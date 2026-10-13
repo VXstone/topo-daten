@@ -1,0 +1,72 @@
+name: Bahndaten Schweiz
+
+# Läuft monatlich von selbst und jederzeit über «Run workflow» (Reiter Actions).
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 3 2 * *"          # jeden 2. des Monats, 03:17 UTC
+
+permissions:
+  contents: write                  # Release hochladen und stand.json speichern
+
+jobs:
+  daten:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Werkzeuge installieren
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y -q osmium-tool
+          pip install -q osmium
+
+      - name: Schweiz-Extrakt von Geofabrik laden (OSM, täglich aktualisiert)
+        run: |
+          curl -fsSL --retry 3 -A "topo-daten (GitHub Actions)" \
+            -o schweiz.osm.pbf https://download.geofabrik.de/europe/switzerland-latest.osm.pbf
+          ls -lh schweiz.osm.pbf
+
+      - name: Bahn herausfiltern
+        run: |
+          osmium tags-filter schweiz.osm.pbf nwr/railway w/public_transport=platform \
+            -o bahn_schweiz.osm.pbf --overwrite
+          ls -lh bahn_schweiz.osm.pbf
+
+      - name: In Overpass-Format umwandeln
+        run: python3 skripte/umwandeln.py bahn_schweiz.osm.pbf schweiz_bahn.json.gz zahlen.json
+
+      - name: Als Release «daten» veröffentlichen
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view daten >/dev/null 2>&1 || \
+            gh release create daten --title "Bahndaten Schweiz (aktuell)" \
+              --notes "Wird automatisch ersetzt. Daten © OpenStreetMap-Mitwirkende, ODbL."
+          gh release upload daten schweiz_bahn.json.gz bahn_schweiz.osm.pbf --clobber
+
+      - name: Stand festhalten (stand.json)
+        run: |
+          OSM_STAND=$(osmium fileinfo -g header.option.osmosis_replication_timestamp schweiz.osm.pbf || echo "?")
+          python3 - "$OSM_STAND" <<'EOF'
+          import json, os, sys, datetime
+          z = json.load(open("zahlen.json"))
+          json.dump({
+              "erzeugt": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
+              "osm_stand": sys.argv[1],
+              "nodes": z["nodes"], "ways": z["ways"],
+              "groesse_mb": {f: round(os.path.getsize(f) / 1e6, 1)
+                             for f in ("schweiz_bahn.json.gz", "bahn_schweiz.osm.pbf")},
+          }, open("stand.json", "w"), indent=1, ensure_ascii=False)
+          print(open("stand.json").read())
+          EOF
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add stand.json
+          git commit -m "Bahndaten aktualisiert" || echo "keine Änderung"
+          git push
