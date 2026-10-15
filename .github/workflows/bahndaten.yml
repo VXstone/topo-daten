@@ -79,4 +79,4 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add stand.json
           git commit -m "Bahndaten aktualisiert" || echo "keine Änderung"
-          git push
+          git pull --rebase origin main && git push
