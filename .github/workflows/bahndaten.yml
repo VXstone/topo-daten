@@ -41,6 +41,16 @@ jobs:
       - name: In Overpass-Format umwandeln
         run: python3 skripte/umwandeln.py bahn_schweiz.osm.pbf schweiz_bahn.json.gz zahlen.json
 
+      - name: Perronkanten und Perronflächen SBB/BLS laden (data.sbb.ch)
+        continue-on-error: true
+        run: |
+          B=https://data.sbb.ch/api/explore/v2.1/catalog/datasets
+          for ID in haltestelle-perronkante-inkl-bls haltestelle-perronoberflache haltestelle-perronoberflache1; do
+            curl -fsSL --retry 3 -A "topo-daten (GitHub Actions)" -o "$ID.geojson" "$B/$ID/exports/geojson" \
+              && gzip -f "$ID.geojson" && echo "OK $ID" || echo "fehlt $ID"
+          done
+          ls -lh *.geojson.gz || true
+          
       - name: Als Release «daten» veröffentlichen
         env:
           GH_TOKEN: ${{ github.token }}
@@ -48,7 +58,7 @@ jobs:
           gh release view daten >/dev/null 2>&1 || \
             gh release create daten --title "Bahndaten Schweiz (aktuell)" \
               --notes "Wird automatisch ersetzt. Daten © OpenStreetMap-Mitwirkende, ODbL."
-          gh release upload daten schweiz_bahn.json.gz bahn_schweiz.osm.pbf --clobber
+          gh release upload daten schweiz_bahn.json.gz bahn_schweiz.osm.pbf $(ls *.geojson.gz 2>/dev/null) --clobber
 
       - name: Stand festhalten (stand.json)
         run: |
