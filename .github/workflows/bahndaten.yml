@@ -45,7 +45,7 @@ jobs:
         continue-on-error: true
         run: |
           B=https://data.sbb.ch/api/explore/v2.1/catalog/datasets
-          for ID in haltestelle-perronkante-inkl-bls haltestelle-perronoberflache haltestelle-perronoberflache1; do
+          for ID in perronkante perronoberflache perron haltestelle-perronkante-inkl-bls; do
             curl -fsSL --retry 3 -A "topo-daten (GitHub Actions)" -o "$ID.geojson" "$B/$ID/exports/geojson" \
               && gzip -f "$ID.geojson" && echo "OK $ID" || echo "fehlt $ID"
           done
