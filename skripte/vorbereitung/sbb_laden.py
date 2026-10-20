@@ -43,6 +43,12 @@ def versuche(ds, ziel_pfad):
     return dict(anzahl=len(fs), felder=felder[:60], geometrie=dict(geo))
 
 
+def PRUEF_KANTE(pfad):
+    fs = json.load(open(pfad)).get("features", [])
+    mit = sum(1 for f in fs if (f.get("properties") or {}).get("designation") or (f.get("properties") or {}).get("length"))
+    return mit >= 0.1 * max(len(fs), 1)
+
+
 ein, prot = sys.argv[1], sys.argv[2]
 P = {}
 for ziel, cfg in ZIELE.items():
@@ -51,9 +57,16 @@ for ziel, cfg in ZIELE.items():
     gefunden = [x for v in e["katalog"].values() for x in v if x and not x.startswith("Fehler")]
     for ds in list(dict.fromkeys(cfg["ids"] + gefunden)):
         try:
-            e.update(versuche(ds, f"{ein}/{ziel}.geojson")); e.update(status="OK", id=ds); e["versucht"].append(f"{ds}: OK"); break
+            r_ = versuche(ds, f"{ein}/{ziel}.geojson")
+            if ziel == "perronkante" and not PRUEF_KANTE(f"{ein}/{ziel}.geojson"):
+                # haltestelle-haltekante liefert nur Haltestellen ohne Kantennummer/Länge (Lauf 20.10.) -> nicht brauchbar
+                e["versucht"].append(f"{ds}: geladen, aber ohne Kantennummer/Länge (nur Haltestellen)"); continue
+            e.update(r_); e.update(status="OK", id=ds); e["versucht"].append(f"{ds}: OK"); break
         except Exception as x:
             e["versucht"].append(f"{ds}: {type(x).__name__} {str(x)[:80]}")
+    if e["status"] != "OK":
+        import os
+        if os.path.exists(f"{ein}/{ziel}.geojson") and ziel == "perronkante": os.rename(f"{ein}/{ziel}.geojson", f"{ein}/{ziel}_unbrauchbar.geojson")
     P[ziel] = e
     print(ziel, e["status"], e["id"], e.get("anzahl"))
 json.dump(P, open(prot, "w"), ensure_ascii=False, indent=1)
