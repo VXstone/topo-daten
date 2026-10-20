@@ -8,7 +8,7 @@ OSM railway=station/halt (auch Privatbahnen: BLS, TPF, …). Abgleich über Lage
 Ausgabe je Punkt: name, abk, typ, lat, lon, quellen, osm_node (Stationsknoten oder null), personenverkehr,
 synthetisch_node (Knoten auf dem Hauptgleis, wenn OSM keinen Stationsknoten hat; z. B. Onnens-Bonvillars).
 """
-import sys, json, math, collections
+import sys, json, math, collections, unicodedata
 sys.path.insert(0, __file__.rsplit("/", 1)[0])
 from gemeinsam import lade_osm, lade_geojson, feld, punkt, m, normalspur, name_gleich
 
@@ -35,10 +35,17 @@ punkte = []
 bp = lade_geojson(f"{ein}/betriebspunkte.geojson")
 for f in bp:
     p = f.get("properties", {})
-    k_n = feld(p, "bezeichnung", "name", ausser=("linie", "strecke")); k_a = feld(p, "abk", "kurz"); k_t = feld(p, "typ", "art")
+    # Name des Betriebspunkts: "bezeichnung_offiziell" (Olten Ost, Bussigny Est (bif)); "bezeichnung_bps" ist der
+    # übergeordnete Bahnhof (OLO und OLN hiessen sonst beide «Olten», Lauf 20.10.)
+    k_n = feld(p, "offiziell", "bezeichnung", "name", ausser=("linie", "strecke")); k_a = feld(p, "abk", "kurz"); k_t = feld(p, "typ", "art")
     q = punkt(f.get("geometry")) or (lambda g: (g["lat"], g["lon"]) if isinstance(g, dict) else None)(p.get(feld(p, "geo") or "", None))
     if not q or not p.get(k_n): continue
-    punkte.append(dict(name=p.get(k_n), abk=p.get(k_a), typ=p.get(k_t), lat=q[0], lon=q[1], quellen=["SBB-Betriebspunkt"]))
+    nm_ = unicodedata.normalize("NFC", str(p.get(k_n)))
+    typ_ = p.get(k_t) if k_t else None
+    if not typ_:                      # Typ aus dem Namenszusatz (der Datensatz hat kein Typfeld)
+        typ_ = "Abzweigstelle" if "(bif)" in nm_ or "(Abzw)" in nm_ or "Abzweig" in nm_ else None
+    punkte.append(dict(name=nm_, abk=p.get(k_a), typ=typ_, lat=q[0], lon=q[1], quellen=["SBB-Betriebspunkt"],
+                       bahnhof=p.get("bezeichnung_bps"), didok=p.get("didok"), linie=p.get("linie"), km=p.get("km")))
 # doppelte (ein Betriebspunkt auf mehreren Linien) zusammenfassen
 uniq = {}
 for x in punkte:

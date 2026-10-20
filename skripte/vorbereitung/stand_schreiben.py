@@ -5,7 +5,7 @@ Umgebung: SCHRITTE="name=outcome;…" (Ergebnis jedes Workflow-Schritts: success
 Inhalt: Zeitpunkt, Status je SBB-Datensatz (OK/fehlt, ID, Anzahl, Felder, Kandidaten aus dem Katalog), Musterzeilen,
 Zahlen der Ergebnisse und eine Stichprobe bekannter Betriebspunkte – weil Claude die Lauf-Logs nicht lesen kann.
 """
-import sys, os, json, gzip, zipfile, datetime
+import sys, os, json, gzip, zipfile, datetime, unicodedata
 
 ein, aus, stand_pfad = sys.argv[1:4]
 
@@ -42,8 +42,9 @@ if isinstance(bp, list):
                                              personenverkehr=sum(1 for x in bp if x.get("personenverkehr")))
     for nm in ("Olten", "Olten Ost", "Rothrist", "Neuchâtel", "Neuchâtel-Vauseyon", "Onnens-Bonvillars", "Ligerz",
                "Gümmenen", "Les Deurres", "Riedbach"):
-        t = [x for x in bp if (x.get("name") or "").lower().startswith(nm.lower())][:3]
-        v["stichprobe"][nm] = [{k: x.get(k) for k in ("name", "abk", "typ", "quellen", "osm_node", "synthetisch_node", "personenverkehr")} for x in t] or "nicht gefunden"
+        _n = lambda z: unicodedata.normalize("NFKD", z or "").encode("ascii", "ignore").decode().lower()   # Neuchatel = Neuchâtel
+        t = [x for x in bp if _n(x.get("name")).startswith(_n(nm))][:4]
+        v["stichprobe"][nm] = [{k: x.get(k) for k in ("name", "abk", "typ", "bahnhof", "quellen", "osm_node", "synthetisch_node", "personenverkehr")} for x in t] or "nicht gefunden"
 else:
     v["ergebnisse"]["betriebspunkte"] = dict(status="fehlt")
 

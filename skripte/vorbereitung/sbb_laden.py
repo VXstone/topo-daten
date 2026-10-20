@@ -12,8 +12,8 @@ B = "https://data.sbb.ch/api/explore/v2.1/catalog/datasets"
 UA = {"User-Agent": "topo-daten (GitHub Actions)"}
 ZIELE = {
     "perronoberflache": dict(ids=["perronoberflache"], suche=["perronoberfl"]),
-    "perronkante": dict(ids=["perronkante", "perronkanten", "haltestelle-perronkante", "haltestelle-perronkante-inkl-bls"],
-                        suche=["perronkante"]),
+    "perronkante": dict(ids=["perronkante", "perronkanten", "haltestelle-perronkante", "haltestelle-perronkante-inkl-bls", "haltestelle-haltekante"],
+                        suche=["perronkante", "haltekante"]),
     "betriebspunkte": dict(ids=["linie-mit-betriebspunkten", "dienststellen-gemass-opentransportdata-ch-didok",
                                 "betriebspunkte", "betriebspunkt"], suche=["betriebspunkt", "dienststelle", "didok"]),
 }
