@@ -8,11 +8,12 @@
   "bahn_schweiz.osm.pbf": 7.8
  },
  "vorbereitung": {
-  "erzeugt": "2026-10-20 12:08 UTC",
-  "lauf": "https://github.com/VXstone/topo-daten/actions/runs/39419624007",
+  "erzeugt": "2026-10-20 12:10 UTC",
+  "lauf": "https://github.com/VXstone/topo-daten/actions/runs/39420108122",
   "schritte": {
    "osm": "OK",
    "sbb": "OK",
+   "perronkanten": "OK",
    "betriebspunkte": "OK",
    "gleisnummern": "OK",
    "ausschnitte": "OK",
@@ -730,61 +731,242 @@
    ],
    "betriebspunkte": [
     {
-     "abkurzung_bpk": "ECL",
-     "bezeichnung_bps": "Eclepens",
-     "linie": 210,
-     "km": 21.379,
-     "linienname": "Daillens - Biel/Bienne",
-     "didok": 1114,
-     "bpuic": 8501114,
-     "bezeichnung_offiziell": "Eclépens",
+     "abkurzung_bpk": "BY",
+     "bezeichnung_bps": "Bussigny",
+     "linie": 169,
+     "km": 14.92027,
+     "linienname": "Lausanne-Triage sect. - Bussigny",
+     "didok": 1117,
+     "bpuic": 8501117,
+     "bezeichnung_offiziell": "Bussigny",
      "lod": "http://lod.opentransportdata.swiss/didok/didok85",
-     "sloid": "ch:1:sloid:1114"
+     "sloid": "ch:1:sloid:1117"
     },
     {
-     "abkurzung_bpk": "ECLN",
-     "bezeichnung_bps": "Eclepens",
-     "linie": 210,
-     "km": 21.56,
-     "linienname": "Daillens - Biel/Bienne",
-     "didok": 15327,
-     "bpuic": 8515327,
-     "bezeichnung_offiziell": "Eclépens Nord (bif)",
+     "abkurzung_bpk": "BY",
+     "bezeichnung_bps": "Bussigny",
+     "linie": 200,
+     "km": 6.9281,
+     "linienname": "Renens VD Ouest - Vallorbe",
+     "didok": 1117,
+     "bpuic": 8501117,
+     "bezeichnung_offiziell": "Bussigny",
      "lod": "http://lod.opentransportdata.swiss/didok/didok85",
-     "sloid": "ch:1:sloid:15327"
+     "sloid": "ch:1:sloid:1117"
     },
     {
-     "abkurzung_bpk": "EF",
-     "bezeichnung_bps": "Effretikon",
-     "linie": 753,
-     "km": -0.01948,
-     "linienname": "Effretikon - Wetzikon - Hinwil",
-     "didok": 3305,
-     "bpuic": 8503305,
-     "bezeichnung_offiziell": "Effretikon",
+     "abkurzung_bpk": "BYE",
+     "bezeichnung_bps": "Bussigny",
+     "linie": 206,
+     "km": 6.33829,
+     "linienname": "Renens VD Ouest - Bussigny Est",
+     "didok": 15312,
+     "bpuic": 8515312,
+     "bezeichnung_offiziell": "Bussigny Est (bif)",
      "lod": "http://lod.opentransportdata.swiss/didok/didok85",
-     "sloid": "ch:1:sloid:3305"
+     "sloid": "ch:1:sloid:15312"
     }
    ]
   },
   "perronkanten": {
-   "anzahl": 495839,
-   "organisation": {
-    "null": 495839
-   },
-   "verkehrsmittel": {
-    "None": 495839
-   },
-   "elementtyp": {
-    "None": 495839
-   },
-   "geometrie": {
-    "Point": 495839
-   },
-   "mit_nummer": 0,
-   "beispiel_neuchatel": [],
-   "beispiel_grandson": [],
-   "beispiel_olten": []
+   "status": "OK",
+   "kanten": 2799,
+   "betriebspunkte": 978,
+   "mit_gleisnummer": 2799,
+   "beispiele": {
+    "Grandson": [
+     [
+      "Grandson",
+      "1",
+      225.1
+     ],
+     [
+      "Grandson",
+      "2",
+      200.6
+     ],
+     [
+      "Grandson",
+      "3",
+      200.6
+     ]
+    ],
+    "Les Hauts-Geneveys": [
+     [
+      "Les Hauts-Geneveys",
+      "1",
+      19.8
+     ],
+     [
+      "Les Hauts-Geneveys",
+      "1",
+      149.9
+     ],
+     [
+      "Les Hauts-Geneveys",
+      "1",
+      20.6
+     ],
+     [
+      "Les Hauts-Geneveys",
+      "2",
+      149.9
+     ],
+     [
+      "Les Hauts-Geneveys",
+      "2",
+      44.5
+     ]
+    ],
+    "Neuchâtel": [
+     [
+      "Neuchatel",
+      "1",
+      218.1
+     ],
+     [
+      "Neuchatel",
+      "2",
+      302.9
+     ],
+     [
+      "Neuchatel",
+      "2",
+      115.9
+     ],
+     [
+      "Neuchatel",
+      "3",
+      302.7
+     ],
+     [
+      "Neuchatel",
+      "3",
+      115.3
+     ],
+     [
+      "Neuchatel",
+      "4",
+      301.9
+     ],
+     [
+      "Neuchatel",
+      "4",
+      100.5
+     ],
+     [
+      "Neuchatel",
+      "5",
+      100.6
+     ],
+     [
+      "Neuchatel",
+      "5",
+      301.9
+     ],
+     [
+      "Neuchatel",
+      "6",
+      187.3
+     ],
+     [
+      "Neuchatel",
+      "7",
+      188.2
+     ]
+    ],
+    "Olten": [
+     [
+      "Olten",
+      "1",
+      14.1
+     ],
+     [
+      "Olten",
+      "1",
+      286.9
+     ],
+     [
+      "Olten",
+      "10",
+      450.2
+     ],
+     [
+      "Olten",
+      "11",
+      424.5
+     ],
+     [
+      "Olten",
+      "11",
+      25.8
+     ],
+     [
+      "Olten",
+      "12",
+      460.2
+     ],
+     [
+      "Olten",
+      "2",
+      360.1
+     ],
+     [
+      "Olten",
+      "2",
+      44.4
+     ],
+     [
+      "Olten",
+      "3",
+      44.5
+     ],
+     [
+      "Olten",
+      "3",
+      357.3
+     ],
+     [
+      "Olten",
+      "4",
+      59.6
+     ],
+     [
+      "Olten",
+      "7",
+      363.8
+     ],
+     [
+      "Olten",
+      "7",
+      59.6
+     ],
+     [
+      "Olten",
+      "8",
+      435.2
+     ],
+     [
+      "Olten",
+      "9",
+      435.1
+     ]
+    ],
+    "Rothrist": [
+     [
+      "Rothrist",
+      "1",
+      213.6
+     ],
+     [
+      "Rothrist",
+      "4",
+      222.3
+     ]
+    ],
+    "Môtiers": [],
+    "Couvet": []
+   }
   }
  }
 }
