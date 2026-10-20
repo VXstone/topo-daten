@@ -66,7 +66,9 @@ jobs:
           python3 - "$OSM_STAND" <<'EOF'
           import json, os, sys, datetime
           z = json.load(open("zahlen.json"))
-          json.dump({
+          try: alt = json.load(open("stand.json"))
+          except Exception: alt = {}
+          json.dump({**{k: v for k, v in alt.items() if k == "vorbereitung"},   # Stand der Vorbereitung behalten
               "erzeugt": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
               "osm_stand": sys.argv[1],
               "nodes": z["nodes"], "ways": z["ways"],
