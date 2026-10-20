@@ -8,8 +8,8 @@
   "bahn_schweiz.osm.pbf": 7.8
  },
  "vorbereitung": {
-  "erzeugt": "2026-10-20 11:55 UTC",
-  "lauf": "https://github.com/VXstone/topo-daten/actions/runs/39418309172",
+  "erzeugt": "2026-10-20 11:57 UTC",
+  "lauf": "https://github.com/VXstone/topo-daten/actions/runs/39418517417",
   "schritte": {
    "osm": "OK",
    "sbb": "OK",
@@ -715,6 +715,442 @@
      "bezeichnung_offiziell": "Effretikon",
      "lod": "http://lod.opentransportdata.swiss/didok/didok85",
      "sloid": "ch:1:sloid:3305"
+    }
+   ]
+  },
+  "perronkanten": {
+   "anzahl": 30747,
+   "organisation": {
+    "PAG": 11025,
+    "SBB": 2252,
+    "TPF Auto": 848,
+    "TPG": 798,
+    "VBZ": 731,
+    "BOS": 610,
+    "TL": 535,
+    "STI": 457,
+    "VZO": 453,
+    "TPC Auto": 437,
+    "ZVB": 407,
+    "VBG": 378
+   },
+   "verkehrsmittel": {
+    "BUS": 23136,
+    "None": 3674,
+    "TRAIN": 1697,
+    "CHAIRLIFT": 589,
+    "CABLE_CAR": 512,
+    "BUS|TRAM": 434,
+    "BOAT": 318,
+    "TRAM": 135
+   },
+   "elementtyp": {
+    "None": 30747
+   },
+   "geometrie": {
+    "Point": 30747
+   },
+   "mit_nummer": 0,
+   "beispiel_neuchatel": [
+    {
+     "designationofficial": "Neuchâtel",
+     "designation": null,
+     "designationoperational": null,
+     "length": null,
+     "boardingareaheight": null,
+     "trafficpointelementtype": null,
+     "meansoftransport": "TRAIN",
+     "businessorganisationabbreviationde": "SBB",
+     "parentsloidservicepoint": null
+    },
+    {
+     "designationofficial": "Neuchâtel (bateau)",
+     "designation": null,
+     "designationoperational": null,
+     "length": null,
+     "boardingareaheight": null,
+     "trafficpointelementtype": null,
+     "meansoftransport": "BOAT",
+     "businessorganisationabbreviationde": "LNM",
+     "parentsloidservicepoint": null
+    },
+    {
+     "designationofficial": "Neuchâtel Bus/TGV",
+     "designation": null,
+     "designationoperational": null,
+     "length": null,
+     "boardingareaheight": null,
+     "trafficpointelementtype": null,
+     "meansoftransport": null,
+     "businessorganisationabbreviationde": "SBB",
+     "parentsloidservicepoint": null
+    },
+    {
+     "designationofficial": "Neuchâtel Cargo",
+     "designation": null,
+     "designationoperational": null,
+     "length": null,
+     "boardingareaheight": null,
+     "trafficpointelementtype": null,
+     "meansoftransport": null,
+     "businessorganisationabbreviationde": "SBB",
+     "parentsloidservicepoint": null
+    },
+    {
+     "designationofficial": "Neuchâtel Champ-Bougin",
+     "designation": null,
+     "designationoperational": null,
+     "length": null,
+     "boardingareaheight": null,
+     "trafficpointelementtype": null,
+     "meansoftransport": "TRAIN",
+     "businessorganisationabbreviationde": "TRN-tn",
+     "parentsloidservicepoint": null
+    },
+    {
+     "designationofficial": "Neuchâtel Est (bif)",
+     "designation": null,
+     "designationoperational": null,
+     "length": null,
+     "boardingareaheight": null,
+     "trafficpointelementtype": null,
+     "meansoftransport": null,
+     "businessorganisationabbreviationde": "SBB",
+     "parentsloidservicepoint": null
+    },
+    {
+     "designationofficial": "Neuchâtel Evole",
+     "designation": null,
+     "designationoperational": null,
+     "length": null,
+     "boardingareaheight": null,
+     "trafficpointelementtype": null,
+     "meansoftransport": "TRAIN",
+     "businessorganisationabbreviationde": "TRN-tn",
+     "parentsloidservicepoint": null
+    },
+    {
+     "designationofficial": "Neuchâtel Place Pury Littorail",
+     "designation": null,
+     "designationoperational": null,
+     "length": null,
+     "boardingareaheight": null,
+     "trafficpointelementtype": null,
+     "meansoftransport": "TRAIN",
+     "businessorganisationabbreviationde": "TRN-tn",
+     "parentsloidservicepoint": null
+    },
+    {
+     "designationofficial": "Neuchâtel Port-de-Serrières",
+     "designation": null,
+     "designationoperational": null,
+     "length": null,
+     "boardingareaheight": null,
+     "trafficpointelementtype": null,
+     "meansoftransport": "TRAIN",
+     "businessorganisationabbreviationde": "TRN-tn",
+     "parentsloidservicepoint": null
+    },
+    {
+     "designationofficial": "Neuchâtel salles de formation",
+     "designation": null,
+     "designationoperational": null,
+     "length": null,
+     "boardingareaheight": null,
+     "trafficpointelementtype": null,
+     "meansoftransport": null,
+     "businessorganisationabbreviationde": "SBB",
+     "parentsloidservicepoint": null
+    },
+    {
+     "designationofficial": "Neuchâtel Serrières Ruau",
+     "designation": null,
+     "designationoperational": null,
+     "length": null,
+     "boardingareaheight": null,
+     "trafficpointelementtype": null,
+     "meansoftransport": "TRAIN",
+     "businessorganisationabbreviationde": "TRN-tn",
+     "parentsloidservicepoint": null
+    },
+    {
+     "designationofficial": "Neuchâtel Serrières, parking",
+     "designation": null,
+     "designationoperational": null,
+     "length": null,
+     "boardingareaheight": null,
+     "trafficpointelementtype": null,
+     "meansoftransport": "BUS",
+     "businessorganisationabbreviationde": "TRN-tn",
+     "parentsloidservicepoint": null
+    }
+   ],
+   "beispiel_grandson": [
+    {
+     "designationofficial": "Grandson",
+     "designation": null,
+     "designationoperational": null,
+     "length": null,
+     "boardingareaheight": null,
+     "trafficpointelementtype": null,
+     "meansoftransport": "TRAIN",
+     "businessorganisationabbreviationde": "SBB",
+     "parentsloidservicepoint": null
+    },
+    {
+     "designationofficial": "Grandson (bateau)",
+     "designation": null,
+     "designationoperational": null,
+     "length": null,
+     "boardingareaheight": null,
+     "trafficpointelementtype": null,
+     "meansoftransport": "BOAT",
+     "businessorganisationabbreviationde": "LNM",
+     "parentsloidservicepoint": null
+    },
+    {
+     "designationofficial": "Grandson, Borné Nau",
+     "designation": null,
+     "designationoperational": null,
+     "length": null,
+     "boardingareaheight": null,
+     "trafficpointelementtype": null,
+     "meansoftransport": "BUS",
+     "businessorganisationabbreviationde": "PAG",
+     "parentsloidservicepoint": null
+    },
+    {
+     "designationofficial": "Grandson, Corcelettes",
+     "designation": null,
+     "designationoperational": null,
+     "length": null,
+     "boardingareaheight": null,
+     "trafficpointelementtype": null,
+     "meansoftransport": "BUS",
+     "businessorganisationabbreviationde": "PAG",
+     "parentsloidservicepoint": null
+    },
+    {
+     "designationofficial": "Grandson, Crêt-aux-Moines",
+     "designation": null,
+     "designationoperational": null,
+     "length": null,
+     "boardingareaheight": null,
+     "trafficpointelementtype": null,
+     "meansoftransport": "BUS",
+     "businessorganisationabbreviationde": "PAG",
+     "parentsloidservicepoint": null
+    },
+    {
+     "designationofficial": "Grandson, croisée de Fiez",
+     "designation": null,
+     "designationoperational": null,
+     "length": null,
+     "boardingareaheight": null,
+     "trafficpointelementtype": null,
+     "meansoftransport": "BUS",
+     "businessorganisationabbreviationde": "PAG",
+     "parentsloidservicepoint": null
+    },
+    {
+     "designationofficial": "Grandson, gare",
+     "designation": null,
+     "designationoperational": null,
+     "length": null,
+     "boardingareaheight": null,
+     "trafficpointelementtype": null,
+     "meansoftransport": "BUS",
+     "businessorganisationabbreviationde": "PAG",
+     "parentsloidservicepoint": null
+    },
+    {
+     "designationofficial": "Grandson, Le Repuis",
+     "designation": null,
+     "designationoperational": null,
+     "length": null,
+     "boardingareaheight": null,
+     "trafficpointelementtype": null,
+     "meansoftransport": "BUS",
+     "businessorganisationabbreviationde": "PAG",
+     "parentsloidservicepoint": null
+    },
+    {
+     "designationofficial": "Grandson, Le Revelin",
+     "designation": null,
+     "designationoperational": null,
+     "length": null,
+     "boardingareaheight": null,
+     "trafficpointelementtype": null,
+     "meansoftransport": "BUS",
+     "businessorganisationabbreviationde": "PAG",
+     "parentsloidservicepoint": null
+    },
+    {
+     "designationofficial": "Grandson, Péroset",
+     "designation": null,
+     "designationoperational": null,
+     "length": null,
+     "boardingareaheight": null,
+     "trafficpointelementtype": null,
+     "meansoftransport": "BUS",
+     "businessorganisationabbreviationde": "PAG",
+     "parentsloidservicepoint": null
+    },
+    {
+     "designationofficial": "Grandson, place du Château",
+     "designation": null,
+     "designationoperational": null,
+     "length": null,
+     "boardingareaheight": null,
+     "trafficpointelementtype": null,
+     "meansoftransport": "BUS",
+     "businessorganisationabbreviationde": "PAG",
+     "parentsloidservicepoint": null
+    },
+    {
+     "designationofficial": "Grandson, SC Les Cloître",
+     "designation": null,
+     "designationoperational": null,
+     "length": null,
+     "boardingareaheight": null,
+     "trafficpointelementtype": null,
+     "meansoftransport": null,
+     "businessorganisationabbreviationde": "PAG",
+     "parentsloidservicepoint": null
+    }
+   ],
+   "beispiel_olten": [
+    {
+     "designationofficial": "Olten",
+     "designation": null,
+     "designationoperational": null,
+     "length": null,
+     "boardingareaheight": null,
+     "trafficpointelementtype": null,
+     "meansoftransport": "TRAIN",
+     "businessorganisationabbreviationde": "SBB",
+     "parentsloidservicepoint": null
+    },
+    {
+     "designationofficial": "Olten Betriebszentrale",
+     "designation": null,
+     "designationoperational": null,
+     "length": null,
+     "boardingareaheight": null,
+     "trafficpointelementtype": null,
+     "meansoftransport": null,
+     "businessorganisationabbreviationde": "SBB",
+     "parentsloidservicepoint": null
+    },
+    {
+     "designationofficial": "Olten Borntunnel Ost",
+     "designation": null,
+     "designationoperational": null,
+     "length": null,
+     "boardingareaheight": null,
+     "trafficpointelementtype": null,
+     "meansoftransport": null,
+     "businessorganisationabbreviationde": "SBB",
+     "parentsloidservicepoint": null
+    },
+    {
+     "designationofficial": "Olten Borntunnel West",
+     "designation": null,
+     "designationoperational": null,
+     "length": null,
+     "boardingareaheight": null,
+     "trafficpointelementtype": null,
+     "meansoftransport": null,
+     "businessorganisationabbreviationde": "SBB",
+     "parentsloidservicepoint": null
+    },
+    {
+     "designationofficial": "Olten Gebäude Aarepark",
+     "designation": null,
+     "designationoperational": null,
+     "length": null,
+     "boardingareaheight": null,
+     "trafficpointelementtype": null,
+     "meansoftransport": null,
+     "businessorganisationabbreviationde": "SBB",
+     "parentsloidservicepoint": null
+    },
+    {
+     "designationofficial": "Olten Hammer",
+     "designation": null,
+     "designationoperational": null,
+     "length": null,
+     "boardingareaheight": null,
+     "trafficpointelementtype": null,
+     "meansoftransport": "TRAIN",
+     "businessorganisationabbreviationde": "SBB",
+     "parentsloidservicepoint": null
+    },
+    {
+     "designationofficial": "Olten Nord (Abzw)",
+     "designation": null,
+     "designationoperational": null,
+     "length": null,
+     "boardingareaheight": null,
+     "trafficpointelementtype": null,
+     "meansoftransport": null,
+     "businessorganisationabbreviationde": "SBB",
+     "parentsloidservicepoint": null
+    },
+    {
+     "designationofficial": "Olten Nord-Ost (Abzw)",
+     "designation": null,
+     "designationoperational": null,
+     "length": null,
+     "boardingareaheight": null,
+     "trafficpointelementtype": null,
+     "meansoftransport": null,
+     "businessorganisationabbreviationde": "SBB",
+     "parentsloidservicepoint": null
+    },
+    {
+     "designationofficial": "Olten Ost (Abzw)",
+     "designation": null,
+     "designationoperational": null,
+     "length": null,
+     "boardingareaheight": null,
+     "trafficpointelementtype": null,
+     "meansoftransport": null,
+     "businessorganisationabbreviationde": "SBB",
+     "parentsloidservicepoint": null
+    },
+    {
+     "designationofficial": "Olten RB",
+     "designation": null,
+     "designationoperational": null,
+     "length": null,
+     "boardingareaheight": null,
+     "trafficpointelementtype": null,
+     "meansoftransport": null,
+     "businessorganisationabbreviationde": "SBB",
+     "parentsloidservicepoint": null
+    },
+    {
+     "designationofficial": "Olten SBB/CFF/FFS Cargo",
+     "designation": null,
+     "designationoperational": null,
+     "length": null,
+     "boardingareaheight": null,
+     "trafficpointelementtype": null,
+     "meansoftransport": null,
+     "businessorganisationabbreviationde": "SBB",
+     "parentsloidservicepoint": null
+    },
+    {
+     "designationofficial": "Olten Süd (Abzw)",
+     "designation": null,
+     "designationoperational": null,
+     "length": null,
+     "boardingareaheight": null,
+     "trafficpointelementtype": null,
+     "meansoftransport": null,
+     "businessorganisationabbreviationde": "SBB",
+     "parentsloidservicepoint": null
     }
    ]
   }
