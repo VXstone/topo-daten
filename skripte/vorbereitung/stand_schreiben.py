@@ -29,6 +29,24 @@ for ziel, e in prot.items():
     gj = lade(f"{ein}/{ziel}.geojson")
     if gj and gj.get("features"):
         v["muster"][ziel] = [f.get("properties") for f in gj["features"][:3]]
+# Perronkanten (haltestelle-haltekante): Auswertung, ob für Gleisnummern brauchbar (Bahn, Nummer, Länge, Lage)
+pk = lade(f"{ein}/perronkante.geojson")
+if pk and pk.get("features"):
+    import collections
+    fs = [f for f in pk["features"] if f.get("properties")]
+    org = collections.Counter(f["properties"].get("businessorganisationabbreviationde") for f in fs)
+    mot = collections.Counter(str(f["properties"].get("meansoftransport")) for f in fs)
+    typ = collections.Counter(str(f["properties"].get("trafficpointelementtype")) for f in fs)
+    geo = collections.Counter((f.get("geometry") or {}).get("type") for f in fs)
+    def _bsp(nm):
+        t = [f["properties"] for f in fs if (f["properties"].get("designationofficial") or "").startswith(nm)]
+        return [{k: x.get(k) for k in ("designationofficial", "designation", "designationoperational", "length", "boardingareaheight",
+                                        "trafficpointelementtype", "meansoftransport", "businessorganisationabbreviationde", "parentsloidservicepoint")}
+                for x in t[:12]]
+    v["perronkanten"] = dict(anzahl=len(fs), organisation=dict(org.most_common(12)), verkehrsmittel=dict(mot.most_common(8)),
+                             elementtyp=dict(typ.most_common(6)), geometrie=dict(geo),
+                             mit_nummer=sum(1 for f in fs if f["properties"].get("designation")),
+                             beispiel_neuchatel=_bsp("Neuchâtel"), beispiel_grandson=_bsp("Grandson"), beispiel_olten=_bsp("Olten"))
 v["datensaetze"]["schweiz_bahn (OSM, Release daten)"] = dict(status="OK" if os.path.exists(f"{ein}/schweiz_bahn.json.gz") else "fehlt")
 
 bp = lade(f"{aus}/betriebspunkte.json")
