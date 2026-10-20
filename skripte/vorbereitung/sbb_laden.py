@@ -49,7 +49,8 @@ KANTE_FELDER = ("designation", "gleis", "kante", "track", "length", "lange", "la
 def PRUEF_KANTE(pfad, info=None):
     """Brauchbar als Perronkanten, wenn >= 10 % der Objekte ein Kanten-/Gleis-/Längenfeld mit Wert haben."""
     fs = json.load(open(pfad)).get("features", [])
-    ok = lambda pr: any(v not in (None, "", 0) and any(w in k.lower() for w in KANTE_FELDER) and "sloid" not in k.lower()
+    ok = lambda pr: any(v not in (None, "", 0, "ok", "true", "false", True, False) and any(w in k.lower() for w in KANTE_FELDER)
+                        and "sloid" not in k.lower() and k.lower() != "haltekante"          # "haltekante": "ok" ist nur ein Merker
                         for k, v in (pr or {}).items())
     mit = sum(1 for f in fs if ok(f.get("properties")))
     if info is not None:
