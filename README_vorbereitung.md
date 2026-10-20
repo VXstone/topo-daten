@@ -14,8 +14,23 @@ ins Release **`vorbereitung`**. Die Sitzungen holen dort fertige Daten, statt si
 | `skripte/vorbereitung/aenderungen.py` | Änderungen gegenüber dem Vormonat je Betriebspunkt → welche Pläne neu zeichnen |
 | `konfig/regionen.json` | Vielecke der Regionen (Olten, Neuchâtel); neue Region = neuer Eintrag |
 
+## SBB-Datensätze (data.sbb.ch, Stand 20.10.2026)
+| Ziel | Datensatz | Inhalt |
+|---|---|---|
+| Perronflächen | `perronoberflache` | 2212 Perrons, p_nr «a/b», perrontyp |
+| Perronkanten | `21196_behig-haltekantepunkt` | ~500 000 Punkte (1 m), `kundengleisnr`, Kantenlänge, LV95 → verdichtet zu `perronkanten.json` (2799 Kanten, 978 Betriebspunkte) |
+| Betriebspunkte | `linie-mit-betriebspunkten` | 1894 Punkte je Linie, `abkurzung_bpk`, `bezeichnung_offiziell` (z. B. «Olten Ost (Abzw)»), km |
+Die früheren IDs `perronkante`, `haltestelle-perronkante(-inkl-bls)` liefern 404; `haltestelle-haltekante` enthält nur Haltestellen ohne Kanten.
+`sbb_laden.py` versucht bekannte IDs, sucht sonst im Katalog und protokolliert alles.
+
+## stand.json (Schlüssel `vorbereitung`)
+Weil die Lauf-Logs ausserhalb von GitHub nicht lesbar sind, schreibt jeder Lauf: Zeitpunkt und Lauf-Link, Ergebnis jedes Schritts
+(OK/failure), je SBB-Datensatz Status OK/fehlt mit ID, Anzahl, Feldern, Versuchen und Katalog-Kandidaten, Musterzeilen, Zahlen der
+Ergebnisse und Stichproben (Betriebspunkte Olten/Rothrist/Neuchâtel …, Gleisnummern, Perronkanten je Bahnhof).
+Der Workflow «Bahndaten Schweiz» lässt diesen Schlüssel beim Überschreiben von stand.json stehen.
+
 ## Release `vorbereitung`
-`betriebspunkte.json`, `gleisnummern.json`, `region_<key>.json.gz`, `bahnhoefe_<key>.zip/.json`, `aenderungen.json`,
+`betriebspunkte.json`, `gleisnummern.json`, `perronkanten.json`, `sbb_perronoberflache.geojson.gz`, `sbb_betriebspunkte.geojson.gz`, `region_<key>.json.gz`, `bahnhoefe_<key>.zip/.json`, `aenderungen.json`,
 `schweiz_bahn_vorher.json.gz` (Vergleichsbasis für den nächsten Monat).
 
 ## Getestet (Sandbox, OSM-Stand 12.10., SBB perronoberflache)
@@ -27,8 +42,8 @@ ins Release **`vorbereitung`**. Die Sitzungen holen dort fertige Daten, statt si
 - Nicht getestet: SBB «linie-mit-betriebspunkten» und «perronkante» (Sandbox ohne Zugriff). Feldnamen werden per Stichwort
   gesucht; beim ersten Lauf das Log ansehen. `perronkante` lieferte am 15.10. 404 – Export-ID auf data.sbb.ch prüfen.
 
-## Einbau
-Ordner ins Repo kopieren, committen, unter Actions «vorbereitung» einmal von Hand starten.
+## Eingebaut 20.10.2026
+Erster Lauf erfolgreich (alle Schritte OK). Alte Datei `sbb_perronkante.geojson.gz` (17 MB Rohdaten eines Zwischenlaufs) kann im Release gelöscht werden.
 
 ## Nächster Schritt (Stufe 2)
 Spurplan-Skripte und Bahnhofs-Overrides ins Repo; Workflow zeichnet bei jeder Änderung alle Bahnhöfe und Regionalpläne,
