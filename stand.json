@@ -6,5 +6,413 @@
  "groesse_mb": {
   "schweiz_bahn.json.gz": 10.9,
   "bahn_schweiz.osm.pbf": 7.8
+ },
+ "vorbereitung": {
+  "erzeugt": "2026-10-20 11:53 UTC",
+  "lauf": "https://github.com/VXstone/topo-daten/actions/runs/39418004653",
+  "schritte": {
+   "osm": "OK",
+   "sbb": "OK",
+   "betriebspunkte": "OK",
+   "gleisnummern": "OK",
+   "ausschnitte": "OK",
+   "aenderungen": "OK",
+   "release": "OK"
+  },
+  "datensaetze": {
+   "perronoberflache": {
+    "status": "OK",
+    "id": "perronoberflache",
+    "versucht": [
+     "perronoberflache: OK"
+    ],
+    "katalog": {
+     "perronoberfl": [
+      "perronoberflache"
+     ]
+    },
+    "anzahl": 2212,
+    "felder": [
+     "baujahr",
+     "bps",
+     "bps_name",
+     "bpuic",
+     "dok_pfm",
+     "dst_id",
+     "fid",
+     "flache",
+     "km",
+     "linie",
+     "lod",
+     "oberflache",
+     "p_lange",
+     "p_nr",
+     "perrontyp",
+     "uuid"
+    ],
+    "geometrie": {
+     "Point": 2000
+    }
+   },
+   "perronkante": {
+    "status": "fehlt",
+    "id": null,
+    "versucht": [
+     "perronkante: HTTPError HTTP Error 404: Not Found",
+     "perronkanten: HTTPError HTTP Error 404: Not Found",
+     "haltestelle-perronkante: HTTPError HTTP Error 404: Not Found",
+     "haltestelle-perronkante-inkl-bls: HTTPError HTTP Error 404: Not Found"
+    ],
+    "katalog": {
+     "perronkante": []
+    }
+   },
+   "betriebspunkte": {
+    "status": "OK",
+    "id": "linie-mit-betriebspunkten",
+    "versucht": [
+     "linie-mit-betriebspunkten: OK"
+    ],
+    "katalog": {
+     "betriebspunkt": [
+      "haltestelle-uhr",
+      "haltestelle-wartehallen",
+      "linie-mit-betriebspunkten"
+     ],
+     "dienststelle": [
+      "haltestelle-haltekante",
+      "dienststellen-gemass-opentransportdataswiss"
+     ],
+     "didok": [
+      "haltestelle-haltekante",
+      "anzahl-sbb-bahnhofbenutzer",
+      "graphischer-fahrplan",
+      "dienststellen-gemass-opentransportdataswiss",
+      "mobiliar-im-bahnhof"
+     ]
+    },
+    "anzahl": 1894,
+    "felder": [
+     "abkurzung_bpk",
+     "bezeichnung_bps",
+     "bezeichnung_offiziell",
+     "bpuic",
+     "didok",
+     "km",
+     "linie",
+     "linienname",
+     "lod",
+     "sloid"
+    ],
+    "geometrie": {
+     "Point": 1894
+    }
+   },
+   "schweiz_bahn (OSM, Release daten)": {
+    "status": "OK"
+   }
+  },
+  "ergebnisse": {
+   "betriebspunkte": {
+    "status": "OK",
+    "anzahl": 1595,
+    "nach_quellen": {
+     "OSM+SBB-Betriebspunkt": 708,
+     "SBB-Betriebspunkt": 594,
+     "OSM+OSM+SBB-Betriebspunkt": 17,
+     "SBB-Perron": 1,
+     "OSM": 275
+    },
+    "ohne_osm_stationsknoten": 595,
+    "mit_ersatzknoten": 595,
+    "personenverkehr": 1064
+   },
+   "gleisnummern": {
+    "status": "OK",
+    "betriebspunkte": 1144,
+    "quelle_sbb": 803,
+    "quelle_osm": 341,
+    "mit_fragezeichen": 98,
+    "gross_von_hand": 46
+   },
+   "ausschnitte": {
+    "bahnhoefe_neuchatel.zip": {
+     "status": "OK",
+     "dateien": 134
+    },
+    "bahnhoefe_olten.zip": {
+     "status": "OK",
+     "dateien": 56
+    },
+    "region_neuchatel.json.gz": {
+     "status": "OK",
+     "mb": 0.7
+    },
+    "region_olten.json.gz": {
+     "status": "OK",
+     "mb": 0.2
+    }
+   },
+   "aenderungen": {
+    "status": "OK",
+    "hinweis": "erster Lauf, kein Vergleich"
+   }
+  },
+  "stichprobe": {
+   "Olten": [
+    {
+     "name": "Olten",
+     "abk": "OL",
+     "typ": null,
+     "quellen": [
+      "SBB-Betriebspunkt",
+      "OSM"
+     ],
+     "osm_node": 636798044,
+     "synthetisch_node": null,
+     "personenverkehr": true
+    },
+    {
+     "name": "Olten",
+     "abk": "OLO",
+     "typ": null,
+     "quellen": [
+      "SBB-Betriebspunkt"
+     ],
+     "osm_node": null,
+     "synthetisch_node": 11742914059,
+     "personenverkehr": false
+    },
+    {
+     "name": "Olten",
+     "abk": "OLN",
+     "typ": null,
+     "quellen": [
+      "SBB-Betriebspunkt"
+     ],
+     "osm_node": null,
+     "synthetisch_node": 1501985410,
+     "personenverkehr": false
+    }
+   ],
+   "Olten Ost": "nicht gefunden",
+   "Rothrist": [
+    {
+     "name": "Rothrist",
+     "abk": "RTR",
+     "typ": null,
+     "quellen": [
+      "SBB-Betriebspunkt",
+      "OSM"
+     ],
+     "osm_node": 3876626738,
+     "synthetisch_node": null,
+     "personenverkehr": true
+    },
+    {
+     "name": "Rothrist",
+     "abk": "RTRW",
+     "typ": null,
+     "quellen": [
+      "SBB-Betriebspunkt"
+     ],
+     "osm_node": null,
+     "synthetisch_node": 360472204,
+     "personenverkehr": false
+    },
+    {
+     "name": "Rothrist",
+     "abk": "BFG",
+     "typ": null,
+     "quellen": [
+      "SBB-Betriebspunkt"
+     ],
+     "osm_node": null,
+     "synthetisch_node": 7223639880,
+     "personenverkehr": false
+    }
+   ],
+   "Neuchâtel": "nicht gefunden",
+   "Neuchâtel-Vauseyon": "nicht gefunden",
+   "Onnens-Bonvillars": [
+    {
+     "name": "Onnens-Bonvillars",
+     "abk": "ONB",
+     "typ": null,
+     "quellen": [
+      "SBB-Betriebspunkt"
+     ],
+     "osm_node": null,
+     "synthetisch_node": 10123561534,
+     "personenverkehr": true
+    }
+   ],
+   "Ligerz": [
+    {
+     "name": "Ligerz",
+     "abk": "LIG",
+     "typ": null,
+     "quellen": [
+      "SBB-Betriebspunkt"
+     ],
+     "osm_node": null,
+     "synthetisch_node": 12175249530,
+     "personenverkehr": true
+    }
+   ],
+   "Gümmenen": [
+    {
+     "name": "Gümmenen",
+     "abk": null,
+     "typ": "station",
+     "quellen": [
+      "OSM"
+     ],
+     "osm_node": 3081154382,
+     "synthetisch_node": null,
+     "personenverkehr": true
+    }
+   ],
+   "Les Deurres": [
+    {
+     "name": "Les Deurres",
+     "abk": "DEU",
+     "typ": null,
+     "quellen": [
+      "SBB-Betriebspunkt",
+      "OSM"
+     ],
+     "osm_node": 1949801868,
+     "synthetisch_node": null,
+     "personenverkehr": true
+    }
+   ],
+   "Riedbach": [
+    {
+     "name": "Riedbach",
+     "abk": null,
+     "typ": "station",
+     "quellen": [
+      "OSM"
+     ],
+     "osm_node": 1870460759,
+     "synthetisch_node": null,
+     "personenverkehr": false
+    }
+   ],
+   "Gleisnummern Grandson": [
+    "1",
+    "2",
+    "3",
+    "SBB"
+   ],
+   "Gleisnummern Les Hauts-Geneveys": [
+    null,
+    "1",
+    "SBB"
+   ],
+   "Gleisnummern Concise": [
+    "1",
+    "2",
+    "SBB"
+   ],
+   "Gleisnummern Neuchâtel": "nicht gefunden"
+  },
+  "muster": {
+   "perronoberflache": [
+    {
+     "linie": 9250,
+     "km": 97.1,
+     "bps": "BN",
+     "bps_name": "Bern",
+     "perrontyp": "Mittelperron",
+     "p_nr": "5/6",
+     "p_lange": 506,
+     "flache": 975,
+     "oberflache": "Bituminoeses Mischgut",
+     "baujahr": null,
+     "dst_id": "7000",
+     "dok_pfm": "Mitte",
+     "fid": 376255843,
+     "uuid": "1bf08c56-8daa-e443-e063-d42b1cac2722",
+     "bpuic": "8507000",
+     "lod": "http://lod.opentransportdata.swiss/didok/didok85"
+    },
+    {
+     "linie": 9210,
+     "km": 95.823,
+     "bps": "TWN",
+     "bps_name": "Twann",
+     "perrontyp": "Hausperron",
+     "p_nr": "2",
+     "p_lange": 219,
+     "flache": 1019,
+     "oberflache": "Bituminoeses Mischgut",
+     "baujahr": null,
+     "dst_id": "4228",
+     "dok_pfm": "West",
+     "fid": 324039008,
+     "uuid": "f75087bc-539e-47be-a6d6-ed2274939a18",
+     "bpuic": "8504228",
+     "lod": "http://lod.opentransportdata.swiss/didok/didok85"
+    },
+    {
+     "linie": 7705,
+     "km": 33.831,
+     "bps": "OF",
+     "bps_name": "Otelfingen",
+     "perrontyp": "Hausperron",
+     "p_nr": "1",
+     "p_lange": 220,
+     "flache": 831,
+     "oberflache": "Bituminoeses Mischgut",
+     "baujahr": null,
+     "dst_id": "3528",
+     "dok_pfm": "Ost",
+     "fid": 35396250,
+     "uuid": "27d1f64d-c005-4d3e-a0ee-e2b286f2bc89",
+     "bpuic": "8503528",
+     "lod": "http://lod.opentransportdata.swiss/didok/didok85"
+    }
+   ],
+   "betriebspunkte": [
+    {
+     "abkurzung_bpk": "BY",
+     "bezeichnung_bps": "Bussigny",
+     "linie": 169,
+     "km": 14.92027,
+     "linienname": "Lausanne-Triage sect. - Bussigny",
+     "didok": 1117,
+     "bpuic": 8501117,
+     "bezeichnung_offiziell": "Bussigny",
+     "lod": "http://lod.opentransportdata.swiss/didok/didok85",
+     "sloid": "ch:1:sloid:1117"
+    },
+    {
+     "abkurzung_bpk": "BY",
+     "bezeichnung_bps": "Bussigny",
+     "linie": 200,
+     "km": 6.9281,
+     "linienname": "Renens VD Ouest - Vallorbe",
+     "didok": 1117,
+     "bpuic": 8501117,
+     "bezeichnung_offiziell": "Bussigny",
+     "lod": "http://lod.opentransportdata.swiss/didok/didok85",
+     "sloid": "ch:1:sloid:1117"
+    },
+    {
+     "abkurzung_bpk": "BYE",
+     "bezeichnung_bps": "Bussigny",
+     "linie": 206,
+     "km": 6.33829,
+     "linienname": "Renens VD Ouest - Bussigny Est",
+     "didok": 15312,
+     "bpuic": 8515312,
+     "bezeichnung_offiziell": "Bussigny Est (bif)",
+     "lod": "http://lod.opentransportdata.swiss/didok/didok85",
+     "sloid": "ch:1:sloid:15312"
+    }
+   ]
+  }
  }
 }
