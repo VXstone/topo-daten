@@ -8,8 +8,8 @@
   "bahn_schweiz.osm.pbf": 7.8
  },
  "vorbereitung": {
-  "erzeugt": "2026-10-20 11:53 UTC",
-  "lauf": "https://github.com/VXstone/topo-daten/actions/runs/39418004653",
+  "erzeugt": "2026-10-20 11:55 UTC",
+  "lauf": "https://github.com/VXstone/topo-daten/actions/runs/39418309172",
   "schritte": {
    "osm": "OK",
    "sbb": "OK",
@@ -55,16 +55,74 @@
     }
    },
    "perronkante": {
-    "status": "fehlt",
-    "id": null,
+    "status": "OK",
+    "id": "haltestelle-haltekante",
     "versucht": [
      "perronkante: HTTPError HTTP Error 404: Not Found",
      "perronkanten: HTTPError HTTP Error 404: Not Found",
      "haltestelle-perronkante: HTTPError HTTP Error 404: Not Found",
-     "haltestelle-perronkante-inkl-bls: HTTPError HTTP Error 404: Not Found"
+     "haltestelle-perronkante-inkl-bls: HTTPError HTTP Error 404: Not Found",
+     "haltestelle-haltekante: OK"
     ],
     "katalog": {
-     "perronkante": []
+     "perronkante": [],
+     "haltekante": [
+      "haltestelle-haltekante",
+      "21196_behig-haltekantepunkt",
+      "21197_behig-haltekantesegment"
+     ]
+    },
+    "anzahl": 30747,
+    "felder": [
+     "abbreviation",
+     "boardingareaheight",
+     "businessorganisation",
+     "businessorganisationabbreviationde",
+     "businessorganisationdescriptionde",
+     "businessorganisationnumber",
+     "cantonabbreviation",
+     "cantonfsonumber",
+     "cantonname",
+     "categories",
+     "checkdigit",
+     "compassdirection",
+     "designation",
+     "designationofficial",
+     "designationoperational",
+     "didok_url",
+     "districtfsonumber",
+     "districtname",
+     "fsonumber",
+     "haltekante",
+     "height",
+     "isocountrycode",
+     "length",
+     "localityname",
+     "meansoftransport",
+     "municipalityname",
+     "number",
+     "numbershort",
+     "operatingpoint",
+     "parentsloid",
+     "parentsloidservicepoint",
+     "servicepointbusinessorganisation",
+     "servicepointbusinessorganisationabbreviationde",
+     "servicepointbusinessorganisationabbreviationen",
+     "servicepointbusinessorganisationabbreviationfr",
+     "servicepointbusinessorganisationabbreviationit",
+     "servicepointbusinessorganisationdescriptionde",
+     "servicepointbusinessorganisationdescriptionen",
+     "servicepointbusinessorganisationdescriptionfr",
+     "servicepointbusinessorganisationdescriptionit",
+     "servicepointbusinessorganisationnumber",
+     "sloid",
+     "trafficpointelementtype",
+     "uiccountrycode",
+     "validfrom",
+     "validto"
+    ],
+    "geometrie": {
+     "Point": 2000
     }
    },
    "betriebspunkte": {
@@ -115,34 +173,34 @@
   "ergebnisse": {
    "betriebspunkte": {
     "status": "OK",
-    "anzahl": 1595,
+    "anzahl": 1597,
     "nach_quellen": {
      "OSM+SBB-Betriebspunkt": 708,
-     "SBB-Betriebspunkt": 594,
-     "OSM+OSM+SBB-Betriebspunkt": 17,
+     "SBB-Betriebspunkt": 595,
+     "OSM+OSM+SBB-Betriebspunkt": 16,
      "SBB-Perron": 1,
-     "OSM": 275
+     "OSM": 277
     },
-    "ohne_osm_stationsknoten": 595,
-    "mit_ersatzknoten": 595,
-    "personenverkehr": 1064
+    "ohne_osm_stationsknoten": 596,
+    "mit_ersatzknoten": 596,
+    "personenverkehr": 1066
    },
    "gleisnummern": {
     "status": "OK",
-    "betriebspunkte": 1144,
-    "quelle_sbb": 803,
-    "quelle_osm": 341,
-    "mit_fragezeichen": 98,
-    "gross_von_hand": 46
+    "betriebspunkte": 1333,
+    "quelle_sbb": 924,
+    "quelle_osm": 409,
+    "mit_fragezeichen": 134,
+    "gross_von_hand": 100
    },
    "ausschnitte": {
     "bahnhoefe_neuchatel.zip": {
      "status": "OK",
-     "dateien": 134
+     "dateien": 148
     },
     "bahnhoefe_olten.zip": {
      "status": "OK",
-     "dateien": 56
+     "dateien": 74
     },
     "region_neuchatel.json.gz": {
      "status": "OK",
@@ -155,7 +213,7 @@
    },
    "aenderungen": {
     "status": "OK",
-    "hinweis": "erster Lauf, kein Vergleich"
+    "betriebspunkte_mit_aenderung": 0
    }
   },
   "stichprobe": {
@@ -164,6 +222,7 @@
      "name": "Olten",
      "abk": "OL",
      "typ": null,
+     "bahnhof": "Olten",
      "quellen": [
       "SBB-Betriebspunkt",
       "OSM"
@@ -173,9 +232,10 @@
      "personenverkehr": true
     },
     {
-     "name": "Olten",
+     "name": "Olten Ost (Abzw)",
      "abk": "OLO",
-     "typ": null,
+     "typ": "Abzweigstelle",
+     "bahnhof": "Olten",
      "quellen": [
       "SBB-Betriebspunkt"
      ],
@@ -184,23 +244,50 @@
      "personenverkehr": false
     },
     {
-     "name": "Olten",
+     "name": "Olten Nord (Abzw)",
      "abk": "OLN",
-     "typ": null,
+     "typ": "Abzweigstelle",
+     "bahnhof": "Olten",
      "quellen": [
       "SBB-Betriebspunkt"
      ],
      "osm_node": null,
      "synthetisch_node": 1501985410,
      "personenverkehr": false
+    },
+    {
+     "name": "Olten Tunnel (Spw)",
+     "abk": "OLTU",
+     "typ": null,
+     "bahnhof": "Olten Tunnel (Spw)",
+     "quellen": [
+      "SBB-Betriebspunkt"
+     ],
+     "osm_node": null,
+     "synthetisch_node": 1510193404,
+     "personenverkehr": false
     }
    ],
-   "Olten Ost": "nicht gefunden",
+   "Olten Ost": [
+    {
+     "name": "Olten Ost (Abzw)",
+     "abk": "OLO",
+     "typ": "Abzweigstelle",
+     "bahnhof": "Olten",
+     "quellen": [
+      "SBB-Betriebspunkt"
+     ],
+     "osm_node": null,
+     "synthetisch_node": 11742914059,
+     "personenverkehr": false
+    }
+   ],
    "Rothrist": [
     {
      "name": "Rothrist",
      "abk": "RTR",
      "typ": null,
+     "bahnhof": "Rothrist",
      "quellen": [
       "SBB-Betriebspunkt",
       "OSM"
@@ -210,35 +297,100 @@
      "personenverkehr": true
     },
     {
-     "name": "Rothrist",
+     "name": "Rothrist West (Abzw)",
      "abk": "RTRW",
-     "typ": null,
+     "typ": "Abzweigstelle",
+     "bahnhof": "Rothrist",
      "quellen": [
       "SBB-Betriebspunkt"
      ],
      "osm_node": null,
      "synthetisch_node": 360472204,
      "personenverkehr": false
-    },
+    }
+   ],
+   "Neuchâtel": [
     {
-     "name": "Rothrist",
-     "abk": "BFG",
-     "typ": null,
+     "name": "Neuchâtel-Vauseyon (bif)",
+     "abk": "NEBI",
+     "typ": "Abzweigstelle",
+     "bahnhof": "Neuchatel-Vauseyon (bif)",
      "quellen": [
       "SBB-Betriebspunkt"
      ],
      "osm_node": null,
-     "synthetisch_node": 7223639880,
+     "synthetisch_node": 11288506478,
+     "personenverkehr": true
+    },
+    {
+     "name": "Neuchâtel Est (bif)",
+     "abk": "NEMA",
+     "typ": "Abzweigstelle",
+     "bahnhof": "Neuchatel",
+     "quellen": [
+      "SBB-Betriebspunkt"
+     ],
+     "osm_node": null,
+     "synthetisch_node": 416783520,
+     "personenverkehr": false
+    },
+    {
+     "name": "Neuchâtel-Serrières",
+     "abk": "NESE",
+     "typ": null,
+     "bahnhof": "Neuchatel-Serrieres",
+     "quellen": [
+      "SBB-Betriebspunkt"
+     ],
+     "osm_node": null,
+     "synthetisch_node": 10106458581,
+     "personenverkehr": true
+    },
+    {
+     "name": "Neuchâtel-Vauseyon",
+     "abk": "NEVS",
+     "typ": null,
+     "bahnhof": "Neuchatel-Vauseyon",
+     "quellen": [
+      "SBB-Betriebspunkt"
+     ],
+     "osm_node": null,
+     "synthetisch_node": 11288506527,
      "personenverkehr": false
     }
    ],
-   "Neuchâtel": "nicht gefunden",
-   "Neuchâtel-Vauseyon": "nicht gefunden",
+   "Neuchâtel-Vauseyon": [
+    {
+     "name": "Neuchâtel-Vauseyon (bif)",
+     "abk": "NEBI",
+     "typ": "Abzweigstelle",
+     "bahnhof": "Neuchatel-Vauseyon (bif)",
+     "quellen": [
+      "SBB-Betriebspunkt"
+     ],
+     "osm_node": null,
+     "synthetisch_node": 11288506478,
+     "personenverkehr": true
+    },
+    {
+     "name": "Neuchâtel-Vauseyon",
+     "abk": "NEVS",
+     "typ": null,
+     "bahnhof": "Neuchatel-Vauseyon",
+     "quellen": [
+      "SBB-Betriebspunkt"
+     ],
+     "osm_node": null,
+     "synthetisch_node": 11288506527,
+     "personenverkehr": false
+    }
+   ],
    "Onnens-Bonvillars": [
     {
      "name": "Onnens-Bonvillars",
      "abk": "ONB",
      "typ": null,
+     "bahnhof": "Onnens-Bonvillars",
      "quellen": [
       "SBB-Betriebspunkt"
      ],
@@ -252,6 +404,7 @@
      "name": "Ligerz",
      "abk": "LIG",
      "typ": null,
+     "bahnhof": "Ligerz",
      "quellen": [
       "SBB-Betriebspunkt"
      ],
@@ -265,6 +418,7 @@
      "name": "Gümmenen",
      "abk": null,
      "typ": "station",
+     "bahnhof": null,
      "quellen": [
       "OSM"
      ],
@@ -278,6 +432,7 @@
      "name": "Les Deurres",
      "abk": "DEU",
      "typ": null,
+     "bahnhof": "Les Deurres",
      "quellen": [
       "SBB-Betriebspunkt",
       "OSM"
@@ -292,6 +447,7 @@
      "name": "Riedbach",
      "abk": null,
      "typ": "station",
+     "bahnhof": null,
      "quellen": [
       "OSM"
      ],
@@ -316,7 +472,9 @@
     "2",
     "SBB"
    ],
-   "Gleisnummern Neuchâtel": "nicht gefunden"
+   "Gleisnummern Neuchâtel": [
+    "SBB"
+   ]
   },
   "muster": {
    "perronoberflache": [
@@ -375,42 +533,188 @@
      "lod": "http://lod.opentransportdata.swiss/didok/didok85"
     }
    ],
+   "perronkante": [
+    {
+     "sloid": "ch:1:sloid:84647",
+     "height": 608.8,
+     "numbershort": 84647,
+     "uiccountrycode": 85,
+     "number": 8584647,
+     "checkdigit": 7,
+     "validfrom": "2019-04-23",
+     "validto": "9999-12-31",
+     "designationofficial": "12 Garage GS Le Mont sur Laus",
+     "abbreviation": null,
+     "operatingpoint": "true",
+     "isocountrycode": "CH",
+     "cantonname": "Vaud",
+     "cantonfsonumber": "22",
+     "cantonabbreviation": "VD",
+     "districtname": "Lausanne",
+     "districtfsonumber": "2225",
+     "municipalityname": "Romanel-sur-Lausanne",
+     "fsonumber": "5592",
+     "localityname": "Romanel-sur-Lausanne",
+     "meansoftransport": null,
+     "categories": null,
+     "businessorganisation": "ch:1:sboid:100602",
+     "businessorganisationnumber": 801,
+     "businessorganisationabbreviationde": "PAG",
+     "businessorganisationdescriptionde": "PostAuto AG",
+     "parentsloidservicepoint": null,
+     "designation": null,
+     "designationoperational": null,
+     "length": null,
+     "boardingareaheight": null,
+     "compassdirection": null,
+     "parentsloid": null,
+     "trafficpointelementtype": null,
+     "servicepointbusinessorganisation": null,
+     "servicepointbusinessorganisationnumber": null,
+     "servicepointbusinessorganisationabbreviationde": null,
+     "servicepointbusinessorganisationabbreviationfr": null,
+     "servicepointbusinessorganisationabbreviationit": null,
+     "servicepointbusinessorganisationabbreviationen": null,
+     "servicepointbusinessorganisationdescriptionde": null,
+     "servicepointbusinessorganisationdescriptionfr": null,
+     "servicepointbusinessorganisationdescriptionit": null,
+     "servicepointbusinessorganisationdescriptionen": null,
+     "haltekante": "ok",
+     "didok_url": "https://atlas.app.sbb.ch/service-point-directory/service-points/8584647/service-point"
+    },
+    {
+     "sloid": "ch:1:sloid:5359",
+     "height": 443.1,
+     "numbershort": 5359,
+     "uiccountrycode": 85,
+     "number": 8505359,
+     "checkdigit": 5,
+     "validfrom": "2019-04-23",
+     "validto": "9999-12-31",
+     "designationofficial": "12 Parcage Concise",
+     "abbreviation": null,
+     "operatingpoint": "true",
+     "isocountrycode": "CH",
+     "cantonname": "Vaud",
+     "cantonfsonumber": "22",
+     "cantonabbreviation": "VD",
+     "districtname": "Jura-Nord vaudois",
+     "districtfsonumber": "2224",
+     "municipalityname": "Concise",
+     "fsonumber": "5554",
+     "localityname": "Concise",
+     "meansoftransport": null,
+     "categories": null,
+     "businessorganisation": "ch:1:sboid:100602",
+     "businessorganisationnumber": 801,
+     "businessorganisationabbreviationde": "PAG",
+     "businessorganisationdescriptionde": "PostAuto AG",
+     "parentsloidservicepoint": null,
+     "designation": null,
+     "designationoperational": null,
+     "length": null,
+     "boardingareaheight": null,
+     "compassdirection": null,
+     "parentsloid": null,
+     "trafficpointelementtype": null,
+     "servicepointbusinessorganisation": null,
+     "servicepointbusinessorganisationnumber": null,
+     "servicepointbusinessorganisationabbreviationde": null,
+     "servicepointbusinessorganisationabbreviationfr": null,
+     "servicepointbusinessorganisationabbreviationit": null,
+     "servicepointbusinessorganisationabbreviationen": null,
+     "servicepointbusinessorganisationdescriptionde": null,
+     "servicepointbusinessorganisationdescriptionfr": null,
+     "servicepointbusinessorganisationdescriptionit": null,
+     "servicepointbusinessorganisationdescriptionen": null,
+     "haltekante": "ok",
+     "didok_url": "https://atlas.app.sbb.ch/service-point-directory/service-points/8505359/service-point"
+    },
+    {
+     "sloid": "ch:1:sloid:5360",
+     "height": 433.5,
+     "numbershort": 5360,
+     "uiccountrycode": 85,
+     "number": 8505360,
+     "checkdigit": 3,
+     "validfrom": "2019-04-23",
+     "validto": "9999-12-31",
+     "designationofficial": "12 Parcage Yverdon gare",
+     "abbreviation": null,
+     "operatingpoint": "true",
+     "isocountrycode": "CH",
+     "cantonname": "Vaud",
+     "cantonfsonumber": "22",
+     "cantonabbreviation": "VD",
+     "districtname": "Jura-Nord vaudois",
+     "districtfsonumber": "2224",
+     "municipalityname": "Yverdon-les-Bains",
+     "fsonumber": "5938",
+     "localityname": "Yverdon-les-Bains",
+     "meansoftransport": null,
+     "categories": null,
+     "businessorganisation": "ch:1:sboid:100602",
+     "businessorganisationnumber": 801,
+     "businessorganisationabbreviationde": "PAG",
+     "businessorganisationdescriptionde": "PostAuto AG",
+     "parentsloidservicepoint": null,
+     "designation": null,
+     "designationoperational": null,
+     "length": null,
+     "boardingareaheight": null,
+     "compassdirection": null,
+     "parentsloid": null,
+     "trafficpointelementtype": null,
+     "servicepointbusinessorganisation": null,
+     "servicepointbusinessorganisationnumber": null,
+     "servicepointbusinessorganisationabbreviationde": null,
+     "servicepointbusinessorganisationabbreviationfr": null,
+     "servicepointbusinessorganisationabbreviationit": null,
+     "servicepointbusinessorganisationabbreviationen": null,
+     "servicepointbusinessorganisationdescriptionde": null,
+     "servicepointbusinessorganisationdescriptionfr": null,
+     "servicepointbusinessorganisationdescriptionit": null,
+     "servicepointbusinessorganisationdescriptionen": null,
+     "haltekante": "ok",
+     "didok_url": "https://atlas.app.sbb.ch/service-point-directory/service-points/8505360/service-point"
+    }
+   ],
    "betriebspunkte": [
     {
-     "abkurzung_bpk": "BY",
-     "bezeichnung_bps": "Bussigny",
-     "linie": 169,
-     "km": 14.92027,
-     "linienname": "Lausanne-Triage sect. - Bussigny",
-     "didok": 1117,
-     "bpuic": 8501117,
-     "bezeichnung_offiziell": "Bussigny",
+     "abkurzung_bpk": "ECL",
+     "bezeichnung_bps": "Eclepens",
+     "linie": 210,
+     "km": 21.379,
+     "linienname": "Daillens - Biel/Bienne",
+     "didok": 1114,
+     "bpuic": 8501114,
+     "bezeichnung_offiziell": "Eclépens",
      "lod": "http://lod.opentransportdata.swiss/didok/didok85",
-     "sloid": "ch:1:sloid:1117"
+     "sloid": "ch:1:sloid:1114"
     },
     {
-     "abkurzung_bpk": "BY",
-     "bezeichnung_bps": "Bussigny",
-     "linie": 200,
-     "km": 6.9281,
-     "linienname": "Renens VD Ouest - Vallorbe",
-     "didok": 1117,
-     "bpuic": 8501117,
-     "bezeichnung_offiziell": "Bussigny",
+     "abkurzung_bpk": "ECLN",
+     "bezeichnung_bps": "Eclepens",
+     "linie": 210,
+     "km": 21.56,
+     "linienname": "Daillens - Biel/Bienne",
+     "didok": 15327,
+     "bpuic": 8515327,
+     "bezeichnung_offiziell": "Eclépens Nord (bif)",
      "lod": "http://lod.opentransportdata.swiss/didok/didok85",
-     "sloid": "ch:1:sloid:1117"
+     "sloid": "ch:1:sloid:15327"
     },
     {
-     "abkurzung_bpk": "BYE",
-     "bezeichnung_bps": "Bussigny",
-     "linie": 206,
-     "km": 6.33829,
-     "linienname": "Renens VD Ouest - Bussigny Est",
-     "didok": 15312,
-     "bpuic": 8515312,
-     "bezeichnung_offiziell": "Bussigny Est (bif)",
+     "abkurzung_bpk": "EF",
+     "bezeichnung_bps": "Effretikon",
+     "linie": 753,
+     "km": -0.01948,
+     "linienname": "Effretikon - Wetzikon - Hinwil",
+     "didok": 3305,
+     "bpuic": 8503305,
+     "bezeichnung_offiziell": "Effretikon",
      "lod": "http://lod.opentransportdata.swiss/didok/didok85",
-     "sloid": "ch:1:sloid:15312"
+     "sloid": "ch:1:sloid:3305"
     }
    ]
   }
