@@ -43,9 +43,18 @@ def versuche(ds, ziel_pfad):
     return dict(anzahl=len(fs), felder=felder[:60], geometrie=dict(geo))
 
 
-def PRUEF_KANTE(pfad):
+KANTE_FELDER = ("designation", "gleis", "kante", "track", "length", "lange", "laenge", "nummer")
+
+
+def PRUEF_KANTE(pfad, info=None):
+    """Brauchbar als Perronkanten, wenn >= 10 % der Objekte ein Kanten-/Gleis-/Längenfeld mit Wert haben."""
     fs = json.load(open(pfad)).get("features", [])
-    mit = sum(1 for f in fs if (f.get("properties") or {}).get("designation") or (f.get("properties") or {}).get("length"))
+    ok = lambda pr: any(v not in (None, "", 0) and any(w in k.lower() for w in KANTE_FELDER) and "sloid" not in k.lower()
+                        for k, v in (pr or {}).items())
+    mit = sum(1 for f in fs if ok(f.get("properties")))
+    if info is not None:
+        info["felder"] = sorted({k for f in fs[:200] for k in (f.get("properties") or {})})[:60]
+        info["muster"] = [f.get("properties") for f in fs[:2]]; info["mit_kantenfeld"] = mit; info["anzahl"] = len(fs)
     return mit >= 0.1 * max(len(fs), 1)
 
 
@@ -58,9 +67,10 @@ for ziel, cfg in ZIELE.items():
     for ds in list(dict.fromkeys(cfg["ids"] + gefunden)):
         try:
             r_ = versuche(ds, f"{ein}/{ziel}.geojson")
-            if ziel == "perronkante" and not PRUEF_KANTE(f"{ein}/{ziel}.geojson"):
+            _inf = {}
+            if ziel == "perronkante" and not PRUEF_KANTE(f"{ein}/{ziel}.geojson", _inf):
                 # haltestelle-haltekante liefert nur Haltestellen ohne Kantennummer/Länge (Lauf 20.10.) -> nicht brauchbar
-                e["versucht"].append(f"{ds}: geladen, aber ohne Kantennummer/Länge (nur Haltestellen)"); continue
+                e["versucht"].append(f"{ds}: geladen, aber ohne Kantennummer/Länge"); e.setdefault("abgelehnt", {})[ds] = _inf; continue
             e.update(r_); e.update(status="OK", id=ds); e["versucht"].append(f"{ds}: OK"); break
         except Exception as x:
             e["versucht"].append(f"{ds}: {type(x).__name__} {str(x)[:80]}")
