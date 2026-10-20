@@ -62,12 +62,14 @@ else:
 gn = lade(f"{aus}/gleisnummern.json")
 if isinstance(gn, dict):
     v["ergebnisse"]["gleisnummern"] = dict(status="OK", betriebspunkte=len(gn),
+                                           quelle_sbb_kante=sum(1 for x in gn.values() if x.get("quelle") == "SBB-Kante"),
                                            quelle_sbb=sum(1 for x in gn.values() if x.get("quelle") == "SBB"),
                                            quelle_osm=sum(1 for x in gn.values() if x.get("quelle") == "OSM"),
                                            mit_fragezeichen=sum(1 for x in gn.values() if any(q.get("nr") == "?" for q in x.get("querschnitt", []))),
                                            gross_von_hand=sum(1 for x in gn.values() if x.get("gross")))
-    for nm in ("Grandson", "Les Hauts-Geneveys", "Concise", "Neuchâtel"):
-        x = gn.get(nm)
+    for nm in ("Grandson", "Les Hauts-Geneveys", "Concise", "Neuchâtel", "Couvet", "Môtiers", "Riedbach", "Gorgier-St-Aubin", "Bevaix", "Olten", "Onnens-Bonvillars"):
+        _nn = lambda z: unicodedata.normalize("NFKD", z or "").encode("ascii", "ignore").decode().lower().replace("saint", "st")
+        x = gn.get(nm) or next((w for k, w in gn.items() if _nn(k).startswith(_nn(nm))), None)
         v["stichprobe"]["Gleisnummern " + nm] = ([q.get("nr") for q in x.get("querschnitt", [])] + ([x.get("quelle")] if x.get("quelle") else [])) if x else "nicht gefunden"
 else:
     v["ergebnisse"]["gleisnummern"] = dict(status="fehlt")

@@ -1,5 +1,6 @@
 """Gleisnummern je Betriebspunkt (Regeln D. Eckenstein 20.10.2026):
-- Quelle SBB vor OSM (SBB perronoberflache p_nr, sonst OSM-Perron ref)
+- Quelle SBB vor OSM: zuerst SBB-Perronkanten (aus/perronkanten.json, kundengleisnr je Kante, genaueste Quelle,
+  D. Eckenstein 20.10. abends), dann SBB perronoberflache p_nr, sonst OSM-Perron ref
 - nur Gleise mit Perron bekommen eine Nummer; Halt mit einem Gleis: keine Nummer
 - stillgelegte Perrons (OSM disused) zählen nicht
 - Perron ohne Nummer in allen Quellen -> "?" (im Plan Fragezeichen-Symbol, von Hand eintragen)
@@ -38,6 +39,12 @@ def zuweisen(nr, ds, pl):
 
 if __name__ == "__main__":
     ein, bpf, aus = sys.argv[1:4]
+    import os
+    PK = collections.defaultdict(list)          # Perronkanten je Betriebspunkt-Name
+    _pkf = os.path.join(os.path.dirname(aus) or ".", "perronkanten.json")
+    if os.path.exists(_pkf):
+        for k in json.load(open(_pkf)):
+            if k.get("gleis") and k.get("mitte"): PK[k.get("bps") or ""].append(k)
     E = lade_osm(f"{ein}/schweiz_bahn.json.gz")
     BP = json.load(open(bpf))
     GL = [e for e in E if normalspur(e) and e["tags"].get("service") not in ("yard", "spur", "industrial")]
@@ -80,6 +87,52 @@ if __name__ == "__main__":
             sb = [x for x in sb if not (any(m(x[0], w) < 40 for w in weg) and not any(m(x[0], a) < 40 for a in akt))]
         if sb and len({z for _, n_, _ in sb for z in str(n_).split("/")}) > 5:                                         # grosser Knoten: von Hand (sbb_perrons.py)
             R[b["name"]] = dict(querschnitt=[], quelle="SBB", gross=True, perrons=[dict(nr=n_) for _, n_, _ in sb]); continue
+        # 1) SBB-Perronkanten: jede Kante gehört zum nächsten Gleis (Kante liegt ~1,7 m neben der Gleisachse)
+        kanten = next((v for k_, v in PK.items() if name_gleich(k_, b["name"]) and m(tuple(v[0]["mitte"]), (la0, lo0)) < 1500), None)
+        if kanten:      # stillgelegt (alle OSM-Perrons disused): keine Nummern (Onnens-Bonvillars)
+            _w = [w for w in nahe(PL_WEG, la0, lo0) if m(w, (la0, lo0)) < 700]; _a = [q for q, _ in nahe(PL_OSM, la0, lo0) if m(q, (la0, lo0)) < 700]
+            if _w and not _a: kanten = None
+        if kanten and len({k_["gleis"] for k_ in kanten}) > 5:
+            R[b["name"]] = dict(querschnitt=[], quelle="SBB-Kante", gross=True, perrons=[dict(nr=k_["gleis"]) for k_ in kanten]); continue
+        if kanten:
+            from shapely.geometry import LineString as _LS, Point as _Pt
+            WL = {wid: _LS([xy(g["lat"], g["lon"]) for g in e["geometry"]]) for wid, e in ways.items() if len(e["geometry"]) > 1}
+            way_nr = {}
+            for k_ in kanten:
+                pts_ = [xy(*k_[t_]) for t_ in ("anfang", "mitte", "ende")]
+                best = None
+                for wid, L_ in WL.items():
+                    dd = float(np.mean([L_.distance(_Pt(p_)) for p_ in pts_]))
+                    if dd < 6 and (best is None or dd < best[0]): best = (dd, wid)
+                if best: way_nr.setdefault(best[1], set()).add(str(k_["gleis"]))
+            sm = [xy(*k_["mitte"]) @ u for k_ in kanten]; S0 = float(np.median(sm))
+            prof = []
+            for e in ways.values():
+                pts = [xy(g["lat"], g["lon"]) for g in e["geometry"]]
+                for a, c in zip(pts, pts[1:]):
+                    sa, sc = a @ u, c @ u
+                    if (sa - S0) * (sc - S0) <= 0 and sa != sc:
+                        t_ = (S0 - sa) / (sc - sa); d = float((a + (c - a) * t_) @ nrm)
+                        if abs(d) < 80: prof.append((d, e["id"]))
+            prof.sort(key=lambda t: -t[0]); Q = []
+            for d, w in prof:
+                if Q and abs(Q[-1]["d"] - d) < 2.5: continue
+                Q.append(dict(d=round(d, 1), way=w, nr=None))
+            # Kante, deren Gleis nicht im Querschnitt liegt (anderer Way): nächstes Gleis quer zur Kante
+            for k_ in kanten:
+                if any(str(k_["gleis"]) in way_nr.get(q["way"], ()) for q in Q): continue
+                dk = float(xy(*k_["mitte"]) @ nrm)
+                c = [q for q in Q if abs(q["d"] - dk) < 4.5 and q["way"] not in way_nr]
+                if c: way_nr.setdefault(min(c, key=lambda q: abs(q["d"] - dk))["way"], set()).add(str(k_["gleis"]))
+            for q in Q:
+                n_ = sorted(way_nr.get(q["way"], ()), key=lambda x: (len(x), x))
+                q["nr"] = n_[0] if n_ else None
+            if Q and any(q["nr"] for q in Q):       # sonst: weiter mit Perronflächen/OSM
+                if len(Q) == 1:
+                    for q in Q: q["nr"] = None
+                R[b["name"]] = dict(querschnitt=Q, quelle="SBB-Kante", einzelgleis=len(Q) == 1,
+                                    perrons=[dict(nr=k_["gleis"], laenge=k_.get("laenge")) for k_ in kanten])
+                continue
         quelle = "SBB" if sb else None
         pl = [(q, nr_) for q, nr_, _ in sb] if sb else [(q, r) for q, r in nahe(PL_OSM, la0, lo0) if m(q, (la0, lo0)) < 700]
         if not sb and pl: quelle = "OSM"
@@ -114,4 +167,4 @@ if __name__ == "__main__":
         R[b["name"]] = dict(querschnitt=Q, quelle=quelle, einzelgleis=len(Q) == 1,
                             perrons=[dict(nr=n_, d=round(d, 1), s=round(s_ - S0)) for s_, d, n_ in P])
     json.dump(R, open(aus, "w"), ensure_ascii=False, indent=0)
-    print(len(R), "Betriebspunkte;", sum(1 for r in R.values() if any(q["nr"] == "?" for q in r["querschnitt"])), "mit offenen Nummern (?)")
+    print(len(R), "Betriebspunkte;", sum(1 for r in R.values() if r.get("quelle") == "SBB-Kante"), "aus Perronkanten;", sum(1 for r in R.values() if any(q["nr"] == "?" for q in r["querschnitt"])), "mit offenen Nummern (?)")
