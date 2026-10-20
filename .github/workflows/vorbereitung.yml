@@ -35,6 +35,11 @@ jobs:
         continue-on-error: true
         run: python3 skripte/vorbereitung/sbb_laden.py eingang eingang/sbb_laden.json
 
+      - name: Perronkanten verdichten (eine Zeile je Kante mit Gleisnummer)
+        id: perronkanten
+        continue-on-error: true
+        run: python3 skripte/vorbereitung/perronkanten.py eingang/perronkante.geojson aus/perronkanten.json
+
       - name: Betriebspunkte (SBB) mit OSM-Stationen abgleichen
         id: betriebspunkte
         continue-on-error: true
@@ -64,7 +69,7 @@ jobs:
         env: { GH_TOKEN: "${{ github.token }}" }
         run: |
           cp eingang/schweiz_bahn.json.gz aus/schweiz_bahn_vorher.json.gz
-          for f in perronoberflache perronkante betriebspunkte; do
+          for f in perronoberflache betriebspunkte; do          # Perronkanten-Rohdaten (~500 000 Punkte) nicht, verdichtet in perronkanten.json
             [ -f eingang/$f.geojson ] && gzip -c eingang/$f.geojson > aus/sbb_$f.geojson.gz || true
           done
           gh release view vorbereitung >/dev/null 2>&1 || gh release create vorbereitung -t "Vorbereitung Spurpläne" -n "automatisch"
@@ -74,7 +79,7 @@ jobs:
         if: always()
         env:
           LAUF: "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
-          SCHRITTE: "osm=${{ steps.osm.outcome }};sbb=${{ steps.sbb.outcome }};betriebspunkte=${{ steps.betriebspunkte.outcome }};gleisnummern=${{ steps.gleisnummern.outcome }};ausschnitte=${{ steps.ausschnitte.outcome }};aenderungen=${{ steps.aenderungen.outcome }};release=${{ steps.release.outcome }}"
+          SCHRITTE: "osm=${{ steps.osm.outcome }};sbb=${{ steps.sbb.outcome }};perronkanten=${{ steps.perronkanten.outcome }};betriebspunkte=${{ steps.betriebspunkte.outcome }};gleisnummern=${{ steps.gleisnummern.outcome }};ausschnitte=${{ steps.ausschnitte.outcome }};aenderungen=${{ steps.aenderungen.outcome }};release=${{ steps.release.outcome }}"
         run: |
           git pull --rebase origin main || true
           python3 skripte/vorbereitung/stand_schreiben.py eingang aus stand.json
