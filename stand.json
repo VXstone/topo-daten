@@ -8,8 +8,8 @@
   "bahn_schweiz.osm.pbf": 7.8
  },
  "vorbereitung": {
-  "erzeugt": "2026-10-20 12:10 UTC",
-  "lauf": "https://github.com/VXstone/topo-daten/actions/runs/39420108122",
+  "erzeugt": "2026-10-20 20:51 UTC",
+  "lauf": "https://github.com/VXstone/topo-daten/actions/runs/39495108807",
   "schritte": {
    "osm": "OK",
    "sbb": "OK",
@@ -69,8 +69,8 @@
     "katalog": {
      "perronkante": [],
      "haltekante": [
-      "haltestelle-haltekante",
       "21196_behig-haltekantepunkt",
+      "haltestelle-haltekante",
       "21197_behig-haltekantesegment"
      ]
     },
@@ -315,11 +315,12 @@
    },
    "gleisnummern": {
     "status": "OK",
-    "betriebspunkte": 1333,
-    "quelle_sbb": 924,
-    "quelle_osm": 409,
-    "mit_fragezeichen": 134,
-    "gross_von_hand": 100
+    "betriebspunkte": 1360,
+    "quelle_sbb_kante": 915,
+    "quelle_sbb": 171,
+    "quelle_osm": 274,
+    "mit_fragezeichen": 107,
+    "gross_von_hand": 113
    },
    "ausschnitte": {
     "bahnhoefe_neuchatel.zip": {
@@ -588,21 +589,50 @@
     "1",
     "2",
     "3",
-    "SBB"
+    "SBB-Kante"
    ],
    "Gleisnummern Les Hauts-Geneveys": [
-    null,
+    "2",
     "1",
-    "SBB"
+    "SBB-Kante"
    ],
    "Gleisnummern Concise": [
     "1",
     "2",
-    "SBB"
+    "SBB-Kante"
    ],
    "Gleisnummern Neuchâtel": [
     "SBB"
-   ]
+   ],
+   "Gleisnummern Couvet": [
+    null,
+    "SBB"
+   ],
+   "Gleisnummern Môtiers": [
+    null,
+    "?",
+    "OSM"
+   ],
+   "Gleisnummern Riedbach": [
+    "2",
+    "1",
+    "OSM"
+   ],
+   "Gleisnummern Gorgier-St-Aubin": [
+    "3",
+    "2",
+    "1",
+    "SBB-Kante"
+   ],
+   "Gleisnummern Bevaix": [
+    "2",
+    "1",
+    "SBB-Kante"
+   ],
+   "Gleisnummern Olten": [
+    "SBB"
+   ],
+   "Gleisnummern Onnens-Bonvillars": "nicht gefunden"
   },
   "muster": {
    "perronoberflache": [
@@ -731,40 +761,40 @@
    ],
    "betriebspunkte": [
     {
-     "abkurzung_bpk": "BY",
-     "bezeichnung_bps": "Bussigny",
-     "linie": 169,
-     "km": 14.92027,
-     "linienname": "Lausanne-Triage sect. - Bussigny",
-     "didok": 1117,
-     "bpuic": 8501117,
-     "bezeichnung_offiziell": "Bussigny",
+     "abkurzung_bpk": "ECL",
+     "bezeichnung_bps": "Eclepens",
+     "linie": 210,
+     "km": 21.379,
+     "linienname": "Daillens - Biel/Bienne",
+     "didok": 1114,
+     "bpuic": 8501114,
+     "bezeichnung_offiziell": "Eclépens",
      "lod": "http://lod.opentransportdata.swiss/didok/didok85",
-     "sloid": "ch:1:sloid:1117"
+     "sloid": "ch:1:sloid:1114"
     },
     {
-     "abkurzung_bpk": "BY",
-     "bezeichnung_bps": "Bussigny",
-     "linie": 200,
-     "km": 6.9281,
-     "linienname": "Renens VD Ouest - Vallorbe",
-     "didok": 1117,
-     "bpuic": 8501117,
-     "bezeichnung_offiziell": "Bussigny",
+     "abkurzung_bpk": "ECLN",
+     "bezeichnung_bps": "Eclepens",
+     "linie": 210,
+     "km": 21.56,
+     "linienname": "Daillens - Biel/Bienne",
+     "didok": 15327,
+     "bpuic": 8515327,
+     "bezeichnung_offiziell": "Eclépens Nord (bif)",
      "lod": "http://lod.opentransportdata.swiss/didok/didok85",
-     "sloid": "ch:1:sloid:1117"
+     "sloid": "ch:1:sloid:15327"
     },
     {
-     "abkurzung_bpk": "BYE",
-     "bezeichnung_bps": "Bussigny",
-     "linie": 206,
-     "km": 6.33829,
-     "linienname": "Renens VD Ouest - Bussigny Est",
-     "didok": 15312,
-     "bpuic": 8515312,
-     "bezeichnung_offiziell": "Bussigny Est (bif)",
+     "abkurzung_bpk": "EF",
+     "bezeichnung_bps": "Effretikon",
+     "linie": 753,
+     "km": -0.01948,
+     "linienname": "Effretikon - Wetzikon - Hinwil",
+     "didok": 3305,
+     "bpuic": 8503305,
+     "bezeichnung_offiziell": "Effretikon",
      "lod": "http://lod.opentransportdata.swiss/didok/didok85",
-     "sloid": "ch:1:sloid:15312"
+     "sloid": "ch:1:sloid:3305"
     }
    ]
   },
