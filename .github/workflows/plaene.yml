@@ -1,0 +1,43 @@
+# Spurpläne bauen und prüfen (D. Eckenstein 21.10.2026: «Skripte laufen im Repo, Claude prüft nur noch»)
+# Läuft bei jedem Commit unter spurplan/ und von Hand (Eingabe: Bahnhöfe, leer = alle aus spurplan/bahnhoefe.json).
+# Ergebnis: Branch «ergebnisse» mit ergebnisse/<bahnhof>/ (SVG, PNG, Differenzbild, bericht.json) und ergebnisse/bericht.json.
+name: plaene
+on:
+  workflow_dispatch:
+    inputs:
+      bahnhoefe: { description: "Bahnhöfe (Leerzeichen getrennt), leer = alle", required: false, default: "" }
+  push:
+    branches: [main]
+    paths: ["spurplan/**"]
+permissions:
+  contents: write
+concurrency: { group: plaene, cancel-in-progress: false }
+jobs:
+  bauen:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with: { python-version: "3.12" }
+      - run: |
+          sudo apt-get install -y -q libcairo2 >/dev/null
+          pip install -q numpy scipy shapely svgpathtools cairosvg pillow
+      - name: Pläne bauen und prüfen
+        env:
+          LAUF: "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          VBJS: "/nicht-vorhanden"
+        run: python3 spurplan/code/lauf.py ${{ github.event.inputs.bahnhoefe }}
+      - name: Ergebnisse auf Branch «ergebnisse»
+        if: always()
+        run: |
+          mkdir -p /tmp/erg && cp -r ergebnisse /tmp/erg/ 2>/dev/null || true
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin ergebnisse || true
+          if git rev-parse --verify origin/ergebnisse >/dev/null 2>&1; then git checkout -q -B ergebnisse origin/ergebnisse; else git checkout -q --orphan ergebnisse; git rm -rq --cached . || true; fi
+          find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+          cp -r /tmp/erg/ergebnisse . 2>/dev/null || mkdir ergebnisse
+          git add -A ergebnisse
+          git commit -qm "Pläne $(date -u +%Y-%m-%dT%H:%MZ) (${{ github.sha }})" || echo "keine Änderung"
+          git push -q origin ergebnisse

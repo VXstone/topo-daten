@@ -1,0 +1,434 @@
+{
+ "_quelle": "Entwurf 14.10.2026 (Claude), Neuchâtel, OSM-Stand 12.10.",
+ "cfg": {
+  "towns": {
+   "Biel": [
+    47.1325,
+    7.2426
+   ],
+   "Ins": [
+    46.9999,
+    7.0996
+   ],
+   "Kerzers": [
+    46.9751,
+    7.1929
+   ],
+   "Bern": [
+    46.949,
+    7.4391
+   ],
+   "Neuchâtel": [
+    46.9966,
+    6.9358
+   ],
+   "Twann": [
+    47.0938,
+    7.1566
+   ],
+   "Ligerz": [
+    47.084,
+    7.1348
+   ],
+   "La Neuveville": [
+    47.0628,
+    7.0954
+   ],
+   "Le Landeron": [
+    47.0566,
+    7.0663
+   ],
+   "Cressier": [
+    47.0519,
+    7.0395
+   ],
+   "Cornaux": [
+    47.0387,
+    7.0234
+   ],
+   "Saint-Blaise": [
+    47.0145,
+    6.9821
+   ],
+   "Marin-Epagnier": [
+    47.009,
+    7.0107
+   ],
+   "Gampelen": [
+    47.0091,
+    7.0582
+   ],
+   "Zihlbrücke": [
+    47.0093,
+    7.0306
+   ],
+   "Serrières": [
+    46.984,
+    6.9033
+   ],
+   "Auvernier": [
+    46.9796,
+    6.8777
+   ],
+   "Colombier": [
+    46.9677,
+    6.849
+   ],
+   "Boudry": [
+    46.9595,
+    6.8352
+   ],
+   "Bevaix": [
+    46.9297,
+    6.8117
+   ],
+   "Yverdon": [
+    46.7814,
+    6.6408
+   ],
+   "Corcelles-Peseux": [
+    46.9834,
+    6.8838
+   ],
+   "Chambrelien": [
+    46.9673,
+    6.8125
+   ],
+   "La Chaux-de-Fonds": [
+    47.0986,
+    6.8251
+   ],
+   "Les Geneveys-sur-Coffrane": [
+    47.0151,
+    6.8532
+   ],
+   "Bôle": [
+    46.9691,
+    6.838
+   ],
+   "Champ-du-Moulin": [
+    46.9599,
+    6.775
+   ],
+   "Noiraigue": [
+    46.9549,
+    6.7218
+   ],
+   "Travers": [
+    46.9424,
+    6.6762
+   ],
+   "Pontarlier": [
+    46.9035,
+    6.3546
+   ],
+   "Fleurier": [
+    46.9025,
+    6.5822
+   ],
+   "Buttes": [
+    46.8889,
+    6.5512
+   ],
+   "Murten": [
+    46.9254,
+    7.1153
+   ],
+   "Gals": [
+    47.027,
+    7.048
+   ]
+  },
+  "margin_x": 330,
+  "lt_dist_w": 2.0,
+  "rules": {
+   "r40": true,
+   "r43": true,
+   "r48": true,
+   "r49": true,
+   "r38m": true
+  },
+  "r14a_m": 200,
+  "drop_service": [
+   "siding",
+   "yard",
+   "spur"
+  ],
+  "perron_nur_gerade": true
+ },
+ "platforms": [
+  {
+   "outer": "1",
+   "s": [
+    2999,
+    3418
+   ],
+   "_sbb": "1 Hausperron 218 m"
+  },
+  {
+   "between": [
+    "2",
+    "3"
+   ],
+   "s": [
+    2999,
+    3418
+   ],
+   "_sbb": "2/3 Mittelperron 419 m"
+  },
+  {
+   "between": [
+    "4",
+    "5"
+   ],
+   "s": [
+    2999,
+    3418
+   ],
+   "_sbb": "4/5 Mittelperron 402 m"
+  },
+  {
+   "between": [
+    "6",
+    "7"
+   ],
+   "s": [
+    2999,
+    3418
+   ],
+   "_sbb": "6/7 Mittelperron 187 m"
+  }
+ ],
+ "pax": [
+  "1",
+  "2",
+  "3",
+  "4",
+  "5",
+  "6",
+  "7"
+ ],
+ "_perrons": "SBB Open Data perronoberflache (sbb_perrons.py, 17.10.2026); 19.10. Standardlänge (Hinweis \"Perronlängen Standard\"): alle mit gleichem Bereich, 6/7 durch Gleis 7 begrenzt",
+ "abgang": {
+  "1222936424": {
+   "ref": "220",
+   "ort": "Ins"
+  }
+ },
+ "perron_einheitlich": {
+  "mitte_px": 680,
+  "laenge_px": 100,
+  "_hinweis": "Standardlänge für alle Perrons (D.E. 20.10.), innerhalb Gleis 7"
+ },
+ "behalten": [
+  32113632,
+  35545992,
+  35567576,
+  35567577,
+  184331533,
+  380141987,
+  579953623,
+  1219093729
+ ],
+ "_behalten": "19.10. (Hinweis Daniel: Gleise nicht mehr angebunden): siding-Verbindungen der Perrongleise 1–7 zu Hauptgleisen und untereinander (≤ 150 m) bleiben trotz drop_service",
+ "r47_pax": [
+  35567629,
+  184331530
+ ],
+ "pax_ways": [
+  32113632,
+  184331533,
+  380141987
+ ],
+ "weglassen": [],
+ "r38_seite": {
+  "32539144": "oben",
+  "507898317": "gerade",
+  "_zweck": "Topologie: B2 zweigt auf der oberen Seite ab, B1 ist der gerade Strang (Gleis 7 -> 6 ist die abzweigende Seite). Hinweis 20.10."
+ },
+ "zeichnen": {
+  "weg": [
+   35434218,
+   35434221,
+   35567923,
+   49689309,
+   49689312,
+   49689315,
+   507898420,
+   1218245280,
+   1219093724,
+   1219093737,
+   1219093738,
+   1222936432,
+   1271585756
+  ],
+  "linien": [
+   {
+    "pts": [
+     [
+      "x:327",
+      "y:182"
+     ],
+     [
+      "x:455",
+      "y:182"
+     ],
+     [
+      "d60",
+      "y:206"
+     ],
+     [
+      "x:490",
+      "y:206"
+     ]
+    ],
+    "pax": true,
+    "port_way": 35434221,
+    "port_am_anfang": true,
+    "_osm": "Streckengleis Yverdon unten: Doppelspur mit Standardabstand (Hinweis 20.10.), senkt sich vor der Weiche 416792794 auf seine Ebene"
+   },
+   {
+    "pts": [
+     [
+      "x:420",
+      "y:158"
+     ],
+     [
+      "x:428",
+      "y:158"
+     ],
+     [
+      "d60",
+      "y:182"
+     ],
+     [
+      "x:446",
+      "y:182"
+     ]
+    ],
+    "pax": true,
+    "_osm": "35567923 Spurwechsel zwischen den Streckengleisen (Regel 43: grün)"
+   },
+   {
+    "pts": [
+     [
+      "x:552",
+      "y:158"
+     ],
+     [
+      "x:539.7",
+      "y:158"
+     ],
+     [
+      "x:512",
+      "y:206"
+     ],
+     [
+      "x:505.1",
+      "y:218"
+     ]
+    ],
+    "pax": true,
+    "rund": 7,
+    "_osm": "507898420 + 1219093738: Verbindung Strecke Gleis 5 -> unteres Streckengleis über die DKW 11296350767 (Regel 43: grün)"
+   },
+   {
+    "pts": [
+     [
+      "x:505.1",
+      "y:218"
+     ],
+     [
+      "x:501.6",
+      "y:224"
+     ],
+     [
+      "x:498.1",
+      "y:230"
+     ]
+    ],
+    "pax": false,
+    "pfeil": true,
+    "_osm": "Abstellgruppe A (49689315) über die Kreuzung 631631020"
+   },
+   {
+    "pts": [
+     [
+      "x:757",
+      "y:230"
+     ],
+     [
+      "x:765",
+      "y:230"
+     ],
+     [
+      "d60",
+      "y:254"
+     ],
+     [
+      "+10",
+      "y:254"
+     ]
+    ],
+    "pax": true,
+    "rund": 7,
+    "_osm": "1222936432: Gleis 2 -> Gleis 1 (erste Achse)"
+   },
+   {
+    "pts": [
+     [
+      "x:765",
+      "y:230"
+     ],
+     [
+      "x:793",
+      "y:230"
+     ],
+     [
+      "d60",
+      "y:254"
+     ],
+     [
+      "+10",
+      "y:254"
+     ]
+    ],
+    "pax": true,
+    "rund": 7,
+    "_osm": "1219093724: Gleis 2 -> Gleis 1 (zweite Achse, Hinweis 20.10.: zwei Achsen weiter auseinander)"
+   }
+  ],
+  "_zweck": "Hinweise Neuchâtel 20.10.: Doppelspur Standardabstand, Pfeile in der Doppelspur = eine Verbindung, DKW"
+ },
+ "dkw_px": [
+  {
+   "x": 512.0,
+   "y": 206.0,
+   "pax": true,
+   "rund_pax": true,
+   "arme": [
+    [
+     [
+      -1,
+      0
+     ],
+     [
+      0.5,
+      -0.866
+     ]
+    ],
+    [
+     [
+      1,
+      0
+     ],
+     [
+      -0.5,
+      0.866
+     ]
+    ]
+   ],
+   "_osm": "DKW 11296350767/11296350764 + Kreuzung 631631020"
+  }
+ ]
+}
