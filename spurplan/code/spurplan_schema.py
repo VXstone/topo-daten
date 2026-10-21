@@ -1568,7 +1568,8 @@ if RU.get("r47", True):
         STUBS = [t_ for t_ in STUBS if t_ not in (sa_, sb_)]
         _d47 = _rund([(xa_, ya_), (xm_ - dx_ / 2, ya_), (xm_ + dx_ / 2, yb_), (xb_, yb_)])
         if _eid in OVR.get("r47_pax", []): svg_paths[True].append(_d47)      # Spurwechsel zwischen Hauptgleisen, in OSM siding (Neuchâtel 19.10.)
-        else: svg_paths[False].append(_d47); R47_P.append((_d47, na_, nb_))
+        else: svg_paths[False].append(_d47)
+        R47_P.append((_d47, na_, nb_, _eid))
 
 # Override "kreuzung" (Keilbahnhof mit Kreuzung, Kerzers): zwei Strecken kreuzen ausserhalb der Perrongruppen.
 # a: Way, der links an ein Gleis anschliesst und nach der Kreuzung unten rechts weiterläuft (z. B. 220 nach Bern)
@@ -2005,8 +2006,8 @@ if _zn:
     _wg = {int(w) for w in _zn.get("weg", [])}
     _ids = {sg["id"] for sg in segs if sg["way"] in _wg}
     _wn = {n_ for sg in segs if sg["way"] in _wg for n_ in sg["nodes"]}
-    for _d, _a, _b in R47_P:            # Regel-47-Spurwechsel an weggenommenen Gleisen ebenfalls weg
-        if _a in _wn or _b in _wn:
+    for _d, _a, _b, _e in R47_P:        # Regel-47-Spurwechsel an weggenommenen Gleisen ebenfalls weg (auch der weggelassene Way selbst, 21.10.)
+        if _a in _wn or _b in _wn or _e in _wg:
             for k_ in (True, False):
                 if _d in svg_paths[k_]: svg_paths[k_].remove(_d)
     _wpos = {(f"{xpos(n_, SD[n_][0]):.1f}", f"{ypos(n_):.1f}") for n_ in _wn if n_ in SD and n_ in home}

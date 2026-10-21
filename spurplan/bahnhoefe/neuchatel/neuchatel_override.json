@@ -250,15 +250,25 @@
   "weg": [
    35434218,
    35434221,
+   35567629,
    35567923,
    49689309,
    49689312,
    49689315,
+   184331530,
+   507898311,
    507898420,
+   579953623,
    1218245280,
+   1219093722,
+   1219093723,
    1219093724,
    1219093737,
    1219093738,
+   1222936427,
+   1222936428,
+   1222936429,
+   1222936430,
    1222936432,
    1271585756
   ],
@@ -364,38 +374,106 @@
      [
       "d60",
       "y:254"
-     ],
-     [
-      "+10",
-      "y:254"
      ]
     ],
     "pax": true,
     "rund": 7,
-    "_osm": "1222936432: Gleis 2 -> Gleis 1 (erste Achse)"
+    "_osm": "DKW Gleis 2/Gleis 1 (11296350712/14/15/17 + Kreuzung 360421652): Gleis 2 läuft als Schräge durch Gleis 1 (Hinweis 20.10.)"
    },
    {
     "pts": [
      [
-      "x:765",
-      "y:230"
+      "x:778.9",
+      "y:254"
      ],
      [
-      "x:793",
-      "y:230"
+      "x:785.8",
+      "y:266"
+     ],
+     [
+      "x:792.7",
+      "y:278"
+     ]
+    ],
+    "pax": false,
+    "pfeil": true,
+    "_osm": "1219093722: weiter in die Abstellgruppe D"
+   },
+   {
+    "pts": [
+     [
+      "x:801",
+      "y:134"
+     ],
+     [
+      "x:879.3",
+      "y:134"
      ],
      [
       "d60",
-      "y:254"
+      "y:182"
+     ]
+    ],
+    "pax": false,
+    "rund": 7,
+    "_osm": "DKW 11343328180/81/82/86 + Kreuzung 416783504: A36 (579953623) hinunter durch Gleis A44"
+   },
+   {
+    "pts": [
+     [
+      "x:907",
+      "y:182"
      ],
      [
-      "+10",
-      "y:254"
+      "d60",
+      "y:206"
+     ],
+     [
+      "+8",
+      "y:206"
      ]
     ],
     "pax": true,
     "rund": 7,
-    "_osm": "1219093724: Gleis 2 -> Gleis 1 (zweite Achse, Hinweis 20.10.: zwei Achsen weiter auseinander)"
+    "_osm": "184331530: Verbindung A44 -> A43 unter der DKW (befahren, bisher r47_pax)"
+   },
+   {
+    "pts": [
+     [
+      "x:1032",
+      "y:206"
+     ],
+     [
+      "x:1040",
+      "y:206"
+     ],
+     [
+      "d60",
+      "y:182"
+     ]
+    ],
+    "pax": true,
+    "rund": 7,
+    "_osm": "DKW bei 416783513: 35567629 von A43 hinauf auf A44 (befahren, bisher r47_pax)"
+   },
+   {
+    "pts": [
+     [
+      "x:1053.9",
+      "y:182"
+     ],
+     [
+      "x:1060.8",
+      "y:170"
+     ],
+     [
+      "x:1067.7",
+      "y:158"
+     ]
+    ],
+    "pax": false,
+    "pfeil": true,
+    "_osm": "507898311: weiter in die Abstellgruppe B"
    }
   ],
   "_zweck": "Hinweise Neuchâtel 20.10.: Doppelspur Standardabstand, Pfeile in der Doppelspur = eine Verbindung, DKW"
@@ -429,6 +507,93 @@
     ]
    ],
    "_osm": "DKW 11296350767/11296350764 + Kreuzung 631631020"
+  },
+  {
+   "x": 778.9,
+   "y": 254.0,
+   "pax": true,
+   "rund_pax": true,
+   "arme": [
+    [
+     [
+      -0.5,
+      -0.866
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    [
+     [
+      -1,
+      0
+     ],
+     [
+      0.5,
+      0.866
+     ]
+    ]
+   ],
+   "_osm": "DKW Gleis 2/1"
+  },
+  {
+   "x": 907.0,
+   "y": 182.0,
+   "pax": true,
+   "rund_pax": false,
+   "arme": [
+    [
+     [
+      -0.5,
+      -0.866
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    [
+     [
+      -1,
+      0
+     ],
+     [
+      0.5,
+      0.866
+     ]
+    ]
+   ],
+   "_osm": "DKW 416783504"
+  },
+  {
+   "x": 1053.9,
+   "y": 182.0,
+   "pax": true,
+   "rund_pax": false,
+   "arme": [
+    [
+     [
+      -1,
+      0
+     ],
+     [
+      0.5,
+      -0.866
+     ]
+    ],
+    [
+     [
+      1,
+      0
+     ],
+     [
+      -0.5,
+      0.866
+     ]
+    ]
+   ],
+   "_osm": "DKW 416783513"
   }
  ]
 }
