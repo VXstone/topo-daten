@@ -9,6 +9,13 @@
  "regeln": [
   {
    "regel": "G2",
+   "x": 778.9,
+   "y": 254.0,
+   "bahnhof": null,
+   "text": "Weiche ohne Ausrundung (60°)"
+  },
+  {
+   "regel": "G2",
    "x": 854.8,
    "y": 206.0,
    "bahnhof": null,
@@ -44,10 +51,24 @@
   },
   {
    "regel": "G2",
+   "x": 907.4,
+   "y": 182.0,
+   "bahnhof": null,
+   "text": "Weiche ohne Ausrundung (30°)"
+  },
+  {
+   "regel": "G2",
    "x": 1089.7,
    "y": 254.0,
    "bahnhof": null,
    "text": "Weiche ohne Ausrundung (24°)"
+  },
+  {
+   "regel": "G2",
+   "x": 907.4,
+   "y": 182.0,
+   "bahnhof": null,
+   "text": "Weiche ohne Ausrundung (30°)"
   },
   {
    "regel": "G2",
@@ -64,29 +85,77 @@
    "text": "Weiche ohne Ausrundung (24°)"
   },
   {
+   "regel": "G2",
+   "x": 778.9,
+   "y": 254.0,
+   "bahnhof": null,
+   "text": "Weiche ohne Ausrundung (60°)"
+  },
+  {
+   "regel": "G6",
+   "x": 907.0,
+   "y": 182.0,
+   "bahnhof": null,
+   "text": "Linien stossen mit Knick 60° zusammen (Knubbel)"
+  },
+  {
+   "regel": "G7",
+   "x": 764.6,
+   "y": 230.0,
+   "bahnhof": null,
+   "text": "Gleisende nicht angebunden, nächstes Gleis 1.8 px"
+  },
+  {
    "regel": "G8",
    "x": 900.0,
    "y": 206.0,
    "bahnhof": null,
    "text": "Gleise 19 px deckungsgleich"
-  },
-  {
-   "regel": "G8",
-   "x": 913.1,
-   "y": 182.0,
-   "bahnhof": null,
-   "text": "Gleise 11 px deckungsgleich"
-  },
-  {
-   "regel": "G8",
-   "x": 949.4,
-   "y": 206.0,
-   "bahnhof": null,
-   "text": "Gleise 11 px deckungsgleich"
   }
  ],
  "planrand": [],
- "gleich_wie_vergleich": true,
- "differenz": [],
+ "gleich_wie_vergleich": false,
+ "differenz": [
+  {
+   "x": 909.1,
+   "y": 169.3,
+   "b": 77,
+   "h": 81,
+   "bahnhof": null,
+   "gewollt": false
+  },
+  {
+   "x": 1046.3,
+   "y": 177.3,
+   "b": 62,
+   "h": 65,
+   "bahnhof": null,
+   "gewollt": false
+  },
+  {
+   "x": 786.5,
+   "y": 256.6,
+   "b": 58,
+   "h": 69,
+   "bahnhof": null,
+   "gewollt": false
+  },
+  {
+   "x": 671.1,
+   "y": 320.4,
+   "b": 221,
+   "h": 46,
+   "bahnhof": null,
+   "gewollt": false
+  },
+  {
+   "x": 772.7,
+   "y": 306.1,
+   "b": 18,
+   "h": 16,
+   "bahnhof": null,
+   "gewollt": false
+  }
+ ],
  "ok": true
 }

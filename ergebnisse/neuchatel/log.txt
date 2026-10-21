@@ -1,6 +1,6 @@
 $ spurplan_schema.py --src neuchatel.json --nowarp --hauptgleise
 Bahnhof Neuchâtel: Achse 6510 m, Ausschnitt s=2683…3936, 36 Weichen, 6 Perrons
-chains 9 lanes 7 segs 72 W 1715 H 363
+chains 9 lanes 7 segs 72 W 1715 H 368
 
 $ spurplan_warp.py neuchatel
 Optimization terminated successfully. (HiGHS Status 7: Optimal)
@@ -8,7 +8,7 @@ Breite linear 1153 px -> entzerrt 864 px
 
 $ spurplan_schema.py --src neuchatel.json --hauptgleise
 Bahnhof Neuchâtel: Achse 6510 m, Ausschnitt s=2683…3936, 36 Weichen, 6 Perrons
-chains 9 lanes 7 segs 72 W 1426 H 363
+chains 9 lanes 7 segs 72 W 1426 H 368
 
 $ spurplan_warp.py neuchatel
 Optimization terminated successfully. (HiGHS Status 7: Optimal)
@@ -16,17 +16,17 @@ Breite linear 1153 px -> entzerrt 864 px
 
 $ spurplan_schema.py --src neuchatel.json --hauptgleise
 Bahnhof Neuchâtel: Achse 6510 m, Ausschnitt s=2683…3936, 36 Weichen, 6 Perrons
-chains 9 lanes 7 segs 72 W 1426 H 363
+chains 9 lanes 7 segs 72 W 1426 H 368
 
 $ spurplan_check.py --src neuchatel.json --out /tmp/spurplan_lauf/_check_neuchatel.svg --hauptgleise
 Bahnhof Neuchâtel: Achse 6510 m, Ausschnitt s=2683…3936, 36 Weichen, 6 Perrons
-chains 9 lanes 7 segs 72 W 1426 H 363
+chains 9 lanes 7 segs 72 W 1426 H 368
 Befunde: {}
 eindeutig: {}
 
 $ spurplan_schema.py --src neuchatel.json --bare --out neuchatel_bare.svg --hauptgleise
 Bahnhof Neuchâtel: Achse 6510 m, Ausschnitt s=2683…3936, 36 Weichen, 6 Perrons
-chains 9 lanes 7 segs 72 W 1426 H 363
+chains 9 lanes 7 segs 72 W 1426 H 368
 
 Verbindungsprüfung neuchatel: 7 Perrongleise, 5 Abgänge (Personenverkehr)
   Gleis  1 West Hinweis: Plan grün nach 210 Yverdon (edge y158 x327), in OSM nur über Nebengleis (siding)
@@ -52,4 +52,6 @@ Verbindungsprüfung neuchatel: 7 Perrongleise, 5 Abgänge (Personenverkehr)
   Abgang 210 Biel (edge y206 x1191): ok (2 Ziele)
   Abgang 210 Biel (edge y182 x1191): ok (2 Ziele)
 → 0 Abweichungen
-Weichen ohne Ausrundung (Linienende unter >35° auf Gleis): 0
+Weichen ohne Ausrundung (Linienende unter >35° auf Gleis): 2
+   x779 y254  37°
+   x1054 y182  60°
