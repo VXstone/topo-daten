@@ -1,0 +1,92 @@
+{
+ "bahnhof": "neuchatel",
+ "optionen": [
+  "--hauptgleise"
+ ],
+ "topologie": "{}",
+ "verbindungen_abweichungen": 0,
+ "verbindungen": [],
+ "regeln": [
+  {
+   "regel": "G2",
+   "x": 854.8,
+   "y": 206.0,
+   "bahnhof": null,
+   "text": "Weiche ohne Ausrundung (24°)"
+  },
+  {
+   "regel": "G2",
+   "x": 600.6,
+   "y": 134.0,
+   "bahnhof": null,
+   "text": "Weiche ohne Ausrundung (24°)"
+  },
+  {
+   "regel": "G2",
+   "x": 602.6,
+   "y": 134.0,
+   "bahnhof": null,
+   "text": "Weiche ohne Ausrundung (30°)"
+  },
+  {
+   "regel": "G2",
+   "x": 854.8,
+   "y": 206.0,
+   "bahnhof": null,
+   "text": "Weiche ohne Ausrundung (24°)"
+  },
+  {
+   "regel": "G2",
+   "x": 586.8,
+   "y": 182.0,
+   "bahnhof": null,
+   "text": "Weiche ohne Ausrundung (24°)"
+  },
+  {
+   "regel": "G2",
+   "x": 1089.7,
+   "y": 254.0,
+   "bahnhof": null,
+   "text": "Weiche ohne Ausrundung (24°)"
+  },
+  {
+   "regel": "G2",
+   "x": 586.8,
+   "y": 182.0,
+   "bahnhof": null,
+   "text": "Weiche ohne Ausrundung (24°)"
+  },
+  {
+   "regel": "G2",
+   "x": 1089.7,
+   "y": 254.0,
+   "bahnhof": null,
+   "text": "Weiche ohne Ausrundung (24°)"
+  },
+  {
+   "regel": "G8",
+   "x": 900.0,
+   "y": 206.0,
+   "bahnhof": null,
+   "text": "Gleise 19 px deckungsgleich"
+  },
+  {
+   "regel": "G8",
+   "x": 913.1,
+   "y": 182.0,
+   "bahnhof": null,
+   "text": "Gleise 11 px deckungsgleich"
+  },
+  {
+   "regel": "G8",
+   "x": 949.4,
+   "y": 206.0,
+   "bahnhof": null,
+   "text": "Gleise 11 px deckungsgleich"
+  }
+ ],
+ "planrand": [],
+ "gleich_wie_vergleich": true,
+ "differenz": [],
+ "ok": true
+}

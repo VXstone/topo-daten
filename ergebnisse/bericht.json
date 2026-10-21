@@ -1,0 +1,18 @@
+{
+ "erzeugt": "2026-10-21 09:06 UTC",
+ "lauf": "https://github.com/VXstone/topo-daten/actions/runs/39574334576",
+ "bahnhoefe": {
+  "neuchatel": {
+   "ok": true,
+   "fehler": null,
+   "topologie": "{}",
+   "verbindungen_abweichungen": 0,
+   "gleich_wie_vergleich": true,
+   "regeln": {
+    "G2": 8,
+    "G8": 3
+   },
+   "differenz_stellen": 0
+  }
+ }
+}
