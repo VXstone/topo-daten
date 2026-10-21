@@ -103,7 +103,9 @@ for st in betr:
             if e["id"] != st["id"]: continue
             e = dict(e); e["tags"] = dict(e["tags"], railway="station"); e["tags"].pop("public_transport", None)
         if math.dist(xy(e), c) <= R: el.append(e)
+    sp_here = {w["tags"].get("spur", "1435") for w in out_w if w["tags"].get("railway") == "rail" and min(math.dist(xy(g), c) for g in w["geometry"]) < 60}
     for w in out_w:
+        if w["tags"].get("railway") == "rail" and w["tags"].get("spur", "1435") not in sp_here: continue   # nur die Spuren dieses Betriebspunkts (Belmont: keine SBB-Gleise)
         runs, cur = [], []
         for n, g in zip(w["nodes"], w["geometry"]):
             if math.dist(xy(g), c) <= R: cur.append((n, g))

@@ -54,6 +54,7 @@ def drop_loops():
 # ------------------------------------------------------------------ 1. Bereinigen, Kästen
 PORTS = {}
 L0 = json.load(open(f"{NAME}_lage.json")) if os.path.exists(f"{NAME}_lage.json") else {}
+CFG.update(L0.get("cfg", {}))       # Lage "cfg": Grundwerte je Region (Region MOB: dichte Betriebspunkte, cover_m/merge_station_m kleiner)
 for i, n in nodes.items():
     n["inset"] = None
     if n["kind"] == "station" and os.path.exists(slug(n["name"]) + "_ports.json"):

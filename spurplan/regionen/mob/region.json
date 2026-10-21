@@ -140,6 +140,11 @@
    "122": "#9a5b1e",
    "114": "#9a5b1e",
    "247": "#9a5b1e"
+  },
+  "cfg": {
+   "cover_m": 200,
+   "merge_station_m": 300,
+   "merge_junction_m": 200
   }
  }
 }

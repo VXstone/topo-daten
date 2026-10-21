@@ -14,7 +14,7 @@ Konfig: spurplan/regionen/<region>/region.json (+ optionale <bahnhof>_override.j
 import json, os, sys, shutil, subprocess, time, glob
 HERE = os.path.dirname(os.path.abspath(__file__)); REPO = os.path.dirname(os.path.dirname(HERE))
 REG = sys.argv[1]
-DATEN = sys.argv[sys.argv.index("--daten") + 1] if "--daten" in sys.argv else os.path.join(REPO, "schweiz_bahn.json.gz")
+DATEN = os.path.abspath(sys.argv[sys.argv.index("--daten") + 1] if "--daten" in sys.argv else os.path.join(REPO, "schweiz_bahn.json.gz"))
 KDIR = os.path.join(REPO, "spurplan", "regionen", REG); K = json.load(open(os.path.join(KDIR, "region.json")))
 WORK = os.path.join("/tmp/spurplan_region", REG); OUT = os.path.join(REPO, "ergebnisse", f"region_{REG}")
 NUR_LAGE = "--nur-lage" in sys.argv
@@ -28,6 +28,8 @@ def sh(cmd, timeout=900):
 for f in glob.glob(os.path.join(KDIR, "*.json")):
     if os.path.basename(f) != "region.json": shutil.copy(f, WORK)
 py = lambda s: os.path.join(HERE, s)
+import atexit
+atexit.register(lambda: open(os.path.join(OUT, "log.txt"), "w").write("\n\n".join(LOG)))   # Log auch bei Abbruch
 if not NUR_LAGE:
     sh(["python3", py("region_vorbereiten.py"), DATEN, os.path.join(KDIR, "region.json"), WORK])
 NAME = K.get("name", f"{REG}_region")

@@ -190,6 +190,11 @@ for _lim in (150, 450, 1350):
         totlen = sum(math.dist(P[a_], P[b_]) for a_, b_ in zip(p, p[1:]))
         key_ = (round(refshare, 1), round(mainlen / max(totlen, 1), 1), score, length)
         if best is None or key_ > best[0]: best = (key_, A, B, p)
+if best is None:      # Kopfbahnhof mit nur einem Streckenende (Lenk 21.10.): vom Gleisknoten am Bahnhof zum fernsten erreichbaren Knoten
+    _n0 = min(P, key=lambda n: math.hypot(*P[n]))
+    _far = sorted(ends_ or list(P), key=lambda n: -math.dist(P[n], P[_n0]))
+    _p = next((p for p in (shortest(_n0, f) for f in _far) if p), [_n0, _far[0]])
+    best = (None, _p[0], _p[-1], _p)
 _, A, B, path = best
 if CFG.get("axis_mode") == "main_extremes":
     # Achse zwischen den äussersten Knoten der Stammlinie (usage=main), quer zur Hauptrichtung
