@@ -1,0 +1,227 @@
+{
+ "region": "mob",
+ "erzeugt": "2026-10-21 10:23 UTC",
+ "bahnhoefe": {
+  "schonried": {
+   "name": "Schönried",
+   "ok": true,
+   "befunde": "?",
+   "optionen": []
+  },
+  "la_tine": {
+   "name": "La Tine",
+   "ok": true,
+   "befunde": "?",
+   "optionen": []
+  },
+  "belmont_sur_montreux": {
+   "name": "Belmont-sur-Montreux",
+   "ok": true,
+   "befunde": "?",
+   "optionen": []
+  },
+  "les_avants": {
+   "name": "Les Avants",
+   "ok": true,
+   "befunde": "?",
+   "optionen": []
+  },
+  "flendruz": {
+   "name": "Flendruz",
+   "ok": true,
+   "befunde": "?",
+   "optionen": []
+  },
+  "chateau_d_oex": {
+   "name": "Château-d'Oex",
+   "ok": true,
+   "befunde": "?",
+   "optionen": []
+  },
+  "rougemont": {
+   "name": "Rougemont",
+   "ok": true,
+   "befunde": "?",
+   "optionen": []
+  },
+  "glion_alpes": {
+   "name": "Glion-Alpes",
+   "ok": true,
+   "befunde": "?",
+   "optionen": []
+  },
+  "matten": {
+   "name": "Matten",
+   "ok": true,
+   "befunde": "?",
+   "optionen": []
+  },
+  "rochers_de_naye": {
+   "name": "Rochers de Naye",
+   "ok": true,
+   "befunde": "?",
+   "optionen": []
+  },
+  "les_sciernes": {
+   "name": "Les Sciernes",
+   "ok": true,
+   "befunde": "?",
+   "optionen": []
+  },
+  "paccot": {
+   "name": "Paccot",
+   "ok": true,
+   "befunde": "?",
+   "optionen": []
+  },
+  "sendy_sollard": {
+   "name": "Sendy-Sollard",
+   "ok": true,
+   "befunde": "?",
+   "optionen": []
+  },
+  "planchamp": {
+   "name": "Planchamp",
+   "ok": true,
+   "befunde": "?",
+   "optionen": []
+  },
+  "le_tremblex": {
+   "name": "Le Tremblex",
+   "ok": true,
+   "befunde": "?",
+   "optionen": []
+  },
+  "st_stephan": {
+   "name": "St. Stephan",
+   "ok": true,
+   "befunde": "?",
+   "optionen": []
+  },
+  "blankenburg": {
+   "name": "Blankenburg",
+   "ok": true,
+   "befunde": "?",
+   "optionen": []
+  },
+  "glion": {
+   "name": "Glion",
+   "ok": true,
+   "befunde": "?",
+   "optionen": []
+  },
+  "montreux": {
+   "name": "Montreux",
+   "ok": true,
+   "befunde": "?",
+   "optionen": [
+    "--hauptgleise"
+   ]
+  },
+  "zweisimmen": {
+   "name": "Zweisimmen",
+   "ok": true,
+   "befunde": "?",
+   "optionen": [
+    "--hauptgleise"
+   ]
+  },
+  "caux": {
+   "name": "Caux",
+   "ok": true,
+   "befunde": "?",
+   "optionen": []
+  },
+  "fontanivent": {
+   "name": "Fontanivent",
+   "ok": true,
+   "befunde": "?",
+   "optionen": []
+  },
+  "chernex": {
+   "name": "Chernex",
+   "ok": true,
+   "befunde": "?",
+   "optionen": []
+  },
+  "chamby": {
+   "name": "Chamby",
+   "ok": true,
+   "befunde": "?",
+   "optionen": []
+  },
+  "allieres": {
+   "name": "Allières",
+   "ok": true,
+   "befunde": "?",
+   "optionen": []
+  },
+  "les_cases": {
+   "name": "Les Cases",
+   "ok": true,
+   "befunde": "?",
+   "optionen": []
+  },
+  "jor": {
+   "name": "Jor",
+   "ok": true,
+   "befunde": "?",
+   "optionen": []
+  },
+  "jaman": {
+   "name": "Jaman",
+   "ok": true,
+   "befunde": "?",
+   "optionen": []
+  },
+  "saanen": {
+   "name": "Saanen",
+   "ok": true,
+   "befunde": "?",
+   "optionen": []
+  },
+  "saanenmoser": {
+   "name": "Saanenmöser",
+   "ok": true,
+   "befunde": "?",
+   "optionen": []
+  },
+  "oeschseite": {
+   "name": "Oeschseite",
+   "ok": true,
+   "befunde": "?",
+   "optionen": []
+  },
+  "gstaad": {
+   "name": "Gstaad",
+   "ok": true,
+   "befunde": "?",
+   "optionen": []
+  },
+  "gruben": {
+   "name": "Gruben",
+   "ok": true,
+   "befunde": "?",
+   "optionen": []
+  },
+  "lenk_im_simmental": {
+   "name": "Lenk im Simmental",
+   "ok": true,
+   "befunde": "?",
+   "optionen": []
+  },
+  "rossiniere": {
+   "name": "Rossinière",
+   "ok": true,
+   "befunde": "?",
+   "optionen": []
+  },
+  "montbovon": {
+   "name": "Montbovon",
+   "ok": true,
+   "befunde": "?",
+   "optionen": []
+  }
+ },
+ "netz_lage": 1
+}
