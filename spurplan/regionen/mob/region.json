@@ -1,0 +1,145 @@
+{
+ "_zweck": "Region MOB (21.10.2026, Wunsch D. Eckenstein): Meterspur Montreux–Zweisimmen–Lenk (MOB 120/321) und 800 mm Montreux–Glion–Rochers-de-Naye (MGN 121/122). Äste Chamby (CEV 114) und Montbovon (TPF 247) nur angedeutet, Normalspur nur in Montreux (100) und Zweisimmen (320) mit Hauptgleisen.",
+ "titel": "Region MOB / Rochers-de-Naye",
+ "bbox": [
+  46.4,
+  6.88,
+  46.62,
+  7.5
+ ],
+ "linien": [
+  "120",
+  "321",
+  "121",
+  "122"
+ ],
+ "betreiber": [
+  "MOB",
+  "MVR-mtgn"
+ ],
+ "aeste": {
+  "Chamby": 300,
+  "Montbovon": 300
+ },
+ "normalspur": {
+  "Montreux": 900,
+  "Zweisimmen": 900
+ },
+ "radius": 700,
+ "radius_je": {
+  "Montreux": 1000,
+  "Zweisimmen": 1000
+ },
+ "weg_namen": [
+  "(funi)"
+ ],
+ "integriert": {
+  "Montreux-Collège": "Montreux"
+ },
+ "bp_abstand_je": {
+  "Zweisimmen": 600,
+  "Lenk im Simmental": 400
+ },
+ "name": "mob_region",
+ "optionen_je": {
+  "Montreux": [
+   "--hauptgleise"
+  ],
+  "Zweisimmen": [
+   "--hauptgleise"
+  ]
+ },
+ "override_standard": {
+  "cfg": {
+   "sw_search_m": 350,
+   "min_half_window_m": 150,
+   "s_pad": 60,
+   "lt_dist_w": 2.0,
+   "margin_x": 230,
+   "towns": {
+    "Lausanne": [
+     46.5168,
+     6.6291
+    ],
+    "Villeneuve": [
+     46.3966,
+     6.9278
+    ],
+    "Blonay": [
+     46.4657,
+     6.8958
+    ],
+    "Bulle": [
+     46.6196,
+     7.0533
+    ],
+    "Spiez": [
+     46.6863,
+     7.68
+    ],
+    "Montreux": [
+     46.4359,
+     6.9104
+    ],
+    "Zweisimmen": [
+     46.5535,
+     7.3747
+    ],
+    "Lenk": [
+     46.458,
+     7.4437
+    ],
+    "Rochers-de-Naye": [
+     46.4318,
+     6.9788
+    ],
+    "Glion": [
+     46.4319,
+     6.9241
+    ],
+    "Chamby": [
+     46.4493,
+     6.9135
+    ],
+    "Les Avants": [
+     46.4536,
+     6.9435
+    ],
+    "Montbovon": [
+     46.4859,
+     7.0426
+    ],
+    "Château-d'Oex": [
+     46.4749,
+     7.1326
+    ],
+    "Gstaad": [
+     46.4751,
+     7.2841
+    ],
+    "Caux": [
+     46.4311,
+     6.9385
+    ]
+   }
+  }
+ },
+ "lage": {
+  "auto": {
+   "c0": 30,
+   "c1": 32,
+   "p": 0.6,
+   "gap": 58,
+   "wg": 0.01
+  },
+  "osm": "region.json",
+  "linienfarbe": {
+   "120": "#9a5b1e",
+   "321": "#9a5b1e",
+   "121": "#9a5b1e",
+   "122": "#9a5b1e",
+   "114": "#9a5b1e",
+   "247": "#9a5b1e"
+  }
+ }
+}

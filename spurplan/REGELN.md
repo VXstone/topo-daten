@@ -57,3 +57,8 @@ Stand 21.10.2026.
 - E9: Abgenommene Pläne dürfen sich ohne Topologieänderung ändern; jede Änderung im Differenzbild (R13: jede Runde gegen `vergleich/`).
 - Zuerst Override je Bahnhof, neue Regel im Code nur bei Mehrfachnutzen; Overrides über OSM-Nummern statt Pixel.
 - Nie selbst abnehmen; Abnahme macht D. Eckenstein.
+
+## Regionen (Workflow «regionen», seit 21.10.2026)
+- `spurplan/regionen/<region>/region.json` beschreibt eine Linien-Region (Linien, Äste, Normalspur-Umkreise, Optionen je Bahnhof, Lage). `region_lauf.py <region>` baut daraus alle Bahnhofspläne und den Regionalplan.
+- Schmal- und 800-mm-Spur: braun wie die Meterspur in Ins (dick = Streckengleis, dünn = Nebengleis); Normalspur in gemischten Bahnhöfen (Montreux, Zweisimmen) grün/schwarz wie immer.
+- Betriebspunkte ohne Weiche erscheinen im Regionalplan als Halt, Betriebspunkte mit Weichen als Spurplan.

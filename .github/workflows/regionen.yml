@@ -1,0 +1,49 @@
+# Regionalpläne von Linien-Regionen bauen (D. Eckenstein 21.10.2026: Meterspur Montreux–Zweisimmen–Lenk und
+# Montreux–Rochers-de-Naye). Daten: Release «daten» (schweiz_bahn.json.gz). Konfig: spurplan/regionen/<region>/region.json.
+# Ergebnis: Branch «ergebnisse», Ordner ergebnisse/region_<region>/ (region.svg, region.png, bericht.json, log.txt, Spurpläne).
+name: regionen
+on:
+  workflow_dispatch:
+    inputs:
+      region: { description: "Region (Ordner unter spurplan/regionen)", required: true, default: "mob" }
+  push:
+    branches: [main]
+    paths: ["spurplan/regionen/**"]
+permissions:
+  contents: write
+concurrency: { group: plaene, cancel-in-progress: false }
+jobs:
+  bauen:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with: { python-version: "3.12" }
+      - run: |
+          sudo apt-get install -y -q libcairo2 >/dev/null
+          pip install -q numpy scipy shapely svgpathtools cairosvg pillow networkx
+      - name: Daten (Release «daten»)
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: gh release download daten -p schweiz_bahn.json.gz -D . --clobber
+      - name: Regionalplan bauen und prüfen
+        env:
+          VBJS: "/nicht-vorhanden"
+        run: |
+          R="${{ github.event.inputs.region }}"
+          if [ -z "$R" ]; then R=$(ls spurplan/regionen); fi
+          for r in $R; do python3 spurplan/code/region_lauf.py "$r" --daten schweiz_bahn.json.gz; done
+      - name: Ergebnisse auf Branch «ergebnisse» (nur die Regionsordner ersetzen)
+        if: always()
+        run: |
+          mkdir -p /tmp/erg && cp -r ergebnisse/region_* /tmp/erg/ 2>/dev/null || true
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin ergebnisse || true
+          git stash -u -q || true
+          if git rev-parse --verify origin/ergebnisse >/dev/null 2>&1; then git checkout -q -B ergebnisse origin/ergebnisse; else git checkout -q --orphan ergebnisse; git rm -rq --cached . || true; fi
+          mkdir -p ergebnisse
+          for d in /tmp/erg/region_*; do [ -d "$d" ] || continue; rm -rf "ergebnisse/$(basename $d)"; cp -r "$d" ergebnisse/; done
+          git add -A ergebnisse
+          git commit -qm "Regionen $(date -u +%Y-%m-%dT%H:%MZ) (${{ github.sha }})" || echo "keine Änderung"
+          git push -q origin ergebnisse

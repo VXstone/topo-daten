@@ -462,6 +462,7 @@ for i, sg in enumerate(segs):
     # Gleisende (Prellbock/Stumpfgleis): immer als eigenes Gleis, nie als Diagonale
     if (use[sg["nodes"][0]] == 1 and not sg["cut0"]) or (use[sg["nodes"][-1]] == 1 and not sg["cut1"]):
         sg["flat"] = True
+    sg["schmal"] = sg["tags"].get("spur") in ("1000", "800")       # Schmalspur (region_vorbereiten.py, Region MOB 21.10.)
     sg["pax"] = passenger(sg["tags"]) or sg["tags"].get("railway:track_ref") in OVR.get("pax", []) or sg["way"] in OVR.get("pax_ways", [])
     if sg["way"] in OVR.get("kein_pax", []): sg["pax"] = False      # Override "kein_pax": Way schwarz (Twann Bauphasen, 15.10.)
     if ARGS.dbg and sg["way"] == 263977262: print("FLATDBG", _thru(sg["nodes"][0], sg["way"]), _thru(sg["nodes"][-1], sg["way"]), round(_par_run(p)), sg["flat"], round(sg["slope"], 4), round(L), sg["nodes"][0], sg["nodes"][-1], use[sg["nodes"][0]], use[sg["nodes"][-1]])
@@ -1182,6 +1183,10 @@ def from_diag(xn, yn, u, xt, yt):
     k = abs(xt - xn) / 2
     return (f"M{xn:.1f},{yn:.1f}C{xn + ux * k:.1f},{yn + uy * k:.1f} {xt - sx * k:.1f},{yt:.1f} {xt:.1f},{yt:.1f}")
 
+MS_BRAUN = "#9a5b1e"
+SCHMAL_ALLE = bool(segs) and all(x.get("schmal") for x in segs)
+SCHMAL_GEMISCHT = any(x.get("schmal") for x in segs) and not SCHMAL_ALLE
+if SCHMAL_ALLE: CFG["green"] = CFG["black"] = MS_BRAUN        # reiner Schmalspurbahnhof: alles braun (dick = Hauptgleis, dünn = Nebengleis)
 green, black = CFG["green"], CFG["black"]
 # Regel 29: zweigen zwei Gleise derselben Richtung seitlich ab (Doppelspur, z. B. 451 in Aarburg), dürfen die
 # Abgänge nicht auf einer Linie liegen: der äussere Abgang wird stromaufwärts gelegt, so dass der innere
@@ -2194,11 +2199,45 @@ for xs_, xk_, ys_ in _RS:
         if (xk_ - x0_) * (xk_ - xs_) <= 0 or abs(xk_ - x0_) <= abs(xk_ - xs_): return m_[0]
         return f"M{m_[1]},{ys_}{m_[2]}H{xs_:.1f}"
     svg_paths = {k_: [pat_.sub(_tr, d_) for d_ in v_] for k_, v_ in svg_paths.items()}
+_BRAUN = {True: [], False: []}
+if SCHMAL_GEMISCHT:
+    # gemischter Bahnhof (Montreux, Zweisimmen): Teilpfade nach der nächstgelegenen Spur trennen, Schmalspur braun
+    from svgpathtools import parse_path as _ppS
+    def _samp_d(d_, step=3.0):
+        out_ = []
+        try:
+            for sub in _ppS(d_).continuous_subpaths():
+                L_ = sub.length()
+                for t_ in np.linspace(0, 1, max(2, int(L_ / step))):
+                    z_ = sub.point(sub.ilength(t_ * L_)) if L_ > 0 else sub.point(0); out_.append((z_.real, z_.imag))
+        except Exception: pass
+        return out_
+    _sgS = {x["id"]: x for x in segs}
+    _ps, _pn = [], []
+    for i_, d_ in DBG:
+        if i_ in _sgS: (_ps if _sgS[i_].get("schmal") else _pn).extend(_samp_d(d_))
+    from scipy.spatial import cKDTree as _KDS
+    _ks = _KDS(np.array(_ps)) if _ps else None; _kn = _KDS(np.array(_pn)) if _pn else None
+    def _ist_schmal(sub_d):
+        q_ = _samp_d(sub_d)
+        if not q_ or _ks is None: return False
+        if _kn is None: return True
+        ds_, _ = _ks.query(q_); dn_, _ = _kn.query(q_)
+        return float(np.mean(ds_)) < float(np.mean(dn_))
+    for k_ in (True, False):
+        keep_ = []
+        for d_ in svg_paths[k_]:
+            subs_ = [p_.strip() for p_ in re.split(r"(?=M)", d_) if p_.strip()]
+            for x_ in subs_:
+                (_BRAUN[k_] if _ist_schmal(x_) else keep_).append(x_)
+        svg_paths[k_] = keep_
 out.append(f'<path d="{" ".join(svg_paths[False])}" stroke="{black}" stroke-width="1.6"/>')
+if _BRAUN[False]: out.append(f'<path d="{" ".join(_BRAUN[False])}" stroke="{MS_BRAUN}" stroke-width="1.6"/>')
 _z = re.compile(r"M([-\d.]+),([-\d.]+)L\1,\2(?=[\s\"M]|$)")
 svg_paths = {k_: [_z.sub("", d_) for d_ in v_] for k_, v_ in svg_paths.items()}
 _GREEN_IDX = len(out)
 out.append(f'<path d="{" ".join(svg_paths[True])}" stroke="{green}" stroke-width="3.6"/>')
+if _BRAUN[True]: out.append(f'<path d="{" ".join(_BRAUN[True])}" stroke="{MS_BRAUN}" stroke-width="3.6"/>')
 # Override "portale": [{"s": m, "y": [ebenen-ref...], "dir": +1}] - Tunnelportal nach Blaupause E7 (öffnet nach aussen)
 for _pt in OVR.get("portale", []):        # auch im Regionalplan (bare) zeichnen (Hinweis Region Olten 15.10.)
     _xp = X(float(_pt["s"])); _dr = _pt.get("dir", 1)
@@ -2545,6 +2584,7 @@ for sg in segs:
         else:
             if sg["way"] in ZEICHNEN_PORT: x, y = ZEICHNEN_PORT[sg["way"]]     # neu gezeichneter Abgang (Thun Gürbetal)
             _c, _w = (green, 3.6) if sg["pax"] else (black, 1.6)
+            if sg.get("schmal"): _c = MS_BRAUN
             _xs = x - (1 if end else -1) * 22
             if sg["way"] in ZEICHNEN_PORT_AB and (ZEICHNEN_PORT_AB[sg["way"]][0] - _xs) * (1 if end else -1) > 0:
                 _xs = ZEICHNEN_PORT_AB[sg["way"]][0]     # neu gezeichneter Abgang: Randstück nicht vor den Linienanfang (Chambrelien 224, grüner Stummel)
