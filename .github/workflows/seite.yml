@@ -15,7 +15,7 @@ on:
     types: [completed]
 permissions:
   contents: write
-concurrency: { group: plaene, cancel-in-progress: false }
+concurrency: { group: seite, cancel-in-progress: false }   # eigene Gruppe: in einer gemeinsamen Gruppe ersetzt ein wartender Lauf den anderen
 jobs:
   bauen:
     runs-on: ubuntu-24.04
@@ -54,4 +54,4 @@ jobs:
           rm -rf ergebnisse/seite && mkdir -p ergebnisse && cp -r /tmp/seite ergebnisse/seite
           git add -A ergebnisse/seite
           git commit -qm "Seite $(date -u +%Y-%m-%dT%H:%MZ) (${{ github.sha }})" || echo "keine Änderung"
-          git push -q origin ergebnisse
+          git push -q origin ergebnisse || { sleep 20; git fetch -q origin ergebnisse && git rebase -q origin/ergebnisse && git push -q origin ergebnisse; }   # paralleler Lauf hat gerade gepusht

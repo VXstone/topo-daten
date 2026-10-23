@@ -11,7 +11,7 @@ on:
     paths: ["spurplan/regionen/**"]
 permissions:
   contents: write
-concurrency: { group: plaene, cancel-in-progress: false }
+concurrency: { group: regionen, cancel-in-progress: false }   # eigene Gruppe: in einer gemeinsamen Gruppe ersetzt ein wartender Lauf den anderen
 jobs:
   bauen:
     runs-on: ubuntu-24.04
@@ -46,4 +46,4 @@ jobs:
           for d in /tmp/erg/region_*; do [ -d "$d" ] || continue; rm -rf "ergebnisse/$(basename $d)"; cp -r "$d" ergebnisse/; done
           git add -A ergebnisse
           git commit -qm "Regionen $(date -u +%Y-%m-%dT%H:%MZ) (${{ github.sha }})" || echo "keine Änderung"
-          git push -q origin ergebnisse
+          git push -q origin ergebnisse || { sleep 20; git fetch -q origin ergebnisse && git rebase -q origin/ergebnisse && git push -q origin ergebnisse; }   # paralleler Lauf hat gerade gepusht
