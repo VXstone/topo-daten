@@ -28,6 +28,7 @@ def sh(cmd, timeout=900):
 for f in glob.glob(os.path.join(KDIR, "*.json")):
     if os.path.basename(f) != "region.json": shutil.copy(f, WORK)
 py = lambda s: os.path.join(HERE, s)
+shutil.copy(os.path.join(HERE, "spurplan_schema.py"), WORK)      # spurplan_check.py führt das Schema aus dem Arbeitsordner aus
 import atexit
 atexit.register(lambda: open(os.path.join(OUT, "log.txt"), "w").write("\n\n".join(LOG)))   # Log auch bei Abbruch
 if not NUR_LAGE:

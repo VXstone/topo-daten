@@ -1026,7 +1026,7 @@ _stoesse()
 def _dp(pts, eps=1.6):       # kleine Versätze in einer Linie weg (Vauseyon 20.10.: Knubbel an Stössen)
     if len(pts) < 3: return pts
     a_, b_ = np.asarray(pts[0], float), np.asarray(pts[-1], float); L_ = np.linalg.norm(b_ - a_) or 1e-9
-    dd_ = [abs(float(np.cross(b_ - a_, np.asarray(p_, float) - a_))) / L_ for p_ in pts[1:-1]]
+    dd_ = [abs(float((b_ - a_)[0] * (np.asarray(p_, float) - a_)[1] - (b_ - a_)[1] * (np.asarray(p_, float) - a_)[0])) / L_ for p_ in pts[1:-1]]   # 2D-Kreuzprodukt (numpy 2: np.cross nur 3D)
     i_ = int(np.argmax(dd_)) + 1
     return _dp(pts[:i_ + 1], eps)[:-1] + _dp(pts[i_:], eps) if dd_[i_ - 1] > eps else [pts[0], pts[-1]]
 for r_, l_, c_, w_ in DEFER_L:
