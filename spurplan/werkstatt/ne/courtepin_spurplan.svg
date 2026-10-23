@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1160 246" width="1160" height="246" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
+<rect width="100%" height="100%" fill="#fff"/>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M500.0,110.0L495.0,110.0Q490.0,110.0 487.5,105.7L479.6,92.1Q476.1,86.0 469.1,86.0L386.1,86.0" stroke="#111" stroke-width="1.6"/>
+<path d="M275.0,110.0L829.7,110.0 M510.0,110.0L515.0,110.0Q520.0,110.0 522.5,114.3L530.4,127.9Q533.9,134.0 540.9,134.0L726.9,134.0Q733.9,134.0 737.4,127.9L745.2,114.3Q747.7,110.0 752.7,110.0L757.7,110.0" stroke="#00862f" stroke-width="3.6"/>
+</g>
+<rect x="578.9" y="141.0" width="110.0" height="8" rx="1.5" fill="#00862f"/>
+<rect x="578.9" y="95.0" width="110.0" height="8" rx="1.5" fill="#00862f"/>
+<rect x="620.9" y="102.0" width="26" height="16" fill="#fff" stroke="none"/><text x="633.9" y="116.5" font-size="19" text-anchor="middle" fill="#00862f">1</text>
+<rect x="620.9" y="126.0" width="26" height="16" fill="#fff" stroke="none"/><text x="633.9" y="140.5" font-size="19" text-anchor="middle" fill="#00862f">2</text>
+<path d="M377.1,86.0L386.1,82.0L386.1,90.0Z" fill="#111"/>
+<text x="263.0" y="97.0" font-size="22" text-anchor="end" fill="#00862f">Linie 255</text>
+<text x="263.0" y="123.0" font-size="22" text-anchor="end" fill="#00862f">← Murten</text>
+<text x="841.7" y="97.0" font-size="22" text-anchor="start" fill="#00862f">Linie 255</text>
+<text x="841.7" y="123.0" font-size="22" text-anchor="start" fill="#00862f">Fribourg →</text>
+<text x="633.9" y="201.0" font-size="38" font-weight="700" text-anchor="middle" fill="#00862f">Courtepin</text>
+</svg>

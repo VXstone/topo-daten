@@ -1,0 +1,262 @@
+{
+ "_quelle": "Entwurf 14.10.2026 (Claude), Bôle, OSM-Stand 12.10.",
+ "cfg": {
+  "towns": {
+   "Biel": [
+    47.1325,
+    7.2426
+   ],
+   "Ins": [
+    46.9999,
+    7.0996
+   ],
+   "Kerzers": [
+    46.9751,
+    7.1929
+   ],
+   "Bern": [
+    46.949,
+    7.4391
+   ],
+   "Neuchâtel": [
+    46.9966,
+    6.9358
+   ],
+   "Twann": [
+    47.0938,
+    7.1566
+   ],
+   "Ligerz": [
+    47.084,
+    7.1348
+   ],
+   "La Neuveville": [
+    47.0628,
+    7.0954
+   ],
+   "Le Landeron": [
+    47.0566,
+    7.0663
+   ],
+   "Cressier": [
+    47.0519,
+    7.0395
+   ],
+   "Cornaux": [
+    47.0387,
+    7.0234
+   ],
+   "Saint-Blaise": [
+    47.0145,
+    6.9821
+   ],
+   "Marin-Epagnier": [
+    47.009,
+    7.0107
+   ],
+   "Gampelen": [
+    47.0091,
+    7.0582
+   ],
+   "Zihlbrücke": [
+    47.0093,
+    7.0306
+   ],
+   "Serrières": [
+    46.984,
+    6.9033
+   ],
+   "Auvernier": [
+    46.9796,
+    6.8777
+   ],
+   "Colombier": [
+    46.9677,
+    6.849
+   ],
+   "Boudry": [
+    46.9595,
+    6.8352
+   ],
+   "Bevaix": [
+    46.9297,
+    6.8117
+   ],
+   "Yverdon": [
+    46.7814,
+    6.6408
+   ],
+   "Corcelles-Peseux": [
+    46.9834,
+    6.8838
+   ],
+   "Chambrelien": [
+    46.9673,
+    6.8125
+   ],
+   "La Chaux-de-Fonds": [
+    47.0986,
+    6.8251
+   ],
+   "Les Geneveys-sur-Coffrane": [
+    47.0151,
+    6.8532
+   ],
+   "Bôle": [
+    46.9691,
+    6.838
+   ],
+   "Champ-du-Moulin": [
+    46.9599,
+    6.775
+   ],
+   "Noiraigue": [
+    46.9549,
+    6.7218
+   ],
+   "Travers": [
+    46.9424,
+    6.6762
+   ],
+   "Pontarlier": [
+    46.9035,
+    6.3546
+   ],
+   "Fleurier": [
+    46.9025,
+    6.5822
+   ],
+   "Buttes": [
+    46.8889,
+    6.5512
+   ],
+   "Murten": [
+    46.9254,
+    7.1153
+   ],
+   "Gals": [
+    47.027,
+    7.048
+   ]
+  },
+  "margin_x": 330,
+  "lt_dist_w": 2.0
+ },
+ "zeichnen": {
+  "_zweck": "Hinweis 15.10. (doppelt): Anschlussgleise als ein Fächer mit einer 60°-Schräge; Abzweige aus der Schrägen ausgerundet (Hinweis «Nun runden», 17.10.)",
+  "weg": [
+   45279438,
+   157259844,
+   157259845,
+   157259846,
+   157259847,
+   49448903
+  ],
+  "linien": [
+   {
+    "pts": [
+     [
+      "x:1213",
+      "y:110"
+     ],
+     [
+      "x:1155.0",
+      "y:110"
+     ],
+     [
+      "x:1118",
+      "y:174"
+     ],
+     [
+      "x:1111",
+      "y:174"
+     ]
+    ],
+    "pax": false,
+    "punkt_anfang": true,
+    "_osm": "45279438/157259847 Anschluss"
+   },
+   {
+    "pts": [
+     [
+      "x:1098.0",
+      "y:158.0"
+     ],
+     [
+      "x:1127.3",
+      "y:158.0"
+     ],
+     [
+      "x:1133.3",
+      "y:147.6"
+     ]
+    ],
+    "pax": false,
+    "punkt_anfang": true,
+    "_osm": "49448903",
+    "rund": 9
+   },
+   {
+    "pts": [
+     [
+      "x:1128.2",
+      "y:156.4"
+     ],
+     [
+      "x:1134.2",
+      "y:146.0"
+     ],
+     [
+      "x:1207.0",
+      "y:146.0"
+     ]
+    ],
+    "pax": false,
+    "punkt_anfang": false,
+    "_osm": "157259845/844",
+    "rund": 9,
+    "punkt_ende": true
+   },
+   {
+    "pts": [
+     [
+      "x:1098.0",
+      "y:134.0"
+     ],
+     [
+      "x:1141.1",
+      "y:134.0"
+     ],
+     [
+      "x:1147.1",
+      "y:123.6"
+     ]
+    ],
+    "pax": false,
+    "punkt_anfang": true,
+    "_osm": "157259847 links",
+    "rund": 9
+   },
+   {
+    "pts": [
+     [
+      "x:1098.0",
+      "y:122.0"
+     ],
+     [
+      "x:1146.0",
+      "y:122.0"
+     ],
+     [
+      "x:1150.4",
+      "y:118.0"
+     ]
+    ],
+    "pax": false,
+    "punkt_anfang": true,
+    "_osm": "157259846 – mündet unterhalb der Ausrundung des obersten Gleises (20.10.: Ministummel/Überlappung)",
+    "rund": 4
+   }
+  ]
+ }
+}

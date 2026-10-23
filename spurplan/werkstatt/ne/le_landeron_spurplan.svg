@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 270" width="1280" height="270" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
+<rect width="100%" height="100%" fill="#fff"/>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M436.3,158.0L441.3,158.0Q446.3,158.0 448.8,153.7L457.6,138.3Q460.1,134.0 465.1,134.0L470.1,134.0 M771.7,134.0L776.7,134.0Q781.7,134.0 784.2,138.3L793.1,153.7Q795.6,158.0 800.6,158.0L805.6,158.0 M533.9,110.0L507.9,110.0" stroke="#111" stroke-width="1.6"/>
+<path d="M275.0,134.0L949.7,134.0 M275.0,158.0L949.7,158.0 M510.0,134.0L515.0,134.0Q520.0,134.0 522.5,129.7L530.4,116.1Q533.9,110.0 540.9,110.0L726.9,110.0Q733.9,110.0 737.4,116.1L745.2,129.7Q747.7,134.0 752.7,134.0L757.7,134.0" stroke="#00862f" stroke-width="3.6"/>
+</g>
+<rect x="578.9" y="165.0" width="110.0" height="8" rx="1.5" fill="#00862f"/>
+<rect x="578.9" y="118.0" width="110.0" height="8" rx="1.5" fill="#00862f"/>
+<rect x="620.9" y="102.0" width="26" height="16" fill="#fff" stroke="none"/><text x="633.9" y="116.5" font-size="19" text-anchor="middle" fill="#00862f">3</text>
+<rect x="620.9" y="126.0" width="26" height="16" fill="#fff" stroke="none"/><text x="633.9" y="140.5" font-size="19" text-anchor="middle" fill="#00862f">2</text>
+<rect x="620.9" y="150.0" width="26" height="16" fill="#fff" stroke="none"/><text x="633.9" y="164.5" font-size="19" text-anchor="middle" fill="#00862f">1</text>
+<circle cx="507.9" cy="110.0" r="3.2" fill="#111"/>
+<text x="263.0" y="133.0" font-size="22" text-anchor="end" fill="#00862f">Linie 210</text>
+<text x="263.0" y="159.0" font-size="22" text-anchor="end" fill="#00862f">← Neuchâtel</text>
+<text x="961.7" y="133.0" font-size="22" text-anchor="start" fill="#00862f">Linie 210</text>
+<text x="961.7" y="159.0" font-size="22" text-anchor="start" fill="#00862f">Biel →</text>
+<text x="633.9" y="225.0" font-size="38" font-weight="700" text-anchor="middle" fill="#00862f">Le Landeron</text>
+</svg>

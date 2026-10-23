@@ -1,0 +1,283 @@
+{
+ "_quelle": "Entwurf 14.10.2026 (Claude), Le Landeron, OSM-Stand 12.10.",
+ "cfg": {
+  "towns": {
+   "Biel": [
+    47.1325,
+    7.2426
+   ],
+   "Ins": [
+    46.9999,
+    7.0996
+   ],
+   "Kerzers": [
+    46.9751,
+    7.1929
+   ],
+   "Bern": [
+    46.949,
+    7.4391
+   ],
+   "Neuchâtel": [
+    46.9966,
+    6.9358
+   ],
+   "Twann": [
+    47.0938,
+    7.1566
+   ],
+   "Ligerz": [
+    47.084,
+    7.1348
+   ],
+   "La Neuveville": [
+    47.0628,
+    7.0954
+   ],
+   "Le Landeron": [
+    47.0566,
+    7.0663
+   ],
+   "Cressier": [
+    47.0519,
+    7.0395
+   ],
+   "Cornaux": [
+    47.0387,
+    7.0234
+   ],
+   "Saint-Blaise": [
+    47.0145,
+    6.9821
+   ],
+   "Marin-Epagnier": [
+    47.009,
+    7.0107
+   ],
+   "Gampelen": [
+    47.0091,
+    7.0582
+   ],
+   "Zihlbrücke": [
+    47.0093,
+    7.0306
+   ],
+   "Serrières": [
+    46.984,
+    6.9033
+   ],
+   "Auvernier": [
+    46.9796,
+    6.8777
+   ],
+   "Colombier": [
+    46.9677,
+    6.849
+   ],
+   "Boudry": [
+    46.9595,
+    6.8352
+   ],
+   "Bevaix": [
+    46.9297,
+    6.8117
+   ],
+   "Yverdon": [
+    46.7814,
+    6.6408
+   ],
+   "Corcelles-Peseux": [
+    46.9834,
+    6.8838
+   ],
+   "Chambrelien": [
+    46.9673,
+    6.8125
+   ],
+   "La Chaux-de-Fonds": [
+    47.0986,
+    6.8251
+   ],
+   "Les Geneveys-sur-Coffrane": [
+    47.0151,
+    6.8532
+   ],
+   "Bôle": [
+    46.9691,
+    6.838
+   ],
+   "Champ-du-Moulin": [
+    46.9599,
+    6.775
+   ],
+   "Noiraigue": [
+    46.9549,
+    6.7218
+   ],
+   "Travers": [
+    46.9424,
+    6.6762
+   ],
+   "Pontarlier": [
+    46.9035,
+    6.3546
+   ],
+   "Fleurier": [
+    46.9025,
+    6.5822
+   ],
+   "Buttes": [
+    46.8889,
+    6.5512
+   ],
+   "Murten": [
+    46.9254,
+    7.1153
+   ],
+   "Gals": [
+    47.027,
+    7.048
+   ]
+  },
+  "margin_x": 330,
+  "lt_dist_w": 2.0
+ },
+ "weglassen": [
+  184205540,
+  184205542,
+  184205541,
+  886128196,
+  886128197
+ ],
+ "pax_ways": [
+  39832533
+ ],
+ "zeichnen": {
+  "_zweck": "Hinweise 15.10.: Gleise 1/2 eine Achse auseinander; Gleis 3 direkt ins Gleis 2, Spurwechsel 1/2 ohne Zwischengerade",
+  "weg": [],
+  "linien": [
+   {
+    "pts": [
+     [
+      "n:249162307-7",
+      "n:249162307"
+     ],
+     [
+      "n:249162307",
+      "n:249162307"
+     ],
+     [
+      "d60",
+      "n:1946616036"
+     ],
+     [
+      "+7",
+      "n:1946616036"
+     ]
+    ],
+    "pax": false,
+    "_osm": "Spurwechsel 1->2 (184205541/886128196/7)"
+   },
+   {
+    "pts": [
+     [
+      "n:477515436-20.9",
+      "n:1946616035"
+     ],
+     [
+      "n:477515436-13.9",
+      "n:1946616035"
+     ],
+     [
+      "n:477515436",
+      "n:477515436"
+     ],
+     [
+      "+7",
+      "n:477515436"
+     ]
+    ],
+    "pax": true,
+    "_osm": "Gleis 3 -> 2 (184205540/542)"
+   }
+  ]
+ },
+ "platforms": [],
+ "perrons_px": [
+  [
+   815,
+   925,
+   146
+  ],
+  [
+   815,
+   925,
+   193
+  ]
+ ],
+ "nummern_weg": [
+  "1",
+  "2",
+  "3",
+  "13",
+  "21",
+  "52",
+  "709",
+  "809"
+ ],
+ "nummern_px": [
+  [
+   "3",
+   870,
+   134
+  ],
+  [
+   "2",
+   870,
+   158
+  ],
+  [
+   "1",
+   870,
+   182
+  ]
+ ],
+ "vorlage": {
+  "strecke": "doppelspur",
+  "form": "ueberholung",
+  "ueberholgleise": "oben",
+  "gleise": [
+   "3",
+   "2",
+   "1"
+  ],
+  "pax": [
+   true,
+   true,
+   true
+  ],
+  "perrons": "unten+zwischen",
+  "zusaetze": [
+   {
+    "art": "spurwechsel",
+    "ende": "links",
+    "anzahl": 1,
+    "richtung": "steigend"
+   },
+   {
+    "art": "spurwechsel",
+    "ende": "rechts",
+    "anzahl": 1,
+    "richtung": "fallend"
+   },
+   {
+    "art": "schutzstumpen",
+    "ende": "links"
+   }
+  ],
+  "_hinweis_2010b": "D.E. 20.10.: 4 Weichen zwischen den Hauptgleisen (links 1->2, rechts zurück), Gleis 3 links Prellbock, rechts nur Schutzweiche (weggelassen)"
+ },
+ "_aenderungen": [
+  "20.10.: Anschlüsse neu aus OSM (Verbindungen zwischen Hauptgleisen sind keine Anschlüsse)"
+ ]
+}

@@ -1,0 +1,280 @@
+{
+ "_quelle": "Entwurf 15.10.2026 (Claude), Müntschemier, OSM-Stand 12.10.",
+ "cfg": {
+  "towns": {
+   "Biel": [
+    47.1325,
+    7.2426
+   ],
+   "Ins": [
+    46.9999,
+    7.0996
+   ],
+   "Kerzers": [
+    46.9751,
+    7.1929
+   ],
+   "Bern": [
+    46.949,
+    7.4391
+   ],
+   "Neuchâtel": [
+    46.9966,
+    6.9358
+   ],
+   "Twann": [
+    47.0938,
+    7.1566
+   ],
+   "Ligerz": [
+    47.084,
+    7.1348
+   ],
+   "La Neuveville": [
+    47.0628,
+    7.0954
+   ],
+   "Le Landeron": [
+    47.0566,
+    7.0663
+   ],
+   "Cressier": [
+    47.0519,
+    7.0395
+   ],
+   "Cornaux": [
+    47.0387,
+    7.0234
+   ],
+   "Saint-Blaise": [
+    47.0145,
+    6.9821
+   ],
+   "Marin-Epagnier": [
+    47.009,
+    7.0107
+   ],
+   "Gampelen": [
+    47.0091,
+    7.0582
+   ],
+   "Zihlbrücke": [
+    47.0093,
+    7.0306
+   ],
+   "Serrières": [
+    46.984,
+    6.9033
+   ],
+   "Auvernier": [
+    46.9796,
+    6.8777
+   ],
+   "Colombier": [
+    46.9677,
+    6.849
+   ],
+   "Boudry": [
+    46.9595,
+    6.8352
+   ],
+   "Bevaix": [
+    46.9297,
+    6.8117
+   ],
+   "Yverdon": [
+    46.7814,
+    6.6408
+   ],
+   "Corcelles-Peseux": [
+    46.9834,
+    6.8838
+   ],
+   "Chambrelien": [
+    46.9673,
+    6.8125
+   ],
+   "La Chaux-de-Fonds": [
+    47.0986,
+    6.8251
+   ],
+   "Les Geneveys-sur-Coffrane": [
+    47.0151,
+    6.8532
+   ],
+   "Bôle": [
+    46.9691,
+    6.838
+   ],
+   "Champ-du-Moulin": [
+    46.9599,
+    6.775
+   ],
+   "Noiraigue": [
+    46.9549,
+    6.7218
+   ],
+   "Travers": [
+    46.9424,
+    6.6762
+   ],
+   "Pontarlier": [
+    46.9035,
+    6.3546
+   ],
+   "Fleurier": [
+    46.9025,
+    6.5822
+   ],
+   "Buttes": [
+    46.8889,
+    6.5512
+   ],
+   "Murten": [
+    46.9254,
+    7.1153
+   ],
+   "Gals": [
+    47.027,
+    7.048
+   ],
+   "Payerne": [
+    46.8197,
+    6.9384
+   ],
+   "Fribourg": [
+    46.8032,
+    7.1513
+   ],
+   "Lyss": [
+    47.0742,
+    7.3063
+   ]
+  },
+  "margin_x": 330,
+  "lt_dist_w": 2.0
+ },
+ "abgang": {
+  "380268817": {
+   "ref": "220",
+   "ort": "Kerzers"
+  }
+ },
+ "zeichnen": {
+  "_zweck": "Müntschemier (15.10. abends): Anschlussgleise Süd vereinfacht – ein Stumpen ab Gleis 2 (60°), Anschluss nach Westen eine Ebene tiefer",
+  "weg": [
+   380268818,
+   972574081,
+   972574082,
+   972574083,
+   1041958913,
+   380268817
+  ],
+  "linien": [
+   {
+    "pts": [
+     [
+      "x:420",
+      "y:158"
+     ],
+     [
+      "x:626.1",
+      "y:158"
+     ],
+     [
+      "d60",
+      "y:134"
+     ]
+    ],
+    "pax": false,
+    "punkt_anfang": true,
+    "_osm": "972574081/972574083 Abstellgleis"
+   },
+   {
+    "pts": [
+     [
+      "x:330",
+      "y:182"
+     ],
+     [
+      "x:456.1",
+      "y:182"
+     ],
+     [
+      "d60",
+      "y:158"
+     ]
+    ],
+    "pax": false,
+    "_osm": "380268818 Anschluss West"
+   },
+   {
+    "pts": [
+     [
+      "x:640.4",
+      "y:134"
+     ],
+     [
+      "x:957",
+      "y:134"
+     ]
+    ],
+    "port_way": 380268817,
+    "_osm": "380268817 Gleis 2 Ost bis Weiche 29383771 (sonst falscher Pfeil am Ostkopf)"
+   }
+  ]
+ },
+ "platforms": [],
+ "perrons_px": [
+  [
+   640,
+   750,
+   98
+  ],
+  [
+   640,
+   750,
+   146
+  ]
+ ],
+ "nummern_weg": [
+  "1",
+  "2"
+ ],
+ "nummern_px": [
+  [
+   "1",
+   695,
+   110
+  ],
+  [
+   "2",
+   695,
+   134
+  ]
+ ],
+ "_perrons": "zwei Aussenperrons nach Dreieck-Netzplan 1.10. (Ortskenntnis); OSM hat keine Perrons",
+ "vorlage": {
+  "strecke": "einspur",
+  "form": "kreuzung",
+  "gleise": [
+   "1",
+   "2"
+  ],
+  "pax": [
+   true,
+   true
+  ],
+  "perrons": "aussen",
+  "zusaetze": [
+   {
+    "art": "anschluss",
+    "ende": "rechts",
+    "lage": "innen",
+    "seite": "unten",
+    "stumpen": 2
+   }
+  ],
+  "_ortskenntnis": "zwei Aussenperrons (Dreieck-Netzplan 1.10.)"
+ }
+}
