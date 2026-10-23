@@ -40,10 +40,12 @@ jobs:
         working-directory: spurplan/werkstatt/olten
         env: { PLAENE_DIR: "/tmp/seite/plaene" }
         run: |
-          python3 feedback/bauen.py "${{ github.event.inputs.label || 'Region Olten' }}" feedback/region.svg
-          mkdir -p /tmp/seite && cp feedback/index.html /tmp/seite/
-          python3 ../../code/ausschnitte.py /tmp/seite/plaene ../../hinweise.json /tmp/seite/ausschnitte
+          set -o pipefail; mkdir -p /tmp/seite
+          python3 feedback/bauen.py "${{ github.event.inputs.label || 'Region Olten' }}" feedback/region.svg 2>&1 | tee /tmp/seite/log.txt
+          cp feedback/index.html /tmp/seite/
+          python3 ../../code/ausschnitte.py /tmp/seite/plaene ../../hinweise.json /tmp/seite/ausschnitte 2>&1 | tee -a /tmp/seite/log.txt
       - name: Ergebnisse auf Branch «ergebnisse» (nur ergebnisse/seite ersetzen)
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
