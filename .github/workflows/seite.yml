@@ -1,0 +1,55 @@
+# Feedback-Seite bauen (D. Eckenstein 23.10.2026: «mehr in Git auslagern»). Claude holt nur noch die fertige Seite und
+# veröffentlicht sie; an den Hinweisstellen (spurplan/hinweise.json) entstehen kleine PNG-Ausschnitte zum Prüfen.
+# Quelle: spurplan/werkstatt/olten (Stand der Arbeitsordner, feedback/bauen.py) + Regionalpläne vom Branch «ergebnisse».
+# Ergebnis: Branch «ergebnisse», Ordner ergebnisse/seite/ (index.html, plaene/<key>.svg, ausschnitte/<id>.png + index.json).
+name: seite
+on:
+  workflow_dispatch:
+    inputs:
+      label: { description: "Label des Regionalplans Olten", required: false, default: "Region Olten" }
+  push:
+    branches: [main]
+    paths: ["spurplan/werkstatt/**", "spurplan/hinweise.json", "spurplan/code/ausschnitte.py"]
+  workflow_run:
+    workflows: ["regionen", "plaene"]
+    types: [completed]
+permissions:
+  contents: write
+concurrency: { group: plaene, cancel-in-progress: false }
+jobs:
+  bauen:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v6
+        with: { ref: main }
+      - uses: actions/setup-python@v6
+        with: { python-version: "3.12" }
+      - run: |
+          sudo apt-get install -y -q libcairo2 >/dev/null
+          pip install -q numpy scipy shapely svgpathtools cairosvg pillow
+      - name: Regionalpläne vom Branch «ergebnisse» übernehmen
+        run: |
+          git fetch -q origin ergebnisse || true
+          for r in $(git ls-tree --name-only origin/ergebnisse ergebnisse/ 2>/dev/null | grep '/region_' || true); do
+            k=$(basename $r)
+            git show origin/ergebnisse:$r/region.svg > spurplan/werkstatt/olten/feedback/$k.svg 2>/dev/null || rm -f spurplan/werkstatt/olten/feedback/$k.svg
+          done
+          ls spurplan/werkstatt/olten/feedback/*.svg
+      - name: Seite bauen und Ausschnitte
+        working-directory: spurplan/werkstatt/olten
+        env: { PLAENE_DIR: "/tmp/seite/plaene" }
+        run: |
+          python3 feedback/bauen.py "${{ github.event.inputs.label || 'Region Olten' }}" feedback/region.svg
+          mkdir -p /tmp/seite && cp feedback/index.html /tmp/seite/
+          python3 ../../code/ausschnitte.py /tmp/seite/plaene ../../hinweise.json /tmp/seite/ausschnitte
+      - name: Ergebnisse auf Branch «ergebnisse» (nur ergebnisse/seite ersetzen)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git stash -u -q || true
+          if git rev-parse --verify origin/ergebnisse >/dev/null 2>&1; then git checkout -q -B ergebnisse origin/ergebnisse; else git checkout -q --orphan ergebnisse; git rm -rq --cached . || true; fi
+          rm -rf ergebnisse/seite && mkdir -p ergebnisse && cp -r /tmp/seite ergebnisse/seite
+          git add -A ergebnisse/seite
+          git commit -qm "Seite $(date -u +%Y-%m-%dT%H:%MZ) (${{ github.sha }})" || echo "keine Änderung"
+          git push -q origin ergebnisse

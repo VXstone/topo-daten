@@ -1,0 +1,212 @@
+[
+ {
+  "id": "am5twqnilzi7se6soula",
+  "plan": "region",
+  "x": 101.3,
+  "y": -720.5,
+  "text": "da fehlt \"Platz\" für den langen Hauensteintunnel der auch mehrere Spurwechsel (doppelte) auf der Strecke hat",
+  "status": "offen",
+  "rueckmeldungen": [
+   "ausrunden der Spurwechsel, Tunnelportalsymbole evt?",
+   "platz ist jetzt mehr als genug da, Tunnelportal mitnehmen und wieder etwas drängen",
+   "der Tunnel braucht doch keinen Knick, eher die Linie via Läufelfingen weiter nach links setzen und diese Hauptlinie gerade aus Olten heraus nach Tecknau führen\nNordportal vom Tunnel fehlt\n\nWieso sind die ersten Spurwechsel noch grün? (südlich/unten)"
+  ],
+  "erstellt": "2026-10-13T10:39:33.354Z"
+ },
+ {
+  "id": "druqnj7ghzdzwq9ljk6q",
+  "plan": "region",
+  "x": -12.4,
+  "y": -276.4,
+  "text": "Das Portal müsste doch hier sein und der Abzweig nach Trimbach vorher",
+  "status": "offen",
+  "rueckmeldungen": [
+   "Nordportal? Und Knick im tunnel ist unlogisch, eher kürzen alles",
+   "und Spurwechsel (der erste im Tunnel schwarz)?"
+  ],
+  "erstellt": "2026-10-15T18:37:30.876Z"
+ },
+ {
+  "id": "fw9u1gykuqzw7kvc4b5a",
+  "plan": "region",
+  "x": -186.1,
+  "y": -950.8,
+  "text": "Die sind ja alle auf einem Flexk",
+  "status": "offen",
+  "rueckmeldungen": [
+   "Mindestabstand zwischen Stationen einführen? Die sind zu nah visuell"
+  ],
+  "erstellt": "2026-10-15T18:37:47.505Z"
+ },
+ {
+  "id": "eojeak1xonq1k48e0gyd",
+  "plan": "region_ne",
+  "x": 2125.8,
+  "y": -406.4,
+  "text": "Sinnvoll Kerzers in zwei kreuzende 60 Grad zueinander achsen? Alles diese 90 Grad Winkel auf jedem Ast wären so weg",
+  "status": "offen",
+  "rueckmeldungen": [
+   "Ja"
+  ],
+  "erstellt": "2026-10-17T20:34:36.105Z"
+ },
+ {
+  "id": "3za5possrk2xb0k94bb1",
+  "plan": "region",
+  "x": -54,
+  "y": 763.7,
+  "text": "solche Dinge dürften nicht passieren, plötzlich 90 Grad Winkel und statt 2 Weichen ist es nur noch eine bzw. sieht fast aus wie eine rechtwinkliche DKW\n\n-> Prüfalgorhythmus der ein Resultate auf Basis visuelles check?",
+  "status": "offen",
+  "rueckmeldungen": [
+   "nun Rundung, und diverse Weichen fehlen hier doch?"
+  ],
+  "erstellt": "2026-10-19T09:19:11.253Z"
+ },
+ {
+  "id": "9oxng3sh2mls0r6coyx7",
+  "plan": "region",
+  "x": -93.7,
+  "y": 761.1,
+  "text": "Regel: Schwarz hinter grün",
+  "status": "offen",
+  "rueckmeldungen": [
+   "kommentar 10 wär nun hier gelandet, die Kommentare zügeln nicht mit"
+  ],
+  "erstellt": "2026-10-19T09:19:32.438Z"
+ },
+ {
+  "id": "4xdm1q0bw47yeso6zkbv",
+  "plan": "region",
+  "x": 34.7,
+  "y": 924.7,
+  "text": "dazwischen geht noch ein Gleisanschluss raus, oder? Prüfalgorhythmus, der alle Verbindungen checkt?",
+  "status": "offen",
+  "rueckmeldungen": [
+   "das Gleis geht doch utnerhalb des Gleis von Rothrist her raus -> ist es jetzt falsch rum?"
+  ],
+  "erstellt": "2026-10-19T14:27:53.588Z"
+ },
+ {
+  "id": "lld9ys5a6ksdz6xxwrcy",
+  "plan": "region",
+  "x": -3.5,
+  "y": 472,
+  "text": "diese Anschlussgleise südlich von Olten? Woher kommen diese? Olten scheint mir komplett, ebenso Olten Hammer und die Streckeb bis Rothrist",
+  "status": "offen",
+  "rueckmeldungen": [],
+  "erstellt": "2026-10-20T11:19:55.425Z"
+ },
+ {
+  "id": "of4dx1zk7w3uayt110tr",
+  "plan": "onnens_bonvillars",
+  "x": 664.7,
+  "y": 122.4,
+  "text": "DKW?",
+  "status": "offen",
+  "rueckmeldungen": [
+   "die DKW müsste aber um 90 Grad gedreht sein oder gemäss OSM? also Äste rechts-links je miteinander verbinden oder nicht?",
+   "so kann keine DKW aussehen -> Blaupausen-Update machen? EIne DKW verbindet immer die geraden Äste und diejenigen mit dem jeweils grösseren WInkel sind auch erreichbar, aber nicht der nähere WInkel) -> das als Standard\n\nFür den Fall hier -> DKW nach Links versetzen, damit der Pfeil nach rechts oben an seiner Lage bleibt und die DKW liegend zeichnen)"
+  ],
+  "erstellt": "2026-10-20T11:40:58.653Z"
+ },
+ {
+  "id": "eh1civ1dzr80annhem8g",
+  "plan": "neuchatel",
+  "x": 1186.2,
+  "y": 193.4,
+  "text": "noch weitere Weichen bis Ende bhf?",
+  "status": "offen",
+  "rueckmeldungen": [],
+  "erstellt": "2026-10-20T15:29:34.149Z"
+ },
+ {
+  "id": "1v507u9g14qh71941icj",
+  "plan": "neuchatel",
+  "x": 763.5,
+  "y": 229.2,
+  "text": "Zeichenregel Rundung / Gleislänge",
+  "status": "offen",
+  "rueckmeldungen": [],
+  "erstellt": "2026-10-21T09:49:21.619Z"
+ },
+ {
+  "id": "xxvpmg453y1iysxvvr0d",
+  "plan": "region",
+  "x": 205.3,
+  "y": -333.6,
+  "text": "dieses Gleis in den 1-Achse-Abstand vom nächsten Gleis (also eines nach rechts versetzen und das abzweigende Gleis dann als Weiche nach links raus)",
+  "status": "offen",
+  "rueckmeldungen": [],
+  "erstellt": "2026-10-21T09:52:58.161Z"
+ },
+ {
+  "id": "k9zbnjd652zs03q9eban",
+  "plan": "region",
+  "x": 142.2,
+  "y": -235.3,
+  "text": "noch weniger lang parallel, die Gleise steiler weg -> damit",
+  "status": "offen",
+  "rueckmeldungen": [],
+  "erstellt": "2026-10-21T09:53:25.372Z"
+ },
+ {
+  "id": "m1ama0shvi5is3e60k2i",
+  "plan": "region",
+  "x": 65.9,
+  "y": -175.2,
+  "text": "von 57 -> damit hier kein Knick, die Gleise gerade durchziehen und dann wieder ein Winkel RIchtung Tunnel",
+  "status": "offen",
+  "rueckmeldungen": [],
+  "erstellt": "2026-10-21T09:53:43.095Z"
+ },
+ {
+  "id": "5o16cik02oi3ra5wdfx2",
+  "plan": "region",
+  "x": -954.1,
+  "y": 727.4,
+  "text": "da stimmt was nicht (mehr) in Rothrist!",
+  "status": "offen",
+  "rueckmeldungen": [],
+  "erstellt": "2026-10-21T09:54:43.486Z"
+ },
+ {
+  "id": "jbs12ofny2vyq8mel03r",
+  "plan": "region",
+  "x": -77.4,
+  "y": 762,
+  "text": "fehlen nun weichen",
+  "status": "offen",
+  "rueckmeldungen": [],
+  "erstellt": "2026-10-21T09:54:55.706Z"
+ },
+ {
+  "id": "yfi1pm6102v50sop5euu",
+  "plan": "tuscherz",
+  "x": 587.5,
+  "y": 127,
+  "text": "fehlt da nicht eine Weiche?",
+  "status": "offen",
+  "rueckmeldungen": [],
+  "erstellt": "2026-10-21T09:58:23.718Z"
+ },
+ {
+  "id": "olvnrgp65hwz6p3fsqks",
+  "plan": "region_ne",
+  "x": 1420.6,
+  "y": -625.3,
+  "text": "Meterspur Perron braun",
+  "status": "offen",
+  "rueckmeldungen": [],
+  "erstellt": "2026-10-22T07:10:48.299Z"
+ },
+ {
+  "id": "2ayijyy37uvnfgst9306",
+  "plan": "region_ne",
+  "x": -709.9,
+  "y": -310.4,
+  "text": "Anbindung hier",
+  "status": "offen",
+  "rueckmeldungen": [],
+  "erstellt": "2026-10-22T07:11:53.864Z"
+ }
+]

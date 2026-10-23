@@ -1,0 +1,38 @@
+{
+ "_quelle": "Hinweise D. Eckenstein (Feedback-Seite, Runde 3): Mittelperron 3/4, Spurwechsel ohne Zwischengerade, Gleise 1 und 2 beschriften. Perronlage geschätzt um den Stationspunkt (s 4469), in OSM fehlt der Perron. Runde 4: Verbindung 2->1 ohne Zwischengerade, Gl. 2 gerade Richtung Luzern und Gl. 1 kommt herunter, Hauptgleise laufen gerade an den Planrand.",
+ "cfg": {
+  "rules": {
+   "r34n": true,
+   "r28d": true
+  },
+  "px_per_m": 0.7,
+  "s_max_fix": 5170,
+  "side_lane_factor": 1.0
+ },
+ "nummern": [
+  "1",
+  "2"
+ ],
+ "platforms": [
+  {
+   "between": [
+    "3",
+    "4"
+   ],
+   "s": [
+    4330,
+    4610
+   ]
+  }
+ ],
+ "schraeg": [
+  1315701709,
+  1315701703
+ ],
+ "gerade": [
+  [
+   181147022,
+   3631
+  ]
+ ]
+}

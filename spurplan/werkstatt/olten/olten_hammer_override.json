@@ -1,0 +1,40 @@
+{
+ "_quelle": "Hinweise D. Eckenstein 13.10.2026: Ausschnitt endet vor der Südeinfahrt Olten; Mittelperron zwischen den Hauptgleisen 2 (Nord) und 3 (Süd). Perronlage geschätzt um den Stationspunkt (s 4420-4570), in OSM fehlt der Perron.",
+ "cfg": {
+  "axis_snap": false,
+  "s_max_fix": 5240,
+  "rules": {
+   "r34n": true
+  }
+ },
+ "gleise": {
+  "2": [
+   52581368,
+   976727145,
+   52581367,
+   141697084,
+   52581508,
+   52581347
+  ],
+  "3": [
+   141697082,
+   976727146,
+   141697080,
+   141697085,
+   23993058,
+   25955344
+  ]
+ },
+ "platforms": [
+  {
+   "between": [
+    "2",
+    "3"
+   ],
+   "s": [
+    4400,
+    4590
+   ]
+  }
+ ]
+}

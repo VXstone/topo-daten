@@ -1,0 +1,48 @@
+{
+ "cfg": {
+  "sw_search_m": 600,
+  "rules": {
+   "r48": true
+  }
+ },
+ "_quelle": "Betriebspunkt Olten Ost (Name D. Eckenstein 20.10.), Daten region.json, synthetischer Stationsknoten, Kreis 650 m, --hauptgleise",
+ "abgang": {
+  "50062999": {
+   "ref": "531",
+   "ort": "Olten"
+  },
+  "702696960": {
+   "ref": "531",
+   "ort": "Olten"
+  }
+ },
+ "zeichnen": {
+  "weg": [
+   1332417458
+  ],
+  "linien": [
+   {
+    "pts": [
+     [
+      "x:419",
+      "y:110"
+     ],
+     [
+      "x:470",
+      "y:110"
+     ],
+     [
+      "d60",
+      "y:134"
+     ],
+     [
+      "x:533",
+      "y:134"
+     ]
+    ],
+    "port_way": 1332417458,
+    "_osm": "Aarau Gleis 1 am Planrand im Doppelspurabstand (Regel D.E. 20.10. abends)"
+   }
+  ]
+ }
+}

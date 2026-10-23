@@ -1,0 +1,100 @@
+{
+ "cfg": {
+  "sw_search_m": 600,
+  "rules": {
+   "r48": true
+  }
+ },
+ "_quelle": "Betriebspunkt Olten Ost (Name D. Eckenstein 20.10.), Daten region.json, synthetischer Stationsknoten, Kreis 650 m, --hauptgleise · Regionalvariante (20.10. abends): 531 als Gleise am linken Rand über den 540-Gleisen, fädeln mit 60° ein (Drehung 60° im Regionalplan)",
+ "abgang": {
+  "50062999": {
+   "ref": "531",
+   "ort": "Olten"
+  },
+  "702696960": {
+   "ref": "531",
+   "ort": "Olten"
+  }
+ },
+ "als_rand": [
+  50062999,
+  702696960
+ ],
+ "zeichnen": {
+  "weg": [
+   50062999,
+   702696960,
+   1332417458
+  ],
+  "linien": [
+   {
+    "pts": [
+     [
+      "x:220",
+      "y:86"
+     ],
+     [
+      "c60:635803262",
+      "y:86"
+     ],
+     [
+      "n:635803262",
+      "n:635803262"
+     ],
+     [
+      "+12",
+      "n:635803262"
+     ]
+    ],
+    "port_way": 50062999,
+    "port_am_anfang": true,
+    "_osm": "531 (oberes Gleis) fädelt in Gleis Aarau 1 ein"
+   },
+   {
+    "pts": [
+     [
+      "x:220",
+      "y:110"
+     ],
+     [
+      "c60:635803227",
+      "y:110"
+     ],
+     [
+      "n:635803227",
+      "n:635803227"
+     ],
+     [
+      "+12",
+      "n:635803227"
+     ]
+    ],
+    "port_way": 702696960,
+    "port_am_anfang": true,
+    "_osm": "531 (unteres Gleis) fädelt in das 540-Gleis ein"
+   },
+   {
+    "pts": [
+     [
+      "x:419",
+      "y:110"
+     ],
+     [
+      "x:470",
+      "y:110"
+     ],
+     [
+      "d60",
+      "y:134"
+     ],
+     [
+      "x:533",
+      "y:134"
+     ]
+    ],
+    "port_way": 1332417458,
+    "_osm": "Aarau Gleis 1 am Planrand im Doppelspurabstand (Regel D.E. 20.10. abends)"
+   }
+  ]
+ }
+}

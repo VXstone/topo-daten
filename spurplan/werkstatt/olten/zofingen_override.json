@@ -1,0 +1,70 @@
+{
+ "_quelle": "Ortskenntnis D. Eckenstein, 1.10.2026",
+ "pax": [
+  "1",
+  "2",
+  "3",
+  "40"
+ ],
+ "platforms": [
+  {
+   "outer": "1"
+  },
+  {
+   "between": [
+    "2",
+    "3"
+   ]
+  },
+  {
+   "outer": "40"
+  }
+ ],
+ "cfg": {
+  "axis_snap": false,
+  "d_lim": 140,
+  "rules": {
+   "r48": true
+  }
+ },
+ "knoten": {
+  "2055876778": "4"
+ },
+ "direkt": [
+  195100348
+ ],
+ "platz": [
+  [
+   2055876771,
+   2055876770,
+   45
+  ],
+  [
+   2055876782,
+   2055876778,
+   30
+  ]
+ ],
+ "zusatz_spurwechsel": [
+  {
+   "von": "3",
+   "nach": "2",
+   "s": 5100,
+   "pax": true
+  }
+ ],
+ "schraeg": [
+  195101327
+ ],
+ "gerade": [
+  195101323
+ ],
+ "knoten_x": {
+  "2055876778": 384.2
+ },
+ "knoten_versatz_m": {
+  "2055879903": 45,
+  "2023056388": 45
+ },
+ "direkt_alle_dkw": true
+}

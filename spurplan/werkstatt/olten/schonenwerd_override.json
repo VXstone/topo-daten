@@ -1,0 +1,13 @@
+{
+ "_quelle": "Hinweis D. Eckenstein (Feedback-Seite 13.10.): doppelter Spurwechsel Richtung Aarau; der Gegenwechsel liegt ausserhalb der OSM-Daten und ist nach Ortskenntnis ergänzt.",
+ "zusatz_spurwechsel": [
+  {
+   "von": "2",
+   "nach": "1",
+   "s": 5470
+  }
+ ],
+ "cfg": {
+  "s_max_fix": 5600
+ }
+}

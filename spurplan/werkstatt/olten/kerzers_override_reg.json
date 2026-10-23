@@ -1,0 +1,176 @@
+{
+ "_quelle": "Hinweise D. Eckenstein (Feedback-Seite, 13.10.): Kerzers wie eine grosse DKW - Bern/Murten im Süden (links), Lyss/Neuenburg-Ins im Norden (rechts); beide Perrongruppen von Bern und Murten erreichbar. Achse Süd-Nord (kerzers_axis.json).",
+ "pax": [
+  "1",
+  "2",
+  "3",
+  "4",
+  "5",
+  "6"
+ ],
+ "cfg": {
+  "axis_snap": false,
+  "d_lim": 600,
+  "rules": {
+   "r28d": true
+  }
+ },
+ "schraeg": [
+  1288904563,
+  27342734
+ ],
+ "weglassen": [
+  108434317,
+  146406262,
+  146406264,
+  146406269,
+  173229809,
+  173229810,
+  380966233
+ ],
+ "pax_ways": [
+  44889470,
+  113019789,
+  380966231
+ ],
+ "platz": [
+  [
+   569100123,
+   30889073,
+   170
+  ],
+  [
+   1283055801,
+   1283055799,
+   170
+  ],
+  [
+   1244208593,
+   29383770,
+   35
+  ],
+  [
+   1596790690,
+   1596790956,
+   30
+  ]
+ ],
+ "x_kreuzung": {
+  "ways": [
+   1288904563,
+   27342734
+  ],
+  "extra": [
+   44889470,
+   113019789,
+   964036924,
+   380966237,
+   146406262
+  ]
+ },
+ "ebene_wie": [
+  [
+   380966237,
+   "1"
+  ],
+  [
+   964036924,
+   "6"
+  ]
+ ],
+ "gerade": [
+  27821502,
+  27821503,
+  44889470,
+  380141992,
+  380966234,
+  380966235,
+  1041953926
+ ],
+ "knoten": {
+  "1596791343": "3"
+ },
+ "abzweig_diagonale": [
+  {
+   "way": 185277587,
+   "diag_way": 380966230
+  }
+ ],
+ "platforms": [
+  {
+   "outer": "1",
+   "side": "above",
+   "s": [
+    2308,
+    2520
+   ]
+  },
+  {
+   "outer": "3",
+   "side": "below",
+   "s": [
+    2307,
+    2466
+   ]
+  },
+  {
+   "outer": "4",
+   "side": "above",
+   "s": [
+    2247,
+    2477
+   ]
+  },
+  {
+   "outer": "6",
+   "side": "below",
+   "s": [
+    2260,
+    2481
+   ]
+  }
+ ],
+ "zeichnen": {
+  "_zweck": "Gleis 4 als eine gerade Schräge zu 6, Gleis 5 fädelt direkt in die Schräge ein (Hinweis 14.10.)",
+  "weg": [
+   1346422183,
+   380966231
+  ],
+  "linien": [
+   {
+    "pts": [
+     [
+      "x:561",
+      2
+     ],
+     [
+      "x:594.3",
+      2
+     ],
+     [
+      "d60",
+      0
+     ],
+     [
+      "x:626",
+      0
+     ]
+    ]
+   },
+   {
+    "pts": [
+     [
+      "x:588",
+      1
+     ],
+     [
+      "x:608.2",
+      1
+     ]
+    ],
+    "rund": 0
+   }
+  ]
+ },
+ "weglassen_pfeil": true
+}

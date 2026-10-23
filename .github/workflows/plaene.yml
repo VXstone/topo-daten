@@ -8,7 +8,7 @@ on:
       bahnhoefe: { description: "Bahnhöfe (Leerzeichen getrennt), leer = alle", required: false, default: "" }
   push:
     branches: [main]
-    paths: ["spurplan/**", "!spurplan/regionen/**"]
+    paths: ["spurplan/**", "!spurplan/regionen/**", "!spurplan/werkstatt/**", "!spurplan/hinweise.json", "!spurplan/UEBERGABE.md"]
 permissions:
   contents: write
 concurrency: { group: plaene, cancel-in-progress: false }
@@ -36,10 +36,10 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git fetch origin ergebnisse || true
           if git rev-parse --verify origin/ergebnisse >/dev/null 2>&1; then git checkout -q -B ergebnisse origin/ergebnisse; else git checkout -q --orphan ergebnisse; git rm -rq --cached . || true; fi
-          mkdir -p /tmp/regionen && mv ergebnisse/region_* /tmp/regionen/ 2>/dev/null || true   # Regionalpläne (Workflow regionen) behalten
+          mkdir -p /tmp/regionen && mv ergebnisse/region_* ergebnisse/seite /tmp/regionen/ 2>/dev/null || true   # Regionalpläne (regionen) und Seite (seite) behalten
           find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
           cp -r /tmp/erg/ergebnisse . 2>/dev/null || mkdir ergebnisse
-          mv /tmp/regionen/region_* ergebnisse/ 2>/dev/null || true
+          mv /tmp/regionen/* ergebnisse/ 2>/dev/null || true
           git add -A ergebnisse
           git commit -qm "Pläne $(date -u +%Y-%m-%dT%H:%MZ) (${{ github.sha }})" || echo "keine Änderung"
           git push -q origin ergebnisse

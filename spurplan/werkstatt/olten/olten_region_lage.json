@@ -1,0 +1,216 @@
+{
+ "Olten": [
+  0,
+  0
+ ],
+ "Abzweig #24": [
+  24.0,
+  -330.0
+ ],
+ "Dulliken": [
+  650,
+  -387
+ ],
+ "Däniken": [
+  1164,
+  -389
+ ],
+ "Schönenwerd": [
+  1830,
+  -550.8
+ ],
+ "Abgang 540 #36": [
+  2200,
+  -548.0
+ ],
+ "Abgang 650 #42": [
+  1500,
+  -370
+ ],
+ "Tecknau": [
+  108.6,
+  -961.0
+ ],
+ "Abgang 500 #35": [
+  99.6,
+  -1297.0
+ ],
+ "Läufelfingen": [
+  -250,
+  -751.0
+ ],
+ "Abgang 503 #37": [
+  -249,
+  -1285
+ ],
+ "Wangen bei Olten": [
+  -850,
+  468
+ ],
+ "Abgang 410 #39": [
+  -1350,
+  493
+ ],
+ "Aarburg-Oftringen": [
+  38.5,
+  650
+ ],
+ "Rothrist": [
+  -669,
+  753.24
+ ],
+ "Abzweig #31": [
+  -1238,
+  985.0
+ ],
+ "Abgang 400 #40": [
+  -1238,
+  1209.0
+ ],
+ "Abgang 450 #41": [
+  -1488,
+  1160.0
+ ],
+ "Zofingen": [
+  37.5,
+  1223.0
+ ],
+ "Abgang 500 #34": [
+  39.35,
+  1475.0
+ ],
+ "Safenwil": [
+  800,
+  983.0
+ ],
+ "Abgang 504 #38": [
+  1150,
+  1000.0
+ ],
+ "drehung": {
+  "Olten": -90,
+  "Aarburg-Oftringen": 90,
+  "Zofingen": 90,
+  "Tecknau": 90,
+  "Läufelfingen": 90,
+  "Olten Hammer": 0,
+  "Olten Ost": -60
+ },
+ "als_halt": [
+  "Hägendorf"
+ ],
+ "richtung": {
+  "#43": {
+   "#25": 300
+  },
+  "#25": {
+   "#43": 120
+  },
+  "#24": {
+   "#22": 300
+  },
+  "#22": {
+   "#24": 120
+  }
+ },
+ "merge_radius": {
+  "Aarburg-Oftringen": 450,
+  "Olten Ost": 150
+ },
+ "Abzweig #43": [
+  -52.5,
+  763.32
+ ],
+ "Abzweig #25": [
+  39.5,
+  920.5
+ ],
+ "senkrecht": [
+  "#25",
+  "#31"
+ ],
+ "stack_aus": [
+  "Rothrist"
+ ],
+ "xo_manuell": [
+  {
+   "a": "Abzweig",
+   "b": "Zofingen",
+   "t": 0.1,
+   "kehren": true,
+   "pax": true
+  }
+ ],
+ "eigenes_feld": [
+  "Olten Hammer"
+ ],
+ "Olten Hammer": [
+  -310,
+  495
+ ],
+ "gleise_strecke": {
+  "Olten|Dulliken": 4,
+  "Olten Ost|Dulliken": 4
+ },
+ "buendel_zusatz": [
+  "Olten|Dulliken",
+  "Olten|Olten Ost"
+ ],
+ "frueh": [
+  "Rothrist|Olten"
+ ],
+ "spaet_anteil": 0.9,
+ "spaet_anteil_strecke": {
+  "Rothrist|#43": 0.78
+ },
+ "kreuzung_tausch": [
+  [
+   -141,
+   742
+  ]
+ ],
+ "Olten Ost": [
+  205.5,
+  -302.6
+ ],
+ "_nebengleis_hand_vor_olten_ost": [
+  {
+   "weg": [
+    50063046,
+    50063047,
+    137216150,
+    313267372,
+    313267374
+   ],
+   "pts": [
+    [
+     205.8,
+     -226.9
+    ],
+    [
+     200.1,
+     -225.0
+    ],
+    [
+     193.2,
+     -231.1
+    ],
+    [
+     118.9,
+     -206.2
+    ]
+   ],
+   "punkt": true,
+   "_anlass": "Hinweis Region Olten 19.10.: Anschlussgleis geht aus dem Gleis Richtung Hauenstein (531) raus"
+  }
+ ],
+ "_olten_ost": "20.10. abends (D. Eckenstein: 60°): Olten Ost um 60° gedreht auf der Geraden der 540 aus Olten; Regionalvariante olten_ost_regional_* (531 am linken Rand, fädelt ein)",
+ "tunnel_hand": {
+  "Rothrist|Olten": [
+   [
+    0.47,
+    0.66
+   ]
+  ]
+ }
+}

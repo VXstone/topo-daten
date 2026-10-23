@@ -1,0 +1,22 @@
+== Prüfung 1: Gleise entlang der Strecken ==
+  Olten – Abzweig #24: gezeichnet 2 statt 3 Gleise (OSM-Querschnitt)
+  Olten – Abzweig #22: gezeichnet 4 statt 3 Gleise (OSM-Querschnitt)
+  Olten: 1 Abgänge des Spurplans ohne Strecke
+  Hinweis Abzweig #43: Gleis der Linie 453 (von Rothrist) wechselt auf Aarburg-Oftringen (451)
+  → 3 Befunde
+
+== Prüfung 2: Lage Nord/Süd und Ost/West gegenüber Geografie ==
+  → 0 Befunde
+
+== Prüfung 3: Achsen und Seiten der Spurpläne gegen die Karte ==
+  Dulliken: Abgang 540 (Aarau) liegt auf der Karte links von 540 (Aarau), im Plan rechts (Blick in Achsrichtung)
+  Olten: Strecken-Reihenfolge an einer Seite im Plan ['Abzweig #22', 'Abzweig #24'], auf der Karte ['Abzweig #24', 'Abzweig #22']
+  → 2 Befunde
+
+== Prüfung 4: Abstand der Gleise (< 4,5 px = optisch ein Gleis / Weiche verdeckt) ==
+  Olten: zu nah – zwei Linien 1.7 px auseinander auf 50 px
+  Olten: zu nah – zwei Linien 3.4 px auseinander auf 23 px
+  Olten: Weiche verdeckt – zwei Linien 3.4 px auseinander auf 20 px
+  Olten: Weiche verdeckt – zwei Linien 2.2 px auseinander auf 17 px
+  Olten: Weiche verdeckt – zwei Linien 3.0 px auseinander auf 16 px
+  → 5 Befunde

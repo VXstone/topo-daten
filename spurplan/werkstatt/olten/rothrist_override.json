@@ -1,0 +1,237 @@
+{
+ "_quelle": "Achse aus Pfad West(450)->Ost(451/453), Fenster bis zum Zusammenlauf der 450er (West) und 451/453 (Ost), Hinweise 14.10.",
+ "cfg": {
+  "sw_search_m": 1600,
+  "axis_snap": false,
+  "d_lim": 110,
+  "s_min_fix": 2380,
+  "s_max_fix": 7150,
+  "rules": {
+   "r43": true,
+   "r44v": false,
+   "r48": true
+  }
+ },
+ "ebene_wie": [
+  [
+   157733586,
+   "2"
+  ],
+  [
+   780534821,
+   "2"
+  ],
+  [
+   45838711,
+   "2"
+  ],
+  [
+   45838712,
+   "2"
+  ]
+ ],
+ "schraeg": [
+  45838705,
+  780534820,
+  773830215
+ ],
+ "zeichnen": {
+  "_zweck": "Ost: Spurwechsel 3->4 zweigt aus der Olten-Schrägen ab, 2->1 als eigene Schräge (Hinweise 14.10.) / West: die zwei 450er auf Doppelspurabstand, steigt vor den 400ern auf Gleis 4",
+  "weg": [
+   773841116,
+   139103033,
+   157733586,
+   780534821,
+   780534820,
+   773830215,
+   773830214,
+   139097762,
+   207931222,
+   773837141,
+   773837142,
+   773837165,
+   157743967,
+   773837140,
+   773837139,
+   773837164,
+   773837160
+  ],
+  "linien": [
+   {
+    "pts": [
+     [
+      2380,
+      4
+     ],
+     [
+      3120,
+      4
+     ],
+     [
+      "d60",
+      6
+     ],
+     [
+      3573,
+      6
+     ]
+    ]
+   },
+   {
+    "pts": [
+     [
+      2781,
+      4
+     ],
+     [
+      "d60",
+      3
+     ],
+     [
+      "+3",
+      3
+     ]
+    ]
+   },
+   {
+    "pts": [
+     [
+      2970,
+      3
+     ],
+     [
+      "d60",
+      4
+     ],
+     [
+      "+3",
+      4
+     ]
+    ]
+   },
+   {
+    "pts": [
+     [
+      5794,
+      5
+     ],
+     [
+      "d60",
+      6
+     ],
+     [
+      "+6",
+      6
+     ]
+    ],
+    "_zweck": "Spurwechsel 3->4 im Parallelabschnitt"
+   },
+   {
+    "pts": [
+     [
+      5794,
+      5
+     ],
+     [
+      "+30",
+      5
+     ],
+     [
+      "d60",
+      6.5
+     ]
+    ],
+    "port_way": 139097762,
+    "_zweck": "Abzweig Olten weiter rechts"
+   },
+   {
+    "pts": [
+     [
+      5974,
+      4
+     ],
+     [
+      "d60",
+      3
+     ],
+     [
+      "+6",
+      3
+     ]
+    ],
+    "_zweck": "Spurwechsel 2->1"
+   },
+   {
+    "pts": [
+     [
+      5974,
+      4
+     ],
+     [
+      "+30",
+      4
+     ],
+     [
+      "d60",
+      6.5
+     ]
+    ],
+    "port_way": 207931222
+   },
+   {
+    "pts": [
+     [
+      "x:1721",
+      "y:136"
+     ],
+     [
+      "x:1713.5",
+      "y:123"
+     ],
+     [
+      "x:1654",
+      "y:123"
+     ],
+     [
+      "x:1640.1",
+      "y:99"
+     ]
+    ],
+    "pax": false,
+    "pfeil": true,
+    "_zweck": "Industriegleis Nord (15.10.): zweigt aus Gleis 5 nach links oben ab, nicht mehr auf Gleis 5 gezeichnet"
+   },
+   {
+    "pts": [
+     [
+      "x:1700",
+      "y:110"
+     ],
+     [
+      "x:1667.5",
+      "y:110"
+     ],
+     [
+      "x:1660",
+      "y:123"
+     ]
+    ],
+    "pax": false,
+    "punkt_anfang": true,
+    "_zweck": "Stumpengleis 773837140 aus der Weiche 1699953345"
+   }
+  ]
+ },
+ "knoten_lane": {
+  "1699887364": 4,
+  "1699887365": 4
+ },
+ "direkt": [
+  139107106,
+  139107115
+ ],
+ "r45_weiter": [],
+ "als_dkw": [
+  1524688696
+ ]
+}

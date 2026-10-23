@@ -1,0 +1,8890 @@
+{
+ "avenches": {
+  "_quelle": "Entwurf 16.10.2026 (Claude), Avenches, OSM-Stand 12.10.",
+  "cfg": {
+   "towns": {
+    "Biel": [
+     47.1325,
+     7.2426
+    ],
+    "Ins": [
+     46.9999,
+     7.0996
+    ],
+    "Kerzers": [
+     46.9751,
+     7.1929
+    ],
+    "Bern": [
+     46.949,
+     7.4391
+    ],
+    "Neuchâtel": [
+     46.9966,
+     6.9358
+    ],
+    "Twann": [
+     47.0938,
+     7.1566
+    ],
+    "Ligerz": [
+     47.084,
+     7.1348
+    ],
+    "La Neuveville": [
+     47.0628,
+     7.0954
+    ],
+    "Le Landeron": [
+     47.0566,
+     7.0663
+    ],
+    "Cressier": [
+     47.0519,
+     7.0395
+    ],
+    "Cornaux": [
+     47.0387,
+     7.0234
+    ],
+    "Saint-Blaise": [
+     47.0145,
+     6.9821
+    ],
+    "Marin-Epagnier": [
+     47.009,
+     7.0107
+    ],
+    "Gampelen": [
+     47.0091,
+     7.0582
+    ],
+    "Zihlbrücke": [
+     47.0093,
+     7.0306
+    ],
+    "Serrières": [
+     46.984,
+     6.9033
+    ],
+    "Auvernier": [
+     46.9796,
+     6.8777
+    ],
+    "Colombier": [
+     46.9677,
+     6.849
+    ],
+    "Boudry": [
+     46.9595,
+     6.8352
+    ],
+    "Bevaix": [
+     46.9297,
+     6.8117
+    ],
+    "Yverdon": [
+     46.7814,
+     6.6408
+    ],
+    "Corcelles-Peseux": [
+     46.9834,
+     6.8838
+    ],
+    "Chambrelien": [
+     46.9673,
+     6.8125
+    ],
+    "La Chaux-de-Fonds": [
+     47.0986,
+     6.8251
+    ],
+    "Les Geneveys-sur-Coffrane": [
+     47.0151,
+     6.8532
+    ],
+    "Bôle": [
+     46.9691,
+     6.838
+    ],
+    "Champ-du-Moulin": [
+     46.9599,
+     6.775
+    ],
+    "Noiraigue": [
+     46.9549,
+     6.7218
+    ],
+    "Travers": [
+     46.9424,
+     6.6762
+    ],
+    "Pontarlier": [
+     46.9035,
+     6.3546
+    ],
+    "Fleurier": [
+     46.9025,
+     6.5822
+    ],
+    "Buttes": [
+     46.8889,
+     6.5512
+    ],
+    "Murten": [
+     46.9254,
+     7.1153
+    ],
+    "Gals": [
+     47.027,
+     7.048
+    ],
+    "Payerne": [
+     46.8197,
+     6.9384
+    ],
+    "Fribourg": [
+     46.8032,
+     7.1513
+    ],
+    "Lyss": [
+     47.0742,
+     7.3063
+    ],
+    "Gümmenen": [
+     46.9422,
+     7.2348
+    ],
+    "Avenches": [
+     46.8844,
+     7.0407
+    ],
+    "Grandson": [
+     46.8063,
+     6.6418
+    ],
+    "Concise": [
+     46.8509,
+     6.7232
+    ],
+    "Couvet": [
+     46.9239,
+     6.636
+    ],
+    "Môtiers": [
+     46.9118,
+     6.6103
+    ],
+    "Tüscherz": [
+     47.1141,
+     7.1959
+    ],
+    "Kallnach": [
+     47.0255,
+     7.2352
+    ],
+    "Courtepin": [
+     46.8674,
+     7.1227
+    ],
+    "Les Hauts-Geneveys": [
+     47.0472,
+     6.8748
+    ]
+   },
+   "margin_x": 330,
+   "lt_dist_w": 2.0
+  },
+  "vorlage": {
+   "strecke": "einspur",
+   "form": "kreuzung",
+   "gleise": [
+    "2",
+    "1"
+   ],
+   "pax": [
+    false,
+    true
+   ],
+   "perrons": "aussen",
+   "zusaetze": [
+    {
+     "art": "anschluss",
+     "ende": "rechts",
+     "lage": "innen",
+     "seite": "unten",
+     "stumpen": 2
+    },
+    {
+     "art": "anschluss",
+     "ende": "rechts",
+     "lage": "aussen",
+     "seite": "oben",
+     "stumpen": 1
+    }
+   ]
+  },
+  "_gleisnummern": "SBB Open Data perronoberflache (gleisnummern_sbb.py, 19.10.2026)"
+ },
+ "bern_brunnen_westside": {
+  "_quelle": "Entwurf 16.10.2026 (Claude), Bern Brünnen Westside, OSM-Stand 12.10.",
+  "cfg": {
+   "towns": {
+    "Biel": [
+     47.1325,
+     7.2426
+    ],
+    "Ins": [
+     46.9999,
+     7.0996
+    ],
+    "Kerzers": [
+     46.9751,
+     7.1929
+    ],
+    "Bern": [
+     46.949,
+     7.4391
+    ],
+    "Neuchâtel": [
+     46.9966,
+     6.9358
+    ],
+    "Twann": [
+     47.0938,
+     7.1566
+    ],
+    "Ligerz": [
+     47.084,
+     7.1348
+    ],
+    "La Neuveville": [
+     47.0628,
+     7.0954
+    ],
+    "Le Landeron": [
+     47.0566,
+     7.0663
+    ],
+    "Cressier": [
+     47.0519,
+     7.0395
+    ],
+    "Cornaux": [
+     47.0387,
+     7.0234
+    ],
+    "Saint-Blaise": [
+     47.0145,
+     6.9821
+    ],
+    "Marin-Epagnier": [
+     47.009,
+     7.0107
+    ],
+    "Gampelen": [
+     47.0091,
+     7.0582
+    ],
+    "Zihlbrücke": [
+     47.0093,
+     7.0306
+    ],
+    "Serrières": [
+     46.984,
+     6.9033
+    ],
+    "Auvernier": [
+     46.9796,
+     6.8777
+    ],
+    "Colombier": [
+     46.9677,
+     6.849
+    ],
+    "Boudry": [
+     46.9595,
+     6.8352
+    ],
+    "Bevaix": [
+     46.9297,
+     6.8117
+    ],
+    "Yverdon": [
+     46.7814,
+     6.6408
+    ],
+    "Corcelles-Peseux": [
+     46.9834,
+     6.8838
+    ],
+    "Chambrelien": [
+     46.9673,
+     6.8125
+    ],
+    "La Chaux-de-Fonds": [
+     47.0986,
+     6.8251
+    ],
+    "Les Geneveys-sur-Coffrane": [
+     47.0151,
+     6.8532
+    ],
+    "Bôle": [
+     46.9691,
+     6.838
+    ],
+    "Champ-du-Moulin": [
+     46.9599,
+     6.775
+    ],
+    "Noiraigue": [
+     46.9549,
+     6.7218
+    ],
+    "Travers": [
+     46.9424,
+     6.6762
+    ],
+    "Pontarlier": [
+     46.9035,
+     6.3546
+    ],
+    "Fleurier": [
+     46.9025,
+     6.5822
+    ],
+    "Buttes": [
+     46.8889,
+     6.5512
+    ],
+    "Murten": [
+     46.9254,
+     7.1153
+    ],
+    "Gals": [
+     47.027,
+     7.048
+    ],
+    "Payerne": [
+     46.8197,
+     6.9384
+    ],
+    "Fribourg": [
+     46.8032,
+     7.1513
+    ],
+    "Lyss": [
+     47.0742,
+     7.3063
+    ],
+    "Gümmenen": [
+     46.9422,
+     7.2348
+    ],
+    "Avenches": [
+     46.8844,
+     7.0407
+    ],
+    "Grandson": [
+     46.8063,
+     6.6418
+    ],
+    "Concise": [
+     46.8509,
+     6.7232
+    ],
+    "Couvet": [
+     46.9239,
+     6.636
+    ],
+    "Môtiers": [
+     46.9118,
+     6.6103
+    ],
+    "Tüscherz": [
+     47.1141,
+     7.1959
+    ],
+    "Kallnach": [
+     47.0255,
+     7.2352
+    ],
+    "Courtepin": [
+     46.8674,
+     7.1227
+    ],
+    "Les Hauts-Geneveys": [
+     47.0472,
+     6.8748
+    ]
+   },
+   "margin_x": 330,
+   "lt_dist_w": 2.0
+  },
+  "vorlage": {
+   "strecke": "doppelspur",
+   "form": "halt",
+   "gleise": [
+    "1",
+    "2"
+   ],
+   "pax": [
+    true,
+    true
+   ],
+   "perrons": "aussen",
+   "zusaetze": [
+    {
+     "art": "spurwechsel",
+     "ende": "links",
+     "anzahl": 1,
+     "richtung": "fallend"
+    },
+    {
+     "art": "spurwechsel",
+     "ende": "rechts",
+     "anzahl": 2
+    }
+   ],
+   "_hinweis": "17.10. OSM: Ost zwei Spurwechsel hintereinander (651->75, 75->...), West einer (652->651)"
+  },
+  "_gleisnummern": "SBB Open Data perronoberflache (gleisnummern_sbb.py, 19.10.2026)"
+ },
+ "bevaix": {
+  "_quelle": "Entwurf 16.10.2026 (Claude), Bevaix, OSM-Stand 12.10.",
+  "cfg": {
+   "towns": {
+    "Biel": [
+     47.1325,
+     7.2426
+    ],
+    "Ins": [
+     46.9999,
+     7.0996
+    ],
+    "Kerzers": [
+     46.9751,
+     7.1929
+    ],
+    "Bern": [
+     46.949,
+     7.4391
+    ],
+    "Neuchâtel": [
+     46.9966,
+     6.9358
+    ],
+    "Twann": [
+     47.0938,
+     7.1566
+    ],
+    "Ligerz": [
+     47.084,
+     7.1348
+    ],
+    "La Neuveville": [
+     47.0628,
+     7.0954
+    ],
+    "Le Landeron": [
+     47.0566,
+     7.0663
+    ],
+    "Cressier": [
+     47.0519,
+     7.0395
+    ],
+    "Cornaux": [
+     47.0387,
+     7.0234
+    ],
+    "Saint-Blaise": [
+     47.0145,
+     6.9821
+    ],
+    "Marin-Epagnier": [
+     47.009,
+     7.0107
+    ],
+    "Gampelen": [
+     47.0091,
+     7.0582
+    ],
+    "Zihlbrücke": [
+     47.0093,
+     7.0306
+    ],
+    "Serrières": [
+     46.984,
+     6.9033
+    ],
+    "Auvernier": [
+     46.9796,
+     6.8777
+    ],
+    "Colombier": [
+     46.9677,
+     6.849
+    ],
+    "Boudry": [
+     46.9595,
+     6.8352
+    ],
+    "Bevaix": [
+     46.9297,
+     6.8117
+    ],
+    "Yverdon": [
+     46.7814,
+     6.6408
+    ],
+    "Corcelles-Peseux": [
+     46.9834,
+     6.8838
+    ],
+    "Chambrelien": [
+     46.9673,
+     6.8125
+    ],
+    "La Chaux-de-Fonds": [
+     47.0986,
+     6.8251
+    ],
+    "Les Geneveys-sur-Coffrane": [
+     47.0151,
+     6.8532
+    ],
+    "Bôle": [
+     46.9691,
+     6.838
+    ],
+    "Champ-du-Moulin": [
+     46.9599,
+     6.775
+    ],
+    "Noiraigue": [
+     46.9549,
+     6.7218
+    ],
+    "Travers": [
+     46.9424,
+     6.6762
+    ],
+    "Pontarlier": [
+     46.9035,
+     6.3546
+    ],
+    "Fleurier": [
+     46.9025,
+     6.5822
+    ],
+    "Buttes": [
+     46.8889,
+     6.5512
+    ],
+    "Murten": [
+     46.9254,
+     7.1153
+    ],
+    "Gals": [
+     47.027,
+     7.048
+    ],
+    "Payerne": [
+     46.8197,
+     6.9384
+    ],
+    "Fribourg": [
+     46.8032,
+     7.1513
+    ],
+    "Lyss": [
+     47.0742,
+     7.3063
+    ],
+    "Gümmenen": [
+     46.9422,
+     7.2348
+    ],
+    "Avenches": [
+     46.8844,
+     7.0407
+    ],
+    "Grandson": [
+     46.8063,
+     6.6418
+    ],
+    "Concise": [
+     46.8509,
+     6.7232
+    ],
+    "Couvet": [
+     46.9239,
+     6.636
+    ],
+    "Môtiers": [
+     46.9118,
+     6.6103
+    ],
+    "Tüscherz": [
+     47.1141,
+     7.1959
+    ],
+    "Kallnach": [
+     47.0255,
+     7.2352
+    ],
+    "Courtepin": [
+     46.8674,
+     7.1227
+    ],
+    "Les Hauts-Geneveys": [
+     47.0472,
+     6.8748
+    ]
+   },
+   "margin_x": 330,
+   "lt_dist_w": 2.0
+  },
+  "vorlage": {
+   "strecke": "doppelspur",
+   "form": "halt",
+   "gleise": [
+    "2",
+    "1"
+   ],
+   "pax": [
+    true,
+    true
+   ],
+   "perrons": "aussen",
+   "zusaetze": [
+    {
+     "art": "spurwechsel",
+     "ende": "rechts",
+     "anzahl": 2,
+     "richtung": "fallend"
+    },
+    {
+     "art": "anschluss",
+     "ende": "rechts",
+     "lage": "innen",
+     "seite": "oben",
+     "stumpen": 1
+    },
+    {
+     "art": "anschluss",
+     "ende": "links",
+     "lage": "aussen",
+     "seite": "unten",
+     "stumpen": 2
+    },
+    {
+     "art": "anschluss",
+     "ende": "rechts",
+     "lage": "aussen",
+     "seite": "oben",
+     "stumpen": 1
+    }
+   ]
+  },
+  "_gleisnummern": "SBB Open Data perronoberflache (gleisnummern_sbb.py, 19.10.2026)"
+ },
+ "boudry": {
+  "_quelle": "Entwurf 14.10.2026 (Claude), Boudry, OSM-Stand 12.10.",
+  "cfg": {
+   "towns": {
+    "Biel": [
+     47.1325,
+     7.2426
+    ],
+    "Ins": [
+     46.9999,
+     7.0996
+    ],
+    "Kerzers": [
+     46.9751,
+     7.1929
+    ],
+    "Bern": [
+     46.949,
+     7.4391
+    ],
+    "Neuchâtel": [
+     46.9966,
+     6.9358
+    ],
+    "Twann": [
+     47.0938,
+     7.1566
+    ],
+    "Ligerz": [
+     47.084,
+     7.1348
+    ],
+    "La Neuveville": [
+     47.0628,
+     7.0954
+    ],
+    "Le Landeron": [
+     47.0566,
+     7.0663
+    ],
+    "Cressier": [
+     47.0519,
+     7.0395
+    ],
+    "Cornaux": [
+     47.0387,
+     7.0234
+    ],
+    "Saint-Blaise": [
+     47.0145,
+     6.9821
+    ],
+    "Marin-Epagnier": [
+     47.009,
+     7.0107
+    ],
+    "Gampelen": [
+     47.0091,
+     7.0582
+    ],
+    "Zihlbrücke": [
+     47.0093,
+     7.0306
+    ],
+    "Serrières": [
+     46.984,
+     6.9033
+    ],
+    "Auvernier": [
+     46.9796,
+     6.8777
+    ],
+    "Colombier": [
+     46.9677,
+     6.849
+    ],
+    "Boudry": [
+     46.9595,
+     6.8352
+    ],
+    "Bevaix": [
+     46.9297,
+     6.8117
+    ],
+    "Yverdon": [
+     46.7814,
+     6.6408
+    ],
+    "Corcelles-Peseux": [
+     46.9834,
+     6.8838
+    ],
+    "Chambrelien": [
+     46.9673,
+     6.8125
+    ],
+    "La Chaux-de-Fonds": [
+     47.0986,
+     6.8251
+    ],
+    "Les Geneveys-sur-Coffrane": [
+     47.0151,
+     6.8532
+    ],
+    "Bôle": [
+     46.9691,
+     6.838
+    ],
+    "Champ-du-Moulin": [
+     46.9599,
+     6.775
+    ],
+    "Noiraigue": [
+     46.9549,
+     6.7218
+    ],
+    "Travers": [
+     46.9424,
+     6.6762
+    ],
+    "Pontarlier": [
+     46.9035,
+     6.3546
+    ],
+    "Fleurier": [
+     46.9025,
+     6.5822
+    ],
+    "Buttes": [
+     46.8889,
+     6.5512
+    ],
+    "Murten": [
+     46.9254,
+     7.1153
+    ],
+    "Gals": [
+     47.027,
+     7.048
+    ]
+   },
+   "margin_x": 330,
+   "lt_dist_w": 2.0
+  },
+  "platforms": [],
+  "perrons_px": [
+   [
+    565,
+    675,
+    122
+   ]
+  ],
+  "nummern_px": [
+   [
+    "3",
+    620,
+    110
+   ],
+   [
+    "2",
+    620,
+    134
+   ]
+  ],
+  "vorlage": {
+   "strecke": "doppelspur",
+   "form": "halt",
+   "gleise": [
+    "3",
+    "2"
+   ],
+   "pax": [
+    true,
+    true
+   ],
+   "perrons": "mittel",
+   "zusaetze": [
+    {
+     "art": "spurwechsel",
+     "ende": "rechts",
+     "anzahl": 1,
+     "richtung": "fallend"
+    },
+    {
+     "art": "anschluss",
+     "ende": "links",
+     "lage": "innen",
+     "seite": "unten",
+     "stumpen": 2
+    }
+   ]
+  }
+ },
+ "champ_du_moulin": {
+  "_quelle": "Entwurf 14.10.2026 (Claude), Champ du Moulin, OSM-Stand 12.10.",
+  "cfg": {
+   "towns": {
+    "Biel": [
+     47.1325,
+     7.2426
+    ],
+    "Ins": [
+     46.9999,
+     7.0996
+    ],
+    "Kerzers": [
+     46.9751,
+     7.1929
+    ],
+    "Bern": [
+     46.949,
+     7.4391
+    ],
+    "Neuchâtel": [
+     46.9966,
+     6.9358
+    ],
+    "Twann": [
+     47.0938,
+     7.1566
+    ],
+    "Ligerz": [
+     47.084,
+     7.1348
+    ],
+    "La Neuveville": [
+     47.0628,
+     7.0954
+    ],
+    "Le Landeron": [
+     47.0566,
+     7.0663
+    ],
+    "Cressier": [
+     47.0519,
+     7.0395
+    ],
+    "Cornaux": [
+     47.0387,
+     7.0234
+    ],
+    "Saint-Blaise": [
+     47.0145,
+     6.9821
+    ],
+    "Marin-Epagnier": [
+     47.009,
+     7.0107
+    ],
+    "Gampelen": [
+     47.0091,
+     7.0582
+    ],
+    "Zihlbrücke": [
+     47.0093,
+     7.0306
+    ],
+    "Serrières": [
+     46.984,
+     6.9033
+    ],
+    "Auvernier": [
+     46.9796,
+     6.8777
+    ],
+    "Colombier": [
+     46.9677,
+     6.849
+    ],
+    "Boudry": [
+     46.9595,
+     6.8352
+    ],
+    "Bevaix": [
+     46.9297,
+     6.8117
+    ],
+    "Yverdon": [
+     46.7814,
+     6.6408
+    ],
+    "Corcelles-Peseux": [
+     46.9834,
+     6.8838
+    ],
+    "Chambrelien": [
+     46.9673,
+     6.8125
+    ],
+    "La Chaux-de-Fonds": [
+     47.0986,
+     6.8251
+    ],
+    "Les Geneveys-sur-Coffrane": [
+     47.0151,
+     6.8532
+    ],
+    "Bôle": [
+     46.9691,
+     6.838
+    ],
+    "Champ-du-Moulin": [
+     46.9599,
+     6.775
+    ],
+    "Noiraigue": [
+     46.9549,
+     6.7218
+    ],
+    "Travers": [
+     46.9424,
+     6.6762
+    ],
+    "Pontarlier": [
+     46.9035,
+     6.3546
+    ],
+    "Fleurier": [
+     46.9025,
+     6.5822
+    ],
+    "Buttes": [
+     46.8889,
+     6.5512
+    ],
+    "Murten": [
+     46.9254,
+     7.1153
+    ],
+    "Gals": [
+     47.027,
+     7.048
+    ]
+   },
+   "margin_x": 330,
+   "lt_dist_w": 2.0
+  },
+  "vorlage": {
+   "strecke": "einspur",
+   "form": "kreuzung",
+   "spiegeln": true,
+   "gleise": [
+    "1",
+    "2"
+   ],
+   "pax": [
+    true,
+    true
+   ],
+   "perrons": "oben+zwischen"
+  }
+ },
+ "concise": {
+  "_quelle": "Entwurf 16.10.2026 (Claude), Concise, OSM-Stand 12.10.",
+  "cfg": {
+   "towns": {
+    "Biel": [
+     47.1325,
+     7.2426
+    ],
+    "Ins": [
+     46.9999,
+     7.0996
+    ],
+    "Kerzers": [
+     46.9751,
+     7.1929
+    ],
+    "Bern": [
+     46.949,
+     7.4391
+    ],
+    "Neuchâtel": [
+     46.9966,
+     6.9358
+    ],
+    "Twann": [
+     47.0938,
+     7.1566
+    ],
+    "Ligerz": [
+     47.084,
+     7.1348
+    ],
+    "La Neuveville": [
+     47.0628,
+     7.0954
+    ],
+    "Le Landeron": [
+     47.0566,
+     7.0663
+    ],
+    "Cressier": [
+     47.0519,
+     7.0395
+    ],
+    "Cornaux": [
+     47.0387,
+     7.0234
+    ],
+    "Saint-Blaise": [
+     47.0145,
+     6.9821
+    ],
+    "Marin-Epagnier": [
+     47.009,
+     7.0107
+    ],
+    "Gampelen": [
+     47.0091,
+     7.0582
+    ],
+    "Zihlbrücke": [
+     47.0093,
+     7.0306
+    ],
+    "Serrières": [
+     46.984,
+     6.9033
+    ],
+    "Auvernier": [
+     46.9796,
+     6.8777
+    ],
+    "Colombier": [
+     46.9677,
+     6.849
+    ],
+    "Boudry": [
+     46.9595,
+     6.8352
+    ],
+    "Bevaix": [
+     46.9297,
+     6.8117
+    ],
+    "Yverdon": [
+     46.7814,
+     6.6408
+    ],
+    "Corcelles-Peseux": [
+     46.9834,
+     6.8838
+    ],
+    "Chambrelien": [
+     46.9673,
+     6.8125
+    ],
+    "La Chaux-de-Fonds": [
+     47.0986,
+     6.8251
+    ],
+    "Les Geneveys-sur-Coffrane": [
+     47.0151,
+     6.8532
+    ],
+    "Bôle": [
+     46.9691,
+     6.838
+    ],
+    "Champ-du-Moulin": [
+     46.9599,
+     6.775
+    ],
+    "Noiraigue": [
+     46.9549,
+     6.7218
+    ],
+    "Travers": [
+     46.9424,
+     6.6762
+    ],
+    "Pontarlier": [
+     46.9035,
+     6.3546
+    ],
+    "Fleurier": [
+     46.9025,
+     6.5822
+    ],
+    "Buttes": [
+     46.8889,
+     6.5512
+    ],
+    "Murten": [
+     46.9254,
+     7.1153
+    ],
+    "Gals": [
+     47.027,
+     7.048
+    ],
+    "Payerne": [
+     46.8197,
+     6.9384
+    ],
+    "Fribourg": [
+     46.8032,
+     7.1513
+    ],
+    "Lyss": [
+     47.0742,
+     7.3063
+    ],
+    "Gümmenen": [
+     46.9422,
+     7.2348
+    ],
+    "Avenches": [
+     46.8844,
+     7.0407
+    ],
+    "Grandson": [
+     46.8063,
+     6.6418
+    ],
+    "Concise": [
+     46.8509,
+     6.7232
+    ],
+    "Couvet": [
+     46.9239,
+     6.636
+    ],
+    "Môtiers": [
+     46.9118,
+     6.6103
+    ],
+    "Tüscherz": [
+     47.1141,
+     7.1959
+    ],
+    "Kallnach": [
+     47.0255,
+     7.2352
+    ],
+    "Courtepin": [
+     46.8674,
+     7.1227
+    ],
+    "Les Hauts-Geneveys": [
+     47.0472,
+     6.8748
+    ]
+   },
+   "margin_x": 330,
+   "lt_dist_w": 2.0
+  },
+  "vorlage": {
+   "strecke": "doppelspur",
+   "form": "halt",
+   "gleise": [
+    "1",
+    "2"
+   ],
+   "pax": [
+    true,
+    true
+   ],
+   "perrons": "aussen"
+  },
+  "_gleisnummern": "SBB Open Data perronoberflache (gleisnummern_sbb.py, 19.10.2026)"
+ },
+ "courtepin": {
+  "_quelle": "Entwurf 16.10.2026 (Claude), Courtepin, OSM-Stand 12.10.",
+  "cfg": {
+   "towns": {
+    "Biel": [
+     47.1325,
+     7.2426
+    ],
+    "Ins": [
+     46.9999,
+     7.0996
+    ],
+    "Kerzers": [
+     46.9751,
+     7.1929
+    ],
+    "Bern": [
+     46.949,
+     7.4391
+    ],
+    "Neuchâtel": [
+     46.9966,
+     6.9358
+    ],
+    "Twann": [
+     47.0938,
+     7.1566
+    ],
+    "Ligerz": [
+     47.084,
+     7.1348
+    ],
+    "La Neuveville": [
+     47.0628,
+     7.0954
+    ],
+    "Le Landeron": [
+     47.0566,
+     7.0663
+    ],
+    "Cressier": [
+     47.0519,
+     7.0395
+    ],
+    "Cornaux": [
+     47.0387,
+     7.0234
+    ],
+    "Saint-Blaise": [
+     47.0145,
+     6.9821
+    ],
+    "Marin-Epagnier": [
+     47.009,
+     7.0107
+    ],
+    "Gampelen": [
+     47.0091,
+     7.0582
+    ],
+    "Zihlbrücke": [
+     47.0093,
+     7.0306
+    ],
+    "Serrières": [
+     46.984,
+     6.9033
+    ],
+    "Auvernier": [
+     46.9796,
+     6.8777
+    ],
+    "Colombier": [
+     46.9677,
+     6.849
+    ],
+    "Boudry": [
+     46.9595,
+     6.8352
+    ],
+    "Bevaix": [
+     46.9297,
+     6.8117
+    ],
+    "Yverdon": [
+     46.7814,
+     6.6408
+    ],
+    "Corcelles-Peseux": [
+     46.9834,
+     6.8838
+    ],
+    "Chambrelien": [
+     46.9673,
+     6.8125
+    ],
+    "La Chaux-de-Fonds": [
+     47.0986,
+     6.8251
+    ],
+    "Les Geneveys-sur-Coffrane": [
+     47.0151,
+     6.8532
+    ],
+    "Bôle": [
+     46.9691,
+     6.838
+    ],
+    "Champ-du-Moulin": [
+     46.9599,
+     6.775
+    ],
+    "Noiraigue": [
+     46.9549,
+     6.7218
+    ],
+    "Travers": [
+     46.9424,
+     6.6762
+    ],
+    "Pontarlier": [
+     46.9035,
+     6.3546
+    ],
+    "Fleurier": [
+     46.9025,
+     6.5822
+    ],
+    "Buttes": [
+     46.8889,
+     6.5512
+    ],
+    "Murten": [
+     46.9254,
+     7.1153
+    ],
+    "Gals": [
+     47.027,
+     7.048
+    ],
+    "Payerne": [
+     46.8197,
+     6.9384
+    ],
+    "Fribourg": [
+     46.8032,
+     7.1513
+    ],
+    "Lyss": [
+     47.0742,
+     7.3063
+    ],
+    "Gümmenen": [
+     46.9422,
+     7.2348
+    ],
+    "Avenches": [
+     46.8844,
+     7.0407
+    ],
+    "Grandson": [
+     46.8063,
+     6.6418
+    ],
+    "Concise": [
+     46.8509,
+     6.7232
+    ],
+    "Couvet": [
+     46.9239,
+     6.636
+    ],
+    "Môtiers": [
+     46.9118,
+     6.6103
+    ],
+    "Tüscherz": [
+     47.1141,
+     7.1959
+    ],
+    "Kallnach": [
+     47.0255,
+     7.2352
+    ],
+    "Courtepin": [
+     46.8674,
+     7.1227
+    ],
+    "Les Hauts-Geneveys": [
+     47.0472,
+     6.8748
+    ]
+   },
+   "margin_x": 330,
+   "lt_dist_w": 2.0
+  },
+  "vorlage": {
+   "strecke": "einspur",
+   "form": "kreuzung",
+   "spiegeln": true,
+   "gleise": [
+    "1",
+    "2"
+   ],
+   "pax": [
+    true,
+    true
+   ],
+   "perrons": "aussen"
+  }
+ },
+ "couvet": {
+  "_quelle": "Entwurf 16.10.2026 (Claude), Couvet, OSM-Stand 12.10.",
+  "cfg": {
+   "towns": {
+    "Biel": [
+     47.1325,
+     7.2426
+    ],
+    "Ins": [
+     46.9999,
+     7.0996
+    ],
+    "Kerzers": [
+     46.9751,
+     7.1929
+    ],
+    "Bern": [
+     46.949,
+     7.4391
+    ],
+    "Neuchâtel": [
+     46.9966,
+     6.9358
+    ],
+    "Twann": [
+     47.0938,
+     7.1566
+    ],
+    "Ligerz": [
+     47.084,
+     7.1348
+    ],
+    "La Neuveville": [
+     47.0628,
+     7.0954
+    ],
+    "Le Landeron": [
+     47.0566,
+     7.0663
+    ],
+    "Cressier": [
+     47.0519,
+     7.0395
+    ],
+    "Cornaux": [
+     47.0387,
+     7.0234
+    ],
+    "Saint-Blaise": [
+     47.0145,
+     6.9821
+    ],
+    "Marin-Epagnier": [
+     47.009,
+     7.0107
+    ],
+    "Gampelen": [
+     47.0091,
+     7.0582
+    ],
+    "Zihlbrücke": [
+     47.0093,
+     7.0306
+    ],
+    "Serrières": [
+     46.984,
+     6.9033
+    ],
+    "Auvernier": [
+     46.9796,
+     6.8777
+    ],
+    "Colombier": [
+     46.9677,
+     6.849
+    ],
+    "Boudry": [
+     46.9595,
+     6.8352
+    ],
+    "Bevaix": [
+     46.9297,
+     6.8117
+    ],
+    "Yverdon": [
+     46.7814,
+     6.6408
+    ],
+    "Corcelles-Peseux": [
+     46.9834,
+     6.8838
+    ],
+    "Chambrelien": [
+     46.9673,
+     6.8125
+    ],
+    "La Chaux-de-Fonds": [
+     47.0986,
+     6.8251
+    ],
+    "Les Geneveys-sur-Coffrane": [
+     47.0151,
+     6.8532
+    ],
+    "Bôle": [
+     46.9691,
+     6.838
+    ],
+    "Champ-du-Moulin": [
+     46.9599,
+     6.775
+    ],
+    "Noiraigue": [
+     46.9549,
+     6.7218
+    ],
+    "Travers": [
+     46.9424,
+     6.6762
+    ],
+    "Pontarlier": [
+     46.9035,
+     6.3546
+    ],
+    "Fleurier": [
+     46.9025,
+     6.5822
+    ],
+    "Buttes": [
+     46.8889,
+     6.5512
+    ],
+    "Murten": [
+     46.9254,
+     7.1153
+    ],
+    "Gals": [
+     47.027,
+     7.048
+    ],
+    "Payerne": [
+     46.8197,
+     6.9384
+    ],
+    "Fribourg": [
+     46.8032,
+     7.1513
+    ],
+    "Lyss": [
+     47.0742,
+     7.3063
+    ],
+    "Gümmenen": [
+     46.9422,
+     7.2348
+    ],
+    "Avenches": [
+     46.8844,
+     7.0407
+    ],
+    "Grandson": [
+     46.8063,
+     6.6418
+    ],
+    "Concise": [
+     46.8509,
+     6.7232
+    ],
+    "Couvet": [
+     46.9239,
+     6.636
+    ],
+    "Môtiers": [
+     46.9118,
+     6.6103
+    ],
+    "Tüscherz": [
+     47.1141,
+     7.1959
+    ],
+    "Kallnach": [
+     47.0255,
+     7.2352
+    ],
+    "Courtepin": [
+     46.8674,
+     7.1227
+    ],
+    "Les Hauts-Geneveys": [
+     47.0472,
+     6.8748
+    ]
+   },
+   "margin_x": 330,
+   "lt_dist_w": 2.0
+  },
+  "vorlage": {
+   "strecke": "einspur",
+   "form": "kreuzung",
+   "gleise": [
+    null,
+    null
+   ],
+   "pax": [
+    true,
+    true
+   ],
+   "perrons": "mittel"
+  }
+ },
+ "cressier_fr": {
+  "_quelle": "Entwurf 16.10.2026 (Claude), Cressier FR, OSM-Stand 12.10.",
+  "cfg": {
+   "towns": {
+    "Biel": [
+     47.1325,
+     7.2426
+    ],
+    "Ins": [
+     46.9999,
+     7.0996
+    ],
+    "Kerzers": [
+     46.9751,
+     7.1929
+    ],
+    "Bern": [
+     46.949,
+     7.4391
+    ],
+    "Neuchâtel": [
+     46.9966,
+     6.9358
+    ],
+    "Twann": [
+     47.0938,
+     7.1566
+    ],
+    "Ligerz": [
+     47.084,
+     7.1348
+    ],
+    "La Neuveville": [
+     47.0628,
+     7.0954
+    ],
+    "Le Landeron": [
+     47.0566,
+     7.0663
+    ],
+    "Cressier": [
+     47.0519,
+     7.0395
+    ],
+    "Cornaux": [
+     47.0387,
+     7.0234
+    ],
+    "Saint-Blaise": [
+     47.0145,
+     6.9821
+    ],
+    "Marin-Epagnier": [
+     47.009,
+     7.0107
+    ],
+    "Gampelen": [
+     47.0091,
+     7.0582
+    ],
+    "Zihlbrücke": [
+     47.0093,
+     7.0306
+    ],
+    "Serrières": [
+     46.984,
+     6.9033
+    ],
+    "Auvernier": [
+     46.9796,
+     6.8777
+    ],
+    "Colombier": [
+     46.9677,
+     6.849
+    ],
+    "Boudry": [
+     46.9595,
+     6.8352
+    ],
+    "Bevaix": [
+     46.9297,
+     6.8117
+    ],
+    "Yverdon": [
+     46.7814,
+     6.6408
+    ],
+    "Corcelles-Peseux": [
+     46.9834,
+     6.8838
+    ],
+    "Chambrelien": [
+     46.9673,
+     6.8125
+    ],
+    "La Chaux-de-Fonds": [
+     47.0986,
+     6.8251
+    ],
+    "Les Geneveys-sur-Coffrane": [
+     47.0151,
+     6.8532
+    ],
+    "Bôle": [
+     46.9691,
+     6.838
+    ],
+    "Champ-du-Moulin": [
+     46.9599,
+     6.775
+    ],
+    "Noiraigue": [
+     46.9549,
+     6.7218
+    ],
+    "Travers": [
+     46.9424,
+     6.6762
+    ],
+    "Pontarlier": [
+     46.9035,
+     6.3546
+    ],
+    "Fleurier": [
+     46.9025,
+     6.5822
+    ],
+    "Buttes": [
+     46.8889,
+     6.5512
+    ],
+    "Murten": [
+     46.9254,
+     7.1153
+    ],
+    "Gals": [
+     47.027,
+     7.048
+    ],
+    "Payerne": [
+     46.8197,
+     6.9384
+    ],
+    "Fribourg": [
+     46.8032,
+     7.1513
+    ],
+    "Lyss": [
+     47.0742,
+     7.3063
+    ],
+    "Gümmenen": [
+     46.9422,
+     7.2348
+    ],
+    "Avenches": [
+     46.8844,
+     7.0407
+    ],
+    "Grandson": [
+     46.8063,
+     6.6418
+    ],
+    "Concise": [
+     46.8509,
+     6.7232
+    ],
+    "Couvet": [
+     46.9239,
+     6.636
+    ],
+    "Môtiers": [
+     46.9118,
+     6.6103
+    ],
+    "Tüscherz": [
+     47.1141,
+     7.1959
+    ],
+    "Kallnach": [
+     47.0255,
+     7.2352
+    ],
+    "Courtepin": [
+     46.8674,
+     7.1227
+    ],
+    "Les Hauts-Geneveys": [
+     47.0472,
+     6.8748
+    ]
+   },
+   "margin_x": 330,
+   "lt_dist_w": 2.0
+  },
+  "vorlage": {
+   "strecke": "einspur",
+   "form": "halt",
+   "gleise": [
+    "1"
+   ],
+   "pax": [
+    true
+   ],
+   "perrons": "oben",
+   "zusaetze": [
+    {
+     "art": "anschluss",
+     "ende": "links",
+     "lage": "innen",
+     "seite": "unten",
+     "stumpen": 1
+    }
+   ]
+  },
+  "_gleisnummern": "SBB Open Data perronoberflache (gleisnummern_sbb.py, 19.10.2026)"
+ },
+ "cressier": {
+  "_quelle": "Entwurf 14.10.2026 (Claude), Cressier, OSM-Stand 12.10.",
+  "cfg": {
+   "towns": {
+    "Biel": [
+     47.1325,
+     7.2426
+    ],
+    "Ins": [
+     46.9999,
+     7.0996
+    ],
+    "Kerzers": [
+     46.9751,
+     7.1929
+    ],
+    "Bern": [
+     46.949,
+     7.4391
+    ],
+    "Neuchâtel": [
+     46.9966,
+     6.9358
+    ],
+    "Twann": [
+     47.0938,
+     7.1566
+    ],
+    "Ligerz": [
+     47.084,
+     7.1348
+    ],
+    "La Neuveville": [
+     47.0628,
+     7.0954
+    ],
+    "Le Landeron": [
+     47.0566,
+     7.0663
+    ],
+    "Cressier": [
+     47.0519,
+     7.0395
+    ],
+    "Cornaux": [
+     47.0387,
+     7.0234
+    ],
+    "Saint-Blaise": [
+     47.0145,
+     6.9821
+    ],
+    "Marin-Epagnier": [
+     47.009,
+     7.0107
+    ],
+    "Gampelen": [
+     47.0091,
+     7.0582
+    ],
+    "Zihlbrücke": [
+     47.0093,
+     7.0306
+    ],
+    "Serrières": [
+     46.984,
+     6.9033
+    ],
+    "Auvernier": [
+     46.9796,
+     6.8777
+    ],
+    "Colombier": [
+     46.9677,
+     6.849
+    ],
+    "Boudry": [
+     46.9595,
+     6.8352
+    ],
+    "Bevaix": [
+     46.9297,
+     6.8117
+    ],
+    "Yverdon": [
+     46.7814,
+     6.6408
+    ],
+    "Corcelles-Peseux": [
+     46.9834,
+     6.8838
+    ],
+    "Chambrelien": [
+     46.9673,
+     6.8125
+    ],
+    "La Chaux-de-Fonds": [
+     47.0986,
+     6.8251
+    ],
+    "Les Geneveys-sur-Coffrane": [
+     47.0151,
+     6.8532
+    ],
+    "Bôle": [
+     46.9691,
+     6.838
+    ],
+    "Champ-du-Moulin": [
+     46.9599,
+     6.775
+    ],
+    "Noiraigue": [
+     46.9549,
+     6.7218
+    ],
+    "Travers": [
+     46.9424,
+     6.6762
+    ],
+    "Pontarlier": [
+     46.9035,
+     6.3546
+    ],
+    "Fleurier": [
+     46.9025,
+     6.5822
+    ],
+    "Buttes": [
+     46.8889,
+     6.5512
+    ],
+    "Murten": [
+     46.9254,
+     7.1153
+    ],
+    "Gals": [
+     47.027,
+     7.048
+    ]
+   },
+   "margin_x": 330,
+   "lt_dist_w": 2.0
+  },
+  "vorlage": {
+   "strecke": "doppelspur",
+   "form": "halt",
+   "gleise": [
+    "1",
+    "2"
+   ],
+   "pax": [
+    true,
+    true
+   ],
+   "perrons": "aussen"
+  },
+  "_gleisnummern": "SBB Open Data perronoberflache (gleisnummern_sbb.py, 19.10.2026)"
+ },
+ "domdidier": {
+  "_quelle": "Entwurf 16.10.2026 (Claude), Domdidier, OSM-Stand 12.10.",
+  "cfg": {
+   "towns": {
+    "Biel": [
+     47.1325,
+     7.2426
+    ],
+    "Ins": [
+     46.9999,
+     7.0996
+    ],
+    "Kerzers": [
+     46.9751,
+     7.1929
+    ],
+    "Bern": [
+     46.949,
+     7.4391
+    ],
+    "Neuchâtel": [
+     46.9966,
+     6.9358
+    ],
+    "Twann": [
+     47.0938,
+     7.1566
+    ],
+    "Ligerz": [
+     47.084,
+     7.1348
+    ],
+    "La Neuveville": [
+     47.0628,
+     7.0954
+    ],
+    "Le Landeron": [
+     47.0566,
+     7.0663
+    ],
+    "Cressier": [
+     47.0519,
+     7.0395
+    ],
+    "Cornaux": [
+     47.0387,
+     7.0234
+    ],
+    "Saint-Blaise": [
+     47.0145,
+     6.9821
+    ],
+    "Marin-Epagnier": [
+     47.009,
+     7.0107
+    ],
+    "Gampelen": [
+     47.0091,
+     7.0582
+    ],
+    "Zihlbrücke": [
+     47.0093,
+     7.0306
+    ],
+    "Serrières": [
+     46.984,
+     6.9033
+    ],
+    "Auvernier": [
+     46.9796,
+     6.8777
+    ],
+    "Colombier": [
+     46.9677,
+     6.849
+    ],
+    "Boudry": [
+     46.9595,
+     6.8352
+    ],
+    "Bevaix": [
+     46.9297,
+     6.8117
+    ],
+    "Yverdon": [
+     46.7814,
+     6.6408
+    ],
+    "Corcelles-Peseux": [
+     46.9834,
+     6.8838
+    ],
+    "Chambrelien": [
+     46.9673,
+     6.8125
+    ],
+    "La Chaux-de-Fonds": [
+     47.0986,
+     6.8251
+    ],
+    "Les Geneveys-sur-Coffrane": [
+     47.0151,
+     6.8532
+    ],
+    "Bôle": [
+     46.9691,
+     6.838
+    ],
+    "Champ-du-Moulin": [
+     46.9599,
+     6.775
+    ],
+    "Noiraigue": [
+     46.9549,
+     6.7218
+    ],
+    "Travers": [
+     46.9424,
+     6.6762
+    ],
+    "Pontarlier": [
+     46.9035,
+     6.3546
+    ],
+    "Fleurier": [
+     46.9025,
+     6.5822
+    ],
+    "Buttes": [
+     46.8889,
+     6.5512
+    ],
+    "Murten": [
+     46.9254,
+     7.1153
+    ],
+    "Gals": [
+     47.027,
+     7.048
+    ],
+    "Payerne": [
+     46.8197,
+     6.9384
+    ],
+    "Fribourg": [
+     46.8032,
+     7.1513
+    ],
+    "Lyss": [
+     47.0742,
+     7.3063
+    ],
+    "Gümmenen": [
+     46.9422,
+     7.2348
+    ],
+    "Avenches": [
+     46.8844,
+     7.0407
+    ],
+    "Grandson": [
+     46.8063,
+     6.6418
+    ],
+    "Concise": [
+     46.8509,
+     6.7232
+    ],
+    "Couvet": [
+     46.9239,
+     6.636
+    ],
+    "Môtiers": [
+     46.9118,
+     6.6103
+    ],
+    "Tüscherz": [
+     47.1141,
+     7.1959
+    ],
+    "Kallnach": [
+     47.0255,
+     7.2352
+    ],
+    "Courtepin": [
+     46.8674,
+     7.1227
+    ],
+    "Les Hauts-Geneveys": [
+     47.0472,
+     6.8748
+    ]
+   },
+   "margin_x": 330,
+   "lt_dist_w": 2.0
+  },
+  "vorlage": {
+   "strecke": "einspur",
+   "form": "halt",
+   "gleise": [
+    "1"
+   ],
+   "pax": [
+    true
+   ],
+   "perrons": "unten",
+   "zusaetze": [
+    {
+     "art": "anschluss",
+     "ende": "links",
+     "lage": "innen",
+     "seite": "unten",
+     "stumpen": 1
+    },
+    {
+     "art": "anschluss",
+     "ende": "rechts",
+     "lage": "aussen",
+     "seite": "oben",
+     "stumpen": 2
+    }
+   ]
+  },
+  "_gleisnummern": "SBB Open Data perronoberflache (gleisnummern_sbb.py, 19.10.2026)"
+ },
+ "dompierre": {
+  "_quelle": "Entwurf 16.10.2026 (Claude), Dompierre, OSM-Stand 12.10.",
+  "cfg": {
+   "towns": {
+    "Biel": [
+     47.1325,
+     7.2426
+    ],
+    "Ins": [
+     46.9999,
+     7.0996
+    ],
+    "Kerzers": [
+     46.9751,
+     7.1929
+    ],
+    "Bern": [
+     46.949,
+     7.4391
+    ],
+    "Neuchâtel": [
+     46.9966,
+     6.9358
+    ],
+    "Twann": [
+     47.0938,
+     7.1566
+    ],
+    "Ligerz": [
+     47.084,
+     7.1348
+    ],
+    "La Neuveville": [
+     47.0628,
+     7.0954
+    ],
+    "Le Landeron": [
+     47.0566,
+     7.0663
+    ],
+    "Cressier": [
+     47.0519,
+     7.0395
+    ],
+    "Cornaux": [
+     47.0387,
+     7.0234
+    ],
+    "Saint-Blaise": [
+     47.0145,
+     6.9821
+    ],
+    "Marin-Epagnier": [
+     47.009,
+     7.0107
+    ],
+    "Gampelen": [
+     47.0091,
+     7.0582
+    ],
+    "Zihlbrücke": [
+     47.0093,
+     7.0306
+    ],
+    "Serrières": [
+     46.984,
+     6.9033
+    ],
+    "Auvernier": [
+     46.9796,
+     6.8777
+    ],
+    "Colombier": [
+     46.9677,
+     6.849
+    ],
+    "Boudry": [
+     46.9595,
+     6.8352
+    ],
+    "Bevaix": [
+     46.9297,
+     6.8117
+    ],
+    "Yverdon": [
+     46.7814,
+     6.6408
+    ],
+    "Corcelles-Peseux": [
+     46.9834,
+     6.8838
+    ],
+    "Chambrelien": [
+     46.9673,
+     6.8125
+    ],
+    "La Chaux-de-Fonds": [
+     47.0986,
+     6.8251
+    ],
+    "Les Geneveys-sur-Coffrane": [
+     47.0151,
+     6.8532
+    ],
+    "Bôle": [
+     46.9691,
+     6.838
+    ],
+    "Champ-du-Moulin": [
+     46.9599,
+     6.775
+    ],
+    "Noiraigue": [
+     46.9549,
+     6.7218
+    ],
+    "Travers": [
+     46.9424,
+     6.6762
+    ],
+    "Pontarlier": [
+     46.9035,
+     6.3546
+    ],
+    "Fleurier": [
+     46.9025,
+     6.5822
+    ],
+    "Buttes": [
+     46.8889,
+     6.5512
+    ],
+    "Murten": [
+     46.9254,
+     7.1153
+    ],
+    "Gals": [
+     47.027,
+     7.048
+    ],
+    "Payerne": [
+     46.8197,
+     6.9384
+    ],
+    "Fribourg": [
+     46.8032,
+     7.1513
+    ],
+    "Lyss": [
+     47.0742,
+     7.3063
+    ],
+    "Gümmenen": [
+     46.9422,
+     7.2348
+    ],
+    "Avenches": [
+     46.8844,
+     7.0407
+    ],
+    "Grandson": [
+     46.8063,
+     6.6418
+    ],
+    "Concise": [
+     46.8509,
+     6.7232
+    ],
+    "Couvet": [
+     46.9239,
+     6.636
+    ],
+    "Môtiers": [
+     46.9118,
+     6.6103
+    ],
+    "Tüscherz": [
+     47.1141,
+     7.1959
+    ],
+    "Kallnach": [
+     47.0255,
+     7.2352
+    ],
+    "Courtepin": [
+     46.8674,
+     7.1227
+    ],
+    "Les Hauts-Geneveys": [
+     47.0472,
+     6.8748
+    ]
+   },
+   "margin_x": 330,
+   "lt_dist_w": 2.0
+  },
+  "vorlage": {
+   "strecke": "einspur",
+   "form": "halt",
+   "gleise": [
+    "2"
+   ],
+   "pax": [
+    true
+   ],
+   "perrons": "unten"
+  },
+  "_gleisnummern": "SBB Open Data perronoberflache (gleisnummern_sbb.py, 19.10.2026)"
+ },
+ "faoug": {
+  "_quelle": "Entwurf 16.10.2026 (Claude), Faoug, OSM-Stand 12.10.",
+  "cfg": {
+   "towns": {
+    "Biel": [
+     47.1325,
+     7.2426
+    ],
+    "Ins": [
+     46.9999,
+     7.0996
+    ],
+    "Kerzers": [
+     46.9751,
+     7.1929
+    ],
+    "Bern": [
+     46.949,
+     7.4391
+    ],
+    "Neuchâtel": [
+     46.9966,
+     6.9358
+    ],
+    "Twann": [
+     47.0938,
+     7.1566
+    ],
+    "Ligerz": [
+     47.084,
+     7.1348
+    ],
+    "La Neuveville": [
+     47.0628,
+     7.0954
+    ],
+    "Le Landeron": [
+     47.0566,
+     7.0663
+    ],
+    "Cressier": [
+     47.0519,
+     7.0395
+    ],
+    "Cornaux": [
+     47.0387,
+     7.0234
+    ],
+    "Saint-Blaise": [
+     47.0145,
+     6.9821
+    ],
+    "Marin-Epagnier": [
+     47.009,
+     7.0107
+    ],
+    "Gampelen": [
+     47.0091,
+     7.0582
+    ],
+    "Zihlbrücke": [
+     47.0093,
+     7.0306
+    ],
+    "Serrières": [
+     46.984,
+     6.9033
+    ],
+    "Auvernier": [
+     46.9796,
+     6.8777
+    ],
+    "Colombier": [
+     46.9677,
+     6.849
+    ],
+    "Boudry": [
+     46.9595,
+     6.8352
+    ],
+    "Bevaix": [
+     46.9297,
+     6.8117
+    ],
+    "Yverdon": [
+     46.7814,
+     6.6408
+    ],
+    "Corcelles-Peseux": [
+     46.9834,
+     6.8838
+    ],
+    "Chambrelien": [
+     46.9673,
+     6.8125
+    ],
+    "La Chaux-de-Fonds": [
+     47.0986,
+     6.8251
+    ],
+    "Les Geneveys-sur-Coffrane": [
+     47.0151,
+     6.8532
+    ],
+    "Bôle": [
+     46.9691,
+     6.838
+    ],
+    "Champ-du-Moulin": [
+     46.9599,
+     6.775
+    ],
+    "Noiraigue": [
+     46.9549,
+     6.7218
+    ],
+    "Travers": [
+     46.9424,
+     6.6762
+    ],
+    "Pontarlier": [
+     46.9035,
+     6.3546
+    ],
+    "Fleurier": [
+     46.9025,
+     6.5822
+    ],
+    "Buttes": [
+     46.8889,
+     6.5512
+    ],
+    "Murten": [
+     46.9254,
+     7.1153
+    ],
+    "Gals": [
+     47.027,
+     7.048
+    ],
+    "Payerne": [
+     46.8197,
+     6.9384
+    ],
+    "Fribourg": [
+     46.8032,
+     7.1513
+    ],
+    "Lyss": [
+     47.0742,
+     7.3063
+    ],
+    "Gümmenen": [
+     46.9422,
+     7.2348
+    ],
+    "Avenches": [
+     46.8844,
+     7.0407
+    ],
+    "Grandson": [
+     46.8063,
+     6.6418
+    ],
+    "Concise": [
+     46.8509,
+     6.7232
+    ],
+    "Couvet": [
+     46.9239,
+     6.636
+    ],
+    "Môtiers": [
+     46.9118,
+     6.6103
+    ],
+    "Tüscherz": [
+     47.1141,
+     7.1959
+    ],
+    "Kallnach": [
+     47.0255,
+     7.2352
+    ],
+    "Courtepin": [
+     46.8674,
+     7.1227
+    ],
+    "Les Hauts-Geneveys": [
+     47.0472,
+     6.8748
+    ]
+   },
+   "margin_x": 330,
+   "lt_dist_w": 2.0
+  },
+  "vorlage": {
+   "strecke": "einspur",
+   "form": "halt",
+   "gleise": [
+    "1"
+   ],
+   "pax": [
+    true
+   ],
+   "perrons": "unten"
+  },
+  "_gleisnummern": "SBB Open Data perronoberflache (gleisnummern_sbb.py, 19.10.2026)"
+ },
+ "fraschels": {
+  "_quelle": "Entwurf 16.10.2026 (Claude), Fräschels, OSM-Stand 12.10.",
+  "cfg": {
+   "towns": {
+    "Biel": [
+     47.1325,
+     7.2426
+    ],
+    "Ins": [
+     46.9999,
+     7.0996
+    ],
+    "Kerzers": [
+     46.9751,
+     7.1929
+    ],
+    "Bern": [
+     46.949,
+     7.4391
+    ],
+    "Neuchâtel": [
+     46.9966,
+     6.9358
+    ],
+    "Twann": [
+     47.0938,
+     7.1566
+    ],
+    "Ligerz": [
+     47.084,
+     7.1348
+    ],
+    "La Neuveville": [
+     47.0628,
+     7.0954
+    ],
+    "Le Landeron": [
+     47.0566,
+     7.0663
+    ],
+    "Cressier": [
+     47.0519,
+     7.0395
+    ],
+    "Cornaux": [
+     47.0387,
+     7.0234
+    ],
+    "Saint-Blaise": [
+     47.0145,
+     6.9821
+    ],
+    "Marin-Epagnier": [
+     47.009,
+     7.0107
+    ],
+    "Gampelen": [
+     47.0091,
+     7.0582
+    ],
+    "Zihlbrücke": [
+     47.0093,
+     7.0306
+    ],
+    "Serrières": [
+     46.984,
+     6.9033
+    ],
+    "Auvernier": [
+     46.9796,
+     6.8777
+    ],
+    "Colombier": [
+     46.9677,
+     6.849
+    ],
+    "Boudry": [
+     46.9595,
+     6.8352
+    ],
+    "Bevaix": [
+     46.9297,
+     6.8117
+    ],
+    "Yverdon": [
+     46.7814,
+     6.6408
+    ],
+    "Corcelles-Peseux": [
+     46.9834,
+     6.8838
+    ],
+    "Chambrelien": [
+     46.9673,
+     6.8125
+    ],
+    "La Chaux-de-Fonds": [
+     47.0986,
+     6.8251
+    ],
+    "Les Geneveys-sur-Coffrane": [
+     47.0151,
+     6.8532
+    ],
+    "Bôle": [
+     46.9691,
+     6.838
+    ],
+    "Champ-du-Moulin": [
+     46.9599,
+     6.775
+    ],
+    "Noiraigue": [
+     46.9549,
+     6.7218
+    ],
+    "Travers": [
+     46.9424,
+     6.6762
+    ],
+    "Pontarlier": [
+     46.9035,
+     6.3546
+    ],
+    "Fleurier": [
+     46.9025,
+     6.5822
+    ],
+    "Buttes": [
+     46.8889,
+     6.5512
+    ],
+    "Murten": [
+     46.9254,
+     7.1153
+    ],
+    "Gals": [
+     47.027,
+     7.048
+    ],
+    "Payerne": [
+     46.8197,
+     6.9384
+    ],
+    "Fribourg": [
+     46.8032,
+     7.1513
+    ],
+    "Lyss": [
+     47.0742,
+     7.3063
+    ],
+    "Gümmenen": [
+     46.9422,
+     7.2348
+    ],
+    "Avenches": [
+     46.8844,
+     7.0407
+    ],
+    "Grandson": [
+     46.8063,
+     6.6418
+    ],
+    "Concise": [
+     46.8509,
+     6.7232
+    ],
+    "Couvet": [
+     46.9239,
+     6.636
+    ],
+    "Môtiers": [
+     46.9118,
+     6.6103
+    ],
+    "Tüscherz": [
+     47.1141,
+     7.1959
+    ],
+    "Kallnach": [
+     47.0255,
+     7.2352
+    ],
+    "Courtepin": [
+     46.8674,
+     7.1227
+    ],
+    "Les Hauts-Geneveys": [
+     47.0472,
+     6.8748
+    ]
+   },
+   "margin_x": 330,
+   "lt_dist_w": 2.0
+  },
+  "vorlage": {
+   "strecke": "einspur",
+   "form": "halt",
+   "gleise": [
+    "447"
+   ],
+   "pax": [
+    true
+   ],
+   "perrons": "unten"
+  }
+ },
+ "galmiz": {
+  "_quelle": "Entwurf 15.10.2026 (Claude), Galmiz, OSM-Stand 12.10.",
+  "cfg": {
+   "towns": {
+    "Biel": [
+     47.1325,
+     7.2426
+    ],
+    "Ins": [
+     46.9999,
+     7.0996
+    ],
+    "Kerzers": [
+     46.9751,
+     7.1929
+    ],
+    "Bern": [
+     46.949,
+     7.4391
+    ],
+    "Neuchâtel": [
+     46.9966,
+     6.9358
+    ],
+    "Twann": [
+     47.0938,
+     7.1566
+    ],
+    "Ligerz": [
+     47.084,
+     7.1348
+    ],
+    "La Neuveville": [
+     47.0628,
+     7.0954
+    ],
+    "Le Landeron": [
+     47.0566,
+     7.0663
+    ],
+    "Cressier": [
+     47.0519,
+     7.0395
+    ],
+    "Cornaux": [
+     47.0387,
+     7.0234
+    ],
+    "Saint-Blaise": [
+     47.0145,
+     6.9821
+    ],
+    "Marin-Epagnier": [
+     47.009,
+     7.0107
+    ],
+    "Gampelen": [
+     47.0091,
+     7.0582
+    ],
+    "Zihlbrücke": [
+     47.0093,
+     7.0306
+    ],
+    "Serrières": [
+     46.984,
+     6.9033
+    ],
+    "Auvernier": [
+     46.9796,
+     6.8777
+    ],
+    "Colombier": [
+     46.9677,
+     6.849
+    ],
+    "Boudry": [
+     46.9595,
+     6.8352
+    ],
+    "Bevaix": [
+     46.9297,
+     6.8117
+    ],
+    "Yverdon": [
+     46.7814,
+     6.6408
+    ],
+    "Corcelles-Peseux": [
+     46.9834,
+     6.8838
+    ],
+    "Chambrelien": [
+     46.9673,
+     6.8125
+    ],
+    "La Chaux-de-Fonds": [
+     47.0986,
+     6.8251
+    ],
+    "Les Geneveys-sur-Coffrane": [
+     47.0151,
+     6.8532
+    ],
+    "Bôle": [
+     46.9691,
+     6.838
+    ],
+    "Champ-du-Moulin": [
+     46.9599,
+     6.775
+    ],
+    "Noiraigue": [
+     46.9549,
+     6.7218
+    ],
+    "Travers": [
+     46.9424,
+     6.6762
+    ],
+    "Pontarlier": [
+     46.9035,
+     6.3546
+    ],
+    "Fleurier": [
+     46.9025,
+     6.5822
+    ],
+    "Buttes": [
+     46.8889,
+     6.5512
+    ],
+    "Murten": [
+     46.9254,
+     7.1153
+    ],
+    "Gals": [
+     47.027,
+     7.048
+    ],
+    "Payerne": [
+     46.8197,
+     6.9384
+    ],
+    "Fribourg": [
+     46.8032,
+     7.1513
+    ],
+    "Lyss": [
+     47.0742,
+     7.3063
+    ]
+   },
+   "margin_x": 330,
+   "lt_dist_w": 2.0
+  },
+  "knoten_lane": {
+   "251434878": 0
+  },
+  "knoten_x": {
+   "251434878": 420
+  },
+  "zeichnen": {
+   "_zweck": "Galmiz (15.10. abends): Kreuzungsgleis (OSM siding) als Ausweiche oberhalb, ohne falschen Pfeil am Westkopf",
+   "weg": [
+    186891759
+   ],
+   "linien": [
+    {
+     "pts": [
+      [
+       "x:420",
+       "y:134"
+      ],
+      [
+       "d60",
+       "y:110"
+      ],
+      [
+       "x:876.4",
+       "y:110"
+      ],
+      [
+       "d60",
+       "y:134"
+      ]
+     ],
+     "pax": false,
+     "_osm": "186891759 Kreuzungsgleis"
+    }
+   ]
+  },
+  "platforms": [],
+  "perrons_px": [
+   [
+    600,
+    710,
+    122
+   ]
+  ],
+  "vorlage": {
+   "strecke": "einspur",
+   "form": "kreuzung",
+   "gleise": [
+    null,
+    "1"
+   ],
+   "pax": [
+    false,
+    true
+   ],
+   "perrons": "unten"
+  },
+  "_gleisnummern": "SBB Open Data perronoberflache (gleisnummern_sbb.py, 19.10.2026)"
+ },
+ "gampelen": {
+  "_quelle": "Entwurf 14.10.2026 (Claude), Gampelen, OSM-Stand 12.10.",
+  "cfg": {
+   "towns": {
+    "Biel": [
+     47.1325,
+     7.2426
+    ],
+    "Ins": [
+     46.9999,
+     7.0996
+    ],
+    "Kerzers": [
+     46.9751,
+     7.1929
+    ],
+    "Bern": [
+     46.949,
+     7.4391
+    ],
+    "Neuchâtel": [
+     46.9966,
+     6.9358
+    ],
+    "Twann": [
+     47.0938,
+     7.1566
+    ],
+    "Ligerz": [
+     47.084,
+     7.1348
+    ],
+    "La Neuveville": [
+     47.0628,
+     7.0954
+    ],
+    "Le Landeron": [
+     47.0566,
+     7.0663
+    ],
+    "Cressier": [
+     47.0519,
+     7.0395
+    ],
+    "Cornaux": [
+     47.0387,
+     7.0234
+    ],
+    "Saint-Blaise": [
+     47.0145,
+     6.9821
+    ],
+    "Marin-Epagnier": [
+     47.009,
+     7.0107
+    ],
+    "Gampelen": [
+     47.0091,
+     7.0582
+    ],
+    "Zihlbrücke": [
+     47.0093,
+     7.0306
+    ],
+    "Serrières": [
+     46.984,
+     6.9033
+    ],
+    "Auvernier": [
+     46.9796,
+     6.8777
+    ],
+    "Colombier": [
+     46.9677,
+     6.849
+    ],
+    "Boudry": [
+     46.9595,
+     6.8352
+    ],
+    "Bevaix": [
+     46.9297,
+     6.8117
+    ],
+    "Yverdon": [
+     46.7814,
+     6.6408
+    ],
+    "Corcelles-Peseux": [
+     46.9834,
+     6.8838
+    ],
+    "Chambrelien": [
+     46.9673,
+     6.8125
+    ],
+    "La Chaux-de-Fonds": [
+     47.0986,
+     6.8251
+    ],
+    "Les Geneveys-sur-Coffrane": [
+     47.0151,
+     6.8532
+    ],
+    "Bôle": [
+     46.9691,
+     6.838
+    ],
+    "Champ-du-Moulin": [
+     46.9599,
+     6.775
+    ],
+    "Noiraigue": [
+     46.9549,
+     6.7218
+    ],
+    "Travers": [
+     46.9424,
+     6.6762
+    ],
+    "Pontarlier": [
+     46.9035,
+     6.3546
+    ],
+    "Fleurier": [
+     46.9025,
+     6.5822
+    ],
+    "Buttes": [
+     46.8889,
+     6.5512
+    ],
+    "Murten": [
+     46.9254,
+     7.1153
+    ],
+    "Gals": [
+     47.027,
+     7.048
+    ]
+   },
+   "margin_x": 330,
+   "lt_dist_w": 2.0
+  },
+  "vorlage": {
+   "strecke": "doppelspur",
+   "form": "halt",
+   "gleise": [
+    "1",
+    "2"
+   ],
+   "pax": [
+    true,
+    true
+   ],
+   "perrons": "aussen",
+   "zusaetze": [
+    {
+     "art": "spurwechsel",
+     "ende": "links",
+     "anzahl": 1,
+     "richtung": "steigend"
+    }
+   ]
+  },
+  "_gleisnummern": "SBB Open Data perronoberflache (gleisnummern_sbb.py, 19.10.2026)"
+ },
+ "gorgier_saint_aubin": {
+  "_quelle": "Entwurf 16.10.2026 (Claude), Gorgier-Saint-Aubin, OSM-Stand 12.10.",
+  "cfg": {
+   "towns": {
+    "Biel": [
+     47.1325,
+     7.2426
+    ],
+    "Ins": [
+     46.9999,
+     7.0996
+    ],
+    "Kerzers": [
+     46.9751,
+     7.1929
+    ],
+    "Bern": [
+     46.949,
+     7.4391
+    ],
+    "Neuchâtel": [
+     46.9966,
+     6.9358
+    ],
+    "Twann": [
+     47.0938,
+     7.1566
+    ],
+    "Ligerz": [
+     47.084,
+     7.1348
+    ],
+    "La Neuveville": [
+     47.0628,
+     7.0954
+    ],
+    "Le Landeron": [
+     47.0566,
+     7.0663
+    ],
+    "Cressier": [
+     47.0519,
+     7.0395
+    ],
+    "Cornaux": [
+     47.0387,
+     7.0234
+    ],
+    "Saint-Blaise": [
+     47.0145,
+     6.9821
+    ],
+    "Marin-Epagnier": [
+     47.009,
+     7.0107
+    ],
+    "Gampelen": [
+     47.0091,
+     7.0582
+    ],
+    "Zihlbrücke": [
+     47.0093,
+     7.0306
+    ],
+    "Serrières": [
+     46.984,
+     6.9033
+    ],
+    "Auvernier": [
+     46.9796,
+     6.8777
+    ],
+    "Colombier": [
+     46.9677,
+     6.849
+    ],
+    "Boudry": [
+     46.9595,
+     6.8352
+    ],
+    "Bevaix": [
+     46.9297,
+     6.8117
+    ],
+    "Yverdon": [
+     46.7814,
+     6.6408
+    ],
+    "Corcelles-Peseux": [
+     46.9834,
+     6.8838
+    ],
+    "Chambrelien": [
+     46.9673,
+     6.8125
+    ],
+    "La Chaux-de-Fonds": [
+     47.0986,
+     6.8251
+    ],
+    "Les Geneveys-sur-Coffrane": [
+     47.0151,
+     6.8532
+    ],
+    "Bôle": [
+     46.9691,
+     6.838
+    ],
+    "Champ-du-Moulin": [
+     46.9599,
+     6.775
+    ],
+    "Noiraigue": [
+     46.9549,
+     6.7218
+    ],
+    "Travers": [
+     46.9424,
+     6.6762
+    ],
+    "Pontarlier": [
+     46.9035,
+     6.3546
+    ],
+    "Fleurier": [
+     46.9025,
+     6.5822
+    ],
+    "Buttes": [
+     46.8889,
+     6.5512
+    ],
+    "Murten": [
+     46.9254,
+     7.1153
+    ],
+    "Gals": [
+     47.027,
+     7.048
+    ],
+    "Payerne": [
+     46.8197,
+     6.9384
+    ],
+    "Fribourg": [
+     46.8032,
+     7.1513
+    ],
+    "Lyss": [
+     47.0742,
+     7.3063
+    ],
+    "Gümmenen": [
+     46.9422,
+     7.2348
+    ],
+    "Avenches": [
+     46.8844,
+     7.0407
+    ],
+    "Grandson": [
+     46.8063,
+     6.6418
+    ],
+    "Concise": [
+     46.8509,
+     6.7232
+    ],
+    "Couvet": [
+     46.9239,
+     6.636
+    ],
+    "Môtiers": [
+     46.9118,
+     6.6103
+    ],
+    "Tüscherz": [
+     47.1141,
+     7.1959
+    ],
+    "Kallnach": [
+     47.0255,
+     7.2352
+    ],
+    "Courtepin": [
+     46.8674,
+     7.1227
+    ],
+    "Les Hauts-Geneveys": [
+     47.0472,
+     6.8748
+    ]
+   },
+   "margin_x": 330,
+   "lt_dist_w": 2.0
+  },
+  "vorlage": {
+   "strecke": "doppelspur",
+   "form": "ueberholung",
+   "ueberholgleise": "unten",
+   "gleise": [
+    "3",
+    "2",
+    "1"
+   ],
+   "pax": [
+    true,
+    true,
+    true
+   ],
+   "perrons": "unten",
+   "zusaetze": [
+    {
+     "art": "spurwechsel",
+     "ende": "links",
+     "anzahl": 1,
+     "richtung": "fallend"
+    },
+    {
+     "art": "spurwechsel",
+     "ende": "rechts",
+     "anzahl": 1,
+     "richtung": "steigend"
+    },
+    {
+     "art": "anschluss",
+     "ende": "links",
+     "lage": "innen",
+     "seite": "unten",
+     "stumpen": 2
+    },
+    {
+     "art": "anschluss",
+     "ende": "rechts",
+     "lage": "aussen",
+     "seite": "unten",
+     "stumpen": 1
+    }
+   ]
+  },
+  "_gleisnummern": "SBB Open Data perronoberflache (gleisnummern_sbb.py, 19.10.2026)"
+ },
+ "grandson": {
+  "_quelle": "Entwurf 16.10.2026 (Claude), Grandson, OSM-Stand 12.10.",
+  "cfg": {
+   "towns": {
+    "Biel": [
+     47.1325,
+     7.2426
+    ],
+    "Ins": [
+     46.9999,
+     7.0996
+    ],
+    "Kerzers": [
+     46.9751,
+     7.1929
+    ],
+    "Bern": [
+     46.949,
+     7.4391
+    ],
+    "Neuchâtel": [
+     46.9966,
+     6.9358
+    ],
+    "Twann": [
+     47.0938,
+     7.1566
+    ],
+    "Ligerz": [
+     47.084,
+     7.1348
+    ],
+    "La Neuveville": [
+     47.0628,
+     7.0954
+    ],
+    "Le Landeron": [
+     47.0566,
+     7.0663
+    ],
+    "Cressier": [
+     47.0519,
+     7.0395
+    ],
+    "Cornaux": [
+     47.0387,
+     7.0234
+    ],
+    "Saint-Blaise": [
+     47.0145,
+     6.9821
+    ],
+    "Marin-Epagnier": [
+     47.009,
+     7.0107
+    ],
+    "Gampelen": [
+     47.0091,
+     7.0582
+    ],
+    "Zihlbrücke": [
+     47.0093,
+     7.0306
+    ],
+    "Serrières": [
+     46.984,
+     6.9033
+    ],
+    "Auvernier": [
+     46.9796,
+     6.8777
+    ],
+    "Colombier": [
+     46.9677,
+     6.849
+    ],
+    "Boudry": [
+     46.9595,
+     6.8352
+    ],
+    "Bevaix": [
+     46.9297,
+     6.8117
+    ],
+    "Yverdon": [
+     46.7814,
+     6.6408
+    ],
+    "Corcelles-Peseux": [
+     46.9834,
+     6.8838
+    ],
+    "Chambrelien": [
+     46.9673,
+     6.8125
+    ],
+    "La Chaux-de-Fonds": [
+     47.0986,
+     6.8251
+    ],
+    "Les Geneveys-sur-Coffrane": [
+     47.0151,
+     6.8532
+    ],
+    "Bôle": [
+     46.9691,
+     6.838
+    ],
+    "Champ-du-Moulin": [
+     46.9599,
+     6.775
+    ],
+    "Noiraigue": [
+     46.9549,
+     6.7218
+    ],
+    "Travers": [
+     46.9424,
+     6.6762
+    ],
+    "Pontarlier": [
+     46.9035,
+     6.3546
+    ],
+    "Fleurier": [
+     46.9025,
+     6.5822
+    ],
+    "Buttes": [
+     46.8889,
+     6.5512
+    ],
+    "Murten": [
+     46.9254,
+     7.1153
+    ],
+    "Gals": [
+     47.027,
+     7.048
+    ],
+    "Payerne": [
+     46.8197,
+     6.9384
+    ],
+    "Fribourg": [
+     46.8032,
+     7.1513
+    ],
+    "Lyss": [
+     47.0742,
+     7.3063
+    ],
+    "Gümmenen": [
+     46.9422,
+     7.2348
+    ],
+    "Avenches": [
+     46.8844,
+     7.0407
+    ],
+    "Grandson": [
+     46.8063,
+     6.6418
+    ],
+    "Concise": [
+     46.8509,
+     6.7232
+    ],
+    "Couvet": [
+     46.9239,
+     6.636
+    ],
+    "Môtiers": [
+     46.9118,
+     6.6103
+    ],
+    "Tüscherz": [
+     47.1141,
+     7.1959
+    ],
+    "Kallnach": [
+     47.0255,
+     7.2352
+    ],
+    "Courtepin": [
+     46.8674,
+     7.1227
+    ],
+    "Les Hauts-Geneveys": [
+     47.0472,
+     6.8748
+    ]
+   },
+   "margin_x": 330,
+   "lt_dist_w": 2.0
+  },
+  "vorlage": {
+   "strecke": "doppelspur",
+   "form": "ueberholung",
+   "ueberholgleise": "oben",
+   "gleise": [
+    "1",
+    "2",
+    "3"
+   ],
+   "pax": [
+    true,
+    true,
+    true
+   ],
+   "perrons": "oben",
+   "zusaetze": [
+    {
+     "art": "spurwechsel",
+     "ende": "rechts",
+     "anzahl": 1,
+     "richtung": "fallend"
+    },
+    {
+     "art": "anschluss",
+     "ende": "links",
+     "lage": "aussen",
+     "seite": "oben",
+     "stumpen": 1
+    },
+    {
+     "art": "anschluss",
+     "ende": "rechts",
+     "lage": "innen",
+     "seite": "unten",
+     "stumpen": 1
+    },
+    {
+     "art": "anschluss",
+     "ende": "links",
+     "lage": "innen",
+     "seite": "oben",
+     "stumpen": 1
+    },
+    {
+     "art": "anschluss",
+     "ende": "rechts",
+     "lage": "aussen",
+     "seite": "unten",
+     "stumpen": 1
+    }
+   ]
+  },
+  "_gleisnummern": "SBB Open Data perronoberflache (gleisnummern_sbb.py, 19.10.2026)"
+ },
+ "gummenen": {
+  "_quelle": "Entwurf 16.10.2026 (Claude), Gümmenen, OSM-Stand 12.10.",
+  "cfg": {
+   "towns": {
+    "Biel": [
+     47.1325,
+     7.2426
+    ],
+    "Ins": [
+     46.9999,
+     7.0996
+    ],
+    "Kerzers": [
+     46.9751,
+     7.1929
+    ],
+    "Bern": [
+     46.949,
+     7.4391
+    ],
+    "Neuchâtel": [
+     46.9966,
+     6.9358
+    ],
+    "Twann": [
+     47.0938,
+     7.1566
+    ],
+    "Ligerz": [
+     47.084,
+     7.1348
+    ],
+    "La Neuveville": [
+     47.0628,
+     7.0954
+    ],
+    "Le Landeron": [
+     47.0566,
+     7.0663
+    ],
+    "Cressier": [
+     47.0519,
+     7.0395
+    ],
+    "Cornaux": [
+     47.0387,
+     7.0234
+    ],
+    "Saint-Blaise": [
+     47.0145,
+     6.9821
+    ],
+    "Marin-Epagnier": [
+     47.009,
+     7.0107
+    ],
+    "Gampelen": [
+     47.0091,
+     7.0582
+    ],
+    "Zihlbrücke": [
+     47.0093,
+     7.0306
+    ],
+    "Serrières": [
+     46.984,
+     6.9033
+    ],
+    "Auvernier": [
+     46.9796,
+     6.8777
+    ],
+    "Colombier": [
+     46.9677,
+     6.849
+    ],
+    "Boudry": [
+     46.9595,
+     6.8352
+    ],
+    "Bevaix": [
+     46.9297,
+     6.8117
+    ],
+    "Yverdon": [
+     46.7814,
+     6.6408
+    ],
+    "Corcelles-Peseux": [
+     46.9834,
+     6.8838
+    ],
+    "Chambrelien": [
+     46.9673,
+     6.8125
+    ],
+    "La Chaux-de-Fonds": [
+     47.0986,
+     6.8251
+    ],
+    "Les Geneveys-sur-Coffrane": [
+     47.0151,
+     6.8532
+    ],
+    "Bôle": [
+     46.9691,
+     6.838
+    ],
+    "Champ-du-Moulin": [
+     46.9599,
+     6.775
+    ],
+    "Noiraigue": [
+     46.9549,
+     6.7218
+    ],
+    "Travers": [
+     46.9424,
+     6.6762
+    ],
+    "Pontarlier": [
+     46.9035,
+     6.3546
+    ],
+    "Fleurier": [
+     46.9025,
+     6.5822
+    ],
+    "Buttes": [
+     46.8889,
+     6.5512
+    ],
+    "Murten": [
+     46.9254,
+     7.1153
+    ],
+    "Gals": [
+     47.027,
+     7.048
+    ],
+    "Payerne": [
+     46.8197,
+     6.9384
+    ],
+    "Fribourg": [
+     46.8032,
+     7.1513
+    ],
+    "Lyss": [
+     47.0742,
+     7.3063
+    ],
+    "Gümmenen": [
+     46.9422,
+     7.2348
+    ],
+    "Avenches": [
+     46.8844,
+     7.0407
+    ],
+    "Grandson": [
+     46.8063,
+     6.6418
+    ],
+    "Concise": [
+     46.8509,
+     6.7232
+    ],
+    "Couvet": [
+     46.9239,
+     6.636
+    ],
+    "Môtiers": [
+     46.9118,
+     6.6103
+    ],
+    "Tüscherz": [
+     47.1141,
+     7.1959
+    ],
+    "Kallnach": [
+     47.0255,
+     7.2352
+    ],
+    "Courtepin": [
+     46.8674,
+     7.1227
+    ],
+    "Les Hauts-Geneveys": [
+     47.0472,
+     6.8748
+    ]
+   },
+   "margin_x": 330,
+   "lt_dist_w": 2.0
+  },
+  "vorlage": {
+   "strecke": "einspur",
+   "form": "kreuzung",
+   "spiegeln": true,
+   "gleise": [
+    "2",
+    "1"
+   ],
+   "pax": [
+    true,
+    true
+   ],
+   "perrons": "aussen",
+   "zusaetze": [
+    {
+     "art": "doppelspurbeginn",
+     "ende": "rechts",
+     "seite": "unten",
+     "aus": "kreuzungsgleis"
+    }
+   ]
+  }
+ },
+ "kallnach": {
+  "_quelle": "Entwurf 16.10.2026 (Claude), Kallnach, OSM-Stand 12.10.",
+  "cfg": {
+   "towns": {
+    "Biel": [
+     47.1325,
+     7.2426
+    ],
+    "Ins": [
+     46.9999,
+     7.0996
+    ],
+    "Kerzers": [
+     46.9751,
+     7.1929
+    ],
+    "Bern": [
+     46.949,
+     7.4391
+    ],
+    "Neuchâtel": [
+     46.9966,
+     6.9358
+    ],
+    "Twann": [
+     47.0938,
+     7.1566
+    ],
+    "Ligerz": [
+     47.084,
+     7.1348
+    ],
+    "La Neuveville": [
+     47.0628,
+     7.0954
+    ],
+    "Le Landeron": [
+     47.0566,
+     7.0663
+    ],
+    "Cressier": [
+     47.0519,
+     7.0395
+    ],
+    "Cornaux": [
+     47.0387,
+     7.0234
+    ],
+    "Saint-Blaise": [
+     47.0145,
+     6.9821
+    ],
+    "Marin-Epagnier": [
+     47.009,
+     7.0107
+    ],
+    "Gampelen": [
+     47.0091,
+     7.0582
+    ],
+    "Zihlbrücke": [
+     47.0093,
+     7.0306
+    ],
+    "Serrières": [
+     46.984,
+     6.9033
+    ],
+    "Auvernier": [
+     46.9796,
+     6.8777
+    ],
+    "Colombier": [
+     46.9677,
+     6.849
+    ],
+    "Boudry": [
+     46.9595,
+     6.8352
+    ],
+    "Bevaix": [
+     46.9297,
+     6.8117
+    ],
+    "Yverdon": [
+     46.7814,
+     6.6408
+    ],
+    "Corcelles-Peseux": [
+     46.9834,
+     6.8838
+    ],
+    "Chambrelien": [
+     46.9673,
+     6.8125
+    ],
+    "La Chaux-de-Fonds": [
+     47.0986,
+     6.8251
+    ],
+    "Les Geneveys-sur-Coffrane": [
+     47.0151,
+     6.8532
+    ],
+    "Bôle": [
+     46.9691,
+     6.838
+    ],
+    "Champ-du-Moulin": [
+     46.9599,
+     6.775
+    ],
+    "Noiraigue": [
+     46.9549,
+     6.7218
+    ],
+    "Travers": [
+     46.9424,
+     6.6762
+    ],
+    "Pontarlier": [
+     46.9035,
+     6.3546
+    ],
+    "Fleurier": [
+     46.9025,
+     6.5822
+    ],
+    "Buttes": [
+     46.8889,
+     6.5512
+    ],
+    "Murten": [
+     46.9254,
+     7.1153
+    ],
+    "Gals": [
+     47.027,
+     7.048
+    ],
+    "Payerne": [
+     46.8197,
+     6.9384
+    ],
+    "Fribourg": [
+     46.8032,
+     7.1513
+    ],
+    "Lyss": [
+     47.0742,
+     7.3063
+    ],
+    "Gümmenen": [
+     46.9422,
+     7.2348
+    ],
+    "Avenches": [
+     46.8844,
+     7.0407
+    ],
+    "Grandson": [
+     46.8063,
+     6.6418
+    ],
+    "Concise": [
+     46.8509,
+     6.7232
+    ],
+    "Couvet": [
+     46.9239,
+     6.636
+    ],
+    "Môtiers": [
+     46.9118,
+     6.6103
+    ],
+    "Tüscherz": [
+     47.1141,
+     7.1959
+    ],
+    "Kallnach": [
+     47.0255,
+     7.2352
+    ],
+    "Courtepin": [
+     46.8674,
+     7.1227
+    ],
+    "Les Hauts-Geneveys": [
+     47.0472,
+     6.8748
+    ]
+   },
+   "margin_x": 330,
+   "lt_dist_w": 2.0
+  },
+  "vorlage": {
+   "strecke": "einspur",
+   "form": "kreuzung",
+   "gleise": [
+    "2",
+    "1"
+   ],
+   "pax": [
+    true,
+    true
+   ],
+   "perrons": "unten",
+   "zusaetze": [
+    {
+     "art": "anschluss",
+     "ende": "links",
+     "lage": "innen",
+     "seite": "oben",
+     "stumpen": 1
+    }
+   ]
+  }
+ },
+ "kerzers_papiliorama": {
+  "_quelle": "Entwurf 16.10.2026 (Claude), Kerzers Papiliorama, OSM-Stand 12.10.",
+  "cfg": {
+   "towns": {
+    "Biel": [
+     47.1325,
+     7.2426
+    ],
+    "Ins": [
+     46.9999,
+     7.0996
+    ],
+    "Kerzers": [
+     46.9751,
+     7.1929
+    ],
+    "Bern": [
+     46.949,
+     7.4391
+    ],
+    "Neuchâtel": [
+     46.9966,
+     6.9358
+    ],
+    "Twann": [
+     47.0938,
+     7.1566
+    ],
+    "Ligerz": [
+     47.084,
+     7.1348
+    ],
+    "La Neuveville": [
+     47.0628,
+     7.0954
+    ],
+    "Le Landeron": [
+     47.0566,
+     7.0663
+    ],
+    "Cressier": [
+     47.0519,
+     7.0395
+    ],
+    "Cornaux": [
+     47.0387,
+     7.0234
+    ],
+    "Saint-Blaise": [
+     47.0145,
+     6.9821
+    ],
+    "Marin-Epagnier": [
+     47.009,
+     7.0107
+    ],
+    "Gampelen": [
+     47.0091,
+     7.0582
+    ],
+    "Zihlbrücke": [
+     47.0093,
+     7.0306
+    ],
+    "Serrières": [
+     46.984,
+     6.9033
+    ],
+    "Auvernier": [
+     46.9796,
+     6.8777
+    ],
+    "Colombier": [
+     46.9677,
+     6.849
+    ],
+    "Boudry": [
+     46.9595,
+     6.8352
+    ],
+    "Bevaix": [
+     46.9297,
+     6.8117
+    ],
+    "Yverdon": [
+     46.7814,
+     6.6408
+    ],
+    "Corcelles-Peseux": [
+     46.9834,
+     6.8838
+    ],
+    "Chambrelien": [
+     46.9673,
+     6.8125
+    ],
+    "La Chaux-de-Fonds": [
+     47.0986,
+     6.8251
+    ],
+    "Les Geneveys-sur-Coffrane": [
+     47.0151,
+     6.8532
+    ],
+    "Bôle": [
+     46.9691,
+     6.838
+    ],
+    "Champ-du-Moulin": [
+     46.9599,
+     6.775
+    ],
+    "Noiraigue": [
+     46.9549,
+     6.7218
+    ],
+    "Travers": [
+     46.9424,
+     6.6762
+    ],
+    "Pontarlier": [
+     46.9035,
+     6.3546
+    ],
+    "Fleurier": [
+     46.9025,
+     6.5822
+    ],
+    "Buttes": [
+     46.8889,
+     6.5512
+    ],
+    "Murten": [
+     46.9254,
+     7.1153
+    ],
+    "Gals": [
+     47.027,
+     7.048
+    ],
+    "Payerne": [
+     46.8197,
+     6.9384
+    ],
+    "Fribourg": [
+     46.8032,
+     7.1513
+    ],
+    "Lyss": [
+     47.0742,
+     7.3063
+    ],
+    "Gümmenen": [
+     46.9422,
+     7.2348
+    ],
+    "Avenches": [
+     46.8844,
+     7.0407
+    ],
+    "Grandson": [
+     46.8063,
+     6.6418
+    ],
+    "Concise": [
+     46.8509,
+     6.7232
+    ],
+    "Couvet": [
+     46.9239,
+     6.636
+    ],
+    "Môtiers": [
+     46.9118,
+     6.6103
+    ],
+    "Tüscherz": [
+     47.1141,
+     7.1959
+    ],
+    "Kallnach": [
+     47.0255,
+     7.2352
+    ],
+    "Courtepin": [
+     46.8674,
+     7.1227
+    ],
+    "Les Hauts-Geneveys": [
+     47.0472,
+     6.8748
+    ]
+   },
+   "margin_x": 330,
+   "lt_dist_w": 2.0
+  },
+  "vorlage": {
+   "strecke": "einspur",
+   "form": "halt",
+   "gleise": [
+    "1"
+   ],
+   "pax": [
+    true
+   ],
+   "perrons": "unten",
+   "_hinweis": "Querschnitt leer, Halt an Einspur angenommen"
+  },
+  "_gleisnummern": "SBB Open Data perronoberflache (Perron 1), 19.10.2026"
+ },
+ "la_neuveville": {
+  "_quelle": "Entwurf 14.10.2026 (Claude), La Neuveville, OSM-Stand 12.10.",
+  "cfg": {
+   "towns": {
+    "Biel": [
+     47.1325,
+     7.2426
+    ],
+    "Ins": [
+     46.9999,
+     7.0996
+    ],
+    "Kerzers": [
+     46.9751,
+     7.1929
+    ],
+    "Bern": [
+     46.949,
+     7.4391
+    ],
+    "Neuchâtel": [
+     46.9966,
+     6.9358
+    ],
+    "Twann": [
+     47.0938,
+     7.1566
+    ],
+    "Ligerz": [
+     47.084,
+     7.1348
+    ],
+    "La Neuveville": [
+     47.0628,
+     7.0954
+    ],
+    "Le Landeron": [
+     47.0566,
+     7.0663
+    ],
+    "Cressier": [
+     47.0519,
+     7.0395
+    ],
+    "Cornaux": [
+     47.0387,
+     7.0234
+    ],
+    "Saint-Blaise": [
+     47.0145,
+     6.9821
+    ],
+    "Marin-Epagnier": [
+     47.009,
+     7.0107
+    ],
+    "Gampelen": [
+     47.0091,
+     7.0582
+    ],
+    "Zihlbrücke": [
+     47.0093,
+     7.0306
+    ],
+    "Serrières": [
+     46.984,
+     6.9033
+    ],
+    "Auvernier": [
+     46.9796,
+     6.8777
+    ],
+    "Colombier": [
+     46.9677,
+     6.849
+    ],
+    "Boudry": [
+     46.9595,
+     6.8352
+    ],
+    "Bevaix": [
+     46.9297,
+     6.8117
+    ],
+    "Yverdon": [
+     46.7814,
+     6.6408
+    ],
+    "Corcelles-Peseux": [
+     46.9834,
+     6.8838
+    ],
+    "Chambrelien": [
+     46.9673,
+     6.8125
+    ],
+    "La Chaux-de-Fonds": [
+     47.0986,
+     6.8251
+    ],
+    "Les Geneveys-sur-Coffrane": [
+     47.0151,
+     6.8532
+    ],
+    "Bôle": [
+     46.9691,
+     6.838
+    ],
+    "Champ-du-Moulin": [
+     46.9599,
+     6.775
+    ],
+    "Noiraigue": [
+     46.9549,
+     6.7218
+    ],
+    "Travers": [
+     46.9424,
+     6.6762
+    ],
+    "Pontarlier": [
+     46.9035,
+     6.3546
+    ],
+    "Fleurier": [
+     46.9025,
+     6.5822
+    ],
+    "Buttes": [
+     46.8889,
+     6.5512
+    ],
+    "Murten": [
+     46.9254,
+     7.1153
+    ],
+    "Gals": [
+     47.027,
+     7.048
+    ]
+   },
+   "margin_x": 330,
+   "lt_dist_w": 2.0
+  },
+  "vorlage": {
+   "strecke": "doppelspur",
+   "form": "halt",
+   "gleise": [
+    "1",
+    "2"
+   ],
+   "pax": [
+    true,
+    true
+   ],
+   "perrons": "aussen"
+  },
+  "_gleisnummern": "SBB Open Data perronoberflache (gleisnummern_sbb.py, 19.10.2026)"
+ },
+ "la_presta_mines_d_asphalte": {
+  "_quelle": "Entwurf 16.10.2026 (Claude), La Presta - Mines d'Asphalte, OSM-Stand 12.10.",
+  "cfg": {
+   "towns": {
+    "Biel": [
+     47.1325,
+     7.2426
+    ],
+    "Ins": [
+     46.9999,
+     7.0996
+    ],
+    "Kerzers": [
+     46.9751,
+     7.1929
+    ],
+    "Bern": [
+     46.949,
+     7.4391
+    ],
+    "Neuchâtel": [
+     46.9966,
+     6.9358
+    ],
+    "Twann": [
+     47.0938,
+     7.1566
+    ],
+    "Ligerz": [
+     47.084,
+     7.1348
+    ],
+    "La Neuveville": [
+     47.0628,
+     7.0954
+    ],
+    "Le Landeron": [
+     47.0566,
+     7.0663
+    ],
+    "Cressier": [
+     47.0519,
+     7.0395
+    ],
+    "Cornaux": [
+     47.0387,
+     7.0234
+    ],
+    "Saint-Blaise": [
+     47.0145,
+     6.9821
+    ],
+    "Marin-Epagnier": [
+     47.009,
+     7.0107
+    ],
+    "Gampelen": [
+     47.0091,
+     7.0582
+    ],
+    "Zihlbrücke": [
+     47.0093,
+     7.0306
+    ],
+    "Serrières": [
+     46.984,
+     6.9033
+    ],
+    "Auvernier": [
+     46.9796,
+     6.8777
+    ],
+    "Colombier": [
+     46.9677,
+     6.849
+    ],
+    "Boudry": [
+     46.9595,
+     6.8352
+    ],
+    "Bevaix": [
+     46.9297,
+     6.8117
+    ],
+    "Yverdon": [
+     46.7814,
+     6.6408
+    ],
+    "Corcelles-Peseux": [
+     46.9834,
+     6.8838
+    ],
+    "Chambrelien": [
+     46.9673,
+     6.8125
+    ],
+    "La Chaux-de-Fonds": [
+     47.0986,
+     6.8251
+    ],
+    "Les Geneveys-sur-Coffrane": [
+     47.0151,
+     6.8532
+    ],
+    "Bôle": [
+     46.9691,
+     6.838
+    ],
+    "Champ-du-Moulin": [
+     46.9599,
+     6.775
+    ],
+    "Noiraigue": [
+     46.9549,
+     6.7218
+    ],
+    "Travers": [
+     46.9424,
+     6.6762
+    ],
+    "Pontarlier": [
+     46.9035,
+     6.3546
+    ],
+    "Fleurier": [
+     46.9025,
+     6.5822
+    ],
+    "Buttes": [
+     46.8889,
+     6.5512
+    ],
+    "Murten": [
+     46.9254,
+     7.1153
+    ],
+    "Gals": [
+     47.027,
+     7.048
+    ],
+    "Payerne": [
+     46.8197,
+     6.9384
+    ],
+    "Fribourg": [
+     46.8032,
+     7.1513
+    ],
+    "Lyss": [
+     47.0742,
+     7.3063
+    ],
+    "Gümmenen": [
+     46.9422,
+     7.2348
+    ],
+    "Avenches": [
+     46.8844,
+     7.0407
+    ],
+    "Grandson": [
+     46.8063,
+     6.6418
+    ],
+    "Concise": [
+     46.8509,
+     6.7232
+    ],
+    "Couvet": [
+     46.9239,
+     6.636
+    ],
+    "Môtiers": [
+     46.9118,
+     6.6103
+    ],
+    "Tüscherz": [
+     47.1141,
+     7.1959
+    ],
+    "Kallnach": [
+     47.0255,
+     7.2352
+    ],
+    "Courtepin": [
+     46.8674,
+     7.1227
+    ],
+    "Les Hauts-Geneveys": [
+     47.0472,
+     6.8748
+    ]
+   },
+   "margin_x": 330,
+   "lt_dist_w": 2.0
+  },
+  "vorlage": {
+   "strecke": "einspur",
+   "form": "halt",
+   "gleise": [
+    "1"
+   ],
+   "pax": [
+    true
+   ],
+   "perrons": "unten"
+  },
+  "_gleisnummern": "SBB Open Data perronoberflache (gleisnummern_sbb.py, 19.10.2026)"
+ },
+ "le_landeron": {
+  "_quelle": "Entwurf 14.10.2026 (Claude), Le Landeron, OSM-Stand 12.10.",
+  "cfg": {
+   "towns": {
+    "Biel": [
+     47.1325,
+     7.2426
+    ],
+    "Ins": [
+     46.9999,
+     7.0996
+    ],
+    "Kerzers": [
+     46.9751,
+     7.1929
+    ],
+    "Bern": [
+     46.949,
+     7.4391
+    ],
+    "Neuchâtel": [
+     46.9966,
+     6.9358
+    ],
+    "Twann": [
+     47.0938,
+     7.1566
+    ],
+    "Ligerz": [
+     47.084,
+     7.1348
+    ],
+    "La Neuveville": [
+     47.0628,
+     7.0954
+    ],
+    "Le Landeron": [
+     47.0566,
+     7.0663
+    ],
+    "Cressier": [
+     47.0519,
+     7.0395
+    ],
+    "Cornaux": [
+     47.0387,
+     7.0234
+    ],
+    "Saint-Blaise": [
+     47.0145,
+     6.9821
+    ],
+    "Marin-Epagnier": [
+     47.009,
+     7.0107
+    ],
+    "Gampelen": [
+     47.0091,
+     7.0582
+    ],
+    "Zihlbrücke": [
+     47.0093,
+     7.0306
+    ],
+    "Serrières": [
+     46.984,
+     6.9033
+    ],
+    "Auvernier": [
+     46.9796,
+     6.8777
+    ],
+    "Colombier": [
+     46.9677,
+     6.849
+    ],
+    "Boudry": [
+     46.9595,
+     6.8352
+    ],
+    "Bevaix": [
+     46.9297,
+     6.8117
+    ],
+    "Yverdon": [
+     46.7814,
+     6.6408
+    ],
+    "Corcelles-Peseux": [
+     46.9834,
+     6.8838
+    ],
+    "Chambrelien": [
+     46.9673,
+     6.8125
+    ],
+    "La Chaux-de-Fonds": [
+     47.0986,
+     6.8251
+    ],
+    "Les Geneveys-sur-Coffrane": [
+     47.0151,
+     6.8532
+    ],
+    "Bôle": [
+     46.9691,
+     6.838
+    ],
+    "Champ-du-Moulin": [
+     46.9599,
+     6.775
+    ],
+    "Noiraigue": [
+     46.9549,
+     6.7218
+    ],
+    "Travers": [
+     46.9424,
+     6.6762
+    ],
+    "Pontarlier": [
+     46.9035,
+     6.3546
+    ],
+    "Fleurier": [
+     46.9025,
+     6.5822
+    ],
+    "Buttes": [
+     46.8889,
+     6.5512
+    ],
+    "Murten": [
+     46.9254,
+     7.1153
+    ],
+    "Gals": [
+     47.027,
+     7.048
+    ]
+   },
+   "margin_x": 330,
+   "lt_dist_w": 2.0
+  },
+  "weglassen": [
+   184205540,
+   184205542,
+   184205541,
+   886128196,
+   886128197
+  ],
+  "pax_ways": [
+   39832533
+  ],
+  "zeichnen": {
+   "_zweck": "Hinweise 15.10.: Gleise 1/2 eine Achse auseinander; Gleis 3 direkt ins Gleis 2, Spurwechsel 1/2 ohne Zwischengerade",
+   "weg": [],
+   "linien": [
+    {
+     "pts": [
+      [
+       "n:249162307-7",
+       "n:249162307"
+      ],
+      [
+       "n:249162307",
+       "n:249162307"
+      ],
+      [
+       "d60",
+       "n:1946616036"
+      ],
+      [
+       "+7",
+       "n:1946616036"
+      ]
+     ],
+     "pax": false,
+     "_osm": "Spurwechsel 1->2 (184205541/886128196/7)"
+    },
+    {
+     "pts": [
+      [
+       "n:477515436-20.9",
+       "n:1946616035"
+      ],
+      [
+       "n:477515436-13.9",
+       "n:1946616035"
+      ],
+      [
+       "n:477515436",
+       "n:477515436"
+      ],
+      [
+       "+7",
+       "n:477515436"
+      ]
+     ],
+     "pax": true,
+     "_osm": "Gleis 3 -> 2 (184205540/542)"
+    }
+   ]
+  },
+  "platforms": [],
+  "perrons_px": [
+   [
+    815,
+    925,
+    146
+   ],
+   [
+    815,
+    925,
+    193
+   ]
+  ],
+  "nummern_weg": [
+   "1",
+   "2",
+   "3",
+   "13",
+   "21",
+   "52",
+   "709",
+   "809"
+  ],
+  "nummern_px": [
+   [
+    "3",
+    870,
+    134
+   ],
+   [
+    "2",
+    870,
+    158
+   ],
+   [
+    "1",
+    870,
+    182
+   ]
+  ],
+  "vorlage": {
+   "strecke": "doppelspur",
+   "form": "ueberholung",
+   "ueberholgleise": "oben",
+   "gleise": [
+    "3",
+    "2",
+    "1"
+   ],
+   "pax": [
+    true,
+    true,
+    true
+   ],
+   "perrons": "unten+zwischen",
+   "zusaetze": [
+    {
+     "art": "spurwechsel",
+     "ende": "links",
+     "anzahl": 1,
+     "richtung": "fallend"
+    },
+    {
+     "art": "anschluss",
+     "ende": "links",
+     "lage": "innen",
+     "seite": "unten",
+     "stumpen": 1
+    },
+    {
+     "art": "anschluss",
+     "ende": "rechts",
+     "lage": "aussen",
+     "seite": "oben",
+     "stumpen": 1
+    }
+   ]
+  }
+ },
+ "les_deurres": {
+  "_quelle": "Entwurf 16.10.2026 (Claude), Les Deurres, OSM-Stand 12.10.",
+  "cfg": {
+   "towns": {
+    "Biel": [
+     47.1325,
+     7.2426
+    ],
+    "Ins": [
+     46.9999,
+     7.0996
+    ],
+    "Kerzers": [
+     46.9751,
+     7.1929
+    ],
+    "Bern": [
+     46.949,
+     7.4391
+    ],
+    "Neuchâtel": [
+     46.9966,
+     6.9358
+    ],
+    "Twann": [
+     47.0938,
+     7.1566
+    ],
+    "Ligerz": [
+     47.084,
+     7.1348
+    ],
+    "La Neuveville": [
+     47.0628,
+     7.0954
+    ],
+    "Le Landeron": [
+     47.0566,
+     7.0663
+    ],
+    "Cressier": [
+     47.0519,
+     7.0395
+    ],
+    "Cornaux": [
+     47.0387,
+     7.0234
+    ],
+    "Saint-Blaise": [
+     47.0145,
+     6.9821
+    ],
+    "Marin-Epagnier": [
+     47.009,
+     7.0107
+    ],
+    "Gampelen": [
+     47.0091,
+     7.0582
+    ],
+    "Zihlbrücke": [
+     47.0093,
+     7.0306
+    ],
+    "Serrières": [
+     46.984,
+     6.9033
+    ],
+    "Auvernier": [
+     46.9796,
+     6.8777
+    ],
+    "Colombier": [
+     46.9677,
+     6.849
+    ],
+    "Boudry": [
+     46.9595,
+     6.8352
+    ],
+    "Bevaix": [
+     46.9297,
+     6.8117
+    ],
+    "Yverdon": [
+     46.7814,
+     6.6408
+    ],
+    "Corcelles-Peseux": [
+     46.9834,
+     6.8838
+    ],
+    "Chambrelien": [
+     46.9673,
+     6.8125
+    ],
+    "La Chaux-de-Fonds": [
+     47.0986,
+     6.8251
+    ],
+    "Les Geneveys-sur-Coffrane": [
+     47.0151,
+     6.8532
+    ],
+    "Bôle": [
+     46.9691,
+     6.838
+    ],
+    "Champ-du-Moulin": [
+     46.9599,
+     6.775
+    ],
+    "Noiraigue": [
+     46.9549,
+     6.7218
+    ],
+    "Travers": [
+     46.9424,
+     6.6762
+    ],
+    "Pontarlier": [
+     46.9035,
+     6.3546
+    ],
+    "Fleurier": [
+     46.9025,
+     6.5822
+    ],
+    "Buttes": [
+     46.8889,
+     6.5512
+    ],
+    "Murten": [
+     46.9254,
+     7.1153
+    ],
+    "Gals": [
+     47.027,
+     7.048
+    ],
+    "Payerne": [
+     46.8197,
+     6.9384
+    ],
+    "Fribourg": [
+     46.8032,
+     7.1513
+    ],
+    "Lyss": [
+     47.0742,
+     7.3063
+    ],
+    "Gümmenen": [
+     46.9422,
+     7.2348
+    ],
+    "Avenches": [
+     46.8844,
+     7.0407
+    ],
+    "Grandson": [
+     46.8063,
+     6.6418
+    ],
+    "Concise": [
+     46.8509,
+     6.7232
+    ],
+    "Couvet": [
+     46.9239,
+     6.636
+    ],
+    "Môtiers": [
+     46.9118,
+     6.6103
+    ],
+    "Tüscherz": [
+     47.1141,
+     7.1959
+    ],
+    "Kallnach": [
+     47.0255,
+     7.2352
+    ],
+    "Courtepin": [
+     46.8674,
+     7.1227
+    ],
+    "Les Hauts-Geneveys": [
+     47.0472,
+     6.8748
+    ]
+   },
+   "margin_x": 330,
+   "lt_dist_w": 2.0
+  },
+  "vorlage": {
+   "strecke": "einspur",
+   "form": "halt",
+   "gleise": [
+    "1"
+   ],
+   "pax": [
+    true
+   ],
+   "perrons": "oben",
+   "zusaetze": [
+    {
+     "art": "anschluss",
+     "ende": "rechts",
+     "lage": "innen",
+     "seite": "unten",
+     "stumpen": 2
+    }
+   ],
+   "_hinweis": "Querschnitt leer, Halt an Einspur angenommen"
+  },
+  "_gleisnummern": "SBB Open Data perronoberflache (Perron 1), 19.10.2026"
+ },
+ "les_geneveys_sur_coffrane": {
+  "_quelle": "Entwurf 16.10.2026 (Claude), Les Geneveys-sur-Coffrane, OSM-Stand 12.10.",
+  "cfg": {
+   "towns": {
+    "Biel": [
+     47.1325,
+     7.2426
+    ],
+    "Ins": [
+     46.9999,
+     7.0996
+    ],
+    "Kerzers": [
+     46.9751,
+     7.1929
+    ],
+    "Bern": [
+     46.949,
+     7.4391
+    ],
+    "Neuchâtel": [
+     46.9966,
+     6.9358
+    ],
+    "Twann": [
+     47.0938,
+     7.1566
+    ],
+    "Ligerz": [
+     47.084,
+     7.1348
+    ],
+    "La Neuveville": [
+     47.0628,
+     7.0954
+    ],
+    "Le Landeron": [
+     47.0566,
+     7.0663
+    ],
+    "Cressier": [
+     47.0519,
+     7.0395
+    ],
+    "Cornaux": [
+     47.0387,
+     7.0234
+    ],
+    "Saint-Blaise": [
+     47.0145,
+     6.9821
+    ],
+    "Marin-Epagnier": [
+     47.009,
+     7.0107
+    ],
+    "Gampelen": [
+     47.0091,
+     7.0582
+    ],
+    "Zihlbrücke": [
+     47.0093,
+     7.0306
+    ],
+    "Serrières": [
+     46.984,
+     6.9033
+    ],
+    "Auvernier": [
+     46.9796,
+     6.8777
+    ],
+    "Colombier": [
+     46.9677,
+     6.849
+    ],
+    "Boudry": [
+     46.9595,
+     6.8352
+    ],
+    "Bevaix": [
+     46.9297,
+     6.8117
+    ],
+    "Yverdon": [
+     46.7814,
+     6.6408
+    ],
+    "Corcelles-Peseux": [
+     46.9834,
+     6.8838
+    ],
+    "Chambrelien": [
+     46.9673,
+     6.8125
+    ],
+    "La Chaux-de-Fonds": [
+     47.0986,
+     6.8251
+    ],
+    "Les Geneveys-sur-Coffrane": [
+     47.0151,
+     6.8532
+    ],
+    "Bôle": [
+     46.9691,
+     6.838
+    ],
+    "Champ-du-Moulin": [
+     46.9599,
+     6.775
+    ],
+    "Noiraigue": [
+     46.9549,
+     6.7218
+    ],
+    "Travers": [
+     46.9424,
+     6.6762
+    ],
+    "Pontarlier": [
+     46.9035,
+     6.3546
+    ],
+    "Fleurier": [
+     46.9025,
+     6.5822
+    ],
+    "Buttes": [
+     46.8889,
+     6.5512
+    ],
+    "Murten": [
+     46.9254,
+     7.1153
+    ],
+    "Gals": [
+     47.027,
+     7.048
+    ],
+    "Payerne": [
+     46.8197,
+     6.9384
+    ],
+    "Fribourg": [
+     46.8032,
+     7.1513
+    ],
+    "Lyss": [
+     47.0742,
+     7.3063
+    ],
+    "Gümmenen": [
+     46.9422,
+     7.2348
+    ],
+    "Avenches": [
+     46.8844,
+     7.0407
+    ],
+    "Grandson": [
+     46.8063,
+     6.6418
+    ],
+    "Concise": [
+     46.8509,
+     6.7232
+    ],
+    "Couvet": [
+     46.9239,
+     6.636
+    ],
+    "Môtiers": [
+     46.9118,
+     6.6103
+    ],
+    "Tüscherz": [
+     47.1141,
+     7.1959
+    ],
+    "Kallnach": [
+     47.0255,
+     7.2352
+    ],
+    "Courtepin": [
+     46.8674,
+     7.1227
+    ],
+    "Les Hauts-Geneveys": [
+     47.0472,
+     6.8748
+    ]
+   },
+   "margin_x": 330,
+   "lt_dist_w": 2.0
+  },
+  "vorlage": {
+   "strecke": "einspur",
+   "form": "kreuzung",
+   "spiegeln": true,
+   "gleise": [
+    "1",
+    "2"
+   ],
+   "pax": [
+    true,
+    true
+   ],
+   "perrons": "oben+zwischen"
+  }
+ },
+ "les_hauts_geneveys": {
+  "_quelle": "Entwurf 16.10.2026 (Claude), Les Hauts-Geneveys, OSM-Stand 12.10.",
+  "cfg": {
+   "towns": {
+    "Biel": [
+     47.1325,
+     7.2426
+    ],
+    "Ins": [
+     46.9999,
+     7.0996
+    ],
+    "Kerzers": [
+     46.9751,
+     7.1929
+    ],
+    "Bern": [
+     46.949,
+     7.4391
+    ],
+    "Neuchâtel": [
+     46.9966,
+     6.9358
+    ],
+    "Twann": [
+     47.0938,
+     7.1566
+    ],
+    "Ligerz": [
+     47.084,
+     7.1348
+    ],
+    "La Neuveville": [
+     47.0628,
+     7.0954
+    ],
+    "Le Landeron": [
+     47.0566,
+     7.0663
+    ],
+    "Cressier": [
+     47.0519,
+     7.0395
+    ],
+    "Cornaux": [
+     47.0387,
+     7.0234
+    ],
+    "Saint-Blaise": [
+     47.0145,
+     6.9821
+    ],
+    "Marin-Epagnier": [
+     47.009,
+     7.0107
+    ],
+    "Gampelen": [
+     47.0091,
+     7.0582
+    ],
+    "Zihlbrücke": [
+     47.0093,
+     7.0306
+    ],
+    "Serrières": [
+     46.984,
+     6.9033
+    ],
+    "Auvernier": [
+     46.9796,
+     6.8777
+    ],
+    "Colombier": [
+     46.9677,
+     6.849
+    ],
+    "Boudry": [
+     46.9595,
+     6.8352
+    ],
+    "Bevaix": [
+     46.9297,
+     6.8117
+    ],
+    "Yverdon": [
+     46.7814,
+     6.6408
+    ],
+    "Corcelles-Peseux": [
+     46.9834,
+     6.8838
+    ],
+    "Chambrelien": [
+     46.9673,
+     6.8125
+    ],
+    "La Chaux-de-Fonds": [
+     47.0986,
+     6.8251
+    ],
+    "Les Geneveys-sur-Coffrane": [
+     47.0151,
+     6.8532
+    ],
+    "Bôle": [
+     46.9691,
+     6.838
+    ],
+    "Champ-du-Moulin": [
+     46.9599,
+     6.775
+    ],
+    "Noiraigue": [
+     46.9549,
+     6.7218
+    ],
+    "Travers": [
+     46.9424,
+     6.6762
+    ],
+    "Pontarlier": [
+     46.9035,
+     6.3546
+    ],
+    "Fleurier": [
+     46.9025,
+     6.5822
+    ],
+    "Buttes": [
+     46.8889,
+     6.5512
+    ],
+    "Murten": [
+     46.9254,
+     7.1153
+    ],
+    "Gals": [
+     47.027,
+     7.048
+    ],
+    "Payerne": [
+     46.8197,
+     6.9384
+    ],
+    "Fribourg": [
+     46.8032,
+     7.1513
+    ],
+    "Lyss": [
+     47.0742,
+     7.3063
+    ],
+    "Gümmenen": [
+     46.9422,
+     7.2348
+    ],
+    "Avenches": [
+     46.8844,
+     7.0407
+    ],
+    "Grandson": [
+     46.8063,
+     6.6418
+    ],
+    "Concise": [
+     46.8509,
+     6.7232
+    ],
+    "Couvet": [
+     46.9239,
+     6.636
+    ],
+    "Môtiers": [
+     46.9118,
+     6.6103
+    ],
+    "Tüscherz": [
+     47.1141,
+     7.1959
+    ],
+    "Kallnach": [
+     47.0255,
+     7.2352
+    ],
+    "Courtepin": [
+     46.8674,
+     7.1227
+    ],
+    "Les Hauts-Geneveys": [
+     47.0472,
+     6.8748
+    ]
+   },
+   "margin_x": 330,
+   "lt_dist_w": 2.0
+  },
+  "vorlage": {
+   "strecke": "einspur",
+   "form": "kreuzung",
+   "spiegeln": true,
+   "gleise": [
+    "2",
+    "1"
+   ],
+   "pax": [
+    true,
+    true
+   ],
+   "perrons": "oben",
+   "zusaetze": [
+    {
+     "art": "anschluss",
+     "ende": "rechts",
+     "lage": "innen",
+     "seite": "oben",
+     "stumpen": 2
+    }
+   ]
+  }
+ },
+ "ligerz": {
+  "_quelle": "Entwurf 14.10.2026 (Claude), Ligerz, OSM-Stand 12.10.",
+  "cfg": {
+   "towns": {
+    "Biel": [
+     47.1325,
+     7.2426
+    ],
+    "Ins": [
+     46.9999,
+     7.0996
+    ],
+    "Kerzers": [
+     46.9751,
+     7.1929
+    ],
+    "Bern": [
+     46.949,
+     7.4391
+    ],
+    "Neuchâtel": [
+     46.9966,
+     6.9358
+    ],
+    "Twann": [
+     47.0938,
+     7.1566
+    ],
+    "Ligerz": [
+     47.084,
+     7.1348
+    ],
+    "La Neuveville": [
+     47.0628,
+     7.0954
+    ],
+    "Le Landeron": [
+     47.0566,
+     7.0663
+    ],
+    "Cressier": [
+     47.0519,
+     7.0395
+    ],
+    "Cornaux": [
+     47.0387,
+     7.0234
+    ],
+    "Saint-Blaise": [
+     47.0145,
+     6.9821
+    ],
+    "Marin-Epagnier": [
+     47.009,
+     7.0107
+    ],
+    "Gampelen": [
+     47.0091,
+     7.0582
+    ],
+    "Zihlbrücke": [
+     47.0093,
+     7.0306
+    ],
+    "Serrières": [
+     46.984,
+     6.9033
+    ],
+    "Auvernier": [
+     46.9796,
+     6.8777
+    ],
+    "Colombier": [
+     46.9677,
+     6.849
+    ],
+    "Boudry": [
+     46.9595,
+     6.8352
+    ],
+    "Bevaix": [
+     46.9297,
+     6.8117
+    ],
+    "Yverdon": [
+     46.7814,
+     6.6408
+    ],
+    "Corcelles-Peseux": [
+     46.9834,
+     6.8838
+    ],
+    "Chambrelien": [
+     46.9673,
+     6.8125
+    ],
+    "La Chaux-de-Fonds": [
+     47.0986,
+     6.8251
+    ],
+    "Les Geneveys-sur-Coffrane": [
+     47.0151,
+     6.8532
+    ],
+    "Bôle": [
+     46.9691,
+     6.838
+    ],
+    "Champ-du-Moulin": [
+     46.9599,
+     6.775
+    ],
+    "Noiraigue": [
+     46.9549,
+     6.7218
+    ],
+    "Travers": [
+     46.9424,
+     6.6762
+    ],
+    "Pontarlier": [
+     46.9035,
+     6.3546
+    ],
+    "Fleurier": [
+     46.9025,
+     6.5822
+    ],
+    "Buttes": [
+     46.8889,
+     6.5512
+    ],
+    "Murten": [
+     46.9254,
+     7.1153
+    ],
+    "Gals": [
+     47.027,
+     7.048
+    ]
+   },
+   "margin_x": 330,
+   "lt_dist_w": 2.0
+  },
+  "zeichnen": {
+   "_zweck": "Hinweis 15.10.: grüne Doppelspur Seite Neuchâtel, ohne Abstellgleis-Pfeil",
+   "weg": [
+    184197820,
+    43797446
+   ],
+   "linien": [
+    {
+     "pts": [
+      [
+       "x:229",
+       "y:110"
+      ],
+      [
+       "x:330",
+       "y:110"
+      ],
+      [
+       "d60",
+       "y:134"
+      ],
+      [
+       "+7",
+       "y:134"
+      ]
+     ],
+     "port_way": 43797446,
+     "port_am_anfang": true
+    }
+   ]
+  },
+  "vorlage": {
+   "strecke": "einspur",
+   "form": "halt",
+   "perrons": "keine",
+   "zusaetze": [
+    {
+     "art": "doppelspurbeginn",
+     "ende": "links",
+     "seite": "unten"
+    }
+   ],
+   "_hinweis": "Daniel 15.10.: ohne Perron, kein Bahnhof mehr – nur der Übergang Doppelspur/Einspur"
+  }
+ },
+ "motiers": {
+  "_quelle": "Entwurf 16.10.2026 (Claude), Môtiers, OSM-Stand 12.10.",
+  "cfg": {
+   "towns": {
+    "Biel": [
+     47.1325,
+     7.2426
+    ],
+    "Ins": [
+     46.9999,
+     7.0996
+    ],
+    "Kerzers": [
+     46.9751,
+     7.1929
+    ],
+    "Bern": [
+     46.949,
+     7.4391
+    ],
+    "Neuchâtel": [
+     46.9966,
+     6.9358
+    ],
+    "Twann": [
+     47.0938,
+     7.1566
+    ],
+    "Ligerz": [
+     47.084,
+     7.1348
+    ],
+    "La Neuveville": [
+     47.0628,
+     7.0954
+    ],
+    "Le Landeron": [
+     47.0566,
+     7.0663
+    ],
+    "Cressier": [
+     47.0519,
+     7.0395
+    ],
+    "Cornaux": [
+     47.0387,
+     7.0234
+    ],
+    "Saint-Blaise": [
+     47.0145,
+     6.9821
+    ],
+    "Marin-Epagnier": [
+     47.009,
+     7.0107
+    ],
+    "Gampelen": [
+     47.0091,
+     7.0582
+    ],
+    "Zihlbrücke": [
+     47.0093,
+     7.0306
+    ],
+    "Serrières": [
+     46.984,
+     6.9033
+    ],
+    "Auvernier": [
+     46.9796,
+     6.8777
+    ],
+    "Colombier": [
+     46.9677,
+     6.849
+    ],
+    "Boudry": [
+     46.9595,
+     6.8352
+    ],
+    "Bevaix": [
+     46.9297,
+     6.8117
+    ],
+    "Yverdon": [
+     46.7814,
+     6.6408
+    ],
+    "Corcelles-Peseux": [
+     46.9834,
+     6.8838
+    ],
+    "Chambrelien": [
+     46.9673,
+     6.8125
+    ],
+    "La Chaux-de-Fonds": [
+     47.0986,
+     6.8251
+    ],
+    "Les Geneveys-sur-Coffrane": [
+     47.0151,
+     6.8532
+    ],
+    "Bôle": [
+     46.9691,
+     6.838
+    ],
+    "Champ-du-Moulin": [
+     46.9599,
+     6.775
+    ],
+    "Noiraigue": [
+     46.9549,
+     6.7218
+    ],
+    "Travers": [
+     46.9424,
+     6.6762
+    ],
+    "Pontarlier": [
+     46.9035,
+     6.3546
+    ],
+    "Fleurier": [
+     46.9025,
+     6.5822
+    ],
+    "Buttes": [
+     46.8889,
+     6.5512
+    ],
+    "Murten": [
+     46.9254,
+     7.1153
+    ],
+    "Gals": [
+     47.027,
+     7.048
+    ],
+    "Payerne": [
+     46.8197,
+     6.9384
+    ],
+    "Fribourg": [
+     46.8032,
+     7.1513
+    ],
+    "Lyss": [
+     47.0742,
+     7.3063
+    ],
+    "Gümmenen": [
+     46.9422,
+     7.2348
+    ],
+    "Avenches": [
+     46.8844,
+     7.0407
+    ],
+    "Grandson": [
+     46.8063,
+     6.6418
+    ],
+    "Concise": [
+     46.8509,
+     6.7232
+    ],
+    "Couvet": [
+     46.9239,
+     6.636
+    ],
+    "Môtiers": [
+     46.9118,
+     6.6103
+    ],
+    "Tüscherz": [
+     47.1141,
+     7.1959
+    ],
+    "Kallnach": [
+     47.0255,
+     7.2352
+    ],
+    "Courtepin": [
+     46.8674,
+     7.1227
+    ],
+    "Les Hauts-Geneveys": [
+     47.0472,
+     6.8748
+    ]
+   },
+   "margin_x": 330,
+   "lt_dist_w": 2.0
+  },
+  "vorlage": {
+   "strecke": "einspur",
+   "form": "kreuzung",
+   "gleise": [
+    null,
+    null
+   ],
+   "pax": [
+    true,
+    true
+   ],
+   "perrons": "unten"
+  }
+ },
+ "munchenwiler_courgevaux": {
+  "_quelle": "Entwurf 16.10.2026 (Claude), Münchenwiler-Courgevaux, OSM-Stand 12.10.",
+  "cfg": {
+   "towns": {
+    "Biel": [
+     47.1325,
+     7.2426
+    ],
+    "Ins": [
+     46.9999,
+     7.0996
+    ],
+    "Kerzers": [
+     46.9751,
+     7.1929
+    ],
+    "Bern": [
+     46.949,
+     7.4391
+    ],
+    "Neuchâtel": [
+     46.9966,
+     6.9358
+    ],
+    "Twann": [
+     47.0938,
+     7.1566
+    ],
+    "Ligerz": [
+     47.084,
+     7.1348
+    ],
+    "La Neuveville": [
+     47.0628,
+     7.0954
+    ],
+    "Le Landeron": [
+     47.0566,
+     7.0663
+    ],
+    "Cressier": [
+     47.0519,
+     7.0395
+    ],
+    "Cornaux": [
+     47.0387,
+     7.0234
+    ],
+    "Saint-Blaise": [
+     47.0145,
+     6.9821
+    ],
+    "Marin-Epagnier": [
+     47.009,
+     7.0107
+    ],
+    "Gampelen": [
+     47.0091,
+     7.0582
+    ],
+    "Zihlbrücke": [
+     47.0093,
+     7.0306
+    ],
+    "Serrières": [
+     46.984,
+     6.9033
+    ],
+    "Auvernier": [
+     46.9796,
+     6.8777
+    ],
+    "Colombier": [
+     46.9677,
+     6.849
+    ],
+    "Boudry": [
+     46.9595,
+     6.8352
+    ],
+    "Bevaix": [
+     46.9297,
+     6.8117
+    ],
+    "Yverdon": [
+     46.7814,
+     6.6408
+    ],
+    "Corcelles-Peseux": [
+     46.9834,
+     6.8838
+    ],
+    "Chambrelien": [
+     46.9673,
+     6.8125
+    ],
+    "La Chaux-de-Fonds": [
+     47.0986,
+     6.8251
+    ],
+    "Les Geneveys-sur-Coffrane": [
+     47.0151,
+     6.8532
+    ],
+    "Bôle": [
+     46.9691,
+     6.838
+    ],
+    "Champ-du-Moulin": [
+     46.9599,
+     6.775
+    ],
+    "Noiraigue": [
+     46.9549,
+     6.7218
+    ],
+    "Travers": [
+     46.9424,
+     6.6762
+    ],
+    "Pontarlier": [
+     46.9035,
+     6.3546
+    ],
+    "Fleurier": [
+     46.9025,
+     6.5822
+    ],
+    "Buttes": [
+     46.8889,
+     6.5512
+    ],
+    "Murten": [
+     46.9254,
+     7.1153
+    ],
+    "Gals": [
+     47.027,
+     7.048
+    ],
+    "Payerne": [
+     46.8197,
+     6.9384
+    ],
+    "Fribourg": [
+     46.8032,
+     7.1513
+    ],
+    "Lyss": [
+     47.0742,
+     7.3063
+    ],
+    "Gümmenen": [
+     46.9422,
+     7.2348
+    ],
+    "Avenches": [
+     46.8844,
+     7.0407
+    ],
+    "Grandson": [
+     46.8063,
+     6.6418
+    ],
+    "Concise": [
+     46.8509,
+     6.7232
+    ],
+    "Couvet": [
+     46.9239,
+     6.636
+    ],
+    "Môtiers": [
+     46.9118,
+     6.6103
+    ],
+    "Tüscherz": [
+     47.1141,
+     7.1959
+    ],
+    "Kallnach": [
+     47.0255,
+     7.2352
+    ],
+    "Courtepin": [
+     46.8674,
+     7.1227
+    ],
+    "Les Hauts-Geneveys": [
+     47.0472,
+     6.8748
+    ]
+   },
+   "margin_x": 330,
+   "lt_dist_w": 2.0
+  },
+  "vorlage": {
+   "strecke": "einspur",
+   "form": "kreuzung",
+   "spiegeln": true,
+   "gleise": [
+    "2",
+    "1"
+   ],
+   "pax": [
+    true,
+    true
+   ],
+   "perrons": "unten",
+   "orte": {
+    "links": "Murten",
+    "rechts": "Fribourg"
+   }
+  },
+  "_gleisnummern": "SBB Open Data perronoberflache (gleisnummern_sbb.py, 19.10.2026)"
+ },
+ "muntelier_lowenberg": {
+  "_quelle": "Entwurf 15.10.2026 (Claude), Muntelier-Löwenberg, OSM-Stand 12.10.",
+  "cfg": {
+   "towns": {
+    "Biel": [
+     47.1325,
+     7.2426
+    ],
+    "Ins": [
+     46.9999,
+     7.0996
+    ],
+    "Kerzers": [
+     46.9751,
+     7.1929
+    ],
+    "Bern": [
+     46.949,
+     7.4391
+    ],
+    "Neuchâtel": [
+     46.9966,
+     6.9358
+    ],
+    "Twann": [
+     47.0938,
+     7.1566
+    ],
+    "Ligerz": [
+     47.084,
+     7.1348
+    ],
+    "La Neuveville": [
+     47.0628,
+     7.0954
+    ],
+    "Le Landeron": [
+     47.0566,
+     7.0663
+    ],
+    "Cressier": [
+     47.0519,
+     7.0395
+    ],
+    "Cornaux": [
+     47.0387,
+     7.0234
+    ],
+    "Saint-Blaise": [
+     47.0145,
+     6.9821
+    ],
+    "Marin-Epagnier": [
+     47.009,
+     7.0107
+    ],
+    "Gampelen": [
+     47.0091,
+     7.0582
+    ],
+    "Zihlbrücke": [
+     47.0093,
+     7.0306
+    ],
+    "Serrières": [
+     46.984,
+     6.9033
+    ],
+    "Auvernier": [
+     46.9796,
+     6.8777
+    ],
+    "Colombier": [
+     46.9677,
+     6.849
+    ],
+    "Boudry": [
+     46.9595,
+     6.8352
+    ],
+    "Bevaix": [
+     46.9297,
+     6.8117
+    ],
+    "Yverdon": [
+     46.7814,
+     6.6408
+    ],
+    "Corcelles-Peseux": [
+     46.9834,
+     6.8838
+    ],
+    "Chambrelien": [
+     46.9673,
+     6.8125
+    ],
+    "La Chaux-de-Fonds": [
+     47.0986,
+     6.8251
+    ],
+    "Les Geneveys-sur-Coffrane": [
+     47.0151,
+     6.8532
+    ],
+    "Bôle": [
+     46.9691,
+     6.838
+    ],
+    "Champ-du-Moulin": [
+     46.9599,
+     6.775
+    ],
+    "Noiraigue": [
+     46.9549,
+     6.7218
+    ],
+    "Travers": [
+     46.9424,
+     6.6762
+    ],
+    "Pontarlier": [
+     46.9035,
+     6.3546
+    ],
+    "Fleurier": [
+     46.9025,
+     6.5822
+    ],
+    "Buttes": [
+     46.8889,
+     6.5512
+    ],
+    "Murten": [
+     46.9254,
+     7.1153
+    ],
+    "Gals": [
+     47.027,
+     7.048
+    ],
+    "Payerne": [
+     46.8197,
+     6.9384
+    ],
+    "Fribourg": [
+     46.8032,
+     7.1513
+    ],
+    "Lyss": [
+     47.0742,
+     7.3063
+    ]
+   },
+   "margin_x": 330,
+   "lt_dist_w": 2.0
+  },
+  "platforms": [],
+  "perrons_px": [
+   [
+    469,
+    579,
+    121
+   ]
+  ],
+  "zeichnen": {
+   "_zweck": "Muntelier-Löwenberg (15.10. abends): Anschlussgleise Ost vereinfacht (zwei Stumpen, 60°)",
+   "weg": [
+    186890664,
+    186890666,
+    186890667,
+    186890669,
+    186890670,
+    1351695674
+   ],
+   "linien": [
+    {
+     "pts": [
+      [
+       "x:1248",
+       "y:134"
+      ],
+      [
+       "x:1019.9",
+       "y:134"
+      ],
+      [
+       "x:1006",
+       "y:110"
+      ]
+     ],
+     "pax": false,
+     "punkt_anfang": true
+    },
+    {
+     "pts": [
+      [
+       "x:1248",
+       "y:158"
+      ],
+      [
+       "x:1061.9",
+       "y:158"
+      ],
+      [
+       "x:1048",
+       "y:134"
+      ]
+     ],
+     "pax": false,
+     "punkt_anfang": true
+    }
+   ]
+  },
+  "vorlage": {
+   "strecke": "einspur",
+   "form": "halt",
+   "gleise": [
+    "1"
+   ],
+   "pax": [
+    true
+   ],
+   "perrons": "unten",
+   "zusaetze": [
+    {
+     "art": "anschluss",
+     "ende": "rechts",
+     "lage": "aussen",
+     "seite": "unten",
+     "stumpen": 2
+    },
+    {
+     "art": "abzweig",
+     "ende": "rechts",
+     "seite": "oben"
+    }
+   ]
+  },
+  "_gleisnummern": "SBB Open Data perronoberflache (gleisnummern_sbb.py, 19.10.2026)"
+ },
+ "muntschemier": {
+  "_quelle": "Entwurf 15.10.2026 (Claude), Müntschemier, OSM-Stand 12.10.",
+  "cfg": {
+   "towns": {
+    "Biel": [
+     47.1325,
+     7.2426
+    ],
+    "Ins": [
+     46.9999,
+     7.0996
+    ],
+    "Kerzers": [
+     46.9751,
+     7.1929
+    ],
+    "Bern": [
+     46.949,
+     7.4391
+    ],
+    "Neuchâtel": [
+     46.9966,
+     6.9358
+    ],
+    "Twann": [
+     47.0938,
+     7.1566
+    ],
+    "Ligerz": [
+     47.084,
+     7.1348
+    ],
+    "La Neuveville": [
+     47.0628,
+     7.0954
+    ],
+    "Le Landeron": [
+     47.0566,
+     7.0663
+    ],
+    "Cressier": [
+     47.0519,
+     7.0395
+    ],
+    "Cornaux": [
+     47.0387,
+     7.0234
+    ],
+    "Saint-Blaise": [
+     47.0145,
+     6.9821
+    ],
+    "Marin-Epagnier": [
+     47.009,
+     7.0107
+    ],
+    "Gampelen": [
+     47.0091,
+     7.0582
+    ],
+    "Zihlbrücke": [
+     47.0093,
+     7.0306
+    ],
+    "Serrières": [
+     46.984,
+     6.9033
+    ],
+    "Auvernier": [
+     46.9796,
+     6.8777
+    ],
+    "Colombier": [
+     46.9677,
+     6.849
+    ],
+    "Boudry": [
+     46.9595,
+     6.8352
+    ],
+    "Bevaix": [
+     46.9297,
+     6.8117
+    ],
+    "Yverdon": [
+     46.7814,
+     6.6408
+    ],
+    "Corcelles-Peseux": [
+     46.9834,
+     6.8838
+    ],
+    "Chambrelien": [
+     46.9673,
+     6.8125
+    ],
+    "La Chaux-de-Fonds": [
+     47.0986,
+     6.8251
+    ],
+    "Les Geneveys-sur-Coffrane": [
+     47.0151,
+     6.8532
+    ],
+    "Bôle": [
+     46.9691,
+     6.838
+    ],
+    "Champ-du-Moulin": [
+     46.9599,
+     6.775
+    ],
+    "Noiraigue": [
+     46.9549,
+     6.7218
+    ],
+    "Travers": [
+     46.9424,
+     6.6762
+    ],
+    "Pontarlier": [
+     46.9035,
+     6.3546
+    ],
+    "Fleurier": [
+     46.9025,
+     6.5822
+    ],
+    "Buttes": [
+     46.8889,
+     6.5512
+    ],
+    "Murten": [
+     46.9254,
+     7.1153
+    ],
+    "Gals": [
+     47.027,
+     7.048
+    ],
+    "Payerne": [
+     46.8197,
+     6.9384
+    ],
+    "Fribourg": [
+     46.8032,
+     7.1513
+    ],
+    "Lyss": [
+     47.0742,
+     7.3063
+    ]
+   },
+   "margin_x": 330,
+   "lt_dist_w": 2.0
+  },
+  "abgang": {
+   "380268817": {
+    "ref": "220",
+    "ort": "Kerzers"
+   }
+  },
+  "zeichnen": {
+   "_zweck": "Müntschemier (15.10. abends): Anschlussgleise Süd vereinfacht – ein Stumpen ab Gleis 2 (60°), Anschluss nach Westen eine Ebene tiefer",
+   "weg": [
+    380268818,
+    972574081,
+    972574082,
+    972574083,
+    1041958913,
+    380268817
+   ],
+   "linien": [
+    {
+     "pts": [
+      [
+       "x:420",
+       "y:158"
+      ],
+      [
+       "x:626.1",
+       "y:158"
+      ],
+      [
+       "d60",
+       "y:134"
+      ]
+     ],
+     "pax": false,
+     "punkt_anfang": true,
+     "_osm": "972574081/972574083 Abstellgleis"
+    },
+    {
+     "pts": [
+      [
+       "x:330",
+       "y:182"
+      ],
+      [
+       "x:456.1",
+       "y:182"
+      ],
+      [
+       "d60",
+       "y:158"
+      ]
+     ],
+     "pax": false,
+     "_osm": "380268818 Anschluss West"
+    },
+    {
+     "pts": [
+      [
+       "x:640.4",
+       "y:134"
+      ],
+      [
+       "x:957",
+       "y:134"
+      ]
+     ],
+     "port_way": 380268817,
+     "_osm": "380268817 Gleis 2 Ost bis Weiche 29383771 (sonst falscher Pfeil am Ostkopf)"
+    }
+   ]
+  },
+  "platforms": [],
+  "perrons_px": [
+   [
+    640,
+    750,
+    98
+   ],
+   [
+    640,
+    750,
+    146
+   ]
+  ],
+  "nummern_weg": [
+   "1",
+   "2"
+  ],
+  "nummern_px": [
+   [
+    "1",
+    695,
+    110
+   ],
+   [
+    "2",
+    695,
+    134
+   ]
+  ],
+  "_perrons": "zwei Aussenperrons nach Dreieck-Netzplan 1.10. (Ortskenntnis); OSM hat keine Perrons",
+  "vorlage": {
+   "strecke": "einspur",
+   "form": "kreuzung",
+   "gleise": [
+    "1",
+    "2"
+   ],
+   "pax": [
+    true,
+    true
+   ],
+   "perrons": "aussen",
+   "zusaetze": [
+    {
+     "art": "anschluss",
+     "ende": "rechts",
+     "lage": "innen",
+     "seite": "unten",
+     "stumpen": 2
+    }
+   ],
+   "_ortskenntnis": "zwei Aussenperrons (Dreieck-Netzplan 1.10.)"
+  }
+ },
+ "noiraigue": {
+  "_quelle": "Entwurf 14.10.2026 (Claude), Noiraigue, OSM-Stand 12.10.",
+  "cfg": {
+   "towns": {
+    "Biel": [
+     47.1325,
+     7.2426
+    ],
+    "Ins": [
+     46.9999,
+     7.0996
+    ],
+    "Kerzers": [
+     46.9751,
+     7.1929
+    ],
+    "Bern": [
+     46.949,
+     7.4391
+    ],
+    "Neuchâtel": [
+     46.9966,
+     6.9358
+    ],
+    "Twann": [
+     47.0938,
+     7.1566
+    ],
+    "Ligerz": [
+     47.084,
+     7.1348
+    ],
+    "La Neuveville": [
+     47.0628,
+     7.0954
+    ],
+    "Le Landeron": [
+     47.0566,
+     7.0663
+    ],
+    "Cressier": [
+     47.0519,
+     7.0395
+    ],
+    "Cornaux": [
+     47.0387,
+     7.0234
+    ],
+    "Saint-Blaise": [
+     47.0145,
+     6.9821
+    ],
+    "Marin-Epagnier": [
+     47.009,
+     7.0107
+    ],
+    "Gampelen": [
+     47.0091,
+     7.0582
+    ],
+    "Zihlbrücke": [
+     47.0093,
+     7.0306
+    ],
+    "Serrières": [
+     46.984,
+     6.9033
+    ],
+    "Auvernier": [
+     46.9796,
+     6.8777
+    ],
+    "Colombier": [
+     46.9677,
+     6.849
+    ],
+    "Boudry": [
+     46.9595,
+     6.8352
+    ],
+    "Bevaix": [
+     46.9297,
+     6.8117
+    ],
+    "Yverdon": [
+     46.7814,
+     6.6408
+    ],
+    "Corcelles-Peseux": [
+     46.9834,
+     6.8838
+    ],
+    "Chambrelien": [
+     46.9673,
+     6.8125
+    ],
+    "La Chaux-de-Fonds": [
+     47.0986,
+     6.8251
+    ],
+    "Les Geneveys-sur-Coffrane": [
+     47.0151,
+     6.8532
+    ],
+    "Bôle": [
+     46.9691,
+     6.838
+    ],
+    "Champ-du-Moulin": [
+     46.9599,
+     6.775
+    ],
+    "Noiraigue": [
+     46.9549,
+     6.7218
+    ],
+    "Travers": [
+     46.9424,
+     6.6762
+    ],
+    "Pontarlier": [
+     46.9035,
+     6.3546
+    ],
+    "Fleurier": [
+     46.9025,
+     6.5822
+    ],
+    "Buttes": [
+     46.8889,
+     6.5512
+    ],
+    "Murten": [
+     46.9254,
+     7.1153
+    ],
+    "Gals": [
+     47.027,
+     7.048
+    ]
+   },
+   "margin_x": 330,
+   "lt_dist_w": 2.0
+  },
+  "vorlage": {
+   "strecke": "einspur",
+   "form": "kreuzung",
+   "gleise": [
+    "2",
+    "3"
+   ],
+   "pax": [
+    true,
+    true
+   ],
+   "perrons": "oben+zwischen"
+  }
+ },
+ "pensier": {
+  "_quelle": "Entwurf 16.10.2026 (Claude), Pensier, OSM-Stand 12.10.",
+  "cfg": {
+   "towns": {
+    "Biel": [
+     47.1325,
+     7.2426
+    ],
+    "Ins": [
+     46.9999,
+     7.0996
+    ],
+    "Kerzers": [
+     46.9751,
+     7.1929
+    ],
+    "Bern": [
+     46.949,
+     7.4391
+    ],
+    "Neuchâtel": [
+     46.9966,
+     6.9358
+    ],
+    "Twann": [
+     47.0938,
+     7.1566
+    ],
+    "Ligerz": [
+     47.084,
+     7.1348
+    ],
+    "La Neuveville": [
+     47.0628,
+     7.0954
+    ],
+    "Le Landeron": [
+     47.0566,
+     7.0663
+    ],
+    "Cressier": [
+     47.0519,
+     7.0395
+    ],
+    "Cornaux": [
+     47.0387,
+     7.0234
+    ],
+    "Saint-Blaise": [
+     47.0145,
+     6.9821
+    ],
+    "Marin-Epagnier": [
+     47.009,
+     7.0107
+    ],
+    "Gampelen": [
+     47.0091,
+     7.0582
+    ],
+    "Zihlbrücke": [
+     47.0093,
+     7.0306
+    ],
+    "Serrières": [
+     46.984,
+     6.9033
+    ],
+    "Auvernier": [
+     46.9796,
+     6.8777
+    ],
+    "Colombier": [
+     46.9677,
+     6.849
+    ],
+    "Boudry": [
+     46.9595,
+     6.8352
+    ],
+    "Bevaix": [
+     46.9297,
+     6.8117
+    ],
+    "Yverdon": [
+     46.7814,
+     6.6408
+    ],
+    "Corcelles-Peseux": [
+     46.9834,
+     6.8838
+    ],
+    "Chambrelien": [
+     46.9673,
+     6.8125
+    ],
+    "La Chaux-de-Fonds": [
+     47.0986,
+     6.8251
+    ],
+    "Les Geneveys-sur-Coffrane": [
+     47.0151,
+     6.8532
+    ],
+    "Bôle": [
+     46.9691,
+     6.838
+    ],
+    "Champ-du-Moulin": [
+     46.9599,
+     6.775
+    ],
+    "Noiraigue": [
+     46.9549,
+     6.7218
+    ],
+    "Travers": [
+     46.9424,
+     6.6762
+    ],
+    "Pontarlier": [
+     46.9035,
+     6.3546
+    ],
+    "Fleurier": [
+     46.9025,
+     6.5822
+    ],
+    "Buttes": [
+     46.8889,
+     6.5512
+    ],
+    "Murten": [
+     46.9254,
+     7.1153
+    ],
+    "Gals": [
+     47.027,
+     7.048
+    ],
+    "Payerne": [
+     46.8197,
+     6.9384
+    ],
+    "Fribourg": [
+     46.8032,
+     7.1513
+    ],
+    "Lyss": [
+     47.0742,
+     7.3063
+    ],
+    "Gümmenen": [
+     46.9422,
+     7.2348
+    ],
+    "Avenches": [
+     46.8844,
+     7.0407
+    ],
+    "Grandson": [
+     46.8063,
+     6.6418
+    ],
+    "Concise": [
+     46.8509,
+     6.7232
+    ],
+    "Couvet": [
+     46.9239,
+     6.636
+    ],
+    "Môtiers": [
+     46.9118,
+     6.6103
+    ],
+    "Tüscherz": [
+     47.1141,
+     7.1959
+    ],
+    "Kallnach": [
+     47.0255,
+     7.2352
+    ],
+    "Courtepin": [
+     46.8674,
+     7.1227
+    ],
+    "Les Hauts-Geneveys": [
+     47.0472,
+     6.8748
+    ]
+   },
+   "margin_x": 330,
+   "lt_dist_w": 2.0
+  },
+  "vorlage": {
+   "strecke": "einspur",
+   "form": "kreuzung",
+   "spiegeln": true,
+   "gleise": [
+    "2",
+    "1"
+   ],
+   "pax": [
+    true,
+    true
+   ],
+   "perrons": "aussen"
+  },
+  "_gleisnummern": "SBB Open Data perronoberflache (gleisnummern_sbb.py, 19.10.2026)"
+ },
+ "riedbach": {
+  "_quelle": "Entwurf 16.10.2026 (Claude), Riedbach, OSM-Stand 12.10.",
+  "cfg": {
+   "towns": {
+    "Biel": [
+     47.1325,
+     7.2426
+    ],
+    "Ins": [
+     46.9999,
+     7.0996
+    ],
+    "Kerzers": [
+     46.9751,
+     7.1929
+    ],
+    "Bern": [
+     46.949,
+     7.4391
+    ],
+    "Neuchâtel": [
+     46.9966,
+     6.9358
+    ],
+    "Twann": [
+     47.0938,
+     7.1566
+    ],
+    "Ligerz": [
+     47.084,
+     7.1348
+    ],
+    "La Neuveville": [
+     47.0628,
+     7.0954
+    ],
+    "Le Landeron": [
+     47.0566,
+     7.0663
+    ],
+    "Cressier": [
+     47.0519,
+     7.0395
+    ],
+    "Cornaux": [
+     47.0387,
+     7.0234
+    ],
+    "Saint-Blaise": [
+     47.0145,
+     6.9821
+    ],
+    "Marin-Epagnier": [
+     47.009,
+     7.0107
+    ],
+    "Gampelen": [
+     47.0091,
+     7.0582
+    ],
+    "Zihlbrücke": [
+     47.0093,
+     7.0306
+    ],
+    "Serrières": [
+     46.984,
+     6.9033
+    ],
+    "Auvernier": [
+     46.9796,
+     6.8777
+    ],
+    "Colombier": [
+     46.9677,
+     6.849
+    ],
+    "Boudry": [
+     46.9595,
+     6.8352
+    ],
+    "Bevaix": [
+     46.9297,
+     6.8117
+    ],
+    "Yverdon": [
+     46.7814,
+     6.6408
+    ],
+    "Corcelles-Peseux": [
+     46.9834,
+     6.8838
+    ],
+    "Chambrelien": [
+     46.9673,
+     6.8125
+    ],
+    "La Chaux-de-Fonds": [
+     47.0986,
+     6.8251
+    ],
+    "Les Geneveys-sur-Coffrane": [
+     47.0151,
+     6.8532
+    ],
+    "Bôle": [
+     46.9691,
+     6.838
+    ],
+    "Champ-du-Moulin": [
+     46.9599,
+     6.775
+    ],
+    "Noiraigue": [
+     46.9549,
+     6.7218
+    ],
+    "Travers": [
+     46.9424,
+     6.6762
+    ],
+    "Pontarlier": [
+     46.9035,
+     6.3546
+    ],
+    "Fleurier": [
+     46.9025,
+     6.5822
+    ],
+    "Buttes": [
+     46.8889,
+     6.5512
+    ],
+    "Murten": [
+     46.9254,
+     7.1153
+    ],
+    "Gals": [
+     47.027,
+     7.048
+    ],
+    "Payerne": [
+     46.8197,
+     6.9384
+    ],
+    "Fribourg": [
+     46.8032,
+     7.1513
+    ],
+    "Lyss": [
+     47.0742,
+     7.3063
+    ],
+    "Gümmenen": [
+     46.9422,
+     7.2348
+    ],
+    "Avenches": [
+     46.8844,
+     7.0407
+    ],
+    "Grandson": [
+     46.8063,
+     6.6418
+    ],
+    "Concise": [
+     46.8509,
+     6.7232
+    ],
+    "Couvet": [
+     46.9239,
+     6.636
+    ],
+    "Môtiers": [
+     46.9118,
+     6.6103
+    ],
+    "Tüscherz": [
+     47.1141,
+     7.1959
+    ],
+    "Kallnach": [
+     47.0255,
+     7.2352
+    ],
+    "Courtepin": [
+     46.8674,
+     7.1227
+    ],
+    "Les Hauts-Geneveys": [
+     47.0472,
+     6.8748
+    ]
+   },
+   "margin_x": 330,
+   "lt_dist_w": 2.0
+  },
+  "vorlage": {
+   "strecke": "doppelspur",
+   "form": "halt",
+   "gleise": [
+    "2",
+    "1"
+   ],
+   "pax": [
+    true,
+    true
+   ],
+   "perrons": "aussen",
+   "zusaetze": [
+    {
+     "art": "spurwechsel",
+     "ende": "links",
+     "anzahl": 1,
+     "richtung": "steigend"
+    },
+    {
+     "art": "spurwechsel",
+     "ende": "rechts",
+     "anzahl": 2,
+     "richtung": "fallend"
+    },
+    {
+     "art": "anschluss",
+     "ende": "links",
+     "lage": "aussen",
+     "seite": "unten",
+     "stumpen": 2
+    }
+   ]
+  },
+  "_gleisnummern": "SBB Open Data perronoberflache (gleisnummern_sbb.py, 19.10.2026)"
+ },
+ "rosshausern": {
+  "_quelle": "Entwurf 16.10.2026 (Claude), Rosshäusern, OSM-Stand 12.10.",
+  "cfg": {
+   "towns": {
+    "Biel": [
+     47.1325,
+     7.2426
+    ],
+    "Ins": [
+     46.9999,
+     7.0996
+    ],
+    "Kerzers": [
+     46.9751,
+     7.1929
+    ],
+    "Bern": [
+     46.949,
+     7.4391
+    ],
+    "Neuchâtel": [
+     46.9966,
+     6.9358
+    ],
+    "Twann": [
+     47.0938,
+     7.1566
+    ],
+    "Ligerz": [
+     47.084,
+     7.1348
+    ],
+    "La Neuveville": [
+     47.0628,
+     7.0954
+    ],
+    "Le Landeron": [
+     47.0566,
+     7.0663
+    ],
+    "Cressier": [
+     47.0519,
+     7.0395
+    ],
+    "Cornaux": [
+     47.0387,
+     7.0234
+    ],
+    "Saint-Blaise": [
+     47.0145,
+     6.9821
+    ],
+    "Marin-Epagnier": [
+     47.009,
+     7.0107
+    ],
+    "Gampelen": [
+     47.0091,
+     7.0582
+    ],
+    "Zihlbrücke": [
+     47.0093,
+     7.0306
+    ],
+    "Serrières": [
+     46.984,
+     6.9033
+    ],
+    "Auvernier": [
+     46.9796,
+     6.8777
+    ],
+    "Colombier": [
+     46.9677,
+     6.849
+    ],
+    "Boudry": [
+     46.9595,
+     6.8352
+    ],
+    "Bevaix": [
+     46.9297,
+     6.8117
+    ],
+    "Yverdon": [
+     46.7814,
+     6.6408
+    ],
+    "Corcelles-Peseux": [
+     46.9834,
+     6.8838
+    ],
+    "Chambrelien": [
+     46.9673,
+     6.8125
+    ],
+    "La Chaux-de-Fonds": [
+     47.0986,
+     6.8251
+    ],
+    "Les Geneveys-sur-Coffrane": [
+     47.0151,
+     6.8532
+    ],
+    "Bôle": [
+     46.9691,
+     6.838
+    ],
+    "Champ-du-Moulin": [
+     46.9599,
+     6.775
+    ],
+    "Noiraigue": [
+     46.9549,
+     6.7218
+    ],
+    "Travers": [
+     46.9424,
+     6.6762
+    ],
+    "Pontarlier": [
+     46.9035,
+     6.3546
+    ],
+    "Fleurier": [
+     46.9025,
+     6.5822
+    ],
+    "Buttes": [
+     46.8889,
+     6.5512
+    ],
+    "Murten": [
+     46.9254,
+     7.1153
+    ],
+    "Gals": [
+     47.027,
+     7.048
+    ],
+    "Payerne": [
+     46.8197,
+     6.9384
+    ],
+    "Fribourg": [
+     46.8032,
+     7.1513
+    ],
+    "Lyss": [
+     47.0742,
+     7.3063
+    ],
+    "Gümmenen": [
+     46.9422,
+     7.2348
+    ],
+    "Avenches": [
+     46.8844,
+     7.0407
+    ],
+    "Grandson": [
+     46.8063,
+     6.6418
+    ],
+    "Concise": [
+     46.8509,
+     6.7232
+    ],
+    "Couvet": [
+     46.9239,
+     6.636
+    ],
+    "Môtiers": [
+     46.9118,
+     6.6103
+    ],
+    "Tüscherz": [
+     47.1141,
+     7.1959
+    ],
+    "Kallnach": [
+     47.0255,
+     7.2352
+    ],
+    "Courtepin": [
+     46.8674,
+     7.1227
+    ],
+    "Les Hauts-Geneveys": [
+     47.0472,
+     6.8748
+    ]
+   },
+   "margin_x": 330,
+   "lt_dist_w": 2.0
+  },
+  "vorlage": {
+   "strecke": "doppelspur",
+   "form": "halt",
+   "gleise": [
+    "3",
+    "2"
+   ],
+   "pax": [
+    true,
+    true
+   ],
+   "perrons": "aussen",
+   "zusaetze": [
+    {
+     "art": "spurwechsel",
+     "ende": "rechts",
+     "anzahl": 1,
+     "richtung": "steigend"
+    }
+   ]
+  }
+ },
+ "saint_blaise_cff": {
+  "_quelle": "Entwurf 14.10.2026 (Claude), Saint-Blaise CFF, OSM-Stand 12.10.",
+  "cfg": {
+   "towns": {
+    "Biel": [
+     47.1325,
+     7.2426
+    ],
+    "Ins": [
+     46.9999,
+     7.0996
+    ],
+    "Kerzers": [
+     46.9751,
+     7.1929
+    ],
+    "Bern": [
+     46.949,
+     7.4391
+    ],
+    "Neuchâtel": [
+     46.9966,
+     6.9358
+    ],
+    "Twann": [
+     47.0938,
+     7.1566
+    ],
+    "Ligerz": [
+     47.084,
+     7.1348
+    ],
+    "La Neuveville": [
+     47.0628,
+     7.0954
+    ],
+    "Le Landeron": [
+     47.0566,
+     7.0663
+    ],
+    "Cressier": [
+     47.0519,
+     7.0395
+    ],
+    "Cornaux": [
+     47.0387,
+     7.0234
+    ],
+    "Saint-Blaise": [
+     47.0145,
+     6.9821
+    ],
+    "Marin-Epagnier": [
+     47.009,
+     7.0107
+    ],
+    "Gampelen": [
+     47.0091,
+     7.0582
+    ],
+    "Zihlbrücke": [
+     47.0093,
+     7.0306
+    ],
+    "Serrières": [
+     46.984,
+     6.9033
+    ],
+    "Auvernier": [
+     46.9796,
+     6.8777
+    ],
+    "Colombier": [
+     46.9677,
+     6.849
+    ],
+    "Boudry": [
+     46.9595,
+     6.8352
+    ],
+    "Bevaix": [
+     46.9297,
+     6.8117
+    ],
+    "Yverdon": [
+     46.7814,
+     6.6408
+    ],
+    "Corcelles-Peseux": [
+     46.9834,
+     6.8838
+    ],
+    "Chambrelien": [
+     46.9673,
+     6.8125
+    ],
+    "La Chaux-de-Fonds": [
+     47.0986,
+     6.8251
+    ],
+    "Les Geneveys-sur-Coffrane": [
+     47.0151,
+     6.8532
+    ],
+    "Bôle": [
+     46.9691,
+     6.838
+    ],
+    "Champ-du-Moulin": [
+     46.9599,
+     6.775
+    ],
+    "Noiraigue": [
+     46.9549,
+     6.7218
+    ],
+    "Travers": [
+     46.9424,
+     6.6762
+    ],
+    "Pontarlier": [
+     46.9035,
+     6.3546
+    ],
+    "Fleurier": [
+     46.9025,
+     6.5822
+    ],
+    "Buttes": [
+     46.8889,
+     6.5512
+    ],
+    "Murten": [
+     46.9254,
+     7.1153
+    ],
+    "Gals": [
+     47.027,
+     7.048
+    ]
+   },
+   "margin_x": 330,
+   "lt_dist_w": 2.0
+  },
+  "weglassen": [
+   171035995,
+   171035996,
+   171035994,
+   49773692
+  ],
+  "zeichnen": {
+   "_zweck": "Hinweis 15.10.: Spurwechsel ohne Zwischengerade, Gleise eine Achse auseinander",
+   "weg": [],
+   "linien": [
+    {
+     "pts": [
+      [
+       "n:1821345664-7",
+       "n:1821345664"
+      ],
+      [
+       "n:1821345664",
+       "n:1821345664"
+      ],
+      [
+       "d60",
+       "n:1821345669"
+      ],
+      [
+       "+7",
+       "n:1821345669"
+      ]
+     ],
+     "pax": false
+    },
+    {
+     "pts": [
+      [
+       "n:468098347-7",
+       "n:468098347"
+      ],
+      [
+       "n:468098347",
+       "n:468098347"
+      ],
+      [
+       "d60",
+       "n:1693772540"
+      ],
+      [
+       "+7",
+       "n:1693772540"
+      ]
+     ],
+     "pax": false
+    }
+   ]
+  },
+  "vorlage": {
+   "strecke": "doppelspur",
+   "form": "halt",
+   "gleise": [
+    "2",
+    "1"
+   ],
+   "pax": [
+    true,
+    true
+   ],
+   "perrons": "aussen",
+   "zusaetze": [
+    {
+     "art": "spurwechsel",
+     "ende": "links",
+     "anzahl": 1,
+     "richtung": "steigend"
+    },
+    {
+     "art": "spurwechsel",
+     "ende": "rechts",
+     "anzahl": 1,
+     "richtung": "fallend"
+    },
+    {
+     "art": "anschluss",
+     "ende": "links",
+     "lage": "innen",
+     "seite": "unten",
+     "stumpen": 1
+    }
+   ]
+  },
+  "_gleisnummern": "SBB Open Data perronoberflache (gleisnummern_sbb.py, 19.10.2026)"
+ },
+ "saint_blaise_lac": {
+  "_quelle": "Entwurf 14.10.2026 (Claude), Saint Blaise-Lac, OSM-Stand 12.10.",
+  "cfg": {
+   "towns": {
+    "Biel": [
+     47.1325,
+     7.2426
+    ],
+    "Ins": [
+     46.9999,
+     7.0996
+    ],
+    "Kerzers": [
+     46.9751,
+     7.1929
+    ],
+    "Bern": [
+     46.949,
+     7.4391
+    ],
+    "Neuchâtel": [
+     46.9966,
+     6.9358
+    ],
+    "Twann": [
+     47.0938,
+     7.1566
+    ],
+    "Ligerz": [
+     47.084,
+     7.1348
+    ],
+    "La Neuveville": [
+     47.0628,
+     7.0954
+    ],
+    "Le Landeron": [
+     47.0566,
+     7.0663
+    ],
+    "Cressier": [
+     47.0519,
+     7.0395
+    ],
+    "Cornaux": [
+     47.0387,
+     7.0234
+    ],
+    "Saint-Blaise": [
+     47.0145,
+     6.9821
+    ],
+    "Marin-Epagnier": [
+     47.009,
+     7.0107
+    ],
+    "Gampelen": [
+     47.0091,
+     7.0582
+    ],
+    "Zihlbrücke": [
+     47.0093,
+     7.0306
+    ],
+    "Serrières": [
+     46.984,
+     6.9033
+    ],
+    "Auvernier": [
+     46.9796,
+     6.8777
+    ],
+    "Colombier": [
+     46.9677,
+     6.849
+    ],
+    "Boudry": [
+     46.9595,
+     6.8352
+    ],
+    "Bevaix": [
+     46.9297,
+     6.8117
+    ],
+    "Yverdon": [
+     46.7814,
+     6.6408
+    ],
+    "Corcelles-Peseux": [
+     46.9834,
+     6.8838
+    ],
+    "Chambrelien": [
+     46.9673,
+     6.8125
+    ],
+    "La Chaux-de-Fonds": [
+     47.0986,
+     6.8251
+    ],
+    "Les Geneveys-sur-Coffrane": [
+     47.0151,
+     6.8532
+    ],
+    "Bôle": [
+     46.9691,
+     6.838
+    ],
+    "Champ-du-Moulin": [
+     46.9599,
+     6.775
+    ],
+    "Noiraigue": [
+     46.9549,
+     6.7218
+    ],
+    "Travers": [
+     46.9424,
+     6.6762
+    ],
+    "Pontarlier": [
+     46.9035,
+     6.3546
+    ],
+    "Fleurier": [
+     46.9025,
+     6.5822
+    ],
+    "Buttes": [
+     46.8889,
+     6.5512
+    ],
+    "Murten": [
+     46.9254,
+     7.1153
+    ],
+    "Gals": [
+     47.027,
+     7.048
+    ]
+   },
+   "margin_x": 330,
+   "lt_dist_w": 2.0
+  },
+  "pax_ways": [
+   109460902,
+   1043513364,
+   1043513363
+  ],
+  "vorlage": {
+   "strecke": "einspur",
+   "form": "kreuzung",
+   "gleise": [
+    "1",
+    "2"
+   ],
+   "pax": [
+    true,
+    true
+   ],
+   "perrons": "aussen",
+   "zusaetze": [
+    {
+     "art": "anschluss",
+     "ende": "rechts",
+     "lage": "aussen",
+     "seite": "unten",
+     "stumpen": 1
+    }
+   ]
+  }
+ },
+ "serrieres": {
+  "_quelle": "Entwurf 14.10.2026 (Claude), Serrières, OSM-Stand 12.10.",
+  "cfg": {
+   "towns": {
+    "Biel": [
+     47.1325,
+     7.2426
+    ],
+    "Ins": [
+     46.9999,
+     7.0996
+    ],
+    "Kerzers": [
+     46.9751,
+     7.1929
+    ],
+    "Bern": [
+     46.949,
+     7.4391
+    ],
+    "Neuchâtel": [
+     46.9966,
+     6.9358
+    ],
+    "Twann": [
+     47.0938,
+     7.1566
+    ],
+    "Ligerz": [
+     47.084,
+     7.1348
+    ],
+    "La Neuveville": [
+     47.0628,
+     7.0954
+    ],
+    "Le Landeron": [
+     47.0566,
+     7.0663
+    ],
+    "Cressier": [
+     47.0519,
+     7.0395
+    ],
+    "Cornaux": [
+     47.0387,
+     7.0234
+    ],
+    "Saint-Blaise": [
+     47.0145,
+     6.9821
+    ],
+    "Marin-Epagnier": [
+     47.009,
+     7.0107
+    ],
+    "Gampelen": [
+     47.0091,
+     7.0582
+    ],
+    "Zihlbrücke": [
+     47.0093,
+     7.0306
+    ],
+    "Serrières": [
+     46.984,
+     6.9033
+    ],
+    "Auvernier": [
+     46.9796,
+     6.8777
+    ],
+    "Colombier": [
+     46.9677,
+     6.849
+    ],
+    "Boudry": [
+     46.9595,
+     6.8352
+    ],
+    "Bevaix": [
+     46.9297,
+     6.8117
+    ],
+    "Yverdon": [
+     46.7814,
+     6.6408
+    ],
+    "Corcelles-Peseux": [
+     46.9834,
+     6.8838
+    ],
+    "Chambrelien": [
+     46.9673,
+     6.8125
+    ],
+    "La Chaux-de-Fonds": [
+     47.0986,
+     6.8251
+    ],
+    "Les Geneveys-sur-Coffrane": [
+     47.0151,
+     6.8532
+    ],
+    "Bôle": [
+     46.9691,
+     6.838
+    ],
+    "Champ-du-Moulin": [
+     46.9599,
+     6.775
+    ],
+    "Noiraigue": [
+     46.9549,
+     6.7218
+    ],
+    "Travers": [
+     46.9424,
+     6.6762
+    ],
+    "Pontarlier": [
+     46.9035,
+     6.3546
+    ],
+    "Fleurier": [
+     46.9025,
+     6.5822
+    ],
+    "Buttes": [
+     46.8889,
+     6.5512
+    ],
+    "Murten": [
+     46.9254,
+     7.1153
+    ],
+    "Gals": [
+     47.027,
+     7.048
+    ]
+   },
+   "margin_x": 330,
+   "lt_dist_w": 2.0
+  },
+  "platforms": [],
+  "perrons_px": [
+   [
+    1005,
+    1115,
+    99
+   ],
+   [
+    1005,
+    1115,
+    145
+   ]
+  ],
+  "nummern_weg": [
+   "1",
+   "2"
+  ],
+  "nummern_px": [
+   [
+    "1",
+    1060,
+    110
+   ],
+   [
+    "2",
+    1060,
+    134
+   ]
+  ],
+  "vorlage": {
+   "strecke": "doppelspur",
+   "form": "halt",
+   "gleise": [
+    "1",
+    "2"
+   ],
+   "pax": [
+    true,
+    true
+   ],
+   "perrons": "aussen",
+   "zusaetze": [
+    {
+     "art": "spurwechsel",
+     "ende": "links",
+     "anzahl": 1,
+     "richtung": "steigend"
+    },
+    {
+     "art": "anschluss",
+     "ende": "rechts",
+     "lage": "innen",
+     "seite": "unten",
+     "stumpen": 2
+    }
+   ]
+  }
+ },
+ "sugiez": {
+  "_quelle": "Entwurf 15.10.2026 (Claude), Sugiez, OSM-Stand 12.10.",
+  "cfg": {
+   "towns": {
+    "Biel": [
+     47.1325,
+     7.2426
+    ],
+    "Ins": [
+     46.9999,
+     7.0996
+    ],
+    "Kerzers": [
+     46.9751,
+     7.1929
+    ],
+    "Bern": [
+     46.949,
+     7.4391
+    ],
+    "Neuchâtel": [
+     46.9966,
+     6.9358
+    ],
+    "Twann": [
+     47.0938,
+     7.1566
+    ],
+    "Ligerz": [
+     47.084,
+     7.1348
+    ],
+    "La Neuveville": [
+     47.0628,
+     7.0954
+    ],
+    "Le Landeron": [
+     47.0566,
+     7.0663
+    ],
+    "Cressier": [
+     47.0519,
+     7.0395
+    ],
+    "Cornaux": [
+     47.0387,
+     7.0234
+    ],
+    "Saint-Blaise": [
+     47.0145,
+     6.9821
+    ],
+    "Marin-Epagnier": [
+     47.009,
+     7.0107
+    ],
+    "Gampelen": [
+     47.0091,
+     7.0582
+    ],
+    "Zihlbrücke": [
+     47.0093,
+     7.0306
+    ],
+    "Serrières": [
+     46.984,
+     6.9033
+    ],
+    "Auvernier": [
+     46.9796,
+     6.8777
+    ],
+    "Colombier": [
+     46.9677,
+     6.849
+    ],
+    "Boudry": [
+     46.9595,
+     6.8352
+    ],
+    "Bevaix": [
+     46.9297,
+     6.8117
+    ],
+    "Yverdon": [
+     46.7814,
+     6.6408
+    ],
+    "Corcelles-Peseux": [
+     46.9834,
+     6.8838
+    ],
+    "Chambrelien": [
+     46.9673,
+     6.8125
+    ],
+    "La Chaux-de-Fonds": [
+     47.0986,
+     6.8251
+    ],
+    "Les Geneveys-sur-Coffrane": [
+     47.0151,
+     6.8532
+    ],
+    "Bôle": [
+     46.9691,
+     6.838
+    ],
+    "Champ-du-Moulin": [
+     46.9599,
+     6.775
+    ],
+    "Noiraigue": [
+     46.9549,
+     6.7218
+    ],
+    "Travers": [
+     46.9424,
+     6.6762
+    ],
+    "Pontarlier": [
+     46.9035,
+     6.3546
+    ],
+    "Fleurier": [
+     46.9025,
+     6.5822
+    ],
+    "Buttes": [
+     46.8889,
+     6.5512
+    ],
+    "Murten": [
+     46.9254,
+     7.1153
+    ],
+    "Gals": [
+     47.027,
+     7.048
+    ],
+    "Payerne": [
+     46.8197,
+     6.9384
+    ],
+    "Fribourg": [
+     46.8032,
+     7.1513
+    ],
+    "Lyss": [
+     47.0742,
+     7.3063
+    ]
+   },
+   "margin_x": 330,
+   "lt_dist_w": 2.0
+  },
+  "platforms": [],
+  "perrons_px": [
+   [
+    740,
+    850,
+    99
+   ],
+   [
+    740,
+    850,
+    145
+   ]
+  ],
+  "nummern_weg": [
+   "1",
+   "2"
+  ],
+  "nummern_px": [
+   [
+    "1",
+    795,
+    110
+   ],
+   [
+    "2",
+    795,
+    134
+   ]
+  ],
+  "_perrons": "OSM-Perron 1 (1390031256) am Kreuzungsgleis, 2 (1390031255) am Streckengleis",
+  "vorlage": {
+   "strecke": "einspur",
+   "form": "kreuzung",
+   "gleise": [
+    "1",
+    "2"
+   ],
+   "pax": [
+    true,
+    true
+   ],
+   "perrons": "aussen",
+   "zusaetze": [
+    {
+     "art": "anschluss",
+     "ende": "rechts",
+     "lage": "innen",
+     "seite": "unten",
+     "stumpen": 1
+    }
+   ]
+  }
+ },
+ "tuscherz": {
+  "_quelle": "Entwurf 16.10.2026 (Claude), Tüscherz, OSM-Stand 12.10.",
+  "cfg": {
+   "towns": {
+    "Biel": [
+     47.1325,
+     7.2426
+    ],
+    "Ins": [
+     46.9999,
+     7.0996
+    ],
+    "Kerzers": [
+     46.9751,
+     7.1929
+    ],
+    "Bern": [
+     46.949,
+     7.4391
+    ],
+    "Neuchâtel": [
+     46.9966,
+     6.9358
+    ],
+    "Twann": [
+     47.0938,
+     7.1566
+    ],
+    "Ligerz": [
+     47.084,
+     7.1348
+    ],
+    "La Neuveville": [
+     47.0628,
+     7.0954
+    ],
+    "Le Landeron": [
+     47.0566,
+     7.0663
+    ],
+    "Cressier": [
+     47.0519,
+     7.0395
+    ],
+    "Cornaux": [
+     47.0387,
+     7.0234
+    ],
+    "Saint-Blaise": [
+     47.0145,
+     6.9821
+    ],
+    "Marin-Epagnier": [
+     47.009,
+     7.0107
+    ],
+    "Gampelen": [
+     47.0091,
+     7.0582
+    ],
+    "Zihlbrücke": [
+     47.0093,
+     7.0306
+    ],
+    "Serrières": [
+     46.984,
+     6.9033
+    ],
+    "Auvernier": [
+     46.9796,
+     6.8777
+    ],
+    "Colombier": [
+     46.9677,
+     6.849
+    ],
+    "Boudry": [
+     46.9595,
+     6.8352
+    ],
+    "Bevaix": [
+     46.9297,
+     6.8117
+    ],
+    "Yverdon": [
+     46.7814,
+     6.6408
+    ],
+    "Corcelles-Peseux": [
+     46.9834,
+     6.8838
+    ],
+    "Chambrelien": [
+     46.9673,
+     6.8125
+    ],
+    "La Chaux-de-Fonds": [
+     47.0986,
+     6.8251
+    ],
+    "Les Geneveys-sur-Coffrane": [
+     47.0151,
+     6.8532
+    ],
+    "Bôle": [
+     46.9691,
+     6.838
+    ],
+    "Champ-du-Moulin": [
+     46.9599,
+     6.775
+    ],
+    "Noiraigue": [
+     46.9549,
+     6.7218
+    ],
+    "Travers": [
+     46.9424,
+     6.6762
+    ],
+    "Pontarlier": [
+     46.9035,
+     6.3546
+    ],
+    "Fleurier": [
+     46.9025,
+     6.5822
+    ],
+    "Buttes": [
+     46.8889,
+     6.5512
+    ],
+    "Murten": [
+     46.9254,
+     7.1153
+    ],
+    "Gals": [
+     47.027,
+     7.048
+    ],
+    "Payerne": [
+     46.8197,
+     6.9384
+    ],
+    "Fribourg": [
+     46.8032,
+     7.1513
+    ],
+    "Lyss": [
+     47.0742,
+     7.3063
+    ],
+    "Gümmenen": [
+     46.9422,
+     7.2348
+    ],
+    "Avenches": [
+     46.8844,
+     7.0407
+    ],
+    "Grandson": [
+     46.8063,
+     6.6418
+    ],
+    "Concise": [
+     46.8509,
+     6.7232
+    ],
+    "Couvet": [
+     46.9239,
+     6.636
+    ],
+    "Môtiers": [
+     46.9118,
+     6.6103
+    ],
+    "Tüscherz": [
+     47.1141,
+     7.1959
+    ],
+    "Kallnach": [
+     47.0255,
+     7.2352
+    ],
+    "Courtepin": [
+     46.8674,
+     7.1227
+    ],
+    "Les Hauts-Geneveys": [
+     47.0472,
+     6.8748
+    ]
+   },
+   "margin_x": 330,
+   "lt_dist_w": 2.0
+  },
+  "vorlage": {
+   "strecke": "doppelspur",
+   "form": "halt",
+   "gleise": [
+    "1",
+    "2"
+   ],
+   "pax": [
+    true,
+    true
+   ],
+   "perrons": "aussen",
+   "zusaetze": [
+    {
+     "art": "spurwechsel",
+     "ende": "rechts",
+     "anzahl": 1,
+     "richtung": "steigend"
+    },
+    {
+     "art": "anschluss",
+     "ende": "rechts",
+     "lage": "innen",
+     "seite": "unten",
+     "stumpen": 1
+    }
+   ]
+  },
+  "_gleisnummern": "SBB Open Data perronoberflache (gleisnummern_sbb.py, 19.10.2026)"
+ },
+ "zihlbruecke": {
+  "_quelle": "Entwurf 14.10.2026 (Claude), Zihlbrücke, OSM-Stand 12.10.",
+  "cfg": {
+   "towns": {
+    "Biel": [
+     47.1325,
+     7.2426
+    ],
+    "Ins": [
+     46.9999,
+     7.0996
+    ],
+    "Kerzers": [
+     46.9751,
+     7.1929
+    ],
+    "Bern": [
+     46.949,
+     7.4391
+    ],
+    "Neuchâtel": [
+     46.9966,
+     6.9358
+    ],
+    "Twann": [
+     47.0938,
+     7.1566
+    ],
+    "Ligerz": [
+     47.084,
+     7.1348
+    ],
+    "La Neuveville": [
+     47.0628,
+     7.0954
+    ],
+    "Le Landeron": [
+     47.0566,
+     7.0663
+    ],
+    "Cressier": [
+     47.0519,
+     7.0395
+    ],
+    "Cornaux": [
+     47.0387,
+     7.0234
+    ],
+    "Saint-Blaise": [
+     47.0145,
+     6.9821
+    ],
+    "Marin-Epagnier": [
+     47.009,
+     7.0107
+    ],
+    "Gampelen": [
+     47.0091,
+     7.0582
+    ],
+    "Zihlbrücke": [
+     47.0093,
+     7.0306
+    ],
+    "Serrières": [
+     46.984,
+     6.9033
+    ],
+    "Auvernier": [
+     46.9796,
+     6.8777
+    ],
+    "Colombier": [
+     46.9677,
+     6.849
+    ],
+    "Boudry": [
+     46.9595,
+     6.8352
+    ],
+    "Bevaix": [
+     46.9297,
+     6.8117
+    ],
+    "Yverdon": [
+     46.7814,
+     6.6408
+    ],
+    "Corcelles-Peseux": [
+     46.9834,
+     6.8838
+    ],
+    "Chambrelien": [
+     46.9673,
+     6.8125
+    ],
+    "La Chaux-de-Fonds": [
+     47.0986,
+     6.8251
+    ],
+    "Les Geneveys-sur-Coffrane": [
+     47.0151,
+     6.8532
+    ],
+    "Bôle": [
+     46.9691,
+     6.838
+    ],
+    "Champ-du-Moulin": [
+     46.9599,
+     6.775
+    ],
+    "Noiraigue": [
+     46.9549,
+     6.7218
+    ],
+    "Travers": [
+     46.9424,
+     6.6762
+    ],
+    "Pontarlier": [
+     46.9035,
+     6.3546
+    ],
+    "Fleurier": [
+     46.9025,
+     6.5822
+    ],
+    "Buttes": [
+     46.8889,
+     6.5512
+    ],
+    "Murten": [
+     46.9254,
+     7.1153
+    ],
+    "Gals": [
+     47.027,
+     7.048
+    ]
+   },
+   "margin_x": 330,
+   "lt_dist_w": 2.0
+  },
+  "vorlage": {
+   "strecke": "einspur",
+   "form": "halt",
+   "gleise": [
+    "135"
+   ],
+   "pax": [
+    true
+   ],
+   "perrons": "oben",
+   "zusaetze": [
+    {
+     "art": "doppelspurbeginn",
+     "ende": "rechts",
+     "seite": "unten"
+    }
+   ]
+  }
+ }
+}

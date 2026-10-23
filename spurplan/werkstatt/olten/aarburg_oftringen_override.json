@@ -1,0 +1,40 @@
+{
+ "cfg": {
+  "axis_snap": false
+ },
+ "_quelle": "Hinweise D. Eckenstein (Feedback-Seite): Stummel südlich der Strecke nach Rothrist weiter unten heraus; keine Doppelung bei Gleis 1.",
+ "stummel_versatz": {
+  "1553423181": 45
+ },
+ "dkw_symbol": [
+  [
+   261001938,
+   1
+  ]
+ ],
+ "zeichnen": {
+  "_osm": "Gleis 3 -> 451 Rothrist ueber DKW 261001938 auf Gleis 2: eine gerade 60-Grad-Linie durch den DKW-Knoten (Regel 44)",
+  "weg": [
+   195005891,
+   195005886
+  ],
+  "linien": [
+   {
+    "pts": [
+     [
+      "x:628",
+      "y:134"
+     ],
+     [
+      "c60:261001938",
+      "y:134"
+     ],
+     [
+      "c60:261001938",
+      "y:165.794"
+     ]
+    ]
+   }
+  ]
+ }
+}

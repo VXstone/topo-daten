@@ -1,0 +1,27 @@
+{
+ "cfg": {
+  "axis_snap": false,
+  "s_min_fix": 3270
+ },
+ "platforms": [
+  {
+   "between": [
+    "2",
+    "3"
+   ],
+   "s": [
+    4355,
+    4587
+   ]
+  },
+  {
+   "outer": "4",
+   "side": "above",
+   "s": [
+    4355,
+    4587
+   ]
+  }
+ ],
+ "_quelle": "Hinweise D. Eckenstein (Feedback-Seite 13.10.): 4 Gleise Richtung Dulliken durchgehend, Mittelperron 2/3, Weichenverbindung aus Richtung Dulliken."
+}

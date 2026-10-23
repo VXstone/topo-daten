@@ -1,0 +1,488 @@
+<title>Spurplan-Feedback</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600&family=Fira+Sans+Condensed:wght@600;700&family=Fira+Mono&display=swap">
+<style>
+/* Layout: Arbeitsplatz wie ein Planungstisch: links Planliste, Mitte der Plan (zoom/pan, Klick = Hinweis), rechts die Hinweise zum Plan */
+:root{
+  --bg:#e9eeea; --panel:#ffffff; --fg:#16201a; --muted:#5a665e; --line:#d2dad4; --hover:#f1f5f2;
+  --accent:#00862f; --accent-fg:#ffffff; --pin:#d4351c; --pin-done:#7d8a80; --sketch:#1f6feb;
+  --ok:#00862f; --warn:#a86400; --info:#00649e; --violet:#8a1fb0;
+  --f-body:"Fira Sans","Source Sans 3",Helvetica,Arial,sans-serif;
+  --f-disp:"Fira Sans Condensed","Fira Sans",Helvetica,Arial,sans-serif;
+  --f-mono:"Fira Mono",ui-monospace,Menlo,Consolas,monospace;
+  --r:6px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#111613; --panel:#192019; --fg:#e4ebe6; --muted:#98a59c; --line:#2b352e; --hover:#202a23;
+  --accent:#3db26a; --accent-fg:#06200f; --pin:#ff6a4d; --pin-done:#8d9a91; --sketch:#5aa2ff;
+  --ok:#4cc27a; --warn:#e3a246; --info:#5fb3e6; --violet:#d189f0; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#111613; --panel:#192019; --fg:#e4ebe6; --muted:#98a59c; --line:#2b352e; --hover:#202a23;
+  --accent:#3db26a; --accent-fg:#06200f; --pin:#ff6a4d; --pin-done:#8d9a91; --sketch:#5aa2ff;
+  --ok:#4cc27a; --warn:#e3a246; --info:#5fb3e6; --violet:#d189f0; color-scheme:dark}
+[hidden]{display:none!important}
+html,body{height:100%}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:14px;line-height:1.4}
+*{box-sizing:border-box}
+button{font:inherit;color:inherit;cursor:pointer}
+button:focus-visible,select:focus-visible,textarea:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.app{height:100%;display:grid;grid-template-columns:230px minmax(0,1fr) 320px;grid-template-rows:auto minmax(0,1fr);gap:0}
+header.top{grid-column:1/-1;display:flex;align-items:center;gap:16px;padding:10px 16px;border-bottom:1px solid var(--line);background:var(--panel);flex-wrap:wrap}
+header.top h1{font-family:var(--f-disp);font-weight:700;font-size:19px;margin:0;letter-spacing:.01em}
+header.top .sub{color:var(--muted);font-size:13px}
+.conn{margin-left:auto;font-size:12px;color:var(--muted);display:flex;align-items:center;gap:6px}
+.conn i{width:8px;height:8px;border-radius:50%;background:var(--muted);display:inline-block}
+.conn.live i{background:var(--ok)} .conn.err i{background:var(--pin)}
+nav.plans{border-right:1px solid var(--line);background:var(--panel);overflow:auto;padding-block:8px}
+nav.plans h3{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:12px 16px 4px;font-weight:600}
+nav.plans button{display:flex;align-items:center;gap:8px;width:100%;text-align:left;border:0;background:none;padding:6px 16px;border-left:3px solid transparent}
+nav.plans button:hover{background:var(--hover)}
+nav.plans button[aria-current="true"]{background:var(--hover);border-left-color:var(--accent);font-weight:600}
+nav.plans .nm{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.dot{width:9px;height:9px;border-radius:50%;flex:none;border:2px solid transparent}
+.dot.sauber{background:var(--ok)} .dot.offen{background:var(--warn)} .dot.abgenommen{background:var(--info)} .dot.region{background:var(--fg)}
+.badge{font-size:11px;font-variant-numeric:tabular-nums;background:var(--pin);color:#fff;border-radius:9px;padding:0 6px;min-width:18px;text-align:center}
+.badge.zero{display:none}
+select#planSel{display:none}
+main.stage{position:relative;display:flex;flex-direction:column;min-width:0;min-height:0}
+.bar{display:flex;align-items:center;gap:10px;padding:8px 16px;border-bottom:1px solid var(--line);flex-wrap:wrap;background:var(--bg)}
+.bar h2{font-family:var(--f-disp);font-size:20px;margin:0;font-weight:700}
+.bar .lab{color:var(--muted);font-size:13px}
+.counts{display:flex;gap:4px;font-family:var(--f-mono);font-size:12px;font-variant-numeric:tabular-nums}
+.counts span{padding:1px 6px;border-radius:4px;border:1px solid var(--line);color:var(--muted)}
+.counts span.hit{border-color:var(--warn);color:var(--warn)}
+.spacer{flex:1}
+.btn{border:1px solid var(--line);background:var(--panel);border-radius:var(--r);padding:5px 10px;font-size:13px}
+.btn:hover{border-color:var(--muted)}
+.btn.prim{background:var(--accent);border-color:var(--accent);color:var(--accent-fg);font-weight:600}
+.btn.quiet{border-color:transparent;background:none;color:var(--muted)}
+.btn[disabled]{opacity:.5;cursor:default}
+.tog{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--muted)}
+.abn{display:flex;align-items:center;gap:8px;font-size:13px}
+.abn .ok{color:var(--info);font-weight:600}
+.canvas{position:relative;flex:1;min-height:0;overflow:hidden;touch-action:none;cursor:crosshair;background:
+  linear-gradient(var(--line) 1px,transparent 1px) 0 0/40px 40px,linear-gradient(90deg,var(--line) 1px,transparent 1px) 0 0/40px 40px,var(--bg)}
+.canvas.panning{cursor:grabbing}
+.canvas{background:#fff!important}
+.canvas svg.plan{position:absolute;inset:0;width:100%;height:100%;display:block}
+.canvas.nobef .befund{display:none}
+.zoom{position:absolute;right:12px;bottom:12px;display:flex;flex-direction:column;gap:4px}
+.zoom .btn{width:34px;height:34px;padding:0;font-size:17px;line-height:1}
+.zoom .btn[aria-pressed="true"]{background:var(--sketch);color:#fff;border-color:var(--sketch)}
+.canvas.sketching{cursor:crosshair}
+.sk-opts{display:flex;gap:10px;align-items:center;font-size:12px;color:var(--muted);margin:4px 0}
+.sk-opts label{display:flex;gap:4px;align-items:center}
+.hint{position:absolute;left:12px;top:10px;font-size:12px;color:var(--muted);background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:4px 8px;pointer-events:none}
+.composer{position:absolute;left:12px;bottom:12px;width:min(380px,calc(100% - 70px));background:var(--panel);border:1px solid var(--line);border-radius:8px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:12px;display:flex;flex-direction:column;gap:8px}
+.composer .where{font-size:12px;color:var(--muted);font-family:var(--f-mono)}
+.composer .where b{font-family:var(--f-body);color:var(--fg);font-size:13px}
+.arten{display:flex;flex-wrap:wrap;gap:4px}
+.arten button{border:1px solid var(--line);background:none;border-radius:12px;padding:2px 9px;font-size:12px}
+.arten button[aria-pressed="true"]{background:var(--fg);color:var(--panel);border-color:var(--fg)}
+textarea{width:100%;min-height:72px;resize:vertical;border:1px solid var(--line);border-radius:var(--r);padding:8px;font:inherit;background:var(--bg);color:var(--fg)}
+.row{display:flex;gap:8px;justify-content:flex-end;align-items:center}
+aside.notes{border-left:1px solid var(--line);background:var(--panel);overflow:auto;padding:12px 16px;display:flex;flex-direction:column;gap:10px;min-width:0}
+aside.notes h3{margin:0;font-family:var(--f-disp);font-size:16px;font-weight:700;display:flex;align-items:baseline;gap:8px}
+aside.notes h3 small{font-family:var(--f-body);font-weight:400;color:var(--muted);font-size:12px}
+.filter{display:flex;gap:4px;flex-wrap:wrap}
+.filter button{border:1px solid var(--line);background:none;border-radius:12px;padding:1px 9px;font-size:12px;color:var(--muted)}
+.filter button[aria-pressed="true"]{color:var(--fg);border-color:var(--fg)}
+.empty{color:var(--muted);font-size:13px;border:1px dashed var(--line);border-radius:var(--r);padding:12px}
+.note{border:1px solid var(--line);border-radius:var(--r);padding:8px 10px;display:flex;flex-direction:column;gap:4px;cursor:pointer}
+.note:hover{border-color:var(--muted)}
+.note.sel{border-color:var(--pin);box-shadow:0 0 0 1px var(--pin)}
+.note .h{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted)}
+.note .n{font-family:var(--f-mono);font-weight:600;color:var(--fg);background:var(--hover);border-radius:4px;padding:0 5px}
+.note .t{white-space:pre-wrap;overflow-wrap:anywhere}
+.note .a{font-size:13px;border-left:2px solid var(--accent);padding-left:8px;color:var(--fg);white-space:pre-wrap;overflow-wrap:anywhere}
+.note .a b{color:var(--accent);font-weight:600}
+.note .a.du{border-left-color:var(--info)} .note .a.du b{color:var(--info)}
+.note .reply{display:flex;flex-direction:column;gap:6px}
+.note .reply textarea{min-height:56px}
+.st{font-size:11px;border-radius:9px;padding:0 7px;border:1px solid currentColor}
+.st.offen{color:var(--pin)} .st.behoben{color:var(--info)} .st.rueckfrage{color:var(--violet)} .st.erledigt{color:var(--muted)}
+.note .acts{display:flex;gap:6px;justify-content:flex-end;flex-wrap:wrap}
+.note .src{font-size:11px;color:var(--muted);border:1px dashed var(--line);border-radius:9px;padding:0 6px}
+.neu{border:1px solid var(--info);border-radius:var(--r);padding:8px 10px;font-size:13px;display:flex;flex-direction:column;gap:4px}
+.neu b{color:var(--info);font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+.neu ul{margin:0;padding-left:18px} .neu li{margin:2px 0}
+.chip{font-size:10.5px;border-radius:9px;padding:0 6px;border:1px solid currentColor;white-space:nowrap}
+.chip.jetzt{color:var(--accent);font-weight:600} .chip.kontrolle{color:var(--info)} .chip.abgenommen{color:var(--muted)}
+nav.plans .nr{font-family:var(--f-mono);font-size:11px;color:var(--muted);width:16px;text-align:right;flex:none}
+.note .acts .btn{padding:2px 8px;font-size:12px}
+.legend{font-size:12px;color:var(--muted);border-top:1px solid var(--line);padding-top:10px;margin-top:auto;display:flex;flex-direction:column;gap:3px}
+.legend b{color:var(--fg);font-family:var(--f-mono)}
+.legpanel{position:absolute;right:56px;top:10px;bottom:12px;width:min(360px,calc(100% - 80px));overflow:auto;background:var(--panel);border:1px solid var(--line);border-radius:8px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:12px;display:flex;flex-direction:column;gap:2px;cursor:default;z-index:2}
+.legpanel h4{margin:0 0 4px;font-family:var(--f-disp);font-size:16px;display:flex;align-items:center;gap:8px}
+.legpanel h4 small{font-family:var(--f-body);font-weight:400;font-size:12px;color:var(--muted)}
+.legpanel h4 .btn{margin-left:auto}
+.leg{display:grid;grid-template-columns:96px minmax(0,1fr);gap:10px;align-items:center;padding:5px 6px;border-radius:var(--r);border:0;background:none;text-align:left;width:100%}
+.leg:hover{background:var(--hover)}
+.leg .sym{background:#fff;border-radius:4px;border:1px solid var(--line);display:block}
+.leg .sym svg{display:block;width:100%;height:auto}
+.leg b{display:block;font-size:13px}
+.leg span{display:block;font-size:12px;color:var(--muted);line-height:1.3}
+.composer .tip{font-size:12px;color:var(--muted)}
+.composer .tip button{border:0;background:none;padding:0;color:var(--accent);text-decoration:underline;font-size:12px}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(16px + env(safe-area-inset-bottom,0px));background:var(--fg);color:var(--panel);padding:8px 14px;border-radius:var(--r);font-size:13px;z-index:9}
+@media (max-width:900px){
+  .app{grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto minmax(380px,62vh) auto;height:auto;min-height:100%}
+  nav.plans{display:none}
+  select#planSel{display:block;margin:8px 16px 0;padding:6px;border:1px solid var(--line);border-radius:var(--r);background:var(--panel);color:var(--fg);font:inherit}
+  aside.notes{border-left:0;border-top:1px solid var(--line)}
+  html,body{height:auto}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="app">
+  <header class="top">
+    <h1>Spurplan-Feedback</h1>
+    <span class="sub">Region Olten · Basel · Bern · Region Neuchâtel · Stand {{STAND}}</span>
+    <span class="conn" id="conn"><i></i><span id="connTxt">verbinde …</span></span>
+  </header>
+  <nav class="plans" id="nav" aria-label="Pläne"></nav>
+  <select id="planSel" aria-label="Plan wählen"></select>
+  <main class="stage">
+    <div class="bar">
+      <h2 id="pName"></h2><span class="lab" id="pLab"></span>
+      <span class="counts" id="pCounts"></span>
+      <span class="spacer"></span>
+      <label class="tog" id="befTog"><input type="checkbox" id="befChk" checked> Prüfbefunde zeigen</label>
+      <button class="btn" id="legBtn" aria-expanded="false">Legende</button>
+      <span class="abn" id="abn"></span>
+    </div>
+    <div class="canvas" id="cv">
+      <div class="hint" id="hint">Klick auf eine Stelle = Hinweis · Ziehen = verschieben · Mausrad/zwei Finger = Zoom · ✎ = Skizze</div>
+      <div class="legpanel" id="legPanel" hidden></div>
+      <div class="zoom">
+        <button class="btn" id="zIn" aria-label="Vergrössern">+</button>
+        <button class="btn" id="zOut" aria-label="Verkleinern">−</button>
+        <button class="btn" id="zFit" aria-label="Ganzen Plan zeigen" title="Ganzen Plan zeigen">⤢</button>
+        <button class="btn" id="skBtn" aria-pressed="false" aria-label="Skizze zeichnen" title="Skizze: Linien in den Plan zeichnen (Ziehen = Strich)">✎</button>
+      </div>
+      <form class="composer" id="comp" hidden>
+        <div class="where" id="compWhere"></div>
+        <div class="tip" id="compTip"></div>
+        <div class="sk-opts" id="skOpts" hidden><span id="skN"></span><label><input type="checkbox" id="skSnap" checked> Winkel einrasten (30°)</label><button type="button" class="btn quiet" id="skUndo" style="padding:0 6px;font-size:12px">letzten Strich entfernen</button></div>
+        <textarea id="compTxt" placeholder="Was stimmt hier nicht? z. B. «Gleis 4 sollte hier gerade bleiben»"></textarea>
+        <div class="row"><button type="button" class="btn quiet" id="compCancel">Abbrechen</button><button type="submit" class="btn prim" id="compSave">Hinweis speichern</button></div>
+      </form>
+    </div>
+  </main>
+  <aside class="notes">
+    <h3>Hinweise <small id="nCount"></small></h3>
+    <div id="neu"></div>
+    <div class="filter" id="filter"></div>
+    <div id="list"></div>
+    <div class="legend">
+      <div><b>A</b> Verbindung offen · <b>B</b> Scheinverbindung/Überlagerung · <b>C</b> Kreuzung ohne Knoten · <b>D</b> Reihenfolge</div>
+      <div>Symbole und Begriffe: Knopf «Legende» über dem Plan</div>
+      <div><b>E</b> zu nah (violett) · <b>W</b> Weiche verdeckt (orange) · <b>R</b> 90-Grad-Stück · rote Kreise: Prüfung A–D</div>
+      <div>Status: offen → behoben (von Claude, mit Antwort) → erledigt (von dir bestätigt)</div>
+      <div>Arbeitsliste: Bahnhof für Bahnhof. <b>jetzt dran</b> = Claude arbeitet daran · <b>zur Kontrolle</b> = neue Fassung, bitte prüfen und abnehmen · gestrichelte Punkte = Hinweise aus dem Regionalplan</div>
+    </div>
+  </aside>
+</div>
+<div class="toast" id="toast" hidden></div>
+
+<script>
+const PLANS = /*PLANS*/[];
+const isReg=p=>!!p&&(p.key==="region"||p.gruppe==="Region");const REGK=PLANS.filter(isReg).map(p=>p.key);   // mehrere Regionalpläne (15.10.)
+const LEG = /*LEGENDE*/[];
+const ARBEIT = /*ARBEIT*/{};
+const AST = (ARBEIT.stand||{});
+const STLAB = {offen:"offen",behoben:"behoben",rueckfrage:"Rückfrage",erledigt:"erledigt"};
+const $ = s => document.querySelector(s);
+const SVGNS = "http://www.w3.org/2000/svg";
+let cur = PLANS[0], svgEl = null, pinsG = null, base = null, vb = null;
+let entries = [], abnahmen = {}, db = null, canWrite = true;
+let pending = null, selId = null, filterSt = "aktiv", confirmDel = null, replyId = null;
+
+function toast(t){const el=$("#toast");el.textContent=t;el.hidden=false;clearTimeout(toast.t);toast.t=setTimeout(()=>el.hidden=true,2600)}
+function esc(s){return String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
+function fmtDate(iso){try{const d=new Date(iso);return d.toLocaleDateString("de-CH",{day:"2-digit",month:"2-digit"})+" "+d.toLocaleTimeString("de-CH",{hour:"2-digit",minute:"2-digit"})}catch(e){return ""}}
+function planEntries(p){
+  const own=entries.filter(e=>e.plan===p.key);
+  const reg=isReg(p)?[]:entries.filter(e=>REGK.includes(e.plan)&&((e.punkte&&e.punkte.length)?e.punkte:[e]).some(q=>q.bahnhof===p.key))
+    .map(e=>({...e,_reg:true,_pts:((e.punkte&&e.punkte.length)?e.punkte:[e]).filter(q=>q.bahnhof===p.key&&q.lx!=null).map(q=>({x:q.lx,y:q.ly}))}));
+  return own.concat(reg).sort((a,b)=>(a.erstellt||"").localeCompare(b.erstellt||""))}
+function pts(e){return e._pts||((e.punkte&&e.punkte.length)?e.punkte:[{x:e.x,y:e.y}])}
+function arbeitStatus(p){if(abnahmen[p.key])return ["abgenommen","abgenommen"];if(ARBEIT.aktuell===p.key)return ["jetzt","jetzt dran"];
+  const a=AST[p.key];if(a&&a.status==="kontrolle")return ["kontrolle","zur Kontrolle"];return null}
+function openCount(p){return planEntries(p).filter(e=>e.status!=="erledigt").length}
+function status(p){return abnahmen[p.key]?"abgenommen":p.status}
+
+/* ---------- Navigation ---------- */
+function renderNav(){
+  const order=ARBEIT.reihenfolge||[];const groups={};
+  PLANS.forEach(p=>{const g=order.includes(p.key)?"Arbeitsliste":p.gruppe;(groups[g]=groups[g]||[]).push(p)});
+  if(groups.Arbeitsliste)groups.Arbeitsliste.sort((a,b)=>order.indexOf(a.key)-order.indexOf(b.key));
+  const keys=Object.keys(groups).sort((a,b)=>(a==="Region"?0:a==="Arbeitsliste"?1:2)-(b==="Region"?0:b==="Arbeitsliste"?1:2));
+  const g0=groups;
+  let h="";for(const g of keys){h+=`<h3>${esc(g)}</h3>`;g0[g].forEach((p,i)=>{const n=openCount(p),a=arbeitStatus(p);
+    h+=`<button data-k="${p.key}" aria-current="${p===cur}">${g==="Arbeitsliste"?`<span class="nr">${i+1}</span>`:""}<span class="dot ${isReg(p)?"region":status(p)}" title="${esc(isReg(p)?"Regionalplan":status(p))}"></span><span class="nm">${esc(p.name)}</span>${a?`<span class="chip ${a[0]}">${a[1]}</span>`:""}<span class="badge ${n?"":"zero"}">${n}</span></button>`})}
+  $("#nav").innerHTML=h;
+  /* Auswahlliste (schmale Ansicht) mit denselben Gruppen wie die Seitenleiste (20.10.: "Gruppierung wieder weg") */
+  const opt=p=>{const n=openCount(p);return `<option value="${p.key}" ${p===cur?"selected":""}>${esc(p.name)}${n?` (${n})`:""}${!isReg(p)?" · "+status(p):""}</option>`};
+  $("#planSel").innerHTML=keys.map(g=>`<optgroup label="${esc(g)}">${g0[g].map(opt).join("")}</optgroup>`).join("");
+}
+$("#nav").addEventListener("click",e=>{const b=e.target.closest("button[data-k]");if(b)show(b.dataset.k)});
+$("#planSel").addEventListener("change",e=>show(e.target.value));
+
+/* ---------- Plan ---------- */
+function show(key){
+  cur=PLANS.find(p=>p.key===key)||PLANS[0];if(!cur||!cur.svg){toast("Plan nicht gefunden");return}pending=null;selId=null;$("#comp").hidden=true;
+  try{localStorage.setItem("sp_plan",cur.key)}catch(e){}
+  const cv=$("#cv");cv.querySelectorAll("svg.plan").forEach(s=>s.remove());
+  const tmp=document.createElement("div");tmp.innerHTML=cur.svg;const s_=tmp.querySelector("svg");if(!s_)return;svgEl=s_;svgEl.classList.add("plan");
+  svgEl.setAttribute("preserveAspectRatio","xMidYMid meet");cv.prepend(svgEl);
+  const v=(svgEl.getAttribute("viewBox")||"0 0 1000 600").split(/[\s,]+/).map(Number);base={x:v[0],y:v[1],w:v[2],h:v[3]};
+  /* Papier: das weisse Planblatt deckt immer den ganzen sichtbaren Bereich (width="100%" hängt sonst am Zoom) */
+  svgEl.querySelectorAll(':scope > rect[width="100%"]').forEach(r=>r.remove());
+  const paper=document.createElementNS(SVGNS,"rect");paper.setAttribute("x",base.x-base.w*5);paper.setAttribute("y",base.y-base.h*5);
+  paper.setAttribute("width",base.w*11);paper.setAttribute("height",base.h*11);paper.setAttribute("fill","#fff");svgEl.prepend(paper);
+  pinsG=document.createElementNS(SVGNS,"g");pinsG.setAttribute("id","pins");svgEl.appendChild(pinsG);
+  fit();
+  $("#pName").textContent=cur.name;$("#pLab").textContent=cur.label;
+  $("#pCounts").innerHTML=cur.counts?Object.entries(cur.counts).map(([k,v])=>`<span class="${v?"hit":""}" title="${k}">${k} ${v}</span>`).join(""):"";
+  $("#befTog").hidden=!cur.counts;
+  renderAll();
+}
+function fit(){const m=0.03;vb={x:base.x-base.w*m,y:base.y-base.h*m,w:base.w*(1+2*m),h:base.h*(1+2*m)};applyVB()}
+function applyVB(){svgEl.setAttribute("viewBox",`${vb.x} ${vb.y} ${vb.w} ${vb.h}`);drawPins()}
+function unitPx(){const c=svgEl.getScreenCTM();return c?1/c.a:1}
+function toSvg(cx,cy,el){const pt=svgEl.createSVGPoint();pt.x=cx;pt.y=cy;return pt.matrixTransform((el||svgEl).getScreenCTM().inverse())}
+function zoomAt(f,cx,cy){const p=toSvg(cx,cy);const nw=vb.w*f;if(nw<base.w/60||nw>base.w*4)return;
+  vb={x:p.x-(p.x-vb.x)*f,y:p.y-(p.y-vb.y)*f,w:nw,h:vb.h*f};applyVB()}
+function zoomCenter(f){const r=svgEl.getBoundingClientRect();zoomAt(f,r.left+r.width/2,r.top+r.height/2)}
+$("#zIn").onclick=()=>zoomCenter(1/1.4);$("#zOut").onclick=()=>zoomCenter(1.4);$("#zFit").onclick=fit;
+$("#befChk").onchange=e=>$("#cv").classList.toggle("nobef",!e.target.checked);
+
+/* Pan / Pinch / Klick */
+const cv=$("#cv");const ptrs=new Map();let drag=null,pinch=null;
+cv.addEventListener("wheel",e=>{if(!svgEl||e.target.closest(".legpanel,.composer"))return;e.preventDefault();zoomAt(Math.exp(e.deltaY*0.0015),e.clientX,e.clientY)},{passive:false});
+cv.addEventListener("pointerdown",e=>{
+  if(e.target.closest(".composer,.zoom,.legpanel")||!svgEl)return;
+  try{cv.setPointerCapture(e.pointerId)}catch(_){}ptrs.set(e.pointerId,{x:e.clientX,y:e.clientY});
+  if(ptrs.size===1){
+    if(sketchOn){const p=toSvg(e.clientX,e.clientY);stroke={pts:[[p.x,p.y]]};drag=null;drawPins();return}
+    drag={sx:e.clientX,sy:e.clientY,vb:{...vb},k:unitPx(),moved:false,pin:e.target.closest("[data-pin]")}}
+  else if(ptrs.size===2){const [a,b]=[...ptrs.values()];pinch={d:Math.hypot(a.x-b.x,a.y-b.y)};drag=null;stroke=null;drawPins()}
+});
+cv.addEventListener("pointermove",e=>{
+  if(!ptrs.has(e.pointerId))return;ptrs.set(e.pointerId,{x:e.clientX,y:e.clientY});
+  if(pinch&&ptrs.size===2){const [a,b]=[...ptrs.values()];const d=Math.hypot(a.x-b.x,a.y-b.y);if(d>0){zoomAt(pinch.d/d,(a.x+b.x)/2,(a.y+b.y)/2);pinch.d=d}return}
+  if(stroke){const p=toSvg(e.clientX,e.clientY),l=stroke.pts[stroke.pts.length-1];if(Math.hypot(p.x-l[0],p.y-l[1])>2*unitPx()){stroke.pts.push([p.x,p.y]);drawPins()}return}
+  if(!drag)return;const dx=e.clientX-drag.sx,dy=e.clientY-drag.sy;
+  if(!drag.moved&&Math.hypot(dx,dy)>5){drag.moved=true;cv.classList.add("panning")}
+  if(drag.moved){vb={...vb,x:drag.vb.x-dx*drag.k,y:drag.vb.y-dy*drag.k};applyVB()}
+});
+function endPtr(e){
+  if(!ptrs.has(e.pointerId))return;ptrs.delete(e.pointerId);cv.classList.remove("panning");
+  if(pinch){if(ptrs.size<2)pinch=null;drag=null;return}
+  if(stroke){const st_=stroke;stroke=null;if(e.type==="pointerup")finishStroke(st_.pts,e.clientX,e.clientY);drawPins();return}
+  if(drag&&!drag.moved&&e.type==="pointerup"){
+    if(drag.pin){select(drag.pin.getAttribute("data-pin"),false)}else{startNote(e.clientX,e.clientY)}
+  }
+  drag=null;
+}
+cv.addEventListener("pointerup",endPtr);cv.addEventListener("pointercancel",endPtr);
+
+/* ---------- Hinweis erfassen ---------- */
+function stationAt(cx,cy){
+  let best=null;
+  svgEl.querySelectorAll("g[data-st]").forEach(g=>{try{
+    const p=toSvg(cx,cy,g),bb=g.getBBox(),m=Math.max(bb.width,bb.height)*0.04;
+    if(p.x>=bb.x-m&&p.x<=bb.x+bb.width+m&&p.y>=bb.y-m&&p.y<=bb.y+bb.height+m){const a=bb.width*bb.height;if(!best||a<best.a)best={a,key:g.dataset.st,name:g.dataset.name,lx:p.x,ly:p.y}}
+  }catch(e){}});
+  return best;
+}
+function startNote(cx,cy){
+  if(!db){toast("Speichern geht nur in der geöffneten Seite auf claude.ai");return}
+  if(!canWrite){toast("Du kannst diese Seite nur ansehen");return}
+  const p=toSvg(cx,cy);let st=null;
+  if(isReg(cur))st=stationAt(cx,cy);else st={key:cur.key,name:cur.name,lx:p.x,ly:p.y};
+  const pt={x:+p.x.toFixed(1),y:+p.y.toFixed(1),st};
+  if(pending&&!$("#comp").hidden){pending.punkte.push(pt)}          // weitere Stelle zum selben Hinweis
+  else{pending={punkte:[pt]};$("#compTxt").value=""}
+  renderWhere();$("#comp").hidden=false;drawPins();if(!$("#legPanel").hidden)renderLegend();$("#compTxt").focus({preventScroll:true});
+}
+/* ---------- Skizze (17.10.): Linien in den Plan zeichnen, werden mit dem Hinweis gespeichert ---------- */
+let sketchOn=false,stroke=null;
+function setSketch(on){sketchOn=on;$("#skBtn").setAttribute("aria-pressed",on);cv.classList.toggle("sketching",on);
+  $("#hint").textContent=on?"Skizze: Ziehen = Strich zeichnen · zwei Finger = Zoom · ✎ nochmals = fertig":"Klick auf eine Stelle = Hinweis · Ziehen = verschieben · Mausrad/zwei Finger = Zoom · ✎ = Skizze"}
+$("#skBtn").onclick=()=>{if(!sketchOn&&(!db||!canWrite)){toast(!db?"Zeichnen geht nur in der geöffneten Seite auf claude.ai":"Du kannst diese Seite nur ansehen");return}setSketch(!sketchOn)};
+function simplify(P,eps){if(P.length<3)return P;let dm=0,ix=0;const [a,b]=[P[0],P[P.length-1]];const L=Math.hypot(b[0]-a[0],b[1]-a[1])||1;
+  for(let i=1;i<P.length-1;i++){const d=Math.abs((b[0]-a[0])*(a[1]-P[i][1])-(a[0]-P[i][0])*(b[1]-a[1]))/L;if(d>dm){dm=d;ix=i}}
+  if(dm<=eps)return [a,b];return simplify(P.slice(0,ix+1),eps).slice(0,-1).concat(simplify(P.slice(ix),eps))}
+function snapPoly(P){if(P.length<2)return P;const out=[P[0]];for(let i=1;i<P.length;i++){const p=out[out.length-1],q=P[i];const dx=q[0]-p[0],dy=q[1]-p[1],L=Math.hypot(dx,dy);
+  const a=Math.round(Math.atan2(dy,dx)/(Math.PI/6))*(Math.PI/6);out.push([p[0]+L*Math.cos(a),p[1]+L*Math.sin(a)])}return out}
+function finishStroke(P,cx,cy){
+  if(P.length<2){toast("Zum Zeichnen ziehen");return}
+  let Q=simplify(P,4*unitPx());if($("#skSnap")&&$("#skSnap").checked)Q=snapPoly(Q);
+  Q=Q.map(p=>[+p[0].toFixed(1),+p[1].toFixed(1)]);
+  if(!pending||$("#comp").hidden){const r=svgEl.getScreenCTM();const sx=Q[0][0]*r.a+r.e,sy=Q[0][1]*r.d+r.f;startNote(sx,sy)}
+  if(!pending)return;(pending.skizze=pending.skizze||[]).push(Q);renderWhere();drawPins()}
+$("#skUndo")&&($("#skUndo").onclick=()=>{if(pending&&pending.skizze){pending.skizze.pop();renderWhere();drawPins()}});
+function skPath(Q){return Q.map((p,i)=>(i?"L":"M")+p[0]+","+p[1]).join("")}
+function skParse(e){return (e.skizze||[]).map(s_=>String(s_).trim().split(/\s+/).map(t=>t.split(",").map(Number)).filter(p=>p.length===2&&isFinite(p[0])&&isFinite(p[1])))}
+function renderWhere(){
+  const P=pending.punkte,L="abcdefghijklmnopqrstuvwxyz";
+  const nm=pt=>pt.st?esc(pt.st.name):(isReg(cur)?"Strecke":"");
+  $("#compWhere").innerHTML=P.length===1?`<b>${nm(P[0])}</b> · x ${P[0].x.toFixed(0)} · y ${P[0].y.toFixed(0)}`
+    :`<b>${P.length} Stellen</b> · `+P.map((pt,i)=>`${L[i]} ${nm(pt)}`).join(" · ")+` <button type="button" class="btn quiet" id="ptUndo" style="padding:0 4px;font-size:12px">letzte entfernen</button>`;
+  $("#compTip").innerHTML=`Weitere Stelle zum selben Hinweis: nochmals in den Plan klicken${sketchOn?"":" · Linien zeichnen: ✎"}. Begriffe: <button type="button" id="tipLeg">Legende</button>`;
+  const nS=(pending.skizze||[]).length;$("#skOpts").hidden=!(sketchOn||nS);$("#skN").textContent=nS?`Skizze: ${nS} Strich${nS>1?"e":""}`:"Skizze: Ziehen = Strich";
+}
+$("#comp").addEventListener("click",e=>{
+  if(e.target.id==="ptUndo"){pending.punkte.pop();renderWhere();drawPins()}
+  if(e.target.id==="tipLeg")toggleLegend(true);
+});
+function cancelNote(){pending=null;$("#comp").hidden=true;stroke=null;drawPins();if(!$("#legPanel").hidden)renderLegend()}
+$("#compCancel").onclick=cancelNote;
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){if(pending)cancelNote();else if(sketchOn)setSketch(false);else toggleLegend(false)}});
+$("#comp").addEventListener("submit",async e=>{
+  e.preventDefault();const txt=$("#compTxt").value.trim();if(!txt){$("#compTxt").focus();toast("Bitte kurz beschreiben, was hier nicht stimmt");return}
+  const btn=$("#compSave");btn.disabled=true;
+  const P=pending.punkte.map(pt=>({x:pt.x,y:pt.y,bahnhof:pt.st?pt.st.key:null,bahnhof_name:pt.st?pt.st.name:null,
+    lx:pt.st?+pt.st.lx.toFixed(1):null,ly:pt.st?+pt.st.ly.toFixed(1):null}));
+  const doc={plan:cur.key,plan_name:cur.name,plan_stand:cur.label,...P[0],punkte:P,
+    text:txt,status:"offen",antwort:null,erstellt:new Date().toISOString()};
+  if(pending.skizze&&pending.skizze.length)doc.skizze=pending.skizze.map(Q=>Q.map(p=>p[0]+","+p[1]).join(" "));   // Strings: verschachtelte Listen speichert die Datenbank nicht
+  try{await db.collection("feedback").add(doc);pending=null;$("#comp").hidden=true;setSketch(false);if(!$("#legPanel").hidden)renderLegend();toast("Hinweis gespeichert")}
+  catch(err){toast(err&&err.code==="invalid_argument"?"Keine Schreibrechte für diese Seite":"Speichern fehlgeschlagen, bitte nochmals versuchen")}
+  finally{btn.disabled=false}
+});
+
+/* ---------- Legende ---------- */
+function renderLegend(){
+  $("#legPanel").innerHTML=`<h4>Legende <small>${pending?"Klick fügt den Begriff in den Hinweis ein":"Begriffe für Hinweise"}</small><button class="btn quiet" id="legClose" aria-label="Legende schliessen">✕</button></h4>`+
+    LEG.filter(Boolean).map((l,i)=>`<button class="leg" data-i="${i}" title="${pending?"In den Hinweis einfügen":esc(l.begriff)}"><span class="sym">${l.svg}</span><span><b>${esc(l.begriff)}</b><span>${esc(l.text)}</span></span></button>`).join("");
+}
+function toggleLegend(on){const p=$("#legPanel");p.hidden=on===undefined?!p.hidden:!on;$("#legBtn").setAttribute("aria-expanded",!p.hidden);if(!p.hidden)renderLegend()}
+$("#legBtn").onclick=()=>toggleLegend();
+$("#legPanel").addEventListener("click",e=>{
+  if(e.target.closest("#legClose")){toggleLegend(false);return}
+  const b=e.target.closest(".leg");if(!b||!pending||!LEG[+b.dataset.i])return;
+  const ta=$("#compTxt"),t=LEG[+b.dataset.i].begriff,pos=ta.selectionStart??ta.value.length;
+  const before=ta.value.slice(0,pos),after=ta.value.slice(pos);
+  const ins=(before&&!/\s$/.test(before)?" ":"")+t+(after&&!/^\s/.test(after)?" ":" ");
+  ta.value=before+ins+after;ta.focus();ta.selectionStart=ta.selectionEnd=pos+ins.length;
+});
+
+/* ---------- Pins ---------- */
+function drawPins(){
+  if(!pinsG)return;const u=unitPx(),r=10*u;let h="";
+  const list=planEntries(cur);
+  const L="abcdefghijklmnopqrstuvwxyz";
+  list.forEach((e,i)=>{if(!visible(e))return;const done=e.status==="erledigt",sel=e.id===selId,col=done?"var(--pin-done)":"var(--pin)";
+    const P=pts(e);if(!P.length)return;
+    if(P.length>1)h+=`<polyline points="${P.map(q=>q.x+","+q.y).join(" ")}" fill="none" stroke="${col}" stroke-width="${1.5*u}" stroke-dasharray="${3*u} ${3*u}" opacity="${sel?.9:.45}" pointer-events="none"/>`;
+    P.forEach((q,k)=>{const lb=(i+1)+(P.length>1?L[k]:"");
+      h+=`<g data-pin="${e.id}" style="cursor:pointer"><circle cx="${q.x}" cy="${q.y}" r="${(sel?1.35:1)*r*(lb.length>2?1.2:1)}" fill="${col}" fill-opacity="${done?.55:.92}" stroke="#fff" stroke-width="${2*u}" ${e._reg?`stroke-dasharray="${3*u} ${2*u}"`:""}/>`+
+         `<text x="${q.x}" y="${q.y+4*u}" font-size="${(lb.length>2?9.5:11)*u}" text-anchor="middle" fill="#fff" font-family="Fira Mono, monospace" font-weight="600" pointer-events="none">${lb}</text></g>`})});
+  const sw=2.6*u;
+  list.forEach(e=>{if(!visible(e)||e._reg)return;const done=e.status==="erledigt";skParse(e).forEach(Q=>{if(Q.length>1)h+=`<path d="${skPath(Q)}" fill="none" stroke="${done?"var(--pin-done)":"var(--sketch)"}" stroke-width="${sw}" stroke-linecap="round" stroke-linejoin="round" opacity="${e.id===selId?1:.8}" pointer-events="none"/>`})});
+  if(pending&&pending.skizze)pending.skizze.forEach(Q=>{h+=`<path d="${skPath(Q)}" fill="none" stroke="var(--sketch)" stroke-width="${sw}" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="${6*u} ${3*u}" pointer-events="none"/>`});
+  if(stroke&&stroke.pts.length>1)h+=`<path d="${skPath(stroke.pts)}" fill="none" stroke="var(--sketch)" stroke-width="${sw}" stroke-linecap="round" stroke-linejoin="round" opacity=".7" pointer-events="none"/>`;
+  if(pending)pending.punkte.forEach((q,k)=>{h+=`<circle cx="${q.x}" cy="${q.y}" r="${r}" fill="none" stroke="var(--pin)" stroke-width="${3*u}" stroke-dasharray="${4*u} ${3*u}"/>`+
+    (pending.punkte.length>1?`<text x="${q.x}" y="${q.y+4*u}" font-size="${11*u}" text-anchor="middle" fill="var(--pin)" font-family="Fira Mono, monospace" font-weight="600">${L[k]}</text>`:"")});
+  pinsG.innerHTML=h;
+}
+function visible(e){return filterSt==="alle"||(filterSt==="aktiv"?e.status!=="erledigt":e.status===filterSt)}
+
+/* ---------- Liste ---------- */
+function renderList(){
+  const all=planEntries(cur),list=all.map((e,i)=>({e,i})).filter(o=>visible(o.e));
+  const nOpen=all.filter(e=>e.status!=="erledigt").length;
+  $("#nCount").textContent=all.length?`${nOpen} offen · ${all.length} gesamt`:"";
+  const F=[["aktiv","nicht erledigt"],["offen","offen"],["behoben","behoben"],["erledigt","erledigt"],["alle","alle"]];
+  $("#filter").innerHTML=F.map(([k,l])=>`<button data-f="${k}" aria-pressed="${filterSt===k}">${l}</button>`).join("");
+  const nb=AST[cur.key]&&AST[cur.key].neu&&AST[cur.key].neu.length?`<div class="neu"><b>Neu in dieser Fassung${AST[cur.key].am?" · "+esc(AST[cur.key].am):""}</b><ul>${AST[cur.key].neu.map(t=>`<li>${esc(t)}</li>`).join("")}</ul></div>`:"";
+  $("#neu").innerHTML=nb;
+  if(!db){$("#list").innerHTML=`<div class="empty">Die Hinweise werden geladen, sobald die Seite mit claude.ai verbunden ist.</div>`;return}
+  if(!list.length){$("#list").innerHTML=`<div class="empty">${all.length?"Keine Hinweise in diesem Filter.":"Noch keine Hinweise zu diesem Plan. Klick im Plan auf die Stelle, die nicht stimmt, und beschreibe kurz das Problem."}</div>`;return}
+  $("#list").innerHTML=list.map(({e,i})=>`<div class="note ${e.id===selId?"sel":""}" data-id="${e.id}">
+    <div class="h"><span class="n">${i+1}</span><span class="st ${e.status}">${STLAB[e.status]||esc(e.status)}</span>${isReg(cur)?`<span>${esc([...new Set(((e.punkte&&e.punkte.length)?e.punkte:[e]).map(q=>q.bahnhof_name||"Strecke"))].join(", "))}</span>`:""}${e.punkte&&e.punkte.length>1?`<span>· ${e.punkte.length} Stellen</span>`:""}${e.skizze&&e.skizze.length&&!e._reg?`<span>· ✎ Skizze</span>`:""}${e._reg?`<span class="src" title="Hinweis aus dem Regionalplan, hier an derselben Stelle im Spurplan">Regionalplan</span>`:""}<span class="spacer"></span><span>${fmtDate(e.erstellt)}</span></div>
+    <div class="t">${esc(e.text)}</div>
+    ${e.antwort?`<div class="a"><b>Claude${e.version?" · "+esc(e.version):""}:</b> ${esc(e.antwort)}</div>`:""}
+    ${(e.rueckmeldungen||[]).map(r=>`<div class="a du"><b>Du:</b> ${esc(r.text)}</div>`).join("")}
+    ${replyId===e.id?`<div class="reply"><textarea id="replyTxt" placeholder="Deine Antwort an Claude"></textarea><div class="row"><button class="btn quiet" data-a="replyNo">Abbrechen</button><button class="btn prim" data-a="replySave">Antwort senden</button></div></div>`:""}
+    <div class="acts">${confirmDel===e.id?`<span style="font-size:12px;color:var(--muted)">Wirklich löschen?</span><button class="btn" data-a="delYes">Löschen</button><button class="btn" data-a="delNo">Behalten</button>`:
+      `${e.antwort&&replyId!==e.id?`<button class="btn" data-a="reply">Antworten</button>`:""}${e.status!=="erledigt"?`<button class="btn" data-a="done">Erledigt</button>`:`<button class="btn" data-a="reopen">Wieder öffnen</button>`}<button class="btn quiet" data-a="del">Löschen</button>`}</div></div>`).join("");
+  const rt=document.getElementById("replyTxt");if(rt&&document.activeElement!==rt)rt.focus({preventScroll:true});
+}
+$("#filter").addEventListener("click",e=>{const b=e.target.closest("button[data-f]");if(b){filterSt=b.dataset.f;renderAll()}});
+$("#list").addEventListener("click",async ev=>{
+  const n=ev.target.closest(".note");if(!n||ev.target.closest("textarea"))return;const id=n.dataset.id,a=ev.target.closest("button[data-a]");
+  if(!a){select(id,true);return}
+  const ref=db.collection("feedback").doc(id),act=a.dataset.a;
+  try{
+    if(act==="del"){confirmDel=id;renderList();return}
+    if(act==="reply"){replyId=id;renderList();return}
+    if(act==="replyNo"){replyId=null;renderList();return}
+    if(act==="replySave"){const t=($("#replyTxt").value||"").trim();if(!t){toast("Bitte eine Antwort schreiben");return}
+      const e=entries.find(x=>x.id===id);const list=[...(e&&e.rueckmeldungen||[]),{text:t,am:new Date().toISOString()}];
+      await ref.update({rueckmeldungen:list,status:"offen"});replyId=null;toast("Antwort gesendet");return}
+    if(act==="delNo"){confirmDel=null;renderList();return}
+    if(act==="delYes"){confirmDel=null;await ref.delete();toast("Hinweis gelöscht");return}
+    if(act==="done")await ref.update({status:"erledigt",erledigt_am:new Date().toISOString()});
+    if(act==="reopen")await ref.update({status:"offen"});
+  }catch(err){toast("Änderung nicht gespeichert")}
+});
+function select(id,center){
+  selId=id;const e=entries.find(x=>x.id===id);
+  const ee=e&&planEntries(cur).find(x=>x.id===id),q0=ee&&pts(ee)[0];
+  if(q0&&center){let w=vb.w,h=vb.h;if(w>base.w*0.45){h=h*(base.w*0.3)/w;w=base.w*0.3}vb={x:q0.x-w/2,y:q0.y-h/2,w,h};applyVB()}
+  renderList();drawPins();
+  const el=document.querySelector(`.note[data-id="${id}"]`);if(el)el.scrollIntoView({block:"nearest"});
+}
+
+/* ---------- Abnahme ---------- */
+function renderAbn(){
+  const el=$("#abn");if(isReg(cur)||!cur.counts){el.innerHTML="";return}
+  const a=abnahmen[cur.key];
+  if(cur.status==="abgenommen"&&!a){el.innerHTML=`<span class="ok">Referenz (abgenommen)</span>`;return}
+  el.innerHTML=a?`<span class="ok">Von dir abgenommen ${fmtDate(a.am)}</span><button class="btn" id="abnUndo">Zurückziehen</button>`
+               :`<button class="btn prim" id="abnDo" ${db?"":"disabled"}>Abnehmen</button>`;
+}
+$("#abn").addEventListener("click",async e=>{
+  if(!db)return;const ref=db.collection("abnahme").doc(cur.key);
+  try{
+    if(e.target.id==="abnDo"){await ref.set({bahnhof:cur.key,name:cur.name,stand:cur.label,counts:cur.counts,am:new Date().toISOString()});toast(cur.name+" abgenommen")}
+    if(e.target.id==="abnUndo"){await ref.delete();toast("Abnahme zurückgezogen")}
+  }catch(err){toast("Abnahme nicht gespeichert")}
+});
+
+function renderAll(){renderNav();renderList();renderAbn();drawPins()}
+
+/* ---------- Start ---------- */
+let start=ARBEIT.aktuell||"region";try{start=localStorage.getItem("sp_plan")||start}catch(e){}
+if(location.hash.length>1&&PLANS.some(p=>p.key===location.hash.slice(1)))start=location.hash.slice(1);
+show(start);
+window.addEventListener("resize",()=>drawPins());
+
+let _unsub=[];
+async function connect(){
+  const conn=$("#conn"),txt=$("#connTxt");
+  const fail=m=>{conn.className="conn err";txt.innerHTML=esc(m)+' <button class="btn quiet" id="reconn" style="padding:0 6px;font-size:12px">Neu verbinden</button>';renderAll()};
+  conn.className="conn";txt.textContent="verbinde …";
+  // auf die Laufzeit warten (kann nach dem Laden oder nach einer Aktualisierung später kommen)
+  for(let k=0;k<50&&!(window.claude&&window.claude.use);k++)await new Promise(r=>setTimeout(r,200));
+  if(!(window.claude&&window.claude.use)){fail("nicht verbunden: nur ansehen");return}
+  for(let k=0;k<3&&!db;k++){
+    try{db=await window.claude.use("db")}catch(e){db=null}
+    if(!db)await new Promise(r=>setTimeout(r,1500));
+  }
+  if(!db){fail("nicht verbunden: nur ansehen");return}
+  try{const u=await window.claude.use("user");if(u&&u.can){const w=await u.can("data.write");if(w===false)canWrite=false}}catch(e){}
+  conn.className="conn live";txt.textContent=canWrite?"verbunden":"nur lesen";
+  _unsub.forEach(f=>{try{f()}catch(e){}});
+  _unsub=[db.collection("feedback").onSnapshot(s=>{entries=s.docs.map(d=>({id:d.id,...d.data()}));renderAll()},e=>{db=null;fail("Verbindung unterbrochen")}),
+          db.collection("abnahme").onSnapshot(s=>{abnahmen={};s.docs.forEach(d=>abnahmen[d.id]=d.data());renderAll()},()=>{})];
+  renderAll();
+}
+document.addEventListener("click",e=>{if(e.target&&e.target.id==="reconn"){db=null;connect()}});
+connect();
+</script>

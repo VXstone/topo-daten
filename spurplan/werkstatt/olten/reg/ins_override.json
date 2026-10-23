@@ -1,0 +1,68 @@
+{
+ "_quelle": "Ortskenntnis D. Eckenstein, 1.10.2026",
+ "pax": [
+  "2",
+  "3",
+  "4"
+ ],
+ "platforms": [
+  {
+   "between": [
+    "2",
+    "3"
+   ]
+  },
+  {
+   "outer": "4"
+  }
+ ],
+ "platz": [
+  [
+   1688852748,
+   1688852743,
+   45
+  ]
+ ],
+ "pax_ways": [
+  282851493,
+  108247241
+ ],
+ "meterspur": "ins_meter.json",
+ "meterspur_cfg": {
+  "bezug": "11",
+  "d_max": 60,
+  "m_pro_lane": 10,
+  "ziel": "Biel (asm)",
+  "max_innen": 0.0,
+  "abstand_lanes": 1.3,
+  "rollbock_diag": true
+ },
+ "knoten_x": {
+  "1242293757": 559.9
+ },
+ "knoten_lane": {
+  "1242293757": 3.4
+ },
+ "zeichnen": {
+  "_zweck": "Rollbock: eine gerade Schräge von der Weiche an Gleis 2 bis zur Meterspur, Spurwechsel in der Schräge (Hinweis 14.10.)",
+  "weg": [
+   108247239
+  ],
+  "linien": [
+   {
+    "pts": [
+     [
+      "x:543.0",
+      2
+     ],
+     [
+      "d60",
+      3.4
+     ]
+    ],
+    "pax": false,
+    "rund": 0
+   }
+  ]
+ }
+}

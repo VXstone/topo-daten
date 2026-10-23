@@ -1,0 +1,237 @@
+{
+ "_info": "Arbeitsliste der Feedback-Seite. reihenfolge = Bahnhöfe in Bearbeitungsfolge; aktuell = jetzt dran; stand[key].status 'kontrolle' = neue Fassung zur Kontrolle; neu = was sich geändert hat.",
+ "reihenfolge": [
+  "olten_hammer",
+  "tecknau",
+  "wangen_bei_olten",
+  "kerzers",
+  "murten",
+  "laufelfingen",
+  "zofingen",
+  "aarburg_oftringen",
+  "rothrist",
+  "safenwil",
+  "dulliken",
+  "daniken",
+  "schonenwerd",
+  "olten",
+  "thun",
+  "ins"
+ ],
+ "aktuell": "region",
+ "stand": {
+  "olten_hammer": {
+   "status": "kontrolle",
+   "am": "13.10."
+  },
+  "tecknau": {
+   "status": "kontrolle",
+   "am": "13.10."
+  },
+  "wangen_bei_olten": {
+   "status": "kontrolle",
+   "am": "15.10. abends",
+   "neu": [
+    "Beide Fächer der Abstellgleise mit 60°-Schrägen statt steiler Bögen"
+   ]
+  },
+  "kerzers": {
+   "status": "abgenommen",
+   "am": "14.10.",
+   "neu": [
+    "Gleisnummer 16 (Ausfahrgleis Gümmenen) weggelassen (Override nummern_weg)"
+   ]
+  },
+  "murten": {
+   "status": "kontrolle",
+   "am": "13.10."
+  },
+  "laufelfingen": {
+   "status": "kontrolle",
+   "am": "13.10."
+  },
+  "ins": {
+   "status": "kontrolle",
+   "am": "14.10.",
+   "neu": [
+    "DKW nach Rundungsregel (gerade Schräge, Klammern + kleine Ausrundung)"
+   ]
+  },
+  "dulliken": {
+   "status": "kontrolle",
+   "am": "13.10."
+  },
+  "daniken": {
+   "status": "kontrolle",
+   "am": "13.10."
+  },
+  "schonenwerd": {
+   "status": "kontrolle",
+   "am": "13.10."
+  },
+  "zofingen": {
+   "status": "kontrolle",
+   "am": "15.10. Nachmittag",
+   "neu": [
+    "Gegenspurwechsel nach Ortskenntnis ausgerundet",
+    "Verbindungsprüfung gegen OSM: alle Perrongleise und Abgänge stimmen (Rest siehe Antwort)"
+   ]
+  },
+  "aarburg_oftringen": {
+   "status": "kontrolle",
+   "am": "15.10. abends",
+   "neu": [
+    "DKW Gleis 2: Schräge von Gleis 3 nach Rothrist läuft jetzt als eine gerade 60°-Linie durch die DKW (vorher Knick mit kurzer Geraden auf Gleis 2)"
+   ]
+  },
+  "region": {
+   "status": "kontrolle",
+   "am": "20.10. Mittag",
+   "neu": [
+    "Olten Ost als eigener Betriebspunkt (Spurplan, 6 Gleise West, 4 Ost)",
+    "Rothrist Ost: 3/2 Richtung Borntunnel über Gleis 4 (keine weissen Striche mehr)",
+    "Tunnelportale an beiden Enden"
+   ]
+  },
+  "safenwil": {
+   "status": "kontrolle",
+   "am": "13.10."
+  },
+  "rothrist": {
+   "status": "kontrolle",
+   "am": "15.10. abends",
+   "neu": [
+    "Industriegleis Nord: zweigt jetzt an der richtigen Weiche aus Gleis 5 nach links oben ab (lag vorher auf Gleis 5)",
+    "Stumpengleis daneben als eigener Ast mit Prellbock",
+    "Verbindungsprüfung: keine Abweichung mehr"
+   ]
+  },
+  "thun": {
+   "status": "kontrolle",
+   "am": "15.10.",
+   "neu": [
+    "Abstellgleis an der Schrägen angebunden",
+    "Pfeile verbunden: Gleis 239 läuft als Schlaufe zum Gleis von oben"
+   ]
+  },
+  "olten": {
+   "status": "kontrolle",
+   "am": "15.10. Nachmittag (5)",
+   "neu": [
+    "61: 531 wieder als Durchschneidung (keine Brücke); 62: doppelter Spurwechsel weiter auseinander",
+    "57: zuerst 366 nach oben mit Pfeil, danach doppelter Spurwechsel 11-Ebene/12",
+    "Skizze zu 59: von 4 (Bern) eine Schräge hinauf in 2/410 mit Weiche auf 3; 410 geht vorher hinauf in 2",
+    "Rückmeldungen zu 57 und 59: Spurwechsel auf 12 links, 366 wieder als schwarze Verbindung von der 11-Ebene; 3 kommt von unten, Nebengleis von 2/410 hinunter zu 3",
+    "Linie 531 Aarau als Brücke über die Basler Linie (OSM bridge=yes), Brückenflügel je Bündel",
+    "Hinweise 57–59: 366 zweigt von 10 vor dem Abtauchen ab (keine Dreiwegweiche mehr bei 11), Pfeil Nebengleis 360 in die Basel-Linie, 1 mündet in 2 und 2 geht hinunter auf 410",
+    "Hinweis 55: 206 läuft geradeaus nach Aarau, 1/2 mündet schon beim ersten Wechsel ein, Linie nach 313 taucht früher ab (2 Schrägen weniger); Hinweis 56: Verbindung Bern→Solothurn grün",
+    "West 410 (Solothurn): zweigt gleich nach 1/2 ab, 3 kommt über den Spurwechsel von 4; das kurze Nebengleis 410→3 schwarz (vorher Scheinverbindung 410→3)",
+    "West: die drei Spurwechsel knapp ausserhalb (Luzern 11→10, Luzern→Bern, Bern 8→7) am Planrand ergänzt, Abgänge dafür etwas nach links",
+    "West Gleis 7: Einmündung von 8 und Nebengleis Richtung Solothurn getrennt (OSM-Reihenfolge)",
+    "Ost: geknickte Zufahrt zur Abstellgruppe bei der Basel-Linie aufgeräumt",
+    "Ostkopf nach Skizze D. Eckenstein (vorige Runde)"
+   ]
+  },
+  "region_ne": {
+   "status": "kontrolle",
+   "am": "20.10.",
+   "neu": [
+    "Ligerz: Nebengleis zweigt nach dem Spurwechsel ab",
+    "Vauseyon: Stoss der Doppelspur zusammengeführt",
+    "Spurwechsel nie quer (60°)"
+   ]
+  },
+  "neuchatel": {
+   "status": "kontrolle",
+   "am": "20.10. Nachmittag",
+   "neu": [
+    "Gleis 1 durchgehend grün, Perrons Standardlänge, Pfeile in die Abstellanlagen"
+   ]
+  },
+  "onnens_bonvillars": {
+   "status": "kontrolle",
+   "am": "20.10. Nachmittag",
+   "neu": [
+    "Schutzweiche Ost kurz gerade"
+   ]
+  },
+  "grandson": {
+   "am": "20.10. Nachmittag",
+   "neu": [
+    "Gleis 1 mit kurzem Stumpen links, Anschluss rechts weg"
+   ]
+  },
+  "les_hauts_geneveys": {
+   "am": "20.10.",
+   "neu": [
+    "Aussenperron Gleis 1, beide Stumpen gleich lang"
+   ]
+  },
+  "munchenwiler_courgevaux": {
+   "am": "20.10.",
+   "neu": [
+    "Zwei Aussenperrons (OSM 1/2)"
+   ]
+  },
+  "motiers": {
+   "am": "20.10. Nachmittag",
+   "neu": [
+    "Gleis 3 oben, Gleis 2 unten"
+   ]
+  },
+  "cressier_fr": {
+   "am": "20.10.",
+   "neu": [
+    "Anschluss auf der Perronseite"
+   ]
+  },
+  "courtepin": {
+   "am": "20.10.",
+   "neu": [
+    "Industrieanschluss Richtung Cressier FR (Pfeil)"
+   ]
+  },
+  "riedbach": {
+   "am": "20.10. Nachmittag",
+   "neu": [
+    "Anschluss auf der Bahnhofseite, waagrecht Richtung Perron mit Weiche"
+   ]
+  },
+  "rosshausern": {
+   "am": "20.10.",
+   "neu": [
+    "Spurwechsel schwarz"
+   ]
+  },
+  "le_landeron": {
+   "am": "20.10. Nachmittag",
+   "neu": [
+    "4 Weichen zwischen den Hauptgleisen (links 1→2, rechts zurück), Gleis 3 links mit Prellbock"
+   ]
+  },
+  "bevaix": {
+   "am": "20.10. Nachmittag",
+   "neu": [
+    "Anschluss innen, horizontal Richtung Perron"
+   ]
+  },
+  "gorgier_saint_aubin": {
+   "am": "20.10. Nachmittag",
+   "neu": [
+    "Abstellgleise links aus dem Überholgleis, Schutzstumpen beidseits"
+   ]
+  },
+  "chambrelien": {
+   "am": "20.10. Nachmittag",
+   "neu": [
+    "Gleis 2 grün von rechts, kein grüner Stummel"
+   ]
+  },
+  "bole": {
+   "am": "20.10. Nachmittag",
+   "neu": [
+    "Abstellgleis mündet unter der Ausrundung"
+   ]
+  }
+ }
+}

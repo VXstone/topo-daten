@@ -1,0 +1,15 @@
+{
+ "_quelle": "Regionalplan-Variante Rothrist (Daten aus region.json): Grundeinstellungen ohne Ausschnitt/Handzeichnung des Detailplans (15.10.)",
+ "cfg": {
+  "sw_search_m": 1600,
+  "rules": {
+   "r43": true,
+   "r44v": false,
+   "r48": true
+  },
+  "warp_min": 0.65
+ },
+ "als_dkw": [
+  1524688696
+ ]
+}

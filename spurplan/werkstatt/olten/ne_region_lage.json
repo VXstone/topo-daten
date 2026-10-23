@@ -1,0 +1,401 @@
+{
+ "einmuenden_bei_wenig_abgaengen": true,
+ "einmuenden_versatz": 0,
+ "eigenes_feld": [
+  "Noiraigue",
+  "Môtiers",
+  "Couvet",
+  "Gorgier-Saint-Aubin",
+  "Concise",
+  "Avenches",
+  "Ins",
+  "Dompierre",
+  "Champ du Moulin",
+  "Bern Brünnen Westside",
+  "Riedbach",
+  "Travers",
+  "Tüscherz",
+  "Serrières",
+  "Bôle",
+  "Boudry",
+  "Chambrelien",
+  "Les Geneveys-sur-Coffrane",
+  "Les Hauts-Geneveys",
+  "Faoug",
+  "Galmiz",
+  "Auvernier",
+  "Bevaix",
+  "Colombier",
+  "Corcelles-Peseux",
+  "Cornaux",
+  "Grandson",
+  "Gümmenen",
+  "Kallnach",
+  "Kerzers",
+  "Marin-Epagnier",
+  "Murten",
+  "Neuchâtel",
+  "Rosshäusern",
+  "Saint Blaise-Lac",
+  "Saint-Blaise CFF",
+  "Twann",
+  "Gampelen",
+  "Courtepin",
+  "Cressier FR",
+  "Münchenwiler-Courgevaux",
+  "Pensier",
+  "Müntschemier",
+  "Sugiez",
+  "Le Landeron",
+  "Domdidier",
+  "La Presta - Mines d'Asphalte",
+  "Les Deurres",
+  "Muntelier-Löwenberg",
+  "Fräschels",
+  "Kerzers Papiliorama",
+  "La Neuveville",
+  "Cressier",
+  "Zihlbrücke",
+  "Ligerz",
+  "Onnens-Bonvillars"
+ ],
+ "auto": {
+  "c0": 30,
+  "c1": 32,
+  "p": 0.6,
+  "gap": 58,
+  "wg": 0.01,
+  "kette_winkel": {
+   "Münchenwiler-Courgevaux": 255
+  }
+ },
+ "Noiraigue": [
+  -2547,
+  458
+ ],
+ "Môtiers": [
+  -3577,
+  1200
+ ],
+ "Couvet": [
+  -3363,
+  1004
+ ],
+ "Gorgier-Saint-Aubin": [
+  -2590,
+  1384
+ ],
+ "Concise": [
+  -2861,
+  1657
+ ],
+ "Avenches": [
+  627,
+  594
+ ],
+ "Ins": [
+  1427,
+  -598
+ ],
+ "Dompierre": [
+  152,
+  975
+ ],
+ "Champ du Moulin": [
+  -2297,
+  402
+ ],
+ "Bern Brünnen Westside": [
+  3388,
+  88
+ ],
+ "Riedbach": [
+  3031,
+  13
+ ],
+ "Travers": [
+  -2914,
+  635
+ ],
+ "Tüscherz": [
+  1981,
+  -2271
+ ],
+ "Serrières": [
+  -944,
+  -130
+ ],
+ "Bôle": [
+  -1884,
+  272
+ ],
+ "Boudry": [
+  -2097,
+  853
+ ],
+ "Chambrelien": [
+  -1643,
+  -238
+ ],
+ "Les Geneveys-sur-Coffrane": [
+  -1524,
+  -482
+ ],
+ "Les Hauts-Geneveys": [
+  -1399,
+  -734
+ ],
+ "Faoug": [
+  876,
+  393
+ ],
+ "Galmiz": [
+  1863,
+  -128
+ ],
+ "Auvernier": [
+  -1321,
+  96
+ ],
+ "Bevaix": [
+  -2336,
+  1106
+ ],
+ "Colombier": [
+  -1762,
+  500
+ ],
+ "Corcelles-Peseux": [
+  -1299,
+  -288
+ ],
+ "Cornaux": [
+  345,
+  -961
+ ],
+ "Grandson": [
+  -3492,
+  2325
+ ],
+ "Gümmenen": [
+  2353,
+  -144
+ ],
+ "Kallnach": [
+  2540,
+  -1200
+ ],
+ "Kerzers": [
+  2096,
+  -372
+ ],
+ "Marin-Epagnier": [
+  383,
+  -557
+ ],
+ "Murten": [
+  1237,
+  273
+ ],
+ "Neuchâtel": [
+  -365,
+  -469
+ ],
+ "Rosshäusern": [
+  2706,
+  -66
+ ],
+ "Saint Blaise-Lac": [
+  52,
+  -550
+ ],
+ "Saint-Blaise CFF": [
+  6,
+  -711
+ ],
+ "Twann": [
+  1621,
+  -1997
+ ],
+ "Gampelen": [
+  1015,
+  -576
+ ],
+ "Courtepin": [
+  933,
+  1031
+ ],
+ "Cressier FR": [
+  1015,
+  741
+ ],
+ "Münchenwiler-Courgevaux": [
+  1083,
+  471
+ ],
+ "Pensier": [
+  868,
+  1296
+ ],
+ "Müntschemier": [
+  1842,
+  -581
+ ],
+ "Sugiez": [
+  1574,
+  -265
+ ],
+ "Le Landeron": [
+  810,
+  -1353
+ ],
+ "Domdidier": [
+  377,
+  798
+ ],
+ "La Presta - Mines d'Asphalte": [
+  -3167,
+  837
+ ],
+ "Les Deurres": [
+  -955,
+  -285
+ ],
+ "Muntelier-Löwenberg": [
+  1623,
+  47
+ ],
+ "Fräschels": [
+  2363,
+  -936
+ ],
+ "Kerzers Papiliorama": [
+  2221,
+  -731
+ ],
+ "La Neuveville": [
+  1058,
+  -1546
+ ],
+ "Cressier": [
+  568,
+  -1159
+ ],
+ "Zihlbrücke": [
+  708,
+  -567
+ ],
+ "Abzweig #54": [
+  -708,
+  -299
+ ],
+ "Ligerz": [
+  1317,
+  -1750
+ ],
+ "Abgang 210 #63": [
+  -3699,
+  2552
+ ],
+ "Abgang 220 #64": [
+  3695,
+  160
+ ],
+ "Abgang 251 #65": [
+  2692,
+  -1408
+ ],
+ "Abgang 251 #66": [
+  -54,
+  1143
+ ],
+ "Abgang 219 #67": [
+  -3235,
+  749
+ ],
+ "Abgang 255 #68": [
+  797,
+  1551
+ ],
+ "Abgang 210 #69": [
+  2207,
+  -2451
+ ],
+ "Abgang 224 #70": [
+  -1281,
+  -972
+ ],
+ "Abgang 221 #71": [
+  -3769,
+  1383
+ ],
+ "drehung_auto": {
+  "Noiraigue": -15.0,
+  "Môtiers": -42.1,
+  "Couvet": -42.1,
+  "Gorgier-Saint-Aubin": -46.8,
+  "Concise": -46.8,
+  "Avenches": -38.8,
+  "Dompierre": -38.8,
+  "Champ du Moulin": -15.0,
+  "Bern Brünnen Westside": 12.8,
+  "Riedbach": 12.8,
+  "Travers": -30,
+  "Tüscherz": -38.3,
+  "Serrières": -34.9,
+  "Bôle": -15.0,
+  "Boudry": -46.8,
+  "Chambrelien": -60,
+  "Les Geneveys-sur-Coffrane": -63.5,
+  "Les Hauts-Geneveys": -63.5,
+  "Faoug": -38.8,
+  "Galmiz": -21.0,
+  "Auvernier": -30,
+  "Bevaix": -46.8,
+  "Colombier": -46.8,
+  "Corcelles-Peseux": -2.5,
+  "Cornaux": -38.3,
+  "Grandson": -46.8,
+  "Gümmenen": 12.8,
+  "Kallnach": -55.3,
+  "Kerzers": 90,
+  "Marin-Epagnier": -1.7,
+  "Neuchâtel": -30,
+  "Rosshäusern": 12.8,
+  "Saint Blaise-Lac": -1.7,
+  "Saint-Blaise CFF": -38.3,
+  "Twann": -38.3,
+  "Gampelen": -1.7,
+  "Courtepin": 105.0,
+  "Cressier FR": -75.0,
+  "Münchenwiler-Courgevaux": 105.0,
+  "Pensier": -75.0,
+  "Müntschemier": -1.2,
+  "Sugiez": 77.1,
+  "Le Landeron": -38.3,
+  "Domdidier": -38.8,
+  "La Presta - Mines d'Asphalte": -42.1,
+  "Les Deurres": -2.5,
+  "Muntelier-Löwenberg": -60,
+  "Fräschels": -55.3,
+  "Kerzers Papiliorama": -55.3,
+  "La Neuveville": -38.3,
+  "Cressier": -38.3,
+  "Zihlbrücke": -1.7,
+  "Ligerz": -38.3,
+  "Onnens-Bonvillars": -46.8
+ },
+ "osm": "ne_region.json",
+ "osm_versatz": [
+  -996,
+  -851
+ ],
+ "auto_knick": 76,
+ "port_richtung": {
+  "Murten|255": 240
+ },
+ "Onnens-Bonvillars": [
+  -3157,
+  1957
+ ]
+}

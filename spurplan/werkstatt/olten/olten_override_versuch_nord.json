@@ -1,0 +1,61 @@
+{
+ "_quelle": "Ortskenntnis D. Eckenstein, 1.10.2026",
+ "pax": [
+  "1",
+  "2",
+  "3",
+  "4",
+  "7",
+  "8",
+  "9",
+  "10",
+  "11",
+  "12"
+ ],
+ "platforms": [
+  {
+   "outer": "1"
+  },
+  {
+   "between": [
+    "2",
+    "3"
+   ]
+  },
+  {
+   "between": [
+    "4",
+    "7"
+   ]
+  },
+  {
+   "between": [
+    "8",
+    "9"
+   ]
+  },
+  {
+   "between": [
+    "10",
+    "11"
+   ]
+  },
+  {
+   "outer": "12"
+  }
+ ],
+ "cfg": {
+  "axis_snap": true,
+  "snap_win_m": 200,
+  "snap_smooth_m": 500,
+  "snap_main_only": true,
+  "d_lim": 110,
+  "s_min_fix": 4000,
+  "rules": {
+   "r34p": false,
+   "r35": false,
+   "r28b": false
+  },
+  "s_max_fix": 6000
+ }
+}
