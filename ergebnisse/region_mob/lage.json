@@ -1,0 +1,224 @@
+{
+ "auto": {
+  "c0": 30,
+  "c1": 32,
+  "p": 0.6,
+  "gap": 58,
+  "wg": 0.01
+ },
+ "osm": "region.json",
+ "linienfarbe": {
+  "120": "#9a5b1e",
+  "321": "#9a5b1e",
+  "121": "#9a5b1e",
+  "122": "#9a5b1e",
+  "114": "#9a5b1e",
+  "247": "#9a5b1e"
+ },
+ "cfg": {
+  "cover_m": 200,
+  "merge_station_m": 300,
+  "merge_junction_m": 200
+ },
+ "Schönried": [
+  -223,
+  -649
+ ],
+ "Belmont-sur-Montreux": [
+  -3625,
+  1826
+ ],
+ "Les Avants": [
+  -2958,
+  119
+ ],
+ "La Tine": [
+  -1926,
+  -203
+ ],
+ "Château-d'Oex": [
+  -1474,
+  -329
+ ],
+ "Flendruz": [
+  -1217,
+  -393
+ ],
+ "Rougemont": [
+  -1035,
+  -433
+ ],
+ "Glion-Alpes": [
+  -3416,
+  1933
+ ],
+ "Les Sciernes": [
+  -2232,
+  -183
+ ],
+ "Rochers de Naye": [
+  -2304,
+  1868
+ ],
+ "Matten": [
+  712,
+  -326
+ ],
+ "Paccot": [
+  -2661,
+  1826
+ ],
+ "Planchamp": [
+  -3555,
+  1437
+ ],
+ "Sendy-Sollard": [
+  -3125,
+  187
+ ],
+ "Le Tremblex": [
+  -3156,
+  1797
+ ],
+ "St. Stephan": [
+  628,
+  -499
+ ],
+ "Blankenburg": [
+  543,
+  -686
+ ],
+ "Zweisimmen": [
+  423,
+  -943
+ ],
+ "Montreux": [
+  -3696,
+  1996
+ ],
+ "Glion": [
+  -3535,
+  2278
+ ],
+ "Caux": [
+  -2908,
+  1822
+ ],
+ "Chernex": [
+  -3411,
+  707
+ ],
+ "Chamby": [
+  -3288,
+  285
+ ],
+ "Fontanivent": [
+  -3469,
+  1035
+ ],
+ "Allières": [
+  -2488,
+  -64
+ ],
+ "Les Cases": [
+  -2671,
+  -7
+ ],
+ "Jor": [
+  -2806,
+  60
+ ],
+ "Jaman": [
+  -2446,
+  1844
+ ],
+ "Saanen": [
+  -811,
+  -494
+ ],
+ "Saanenmöser": [
+  -15,
+  -698
+ ],
+ "Oeschseite": [
+  232,
+  -768
+ ],
+ "Gstaad": [
+  -605,
+  -531
+ ],
+ "Gruben": [
+  -422,
+  -597
+ ],
+ "Lenk im Simmental": [
+  830,
+  -167
+ ],
+ "Rossinière": [
+  -1723,
+  -253
+ ],
+ "Montbovon": [
+  -2038,
+  -205
+ ],
+ "Abgang 100 #53": [
+  -3556,
+  2218
+ ],
+ "Abgang 100 #54": [
+  -3907,
+  1814
+ ],
+ "Abgang 114 #55": [
+  -3310,
+  64
+ ],
+ "Abgang 247 #56": [
+  -1926,
+  -418
+ ],
+ "Abgang 320 #57": [
+  376,
+  -1251
+ ],
+ "drehung_auto": {
+  "Schönried": -14.6,
+  "Belmont-sur-Montreux": -77.9,
+  "Les Avants": -22.2,
+  "La Tine": -14.6,
+  "Château-d'Oex": -14.6,
+  "Flendruz": -14.6,
+  "Rougemont": -14.6,
+  "Glion-Alpes": -60,
+  "Les Sciernes": -22.2,
+  "Rochers de Naye": -180,
+  "Matten": 63.4,
+  "Paccot": 3.3,
+  "Planchamp": -77.9,
+  "Sendy-Sollard": -22.2,
+  "Le Tremblex": 3.3,
+  "St. Stephan": 63.4,
+  "Blankenburg": 63.4,
+  "Zweisimmen": 60,
+  "Montreux": 60,
+  "Glion": -90,
+  "Caux": 3.3,
+  "Chernex": -77.9,
+  "Chamby": -60,
+  "Fontanivent": -77.9,
+  "Allières": -22.2,
+  "Les Cases": -22.2,
+  "Jor": -22.2,
+  "Jaman": 3.3,
+  "Saanen": -14.6,
+  "Saanenmöser": -14.6,
+  "Oeschseite": -14.6,
+  "Gstaad": -14.6,
+  "Gruben": -14.6,
+  "Rossinière": -14.6,
+  "Montbovon": 120
+ }
+}

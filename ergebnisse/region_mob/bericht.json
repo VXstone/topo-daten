@@ -1,119 +1,119 @@
 {
  "region": "mob",
- "erzeugt": "2026-10-21 10:23 UTC",
+ "erzeugt": "2026-10-23 18:27 UTC",
  "bahnhoefe": {
   "schonried": {
    "name": "Schönried",
    "ok": true,
-   "befunde": "?",
+   "befunde": "Befunde: {}",
    "optionen": []
   },
   "la_tine": {
    "name": "La Tine",
    "ok": true,
-   "befunde": "?",
+   "befunde": "Befunde: {'A': 1}",
    "optionen": []
   },
   "belmont_sur_montreux": {
    "name": "Belmont-sur-Montreux",
    "ok": true,
-   "befunde": "?",
+   "befunde": "Befunde: {}",
    "optionen": []
   },
   "les_avants": {
    "name": "Les Avants",
    "ok": true,
-   "befunde": "?",
+   "befunde": "Befunde: {}",
    "optionen": []
   },
   "flendruz": {
    "name": "Flendruz",
    "ok": true,
-   "befunde": "?",
+   "befunde": "Befunde: {}",
    "optionen": []
   },
   "chateau_d_oex": {
    "name": "Château-d'Oex",
    "ok": true,
-   "befunde": "?",
+   "befunde": "Befunde: {}",
    "optionen": []
   },
   "rougemont": {
    "name": "Rougemont",
    "ok": true,
-   "befunde": "?",
+   "befunde": "Befunde: {}",
    "optionen": []
   },
   "glion_alpes": {
    "name": "Glion-Alpes",
    "ok": true,
-   "befunde": "?",
+   "befunde": "Befunde: {'B': 2}",
    "optionen": []
   },
   "matten": {
    "name": "Matten",
    "ok": true,
-   "befunde": "?",
-   "optionen": []
-  },
-  "rochers_de_naye": {
-   "name": "Rochers de Naye",
-   "ok": true,
-   "befunde": "?",
+   "befunde": "Befunde: {}",
    "optionen": []
   },
   "les_sciernes": {
    "name": "Les Sciernes",
    "ok": true,
-   "befunde": "?",
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "rochers_de_naye": {
+   "name": "Rochers de Naye",
+   "ok": true,
+   "befunde": "Befunde: {}",
    "optionen": []
   },
   "paccot": {
    "name": "Paccot",
    "ok": true,
-   "befunde": "?",
-   "optionen": []
-  },
-  "sendy_sollard": {
-   "name": "Sendy-Sollard",
-   "ok": true,
-   "befunde": "?",
+   "befunde": "Befunde: {}",
    "optionen": []
   },
   "planchamp": {
    "name": "Planchamp",
    "ok": true,
-   "befunde": "?",
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "sendy_sollard": {
+   "name": "Sendy-Sollard",
+   "ok": true,
+   "befunde": "Befunde: {'A': 1}",
    "optionen": []
   },
   "le_tremblex": {
    "name": "Le Tremblex",
    "ok": true,
-   "befunde": "?",
+   "befunde": "Befunde: {}",
    "optionen": []
   },
   "st_stephan": {
    "name": "St. Stephan",
    "ok": true,
-   "befunde": "?",
+   "befunde": "Befunde: {}",
    "optionen": []
   },
   "blankenburg": {
    "name": "Blankenburg",
    "ok": true,
-   "befunde": "?",
+   "befunde": "Befunde: {}",
    "optionen": []
   },
   "glion": {
    "name": "Glion",
    "ok": true,
-   "befunde": "?",
+   "befunde": "Befunde: {'B': 2}",
    "optionen": []
   },
   "montreux": {
    "name": "Montreux",
    "ok": true,
-   "befunde": "?",
+   "befunde": "Befunde: {'A': 4, 'B': 9}",
    "optionen": [
     "--hauptgleise"
    ]
@@ -121,7 +121,7 @@
   "zweisimmen": {
    "name": "Zweisimmen",
    "ok": true,
-   "befunde": "?",
+   "befunde": "Befunde: {}",
    "optionen": [
     "--hauptgleise"
    ]
@@ -129,99 +129,106 @@
   "caux": {
    "name": "Caux",
    "ok": true,
-   "befunde": "?",
+   "befunde": "Befunde: {}",
    "optionen": []
   },
   "fontanivent": {
    "name": "Fontanivent",
    "ok": true,
-   "befunde": "?",
+   "befunde": "Befunde: {}",
    "optionen": []
   },
   "chernex": {
    "name": "Chernex",
    "ok": true,
-   "befunde": "?",
+   "befunde": "Befunde: {}",
    "optionen": []
   },
   "chamby": {
    "name": "Chamby",
    "ok": true,
-   "befunde": "?",
+   "befunde": "Befunde: {}",
    "optionen": []
   },
   "allieres": {
    "name": "Allières",
    "ok": true,
-   "befunde": "?",
+   "befunde": "Befunde: {}",
    "optionen": []
   },
   "les_cases": {
    "name": "Les Cases",
    "ok": true,
-   "befunde": "?",
+   "befunde": "Befunde: {}",
    "optionen": []
   },
   "jor": {
    "name": "Jor",
    "ok": true,
-   "befunde": "?",
-   "optionen": []
-  },
-  "jaman": {
-   "name": "Jaman",
-   "ok": true,
-   "befunde": "?",
+   "befunde": "Befunde: {}",
    "optionen": []
   },
   "saanen": {
    "name": "Saanen",
    "ok": true,
-   "befunde": "?",
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "jaman": {
+   "name": "Jaman",
+   "ok": true,
+   "befunde": "Befunde: {}",
    "optionen": []
   },
   "saanenmoser": {
    "name": "Saanenmöser",
    "ok": true,
-   "befunde": "?",
+   "befunde": "Befunde: {}",
    "optionen": []
   },
   "oeschseite": {
    "name": "Oeschseite",
    "ok": true,
-   "befunde": "?",
-   "optionen": []
-  },
-  "gstaad": {
-   "name": "Gstaad",
-   "ok": true,
-   "befunde": "?",
+   "befunde": "Befunde: {}",
    "optionen": []
   },
   "gruben": {
    "name": "Gruben",
    "ok": true,
-   "befunde": "?",
+   "befunde": "Befunde: {'A': 1}",
+   "optionen": []
+  },
+  "gstaad": {
+   "name": "Gstaad",
+   "ok": true,
+   "befunde": "Befunde: {}",
    "optionen": []
   },
   "lenk_im_simmental": {
    "name": "Lenk im Simmental",
    "ok": true,
-   "befunde": "?",
+   "befunde": "Befunde: {}",
    "optionen": []
   },
   "rossiniere": {
    "name": "Rossinière",
    "ok": true,
-   "befunde": "?",
+   "befunde": "Befunde: {}",
    "optionen": []
   },
   "montbovon": {
    "name": "Montbovon",
    "ok": true,
-   "befunde": "?",
+   "befunde": "Befunde: {}",
    "optionen": []
   }
  },
- "netz_lage": 1
+ "netz_lage": 0,
+ "regeln": {
+  "G3": 2,
+  "G2": 52,
+  "G6": 6,
+  "G7": 2,
+  "G8": 8
+ }
 }
