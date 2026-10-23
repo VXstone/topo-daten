@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/home/runner/work/topo-daten/topo-daten/spurplan/werkstatt/olten/feedback/bauen.py", line 32, in <module>
+    plans.append(dict(key=_r["key"], name=_r["name"], gruppe="Region", label=_r["label"], svg=strip(open(_r["svg"]).read()), counts=None, status=None))
+                                                                                                    ^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'feedback/region_mob.svg'
