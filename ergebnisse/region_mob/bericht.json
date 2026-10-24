@@ -1,9 +1,15 @@
 {
  "region": "mob",
- "erzeugt": "2026-10-23 18:27 UTC",
+ "erzeugt": "2026-10-24 08:48 UTC",
  "bahnhoefe": {
   "schonried": {
    "name": "Schönried",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "les_avants": {
+   "name": "Les Avants",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -20,8 +26,8 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "les_avants": {
-   "name": "Les Avants",
+  "rougemont": {
+   "name": "Rougemont",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -34,24 +40,6 @@
   },
   "chateau_d_oex": {
    "name": "Château-d'Oex",
-   "ok": true,
-   "befunde": "Befunde: {}",
-   "optionen": []
-  },
-  "rougemont": {
-   "name": "Rougemont",
-   "ok": true,
-   "befunde": "Befunde: {}",
-   "optionen": []
-  },
-  "glion_alpes": {
-   "name": "Glion-Alpes",
-   "ok": true,
-   "befunde": "Befunde: {'B': 2}",
-   "optionen": []
-  },
-  "matten": {
-   "name": "Matten",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -74,6 +62,12 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
+  "matten": {
+   "name": "Matten",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
   "planchamp": {
    "name": "Planchamp",
    "ok": true,
@@ -86,14 +80,14 @@
    "befunde": "Befunde: {'A': 1}",
    "optionen": []
   },
-  "le_tremblex": {
-   "name": "Le Tremblex",
+  "st_stephan": {
+   "name": "St. Stephan",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "st_stephan": {
-   "name": "St. Stephan",
+  "le_tremblex": {
+   "name": "Le Tremblex",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -118,6 +112,12 @@
     "--hauptgleise"
    ]
   },
+  "caux": {
+   "name": "Caux",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
   "zweisimmen": {
    "name": "Zweisimmen",
    "ok": true,
@@ -126,8 +126,8 @@
     "--hauptgleise"
    ]
   },
-  "caux": {
-   "name": "Caux",
+  "chamby": {
+   "name": "Chamby",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -138,20 +138,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "chernex": {
-   "name": "Chernex",
-   "ok": true,
-   "befunde": "Befunde: {}",
-   "optionen": []
-  },
-  "chamby": {
-   "name": "Chamby",
-   "ok": true,
-   "befunde": "Befunde: {}",
-   "optionen": []
-  },
   "allieres": {
    "name": "Allières",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "chernex": {
+   "name": "Chernex",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -162,8 +156,8 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "jor": {
-   "name": "Jor",
+  "jaman": {
+   "name": "Jaman",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -174,8 +168,8 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "jaman": {
-   "name": "Jaman",
+  "jor": {
+   "name": "Jor",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -226,9 +220,9 @@
  "netz_lage": 0,
  "regeln": {
   "G3": 2,
-  "G2": 52,
-  "G6": 6,
+  "G2": 48,
+  "G6": 5,
   "G7": 2,
-  "G8": 8
+  "G8": 6
  }
 }
