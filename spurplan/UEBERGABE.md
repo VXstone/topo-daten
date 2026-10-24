@@ -682,3 +682,9 @@ Wunsch D. Eckenstein: Nutzung sparen, mehr in Git auslagern.
 - Nicht mehr: ganze Skripte oder diese Datei ins Projekt schreiben oder daraus lesen, ganze Regionalpläne als Bild ansehen (nur Ausschnitte), Logs ganz ausgeben.
 - Region MOB: Workflow `regionen` (Lauf 39584225141 erfolgreich), Konfig `spurplan/regionen/mob/region.json`. Offen: Montreux/Glion-Lage, La Tine/Montbovon-Schlaufe, Halte/Namen braun, Zweisimmen dichter, G2 52 / G6 6 / G7 2 / G8 8.
 - 23.10. spät: `spurplan/werkstatt/ne/` = Arbeitsordner Region Neuchâtel (Bahnhöfe, Overrides, Vorlagen, `ne_region_lage.json`, `ne_region.json`, `topo3/`; ohne PNG, Rohausschnitte `*_roh.json` und Schweiz-Datei – bei Bedarf mit `ausschnitt.py`/`cut.py` neu schneiden). Damit ist kein Arbeitsstand mehr nur in einer Sitzung.
+
+### 24.10.2026 – Runde: keine neuen Hinweise; MOB Montreux/Glion-Lage
+- Hinweise: 19 offen, keiner neu seit 23.10. (`hinweise.json` unverändert).
+- MOB: Glion-Alpes (Halt 250 m von Glion) hatte keine eigene Weiche, sein 700-m-Ausschnitt deckte dieselben 8 Weichen wie Glion → zwei deckungsgleiche Pläne (G8), Glion als Stumpf unter Linie 100. Fix: `integriert` {"Glion-Alpes": "Glion"} in `regionen/mob/region.json`. Lokal: G2 52→48, G6 6→5, G8 8→6; Reihenfolge Montreux – Les Planches – Toveyre/Valmont – Glion – Glion-Collège – Caux.
+- Offen MOB: Bahnhofsplan Glion (Perrons Glion fehlen, Kreuzungsgleis als Stumpf links, Schiebebühne Depot als Punktreihe, Z-Knick bei Glion-Collège), Montreux G2/G6, La Tine/Montbovon-Schlaufe, Halte/Namen braun, Zweisimmen dichter.
+- OSM-Release ist aus der Sitzung per curl ladbar (`releases/download/daten/schweiz_bahn.json.gz`); `region_lauf.py mob --daten …` lokal in ~2 min.
