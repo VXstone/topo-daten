@@ -1,6 +1,6 @@
 {
- "erzeugt": "2026-10-25 19:25 UTC",
- "lauf": "https://github.com/VXstone/topo-daten/actions/runs/40225950159",
+ "erzeugt": "2026-10-25 19:30 UTC",
+ "lauf": "https://github.com/VXstone/topo-daten/actions/runs/40226310874",
  "bahnhoefe": {
   "neuchatel": {
    "ok": true,
@@ -9,9 +9,8 @@
    "verbindungen_abweichungen": 0,
    "gleich_wie_vergleich": false,
    "regeln": {
-    "G2": 13,
+    "G2": 14,
     "G6": 1,
-    "G7": 1,
     "G8": 1
    },
    "netz": {},

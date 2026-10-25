@@ -16,7 +16,7 @@
   },
   {
    "regel": "G2",
-   "x": 778.9,
+   "x": 782.9,
    "y": 254.0,
    "bahnhof": null,
    "text": "Weiche ohne Ausrundung (60°)"
@@ -79,6 +79,13 @@
   },
   {
    "regel": "G2",
+   "x": 764.6,
+   "y": 230.0,
+   "bahnhof": null,
+   "text": "Weiche ohne Ausrundung (22°)"
+  },
+  {
+   "regel": "G2",
    "x": 586.8,
    "y": 182.0,
    "bahnhof": null,
@@ -93,7 +100,7 @@
   },
   {
    "regel": "G2",
-   "x": 778.9,
+   "x": 782.9,
    "y": 254.0,
    "bahnhof": null,
    "text": "Weiche ohne Ausrundung (60°)"
@@ -104,13 +111,6 @@
    "y": 182.0,
    "bahnhof": null,
    "text": "Linien stossen mit Knick 60° zusammen (Knubbel)"
-  },
-  {
-   "regel": "G7",
-   "x": 764.6,
-   "y": 230.0,
-   "bahnhof": null,
-   "text": "Gleisende nicht angebunden, nächstes Gleis 1.8 px"
   },
   {
    "regel": "G8",
