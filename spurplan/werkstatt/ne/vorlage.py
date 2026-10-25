@@ -95,7 +95,9 @@ def zeichne(V, osm=None, title="Bahnhof", mit_text=True):
             ya, yb = ys[haupt[0]], ys[haupt[1]]
             n_ = int(a.get("anzahl", 1)); steig = a.get("richtung", "steigend") == "steigend"
             x0 = (SR + 34) if rechts else (SL - 34 - 2 * DX - 12)
-            if n_ >= 2:
+            if n_ >= 2 and not steig:      # doppelt, zuerst fallend (Tüscherz 25.10.: OSM erst 1→2, dann 2→1; R3 Reihenfolge)
+                lines.append(([(x0, ya), (x0 + DX, yb)], False, None)); lines.append(([(x0 + DX + 12, yb), (x0 + 2 * DX + 12, ya)], False, None))
+            elif n_ >= 2:
                 lines.append(([(x0, yb), (x0 + DX, ya)], False, None)); lines.append(([(x0 + DX + 12, ya), (x0 + 2 * DX + 12, yb)], False, None))
             else:
                 lines.append(([(x0, yb if steig else ya), (x0 + DX, ya if steig else yb)], False, None))

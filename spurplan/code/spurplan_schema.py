@@ -1527,7 +1527,13 @@ deg = collections.Counter()
 for sg in segs: deg[sg["nodes"][0]] += 1; deg[sg["nodes"][-1]] += 1
 cutn = {sg["nodes"][0] for sg in segs if sg["cut0"]} | {sg["nodes"][-1] for sg in segs if sg["cut1"]}
 stops = [n for n, k in deg.items() if k == 1 and n not in cutn and use[n] == 1 and n not in CONT38 and n not in _done38 and n not in PFEIL_N]   # Gleisende mit Abgang in weggelassene Anlage: kein Prellbock
-for n_, dr_ in CONT38.items(): arrows.append((xpos(n_, SD[n_][0]), ypos(n_), dr_))
+# Pfeil «läuft weiter» (E2) nicht direkt auf die Weiche setzen, wo der gezeichnete Ast abbiegt (Neuchâtel 25.10.:
+# «Pfeil auf Gleis drauf»): kurzer gerader Stummel über die Weiche hinaus, Pfeil an dessen Ende
+_PST = CFG.get("pfeil_stummel_px", 14)
+for n_, dr_ in CONT38.items():
+    _xa, _ya = xpos(n_, SD[n_][0]), ypos(n_)
+    if _PST: svg_paths[False].append(f"M{_xa:.1f},{_ya:.1f}L{_xa + dr_ * _PST:.1f},{_ya:.1f}")
+    arrows.append((_xa + dr_ * _PST, _ya, dr_))
 dots = [(xpos(n, SD[n][0]), ypos(n), any(sg["pax"] for sg in segs if n in sg["nodes"])) for n in stops]
 
 _pl_s = [x for pl in OVR.get("platforms", []) if "s" in pl for x in pl["s"]] or \
@@ -2358,10 +2364,15 @@ if OVR.get("meterspur") and os.path.exists(OVR["meterspur"]) and (not ARGS.bare 
         hpt = t_.get("service") is None
         if raus is not None and len(q_) >= 1:
             dx_ = 1 if len(q_) < 2 or q_[-1][0] >= q_[-2][0] else -1
+            # Hinweis Ins 25.10. («fast 90 Grad und dann wieder schräg»): Abgang ab dem letzten Punkt auf der
+            # Meterspurebene gerade unter 60° (W2), ohne das steile Zwischenstück, wo das Gleis die Ebene verlässt
+            _qe = [p_ for p_ in q_ if abs(p_[1] - _y0) < 1.5]
+            if _qe and _ms_cfg.get("abgang_60", True): q_ = q_[:q_.index(_qe[-1]) + 1]
             Lr = CFG["lane_px"] * _ms_cfg.get("ausfahrt_len", 1.2)
-            x2, y2 = q_[-1][0] + dx_ * Lr, q_[-1][1] - (1 if _oben else -1) * Lr
+            _c, _s = (0.5, math.sqrt(3) / 2) if _ms_cfg.get("abgang_60", True) else (1 / math.sqrt(2), 1 / math.sqrt(2))
+            x2, y2 = q_[-1][0] + dx_ * Lr * _c / _s, q_[-1][1] - (1 if _oben else -1) * Lr
             q_.append((x2, y2))
-            ux, uy = dx_ / math.sqrt(2), -(1 if _oben else -1) / math.sqrt(2)
+            ux, uy = dx_ * _c, -(1 if _oben else -1) * _s
             out.append(f'<path d="M{x2 + ux * 9:.1f},{y2 + uy * 9:.1f}L{x2 - uy * 4:.1f},{y2 + ux * 4:.1f}L{x2 + uy * 4:.1f},{y2 - ux * 4:.1f}Z" fill="{MS_COL}" stroke="none"/>')
             if _ms_cfg.get("ziel"):
                 for k_, z_ in enumerate(_ms_cfg["ziel"].split("|")):

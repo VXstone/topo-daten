@@ -210,8 +210,8 @@
    {
     "art": "spurwechsel",
     "ende": "rechts",
-    "anzahl": 1,
-    "richtung": "steigend"
+    "anzahl": 2,
+    "richtung": "fallend"
    },
    {
     "art": "anschluss",
@@ -222,5 +222,6 @@
    }
   ]
  },
- "_gleisnummern": "SBB Open Data perronoberflache (gleisnummern_sbb.py, 19.10.2026)"
+ "_gleisnummern": "SBB Open Data perronoberflache (gleisnummern_sbb.py, 19.10.2026)",
+ "_hinweis_25_10": "Hinweis yfi1pm6102v50sop5euu: OSM hat zwei gegenläufige Spurwechsel (184190241 1→2, dann 184190242 2→1) → anzahl 2, fallend zuerst"
 }

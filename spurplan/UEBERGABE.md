@@ -705,3 +705,9 @@ Wunsch D. Eckenstein: Nutzung sparen, mehr in Git auslagern.
 - T10 geschärft: Durchfahrgleis nur mit höchstens 2 Weichen je Ende bis zum Hauptgleis (Thun-Abstellgruppen 3–9 Weichen fielen sonst rein), ≥ 200 m, Gleis ≥ 100 m oder mit Nummer.
 - Gegenprobe Referenzen (SVG byte-gleich): Thun A1 1, D11 5, T10 1 (Gl. 233), Z2 1; Ins D11 1, T10 1, W2 1; Murten A1 1; Kerzers keine.
 - Kerzers (Entscheid D. Eckenstein 25.10.): Zwischengleise 2 und 5 ohne Perron → `nummern_weg` + 2, 5; SVG in `werkstatt/olten/reg` neu (Differenz nur die zwei Nummern).
+
+### 25.10.2026 abends – Hinweise (Runde)
+- Tüscherz (yfi1pm6102v50sop5euu): OSM hat zwei gegenläufige Spurwechsel (184190241 1→2, 184190242 2→1); Vorlage `anzahl 2, richtung fallend`. `vorlage.py`: bei `anzahl 2` gilt jetzt `richtung` (fallend zuerst), Standard unverändert. Werkstatt NE + `zusatz_plaene.json` aktualisiert. Regionalplan NE noch mit altem `tuscherz_bare.svg` gebaut.
+- Ins (drd6z7fe3szw6rearb6e): Meterspur-Abgang ab letztem Punkt auf der Meterspurebene gerade unter 60° statt steilem Zwischenstück + 45° (`meterspur_cfg.abgang_60`, Standard an). Netzprüfung W2 weg; Differenz nur diese Stelle. SVG in `werkstatt/olten/reg`.
+- Neuchâtel (yj1ralip1fvp5982bby2): Pfeil «läuft weiter» (CONT38/E2) jetzt am Ende eines 14-px-Stummels hinter der Weiche (`cfg.pfeil_stummel_px`, 0 = alt). Thun, Murten, Kerzers byte-gleich; Neuchâtel nur diese Stelle.
+- Rothrist (5rte65pcbd37z01tvuqd): OSM: Linie 400 läuft unten durch (tunnel=yes, layer −1) → Unterführung mit Brückenflügeln (B19/T4) zeichnen; offen.
