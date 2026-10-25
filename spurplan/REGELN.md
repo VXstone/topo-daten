@@ -62,3 +62,11 @@ Stand 21.10.2026.
 - `spurplan/regionen/<region>/region.json` beschreibt eine Linien-Region (Linien, Äste, Normalspur-Umkreise, Optionen je Bahnhof, Lage). `region_lauf.py <region>` baut daraus alle Bahnhofspläne und den Regionalplan.
 - Schmal- und 800-mm-Spur: braun wie die Meterspur in Ins (dick = Streckengleis, dünn = Nebengleis); Normalspur in gemischten Bahnhöfen (Montreux, Zweisimmen) grün/schwarz wie immer.
 - Betriebspunkte ohne Weiche erscheinen im Regionalplan als Halt, Betriebspunkte mit Weichen als Spurplan.
+
+## Entscheide 25.10.2026 (D. Eckenstein)
+- B14: Perron 110 px, Gleisnummer in der Perronmitte – für alle Pläne, auch Olten, Bern, Basel.
+- B13: Perrons aus SBB Open Data für jeden Bahnhof, auch Region Neuchâtel.
+- N2: Lage eines Bahnhofs zuerst nach geradestem Streckenanschluss, dann nach Kartenachse; Kreuzungsbahnhof (Kerzers) als X mit zwei Schenkeln.
+- B7: Spurwechsel mit Zwischengerade immer zusammenrücken, ausser es liegt wirklich ein langes Gleis dazwischen.
+- Galmiz (Einzelentscheid): Perron unten/südlich, nicht zwischen den Gleisen; Kreuzungsgleis darf grün sein (Güter-Kreuzungsgleis).
+- Regelkatalog-Entwurf (Stufen T/L/S/W/A/F/D/Z) im Doc, Tab «Regelkatalog (Entwurf 24.10.)»; noch nicht bestätigt.

@@ -688,3 +688,8 @@ Wunsch D. Eckenstein: Nutzung sparen, mehr in Git auslagern.
 - MOB: Glion-Alpes (Halt 250 m von Glion) hatte keine eigene Weiche, sein 700-m-Ausschnitt deckte dieselben 8 Weichen wie Glion → zwei deckungsgleiche Pläne (G8), Glion als Stumpf unter Linie 100. Fix: `integriert` {"Glion-Alpes": "Glion"} in `regionen/mob/region.json`. Lokal: G2 52→48, G6 6→5, G8 8→6; Reihenfolge Montreux – Les Planches – Toveyre/Valmont – Glion – Glion-Collège – Caux.
 - Offen MOB: Bahnhofsplan Glion (Perrons Glion fehlen, Kreuzungsgleis als Stumpf links, Schiebebühne Depot als Punktreihe, Z-Knick bei Glion-Collège), Montreux G2/G6, La Tine/Montbovon-Schlaufe, Halte/Namen braun, Zweisimmen dichter.
 - OSM-Release ist aus der Sitzung per curl ladbar (`releases/download/daten/schweiz_bahn.json.gz`); `region_lauf.py mob --daten …` lokal in ~2 min.
+
+### 25.10.2026 – Entscheide zu den offenen Fragen im Regelwerk
+- Eingetragen im Doc (Haupttab und Katalog-Tab) und in `REGELN.md`: B14 für alle Pläne, B13 für jeden Bahnhof, N2 neue Rangfolge (gerade Strecken vor Kartenachse, Kerzers als X), B7 immer zusammenrücken, Galmiz Perron südlich + Kreuzungsgleis grün. N11-Frage war überholt (alle fünf Halte seit Entwurf 19 im Regionalplan NE).
+- Umsetzung offen: Galmiz-Override (werkstatt/ne), Kerzers als X im Regionalplan NE, B14 in Olten/Bern/Basel prüfen, B13 SBB-Perrons für NE-Bahnhöfe, B7-Verhalten im Code prüfen.
+- Regelkatalog-Entwurf (24.10.) wartet auf Daniels Entscheide; danach `spurplan/regeln.json` + Planmodell.
