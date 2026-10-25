@@ -368,7 +368,7 @@
       "y:230"
      ],
      [
-      "x:765",
+      "x:769",
       "y:230"
      ],
      [
@@ -378,20 +378,20 @@
     ],
     "pax": true,
     "rund": 7,
-    "_osm": "DKW Gleis 2/Gleis 1 (11296350712/14/15/17 + Kreuzung 360421652): Gleis 2 läuft als Schräge durch Gleis 1 (Hinweis 20.10.)"
+    "_osm": "DKW Gleis 2/Gleis 1 (11296350712/14/15/17 + Kreuzung 360421652): Gleis 2 läuft als Schräge durch Gleis 1 (Hinweis 20.10.) · Ecke 25.10. auf x:769, damit die Rundung am Ende von Gleis 2 beginnt (Hinweis 1v507u9g14qh71941icj: kein Stummel geradeaus)"
    },
    {
     "pts": [
      [
-      "x:778.9",
+      "x:782.9",
       "y:254"
      ],
      [
-      "x:785.8",
+      "x:789.8",
       "y:266"
      ],
      [
-      "x:792.7",
+      "x:796.7",
       "y:278"
      ]
     ],
@@ -509,7 +509,7 @@
    "_osm": "DKW 11296350767/11296350764 + Kreuzung 631631020"
   },
   {
-   "x": 778.9,
+   "x": 782.9,
    "y": 254.0,
    "pax": true,
    "rund_pax": true,
@@ -535,7 +535,7 @@
      ]
     ]
    ],
-   "_osm": "DKW Gleis 2/1"
+   "_osm": "DKW Gleis 2/1 (25.10. mit der Schräge um 4 px nach rechts)"
   },
   {
    "x": 907.0,
