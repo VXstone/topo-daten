@@ -699,3 +699,9 @@ Wunsch D. Eckenstein: Nutzung sparen, mehr in Git auslagern.
 - Neu `code/netz_pruefung.py <b>`: Befunde mit Regel-ID des Katalogs: T10 Durchfahrgleis schwarz (beidseitig ohne Richtungswechsel ans Hauptgleis, ≥ 200 m Nebengleis, Gleis selbst ≥ 100 m oder mit Gleisnummer, nicht yard/crossover), A5 Gleis durch Perron, D11 Nummer ohne Perron / OSM-Perron-ref ohne Nummer, D12 Perrons unvollständig, S1 Weiche am Hauptgleis nicht gezeichnet, D6 Stillgelegtes, Z2 Abgang ohne Richtungsort. In `lauf.py` eingebunden (`bericht.json` → `netz`, Ergebnisse `netz.json`, `netz_befunde.json`).
 - Konolfingen neu in `bahnhoefe.json` (ohne Overrides): T10 3 (Gleis 6, Gleis 44), D11 4, D12 1 (nur 1 OSM-Perron → SBB-Perrons nötig, B13), Z2 3. Kerzers: D11 2 (Nummer 2 und 5 ohne Perron – Frage an Daniel). Neuchâtel: T10 1.
 - Offen: netz_pruefung auch in `region_lauf.py`; T2/T3 (Weichenseite, Reihenfolge) und A1 auf dem Netzmodell; Befunde auf der Feedback-Seite anzeigen.
+
+### 25.10.2026 spät – Netzprüfung erweitert, Kerzers Nummern
+- `netz_pruefung.py` liest jetzt auch `<b>_spurplan.svg`: Z2 Pfeilrichtung der Abgangsbeschriftung gegen Abgangsrichtung (Konolfingen «Steffisburg →» zeigt falsch), W2 Stücke ≠ 0°/60° inkl. S-Kurven (Mitte), F2 Knick > 60° ohne Weiche, A1 parallele Gleise enger als 20 px (Haupt) bzw. 9.6 px (mit Nebengleis).
+- T10 geschärft: Durchfahrgleis nur mit höchstens 2 Weichen je Ende bis zum Hauptgleis (Thun-Abstellgruppen 3–9 Weichen fielen sonst rein), ≥ 200 m, Gleis ≥ 100 m oder mit Nummer.
+- Gegenprobe Referenzen (SVG byte-gleich): Thun A1 1, D11 5, T10 1 (Gl. 233), Z2 1; Ins D11 1, T10 1, W2 1; Murten A1 1; Kerzers keine.
+- Kerzers (Entscheid D. Eckenstein 25.10.): Zwischengleise 2 und 5 ohne Perron → `nummern_weg` + 2, 5; SVG in `werkstatt/olten/reg` neu (Differenz nur die zwei Nummern).

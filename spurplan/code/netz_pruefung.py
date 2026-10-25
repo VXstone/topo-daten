@@ -9,13 +9,18 @@ Regeln (v1):
   T10  Durchfahrgleis grün: Gleis, das an beiden Enden über Weichen ohne Richtungswechsel ins Streckengleis führt,
        ist im Personenverkehr befahrbar (Ausnahme service=yard), sofern zwischen den Anschlüssen mindestens
        200 m Nebengleis liegen und das Gleis selbst mindestens 100 m lang ist oder eine Gleisnummer hat (sonst
-       Verbindungsstück/Spurwechsel, schwarz nach E1); gezeichnet schwarz = Befund
+       Verbindungsstück/Spurwechsel, schwarz nach E1) und es an beiden Enden direkt am Hauptgleis hängt (höchstens
+       2 Weichen bis zum Hauptgleis, sonst Abstellgruppe); gezeichnet schwarz = Befund
   A5   Perron neben seinem Gleis: kein Gleis läuft durch das Perron
   D11  Gleisnummer nur an Perrongleisen: jede gezeichnete Nummer hat ein Perron daneben
   D12  Perrons vollständig: jede Gleisnummer mit Perron in OSM/SBB ist gezeichnet (Zählung)
   S1   Weichen sichtbar: jede OSM-Weiche im Planfenster liegt auf einem gezeichneten Gleis
   D6   Stillgelegtes nicht zeichnen
-  Z2   Abgang mit Linie und Richtungsort
+  Z2   Abgang mit Linie und Richtungsort; Pfeil der Beschriftung zeigt in die Richtung des Abgangs
+  aus der gezeichneten Geometrie (<bahnhof>_spurplan.svg, Gleislinien 3.6/1.6 px):
+  W2   jedes Gleisstück ab 10 px waagrecht oder 60°
+  F2   Knick um mehr als 60° ohne Weiche (Haken, Spitzkehre)
+  A1   zwei parallele Gleise enger als 20 px (Hauptgleise) bzw. 9.6 px (40 %, mit Nebengleis) über mind. 12 px
 """
 import json, math, sys, collections
 
@@ -69,7 +74,21 @@ def weg_zum_haupt(prev, cur, max_m=1500, max_dreh=40):
             if c != a and winkel(a, b, c) < max_dreh:
                 heapq.heappush(hq, (d + math.dist(P[b], P[c]), b, c))
     return None
+def weichen_bis_haupt(prev, cur, max_m=1500, max_dreh=40):
+    """wie weg_zum_haupt, aber Anzahl befahrener Weichen (Knoten mit 3 und mehr Nachbarn) bis zum ersten Hauptgleis"""
+    import heapq
+    seen = set(); hq = [(0, 0.0, prev, cur)]
+    while hq:
+        k, d, a, b = heapq.heappop(hq)
+        if (a, b) in seen or d > max_m: continue
+        seen.add((a, b))
+        if haupt(WAY_OF_EDGE[(a, b)]): return k
+        for c in NB[b]:
+            if c != a and winkel(a, b, c) < max_dreh:
+                heapq.heappush(hq, (k + (1 if len(NB[b]) >= 3 else 0), d + math.dist(P[b], P[c]), b, c))
+    return None
 laenge = lambda ns: sum(math.dist(P[a], P[b]) for a, b in zip(ns, ns[1:]))
+MAX_WEICHEN = 2             # je Ende höchstens 2 Weichen bis zum Hauptgleis: Kreuzungsgleis, nicht Abstellgruppe (Thun 3–9, 25.10.)
 MIN_DURCHFAHRT_M = 200      # Nebengleis zwischen den beiden Hauptgleis-Anschlüssen: Platz für einen Zug (sonst Spurwechsel, E1)
 
 # ---- T10 Durchfahrgleis
@@ -89,7 +108,8 @@ for wid, w in WAYS.items():
     if laenge(ns) < 100 and not w["tags"].get("railway:track_ref"): continue   # kurzes Verbindungsstück ohne Gleisnummer = Spurwechsel
     # Gleis als Ganzes: von beiden Enden aus, jeweils vom Gleis weg, muss ein Hauptgleis erreichbar sein
     da = weg_zum_haupt(ns[1], ns[0]); db = weg_zum_haupt(ns[-2], ns[-1])
-    if da is not None and db is not None and sv != "crossover" and da + db + laenge(ns) >= MIN_DURCHFAHRT_M:
+    if da is not None and db is not None and sv != "crossover" and da + db + laenge(ns) >= MIN_DURCHFAHRT_M \
+            and (weichen_bis_haupt(ns[1], ns[0]) or 0) <= MAX_WEICHEN and (weichen_bis_haupt(ns[-2], ns[-1]) or 0) <= MAX_WEICHEN:
         durchfahr.add(wid)
         if wid in gl_way and not any(g["pax"] for g in gl_way[wid]):
             x, y = plan_mitte(wid)
@@ -139,6 +159,78 @@ for w in fehl:
 for a in N["abgaenge"]:
     if a.get("pax") and not a.get("town"):
         bef("Z2", a.get("x"), a.get("y"), f"Abgang Linie {a.get('ref') or '?'} ohne Richtungsort", way=a.get("way"))
+
+# ---- Gezeichnete Geometrie aus dem SVG (Konolfingen 25.10.: «Knicke, enge doppelte Gleise, Pfeil falsch rum»)
+import os, re
+_SVGF = f"{B}_spurplan.svg"
+if os.path.exists(_SVGF):
+    from svgpathtools import parse_path, Line
+    _svg = open(_SVGF).read()
+    # Abgang-Beschriftung: Pfeil im Text muss in die Richtung zeigen, in die der Abgang den Plan verlässt (Z2)
+    for m in re.finditer(r'<text x="([-\d.]+)" y="([-\d.]+)"[^>]*>([^<]*[→←][^<]*)</text>', _svg):
+        t_ = m.group(3); pfeil = 1 if "→" in t_ else -1; ort = t_.replace("→", "").replace("←", "").strip()
+        for a in N["abgaenge"]:
+            if a.get("town") == ort and a.get("dx") and (a["dx"] > 0) != (pfeil > 0):
+                bef("Z2", float(m.group(1)), float(m.group(2)) - 8, f"Pfeil «{t_}» zeigt {'rechts' if pfeil > 0 else 'links'}, "
+                    f"der Abgang verlässt den Plan nach {'rechts' if a['dx'] > 0 else 'links'}", way=a.get("way"))
+    # Gleislinien: Pfade ohne Füllung mit Gleis-Strichbreite (Haupt 3.6, Neben 1.6); Portale, Brückenflügel, Masken ausgenommen
+    LIN = []
+    for k_, m in enumerate(re.finditer(r'<path d="([^"]+)"([^>]*)>', _svg)):
+        at = m.group(2)
+        if re.search(r'fill="#', at) or 'stroke="#fff"' in at or "stroke-opacity" in at: continue
+        sw = re.search(r'stroke-width="([\d.]+)"', at)
+        if not sw or float(sw.group(1)) not in (3.6, 1.6): continue
+        haupt_l = float(sw.group(1)) > 2
+        try: P_ = parse_path(m.group(1))
+        except Exception: continue
+        for j_, sub in enumerate(P_.continuous_subpaths()):
+            for seg in sub:
+                if isinstance(seg, Line) and abs(seg.end - seg.start) >= 3:
+                    LIN.append(dict(a=seg.start, b=seg.end, haupt=haupt_l, sub=(k_, j_)))
+                elif not isinstance(seg, Line) and seg.length() >= 20:      # S-Kurve (Verbindung): steilste Stelle in der Mitte
+                    t_ = seg.unit_tangent(0.5); r_ = math.degrees(math.atan2(t_.imag, t_.real)) % 180
+                    dev = min(abs(r_ - z) for z in (0, 60, 120, 180))
+                    if dev > 8:
+                        mz = seg.point(0.5)
+                        bef("W2", mz.real, mz.imag, f"S-Kurve in der Mitte unter {r_:.0f}° (steiler oder flacher als 60°)")
+    _wpos = [complex(v["x"], v["y"]) for v in KN.values() if v.get("y") is not None and v.get("typ") in ("switch", "railway_crossing")]
+    an_weiche = lambda z: any(abs(z - w_) < 16 for w_ in _wpos)
+    def richt(l):
+        d = l["b"] - l["a"]; return math.degrees(math.atan2(d.imag, d.real)) % 180
+    # W2: jedes Stück waagrecht oder 60°; nur Stücke ab 10 px, ausserhalb der Weichenrundung
+    for l in LIN:
+        r_ = richt(l); dev = min(abs(r_ - z) for z in (0, 60, 120, 180))
+        if abs(l["b"] - l["a"]) >= 10 and dev > 4:
+            mz = (l["a"] + l["b"]) / 2
+            bef("W2", mz.real, mz.imag, f"Gleisstück unter {r_:.0f}° (nur 0° und 60° erlaubt)")
+    # Knick ohne Weiche: zwei aufeinanderfolgende Stücke derselben Linie drehen um mehr als 60° (Haken, Spitzkehre)
+    by_sub = collections.defaultdict(list)
+    for l in LIN: by_sub[l["sub"]].append(l)
+    for ls in by_sub.values():
+        for l1, l2 in zip(ls, ls[1:]):
+            if abs(l2["a"] - l1["b"]) > 16: continue
+            d1, d2 = l1["b"] - l1["a"], l2["b"] - l2["a"]
+            dreh = abs(math.degrees(math.atan2((d2 / d1).imag, (d2 / d1).real)))
+            if dreh > 65 and not an_weiche(l1["b"]):
+                bef("F2", l1["b"].real, l1["b"].imag, f"Knick um {dreh:.0f}° ohne Weiche (mehr als 60°)")
+    # A1: zwei parallele Linien enger als erlaubt (Hauptgleise 20 px, mit Nebengleis 40 % = 9.6 px), über mindestens 12 px
+    _ab = set()
+    for i, l1 in enumerate(LIN):
+        d1 = l1["b"] - l1["a"]; L1 = abs(d1); u = d1 / L1
+        for l2 in LIN[i + 1:]:
+            if l2["sub"] == l1["sub"]: continue
+            d2 = l2["b"] - l2["a"]
+            if abs(math.sin(math.atan2((d2 / d1).imag, (d2 / d1).real))) > 0.09: continue      # nicht parallel (> 5°)
+            pa, pb = (l2["a"] - l1["a"]) / u, (l2["b"] - l1["a"]) / u                           # l2 im System von l1
+            dist = abs((pa.imag + pb.imag) / 2)
+            lo, hi = max(0, min(pa.real, pb.real)), min(L1, max(pa.real, pb.real))
+            grenze = 20 if (l1["haupt"] and l2["haupt"]) else 9.6
+            if hi - lo >= 12 and 0.8 < dist < grenze:
+                mz = l1["a"] + u * (lo + hi) / 2
+                k_ = (round(mz.real / 20), round(mz.imag / 20))
+                if k_ in _ab or an_weiche(mz): continue
+                _ab.add(k_)
+                bef("A1", mz.real, mz.imag, f"zwei Gleise nur {dist:.1f} px auseinander über {hi - lo:.0f} px (Grenze {grenze} px)")
 
 json.dump(dict(bahnhof=B, befunde=BEF, durchfahrgleise=sorted(durchfahr)), open(f"{B}_netz_befunde.json", "w"),
           ensure_ascii=False, indent=1)
