@@ -75,6 +75,31 @@
    "y": 179.0,
    "text": "Abgang Linie 430 ohne Richtungsort",
    "way": 475716119
+  },
+  {
+   "regel": "Z2",
+   "x": 517.5,
+   "y": 440.7,
+   "text": "Pfeil «Steffisburg →» zeigt rechts, der Abgang verlässt den Plan nach links",
+   "way": 33390862
+  },
+  {
+   "regel": "W2",
+   "x": 562.7,
+   "y": 306.8,
+   "text": "S-Kurve in der Mitte unter 103° (steiler oder flacher als 60°)"
+  },
+  {
+   "regel": "A1",
+   "x": 320.6,
+   "y": 214.2,
+   "text": "zwei Gleise nur 6.8 px auseinander über 49 px (Grenze 9.6 px)"
+  },
+  {
+   "regel": "A1",
+   "x": 682.2,
+   "y": 318.2,
+   "text": "zwei Gleise nur 6.9 px auseinander über 15 px (Grenze 9.6 px)"
   }
  ],
  "durchfahrgleise": [

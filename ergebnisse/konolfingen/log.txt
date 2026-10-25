@@ -37,7 +37,7 @@ Traceback (most recent call last):
                                     ~^^^^^^^^
 TypeError: string indices must be integers, not 'str'
 
-Netzprüfung konolfingen: {'D11': 4, 'D12': 1, 'T10': 3, 'Z2': 3}; Durchfahrgleise 3
+Netzprüfung konolfingen: {'A1': 2, 'D11': 4, 'D12': 1, 'T10': 3, 'W2': 1, 'Z2': 4}; Durchfahrgleise 3
   T10  x=375.5 y=222.8  Durchfahrgleis (beidseitig ans Streckengleis angeschlossen, 489 m Nebengleis, service=siding) schwarz gezeichnet  (way 23493308)
   T10  x=466.6 y=330.8  Durchfahrgleis (beidseitig ans Streckengleis angeschlossen, 372 m Nebengleis, service=siding) schwarz gezeichnet  (way 156705029)
   T10  x=536.1 y=354.8  Durchfahrgleis (beidseitig ans Streckengleis angeschlossen, 372 m Nebengleis, service=siding) schwarz gezeichnet  (way 1290401041)
@@ -49,3 +49,7 @@ Netzprüfung konolfingen: {'D11': 4, 'D12': 1, 'T10': 3, 'Z2': 3}; Durchfahrglei
   Z2   x=788.3 y=186.8  Abgang Linie 460 ohne Richtungsort  (way 741945424)
   Z2   x=788.3 y=234.8  Abgang Linie 460 ohne Richtungsort  (way 741945425)
   Z2   x=659.6 y=179.0  Abgang Linie 430 ohne Richtungsort  (way 475716119)
+  Z2   x=517.5 y=440.7  Pfeil «Steffisburg →» zeigt rechts, der Abgang verlässt den Plan nach links  (way 33390862)
+  W2   x=562.7 y=306.8  S-Kurve in der Mitte unter 103° (steiler oder flacher als 60°)
+  A1   x=320.6 y=214.2  zwei Gleise nur 6.8 px auseinander über 49 px (Grenze 9.6 px)
+  A1   x=682.2 y=318.2  zwei Gleise nur 6.9 px auseinander über 15 px (Grenze 9.6 px)

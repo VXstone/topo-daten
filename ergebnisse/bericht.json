@@ -1,6 +1,6 @@
 {
- "erzeugt": "2026-10-25 17:54 UTC",
- "lauf": "https://github.com/VXstone/topo-daten/actions/runs/40218708022",
+ "erzeugt": "2026-10-25 19:12 UTC",
+ "lauf": "https://github.com/VXstone/topo-daten/actions/runs/40224858502",
  "bahnhoefe": {
   "neuchatel": {
    "ok": true,
@@ -14,9 +14,7 @@
     "G7": 1,
     "G8": 1
    },
-   "netz": {
-    "T10": 1
-   },
+   "netz": {},
    "differenz_stellen": 5
   },
   "konolfingen": {
@@ -34,7 +32,9 @@
     "T10": 3,
     "D11": 4,
     "D12": 1,
-    "Z2": 3
+    "Z2": 4,
+    "W2": 1,
+    "A1": 2
    },
    "differenz_stellen": null
   }

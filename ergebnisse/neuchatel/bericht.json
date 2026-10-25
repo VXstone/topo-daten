@@ -114,16 +114,7 @@
   }
  ],
  "planrand": [],
- "netz": [
-  {
-   "regel": "T10",
-   "x": 858.0,
-   "y": 146.0,
-   "text": "Durchfahrgleis (beidseitig ans Streckengleis angeschlossen, 626 m Nebengleis, service=siding) schwarz gezeichnet",
-   "way": 579953623,
-   "gleis": "A36"
-  }
- ],
+ "netz": [],
  "gleich_wie_vergleich": false,
  "differenz": [
   {
