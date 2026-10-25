@@ -2748,6 +2748,39 @@ if os.environ.get("SPUR_IDS"):        # Fehlersuche: Way-Nummern an die Gleisst�
         out.append(f'<text x="{mx_:.1f}" y="{my_ - 2:.1f}" font-size="7" fill="#c00">{_sgw[i_]["way"]}{"/" + str(_sgw[i_]["ref"]) if _sgw[i_].get("ref") else ""}</text>')
 out.append("</svg>")
 open(CFG["out"], "w").write("\n".join(out))
+
+# ---- Netzmodell (D. Eckenstein 25.10.: Gleise als Netz mit Koordinaten, Pr체fungen rechnen darauf statt auf dem SVG)
+# <bahnhof>_netz.json: Gleisst체cke mit OSM-Knoten (Karte + Plan), Weichen, gezeichnete Perrons und Nummern, Abg채nge,
+# OSM-Perrons. Nur im Standardlauf (nicht --bare, nicht in eine Zwischendatei). Auswertung: netz_pruefung.py.
+if not ARGS.bare and ARGS.out in (None, f"{key}_spurplan.svg"):
+    _svg = "\n".join(out)
+    _f = lambda v: round(float(v), 1)
+    _kn = {}
+    for sg in segs:
+        for n_ in sg["nodes"]:
+            if n_ in SD and n_ in LL and n_ not in _kn:
+                _kn[n_] = dict(lat=LL[n_][0], lon=LL[n_][1], x=_f(xpos(n_, SD[n_][0])), y=_f(ypos(n_)) if n_ in home else None,
+                               typ=ntag.get(n_, {}).get("railway"))
+    _NETZ = dict(
+        bahnhof=key, titel=CFG["title"], W=_f(W), H=_f(H),
+        gleise=[dict(id=sg["id"], way=int(sg["way"]), knoten=[int(n_) for n_ in sg["nodes"] if n_ in _kn],
+                     ebene=seglane.get(sg["id"]), y=_f(Y(seglane[sg["id"]])) if sg["id"] in seglane else None,
+                     pax=bool(sg["pax"]), service=sg["tags"].get("service"), usage=sg["tags"].get("usage"),
+                     ref=sg["tags"].get("ref"), gleis=sg["tags"].get("railway:track_ref"),
+                     spur=sg["tags"].get("spur") or sg["tags"].get("gauge"), stillgelegt=bool(sg["tags"].get("disused")))
+                for sg in segs],
+        knoten={str(n_): v for n_, v in _kn.items()},
+        weichen_osm=[dict(id=int(n_), lat=LL[n_][0], lon=LL[n_][1], im_plan=n_ in _kn)
+                     for n_, t in ntag.items() if t.get("railway") == "switch" and n_ in LL and n_ in SD
+                     and CFG["s_min"] <= SD[n_][0] <= CFG["s_max"] and abs(SD[n_][1]) <= CFG["d_lim"]],
+        perrons=[dict(x0=_f(m.group(1)), y=_f(float(m.group(2)) + 4), x1=_f(float(m.group(1)) + float(m.group(3))))
+                 for m in re.finditer(r'<rect x="([-\d.]+)" y="([-\d.]+)" width="([\d.]+)" height="8" rx="1.5"', _svg)],
+        nummern=[dict(text=m.group(3), x=_f(m.group(1)), y=_f(float(m.group(2)) - 6.5))
+                 for m in re.finditer(r'<text x="([-\d.]+)" y="([-\d.]+)" font-size="19" text-anchor="middle"[^>]*>([^<]+)</text>', _svg)],
+        perrons_osm=[dict(way=int(e["id"]), name=e["tags"].get("name"), ref=e["tags"].get("ref"),
+                          punkte=[[g["lat"], g["lon"]] for g in e["geometry"]]) for e in PLAT],
+        abgaenge=[{k_: (v_ if not isinstance(v_, float) else round(v_, 5)) for k_, v_ in p_.items()} for p_ in PORTS])
+    json.dump(_NETZ, open(f"{key}_netz.json", "w"), ensure_ascii=False, indent=0)
 print("chains", len(C), "lanes", maxlane + 1, "segs", len(segs), "W", round(W), "H", round(H))
 
 # ---- Anforderungen f체r die x-Entzerrung: Platz f체r jede Verbindung in Standardgeometrie

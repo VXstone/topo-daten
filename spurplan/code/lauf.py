@@ -4,7 +4,7 @@ python3 spurplan/code/lauf.py [bahnhof …]          (ohne Angabe: alle aus spur
 Je Bahnhof in einem Arbeitsordner: Schema ohne Entzerrung → Entzerrung → Schema → Entzerrung → Schema (wie run.sh),
 bare-Fassung, Typvorlage falls im Override; danach Prüfungen:
   Topologie (spurplan_check A–D …), Verbindungen (verbindungen_pruefen), Regelprüfung G1–G8 (regel_pruefung),
-  Planrand (planrand_pruefung), Differenzbild gegen spurplan/vergleich/<b>_spurplan.svg (abgenommen bzw. zuletzt
+  Planrand (planrand_pruefung), Netzprüfung (netz_pruefung, Regel-IDs des Katalogs), Differenzbild gegen spurplan/vergleich/<b>_spurplan.svg (abgenommen bzw. zuletzt
   veröffentlicht), PNG des Plans.
 Ausgabe: ergebnisse/<b>/ (spurplan.svg, bare.svg, ports.json, spurplan.png, diff.png, bericht.json) und
 ergebnisse/bericht.json (Übersicht). Byte-Vergleich mit der Vergleichsfassung steht im Bericht (gleich: true/false).
@@ -49,8 +49,12 @@ for b in liste:
         ber["regeln"] = json.load(open(os.path.join(w, "regeln.json"))) if os.path.exists(os.path.join(w, "regeln.json")) else o[-500:]
         rc, o = sh(py + ["planrand_pruefung.py", "."], w)
         ber["planrand"] = [l for l in o.splitlines() if l.startswith(b + "\t")]
+        rc, o = sh(py + ["netz_pruefung.py", b], w); log.append(o[-3000:])      # Netzmodell (25.10.): Befunde mit Regel-ID und OSM-Way
+        _nb = os.path.join(w, f"{b}_netz_befunde.json")
+        ber["netz"] = json.load(open(_nb))["befunde"] if os.path.exists(_nb) else o[-500:]
         d = os.path.join(OUT, b); os.makedirs(d, exist_ok=True)
-        for src, dst in ((f"{b}_spurplan.svg", "spurplan.svg"), (f"{b}_bare.svg", "bare.svg"), (f"{b}_ports.json", "ports.json")):
+        for src, dst in ((f"{b}_spurplan.svg", "spurplan.svg"), (f"{b}_bare.svg", "bare.svg"), (f"{b}_ports.json", "ports.json"),
+                         (f"{b}_netz.json", "netz.json"), (f"{b}_netz_befunde.json", "netz_befunde.json")):
             if os.path.exists(os.path.join(w, src)): shutil.copy(os.path.join(w, src), os.path.join(d, dst))
         try:
             import cairosvg
@@ -68,6 +72,7 @@ for b in liste:
     json.dump(ber, open(os.path.join(OUT, b, "bericht.json"), "w"), ensure_ascii=False, indent=1)
     gesamt[b] = {k: ber.get(k) for k in ("ok", "fehler", "topologie", "verbindungen_abweichungen", "gleich_wie_vergleich")}
     gesamt[b]["regeln"] = (dict(__import__("collections").Counter(x["regel"] for x in ber["regeln"])) if isinstance(ber.get("regeln"), list) else ber.get("regeln"))
+    gesamt[b]["netz"] = (dict(__import__("collections").Counter(x["regel"] for x in ber["netz"])) if isinstance(ber.get("netz"), list) else ber.get("netz"))
     gesamt[b]["differenz_stellen"] = len(ber["differenz"]) if isinstance(ber.get("differenz"), list) else None
     print(b, json.dumps(gesamt[b], ensure_ascii=False))
 json.dump(dict(erzeugt=datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d %H:%M UTC"), lauf=os.environ.get("LAUF", ""),

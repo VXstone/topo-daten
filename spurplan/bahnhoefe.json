@@ -1,4 +1,12 @@
 {
  "_info": "Bahnhöfe, die der Workflow «plaene» baut. optionen: Argumente für spurplan_schema (z. B. --hauptgleise); region_lines: Linientabelle der Region (code/region_lines_<r>.json)",
- "neuchatel": {"optionen": ["--hauptgleise"], "region_lines": "ne"}
+ "neuchatel": {
+  "optionen": [
+   "--hauptgleise"
+  ],
+  "region_lines": "ne"
+ },
+ "konolfingen": {
+  "optionen": []
+ }
 }
