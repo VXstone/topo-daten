@@ -1,0 +1,85 @@
+{
+ "bahnhof": "konolfingen",
+ "befunde": [
+  {
+   "regel": "T10",
+   "x": 375.5,
+   "y": 222.8,
+   "text": "Durchfahrgleis (beidseitig ans Streckengleis angeschlossen, 489 m Nebengleis, service=siding) schwarz gezeichnet",
+   "way": 23493308,
+   "gleis": "44"
+  },
+  {
+   "regel": "T10",
+   "x": 466.6,
+   "y": 330.8,
+   "text": "Durchfahrgleis (beidseitig ans Streckengleis angeschlossen, 372 m Nebengleis, service=siding) schwarz gezeichnet",
+   "way": 156705029,
+   "gleis": "6"
+  },
+  {
+   "regel": "T10",
+   "x": 536.1,
+   "y": 354.8,
+   "text": "Durchfahrgleis (beidseitig ans Streckengleis angeschlossen, 372 m Nebengleis, service=siding) schwarz gezeichnet",
+   "way": 1290401041,
+   "gleis": "6"
+  },
+  {
+   "regel": "D11",
+   "x": 489.6,
+   "y": 258.8,
+   "text": "Gleisnummer 4 ohne Perron daneben (Perron fehlt oder Nummer zu viel)"
+  },
+  {
+   "regel": "D11",
+   "x": 489.6,
+   "y": 306.8,
+   "text": "Gleisnummer 5 ohne Perron daneben (Perron fehlt oder Nummer zu viel)"
+  },
+  {
+   "regel": "D11",
+   "x": 489.6,
+   "y": 234.8,
+   "text": "Gleisnummer 3 ohne Perron daneben (Perron fehlt oder Nummer zu viel)"
+  },
+  {
+   "regel": "D12",
+   "x": null,
+   "y": null,
+   "text": "1 Perron(s) gezeichnet für 4 Gleisnummern ['2', '3', '4', '5']; OSM-Perrons: 1 (ref ['1']) – SBB-Perrondaten nachladen (B13)"
+  },
+  {
+   "regel": "D11",
+   "x": null,
+   "y": null,
+   "text": "OSM-Perron ref 1 hat keine gleichnamige Gleisnummer im Plan"
+  },
+  {
+   "regel": "Z2",
+   "x": 788.3,
+   "y": 186.8,
+   "text": "Abgang Linie 460 ohne Richtungsort",
+   "way": 741945424
+  },
+  {
+   "regel": "Z2",
+   "x": 788.3,
+   "y": 234.8,
+   "text": "Abgang Linie 460 ohne Richtungsort",
+   "way": 741945425
+  },
+  {
+   "regel": "Z2",
+   "x": 659.6,
+   "y": 179.0,
+   "text": "Abgang Linie 430 ohne Richtungsort",
+   "way": 475716119
+  }
+ ],
+ "durchfahrgleise": [
+  23493308,
+  156705029,
+  1290401041
+ ]
+}

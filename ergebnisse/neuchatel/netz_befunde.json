@@ -1,0 +1,31 @@
+{
+ "bahnhof": "neuchatel",
+ "befunde": [
+  {
+   "regel": "T10",
+   "x": 858.0,
+   "y": 146.0,
+   "text": "Durchfahrgleis (beidseitig ans Streckengleis angeschlossen, 626 m Nebengleis, service=siding) schwarz gezeichnet",
+   "way": 579953623,
+   "gleis": "A36"
+  }
+ ],
+ "durchfahrgleise": [
+  27838825,
+  32113634,
+  32113640,
+  35567583,
+  35567631,
+  35567684,
+  44333228,
+  49695772,
+  57690879,
+  579953623,
+  1219093726,
+  1219093728,
+  1219093730,
+  1219093731,
+  1219093732,
+  1219093736
+ ]
+}

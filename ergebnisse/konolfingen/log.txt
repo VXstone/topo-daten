@@ -1,0 +1,51 @@
+$ spurplan_schema.py --src konolfingen.json --nowarp
+Bahnhof Konolfingen: Achse 3695 m, Ausschnitt s=1206…2230, 28 Weichen, 1 Perrons
+chains 18 lanes 13 segs 62 W 1256 H 542
+
+$ spurplan_warp.py konolfingen
+Optimization terminated successfully. (HiGHS Status 7: Optimal)
+Breite linear 942 px -> entzerrt 612 px
+
+$ spurplan_schema.py --src konolfingen.json
+Bahnhof Konolfingen: Achse 3695 m, Ausschnitt s=1206…2230, 28 Weichen, 1 Perrons
+chains 18 lanes 13 segs 62 W 929 H 542
+
+$ spurplan_warp.py konolfingen
+Optimization terminated successfully. (HiGHS Status 7: Optimal)
+Breite linear 942 px -> entzerrt 612 px
+
+$ spurplan_schema.py --src konolfingen.json
+Bahnhof Konolfingen: Achse 3695 m, Ausschnitt s=1206…2230, 28 Weichen, 1 Perrons
+chains 18 lanes 13 segs 62 W 929 H 542
+
+$ spurplan_check.py --src konolfingen.json --out /tmp/spurplan_lauf/_check_konolfingen.svg
+Bahnhof Konolfingen: Achse 3695 m, Ausschnitt s=1206…2230, 28 Weichen, 1 Perrons
+chains 18 lanes 13 segs 62 W 929 H 542
+Befunde: {'A': 1, 'B': 2}
+eindeutig: {'A': 1, 'B': 2}
+A x=   586 y=  331  Verbindung nicht geschlossen (90px): yard (way 156705006)
+B x=   397 y=  307  Überlagerung 22px: 11 (way 33390862) / yard (way 739598378)
+B x=   397 y=  307  Überlagerung 22px: Gleis (way 606745360) / yard (way 739598378)
+
+$ spurplan_schema.py --src konolfingen.json --bare --out konolfingen_bare.svg
+Bahnhof Konolfingen: Achse 3695 m, Ausschnitt s=1206…2230, 28 Weichen, 1 Perrons
+chains 18 lanes 13 segs 62 W 929 H 460
+
+Traceback (most recent call last):
+  File "/tmp/spurplan_lauf/konolfingen/verbindungen_pruefen.py", line 34, in <module>
+    WAY = {e["id"]: e for e in E if e["type"] == "way"}
+                                    ~^^^^^^^^
+TypeError: string indices must be integers, not 'str'
+
+Netzprüfung konolfingen: {'D11': 4, 'D12': 1, 'T10': 3, 'Z2': 3}; Durchfahrgleise 3
+  T10  x=375.5 y=222.8  Durchfahrgleis (beidseitig ans Streckengleis angeschlossen, 489 m Nebengleis, service=siding) schwarz gezeichnet  (way 23493308)
+  T10  x=466.6 y=330.8  Durchfahrgleis (beidseitig ans Streckengleis angeschlossen, 372 m Nebengleis, service=siding) schwarz gezeichnet  (way 156705029)
+  T10  x=536.1 y=354.8  Durchfahrgleis (beidseitig ans Streckengleis angeschlossen, 372 m Nebengleis, service=siding) schwarz gezeichnet  (way 1290401041)
+  D11  x=489.6 y=258.8  Gleisnummer 4 ohne Perron daneben (Perron fehlt oder Nummer zu viel)
+  D11  x=489.6 y=306.8  Gleisnummer 5 ohne Perron daneben (Perron fehlt oder Nummer zu viel)
+  D11  x=489.6 y=234.8  Gleisnummer 3 ohne Perron daneben (Perron fehlt oder Nummer zu viel)
+  D12  x=None y=None  1 Perron(s) gezeichnet für 4 Gleisnummern ['2', '3', '4', '5']; OSM-Perrons: 1 (ref ['1']) – SBB-Perrondaten nachladen (B13)
+  D11  x=None y=None  OSM-Perron ref 1 hat keine gleichnamige Gleisnummer im Plan
+  Z2   x=788.3 y=186.8  Abgang Linie 460 ohne Richtungsort  (way 741945424)
+  Z2   x=788.3 y=234.8  Abgang Linie 460 ohne Richtungsort  (way 741945425)
+  Z2   x=659.6 y=179.0  Abgang Linie 430 ohne Richtungsort  (way 475716119)
