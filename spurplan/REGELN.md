@@ -70,3 +70,9 @@ Stand 21.10.2026.
 - B7: Spurwechsel mit Zwischengerade immer zusammenrücken, ausser es liegt wirklich ein langes Gleis dazwischen.
 - Galmiz (Einzelentscheid): Perron unten/südlich, nicht zwischen den Gleisen; Kreuzungsgleis darf grün sein (Güter-Kreuzungsgleis).
 - Regelkatalog-Entwurf (Stufen T/L/S/W/A/F/D/Z) im Doc, Tab «Regelkatalog (Entwurf 24.10.)»; noch nicht bestätigt.
+- Lage geteilt (Grundsatz 2): hart = Reihenfolge der Äste an jedem Knoten und zwischen benachbarten Betriebspunkten (Tecknau nicht südlich von Dulliken); weich = globale Lage weiter entfernter Punkte (nur Hinweis) und Drehung eines Bahnhofs (geht der Linienführung nach).
+- Farbe gehört zur Topologie (Stufe 1): grün = im Personenverkehr befahrbar, aus den Fahrwegen berechnet. Durchfahrgleis (beidseitig über Weichen am Streckengleis, parallel) grün, auch als siding; Ausnahme service=yard. Signale in OSM zu lückenhaft.
+- B7 «langes Gleis» = Gleis mit Perron oder Gleisnummer.
+- B17 grosser Knoten = grosse Nebengleisanlage (Olten, Bern, Basel, Däniken RB, RB Limmattal, Buchs SG, Bern Weyermannshaus; nicht Olten Hammer). Schwelle aus OSM, daran geeicht.
+- Grundsatz 3 auch in grossen Knoten: jede Weiche einzeln als Pfeil.
+- B2: Fehlt Platz, Nebengleise enger statt Plan länger, Untergrenze 40 % (~10 px).
