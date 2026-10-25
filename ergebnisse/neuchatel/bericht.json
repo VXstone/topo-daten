@@ -9,6 +9,13 @@
  "regeln": [
   {
    "regel": "G2",
+   "x": 772.1,
+   "y": 110.0,
+   "bahnhof": null,
+   "text": "Weiche ohne Ausrundung (15°)"
+  },
+  {
+   "regel": "G2",
    "x": 778.9,
    "y": 254.0,
    "bahnhof": null,
@@ -117,6 +124,14 @@
  "netz": [],
  "gleich_wie_vergleich": false,
  "differenz": [
+  {
+   "x": 783.4,
+   "y": 109.6,
+   "b": 34,
+   "h": 19,
+   "bahnhof": null,
+   "gewollt": false
+  },
   {
    "x": 909.1,
    "y": 169.3,
