@@ -19,6 +19,7 @@ KONF = os.path.abspath(sys.argv[sys.argv.index("--konfig") + 1]) if "--konfig" i
 WS = os.path.dirname(KONF); TMP = "/tmp/" + os.path.splitext(os.path.basename(KONF))[0]
 K = json.load(open(KONF))
 BER = sys.argv[sys.argv.index("--bericht") + 1] if "--bericht" in sys.argv else None
+OSM = sys.argv[sys.argv.index("--osm") + 1] if "--osm" in sys.argv else None     # schweiz_bahn.json.gz (Release «daten»)
 
 shutil.rmtree(TMP, ignore_errors=True); shutil.copytree(WS, TMP)
 for f in ("spurplan_schema.py", "spurplan_warp.py", "spurplan_check.py", "netz_pruefung.py"):
@@ -31,7 +32,23 @@ def sh(args, timeout=900, cwd=None):
     return r.returncode, (r.stdout or "") + (r.stderr or "")
 lesen = lambda p: open(p, "rb").read() if os.path.exists(p) else None
 
-bericht = dict(bahnhoefe={}, varianten={}, region={})
+bericht = dict(bahnhoefe={}, varianten={}, region={}, osm={})
+# OSM-Ausschnitte aus dem Release (26.10.2026): Konfig «osm_bbox» {bahnhof: [Süd, West, Nord, Ost]} wie Overpass/Colab.
+# Ohne --osm (oder ohne Eintrag) bleibt der Ausschnitt aus der Werkstatt. Der neue Ausschnitt wird auch in die
+# Werkstatt geschrieben, damit lokale Läufe denselben Stand haben.
+if OSM and K.get("osm_bbox"):
+    sys.path.insert(0, os.path.join(os.path.dirname(SP), "skripte"))
+    import gzip, ausschnitt as AU
+    _ch = json.load(gzip.open(OSM)); _ch = _ch["elements"] if isinstance(_ch, dict) else _ch
+    _ch = [e for e in _ch if AU.wie_colab(e)]
+    for b, (s_, w_, n_, e_) in K["osm_bbox"].items():
+        el = [x for x in _ch if (x["type"] == "node" and s_ <= x["lat"] <= n_ and w_ <= x["lon"] <= e_)
+              or (x["type"] == "way" and AU.schneidet(x.get("geometry", []), s_, w_, n_, e_))]
+        neu = json.dumps({"elements": el}, ensure_ascii=False)
+        alt_ = lesen(os.path.join(WS, f"{b}.json"))
+        bericht["osm"][b] = dict(elemente=len(el), geaendert=alt_ is None or json.loads(alt_) != json.loads(neu))
+        for d_ in (TMP, WS): open(os.path.join(d_, f"{b}.json"), "w").write(neu)
+    print("OSM aus Release:", json.dumps(bericht["osm"], ensure_ascii=False))
 def kette(b, opt, cwd=None):
     """ganze Kette wie run.sh; gibt (rc, letzte Ausgabe) zurück"""
     w = os.path.join(cwd or TMP, f"{b}_warp.json")

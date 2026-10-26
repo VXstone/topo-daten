@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1729 239" width="1729" height="239" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1693 239" width="1693" height="239" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#fff"/>
 <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-<path d="M360.2,134.0H360.2Q367.2,134.0 370.7,127.9L377.6,116.1Q381.1,110.0 388.1,110.0H388.1 M325.1,110.0H325.1Q332.1,110.0 335.6,116.1L342.5,127.9Q346.0,134.0 353.0,134.0H353.0 M1372.6,134.0H1388.5M1383.6,134.0Q1389.6,134.0 1392.6,128.8L1402.9,110.9Q1403.4,110.0 1404.5,110.0H1404.5 M1463.1,110.0H1499.4 M1412.0,110.0L1425.9,134.0" stroke="#111" stroke-width="1.6"/>
-<path d="M641.0,134.0H1372.6 M641.1,110.0H1404.5 M325.1,110.0H388.1 M353.0,134.0H360.2 M223.9,134.0H353.0 M223.9,110.0H325.1 M388.1,110.0H641.1 M360.2,134.0H641.0 M1404.5,110.0H1499.4 M1372.6,134.0L1499.4,134.0" stroke="#00862f" stroke-width="3.6"/>
+<path d="M1372.6,134.0H1388.5M1383.6,134.0Q1389.6,134.0 1392.6,128.8L1402.9,110.9Q1403.4,110.0 1404.5,110.0H1404.5 M1463.0,110.0L1477.0,110.0 M360.2,134.0H360.2Q367.2,134.0 370.7,127.9L377.6,116.1Q381.1,110.0 388.1,110.0H388.1 M325.1,110.0H325.1Q332.1,110.0 335.6,116.1L342.5,127.9Q346.0,134.0 353.0,134.0H353.0 M1412.0,110.0L1425.9,134.0" stroke="#111" stroke-width="1.6"/>
+<path d="M641.0,134.0H1372.6 M641.1,110.0H1404.5 M1404.5,110.0H1477.0 M325.1,110.0H388.1 M353.0,134.0H360.2 M223.9,134.0H353.0 M223.9,110.0H325.1 M1372.6,134.0L1477.0,134.0 M388.1,110.0H641.1 M360.2,134.0H641.0" stroke="#00862f" stroke-width="3.6"/>
 </g>
 <rect x="552.7" y="95.0" width="110.0" height="8" rx="1.5" fill="#00862f"/>
 <rect x="567.5" y="141.0" width="110.0" height="8" rx="1.5" fill="#00862f"/>
@@ -10,8 +10,8 @@
 <text x="622.5" y="140.5" font-size="19" text-anchor="middle" fill="#00862f">1</text>
 <rect x="594.7" y="102.0" width="26" height="16" fill="#fff"/>
 <text x="607.7" y="116.5" font-size="19" text-anchor="middle" fill="#00862f">2</text>
+<path d="M1455.0,110.0H1477.0" stroke="#00862f" stroke-width="3.6" fill="none"/>
 <path d="M245.9,134.0H223.9" stroke="#00862f" stroke-width="3.6" fill="none"/>
 <path d="M245.9,110.0H223.9" stroke="#00862f" stroke-width="3.6" fill="none"/>
-<path d="M1477.4,110.0H1499.4" stroke="#00862f" stroke-width="3.6" fill="none"/>
-<path d="M1477.4,134.0H1499.4" stroke="#00862f" stroke-width="3.6" fill="none"/>
+<path d="M1455.0,134.0H1477.0" stroke="#00862f" stroke-width="3.6" fill="none"/>
 </svg>

@@ -64,5 +64,68 @@
     "rothrist_ports.json": "rothrist_regional_ports.json"
    }
   }
- ]
+ ],
+ "osm_bbox": {
+  "aarburg_oftringen": [
+   47.307077,
+   7.889381,
+   47.325934,
+   7.92462
+  ],
+  "dulliken": [
+   47.349806,
+   7.927059,
+   47.357749,
+   7.9661
+  ],
+  "laufelfingen": [
+   47.380781,
+   7.84018,
+   47.40447,
+   7.871677
+  ],
+  "safenwil": [
+   47.321043,
+   7.980144,
+   47.322638,
+   7.986768
+  ],
+  "schonenwerd": [
+   47.360663,
+   7.972268,
+   47.3841,
+   8.018395
+  ],
+  "tecknau": [
+   47.436425,
+   7.873882,
+   47.455059,
+   7.896426
+  ],
+  "wangen_bei_olten": [
+   47.332799,
+   7.853612,
+   47.344565,
+   7.875241
+  ],
+  "zofingen": [
+   47.276146,
+   7.929623,
+   47.298714,
+   7.956068
+  ],
+  "daniken": [
+   47.344477,
+   7.952711,
+   47.37338,
+   7.995171
+  ],
+  "olten_hammer": [
+   47.337285,
+   7.878208,
+   47.366821,
+   7.923721
+  ]
+ },
+ "_osm_bbox": "26.10.2026: Ausschnitte aus dem Release «daten» (Workflow seite, --osm). bbox so bestimmt, dass alle Gleise des bisherigen Werkstatt-Ausschnitts drin sind. Nicht umgestellt: olten (Handzeichnung Olten Nord hängt an den alten OSM-Knoten, neue Daten geben Lücken im Fächer) und rothrist (Werkstatt-Ausschnitt ist ein Regionsausschnitt; mit Rechteck wird Roggwil-Wynau als Bahnhof gewählt)."
 }

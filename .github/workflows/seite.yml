@@ -42,10 +42,13 @@ jobs:
             git show origin/ergebnisse:ergebnisse/$b/netz.json > spurplan/werkstatt/olten/feedback/repo_${b}_netz.json 2>/dev/null || rm -f spurplan/werkstatt/olten/feedback/repo_${b}_netz.json
           done
           ls spurplan/werkstatt/olten/feedback/*.svg
+      - name: Daten (Release «daten») für die OSM-Ausschnitte der Region Olten
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: gh release download daten -p schweiz_bahn.json.gz -D /tmp --clobber
       - name: Regionen Olten und Neuchâtel bauen (Bahnhofspläne + Regionalplan aus der Werkstatt, 26.10.2026)
         run: |
           mkdir -p /tmp/seite
-          python3 spurplan/code/region_olten_lauf.py --bericht /tmp/seite/region_olten.json 2>&1 | tee /tmp/seite/region_olten_log.txt
+          python3 spurplan/code/region_olten_lauf.py --osm /tmp/schweiz_bahn.json.gz --bericht /tmp/seite/region_olten.json 2>&1 | tee /tmp/seite/region_olten_log.txt
           python3 spurplan/code/region_olten_lauf.py --konfig spurplan/werkstatt/ne/region_ne.json --bericht /tmp/seite/region_ne.json 2>&1 | tee /tmp/seite/region_ne_log.txt
       - name: Seite bauen und Ausschnitte
         working-directory: spurplan/werkstatt/olten
