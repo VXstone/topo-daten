@@ -713,3 +713,8 @@ Wunsch D. Eckenstein: Nutzung sparen, mehr in Git auslagern.
 - Rothrist (5rte65pcbd37z01tvuqd): OSM: Linie 400 läuft unten durch (tunnel=yes, layer −1) → Unterführung mit Brückenflügeln (B19/T4) zeichnen; offen.
 - Neuchâtel Gleis 2 (1v507u9g14qh71941icj, Daniel: «Stummel geradeaus, gebogener Strang schon weg»): `zeichnen` Linie 4 Ecke x:765 → x:769 (Rundung beginnt am Ende von Gleis 2), Linie 5 und `dkw_px` (778.9 → 782.9) um 4 px mit. G7 1 → 0. `zusatz_plaene.json` neuchatel aus dem Repo-Lauf erneuert.
 - Entscheide 25.10.: «Anbindung hier» (Region NE) = eigener Plan Vauseyon (R8); Region Olten zuerst in den Workflow `regionen`, dann deren 12 Hinweise; Hinweis-Pins an OSM-Element binden (Netzmodell) statt Pixel.
+
+### 26.10.2026 – Neuchâtel bis Saint-Blaise (Hinweis eh1civ1dzr80annhem8g)
+- OSM-Abgleich Korridor Neuchâtel–Saint-Blaise CFF/Lac: 92 Weichen, 43 in Plänen (Neuchâtel, Saint-Blaise CFF/Lac). Nicht gezeichnet war der Ostkopf Neuchâtel bei s=4144–4322 m (0.8–1.1 km östlich): Spurwechsel 49695777 (Linie 210), Weichen 416783522/416784036 ins Nebengleis bzw. Abstellanlage, 11343288453 auf BLS 220; dahinter Abstellanlage Neuchâtel-Est (~30 Weichen, yard, im Hauptgleis-Plan als Pfeile). Von 1.2 km bis Saint-Blaise keine Weichen. Frühere Antwort («keine weiteren Weichen») war falsch (nur das alte Fenster geprüft).
+- Neuchâtel `cfg.s_max_fix` 4400, `kein_pax` [49695777] (E1: Spurwechsel schwarz). Code: Regel 43 respektiert jetzt `kein_pax`. Handzeichnungen unverändert (Differenz nur Ostteil).
+- Verbindungsprüfung meldet Gleis 5 Ost «OSM 1 / Plan 3» (vorher OSM 3 / Plan 3, Plan gleich) → vermutlich Zuordnung der neuen Planrand-Abgänge zu OSM in verbindungen_pruefen; offen.

@@ -479,7 +479,8 @@ for i, sg in enumerate(segs):
 # Regel 43 (opt-in r43): Verbindungen zwischen zwei Personengleisen sind Fahrwege des Personenverkehrs (dunkelgrün),
 # auch wenn OSM sie als service=crossover führt (D. Eckenstein: Perrongleise müssen in Dunkelgrün erreichbar sein)
 if RU.get("r43", False):
-    _dg = [sg for sg in segs if not sg["flat"] and not sg["pax"] and sg["tags"].get("service") in (None, "crossover", "siding")]
+    _dg = [sg for sg in segs if not sg["flat"] and not sg["pax"] and sg["tags"].get("service") in (None, "crossover", "siding")
+           and sg["way"] not in OVR.get("kein_pax", [])]      # expliziter Override «kein_pax» gewinnt (Neuchâtel Ost 26.10.)
     _par = {id(x): id(x) for x in _dg}
     def _f43(a):
         while _par[a] != a: a = _par[a]

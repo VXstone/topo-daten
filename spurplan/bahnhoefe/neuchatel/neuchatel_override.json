@@ -154,7 +154,9 @@
    "yard",
    "spur"
   ],
-  "perron_nur_gerade": true
+  "perron_nur_gerade": true,
+  "s_max_fix": 4400,
+  "_s_max_fix": "26.10.2026: Fenster bis zum Ostkopf (Spurwechsel 49695777, Weichen in Abstellanlage Neuchâtel-Est und BLS 220 bei s=4144–4322 m), Hinweis eh1civ1dzr80annhem8g"
  },
  "platforms": [
   {
@@ -595,5 +597,8 @@
    ],
    "_osm": "DKW 416783513"
   }
+ ],
+ "kein_pax": [
+  49695777
  ]
 }
