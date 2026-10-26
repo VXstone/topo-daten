@@ -6,7 +6,7 @@ geschrieben solothurn_override.json
 
 $ spurplan_schema.py --src solothurn.json --nowarp
 Bahnhof Solothurn: Achse 2825 m, Ausschnitt s=432…2530, 55 Weichen, 4 Perrons
-chains 34 lanes 20 segs 131 W 2380 H 585
+chains 34 lanes 20 segs 131 W 2380 H 686
 
 $ spurplan_warp.py solothurn
 Optimization terminated successfully. (HiGHS Status 7: Optimal)
@@ -14,7 +14,7 @@ Breite linear 1930 px -> entzerrt 1461 px
 
 $ spurplan_schema.py --src solothurn.json
 Bahnhof Solothurn: Achse 2825 m, Ausschnitt s=432…2530, 55 Weichen, 4 Perrons
-chains 34 lanes 20 segs 131 W 1911 H 585
+chains 34 lanes 20 segs 131 W 1911 H 686
 
 $ spurplan_warp.py solothurn
 Optimization terminated successfully. (HiGHS Status 7: Optimal)
@@ -22,11 +22,11 @@ Breite linear 1930 px -> entzerrt 1474 px
 
 $ spurplan_schema.py --src solothurn.json
 Bahnhof Solothurn: Achse 2825 m, Ausschnitt s=432…2530, 55 Weichen, 4 Perrons
-chains 34 lanes 20 segs 131 W 1925 H 585
+chains 34 lanes 20 segs 131 W 1925 H 686
 
 $ spurplan_check.py --src solothurn.json --out /tmp/spurplan_lauf/_check_solothurn.svg
 Bahnhof Solothurn: Achse 2825 m, Ausschnitt s=432…2530, 55 Weichen, 4 Perrons
-chains 34 lanes 20 segs 131 W 1925 H 585
+chains 34 lanes 20 segs 131 W 1925 H 686
 Befunde: {'A': 1, 'B': 4, 'D': 1}
 eindeutig: {'A': 1, 'B': 2, 'D': 1}
 A x=   908 y=  304  Verbindung nicht geschlossen (26px): 444 (way 49565865)
@@ -36,7 +36,7 @@ D x=  1409 y=  232  Reihenfolge vertauscht bei s=2082: Lane 13 über 12, real um
 
 $ spurplan_schema.py --src solothurn.json --bare --out solothurn_bare.svg
 Bahnhof Solothurn: Achse 2825 m, Ausschnitt s=432…2530, 55 Weichen, 4 Perrons
-chains 34 lanes 20 segs 131 W 1925 H 585
+chains 34 lanes 20 segs 131 W 1925 H 686
 
 Verbindungsprüfung solothurn: 0 Perrongleise, 7 Abgänge (Personenverkehr)
   Abgang 410 Oensingen (edge y208 x1701): ok (2 Ziele)
@@ -51,10 +51,11 @@ Weichen ohne Ausrundung (Linienende unter >35° auf Gleis): 2
    x892 y285  60°
    x967 y304  37°
 
-Netzprüfung solothurn: {'A1': 2, 'D11': 3, 'W2': 2}; Durchfahrgleise 0
+Netzprüfung solothurn: {'A1': 2, 'D11': 4, 'W2': 2}; Durchfahrgleise 0
+  D11  x=1111.1 y=503.6  Gleisnummer 10 ohne Perron daneben (Perron fehlt oder Nummer zu viel)
+  D11  x=1096.2 y=527.6  Gleisnummer 9 ohne Perron daneben (Perron fehlt oder Nummer zu viel)
   D11  x=1187.2 y=304.4  Gleisnummer 3 ohne Perron daneben (Perron fehlt oder Nummer zu viel)
   D11  x=1187.2 y=232.4  Gleisnummer 2 ohne Perron daneben (Perron fehlt oder Nummer zu viel)
-  D11  x=None y=None  OSM-Perron ref 21 hat keine gleichnamige Gleisnummer im Plan
   W2   x=899.0 y=256.4  S-Kurve in der Mitte unter 103° (steiler oder flacher als 60°)
   W2   x=1147.2 y=433.4  Gleisstück unter 84° (nur 0° und 60° erlaubt)
   A1   x=875.7 y=304.4  zwei Gleise nur 19.7 px auseinander über 14 px (Grenze 20 px)

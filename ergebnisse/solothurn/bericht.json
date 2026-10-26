@@ -48,6 +48,13 @@
   },
   {
    "regel": "G2",
+   "x": 1172.0,
+   "y": 503.6,
+   "bahnhof": null,
+   "text": "Weiche ohne Ausrundung (60°)"
+  },
+  {
+   "regel": "G2",
    "x": 891.9,
    "y": 284.7,
    "bahnhof": null,
@@ -87,6 +94,13 @@
    "y": 440.0,
    "bahnhof": null,
    "text": "Linien stossen mit Knick 84° zusammen (Knubbel)"
+  },
+  {
+   "regel": "G6",
+   "x": 1185.8,
+   "y": 527.6,
+   "bahnhof": null,
+   "text": "Linien stossen mit Knick 60° zusammen (Knubbel)"
   },
   {
    "regel": "G7",
@@ -186,6 +200,18 @@
  "netz": [
   {
    "regel": "D11",
+   "x": 1111.1,
+   "y": 503.6,
+   "text": "Gleisnummer 10 ohne Perron daneben (Perron fehlt oder Nummer zu viel)"
+  },
+  {
+   "regel": "D11",
+   "x": 1096.2,
+   "y": 527.6,
+   "text": "Gleisnummer 9 ohne Perron daneben (Perron fehlt oder Nummer zu viel)"
+  },
+  {
+   "regel": "D11",
    "x": 1187.2,
    "y": 304.4,
    "text": "Gleisnummer 3 ohne Perron daneben (Perron fehlt oder Nummer zu viel)"
@@ -195,12 +221,6 @@
    "x": 1187.2,
    "y": 232.4,
    "text": "Gleisnummer 2 ohne Perron daneben (Perron fehlt oder Nummer zu viel)"
-  },
-  {
-   "regel": "D11",
-   "x": null,
-   "y": null,
-   "text": "OSM-Perron ref 21 hat keine gleichnamige Gleisnummer im Plan"
   },
   {
    "regel": "W2",
