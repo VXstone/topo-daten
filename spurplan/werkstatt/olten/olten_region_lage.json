@@ -215,33 +215,33 @@
  },
  "strecke_hand": {
   "Olten|Olten Ost": {
-   "_zweck": "26.10.2026 Skizzen D. Eckenstein (Hinweise jm9p/3pn3/h3xx/8sot/tgjh, m1am/k9zb): kein V. Beide Gleise vom Abgang Olten waagrecht, dann direkt unter 60° parallel ins Bündel zu ihren Anschlüssen an Olten Ost (6 Gleise). Fünfspurig (unteres Gleis mündet in Linie 3) erst mit angepasster Regionalvariante Olten Ost.",
-   "4": [
+   "_zweck": "26.10.2026 Skizzen D. Eckenstein (jm9p/3pn3/h3xx/8sot/tgjh, m1am/k9zb): beide 531-Gleise ab Olten waagrecht, kein V; das obere (Linie 0) geht unter 60° als fünftes Gleis zu Olten Ost, das untere (Linie 1) mündet mit Ausrundung ins linke 540-Gleis (Regionalvariante Olten Ost: 531 unten auf der Ebene des 540-Gleises, 531 oben auf 110, Aarau Gleis 1 gerade auf 134). Linien-Nummern nach LINDBG.",
+   "0": [
     [
      64.7,
-     -166.7
+     -178.5
     ],
     [
-     108.6,
-     -166.7
+     115.4,
+     -178.5
     ],
     [
-     160.2,
-     -256.0
+     162.2,
+     -259.6
     ]
    ],
-   "5": [
+   "1": [
     [
      64.7,
-     -178.5
+     -166.7
     ],
     [
-     103.8,
-     -178.5
+     120.25,
+     -166.7
     ],
     [
-     151.5,
-     -261.1
+     171.0,
+     -254.6
     ]
    ]
   }

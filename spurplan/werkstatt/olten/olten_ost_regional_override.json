@@ -24,18 +24,16 @@
   "weg": [
    50062999,
    702696960,
-   1332417458
+   1332417458,
+   137216147,
+   702696962
   ],
   "linien": [
    {
     "pts": [
      [
       "x:220",
-      "y:86"
-     ],
-     [
-      "c60:635803262",
-      "y:86"
+      "y:110"
      ],
      [
       "n:635803262",
@@ -48,17 +46,13 @@
     ],
     "port_way": 50062999,
     "port_am_anfang": true,
-    "_osm": "531 (oberes Gleis) fädelt in Gleis Aarau 1 ein"
+    "_osm": "531 (oberes Gleis) waagrecht auf der Ebene 110 bis zu seiner Weiche (Skizze tgjh 26.10.)"
    },
    {
     "pts": [
      [
       "x:220",
-      "y:110"
-     ],
-     [
-      "c60:635803227",
-      "y:110"
+      "y:134"
      ],
      [
       "n:635803227",
@@ -71,21 +65,13 @@
     ],
     "port_way": 702696960,
     "port_am_anfang": true,
-    "_osm": "531 (unteres Gleis) fädelt in das 540-Gleis ein"
+    "_osm": "531 (unteres Gleis) mündet schon auf der Strecke ins 540-Gleis (Skizze 8sot 26.10.), im Plan auf dessen Ebene"
    },
    {
     "pts": [
      [
-      "x:419",
-      "y:110"
-     ],
-     [
-      "x:470",
-      "y:110"
-     ],
-     [
-      "d60",
-      "y:134"
+      "n:1502110063",
+      "n:1502110063"
      ],
      [
       "x:533",
@@ -93,8 +79,14 @@
      ]
     ],
     "port_way": 1332417458,
-    "_osm": "Aarau Gleis 1 am Planrand im Doppelspurabstand (Regel D.E. 20.10. abends)"
+    "_osm": "Aarau Gleis 1 gerade auf 134 durch (Hinweis 8ouq/xxvp 26.10.)"
    }
   ]
- }
+ },
+ "knoten_lane": {
+  "1502110063": 3,
+  "1502110029": 3,
+  "1502109996": 3
+ },
+ "_knoten_lane": "26.10. Hinweise 8ouq/xxvp/tgjh: Aarau Gleis 1 ab der Weiche 1502110063 gerade auf 134 (von Hand gezeichnet), Linie 531 oben zweigt dort als Weiche ab"
 }
