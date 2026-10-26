@@ -1,57 +1,62 @@
 $ spurplan_schema.py --src neuchatel.json --nowarp --hauptgleise
-Bahnhof Neuchâtel: Achse 6510 m, Ausschnitt s=2683…3936, 36 Weichen, 6 Perrons
-chains 9 lanes 7 segs 72 W 1715 H 368
+Bahnhof Neuchâtel: Achse 6510 m, Ausschnitt s=2683…4400, 36 Weichen, 6 Perrons
+chains 9 lanes 7 segs 85 W 2218 H 368
 
 $ spurplan_warp.py neuchatel
 Optimization terminated successfully. (HiGHS Status 7: Optimal)
-Breite linear 1153 px -> entzerrt 864 px
+Breite linear 1580 px -> entzerrt 1233 px
 
 $ spurplan_schema.py --src neuchatel.json --hauptgleise
-Bahnhof Neuchâtel: Achse 6510 m, Ausschnitt s=2683…3936, 36 Weichen, 6 Perrons
-chains 9 lanes 7 segs 72 W 1426 H 368
+Bahnhof Neuchâtel: Achse 6510 m, Ausschnitt s=2683…4400, 36 Weichen, 6 Perrons
+chains 9 lanes 7 segs 85 W 1871 H 368
 
 $ spurplan_warp.py neuchatel
 Optimization terminated successfully. (HiGHS Status 7: Optimal)
-Breite linear 1153 px -> entzerrt 864 px
+Breite linear 1580 px -> entzerrt 1233 px
 
 $ spurplan_schema.py --src neuchatel.json --hauptgleise
-Bahnhof Neuchâtel: Achse 6510 m, Ausschnitt s=2683…3936, 36 Weichen, 6 Perrons
-chains 9 lanes 7 segs 72 W 1426 H 368
+Bahnhof Neuchâtel: Achse 6510 m, Ausschnitt s=2683…4400, 36 Weichen, 6 Perrons
+chains 9 lanes 7 segs 85 W 1871 H 368
 
 $ spurplan_check.py --src neuchatel.json --out /tmp/spurplan_lauf/_check_neuchatel.svg --hauptgleise
-Bahnhof Neuchâtel: Achse 6510 m, Ausschnitt s=2683…3936, 36 Weichen, 6 Perrons
-chains 9 lanes 7 segs 72 W 1426 H 368
+Bahnhof Neuchâtel: Achse 6510 m, Ausschnitt s=2683…4400, 36 Weichen, 6 Perrons
+chains 9 lanes 7 segs 85 W 1871 H 368
 Befunde: {}
 eindeutig: {}
 
 $ spurplan_schema.py --src neuchatel.json --bare --out neuchatel_bare.svg --hauptgleise
-Bahnhof Neuchâtel: Achse 6510 m, Ausschnitt s=2683…3936, 36 Weichen, 6 Perrons
-chains 9 lanes 7 segs 72 W 1426 H 368
+Bahnhof Neuchâtel: Achse 6510 m, Ausschnitt s=2683…4400, 36 Weichen, 6 Perrons
+chains 9 lanes 7 segs 85 W 1871 H 368
 
 Verbindungsprüfung neuchatel: 7 Perrongleise, 5 Abgänge (Personenverkehr)
   Gleis  1 West Hinweis: Plan grün nach 210 Yverdon (edge y158 x327), in OSM nur über Nebengleis (siding)
   Gleis  1 West OSM 1 / Plan 2  ok
-  Gleis  1 Ost  OSM 3 / Plan 3  ok
+  Gleis  1 Ost  Hinweis: Plan grün nach 210 Biel (edge y182 x1560), in OSM nur über Nebengleis (siding)
+  Gleis  1 Ost  OSM 2 / Plan 3  ok
   Gleis  2 West Hinweis: Plan grün nach 210 Yverdon (edge y158 x327), in OSM nur über Nebengleis (siding)
   Gleis  2 West OSM 1 / Plan 2  ok
-  Gleis  2 Ost  OSM 3 / Plan 3  ok
+  Gleis  2 Ost  Hinweis: Plan grün nach 210 Biel (edge y182 x1560), in OSM nur über Nebengleis (siding)
+  Gleis  2 Ost  OSM 2 / Plan 3  ok
   Gleis  3 West Hinweis: Plan grün nach 210 Yverdon (edge y158 x327), in OSM nur über Nebengleis (siding)
   Gleis  3 West OSM 1 / Plan 2  ok
-  Gleis  3 Ost  OSM 3 / Plan 3  ok
+  Gleis  3 Ost  Hinweis: Plan grün nach 210 Biel (edge y182 x1560), in OSM nur über Nebengleis (siding)
+  Gleis  3 Ost  OSM 2 / Plan 3  ok
   Gleis  4 West OSM 2 / Plan 2  ok
   Gleis  4 Ost  OSM 3 / Plan 3  ok
   Gleis  5 West OSM 2 / Plan 2  ok
-  Gleis  5 Ost  OSM 3 / Plan 3  ok
+  Gleis  5 Ost  OSM 1 / Plan 3  ABWEICHUNG
+        zu viel im Plan: 220 Ins (edge y254 x1560)
+        zu viel im Plan: 210 Biel (edge y206 x1560)
   Gleis  6 West OSM 2 / Plan 2  ok
   Gleis  6 Ost  OSM 0 / Plan 0  ok
   Gleis  7 West OSM 2 / Plan 2  ok
   Gleis  7 Ost  OSM 0 / Plan 0  ok
   Abgang 210 Yverdon (edge y158 x327): ok (3 Ziele)
   Abgang 210 Yverdon (edge y182 x327): ok (3 Ziele)
-  Abgang 220 Ins (edge y254 x1191): ok (2 Ziele)
-  Abgang 210 Biel (edge y206 x1191): ok (2 Ziele)
-  Abgang 210 Biel (edge y182 x1191): ok (2 Ziele)
-→ 0 Abweichungen
+  Abgang 220 Ins (edge y254 x1560): ok (2 Ziele)
+  Abgang 210 Biel (edge y206 x1560): ok (2 Ziele)
+  Abgang 210 Biel (edge y182 x1560): ok (2 Ziele)
+→ 1 Abweichungen
 Weichen ohne Ausrundung (Linienende unter >35° auf Gleis): 2
    x783 y254  37°
    x1054 y182  60°

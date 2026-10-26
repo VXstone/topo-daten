@@ -4,8 +4,10 @@
   "--hauptgleise"
  ],
  "topologie": "{}",
- "verbindungen_abweichungen": 0,
- "verbindungen": [],
+ "verbindungen_abweichungen": 1,
+ "verbindungen": [
+  "Gleis  5 Ost  OSM 1 / Plan 3  ABWEICHUNG"
+ ],
  "regeln": [
   {
    "regel": "G2",
@@ -125,50 +127,50 @@
  "gleich_wie_vergleich": false,
  "differenz": [
   {
-   "x": 783.4,
-   "y": 109.6,
-   "b": 34,
-   "h": 19,
+   "x": 783.5,
+   "y": 109.7,
+   "b": 37,
+   "h": 22,
    "bahnhof": null,
    "gewollt": false
   },
   {
-   "x": 909.1,
-   "y": 169.3,
-   "b": 77,
-   "h": 81,
+   "x": 909.2,
+   "y": 168.8,
+   "b": 78,
+   "h": 84,
    "bahnhof": null,
    "gewollt": false
   },
   {
-   "x": 1046.3,
-   "y": 177.3,
-   "b": 62,
-   "h": 65,
+   "x": 1047.2,
+   "y": 177.0,
+   "b": 64,
+   "h": 68,
    "bahnhof": null,
    "gewollt": false
   },
   {
-   "x": 786.5,
-   "y": 256.6,
+   "x": 1431.3,
+   "y": 217.9,
+   "b": 493,
+   "h": 138,
+   "bahnhof": null,
+   "gewollt": false
+  },
+  {
+   "x": 785.8,
+   "y": 257.1,
    "b": 58,
-   "h": 69,
+   "h": 71,
    "bahnhof": null,
    "gewollt": false
   },
   {
-   "x": 671.1,
-   "y": 320.4,
-   "b": 221,
-   "h": 46,
-   "bahnhof": null,
-   "gewollt": false
-  },
-  {
-   "x": 772.7,
-   "y": 306.1,
-   "b": 18,
-   "h": 16,
+   "x": 671.2,
+   "y": 320.2,
+   "b": 225,
+   "h": 50,
    "bahnhof": null,
    "gewollt": false
   }
