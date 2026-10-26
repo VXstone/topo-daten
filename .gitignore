@@ -1,1 +1,5 @@
 ergebnisse/
+# Netzmodell und Netzbefunde werden in den Workflows erzeugt (26.10.2026)
+spurplan/werkstatt/**/*_netz.json
+spurplan/werkstatt/**/*_netz_befunde.json
+__pycache__/

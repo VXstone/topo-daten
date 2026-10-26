@@ -2391,7 +2391,7 @@ if OVR.get("meterspur") and os.path.exists(OVR["meterspur"]) and (not ARGS.bare 
             a_, b_ = max(min(p_[0] for p_ in pp_), _rs.min()), min(max(p_[0] for p_ in pp_), _rs.max())
             if b_ - a_ < 20 or abs(np.mean(dd_)) > 30: continue
             yb_ = _y0 + (11 if (np.mean(dd_) < 0) == _oben else -11)
-            MS_TXT.insert(0, f'<rect x="{X(a_):.1f}" y="{yb_ - 4:.1f}" width="{X(b_) - X(a_):.1f}" height="8" rx="1.5" fill="{green}"/>')
+            MS_TXT.insert(0, f'<rect x="{X(a_):.1f}" y="{yb_ - 4:.1f}" width="{X(b_) - X(a_):.1f}" height="8" rx="1.5" fill="{MS_COL}"/>')      # Meterspur-Perron braun (Hinweis Region NE 22.10.)
     # Gleisnummer des Bezugsgleises
     if _ref and _ms_cfg.get("bezug"):
         _xm = X(float(np.median(_rs)))

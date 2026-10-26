@@ -1,6 +1,9 @@
 """Region Olten im Repo bauen (26.10.2026, «Olten zügeln»): Bahnhofspläne + Regionalplan aus spurplan/werkstatt/olten.
 
-  python3 spurplan/code/region_olten_lauf.py [--bericht pfad.json]
+  python3 spurplan/code/region_olten_lauf.py [--konfig werkstatt/<ordner>/region_<x>.json] [--bericht pfad.json]
+
+Standard-Konfig: werkstatt/olten/region_olten.json. Neuchâtel (26.10.): werkstatt/ne/region_ne.json (Ausgabe in
+werkstatt/olten/feedback/region_ne.svg, dort liest bauen.py die Regionalpläne).
 
 Arbeitet in einer Kopie der Werkstatt (/tmp/region_olten), mit spurplan_schema/-warp/netz_pruefung aus code/ und
 netz_lage.py der Werkstatt. Je Bahnhof aus werkstatt/olten/region_olten.json die ganze Kette wie run.sh
@@ -12,13 +15,16 @@ Der Bericht nennt je Bahnhof, ob sich Plan/bare gegenüber dem Stand im Repo ge�
 import json, os, shutil, subprocess, sys, collections
 
 HERE = os.path.dirname(os.path.abspath(__file__)); SP = os.path.dirname(HERE)
-WS = os.path.join(SP, "werkstatt", "olten"); TMP = "/tmp/region_olten"
-K = json.load(open(os.path.join(WS, "region_olten.json")))
+KONF = os.path.abspath(sys.argv[sys.argv.index("--konfig") + 1]) if "--konfig" in sys.argv else os.path.join(SP, "werkstatt", "olten", "region_olten.json")
+WS = os.path.dirname(KONF); TMP = "/tmp/" + os.path.splitext(os.path.basename(KONF))[0]
+K = json.load(open(KONF))
 BER = sys.argv[sys.argv.index("--bericht") + 1] if "--bericht" in sys.argv else None
 
 shutil.rmtree(TMP, ignore_errors=True); shutil.copytree(WS, TMP)
 for f in ("spurplan_schema.py", "spurplan_warp.py", "spurplan_check.py", "netz_pruefung.py"):
     shutil.copy(os.path.join(HERE, f), TMP)
+for f in K.get("code_falls_fehlt", ["lage_auto.py"]):      # Hilfsmodule der Werkstatt, die dort fehlen (NE: lage_auto)
+    if not os.path.exists(os.path.join(TMP, f)): shutil.copy(os.path.join(HERE, f), TMP)
 py = sys.executable
 def sh(args, timeout=900):
     r = subprocess.run([py] + args, cwd=TMP, capture_output=True, text=True, timeout=timeout)
@@ -52,13 +58,14 @@ for b, opt in K["bahnhoefe"].items():
     print(b, json.dumps(e, ensure_ascii=False))
 
 R = K["region"]
-alt_r = lesen(os.path.join(TMP, R["ausgabe"]))
-rc, o = sh(["netz_lage.py", R["name"], R["titel"], R["ausgabe"]])
+ZIEL = os.path.normpath(os.path.join(WS, R["ausgabe"]))
+alt_r = lesen(ZIEL)
+rc, o = sh(["netz_lage.py", R["name"], R["titel"], "_region_neu.svg"])
 bericht["region"] = dict(ok=rc == 0, log=o[-1500:])
 if rc == 0:
-    bericht["region"]["geaendert"] = lesen(os.path.join(TMP, R["ausgabe"])) != alt_r
-    shutil.copy(os.path.join(TMP, R["ausgabe"]), os.path.join(WS, R["ausgabe"]))
+    bericht["region"]["geaendert"] = lesen(os.path.join(TMP, "_region_neu.svg")) != alt_r
+    shutil.copy(os.path.join(TMP, "_region_neu.svg"), ZIEL)
     rc, o = sh(["netz_lage.py", R["name"], R["titel"], "/tmp/region_olten_pruef.svg", "--pruefen"])
     bericht["region"]["pruefung"] = o[-3000:]
-print("Region Olten:", json.dumps({k: v for k, v in bericht["region"].items() if k != "pruefung" and k != "log"}, ensure_ascii=False))
+print(R["titel"] + ":", json.dumps({k: v for k, v in bericht["region"].items() if k != "pruefung" and k != "log"}, ensure_ascii=False))
 if BER: json.dump(bericht, open(BER, "w"), ensure_ascii=False, indent=1)

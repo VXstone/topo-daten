@@ -1,16 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -2 1347 440" width="1347" height="440" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
-<rect y="-2" width="100%" height="100%" fill="#fff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1347 438" width="1347" height="438" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
+<rect width="100%" height="100%" fill="#fff"/>
 <g fill="none" stroke-linecap="round" stroke-linejoin="round">
 <path d="M813.9,147.2H877.2 M796.2,171.2H797.3Q804.3,171.2 807.8,177.3L814.6,189.1Q818.1,195.2 825.1,195.2H825.1 M464.1,195.2H464.1Q471.1,195.2 474.6,189.1L481.4,177.3Q484.9,171.2 491.9,171.2H491.9 M322.7,171.2H322.7Q329.7,171.2 333.2,177.3L340.1,189.1Q343.6,195.2 350.6,195.2H350.6 M574.6,147.2H574.6Q577.7,147.2 579.2,144.5L590.0,125.9Q591.5,123.2 594.6,123.2H594.6M594.6,123.2H786.1 M786.1,123.2L786.1,123.2 M780.1,123.2Q786.1,123.2 789.1,118.0L799.1,100.7 M786.1,123.2L793.1,123.2Q800.1,123.2 803.6,129.3L813.9,147.2 M543.0,147.2L559.9,117.9" stroke="#111" stroke-width="1.6"/>
 <path d="M574.6,147.2H813.9 M543.0,147.2H574.6 M491.9,171.2H515.1 M515.1,171.2H796.2 M841.2,195.2H1071.2 M464.1,195.2H825.1 M825.1,195.2H841.2  M796.2,171.2H841.8 M350.6,195.2H464.1 M322.7,171.2H491.9 M841.8,171.2H1051.2M1051.2,171.2H1051.2Q1054.3,171.2 1055.8,173.9L1066.6,192.5Q1068.2,195.2 1071.2,195.2H1071.2 M515.1,171.2H515.1Q522.1,171.2 525.6,165.1L532.5,153.3Q536.0,147.2 543.0,147.2H543.0 M1071.2,195.2H1172.4 M221.5,195.2H350.6 M221.5,171.2H322.7 M813.9,147.2L824.3,165.1Q827.8,171.2 834.8,171.2L841.8,171.2" stroke="#00862f" stroke-width="3.6"/>
 <path d="M811.1,147.2Q813.9,147.2 815.3,149.6" fill="none" stroke="#00862f" stroke-width="3.6" stroke-linecap="round"/>
 <path d="M816.7,147.2Q813.9,147.2 812.5,144.8" fill="none" stroke="#00862f" stroke-width="3.6" stroke-linecap="round"/>
-<path d="M826.2,25.2L822.6,34.4L817.0,28.7Z" fill="#9a5b1e" stroke="none"/>
+<path d="M798.1,42.2L797.1,52.0L790.1,48.0Z" fill="#9a5b1e" stroke="none"/>
 <path d="M559.9,117.9L579.5,84.0Q582.5,78.8 588.5,78.8L646.8,78.8 M646.8,78.8L693.7,78.8" stroke="#9a5b1e" stroke-width="1.6"/>
-<path d="M693.7,78.8L777.0,78.8 M777.0,78.8L781.9,76.7Q786.9,74.5 788.4,69.3L789.3,66.1Q791.0,60.3 795.2,56.1L819.8,31.5" stroke="#9a5b1e" stroke-width="3.6"/>
+<path d="M693.7,78.8L777.0,78.8 M777.0,78.8L793.6,50.0" stroke="#9a5b1e" stroke-width="3.6"/>
 </g>
-<rect x="693.7" y="85.8" width="83.3" height="8" rx="1.5" fill="#00862f"/>
-<text x="833.8" y="23.5" font-size="20" text-anchor="start" fill="#9a5b1e">Biel (asm)</text>
+<rect x="693.7" y="85.8" width="83.3" height="8" rx="1.5" fill="#9a5b1e"/>
+<text x="807.6" y="42.0" font-size="20" text-anchor="start" fill="#9a5b1e">Biel (asm)</text>
 <rect x="750.0" y="70.8" width="26" height="16" fill="#fff" stroke="none"/><text x="763.0" y="85.3" font-size="19" text-anchor="middle" fill="#9a5b1e">11</text>
 <g fill="none" stroke-linecap="round" stroke-linejoin="round">
 </g>
@@ -18,7 +18,6 @@
 <rect x="478.8" y="202.2" width="335.6" height="8" rx="1.5" fill="#00862f"/>
 <path d="M801.9,150.2Q812.2,150.2 817.3,159.1" fill="none" stroke="#00862f" stroke-opacity="0.55" stroke-width="2.2" stroke-linecap="round"/>
 <path d="M825.9,144.2Q815.6,144.2 810.5,135.3" fill="none" stroke="#00862f" stroke-opacity="0.55" stroke-width="2.2" stroke-linecap="round"/>
-<circle cx="559.9" cy="117.9" r="3.2" fill="#111"/>
 <circle cx="877.2" cy="147.2" r="3.2" fill="#111"/>
 <path d="M803.6,92.9L802.5,102.7L795.6,98.7Z" fill="#111"/>
 <rect x="630.9" y="139.2" width="26" height="16" fill="#fff"/>
@@ -33,7 +32,7 @@
 <path d="M832.2,195.2Q841.2,195.2 845.7,203.0" stroke="#00862f" stroke-width="3.6" fill="none"/>
 <path d="M845.7,203.0L845.7,203.0L898.2,293.9" stroke="#00862f" stroke-width="3.6" stroke-linecap="round" fill="none"/>
 <text x="1184.4" y="182.2" font-size="22" text-anchor="start" fill="#00862f">Linie 220</text>
-<text x="1184.4" y="208.2" font-size="22" text-anchor="start" fill="#00862f">Neuchâtel →</text>
+<text x="1184.4" y="208.2" font-size="22" text-anchor="start" fill="#00862f">Bern →</text>
 <text x="209.5" y="170.2" font-size="22" text-anchor="end" fill="#00862f">Linie 220</text>
 <text x="209.5" y="196.2" font-size="22" text-anchor="end" fill="#00862f">← Neuchâtel</text>
 <text x="898.2" y="318.9" font-size="22" text-anchor="middle" fill="#00862f">Linie 256</text>

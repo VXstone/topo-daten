@@ -1,0 +1,7 @@
+{
+ "_zweck": "Region Neuchâtel im Workflow (26.10.2026): code/region_olten_lauf.py --konfig werkstatt/ne/region_ne.json baut die aufgeführten Bahnhofspläne neu und setzt den Regionalplan mit netz_lage.py ne_region zusammen. Übrige Bahnhöfe: bare/ports der Werkstatt als Eingabe (Typvorlagen u. a. noch nicht nachgebaut).",
+ "bahnhoefe": {
+  "ins": []
+ },
+ "region": {"name": "ne_region", "titel": "Region Neuchâtel", "ausgabe": "../olten/feedback/region_ne.svg"}
+}
