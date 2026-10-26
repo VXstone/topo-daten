@@ -1,0 +1,3284 @@
+{
+"100": {
+"enden": [
+[
+"Brig Autoquai",
+46.3211,
+7.9931
+],
+[
+"Lausanne",
+46.517,
+6.6292
+]
+],
+"orte": []
+},
+"109": {
+"enden": [
+[
+"Brig Autoquai",
+46.3211,
+7.9931
+]
+],
+"orte": []
+},
+"111": {
+"enden": [
+[
+"Vevey MVR",
+46.4632,
+6.8438
+]
+],
+"orte": []
+},
+"115000": {
+"enden": [
+[
+"Basel St. Johann",
+47.5701,
+7.5721
+]
+],
+"orte": [
+"Basel"
+]
+},
+"131": {
+"enden": [
+[
+"Saint-Maurice",
+46.2164,
+7.0022
+],
+[
+"Saint-Gingolph (Suisse)",
+46.3922,
+6.8059
+]
+],
+"orte": []
+},
+"133": {
+"enden": [
+[
+"Orsières",
+46.028,
+7.1437
+],
+[
+"Martigny",
+46.1058,
+7.0791
+]
+],
+"orte": []
+},
+"134": {
+"enden": [
+[
+"Le Châble",
+46.0787,
+7.2152
+]
+],
+"orte": []
+},
+"136": {
+"enden": [
+[
+"Basel St. Johann",
+47.5701,
+7.5721
+]
+],
+"orte": [
+"Basel"
+]
+},
+"150": {
+"enden": [
+[
+"Lausanne",
+46.517,
+6.6292
+],
+[
+"Genève",
+46.2102,
+6.1426
+]
+],
+"orte": []
+},
+"151": {
+"enden": [
+[
+"Siggenthal-Würenlingen",
+47.5199,
+8.2406
+]
+],
+"orte": []
+},
+"152": {
+"enden": [
+[
+"Chêne-Bourg",
+46.1966,
+6.1973
+]
+],
+"orte": []
+},
+"154": {
+"enden": [
+[
+"Vernier",
+46.2205,
+6.0947
+]
+],
+"orte": []
+},
+"163": {
+"enden": [
+[
+"Denges-Echandens",
+46.5291,
+6.5405
+]
+],
+"orte": []
+},
+"164": {
+"enden": [
+[
+"Cerisaie",
+46.5279,
+6.5666
+]
+],
+"orte": []
+},
+"166": {
+"enden": [
+[
+"Renens-Gare",
+46.5374,
+6.5783
+]
+],
+"orte": []
+},
+"168": {
+"enden": [
+[
+"Bussigny",
+46.5476,
+6.5519
+]
+],
+"orte": []
+},
+"169": {
+"enden": [
+[
+"Denges-Echandens",
+46.5291,
+6.5405
+]
+],
+"orte": []
+},
+"175": {
+"enden": [
+[
+"Montelly",
+46.5219,
+6.6133
+]
+],
+"orte": []
+},
+"191": {
+"enden": [
+[
+"La Plaine",
+46.1786,
+5.9995
+]
+],
+"orte": []
+},
+"200": {
+"enden": [
+[
+"Epenex",
+46.5375,
+6.5734
+],
+[
+"Vallorbe",
+46.7123,
+6.3706
+]
+],
+"orte": []
+},
+"201": {
+"enden": [
+[
+"Le Day",
+46.7199,
+6.3992
+],
+[
+"Le Brassus",
+46.5854,
+6.2137
+]
+],
+"orte": []
+},
+"203": {
+"enden": [
+[
+"Vallorbe",
+46.7123,
+6.3706
+]
+],
+"orte": []
+},
+"206": {
+"enden": [
+[
+"Bussigny",
+46.5476,
+6.5519
+]
+],
+"orte": []
+},
+"210": {
+"enden": [
+[
+"Biel/Bienne",
+47.1329,
+7.2429
+],
+[
+"Eclépens",
+46.6572,
+6.5524
+],
+[
+"Yverdon-les-Bains",
+46.7814,
+6.641
+]
+],
+"orte": [
+"Neuchâtel"
+]
+},
+"211": {
+"enden": [
+[
+"Chavornay",
+46.7101,
+6.5681
+]
+],
+"orte": []
+},
+"217": {
+"enden": [
+[
+"Le Locle-Col-des-Roches",
+47.0499,
+6.7261
+]
+],
+"orte": []
+},
+"219": {
+"enden": [
+[
+"Auvernier",
+46.9796,
+6.8777
+]
+],
+"orte": [
+"Neuchâtel"
+]
+},
+"220": {
+"enden": [
+[
+"Neuchâtel",
+46.9966,
+6.9358
+],
+[
+"Bern",
+46.9489,
+7.44
+]
+],
+"orte": [
+"Bern",
+"Gümmenen",
+"Ins",
+"Kerzers",
+"Neuchâtel"
+]
+},
+"221": {
+"enden": [
+[
+"Buttes",
+46.8884,
+6.5532
+],
+[
+"Travers",
+46.9424,
+6.6762
+]
+],
+"orte": []
+},
+"223": {
+"enden": [
+[
+"Evole",
+46.9897,
+6.9235
+],
+[
+"Chambrelien",
+46.9673,
+6.8125
+]
+],
+"orte": [
+"Neuchâtel"
+]
+},
+"224": {
+"enden": [
+[
+"Chambrelien",
+46.9673,
+6.8125
+],
+[
+"Le Locle-Col-des-Roches",
+47.0499,
+6.7261
+],
+[
+"La Chaux-de-Fonds",
+47.0986,
+6.8251
+]
+],
+"orte": []
+},
+"225": {
+"enden": [
+[
+"La Chaux-de-Fonds",
+47.0986,
+6.8251
+],
+[
+"Biel/Bienne",
+47.1329,
+7.2429
+]
+],
+"orte": []
+},
+"226": {
+"enden": [
+[
+"Corgémont",
+47.1934,
+7.1446
+]
+],
+"orte": []
+},
+"230": {
+"enden": [
+[
+"Delémont",
+47.362,
+7.3502
+],
+[
+"Basel SBB",
+47.5476,
+7.5896
+]
+],
+"orte": [
+"Basel"
+]
+},
+"232": {
+"enden": [
+[
+"Moutier",
+47.2809,
+7.3812
+],
+[
+"Lengnau BE",
+47.1795,
+7.3666
+]
+],
+"orte": []
+},
+"236": {
+"enden": [
+[
+"Basel St. Johann",
+47.5701,
+7.5721
+]
+],
+"orte": [
+"Basel"
+]
+},
+"238": {
+"enden": [
+[
+"Porrentruy",
+47.4209,
+7.08
+],
+[
+"Bonfol",
+47.4745,
+7.1548
+]
+],
+"orte": []
+},
+"240": {
+"enden": [
+[
+"Delémont",
+47.362,
+7.3502
+],
+[
+"Boncourt",
+47.4924,
+7.0167
+],
+[
+"Glovelier",
+47.3351,
+7.2093
+]
+],
+"orte": []
+},
+"247": {
+"enden": [
+[
+"Bulle",
+46.6196,
+7.0533
+]
+],
+"orte": []
+},
+"249": {
+"enden": [
+[
+"Bulle",
+46.6196,
+7.0533
+]
+],
+"orte": []
+},
+"250": {
+"enden": [
+[
+"Bern",
+46.9489,
+7.44
+],
+[
+"Flamatt",
+46.8885,
+7.3196
+],
+[
+"Lausanne",
+46.517,
+6.6292
+],
+[
+"Düdingen",
+46.851,
+7.1898
+]
+],
+"orte": [
+"Bern",
+"Fribourg"
+]
+},
+"251": {
+"enden": [
+[
+"Lyss",
+47.0762,
+7.3063
+],
+[
+"Palézieux",
+46.5428,
+6.8379
+]
+],
+"orte": [
+"Avenches",
+"Kerzers",
+"Lyss",
+"Murten",
+"Payerne"
+]
+},
+"252": {
+"enden": [
+[
+"Yverdon-les-Bains",
+46.7814,
+6.641
+],
+[
+"Payerne",
+46.8197,
+6.9398
+]
+],
+"orte": [
+"Payerne"
+]
+},
+"253": {
+"enden": [
+[
+"Payerne",
+46.8197,
+6.9398
+],
+[
+"Fribourg/Freiburg",
+46.803,
+7.151
+]
+],
+"orte": [
+"Fribourg",
+"Payerne"
+]
+},
+"254": {
+"enden": [
+[
+"Romont",
+46.6935,
+6.912
+]
+],
+"orte": []
+},
+"255": {
+"enden": [
+[
+"Murten/Morat",
+46.9254,
+7.1153
+],
+[
+"Givisiez",
+46.8168,
+7.1306
+]
+],
+"orte": [
+"Fribourg",
+"Murten"
+]
+},
+"256": {
+"enden": [
+[
+"Ins",
+46.9999,
+7.0996
+]
+],
+"orte": [
+"Ins"
+]
+},
+"257": {
+"enden": [
+[
+"Laupen BE",
+46.9015,
+7.241
+]
+],
+"orte": [
+"Gümmenen"
+]
+},
+"260": {
+"enden": [
+[
+"Zollikofen",
+47.0007,
+7.4621
+],
+[
+"Biel/Bienne",
+47.1329,
+7.2429
+]
+],
+"orte": [
+"Lyss"
+]
+},
+"265": {
+"enden": [
+[
+"Biel/Bienne",
+47.1329,
+7.2429
+]
+],
+"orte": []
+},
+"266": {
+"enden": [
+[
+"Biel/Bienne",
+47.1329,
+7.2429
+]
+],
+"orte": []
+},
+"268": {
+"enden": [
+[
+"Biel/Bienne",
+47.1329,
+7.2429
+]
+],
+"orte": []
+},
+"290": {
+"enden": [
+[
+"Thun",
+46.7549,
+7.6296
+],
+[
+"Bern Felsenau",
+46.9687,
+7.4443
+]
+],
+"orte": [
+"Bern",
+"Steffisburg"
+]
+},
+"291": {
+"enden": [
+[
+"Papiermühle",
+46.9744,
+7.4764
+]
+],
+"orte": [
+"Bern"
+]
+},
+"297": {
+"enden": [
+[
+"Bern Europaplatz",
+46.9435,
+7.4074
+],
+[
+"Schwarzenburg",
+46.819,
+7.3427
+]
+],
+"orte": [
+"Bern"
+]
+},
+"298": {
+"enden": [
+[
+"Bern Europaplatz",
+46.9441,
+7.4062
+]
+],
+"orte": [
+"Bern"
+]
+},
+"300": {
+"enden": [
+[
+"Spiez",
+46.6866,
+7.68
+],
+[
+"Brig Bahnhofplatz",
+46.319,
+7.9876
+],
+[
+"Frutigen",
+46.5889,
+7.6513
+],
+[
+"Hohtenn",
+46.3224,
+7.7641
+]
+],
+"orte": [
+"Spiez"
+]
+},
+"302": {
+"enden": [
+[
+"Goppenstein",
+46.3677,
+7.7548
+]
+],
+"orte": []
+},
+"303 01": {
+"enden": [
+[
+"Buchs SG",
+47.1687,
+9.4788
+]
+],
+"orte": []
+},
+"304 01": {
+"enden": [
+[
+"Lustenau Museum",
+47.4479,
+9.6604
+]
+],
+"orte": []
+},
+"304 01 / 883": {
+"enden": [
+[
+"Lustenau Museum",
+47.4479,
+9.6604
+]
+],
+"orte": []
+},
+"310": {
+"enden": [
+[
+"Interlaken Ost",
+46.6904,
+7.869
+],
+[
+"Thun",
+46.7549,
+7.6296
+]
+],
+"orte": [
+"Spiez",
+"Steffisburg"
+]
+},
+"319": {
+"enden": [
+[
+"Vallorbe",
+46.7123,
+6.3706
+]
+],
+"orte": []
+},
+"320": {
+"enden": [
+[
+"Gossau",
+47.4119,
+9.2531
+]
+],
+"orte": [
+"Spiez"
+]
+},
+"330": {
+"enden": [
+[
+"Ausserberg",
+46.3122,
+7.8441
+],
+[
+"Reichenbach",
+46.6251,
+7.6899
+]
+],
+"orte": []
+},
+"333": {
+"enden": [
+[
+"Frutigen",
+46.5889,
+7.6513
+]
+],
+"orte": []
+},
+"400": {
+"enden": [
+[
+"Rothrist",
+47.3064,
+7.8795
+],
+[
+"Worblaufen",
+46.9793,
+7.4578
+]
+],
+"orte": [
+"Aarburg",
+"Bern",
+"Hägendorf",
+"Langenthal",
+"Rothrist",
+"Wangen b. O.",
+"Zofingen"
+]
+},
+"4000": {
+"enden": [
+[
+"Schaffhausen",
+47.6981,
+8.6327
+],
+[
+"Wilchingen-Hallau",
+47.6796,
+8.4639
+]
+],
+"orte": []
+},
+"4000 / 822": {
+"enden": [
+[
+"Kreuzlingen",
+47.6525,
+9.1691
+]
+],
+"orte": []
+},
+"410": {
+"enden": [
+[
+"Biel/Bienne",
+47.1329,
+7.2429
+],
+[
+"Olten",
+47.3519,
+7.9075
+]
+],
+"orte": [
+"Aarburg",
+"Dulliken",
+"Däniken",
+"Hägendorf",
+"Oensingen",
+"Olten",
+"Rothrist",
+"Solothurn",
+"Trimbach",
+"Wangen b. O."
+]
+},
+"412": {
+"enden": [
+[
+"Oensingen",
+47.285,
+7.7098
+]
+],
+"orte": [
+"Oensingen"
+]
+},
+"415": {
+"enden": [
+[
+"Busswil BE",
+47.0985,
+7.3186
+],
+[
+"Herzogenbuchsee",
+47.1881,
+7.7011
+]
+],
+"orte": [
+"Lyss"
+]
+},
+"416": {
+"enden": [
+[
+"Herzogenbuchsee",
+47.1881,
+7.7011
+]
+],
+"orte": []
+},
+"420": {
+"enden": [
+[
+"Solothurn West",
+47.2068,
+7.532
+],
+[
+"Moutier",
+47.2809,
+7.3812
+]
+],
+"orte": [
+"Solothurn"
+]
+},
+"421": {
+"enden": [
+[
+"Burgdorf",
+47.0606,
+7.6217
+],
+[
+"Solothurn",
+47.2043,
+7.5427
+]
+],
+"orte": [
+"Solothurn"
+]
+},
+"430": {
+"enden": [
+[
+"Thun",
+46.7549,
+7.6296
+],
+[
+"Hasle-Rüegsau",
+47.0162,
+7.6555
+]
+],
+"orte": [
+"Konolfingen",
+"Steffisburg"
+]
+},
+"4320": {
+"enden": [
+[
+"Ramsen",
+47.7078,
+8.8211
+]
+],
+"orte": []
+},
+"4322": {
+"enden": [
+[
+"Kreuzlingen",
+47.6525,
+9.1691
+]
+],
+"orte": []
+},
+"4322 / 824": {
+"enden": [
+[
+"Kreuzlingen",
+47.6525,
+9.1691
+]
+],
+"orte": []
+},
+"440": {
+"enden": [
+[
+"Emmenmatt",
+46.9481,
+7.7472
+],
+[
+"Buchmatt",
+47.0654,
+7.6082
+]
+],
+"orte": []
+},
+"4400": {
+"enden": [
+[
+"Lörrach Dammstraße",
+47.5977,
+7.655
+]
+],
+"orte": []
+},
+"4402": {
+"enden": [
+[
+"Koblenz",
+47.6003,
+8.227
+]
+],
+"orte": []
+},
+"4404": {
+"enden": [
+[
+"Basel Badischer Bahnhof",
+47.5675,
+7.6073
+]
+],
+"orte": [
+"Basel"
+]
+},
+"4405": {
+"enden": [
+[
+"Basel Badischer Bahnhof",
+47.5675,
+7.6073
+]
+],
+"orte": [
+"Basel"
+]
+},
+"4407": {
+"enden": [
+[
+"Basel Badischer Bahnhof",
+47.5675,
+7.6073
+]
+],
+"orte": [
+"Basel"
+]
+},
+"441": {
+"enden": [
+[
+"Langenthal",
+47.2173,
+7.7849
+],
+[
+"Huttwil",
+47.1144,
+7.8425
+]
+],
+"orte": [
+"Langenthal"
+]
+},
+"4410": {
+"enden": [
+[
+"Weil am Rhein Ost",
+47.5908,
+7.6349
+]
+],
+"orte": [
+"Basel"
+]
+},
+"4416": {
+"enden": [
+[
+"Basel Badischer Bahnhof",
+47.5675,
+7.6073
+]
+],
+"orte": [
+"Basel"
+]
+},
+"442": {
+"enden": [
+[
+"Sumiswald-Grünen",
+47.0254,
+7.7372
+]
+],
+"orte": []
+},
+"4425": {
+"enden": [
+[
+"Basel Badischer Bahnhof",
+47.5675,
+7.6073
+]
+],
+"orte": [
+"Basel"
+]
+},
+"443": {
+"enden": [
+[
+"Sumiswald-Grünen",
+47.0254,
+7.7372
+]
+],
+"orte": []
+},
+"444.2": {
+"enden": [
+[
+"Huttwil",
+47.1144,
+7.8425
+],
+[
+"Sumiswald-Grünen",
+47.0254,
+7.7372
+]
+],
+"orte": []
+},
+"445": {
+"enden": [
+[
+"Wolhusen",
+47.0555,
+8.0799
+],
+[
+"Huttwil",
+47.1144,
+7.8425
+]
+],
+"orte": []
+},
+"450": {
+"enden": [
+[
+"Olten",
+47.3519,
+7.9075
+],
+[
+"Murgenthal",
+47.2655,
+7.8322
+],
+[
+"Bern",
+46.9489,
+7.44
+]
+],
+"orte": [
+"Aarburg",
+"Bern",
+"Dulliken",
+"Däniken",
+"Hägendorf",
+"Langenthal",
+"Läufelfingen",
+"Olten",
+"Rothrist",
+"Trimbach",
+"Wangen b. O."
+]
+},
+"451": {
+"enden": [
+[
+"Rothrist",
+47.3064,
+7.8795
+]
+],
+"orte": [
+"Aarburg",
+"Hägendorf",
+"Olten",
+"Rothrist",
+"Wangen b. O.",
+"Zofingen"
+]
+},
+"453": {
+"enden": [
+[
+"Rothrist",
+47.3064,
+7.8795
+]
+],
+"orte": [
+"Aarburg",
+"Hägendorf",
+"Olten",
+"Rothrist",
+"Wangen b. O.",
+"Zofingen"
+]
+},
+"455": {
+"enden": [
+[
+"Urtenen",
+47.0289,
+7.5008
+]
+],
+"orte": []
+},
+"456": {
+"enden": [
+[
+"Urtenen",
+47.0289,
+7.5008
+]
+],
+"orte": []
+},
+"457": {
+"enden": [
+[
+"Hindelbank",
+47.0497,
+7.546
+]
+],
+"orte": []
+},
+"459": {
+"enden": [
+[
+"Worblaufen",
+46.9793,
+7.4578
+]
+],
+"orte": [
+"Bern"
+]
+},
+"460": {
+"enden": [
+[
+"Oberzollikofen",
+46.997,
+7.4617
+],
+[
+"Emmenbrücke",
+47.0706,
+8.2825
+],
+[
+"Worb Dorf",
+46.93,
+7.5627
+],
+[
+"Wolhusen",
+47.0555,
+8.0799
+]
+],
+"orte": [
+"Bern",
+"Konolfingen",
+"Luzern"
+]
+},
+"500": {
+"enden": [
+[
+"Luzern",
+47.0502,
+8.3103
+],
+[
+"Basel SBB",
+47.5476,
+7.5896
+],
+[
+"Liestal",
+47.4845,
+7.7314
+]
+],
+"orte": [
+"Aarburg",
+"Basel",
+"Gelterkinden",
+"Luzern",
+"Olten",
+"Sissach",
+"Sursee",
+"Tecknau",
+"Trimbach",
+"Zofingen"
+]
+},
+"501": {
+"enden": [
+[
+"Liestal",
+47.4845,
+7.7314
+]
+],
+"orte": []
+},
+"503": {
+"enden": [
+[
+"Sissach",
+47.4628,
+7.8121
+],
+[
+"Olten",
+47.3519,
+7.9075
+]
+],
+"orte": [
+"Aarburg",
+"Dulliken",
+"Däniken",
+"Gelterkinden",
+"Läufelfingen",
+"Olten",
+"Sissach",
+"Tecknau",
+"Trimbach",
+"Wangen b. O."
+]
+},
+"504": {
+"enden": [
+[
+"Suhr",
+47.3716,
+8.0821
+],
+[
+"Zofingen",
+47.288,
+7.9429
+]
+],
+"orte": [
+"Aarau",
+"Aarburg",
+"Rothrist",
+"Safenwil",
+"Suhr",
+"Zofingen"
+]
+},
+"510": {
+"enden": [
+[
+"Basel St. Johann",
+47.5701,
+7.5721
+]
+],
+"orte": [
+"Basel"
+]
+},
+"511": {
+"enden": [
+[
+"Pratteln",
+47.5226,
+7.6907
+]
+],
+"orte": [
+"Basel"
+]
+},
+"512": {
+"enden": [
+[
+"Basel Dreispitz",
+47.5375,
+7.6094
+]
+],
+"orte": [
+"Basel"
+]
+},
+"513": {
+"enden": [
+[
+"Basel Dreispitz",
+47.5375,
+7.6094
+]
+],
+"orte": [
+"Basel"
+]
+},
+"514": {
+"enden": [
+[
+"Basel SBB",
+47.5476,
+7.5896
+]
+],
+"orte": [
+"Basel"
+]
+},
+"519": {
+"enden": [
+[
+"Basel SBB",
+47.5476,
+7.5896
+]
+],
+"orte": [
+"Basel"
+]
+},
+"520": {
+"enden": [
+[
+"Muttenz",
+47.5336,
+7.6479
+]
+],
+"orte": [
+"Basel"
+]
+},
+"522": {
+"enden": [
+[
+"Pratteln",
+47.5226,
+7.6907
+]
+],
+"orte": []
+},
+"523": {
+"enden": [
+[
+"Basel St. Johann",
+47.5701,
+7.5721
+]
+],
+"orte": [
+"Basel"
+]
+},
+"525": {
+"enden": [
+[
+"Muttenz",
+47.5336,
+7.6479
+]
+],
+"orte": [
+"Basel"
+]
+},
+"526": {
+"enden": [
+[
+"Muttenz",
+47.5336,
+7.6479
+]
+],
+"orte": [
+"Basel"
+]
+},
+"527": {
+"enden": [
+[
+"Muttenz",
+47.5336,
+7.6479
+]
+],
+"orte": [
+"Basel"
+]
+},
+"529": {
+"enden": [
+[
+"Muttenz",
+47.5336,
+7.6479
+]
+],
+"orte": [
+"Basel"
+]
+},
+"531": {
+"enden": [
+[
+"Dulliken",
+47.3541,
+7.9464
+]
+],
+"orte": [
+"Aarburg",
+"Dulliken",
+"Däniken",
+"Olten",
+"Safenwil",
+"Schönenwerd",
+"Trimbach",
+"Wangen b. O."
+]
+},
+"533": {
+"enden": [
+[
+"Zürich Altstetten",
+47.3913,
+8.4893
+]
+],
+"orte": []
+},
+"540": {
+"enden": [
+[
+"Distelberg",
+47.3758,
+8.0493
+]
+],
+"orte": [
+"Aarau",
+"Dulliken",
+"Däniken",
+"Olten",
+"Schönenwerd",
+"Suhr",
+"Trimbach"
+]
+},
+"570": {
+"enden": [
+[
+"Luzern Gütsch",
+47.052,
+8.2971
+],
+[
+"Immensee",
+47.0915,
+8.4628
+]
+],
+"orte": [
+"Luzern"
+]
+},
+"580": {
+"enden": [
+[
+"Sant'Antonino",
+46.1588,
+8.969
+],
+[
+"Lugano",
+46.0055,
+8.9468
+]
+],
+"orte": []
+},
+"581": {
+"enden": [
+[
+"Sant'Antonino",
+46.1588,
+8.969
+],
+[
+"Lamone-Cadempino",
+46.0398,
+8.9323
+]
+],
+"orte": []
+},
+"591": {
+"enden": [
+[
+"Sant'Antonino",
+46.1588,
+8.969
+]
+],
+"orte": []
+},
+"592": {
+"enden": [
+[
+"Sant'Antonino",
+46.1588,
+8.969
+]
+],
+"orte": []
+},
+"593": {
+"enden": [
+[
+"Sant'Antonino",
+46.1588,
+8.969
+]
+],
+"orte": []
+},
+"594": {
+"enden": [
+[
+"Bodio",
+46.3805,
+8.9063
+],
+[
+"Erstfeld",
+46.8206,
+8.6503
+]
+],
+"orte": []
+},
+"595": {
+"enden": [
+[
+"Erstfeld",
+46.8206,
+8.6503
+]
+],
+"orte": []
+},
+"600": {
+"enden": [
+[
+"Immensee",
+47.0915,
+8.4628
+],
+[
+"Arth-Goldau",
+47.0491,
+8.5496
+],
+[
+"Chiasso",
+45.8322,
+9.0314
+],
+[
+"Capolago-Riva San Vitale",
+45.9029,
+8.9789
+]
+],
+"orte": []
+},
+"601": {
+"enden": [
+[
+"Erstfeld",
+46.8206,
+8.6503
+]
+],
+"orte": []
+},
+"602": {
+"enden": [
+[
+"Arth-Goldau Rigibahn",
+47.0488,
+8.5478
+]
+],
+"orte": []
+},
+"603": {
+"enden": [
+[
+"Vitznau",
+47.0096,
+8.483
+]
+],
+"orte": []
+},
+"604": {
+"enden": [
+[
+"Brunnen",
+46.9993,
+8.6101
+]
+],
+"orte": []
+},
+"605": {
+"enden": [
+[
+"Flüelen",
+46.9017,
+8.6242
+]
+],
+"orte": []
+},
+"606": {
+"enden": [
+[
+"Cadenazzo",
+46.1526,
+8.9417
+]
+],
+"orte": []
+},
+"607": {
+"enden": [
+[
+"Rivera-Bironico",
+46.1241,
+8.925
+]
+],
+"orte": []
+},
+"608": {
+"enden": [
+[
+"Lugano",
+46.0055,
+8.9468
+]
+],
+"orte": []
+},
+"630": {
+"enden": [
+[
+"Locarno",
+46.1723,
+8.8014
+],
+[
+"Giubiasco",
+46.1738,
+9.0036
+]
+],
+"orte": []
+},
+"631": {
+"enden": [
+[
+"Cadenazzo",
+46.1526,
+8.9417
+],
+[
+"Ranzo-S. Abbondio",
+46.117,
+8.7766
+]
+],
+"orte": []
+},
+"638": {
+"enden": [
+[
+"Balerna",
+45.8468,
+9.0051
+]
+],
+"orte": []
+},
+"639": {
+"enden": [
+[
+"Balerna",
+45.8468,
+9.0051
+]
+],
+"orte": []
+},
+"640": {
+"enden": [
+[
+"Brugg",
+47.4808,
+8.2087
+],
+[
+"Rupperswil",
+47.4032,
+8.1271
+]
+],
+"orte": [
+"Aarau",
+"Lenzburg",
+"Suhr"
+]
+},
+"641": {
+"enden": [
+[
+"Rupperswil",
+47.4032,
+8.1271
+]
+],
+"orte": [
+"Lenzburg",
+"Suhr"
+]
+},
+"645": {
+"enden": [
+[
+"Lenzburg",
+47.3911,
+8.1703
+]
+],
+"orte": [
+"Lenzburg",
+"Suhr"
+]
+},
+"646": {
+"enden": [
+[
+"Mägenwil",
+47.4145,
+8.2352
+]
+],
+"orte": [
+"Lenzburg"
+]
+},
+"647": {
+"enden": [
+[
+"Brugg",
+47.4808,
+8.2087
+],
+[
+"Hendschiken",
+47.3892,
+8.2074
+]
+],
+"orte": [
+"Lenzburg"
+]
+},
+"648": {
+"enden": [
+[
+"Brugg",
+47.4808,
+8.2087
+]
+],
+"orte": []
+},
+"649": {
+"enden": [
+[
+"Aarau",
+47.3915,
+8.0513
+]
+],
+"orte": [
+"Aarau",
+"Schönenwerd",
+"Suhr"
+]
+},
+"650": {
+"enden": [
+[
+"Killwangen-Spreitenbach",
+47.4333,
+8.3541
+],
+[
+"Däniken",
+47.3563,
+7.9786
+]
+],
+"orte": [
+"Aarau",
+"Dulliken",
+"Däniken",
+"Lenzburg",
+"Olten",
+"Safenwil",
+"Schönenwerd",
+"Trimbach"
+]
+},
+"651": {
+"enden": [
+[
+"Lenzburg",
+47.3911,
+8.1703
+],
+[
+"Emmenbrücke Gersag",
+47.0781,
+8.2768
+]
+],
+"orte": [
+"Lenzburg",
+"Luzern"
+]
+},
+"653": {
+"enden": [
+[
+"Hendschiken",
+47.3892,
+8.2074
+],
+[
+"Immensee",
+47.0915,
+8.4628
+]
+],
+"orte": [
+"Lenzburg"
+]
+},
+"654": {
+"enden": [
+[
+"Hendschiken",
+47.3892,
+8.2074
+]
+],
+"orte": [
+"Lenzburg"
+]
+},
+"660": {
+"enden": [
+[
+"Emmenbrücke",
+47.0706,
+8.2825
+],
+[
+"Thalwil",
+47.296,
+8.5648
+]
+],
+"orte": [
+"Luzern"
+]
+},
+"664": {
+"enden": [
+[
+"Zug",
+47.1738,
+8.5151
+]
+],
+"orte": []
+},
+"665": {
+"enden": [
+[
+"Arth-Goldau",
+47.0491,
+8.5496
+],
+[
+"Zug",
+47.1738,
+8.5151
+]
+],
+"orte": []
+},
+"666": {
+"enden": [
+[
+"Arth-Goldau",
+47.0491,
+8.5496
+]
+],
+"orte": []
+},
+"670": {
+"enden": [
+[
+"Wädenswil",
+47.2293,
+8.6752
+],
+[
+"Einsiedeln",
+47.1281,
+8.7442
+]
+],
+"orte": []
+},
+"671": {
+"enden": [
+[
+"Pfäffikon SZ",
+47.203,
+8.7781
+]
+],
+"orte": []
+},
+"672": {
+"enden": [
+[
+"Pfäffikon SZ",
+47.203,
+8.7781
+]
+],
+"orte": []
+},
+"673": {
+"enden": [
+[
+"Biberbrugg",
+47.1566,
+8.7227
+],
+[
+"Arth-Goldau",
+47.0491,
+8.5496
+]
+],
+"orte": []
+},
+"698": {
+"enden": [
+[
+"Neuenhof",
+47.4508,
+8.3312
+]
+],
+"orte": []
+},
+"700": {
+"enden": [
+[
+"Pratteln",
+47.5226,
+7.6907
+],
+[
+"Brugg",
+47.4808,
+8.2087
+]
+],
+"orte": []
+},
+"701": {
+"enden": [
+[
+"Stein-Säckingen",
+47.5416,
+7.9489
+],
+[
+"Eglisau",
+47.5724,
+8.5165
+]
+],
+"orte": []
+},
+"702": {
+"enden": [
+[
+"Turgi",
+47.4921,
+8.2529
+],
+[
+"Koblenz",
+47.6003,
+8.227
+]
+],
+"orte": []
+},
+"703": {
+"enden": [
+[
+"Mellingen Heitersberg",
+47.4281,
+8.2759
+],
+[
+"Zürich Seebach",
+47.4186,
+8.5442
+]
+],
+"orte": []
+},
+"704": {
+"enden": [
+[
+"Würenlos",
+47.4457,
+8.3578
+]
+],
+"orte": []
+},
+"706": {
+"enden": [
+[
+"Opfikon",
+47.43,
+8.5618
+]
+],
+"orte": []
+},
+"71": {
+"enden": [
+[
+"Wettingen",
+47.4597,
+8.3161
+]
+],
+"orte": []
+},
+"710": {
+"enden": [
+[
+"Brugg",
+47.4808,
+8.2087
+],
+[
+"Zürich Hauptbahnhof",
+47.3781,
+8.5394
+]
+],
+"orte": []
+},
+"711": {
+"enden": [
+[
+"Zürich Hardbrücke",
+47.3852,
+8.5174
+]
+],
+"orte": []
+},
+"712": {
+"enden": [
+[
+"Horgen Oberdorf",
+47.2587,
+8.59
+],
+[
+"Zürich Selnau",
+47.3725,
+8.5319
+]
+],
+"orte": []
+},
+"713": {
+"enden": [
+[
+"Zürich Giesshübel",
+47.3626,
+8.522
+]
+],
+"orte": []
+},
+"714": {
+"enden": [
+[
+"Zürich Altstetten",
+47.3913,
+8.4893
+]
+],
+"orte": []
+},
+"715": {
+"enden": [
+[
+"Zürich Altstetten",
+47.3913,
+8.4893
+]
+],
+"orte": []
+},
+"716": {
+"enden": [
+[
+"Zürich Hardbrücke",
+47.3852,
+8.5174
+]
+],
+"orte": []
+},
+"717": {
+"enden": [
+[
+"Zürich Wiedikon",
+47.3717,
+8.5231
+]
+],
+"orte": []
+},
+"718": {
+"enden": [
+[
+"Zürich Altstetten",
+47.3913,
+8.4893
+]
+],
+"orte": []
+},
+"720": {
+"enden": [
+[
+"Ziegelbrücke",
+47.1361,
+9.06
+],
+[
+"Zürich Wiedikon",
+47.3717,
+8.5231
+]
+],
+"orte": []
+},
+"721": {
+"enden": [
+[
+"Thalwil",
+47.296,
+8.5648
+]
+],
+"orte": []
+},
+"722": {
+"enden": [
+[
+"Rüschlikon",
+47.307,
+8.5553
+]
+],
+"orte": []
+},
+"723": {
+"enden": [
+[
+"Rüschlikon",
+47.307,
+8.5553
+]
+],
+"orte": []
+},
+"725": {
+"enden": [
+[
+"Rüschlikon",
+47.307,
+8.5553
+]
+],
+"orte": []
+},
+"727": {
+"enden": [
+[
+"Zürich Selnau",
+47.3725,
+8.5319
+]
+],
+"orte": []
+},
+"730": {
+"enden": [
+[
+"Zürich Stadelhofen",
+47.3666,
+8.5484
+],
+[
+"Rapperswil SG",
+47.225,
+8.8168
+]
+],
+"orte": []
+},
+"735": {
+"enden": [
+[
+"Ziegelbrücke",
+47.1361,
+9.06
+],
+[
+"Rapperswil SG",
+47.225,
+8.8168
+]
+],
+"orte": []
+},
+"736": {
+"enden": [
+[
+"Ziegelbrücke",
+47.1361,
+9.06
+],
+[
+"Linthal",
+46.9255,
+8.9979
+]
+],
+"orte": []
+},
+"740": {
+"enden": [
+[
+"Wallisellen",
+47.4126,
+8.5924
+],
+[
+"Rapperswil SG",
+47.225,
+8.8168
+]
+],
+"orte": []
+},
+"742": {
+"enden": [
+[
+"Hinwil",
+47.3001,
+8.8398
+]
+],
+"orte": []
+},
+"745": {
+"enden": [
+[
+"Dietlikon",
+47.4202,
+8.6192
+],
+[
+"Zürich Hardbrücke",
+47.3852,
+8.5174
+]
+],
+"orte": []
+},
+"746": {
+"enden": [
+[
+"Dübendorf",
+47.4001,
+8.6234
+]
+],
+"orte": []
+},
+"747": {
+"enden": [
+[
+"Stettbach",
+47.3972,
+8.5961
+]
+],
+"orte": []
+},
+"748": {
+"enden": [
+[
+"Zürich Altstetten",
+47.3913,
+8.4893
+]
+],
+"orte": []
+},
+"750": {
+"enden": [
+[
+"Bassersdorf",
+47.4386,
+8.6264
+]
+],
+"orte": []
+},
+"751": {
+"enden": [
+[
+"Winterthur",
+47.5003,
+8.724
+],
+[
+"Zürich Hauptbahnhof",
+47.3781,
+8.5394
+]
+],
+"orte": []
+},
+"752": {
+"enden": [
+[
+"Effretikon",
+47.4257,
+8.687
+],
+[
+"Zürich Seebach",
+47.4186,
+8.5442
+]
+],
+"orte": []
+},
+"753": {
+"enden": [
+[
+"Hinwil",
+47.3001,
+8.8398
+],
+[
+"Effretikon",
+47.4257,
+8.687
+]
+],
+"orte": []
+},
+"754": {
+"enden": [
+[
+"Winterthur Grüze",
+47.4991,
+8.7509
+],
+[
+"Rüti",
+47.2604,
+8.8544
+]
+],
+"orte": []
+},
+"755": {
+"enden": [
+[
+"Zürich Hauptbahnhof",
+47.3781,
+8.5394
+]
+],
+"orte": []
+},
+"756": {
+"enden": [
+[
+"Effretikon",
+47.4257,
+8.687
+]
+],
+"orte": []
+},
+"757": {
+"enden": [
+[
+"Bassersdorf",
+47.4386,
+8.6264
+]
+],
+"orte": []
+},
+"758": {
+"enden": [
+[
+"Zürich Hardbrücke",
+47.3852,
+8.5174
+]
+],
+"orte": []
+},
+"760": {
+"enden": [
+[
+"Bülach",
+47.5238,
+8.5366
+],
+[
+"Zürich Hardbrücke",
+47.3852,
+8.5174
+]
+],
+"orte": []
+},
+"761": {
+"enden": [
+[
+"Niederweningen",
+47.5113,
+8.3694
+],
+[
+"Oberglatt",
+47.4704,
+8.5105
+]
+],
+"orte": []
+},
+"762": {
+"enden": [
+[
+"Winterthur",
+47.5003,
+8.724
+],
+[
+"Schaffhausen",
+47.6981,
+8.6327
+]
+],
+"orte": []
+},
+"763 / 4000": {
+"enden": [
+[
+"Erzingen (Baden)",
+47.6602,
+8.4307
+],
+[
+"Schaffhausen",
+47.6981,
+8.6327
+]
+],
+"orte": []
+},
+"764 / 4000": {
+"enden": [
+[
+"Schaffhausen",
+47.6981,
+8.6327
+],
+[
+"Thayngen",
+47.7456,
+8.7045
+]
+],
+"orte": []
+},
+"769": {
+"enden": [
+[
+"Bülach",
+47.5238,
+8.5366
+],
+[
+"Winterthur",
+47.5003,
+8.724
+]
+],
+"orte": []
+},
+"770": {
+"enden": [
+[
+"Neuhausen",
+47.683,
+8.6249
+],
+[
+"Bülach",
+47.5238,
+8.5366
+]
+],
+"orte": []
+},
+"819": {
+"enden": [
+[
+"Ramsen",
+47.7078,
+8.8211
+]
+],
+"orte": []
+},
+"820": {
+"enden": [
+[
+"Etzwilen",
+47.6611,
+8.8186
+],
+[
+"Schaffhausen",
+47.6981,
+8.6327
+]
+],
+"orte": []
+},
+"821": {
+"enden": [
+[
+"Oberwinterthur",
+47.5077,
+8.7601
+],
+[
+"Etzwilen",
+47.6611,
+8.8186
+]
+],
+"orte": []
+},
+"822": {
+"enden": [
+[
+"Kreuzlingen",
+47.6525,
+9.1691
+],
+[
+"Etzwilen",
+47.6611,
+8.8186
+]
+],
+"orte": []
+},
+"822 / 4000": {
+"enden": [
+[
+"Kreuzlingen",
+47.6525,
+9.1691
+]
+],
+"orte": []
+},
+"823": {
+"enden": [
+[
+"Kreuzlingen Hafen",
+47.6491,
+9.1819
+]
+],
+"orte": []
+},
+"824": {
+"enden": [
+[
+"Romanshorn",
+47.5655,
+9.3793
+],
+[
+"Kreuzlingen Hafen",
+47.6491,
+9.1819
+]
+],
+"orte": []
+},
+"824 / 4322": {
+"enden": [
+[
+"Kreuzlingen",
+47.6525,
+9.1691
+]
+],
+"orte": []
+},
+"825": {
+"enden": [
+[
+"Romanshorn",
+47.5655,
+9.3793
+],
+[
+"Rorschach",
+47.4781,
+9.5052
+]
+],
+"orte": []
+},
+"830": {
+"enden": [
+[
+"Weinfelden",
+47.5663,
+9.1064
+],
+[
+"Wil SG",
+47.4625,
+9.0409
+]
+],
+"orte": []
+},
+"831": {
+"enden": [
+[
+"St. Margrethen SG",
+47.4531,
+9.6382
+]
+],
+"orte": []
+},
+"832": {
+"enden": [
+[
+"Buchs SG",
+47.1687,
+9.4788
+]
+],
+"orte": []
+},
+"840": {
+"enden": [
+[
+"Romanshorn",
+47.5655,
+9.3793
+],
+[
+"Winterthur",
+47.5003,
+8.724
+]
+],
+"orte": []
+},
+"845": {
+"enden": [
+[
+"Rorschach",
+47.4781,
+9.5052
+]
+],
+"orte": []
+},
+"850": {
+"enden": [
+[
+"St. Gallen",
+47.4233,
+9.3698
+],
+[
+"Winterthur",
+47.5003,
+8.724
+],
+[
+"Flawil",
+47.4154,
+9.1893
+]
+],
+"orte": []
+},
+"850000": {
+"enden": [
+[
+"Vallorbe",
+46.7123,
+6.3706
+]
+],
+"orte": []
+},
+"852": {
+"enden": [
+[
+"Sulgen",
+47.5389,
+9.1836
+],
+[
+"Gossau",
+47.4119,
+9.2531
+]
+],
+"orte": []
+},
+"853": {
+"enden": [
+[
+"Wil SG",
+47.4625,
+9.0409
+],
+[
+"Uznach",
+47.2243,
+8.9807
+]
+],
+"orte": []
+},
+"854000": {
+"enden": [
+[
+"Boncourt",
+47.4924,
+7.0167
+]
+],
+"orte": []
+},
+"857": {
+"enden": [
+[
+"Heiden",
+47.4461,
+9.5366
+]
+],
+"orte": []
+},
+"868": {
+"enden": [
+[
+"St. Gallen St. Fiden",
+47.4345,
+9.3935
+]
+],
+"orte": []
+},
+"869": {
+"enden": [
+[
+"St. Gallen St. Fiden",
+47.4345,
+9.3935
+],
+[
+"Romanshorn",
+47.5655,
+9.3793
+]
+],
+"orte": []
+},
+"870": {
+"enden": [
+[
+"Lichtensteig",
+47.3196,
+9.0832
+],
+[
+"St. Gallen AB",
+47.4222,
+9.3689
+]
+],
+"orte": []
+},
+"871": {
+"enden": [
+[
+"Wattwil",
+47.2995,
+9.0865
+]
+],
+"orte": []
+},
+"872": {
+"enden": [
+[
+"Nesslau-Neu St. Johann",
+47.2268,
+9.1977
+]
+],
+"orte": []
+},
+"872000": {
+"enden": [
+[
+"Le Locle-Col-des-Roches",
+47.0499,
+6.7261
+]
+],
+"orte": []
+},
+"880": {
+"enden": [
+[
+"Sargans",
+47.0454,
+9.4454
+],
+[
+"Sevelen",
+47.1254,
+9.4938
+]
+],
+"orte": []
+},
+"882": {
+"enden": [
+[
+"Buchs SG",
+47.1687,
+9.4788
+]
+],
+"orte": []
+},
+"883": {
+"enden": [
+[
+"St. Margrethen SG",
+47.4531,
+9.6382
+]
+],
+"orte": []
+},
+"883 / 304 01": {
+"enden": [
+[
+"St. Margrethen SG",
+47.4531,
+9.6382
+]
+],
+"orte": []
+},
+"890": {
+"enden": [
+[
+"Sargans",
+47.0454,
+9.4454
+],
+[
+"Ziegelbrücke",
+47.1361,
+9.06
+]
+],
+"orte": []
+},
+"890000": {
+"enden": [
+[
+"La Plaine",
+46.1786,
+5.9995
+]
+],
+"orte": []
+},
+"894000": {
+"enden": [
+[
+"Chêne-Bourg",
+46.1966,
+6.1973
+]
+],
+"orte": []
+},
+"900": {
+"enden": [
+[
+"Sargans",
+47.0454,
+9.4454
+],
+[
+"Chur",
+46.8536,
+9.5296
+]
+],
+"orte": []
+},
+"920": {
+"enden": [
+[
+"Domat/Ems",
+46.8332,
+9.4531
+]
+],
+"orte": []
+},
+"949": {
+"enden": [
+[
+"Zürich Oerlikon",
+47.4115,
+8.5442
+]
+],
+"orte": []
+},
+"A27": {
+"enden": [
+[
+"Basel St. Johann",
+47.5701,
+7.5721
+]
+],
+"orte": [
+"Basel"
+]
+},
+"A28": {
+"enden": [
+[
+"Basel St. Johann",
+47.5701,
+7.5721
+]
+],
+"orte": [
+"Basel"
+]
+},
+"Lötschberg-Bergstrecke": {
+"enden": [
+[
+"Brig Bahnhofplatz",
+46.319,
+7.9876
+]
+],
+"orte": []
+}
+}

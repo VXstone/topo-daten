@@ -73,6 +73,7 @@ for k_, v_ in OVR.get("cfg", {}).items():
     if k_ == "rules": CFG["rules"].update(v_)
     else: CFG[k_] = v_
 RU = CFG["rules"]
+LINIENENDEN = json.load(open("linienenden.json")) if os.path.exists("linienenden.json") else {}   # nur im Workflow «plaene»
 LINE_TOWNS = {k: v for k, v in (json.load(open("region_lines.json")).items() if os.path.exists("region_lines.json") else []) if not k.startswith("_")}
 CFG["warp_file"] = ARGS.warp or f"{key}_warp.json"
 CFG["req_file"] = f"{key}_req.json"
@@ -498,6 +499,55 @@ if RU.get("r43", False):
         ends = [n_ for x in xs_ for n_ in (x["nodes"][0], x["nodes"][-1]) if _flat_at[n_]]
         if len(set(ends)) >= 2 and all(any(f["pax"] for f in _flat_at[n_]) for n_ in ends):
             for x in xs_: x["pax"] = True
+# Lücke im Perrongleis (26.10.2026, Solothurn Gleis 3: OSM teilt das Gleis, Mittelstücke ohne/mit falscher track_ref):
+# gerade Stücke ohne Personenverkehr zwischen zwei Personengleis-Stücken derselben Gleisnummer, zusammen höchstens
+# cfg «pax_luecke_m» (Standard 400 m), werden Personengleis. cfg «pax_luecke_m»: 0 schaltet die Regel ab.
+_PLM = CFG.get("pax_luecke_m", 400)
+if _PLM:
+    _np = [sg for sg in segs if sg["flat"] and not sg["pax"] and sg["way"] not in OVR.get("kein_pax", [])
+           and sg["tags"].get("service") not in ("yard",)]
+    _pp = collections.defaultdict(set); _ppf = collections.defaultdict(set)    # Personengleis-Stücke (alle / gerade)
+    for x in segs:
+        if x["pax"] and x["ref"]:
+            _pp[x["nodes"][0]].add(x["ref"]); _pp[x["nodes"][-1]].add(x["ref"])
+            if x["flat"]: _ppf[x["nodes"][0]].add(x["ref"]); _ppf[x["nodes"][-1]].add(x["ref"])
+    _pa = {id(x): id(x) for x in _np}
+    def _fpl(a):
+        while _pa[a] != a: a = _pa[a]
+        return a
+    _bn = collections.defaultdict(list)
+    for x in _np: _bn[x["nodes"][0]].append(x); _bn[x["nodes"][-1]].append(x)
+    for n_, xs_ in _bn.items():
+        if _ppf[n_]: continue             # am geraden Personengleis endet die Lücke
+        if len(xs_) == 2: _pa[_fpl(id(xs_[1]))] = _fpl(id(xs_[0]))
+        elif len(xs_) > 2 and n_ in SD:   # an einer Weiche: das geradeste Stück auf jeder Seite ist die Fortsetzung
+            _l = [x for x in xs_ if x["nodes"][-1] == n_]; _r = [x for x in xs_ if x["nodes"][0] == n_]
+            if _l and _r:
+                a_ = min(_l, key=lambda x: abs(x.get("slope", 0))); b_ = min(_r, key=lambda x: abs(x.get("slope", 0)))
+                _pa[_fpl(id(b_))] = _fpl(id(a_))
+    _cp = collections.defaultdict(list)
+    for x in _np: _cp[_fpl(id(x))].append(x)
+    for xs_ in _cp.values():
+        _adj = collections.defaultdict(list)
+        for x in xs_: _adj[x["nodes"][0]].append(x); _adj[x["nodes"][-1]].append(x)
+        ends = [n_ for n_ in _adj if _pp[n_]]
+        _rc = collections.Counter(r_ for n_ in ends for r_ in _pp[n_])
+        for R_ in [r_ for r_, c_ in _rc.items() if c_ >= 2]:
+            e_ = [n_ for n_ in ends if R_ in _pp[n_]]
+            # Weg zwischen den ersten zwei Enden mit dieser Gleisnummer (Breitensuche im Lückenstück)
+            prev = {e_[0]: None}; q_ = [e_[0]]
+            while q_:
+                n_ = q_.pop(0)
+                if n_ == e_[1]: break
+                for x in _adj[n_]:
+                    m_ = x["nodes"][-1] if x["nodes"][0] == n_ else x["nodes"][0]
+                    if m_ not in prev and (m_ == e_[1] or not _ppf[m_]): prev[m_] = (n_, x); q_.append(m_)
+            if e_[1] not in prev: continue
+            weg = []; n_ = e_[1]
+            while prev[n_]: n_, x = prev[n_]; weg.append(x)
+            if sum(x["s1"] - x["s0"] for x in weg) > _PLM: continue
+            for x in weg: x["pax"] = True; x["ref"] = x["ref"] or R_
+            if ARGS.dbg: print("PAXLUECKE", R_, [x["way"] for x in weg])
 # Kurzes gerades Mittelstück einer Verbindung (beidseitig nur Verbindungsstücke, keine Abzweige)
 _inc = collections.defaultdict(list)
 for sg in segs:
@@ -1124,14 +1174,27 @@ def exit_town(sg, n_cut):
             _dd = math.hypot(la - lat0, (lo - lon0) * math.cos(math.radians(lat0)))
             sc_.append((abs((bt - br + math.pi) % (2 * math.pi) - math.pi) + CFG.get("lt_dist_w", 0) * _dd, name))   # cfg.lt_dist_w: näherer Zielort bevorzugt (Region Neuchâtel)
         if sc_: return min(sc_)[1]
-    for name, (la, lo) in cands:
+    _le = LINIENENDEN.get(sg["tags"].get("ref") or exit_ref(sg) or "")
+    _pass = [cands]
+    if _le:   # Linienenden (code/linienenden.json, 26.10.2026): zuerst Orte an dieser Strecke, sonst ihre Endbahnhöfe
+        _pass = [[(n_, CFG["towns"][n_]) for n_ in _le.get("orte", []) if n_ in CFG["towns"]],
+                 [(n_, (la_, lo_)) for n_, la_, lo_ in _le.get("enden", [])]]
+        cands = _pass[0] + _pass[1]
+    for name, (la, lo) in [c_ for c_ in _pass[0]] + ([] if not _le else [("__ENDEN__", (0, 0))]) + (_pass[1] if _le else []):
+        if name == "__ENDEN__":
+            if bestt: break
+            continue
         dd = math.hypot(la - lat0, (lo - lon0) * math.cos(math.radians(lat0)))
-        if dd < 0.004 or dd > 0.25: continue
+        if dd < 0.004 or (dd > 0.25 and not _le): continue
         bt = math.atan2(la - p0[0], (lo - p0[1]) * math.cos(math.radians(lat0)))
         dang = abs((bt - br + math.pi) % (2 * math.pi) - math.pi)
         if dang < math.radians(70):
             sc = dang + dd * 8          # nächstgelegener Ort in Fahrtrichtung bevorzugt
             if bestt is None or sc < bestt[0]: bestt = (sc, name)
+    if bestt is None and _le:      # Strecke biegt nach dem Planrand ab (Solothurn 421 → Burgdorf): einziges Ende nehmen
+        _r = [(abs((math.atan2(la - p0[0], (lo - p0[1]) * math.cos(math.radians(lat0))) - br + math.pi) % (2 * math.pi) - math.pi), n_)
+              for n_, (la, lo) in cands if math.hypot(la - lat0, (lo - lon0) * math.cos(math.radians(lat0))) >= 0.004]
+        if _r and math.degrees(min(_r)[0]) < 135: return min(_r)[1]
     return bestt[1] if bestt else None
 
 def port_bearing(sg, n_cut):

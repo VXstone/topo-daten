@@ -22,6 +22,7 @@ for b in liste:
     cfg = B[b]; opt = cfg.get("optionen", [])
     w = os.path.join("/tmp", "spurplan_lauf", b); shutil.rmtree(w, ignore_errors=True); os.makedirs(w)
     for f in glob.glob(os.path.join(C, "*.py")): shutil.copy(f, w)
+    if os.path.exists(os.path.join(C, "linienenden.json")): shutil.copy(os.path.join(C, "linienenden.json"), w)   # Richtungsorte
     rl = os.path.join(C, f"region_lines_{cfg.get('region_lines', '')}.json")
     if os.path.exists(rl): shutil.copy(rl, os.path.join(w, "region_lines.json"))
     for f in glob.glob(os.path.join(R, "bahnhoefe", b, "*")): shutil.copy(f, w)
