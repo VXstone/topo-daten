@@ -724,3 +724,5 @@ Wunsch D. Eckenstein: Nutzung sparen, mehr in Git auslagern.
 - Nachbau geprüft: 12 Bahnhöfe und Regionalplan byte-gleich. Fest als Eingabe (eigener Bauweg): Hagendorf, Olten Ost, Regionalvarianten Rothrist und Olten Ost (Unterordner).
 - `netz_lage.py` (Olten und NE): `np.cross` mit 2D-Vektoren durch `_cr` ersetzt (numpy 2.5 bricht sonst ab).
 - Damit gilt: Änderungen an Overrides/Lage der Region Olten wirken direkt im Workflow, kein Hand-Kopieren von SVG mehr.
+- `werkstatt/olten/netz_lage.py`: Mindestabstand zwischen Halten (Lage `halt_abstand_min`, Standard 60 px): reicht das längste gerade Stück nicht, verteilen sich die Halte über die ganze gezeichnete Strecke (Hinweis fw9u: Sommerau/Rümlingen/Buckten 48 → ~105 px). Differenz nur Strecke Tecknau–Läufelfingen (Läufelfingerli).
+- Hinweis lld9 (Anschlussgleise südlich Olten): echte OSM-Gleise zwischen den Planfenstern Olten/Olten Hammer (137216805 + Verbindung 137713015 an Rothrist–Olten; 57016117, 137216810, Abstellgleis 480 137216908 an Olten–Hammer), nach R9 richtig gezeichnet. Debug: Env NEBDBG in netz_lage (nur lokal benutzt).

@@ -975,6 +975,17 @@ for r in routes:
         t = 0.15 + 0.7 * acc / r["length"]
         if len(_hl) >= 2: t = 0.12 + 0.76 * (_hl.index(nid) + 0.5) / len(_hl)     # mehrere Halte: gleichmässig
         HALT_AT[nid] = (P0 + (P1 - P0) * t, u, k)
+    # Mindestabstand zwischen Halten (Hinweis fw9u 17.10., D. Eckenstein 26.10.: Sommerau, Rümlingen, Buckten zu nah):
+    # reicht das längste gerade Stück nicht, verteilen sich die Halte über die ganze gezeichnete Strecke
+    _MINH = float(L0.get("halt_abstand_min", 60))
+    if len(_hl) >= 2 and 0.76 * Ls / len(_hl) < _MINH and len(core) >= 2:
+        _PLh = _LS([tuple(map(float, p_)) for p_ in core])
+        _a0, _a1 = 0.10 * _PLh.length, 0.90 * _PLh.length
+        for i_, nid in enumerate(_hl):
+            s_ = _a0 + (_a1 - _a0) * (i_ + 0.5) / len(_hl)
+            p_ = np.array(_PLh.interpolate(s_).coords[0]); q0_ = np.array(_PLh.interpolate(max(0, s_ - 6)).coords[0])
+            q1_ = np.array(_PLh.interpolate(min(_PLh.length, s_ + 6)).coords[0]); u_ = (q1_ - q0_) / (np.linalg.norm(q1_ - q0_) or 1)
+            HALT_AT[nid] = (p_, u_, k)
 print(f"  Spurwechsel gezeichnet: {XO_N[0]}")
 # Stösse zwischen Strecken an Abzweigen (Vauseyon 20.10.: "Doppelspur Achsabstand springt oder Winkel"): enden zwei Linien
 # verschiedener Strecken fast am selben Punkt in ähnlicher Richtung, werden beide Enden auf den Mittelpunkt gelegt und
