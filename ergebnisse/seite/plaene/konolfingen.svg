@@ -48,8 +48,11 @@
 <path d="M659.6,179.0L659.6,179.0L712.1,88.1" stroke="#00862f" stroke-width="3.6" stroke-linecap="round" fill="none"/>
 <text x="164.6" y="173.8" font-size="22" text-anchor="end" fill="#00862f">Linie 460</text>
 <text x="164.6" y="199.8" font-size="22" text-anchor="end" fill="#00862f">← Bern</text>
-<text x="800.3" y="210.8" font-size="22" text-anchor="start" fill="#00862f">Linie 460</text>
-<text x="517.5" y="422.7" font-size="22" text-anchor="middle" fill="#00862f">Linie 430</text>
-<text x="517.5" y="448.7" font-size="22" text-anchor="middle" fill="#00862f">Steffisburg →</text>
+<text x="800.3" y="197.8" font-size="22" text-anchor="start" fill="#00862f">Linie 460</text>
+<text x="800.3" y="223.8" font-size="22" text-anchor="start" fill="#00862f">Luzern →</text>
+<text x="322.9" y="422.7" font-size="22" text-anchor="middle" fill="#00862f">Linie 430</text>
+<text x="322.9" y="448.7" font-size="22" text-anchor="middle" fill="#00862f">← Steffisburg</text>
+<text x="712.1" y="29.1" font-size="22" text-anchor="middle" fill="#00862f">Linie 430</text>
+<text x="712.1" y="55.1" font-size="22" text-anchor="middle" fill="#00862f">Hasle-Rüegsau →</text>
 <text x="500.4" y="511.7" font-size="38" font-weight="700" text-anchor="middle" fill="#00862f">Konolfingen</text>
 </svg>
