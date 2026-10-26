@@ -2,267 +2,244 @@
  "bahnhof": "solothurn",
  "optionen": [],
  "sbb_perrons": [
-  "1 Hausperron 401.0 [1705] → 1504 1905 SBB-Länge, um Bahnhofsmitte",
-  "2/3 Mittelperron 401.0 [1704] → 1447 1848 SBB-Länge, um Bahnhofsmitte",
-  "5/6 Mittelperron 221.0 [1714] → 1525 1746 SBB-Länge, um Bahnhofsmitte",
+  "1 Hausperron 401.0 [1706] → 1378 1821 OSM-Perron",
+  "2/3 Mittelperron 401.0 [1705] → 1448 1849 SBB-Länge, um Bahnhofsmitte",
+  "5/6 Mittelperron 221.0 [1716] → 1508 1747 OSM-Perron",
   "geschrieben solothurn_override.json"
  ],
- "topologie": "{'A': 1, 'B': 4, 'D': 1}",
+ "topologie": "{'A': 3, 'B': 23}",
  "verbindungen_abweichungen": 0,
  "verbindungen": [],
  "regeln": [
   {
    "regel": "G2",
-   "x": 1043.4,
-   "y": 376.4,
+   "x": 996.8,
+   "y": 341.6,
    "bahnhof": null,
    "text": "Weiche ohne Ausrundung (60°)"
   },
   {
    "regel": "G2",
-   "x": 1434.6,
-   "y": 454.1,
+   "x": 920.2,
+   "y": 269.6,
    "bahnhof": null,
    "text": "Weiche ohne Ausrundung (60°)"
   },
   {
    "regel": "G2",
-   "x": 1442.7,
-   "y": 440.0,
+   "x": 920.2,
+   "y": 269.6,
    "bahnhof": null,
    "text": "Weiche ohne Ausrundung (60°)"
   },
   {
    "regel": "G2",
-   "x": 966.8,
-   "y": 304.4,
+   "x": 1138.5,
+   "y": 482.0,
    "bahnhof": null,
    "text": "Weiche ohne Ausrundung (60°)"
   },
   {
    "regel": "G2",
-   "x": 966.8,
-   "y": 304.4,
-   "bahnhof": null,
-   "text": "Weiche ohne Ausrundung (60°)"
-  },
-  {
-   "regel": "G2",
-   "x": 1172.0,
-   "y": 503.6,
-   "bahnhof": null,
-   "text": "Weiche ohne Ausrundung (60°)"
-  },
-  {
-   "regel": "G2",
-   "x": 891.9,
-   "y": 284.7,
+   "x": 845.7,
+   "y": 249.9,
    "bahnhof": null,
    "text": "Weiche ohne Ausrundung (60°)"
   },
   {
    "regel": "G6",
-   "x": 1470.9,
-   "y": 413.6,
+   "x": 1415.3,
+   "y": 378.8,
    "bahnhof": null,
    "text": "Linien stossen mit Knick 152° zusammen (Knubbel)"
   },
   {
    "regel": "G6",
-   "x": 1469.9,
-   "y": 413.6,
+   "x": 1414.3,
+   "y": 378.8,
    "bahnhof": null,
    "text": "Linien stossen mit Knick 152° zusammen (Knubbel)"
   },
   {
    "regel": "G6",
-   "x": 1470.9,
-   "y": 400.4,
+   "x": 1415.3,
+   "y": 365.6,
    "bahnhof": null,
    "text": "Linien stossen mit Knick 28° zusammen (Knubbel)"
   },
   {
    "regel": "G6",
-   "x": 1146.9,
-   "y": 440.0,
+   "x": 1113.4,
+   "y": 405.2,
    "bahnhof": null,
    "text": "Linien stossen mit Knick 84° zusammen (Knubbel)"
   },
   {
    "regel": "G6",
-   "x": 1147.9,
-   "y": 440.0,
+   "x": 1347.8,
+   "y": 431.6,
+   "bahnhof": null,
+   "text": "Linien stossen mit Knick 90° zusammen (Knubbel)"
+  },
+  {
+   "regel": "G6",
+   "x": 1114.4,
+   "y": 405.2,
    "bahnhof": null,
    "text": "Linien stossen mit Knick 84° zusammen (Knubbel)"
   },
   {
    "regel": "G6",
-   "x": 1185.8,
-   "y": 527.6,
+   "x": 1152.3,
+   "y": 506.0,
    "bahnhof": null,
    "text": "Linien stossen mit Knick 60° zusammen (Knubbel)"
   },
   {
    "regel": "G7",
-   "x": 868.7,
-   "y": 304.4,
+   "x": 826.7,
+   "y": 269.6,
    "bahnhof": null,
-   "text": "Gleisende nicht angebunden, nächstes Gleis 10.3 px"
+   "text": "Gleisende nicht angebunden, nächstes Gleis 6.6 px"
   },
   {
    "regel": "G7",
-   "x": 882.7,
-   "y": 304.4,
+   "x": 840.7,
+   "y": 269.6,
    "bahnhof": null,
-   "text": "Gleisende nicht angebunden, nächstes Gleis 1.9 px"
+   "text": "Gleisende nicht angebunden, nächstes Gleis 5.5 px"
   },
   {
    "regel": "G7",
-   "x": 909.6,
-   "y": 304.4,
+   "x": 863.1,
+   "y": 269.6,
    "bahnhof": null,
-   "text": "Gleisende nicht angebunden, nächstes Gleis 3.9 px"
+   "text": "Gleisende nicht angebunden, nächstes Gleis 4.0 px"
   },
   {
    "regel": "G7",
-   "x": 864.0,
-   "y": 284.7,
+   "x": 824.6,
+   "y": 249.9,
    "bahnhof": null,
-   "text": "Gleisende nicht angebunden, nächstes Gleis 4.3 px"
+   "text": "Gleisende nicht angebunden, nächstes Gleis 18.3 px"
   },
   {
    "regel": "G7",
-   "x": 1317.0,
-   "y": 256.4,
+   "x": 1311.1,
+   "y": 221.6,
    "bahnhof": null,
    "text": "Gleisende nicht angebunden, nächstes Gleis 2.2 px"
   },
   {
    "regel": "G8",
-   "x": 1466.7,
-   "y": 426.8,
+   "x": 1108.4,
+   "y": 431.6,
    "bahnhof": null,
-   "text": "Gleise 22 px deckungsgleich"
+   "text": "Gleise 23 px deckungsgleich"
   },
   {
    "regel": "G8",
-   "x": 1142.6,
-   "y": 466.4,
+   "x": 1077.7,
+   "y": 450.1,
    "bahnhof": null,
-   "text": "Gleise 21 px deckungsgleich"
+   "text": "Gleise 15 px deckungsgleich"
   },
   {
    "regel": "G8",
-   "x": 1116.6,
-   "y": 475.9,
+   "x": 1509.5,
+   "y": 418.4,
    "bahnhof": null,
-   "text": "Gleise 17 px deckungsgleich"
+   "text": "Gleise 25 px deckungsgleich"
   },
   {
    "regel": "G8",
-   "x": 1497.9,
-   "y": 123.2,
+   "x": 1591.0,
+   "y": 197.6,
    "bahnhof": null,
-   "text": "Gleise 17 px deckungsgleich"
+   "text": "Gleise 68 px deckungsgleich"
   },
   {
    "regel": "G8",
-   "x": 1578.9,
-   "y": 440.0,
+   "x": 1419.6,
+   "y": 173.6,
    "bahnhof": null,
-   "text": "Gleise 14 px deckungsgleich"
+   "text": "Gleise 24 px deckungsgleich"
   },
   {
    "regel": "G8",
-   "x": 1591.5,
-   "y": 440.0,
+   "x": 1479.8,
+   "y": 197.6,
    "bahnhof": null,
-   "text": "Gleise 39 px deckungsgleich"
-  },
-  {
-   "regel": "G8",
-   "x": 1508.7,
-   "y": 376.4,
-   "bahnhof": null,
-   "text": "Gleise 19 px deckungsgleich"
-  },
-  {
-   "regel": "G8",
-   "x": 1578.9,
-   "y": 439.9,
-   "bahnhof": null,
-   "text": "Gleise 14 px deckungsgleich"
+   "text": "Gleise 47 px deckungsgleich"
   }
  ],
- "planrand": [
-  "solothurn\tlinks x227\tLinie 410/410: Abstand 72 px statt 24"
- ],
+ "planrand": [],
  "netz": [
   {
    "regel": "D11",
-   "x": 1111.1,
-   "y": 503.6,
-   "text": "Gleisnummer 10 ohne Perron daneben (Perron fehlt oder Nummer zu viel)"
-  },
-  {
-   "regel": "D11",
-   "x": 1096.2,
-   "y": 527.6,
-   "text": "Gleisnummer 9 ohne Perron daneben (Perron fehlt oder Nummer zu viel)"
-  },
-  {
-   "regel": "D11",
-   "x": 1187.2,
-   "y": 304.4,
-   "text": "Gleisnummer 3 ohne Perron daneben (Perron fehlt oder Nummer zu viel)"
-  },
-  {
-   "regel": "D11",
-   "x": 1187.2,
-   "y": 232.4,
+   "x": 1153.7,
+   "y": 197.6,
    "text": "Gleisnummer 2 ohne Perron daneben (Perron fehlt oder Nummer zu viel)"
   },
   {
+   "regel": "D11",
+   "x": 1153.7,
+   "y": 269.6,
+   "text": "Gleisnummer 3 ohne Perron daneben (Perron fehlt oder Nummer zu viel)"
+  },
+  {
    "regel": "W2",
-   "x": 899.0,
-   "y": 256.4,
+   "x": 1397.3,
+   "y": 399.8,
    "text": "S-Kurve in der Mitte unter 103° (steiler oder flacher als 60°)"
   },
   {
    "regel": "W2",
-   "x": 1147.2,
-   "y": 433.4,
+   "x": 1367.3,
+   "y": 386.6,
+   "text": "S-Kurve in der Mitte unter 102° (steiler oder flacher als 60°)"
+  },
+  {
+   "regel": "W2",
+   "x": 1449.6,
+   "y": 380.0,
+   "text": "S-Kurve in der Mitte unter 77° (steiler oder flacher als 60°)"
+  },
+  {
+   "regel": "W2",
+   "x": 1349.0,
+   "y": 444.8,
+   "text": "Gleisstück unter 85° (nur 0° und 60° erlaubt)"
+  },
+  {
+   "regel": "W2",
+   "x": 1113.7,
+   "y": 398.6,
    "text": "Gleisstück unter 84° (nur 0° und 60° erlaubt)"
   },
   {
    "regel": "W1",
-   "x": 1147.2,
-   "y": 433.4,
+   "x": 1349.0,
+   "y": 444.8,
+   "text": "Gleisstück unter 85° (steiler als 60°), 27 px"
+  },
+  {
+   "regel": "W1",
+   "x": 1113.7,
+   "y": 398.6,
    "text": "Gleisstück unter 84° (steiler als 60°), 13 px"
   },
   {
-   "regel": "F10",
-   "x": 1368.3,
-   "y": 256.4,
-   "text": "Badewanne: Gleis geht eine Ebene hinunter/hinauf und gleich zurück (20 px waagrecht, ohne Weiche)"
-  },
-  {
-   "regel": "F7",
-   "x": 481.9,
-   "y": 256.4,
-   "text": "Zwischengerade 20 px im Spurwechsel ohne Perron und Nummer (eine Diagonale)"
-  },
-  {
    "regel": "A1",
-   "x": 875.7,
-   "y": 304.4,
+   "x": 833.7,
+   "y": 269.6,
    "text": "zwei Gleise nur 19.7 px auseinander über 14 px (Grenze 20 px)"
   },
   {
    "regel": "A1",
-   "x": 927.5,
-   "y": 304.4,
-   "text": "zwei Gleise nur 19.7 px auseinander über 33 px (Grenze 20 px)"
+   "x": 882.7,
+   "y": 269.6,
+   "text": "zwei Gleise nur 19.7 px auseinander über 29 px (Grenze 20 px)"
   }
  ],
  "ok": true

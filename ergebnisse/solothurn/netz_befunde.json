@@ -3,69 +3,69 @@
  "befunde": [
   {
    "regel": "D11",
-   "x": 1111.1,
-   "y": 503.6,
-   "text": "Gleisnummer 10 ohne Perron daneben (Perron fehlt oder Nummer zu viel)"
-  },
-  {
-   "regel": "D11",
-   "x": 1096.2,
-   "y": 527.6,
-   "text": "Gleisnummer 9 ohne Perron daneben (Perron fehlt oder Nummer zu viel)"
-  },
-  {
-   "regel": "D11",
-   "x": 1187.2,
-   "y": 304.4,
-   "text": "Gleisnummer 3 ohne Perron daneben (Perron fehlt oder Nummer zu viel)"
-  },
-  {
-   "regel": "D11",
-   "x": 1187.2,
-   "y": 232.4,
+   "x": 1153.7,
+   "y": 197.6,
    "text": "Gleisnummer 2 ohne Perron daneben (Perron fehlt oder Nummer zu viel)"
   },
   {
+   "regel": "D11",
+   "x": 1153.7,
+   "y": 269.6,
+   "text": "Gleisnummer 3 ohne Perron daneben (Perron fehlt oder Nummer zu viel)"
+  },
+  {
    "regel": "W2",
-   "x": 899.0,
-   "y": 256.4,
+   "x": 1397.3,
+   "y": 399.8,
    "text": "S-Kurve in der Mitte unter 103° (steiler oder flacher als 60°)"
   },
   {
    "regel": "W2",
-   "x": 1147.2,
-   "y": 433.4,
+   "x": 1367.3,
+   "y": 386.6,
+   "text": "S-Kurve in der Mitte unter 102° (steiler oder flacher als 60°)"
+  },
+  {
+   "regel": "W2",
+   "x": 1449.6,
+   "y": 380.0,
+   "text": "S-Kurve in der Mitte unter 77° (steiler oder flacher als 60°)"
+  },
+  {
+   "regel": "W2",
+   "x": 1349.0,
+   "y": 444.8,
+   "text": "Gleisstück unter 85° (nur 0° und 60° erlaubt)"
+  },
+  {
+   "regel": "W2",
+   "x": 1113.7,
+   "y": 398.6,
    "text": "Gleisstück unter 84° (nur 0° und 60° erlaubt)"
   },
   {
    "regel": "W1",
-   "x": 1147.2,
-   "y": 433.4,
+   "x": 1349.0,
+   "y": 444.8,
+   "text": "Gleisstück unter 85° (steiler als 60°), 27 px"
+  },
+  {
+   "regel": "W1",
+   "x": 1113.7,
+   "y": 398.6,
    "text": "Gleisstück unter 84° (steiler als 60°), 13 px"
   },
   {
-   "regel": "F10",
-   "x": 1368.3,
-   "y": 256.4,
-   "text": "Badewanne: Gleis geht eine Ebene hinunter/hinauf und gleich zurück (20 px waagrecht, ohne Weiche)"
-  },
-  {
-   "regel": "F7",
-   "x": 481.9,
-   "y": 256.4,
-   "text": "Zwischengerade 20 px im Spurwechsel ohne Perron und Nummer (eine Diagonale)"
-  },
-  {
    "regel": "A1",
-   "x": 875.7,
-   "y": 304.4,
+   "x": 833.7,
+   "y": 269.6,
    "text": "zwei Gleise nur 19.7 px auseinander über 14 px (Grenze 20 px)"
   },
   {
    "regel": "A1",
-   "x": 927.5,
-   "y": 304.4,
-   "text": "zwei Gleise nur 19.7 px auseinander über 33 px (Grenze 20 px)"
+   "x": 882.7,
+   "y": 269.6,
+   "text": "zwei Gleise nur 19.7 px auseinander über 29 px (Grenze 20 px)"
   }
  ],
  "durchfahrgleise": []

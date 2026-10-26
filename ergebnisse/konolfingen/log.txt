@@ -1,52 +1,57 @@
 $ sbb_perrons.py
-2 Hausperron 249.0 [1763] → 1541 1826 OSM-Perron
-3/4 Mittelperron 259.0 [1790] → 1673 1932 SBB-Länge, um Bahnhofsmitte
-5/6 Mittelperron 150.0 [1782] → 1707 1857 SBB-Länge, um Bahnhofsmitte
+2 Hausperron 249.0 [1763] → 1541 1945 OSM-Perron
+3/4 Mittelperron 259.0 [1790] → 1602 1945 OSM-Perron
+5/6 Mittelperron 150.0 [1782] → 1694 1858 OSM-Perron
 geschrieben konolfingen_override.json
 
 $ spurplan_schema.py --src konolfingen.json --nowarp
-Bahnhof Konolfingen: Achse 3695 m, Ausschnitt s=1206…2230, 28 Weichen, 1 Perrons
+Bahnhof Konolfingen: Achse 3695 m, Ausschnitt s=1206…2230, 28 Weichen, 3 Perrons
 chains 18 lanes 13 segs 62 W 1256 H 542
 
 $ spurplan_warp.py konolfingen
 Optimization terminated successfully. (HiGHS Status 7: Optimal)
-Breite linear 942 px -> entzerrt 612 px
+Breite linear 942 px -> entzerrt 621 px
 
 $ spurplan_schema.py --src konolfingen.json
-Bahnhof Konolfingen: Achse 3695 m, Ausschnitt s=1206…2230, 28 Weichen, 1 Perrons
-chains 18 lanes 13 segs 62 W 929 H 542
+Bahnhof Konolfingen: Achse 3695 m, Ausschnitt s=1206…2230, 28 Weichen, 3 Perrons
+chains 18 lanes 13 segs 62 W 938 H 542
 
 $ spurplan_warp.py konolfingen
 Optimization terminated successfully. (HiGHS Status 7: Optimal)
-Breite linear 942 px -> entzerrt 612 px
+Breite linear 942 px -> entzerrt 621 px
 
 $ spurplan_schema.py --src konolfingen.json
-Bahnhof Konolfingen: Achse 3695 m, Ausschnitt s=1206…2230, 28 Weichen, 1 Perrons
-chains 18 lanes 13 segs 62 W 929 H 542
+Bahnhof Konolfingen: Achse 3695 m, Ausschnitt s=1206…2230, 28 Weichen, 3 Perrons
+chains 18 lanes 13 segs 62 W 938 H 542
 
 $ spurplan_check.py --src konolfingen.json --out /tmp/spurplan_lauf/_check_konolfingen.svg
-Bahnhof Konolfingen: Achse 3695 m, Ausschnitt s=1206…2230, 28 Weichen, 1 Perrons
-chains 18 lanes 13 segs 62 W 929 H 542
+Bahnhof Konolfingen: Achse 3695 m, Ausschnitt s=1206…2230, 28 Weichen, 3 Perrons
+chains 18 lanes 13 segs 62 W 938 H 542
 Befunde: {'A': 1, 'B': 2}
 eindeutig: {'A': 1, 'B': 2}
-A x=   586 y=  331  Verbindung nicht geschlossen (90px): yard (way 156705006)
+A x=   595 y=  331  Verbindung nicht geschlossen (90px): yard (way 156705006)
 B x=   397 y=  307  Überlagerung 22px: 11 (way 33390862) / yard (way 739598378)
 B x=   397 y=  307  Überlagerung 22px: Gleis (way 606745360) / yard (way 739598378)
 
 $ spurplan_schema.py --src konolfingen.json --bare --out konolfingen_bare.svg
-Bahnhof Konolfingen: Achse 3695 m, Ausschnitt s=1206…2230, 28 Weichen, 1 Perrons
-chains 18 lanes 13 segs 62 W 929 H 460
+Bahnhof Konolfingen: Achse 3695 m, Ausschnitt s=1206…2230, 28 Weichen, 3 Perrons
+chains 18 lanes 13 segs 62 W 938 H 460
 
-Traceback (most recent call last):
-  File "/tmp/spurplan_lauf/konolfingen/verbindungen_pruefen.py", line 34, in <module>
-    WAY = {e["id"]: e for e in E if e["type"] == "way"}
-                                    ~^^^^^^^^
-TypeError: string indices must be integers, not 'str'
+Verbindungsprüfung konolfingen: 0 Perrongleise, 5 Abgänge (Personenverkehr)
+  Abgang 460 Bern (edge y187 x177): ok (3 Ziele)
+  Abgang 460 Luzern (edge y187 x797): ok (2 Ziele)
+  Abgang 460 Luzern (edge y235 x797): ok (2 Ziele)
+  Abgang 430 Steffisburg (side y307 x375): ok (3 Ziele)
+  Abgang 430 Hasle-Rüegsau (side y179 x669): ok (2 Ziele)
+→ 0 Abweichungen
+Weichen ohne Ausrundung (Linienende unter >35° auf Gleis): 2
+   x375 y307  60°
+   x622 y235  36°
 
 Netzprüfung konolfingen: {'A1': 2, 'D11': 1, 'F7': 1, 'T10': 1, 'W2': 1}; Durchfahrgleise 3
   T10  x=375.5 y=222.8  Durchfahrgleis (beidseitig ans Streckengleis angeschlossen, 489 m Nebengleis, service=siding) schwarz gezeichnet  (way 23493308)
   D11  x=None y=None  OSM-Perron ref 1 hat keine gleichnamige Gleisnummer im Plan
-  W2   x=562.7 y=306.8  S-Kurve in der Mitte unter 103° (steiler oder flacher als 60°)
-  F7   x=573.7 y=210.8  Zwischengerade 33 px im Spurwechsel ohne Perron und Nummer (eine Diagonale)
+  W2   x=571.8 y=306.8  S-Kurve in der Mitte unter 103° (steiler oder flacher als 60°)
+  F7   x=582.9 y=210.8  Zwischengerade 33 px im Spurwechsel ohne Perron und Nummer (eine Diagonale)
   A1   x=320.6 y=214.2  zwei Gleise nur 6.8 px auseinander über 49 px (Grenze 9.6 px)
-  A1   x=682.2 y=318.2  zwei Gleise nur 6.9 px auseinander über 15 px (Grenze 9.6 px)
+  A1   x=691.4 y=318.2  zwei Gleise nur 6.9 px auseinander über 15 px (Grenze 9.6 px)
