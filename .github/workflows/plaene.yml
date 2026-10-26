@@ -23,8 +23,12 @@ jobs:
       - run: |
           sudo apt-get install -y -q libcairo2 >/dev/null
           pip install -q numpy scipy shapely svgpathtools cairosvg pillow
+      - name: SBB-Perrondaten (Release «daten», B13)
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: gh release download daten -p perronoberflache.geojson.gz -D /tmp --clobber
       - name: Pläne bauen und prüfen
         env:
+          SBB_PO: "/tmp/perronoberflache.geojson.gz"
           LAUF: "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
           VBJS: "/nicht-vorhanden"
         run: python3 spurplan/code/lauf.py ${{ github.event.inputs.bahnhoefe }}

@@ -34,6 +34,15 @@ for b in liste:
                 py + ["spurplan_schema.py", "--src", f"{b}.json", "--bare", "--out", f"{b}_bare.svg"] + opt]
     if os.path.exists(os.path.join(w, f"{b}_warp.json")): os.remove(os.path.join(w, f"{b}_warp.json"))
     ber = dict(bahnhof=b, optionen=opt)
+    # B13 (26.10.2026, Hinweis Konolfingen): Perrons aus SBB Open Data, sofern das Override keine «platforms» von Hand hat.
+    # Daten: SBB_PO oder perronoberflache.geojson.gz im Repo-Wurzelordner (Workflow lädt sie aus dem Release «daten»).
+    _po = os.environ.get("SBB_PO") or os.path.join(os.path.dirname(R), "perronoberflache.geojson.gz")
+    if os.path.exists(_po) and cfg.get("sbb_perrons", True):
+        p_ = subprocess.run(py + ["spurplan_schema.py", "--src", f"{b}.json", "--nowarp"] + opt, cwd=w, capture_output=True,
+                            text=True, env=dict(os.environ, SPUR_FENSTER="1"))
+        p_ = subprocess.run(py + ["sbb_perrons.py", b] + ([cfg["sbb_name"]] if cfg.get("sbb_name") else []) + ["--auto"],
+                            cwd=w, capture_output=True, text=True, env=dict(os.environ, SBB_PO=_po))
+        ber["sbb_perrons"] = (p_.stdout or p_.stderr).strip().splitlines()[-6:]; log.append("$ sbb_perrons.py\n" + (p_.stdout or "") + (p_.stderr or ""))
     for i, s in enumerate(schritte):
         rc, o = sh(s, w); log.append(f"$ {' '.join(s[1:])}\n{o[-3000:]}")
         if rc: ok = False; ber["fehler"] = f"Schritt {i + 1}: {' '.join(s[1:])}"; break
