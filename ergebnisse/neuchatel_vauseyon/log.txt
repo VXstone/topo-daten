@@ -1,3 +1,6 @@
+$ sbb_perrons.py
+1 Aussenperron 181.0 [1350] → übersprungen: Gleis 1 in OSM bei 280–465, SBB-Punkte daneben
+
 $ spurplan_schema.py --src neuchatel_vauseyon.json --nowarp
 Bahnhof Neuchâtel Vauseyon: Achse 2345 m, Ausschnitt s=276…1995, 9 Weichen, 2 Perrons
 chains 8 lanes 8 segs 35 W 2018 H 391

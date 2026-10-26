@@ -3,6 +3,9 @@
  "optionen": [
   "--hauptgleise"
  ],
+ "sbb_perrons": [
+  "SBB-Perrons neuchatel: nichts zu tun (Override hat platforms)"
+ ],
  "topologie": "{}",
  "verbindungen_abweichungen": 1,
  "verbindungen": [

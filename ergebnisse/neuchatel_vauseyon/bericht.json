@@ -1,6 +1,9 @@
 {
  "bahnhof": "neuchatel_vauseyon",
  "optionen": [],
+ "sbb_perrons": [
+  "1 Aussenperron 181.0 [1350] → übersprungen: Gleis 1 in OSM bei 280–465, SBB-Punkte daneben"
+ ],
  "topologie": "{'A': 1}",
  "verbindungen_abweichungen": null,
  "verbindungen": [],
