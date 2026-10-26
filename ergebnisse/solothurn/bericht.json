@@ -1,0 +1,321 @@
+{
+ "bahnhof": "solothurn",
+ "optionen": [],
+ "sbb_perrons": [
+  "1 Hausperron 401.0 [1705] → 1504 1905 SBB-Länge, um Bahnhofsmitte",
+  "2/3 Mittelperron 401.0 [1704] → 1447 1848 SBB-Länge, um Bahnhofsmitte",
+  "5/6 Mittelperron 221.0 [1714] → 1525 1746 SBB-Länge, um Bahnhofsmitte",
+  "geschrieben solothurn_override.json"
+ ],
+ "topologie": "{'A': 1, 'B': 4, 'D': 1}",
+ "verbindungen_abweichungen": 0,
+ "verbindungen": [],
+ "regeln": [
+  {
+   "regel": "G3",
+   "x": 1185.8,
+   "y": 497.4,
+   "bahnhof": null,
+   "text": "Knick 34° ohne Ausrundung"
+  },
+  {
+   "regel": "G2",
+   "x": 1043.4,
+   "y": 376.4,
+   "bahnhof": null,
+   "text": "Weiche ohne Ausrundung (60°)"
+  },
+  {
+   "regel": "G2",
+   "x": 1434.6,
+   "y": 454.1,
+   "bahnhof": null,
+   "text": "Weiche ohne Ausrundung (60°)"
+  },
+  {
+   "regel": "G2",
+   "x": 1442.7,
+   "y": 440.0,
+   "bahnhof": null,
+   "text": "Weiche ohne Ausrundung (60°)"
+  },
+  {
+   "regel": "G2",
+   "x": 966.8,
+   "y": 304.4,
+   "bahnhof": null,
+   "text": "Weiche ohne Ausrundung (60°)"
+  },
+  {
+   "regel": "G2",
+   "x": 966.8,
+   "y": 304.4,
+   "bahnhof": null,
+   "text": "Weiche ohne Ausrundung (60°)"
+  },
+  {
+   "regel": "G2",
+   "x": 1180.1,
+   "y": 503.6,
+   "bahnhof": null,
+   "text": "Weiche ohne Ausrundung (47°)"
+  },
+  {
+   "regel": "G4",
+   "x": 1199.5,
+   "y": 414.0,
+   "bahnhof": null,
+   "text": "Gleisstück 81° zur Linie"
+  },
+  {
+   "regel": "G2",
+   "x": 1185.8,
+   "y": 497.4,
+   "bahnhof": null,
+   "text": "Weiche ohne Ausrundung (17°)"
+  },
+  {
+   "regel": "G2",
+   "x": 891.9,
+   "y": 284.7,
+   "bahnhof": null,
+   "text": "Weiche ohne Ausrundung (60°)"
+  },
+  {
+   "regel": "G6",
+   "x": 1470.9,
+   "y": 413.6,
+   "bahnhof": null,
+   "text": "Linien stossen mit Knick 152° zusammen (Knubbel)"
+  },
+  {
+   "regel": "G6",
+   "x": 1469.9,
+   "y": 413.6,
+   "bahnhof": null,
+   "text": "Linien stossen mit Knick 152° zusammen (Knubbel)"
+  },
+  {
+   "regel": "G6",
+   "x": 1470.9,
+   "y": 400.4,
+   "bahnhof": null,
+   "text": "Linien stossen mit Knick 28° zusammen (Knubbel)"
+  },
+  {
+   "regel": "G6",
+   "x": 1146.9,
+   "y": 440.0,
+   "bahnhof": null,
+   "text": "Linien stossen mit Knick 84° zusammen (Knubbel)"
+  },
+  {
+   "regel": "G6",
+   "x": 1147.9,
+   "y": 440.0,
+   "bahnhof": null,
+   "text": "Linien stossen mit Knick 84° zusammen (Knubbel)"
+  },
+  {
+   "regel": "G7",
+   "x": 868.7,
+   "y": 304.4,
+   "bahnhof": null,
+   "text": "Gleisende nicht angebunden, nächstes Gleis 10.3 px"
+  },
+  {
+   "regel": "G7",
+   "x": 882.7,
+   "y": 304.4,
+   "bahnhof": null,
+   "text": "Gleisende nicht angebunden, nächstes Gleis 1.9 px"
+  },
+  {
+   "regel": "G7",
+   "x": 909.6,
+   "y": 304.4,
+   "bahnhof": null,
+   "text": "Gleisende nicht angebunden, nächstes Gleis 3.9 px"
+  },
+  {
+   "regel": "G7",
+   "x": 864.0,
+   "y": 284.7,
+   "bahnhof": null,
+   "text": "Gleisende nicht angebunden, nächstes Gleis 4.3 px"
+  },
+  {
+   "regel": "G7",
+   "x": 1317.0,
+   "y": 256.4,
+   "bahnhof": null,
+   "text": "Gleisende nicht angebunden, nächstes Gleis 2.2 px"
+  },
+  {
+   "regel": "G8",
+   "x": 1466.7,
+   "y": 426.8,
+   "bahnhof": null,
+   "text": "Gleise 22 px deckungsgleich"
+  },
+  {
+   "regel": "G8",
+   "x": 1142.6,
+   "y": 466.4,
+   "bahnhof": null,
+   "text": "Gleise 21 px deckungsgleich"
+  },
+  {
+   "regel": "G8",
+   "x": 1116.6,
+   "y": 475.9,
+   "bahnhof": null,
+   "text": "Gleise 17 px deckungsgleich"
+  },
+  {
+   "regel": "G8",
+   "x": 1497.9,
+   "y": 123.2,
+   "bahnhof": null,
+   "text": "Gleise 17 px deckungsgleich"
+  },
+  {
+   "regel": "G8",
+   "x": 1578.9,
+   "y": 440.0,
+   "bahnhof": null,
+   "text": "Gleise 14 px deckungsgleich"
+  },
+  {
+   "regel": "G8",
+   "x": 1591.5,
+   "y": 440.0,
+   "bahnhof": null,
+   "text": "Gleise 39 px deckungsgleich"
+  },
+  {
+   "regel": "G8",
+   "x": 1508.7,
+   "y": 376.4,
+   "bahnhof": null,
+   "text": "Gleise 19 px deckungsgleich"
+  },
+  {
+   "regel": "G8",
+   "x": 1578.9,
+   "y": 439.9,
+   "bahnhof": null,
+   "text": "Gleise 14 px deckungsgleich"
+  }
+ ],
+ "planrand": [
+  "solothurn\tlinks x227\tLinie 410/410: Abstand 72 px statt 24"
+ ],
+ "netz": [
+  {
+   "regel": "D11",
+   "x": 1111.1,
+   "y": 503.6,
+   "text": "Gleisnummer 10 ohne Perron daneben (Perron fehlt oder Nummer zu viel)"
+  },
+  {
+   "regel": "D11",
+   "x": 1095.8,
+   "y": 304.4,
+   "text": "Gleisnummer 3 ohne Perron daneben (Perron fehlt oder Nummer zu viel)"
+  },
+  {
+   "regel": "D11",
+   "x": 1185.3,
+   "y": 232.4,
+   "text": "Gleisnummer 2 ohne Perron daneben (Perron fehlt oder Nummer zu viel)"
+  },
+  {
+   "regel": "D11",
+   "x": null,
+   "y": null,
+   "text": "OSM-Perron ref 21 hat keine gleichnamige Gleisnummer im Plan"
+  },
+  {
+   "regel": "Z2",
+   "x": 226.7,
+   "y": 208.4,
+   "text": "Abgang Linie 410 ohne Richtungsort",
+   "way": 98467649
+  },
+  {
+   "regel": "Z2",
+   "x": 226.7,
+   "y": 280.4,
+   "text": "Abgang Linie 410 ohne Richtungsort",
+   "way": 155433654
+  },
+  {
+   "regel": "W2",
+   "x": 899.0,
+   "y": 256.4,
+   "text": "S-Kurve in der Mitte unter 103° (steiler oder flacher als 60°)"
+  },
+  {
+   "regel": "W2",
+   "x": 1147.2,
+   "y": 433.4,
+   "text": "Gleisstück unter 84° (nur 0° und 60° erlaubt)"
+  },
+  {
+   "regel": "W2",
+   "x": 1039.8,
+   "y": 505.5,
+   "text": "Gleisstück unter 176° (nur 0° und 60° erlaubt)"
+  },
+  {
+   "regel": "W2",
+   "x": 985.8,
+   "y": 515.5,
+   "text": "Gleisstück unter 156° (nur 0° und 60° erlaubt)"
+  },
+  {
+   "regel": "W2",
+   "x": 1192.7,
+   "y": 455.7,
+   "text": "Gleisstück unter 99° (nur 0° und 60° erlaubt)"
+  },
+  {
+   "regel": "W2",
+   "x": 1180.0,
+   "y": 503.6,
+   "text": "Gleisstück unter 133° (nur 0° und 60° erlaubt)"
+  },
+  {
+   "regel": "W2",
+   "x": 1159.3,
+   "y": 516.1,
+   "text": "Gleisstück unter 170° (nur 0° und 60° erlaubt)"
+  },
+  {
+   "regel": "W2",
+   "x": 1113.3,
+   "y": 515.7,
+   "text": "Gleisstück unter 8° (nur 0° und 60° erlaubt)"
+  },
+  {
+   "regel": "W2",
+   "x": 1070.9,
+   "y": 504.7,
+   "text": "Gleisstück unter 10° (nur 0° und 60° erlaubt)"
+  },
+  {
+   "regel": "A1",
+   "x": 875.7,
+   "y": 304.4,
+   "text": "zwei Gleise nur 19.7 px auseinander über 14 px (Grenze 20 px)"
+  },
+  {
+   "regel": "A1",
+   "x": 927.5,
+   "y": 304.4,
+   "text": "zwei Gleise nur 19.7 px auseinander über 33 px (Grenze 20 px)"
+  }
+ ],
+ "ok": true
+}

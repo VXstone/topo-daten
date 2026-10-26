@@ -1,0 +1,110 @@
+{
+ "bahnhof": "solothurn",
+ "befunde": [
+  {
+   "regel": "D11",
+   "x": 1111.1,
+   "y": 503.6,
+   "text": "Gleisnummer 10 ohne Perron daneben (Perron fehlt oder Nummer zu viel)"
+  },
+  {
+   "regel": "D11",
+   "x": 1095.8,
+   "y": 304.4,
+   "text": "Gleisnummer 3 ohne Perron daneben (Perron fehlt oder Nummer zu viel)"
+  },
+  {
+   "regel": "D11",
+   "x": 1185.3,
+   "y": 232.4,
+   "text": "Gleisnummer 2 ohne Perron daneben (Perron fehlt oder Nummer zu viel)"
+  },
+  {
+   "regel": "D11",
+   "x": null,
+   "y": null,
+   "text": "OSM-Perron ref 21 hat keine gleichnamige Gleisnummer im Plan"
+  },
+  {
+   "regel": "Z2",
+   "x": 226.7,
+   "y": 208.4,
+   "text": "Abgang Linie 410 ohne Richtungsort",
+   "way": 98467649
+  },
+  {
+   "regel": "Z2",
+   "x": 226.7,
+   "y": 280.4,
+   "text": "Abgang Linie 410 ohne Richtungsort",
+   "way": 155433654
+  },
+  {
+   "regel": "W2",
+   "x": 899.0,
+   "y": 256.4,
+   "text": "S-Kurve in der Mitte unter 103° (steiler oder flacher als 60°)"
+  },
+  {
+   "regel": "W2",
+   "x": 1147.2,
+   "y": 433.4,
+   "text": "Gleisstück unter 84° (nur 0° und 60° erlaubt)"
+  },
+  {
+   "regel": "W2",
+   "x": 1039.8,
+   "y": 505.5,
+   "text": "Gleisstück unter 176° (nur 0° und 60° erlaubt)"
+  },
+  {
+   "regel": "W2",
+   "x": 985.8,
+   "y": 515.5,
+   "text": "Gleisstück unter 156° (nur 0° und 60° erlaubt)"
+  },
+  {
+   "regel": "W2",
+   "x": 1192.7,
+   "y": 455.7,
+   "text": "Gleisstück unter 99° (nur 0° und 60° erlaubt)"
+  },
+  {
+   "regel": "W2",
+   "x": 1180.0,
+   "y": 503.6,
+   "text": "Gleisstück unter 133° (nur 0° und 60° erlaubt)"
+  },
+  {
+   "regel": "W2",
+   "x": 1159.3,
+   "y": 516.1,
+   "text": "Gleisstück unter 170° (nur 0° und 60° erlaubt)"
+  },
+  {
+   "regel": "W2",
+   "x": 1113.3,
+   "y": 515.7,
+   "text": "Gleisstück unter 8° (nur 0° und 60° erlaubt)"
+  },
+  {
+   "regel": "W2",
+   "x": 1070.9,
+   "y": 504.7,
+   "text": "Gleisstück unter 10° (nur 0° und 60° erlaubt)"
+  },
+  {
+   "regel": "A1",
+   "x": 875.7,
+   "y": 304.4,
+   "text": "zwei Gleise nur 19.7 px auseinander über 14 px (Grenze 20 px)"
+  },
+  {
+   "regel": "A1",
+   "x": 927.5,
+   "y": 304.4,
+   "text": "zwei Gleise nur 19.7 px auseinander über 33 px (Grenze 20 px)"
+  }
+ ],
+ "durchfahrgleise": []
+}

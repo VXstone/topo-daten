@@ -1,0 +1,71 @@
+$ sbb_perrons.py
+1 Hausperron 401.0 [1705] → 1504 1905 SBB-Länge, um Bahnhofsmitte
+2/3 Mittelperron 401.0 [1704] → 1447 1848 SBB-Länge, um Bahnhofsmitte
+5/6 Mittelperron 221.0 [1714] → 1525 1746 SBB-Länge, um Bahnhofsmitte
+geschrieben solothurn_override.json
+
+$ spurplan_schema.py --src solothurn.json --nowarp
+Bahnhof Solothurn: Achse 2825 m, Ausschnitt s=432…2530, 55 Weichen, 4 Perrons
+chains 34 lanes 20 segs 131 W 2380 H 585
+
+$ spurplan_warp.py solothurn
+Optimization terminated successfully. (HiGHS Status 7: Optimal)
+Breite linear 1930 px -> entzerrt 1461 px
+
+$ spurplan_schema.py --src solothurn.json
+Bahnhof Solothurn: Achse 2825 m, Ausschnitt s=432…2530, 55 Weichen, 4 Perrons
+chains 34 lanes 20 segs 131 W 1911 H 585
+
+$ spurplan_warp.py solothurn
+Optimization terminated successfully. (HiGHS Status 7: Optimal)
+Breite linear 1930 px -> entzerrt 1474 px
+
+$ spurplan_schema.py --src solothurn.json
+Bahnhof Solothurn: Achse 2825 m, Ausschnitt s=432…2530, 55 Weichen, 4 Perrons
+chains 34 lanes 20 segs 131 W 1925 H 585
+
+$ spurplan_check.py --src solothurn.json --out /tmp/spurplan_lauf/_check_solothurn.svg
+Bahnhof Solothurn: Achse 2825 m, Ausschnitt s=432…2530, 55 Weichen, 4 Perrons
+chains 34 lanes 20 segs 131 W 1925 H 585
+Befunde: {'A': 1, 'B': 4, 'D': 1}
+eindeutig: {'A': 1, 'B': 2, 'D': 1}
+A x=   908 y=  304  Verbindung nicht geschlossen (26px): 444 (way 49565865)
+B x=  1572 y=  440  Scheinverbindung: 904 (way 49565917) berührt yard (way 251195479)
+B x=  1572 y=  440  Scheinverbindung: yard (way 251195476) berührt yard (way 251195479)
+D x=  1409 y=  232  Reihenfolge vertauscht bei s=2082: Lane 13 über 12, real umgekehrt
+
+$ spurplan_schema.py --src solothurn.json --bare --out solothurn_bare.svg
+Bahnhof Solothurn: Achse 2825 m, Ausschnitt s=432…2530, 55 Weichen, 4 Perrons
+chains 34 lanes 20 segs 131 W 1925 H 585
+
+Verbindungsprüfung solothurn: 0 Perrongleise, 7 Abgänge (Personenverkehr)
+  Abgang 410 Langenthal (edge y208 x1701): ok (2 Ziele)
+  Abgang 410 None (edge y208 x227): ok (3 Ziele)
+  Abgang 410 None (edge y280 x227): ok (2 Ziele)
+  Abgang 410 Langenthal (edge y160 x1701): ok (1 Ziele)
+  Abgang 410 Langenthal (edge y184 x1701): ok (2 Ziele)
+  Abgang 421 Lyss (side y312 x904): ok (0 Ziele)
+  Abgang 415 Lyss (side y285 x892): ok (0 Ziele)
+→ 0 Abweichungen
+Weichen ohne Ausrundung (Linienende unter >35° auf Gleis): 2
+   x892 y285  60°
+   x967 y304  37°
+
+Netzprüfung solothurn: {'A1': 2, 'D11': 4, 'W2': 9, 'Z2': 2}; Durchfahrgleise 0
+  D11  x=1111.1 y=503.6  Gleisnummer 10 ohne Perron daneben (Perron fehlt oder Nummer zu viel)
+  D11  x=1095.8 y=304.4  Gleisnummer 3 ohne Perron daneben (Perron fehlt oder Nummer zu viel)
+  D11  x=1185.3 y=232.4  Gleisnummer 2 ohne Perron daneben (Perron fehlt oder Nummer zu viel)
+  D11  x=None y=None  OSM-Perron ref 21 hat keine gleichnamige Gleisnummer im Plan
+  Z2   x=226.7 y=208.4  Abgang Linie 410 ohne Richtungsort  (way 98467649)
+  Z2   x=226.7 y=280.4  Abgang Linie 410 ohne Richtungsort  (way 155433654)
+  W2   x=899.0 y=256.4  S-Kurve in der Mitte unter 103° (steiler oder flacher als 60°)
+  W2   x=1147.2 y=433.4  Gleisstück unter 84° (nur 0° und 60° erlaubt)
+  W2   x=1039.8 y=505.5  Gleisstück unter 176° (nur 0° und 60° erlaubt)
+  W2   x=985.8 y=515.5  Gleisstück unter 156° (nur 0° und 60° erlaubt)
+  W2   x=1192.7 y=455.7  Gleisstück unter 99° (nur 0° und 60° erlaubt)
+  W2   x=1180.0 y=503.6  Gleisstück unter 133° (nur 0° und 60° erlaubt)
+  W2   x=1159.3 y=516.1  Gleisstück unter 170° (nur 0° und 60° erlaubt)
+  W2   x=1113.3 y=515.7  Gleisstück unter 8° (nur 0° und 60° erlaubt)
+  W2   x=1070.9 y=504.7  Gleisstück unter 10° (nur 0° und 60° erlaubt)
+  A1   x=875.7 y=304.4  zwei Gleise nur 19.7 px auseinander über 14 px (Grenze 20 px)
+  A1   x=927.5 y=304.4  zwei Gleise nur 19.7 px auseinander über 33 px (Grenze 20 px)
