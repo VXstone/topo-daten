@@ -844,13 +844,27 @@ if CFG.get("a4_rand", True):
         _innen = (max if _lo else min)(_ce, key=_sp)          # inneres Ende der Randkette
         for o in C:
             if o is c or o["lane"] == c["lane"] or not any(sg["pax"] and sg["ref"] for sg in o["segs"]): continue
+            if (o["s0"] <= _sl + 40) if _lo else (o["s1"] >= _sh - 40): continue    # o selbst am Rand: keine Fortsetzung (Olten 450)
             _oe = [n_ for n_ in _ends(o) if _sp(n_) is not None]
             if not _oe or _innen not in _ends(o): continue                               # o hängt am inneren Ende von c
             if (max(_sp(n_) for n_ in _oe) <= _sp(_innen) + 50) if _lo else (min(_sp(n_) for n_ in _oe) >= _sp(_innen) - 50): continue   # und führt in den Bahnhof hinein
+            # nur wenn der Abstand zum anderen Randgleis derselben Linie dadurch nicht grösser wird (A4-Ziel, Olten 26.10.)
+            _pa = [x for x in C if x is not c and _lref(x) == _lref(c) and ((x["s0"] <= _sl + 40) if _lo else (x["s1"] >= _sh - 40))]
+            if _pa and min(abs(x["lane"] - o["lane"]) for x in _pa) > min(abs(x["lane"] - c["lane"]) for x in _pa): continue
+            # Schrägen, die an c hängen, dürfen durch die Verschiebung nicht flach werden oder umklappen (Olten 26.10.: Haken)
+            _cn = {n_ for sg in c["segs"] for n_ in sg["nodes"]}
+            _kl = False
+            for sg in segs:
+                if sg["flat"] or not ({sg["nodes"][0], sg["nodes"][-1]} & _cn): continue
+                m_ = sg["nodes"][-1] if sg["nodes"][0] in _cn else sg["nodes"][0]
+                for x in C:
+                    if x is c or m_ not in {n_ for g_ in x["segs"] for n_ in g_["nodes"]}: continue
+                    if x["lane"] == o["lane"] or (x["lane"] - o["lane"]) * (x["lane"] - c["lane"]) < 0: _kl = True
+            if _kl: continue
             if all(x is c or x["lane"] != o["lane"] or min(x["s1"], c["s1"]) - max(x["s0"], c["s0"]) < 1
                    or ((_ends(x) & _ends(c)) and min(x["s1"], c["s1"]) - max(x["s0"], c["s0"]) < 150) for x in C):
                 if ARGS.dbg: print("A4FORTS", _lref(c), c["lane"], "->", o["lane"], [sg["way"] for sg in c["segs"]][:3], "an", [sg["way"] for sg in o["segs"]][:3])
-                c["lane"] = o["lane"]; break
+                c["lane"] = o["lane"]; c["_forts"] = True; break
     for _rand in ("lo", "hi"):
         _ec = [c for c in C if (c["s0"] <= _sl + 40 if _rand == "lo" else c["s1"] >= _sh - 40)
                and any(sg["pax"] and not sg["tags"].get("service") for sg in c["segs"]) and _lref(c)]
@@ -860,6 +874,7 @@ if CFG.get("a4_rand", True):
             cs_.sort(key=lambda c: c["lane"])
             for c1, c2 in zip(cs_, cs_[1:]):
                 for _mv, _zi in ((c2, c1), (c1, c2)):          # zuerst die obere Kette nach unten rücken, sonst umgekehrt
+                    if _mv.get("_forts"): continue             # Fortsetzung bleibt auf der Ebene ihres Gleises
                     st_ = -1 if _mv["lane"] > _zi["lane"] else 1; _alt = _mv["lane"]
                     while abs(_mv["lane"] - _zi["lane"]) > 1 and _frei(_mv, _mv["lane"] + st_): _mv["lane"] += st_
                     if _mv["lane"] != _alt:
@@ -885,6 +900,9 @@ if CFG.get("f10", True):
         nb_ = [_n2c[m_] for n_ in en_ for m_ in _diag.get(n_, []) if m_ in _n2c and _n2c[m_] is not c] + \
               [o for n_ in en_ for o in _n2cs.get(n_, []) if o is not c]          # auch direkt am selben Knoten
         if len(nb_) < 2: continue
+        # nur echte Badewanne: das Stück hängt an seinen Enden direkt (gerade) an den Nachbarn; hängen Schrägen daran,
+        # ist es ein Verbindungs- oder Kreuzungsstück (Olten 26.10.: sonst 120°-Haken)
+        if any(not sg["flat"] for sg in segs if {sg["nodes"][0], sg["nodes"][-1]} & en_ and sg not in c["segs"]): continue
         ls_ = sorted({o["lane"] for o in nb_})
         if not (all(l_ > c["lane"] for l_ in ls_) or all(l_ < c["lane"] for l_ in ls_)): continue
         ziel = min(ls_, key=lambda l_: abs(l_ - c["lane"]))
