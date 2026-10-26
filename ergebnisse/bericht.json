@@ -1,6 +1,6 @@
 {
- "erzeugt": "2026-10-26 03:01 UTC",
- "lauf": "https://github.com/VXstone/topo-daten/actions/runs/40261915869",
+ "erzeugt": "2026-10-26 03:03 UTC",
+ "lauf": "https://github.com/VXstone/topo-daten/actions/runs/40262109757",
  "bahnhoefe": {
   "neuchatel": {
    "ok": true,
@@ -34,6 +34,23 @@
     "Z2": 4,
     "W2": 1,
     "A1": 2
+   },
+   "differenz_stellen": null
+  },
+  "neuchatel_vauseyon": {
+   "ok": true,
+   "fehler": null,
+   "topologie": "{'A': 1}",
+   "verbindungen_abweichungen": null,
+   "gleich_wie_vergleich": null,
+   "regeln": {
+    "G8": 6
+   },
+   "netz": {
+    "D11": 2,
+    "D12": 1,
+    "Z2": 1,
+    "W2": 1
    },
    "differenz_stellen": null
   }
