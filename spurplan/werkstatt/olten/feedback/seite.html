@@ -207,7 +207,20 @@ function planEntries(p){
   const reg=isReg(p)?[]:entries.filter(e=>REGK.includes(e.plan)&&((e.punkte&&e.punkte.length)?e.punkte:[e]).some(q=>q.bahnhof===p.key))
     .map(e=>({...e,_reg:true,_pts:((e.punkte&&e.punkte.length)?e.punkte:[e]).filter(q=>q.bahnhof===p.key&&q.lx!=null).map(q=>({x:q.lx,y:q.ly}))}));
   return own.concat(reg).sort((a,b)=>(a.erstellt||"").localeCompare(b.erstellt||""))}
-function pts(e){return e._pts||((e.punkte&&e.punkte.length)?e.punkte:[{x:e.x,y:e.y}])}
+/* Pins wandern mit (Hinweis «Kommentare zügeln nicht mit», 26.10.2026): Bahnhofsplan über den nächsten Knoten aus dem
+   Netzmodell (anker {id,dx,dy}), Regionalplan über die aktuelle Lage des Bahnhofs (bahnhof + lx/ly im Bahnhof). */
+let ANK=null;
+function ankerMap(p){if(!p||!p.anker)return null;const m={};p.anker.forEach(a=>m[a[0]]=[a[1],a[2]]);return m}
+function nearestAnker(x,y){if(!ANK)return null;let b=null;for(const k in ANK){const d=Math.hypot(ANK[k][0]-x,ANK[k][1]-y);if(d<=80&&(!b||d<b.d))b={id:+k,d}}
+  return b?{id:b.id,dx:+(x-ANK[b.id][0]).toFixed(1),dy:+(y-ANK[b.id][1]).toFixed(1)}:null}
+function posOf(q){
+  if(q.anker&&ANK&&ANK[q.anker.id])return{x:ANK[q.anker.id][0]+q.anker.dx,y:ANK[q.anker.id][1]+q.anker.dy};
+  if(isReg(cur)&&q.bahnhof&&q.lx!=null&&svgEl){const g=svgEl.querySelector('g[data-st="'+String(q.bahnhof).replace(/"/g,"")+'"]');
+    if(g){try{const m=svgEl.getScreenCTM().inverse().multiply(g.getScreenCTM());const p=new DOMPoint(q.lx,q.ly).matrixTransform(m);
+      if(isFinite(p.x)&&isFinite(p.y))return{x:p.x,y:p.y}}catch(_){}}}
+  return{x:q.x,y:q.y};
+}
+function pts(e){if(e._pts)return e._pts;const P=(e.punkte&&e.punkte.length)?e.punkte:[{x:e.x,y:e.y,bahnhof:e.bahnhof,lx:e.lx,ly:e.ly,anker:e.anker}];return P.map(posOf)}
 function arbeitStatus(p){if(abnahmen[p.key])return ["abgenommen","abgenommen"];if(ARBEIT.aktuell===p.key)return ["jetzt","jetzt dran"];
   const a=AST[p.key];if(a&&a.status==="kontrolle")return ["kontrolle","zur Kontrolle"];return null}
 function openCount(p){return planEntries(p).filter(e=>e.status!=="erledigt").length}
@@ -235,7 +248,7 @@ function show(key){
   cur=PLANS.find(p=>p.key===key)||PLANS[0];if(!cur||!cur.svg){toast("Plan nicht gefunden");return}pending=null;selId=null;$("#comp").hidden=true;
   try{localStorage.setItem("sp_plan",cur.key)}catch(e){}
   const cv=$("#cv");cv.querySelectorAll("svg.plan").forEach(s=>s.remove());
-  const tmp=document.createElement("div");tmp.innerHTML=cur.svg;const s_=tmp.querySelector("svg");if(!s_)return;svgEl=s_;svgEl.classList.add("plan");
+  ANK=ankerMap(cur);const tmp=document.createElement("div");tmp.innerHTML=cur.svg;const s_=tmp.querySelector("svg");if(!s_)return;svgEl=s_;svgEl.classList.add("plan");
   svgEl.setAttribute("preserveAspectRatio","xMidYMid meet");cv.prepend(svgEl);
   const v=(svgEl.getAttribute("viewBox")||"0 0 1000 600").split(/[\s,]+/).map(Number);base={x:v[0],y:v[1],w:v[2],h:v[3]};
   /* Papier: das weisse Planblatt deckt immer den ganzen sichtbaren Bereich (width="100%" hängt sonst am Zoom) */
@@ -346,7 +359,7 @@ $("#comp").addEventListener("submit",async e=>{
   e.preventDefault();const txt=$("#compTxt").value.trim();if(!txt){$("#compTxt").focus();toast("Bitte kurz beschreiben, was hier nicht stimmt");return}
   const btn=$("#compSave");btn.disabled=true;
   const P=pending.punkte.map(pt=>({x:pt.x,y:pt.y,bahnhof:pt.st?pt.st.key:null,bahnhof_name:pt.st?pt.st.name:null,
-    lx:pt.st?+pt.st.lx.toFixed(1):null,ly:pt.st?+pt.st.ly.toFixed(1):null}));
+    lx:pt.st?+pt.st.lx.toFixed(1):null,ly:pt.st?+pt.st.ly.toFixed(1):null,...(!isReg(cur)&&nearestAnker(pt.x,pt.y)?{anker:nearestAnker(pt.x,pt.y)}:{})}));
   const doc={plan:cur.key,plan_name:cur.name,plan_stand:cur.label,...P[0],punkte:P,
     text:txt,status:"offen",antwort:null,erstellt:new Date().toISOString()};
   if(pending.skizze&&pending.skizze.length)doc.skizze=pending.skizze.map(Q=>Q.map(p=>p[0]+","+p[1]).join(" "));   // Strings: verschachtelte Listen speichert die Datenbank nicht

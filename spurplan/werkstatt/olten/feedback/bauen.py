@@ -68,6 +68,15 @@ for _b in ([k_ for k_ in json.load(open(_bj)) if not k_.startswith("_")] if os.p
     plans.append(dict(key=_b, name=_m.get("name") or (_tt[-1] if _tt else _b), gruppe=_m.get("gruppe", "Repo-Bahnhöfe (Workflow plaene)"),
                       label=f"Workflow plaene {_rber.get('erzeugt', '')}" + (" · Netzprüfung " + ", ".join(f"{k_} {v_}" for k_, v_ in sorted(_nb.items())) if _nb else " · Netzprüfung ohne Befunde"),
                       svg=strip(_svg), counts=_m.get("counts"), status=_m.get("status", "offen"), **({"region": _m["region"]} if _m.get("region") else {})))
+# Anker für mitwandernde Hinweis-Pins (26.10.2026): Weichen, Gleisenden, Kreuzungen aus dem Netzmodell des Bahnhofs
+def _anker(key_):
+    for f_ in (os.path.join(HERE, f"repo_{key_}_netz.json"), os.path.join(OL, f"{key_}_netz.json")):
+        if os.path.exists(f_):
+            try:
+                K_ = json.load(open(f_))["knoten"]
+                return [[int(i_), v_["x"], v_["y"]] for i_, v_ in K_.items() if v_.get("y") is not None and v_.get("typ") in ("switch", "buffer_stop", "railway_crossing")]
+            except Exception: return None
+    return None
 _zus = os.path.join(HERE, "zusatz_plaene.json")   # Pläne aus anderen Sitzungen (z. B. Basel/Bern, Grosse Knoten) übernehmen
 if os.path.exists(_zus):
     _have = {p_["key"] for p_ in plans}
@@ -77,6 +86,10 @@ leg = open(os.path.join(HERE, "legende.json")).read()
 tpl = open(os.path.join(HERE, "seite.html")).read().replace("/*LEGENDE*/[]", leg.replace("</", "<\\/"))
 _arb = os.path.join(HERE, "arbeit.json")   # Arbeitsliste: Reihenfolge, aktueller Bahnhof, "Neu in dieser Fassung"
 tpl = tpl.replace("/*ARBEIT*/{}", json.dumps(json.load(open(_arb)) if os.path.exists(_arb) else {}, ensure_ascii=False).replace("</", "<\\/"))
+for p_ in plans:
+    if p_.get("gruppe") != "Region" and p_.get("key"):
+        a_ = _anker(p_["key"])
+        if a_: p_["anker"] = a_
 out = tpl.replace("/*PLANS*/[]", json.dumps(plans, ensure_ascii=False).replace("</", "<\\/")).replace("{{STAND}}", stand)
 open(os.path.join(HERE, "index.html"), "w").write(out)
 if os.environ.get("PLAENE_DIR"):       # je Plan eine SVG-Datei (Workflow «seite»: Ausschnitte an den Hinweisstellen)
