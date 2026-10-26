@@ -57,7 +57,9 @@
    "r28b": false,
    "r43": true
   },
-  "s_max_fix": 7060
+  "s_max_fix": 7060,
+  "a4_rand": false,
+  "f10": false
  },
  "pax_ways": [
   50062881,
@@ -1563,5 +1565,6 @@
  "perron_einheitlich": {
   "mitte_px": 630,
   "laenge_px": 210
- }
+ },
+ "_cfg_a4_f10": "26.10.2026: Olten ist abgenommen – die neuen Ebenenregeln A4 (Planrand/Fortsetzung) und F10 (Badewanne) hier aus"
 }

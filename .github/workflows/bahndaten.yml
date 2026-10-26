@@ -34,7 +34,7 @@ jobs:
 
       - name: Bahn herausfiltern
         run: |
-          osmium tags-filter schweiz.osm.pbf nwr/railway w/public_transport=platform \
+          osmium tags-filter schweiz.osm.pbf nwr/railway wr/public_transport=platform \
             -o bahn_schweiz.osm.pbf --overwrite
           ls -lh bahn_schweiz.osm.pbf
 

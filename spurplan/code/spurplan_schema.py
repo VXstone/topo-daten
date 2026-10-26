@@ -832,6 +832,25 @@ if CFG.get("a4_rand", True):
     _sl, _sh = CFG["s_min"], CFG["s_max"]
     def _lref(c): return next((sg["tags"].get("ref") for sg in c["segs"] if sg["tags"].get("ref")), None)
     def _frei(c, l_): return all(o is c or o["lane"] != l_ or min(o["s1"], c["s1"]) - max(o["s0"], c["s0"]) < 1 for o in C)   # Berühren erlaubt
+    def _ends(c): return {n_ for sg in c["segs"] for n_ in (sg["nodes"][0], sg["nodes"][-1])}
+    # Fortsetzung (Solothurn 26.10.: «das Gleis nach Biel ist die Verlängerung von Gleis 2»): eine Randkette, die an ein
+    # Personengleis derselben Linie anschliesst, kommt auf dessen Ebene, wenn dort nur mit ihr verbundene Ketten liegen
+    for c in [c for c in C if ((c["s0"] <= _sl + 40) != (c["s1"] >= _sh - 40)) and _lref(c)
+              and any(sg["pax"] and not sg["tags"].get("service") for sg in c["segs"])]:
+        _lo = c["s0"] <= _sl + 40
+        _sp = lambda n_: SD[n_][0] if n_ in SD else None
+        _ce = [n_ for n_ in _ends(c) if _sp(n_) is not None]
+        if not _ce: continue
+        _innen = (max if _lo else min)(_ce, key=_sp)          # inneres Ende der Randkette
+        for o in C:
+            if o is c or o["lane"] == c["lane"] or not any(sg["pax"] and sg["ref"] for sg in o["segs"]): continue
+            _oe = [n_ for n_ in _ends(o) if _sp(n_) is not None]
+            if not _oe or _innen not in _ends(o): continue                               # o hängt am inneren Ende von c
+            if (max(_sp(n_) for n_ in _oe) <= _sp(_innen) + 50) if _lo else (min(_sp(n_) for n_ in _oe) >= _sp(_innen) - 50): continue   # und führt in den Bahnhof hinein
+            if all(x is c or x["lane"] != o["lane"] or min(x["s1"], c["s1"]) - max(x["s0"], c["s0"]) < 1
+                   or ((_ends(x) & _ends(c)) and min(x["s1"], c["s1"]) - max(x["s0"], c["s0"]) < 150) for x in C):
+                if ARGS.dbg: print("A4FORTS", _lref(c), c["lane"], "->", o["lane"], [sg["way"] for sg in c["segs"]][:3], "an", [sg["way"] for sg in o["segs"]][:3])
+                c["lane"] = o["lane"]; break
     for _rand in ("lo", "hi"):
         _ec = [c for c in C if (c["s0"] <= _sl + 40 if _rand == "lo" else c["s1"] >= _sh - 40)
                and any(sg["pax"] and not sg["tags"].get("service") for sg in c["segs"]) and _lref(c)]
@@ -846,6 +865,33 @@ if CFG.get("a4_rand", True):
                     if _mv["lane"] != _alt:
                         if ARGS.dbg: print("A4RAND", _r, _rand, _alt, "->", _mv["lane"], [sg["way"] for sg in _mv["segs"]][:4])
                         break
+
+# F10 Badewanne (Solothurn 26.10.2026): ein kurzes waagrechtes Stück ohne Nummer, das über Schrägen an beiden Enden mit
+# Ketten auf Ebenen derselben Seite verbunden ist (hinunter und gleich wieder hinauf), kommt auf die nähere dieser Ebenen,
+# wenn sie dort frei ist (Berühren und kurze Überlappung mit den verbundenen Ketten erlaubt). cfg «f10»: false = aus.
+if CFG.get("f10", True):
+    _n2c = {}; _n2cs = collections.defaultdict(list)
+    for c in C:
+        for sg in c["segs"]:
+            for n_ in sg["nodes"]:
+                _n2c.setdefault(n_, c)
+                if not _n2cs[n_] or _n2cs[n_][-1] is not c: _n2cs[n_].append(c)
+    _diag = collections.defaultdict(list)
+    for sg in segs:
+        if not sg["flat"]: _diag[sg["nodes"][0]].append(sg["nodes"][-1]); _diag[sg["nodes"][-1]].append(sg["nodes"][0])
+    for c in C:
+        if c["s1"] - c["s0"] > CFG.get("f10_m", 150) or any(sg["ref"] for sg in c["segs"]): continue
+        en_ = {n_ for sg in c["segs"] for n_ in (sg["nodes"][0], sg["nodes"][-1])}
+        nb_ = [_n2c[m_] for n_ in en_ for m_ in _diag.get(n_, []) if m_ in _n2c and _n2c[m_] is not c] + \
+              [o for n_ in en_ for o in _n2cs.get(n_, []) if o is not c]          # auch direkt am selben Knoten
+        if len(nb_) < 2: continue
+        ls_ = sorted({o["lane"] for o in nb_})
+        if not (all(l_ > c["lane"] for l_ in ls_) or all(l_ < c["lane"] for l_ in ls_)): continue
+        ziel = min(ls_, key=lambda l_: abs(l_ - c["lane"]))
+        ok_ = all(x is c or x["lane"] != ziel or min(x["s1"], c["s1"]) - max(x["s0"], c["s0"]) < 1 or (x in nb_) for x in C)
+        if ok_:
+            if ARGS.dbg: print("F10", c["lane"], "->", ziel, [sg["way"] for sg in c["segs"]][:3])
+            c["lane"] = ziel
 
 # x-Abbildung: linear oder entzerrt (warp.json aus spurplan_warp.py)
 import os
