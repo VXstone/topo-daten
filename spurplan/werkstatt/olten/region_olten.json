@@ -1,5 +1,5 @@
 {
- "_zweck": "Region Olten im Workflow (26.10.2026, Wunsch D. Eckenstein «Olten zügeln»): code/region_olten_lauf.py baut die Bahnhofspläne (ganze Kette wie run.sh) und den Regionalplan netz_lage.py olten_region. Nachbau vorher geprüft: alle Bahnhöfe byte-gleich.",
+ "_zweck": "Region Olten im Workflow (26.10.2026, Wunsch D. Eckenstein «Olten zügeln»): code/region_olten_lauf.py baut die Bahnhofspläne (ganze Kette wie run.sh) und den Regionalplan netz_lage.py olten_region. Nachbau vorher geprüft: alle Bahnhöfe byte-gleich. Seit 26.10. auch die Varianten in Unterordnern (olten_ost, regional_olten_ost, regional_rothrist) im Lauf.",
  "bahnhoefe": {
   "aarburg_oftringen": [],
   "dulliken": [],
@@ -21,14 +21,48 @@
   ]
  },
  "fest": {
-  "hagendorf": "eigener Bauweg (nicht mit spurplan_schema nachbaubar), SVG/ports/bare als Eingabe",
-  "olten_ost": "eigener Ordner olten_ost/, SVG/ports/bare als Eingabe",
-  "rothrist_regional": "Regionalvariante, gebaut im Unterordner regional_rothrist/; bare/ports als Eingabe",
-  "olten_ost_regional": "Regionalvariante, gebaut im Unterordner regional_olten_ost/; bare/ports als Eingabe"
+  "hagendorf": "wird im Regionalplan als Halt gezeichnet (Perrons aus OSM); hagendorf_*.svg/ports werden nicht gelesen. Nachbau mit spurplan_schema geprüft 26.10. (Regionalplan unverändert)."
  },
  "region": {
   "name": "olten_region",
   "titel": "Region Olten",
   "ausgabe": "feedback/region.svg"
- }
+ },
+ "varianten": [
+  {
+   "ordner": "olten_ost",
+   "bahnhof": "olten_ost",
+   "optionen": [
+    "--hauptgleise"
+   ],
+   "nach_oben": {
+    "olten_ost_bare.svg": "olten_ost_bare.svg",
+    "olten_ost_ports.json": "olten_ost_ports.json",
+    "olten_ost_spurplan.svg": "olten_ost_spurplan.svg"
+   }
+  },
+  {
+   "ordner": "regional_olten_ost",
+   "bahnhof": "olten_ost",
+   "optionen": [
+    "--hauptgleise"
+   ],
+   "nach_oben": {
+    "olten_ost_bare.svg": "olten_ost_regional_bare.svg",
+    "olten_ost_ports.json": "olten_ost_regional_ports.json"
+   },
+   "override_oben": {
+    "olten_ost_override.json": "olten_ost_regional_override.json"
+   }
+  },
+  {
+   "ordner": "regional_rothrist",
+   "bahnhof": "rothrist",
+   "optionen": [],
+   "nach_oben": {
+    "rothrist_bare.svg": "rothrist_regional_bare.svg",
+    "rothrist_ports.json": "rothrist_regional_ports.json"
+   }
+  }
+ ]
 }

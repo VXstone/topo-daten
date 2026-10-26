@@ -26,25 +26,50 @@ for f in ("spurplan_schema.py", "spurplan_warp.py", "spurplan_check.py", "netz_p
 for f in K.get("code_falls_fehlt", ["lage_auto.py"]):      # Hilfsmodule der Werkstatt, die dort fehlen (NE: lage_auto)
     if not os.path.exists(os.path.join(TMP, f)): shutil.copy(os.path.join(HERE, f), TMP)
 py = sys.executable
-def sh(args, timeout=900):
-    r = subprocess.run([py] + args, cwd=TMP, capture_output=True, text=True, timeout=timeout)
+def sh(args, timeout=900, cwd=None):
+    r = subprocess.run([py] + args, cwd=cwd or TMP, capture_output=True, text=True, timeout=timeout)
     return r.returncode, (r.stdout or "") + (r.stderr or "")
 lesen = lambda p: open(p, "rb").read() if os.path.exists(p) else None
 
-bericht = dict(bahnhoefe={}, region={})
-for b, opt in K["bahnhoefe"].items():
-    alt = {k: lesen(os.path.join(TMP, f"{b}_{k}")) for k in ("spurplan.svg", "bare.svg")}
-    w = os.path.join(TMP, f"{b}_warp.json")
+bericht = dict(bahnhoefe={}, varianten={}, region={})
+def kette(b, opt, cwd=None):
+    """ganze Kette wie run.sh; gibt (rc, letzte Ausgabe) zurück"""
+    w = os.path.join(cwd or TMP, f"{b}_warp.json")
     if os.path.exists(w): os.remove(w)
-    rc = 0; log = []
     for a in (["spurplan_schema.py", "--src", f"{b}.json", "--nowarp"] + opt, ["spurplan_warp.py", b],
               ["spurplan_schema.py", "--src", f"{b}.json"] + opt, ["spurplan_warp.py", b],
               ["spurplan_schema.py", "--src", f"{b}.json"] + opt,
               ["spurplan_schema.py", "--src", f"{b}.json", "--bare", "--out", f"{b}_bare.svg"] + opt):
-        rc, o = sh(a); log.append(o[-800:])
-        if rc: break
+        rc, o = sh(a, cwd=cwd)
+        if rc: return rc, o[-800:]
+    return 0, ""
+
+# Varianten in Unterordnern (26.10.2026, «Olten zügeln» Teil 2): Olten Ost, Regionalvarianten Olten Ost und Rothrist.
+# Gebaut im eigenen Ordner mit dem Code aus code/; «nach_oben» kopiert Ergebnisse in die Werkstatt-Ebene, wo
+# netz_lage.py sie liest (z. B. olten_ost_bare.svg -> olten_ost_regional_bare.svg). Der Ordner ist die Quelle.
+for v in K.get("varianten", []):
+    d_ = os.path.join(TMP, v["ordner"]); b = v["bahnhof"]
+    for f in ("spurplan_schema.py", "spurplan_warp.py", "spurplan_check.py"):
+        shutil.copy(os.path.join(HERE, f), d_)
+    alt = {f: lesen(os.path.join(d_, f)) for f in v["nach_oben"]}
+    rc, o = kette(b, v.get("optionen", []), cwd=d_)
+    e = dict(ok=rc == 0, ordner=v["ordner"])
+    if rc: e["fehler"] = o
+    else:
+        e["geaendert"] = sorted(f for f in v["nach_oben"] if lesen(os.path.join(d_, f)) != alt[f])
+        for f in os.listdir(d_):
+            if f.startswith(b + "_") and f.endswith((".svg", ".json")) and not f.endswith("_override.json"):
+                shutil.copy(os.path.join(d_, f), os.path.join(WS, v["ordner"], f))
+        for f, ziel in list(v["nach_oben"].items()) + list(v.get("override_oben", {}).items()):
+            shutil.copy(os.path.join(d_, f), os.path.join(TMP, ziel)); shutil.copy(os.path.join(d_, f), os.path.join(WS, ziel))
+    bericht["varianten"][v["ordner"]] = e
+    print("Variante", json.dumps(e, ensure_ascii=False))
+
+for b, opt in K["bahnhoefe"].items():
+    alt = {k: lesen(os.path.join(TMP, f"{b}_{k}")) for k in ("spurplan.svg", "bare.svg")}
+    rc, o = kette(b, opt)
     e = dict(ok=rc == 0, optionen=opt)
-    if rc: e["fehler"] = log[-1]
+    if rc: e["fehler"] = o
     else:
         e["plan_geaendert"] = lesen(os.path.join(TMP, f"{b}_spurplan.svg")) != alt["spurplan.svg"]
         e["bare_geaendert"] = lesen(os.path.join(TMP, f"{b}_bare.svg")) != alt["bare.svg"]
