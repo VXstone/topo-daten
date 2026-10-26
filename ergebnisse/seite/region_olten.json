@@ -3,8 +3,8 @@
   "aarburg_oftringen": {
    "ok": true,
    "optionen": [],
-   "plan_geaendert": true,
-   "bare_geaendert": true,
+   "plan_geaendert": false,
+   "bare_geaendert": false,
    "netz": {
     "T10": 1
    }
@@ -12,22 +12,22 @@
   "dulliken": {
    "ok": true,
    "optionen": [],
-   "plan_geaendert": true,
-   "bare_geaendert": true,
+   "plan_geaendert": false,
+   "bare_geaendert": false,
    "netz": {}
   },
   "laufelfingen": {
    "ok": true,
    "optionen": [],
-   "plan_geaendert": true,
-   "bare_geaendert": true,
+   "plan_geaendert": false,
+   "bare_geaendert": false,
    "netz": {}
   },
   "rothrist": {
    "ok": true,
    "optionen": [],
-   "plan_geaendert": true,
-   "bare_geaendert": true,
+   "plan_geaendert": false,
+   "bare_geaendert": false,
    "netz": {
     "T10": 1,
     "D11": 2
@@ -36,22 +36,22 @@
   "safenwil": {
    "ok": true,
    "optionen": [],
-   "plan_geaendert": true,
-   "bare_geaendert": true,
+   "plan_geaendert": false,
+   "bare_geaendert": false,
    "netz": {}
   },
   "schonenwerd": {
    "ok": true,
    "optionen": [],
-   "plan_geaendert": true,
-   "bare_geaendert": true,
+   "plan_geaendert": false,
+   "bare_geaendert": false,
    "netz": {}
   },
   "tecknau": {
    "ok": true,
    "optionen": [],
-   "plan_geaendert": true,
-   "bare_geaendert": true,
+   "plan_geaendert": false,
+   "bare_geaendert": false,
    "netz": {
     "T10": 1,
     "D11": 2,
@@ -61,8 +61,8 @@
   "wangen_bei_olten": {
    "ok": true,
    "optionen": [],
-   "plan_geaendert": true,
-   "bare_geaendert": true,
+   "plan_geaendert": false,
+   "bare_geaendert": false,
    "netz": {
     "T10": 1
    }
@@ -70,8 +70,8 @@
   "zofingen": {
    "ok": true,
    "optionen": [],
-   "plan_geaendert": true,
-   "bare_geaendert": true,
+   "plan_geaendert": false,
+   "bare_geaendert": false,
    "netz": {
     "D11": 2
    }
@@ -81,8 +81,8 @@
    "optionen": [
     "--hauptgleise"
    ],
-   "plan_geaendert": true,
-   "bare_geaendert": true,
+   "plan_geaendert": false,
+   "bare_geaendert": false,
    "netz": {
     "D11": 1
    }
@@ -92,8 +92,8 @@
    "optionen": [
     "--hauptgleise"
    ],
-   "plan_geaendert": true,
-   "bare_geaendert": true,
+   "plan_geaendert": false,
+   "bare_geaendert": false,
    "netz": {
     "Z2": 4
    }
@@ -103,15 +103,32 @@
    "optionen": [
     "--hauptgleise"
    ],
-   "plan_geaendert": true,
-   "bare_geaendert": true,
+   "plan_geaendert": false,
+   "bare_geaendert": false,
    "netz": {}
+  }
+ },
+ "varianten": {
+  "olten_ost": {
+   "ok": true,
+   "ordner": "olten_ost",
+   "geaendert": []
+  },
+  "regional_olten_ost": {
+   "ok": true,
+   "ordner": "regional_olten_ost",
+   "geaendert": []
+  },
+  "regional_rothrist": {
+   "ok": true,
+   "ordner": "regional_rothrist",
+   "geaendert": []
   }
  },
  "region": {
   "ok": true,
   "log": "  loses Ende #33 an Strecke ['451'] angeschlossen (Abzweig #43, 100 m)\nKnoten: Counter({'spurplan': 13, 'exit': 9, 'halt': 7, 'junction': 3}) Kanten: 33\nsenkrecht: ['Aarburg-Oftringen', 'Zofingen', 'Olten', 'Läufelfingen', 'Tecknau', 'Olten Ost']\n  Spurfolge Abzweig #31: 450 | 400 | 400 | 450\n  Spurwechsel auf freier Strecke: 11\n  Tunnel auf freier Strecke: 3\n  Spurwechsel ohne Platz weggelassen: Rothrist–Abzweig\n  Spurwechsel gezeichnet: 11\n  Stösse an Abzweigen zusammengeführt: 1\n  Kreuzungen mit Brücke: 1\n  Nebengleise/Spurwechsel freie Strecke gezeichnet: 6\nok 4123 3032\n",
-  "geaendert": true,
+  "geaendert": false,
   "pruefung": "  loses Ende #33 an Strecke ['451'] angeschlossen (Abzweig #43, 100 m)\nKnoten: Counter({'spurplan': 13, 'exit': 9, 'halt': 7, 'junction': 3}) Kanten: 33\nsenkrecht: ['Aarburg-Oftringen', 'Zofingen', 'Olten', 'Läufelfingen', 'Tecknau', 'Olten Ost']\n  Spurfolge Abzweig #31: 450 | 400 | 400 | 450\n  Spurwechsel auf freier Strecke: 11\n  Tunnel auf freier Strecke: 3\n  Spurwechsel ohne Platz weggelassen: Rothrist–Abzweig\n  Spurwechsel gezeichnet: 11\n  Stösse an Abzweigen zusammengeführt: 1\n  Kreuzungen mit Brücke: 1\n  Nebengleise/Spurwechsel freie Strecke gezeichnet: 6\nok 4123 3032\n\n== Prüfung 1: Gleise entlang der Strecken ==\n  Hinweis Abzweig #43: Gleis der Linie 453 (von Rothrist) wechselt auf Aarburg-Oftringen (451)\n  → 0 Befunde\n\n== Prüfung 2: Lage Nord/Süd und Ost/West gegenüber Geografie ==\n  → 0 Befunde\n\n== Prüfung 3: Achsen und Seiten der Spurpläne gegen die Karte ==\n  Dulliken: Abgang 540 (Aarau) liegt auf der Karte links von 540 (Aarau), im Plan rechts (Blick in Achsrichtung)\n  Olten Ost: Achse zeigt im Plan nach NO, auf der Karte nach SO (94°)\n  → 2 Befunde\n\n== Prüfung 4: freie Strecke gegen OSM ==\n  Planfenster: 13 von 13 Spurplänen\n  Rothrist – Olten: 55–130 m ab Rothrist: OSM 3 Gleise, Plan 2\n  Rothrist – Abzweig: 55–130 m ab Rothrist: OSM 3 Gleise, Plan 2\n  Rothrist – Abzweig: 1755–1880 m ab Rothrist: OSM 3 Gleise, Plan 2\n  Aarburg-Oftringen – Abzweig: 855–955 m ab Aarburg-Oftringen: OSM 3 Gleise, Plan 2\n  Olten – Olten Ost: 280–380 m ab Olten: OSM 4 Gleise, Plan 6\n  Dulliken – Däniken: 655–755 m ab Dulliken: OSM 5 Gleise, Plan 4\n  → 6 Befunde\n",
   "geometrie": {
    "plan": "/home/runner/work/topo-daten/topo-daten/spurplan/werkstatt/olten/feedback/region.svg",

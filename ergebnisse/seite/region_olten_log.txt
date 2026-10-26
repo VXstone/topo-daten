@@ -1,16 +1,19 @@
-aarburg_oftringen {"ok": true, "optionen": [], "plan_geaendert": true, "bare_geaendert": true, "netz": {"T10": 1}}
-dulliken {"ok": true, "optionen": [], "plan_geaendert": true, "bare_geaendert": true, "netz": {}}
-laufelfingen {"ok": true, "optionen": [], "plan_geaendert": true, "bare_geaendert": true, "netz": {}}
-rothrist {"ok": true, "optionen": [], "plan_geaendert": true, "bare_geaendert": true, "netz": {"T10": 1, "D11": 2}}
-safenwil {"ok": true, "optionen": [], "plan_geaendert": true, "bare_geaendert": true, "netz": {}}
-schonenwerd {"ok": true, "optionen": [], "plan_geaendert": true, "bare_geaendert": true, "netz": {}}
-tecknau {"ok": true, "optionen": [], "plan_geaendert": true, "bare_geaendert": true, "netz": {"T10": 1, "D11": 2, "D12": 1}}
-wangen_bei_olten {"ok": true, "optionen": [], "plan_geaendert": true, "bare_geaendert": true, "netz": {"T10": 1}}
-zofingen {"ok": true, "optionen": [], "plan_geaendert": true, "bare_geaendert": true, "netz": {"D11": 2}}
-daniken {"ok": true, "optionen": ["--hauptgleise"], "plan_geaendert": true, "bare_geaendert": true, "netz": {"D11": 1}}
-olten {"ok": true, "optionen": ["--hauptgleise"], "plan_geaendert": true, "bare_geaendert": true, "netz": {"Z2": 4}}
-olten_hammer {"ok": true, "optionen": ["--hauptgleise"], "plan_geaendert": true, "bare_geaendert": true, "netz": {}}
+Variante {"ok": true, "ordner": "olten_ost", "geaendert": []}
+Variante {"ok": true, "ordner": "regional_olten_ost", "geaendert": []}
+Variante {"ok": true, "ordner": "regional_rothrist", "geaendert": []}
+aarburg_oftringen {"ok": true, "optionen": [], "plan_geaendert": false, "bare_geaendert": false, "netz": {"T10": 1}}
+dulliken {"ok": true, "optionen": [], "plan_geaendert": false, "bare_geaendert": false, "netz": {}}
+laufelfingen {"ok": true, "optionen": [], "plan_geaendert": false, "bare_geaendert": false, "netz": {}}
+rothrist {"ok": true, "optionen": [], "plan_geaendert": false, "bare_geaendert": false, "netz": {"T10": 1, "D11": 2}}
+safenwil {"ok": true, "optionen": [], "plan_geaendert": false, "bare_geaendert": false, "netz": {}}
+schonenwerd {"ok": true, "optionen": [], "plan_geaendert": false, "bare_geaendert": false, "netz": {}}
+tecknau {"ok": true, "optionen": [], "plan_geaendert": false, "bare_geaendert": false, "netz": {"T10": 1, "D11": 2, "D12": 1}}
+wangen_bei_olten {"ok": true, "optionen": [], "plan_geaendert": false, "bare_geaendert": false, "netz": {"T10": 1}}
+zofingen {"ok": true, "optionen": [], "plan_geaendert": false, "bare_geaendert": false, "netz": {"D11": 2}}
+daniken {"ok": true, "optionen": ["--hauptgleise"], "plan_geaendert": false, "bare_geaendert": false, "netz": {"D11": 1}}
+olten {"ok": true, "optionen": ["--hauptgleise"], "plan_geaendert": false, "bare_geaendert": false, "netz": {"Z2": 4}}
+olten_hammer {"ok": true, "optionen": ["--hauptgleise"], "plan_geaendert": false, "bare_geaendert": false, "netz": {}}
 Regionalgeometrie /home/runner/work/topo-daten/topo-daten/spurplan/werkstatt/olten/feedback/region.svg: Achse 10.06 px, 78 Streckenpfade; {'A1': 1}
   A1  x=85.6 y=-178.5  zwei Streckengleise 11.8 px auseinander (1.17 Achsen) über 42 px
 
-Region Olten: {"ok": true, "geaendert": true, "geometrie": {"plan": "/home/runner/work/topo-daten/topo-daten/spurplan/werkstatt/olten/feedback/region.svg", "achse": 10.063273398556364, "befunde": [{"regel": "A1", "x": 85.6, "y": -178.5, "text": "zwei Streckengleise 11.8 px auseinander (1.17 Achsen) über 42 px"}]}}
+Region Olten: {"ok": true, "geaendert": false, "geometrie": {"plan": "/home/runner/work/topo-daten/topo-daten/spurplan/werkstatt/olten/feedback/region.svg", "achse": 10.063273398556364, "befunde": [{"regel": "A1", "x": 85.6, "y": -178.5, "text": "zwei Streckengleise 11.8 px auseinander (1.17 Achsen) über 42 px"}]}}

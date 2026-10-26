@@ -11,6 +11,7 @@
    }
   }
  },
+ "varianten": {},
  "region": {
   "ok": true,
   "log": "Knoten: Counter({'spurplan': 56, 'exit': 9, 'junction': 1}) Kanten: 66\nsenkrecht: []\n  Überlappungen: [('Saint Blaise-Lac', 'Saint-Blaise CFF')]\n  Lage Ketten: 18 Ketten, 18 Knoten, 48 Bahnhöfe auf Ketten, 30 Durchgänge, Rest-Überlappungen 1\n  Spurwechsel auf freier Strecke: 5\n  Tunnel auf freier Strecke: 6\n  Spurwechsel gezeichnet: 3\n  Stösse an Abzweigen zusammengeführt: 2\n  Kreuzungen mit Brücke: 0\n  Nebengleise/Spurwechsel freie Strecke gezeichnet: 6\nok 7812 5197\n",
