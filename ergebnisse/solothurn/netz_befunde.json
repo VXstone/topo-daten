@@ -38,6 +38,24 @@
    "text": "Gleisstück unter 84° (nur 0° und 60° erlaubt)"
   },
   {
+   "regel": "W1",
+   "x": 1147.2,
+   "y": 433.4,
+   "text": "Gleisstück unter 84° (steiler als 60°), 13 px"
+  },
+  {
+   "regel": "F10",
+   "x": 1368.3,
+   "y": 256.4,
+   "text": "Badewanne: Gleis geht eine Ebene hinunter/hinauf und gleich zurück (20 px waagrecht, ohne Weiche)"
+  },
+  {
+   "regel": "F7",
+   "x": 481.9,
+   "y": 256.4,
+   "text": "Zwischengerade 20 px im Spurwechsel ohne Perron und Nummer (eine Diagonale)"
+  },
+  {
    "regel": "A1",
    "x": 875.7,
    "y": 304.4,

@@ -51,12 +51,15 @@ Weichen ohne Ausrundung (Linienende unter >35° auf Gleis): 2
    x892 y285  60°
    x967 y304  37°
 
-Netzprüfung solothurn: {'A1': 2, 'D11': 4, 'W2': 2}; Durchfahrgleise 0
+Netzprüfung solothurn: {'A1': 2, 'D11': 4, 'F10': 1, 'F7': 1, 'W1': 1, 'W2': 2}; Durchfahrgleise 0
   D11  x=1111.1 y=503.6  Gleisnummer 10 ohne Perron daneben (Perron fehlt oder Nummer zu viel)
   D11  x=1096.2 y=527.6  Gleisnummer 9 ohne Perron daneben (Perron fehlt oder Nummer zu viel)
   D11  x=1187.2 y=304.4  Gleisnummer 3 ohne Perron daneben (Perron fehlt oder Nummer zu viel)
   D11  x=1187.2 y=232.4  Gleisnummer 2 ohne Perron daneben (Perron fehlt oder Nummer zu viel)
   W2   x=899.0 y=256.4  S-Kurve in der Mitte unter 103° (steiler oder flacher als 60°)
   W2   x=1147.2 y=433.4  Gleisstück unter 84° (nur 0° und 60° erlaubt)
+  W1   x=1147.2 y=433.4  Gleisstück unter 84° (steiler als 60°), 13 px
+  F10  x=1368.3 y=256.4  Badewanne: Gleis geht eine Ebene hinunter/hinauf und gleich zurück (20 px waagrecht, ohne Weiche)
+  F7   x=481.9 y=256.4  Zwischengerade 20 px im Spurwechsel ohne Perron und Nummer (eine Diagonale)
   A1   x=875.7 y=304.4  zwei Gleise nur 19.7 px auseinander über 14 px (Grenze 20 px)
   A1   x=927.5 y=304.4  zwei Gleise nur 19.7 px auseinander über 33 px (Grenze 20 px)
