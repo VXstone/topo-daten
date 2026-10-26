@@ -320,6 +320,7 @@ def uvec(dg): return np.array([math.cos(math.radians(dg)), -math.sin(math.radian
 # ------------------------------------------------------------------ 5. Zeichnen
 out = []
 POLYS = []
+PORTAL = "#8a8a8a"   # Tunnelportale grau und vor Grün (D. Eckenstein 26.10.2026: «Schwarz hinter Grün nur bei Weichen»)
 def path(pts, color=G, w=2.4):
     if os.environ.get("PDBG") and any(abs(float(p[0]) - float(os.environ["PDBG"].split(",")[0])) < 3 and abs(float(p[1]) - float(os.environ["PDBG"].split(",")[1])) < 3 for p in pts):
         import traceback; traceback.print_stack(limit=3)
@@ -944,7 +945,7 @@ for r in routes:
                 else: grp_.append([o_])
             for gq in grp_:
                 a0, a1 = c_ + n_ * (gq[0] - 4.5), c_ + n_ * (gq[-1] + 4.5)
-                path([a0 + d_ * sg_ * 5 - n_ * 3, a0, a1, a1 + d_ * sg_ * 5 + n_ * 3], BK, 1.2)
+                path([a0 + d_ * sg_ * 5 - n_ * 3, a0, a1, a1 + d_ * sg_ * 5 + n_ * 3], PORTAL, 1.2)
     # manuelle Spurwechsel (Ortskenntnis, z. B. Abzweig Zofingen Nord): Lage "xo_manuell" [{"a","b","t"}]
     for xm in OVR_LAGE.get("xo_manuell", []):
         nm_a, nm_b = nodes[na]["name"], nodes[nb]["name"]
@@ -1375,6 +1376,9 @@ if _gi is not None and not L0.get("schwarz_oben"):
     _bk = [o_ for o_ in out[_gi:] if o_.startswith("<path") and f'stroke="{BK}"' in o_ and 'fill="none"' in o_ and 'stroke-width="1.3"' in o_]
     _bks = set(map(id, _bk))
     out = out[:_gi] + _bk + [o_ for o_ in out[_gi:] if id(o_) not in _bks]
+# Tunnelportale ganz nach vorn (über Grün)
+_pt = [o_ for o_ in out if o_.startswith("<path") and f'stroke="{PORTAL}"' in o_]
+if _pt: _pts_ = set(map(id, _pt)); out = [o_ for o_ in out if id(o_) not in _pts_] + _pt
 xs = [float(v) for v in re.findall(r'[MLQ ](-?[\d.]+),', "".join(out))] + [p[0] for p in pos.values()]
 ys = [float(v) for v in re.findall(r'[MLQ ]-?[\d.]+,(-?[\d.]+)', "".join(out))] + [p[1] for p in pos.values()]
 bx = boxes()

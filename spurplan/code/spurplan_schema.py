@@ -2257,7 +2257,7 @@ for _pt in OVR.get("portale", []):        # auch im Regionalplan (bare) zeichnen
     for _r in _pt["y"]:
         m_ = re.fullmatch(r"n:(\d+)(?:@([+-][\d.]+))?", str(_r)); _yy.append(ypos(int(m_[1])) + float(m_[2] or 0))
     y0_, y1_ = min(_yy) - 7, max(_yy) + 7
-    out.append(f'<path d="M{_xp + _dr * 5:.1f},{y0_ - 3:.1f}L{_xp:.1f},{y0_:.1f}L{_xp:.1f},{y1_:.1f}L{_xp + _dr * 5:.1f},{y1_ + 3:.1f}" fill="none" stroke="{black}" stroke-width="1.4"/>')
+    out.append(f'<path d="M{_xp + _dr * 5:.1f},{y0_ - 3:.1f}L{_xp:.1f},{y0_:.1f}L{_xp:.1f},{y1_:.1f}L{_xp + _dr * 5:.1f},{y1_ + 3:.1f}" fill="none" stroke="#8a8a8a" stroke-width="1.4"/>')   # Portal grau (26.10.2026)
 # Über-/Unterführung (Blaupause E6, Olten Nord: Aarauer Gleise über die Basler Gleise): das untere Gleis bekommt eine Lücke,
 # das obere Gleis läuft durch und hat Brückenflügel
 if ZEICHNEN_UEBER:                  # auch im Regionalplan (bare): "Unterführungssymbol?" (15.10.)
@@ -2392,9 +2392,11 @@ if OVR.get("meterspur") and os.path.exists(OVR["meterspur"]) and (not ARGS.bare 
             if b_ - a_ < 20 or abs(np.mean(dd_)) > 30: continue
             yb_ = _y0 + (11 if (np.mean(dd_) < 0) == _oben else -11)
             MS_TXT.insert(0, f'<rect x="{X(a_):.1f}" y="{yb_ - 4:.1f}" width="{X(b_) - X(a_):.1f}" height="8" rx="1.5" fill="{MS_COL}"/>')      # Meterspur-Perron braun (Hinweis Region NE 22.10.)
+            _MS_PERRON_X = (X(a_) + X(b_)) / 2          # Gleisnummer in die Perronmitte (B14, Hinweis Ins 26.10.)
     # Gleisnummer des Bezugsgleises
     if _ref and _ms_cfg.get("bezug"):
         _xm = X(float(np.median(_rs)))
+        if "_MS_PERRON_X" in dir() and CFG.get("perron_px", 110): _xm = _MS_PERRON_X
         MS_TXT.append(f'<rect x="{_xm - 13:.1f}" y="{_y0 - 8:.1f}" width="26" height="16" fill="#fff" stroke="none"/>'
                       f'<text x="{_xm:.1f}" y="{_y0 + 6.5:.1f}" font-size="19" text-anchor="middle" fill="{MS_COL}">{_ms_cfg["bezug"]}</text>')
     out.append('</g>'); out.extend(MS_TXT); out.append('<g fill="none" stroke-linecap="round" stroke-linejoin="round">')
@@ -2445,10 +2447,18 @@ elif _PE and _PER:
     for p_ in _PER:
         lo_, hi_ = p_[0], p_[1]; L_ = min(_L, hi_ - lo_)
         c_ = min(max(_M, lo_ + L_ / 2), hi_ - L_ / 2); p_[0], p_[1] = c_ - L_ / 2, c_ + L_ / 2
+# B14 (D. Eckenstein 25.10.2026: «für alle Pläne»): Perron höchstens 110 px lang um die eigene Mitte; kürzer, wenn der freie
+# Abschnitt kürzer ist (nie über Weichen). Override «perron_einheitlich» / «perrons_px» gehen vor; cfg «perron_px» 0 = alt.
+_PPX = CFG.get("perron_px", 110)
+PERRON_PX = []          # gezeichnete Perrons in Pixeln (x0, x1, y) für die Gleisnummern
 for a_, b_, yb in _PER:
-    out.append(f'<rect x="{X(a_):.1f}" y="{yb - 4:.1f}" width="{X(b_) - X(a_):.1f}" height="8" rx="1.5" fill="{green}"/>')
+    x0_, x1_ = X(a_), X(b_)
+    if _PPX and not _PE and x1_ - x0_ > _PPX: _m = (x0_ + x1_) / 2; x0_, x1_ = _m - _PPX / 2, _m + _PPX / 2
+    PERRON_PX.append((x0_, x1_, yb))
+    out.append(f'<rect x="{x0_:.1f}" y="{yb - 4:.1f}" width="{x1_ - x0_:.1f}" height="8" rx="1.5" fill="{green}"/>')
 # Override "perrons_px" [[x0, x1, y], ...]: Perrons in Pixeln, für von Hand gezeichnete Pläne (Chambrelien 15.10.)
 for x0_, x1_, y_ in OVR.get("perrons_px", []):
+    PERRON_PX.append((x0_, x1_, y_))
     out.append(f'<rect x="{x0_:.1f}" y="{y_ - 4:.1f}" width="{x1_ - x0_:.1f}" height="8" rx="1.5" fill="{green}"/>')
 # Override "nummern_px" [[text, x, y], ...]: Gleisnummern in Pixeln (Chambrelien 15.10.)
 for t_, x_, y_ in OVR.get("nummern_px", []):
@@ -2468,7 +2478,10 @@ for e in ([] if OVR.get("platforms") is not None else PLAT):
     elif up: yb = Y(up[0][1]) + 11
     elif dn: yb = Y(dn[-1][1]) - 11
     else: continue
-    out.append(f'<rect x="{X(a_):.1f}" y="{yb - 4:.1f}" width="{X(b_) - X(a_):.1f}" height="8" rx="1.5" fill="{green}"/>')
+    x0_, x1_ = X(a_), X(b_)
+    if _PPX and x1_ - x0_ > _PPX: _m = (x0_ + x1_) / 2; x0_, x1_ = _m - _PPX / 2, _m + _PPX / 2      # B14
+    PERRON_PX.append((x0_, x1_, yb))
+    out.append(f'<rect x="{x0_:.1f}" y="{yb - 4:.1f}" width="{x1_ - x0_:.1f}" height="8" rx="1.5" fill="{green}"/>')
 # Doppelkreuzungsweichen (OSM railway:switch=double_slip): X mit den beiden Bogenverbindungen
 from svgpathtools import parse_path as _pp
 def _arm(d, nx_, ny_, reach=26):
@@ -2580,6 +2593,11 @@ for r, (l, a, b, _) in labels.items():
     xm = min(max(pax_mid, X(a) - X(s_lo) + CFG["margin_x"] + 30 and pax_mid), 1e9)
     xs = min(max(X(pax_mid if a <= pax_mid <= b else (a + b) / 2), X(a) + 20), X(b) - 20)
     y = Y(l)
+    # B14: Gleisnummer in der Mitte des Perrons an diesem Gleis (Hinweis Ins 26.10.: «schon fast in der Ausrundung»)
+    _pp = [p_ for p_ in PERRON_PX if 6 <= abs(p_[2] - y) <= 16 and p_[1] > X(a) and p_[0] < X(b)] if CFG.get("perron_px", 110) else []
+    if _pp:
+        p_ = min(_pp, key=lambda q_: (abs(q_[2] - y), abs((q_[0] + q_[1]) / 2 - xs)))
+        xs = min(max((p_[0] + p_[1]) / 2, X(a) + 20), X(b) - 20)
     out.append(f'<rect x="{xs - 13:.1f}" y="{y - 8:.1f}" width="26" height="16" fill="#fff"/>')
     out.append(f'<text x="{xs:.1f}" y="{y + 6.5:.1f}" font-size="19" text-anchor="middle" fill="{green}">{r}</text>')
 TITLE_X = X(pax_mid)

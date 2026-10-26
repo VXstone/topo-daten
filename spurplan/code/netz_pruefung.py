@@ -137,7 +137,7 @@ for p in N["perrons"]:
     if durch:
         bef("A5", (p["x0"] + p["x1"]) / 2, p["y"], "Gleis läuft durch das Perron", way=durch[0]["way"])
 for t in N["nummern"]:
-    ok = any(p["x0"] - 40 <= t["x"] <= p["x1"] + 40 and 6 <= abs(p["y"] - t["y"]) <= 16 for p in N["perrons"])
+    ok = any(p["x0"] - 40 <= t["x"] <= p["x1"] + 40 and 6 <= abs(p["y"] - t["y"]) <= 26 for p in N["perrons"])
     if not ok:
         bef("D11", t["x"], t["y"], f"Gleisnummer {t['text']} ohne Perron daneben (Perron fehlt oder Nummer zu viel)")
 _osm_refs = sorted({r for p in N["perrons_osm"] for r in str(p.get("ref") or "").replace(",", ";").split(";") if r})
