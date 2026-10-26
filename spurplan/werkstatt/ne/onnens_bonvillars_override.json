@@ -238,11 +238,11 @@
       "y:123"
      ],
      [
-      "x:663.2",
+      "x:648.2",
       "y:123"
      ],
      [
-      "x:680.5",
+      "x:665.5",
       "y:93"
      ]
     ],
@@ -259,7 +259,7 @@
       "y:110"
      ],
      [
-      "x:663.2",
+      "x:667.7",
       "y:110"
      ],
      [
@@ -273,20 +273,20 @@
     ],
     "pax": false,
     "rund": 3,
-    "_osm": "1184393599 + 184785970: Gleis 32 durch die DKW hinunter in die Abstellgruppe"
+    "_osm": "1184393599 + 184785970: Gleis 32 durch die DKW hinunter in die Abstellgruppe · 26.10.: waagrecht durch die DKW (liegend), erst danach hinunter (Hinweis of4dx1zk7w3uayt110tr)"
    }
   ]
  },
  "dkw_px": [
   {
-   "x": 666.95,
-   "y": 116.5,
+   "x": 655.7,
+   "y": 110.0,
    "pax": false,
    "arme": [
     [
      [
-      -0.5,
-      -0.866
+      -1,
+      0
      ],
      [
       0.5,
@@ -295,16 +295,16 @@
     ],
     [
      [
-      -0.5,
-      0.866
+      1,
+      0
      ],
      [
-      0.5,
+      -0.5,
       0.866
      ]
     ]
    ],
-   "_osm": "DKW 1953027582: Klammern oben und unten (verbinden je einen linken mit einem rechten Ast, Hinweis 20.10.)"
+   "_osm": "DKW 1953027582 liegend auf Gleis 32, Gleis 31 kreuzt unter 60°; Klammern in den stumpfen Winkeln (Regel D. Eckenstein 21.10.: gerade Äste + grösserer Winkel, nie der spitze)"
   }
  ]
 }
