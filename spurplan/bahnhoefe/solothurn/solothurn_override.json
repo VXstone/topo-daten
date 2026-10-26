@@ -1,4 +1,26 @@
 {
  "_quelle": "Neuer Bahnhof (D. Eckenstein 26.10.2026: «zeichne mal wieder einen neuen Bahnhof, bspw. Solothurn»), ohne Overrides, Ausschnitt 47.197,7.527,47.212,7.559 aus schweiz_bahn.json.gz",
- "_meterspur_weg": "26.10.: Meterspur (RBS, asm) vorerst weggelassen, die automatische Lage gab Knäuel unter dem Titel; kommt als eigener Schritt (wie Ins)"
+ "meterspur": "solothurn_meter.json",
+ "meterspur_cfg": {
+  "gruppen": [
+   {
+    "operator": "RBS",
+    "bezug": "10",
+    "ebenen": [
+     "10",
+     "9"
+    ],
+    "ziel": "Bern (RBS)"
+   },
+   {
+    "operator": "asm",
+    "bezug": "21",
+    "ebenen": [
+     "21"
+    ],
+    "ziel": "Langenthal (asm)"
+   }
+  ]
+ },
+ "_meterspur": "RBS (Gleise 9/10, nach Bern) südlich und asm (Gleis 21, nach Langenthal) nördlich: zwei Meterspur-Gruppen, schematisch auf Ebenen (meterspur_cfg.gruppen/ebenen, 26.10.2026)"
 }

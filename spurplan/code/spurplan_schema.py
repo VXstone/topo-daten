@@ -2376,7 +2376,7 @@ if ZEICHNEN_UEBER:                  # auch im Regionalplan (bare): "Unterführun
     for pts_, pax_, rund_ in ZEICHNEN_UEBER:
         out.append(f'<path d="{_rund(pts_, rund_)}" stroke="{green if pax_ else black}" stroke-width="{3.6 if pax_ else 1.6}" fill="none"/>')
 # Meterspur (Override "meterspur": Overpass-Datei mit gauge=1000) als eigene, braune Schicht ohne Verbindung zur Normalspur
-MS_COL = "#9a5b1e"; MS_LEG = False
+MS_COL = "#9a5b1e"; MS_LEG = False; MS_YMAX = None     # MS_YMAX: unterste Meterspur-Zeichnung (Titel darunter)
 if OVR.get("meterspur") and os.path.exists(OVR["meterspur"]) and (not ARGS.bare or OVR.get("meterspur_cfg", {}).get("regional", True)):   # auch im Regionalplan (Hinweis Region NE 20.10. "Wo ist die Meterspur?")
     _msd = []
     for e in json.load(open(OVR["meterspur"]))["elements"]:
@@ -2384,85 +2384,183 @@ if OVR.get("meterspur") and os.path.exists(OVR["meterspur"]) and (not ARGS.bare 
         _msd.append((e["id"], e["tags"], [project(xy(g)) for g in e["geometry"]], e.get("nodes", [None] * len(e["geometry"]))))
     if os.environ.get("MS_DBG"):
         for i_, t_, sd_, _ in _msd: print("MS", i_, t_.get("railway:track_ref"), [(round(a), round(b)) for a, b in sd_])
-    _ms_cfg = OVR.get("meterspur_cfg", {})
-    _lmin = min(c["lane"] for c in C); _lmax = max(c["lane"] for c in C)
-    # Bezugsgleis (track_ref, z. B. 11) wird waagrecht eine Ebene ausserhalb der Normalspur gezeichnet,
-    # alles andere relativ dazu, quer gestaucht (m_pro_lane), durch die Normalspur hindurch begrenzt
-    _ref = [sd_ for i_, t_, sd_, _ in _msd if t_.get("railway:track_ref") == str(_ms_cfg.get("bezug", ""))]
-    _ref = sorted(p_ for r_ in _ref for p_ in r_)
-    _rs = np.array([p_[0] for p_ in _ref]) if _ref else np.array([0.0]); _rd = np.array([p_[1] for p_ in _ref]) if _ref else np.array([0.0])
-    _oben = (np.median(_rd) > 0)
-    _y0 = Y(_lmax) - CFG["lane_px"] * _ms_cfg.get("abstand_lanes", 1.0) if _oben else Y(_lmin) + CFG["lane_px"] * _ms_cfg.get("abstand_lanes", 1.0)
-    def _ms_y(s_, d_):
-        q_ = (d_ - float(np.interp(s_, _rs, _rd))) * (1 if _oben else -1) / _ms_cfg.get("m_pro_lane", 10.0)
-        q_ = max(q_, -_ms_cfg.get("max_innen", 0.6))
-        return _y0 - q_ * CFG["lane_px"]
-    def _ms_ok(s_, d_): return abs(d_ - float(np.interp(s_, _rs, _rd))) <= _ms_cfg.get("d_max", 40)   # Regel E8 (20.10.): Meterspur bis ~40 m neben der Normalspur
-    def _dp(pts, eps=1.5):            # Douglas-Peucker: Messrauschen weg, Knicke bleiben
-        if len(pts) < 3: return pts
-        (ax, ay), (bx, by) = pts[0], pts[-1]; L = math.hypot(bx - ax, by - ay) or 1e-9
-        dd = [abs((bx - ax) * (ay - y) - (ax - x) * (by - ay)) / L for x, y in pts[1:-1]]
-        i = int(np.argmax(dd)) + 1
-        return _dp(pts[:i + 1], eps)[:-1] + _dp(pts[i:], eps) if dd[i - 1] > eps else [pts[0], pts[-1]]
-    _mp = {True: [], False: []}; _aus = _ms_cfg.get("ausfahrt_lanes", 0.8); MS_TXT = []
-    for i_, t_, sd_, nn_ in _msd:
-        q_ = []; raus = None
-        for (s_, d_), mn_ in zip(sd_, nn_):
-            if mn_ in home and mn_ in SD:      # gemeinsamer Knoten mit der Normalspur (Rollbockanlage Ins): dort anschliessen
-                q_.append((xpos(mn_, SD[mn_][0]), ypos(mn_))); continue
-            if not (CFG["s_min"] - 1 <= s_ <= CFG["s_max"] + 1) or not _ms_ok(s_, d_):
-                if q_: break
-                continue
-            y_ = _ms_y(s_, d_)
-            if abs(y_ - _y0) > _aus * CFG["lane_px"] and (_y0 - y_) * (1 if _oben else -1) > 0:   # Strecke verlässt den Bahnhof quer: schematischer Abgang
-                if q_: raus = q_[-1]
-                if q_: break
-                continue
-            q_.append((X(s_), y_))
-        # Rollbockanlage (Ins, Hinweis 14.10.): vom gemeinsamen Knoten in derselben 60°-Schrägen weiter bis auf die Meterspurebene
-        if _ms_cfg.get("rollbock_diag") and q_ and nn_ and nn_[0] in home:
-            mx_, my_ = q_[0]; tx_ = mx_ + abs(my_ - _y0) / math.tan(math.radians(60))
-            q_ = [q_[0], (tx_, _y0)] + [p_ for p_ in q_[1:] if p_[0] > tx_ + 2]
-        if os.environ.get("MS_DBG"): print("MSQ", i_, [(round(a), round(b)) for a, b in q_][:6], raus)
-        q_ = _dp(q_)
-        hpt = t_.get("service") is None
-        if raus is not None and len(q_) >= 1:
-            dx_ = 1 if len(q_) < 2 or q_[-1][0] >= q_[-2][0] else -1
-            # Hinweis Ins 25.10. («fast 90 Grad und dann wieder schräg»): Abgang ab dem letzten Punkt auf der
-            # Meterspurebene gerade unter 60° (W2), ohne das steile Zwischenstück, wo das Gleis die Ebene verlässt
-            _qe = [p_ for p_ in q_ if abs(p_[1] - _y0) < 1.5]
-            if _qe and _ms_cfg.get("abgang_60", True): q_ = q_[:q_.index(_qe[-1]) + 1]
-            Lr = CFG["lane_px"] * _ms_cfg.get("ausfahrt_len", 1.2)
-            _c, _s = (0.5, math.sqrt(3) / 2) if _ms_cfg.get("abgang_60", True) else (1 / math.sqrt(2), 1 / math.sqrt(2))
-            x2, y2 = q_[-1][0] + dx_ * Lr * _c / _s, q_[-1][1] - (1 if _oben else -1) * Lr
-            q_.append((x2, y2))
-            ux, uy = dx_ * _c, -(1 if _oben else -1) * _s
-            out.append(f'<path d="M{x2 + ux * 9:.1f},{y2 + uy * 9:.1f}L{x2 - uy * 4:.1f},{y2 + ux * 4:.1f}L{x2 + uy * 4:.1f},{y2 - ux * 4:.1f}Z" fill="{MS_COL}" stroke="none"/>')
-            if _ms_cfg.get("ziel"):
-                for k_, z_ in enumerate(_ms_cfg["ziel"].split("|")):
-                    MS_TXT.append(f'<text x="{x2 + dx_ * 14:.1f}" y="{y2 - (8 if _oben else -22) + 24 * k_ - (24 * (len(_ms_cfg["ziel"].split("|")) - 1) if _oben else 0):.1f}" font-size="20" text-anchor="{"start" if dx_ > 0 else "end"}" fill="{MS_COL}">{z_}</text>')
-        if len(q_) >= 2: _mp[hpt].append(_rund(q_, 6.0))
-    if _mp[True] or _mp[False]:
-        MS_LEG = True
-        if _mp[False]: out.append(f'<path d="{" ".join(_mp[False])}" stroke="{MS_COL}" stroke-width="1.6"/>')
-        if _mp[True]: out.append(f'<path d="{" ".join(_mp[True])}" stroke="{MS_COL}" stroke-width="3.6"/>')
-    # Perron am Bezugsgleis (OSM-Perron, der höchstens 30 m neben dem Meterspurgleis liegt; Ins Gleis 11)
-    if _ref and _ms_cfg.get("perron", True):
+    # Mehrere Meterspur-Gruppen (Solothurn 26.10.2026: RBS südlich, asm nördlich): meterspur_cfg {"gruppen": [{…, "operator": "RBS"}, …]};
+    # jede Gruppe hat ihr Bezugsgleis und liegt auf ihrer Seite der Normalspur. Ohne «gruppen» wie bisher eine Gruppe.
+    def _ms_ebenen(_msd, _ms_cfg, _oben, _y0):
+        """Meterspur schematisch auf Ebenen (Solothurn RBS/asm 26.10.2026): Gleise mit Nummer (cfg «ebenen», erste =
+        Bezugsgleis) waagrecht je eine Ebene, von der Normalspur weg; Verbindungen ohne Nummer unter 60° zwischen den
+        Ebenen; was den Bahnhof verlässt, als Abgang unter 60° mit Pfeil und Ziel; Abstellgleise dünn auf der Ebene."""
+        global MS_LEG, MS_YMAX
+        sgn = -1 if _oben else 1; L_ = CFG["lane_px"]; T60 = math.tan(math.radians(60))
+        ebn = [str(e_) for e_ in _ms_cfg["ebenen"]]
+        ye = {r_: _y0 + sgn * L_ * k_ for k_, r_ in enumerate(ebn)}
+        s_lo, s_hi = CFG["s_min"], CFG["s_max"]
+        auf = {}                                   # Knoten -> (Ebene, s) der nummerierten Gleise
+        dick, duenn, txt = [], [], []
+        for i_, t_, sd_, nn_ in _msd:
+            r_ = t_.get("railway:track_ref")
+            if r_ not in ye: continue
+            ss_ = [min(max(a_, s_lo), s_hi) for a_, _ in sd_]
+            for (a_, _), m_ in zip(sd_, nn_): auf[m_] = (r_, min(max(a_, s_lo), s_hi))
+            (dick if t_.get("service") is None else duenn).append([(X(min(ss_)), ye[r_]), (X(max(ss_)), ye[r_])])
+        # übrige Ways zu Ketten (gemeinsame Endknoten), je Kette: Anschlüsse an Ebenen und freie Enden
+        rest = [(i_, t_, sd_, nn_) for i_, t_, sd_, nn_ in _msd if t_.get("railway:track_ref") not in ye]
+        par = {i_: i_ for i_, *_ in rest}
+        def fnd(a):
+            while par[a] != a: a = par[a]
+            return a
+        endn = collections.defaultdict(list)
+        for i_, t_, sd_, nn_ in rest: endn[nn_[0]].append(i_); endn[nn_[-1]].append(i_)
+        for n_, ids_ in endn.items():
+            if n_ in auf: continue
+            for j_ in ids_[1:]: par[fnd(j_)] = fnd(ids_[0])
+        kom = collections.defaultdict(list)
+        for w_ in rest: kom[fnd(w_[0])].append(w_)
+        for ws_ in kom.values():
+            deg = collections.Counter(n_ for _, _, _, nn_ in ws_ for n_ in (nn_[0], nn_[-1]))
+            pos_ = {n_: p_ for _, _, sd_, nn_ in ws_ for n_, p_ in zip(nn_, sd_)}
+            an = [n_ for n_ in deg if n_ in auf] + [n_ for _, _, _, nn_ in ws_ for n_ in nn_[1:-1] if n_ in auf]
+            frei = [n_ for n_, c_ in deg.items() if c_ == 1 and n_ not in auf]
+            neben = all(t_.get("service") for _, t_, _, _ in ws_)
+            if len(set(auf[n_][0] for n_ in an)) >= 2:          # Verbindung zwischen zwei Ebenen
+                a_, b_ = sorted(an[:2], key=lambda n_: auf[n_][1])
+                (ra, sa), (rb, sb) = auf[a_], auf[b_]
+                xa, xb = X(sa), X(sb); ya, yb = ye[ra], ye[rb]
+                if xb - xa < abs(yb - ya) / T60: xa = xb - abs(yb - ya) / T60
+                (duenn if neben else dick).append([(xa, ya), (xb - abs(yb - ya) / T60, ya), (xb, yb)] if xb - abs(yb - ya) / T60 > xa + 1 else [(xa, ya), (xb, yb)])
+            elif an and frei:
+                a_ = an[0]; r_, sa = auf[a_]; f_ = max(frei, key=lambda n_: abs(pos_[n_][1] - pos_.get(a_, (sa, 0))[1]))
+                sf, df = pos_[f_]
+                draussen = not (s_lo <= sf <= s_hi) or abs(df - pos_.get(a_, (sa, df))[1]) > _ms_cfg.get("d_max", 40)
+                if draussen and not neben:                  # Abgang: unter 60° von der Normalspur weg, Pfeil und Ziel
+                    dx_ = 1 if sf >= sa else -1; Lr = L_ * _ms_cfg.get("ausfahrt_len", 1.6)
+                    x0_, y0_ = X(sa), ye[r_]; x2, y2 = x0_ + dx_ * Lr / T60, y0_ + sgn * Lr
+                    dick.append([(x0_ - dx_ * 8, y0_), (x0_, y0_), (x2, y2)])
+                    ux, uy = dx_ * 0.5, sgn * math.sqrt(3) / 2
+                    out.append(f'<path d="M{x2 + ux * 9:.1f},{y2 + uy * 9:.1f}L{x2 - uy * 4:.1f},{y2 + ux * 4:.1f}L{x2 + uy * 4:.1f},{y2 - ux * 4:.1f}Z" fill="{MS_COL}" stroke="none"/>')
+                    for k_, z_ in enumerate(str(_ms_cfg.get("ziel", "")).split("|")):
+                        if z_: txt.append(f'<text x="{x2 + dx_ * 14:.1f}" y="{y2 + (22 if sgn > 0 else -8) + 24 * k_:.1f}" font-size="20" text-anchor="{"start" if dx_ > 0 else "end"}" fill="{MS_COL}">{z_}</text>')
+                elif not draussen:                          # Abstell- oder Stumpengleis auf der Ebene weiter
+                    (duenn if neben else dick).append([(X(sa), ye[r_]), (X(min(max(sf, s_lo), s_hi)), ye[r_])])
+        if dick or duenn:
+            MS_LEG = True
+            _yy = [p_[1] for q_ in dick + duenn for p_ in q_] + [float(v) + 8 for t_ in txt for v in re.findall(r' y="(-?[\d.]+)"', t_)]
+            MS_YMAX = max([MS_YMAX or -1e9] + _yy)
+            if duenn: out.append(f'<path d="{" ".join(_rund(q_, 6.0) for q_ in duenn)}" stroke="{MS_COL}" stroke-width="1.6"/>')
+            if dick: out.append(f'<path d="{" ".join(_rund(q_, 6.0) for q_ in dick)}" stroke="{MS_COL}" stroke-width="3.6"/>')
+        # Perrons (OSM) neben den Meterspurgleisen, Gleisnummern in der Perronmitte
+        ref_sd = {r_: [p_ for i_, t_, sd_, _ in _msd if t_.get("railway:track_ref") == r_ for p_ in sd_] for r_ in ebn}
+        pm = {}
         for e in PLAT:
             pp_ = [project(xy(g)) for g in e["geometry"]]
-            dd_ = [d_ - float(np.interp(s_, _rs, _rd)) for s_, d_ in pp_]
-            a_, b_ = max(min(p_[0] for p_ in pp_), _rs.min()), min(max(p_[0] for p_ in pp_), _rs.max())
-            if b_ - a_ < 20 or abs(np.mean(dd_)) > 30: continue
-            yb_ = _y0 + (11 if (np.mean(dd_) < 0) == _oben else -11)
-            MS_TXT.insert(0, f'<rect x="{X(a_):.1f}" y="{yb_ - 4:.1f}" width="{X(b_) - X(a_):.1f}" height="8" rx="1.5" fill="{MS_COL}"/>')      # Meterspur-Perron braun (Hinweis Region NE 22.10.)
-            _MS_PERRON_X = (X(a_) + X(b_)) / 2          # Gleisnummer in die Perronmitte (B14, Hinweis Ins 26.10.)
-    # Gleisnummer des Bezugsgleises
-    if _ref and _ms_cfg.get("bezug"):
-        _xm = X(float(np.median(_rs)))
-        if "_MS_PERRON_X" in dir() and CFG.get("perron_px", 110): _xm = _MS_PERRON_X
-        MS_TXT.append(f'<rect x="{_xm - 13:.1f}" y="{_y0 - 8:.1f}" width="26" height="16" fill="#fff" stroke="none"/>'
-                      f'<text x="{_xm:.1f}" y="{_y0 + 6.5:.1f}" font-size="19" text-anchor="middle" fill="{MS_COL}">{_ms_cfg["bezug"]}</text>')
-    out.append('</g>'); out.extend(MS_TXT); out.append('<g fill="none" stroke-linecap="round" stroke-linejoin="round">')
+            sm_ = float(np.mean([a_ for a_, _ in pp_])); dm_ = float(np.mean([b_ for _, b_ in pp_]))
+            nah = []
+            for r_, q_ in ref_sd.items():
+                if not q_: continue
+                qs = sorted(q_); dr_ = float(np.interp(sm_, [a_ for a_, _ in qs], [b_ for _, b_ in qs]))
+                if abs(dm_ - dr_) < 12 and min(a_ for a_, _ in qs) - 30 <= sm_ <= max(a_ for a_, _ in qs) + 30: nah.append((r_, dm_ - dr_))
+            if not nah: continue
+            if len(nah) >= 2: yb_ = (ye[nah[0][0]] + ye[nah[1][0]]) / 2
+            else: yb_ = ye[nah[0][0]] + (11 if (nah[0][1] < 0) == _oben else -11)
+            xm_ = X(min(max(sm_, s_lo), s_hi)); w_ = min(CFG.get("perron_px", 110) or 110, abs(X(max(a_ for a_, _ in pp_)) - X(min(a_ for a_, _ in pp_))))
+            txt.insert(0, f'<rect x="{xm_ - w_ / 2:.1f}" y="{yb_ - 4:.1f}" width="{w_:.1f}" height="8" rx="1.5" fill="{MS_COL}"/>')
+            for r_, _ in nah: pm[r_] = xm_
+        for r_ in ebn:
+            if not ref_sd.get(r_): continue
+            xm_ = pm.get(r_, X(min(max(float(np.median([a_ for a_, _ in ref_sd[r_]])), s_lo), s_hi)))
+            txt.append(f'<rect x="{xm_ - 13:.1f}" y="{ye[r_] - 8:.1f}" width="26" height="16" fill="#fff" stroke="none"/>'
+                       f'<text x="{xm_:.1f}" y="{ye[r_] + 6.5:.1f}" font-size="19" text-anchor="middle" fill="{MS_COL}">{r_}</text>')
+        out.append('</g>'); out.extend(txt); out.append('<g fill="none" stroke-linecap="round" stroke-linejoin="round">')
+
+    def _ms_gruppe(_msd, _ms_cfg):
+        global MS_LEG
+        _lmin = min(c["lane"] for c in C); _lmax = max(c["lane"] for c in C)
+        # Bezugsgleis (track_ref, z. B. 11) wird waagrecht eine Ebene ausserhalb der Normalspur gezeichnet,
+        # alles andere relativ dazu, quer gestaucht (m_pro_lane), durch die Normalspur hindurch begrenzt
+        _ref = [sd_ for i_, t_, sd_, _ in _msd if t_.get("railway:track_ref") == str(_ms_cfg.get("bezug", ""))]
+        _ref = sorted(p_ for r_ in _ref for p_ in r_)
+        _rs = np.array([p_[0] for p_ in _ref]) if _ref else np.array([0.0]); _rd = np.array([p_[1] for p_ in _ref]) if _ref else np.array([0.0])
+        _oben = (np.median(_rd) > 0)
+        _y0 = Y(_lmax) - CFG["lane_px"] * _ms_cfg.get("abstand_lanes", 1.0) if _oben else Y(_lmin) + CFG["lane_px"] * _ms_cfg.get("abstand_lanes", 1.0)
+        if _ms_cfg.get("ebenen"):
+            return _ms_ebenen(_msd, _ms_cfg, _oben, _y0)
+        def _ms_y(s_, d_):
+            q_ = (d_ - float(np.interp(s_, _rs, _rd))) * (1 if _oben else -1) / _ms_cfg.get("m_pro_lane", 10.0)
+            q_ = max(q_, -_ms_cfg.get("max_innen", 0.6))
+            return _y0 - q_ * CFG["lane_px"] * (1 if _oben else -1)     # unten: weiter weg = weiter nach unten (Solothurn RBS 26.10.)
+        def _ms_ok(s_, d_): return abs(d_ - float(np.interp(s_, _rs, _rd))) <= _ms_cfg.get("d_max", 40)   # Regel E8 (20.10.): Meterspur bis ~40 m neben der Normalspur
+        def _dp(pts, eps=1.5):            # Douglas-Peucker: Messrauschen weg, Knicke bleiben
+            if len(pts) < 3: return pts
+            (ax, ay), (bx, by) = pts[0], pts[-1]; L = math.hypot(bx - ax, by - ay) or 1e-9
+            dd = [abs((bx - ax) * (ay - y) - (ax - x) * (by - ay)) / L for x, y in pts[1:-1]]
+            i = int(np.argmax(dd)) + 1
+            return _dp(pts[:i + 1], eps)[:-1] + _dp(pts[i:], eps) if dd[i - 1] > eps else [pts[0], pts[-1]]
+        _mp = {True: [], False: []}; _aus = _ms_cfg.get("ausfahrt_lanes", 0.8); MS_TXT = []
+        for i_, t_, sd_, nn_ in _msd:
+            q_ = []; raus = None
+            for (s_, d_), mn_ in zip(sd_, nn_):
+                if mn_ in home and mn_ in SD:      # gemeinsamer Knoten mit der Normalspur (Rollbockanlage Ins): dort anschliessen
+                    q_.append((xpos(mn_, SD[mn_][0]), ypos(mn_))); continue
+                if not (CFG["s_min"] - 1 <= s_ <= CFG["s_max"] + 1) or not _ms_ok(s_, d_):
+                    if q_: break
+                    continue
+                y_ = _ms_y(s_, d_)
+                if abs(y_ - _y0) > _aus * CFG["lane_px"] and (_y0 - y_) * (1 if _oben else -1) > 0:   # Strecke verlässt den Bahnhof quer: schematischer Abgang
+                    if q_: raus = q_[-1]
+                    if q_: break
+                    continue
+                q_.append((X(s_), y_))
+            # Rollbockanlage (Ins, Hinweis 14.10.): vom gemeinsamen Knoten in derselben 60°-Schrägen weiter bis auf die Meterspurebene
+            if _ms_cfg.get("rollbock_diag") and q_ and nn_ and nn_[0] in home:
+                mx_, my_ = q_[0]; tx_ = mx_ + abs(my_ - _y0) / math.tan(math.radians(60))
+                q_ = [q_[0], (tx_, _y0)] + [p_ for p_ in q_[1:] if p_[0] > tx_ + 2]
+            if os.environ.get("MS_DBG"): print("MSQ", i_, [(round(a), round(b)) for a, b in q_][:6], raus)
+            q_ = _dp(q_)
+            hpt = t_.get("service") is None
+            if raus is not None and len(q_) >= 1:
+                dx_ = 1 if len(q_) < 2 or q_[-1][0] >= q_[-2][0] else -1
+                # Hinweis Ins 25.10. («fast 90 Grad und dann wieder schräg»): Abgang ab dem letzten Punkt auf der
+                # Meterspurebene gerade unter 60° (W2), ohne das steile Zwischenstück, wo das Gleis die Ebene verlässt
+                _qe = [p_ for p_ in q_ if abs(p_[1] - _y0) < 1.5]
+                if _qe and _ms_cfg.get("abgang_60", True): q_ = q_[:q_.index(_qe[-1]) + 1]
+                Lr = CFG["lane_px"] * _ms_cfg.get("ausfahrt_len", 1.2)
+                _c, _s = (0.5, math.sqrt(3) / 2) if _ms_cfg.get("abgang_60", True) else (1 / math.sqrt(2), 1 / math.sqrt(2))
+                x2, y2 = q_[-1][0] + dx_ * Lr * _c / _s, q_[-1][1] - (1 if _oben else -1) * Lr
+                q_.append((x2, y2))
+                ux, uy = dx_ * _c, -(1 if _oben else -1) * _s
+                out.append(f'<path d="M{x2 + ux * 9:.1f},{y2 + uy * 9:.1f}L{x2 - uy * 4:.1f},{y2 + ux * 4:.1f}L{x2 + uy * 4:.1f},{y2 - ux * 4:.1f}Z" fill="{MS_COL}" stroke="none"/>')
+                if _ms_cfg.get("ziel"):
+                    for k_, z_ in enumerate(_ms_cfg["ziel"].split("|")):
+                        MS_TXT.append(f'<text x="{x2 + dx_ * 14:.1f}" y="{y2 - (8 if _oben else -22) + 24 * k_ - (24 * (len(_ms_cfg["ziel"].split("|")) - 1) if _oben else 0):.1f}" font-size="20" text-anchor="{"start" if dx_ > 0 else "end"}" fill="{MS_COL}">{z_}</text>')
+            if len(q_) >= 2: _mp[hpt].append(_rund(q_, 6.0))
+        if _mp[True] or _mp[False]:
+            MS_LEG = True
+            if _mp[False]: out.append(f'<path d="{" ".join(_mp[False])}" stroke="{MS_COL}" stroke-width="1.6"/>')
+            if _mp[True]: out.append(f'<path d="{" ".join(_mp[True])}" stroke="{MS_COL}" stroke-width="3.6"/>')
+        # Perron am Bezugsgleis (OSM-Perron, der höchstens 30 m neben dem Meterspurgleis liegt; Ins Gleis 11)
+        if _ref and _ms_cfg.get("perron", True):
+            for e in PLAT:
+                pp_ = [project(xy(g)) for g in e["geometry"]]
+                dd_ = [d_ - float(np.interp(s_, _rs, _rd)) for s_, d_ in pp_]
+                a_, b_ = max(min(p_[0] for p_ in pp_), _rs.min()), min(max(p_[0] for p_ in pp_), _rs.max())
+                if b_ - a_ < 20 or abs(np.mean(dd_)) > 30: continue
+                yb_ = _y0 + (11 if (np.mean(dd_) < 0) == _oben else -11)
+                MS_TXT.insert(0, f'<rect x="{X(a_):.1f}" y="{yb_ - 4:.1f}" width="{X(b_) - X(a_):.1f}" height="8" rx="1.5" fill="{MS_COL}"/>')      # Meterspur-Perron braun (Hinweis Region NE 22.10.)
+                _MS_PERRON_X = (X(a_) + X(b_)) / 2          # Gleisnummer in die Perronmitte (B14, Hinweis Ins 26.10.)
+        # Gleisnummer des Bezugsgleises
+        if _ref and _ms_cfg.get("bezug"):
+            _xm = X(float(np.median(_rs)))
+            if "_MS_PERRON_X" in dir() and CFG.get("perron_px", 110): _xm = _MS_PERRON_X
+            MS_TXT.append(f'<rect x="{_xm - 13:.1f}" y="{_y0 - 8:.1f}" width="26" height="16" fill="#fff" stroke="none"/>'
+                          f'<text x="{_xm:.1f}" y="{_y0 + 6.5:.1f}" font-size="19" text-anchor="middle" fill="{MS_COL}">{_ms_cfg["bezug"]}</text>')
+        out.append('</g>'); out.extend(MS_TXT); out.append('<g fill="none" stroke-linecap="round" stroke-linejoin="round">')
+
+    _msc = OVR.get("meterspur_cfg", {}); _msd_alle = _msd
+    for _g in (_msc.get("gruppen") or [_msc]):
+        _gc = {k_: v_ for k_, v_ in _msc.items() if k_ != "gruppen"}; _gc.update(_g)
+        _sel = [m_ for m_ in _msd_alle if ("operator" not in _g or m_[1].get("operator") == _g["operator"])
+                and ("ways" not in _g or m_[0] in _g["ways"])]
+        if _sel: _ms_gruppe(_sel, _gc)
 out.append('</g>')
 # Perrons laut Override: zwischen zwei Gleisen oder aussen an einem Gleis
 def ref_span(r):
@@ -2805,7 +2903,7 @@ for (ref, anc, town), grp in _LGROUPS:
     for k, t in enumerate(lines):
         out.append(f'<text x="{xx + dx_:.1f}" y="{yy + dy_ - 6 + 26 * k - 13 * (len(lines) - 1):.1f}" font-size="22" text-anchor="{anc}" fill="{green}">{t}</text>')
 # Titel unterhalb aller Gleise und Beschriftungen
-_ys = [Y(0)] + [e[1] + 10 for e in EXITS] + [y_ for _, y_, _ in STUBS]
+_ys = [Y(0)] + [e[1] + 10 for e in EXITS] + [y_ for _, y_, _ in STUBS] + ([MS_YMAX] if MS_YMAX is not None else [])
 ty = max(_ys) + 60
 if not ARGS.bare:
     out.append(f'<text x="{TITLE_X:.1f}" y="{ty:.1f}" font-size="38" font-weight="700" text-anchor="middle" fill="{green}">{CFG["title"]}</text>')
