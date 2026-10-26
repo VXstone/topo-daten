@@ -10,4 +10,4 @@ zofingen {"ok": true, "optionen": [], "plan_geaendert": false, "bare_geaendert":
 daniken {"ok": true, "optionen": ["--hauptgleise"], "plan_geaendert": false, "bare_geaendert": false, "netz": {"D11": 1}}
 olten {"ok": true, "optionen": ["--hauptgleise"], "plan_geaendert": false, "bare_geaendert": false, "netz": {"D11": 2, "Z2": 4}}
 olten_hammer {"ok": true, "optionen": ["--hauptgleise"], "plan_geaendert": false, "bare_geaendert": false, "netz": {}}
-Region Olten: {"ok": true, "geaendert": false}
+Region Olten: {"ok": true, "geaendert": true}
