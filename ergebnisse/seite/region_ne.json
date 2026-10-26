@@ -3,8 +3,8 @@
   "ins": {
    "ok": true,
    "optionen": [],
-   "plan_geaendert": true,
-   "bare_geaendert": true,
+   "plan_geaendert": false,
+   "bare_geaendert": false,
    "netz": {
     "T10": 1,
     "D11": 1
@@ -15,7 +15,7 @@
  "region": {
   "ok": true,
   "log": "Knoten: Counter({'spurplan': 56, 'exit': 9, 'junction': 1}) Kanten: 66\nsenkrecht: []\n  Überlappungen: [('Saint Blaise-Lac', 'Saint-Blaise CFF')]\n  Lage Ketten: 18 Ketten, 18 Knoten, 48 Bahnhöfe auf Ketten, 30 Durchgänge, Rest-Überlappungen 1\n  Spurwechsel auf freier Strecke: 5\n  Tunnel auf freier Strecke: 6\n  Spurwechsel gezeichnet: 3\n  Stösse an Abzweigen zusammengeführt: 2\n  Kreuzungen mit Brücke: 0\n  Nebengleise/Spurwechsel freie Strecke gezeichnet: 6\nok 7812 5197\n",
-  "geaendert": true,
+  "geaendert": false,
   "pruefung": "Knoten: Counter({'spurplan': 56, 'exit': 9, 'junction': 1}) Kanten: 66\nsenkrecht: []\n  Überlappungen: [('Saint Blaise-Lac', 'Saint-Blaise CFF')]\n  Lage Ketten: 18 Ketten, 18 Knoten, 48 Bahnhöfe auf Ketten, 30 Durchgänge, Rest-Überlappungen 1\n  Spurwechsel auf freier Strecke: 5\n  Tunnel auf freier Strecke: 6\n  Spurwechsel gezeichnet: 3\n  Stösse an Abzweigen zusammengeführt: 2\n  Kreuzungen mit Brücke: 0\n  Nebengleise/Spurwechsel freie Strecke gezeichnet: 6\nok 7812 5197\n\n== Prüfung 1: Gleise entlang der Strecken ==\n  Hinweis Abzweig #54: Gleis der Linie 223 (von Les Deurres) wechselt auf Neuchâtel (210)\n  → 0 Befunde\n\n== Prüfung 2: Lage Nord/Süd und Ost/West gegenüber Geografie ==\n  Bevaix liegt 8.3 km nördlich von Dompierre, im Plan darunter\n  Abgang 219 #67 liegt 3.1 km westlich von Couvet, im Plan rechts davon\n  Colombier liegt 2.8 km östlich von Chambrelien, im Plan links davon\n  Cressier FR liegt 2.6 km östlich von Murten, im Plan links davon\n  Münchenwiler-Courgevaux liegt 2.6 km westlich von Cressier FR, im Plan rechts davon\n  Chambrelien liegt 1.9 km westlich von Bôle, im Plan rechts davon\n  Chambrelien liegt 1.7 km westlich von Boudry, im Plan rechts davon\n  → 7 Befunde\n\n== Prüfung 3: Achsen und Seiten der Spurpläne gegen die Karte ==\n  → 0 Befunde\n\n== Prüfung 4: freie Strecke gegen OSM ==\n  Planfenster: 56 von 56 Spurplänen\n  Noiraigue – Champ du Moulin: 780–855 m ab Noiraigue: OSM 2 Gleise, Plan 1\n  → 1 Befunde\n",
   "geometrie": {
    "plan": "/home/runner/work/topo-daten/topo-daten/spurplan/werkstatt/olten/feedback/region_ne.svg",
