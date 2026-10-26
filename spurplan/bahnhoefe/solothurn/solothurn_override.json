@@ -1,0 +1,8 @@
+{
+ "_quelle": "Neuer Bahnhof (D. Eckenstein 26.10.2026: «zeichne mal wieder einen neuen Bahnhof, bspw. Solothurn»), ohne Overrides, Ausschnitt 47.197,7.527,47.212,7.559 aus schweiz_bahn.json.gz",
+ "meterspur": "solothurn_meter.json",
+ "meterspur_cfg": {
+  "bezug": "10"
+ },
+ "_meterspur": "RBS (Gleise 9/10, Richtung Worblaufen/Bern) und asm (Gleis 21, Richtung Wiedlisbach/Langenthal): narrow_gauge aus schweiz_bahn.json.gz im selben Ausschnitt"
+}
