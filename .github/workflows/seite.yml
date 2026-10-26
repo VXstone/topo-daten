@@ -36,6 +36,10 @@ jobs:
             git show origin/ergebnisse:$r/region.svg > spurplan/werkstatt/olten/feedback/$k.svg 2>/dev/null || rm -f spurplan/werkstatt/olten/feedback/$k.svg
           done
           ls spurplan/werkstatt/olten/feedback/*.svg
+      - name: Region Olten bauen (Bahnhofspläne + Regionalplan aus der Werkstatt, 26.10.2026)
+        run: |
+          mkdir -p /tmp/seite
+          python3 spurplan/code/region_olten_lauf.py --bericht /tmp/seite/region_olten.json 2>&1 | tee /tmp/seite/region_olten_log.txt
       - name: Seite bauen und Ausschnitte
         working-directory: spurplan/werkstatt/olten
         env: { PLAENE_DIR: "/tmp/seite/plaene" }

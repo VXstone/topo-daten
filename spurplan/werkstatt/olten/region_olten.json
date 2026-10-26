@@ -1,0 +1,34 @@
+{
+ "_zweck": "Region Olten im Workflow (26.10.2026, Wunsch D. Eckenstein «Olten zügeln»): code/region_olten_lauf.py baut die Bahnhofspläne (ganze Kette wie run.sh) und den Regionalplan netz_lage.py olten_region. Nachbau vorher geprüft: alle Bahnhöfe byte-gleich.",
+ "bahnhoefe": {
+  "aarburg_oftringen": [],
+  "dulliken": [],
+  "laufelfingen": [],
+  "rothrist": [],
+  "safenwil": [],
+  "schonenwerd": [],
+  "tecknau": [],
+  "wangen_bei_olten": [],
+  "zofingen": [],
+  "daniken": [
+   "--hauptgleise"
+  ],
+  "olten": [
+   "--hauptgleise"
+  ],
+  "olten_hammer": [
+   "--hauptgleise"
+  ]
+ },
+ "fest": {
+  "hagendorf": "eigener Bauweg (nicht mit spurplan_schema nachbaubar), SVG/ports/bare als Eingabe",
+  "olten_ost": "eigener Ordner olten_ost/, SVG/ports/bare als Eingabe",
+  "rothrist_regional": "Regionalvariante, gebaut im Unterordner regional_rothrist/; bare/ports als Eingabe",
+  "olten_ost_regional": "Regionalvariante, gebaut im Unterordner regional_olten_ost/; bare/ports als Eingabe"
+ },
+ "region": {
+  "name": "olten_region",
+  "titel": "Region Olten",
+  "ausgabe": "feedback/region.svg"
+ }
+}

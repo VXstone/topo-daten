@@ -718,3 +718,9 @@ Wunsch D. Eckenstein: Nutzung sparen, mehr in Git auslagern.
 - OSM-Abgleich Korridor Neuchâtel–Saint-Blaise CFF/Lac: 92 Weichen, 43 in Plänen (Neuchâtel, Saint-Blaise CFF/Lac). Nicht gezeichnet war der Ostkopf Neuchâtel bei s=4144–4322 m (0.8–1.1 km östlich): Spurwechsel 49695777 (Linie 210), Weichen 416783522/416784036 ins Nebengleis bzw. Abstellanlage, 11343288453 auf BLS 220; dahinter Abstellanlage Neuchâtel-Est (~30 Weichen, yard, im Hauptgleis-Plan als Pfeile). Von 1.2 km bis Saint-Blaise keine Weichen. Frühere Antwort («keine weiteren Weichen») war falsch (nur das alte Fenster geprüft).
 - Neuchâtel `cfg.s_max_fix` 4400, `kein_pax` [49695777] (E1: Spurwechsel schwarz). Code: Regel 43 respektiert jetzt `kein_pax`. Handzeichnungen unverändert (Differenz nur Ostteil).
 - Verbindungsprüfung meldet Gleis 5 Ost «OSM 1 / Plan 3» (vorher OSM 3 / Plan 3, Plan gleich) → vermutlich Zuordnung der neuen Planrand-Abgänge zu OSM in verbindungen_pruefen; offen.
+
+### 26.10.2026 – Region Olten gezügelt (Workflow `seite`)
+- Neu `code/region_olten_lauf.py` + Konfig `werkstatt/olten/region_olten.json`: baut in einer Kopie der Werkstatt die Bahnhofspläne der Region (ganze Kette wie run.sh; Däniken, Olten, Olten Hammer mit `--hauptgleise`), Netzprüfung je Bahnhof, dann `netz_lage.py olten_region "Region Olten" feedback/region.svg` (+ `--pruefen`) und schreibt Plan/bare/ports/warp/region.svg in die Werkstatt zurück. Läuft im Workflow `seite` vor `bauen.py`; Bericht `ergebnisse/seite/region_olten.json`.
+- Nachbau geprüft: 12 Bahnhöfe und Regionalplan byte-gleich. Fest als Eingabe (eigener Bauweg): Hagendorf, Olten Ost, Regionalvarianten Rothrist und Olten Ost (Unterordner).
+- `netz_lage.py` (Olten und NE): `np.cross` mit 2D-Vektoren durch `_cr` ersetzt (numpy 2.5 bricht sonst ab).
+- Damit gilt: Änderungen an Overrides/Lage der Region Olten wirken direkt im Workflow, kein Hand-Kopieren von SVG mehr.
