@@ -8,7 +8,7 @@ werkstatt/olten/feedback/region_ne.svg, dort liest bauen.py die Regionalpläne).
 Arbeitet in einer Kopie der Werkstatt (/tmp/region_olten), mit spurplan_schema/-warp/netz_pruefung aus code/ und
 netz_lage.py der Werkstatt. Je Bahnhof aus werkstatt/olten/region_olten.json die ganze Kette wie run.sh
 (schema --nowarp → warp → schema → warp → schema → --bare), dann Netzprüfung, dann
-netz_lage.py olten_region "Region Olten" feedback/region.svg (+ --pruefen). Die neuen Dateien (Plan, bare, ports,
+netz_lage.py olten_region "Region Olten" feedback/region.svg (+ --pruefen, + region_geometrie.py). Die neuen Dateien (Plan, bare, ports,
 warp, region.svg) werden in die Werkstatt zurückgeschrieben, damit bauen.py (Workflow seite) sie verwendet.
 Der Bericht nennt je Bahnhof, ob sich Plan/bare gegenüber dem Stand im Repo geändert haben, und die Netzbefunde.
 """
@@ -67,5 +67,9 @@ if rc == 0:
     shutil.copy(os.path.join(TMP, "_region_neu.svg"), ZIEL)
     rc, o = sh(["netz_lage.py", R["name"], R["titel"], "/tmp/region_olten_pruef.svg", "--pruefen"])
     bericht["region"]["pruefung"] = o[-3000:]
+    r_ = subprocess.run([py, os.path.join(HERE, "region_geometrie.py"), ZIEL, "--json", "/tmp/region_geometrie.json"],
+                        capture_output=True, text=True)        # A1 Achsabstand, W6 Einmündung (26.10.)
+    print(r_.stdout[-1500:]); bericht["region"]["geometrie"] = (json.load(open("/tmp/region_geometrie.json"))
+                                                                if r_.returncode == 0 else r_.stderr[-500:])
 print(R["titel"] + ":", json.dumps({k: v for k, v in bericht["region"].items() if k != "pruefung" and k != "log"}, ensure_ascii=False))
 if BER: json.dump(bericht, open(BER, "w"), ensure_ascii=False, indent=1)

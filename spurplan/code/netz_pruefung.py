@@ -13,6 +13,7 @@ Regeln (v1):
        2 Weichen bis zum Hauptgleis, sonst Abstellgruppe); gezeichnet schwarz = Befund
   A5   Perron neben seinem Gleis: kein Gleis läuft durch das Perron
   D11  Gleisnummer nur an Perrongleisen: jede gezeichnete Nummer hat ein Perron daneben
+  Z1   Gleisnummer in der Perronmitte (B14), höchstens 10 px daneben (Perron 6–16 px neben der Nummer)
   D12  Perrons vollständig: jede Gleisnummer mit Perron in OSM/SBB ist gezeichnet (Zählung)
   S1   Weichen sichtbar: jede OSM-Weiche im Planfenster liegt auf einem gezeichneten Gleis
   D6   Stillgelegtes nicht zeichnen
@@ -140,6 +141,11 @@ for t in N["nummern"]:
     ok = any(p["x0"] - 40 <= t["x"] <= p["x1"] + 40 and 6 <= abs(p["y"] - t["y"]) <= 26 for p in N["perrons"])
     if not ok:
         bef("D11", t["x"], t["y"], f"Gleisnummer {t['text']} ohne Perron daneben (Perron fehlt oder Nummer zu viel)")
+    else:   # Z1 (B14, Hinweis Ins 26.10.): Nummer in der Mitte ihres Perrons, nicht in der Ausrundung
+        pp = [p for p in N["perrons"] if p["x0"] <= t["x"] <= p["x1"] and 6 <= abs(p["y"] - t["y"]) <= 16]
+        if pp and min(abs(t["x"] - (p["x0"] + p["x1"]) / 2) for p in pp) > 10:
+            p = min(pp, key=lambda p: abs(t["x"] - (p["x0"] + p["x1"]) / 2))
+            bef("Z1", t["x"], t["y"], f"Gleisnummer {t['text']} {abs(t['x'] - (p['x0'] + p['x1']) / 2):.0f} px neben der Perronmitte")
 _osm_refs = sorted({r for p in N["perrons_osm"] for r in str(p.get("ref") or "").replace(",", ";").split(";") if r})
 _num = sorted({t["text"] for t in N["nummern"]})
 if len(N["perrons"]) < len(_num) / 2:
