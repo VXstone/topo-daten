@@ -55,6 +55,19 @@ for key, d, extra, name in ps.STATIONS:
     st = "abgenommen" if (key in basis and not _wieder) else ("sauber" if tot == 0 else "offen")
     plans.append(dict(key=key, name=name, gruppe="Referenz" if d == ps.REG else "Region Olten", label=f"Stand {stand}",
                       svg=strip(svg), counts=cnt, status=st))
+# Bahnhöfe aus dem Workflow «plaene» (spurplan/bahnhoefe.json, 26.10.2026): Plan aus ergebnisse/<b>/spurplan.svg,
+# vom Workflow «seite» nach feedback/repo_<b>.svg gelegt; Gruppe/Name aus zusatz_plaene.json, sonst Gruppe «Repo-Bahnhöfe»
+_bj = os.path.join(OL, "..", "..", "bahnhoefe.json")
+_zmeta = {p_["key"]: p_ for p_ in (json.load(open(os.path.join(HERE, "zusatz_plaene.json"))) if os.path.exists(os.path.join(HERE, "zusatz_plaene.json")) else [])}
+_rber = json.load(open(os.path.join(HERE, "repo_bericht.json"))) if os.path.exists(os.path.join(HERE, "repo_bericht.json")) else {}
+for _b in ([k_ for k_ in json.load(open(_bj)) if not k_.startswith("_")] if os.path.exists(_bj) else []):
+    _f = os.path.join(HERE, f"repo_{_b}.svg")
+    if not os.path.exists(_f) or any(p_["key"] == _b for p_ in plans): continue
+    _m = _zmeta.get(_b, {}); _nb = (_rber.get("bahnhoefe", {}).get(_b) or {}).get("netz") or {}
+    _svg = open(_f).read(); _tt = re.findall(r'font-weight="700"[^>]*>([^<]+)</text>', _svg)
+    plans.append(dict(key=_b, name=_m.get("name") or (_tt[-1] if _tt else _b), gruppe=_m.get("gruppe", "Repo-Bahnhöfe (Workflow plaene)"),
+                      label=f"Workflow plaene {_rber.get('erzeugt', '')}" + (" · Netzprüfung " + ", ".join(f"{k_} {v_}" for k_, v_ in sorted(_nb.items())) if _nb else " · Netzprüfung ohne Befunde"),
+                      svg=strip(_svg), counts=_m.get("counts"), status=_m.get("status", "offen"), **({"region": _m["region"]} if _m.get("region") else {})))
 _zus = os.path.join(HERE, "zusatz_plaene.json")   # Pläne aus anderen Sitzungen (z. B. Basel/Bern, Grosse Knoten) übernehmen
 if os.path.exists(_zus):
     _have = {p_["key"] for p_ in plans}
