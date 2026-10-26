@@ -17,4 +17,4 @@ olten_hammer {"ok": true, "optionen": ["--hauptgleise"], "plan_geaendert": false
 Regionalgeometrie /home/runner/work/topo-daten/topo-daten/spurplan/werkstatt/olten/feedback/region.svg: Achse 10.06 px, 78 Streckenpfade; {'A1': 1}
   A1  x=85.6 y=-178.5  zwei Streckengleise 11.8 px auseinander (1.17 Achsen) über 42 px
 
-Region Olten: {"ok": true, "geaendert": true, "geometrie": {"plan": "/home/runner/work/topo-daten/topo-daten/spurplan/werkstatt/olten/feedback/region.svg", "achse": 10.062230105775578, "befunde": [{"regel": "A1", "x": 85.6, "y": -178.5, "text": "zwei Streckengleise 11.8 px auseinander (1.17 Achsen) über 42 px"}]}}
+Region Olten: {"ok": true, "geaendert": true, "geometrie": {"plan": "/home/runner/work/topo-daten/topo-daten/spurplan/werkstatt/olten/feedback/region.svg", "achse": 10.062273939653176, "befunde": [{"regel": "A1", "x": 85.6, "y": -178.5, "text": "zwei Streckengleise 11.8 px auseinander (1.17 Achsen) über 42 px"}]}}
