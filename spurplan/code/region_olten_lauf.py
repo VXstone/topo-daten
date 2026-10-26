@@ -5,8 +5,8 @@
 Standard-Konfig: werkstatt/olten/region_olten.json. Neuchâtel (26.10.): werkstatt/ne/region_ne.json (Ausgabe in
 werkstatt/olten/feedback/region_ne.svg, dort liest bauen.py die Regionalpläne).
 
-Arbeitet in einer Kopie der Werkstatt (/tmp/region_olten), mit spurplan_schema/-warp/netz_pruefung aus code/ und
-netz_lage.py der Werkstatt. Je Bahnhof aus werkstatt/olten/region_olten.json die ganze Kette wie run.sh
+Arbeitet in einer Kopie der Werkstatt (/tmp/region_olten); aller Code (spurplan_schema, -warp, netz_pruefung,
+netz_lage, lage_auto) kommt aus code/. Je Bahnhof aus werkstatt/olten/region_olten.json die ganze Kette wie run.sh
 (schema --nowarp → warp → schema → warp → schema → --bare), dann Netzprüfung, dann
 netz_lage.py olten_region "Region Olten" feedback/region.svg (+ --pruefen, + region_geometrie.py). Die neuen Dateien (Plan, bare, ports,
 warp, region.svg) werden in die Werkstatt zurückgeschrieben, damit bauen.py (Workflow seite) sie verwendet.
@@ -22,10 +22,10 @@ BER = sys.argv[sys.argv.index("--bericht") + 1] if "--bericht" in sys.argv else 
 OSM = sys.argv[sys.argv.index("--osm") + 1] if "--osm" in sys.argv else None     # schweiz_bahn.json.gz (Release «daten»)
 
 shutil.rmtree(TMP, ignore_errors=True); shutil.copytree(WS, TMP)
-for f in ("spurplan_schema.py", "spurplan_warp.py", "spurplan_check.py", "netz_pruefung.py"):
+# Code nur aus code/ (26.10.2026: eine Fassung für alle Regionen, die Werkstatt-Kopien sind gelöscht)
+for f in ("spurplan_schema.py", "spurplan_warp.py", "spurplan_check.py", "netz_pruefung.py", "netz_lage.py", "lage_auto.py",
+          "vorlage.py", "viewbox_text.py"):
     shutil.copy(os.path.join(HERE, f), TMP)
-for f in K.get("code_falls_fehlt", ["lage_auto.py"]):      # Hilfsmodule der Werkstatt, die dort fehlen (NE: lage_auto)
-    if not os.path.exists(os.path.join(TMP, f)): shutil.copy(os.path.join(HERE, f), TMP)
 py = sys.executable
 def sh(args, timeout=900, cwd=None):
     r = subprocess.run([py] + args, cwd=cwd or TMP, capture_output=True, text=True, timeout=timeout)

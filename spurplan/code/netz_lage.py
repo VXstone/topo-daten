@@ -327,6 +327,7 @@ def _spur_col(r):
     _f = L0.get("linienfarbe", {}) if "L0" in globals() else {}
     refs = [f_.get("ref") for f_ in r.get("edges", [])] + [x for f_ in r.get("edges", []) for x in f_.get("refs", [])]
     return next((_f[x] for x in refs if x in _f), None)
+PORTAL = "#8a8a8a"   # Tunnelportale grau und vor Grün (D. Eckenstein 26.10.2026: «Schwarz hinter Grün nur bei Weichen»)
 def path(pts, color=G, w=2.4):
     _sc = _spur_col(_CUR[0])
     if _sc and color in (G, BK): color = _sc      # Schmalspur braun (Region MOB 21.10.)
@@ -787,6 +788,13 @@ for r in routes:
             p1 = pe - d_ * back; p2 = pe + VJ * (o2 - o_) * TG
             nl = list(l[:-1]) + [p1, p2] if at_end else [p2, p1] + list(l[1:])
             g_["lines"][li_] = nl
+    # Lage "strecke_hand" {"A|B": {"<Linie>": [[x, y], ...]}} (D. Eckenstein 26.10.2026, Skizzen Olten Nord): einzelne Linien
+    # einer Strecke von Hand als Punktfolge im Regionalplan; Ausrundung und Bogen am Gleisende wie automatisch
+    _shk = f'{nodes[na]["name"]}|{nodes[nb]["name"]}'
+    for li_, pts_ in L0.get("strecke_hand", {}).get(_shk, {}).items():
+        if not str(li_).startswith("_") and int(li_) < len(g_["lines"]): g_["lines"][int(li_)] = [np.asarray(p_, float) for p_ in pts_]
+    if os.environ.get("LINDBG"):
+        for li_, l in enumerate(g_["lines"]): print("LIN", _shk, li_, [[round(float(v), 1) for v in p_] for p_ in l])
     if AUTO and L0.get("port_bogen", True):
         # Knick am Gleisende als Bogen (Hinweis Region NE 19.10. Murten–Faoug "knick/Bogen"): Linie beginnt ein Stück
         # im Bahnhof, das Gleisende darunter wird weiss abgedeckt, damit die Ecke nicht übersteht
@@ -954,7 +962,7 @@ for r in routes:
                 else: grp_.append([o_])
             for gq in grp_:
                 a0, a1 = c_ + n_ * (gq[0] - 4.5), c_ + n_ * (gq[-1] + 4.5)
-                path([a0 + d_ * sg_ * 5 - n_ * 3, a0, a1, a1 + d_ * sg_ * 5 + n_ * 3], BK, 1.2)
+                path([a0 + d_ * sg_ * 5 - n_ * 3, a0, a1, a1 + d_ * sg_ * 5 + n_ * 3], PORTAL, 1.2)
     # manuelle Spurwechsel (Ortskenntnis, z. B. Abzweig Zofingen Nord): Lage "xo_manuell" [{"a","b","t"}]
     for xm in OVR_LAGE.get("xo_manuell", []):
         nm_a, nm_b = nodes[na]["name"], nodes[nb]["name"]
@@ -985,6 +993,17 @@ for r in routes:
         t = 0.15 + 0.7 * acc / r["length"]
         if len(_hl) >= 2: t = 0.12 + 0.76 * (_hl.index(nid) + 0.5) / len(_hl)     # mehrere Halte: gleichmässig
         HALT_AT[nid] = (P0 + (P1 - P0) * t, u, k)
+    # Mindestabstand zwischen Halten (Hinweis fw9u 17.10., D. Eckenstein 26.10.: Sommerau, Rümlingen, Buckten zu nah):
+    # reicht das längste gerade Stück nicht, verteilen sich die Halte über die ganze gezeichnete Strecke
+    _MINH = float(L0.get("halt_abstand_min", 60))
+    if len(_hl) >= 2 and 0.76 * Ls / len(_hl) < _MINH and len(core) >= 2:
+        _PLh = _LS([tuple(map(float, p_)) for p_ in core])
+        _a0, _a1 = 0.10 * _PLh.length, 0.90 * _PLh.length
+        for i_, nid in enumerate(_hl):
+            s_ = _a0 + (_a1 - _a0) * (i_ + 0.5) / len(_hl)
+            p_ = np.array(_PLh.interpolate(s_).coords[0]); q0_ = np.array(_PLh.interpolate(max(0, s_ - 6)).coords[0])
+            q1_ = np.array(_PLh.interpolate(min(_PLh.length, s_ + 6)).coords[0]); u_ = (q1_ - q0_) / (np.linalg.norm(q1_ - q0_) or 1)
+            HALT_AT[nid] = (p_, u_, k)
 print(f"  Spurwechsel gezeichnet: {XO_N[0]}")
 # Stösse zwischen Strecken an Abzweigen (Vauseyon 20.10.: "Doppelspur Achsabstand springt oder Winkel"): enden zwei Linien
 # verschiedener Strecken fast am selben Punkt in ähnlicher Richtung, werden beide Enden auf den Mittelpunkt gelegt und
@@ -1389,6 +1408,9 @@ if _gi is not None and not L0.get("schwarz_oben"):
     _bk = [o_ for o_ in out[_gi:] if o_.startswith("<path") and f'stroke="{BK}"' in o_ and 'fill="none"' in o_ and 'stroke-width="1.3"' in o_]
     _bks = set(map(id, _bk))
     out = out[:_gi] + _bk + [o_ for o_ in out[_gi:] if id(o_) not in _bks]
+# Tunnelportale ganz nach vorn (über Grün)
+_pt = [o_ for o_ in out if o_.startswith("<path") and f'stroke="{PORTAL}"' in o_]
+if _pt: _pts_ = set(map(id, _pt)); out = [o_ for o_ in out if id(o_) not in _pts_] + _pt
 xs = [float(v) for v in re.findall(r'[MLQ ](-?[\d.]+),', "".join(out))] + [p[0] for p in pos.values()]
 ys = [float(v) for v in re.findall(r'[MLQ ]-?[\d.]+,(-?[\d.]+)', "".join(out))] + [p[1] for p in pos.values()]
 bx = boxes()
