@@ -1,12 +1,4 @@
 {
- "erzeugt": "2026-10-15 06:58 UTC",
- "osm_stand": "2026-10-14T20:21:12Z",
- "nodes": 61370,
- "ways": 73573,
- "groesse_mb": {
-  "schweiz_bahn.json.gz": 10.9,
-  "bahn_schweiz.osm.pbf": 7.8
- },
  "vorbereitung": {
   "erzeugt": "2026-10-20 20:51 UTC",
   "lauf": "https://github.com/VXstone/topo-daten/actions/runs/39495108807",
@@ -998,5 +990,13 @@
     "Couvet": []
    }
   }
+ },
+ "erzeugt": "2026-10-26 13:04 UTC",
+ "osm_stand": "2026-10-25T21:21:21Z",
+ "nodes": 61427,
+ "ways": 73590,
+ "groesse_mb": {
+  "schweiz_bahn.json.gz": 11.0,
+  "bahn_schweiz.osm.pbf": 7.8
  }
 }
