@@ -1,15 +1,9 @@
 {
  "region": "mob",
- "erzeugt": "2026-10-24 08:48 UTC",
+ "erzeugt": "2026-10-26 11:40 UTC",
  "bahnhoefe": {
   "schonried": {
    "name": "Schönried",
-   "ok": true,
-   "befunde": "Befunde: {}",
-   "optionen": []
-  },
-  "les_avants": {
-   "name": "Les Avants",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -26,14 +20,20 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "rougemont": {
-   "name": "Rougemont",
+  "les_avants": {
+   "name": "Les Avants",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
   "flendruz": {
    "name": "Flendruz",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "rougemont": {
+   "name": "Rougemont",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -56,14 +56,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "paccot": {
-   "name": "Paccot",
+  "matten": {
+   "name": "Matten",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "matten": {
-   "name": "Matten",
+  "paccot": {
+   "name": "Paccot",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -104,6 +104,12 @@
    "befunde": "Befunde: {'B': 2}",
    "optionen": []
   },
+  "caux": {
+   "name": "Caux",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
   "montreux": {
    "name": "Montreux",
    "ok": true,
@@ -111,12 +117,6 @@
    "optionen": [
     "--hauptgleise"
    ]
-  },
-  "caux": {
-   "name": "Caux",
-   "ok": true,
-   "befunde": "Befunde: {}",
-   "optionen": []
   },
   "zweisimmen": {
    "name": "Zweisimmen",
@@ -126,12 +126,6 @@
     "--hauptgleise"
    ]
   },
-  "chamby": {
-   "name": "Chamby",
-   "ok": true,
-   "befunde": "Befunde: {}",
-   "optionen": []
-  },
   "fontanivent": {
    "name": "Fontanivent",
    "ok": true,
@@ -140,6 +134,12 @@
   },
   "allieres": {
    "name": "Allières",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "chamby": {
+   "name": "Chamby",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -156,6 +156,12 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
+  "jor": {
+   "name": "Jor",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
   "jaman": {
    "name": "Jaman",
    "ok": true,
@@ -164,12 +170,6 @@
   },
   "saanen": {
    "name": "Saanen",
-   "ok": true,
-   "befunde": "Befunde: {}",
-   "optionen": []
-  },
-  "jor": {
-   "name": "Jor",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -186,16 +186,16 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "gruben": {
-   "name": "Gruben",
-   "ok": true,
-   "befunde": "Befunde: {'A': 1}",
-   "optionen": []
-  },
   "gstaad": {
    "name": "Gstaad",
    "ok": true,
    "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "gruben": {
+   "name": "Gruben",
+   "ok": true,
+   "befunde": "Befunde: {'A': 1}",
    "optionen": []
   },
   "lenk_im_simmental": {
@@ -220,9 +220,8 @@
  "netz_lage": 0,
  "regeln": {
   "G3": 2,
-  "G2": 48,
+  "G2": 49,
   "G6": 5,
-  "G7": 2,
   "G8": 6
  }
 }
