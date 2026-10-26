@@ -21,6 +21,9 @@ Regeln (v1):
   aus der gezeichneten Geometrie (<bahnhof>_spurplan.svg, Gleislinien 3.6/1.6 px):
   W2   jedes Gleisstück ab 10 px waagrecht oder 60°
   F2   Knick um mehr als 60° ohne Weiche (Haken, Spitzkehre)
+  W1   Gleisstück steiler als 60° (ab 4 px)
+  F10  Badewanne: schräg hinunter, kurz waagrecht ohne Weiche, gleich wieder hinauf
+  F7   Zwischengerade im Spurwechsel (schräg, kurz waagrecht, schräg in dieselbe Richtung) ohne Perron/Nummer
   A1   zwei parallele Gleise enger als 20 px (Hauptgleise) bzw. 9.6 px (40 %, mit Nebengleis) über mind. 12 px
 """
 import json, math, sys, collections
@@ -219,6 +222,30 @@ if os.path.exists(_SVGF):
             dreh = abs(math.degrees(math.atan2((d2 / d1).imag, (d2 / d1).real)))
             if dreh > 65 and not an_weiche(l1["b"]):
                 bef("F2", l1["b"].real, l1["b"].imag, f"Knick um {dreh:.0f}° ohne Weiche (mehr als 60°)")
+    # W1 (Solothurn 26.10.): kein Gleisstück steiler als 60°, auch kurze Stummel ab 4 px
+    for l in LIN:
+        r_ = richt(l)
+        if abs(l["b"] - l["a"]) >= 4 and 65 < r_ < 115:
+            mz = (l["a"] + l["b"]) / 2
+            bef("W1", mz.real, mz.imag, f"Gleisstück unter {r_:.0f}° (steiler als 60°), {abs(l['b'] - l['a']):.0f} px")
+    # F10 Badewanne / F7 Zwischengerade (Solothurn 26.10.): schräg – kurz waagrecht – schräg in derselben Linie
+    def _vz(l):
+        d = l["b"] - l["a"]; return 0 if abs(d.imag) < 0.5 else (1 if d.imag * (1 if d.real >= 0 else -1) > 0 else -1)
+    _num_xy = [complex(t["x"], t["y"]) for t in N["nummern"]]
+    for ls in by_sub.values():
+        for l1, l2, l3 in zip(ls, ls[1:], ls[2:]):
+            if _vz(l2) != 0 or _vz(l1) == 0 or _vz(l3) == 0: continue
+            if abs(l2["a"] - l1["b"]) > 16 or abs(l3["a"] - l2["b"]) > 16: continue
+            Lf = abs(l2["b"] - l2["a"])
+            if Lf > 80: continue
+            innen = [w_ for w_ in _wpos if min(l2["a"].real, l2["b"].real) + 8 < w_.real < max(l2["a"].real, l2["b"].real) - 8
+                     and abs(w_.imag - l2["a"].imag) < 3]
+            if innen: continue
+            mz = (l2["a"] + l2["b"]) / 2
+            if _vz(l1) != _vz(l3):
+                bef("F10", mz.real, mz.imag, f"Badewanne: Gleis geht eine Ebene hinunter/hinauf und gleich zurück ({Lf:.0f} px waagrecht, ohne Weiche)")
+            elif not any(abs(z - mz) < 60 and abs(z.imag - mz.imag) < 14 for z in _num_xy):
+                bef("F7", mz.real, mz.imag, f"Zwischengerade {Lf:.0f} px im Spurwechsel ohne Perron und Nummer (eine Diagonale)")
     # A1: zwei parallele Linien enger als erlaubt (Hauptgleise 20 px, mit Nebengleis 40 % = 9.6 px), über mindestens 12 px
     _ab = set()
     for i, l1 in enumerate(LIN):

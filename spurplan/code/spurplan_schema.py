@@ -825,6 +825,28 @@ for _wa, _wb in OVR.get("ebene_tausch", []):
     _ca = [c for c in C if any(sg["way"] == _wa for sg in c["segs"])]; _cb = [c for c in C if any(sg["way"] == _wb for sg in c["segs"])]
     if _ca and _cb: _ca[0]["lane"], _cb[0]["lane"] = _cb[0]["lane"], _ca[0]["lane"]
 
+# A4 (Solothurn 26.10.2026): Streckengleise derselben Linie enden am Planrand im Doppelspurabstand. Liegt dazwischen eine
+# freie Ebene, rückt die Kette am Rand zur Nachbarkette (nur wenn die Zielebene über ihre ganze Länge frei ist).
+# cfg «a4_rand»: false schaltet es ab.
+if CFG.get("a4_rand", True):
+    _sl, _sh = CFG["s_min"], CFG["s_max"]
+    def _lref(c): return next((sg["tags"].get("ref") for sg in c["segs"] if sg["tags"].get("ref")), None)
+    def _frei(c, l_): return all(o is c or o["lane"] != l_ or min(o["s1"], c["s1"]) - max(o["s0"], c["s0"]) < 1 for o in C)   # Berühren erlaubt
+    for _rand in ("lo", "hi"):
+        _ec = [c for c in C if (c["s0"] <= _sl + 40 if _rand == "lo" else c["s1"] >= _sh - 40)
+               and any(sg["pax"] and not sg["tags"].get("service") for sg in c["segs"]) and _lref(c)]
+        _by = collections.defaultdict(list)
+        for c in _ec: _by[_lref(c)].append(c)
+        for _r, cs_ in _by.items():
+            cs_.sort(key=lambda c: c["lane"])
+            for c1, c2 in zip(cs_, cs_[1:]):
+                for _mv, _zi in ((c2, c1), (c1, c2)):          # zuerst die obere Kette nach unten rücken, sonst umgekehrt
+                    st_ = -1 if _mv["lane"] > _zi["lane"] else 1; _alt = _mv["lane"]
+                    while abs(_mv["lane"] - _zi["lane"]) > 1 and _frei(_mv, _mv["lane"] + st_): _mv["lane"] += st_
+                    if _mv["lane"] != _alt:
+                        if ARGS.dbg: print("A4RAND", _r, _rand, _alt, "->", _mv["lane"], [sg["way"] for sg in _mv["segs"]][:4])
+                        break
+
 # x-Abbildung: linear oder entzerrt (warp.json aus spurplan_warp.py)
 import os
 WARP = None
