@@ -10,7 +10,7 @@ zofingen {"ok": true, "optionen": [], "plan_geaendert": true, "bare_geaendert": 
 daniken {"ok": true, "optionen": ["--hauptgleise"], "plan_geaendert": true, "bare_geaendert": true, "netz": {"D11": 1}}
 olten {"ok": true, "optionen": ["--hauptgleise"], "plan_geaendert": true, "bare_geaendert": true, "netz": {"Z2": 4}}
 olten_hammer {"ok": true, "optionen": ["--hauptgleise"], "plan_geaendert": true, "bare_geaendert": true, "netz": {}}
-Regionalgeometrie /home/runner/work/topo-daten/topo-daten/spurplan/werkstatt/olten/feedback/region.svg: Achse 10.1 px, 75 Streckenpfade; {'A1': 1}
-  A1  x=79.8 y=-166.7  zwei Streckengleise 11.8 px auseinander (1.17 Achsen) über 30 px
+Regionalgeometrie /home/runner/work/topo-daten/topo-daten/spurplan/werkstatt/olten/feedback/region.svg: Achse 10.06 px, 78 Streckenpfade; {'A1': 1}
+  A1  x=85.6 y=-178.5  zwei Streckengleise 11.8 px auseinander (1.17 Achsen) über 42 px
 
-Region Olten: {"ok": true, "geaendert": true, "geometrie": {"plan": "/home/runner/work/topo-daten/topo-daten/spurplan/werkstatt/olten/feedback/region.svg", "achse": 10.096841643573061, "befunde": [{"regel": "A1", "x": 79.8, "y": -166.7, "text": "zwei Streckengleise 11.8 px auseinander (1.17 Achsen) über 30 px"}]}}
+Region Olten: {"ok": true, "geaendert": true, "geometrie": {"plan": "/home/runner/work/topo-daten/topo-daten/spurplan/werkstatt/olten/feedback/region.svg", "achse": 10.063273398556364, "befunde": [{"regel": "A1", "x": 85.6, "y": -178.5, "text": "zwei Streckengleise 11.8 px auseinander (1.17 Achsen) über 42 px"}]}}
