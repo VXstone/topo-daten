@@ -2,27 +2,27 @@
 <rect width="100%" height="100%" fill="#fff"/>
 <g fill="none" stroke-linecap="round" stroke-linejoin="round">
 <path d="M283.8,110.0H283.8Q290.8,110.0 294.3,116.1L301.2,127.9Q304.7,134.0 311.7,134.0H311.7 M350.5,134.0H350.5Q357.5,134.0 361.0,140.1L367.8,151.9Q371.3,158.0 378.3,158.0H381.0 M426.8,158.0H426.8Q433.8,158.0 437.3,164.1L444.2,175.9Q447.7,182.0 454.7,182.0H454.7" stroke="#111" stroke-width="1.6"/>
-<path d="M311.7,134.0H350.5 M182.6,134.0H311.7 M283.8,110.0H811.5 M182.6,110.0H283.8 M182.6,182.0H454.7 M350.5,134.0H811.1 M182.6,158.0H381.0 M811.6,158.0H1051.0 M811.3,182.0H1051.0 M381.0,158.0H426.8 M811.1,134.0H1051.0 M811.5,110.0H1051.0 M426.8,158.0H811.6 M454.7,182.0H811.3" stroke="#00862f" stroke-width="3.6"/>
+<path d="M311.7,134.0H350.5 M182.6,134.0H311.7 M811.6,158.0H1051.0 M811.3,182.0H1051.0 M283.8,110.0H811.5 M182.6,110.0H283.8 M381.0,158.0H426.8 M811.1,134.0H1051.0 M182.6,182.0H454.7 M811.5,110.0H1051.0 M350.5,134.0H811.1 M426.8,158.0H811.6 M454.7,182.0H811.3 M182.6,158.0H381.0" stroke="#00862f" stroke-width="3.6"/>
 </g>
 <rect x="550.8" y="95.0" width="110.0" height="8" rx="1.5" fill="#00862f"/>
 <rect x="550.8" y="142.0" width="110.0" height="8" rx="1.5" fill="#00862f"/>
 <rect x="550.8" y="189.0" width="110.0" height="8" rx="1.5" fill="#00862f"/>
 <rect x="592.8" y="126.0" width="26" height="16" fill="#fff"/>
 <text x="605.8" y="140.5" font-size="19" text-anchor="middle" fill="#00862f">2</text>
-<rect x="592.8" y="102.0" width="26" height="16" fill="#fff"/>
-<text x="605.8" y="116.5" font-size="19" text-anchor="middle" fill="#00862f">1</text>
-<rect x="592.8" y="174.0" width="26" height="16" fill="#fff"/>
-<text x="605.8" y="188.5" font-size="19" text-anchor="middle" fill="#00862f">4</text>
 <rect x="592.8" y="150.0" width="26" height="16" fill="#fff"/>
 <text x="605.8" y="164.5" font-size="19" text-anchor="middle" fill="#00862f">3</text>
+<rect x="592.8" y="174.0" width="26" height="16" fill="#fff"/>
+<text x="605.8" y="188.5" font-size="19" text-anchor="middle" fill="#00862f">4</text>
+<rect x="592.8" y="102.0" width="26" height="16" fill="#fff"/>
+<text x="605.8" y="116.5" font-size="19" text-anchor="middle" fill="#00862f">1</text>
 <path d="M204.6,134.0H182.6" stroke="#00862f" stroke-width="3.6" fill="none"/>
-<path d="M204.6,110.0H182.6" stroke="#00862f" stroke-width="3.6" fill="none"/>
-<path d="M204.6,182.0H182.6" stroke="#00862f" stroke-width="3.6" fill="none"/>
-<path d="M204.6,158.0H182.6" stroke="#00862f" stroke-width="3.6" fill="none"/>
 <path d="M1029.0,158.0H1051.0" stroke="#00862f" stroke-width="3.6" fill="none"/>
 <path d="M1029.0,182.0H1051.0" stroke="#00862f" stroke-width="3.6" fill="none"/>
+<path d="M204.6,110.0H182.6" stroke="#00862f" stroke-width="3.6" fill="none"/>
 <path d="M1029.0,134.0H1051.0" stroke="#00862f" stroke-width="3.6" fill="none"/>
+<path d="M204.6,182.0H182.6" stroke="#00862f" stroke-width="3.6" fill="none"/>
 <path d="M1029.0,110.0H1051.0" stroke="#00862f" stroke-width="3.6" fill="none"/>
+<path d="M204.6,158.0H182.6" stroke="#00862f" stroke-width="3.6" fill="none"/>
 <text x="170.6" y="133.0" font-size="22" text-anchor="end" fill="#00862f">Linie 540</text>
 <text x="170.6" y="159.0" font-size="22" text-anchor="end" fill="#00862f">← Olten</text>
 <text x="1063.0" y="133.0" font-size="22" text-anchor="start" fill="#00862f">Linie 540</text>
