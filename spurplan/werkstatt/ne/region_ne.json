@@ -14,12 +14,14 @@
    "bahnhof": "kerzers",
    "optionen": [],
    "nach_oben": {
-    "kerzers_bare.svg": "kerzers_regional_bare.svg",
-    "kerzers_ports.json": "kerzers_regional_ports.json"
+    "kerzers_bare.svg": "kerzers_bare.svg",
+    "kerzers_ports.json": "kerzers_ports.json",
+    "kerzers_spurplan.svg": "kerzers_spurplan.svg"
    },
    "nachlauf": [
     "kreuzungsbahnhof.py"
-   ]
+   ],
+   "_zweck": "Kerzers als Kreuzungsbahnhof (X, zwei Achsen unter 60°) für Detail- und Regionalplan: normale Kette, dann code/kreuzungsbahnhof.py (27.10.)"
   }
  ]
 }

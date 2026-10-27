@@ -70,10 +70,15 @@ for v in K.get("varianten", []):
         shutil.copy(os.path.join(HERE, f), d_)
     alt = {f: lesen(os.path.join(d_, f)) for f in v["nach_oben"]}
     rc, o = kette(b, v.get("optionen", []), cwd=d_)
+    _topo = None
+    if not rc:          # Grundregeln auch für Varianten prüfen (27.10., Kerzers: alle Weichen ab Hauptgleis gezeichnet?)
+        import re as _re
+        _o3 = sh(["spurplan_check.py", "--src", f"{b}.json"] + v.get("optionen", []), cwd=d_)[1]
+        _m = _re.search(r"Befunde: (\{.*\})", _o3); _topo = _m.group(1) if _m else _o3[-300:]
     for n_ in v.get("nachlauf", []):          # z. B. kreuzungsbahnhof.py (Kerzers 27.10.): Plan für den Regionalplan umzeichnen
         if rc: break
         shutil.copy(os.path.join(HERE, n_), d_); rc, o = sh([n_, b], cwd=d_); print(o.strip()[-300:])
-    e = dict(ok=rc == 0, ordner=v["ordner"])
+    e = dict(ok=rc == 0, ordner=v["ordner"], topologie=_topo)
     if rc: e["fehler"] = o
     else:
         e["geaendert"] = sorted(f for f in v["nach_oben"] if lesen(os.path.join(d_, f)) != alt[f])

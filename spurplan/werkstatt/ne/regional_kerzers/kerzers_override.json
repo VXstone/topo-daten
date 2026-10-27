@@ -1,5 +1,5 @@
 {
- "_quelle": "Regionalvariante Kerzers (Hinweis eojeak, 17./20.10., D. Eckenstein: zwei sich unter 60° kreuzende Achsen): wie Detailplan, aber alle vier Streckenabgänge seitlich unter 60° (Ins/Lyss nach Norden, Bern/Murten nach Süden), damit die Äste im Regionalplan ohne 90°-Knick weggehen. Hinweise D. Eckenstein (Feedback-Seite, 13.10.): Kerzers wie eine grosse DKW - Bern/Murten im Süden (links), Lyss/Neuenburg-Ins im Norden (rechts); beide Perrongruppen von Bern und Murten erreichbar. Achse Süd-Nord (kerzers_axis.json).",
+ "_quelle": "Hinweise D. Eckenstein (Feedback-Seite, 13.10.): Kerzers wie eine grosse DKW - Bern/Murten im Süden (links), Lyss/Neuenburg-Ins im Norden (rechts); beide Perrongruppen von Bern und Murten erreichbar. Achse Süd-Nord (kerzers_axis.json).",
  "pax": [
   "1",
   "2",
@@ -179,55 +179,13 @@
  "nummern_weg": [
   "16"
  ],
- "seitlich": [
-  27821503,
-  380966229,
-  585416587,
-  964036924
- ],
  "kreuzungsbahnhof": {
-  "_zweck": "Regionalplan: zwei gerade Achsen, die sich im Bahnhof unter 60° kreuzen (code/kreuzungsbahnhof.py, Hinweis eojeak 27.10.)",
-  "achsen": [
-   {
-    "ref": "220",
-    "orte": [
-     "Ins",
-     "Bern"
-    ],
-    "winkel": 120,
-    "gleise": [
-     "6",
-     "5",
-     "4"
-    ],
-    "arm": "Ins",
-    "seite": -1
-   },
-   {
-    "ref": "251",
-    "orte": [
-     "Lyss",
-     "Murten"
-    ],
-    "winkel": 60,
-    "gleise": [
-     "1",
-     "2",
-     "3"
-    ],
-    "arm": "Lyss",
-    "seite": 1
-   }
-  ],
-  "verbindungen": [
-   [
-    "Lyss",
-    "Bern"
-   ],
-   [
-    "Ins",
-    "Murten"
-   ]
-  ]
+  "_zweck": "zwei gerade Achsen, die sich im Bahnhof unter 60° kreuzen (code/kreuzungsbahnhof.py, Hinweis eojeak 27.10.)",
+  "aeste": {
+   "Lyss": 60,
+   "Ins": 120,
+   "Murten": 240,
+   "Bern": 300
+  }
  }
 }
