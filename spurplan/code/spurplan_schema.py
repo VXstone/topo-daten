@@ -833,6 +833,44 @@ if CFG.get("a4_rand", True):
     def _lref(c): return next((sg["tags"].get("ref") for sg in c["segs"] if sg["tags"].get("ref")), None)
     def _frei(c, l_): return all(o is c or o["lane"] != l_ or min(o["s1"], c["s1"]) - max(o["s0"], c["s0"]) < 1 for o in C)   # Berühren erlaubt
     def _ends(c): return {n_ for sg in c["segs"] for n_ in (sg["nodes"][0], sg["nodes"][-1])}
+    # Doppelspur-Paar am Rand (Solothurn 27.10.: «Gleis 2 geht durch vom unteren Streckengleis Seite Olten zum unteren
+    # Seite Biel, das Gleis nach Wanzwil geht vor dem Planende nach unten weg»): endet am Rand ein kurzes Streckenstück e
+    # an einer Weiche N einer Kette X, die selbst mit einem anderen Ast zum selben Rand läuft, und liegt e in OSM näher
+    # beim durchgehenden Randgleis P als X's Ast, dann ist e die Fortsetzung von X: X wird bei N geteilt, der Kopf kommt
+    # auf e's Ebene, der Ast bleibt und zweigt nach aussen ab.
+    def _sd(n_): return SD[n_] if n_ in SD else None
+    for _rand in ("lo", "hi"):
+        _lo = _rand == "lo"
+        _am = lambda c: (c["s0"] <= _sl + 40) if _lo else (c["s1"] >= _sh - 40)
+        _haupt = lambda c: any(sg["pax"] and not sg["tags"].get("service") for sg in c["segs"]) and _lref(c)
+        def _aussen(c):                    # äusserster Knoten (am Rand) und sein Querabstand
+            ns_ = [n_ for n_ in _ends(c) if _sd(n_)]
+            n_ = (min if _lo else max)(ns_, key=lambda n_: SD[n_][0]); return n_, SD[n_][1]
+        _P = [c for c in C if c["s0"] <= _sl + 40 and c["s1"] >= _sh - 40 and _haupt(c)]
+        for e in [c for c in C if _am(c) and _haupt(c) and c["s1"] - c["s0"] < 400 and c not in _P]:
+            for X in C:
+                if X is e or X in _P or not _am(X) or not _haupt(X): continue
+                gem = _ends(e) & {n_ for sg in X["segs"] for n_ in sg["nodes"]}
+                if not gem: continue
+                N = next(iter(gem)); sN = SD[N][0] if N in SD else None
+                if sN is None: continue
+                ast_ = [sg for sg in X["segs"] if (sg["s0"] >= sN - 1 if not _lo else sg["s1"] <= sN + 1)]
+                kopf = [sg for sg in X["segs"] if sg not in ast_]
+                if not ast_ or not kopf: continue
+                for P_ in _P:
+                    dP = _aussen(P_)[1]; de = _aussen(e)[1]
+                    dx = SD[(min if _lo else max)([n_ for sg in ast_ for n_ in (sg["nodes"][0], sg["nodes"][-1]) if n_ in SD], key=lambda n_: SD[n_][0])][1]
+                    if abs(de - dP) + 0.5 >= abs(dx - dP): continue
+                    # Kopf auf e's Ebene: frei bis auf e und den Ast?
+                    k0 = min(sg["s0"] for sg in kopf); k1 = max(sg["s1"] for sg in kopf)
+                    if not all(x in (e, X) or x["lane"] != e["lane"] or min(x["s1"], k1) - max(x["s0"], k0) < 1 for x in C): continue
+                    Y = dict(id=f"{X['id']}_ast", segs=ast_, s0=min(sg["s0"] for sg in ast_), s1=max(sg["s1"] for sg in ast_),
+                             pts=X["pts"], lane=X["lane"])
+                    X["segs"] = kopf; X["s0"], X["s1"] = k0, k1; X["lane"] = e["lane"]; C.append(Y)
+                    if ARGS.dbg: print("A4PAAR", _rand, "Kopf", [sg["way"] for sg in kopf][:3], "->", e["lane"], "Ast", [sg["way"] for sg in ast_][:3], "bleibt", Y["lane"])
+                    break
+                else: continue
+                break
     # Fortsetzung (Solothurn 26.10.: «das Gleis nach Biel ist die Verlängerung von Gleis 2»): eine Randkette, die an ein
     # Personengleis derselben Linie anschliesst, kommt auf dessen Ebene, wenn dort nur mit ihr verbundene Ketten liegen
     for c in [c for c in C if ((c["s0"] <= _sl + 40) != (c["s1"] >= _sh - 40)) and _lref(c)
