@@ -70,6 +70,9 @@ for v in K.get("varianten", []):
         shutil.copy(os.path.join(HERE, f), d_)
     alt = {f: lesen(os.path.join(d_, f)) for f in v["nach_oben"]}
     rc, o = kette(b, v.get("optionen", []), cwd=d_)
+    for n_ in v.get("nachlauf", []):          # z. B. kreuzungsbahnhof.py (Kerzers 27.10.): Plan für den Regionalplan umzeichnen
+        if rc: break
+        shutil.copy(os.path.join(HERE, n_), d_); rc, o = sh([n_, b], cwd=d_); print(o.strip()[-300:])
     e = dict(ok=rc == 0, ordner=v["ordner"])
     if rc: e["fehler"] = o
     else:

@@ -16,7 +16,10 @@
    "nach_oben": {
     "kerzers_bare.svg": "kerzers_regional_bare.svg",
     "kerzers_ports.json": "kerzers_regional_ports.json"
-   }
+   },
+   "nachlauf": [
+    "kreuzungsbahnhof.py"
+   ]
   }
  ]
 }
