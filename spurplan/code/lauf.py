@@ -35,6 +35,15 @@ for b in liste:
                 py + ["spurplan_schema.py", "--src", f"{b}.json", "--bare", "--out", f"{b}_bare.svg"] + opt]
     if os.path.exists(os.path.join(w, f"{b}_warp.json")): os.remove(os.path.join(w, f"{b}_warp.json"))
     ber = dict(bahnhof=b, optionen=opt)
+    # T13 (27.10.2026): Planfenster der Nachbarbahnhöfe (Werkstatt-Regionen) – das eigene Fenster endet dort
+    _nb = {}
+    if cfg.get("nachbarn", True):
+        for f_ in glob.glob(os.path.join(R, "werkstatt", "*", "*_fenster.json")):
+            k_ = os.path.basename(f_)[:-len("_fenster.json")]
+            if k_ == b: continue
+            try: _nb[k_] = json.load(open(f_))["achse"]
+            except Exception: pass
+    json.dump(_nb, open(os.path.join(w, "nachbarn.json"), "w")); os.environ["SPUR_NACHBARN"] = os.path.join(w, "nachbarn.json")
     # B13 (26.10.2026, Hinweis Konolfingen): Perrons aus SBB Open Data, sofern das Override keine «platforms» von Hand hat.
     # Daten: SBB_PO oder perronoberflache.geojson.gz im Repo-Wurzelordner (Workflow lädt sie aus dem Release «daten»).
     _po = os.environ.get("SBB_PO") or os.path.join(os.path.dirname(R), "perronoberflache.geojson.gz")

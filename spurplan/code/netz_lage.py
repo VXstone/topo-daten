@@ -32,6 +32,11 @@ def slug(s):
     s = unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode().lower()
     return re.sub(r"[^a-z0-9]+", "_", s).strip("_")
 nodes = {n["id"]: dict(n) for n in T["nodes"]}
+# Lage "knoten_bahnhof": {"#<id>": "Name"} – ein Abzweig der Topologie ist ein Bahnhof mit eigenem Spurplan
+# (27.10.2026: Abzweig #54 = Neuchâtel Vauseyon, Hinweis 2ayi)
+_L00 = json.load(open(f"{NAME}_lage.json")) if os.path.exists(f"{NAME}_lage.json") else {}
+for _k, _nm in _L00.get("knoten_bahnhof", {}).items():
+    if int(_k.lstrip("#")) in nodes: nodes[int(_k.lstrip("#"))].update(name=_nm, kind="station")
 edges = [dict(e) for e in T["edges"]]
 def dist(a, b): return math.hypot(nodes[a]["x"] - nodes[b]["x"], nodes[a]["y"] - nodes[b]["y"])
 def relabel(old, new):
@@ -294,6 +299,32 @@ if AUTO:
     for n in MAJOR: _L[nodes[n]["name"] + ("" if nodes[n]["inset"] else f" #{n}")] = [round(float(pos[n][0])), round(float(pos[n][1]))]
     _L["drehung_auto"] = {nodes[i]["name"]: round(ROT[i], 1) for i in ROT if ROT[i]}
     json.dump(_L, open(LAGE_F, "w"), ensure_ascii=False, indent=1)
+# Regel S1 (27.10.2026, Hinweis c8i4 Region Olten: «solche S-Kurven vermeiden, da passiert ja nichts»): liegen die
+# Anschlüsse zweier Bahnhöfe auf einer geraden Strecke fast auf einer Linie (Versatz unter einer halben Gleisachse),
+# wird ein Bahnhof quer verschoben, damit die Gleise ohne Versatz durchlaufen. Verschoben wird der Bahnhof mit weniger
+# Strecken (bei Gleichstand der zweite); jeder Bahnhof höchstens einmal. Abschalten: Lage "s1_aus": true
+_S1 = {}; _S1_EXIT = set()
+if not L0.get("s1_aus"):
+    for _ in range(3):
+        for _r in routes:
+            _a, _b = _r["a"], _r["b"]
+            if not (nodes[_a]["inset"] and nodes[_b]["inset"]) or _a not in pos or _b not in pos: continue
+            _aa = anchor.get((id(_r["first"]), _a)); _ab = anchor.get((id(_r["last"]), _b))
+            if not _aa or not _ab: continue
+            _va = np.asarray(_aa["v"], float); _vb = np.asarray(_ab["v"], float)
+            if float(_va @ _vb) > -0.995: continue                       # Anschlüsse nicht genau gegenüber
+            _pa = pos[_a] + np.asarray(_aa["off"], float); _pb = pos[_b] + np.asarray(_ab["off"], float)
+            _d = _pb - _pa
+            if float(_d @ _va) <= 0: continue
+            _nrm = np.array([-_va[1], _va[0]]); _q = float(_d @ _nrm)
+            if not (0.3 < abs(_q) < 0.5 * TG): continue
+            _deg = lambda n_: sum(1 for r_ in routes if n_ in (r_["a"], r_["b"]))
+            _m, _sg = (_b, -1) if _deg(_b) <= _deg(_a) else (_a, 1)
+            if _m in _S1: _m, _sg = (_a, 1) if _m == _b else (_b, -1)
+            if _m in _S1: continue
+            pos[_m] = pos[_m] + _sg * _q * _nrm; _S1[_m] = round(_q, 1)
+    _S1_EXIT.update(n_ for n_ in MAJOR if nodes[n_]["kind"] == "exit" and any(n_ in (r_["a"], r_["b"]) and (r_["a"] in _S1 or r_["b"] in _S1) for r_ in routes))
+    if _S1: print("S1 quer ausgerichtet:", {nodes[k]["name"]: v for k, v in _S1.items()})
 # Abgänge mit kleinem Versatz zum Anschluss auf dessen Linie legen (Hinweis Region Olten 15.10.: "S Kurve" Safenwil–Suhr)
 for _n in [n for n in MAJOR if nodes[n]["kind"] == "exit"]:
     for _r in [r for r in routes if _n in (r["a"], r["b"])]:
@@ -304,6 +335,10 @@ for _n in [n for n in MAJOR if nodes[n]["kind"] == "exit"]:
         for _ax in (0, 1):
             if abs(_v[_ax]) > 0.98 and 0.5 < abs(pos[_n][1 - _ax] - _pp[1 - _ax]) < 25 and (pos[_n][_ax] - _pp[_ax]) * _v[_ax] > 0:
                 pos[_n][1 - _ax] = _pp[1 - _ax]
+        # auch schräge Anschlüsse (27.10., nach S1-Ausrichtung): Abgang quer auf die Anschlusslinie
+        if max(abs(_v[0]), abs(_v[1])) <= 0.98 and _n in _S1_EXIT:
+            _vn = _v / (np.linalg.norm(_v) or 1); _nr = np.array([-_vn[1], _vn[0]]); _qq = float((pos[_n] - _pp) @ _nr)
+            if 0.3 < abs(_qq) < 25 and float((pos[_n] - _pp) @ _vn) > 0: pos[_n] = pos[_n] - _qq * _nr
 def boxes(Y=None):
     out = {}
     for n in MAJOR:
@@ -338,6 +373,23 @@ def path(pts, color=G, w=2.4):
         if np.linalg.norm(p - cl[-1]) > 0.3: cl.append(p)
     pts = cl
     if len(pts) < 2: return
+    # Regel W8 (27.10.2026, Hinweis x42t: «es kommt schräg, wieso muss es vertikal und dann 90° nach horizontal?»):
+    # ein kurzes Zwischenstück (< 1.5 Gleisachsen) zwischen zwei Knicken entfällt, wenn die beiden Nachbarstücke sich
+    # direkt unter höchstens 60° treffen; der Knick liegt dann im Schnittpunkt. Abschalten: Lage "w8_aus": true
+    if not L0.get("w8_aus"):
+        k = 1
+        while k < len(pts) - 2:
+            a0, a1, a2, a3 = pts[k - 1], pts[k], pts[k + 1], pts[k + 2]
+            u1, u2, u3 = a1 - a0, a2 - a1, a3 - a2; l1, l2, l3 = (np.linalg.norm(u1), np.linalg.norm(u2), np.linalg.norm(u3))
+            if l2 < 1.5 * TG and min(l1, l3) > l2 and l1 > 0 and l3 > 0:
+                cr = _cr(u1, u3)
+                ang = math.degrees(math.atan2(abs(cr), float(u1 @ u3)))
+                if abs(cr) > 1e-6 and ang <= 61:
+                    t = _cr(a2 - a0, u3) / cr; X = a0 + u1 * t
+                    t3 = float((X - a2) @ u3) / (l3 * l3)
+                    if t > 0.5 and t3 < 0.9 and np.linalg.norm(X - a1) < 2.5 * TG:
+                        pts = pts[:k] + [X] + pts[k + 2:]; continue
+            k += 1
     POLYS.append([tuple(p) for p in pts])
     d = f"M{pts[0][0]:.1f},{pts[0][1]:.1f}"
     for k in range(1, len(pts) - 1):

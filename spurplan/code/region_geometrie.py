@@ -132,6 +132,32 @@ if ACHSE:
                 bef("W6", p, f"Gleis endet stumpf neben einem durchlaufenden Gleis ({abs(q):.1f} px daneben) – mit Ausrundung einmünden")
                 break
 
+# ---- S1: Versatz ohne Grund (zwei parallele Stücke, dazwischen ein kurzer Versatz unter einer halben Achse, 27.10.)
+# ---- W8: Winkel–Gegenwinkel (kurzes Zwischenstück unter 1.5 Achsen zwischen zwei Knicken, das wegfallen könnte)
+if ACHSE:
+    for d in paths:
+        ecken = []
+        for c_, a_ in re.findall(r"([MLQ])([^MLQ]*)", d):
+            v_ = [float(x) for x in re.findall(r"-?[\d.]+", a_)]
+            if c_ == "M": ecken.append([complex(v_[0], v_[1])])
+            elif c_ == "Q": ecken[-1].append(complex(v_[0], v_[1])); _q_end = complex(v_[2], v_[3])
+            elif c_ == "L": _l = complex(v_[-2], v_[-1])
+        # Ecken: M, Q-Kontrollpunkte, Endpunkt jedes Teilpfads
+        for teil, m_ in zip(ecken, re.split(r"(?=M)", d)[1:]):
+            letzte = re.findall(r"(-?[\d.]+),(-?[\d.]+)", m_)[-1]; pl = teil + [complex(float(letzte[0]), float(letzte[1]))]
+            for k in range(1, len(pl) - 2):
+                a0, a1, a2, a3 = pl[k - 1], pl[k], pl[k + 1], pl[k + 2]
+                u1, u2, u3 = a1 - a0, a2 - a1, a3 - a2
+                if min(abs(u1), abs(u3)) < 1e-6 or abs(u2) < 1e-6: continue
+                par = abs((u1 / abs(u1) * (u3 / abs(u3)).conjugate()).imag) < 0.03 and (u1 * u3.conjugate()).real > 0
+                quer = abs(((a2 - a1) * (u1 / abs(u1)).conjugate()).imag)
+                if par and 0.3 < quer < 0.5 * ACHSE and abs(u2) < 3 * ACHSE:
+                    bef("S1", (a1 + a2) / 2, f"Versatz {quer:.1f} px ohne Grund zwischen zwei parallelen Stücken")
+                elif not par and abs(u2) < 1.5 * ACHSE and min(abs(u1), abs(u3)) > abs(u2):
+                    w1 = math.degrees(abs(math.atan2((u2 * u1.conjugate()).imag, (u2 * u1.conjugate()).real)))
+                    w2 = math.degrees(abs(math.atan2((u3 * u2.conjugate()).imag, (u3 * u2.conjugate()).real)))
+                    if w1 > 15 and w2 > 15: bef("W8", (a1 + a2) / 2, f"kurzes Zwischenstück {abs(u2):.1f} px zwischen zwei Knicken ({w1:.0f}°/{w2:.0f}°)")
+
 print(f"Regionalgeometrie {SVG}: Achse {ACHSE and round(ACHSE, 2)} px, {len(paths)} Streckenpfade; "
       f"{dict(collections.Counter(b['regel'] for b in BEF)) or 'keine Befunde'}")
 for b in BEF: print(f"  {b['regel']:3} x={b['x']} y={b['y']}  {b['text']}")

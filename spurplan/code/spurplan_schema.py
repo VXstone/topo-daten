@@ -274,6 +274,19 @@ pl_s = [project(xy(g))[0] for e in PLAT for g in e["geometry"] if math.hypot(*xy
 _s_st = project((0.0, 0.0))[0]                      # Bahnhofsknoten liegt im Ursprung
 CFG["s_min"] = max(min(sw_s + pl_s + [_s_st - CFG["min_half_window_m"]]) - CFG["s_pad"], SS[0] + 1)
 CFG["s_max"] = min(max(sw_s + pl_s + [_s_st + CFG["min_half_window_m"]]) + CFG["s_pad"], SS[-1] - 1)
+# Regel T13 (27.10.2026, Vauseyon/Serrières, Hinweis 1zg2): das Planfenster endet, wo das Planfenster eines
+# Nachbarbahnhofs beginnt (keine Gleise des Nachbarn doppelt). SPUR_NACHBARN = JSON-Datei {Name: [[lat, lon], …]}
+# (Achsen der Nachbarfenster); nur Achspunkte nahe der eigenen Achse (< 60 m) zählen.
+if os.environ.get("SPUR_NACHBARN") and os.path.exists(os.environ["SPUR_NACHBARN"]):
+    for _nm, _ax in json.load(open(os.environ["SPUR_NACHBARN"])).items():
+        _sd = [project(xy(dict(lat=a_, lon=o_))) for a_, o_ in _ax]
+        _sd = [s_ for s_, d_ in _sd if abs(d_) < 60 and SS[0] + 5 < s_ < SS[-1] - 5]
+        if len(_sd) < 3: continue
+        _lo, _hi = min(_sd), max(_sd)
+        if _hi < _s_st - 100 and _hi > CFG["s_min"]:
+            print(f"T13: Planfenster links bis {_nm} gekürzt ({CFG['s_min']:.0f} -> {_hi:.0f})"); CFG["s_min"] = _hi
+        elif _lo > _s_st + 100 and _lo < CFG["s_max"]:
+            print(f"T13: Planfenster rechts bis {_nm} gekürzt ({CFG['s_max']:.0f} -> {_lo:.0f})"); CFG["s_max"] = _lo
 if CFG.get("s_min_fix") is not None: CFG["s_min"] = CFG["s_min_fix"]
 if CFG.get("s_max_fix") is not None: CFG["s_max"] = CFG["s_max_fix"]
 # Regel 20: Seitenausschnitt so breit, dass alle Personengleise (Override) im Bahnhof hineinpassen
@@ -2928,6 +2941,8 @@ _pax_y = {round(Y(seglane[sg["id"]])) for sg in segs if sg["pax"] and sg["id"] i
 arrows = [a for a in arrows if not (round(a[1]) in _pax_y and any(abs(a[0] - px) < 30 and abs(a[1] - py) < 1.5 for px, py in _pax_ends))]
 for x, y, dr in arrows:
     out.append(f'<path d="M{x:.1f},{y - 4:.1f}L{x + 9 * dr:.1f},{y:.1f}L{x:.1f},{y + 4:.1f}Z" fill="{black}"/>')
+# Regel Z3 (27.10.2026, Hinweis 1zg2 Vauseyon «Perron-Gleis Nummer?»): Betriebspunkt ohne Perron – keine Gleisnummern
+if not any('rx="1.5"' in o_ for o_ in out + globals().get("MS_TXT", [])) and not OVR.get("nummern"): labels = {}
 for r, (l, a, b, _) in labels.items():
     xm = min(max(pax_mid, X(a) - X(s_lo) + CFG["margin_x"] + 30 and pax_mid), 1e9)
     xs = min(max(X(pax_mid if a <= pax_mid <= b else (a + b) / 2), X(a) + 20), X(b) - 20)

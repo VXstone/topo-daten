@@ -49,6 +49,17 @@ if OSM and K.get("osm_bbox"):
         bericht["osm"][b] = dict(elemente=len(el), geaendert=alt_ is None or json.loads(alt_) != json.loads(neu))
         for d_ in (TMP, WS): open(os.path.join(d_, f"{b}.json"), "w").write(neu)
     print("OSM aus Release:", json.dumps(bericht["osm"], ensure_ascii=False))
+# Bahnhöfe aus dem Workflow «plaene» (27.10.2026, Vauseyon in Region NE): bare.svg und ports.json aus ergebnisse/<b>/
+# (lokal) bzw. vom Branch «ergebnisse»; werden auch in die Werkstatt geschrieben
+for b in K.get("repo_bahnhoefe", []):
+    for f, ziel in (("bare.svg", f"{b}_bare.svg"), ("ports.json", f"{b}_ports.json")):
+        q = os.path.join(os.path.dirname(SP), "ergebnisse", b, f); inh = lesen(q)
+        if inh is None:
+            r_ = subprocess.run(["git", "show", f"origin/ergebnisse:ergebnisse/{b}/{f}"], capture_output=True, cwd=SP)
+            inh = r_.stdout if r_.returncode == 0 else None
+        if inh:
+            for d_ in (TMP, WS): open(os.path.join(d_, ziel), "wb").write(inh)
+    bericht.setdefault("repo", {})[b] = os.path.exists(os.path.join(TMP, f"{b}_ports.json"))
 def kette(b, opt, cwd=None):
     """ganze Kette wie run.sh; gibt (rc, letzte Ausgabe) zurück"""
     w = os.path.join(cwd or TMP, f"{b}_warp.json")
