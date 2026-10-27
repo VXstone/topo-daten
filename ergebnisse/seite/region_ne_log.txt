@@ -1,6 +1,7 @@
+Variante {"ok": true, "ordner": "regional_kerzers", "geaendert": []}
 ins {"ok": true, "optionen": [], "plan_geaendert": false, "bare_geaendert": false, "netz": {"T10": 1, "D11": 1}, "topologie": "{}", "qualitaet": {"topo_A": 0, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "netz_T10": 1, "netz_D11": 1, "boegen_pax": 8, "boegen_alle": 19, "randabstand": 0}}
-Regionalgeometrie /home/runner/work/topo-daten/topo-daten/spurplan/werkstatt/olten/feedback/region_ne.svg: Achse 9.93 px, 89 Streckenpfade; keine Befunde
+Regionalgeometrie /home/runner/work/topo-daten/topo-daten/spurplan/werkstatt/olten/feedback/region_ne.svg: Achse 9.9 px, 89 Streckenpfade; keine Befunde
 
-Region Neuchâtel: {"ok": true, "geaendert": true, "geometrie": {"plan": "/home/runner/work/topo-daten/topo-daten/spurplan/werkstatt/olten/feedback/region_ne.svg", "achse": 9.93405237809451, "befunde": []}}
+Region Neuchâtel: {"ok": true, "geaendert": false, "geometrie": {"plan": "/home/runner/work/topo-daten/topo-daten/spurplan/werkstatt/olten/feedback/region_ne.svg", "achse": 9.898867978182619, "befunde": []}}
 Kennzahlen gegen die Basis:
   ins                    gleich  
