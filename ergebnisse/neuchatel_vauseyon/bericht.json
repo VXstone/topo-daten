@@ -11,59 +11,57 @@
   {
    "regel": "G8",
    "x": 265.5,
-   "y": 278.0,
+   "y": 254.0,
    "bahnhof": null,
    "text": "Gleise 21 px deckungsgleich"
   },
   {
    "regel": "G8",
    "x": 267.6,
-   "y": 278.0,
+   "y": 254.0,
    "bahnhof": null,
    "text": "Gleise 25 px deckungsgleich"
   },
   {
    "regel": "G8",
    "x": 211.2,
-   "y": 288.0,
+   "y": 264.0,
    "bahnhof": null,
    "text": "Gleise 30 px deckungsgleich"
   },
   {
    "regel": "G8",
    "x": 211.2,
-   "y": 288.0,
+   "y": 264.0,
    "bahnhof": null,
    "text": "Gleise 30 px deckungsgleich"
   },
   {
    "regel": "G8",
    "x": 245.6,
-   "y": 278.0,
+   "y": 254.0,
    "bahnhof": null,
    "text": "Gleise 59 px deckungsgleich"
   },
   {
    "regel": "G8",
    "x": 211.2,
-   "y": 288.0,
+   "y": 264.0,
    "bahnhof": null,
    "text": "Gleise 30 px deckungsgleich"
   }
  ],
- "planrand": [
-  "neuchatel_vauseyon\trechts x1504\tLinie 210/210: Abstand 48 px statt 24"
- ],
+ "planrand": [],
  "netz": [
   {
    "regel": "D11",
-   "x": 276.9,
+   "x": 266.3,
    "y": 206.0,
    "text": "Gleisnummer 1 ohne Perron daneben (Perron fehlt oder Nummer zu viel)"
   },
   {
    "regel": "D11",
-   "x": 1082.6,
+   "x": 1075.9,
    "y": 110.0,
    "text": "Gleisnummer 3 ohne Perron daneben (Perron fehlt oder Nummer zu viel)"
   },
@@ -75,22 +73,16 @@
   },
   {
    "regel": "Z2",
-   "x": 1005.6,
+   "x": 993.2,
    "y": -29.7,
    "text": "Pfeil «La Chaux-de-Fonds →» zeigt rechts, der Abgang verlässt den Plan nach links",
    "way": 507891443
   },
   {
    "regel": "W2",
-   "x": 1096.9,
+   "x": 1084.5,
    "y": 134.0,
    "text": "S-Kurve in der Mitte unter 77° (steiler oder flacher als 60°)"
-  },
-  {
-   "regel": "F7",
-   "x": 1373.2,
-   "y": 230.0,
-   "text": "Zwischengerade 20 px im Spurwechsel ohne Perron und Nummer (eine Diagonale)"
   }
  ],
  "qualitaet": {
@@ -104,10 +96,9 @@
   "netz_D12": 1,
   "netz_Z2": 1,
   "netz_W2": 1,
-  "netz_F7": 1,
   "boegen_pax": 3,
-  "boegen_alle": 18,
-  "randabstand": 2
+  "boegen_alle": 16,
+  "randabstand": 0
  },
  "ok": true
 }

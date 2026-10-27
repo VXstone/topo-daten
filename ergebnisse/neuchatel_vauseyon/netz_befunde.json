@@ -3,13 +3,13 @@
  "befunde": [
   {
    "regel": "D11",
-   "x": 276.9,
+   "x": 266.3,
    "y": 206.0,
    "text": "Gleisnummer 1 ohne Perron daneben (Perron fehlt oder Nummer zu viel)"
   },
   {
    "regel": "D11",
-   "x": 1082.6,
+   "x": 1075.9,
    "y": 110.0,
    "text": "Gleisnummer 3 ohne Perron daneben (Perron fehlt oder Nummer zu viel)"
   },
@@ -21,22 +21,16 @@
   },
   {
    "regel": "Z2",
-   "x": 1005.6,
+   "x": 993.2,
    "y": -29.7,
    "text": "Pfeil «La Chaux-de-Fonds →» zeigt rechts, der Abgang verlässt den Plan nach links",
    "way": 507891443
   },
   {
    "regel": "W2",
-   "x": 1096.9,
+   "x": 1084.5,
    "y": 134.0,
    "text": "S-Kurve in der Mitte unter 77° (steiler oder flacher als 60°)"
-  },
-  {
-   "regel": "F7",
-   "x": 1373.2,
-   "y": 230.0,
-   "text": "Zwischengerade 20 px im Spurwechsel ohne Perron und Nummer (eine Diagonale)"
   }
  ],
  "durchfahrgleise": []

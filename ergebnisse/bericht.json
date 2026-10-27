@@ -1,6 +1,6 @@
 {
- "erzeugt": "2026-10-27 18:58 UTC",
- "lauf": "https://github.com/VXstone/topo-daten/actions/runs/40564720201",
+ "erzeugt": "2026-10-27 19:59 UTC",
+ "lauf": "https://github.com/VXstone/topo-daten/actions/runs/40573936837",
  "bahnhoefe": {
   "neuchatel": {
    "ok": true,
@@ -59,14 +59,17 @@
     "D11": 2,
     "D12": 1,
     "Z2": 1,
-    "W2": 1,
-    "F7": 1
+    "W2": 1
    },
    "differenz_stellen": null,
    "qualitaet": {
-    "status": "gleich",
+    "status": "besser",
     "schlechter": {},
-    "besser": {}
+    "besser": {
+     "boegen_alle": -2,
+     "netz_F7": -1,
+     "randabstand": -2
+    }
    }
   },
   "solothurn": {
