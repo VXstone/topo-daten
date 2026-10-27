@@ -67,7 +67,11 @@
   "wg": 0.01,
   "kette_winkel": {
    "Münchenwiler-Courgevaux": 255
-  }
+  },
+  "seiten_gewicht": 10,
+  "seiten_richtung": [
+   "Kerzers"
+  ]
  },
  "Noiraigue": [
   -2526,
@@ -458,5 +462,8 @@
   "1411239688": -50,
   "_hinweis": "Ligerz/Schafis 21.10.: zwei Spurwechsel in OSM-Reihenfolge, beide Richtung La Neuveville versetzt, damit das Anschlussgleis Schafis auf der Seite Ligerz/Biel nach beiden Spurwechseln liegt (R3)",
   "1411239690": -30
+ },
+ "drehung": {
+  "Kerzers": 90
  }
 }

@@ -175,6 +175,15 @@ def ketten(nodes, MAJOR, routes, anchor, PORTS, S, P, fix, L0):
                 u_ = np.array([math.cos(math.radians(wk_)), -math.sin(math.radians(wk_))])
                 if float(u_ @ d) < 0: u_ = -u_
                 ch["T"] = u_ * L
+        # Seitlicher Abgang am Knotenbahnhof (Regionalvariante Kerzers 27.10., Hinweis eojeak: zwei unter 60° kreuzende
+        # Achsen): die Kette läuft in der Abgangsrichtung weiter, sonst knickt sie gleich nach dem Abgang wieder ab.
+        # Nur für Bahnhöfe in Lage auto.seiten_richtung; Gewicht der Kette in der Ausgleichsrechnung: auto.seiten_gewicht
+        for j_, h_, sg_ in ((0, a, 1), (-1, b, -1)):
+            a_ = anc(ch["ks"][j_], h_)
+            if h_ in inner or not a_ or not a_.get("side") or nodes[h_]["name"] not in P.get("seiten_richtung", []): continue
+            u_ = rotv(np.array(a_["v"], float), rot.get(h_, 0)); u_ = sg_ * u_ / (np.linalg.norm(u_) or 1)
+            if float(u_ @ d) > 0.5 * (np.linalg.norm(d) or 1): ch["T"] = u_ * L; ch["w"] = P.get("seiten_gewicht", 1.0)
+            if os.environ.get("KDBG"): print("SEITE", [nodes[x]["name"] for x in ch["seq"]], u_.round(2), (d / (np.linalg.norm(d) or 1)).round(2))
     # Ketten, die an einem Knoten fast in dieselbe Richtung abgehen, auf mindestens 28° spreizen (sonst überlagern sie sich)
     for h in hubs:
         cs = [(ch, 1) for ch in chains if ch["seq"][0] == h] + [(ch, -1) for ch in chains if ch["seq"][-1] == h]
@@ -196,9 +205,10 @@ def ketten(nodes, MAJOR, routes, anchor, PORTS, S, P, fix, L0):
         for ch in chains:
             a, b = ch["seq"][0], ch["seq"][-1]
             oa, ob = port(a, ch["ks"][0]), port(b, ch["ks"][-1])
+            w_ = ch.get("w", 1.0)
             for c in range(2):
-                r = np.zeros(2 * len(hubs)); r[2 * hidx[b] + c] += 1; r[2 * hidx[a] + c] -= 1
-                rows.append(r); rhs.append(ch["T"][c] + oa[c] - ob[c])
+                r = np.zeros(2 * len(hubs)); r[2 * hidx[b] + c] += w_; r[2 * hidx[a] + c] -= w_
+                rows.append(r); rhs.append(w_ * (ch["T"][c] + oa[c] - ob[c]))
         for n in hubs:
             for c in range(2):
                 r = np.zeros(2 * len(hubs)); r[2 * hidx[n] + c] = P["wg"]; rows.append(r); rhs.append(P["wg"] * KG * geo[n][c])

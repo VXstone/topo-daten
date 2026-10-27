@@ -2945,6 +2945,9 @@ json.dump(dict(W=W, H=H, s_lo=s_lo, maxlane=maxlane,
                ends=[(sg["id"], X(sg["s0"]), X(sg["s1"]), ypos(sg["nodes"][0]), ypos(sg["nodes"][-1]), sg["cut0"], sg["cut1"], sg["pax"], sg["tags"].get("ref")) for sg in segs if sg["pax"] and (sg["cut0"] or sg["cut1"])]),
           open("meta.json", "w"))
 SIDE = []
+# Override "seitlich": endet ein anderes Gleis im selben Randknoten (Weiche am Planrand, Kerzers Gleis 3 nach Lyss),
+# bekommt es keinen eigenen Längsabgang; es mündet in den seitlichen Abgang (Regionalvariante Kerzers 27.10.)
+_SEIT_N = {sg["nodes"][-1 if e_ else 0] for sg in segs if sg["way"] in OVR.get("seitlich", []) for e_ in (0, 1) if sg["cut%d" % e_]}
 for sg in segs:
     if not sg["pax"]: continue
     if not (sg["cut0"] or sg["cut1"]): continue
@@ -2955,6 +2958,7 @@ for sg in segs:
         x, y = (xpos(n, sg["s1"]), ypos(n)) if end else (xpos(n, sg["s0"]), ypos(n))
         if ((abs(d_) > d_lim_at(s_) - 25 and not sg["flat"]) or sg["way"] in OVR.get("seitlich", [])) and sg["way"] not in OVR.get("als_rand", []):   # seitlich abzweigende Strecke; "als_rand": Abgang am Längsrand (Regionalvariante Olten Ost 20.10.)
             SIDE.append([x, y, end, -1 if d_ > 0 else 1, sg, n])
+        elif n in _SEIT_N: continue
         else:
             if sg["way"] in ZEICHNEN_PORT: x, y = ZEICHNEN_PORT[sg["way"]]     # neu gezeichneter Abgang (Thun Gürbetal)
             _c, _w = (green, 3.6) if sg["pax"] else (black, 1.6)

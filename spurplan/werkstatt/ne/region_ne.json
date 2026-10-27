@@ -3,5 +3,20 @@
  "bahnhoefe": {
   "ins": []
  },
- "region": {"name": "ne_region", "titel": "Region Neuchâtel", "ausgabe": "../olten/feedback/region_ne.svg"}
+ "region": {
+  "name": "ne_region",
+  "titel": "Region Neuchâtel",
+  "ausgabe": "../olten/feedback/region_ne.svg"
+ },
+ "varianten": [
+  {
+   "ordner": "regional_kerzers",
+   "bahnhof": "kerzers",
+   "optionen": [],
+   "nach_oben": {
+    "kerzers_bare.svg": "kerzers_regional_bare.svg",
+    "kerzers_ports.json": "kerzers_regional_ports.json"
+   }
+  }
+ ]
 }
