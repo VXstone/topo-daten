@@ -7,6 +7,18 @@
    "bare_geaendert": false,
    "netz": {
     "T10": 1
+   },
+   "topologie": "{}",
+   "qualitaet": {
+    "topo_A": 0,
+    "topo_B": 0,
+    "topo_C": 0,
+    "topo_D": 0,
+    "topo_E": 0,
+    "netz_T10": 1,
+    "boegen_pax": 7,
+    "boegen_alle": 13,
+    "randabstand": 0
    }
   },
   "dulliken": {
@@ -14,14 +26,36 @@
    "optionen": [],
    "plan_geaendert": false,
    "bare_geaendert": false,
-   "netz": {}
+   "netz": {},
+   "topologie": "{}",
+   "qualitaet": {
+    "topo_A": 0,
+    "topo_B": 0,
+    "topo_C": 0,
+    "topo_D": 0,
+    "topo_E": 0,
+    "boegen_pax": 0,
+    "boegen_alle": 6,
+    "randabstand": 0
+   }
   },
   "laufelfingen": {
    "ok": true,
    "optionen": [],
    "plan_geaendert": false,
    "bare_geaendert": false,
-   "netz": {}
+   "netz": {},
+   "topologie": "{}",
+   "qualitaet": {
+    "topo_A": 0,
+    "topo_B": 0,
+    "topo_C": 0,
+    "topo_D": 0,
+    "topo_E": 0,
+    "boegen_pax": 4,
+    "boegen_alle": 4,
+    "randabstand": 0
+   }
   },
   "rothrist": {
    "ok": true,
@@ -32,6 +66,20 @@
     "T10": 1,
     "D11": 2,
     "F7": 1
+   },
+   "topologie": "{}",
+   "qualitaet": {
+    "topo_A": 0,
+    "topo_B": 0,
+    "topo_C": 0,
+    "topo_D": 0,
+    "topo_E": 0,
+    "netz_T10": 1,
+    "netz_D11": 2,
+    "netz_F7": 1,
+    "boegen_pax": 28,
+    "boegen_alle": 61,
+    "randabstand": 0
    }
   },
   "safenwil": {
@@ -39,14 +87,36 @@
    "optionen": [],
    "plan_geaendert": false,
    "bare_geaendert": false,
-   "netz": {}
+   "netz": {},
+   "topologie": "{}",
+   "qualitaet": {
+    "topo_A": 0,
+    "topo_B": 0,
+    "topo_C": 0,
+    "topo_D": 0,
+    "topo_E": 0,
+    "boegen_pax": 4,
+    "boegen_alle": 12,
+    "randabstand": 0
+   }
   },
   "schonenwerd": {
    "ok": true,
    "optionen": [],
    "plan_geaendert": false,
    "bare_geaendert": false,
-   "netz": {}
+   "netz": {},
+   "topologie": "{}",
+   "qualitaet": {
+    "topo_A": 0,
+    "topo_B": 0,
+    "topo_C": 0,
+    "topo_D": 0,
+    "topo_E": 0,
+    "boegen_pax": 0,
+    "boegen_alle": 6,
+    "randabstand": 0
+   }
   },
   "tecknau": {
    "ok": true,
@@ -57,6 +127,20 @@
     "T10": 1,
     "D11": 2,
     "D12": 1
+   },
+   "topologie": "{}",
+   "qualitaet": {
+    "topo_A": 0,
+    "topo_B": 0,
+    "topo_C": 0,
+    "topo_D": 0,
+    "topo_E": 0,
+    "netz_T10": 1,
+    "netz_D11": 2,
+    "netz_D12": 1,
+    "boegen_pax": 0,
+    "boegen_alle": 18,
+    "randabstand": 0
    }
   },
   "wangen_bei_olten": {
@@ -66,6 +150,18 @@
    "bare_geaendert": false,
    "netz": {
     "T10": 1
+   },
+   "topologie": "{}",
+   "qualitaet": {
+    "topo_A": 0,
+    "topo_B": 0,
+    "topo_C": 0,
+    "topo_D": 0,
+    "topo_E": 0,
+    "netz_T10": 1,
+    "boegen_pax": 0,
+    "boegen_alle": 28,
+    "randabstand": 0
    }
   },
   "zofingen": {
@@ -77,6 +173,20 @@
     "D11": 2,
     "W2": 1,
     "A1": 1
+   },
+   "topologie": "{}",
+   "qualitaet": {
+    "topo_A": 0,
+    "topo_B": 0,
+    "topo_C": 0,
+    "topo_D": 0,
+    "topo_E": 0,
+    "netz_D11": 2,
+    "netz_W2": 1,
+    "netz_A1": 1,
+    "boegen_pax": 6,
+    "boegen_alle": 42,
+    "randabstand": 0
    }
   },
   "daniken": {
@@ -88,6 +198,18 @@
    "bare_geaendert": false,
    "netz": {
     "D11": 1
+   },
+   "topologie": "{}",
+   "qualitaet": {
+    "topo_A": 0,
+    "topo_B": 0,
+    "topo_C": 0,
+    "topo_D": 0,
+    "topo_E": 0,
+    "netz_D11": 1,
+    "boegen_pax": 0,
+    "boegen_alle": 26,
+    "randabstand": 0
    }
   },
   "olten": {
@@ -99,6 +221,18 @@
    "bare_geaendert": false,
    "netz": {
     "Z2": 4
+   },
+   "topologie": "{}",
+   "qualitaet": {
+    "topo_A": 0,
+    "topo_B": 0,
+    "topo_C": 0,
+    "topo_D": 0,
+    "topo_E": 0,
+    "netz_Z2": 4,
+    "boegen_pax": 93,
+    "boegen_alle": 114,
+    "randabstand": 0
    }
   },
   "olten_hammer": {
@@ -110,6 +244,18 @@
    "bare_geaendert": false,
    "netz": {
     "D11": 8
+   },
+   "topologie": "{}",
+   "qualitaet": {
+    "topo_A": 0,
+    "topo_B": 0,
+    "topo_C": 0,
+    "topo_D": 0,
+    "topo_E": 0,
+    "netz_D11": 8,
+    "boegen_pax": 0,
+    "boegen_alle": 13,
+    "randabstand": 0
    }
   }
  },
@@ -188,6 +334,209 @@
   "olten_hammer": {
    "elemente": 1021,
    "geaendert": true
+  }
+ },
+ "qualitaet_messung": {
+  "aarburg_oftringen": {
+   "topo_A": 0,
+   "topo_B": 0,
+   "topo_C": 0,
+   "topo_D": 0,
+   "topo_E": 0,
+   "netz_T10": 1,
+   "boegen_pax": 7,
+   "boegen_alle": 13,
+   "randabstand": 0
+  },
+  "dulliken": {
+   "topo_A": 0,
+   "topo_B": 0,
+   "topo_C": 0,
+   "topo_D": 0,
+   "topo_E": 0,
+   "boegen_pax": 0,
+   "boegen_alle": 6,
+   "randabstand": 0
+  },
+  "laufelfingen": {
+   "topo_A": 0,
+   "topo_B": 0,
+   "topo_C": 0,
+   "topo_D": 0,
+   "topo_E": 0,
+   "boegen_pax": 4,
+   "boegen_alle": 4,
+   "randabstand": 0
+  },
+  "rothrist": {
+   "topo_A": 0,
+   "topo_B": 0,
+   "topo_C": 0,
+   "topo_D": 0,
+   "topo_E": 0,
+   "netz_T10": 1,
+   "netz_D11": 2,
+   "netz_F7": 1,
+   "boegen_pax": 28,
+   "boegen_alle": 61,
+   "randabstand": 0
+  },
+  "safenwil": {
+   "topo_A": 0,
+   "topo_B": 0,
+   "topo_C": 0,
+   "topo_D": 0,
+   "topo_E": 0,
+   "boegen_pax": 4,
+   "boegen_alle": 12,
+   "randabstand": 0
+  },
+  "schonenwerd": {
+   "topo_A": 0,
+   "topo_B": 0,
+   "topo_C": 0,
+   "topo_D": 0,
+   "topo_E": 0,
+   "boegen_pax": 0,
+   "boegen_alle": 6,
+   "randabstand": 0
+  },
+  "tecknau": {
+   "topo_A": 0,
+   "topo_B": 0,
+   "topo_C": 0,
+   "topo_D": 0,
+   "topo_E": 0,
+   "netz_T10": 1,
+   "netz_D11": 2,
+   "netz_D12": 1,
+   "boegen_pax": 0,
+   "boegen_alle": 18,
+   "randabstand": 0
+  },
+  "wangen_bei_olten": {
+   "topo_A": 0,
+   "topo_B": 0,
+   "topo_C": 0,
+   "topo_D": 0,
+   "topo_E": 0,
+   "netz_T10": 1,
+   "boegen_pax": 0,
+   "boegen_alle": 28,
+   "randabstand": 0
+  },
+  "zofingen": {
+   "topo_A": 0,
+   "topo_B": 0,
+   "topo_C": 0,
+   "topo_D": 0,
+   "topo_E": 0,
+   "netz_D11": 2,
+   "netz_W2": 1,
+   "netz_A1": 1,
+   "boegen_pax": 6,
+   "boegen_alle": 42,
+   "randabstand": 0
+  },
+  "daniken": {
+   "topo_A": 0,
+   "topo_B": 0,
+   "topo_C": 0,
+   "topo_D": 0,
+   "topo_E": 0,
+   "netz_D11": 1,
+   "boegen_pax": 0,
+   "boegen_alle": 26,
+   "randabstand": 0
+  },
+  "olten": {
+   "topo_A": 0,
+   "topo_B": 0,
+   "topo_C": 0,
+   "topo_D": 0,
+   "topo_E": 0,
+   "netz_Z2": 4,
+   "boegen_pax": 93,
+   "boegen_alle": 114,
+   "randabstand": 0
+  },
+  "olten_hammer": {
+   "topo_A": 0,
+   "topo_B": 0,
+   "topo_C": 0,
+   "topo_D": 0,
+   "topo_E": 0,
+   "netz_D11": 8,
+   "boegen_pax": 0,
+   "boegen_alle": 13,
+   "randabstand": 0
+  }
+ },
+ "qualitaet": {
+  "aarburg_oftringen": {
+   "status": "gleich",
+   "schlechter": {},
+   "besser": {}
+  },
+  "daniken": {
+   "status": "gleich",
+   "schlechter": {},
+   "besser": {}
+  },
+  "dulliken": {
+   "status": "gleich",
+   "schlechter": {},
+   "besser": {}
+  },
+  "laufelfingen": {
+   "status": "gleich",
+   "schlechter": {},
+   "besser": {}
+  },
+  "olten": {
+   "status": "gleich",
+   "schlechter": {},
+   "besser": {}
+  },
+  "olten_hammer": {
+   "status": "gleich",
+   "schlechter": {},
+   "besser": {}
+  },
+  "rothrist": {
+   "status": "gleich",
+   "schlechter": {},
+   "besser": {}
+  },
+  "safenwil": {
+   "status": "gleich",
+   "schlechter": {},
+   "besser": {}
+  },
+  "schonenwerd": {
+   "status": "gleich",
+   "schlechter": {},
+   "besser": {}
+  },
+  "tecknau": {
+   "status": "gleich",
+   "schlechter": {},
+   "besser": {}
+  },
+  "wangen_bei_olten": {
+   "status": "gleich",
+   "schlechter": {},
+   "besser": {}
+  },
+  "zofingen": {
+   "status": "schlechter",
+   "schlechter": {
+    "netz_A1": 1,
+    "netz_W2": 1
+   },
+   "besser": {
+    "boegen_pax": -2
+   }
   }
  }
 }

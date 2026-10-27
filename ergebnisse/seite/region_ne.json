@@ -8,6 +8,19 @@
    "netz": {
     "T10": 1,
     "D11": 1
+   },
+   "topologie": "{}",
+   "qualitaet": {
+    "topo_A": 0,
+    "topo_B": 0,
+    "topo_C": 0,
+    "topo_D": 0,
+    "topo_E": 0,
+    "netz_T10": 1,
+    "netz_D11": 1,
+    "boegen_pax": 8,
+    "boegen_alle": 19,
+    "randabstand": 0
    }
   }
  },
@@ -23,5 +36,26 @@
    "befunde": []
   }
  },
- "osm": {}
+ "osm": {},
+ "qualitaet_messung": {
+  "ins": {
+   "topo_A": 0,
+   "topo_B": 0,
+   "topo_C": 0,
+   "topo_D": 0,
+   "topo_E": 0,
+   "netz_T10": 1,
+   "netz_D11": 1,
+   "boegen_pax": 8,
+   "boegen_alle": 19,
+   "randabstand": 0
+  }
+ },
+ "qualitaet": {
+  "ins": {
+   "status": "gleich",
+   "schlechter": {},
+   "besser": {}
+  }
+ }
 }

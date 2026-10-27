@@ -2,19 +2,32 @@ OSM aus Release: {"aarburg_oftringen": {"elemente": 92, "geaendert": true}, "dul
 Variante {"ok": true, "ordner": "olten_ost", "geaendert": []}
 Variante {"ok": true, "ordner": "regional_olten_ost", "geaendert": []}
 Variante {"ok": true, "ordner": "regional_rothrist", "geaendert": []}
-aarburg_oftringen {"ok": true, "optionen": [], "plan_geaendert": false, "bare_geaendert": false, "netz": {"T10": 1}}
-dulliken {"ok": true, "optionen": [], "plan_geaendert": false, "bare_geaendert": false, "netz": {}}
-laufelfingen {"ok": true, "optionen": [], "plan_geaendert": false, "bare_geaendert": false, "netz": {}}
-rothrist {"ok": true, "optionen": [], "plan_geaendert": false, "bare_geaendert": false, "netz": {"T10": 1, "D11": 2, "F7": 1}}
-safenwil {"ok": true, "optionen": [], "plan_geaendert": false, "bare_geaendert": false, "netz": {}}
-schonenwerd {"ok": true, "optionen": [], "plan_geaendert": false, "bare_geaendert": false, "netz": {}}
-tecknau {"ok": true, "optionen": [], "plan_geaendert": false, "bare_geaendert": false, "netz": {"T10": 1, "D11": 2, "D12": 1}}
-wangen_bei_olten {"ok": true, "optionen": [], "plan_geaendert": false, "bare_geaendert": false, "netz": {"T10": 1}}
-zofingen {"ok": true, "optionen": [], "plan_geaendert": true, "bare_geaendert": true, "netz": {"D11": 2, "W2": 1, "A1": 1}}
-daniken {"ok": true, "optionen": ["--hauptgleise"], "plan_geaendert": false, "bare_geaendert": false, "netz": {"D11": 1}}
-olten {"ok": true, "optionen": ["--hauptgleise"], "plan_geaendert": false, "bare_geaendert": false, "netz": {"Z2": 4}}
-olten_hammer {"ok": true, "optionen": ["--hauptgleise"], "plan_geaendert": false, "bare_geaendert": false, "netz": {"D11": 8}}
+aarburg_oftringen {"ok": true, "optionen": [], "plan_geaendert": false, "bare_geaendert": false, "netz": {"T10": 1}, "topologie": "{}", "qualitaet": {"topo_A": 0, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "netz_T10": 1, "boegen_pax": 7, "boegen_alle": 13, "randabstand": 0}}
+dulliken {"ok": true, "optionen": [], "plan_geaendert": false, "bare_geaendert": false, "netz": {}, "topologie": "{}", "qualitaet": {"topo_A": 0, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "boegen_pax": 0, "boegen_alle": 6, "randabstand": 0}}
+laufelfingen {"ok": true, "optionen": [], "plan_geaendert": false, "bare_geaendert": false, "netz": {}, "topologie": "{}", "qualitaet": {"topo_A": 0, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "boegen_pax": 4, "boegen_alle": 4, "randabstand": 0}}
+rothrist {"ok": true, "optionen": [], "plan_geaendert": false, "bare_geaendert": false, "netz": {"T10": 1, "D11": 2, "F7": 1}, "topologie": "{}", "qualitaet": {"topo_A": 0, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "netz_T10": 1, "netz_D11": 2, "netz_F7": 1, "boegen_pax": 28, "boegen_alle": 61, "randabstand": 0}}
+safenwil {"ok": true, "optionen": [], "plan_geaendert": false, "bare_geaendert": false, "netz": {}, "topologie": "{}", "qualitaet": {"topo_A": 0, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "boegen_pax": 4, "boegen_alle": 12, "randabstand": 0}}
+schonenwerd {"ok": true, "optionen": [], "plan_geaendert": false, "bare_geaendert": false, "netz": {}, "topologie": "{}", "qualitaet": {"topo_A": 0, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "boegen_pax": 0, "boegen_alle": 6, "randabstand": 0}}
+tecknau {"ok": true, "optionen": [], "plan_geaendert": false, "bare_geaendert": false, "netz": {"T10": 1, "D11": 2, "D12": 1}, "topologie": "{}", "qualitaet": {"topo_A": 0, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "netz_T10": 1, "netz_D11": 2, "netz_D12": 1, "boegen_pax": 0, "boegen_alle": 18, "randabstand": 0}}
+wangen_bei_olten {"ok": true, "optionen": [], "plan_geaendert": false, "bare_geaendert": false, "netz": {"T10": 1}, "topologie": "{}", "qualitaet": {"topo_A": 0, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "netz_T10": 1, "boegen_pax": 0, "boegen_alle": 28, "randabstand": 0}}
+zofingen {"ok": true, "optionen": [], "plan_geaendert": true, "bare_geaendert": true, "netz": {"D11": 2, "W2": 1, "A1": 1}, "topologie": "{}", "qualitaet": {"topo_A": 0, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "netz_D11": 2, "netz_W2": 1, "netz_A1": 1, "boegen_pax": 6, "boegen_alle": 42, "randabstand": 0}}
+daniken {"ok": true, "optionen": ["--hauptgleise"], "plan_geaendert": false, "bare_geaendert": false, "netz": {"D11": 1}, "topologie": "{}", "qualitaet": {"topo_A": 0, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "netz_D11": 1, "boegen_pax": 0, "boegen_alle": 26, "randabstand": 0}}
+olten {"ok": true, "optionen": ["--hauptgleise"], "plan_geaendert": false, "bare_geaendert": false, "netz": {"Z2": 4}, "topologie": "{}", "qualitaet": {"topo_A": 0, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "netz_Z2": 4, "boegen_pax": 93, "boegen_alle": 114, "randabstand": 0}}
+olten_hammer {"ok": true, "optionen": ["--hauptgleise"], "plan_geaendert": false, "bare_geaendert": false, "netz": {"D11": 8}, "topologie": "{}", "qualitaet": {"topo_A": 0, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "netz_D11": 8, "boegen_pax": 0, "boegen_alle": 13, "randabstand": 0}}
 Regionalgeometrie /home/runner/work/topo-daten/topo-daten/spurplan/werkstatt/olten/feedback/region.svg: Achse 10.06 px, 78 Streckenpfade; {'A1': 1}
   A1  x=85.6 y=-178.5  zwei Streckengleise 11.8 px auseinander (1.17 Achsen) über 42 px
 
 Region Olten: {"ok": true, "geaendert": true, "geometrie": {"plan": "/home/runner/work/topo-daten/topo-daten/spurplan/werkstatt/olten/feedback/region.svg", "achse": 10.062273939653176, "befunde": [{"regel": "A1", "x": 85.6, "y": -178.5, "text": "zwei Streckengleise 11.8 px auseinander (1.17 Achsen) über 42 px"}]}}
+Kennzahlen gegen die Basis:
+  aarburg_oftringen      gleich  
+  daniken                gleich  
+  dulliken               gleich  
+  laufelfingen           gleich  
+  olten                  gleich  
+  olten_hammer           gleich  
+  rothrist               gleich  
+  safenwil               gleich  
+  schonenwerd            gleich  
+  tecknau                gleich  
+  wangen_bei_olten       gleich  
+  zofingen               schlechter {'netz_A1': 1, 'netz_W2': 1} {'boegen_pax': -2}
