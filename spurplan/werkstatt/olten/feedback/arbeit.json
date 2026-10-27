@@ -36,10 +36,10 @@
    ]
   },
   "kerzers": {
-   "status": "abgenommen",
-   "am": "14.10.",
+   "status": "kontrolle",
+   "am": "27.10.",
    "neu": [
-    "Gleisnummer 16 (Ausfahrgleis Gümmenen) weggelassen (Override nummern_weg)"
+    "Als X gezeichnet: Ins–Gümmenen (220) und Lyss–Murten (251) je eine gerade Achse, Kreuzung unter 60° in der Mitte; Inhalt (Gleise, Weichen, Anschlüsse, Nummern) wie der abgenommene Plan vom 14.10., nur umgelegt (code/kreuzungsbahnhof.py). Bisheriger Plan: reg/kerzers_parallel_spurplan.svg"
    ]
   },
   "murten": {
