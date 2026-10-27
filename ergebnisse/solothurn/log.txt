@@ -6,77 +6,79 @@ geschrieben solothurn_override.json
 
 $ spurplan_schema.py --src solothurn.json --nowarp
 Bahnhof Solothurn: Achse 2830 m, Ausschnitt s=429…2531, 57 Weichen, 8 Perrons
-chains 33 lanes 20 segs 133 W 2384 H 675
+chains 34 lanes 20 segs 133 W 2384 H 675
 
 $ spurplan_warp.py solothurn
 Optimization terminated successfully. (HiGHS Status 7: Optimal)
-Breite linear 1934 px -> entzerrt 1445 px
+Breite linear 1934 px -> entzerrt 1433 px
 
 $ spurplan_schema.py --src solothurn.json
 Bahnhof Solothurn: Achse 2830 m, Ausschnitt s=429…2531, 57 Weichen, 8 Perrons
-chains 33 lanes 20 segs 133 W 1896 H 675
+chains 34 lanes 20 segs 133 W 1883 H 675
 
 $ spurplan_warp.py solothurn
 Optimization terminated successfully. (HiGHS Status 7: Optimal)
-Breite linear 1934 px -> entzerrt 1441 px
+Breite linear 1934 px -> entzerrt 1415 px
 
 $ spurplan_schema.py --src solothurn.json
 Bahnhof Solothurn: Achse 2830 m, Ausschnitt s=429…2531, 57 Weichen, 8 Perrons
-chains 33 lanes 20 segs 133 W 1892 H 675
+chains 34 lanes 20 segs 133 W 1865 H 675
 
 $ spurplan_check.py --src solothurn.json --out /tmp/spurplan_lauf/_check_solothurn.svg
 Bahnhof Solothurn: Achse 2830 m, Ausschnitt s=429…2531, 57 Weichen, 8 Perrons
-chains 33 lanes 20 segs 133 W 1892 H 675
-Befunde: {'A': 4, 'B': 17}
-eindeutig: {'A': 4, 'B': 15}
-A x=   889 y=  280  Verbindung nicht geschlossen (34px): 444 (way 49565865)
-A x=  1458 y=  386  Verbindung nicht geschlossen (19px): siding (way 251195480), 914 (way 251195487)
-A x=  1463 y=  403  Verbindung nicht geschlossen (13px): siding (way 251195480)
-A x=  1474 y=  372  Verbindung nicht geschlossen (14px): siding (way 251195480)
-B x=  1416 y=  429  Überlagerung 234px: 961 (way 49565844) / yard (way 251195478)
-B x=  1420 y=  416  Überlagerung 236px: 960 (way 49565842) / yard (way 251195478)
-B x=  1424 y=  403  Überlagerung 249px: 959 (way 49565840) / yard (way 251195478)
-B x=  1424 y=  403  Überlagerung 249px: 959 (way 49565840) / siding (way 251195480)
-B x=  1428 y=  390  Überlagerung 272px: 958 (way 49565841) / yard (way 251195478)
-B x=  1428 y=  390  Überlagerung 272px: 958 (way 49565841) / siding (way 251195480)
-B x=  1439 y=  376  Überlagerung 289px: 957 (way 49565846) / yard (way 251195478)
-B x=  1439 y=  376  Überlagerung 289px: 957 (way 49565846) / siding (way 251195480)
-B x=  1448 y=  403  Überlagerung 273px: 959 (way 49565840) / yard (way 136053985)
-B x=  1463 y=  378  Überlagerung 299px: 958 (way 49565841) / yard (way 136053985)
-B x=  1464 y=  376  Überlagerung 315px: 957 (way 49565846) / yard (way 136053985)
-B x=  1465 y=  376  Überlagerung 110px: yard (way 136053985) / siding (way 251195474)
-B x=  1465 y=  376  Überlagerung 110px: yard (way 136053985) / siding (way 251195480)
-B x=  1553 y=  429  Scheinverbindung: 904 (way 49565917) berührt yard (way 251195479)
-B x=  1553 y=  429  Scheinverbindung: yard (way 251195476) berührt yard (way 251195479)
+chains 34 lanes 20 segs 133 W 1865 H 675
+Befunde: {'A': 3, 'B': 23}
+eindeutig: {'A': 3, 'B': 21}
+A x=   862 y=  280  Verbindung nicht geschlossen (21px): 444 (way 49565865)
+A x=  1436 y=  400  Verbindung nicht geschlossen (11px): siding (way 251195480)
+A x=  1436 y=  364  Verbindung nicht geschlossen (27px): siding (way 251195480), 914 (way 251195487)
+B x=  1385 y=  429  Überlagerung 217px: 961 (way 49565844) / yard (way 251195478)
+B x=  1389 y=  416  Überlagerung 220px: 960 (way 49565842) / yard (way 251195478)
+B x=  1392 y=  403  Überlagerung 230px: 959 (way 49565840) / yard (way 251195478)
+B x=  1392 y=  403  Überlagerung 230px: 959 (way 49565840) / siding (way 251195480)
+B x=  1395 y=  390  Überlagerung 252px: 958 (way 49565841) / yard (way 251195478)
+B x=  1395 y=  390  Überlagerung 252px: 958 (way 49565841) / siding (way 251195480)
+B x=  1398 y=  376  Überlagerung 263px: 957 (way 49565846) / yard (way 251195478)
+B x=  1398 y=  376  Überlagerung 263px: 957 (way 49565846) / siding (way 251195480)
+B x=  1410 y=  353  Überlagerung 95px: yard (way 251195478) / 956 (way 1534903300)
+B x=  1410 y=  353  Überlagerung 95px: siding (way 251195480) / 956 (way 1534903300)
+B x=  1425 y=  403  Überlagerung 263px: 959 (way 49565840) / yard (way 136053985)
+B x=  1428 y=  390  Überlagerung 285px: 958 (way 49565841) / yard (way 136053985)
+B x=  1432 y=  376  Überlagerung 297px: 957 (way 49565846) / yard (way 136053985)
+B x=  1447 y=  353  Überlagerung 126px: yard (way 136053985) / 956 (way 1534903300)
+B x=  1447 y=  353  Überlagerung 126px: siding (way 251195480) / 956 (way 1534903300)
+B x=  1457 y=  352  Scheinverbindung: 914 (way 251195487) berührt 956 (way 1534903300)
+B x=  1462 y=  354  Überlagerung 33px: siding (way 251195474) / 914 (way 251195487)
+B x=  1462 y=  354  Überlagerung 33px: siding (way 251195480) / 914 (way 251195487)
+B x=  1464 y=  352  Überlagerung 61px: 959 (way 49565840) / 956 (way 1534903300)
+B x=  1522 y=  429  Scheinverbindung: 904 (way 49565917) berührt yard (way 251195479)
+B x=  1522 y=  429  Scheinverbindung: yard (way 251195476) berührt yard (way 251195479)
 
 $ spurplan_schema.py --src solothurn.json --bare --out solothurn_bare.svg
 Bahnhof Solothurn: Achse 2830 m, Ausschnitt s=429…2531, 57 Weichen, 8 Perrons
-chains 33 lanes 20 segs 133 W 1892 H 675
+chains 34 lanes 20 segs 133 W 1865 H 675
 
 Verbindungsprüfung solothurn: 0 Perrongleise, 7 Abgänge (Personenverkehr)
-  Abgang 410 Oensingen (edge y208 x1668): ok (2 Ziele)
+  Abgang 410 Oensingen (edge y208 x1642): ok (2 Ziele)
   Abgang 410 Biel/Bienne (edge y160 x227): ok (3 Ziele)
-  Abgang 410 Biel/Bienne (edge y208 x227): ok (2 Ziele)
-  Abgang 410 Oensingen (edge y160 x1668): ok (1 Ziele)
-  Abgang 410 Oensingen (edge y184 x1668): ok (2 Ziele)
-  Abgang 421 Burgdorf (side y280 x889): ok (0 Ziele)
-  Abgang 415 Lyss (side y261 x872): ok (0 Ziele)
+  Abgang 410 Biel/Bienne (edge y184 x227): ok (2 Ziele)
+  Abgang 410 Oensingen (edge y160 x1642): ok (1 Ziele)
+  Abgang 410 Oensingen (edge y184 x1642): ok (2 Ziele)
+  Abgang 421 Burgdorf (side y288 x858): ok (0 Ziele)
+  Abgang 415 Lyss (side y254 x849): ok (0 Ziele)
 → 0 Abweichungen
-Weichen ohne Ausrundung (Linienende unter >35° auf Gleis): 3
-   x872 y261  60°
-   x889 y280  60°
-   x948 y280  37°
+Weichen ohne Ausrundung (Linienende unter >35° auf Gleis): 2
+   x850 y254  60°
+   x934 y280  36°
 
-Netzprüfung solothurn: {'A1': 2, 'D11': 2, 'W1': 2, 'W2': 6}; Durchfahrgleise 0
-  D11  x=1181.5 y=208.4  Gleisnummer 2 ohne Perron daneben (Perron fehlt oder Nummer zu viel)
-  D11  x=1181.5 y=280.4  Gleisnummer 3 ohne Perron daneben (Perron fehlt oder Nummer zu viel)
-  W2   x=1394.5 y=184.4  S-Kurve in der Mitte unter 103° (steiler oder flacher als 60°)
-  W2   x=857.2 y=184.4  S-Kurve in der Mitte unter 77° (steiler oder flacher als 60°)
-  W2   x=486.1 y=184.4  S-Kurve in der Mitte unter 103° (steiler oder flacher als 60°)
-  W2   x=1422.0 y=409.4  S-Kurve in der Mitte unter 106° (steiler oder flacher als 60°)
-  W2   x=1403.2 y=455.6  Gleisstück unter 85° (nur 0° und 60° erlaubt)
-  W2   x=1141.4 y=409.4  Gleisstück unter 84° (nur 0° und 60° erlaubt)
-  W1   x=1403.2 y=455.6  Gleisstück unter 85° (steiler als 60°), 27 px
-  W1   x=1141.4 y=409.4  Gleisstück unter 84° (steiler als 60°), 13 px
-  A1   x=847.5 y=280.4  zwei Gleise nur 19.7 px auseinander über 14 px (Grenze 20 px)
-  A1   x=907.8 y=280.4  zwei Gleise nur 19.7 px auseinander über 35 px (Grenze 20 px)
+Netzprüfung solothurn: {'D11': 2, 'W1': 2, 'W2': 6}; Durchfahrgleise 0
+  D11  x=1167.6 y=184.4  Gleisnummer 2 ohne Perron daneben (Perron fehlt oder Nummer zu viel)
+  D11  x=1167.6 y=280.4  Gleisnummer 3 ohne Perron daneben (Perron fehlt oder Nummer zu viel)
+  W2   x=1422.8 y=410.6  S-Kurve in der Mitte unter 103° (steiler oder flacher als 60°)
+  W2   x=1392.8 y=397.4  S-Kurve in der Mitte unter 102° (steiler oder flacher als 60°)
+  W2   x=1475.1 y=390.8  S-Kurve in der Mitte unter 77° (steiler oder flacher als 60°)
+  W2   x=1342.2 y=208.4  S-Kurve in der Mitte unter 103° (steiler oder flacher als 60°)
+  W2   x=1374.5 y=455.6  Gleisstück unter 85° (nur 0° und 60° erlaubt)
+  W2   x=1127.5 y=409.4  Gleisstück unter 84° (nur 0° und 60° erlaubt)
+  W1   x=1374.5 y=455.6  Gleisstück unter 85° (steiler als 60°), 27 px
+  W1   x=1127.5 y=409.4  Gleisstück unter 84° (steiler als 60°), 13 px
