@@ -1,6 +1,6 @@
 {
- "erzeugt": "2026-10-27 21:53 UTC",
- "lauf": "https://github.com/VXstone/topo-daten/actions/runs/40590312364",
+ "erzeugt": "2026-10-27 22:40 UTC",
+ "lauf": "https://github.com/VXstone/topo-daten/actions/runs/40596439879",
  "bahnhoefe": {
   "neuchatel": {
    "ok": true,
@@ -53,22 +53,26 @@
    "verbindungen_abweichungen": null,
    "gleich_wie_vergleich": null,
    "regeln": {
-    "G8": 6
+    "G2": 1
    },
    "netz": {
-    "D11": 2,
-    "D12": 1,
-    "Z2": 1,
     "W2": 1
    },
    "differenz_stellen": null,
    "qualitaet": {
-    "status": "besser",
-    "schlechter": {},
+    "status": "schlechter",
+    "schlechter": {
+     "boegen_pax": 2,
+     "regel_G2": 1
+    },
     "besser": {
-     "boegen_alle": -2,
+     "boegen_alle": -10,
+     "netz_D11": -2,
+     "netz_D12": -1,
      "netz_F7": -1,
-     "randabstand": -2
+     "netz_Z2": -1,
+     "randabstand": -2,
+     "regel_G8": -6
     }
    }
   },
