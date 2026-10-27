@@ -24,7 +24,7 @@ OSM = sys.argv[sys.argv.index("--osm") + 1] if "--osm" in sys.argv else None    
 shutil.rmtree(TMP, ignore_errors=True); shutil.copytree(WS, TMP)
 # Code nur aus code/ (26.10.2026: eine Fassung für alle Regionen, die Werkstatt-Kopien sind gelöscht)
 for f in ("spurplan_schema.py", "spurplan_warp.py", "spurplan_check.py", "netz_pruefung.py", "netz_lage.py", "lage_auto.py",
-          "vorlage.py", "viewbox_text.py"):
+          "vorlage.py", "viewbox_text.py", "qualitaet.py"):
     shutil.copy(os.path.join(HERE, f), TMP)
 py = sys.executable
 def sh(args, timeout=900, cwd=None):
@@ -93,6 +93,12 @@ for b, opt in K["bahnhoefe"].items():
         rc2, o2 = sh(["netz_pruefung.py", b])
         nb = os.path.join(TMP, f"{b}_netz_befunde.json")
         e["netz"] = dict(collections.Counter(x["regel"] for x in json.load(open(nb))["befunde"])) if os.path.exists(nb) else o2[-300:]
+        rc3, o3 = sh(["spurplan_check.py", "--src", f"{b}.json"] + opt)       # Kennzahlen (27.10.): Topologie + Netz + Geometrie
+        import re as _re
+        _m = _re.search(r"Befunde: (\{.*\})", o3); e["topologie"] = _m.group(1) if _m else None
+        sh(["qualitaet.py", "messen", b, "--check", e["topologie"] or "{}"])
+        _qj = os.path.join(TMP, f"{b}_qualitaet.json")
+        if os.path.exists(_qj): e["qualitaet"] = json.load(open(_qj))
         for k in ("spurplan.svg", "bare.svg", "ports.json", "warp.json", "netz.json", "netz_befunde.json"):
             src = os.path.join(TMP, f"{b}_{k}")
             if os.path.exists(src): shutil.copy(src, os.path.join(WS, f"{b}_{k}"))
@@ -114,4 +120,11 @@ if rc == 0:
     print(r_.stdout[-1500:]); bericht["region"]["geometrie"] = (json.load(open("/tmp/region_geometrie.json"))
                                                                 if r_.returncode == 0 else r_.stderr[-500:])
 print(R["titel"] + ":", json.dumps({k: v for k, v in bericht["region"].items() if k != "pruefung" and k != "log"}, ensure_ascii=False))
+# Kennzahlen gegen die Basis (27.10.)
+sys.path.insert(0, HERE); import qualitaet as _Q
+_mess = {b: e["qualitaet"] for b, e in bericht["bahnhoefe"].items() if isinstance(e.get("qualitaet"), dict)}
+bericht["qualitaet_messung"] = _mess
+bericht["qualitaet"] = _Q.vergleichen(_mess, json.load(open(_Q.BASIS)) if os.path.exists(_Q.BASIS) else {})
+print("Kennzahlen gegen die Basis:")
+for b, e in bericht["qualitaet"].items(): print(f"  {b:22} {e['status']}", e.get("schlechter") or "", e.get("besser") or "")
 if BER: json.dump(bericht, open(BER, "w"), ensure_ascii=False, indent=1)

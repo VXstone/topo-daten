@@ -62,6 +62,9 @@ for b in liste:
         rc, o = sh(py + ["netz_pruefung.py", b], w); log.append(o[-3000:])      # Netzmodell (25.10.): Befunde mit Regel-ID und OSM-Way
         _nb = os.path.join(w, f"{b}_netz_befunde.json")
         ber["netz"] = json.load(open(_nb))["befunde"] if os.path.exists(_nb) else o[-500:]
+        rc, o = sh(py + ["qualitaet.py", "messen", b, "--check", str(ber.get("topologie") or "{}"), "--regeln", "regeln.json"], w)
+        _qj = os.path.join(w, f"{b}_qualitaet.json")
+        ber["qualitaet"] = json.load(open(_qj)) if os.path.exists(_qj) else o[-300:]      # Kennzahlen (27.10.)
         d = os.path.join(OUT, b); os.makedirs(d, exist_ok=True)
         for src, dst in ((f"{b}_spurplan.svg", "spurplan.svg"), (f"{b}_bare.svg", "bare.svg"), (f"{b}_ports.json", "ports.json"),
                          (f"{b}_netz.json", "netz.json"), (f"{b}_netz_befunde.json", "netz_befunde.json")):
@@ -85,5 +88,15 @@ for b in liste:
     gesamt[b]["netz"] = (dict(__import__("collections").Counter(x["regel"] for x in ber["netz"])) if isinstance(ber.get("netz"), list) else ber.get("netz"))
     gesamt[b]["differenz_stellen"] = len(ber["differenz"]) if isinstance(ber.get("differenz"), list) else None
     print(b, json.dumps(gesamt[b], ensure_ascii=False))
+# Kennzahlen gegen die Basis (spurplan/qualitaet_basis.json): besser / schlechter / gleich je Bahnhof
+_mess = {b: json.load(open(os.path.join(OUT, b, "bericht.json"))).get("qualitaet") for b in liste}
+_mess = {b: k for b, k in _mess.items() if isinstance(k, dict)}
+json.dump(_mess, open(os.path.join(OUT, "qualitaet_messung.json"), "w"), ensure_ascii=False, indent=1)
+sys.path.insert(0, C); import qualitaet as _Q
+_bas = json.load(open(_Q.BASIS)) if os.path.exists(_Q.BASIS) else {}
+_verg = _Q.vergleichen(_mess, _bas)
+print("Kennzahlen gegen die Basis:")
+for b, e in _verg.items(): print(f"  {b:22} {e['status']}", e.get("schlechter") or "", e.get("besser") or "")
+for b in gesamt: gesamt[b]["qualitaet"] = _verg.get(b)
 json.dump(dict(erzeugt=datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d %H:%M UTC"), lauf=os.environ.get("LAUF", ""),
                bahnhoefe=gesamt), open(os.path.join(OUT, "bericht.json"), "w"), ensure_ascii=False, indent=1)
