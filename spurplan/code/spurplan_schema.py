@@ -553,7 +553,7 @@ _inc = collections.defaultdict(list)
 for sg in segs:
     _inc[sg["nodes"][0]].append(sg); _inc[sg["nodes"][-1]].append(sg)
 for sg in segs:
-    if not RU["r14a"] or not sg["flat"] or sg["s1"] - sg["s0"] > CFG.get("r14a_m", 50) or sg["ref"]: continue     # r14a_m: weniger Zwischengeraden (Neuchâtel 17.10.)
+    if not RU["r14a"] or not sg["flat"] or sg["s1"] - sg["s0"] > CFG.get("r14a_m", 400 if CFG.get("fahrwege") else 50) or sg["ref"]: continue     # r14a_m: weniger Zwischengeraden (Neuchâtel 17.10.)
     nb = [x for n in (sg["nodes"][0], sg["nodes"][-1]) for x in _inc[n] if x is not sg]
     if len(nb) == 2 and all(not x["flat"] for x in nb) and all(len(_inc[n]) == 2 for n in (sg["nodes"][0], sg["nodes"][-1])):
         sg["flat"] = False
@@ -571,11 +571,65 @@ def dir_at(sg, end):
     p = sg["p"]
     q = p[-min(len(p), 3):] if end else p[:min(len(p), 3)]
     return (q[-1, 1] - q[0, 1]) / max(q[-1, 0] - q[0, 0], 1e-3)
+# Fahrwege (27.10.2026, «Code besser machen» Schritt 2; cfg «fahrwege», vorerst opt-in): bevor Ketten gebildet werden,
+# wird bestimmt, welches Streckengleis am linken Rand über welche Gleise zu welchem Streckengleis am rechten Rand führt.
+# Das geradeste Paar ist der Anker; die übrigen Randgleise werden von dort nach ihrer Lage gepaart (das zweitoberste links
+# zum zweitobersten rechts usw.). Ein Randgleis ohne Partner (z. B. eine dritte Strecke) bleibt ein Abzweig.
+# An jeder Weiche auf einem Fahrweg verbindet die Kettenbildung dann die Äste des Fahrwegs, nicht den geradesten Ast.
+FW_PAARE = set(); FAHRWEGE = []
+if CFG.get("fahrwege", os.environ.get("SPUR_FAHRWEGE") == "1"):
+    CFG["fahrwege"] = True
+    import heapq
+    _main = lambda sg: sg["flat"] and not sg["tags"].get("service")
+    _lo = [sg for sg in segs if _main(sg) and sg["pax"] and sg["cut0"] and sg["s0"] <= CFG["s_min"] + 60]
+    _hi = [sg for sg in segs if _main(sg) and sg["pax"] and sg["cut1"] and sg["s1"] >= CFG["s_max"] - 60]
+    _by_id = {sg["id"]: sg for sg in segs}
+    def _kost(a, b):
+        return abs(dir_at(a, 1) - dir_at(b, 0)) + (0 if a["way"] == b["way"] else 0.06) + (0 if b["pax"] else 0.5) + (0.3 if b["tags"].get("service") else 0)
+    def _wege(start):                      # Dijkstra über gerade Stücke nach rechts
+        dist = {start["id"]: 0.0}; prev = {}; hq = [(0.0, start["id"])]
+        while hq:
+            d_, i_ = heapq.heappop(hq)
+            if d_ > dist.get(i_, 1e9): continue
+            a = _by_id[i_]
+            for b in at[a["nodes"][-1]][1]:
+                if not b["flat"]: continue
+                nd = d_ + _kost(a, b)
+                if nd < dist.get(b["id"], 1e9): dist[b["id"]] = nd; prev[b["id"]] = i_; heapq.heappush(hq, (nd, b["id"]))
+        return dist, prev
+    _W = {a["id"]: _wege(a) for a in _lo}
+    _dl = lambda sg, end: float(sg["p"][0 if end == 0 else -1][1])
+    _los = sorted(_lo, key=lambda sg: -_dl(sg, 0)); _his = sorted(_hi, key=lambda sg: -_dl(sg, 1))
+    _kand = [(_W[a["id"]][0][b["id"]], i, j) for i, a in enumerate(_los) for j, b in enumerate(_his) if b["id"] in _W[a["id"]][0]]
+    if _kand:
+        _, i0, j0 = min(_kand)
+        for i, a in enumerate(_los):
+            j = j0 + (i - i0)
+            if not 0 <= j < len(_his) or _his[j]["id"] not in _W[a["id"]][0]: continue
+            prev = _W[a["id"]][1]; weg = [_his[j]["id"]]
+            while weg[-1] != a["id"]: weg.append(prev[weg[-1]])
+            weg.reverse(); FAHRWEGE.append(weg)
+            for x, y in zip(weg, weg[1:]): FW_PAARE.add((x, y))
+            if ARGS.dbg: print("FAHRWEG", _by_id[weg[0]]["way"], "->", _by_id[weg[-1]]["way"], [_by_id[x]["way"] for x in weg][:12])
+    # Spurwechsel zwischen zwei Fahrwegen: ein gerades Stück, dessen beide Enden auf verschiedenen Fahrwegen liegen, ist
+    # eine Verbindung (eine Schräge), kein eigenes Gleis auf einer Zwischenebene (Solothurn 1↔2, Regel F7)
+    _fwk = collections.defaultdict(set)
+    for k_, weg in enumerate(FAHRWEGE):
+        for x in weg:
+            for n_ in (_by_id[x]["nodes"][0], _by_id[x]["nodes"][-1]): _fwk[n_].add(k_)
+    _fws = {x for weg in FAHRWEGE for x in weg}
+    for sg in segs:
+        if not sg["flat"] or sg["id"] in _fws or sg["ref"] or sg["s1"] - sg["s0"] > 400: continue
+        a_, b_ = _fwk.get(sg["nodes"][0], set()), _fwk.get(sg["nodes"][-1], set())
+        if a_ and b_ and not (a_ & b_):
+            sg["flat"] = False
+            if ARGS.dbg: print("FW-SPURWECHSEL", sg["way"], round(sg["s0"]), round(sg["s1"]))
 for n, (L, Rr) in at.items():
     fl = [a for a in L if a["flat"]]; fr = [b for b in Rr if b["flat"]]
     # Weiterlauf: gleiche Richtung, gleicher Way bevorzugt; Weichenverbindungen (service=crossover) nur, wenn nichts anderes
     _xo = lambda x: 0.05 if x["tags"].get("service") == "crossover" else 0
-    pairs = sorted(((abs(dir_at(a, 1) - dir_at(b, 0)) + (0 if a["way"] == b["way"] else CFG.get("way_pen", 0.06)) + _xo(a) + _xo(b), a["id"], b["id"])
+    pairs = sorted(((abs(dir_at(a, 1) - dir_at(b, 0)) + (0 if a["way"] == b["way"] else CFG.get("way_pen", 0.06)) + _xo(a) + _xo(b)
+                     - (10 if (a["id"], b["id"]) in FW_PAARE else 0), a["id"], b["id"])
                     for a in fl for b in fr))
     usedl, usedr = set(), set()
     for c, a, b in pairs:
