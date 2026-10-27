@@ -229,5 +229,22 @@
    "text": "Gleisstück unter 84° (steiler als 60°), 13 px"
   }
  ],
+ "qualitaet": {
+  "topo_A": 3,
+  "topo_B": 23,
+  "topo_C": 0,
+  "topo_D": 0,
+  "topo_E": 0,
+  "regel_G2": 5,
+  "regel_G6": 7,
+  "regel_G7": 3,
+  "regel_G8": 7,
+  "netz_D11": 2,
+  "netz_W2": 6,
+  "netz_W1": 2,
+  "boegen_pax": 11,
+  "boegen_alle": 77,
+  "randabstand": 0
+ },
  "ok": true
 }

@@ -111,5 +111,23 @@
    "text": "zwei Gleise nur 6.9 px auseinander über 15 px (Grenze 9.6 px)"
   }
  ],
+ "qualitaet": {
+  "topo_A": 1,
+  "topo_B": 2,
+  "topo_C": 0,
+  "topo_D": 0,
+  "topo_E": 0,
+  "regel_G2": 4,
+  "regel_G7": 1,
+  "regel_G8": 3,
+  "netz_T10": 1,
+  "netz_D11": 1,
+  "netz_W2": 1,
+  "netz_F7": 1,
+  "netz_A1": 2,
+  "boegen_pax": 11,
+  "boegen_alle": 51,
+  "randabstand": 1
+ },
  "ok": true
 }

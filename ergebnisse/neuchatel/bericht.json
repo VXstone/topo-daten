@@ -127,6 +127,19 @@
  ],
  "planrand": [],
  "netz": [],
+ "qualitaet": {
+  "topo_A": 0,
+  "topo_B": 0,
+  "topo_C": 0,
+  "topo_D": 0,
+  "topo_E": 0,
+  "regel_G2": 14,
+  "regel_G6": 1,
+  "regel_G8": 1,
+  "boegen_pax": 34,
+  "boegen_alle": 55,
+  "randabstand": 0
+ },
  "gleich_wie_vergleich": false,
  "differenz": [
   {
