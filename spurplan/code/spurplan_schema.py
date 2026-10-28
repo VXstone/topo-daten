@@ -2982,7 +2982,7 @@ _pax_y = {round(Y(seglane[sg["id"]])) for sg in segs if sg["pax"] and sg["id"] i
 arrows = [a for a in arrows if not (round(a[1]) in _pax_y and any(abs(a[0] - px) < 30 and abs(a[1] - py) < 1.5 for px, py in _pax_ends))]
 for x, y, dr in arrows:
     out.append(f'<path d="M{x:.1f},{y - 4:.1f}L{x + 9 * dr:.1f},{y:.1f}L{x:.1f},{y + 4:.1f}Z" fill="{black}"/>')
-# Regel Z3 (27.10.2026, Hinweis 1zg2 Vauseyon «Perron-Gleis Nummer?»): Betriebspunkt ohne Perron – keine Gleisnummern
+# Regel Z7 (27.10.2026, Hinweis 1zg2 Vauseyon «Perron-Gleis Nummer?»): Betriebspunkt ohne Perron – keine Gleisnummern
 if not any('rx="1.5"' in o_ for o_ in out + globals().get("MS_TXT", [])) and not OVR.get("nummern"): labels = {}
 for r, (l, a, b, _) in labels.items():
     xm = min(max(pax_mid, X(a) - X(s_lo) + CFG["margin_x"] + 30 and pax_mid), 1e9)

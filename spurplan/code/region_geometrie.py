@@ -132,7 +132,7 @@ if ACHSE:
                 bef("W6", p, f"Gleis endet stumpf neben einem durchlaufenden Gleis ({abs(q):.1f} px daneben) – mit Ausrundung einmünden")
                 break
 
-# ---- S1: Versatz ohne Grund (zwei parallele Stücke, dazwischen ein kurzer Versatz unter einer halben Achse, 27.10.)
+# ---- F11: Versatz ohne Grund (zwei parallele Stücke, dazwischen ein kurzer Versatz unter einer halben Achse, 27.10.)
 # ---- W8: Winkel–Gegenwinkel (kurzes Zwischenstück unter 1.5 Achsen zwischen zwei Knicken, das wegfallen könnte)
 if ACHSE:
     for d in paths:
@@ -152,7 +152,7 @@ if ACHSE:
                 par = abs((u1 / abs(u1) * (u3 / abs(u3)).conjugate()).imag) < 0.03 and (u1 * u3.conjugate()).real > 0
                 quer = abs(((a2 - a1) * (u1 / abs(u1)).conjugate()).imag)
                 if par and 0.3 < quer < 0.5 * ACHSE and abs(u2) < 3 * ACHSE:
-                    bef("S1", (a1 + a2) / 2, f"Versatz {quer:.1f} px ohne Grund zwischen zwei parallelen Stücken")
+                    bef("F11", (a1 + a2) / 2, f"Versatz {quer:.1f} px ohne Grund zwischen zwei parallelen Stücken")
                 elif not par and abs(u2) < 1.5 * ACHSE and min(abs(u1), abs(u3)) > abs(u2):
                     w1 = math.degrees(abs(math.atan2((u2 * u1.conjugate()).imag, (u2 * u1.conjugate()).real)))
                     w2 = math.degrees(abs(math.atan2((u3 * u2.conjugate()).imag, (u3 * u2.conjugate()).real)))

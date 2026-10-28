@@ -145,5 +145,5 @@ _mess = {b: e["qualitaet"] for b, e in bericht["bahnhoefe"].items() if isinstanc
 bericht["qualitaet_messung"] = _mess
 bericht["qualitaet"] = _Q.vergleichen(_mess, json.load(open(_Q.BASIS)) if os.path.exists(_Q.BASIS) else {})
 print("Kennzahlen gegen die Basis:")
-for b, e in bericht["qualitaet"].items(): print(f"  {b:22} {e['status']}", e.get("schlechter") or "", e.get("besser") or "")
+for b, e in bericht["qualitaet"].items(): print(f"  {b:22} {e['status']}", e.get("schlechter") or "", e.get("besser") or "", ("| Topologie offen: " + str(e["topologie_offen"])) if e.get("topologie_offen") else "")
 if BER: json.dump(bericht, open(BER, "w"), ensure_ascii=False, indent=1)

@@ -65,7 +65,11 @@ def vergleichen(mess, basis):
         if alt is None: out[b] = dict(status="neu"); continue
         d = {x: k.get(x, 0) - alt.get(x, 0) for x in sorted(set(k) | set(alt)) if k.get(x, 0) != alt.get(x, 0)}
         schlechter = {x: v for x, v in d.items() if v > 0}; besser = {x: v for x, v in d.items() if v < 0}
-        out[b] = dict(status="schlechter" if schlechter else ("besser" if besser else "gleich"), schlechter=schlechter, besser=besser)
+        # Topologiebefunde (A offene Verbindung, B Scheinverbindung/Überlagerung, F Weichenrichtung) sind nie «normal»,
+        # auch wenn sie in der Basis stehen (28.10.2026, Vauseyon: A stand seit Beginn in der Basis und fiel nicht auf)
+        offen = {x: k[x] for x in ("topo_A", "topo_B", "topo_F") if k.get(x, 0) > 0}
+        out[b] = dict(status="schlechter" if schlechter else ("besser" if besser else "gleich"), schlechter=schlechter, besser=besser,
+                      topologie_offen=offen)
     return out
 
 
@@ -79,7 +83,8 @@ if __name__ == "__main__":
         mess = json.load(open(a[1])); bas = json.load(open(a[2] if len(a) > 2 and not a[2].startswith("--") else BASIS)) if os.path.exists(BASIS) or (len(a) > 2 and os.path.exists(a[2])) else {}
         v = vergleichen(mess, bas)
         for b, e in v.items():
-            print(f"  {b:22} {e['status']:10} " + " ".join(f"{x}{'+' if n > 0 else ''}{n}" for x, n in {**e.get('schlechter', {}), **e.get('besser', {})}.items()))
+            print(f"  {b:22} {e['status']:10} " + " ".join(f"{x}{'+' if n > 0 else ''}{n}" for x, n in {**e.get('schlechter', {}), **e.get('besser', {})}.items())
+                  + (f"  | Topologie offen: {e['topologie_offen']}" if e.get("topologie_offen") else ""))
         if opt("--json"): json.dump(v, open(opt("--json"), "w"), ensure_ascii=False, indent=1)
     elif a[0] == "basis":
         mess = json.load(open(a[1])); ziel = a[2] if len(a) > 2 else BASIS

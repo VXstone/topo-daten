@@ -105,7 +105,7 @@ sys.path.insert(0, C); import qualitaet as _Q
 _bas = json.load(open(_Q.BASIS)) if os.path.exists(_Q.BASIS) else {}
 _verg = _Q.vergleichen(_mess, _bas)
 print("Kennzahlen gegen die Basis:")
-for b, e in _verg.items(): print(f"  {b:22} {e['status']}", e.get("schlechter") or "", e.get("besser") or "")
+for b, e in _verg.items(): print(f"  {b:22} {e['status']}", e.get("schlechter") or "", e.get("besser") or "", ("| Topologie offen: " + str(e["topologie_offen"])) if e.get("topologie_offen") else "")
 for b in liste:                # Lauf abgebrochen: keine Kennzahlen – nicht als «gleich» durchgehen lassen (28.10.)
     if b not in _mess: print(f"  {b:22} FEHLER (keine Kennzahlen: {gesamt.get(b, {}).get('fehler')})"); _verg[b] = dict(status="fehler")
 for b in gesamt: gesamt[b]["qualitaet"] = _verg.get(b)

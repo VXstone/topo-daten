@@ -299,7 +299,7 @@ if AUTO:
     for n in MAJOR: _L[nodes[n]["name"] + ("" if nodes[n]["inset"] else f" #{n}")] = [round(float(pos[n][0])), round(float(pos[n][1]))]
     _L["drehung_auto"] = {nodes[i]["name"]: round(ROT[i], 1) for i in ROT if ROT[i]}
     json.dump(_L, open(LAGE_F, "w"), ensure_ascii=False, indent=1)
-# Regel S1 (27.10.2026, Hinweis c8i4 Region Olten: «solche S-Kurven vermeiden, da passiert ja nichts»): liegen die
+# Regel F11 (früher S1; 27.10.2026, Hinweis c8i4 Region Olten: «solche S-Kurven vermeiden, da passiert ja nichts»): liegen die
 # Anschlüsse zweier Bahnhöfe auf einer geraden Strecke fast auf einer Linie (Versatz unter einer halben Gleisachse),
 # wird ein Bahnhof quer verschoben, damit die Gleise ohne Versatz durchlaufen. Verschoben wird der Bahnhof mit weniger
 # Strecken (bei Gleichstand der zweite); jeder Bahnhof höchstens einmal. Abschalten: Lage "s1_aus": true
@@ -350,7 +350,7 @@ if not L0.get("s1_aus"):
                     break
                 for k_ in _kette: pos[k_] = _alt[k_]
     _S1_EXIT.update(n_ for n_ in MAJOR if nodes[n_]["kind"] == "exit" and any(n_ in (r_["a"], r_["b"]) and (r_["a"] in _S1 or r_["b"] in _S1) for r_ in routes))
-    if _S1: print("S1 quer ausgerichtet:", {nodes[k]["name"]: v for k, v in _S1.items()})
+    if _S1: print("F11 quer ausgerichtet:", {nodes[k]["name"]: v for k, v in _S1.items()})
 # Abgänge mit kleinem Versatz zum Anschluss auf dessen Linie legen (Hinweis Region Olten 15.10.: "S Kurve" Safenwil–Suhr)
 for _n in [n for n in MAJOR if nodes[n]["kind"] == "exit"]:
     for _r in [r for r in routes if _n in (r["a"], r["b"])]:
