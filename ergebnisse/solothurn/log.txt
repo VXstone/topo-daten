@@ -6,6 +6,7 @@ geschrieben solothurn_override.json
 
 $ spurplan_schema.py --src solothurn.json --nowarp
 Bahnhof Solothurn: Achse 2830 m, Ausschnitt s=429…2531, 57 Weichen, 8 Perrons
+G6: 1 Überstand(e) vor Ausrundung gekürzt
 chains 34 lanes 20 segs 133 W 2384 H 675
 
 $ spurplan_warp.py solothurn
@@ -14,6 +15,7 @@ Breite linear 1934 px -> entzerrt 1433 px
 
 $ spurplan_schema.py --src solothurn.json
 Bahnhof Solothurn: Achse 2830 m, Ausschnitt s=429…2531, 57 Weichen, 8 Perrons
+G6: 2 Überstand(e) vor Ausrundung gekürzt
 chains 34 lanes 20 segs 133 W 1883 H 675
 
 $ spurplan_warp.py solothurn
@@ -22,10 +24,12 @@ Breite linear 1934 px -> entzerrt 1415 px
 
 $ spurplan_schema.py --src solothurn.json
 Bahnhof Solothurn: Achse 2830 m, Ausschnitt s=429…2531, 57 Weichen, 8 Perrons
+G6: 2 Überstand(e) vor Ausrundung gekürzt
 chains 34 lanes 20 segs 133 W 1865 H 675
 
 $ spurplan_check.py --src solothurn.json --out /tmp/spurplan_lauf/_check_solothurn.svg
 Bahnhof Solothurn: Achse 2830 m, Ausschnitt s=429…2531, 57 Weichen, 8 Perrons
+G6: 2 Überstand(e) vor Ausrundung gekürzt
 chains 34 lanes 20 segs 133 W 1865 H 675
 Befunde: {'A': 3, 'B': 23, 'F': 2}
 eindeutig: {'A': 3, 'B': 21, 'F': 2}
@@ -58,6 +62,7 @@ F x=  1373 y=  442  Weiche falsch herum: Weichenanfang in OSM siding (way 251195
 
 $ spurplan_schema.py --src solothurn.json --bare --out solothurn_bare.svg
 Bahnhof Solothurn: Achse 2830 m, Ausschnitt s=429…2531, 57 Weichen, 8 Perrons
+G6: 2 Überstand(e) vor Ausrundung gekürzt
 chains 34 lanes 20 segs 133 W 1865 H 675
 
 Verbindungsprüfung solothurn: 0 Perrongleise, 7 Abgänge (Personenverkehr)
