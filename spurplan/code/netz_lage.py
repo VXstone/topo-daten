@@ -304,25 +304,51 @@ if AUTO:
 # wird ein Bahnhof quer verschoben, damit die Gleise ohne Versatz durchlaufen. Verschoben wird der Bahnhof mit weniger
 # Strecken (bei Gleichstand der zweite); jeder Bahnhof höchstens einmal. Abschalten: Lage "s1_aus": true
 _S1 = {}; _S1_EXIT = set()
+def _s1_q(r_):
+    """Querversatz einer geraden Strecke zwischen zwei Kästen (None, wenn nicht gerade gegenüber)"""
+    a_, b_ = r_["a"], r_["b"]
+    if not (nodes[a_]["inset"] and nodes[b_]["inset"]) or a_ not in pos or b_ not in pos: return None
+    aa_ = anchor.get((id(r_["first"]), a_)); ab_ = anchor.get((id(r_["last"]), b_))
+    if not aa_ or not ab_: return None
+    va_ = np.asarray(aa_["v"], float); vb_ = np.asarray(ab_["v"], float)
+    if float(va_ @ vb_) > -0.995: return None
+    d_ = pos[b_] + np.asarray(ab_["off"], float) - pos[a_] - np.asarray(aa_["off"], float)
+    if float(d_ @ va_) <= 0: return None
+    nrm_ = np.array([-va_[1], va_[0]]); return float(d_ @ nrm_), nrm_
+def _s1_schlecht(n_):
+    """Anzahl Strecken am Bahnhof n_ mit kleinem Versatz (S-Kurve)"""
+    k_ = 0
+    for r_ in routes:
+        if n_ not in (r_["a"], r_["b"]): continue
+        q_ = _s1_q(r_)
+        if q_ and 0.3 < abs(q_[0]) < 0.5 * TG: k_ += 1
+    return k_
 if not L0.get("s1_aus"):
     for _ in range(3):
         for _r in routes:
-            _a, _b = _r["a"], _r["b"]
-            if not (nodes[_a]["inset"] and nodes[_b]["inset"]) or _a not in pos or _b not in pos: continue
-            _aa = anchor.get((id(_r["first"]), _a)); _ab = anchor.get((id(_r["last"]), _b))
-            if not _aa or not _ab: continue
-            _va = np.asarray(_aa["v"], float); _vb = np.asarray(_ab["v"], float)
-            if float(_va @ _vb) > -0.995: continue                       # Anschlüsse nicht genau gegenüber
-            _pa = pos[_a] + np.asarray(_aa["off"], float); _pb = pos[_b] + np.asarray(_ab["off"], float)
-            _d = _pb - _pa
-            if float(_d @ _va) <= 0: continue
-            _nrm = np.array([-_va[1], _va[0]]); _q = float(_d @ _nrm)
-            if not (0.3 < abs(_q) < 0.5 * TG): continue
-            _deg = lambda n_: sum(1 for r_ in routes if n_ in (r_["a"], r_["b"]))
-            _m, _sg = (_b, -1) if _deg(_b) <= _deg(_a) else (_a, 1)
-            if _m in _S1: _m, _sg = (_a, 1) if _m == _b else (_b, -1)
-            if _m in _S1: continue
-            pos[_m] = pos[_m] + _sg * _q * _nrm; _S1[_m] = round(_q, 1)
+            _qq = _s1_q(_r)
+            if not _qq or not (0.3 < abs(_qq[0]) < 0.5 * TG): continue
+            _q, _nrm = _qq; _a, _b = _r["a"], _r["b"]
+            # Verschiebung nur, wenn dabei am verschobenen Bahnhof keine neue S-Kurve entsteht (Hinweis l4t5 28.10.:
+            # «nun sind die S-Kurven hier entstanden?» – Dulliken auf der Seite Richtung Olten)
+            for _m, _sg in ((_b, -1), (_a, 1)):
+                if _m in _S1: continue
+                # mitverschieben: Bahnhöfe, die über gerade Strecken weiter in derselben Richtung folgen (Kette), damit der
+                # Versatz nicht nur auf die andere Seite wandert; angenommen wird nur, wenn es insgesamt weniger S-Kurven gibt
+                _kette, _pr, _cur = [_m], _r, _m
+                for __ in range(8):
+                    _nx = [r_ for r_ in routes if _cur in (r_["a"], r_["b"]) and r_ is not _pr and _s1_q(r_)]
+                    if len(_nx) != 1: break
+                    _o = _nx[0]["b"] if _nx[0]["a"] == _cur else _nx[0]["a"]
+                    if _o in _kette or _o in (_a, _b) or sum(1 for r_ in routes if _o in (r_["a"], r_["b"])) > 2: break
+                    _kette.append(_o); _pr, _cur = _nx[0], _o
+                _ns = set(_kette) | {(r_["b"] if r_["a"] == k_ else r_["a"]) for k_ in _kette for r_ in routes if k_ in (r_["a"], r_["b"])}
+                _vor = sum(_s1_schlecht(k_) for k_ in _ns); _alt = {k_: pos[k_].copy() for k_ in _kette}
+                for k_ in _kette: pos[k_] = pos[k_] + _sg * _q * _nrm
+                if sum(_s1_schlecht(k_) for k_ in _ns) < _vor:
+                    for k_ in _kette: _S1[k_] = round(_q, 1)
+                    break
+                for k_ in _kette: pos[k_] = _alt[k_]
     _S1_EXIT.update(n_ for n_ in MAJOR if nodes[n_]["kind"] == "exit" and any(n_ in (r_["a"], r_["b"]) and (r_["a"] in _S1 or r_["b"] in _S1) for r_ in routes))
     if _S1: print("S1 quer ausgerichtet:", {nodes[k]["name"]: v for k, v in _S1.items()})
 # Abgänge mit kleinem Versatz zum Anschluss auf dessen Linie legen (Hinweis Region Olten 15.10.: "S Kurve" Safenwil–Suhr)

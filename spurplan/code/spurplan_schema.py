@@ -335,8 +335,14 @@ if ARGS.dbg:
     for _w in (195100338, 195100333, 43482320):
         if _w in ways: print("WAY", _w, [(n, [round(v) for v in SD[n]] if n in SD else None) for n in ways[_w]["nodes"]])
 # Clipping auf Zeichenbereich
+# cfg "d_lim_neben" (28.10.2026, Vauseyon Hinweis v3f7): Abstell-/Anschlussgleise (service=spur/siding/yard) dürfen
+# seitlich weiter reichen als die Hauptgleise, damit kurze Anlagen ganz gezeichnet werden statt als Pfeil
+_NEBEN_N = {n for w in ways.values() if w["tags"].get("service") in ("spur", "siding", "yard") for n in w["nodes"]} \
+    if CFG.get("d_lim_neben") else set()
 def inside(n):
-    s, d = SD[n]; return CFG["s_min"] <= s <= CFG["s_max"] and abs(d) <= d_lim_at(s)
+    s, d = SD[n]
+    if n in _NEBEN_N: return CFG["s_min"] <= s <= CFG["s_max"] and abs(d) <= max(d_lim_at(s), CFG["d_lim_neben"])
+    return CFG["s_min"] <= s <= CFG["s_max"] and abs(d) <= d_lim_at(s)
 clipped = []
 LAT_CUT = set()
 EDGE_NODES = set()          # innere Knoten, an denen ein Gleis den Ausschnitt verlässt
