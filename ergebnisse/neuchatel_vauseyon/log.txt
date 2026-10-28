@@ -13,6 +13,7 @@ Breite linear 1153 px -> entzerrt 919 px
 $ spurplan_schema.py --src neuchatel_vauseyon.json
 T13: Planfenster links bis serrieres gekürzt (276 -> 742)
 Bahnhof Neuchâtel Vauseyon: Achse 2345 m, Ausschnitt s=742…1995, 9 Weichen, 2 Perrons
+W8 Abgang La Chaux-de-Fonds: Schräge durchgezogen bis zum Abgang (714 -> 739 px)
 chains 6 lanes 6 segs 26 W 1348 H 336
 
 $ spurplan_warp.py neuchatel_vauseyon
@@ -22,11 +23,13 @@ Breite linear 1153 px -> entzerrt 919 px
 $ spurplan_schema.py --src neuchatel_vauseyon.json
 T13: Planfenster links bis serrieres gekürzt (276 -> 742)
 Bahnhof Neuchâtel Vauseyon: Achse 2345 m, Ausschnitt s=742…1995, 9 Weichen, 2 Perrons
+W8 Abgang La Chaux-de-Fonds: Schräge durchgezogen bis zum Abgang (714 -> 739 px)
 chains 6 lanes 6 segs 26 W 1348 H 336
 
 $ spurplan_check.py --src neuchatel_vauseyon.json --out /tmp/spurplan_lauf/_check_neuchatel_vauseyon.svg
 T13: Planfenster links bis serrieres gekürzt (276 -> 742)
 Bahnhof Neuchâtel Vauseyon: Achse 2345 m, Ausschnitt s=742…1995, 9 Weichen, 2 Perrons
+W8 Abgang La Chaux-de-Fonds: Schräge durchgezogen bis zum Abgang (714 -> 739 px)
 chains 6 lanes 6 segs 26 W 1348 H 336
 Befunde: {'A': 1}
 eindeutig: {'A': 1}
@@ -35,6 +38,7 @@ A x=   745 y=  158  Verbindung nicht geschlossen (24px): 6 (way 37214727)
 $ spurplan_schema.py --src neuchatel_vauseyon.json --bare --out neuchatel_vauseyon_bare.svg
 T13: Planfenster links bis serrieres gekürzt (276 -> 742)
 Bahnhof Neuchâtel Vauseyon: Achse 2345 m, Ausschnitt s=742…1995, 9 Weichen, 2 Perrons
+W8 Abgang La Chaux-de-Fonds: Schräge durchgezogen bis zum Abgang (714 -> 739 px)
 chains 6 lanes 6 segs 26 W 1348 H 335
 
 Traceback (most recent call last):
@@ -43,5 +47,5 @@ Traceback (most recent call last):
                                     ~^^^^^^^^
 TypeError: string indices must be integers, not 'str'
 
-Netzprüfung neuchatel_vauseyon: {'W2': 1}; Durchfahrgleise 0
-  W2   x=752.8 y=134.0  S-Kurve in der Mitte unter 77° (steiler oder flacher als 60°)
+Netzprüfung neuchatel_vauseyon: {'Z2': 1}; Durchfahrgleise 0
+  Z2   x=686.3 y=-29.7  Pfeil «La Chaux-de-Fonds →» zeigt rechts, der Abgang verlässt den Plan nach links  (way 507891443)

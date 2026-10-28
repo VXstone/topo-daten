@@ -2,10 +2,11 @@
  "bahnhof": "neuchatel_vauseyon",
  "befunde": [
   {
-   "regel": "W2",
-   "x": 752.8,
-   "y": 134.0,
-   "text": "S-Kurve in der Mitte unter 77° (steiler oder flacher als 60°)"
+   "regel": "Z2",
+   "x": 686.3,
+   "y": -29.7,
+   "text": "Pfeil «La Chaux-de-Fonds →» zeigt rechts, der Abgang verlässt den Plan nach links",
+   "way": 507891443
   }
  ],
  "durchfahrgleise": []
