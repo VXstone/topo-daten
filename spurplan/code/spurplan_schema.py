@@ -2959,7 +2959,7 @@ TITLE_X = X(pax_mid)
 json.dump(dict(W=W, H=H, s_lo=s_lo, maxlane=maxlane,
                ends=[(sg["id"], X(sg["s0"]), X(sg["s1"]), ypos(sg["nodes"][0]), ypos(sg["nodes"][-1]), sg["cut0"], sg["cut1"], sg["pax"], sg["tags"].get("ref")) for sg in segs if sg["pax"] and (sg["cut0"] or sg["cut1"])]),
           open("meta.json", "w"))
-SIDE = []
+SIDE = []; SIDE_INFO = []
 # Override "seitlich": endet ein anderes Gleis im selben Randknoten (Weiche am Planrand, Kerzers Gleis 3 nach Lyss),
 # bekommt es keinen eigenen Längsabgang; es mündet in den seitlichen Abgang (Regionalvariante Kerzers 27.10.)
 _SEIT_N = {sg["nodes"][-1 if e_ else 0] for sg in segs if sg["way"] in OVR.get("seitlich", []) for e_ in (0, 1) if sg["cut%d" % e_]}
@@ -3043,6 +3043,100 @@ for x, y, end, dy, sg, n in SIDE:
         x0_ = x if _fil else xpos(n, sg["s1"] if end else sg["s0"])
         out.append(f'<path d="M{x0_:.1f},{y:.1f}L{x:.1f},{y:.1f}L{x2:.1f},{y2:.1f}" stroke="{green}" stroke-width="3.6" stroke-linecap="round" fill="none"/>')
     EXITS.append((x2, y2 + (-40 if dy < 0 else 44), exit_ref(sg), "middle", exit_town(sg, n)))
+    SIDE_INFO.append(dict(port=len(PORTS) - 1, exit=len(EXITS) - 1, x=x, y=y, x2=x2, y2=y2, ex=(len(out) - 1) if not ARGS.bare else None))
+
+def _treppe_abgang():
+    """Regel W8 im Bahnhofplan (28.10.2026, Vauseyon Hinweis 8jv1: «hier braucht es doch keinen Knick / Treppenstufe»):
+    Kommt ein Gleis schräg (unter 60°) aus dem Plan und läuft es vor dem seitlichen Abgang nur noch kurz waagrecht bzw.
+    über eine enge Kurve weiter, ohne dass dort etwas abzweigt, wird die Schräge direkt bis zum Abgang durchgezogen.
+    Anschlüsse am Knickpunkt wandern auf die Schräge (gleiche Höhe)."""
+    if not RU.get("w8", True): return
+    PATH = re.compile(r'<path d="([^"]*)"( stroke="(#[0-9a-f]+)"[^>]*)/>')
+    def subs(d):
+        return [x_ for x_ in re.split(r"(?=M)", d) if x_.strip()]
+    def pts(sp):
+        return [(float(a_), float(b_)) for a_, b_ in re.findall(r"(-?[\d.]+),(-?[\d.]+)", sp.replace("H", " H"))] if "H" not in sp else _hpts(sp)
+    def _hpts(sp):
+        P_, cur = [], None
+        for c_, a_ in re.findall(r"([MLHQC])([^MLHQC]*)", sp):
+            v_ = [float(z) for z in re.findall(r"-?[\d.]+", a_)]
+            if c_ == "H":
+                for z in v_: cur = (z, cur[1]); P_.append(cur)
+            else:
+                for i_ in range(0, len(v_), 2): cur = (v_[i_], v_[i_ + 1]); P_.append(cur)
+        return P_
+    near = lambda p_, q_: abs(p_[0] - q_[0]) < 0.6 and abs(p_[1] - q_[1]) < 0.6
+    for si in SIDE_INFO:
+        po = PORTS[si["port"]]; e = (po["dx"] * 0.5, po["dy"] * 0.866)
+        items = []                                   # (out-Index, Teilpfad-Index, Teilpfad, Farbe)
+        for oi, o_ in enumerate(out):
+            m_ = PATH.match(o_)
+            if not m_ or 'fill="none"' not in m_.group(2) and "fill" in m_.group(2) and 'fill="none"' not in o_: continue
+            for ki, sp in enumerate(subs(m_.group(1))):
+                P_ = pts(sp)
+                if len(P_) >= 2: items.append([oi, ki, sp, m_.group(3), P_])
+        start = (si["x"], si["y"])
+        R = [it for it in items if near(it[4][-1], start) and it[0] != si["ex"]]
+        if len(R) != 1 or R[0][3] != green: continue
+        weg = [R[0]]; cur = R[0][4][0]; K = J = None
+        for _ in range(4):
+            an = [it for it in items if it not in weg and it[0] != si["ex"] and (near(it[4][0], cur) or near(it[4][-1], cur))]
+            # Schräge parallel zum Abgang, die hier endet?
+            par = []
+            for it in an:
+                P_ = it[4] if near(it[4][-1], cur) else it[4][::-1]
+                for a_, b_ in zip(P_, P_[1:]):
+                    v_ = (b_[0] - a_[0], b_[1] - a_[1]); l_ = math.hypot(*v_)
+                    if l_ > 8 and abs(v_[0] * e[1] - v_[1] * e[0]) / l_ < 0.03 and (v_[0] * e[0] + v_[1] * e[1]) > 0: par.append((it, a_, b_))
+            if par and par[0][0][3] == green: K = cur; J = par[0]; break
+            gr = [it for it in an if it[3] == green]
+            if len(an) != 1 or len(gr) != 1: break
+            weg.append(gr[0]); cur = gr[0][4][-1] if near(gr[0][4][0], cur) else gr[0][4][0]
+        if K is None or abs(K[0] - start[0]) > 3.5 * 24: continue
+        it_j, a_, b_ = J                              # gerades Stück der Schräge, Richtung zum Abgang
+        def auf(yq):                                  # Punkt der Schräge auf Höhe yq
+            t_ = (yq - a_[1]) / (b_[1] - a_[1]); return (a_[0] + t_ * (b_[0] - a_[0]), yq)
+        Kp = auf(K[1]); Pp = auf(si["y"]); Ep = auf(si["y2"])
+        # Schräge: Teilpfad J endet bei b_ (Ausrundung zum Knick K entfällt)
+        P_j = it_j[4]; sp_j = it_j[2]
+        neu_j = None
+        if near(P_j[-1], K):
+            i_ = sp_j.rfind(f"L{b_[0]:.1f},{b_[1]:.1f}")
+            if i_ >= 0: neu_j = sp_j[:i_] + f"L{b_[0]:.1f},{b_[1]:.1f}"
+            if neu_j is not None: neu_j += f"L{Pp[0]:.1f},{Pp[1]:.1f}"
+        elif near(P_j[0], K):
+            t_ = f"{b_[0]:.1f},{b_[1]:.1f}"; i_ = sp_j.find(t_)
+            if i_ >= 0: neu_j = f"M{Pp[0]:.1f},{Pp[1]:.1f}L{t_}" + sp_j[i_ + len(t_):]
+        if neu_j is None: continue
+        # Änderungen in out schreiben: je out-Eintrag Teilpfade ersetzen/entfernen
+        aend = {}
+        for it in weg: aend.setdefault(it[0], {})[it[1]] = ""
+        aend.setdefault(it_j[0], {})[it_j[1]] = neu_j
+        for it in items:                              # Anschlüsse am Knick auf die Schräge
+            if it in weg or it is it_j: continue
+            if near(it[4][0], K) or near(it[4][-1], K):
+                sp_ = it[2].replace(f"{K[0]:.1f},{K[1]:.1f}", f"{Kp[0]:.1f},{Kp[1]:.1f}").replace(f"H{K[0]:.1f}", f"H{Kp[0]:.1f}")
+                # Weiche auf der Schräge ausrunden (G2): gerades Ende -> Bogen in die Schräge
+                P2 = _hpts(sp_); am_ende = near(P2[-1], Kp)
+                Q_ = P2[-2] if am_ende else P2[1]
+                h_ = (Kp[0] - Q_[0], Kp[1] - Q_[1]); lh = math.hypot(*h_)
+                if lh > 9 and re.search(r"[HL][^MHLQC]*$" if am_ende else r"^M[^HLQC]*[HL]", sp_.strip()):
+                    h_ = (h_[0] / lh, h_[1] / lh); w_ = e if (e[0] * h_[0] + e[1] * h_[1]) > 0 else (-e[0], -e[1])
+                    p1 = (Kp[0] - h_[0] * 7, Kp[1] - h_[1] * 7); p2 = (Kp[0] + w_[0] * 7, Kp[1] + w_[1] * 7)
+                    bogen = f"Q{Kp[0]:.1f},{Kp[1]:.1f} {p2[0]:.1f},{p2[1]:.1f}"
+                    if am_ende: sp_ = re.sub(r"([HL])[^MHLQC]*$", f"L{p1[0]:.1f},{p1[1]:.1f}{bogen}", sp_.strip())
+                    else: sp_ = f"M{p2[0]:.1f},{p2[1]:.1f}Q{Kp[0]:.1f},{Kp[1]:.1f} {p1[0]:.1f},{p1[1]:.1f}" + re.sub(r"^M[^HLQC]*", "", sp_.strip())
+                aend.setdefault(it[0], {})[it[1]] = sp_
+        for oi, ch_ in aend.items():
+            m_ = PATH.match(out[oi]); sp_all = subs(m_.group(1))
+            sp_all = [ch_.get(k_, x_) for k_, x_ in enumerate(sp_all)]
+            out[oi] = f'<path d="{" ".join(x_ for x_ in sp_all if x_)}"' + out[oi][m_.end(1) + 1:]
+        if si["ex"] is not None:
+            out[si["ex"]] = f'<path d="M{Pp[0]:.1f},{Pp[1]:.1f}L{Ep[0]:.1f},{Ep[1]:.1f}" stroke="{green}" stroke-width="3.6" stroke-linecap="round" fill="none"/>'
+        po["x"], po["y"] = round(Pp[0], 1), round(Pp[1], 1)
+        ex_ = EXITS[si["exit"]]; EXITS[si["exit"]] = (Ep[0],) + tuple(ex_[1:])
+        print(f"W8 Abgang {po.get('town')}: Schräge durchgezogen bis zum Abgang ({start[0]:.0f} -> {Pp[0]:.0f} px)")
+_treppe_abgang()
 if ARGS.bare: EXITS = []
 _town = {}
 for e_ in EXITS:
