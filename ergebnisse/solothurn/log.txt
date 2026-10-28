@@ -27,8 +27,8 @@ chains 34 lanes 20 segs 133 W 1865 H 675
 $ spurplan_check.py --src solothurn.json --out /tmp/spurplan_lauf/_check_solothurn.svg
 Bahnhof Solothurn: Achse 2830 m, Ausschnitt s=429…2531, 57 Weichen, 8 Perrons
 chains 34 lanes 20 segs 133 W 1865 H 675
-Befunde: {'A': 3, 'B': 23}
-eindeutig: {'A': 3, 'B': 21}
+Befunde: {'A': 3, 'B': 23, 'F': 2}
+eindeutig: {'A': 3, 'B': 21, 'F': 2}
 A x=   862 y=  280  Verbindung nicht geschlossen (21px): 444 (way 49565865)
 A x=  1436 y=  400  Verbindung nicht geschlossen (11px): siding (way 251195480)
 A x=  1436 y=  364  Verbindung nicht geschlossen (27px): siding (way 251195480), 914 (way 251195487)
@@ -53,6 +53,8 @@ B x=  1462 y=  354  Überlagerung 33px: siding (way 251195480) / 914 (way 251195
 B x=  1464 y=  352  Überlagerung 61px: 959 (way 49565840) / 956 (way 1534903300)
 B x=  1522 y=  429  Scheinverbindung: 904 (way 49565917) berührt yard (way 251195479)
 B x=  1522 y=  429  Scheinverbindung: yard (way 251195476) berührt yard (way 251195479)
+F x=  1128 y=  416  Weiche falsch herum: Weichenanfang in OSM 976 (way 49565885), gezeichnet 975 (way 1529724770)
+F x=  1373 y=  442  Weiche falsch herum: Weichenanfang in OSM siding (way 251195480), gezeichnet siding (way 251195480)
 
 $ spurplan_schema.py --src solothurn.json --bare --out solothurn_bare.svg
 Bahnhof Solothurn: Achse 2830 m, Ausschnitt s=429…2531, 57 Weichen, 8 Perrons

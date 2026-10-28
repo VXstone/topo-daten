@@ -7,7 +7,7 @@
   "5/6 Mittelperron 221.0 [1716] → 1508 1747 OSM-Perron",
   "geschrieben solothurn_override.json"
  ],
- "topologie": "{'A': 3, 'B': 23}",
+ "topologie": "{'A': 3, 'B': 23, 'F': 2}",
  "verbindungen_abweichungen": 0,
  "verbindungen": [],
  "regeln": [
@@ -235,6 +235,7 @@
   "topo_C": 0,
   "topo_D": 0,
   "topo_E": 0,
+  "topo_F": 2,
   "regel_G2": 5,
   "regel_G6": 7,
   "regel_G7": 3,

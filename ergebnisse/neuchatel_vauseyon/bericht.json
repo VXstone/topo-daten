@@ -4,8 +4,8 @@
  "sbb_perrons": [
   "1 Aussenperron 181.0 [1350] → übersprungen: Gleis 1 in OSM bei 745–745, SBB-Punkte daneben"
  ],
- "topologie": "{'A': 1}",
- "verbindungen_abweichungen": null,
+ "topologie": "{}",
+ "verbindungen_abweichungen": 0,
  "verbindungen": [],
  "regeln": [
   {
@@ -27,11 +27,12 @@
   }
  ],
  "qualitaet": {
-  "topo_A": 1,
+  "topo_A": 0,
   "topo_B": 0,
   "topo_C": 0,
   "topo_D": 0,
   "topo_E": 0,
+  "topo_F": 0,
   "regel_G2": 1,
   "netz_Z2": 1,
   "boegen_pax": 3,

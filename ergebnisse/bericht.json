@@ -1,6 +1,6 @@
 {
- "erzeugt": "2026-10-28 07:04 UTC",
- "lauf": "https://github.com/VXstone/topo-daten/actions/runs/40647584230",
+ "erzeugt": "2026-10-28 10:20 UTC",
+ "lauf": "https://github.com/VXstone/topo-daten/actions/runs/40671171518",
  "bahnhoefe": {
   "neuchatel": {
    "ok": true,
@@ -49,8 +49,8 @@
   "neuchatel_vauseyon": {
    "ok": true,
    "fehler": null,
-   "topologie": "{'A': 1}",
-   "verbindungen_abweichungen": null,
+   "topologie": "{}",
+   "verbindungen_abweichungen": 0,
    "gleich_wie_vergleich": null,
    "regeln": {
     "G2": 1
@@ -71,14 +71,15 @@
      "netz_F7": -1,
      "netz_W2": -1,
      "randabstand": -2,
-     "regel_G8": -6
+     "regel_G8": -6,
+     "topo_A": -1
     }
    }
   },
   "solothurn": {
    "ok": true,
    "fehler": null,
-   "topologie": "{'A': 3, 'B': 23}",
+   "topologie": "{'A': 3, 'B': 23, 'F': 2}",
    "verbindungen_abweichungen": 0,
    "gleich_wie_vergleich": null,
    "regeln": {
@@ -94,8 +95,10 @@
    },
    "differenz_stellen": null,
    "qualitaet": {
-    "status": "gleich",
-    "schlechter": {},
+    "status": "schlechter",
+    "schlechter": {
+     "topo_F": 2
+    },
     "besser": {}
    }
   }
