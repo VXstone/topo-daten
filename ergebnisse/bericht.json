@@ -1,6 +1,6 @@
 {
- "erzeugt": "2026-10-28 13:32 UTC",
- "lauf": "https://github.com/VXstone/topo-daten/actions/runs/40697129861",
+ "erzeugt": "2026-10-28 21:56 UTC",
+ "lauf": "https://github.com/VXstone/topo-daten/actions/runs/40775835812",
  "bahnhoefe": {
   "neuchatel": {
    "ok": true,
@@ -18,7 +18,8 @@
    "qualitaet": {
     "status": "gleich",
     "schlechter": {},
-    "besser": {}
+    "besser": {},
+    "topologie_offen": {}
    }
   },
   "konolfingen": {
@@ -43,7 +44,11 @@
    "qualitaet": {
     "status": "gleich",
     "schlechter": {},
-    "besser": {}
+    "besser": {},
+    "topologie_offen": {
+     "topo_A": 1,
+     "topo_B": 2
+    }
    }
   },
   "neuchatel_vauseyon": {
@@ -72,7 +77,8 @@
      "randabstand": -2,
      "regel_G8": -6,
      "topo_A": -1
-    }
+    },
+    "topologie_offen": {}
    }
   },
   "solothurn": {
@@ -98,7 +104,12 @@
     "schlechter": {
      "topo_F": 2
     },
-    "besser": {}
+    "besser": {},
+    "topologie_offen": {
+     "topo_A": 3,
+     "topo_B": 23,
+     "topo_F": 2
+    }
    }
   }
  }
