@@ -430,7 +430,11 @@ def connector(A, a, B, b):
         if abs(_cr(v, d)) < 1e-6 and v @ d > 0: cands.append((score([a, v, -b], [np.linalg.norm(d)]) - 1, [A, A1, B1, B]))
     if AUTO:                                       # automatische Lage: gerade Strecke in beliebiger Richtung (16.10.)
         dn = d / np.linalg.norm(d)
-        if turn(a, dn) <= L0.get("auto_knick", 61) and turn(dn, -b) <= L0.get("auto_knick", 61): cands.append((score([a, dn, -b], [np.linalg.norm(d)]) - 3, [A, A1, B1, B]))
+        if turn(a, dn) <= L0.get("auto_knick", 61) and turn(dn, -b) <= L0.get("auto_knick", 61):
+            # schiefe Knicke (zwischen 8° und 52°) nur, wenn es keinen sauberen 60°-Knick gibt (D. Eckenstein 28.10.,
+            # Müntschemier: «oben ein Winkel, der es in die Ebene Richtung Neuenburg bringt»)
+            _schief = sum(1 for q_ in (turn(a, dn), turn(dn, -b)) if 8 < q_ < 52)
+            cands.append((score([a, dn, -b], [np.linalg.norm(d)]) - 3 + 40 * _schief, [A, A1, B1, B]))
         # genau ein Knick am Schnittpunkt der beiden Portgeraden (Hinweis 18.10.: "mit den Ästen aus dem Bahnhof raus auf 60 Grad
         # gehen, dann braucht es den Knick nicht"): liegt ein Ende auf der Kettenachse, knickt die Strecke direkt am Port
         dAB = (B - A) / (np.linalg.norm(B - A) or 1)

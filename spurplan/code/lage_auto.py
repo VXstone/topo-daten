@@ -182,7 +182,7 @@ def ketten(nodes, MAJOR, routes, anchor, PORTS, S, P, fix, L0):
             a_ = anc(ch["ks"][j_], h_)
             if h_ in inner or not a_ or not a_.get("side") or nodes[h_]["name"] not in P.get("seiten_richtung", []): continue
             u_ = rotv(np.array(a_["v"], float), rot.get(h_, 0)); u_ = sg_ * u_ / (np.linalg.norm(u_) or 1)
-            if float(u_ @ d) > 0.5 * (np.linalg.norm(d) or 1): ch["T"] = u_ * L; ch["w"] = P.get("seiten_gewicht", 1.0)
+            if float(u_ @ d) > 0.5 * (np.linalg.norm(d) or 1): ch["T"] = u_ * L; ch["w"] = P.get("seiten_gewicht", 1.0); ch["seite"] = (j_, u_)
             if os.environ.get("KDBG"): print("SEITE", [nodes[x]["name"] for x in ch["seq"]], u_.round(2), (d / (np.linalg.norm(d) or 1)).round(2))
     # Ketten, die an einem Knoten fast in dieselbe Richtung abgehen, auf mindestens 28° spreizen (sonst überlagern sie sich)
     for h in hubs:
@@ -225,6 +225,10 @@ def ketten(nodes, MAJOR, routes, anchor, PORTS, S, P, fix, L0):
             inn = ch["seq"][1:-1]
             if not inn: continue
             dv = B - A; Ltot = np.linalg.norm(dv) or 1.0; u = dv / Ltot
+            # Kette ab einem seitlichen Abgang (seiten_richtung): Bahnhöfe auf der Abgangsrichtung, Knick erst am
+            # anderen Ende (D. Eckenstein 28.10.: Müntschemier im Winkel von Kerzers, oben ein Winkel Richtung Ins)
+            _sei = ch.get("seite")
+            if _sei: u = np.asarray(_sei[1], float) / (np.linalg.norm(_sei[1]) or 1)
             th = math.degrees(math.atan2(u[1], u[0]))
             ws = [boxwh(n)[0] for n in inn]
             lens = [routes[x]["length"] for x in ch["ks"]]
@@ -252,7 +256,7 @@ def ketten(nodes, MAJOR, routes, anchor, PORTS, S, P, fix, L0):
                     for i_ in hi: gaps[i_] -= (gaps[i_] - P["gap"]) * f_
             s = 0.0
             for j, n in enumerate(inn):
-                s += gaps[j] + ws[j] / 2; pos[n] = A + u * s; s += ws[j] / 2
+                s += gaps[j] + ws[j] / 2; pos[n] = (B - u * (Ltot - s)) if (_sei and _sei[0] == -1) else (A + u * s); s += ws[j] / 2
                 left_k = [k for k in inc[n] if anc(k, n)["v"][0] < 0][0]
                 prev_k = ch["ks"][j]           # Strecke Richtung A
                 r = th if prev_k == left_k else th + 180

@@ -402,62 +402,7 @@
   -3107,
   1909
  ],
- "nebengleis_hand": [
-  {
-   "weg": [
-    37214725,
-    37214727,
-    580054999,
-    1104427571
-   ],
-   "pts": [
-    [
-     -710,
-     -308.5
-    ],
-    [
-     -716,
-     -298.8
-    ],
-    [
-     -764,
-     -291.0
-    ]
-   ],
-   "punkt": true,
-   "_hinweis": "Vauseyon: Anschluss Seite Neuchâtel aus der Einspur (223), teilt sich in 2 (D.E. 20.10.)"
-  },
-  {
-   "weg": [
-    37214725,
-    37214727,
-    580054999,
-    1104427571
-   ],
-   "pts": [
-    [
-     -733,
-     -296.0
-    ],
-    [
-     -738,
-     -288.6
-    ],
-    [
-     -760,
-     -285.0
-    ]
-   ],
-   "punkt": true
-  },
-  {
-   "weg": [
-    49801712
-   ],
-   "pts": [],
-   "_hinweis": "kurzes Stumpengleis an der 223, weggelassen (sonst Überlagerung mit dem Anschluss)"
-  }
- ],
+ "nebengleis_hand": [],
  "xo_versatz": {
   "1411239688": -50,
   "_hinweis": "Ligerz/Schafis 21.10.: zwei Spurwechsel in OSM-Reihenfolge, beide Richtung La Neuveville versetzt, damit das Anschlussgleis Schafis auf der Seite Ligerz/Biel nach beiden Spurwechseln liegt (R3)",
