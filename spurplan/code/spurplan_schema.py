@@ -1640,6 +1640,11 @@ for sg in segs:
         if (SD[n_out][0] <= CFG["s_min"] + 15 and not end) or (SD[n_out][0] >= CFG["s_max"] - 15 and end) or n_out in EDGE_LONG:
             arrows.append((xe, ye, dr))                       # läuft am Planrand weiter
         else:                                                 # läuft seitlich aus dem Plan
+            # Stück ohne Länge (Abgang direkt an der Weiche, Regel 28): Pfeil an der Weiche selbst ansetzen, nicht eine
+            # Ebene daneben in der Luft (Vauseyon 28.10., Hinweis gjx6: «Weiche in die andere Richtung?», Topologie A)
+            _an_weiche = abs(x1 - x0) < 1.0 and abs(y1 - y0) > 1.0
+            if _an_weiche:
+                xe, ye = (x1, y1) if end == 0 else (x0, y0)
             # Richtung des Abgangs aus der echten Lage des ersten Punkts ausserhalb
             w = ways[sg["way"]]; i = w["nodes"].index(n_out)
             nb = [w["nodes"][j] for j in (i - 1, i + 1) if 0 <= j < len(w["nodes"]) and w["nodes"][j] not in sg["nodes"]]
@@ -1682,6 +1687,7 @@ for sg in segs:
             svg_paths[False].append(f"M{xe:.1f},{ye:.1f}L{ex:.1f},{ey:.1f}")
             ang = math.atan2(ey - ye, ex - xe)
             STUBS.append((ex, ey, ang)); STUB_SRC.append((sg["way"], f"M{xe:.1f},{ye:.1f}L{ex:.1f},{ey:.1f}", (ex, ey, ang)))
+            if _an_weiche: DBG.append((sg["id"], f"M{xe:.1f},{ye:.1f}L{ex:.1f},{ey:.1f}"))     # für die Topologieprüfung: Gleis = Stummel
             if ARGS.dbg: print("STUB", sg["way"], sg["tags"].get("service"), sg["tags"].get("usage"), sg["tags"].get("name"), round(xe), round(ye), up)
 
 # Regel 38 (nur --hauptgleise): Weichen in weggelassene Anlagen (Rangier-/Güter-/Anschlussgleise) als Abgang andeuten -

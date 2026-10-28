@@ -30,7 +30,9 @@ for l in seg.splitlines():
     if l.startswith("SEG "):
         f = l.split(); SEG.append(dict(way=int(f[2]), pax=f[3] == "1", a=int(f[4]), b=int(f[5]),
                                        xa=float(f[6]), ya=float(f[7]), xb=float(f[8]), yb=float(f[9])))
-D = json.load(open(f"{st}.json")); E = D["elements"] if "elements" in D else D
+D = json.load(open(f"{st}.json"))
+if isinstance(D, dict) and "elements" not in D and len(D) == 1: D = next(iter(D.values()))     # {bahnhof: {elements}} (Vauseyon 28.10.)
+E = D["elements"] if "elements" in D else D
 WAY = {e["id"]: e for e in E if e["type"] == "way"}
 ND = {}
 for e in E:

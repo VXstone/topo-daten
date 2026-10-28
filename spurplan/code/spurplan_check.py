@@ -129,6 +129,38 @@ for s in np.arange(G["CFG"]["s_min"] + 50, G["CFG"]["s_max"], 50):
             x = G["X"](s)
             issues.append(("D", (x, G["Y"](l1)), f"Reihenfolge vertauscht bei s={s:.0f}: Lane {l1} über {l2}, real umgekehrt"))
 
+# ---- F: Weichenrichtung (28.10.2026, Vauseyon Hinweis gjx6: «gibt es eine Prüfung, ob die Weiche in die richtige
+# Richtung abgeht?»). An jedem OSM-Knoten mit genau drei gezeichneten Gleisen: das Gleis, das den beiden anderen
+# gegenüberliegt (Weichenanfang), muss in der Zeichnung dasselbe sein wie in OSM.
+P_ = G["P"]; WAYS_ = G["ways"]
+def _osm_v(sg, n):
+    w = WAYS_[sg["way"]]["nodes"]; i = w.index(n) if n in w else -1
+    nb = [w[j] for j in (i - 1, i + 1) if 0 <= j < len(w) and w[j] in sg["nodes"] and w[j] in P_]
+    if i < 0 or not nb or n not in P_: return None
+    v = np.subtract(P_[nb[0]], P_[n]); return v / (np.linalg.norm(v) or 1)
+def _plan_v(sg, q):
+    m_ = sg["nodes"][-1] if np.allclose([xpos(sg["nodes"][0], SD[sg["nodes"][0]][0]), ypos(sg["nodes"][0])], q, atol=1.5) else sg["nodes"][0]
+    if m_ in SD:                                   # Richtung zum anderen Ende des Segments (robuster als Linienpunkte)
+        v = np.array([xpos(m_, SD[m_][0]), ypos(m_)]) - q
+        if np.linalg.norm(v) > 3: return v / np.linalg.norm(v)
+    pts = poly.get(sg["id"])
+    if pts is None: return None
+    d = np.hypot(*(pts - q).T); ok = (d > 10) & (d < 30)
+    if not ok.any() or d.min() > TOL + 1: return None
+    v = pts[ok][np.argmin(d[ok])] - q; return v / (np.linalg.norm(v) or 1)
+def _spitze(vs):
+    k = [i for i in range(3) if all(float(vs[i] @ vs[j]) < 0.3 for j in range(3) if j != i)]
+    return k[0] if len(k) == 1 else None
+for n, ss in inc.items():
+    ss = [s for s in ss if s["id"] in poly]
+    if len(ss) != 3 or n not in SD or any(s["way"] in KXW for s in ss): continue
+    q = np.array([xpos(n, SD[n][0]), ypos(n)])
+    vo = [_osm_v(s, n) for s in ss]; vp = [_plan_v(s, q) for s in ss]
+    if any(v is None for v in vo + vp): continue
+    ko, kp = _spitze(vo), _spitze(vp)
+    if ko is not None and kp is not None and ko != kp:
+        issues.append(("F", q, f"Weiche falsch herum: Weichenanfang in OSM {label(ss[ko])}, gezeichnet {label(ss[kp])}"))
+
 # ---- Ausgabe
 cnt = collections.Counter(i[0] for i in issues)
 print("Befunde:", dict(cnt))
@@ -140,7 +172,7 @@ print("eindeutig:", dict(cnt))
 for t, q, msg in sorted(issues, key=lambda i: (i[0], i[1][0])):
     print(f"{t} x={q[0]:6.0f} y={q[1]:5.0f}  {msg}")
 
-col = {"A": "#e00", "B": "#e00", "C": "#f90", "D": "#06c"}
+col = {"F": "#d06", "A": "#e00", "B": "#e00", "C": "#f90", "D": "#06c"}
 svg = open(G["CFG"]["out"]).read()
 marks = "".join(
     f'<circle cx="{q[0]:.1f}" cy="{q[1]:.1f}" r="9" fill="none" stroke="{col[t]}" stroke-width="2.5"/>'

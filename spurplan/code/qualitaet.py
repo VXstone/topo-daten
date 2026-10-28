@@ -27,7 +27,7 @@ def messen(b, check=None, regeln=None):
     k = {}
     if check:
         c = check if isinstance(check, dict) else ast.literal_eval(check)
-        for x in "ABCDE": k[f"topo_{x}"] = int(c.get(x, 0))
+        for x in "ABCDEF": k[f"topo_{x}"] = int(c.get(x, 0))
     if regeln and os.path.exists(regeln):
         r = json.load(open(regeln))
         r = collections.Counter(x["regel"] for x in r) if isinstance(r, list) else r
