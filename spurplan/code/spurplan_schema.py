@@ -2477,6 +2477,35 @@ for xs_, xk_, ys_ in _RS:
         if (xk_ - x0_) * (xk_ - xs_) <= 0 or abs(xk_ - x0_) <= abs(xk_ - xs_): return m_[0]
         return f"M{m_[1]},{ys_}{m_[2]}H{xs_:.1f}"
     svg_paths = {k_: [pat_.sub(_tr, d_) for d_ in v_] for k_, v_ in svg_paths.items()}
+# Regel G6 (28.10.2026, Vauseyon Hinweis ypdo: «Rundung nicht vor Stummel»): ein gerades Stück, das über den Anfang
+# einer Ausrundung hinaus bis zu 9 px weiterläuft und dort frei endet, wird am Anfang der Ausrundung gekürzt (kein Knubbel)
+def _knubbel(svg_paths):
+    alle = [(k_, i_, sp_) for k_, v_ in svg_paths.items() for i_, d_ in enumerate(v_) for sp_ in re.split(r"(?=M)", d_) if sp_.strip()]
+    starts = [tuple(map(float, re.match(r"M(-?[\d.]+),(-?[\d.]+)", sp_).groups())) for _, _, sp_ in alle]
+    qstarts = [st_ for st_, (_, _, sp_) in zip(starts, alle) if re.match(r"M[-\d.]+,[-\d.]+Q", sp_.strip())]
+    ends = []
+    for _, _, sp_ in alle:
+        pts_ = re.findall(r"(-?[\d.]+),(-?[\d.]+)", sp_); h_ = re.findall(r"H(-?[\d.]+)\s*$", sp_.strip())
+        ends.append((float(h_[0]), float(pts_[-1][1])) if h_ else (float(pts_[-1][0]), float(pts_[-1][1])))
+    ersatz = {}
+    for (k_, i_, sp_), st_, en_ in zip(alle, starts, ends):
+        m_ = re.fullmatch(r"M(-?[\d.]+),(-?[\d.]+)H(-?[\d.]+)", sp_.strip())
+        if not m_: continue
+        x0_, y_, x1_ = float(m_[1]), float(m_[2]), float(m_[3])
+        for qx_, qy_ in qstarts:
+            if abs(qy_ - y_) > 0.3: continue
+            for frei_, anf_ in ((x1_, x0_), (x0_, x1_)):
+                if 0.5 < abs(frei_ - qx_) <= 9 and (qx_ - anf_) * (frei_ - anf_) > 0 and abs(qx_ - anf_) < abs(frei_ - anf_):
+                    anz_ = sum(1 for (a_, b_) in starts + ends if abs(a_ - frei_) < 0.6 and abs(b_ - y_) < 0.6)
+                    if anz_ <= 1:
+                        neu_ = f"M{x0_:.1f},{y_:.1f}H{qx_:.1f}" if frei_ == x1_ else f"M{qx_:.1f},{y_:.1f}H{x1_:.1f}"
+                        ersatz[(k_, i_, sp_)] = neu_
+    for (k_, i_, sp_), neu_ in ersatz.items():
+        svg_paths[k_][i_] = svg_paths[k_][i_].replace(sp_.strip(), neu_, 1)
+    return len(ersatz)
+if RU.get("g6_knubbel", True):
+    _nk = _knubbel(svg_paths)
+    if _nk: print(f"G6: {_nk} Überstand(e) vor Ausrundung gekürzt")
 _BRAUN = {True: [], False: []}
 if SCHMAL_GEMISCHT:
     # gemischter Bahnhof (Montreux, Zweisimmen): Teilpfade nach der nächstgelegenen Spur trennen, Schmalspur braun
@@ -3055,7 +3084,7 @@ for x, y, end, dy, sg, n in SIDE:
         x0_ = x if _fil else xpos(n, sg["s1"] if end else sg["s0"])
         out.append(f'<path d="M{x0_:.1f},{y:.1f}L{x:.1f},{y:.1f}L{x2:.1f},{y2:.1f}" stroke="{green}" stroke-width="3.6" stroke-linecap="round" fill="none"/>')
     EXITS.append((x2, y2 + (-40 if dy < 0 else 44), exit_ref(sg), "middle", exit_town(sg, n)))
-    SIDE_INFO.append(dict(port=len(PORTS) - 1, exit=len(EXITS) - 1, x=x, y=y, x2=x2, y2=y2, ex=(len(out) - 1) if not ARGS.bare else None))
+    SIDE_INFO.append(dict(port=len(PORTS) - 1, exit=len(EXITS) - 1, x=x, y=y, x2=x2, y2=y2, ex=(len(out) - 1) if not ARGS.bare else None, sg=sg, n=n))
 
 def _treppe_abgang():
     """Regel W8 im Bahnhofplan (28.10.2026, Vauseyon Hinweis 8jv1: «hier braucht es doch keinen Knick / Treppenstufe»):
@@ -3149,6 +3178,56 @@ def _treppe_abgang():
         ex_ = EXITS[si["exit"]]; EXITS[si["exit"]] = (Ep[0],) + tuple(ex_[1:])
         print(f"W8 Abgang {po.get('town')}: Schräge durchgezogen bis zum Abgang ({start[0]:.0f} -> {Pp[0]:.0f} px)")
 _treppe_abgang()
+
+def _abgang_weichen():
+    """Regel 39b (28.10.2026, Vauseyon Hinweis ok5v: «weiter oben ist noch ein Mini-Stumpen auf die andere Seite»):
+    Weichen kurz hinter einem seitlichen Abgang (bis 150 m entlang der Strecke) werden auf der Abgangsschräge angedeutet:
+    waagrechter Stummel in Richtung des abzweigenden Gleises, Prellbock wenn es dort endet, sonst Pfeil."""
+    if ARGS.bare or not RU.get("r39b", True): return
+    use_ = collections.Counter(n_ for w_ in ways.values() for n_ in w_["nodes"])
+    for si in SIDE_INFO:
+        sg_, n_ = si["sg"], si["n"]; w_ = ways[sg_["way"]]
+        if si["ex"] is None: continue
+        # entlang der Strecke vom Schnittknoten nach aussen gehen (über Way-Grenzen derselben Linie)
+        ref_ = w_["tags"].get("ref"); cur, prev, dist_, gef = n_, None, 0.0, []
+        inn = sg_["nodes"][1] if sg_["nodes"][0] == n_ else sg_["nodes"][-2]
+        prev = inn
+        for _ in range(60):
+            nxt = None
+            for ww in ways.values():
+                if cur not in ww["nodes"] or ww["tags"].get("ref") != ref_ or ww["tags"].get("service"): continue
+                i_ = ww["nodes"].index(cur)
+                for j_ in (i_ - 1, i_ + 1):
+                    if 0 <= j_ < len(ww["nodes"]) and ww["nodes"][j_] != prev: nxt = ww["nodes"][j_]
+                if nxt: break
+            if nxt is None or nxt not in P or cur not in P: break
+            dist_ += math.dist(P[cur], P[nxt]); prev, cur = cur, nxt
+            if dist_ > 150: break
+            for ww in ways.values():
+                t_ = ww["tags"]
+                if cur in ww["nodes"] and t_.get("service") in ("spur", "siding", "yard") and t_.get("railway") == "rail":
+                    i_ = ww["nodes"].index(cur); j_ = i_ + 1 if i_ + 1 < len(ww["nodes"]) else i_ - 1
+                    if ww["nodes"][j_] not in P: continue
+                    ende = ww["nodes"][-1] if i_ == 0 else ww["nodes"][0]
+                    tot = use_[ende] == 1
+                    v_ = np.subtract(P[ww["nodes"][j_]], P[cur]); s_dir = project(tuple(np.add(P[cur], v_)))[0] - project(P[cur])[0]
+                    gef.append((dist_, 1 if s_dir > 0 else -1, tot, ww["id"]))
+        if not gef: continue
+        m_ = re.match(r'<path d="M([-\d.]+),([-\d.]+)L([-\d.]+),([-\d.]+)"', out[si["ex"]])
+        if not m_: continue
+        a_ = (float(m_.group(1)), float(m_.group(2))); b_ = (float(m_.group(3)), float(m_.group(4)))
+        L_ = math.dist(a_, b_)
+        for k_, (d_, dx_, tot, wid) in enumerate(gef[:3]):
+            t_ = min(0.75, 0.25 + 0.2 * k_ + d_ / 600)
+            q_ = (a_[0] + (b_[0] - a_[0]) * t_, a_[1] + (b_[1] - a_[1]) * t_)
+            u_ = ((b_[0] - a_[0]) / L_, (b_[1] - a_[1]) / L_)
+            if u_[0] * dx_ < 0: u_ = (-u_[0], -u_[1])
+            c_ = (q_[0] + u_[0] * 7, q_[1] + u_[1] * 7); h_ = (c_[0] + dx_ * 7, c_[1]); e_ = (c_[0] + dx_ * 24, c_[1])
+            out.append(f'<path d="M{q_[0]:.1f},{q_[1]:.1f}Q{c_[0]:.1f},{c_[1]:.1f} {h_[0]:.1f},{h_[1]:.1f}L{e_[0]:.1f},{e_[1]:.1f}" stroke="{black}" stroke-width="1.6" fill="none"/>')
+            if tot: out.append(f'<circle cx="{e_[0]:.1f}" cy="{e_[1]:.1f}" r="3.2" fill="{black}"/>')
+            else: out.append(f'<path d="M{e_[0]:.1f},{e_[1] - 4:.1f}L{e_[0] + 9 * dx_:.1f},{e_[1]:.1f}L{e_[0]:.1f},{e_[1] + 4:.1f}Z" fill="{black}"/>')
+            print(f"R39b Abgang {PORTS[si['port']].get('town')}: Weiche {d_:.0f} m hinter dem Planrand angedeutet (Way {wid})")
+_abgang_weichen()
 if ARGS.bare: EXITS = []
 _town = {}
 for e_ in EXITS:
