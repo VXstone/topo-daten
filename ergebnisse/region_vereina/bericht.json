@@ -1,6 +1,6 @@
 {
  "region": "vereina",
- "erzeugt": "2026-10-29 21:08 UTC",
+ "erzeugt": "2026-10-29 22:29 UTC",
  "bahnhoefe": {
   "sagliains": {
    "name": "Sagliains",
@@ -8,14 +8,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "susch": {
-   "name": "Susch",
-   "ok": true,
-   "befunde": "Befunde: {}",
-   "optionen": []
-  },
   "sagliains_autoverlad": {
    "name": "Sagliains Autoverlad",
+   "ok": true,
+   "befunde": "Befunde: {'B': 1}",
+   "optionen": []
+  },
+  "susch": {
+   "name": "Susch",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -38,16 +38,16 @@
    "befunde": "Befunde: {'B': 2}",
    "optionen": []
   },
-  "selfranga_sud": {
-   "name": "Selfranga Süd",
-   "ok": true,
-   "befunde": "Befunde: {}",
-   "optionen": []
-  },
   "klosters_selfranga": {
    "name": "Klosters Selfranga",
    "ok": true,
    "befunde": "Befunde: {'B': 4}",
+   "optionen": []
+  },
+  "selfranga_sud": {
+   "name": "Selfranga Süd",
+   "ok": true,
+   "befunde": "Befunde: {}",
    "optionen": []
   },
   "vereina_sud": {
@@ -71,8 +71,8 @@
  },
  "netz_lage": 0,
  "regeln": {
-  "G2": 11,
+  "G2": 7,
   "G6": 1,
-  "G8": 3
+  "G8": 1
  }
 }

@@ -1,16 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 687 239" width="687" height="239" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 767 239" width="767" height="239" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#fff"/>
 <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-<path d="M368.6,110.0Q374.6,110.0 377.6,115.2L387.3,132.1Q388.4,134.0 390.7,134.0H390.7M390.7,134.0H409.0" stroke="#9a5b1e" stroke-width="1.6"/>
-<path d="M257.7,110.0L271.7,110.0 M342.2,110.0H372.4 M372.4,110.0H561.3 M221.3,110.0H257.7 M271.7,110.0H287.2 M287.2,110.0H296.4 M296.4,110.0H342.2" stroke="#9a5b1e" stroke-width="3.6"/>
+<path d="M360.8,110.0Q366.8,110.0 369.8,115.2L380.1,133.1Q380.7,134.0 381.7,134.0H381.7M381.7,134.0H397.6" stroke="#9a5b1e" stroke-width="1.6"/>
+<path d="M257.6,110.0H266.6 M445.5,110.0H550.0 M335.6,110.0H365.8 M365.8,110.0H445.5 M221.4,110.0H257.6 M266.6,110.0L280.6,110.0 M280.6,110.0H289.8 M289.8,110.0H335.6" stroke="#9a5b1e" stroke-width="3.6"/>
 </g>
-<rect x="377.4" y="95.0" width="31.3" height="8" rx="1.5" fill="#9a5b1e"/>
-<circle cx="409.0" cy="134.0" r="3.2" fill="#9a5b1e"/>
-<path d="M539.3,110.0H561.3" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
-<path d="M243.3,110.0H221.3" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
-<text x="573.3" y="97.0" font-size="22" text-anchor="start" fill="#9a5b1e">Linie 321</text>
-<text x="573.3" y="123.0" font-size="22" text-anchor="start" fill="#9a5b1e">Lenk →</text>
-<text x="209.3" y="97.0" font-size="22" text-anchor="end" fill="#9a5b1e">Linie 321</text>
-<text x="209.3" y="123.0" font-size="22" text-anchor="end" fill="#9a5b1e">← Zweisimmen</text>
-<text x="394.2" y="194.0" font-size="38" font-weight="700" text-anchor="middle" fill="#9a5b1e">Matten</text>
+<circle cx="397.6" cy="134.0" r="3.2" fill="#9a5b1e"/>
+<path d="M528.0,110.0H550.0" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
+<path d="M243.4,110.0H221.4" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
+<text x="562.0" y="97.0" font-size="22" text-anchor="start" fill="#9a5b1e">Linie 321</text>
+<text x="562.0" y="123.0" font-size="22" text-anchor="start" fill="#9a5b1e">Lenk →</text>
+<text x="209.4" y="97.0" font-size="22" text-anchor="end" fill="#9a5b1e">Linie 321</text>
+<text x="209.4" y="123.0" font-size="22" text-anchor="end" fill="#9a5b1e">← Zweisimmen</text>
+<text x="382.9" y="194.0" font-size="38" font-weight="700" text-anchor="middle" fill="#9a5b1e">Matten</text>
 </svg>

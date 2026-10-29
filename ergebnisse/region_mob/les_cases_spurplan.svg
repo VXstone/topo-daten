@@ -1,17 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 624 260" width="624" height="260" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 708 240" width="708" height="240" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#fff"/>
 <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-<path d="M236.0,147.2Q230.0,147.2 227.0,152.4L217.0,169.7 M285.9,123.2H285.9Q290.5,123.2 293.3,119.5L297.7,113.7Q300.5,110.0 305.1,110.0H305.1M305.1,110.0H324.4 M258.1,147.2H258.1Q265.1,147.2 268.6,141.1L275.4,129.3Q278.9,123.2 285.9,123.2H285.9 M285.9,123.2H341.2M341.2,123.2H341.2Q344.3,123.2 345.9,125.9L356.6,144.5Q358.2,147.2 361.2,147.2H361.2" stroke="#9a5b1e" stroke-width="1.6"/>
-<path d="M258.1,147.2H361.2 M236.0,147.2H258.1 M361.2,147.2H431.5" stroke="#9a5b1e" stroke-width="3.6"/>
+<path d="M374.9,110.0H374.9Q381.9,110.0 385.4,116.1L392.2,127.9Q395.7,134.0 402.7,134.0H402.7 M347.0,134.0H347.0Q354.0,134.0 357.5,127.9L364.4,116.1Q367.9,110.0 374.9,110.0H374.9 M374.9,110.0H394.5M394.5,110.0H394.5Q397.3,110.0 398.8,112.5L409.7,131.5Q411.2,134.0 414.0,134.0H414.0" stroke="#9a5b1e" stroke-width="1.6"/>
+<path d="M402.7,134.0H414.0 M347.0,134.0H402.7 M213.7,134.0H347.0 M414.0,134.0H484.3" stroke="#9a5b1e" stroke-width="3.6"/>
 </g>
-<rect x="264.9" y="131.2" width="59.2" height="8" rx="1.5" fill="#9a5b1e"/>
-<circle cx="324.4" cy="110.0" r="3.2" fill="#9a5b1e"/>
-<path d="M212.5,177.5L213.5,167.7L220.5,171.7Z" fill="#9a5b1e"/>
-<path d="M252.0,147.2H230.0" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
-<path d="M409.5,147.2H431.5" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
-<text x="218.0" y="106.2" font-size="22" text-anchor="end" fill="#9a5b1e">Linie 120</text>
-<text x="218.0" y="132.2" font-size="22" text-anchor="end" fill="#9a5b1e">← Les Avants</text>
-<text x="443.5" y="134.2" font-size="22" text-anchor="start" fill="#9a5b1e">Linie 120</text>
-<text x="443.5" y="160.2" font-size="22" text-anchor="start" fill="#9a5b1e">Montbovon →</text>
-<text x="298.1" y="229.7" font-size="38" font-weight="700" text-anchor="middle" fill="#9a5b1e">Les Cases</text>
+<path d="M235.7,134.0H213.7" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
+<path d="M462.3,134.0H484.3" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
+<text x="201.7" y="121.0" font-size="22" text-anchor="end" fill="#9a5b1e">Linie 120</text>
+<text x="201.7" y="147.0" font-size="22" text-anchor="end" fill="#9a5b1e">← Les Avants</text>
+<text x="496.3" y="121.0" font-size="22" text-anchor="start" fill="#9a5b1e">Linie 120</text>
+<text x="496.3" y="147.0" font-size="22" text-anchor="start" fill="#9a5b1e">Montbovon →</text>
+<text x="377.5" y="210.0" font-size="38" font-weight="700" text-anchor="middle" fill="#9a5b1e">Les Cases</text>
 </svg>

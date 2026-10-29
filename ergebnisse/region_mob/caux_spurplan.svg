@@ -1,19 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 777 287" width="777" height="287" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 807 263" width="807" height="263" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#fff"/>
 <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-<path d="M392.8,134.0H392.8Q399.8,134.0 403.3,127.9L410.1,116.1Q413.6,110.0 420.6,110.0H424.8 M364.6,182.0H375.6M375.6,182.0Q381.6,182.0 384.6,176.8L394.9,158.9Q395.4,158.0 396.5,158.0H396.5 M424.8,110.0H433.7" stroke="#9a5b1e" stroke-width="1.6"/>
-<path d="M392.8,134.0H424.3 M362.6,134.0H392.8 M358.2,134.0Q364.2,134.0 367.2,139.2L377.3,156.7Q378.0,158.0 379.5,158.0H379.5M379.5,158.0H396.5 M396.5,158.0H396.5Q403.5,158.0 407.0,151.9L413.8,140.1Q417.3,134.0 424.3,134.0H424.3 M424.3,134.0H546.8 M199.1,134.0H259.0 M312.0,134.0H362.6 M259.0,134.0H307.5 M307.5,134.0H312.0" stroke="#9a5b1e" stroke-width="3.6"/>
+<path d="M414.7,110.0H414.7Q421.7,110.0 425.2,103.9L432.0,92.1Q435.5,86.0 442.5,86.0H446.7 M386.5,158.0H397.5M397.5,158.0Q403.5,158.0 406.5,152.8L416.8,134.9Q417.3,134.0 418.4,134.0H418.4 M446.7,86.0H446.7Q453.7,86.0 457.2,92.1L464.1,103.9Q467.6,110.0 474.6,110.0H474.6" stroke="#9a5b1e" stroke-width="1.6"/>
+<path d="M414.7,110.0H446.2 M384.6,110.0H414.7 M380.1,110.0Q386.1,110.0 389.1,115.2L399.2,132.7Q399.9,134.0 401.5,134.0H401.5M401.5,134.0H418.4 M418.4,134.0H418.4Q425.4,134.0 428.9,127.9L435.7,116.1Q439.2,110.0 446.2,110.0H446.2 M474.6,110.0H577.3 M446.2,110.0H474.6 M221.0,110.0H251.9 M251.9,110.0H281.0 M333.9,110.0H384.6 M281.0,110.0H329.4 M329.4,110.0H333.9" stroke="#9a5b1e" stroke-width="3.6"/>
 </g>
-<rect x="364.4" y="166.0" width="28.7" height="8" rx="1.5" fill="#9a5b1e"/>
-<rect x="364.7" y="142.0" width="28.4" height="8" rx="1.5" fill="#9a5b1e"/>
-<rect x="364.6" y="119.0" width="28.5" height="8" rx="1.5" fill="#9a5b1e"/>
-<circle cx="364.6" cy="182.0" r="3.2" fill="#9a5b1e"/>
-<circle cx="433.7" cy="110.0" r="3.2" fill="#9a5b1e"/>
-<path d="M524.8,134.0H546.8" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
-<path d="M221.1,134.0H199.1" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
-<text x="558.8" y="121.0" font-size="22" text-anchor="start" fill="#9a5b1e">Linie 122</text>
-<text x="558.8" y="147.0" font-size="22" text-anchor="start" fill="#9a5b1e">Rochers-de-Naye →</text>
-<text x="187.1" y="121.0" font-size="22" text-anchor="end" fill="#9a5b1e">Linie 122</text>
-<text x="187.1" y="147.0" font-size="22" text-anchor="end" fill="#9a5b1e">← Glion</text>
-<text x="416.8" y="242.0" font-size="38" font-weight="700" text-anchor="middle" fill="#9a5b1e">Caux</text>
+<circle cx="386.5" cy="158.0" r="3.2" fill="#9a5b1e"/>
+<path d="M555.3,110.0H577.3" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
+<path d="M243.0,110.0H221.0" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
+<text x="589.3" y="97.0" font-size="22" text-anchor="start" fill="#9a5b1e">Linie 122</text>
+<text x="589.3" y="123.0" font-size="22" text-anchor="start" fill="#9a5b1e">Rochers-de-Naye →</text>
+<text x="209.0" y="97.0" font-size="22" text-anchor="end" fill="#9a5b1e">Linie 122</text>
+<text x="209.0" y="123.0" font-size="22" text-anchor="end" fill="#9a5b1e">← Glion</text>
+<text x="385.5" y="218.0" font-size="38" font-weight="700" text-anchor="middle" fill="#9a5b1e">Caux</text>
 </svg>

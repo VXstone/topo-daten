@@ -1,25 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 793 314" width="793" height="314" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 314" width="750" height="314" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#fff"/>
 <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-<path d="M371.6,110.0H371.6Q376.6,110.0 379.6,114.0L383.6,119.2Q386.6,123.2 391.6,123.2H391.6M391.6,123.2H451.8 M371.6,110.0H451.8 M328.5,160.4H328.5Q335.5,160.4 339.0,154.3L361.1,116.1Q364.6,110.0 371.6,110.0H371.6 M387.4,160.4Q393.4,160.4 396.4,155.2L406.7,137.3Q407.2,136.4 408.3,136.4H408.3M408.3,136.4H424.2 M424.2,136.4H448.8" stroke="#9a5b1e" stroke-width="1.6"/>
-<path d="M321.4,208.4H321.4Q324.5,208.4 326.0,205.7L336.8,187.1Q338.3,184.4 341.4,184.4H341.4M341.4,184.4H436.3 M282.8,208.4C294.2,208.4 294.2,160.4 305.7,160.4M305.7,160.4H328.5 M328.5,160.4H392.3 M392.3,160.4H454.8 M227.6,208.4H282.8 M486.3,160.4H493.3 M493.3,160.4H571.3 M454.5,184.4H465.4M465.4,184.4Q471.4,184.4 474.4,179.2L484.8,161.3Q485.3,160.4 486.3,160.4H486.3 M454.8,160.4H486.3 M436.3,184.4H454.5 M321.4,208.4H416.3M416.3,208.4H416.3Q419.4,208.4 420.9,205.7L431.7,187.1Q433.2,184.4 436.3,184.4H436.3 M282.8,208.4H321.4" stroke="#9a5b1e" stroke-width="3.6"/>
+<path d="M371.6,110.0H371.6Q376.6,110.0 379.6,114.0L383.6,119.2Q386.6,123.2 391.6,123.2H391.6M391.6,123.2H415.8 M371.6,110.0H415.7 M328.5,160.4H328.5Q335.5,160.4 339.0,154.3L361.1,116.1Q364.6,110.0 371.6,110.0H371.6 M373.4,160.4Q379.4,160.4 382.4,155.2L392.7,137.3Q393.2,136.4 394.3,136.4H394.3M394.3,136.4H410.2 M410.2,136.4H421.0Q428.0,136.4 431.5,142.5L438.3,154.3Q441.8,160.4 448.8,160.4H448.8" stroke="#9a5b1e" stroke-width="1.6"/>
+<path d="M321.4,208.4H321.4Q324.5,208.4 326.0,205.7L336.8,187.1Q338.3,184.4 341.4,184.4H341.4M341.4,184.4H413.4 M282.8,208.4C294.2,208.4 294.2,160.4 305.7,160.4M305.7,160.4H328.5 M328.5,160.4H378.3 M378.3,160.4H416.5 M227.6,208.4H282.8 M448.8,160.4H450.4 M448.0,160.4H448.8 M450.4,160.4H528.4 M416.1,184.4H427.1M427.1,184.4Q433.1,184.4 436.1,179.2L446.4,161.3Q447.0,160.4 448.0,160.4H448.0 M416.5,160.4H448.0 M413.4,184.4H416.1 M321.4,208.4H393.4M393.4,208.4H393.4Q396.5,208.4 398.0,205.7L408.8,187.1Q410.3,184.4 413.4,184.4H413.4 M282.8,208.4H321.4" stroke="#9a5b1e" stroke-width="3.6"/>
 </g>
-<rect x="321.4" y="168.4" width="110.0" height="8" rx="1.5" fill="#9a5b1e"/>
-<rect x="319.0" y="215.4" width="110.0" height="8" rx="1.5" fill="#9a5b1e"/>
-<circle cx="451.8" cy="123.2" r="3.2" fill="#9a5b1e"/>
-<circle cx="451.8" cy="110.0" r="3.2" fill="#9a5b1e"/>
-<circle cx="448.8" cy="136.4" r="3.2" fill="#9a5b1e"/>
-<rect x="363.4" y="176.4" width="26" height="16" fill="#fff"/>
-<text x="376.4" y="190.9" font-size="19" text-anchor="middle" fill="#9a5b1e">2</text>
-<rect x="363.4" y="152.4" width="26" height="16" fill="#fff"/>
-<text x="376.4" y="166.9" font-size="19" text-anchor="middle" fill="#9a5b1e">3</text>
-<rect x="361.0" y="200.4" width="26" height="16" fill="#fff"/>
-<text x="374.0" y="214.9" font-size="19" text-anchor="middle" fill="#9a5b1e">1</text>
+<circle cx="415.8" cy="123.2" r="3.2" fill="#9a5b1e"/>
+<circle cx="415.7" cy="110.0" r="3.2" fill="#9a5b1e"/>
 <path d="M249.6,208.4H227.6" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
-<path d="M549.3,160.4H571.3" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
+<path d="M506.4,160.4H528.4" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
 <text x="215.6" y="195.4" font-size="22" text-anchor="end" fill="#9a5b1e">Linie 120</text>
 <text x="215.6" y="221.4" font-size="22" text-anchor="end" fill="#9a5b1e">← Montreux</text>
-<text x="583.3" y="147.4" font-size="22" text-anchor="start" fill="#9a5b1e">Linie 120</text>
-<text x="583.3" y="173.4" font-size="22" text-anchor="start" fill="#9a5b1e">Gstaad →</text>
-<text x="374.8" y="284.4" font-size="38" font-weight="700" text-anchor="middle" fill="#9a5b1e">Château-d'Oex</text>
+<text x="540.4" y="147.4" font-size="22" text-anchor="start" fill="#9a5b1e">Linie 120</text>
+<text x="540.4" y="173.4" font-size="22" text-anchor="start" fill="#9a5b1e">Gstaad →</text>
+<text x="372.7" y="284.4" font-size="38" font-weight="700" text-anchor="middle" fill="#9a5b1e">Château-d'Oex</text>
 </svg>

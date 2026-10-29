@@ -1,30 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -20 803 421" width="803" height="421" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
-<rect y="-20" width="100%" height="100%" fill="#fff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 812 312" width="812" height="312" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
+<rect width="100%" height="100%" fill="#fff"/>
 <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-<path d="M265.9,-10.0H265.9Q272.9,-10.0 276.4,-3.9L338.7,103.9Q342.2,110.0 349.2,110.0H349.2 M256.6,134.0H267.6M267.6,134.0Q273.6,134.0 276.6,139.2L286.9,157.1Q287.5,158.0 288.5,158.0H288.5" stroke="#9a5b1e" stroke-width="1.6"/>
-<path d="M232.0,158.0L249.4,158.0 M249.4,158.0H288.5 M288.5,158.0H575.2 M223.0,134.0H242.6 M256.6,134.0H256.6Q259.7,134.0 261.3,131.3L272.0,112.7Q273.6,110.0 276.6,110.0H276.6M276.6,110.0H349.2 M349.2,110.0H487.8 M249.4,158.0H249.4Q252.5,158.0 254.0,160.7L264.8,179.3Q266.4,182.0 269.4,182.0H269.4M269.4,182.0H575.2 M487.8,110.0H542.6 M242.6,134.0L256.6,134.0" stroke="#9a5b1e" stroke-width="3.6"/>
+<path d="M367.1,14.0H367.1Q374.1,14.0 377.6,20.1L426.0,103.9Q429.5,110.0 436.5,110.0H436.5 M347.6,158.0H358.5M358.5,158.0Q364.5,158.0 367.5,163.2L377.9,181.1Q378.4,182.0 379.4,182.0H379.4 M436.5,110.0H447.5M447.5,110.0Q453.5,110.0 456.5,115.2L466.8,133.1Q467.3,134.0 468.4,134.0H468.4" stroke="#9a5b1e" stroke-width="1.6"/>
+<path d="M227.9,206.0H346.5 M341.8,206.0Q347.8,206.0 350.8,200.8L361.0,183.1Q361.6,182.0 363.0,182.0H363.0M363.0,182.0H379.4 M379.4,182.0H585.1 M227.9,158.0H333.6 M347.6,158.0H347.6Q350.6,158.0 352.2,155.3L363.0,136.7Q364.5,134.0 367.6,134.0H367.6M367.6,134.0H468.4 M468.4,134.0H585.1 M346.5,206.0H585.1 M333.6,158.0L347.6,158.0" stroke="#9a5b1e" stroke-width="3.6"/>
 </g>
-<rect x="352.5" y="130.0" width="110.0" height="8" rx="1.5" fill="#9a5b1e"/>
-<rect x="328.8" y="189.0" width="110.0" height="8" rx="1.5" fill="#9a5b1e"/>
-<circle cx="542.6" cy="110.0" r="4.5" fill="#9a5b1e"/>
-<rect x="359.0" y="150.0" width="26" height="16" fill="#fff"/>
-<text x="372.0" y="164.5" font-size="19" text-anchor="middle" fill="#9a5b1e">2</text>
-<rect x="209.6" y="126.0" width="26" height="16" fill="#fff"/>
-<text x="222.6" y="140.5" font-size="19" text-anchor="middle" fill="#9a5b1e">12</text>
-<rect x="359.0" y="102.0" width="26" height="16" fill="#fff"/>
-<text x="372.0" y="116.5" font-size="19" text-anchor="middle" fill="#9a5b1e">3</text>
-<rect x="370.8" y="174.0" width="26" height="16" fill="#fff"/>
-<text x="383.8" y="188.5" font-size="19" text-anchor="middle" fill="#9a5b1e">1</text>
-<path d="M553.2,158.0H575.2" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
-<path d="M245.0,134.0H223.0" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
-<path d="M553.2,182.0H575.2" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
-<path d="M232.0,158.0Q223.0,158.0 218.5,165.8" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
-<path d="M218.5,165.8L218.5,165.8L166.0,256.7" stroke="#9a5b1e" stroke-width="3.6" stroke-linecap="round" fill="none"/>
-<text x="587.2" y="157.0" font-size="22" text-anchor="start" fill="#9a5b1e">Linie 120</text>
-<text x="587.2" y="183.0" font-size="22" text-anchor="start" fill="#9a5b1e">Château-d'Oex →</text>
-<text x="211.0" y="121.0" font-size="22" text-anchor="end" fill="#9a5b1e">Linie 247</text>
-<text x="211.0" y="147.0" font-size="22" text-anchor="end" fill="#9a5b1e">← Bulle</text>
-<text x="166.0" y="281.7" font-size="22" text-anchor="middle" fill="#9a5b1e">Linie 120</text>
-<text x="166.0" y="307.7" font-size="22" text-anchor="middle" fill="#9a5b1e">← Les Avants</text>
-<text x="372.0" y="370.7" font-size="38" font-weight="700" text-anchor="middle" fill="#9a5b1e">Montbovon</text>
+<path d="M249.9,206.0H227.9" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
+<path d="M563.1,182.0H585.1" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
+<path d="M249.9,158.0H227.9" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
+<path d="M563.1,134.0H585.1" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
+<path d="M563.1,206.0H585.1" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
+<text x="215.9" y="193.0" font-size="22" text-anchor="end" fill="#9a5b1e">Linie 120</text>
+<text x="215.9" y="219.0" font-size="22" text-anchor="end" fill="#9a5b1e">← Chamby</text>
+<text x="597.1" y="181.0" font-size="22" text-anchor="start" fill="#9a5b1e">Linie 120</text>
+<text x="597.1" y="207.0" font-size="22" text-anchor="start" fill="#9a5b1e">Montreux →</text>
+<text x="215.9" y="117.0" font-size="22" text-anchor="end" fill="#9a5b1e">Linie 247</text>
+<text x="215.9" y="143.0" font-size="22" text-anchor="end" fill="#9a5b1e">← Bulle</text>
+<text x="597.1" y="121.0" font-size="22" text-anchor="start" fill="#9a5b1e">Linie 247</text>
+<text x="597.1" y="147.0" font-size="22" text-anchor="start" fill="#9a5b1e">Bulle →</text>
+<text x="452.5" y="282.0" font-size="38" font-weight="700" text-anchor="middle" fill="#9a5b1e">Montbovon</text>
 </svg>

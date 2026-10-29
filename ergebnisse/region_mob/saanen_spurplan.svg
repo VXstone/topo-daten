@@ -1,21 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 736 276" width="736" height="276" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 757 276" width="757" height="276" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#fff"/>
 <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-<path d="M356.3,123.2H356.3Q361.3,123.2 364.3,119.2L368.3,114.0Q371.3,110.0 376.3,110.0H376.3M376.3,110.0H423.0 M386.7,171.2H386.7Q393.7,171.2 397.2,165.1L404.1,153.3Q407.6,147.2 414.6,147.2H414.6 M386.7,171.2H506.4 M349.9,147.2Q355.9,147.2 358.9,152.4L369.2,170.3Q369.8,171.2 370.8,171.2H370.8M370.8,171.2H386.7 M322.3,147.2Q316.3,147.2 313.3,142.0L303.3,124.7 M310.3,147.2Q316.3,147.2 319.3,142.0L329.3,124.7 M356.3,123.2H433.7M433.7,123.2H433.7Q436.8,123.2 438.4,125.9L449.1,144.5Q450.7,147.2 453.7,147.2H453.7 M328.4,147.2H328.4Q335.4,147.2 338.9,141.1L345.8,129.3Q349.3,123.2 356.3,123.2H356.3" stroke="#9a5b1e" stroke-width="1.6"/>
-<path d="M414.6,147.2H453.7 M354.9,147.2H414.6 M328.4,147.2H354.9 M316.3,147.2H328.4 M196.4,147.2H316.3 M453.7,147.2H516.7" stroke="#9a5b1e" stroke-width="3.6"/>
+<path d="M377.0,123.2H377.0Q382.0,123.2 385.0,119.2L389.0,114.0Q392.0,110.0 397.0,110.0H397.0M397.0,110.0H443.7 M407.4,171.2H407.4Q414.4,171.2 417.9,165.1L424.8,153.3Q428.3,147.2 435.3,147.2H435.3 M407.4,171.2H527.0 M370.6,147.2Q376.6,147.2 379.6,152.4L390.0,170.3Q390.5,171.2 391.5,171.2H391.5M391.5,171.2H407.4 M343.1,147.2Q337.1,147.2 334.1,142.0L324.1,124.7 M331.1,147.2Q337.1,147.2 340.1,142.0L350.1,124.7 M377.0,123.2H454.4M454.4,123.2H454.4Q457.5,123.2 459.1,125.9L469.8,144.5Q471.4,147.2 474.4,147.2H474.4 M349.1,147.2H349.1Q356.1,147.2 359.6,141.1L366.5,129.3Q370.0,123.2 377.0,123.2H377.0" stroke="#9a5b1e" stroke-width="1.6"/>
+<path d="M435.3,147.2H474.4 M375.6,147.2H435.3 M349.1,147.2H375.6 M337.1,147.2H349.1 M217.1,147.2H337.1 M474.4,147.2H537.3" stroke="#9a5b1e" stroke-width="3.6"/>
 </g>
-<rect x="359.6" y="112.6" width="61.4" height="8" rx="1.5" fill="#9a5b1e"/>
-<circle cx="423.0" cy="110.0" r="3.2" fill="#9a5b1e"/>
-<circle cx="506.4" cy="171.2" r="3.2" fill="#9a5b1e"/>
-<path d="M298.8,116.9L306.8,122.7L299.9,126.7Z" fill="#9a5b1e"/>
-<path d="M333.8,116.9L332.8,126.7L325.9,122.7Z" fill="#9a5b1e"/>
-<path d="M338.3,147.2H316.3" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
-<path d="M218.4,147.2H196.4" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
-<path d="M294.3,147.2H316.3" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
-<path d="M494.7,147.2H516.7" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
-<text x="184.4" y="134.2" font-size="22" text-anchor="end" fill="#9a5b1e">Linie 120</text>
-<text x="184.4" y="160.2" font-size="22" text-anchor="end" fill="#9a5b1e">← Montbovon</text>
-<text x="528.7" y="134.2" font-size="22" text-anchor="start" fill="#9a5b1e">Linie 120</text>
-<text x="528.7" y="160.2" font-size="22" text-anchor="start" fill="#9a5b1e">Zweisimmen →</text>
-<text x="380.3" y="231.2" font-size="38" font-weight="700" text-anchor="middle" fill="#9a5b1e">Saanen</text>
+<rect x="380.3" y="112.6" width="61.4" height="8" rx="1.5" fill="#9a5b1e"/>
+<circle cx="443.7" cy="110.0" r="3.2" fill="#9a5b1e"/>
+<circle cx="527.0" cy="171.2" r="3.2" fill="#9a5b1e"/>
+<path d="M319.6,116.9L327.5,122.7L320.6,126.7Z" fill="#9a5b1e"/>
+<path d="M354.6,116.9L353.5,126.7L346.6,122.7Z" fill="#9a5b1e"/>
+<path d="M359.1,147.2H337.1" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
+<path d="M239.1,147.2H217.1" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
+<path d="M315.1,147.2H337.1" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
+<path d="M515.3,147.2H537.3" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
+<text x="325.1" y="78.2" font-size="22" text-anchor="end" fill="#9a5b1e">Linie 120</text>
+<text x="325.1" y="104.2" font-size="22" text-anchor="end" fill="#9a5b1e">← Montbovon</text>
+<text x="205.1" y="134.2" font-size="22" text-anchor="end" fill="#9a5b1e">Linie 120</text>
+<text x="205.1" y="160.2" font-size="22" text-anchor="end" fill="#9a5b1e">← Château-d'Oex</text>
+<text x="549.3" y="134.2" font-size="22" text-anchor="start" fill="#9a5b1e">Linie 120</text>
+<text x="549.3" y="160.2" font-size="22" text-anchor="start" fill="#9a5b1e">Zweisimmen →</text>
+<text x="401.1" y="231.2" font-size="38" font-weight="700" text-anchor="middle" fill="#9a5b1e">Saanen</text>
 </svg>

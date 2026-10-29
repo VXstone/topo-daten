@@ -1,14 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 505 247" width="505" height="247" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 835 240" width="835" height="240" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#fff"/>
 <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-<path d="M249.0,134.0Q243.0,134.0 240.0,139.2L230.0,156.5 M236.0,110.0Q230.0,110.0 227.0,115.2L217.0,132.5" stroke="#9a5b1e" stroke-width="1.6"/>
-<path d="M249.0,134.0H258.9M253.9,134.0Q259.9,134.0 262.9,128.8L273.3,110.9Q273.8,110.0 274.8,110.0H274.8 M236.0,110.0H274.8" stroke="#9a5b1e" stroke-width="3.6"/>
+<path d="" stroke="#9a5b1e" stroke-width="1.6"/>
+<path d="M224.9,134.0H472.5M472.5,134.0H472.5Q475.6,134.0 477.1,131.3L487.9,112.7Q489.4,110.0 492.5,110.0H492.5 M224.9,110.0H492.5 M492.5,110.0H611.3" stroke="#9a5b1e" stroke-width="3.6"/>
 </g>
-<path d="M225.5,164.3L226.5,154.5L233.4,158.5Z" fill="#9a5b1e"/>
-<path d="M212.5,140.3L213.5,130.5L220.5,134.5Z" fill="#9a5b1e"/>
-<path d="M258.9,134.0H243.0" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
-<path d="M252.0,110.0H230.0" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
-<text x="218.0" y="81.0" font-size="22" text-anchor="end" fill="#9a5b1e">Linie 910</text>
-<text x="218.0" y="107.0" font-size="22" text-anchor="end" fill="#9a5b1e">← Klosters Platz</text>
-<text x="228.5" y="216.5" font-size="38" font-weight="700" text-anchor="middle" fill="#9a5b1e">Vereina Süd</text>
+<path d="M246.9,134.0H224.9" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
+<path d="M246.9,110.0H224.9" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
+<path d="M589.3,110.0H611.3" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
+<text x="212.9" y="109.0" font-size="22" text-anchor="end" fill="#9a5b1e">Linie 910</text>
+<text x="212.9" y="135.0" font-size="22" text-anchor="end" fill="#9a5b1e">← Klosters Platz</text>
+<text x="623.3" y="97.0" font-size="22" text-anchor="start" fill="#9a5b1e">Linie 910</text>
+<text x="623.3" y="123.0" font-size="22" text-anchor="start" fill="#9a5b1e">Sagliains →</text>
+<text x="418.1" y="210.0" font-size="38" font-weight="700" text-anchor="middle" fill="#9a5b1e">Vereina Süd</text>
 </svg>

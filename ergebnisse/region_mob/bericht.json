@@ -1,6 +1,6 @@
 {
  "region": "mob",
- "erzeugt": "2026-10-29 21:09 UTC",
+ "erzeugt": "2026-10-29 22:30 UTC",
  "bahnhoefe": {
   "schonried": {
    "name": "Schönried",
@@ -11,7 +11,7 @@
   "la_tine": {
    "name": "La Tine",
    "ok": true,
-   "befunde": "Befunde: {'A': 1}",
+   "befunde": "Befunde: {}",
    "optionen": []
   },
   "les_avants": {
@@ -71,7 +71,7 @@
   "zweisimmen": {
    "name": "Zweisimmen",
    "ok": true,
-   "befunde": "Befunde: {}",
+   "befunde": "Befunde: {'B': 4}",
    "optionen": [
     "--hauptgleise"
    ]
@@ -82,24 +82,18 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "glion": {
-   "name": "Glion",
-   "ok": true,
-   "befunde": "Befunde: {'B': 2}",
-   "optionen": []
-  },
   "montreux": {
    "name": "Montreux",
    "ok": true,
-   "befunde": "Befunde: {'A': 3, 'B': 39, 'D': 5, 'F': 1}",
+   "befunde": "Befunde: {'A': 1, 'B': 6, 'F': 1}",
    "optionen": [
     "--hauptgleise"
    ]
   },
-  "allieres": {
-   "name": "Allières",
+  "glion": {
+   "name": "Glion",
    "ok": true,
-   "befunde": "Befunde: {}",
+   "befunde": "Befunde: {'B': 4, 'F': 1}",
    "optionen": []
   },
   "chernex": {
@@ -108,14 +102,20 @@
    "befunde": "Befunde: {'F': 1}",
    "optionen": []
   },
-  "chamby": {
-   "name": "Chamby",
+  "allieres": {
+   "name": "Allières",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
   "jaman": {
    "name": "Jaman",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "chamby": {
+   "name": "Chamby",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -144,14 +144,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "gruben": {
-   "name": "Gruben",
-   "ok": true,
-   "befunde": "Befunde: {'A': 1}",
-   "optionen": []
-  },
   "lenk_im_simmental": {
    "name": "Lenk im Simmental",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "gruben": {
+   "name": "Gruben",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -174,16 +174,16 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
+  "vuarennes": {
+   "name": "Vuarennes",
+   "ok": true,
+   "befunde": "Befunde: {'A': 1, 'B': 21}",
+   "optionen": []
+  },
   "chatelard": {
    "name": "Châtelard",
    "ok": true,
    "befunde": "Befunde: {}",
-   "optionen": []
-  },
-  "vuarennes": {
-   "name": "Vuarennes",
-   "ok": true,
-   "befunde": "Befunde: {'A': 1, 'B': 14}",
    "optionen": []
   },
   "la_perche": {
@@ -198,14 +198,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "paccot": {
-   "name": "Paccot",
+  "les_echets": {
+   "name": "Les Echets",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "les_echets": {
-   "name": "Les Echets",
+  "paccot": {
+   "name": "Paccot",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -222,26 +222,26 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "toveyre": {
-   "name": "Toveyre",
-   "ok": true,
-   "befunde": "Befunde: {}",
-   "optionen": []
-  },
   "montreux_les_planches": {
    "name": "Montreux-Les Planches",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "le_tremblex": {
-   "name": "Le Tremblex",
+  "toveyre": {
+   "name": "Toveyre",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
   "valmont": {
    "name": "Valmont",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "le_tremblex": {
+   "name": "Le Tremblex",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -279,9 +279,8 @@
  },
  "netz_lage": 0,
  "regeln": {
-  "G3": 2,
-  "G2": 53,
-  "G6": 7,
-  "G8": 8
+  "G2": 40,
+  "G6": 6,
+  "G8": 6
  }
 }

@@ -1,17 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 697 253" width="697" height="253" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 721 253" width="721" height="253" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#fff"/>
 <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-<path d="M262.3,110.0H311.8M311.8,110.0H311.8Q316.8,110.0 319.8,114.0L323.8,119.2Q326.8,123.2 331.8,123.2H331.8 M236.0,123.2H331.8 M236.0,123.2Q230.0,123.2 227.0,128.4L217.0,145.7 M331.8,123.2H331.8Q338.8,123.2 342.3,129.3L349.2,141.1Q352.7,147.2 359.7,147.2H359.7" stroke="#9a5b1e" stroke-width="1.6"/>
-<path d="M359.7,147.2H473.3 M325.9,123.2Q331.9,123.2 334.9,128.4L345.7,147.2Q345.7,147.2 345.7,147.2H345.7M345.7,147.2H359.7" stroke="#9a5b1e" stroke-width="3.6"/>
+<path d="M284.3,147.2H284.3Q287.3,147.2 288.8,144.6L307.3,112.6Q308.8,110.0 311.8,110.0H311.8M311.8,110.0H336.6M336.6,110.0H336.6Q341.6,110.0 344.6,114.0L348.6,119.2Q351.6,123.2 356.6,123.2H356.6 M270.7,147.2H270.7Q273.8,147.2 275.3,144.5L286.1,125.9Q287.6,123.2 290.7,123.2H290.7M290.7,123.2H356.6 M356.6,123.2H356.6Q363.6,123.2 367.1,129.3L374.0,141.1Q377.5,147.2 384.5,147.2H384.5" stroke="#9a5b1e" stroke-width="1.6"/>
+<path d="M384.5,147.2H498.1 M284.3,147.2H384.5 M270.7,147.2H284.3 M215.5,147.2H270.7" stroke="#9a5b1e" stroke-width="3.6"/>
 </g>
-<rect x="272.9" y="112.6" width="54.4" height="8" rx="1.5" fill="#9a5b1e"/>
-<circle cx="262.3" cy="110.0" r="3.2" fill="#9a5b1e"/>
-<path d="M212.5,153.5L213.5,143.7L220.5,147.7Z" fill="#9a5b1e"/>
-<path d="M451.3,147.2H473.3" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
-<path d="M331.8,123.2H331.8" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
-<text x="485.3" y="134.2" font-size="22" text-anchor="start" fill="#9a5b1e">Linie 120</text>
-<text x="485.3" y="160.2" font-size="22" text-anchor="start" fill="#9a5b1e">Château-d'Oex →</text>
-<text x="319.8" y="54.2" font-size="22" text-anchor="end" fill="#9a5b1e">Linie 120</text>
-<text x="319.8" y="80.2" font-size="22" text-anchor="end" fill="#9a5b1e">← Les Avants</text>
-<text x="300.1" y="223.2" font-size="38" font-weight="700" text-anchor="middle" fill="#9a5b1e">La Tine</text>
+<rect x="297.7" y="112.6" width="54.4" height="8" rx="1.5" fill="#9a5b1e"/>
+<path d="M476.1,147.2H498.1" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
+<path d="M237.5,147.2H215.5" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
+<text x="510.1" y="134.2" font-size="22" text-anchor="start" fill="#9a5b1e">Linie 120</text>
+<text x="510.1" y="160.2" font-size="22" text-anchor="start" fill="#9a5b1e">Château-d'Oex →</text>
+<text x="203.5" y="134.2" font-size="22" text-anchor="end" fill="#9a5b1e">Linie 120</text>
+<text x="203.5" y="160.2" font-size="22" text-anchor="end" fill="#9a5b1e">← Montbovon</text>
+<text x="324.9" y="223.2" font-size="38" font-weight="700" text-anchor="middle" fill="#9a5b1e">La Tine</text>
 </svg>
