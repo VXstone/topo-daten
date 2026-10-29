@@ -1,23 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 761 289" width="761" height="289" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 761 300" width="761" height="300" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#fff"/>
 <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-<path d="M268.5,158.0H376.4M376.4,158.0H376.4Q379.5,158.0 381.1,155.3L391.8,136.7Q393.4,134.0 396.4,134.0H396.4 M268.5,158.0H268.5Q274.3,158.0 277.9,162.6L280.8,166.6Q284.3,171.2 290.2,171.2H290.2 M290.2,171.2H315.7 M285.6,171.2Q291.6,171.2 295.2,176.0L300.7,183.3Q301.6,184.4 303.0,184.4H303.0M303.0,184.4H315.8 M240.7,134.0H240.7Q247.7,134.0 251.2,140.1L258.0,151.9Q261.5,158.0 268.5,158.0H268.5" stroke="#9a5b1e" stroke-width="1.6"/>
-<path d="M428.3,110.0H533.1 M185.5,110.0H273.1 M396.4,134.0H407.4M407.4,134.0Q413.4,134.0 416.4,128.8L426.7,110.9Q427.3,110.0 428.3,110.0H428.3 M240.7,134.0H396.4 M273.1,110.0H428.3 M185.5,134.0H240.7" stroke="#9a5b1e" stroke-width="3.6"/>
+<path d="M268.5,158.0H268.5Q275.5,158.0 279.0,164.1L285.9,175.9Q289.4,182.0 296.4,182.0H296.4 M296.4,182.0H321.9 M291.8,182.0Q297.8,182.0 301.4,186.8L306.9,194.1Q307.8,195.2 309.2,195.2H309.2M309.2,195.2H322.0 M240.7,134.0H240.7Q247.7,134.0 251.2,140.1L258.0,151.9Q261.5,158.0 268.5,158.0H268.5" stroke="#9a5b1e" stroke-width="1.6"/>
+<path d="M428.8,110.0H533.6 M185.5,110.0H276.9 M397.0,134.0H407.9M407.9,134.0Q413.9,134.0 416.9,128.8L427.3,110.9Q427.8,110.0 428.8,110.0H428.8 M240.7,134.0H397.0 M268.5,158.0H377.0M377.0,158.0H377.0Q380.0,158.0 381.6,155.3L392.4,136.7Q393.9,134.0 397.0,134.0H397.0 M276.9,110.0H428.8 M185.5,134.0H240.7" stroke="#9a5b1e" stroke-width="3.6"/>
 </g>
-<rect x="276.1" y="95.0" width="94.7" height="8" rx="1.5" fill="#9a5b1e"/>
-<rect x="263.3" y="142.0" width="92.9" height="8" rx="1.5" fill="#9a5b1e"/>
-<circle cx="315.7" cy="171.2" r="3.2" fill="#9a5b1e"/>
-<circle cx="315.8" cy="184.4" r="3.2" fill="#9a5b1e"/>
-<rect x="310.5" y="102.0" width="26" height="16" fill="#fff"/>
-<text x="323.5" y="116.5" font-size="19" text-anchor="middle" fill="#9a5b1e">1</text>
-<rect x="296.8" y="126.0" width="26" height="16" fill="#fff"/>
-<text x="309.8" y="140.5" font-size="19" text-anchor="middle" fill="#9a5b1e">2</text>
-<path d="M511.1,110.0H533.1" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
+<rect x="282.4" y="95.0" width="89.0" height="8" rx="1.5" fill="#9a5b1e"/>
+<rect x="263.3" y="142.0" width="93.4" height="8" rx="1.5" fill="#9a5b1e"/>
+<circle cx="321.9" cy="182.0" r="3.2" fill="#9a5b1e"/>
+<circle cx="322.0" cy="195.2" r="3.2" fill="#9a5b1e"/>
+<rect x="313.8" y="102.0" width="26" height="16" fill="#fff"/>
+<text x="326.8" y="116.5" font-size="19" text-anchor="middle" fill="#9a5b1e">1</text>
+<rect x="297.0" y="126.0" width="26" height="16" fill="#fff"/>
+<text x="310.0" y="140.5" font-size="19" text-anchor="middle" fill="#9a5b1e">2</text>
+<rect x="297.0" y="150.0" width="26" height="16" fill="#fff"/>
+<text x="310.0" y="164.5" font-size="19" text-anchor="middle" fill="#9a5b1e">3</text>
+<path d="M511.6,110.0H533.6" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
 <path d="M207.5,110.0H185.5" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
 <path d="M207.5,134.0H185.5" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
-<text x="545.1" y="97.0" font-size="22" text-anchor="start" fill="#9a5b1e">Linie 120</text>
-<text x="545.1" y="123.0" font-size="22" text-anchor="start" fill="#9a5b1e">Zweisimmen →</text>
+<text x="545.6" y="97.0" font-size="22" text-anchor="start" fill="#9a5b1e">Linie 120</text>
+<text x="545.6" y="123.0" font-size="22" text-anchor="start" fill="#9a5b1e">Zweisimmen →</text>
 <text x="173.5" y="109.0" font-size="22" text-anchor="end" fill="#9a5b1e">Linie 120</text>
 <text x="173.5" y="135.0" font-size="22" text-anchor="end" fill="#9a5b1e">← Château-d'Oex</text>
-<text x="308.7" y="244.4" font-size="38" font-weight="700" text-anchor="middle" fill="#9a5b1e">Gstaad</text>
+<text x="313.8" y="255.2" font-size="38" font-weight="700" text-anchor="middle" fill="#9a5b1e">Gstaad</text>
 </svg>

@@ -1,6 +1,6 @@
 {
  "region": "mob",
- "erzeugt": "2026-10-29 20:47 UTC",
+ "erzeugt": "2026-10-29 21:09 UTC",
  "bahnhoefe": {
   "schonried": {
    "name": "Schönried",
@@ -68,6 +68,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
+  "zweisimmen": {
+   "name": "Zweisimmen",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": [
+    "--hauptgleise"
+   ]
+  },
   "caux": {
    "name": "Caux",
    "ok": true,
@@ -80,18 +88,10 @@
    "befunde": "Befunde: {'B': 2}",
    "optionen": []
   },
-  "zweisimmen": {
-   "name": "Zweisimmen",
-   "ok": true,
-   "befunde": "Befunde: {}",
-   "optionen": [
-    "--hauptgleise"
-   ]
-  },
   "montreux": {
    "name": "Montreux",
    "ok": true,
-   "befunde": "Befunde: {'A': 3, 'B': 39, 'D': 5, 'F': 3}",
+   "befunde": "Befunde: {'A': 3, 'B': 39, 'D': 5, 'F': 1}",
    "optionen": [
     "--hauptgleise"
    ]
@@ -102,16 +102,16 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "chamby": {
-   "name": "Chamby",
-   "ok": true,
-   "befunde": "Befunde: {}",
-   "optionen": []
-  },
   "chernex": {
    "name": "Chernex",
    "ok": true,
    "befunde": "Befunde: {'F': 1}",
+   "optionen": []
+  },
+  "chamby": {
+   "name": "Chamby",
+   "ok": true,
+   "befunde": "Befunde: {}",
    "optionen": []
   },
   "jaman": {
@@ -174,16 +174,16 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "vuarennes": {
-   "name": "Vuarennes",
-   "ok": true,
-   "befunde": "Befunde: {'B': 18}",
-   "optionen": []
-  },
   "chatelard": {
    "name": "Châtelard",
    "ok": true,
    "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "vuarennes": {
+   "name": "Vuarennes",
+   "ok": true,
+   "befunde": "Befunde: {'A': 1, 'B': 14}",
    "optionen": []
   },
   "la_perche": {
@@ -198,14 +198,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "les_echets": {
-   "name": "Les Echets",
+  "paccot": {
+   "name": "Paccot",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "paccot": {
-   "name": "Paccot",
+  "les_echets": {
+   "name": "Les Echets",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -222,26 +222,26 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "montreux_les_planches": {
-   "name": "Montreux-Les Planches",
-   "ok": true,
-   "befunde": "Befunde: {}",
-   "optionen": []
-  },
   "toveyre": {
    "name": "Toveyre",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "valmont": {
-   "name": "Valmont",
+  "montreux_les_planches": {
+   "name": "Montreux-Les Planches",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
   "le_tremblex": {
    "name": "Le Tremblex",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "valmont": {
+   "name": "Valmont",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -280,8 +280,8 @@
  "netz_lage": 0,
  "regeln": {
   "G3": 2,
-  "G2": 49,
-  "G6": 8,
-  "G8": 9
+  "G2": 53,
+  "G6": 7,
+  "G8": 8
  }
 }
