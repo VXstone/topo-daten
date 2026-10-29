@@ -3,40 +3,40 @@
  "befunde": [
   {
    "regel": "T10",
-   "x": 375.5,
-   "y": 222.8,
+   "x": 378.6,
+   "y": 233.6,
    "text": "Durchfahrgleis (beidseitig ans Streckengleis angeschlossen, 489 m Nebengleis, service=siding) schwarz gezeichnet",
    "way": 23493308,
    "gleis": "44"
   },
   {
-   "regel": "D11",
-   "x": null,
-   "y": null,
-   "text": "OSM-Perron ref 1 hat keine gleichnamige Gleisnummer im Plan"
+   "regel": "Z1",
+   "x": 514.1,
+   "y": 173.6,
+   "text": "Gleisnummer 1 53 px neben der Perronmitte"
   },
   {
    "regel": "W2",
-   "x": 571.8,
-   "y": 306.8,
+   "x": 578.0,
+   "y": 317.6,
    "text": "S-Kurve in der Mitte unter 103° (steiler oder flacher als 60°)"
   },
   {
    "regel": "F7",
-   "x": 582.9,
-   "y": 210.8,
+   "x": 589.1,
+   "y": 221.6,
    "text": "Zwischengerade 33 px im Spurwechsel ohne Perron und Nummer (eine Diagonale)"
   },
   {
    "regel": "A1",
    "x": 320.6,
-   "y": 214.2,
+   "y": 225.0,
    "text": "zwei Gleise nur 6.8 px auseinander über 49 px (Grenze 9.6 px)"
   },
   {
    "regel": "A1",
-   "x": 691.4,
-   "y": 318.2,
+   "x": 697.6,
+   "y": 329.0,
    "text": "zwei Gleise nur 6.9 px auseinander über 15 px (Grenze 9.6 px)"
   }
  ],

@@ -27,87 +27,87 @@
   },
   {
    "regel": "G2",
-   "x": 622.5,
-   "y": 234.8,
+   "x": 628.8,
+   "y": 245.6,
    "bahnhof": null,
    "text": "Weiche ohne Ausrundung (60°)"
   },
   {
    "regel": "G2",
-   "x": 375.4,
-   "y": 306.8,
+   "x": 381.6,
+   "y": 317.6,
    "bahnhof": null,
    "text": "Weiche ohne Ausrundung (60°)"
   },
   {
    "regel": "G7",
-   "x": 372.1,
-   "y": 306.8,
+   "x": 378.4,
+   "y": 317.6,
    "bahnhof": null,
-   "text": "Gleisende nicht angebunden, nächstes Gleis 2.9 px"
+   "text": "Gleisende nicht angebunden, nächstes Gleis 2.8 px"
   },
   {
    "regel": "G8",
-   "x": 711.3,
-   "y": 340.8,
-   "bahnhof": null,
-   "text": "Gleise 30 px deckungsgleich"
-  },
-  {
-   "regel": "G8",
-   "x": 599.6,
-   "y": 340.8,
+   "x": 717.5,
+   "y": 351.6,
    "bahnhof": null,
    "text": "Gleise 30 px deckungsgleich"
   },
   {
    "regel": "G8",
-   "x": 409.5,
-   "y": 282.8,
+   "x": 605.9,
+   "y": 351.6,
+   "bahnhof": null,
+   "text": "Gleise 30 px deckungsgleich"
+  },
+  {
+   "regel": "G8",
+   "x": 415.8,
+   "y": 293.6,
    "bahnhof": null,
    "text": "Gleise 16 px deckungsgleich"
   }
  ],
  "planrand": [
-  "konolfingen\trechts x797\tLinie 460/460: Abstand 48 px statt 24"
+  "konolfingen\trechts x804\tLinie 460/460: Abstand 48 px statt 24"
  ],
  "netz": [
   {
    "regel": "T10",
-   "x": 375.5,
-   "y": 222.8,
+   "x": 378.6,
+   "y": 233.6,
    "text": "Durchfahrgleis (beidseitig ans Streckengleis angeschlossen, 489 m Nebengleis, service=siding) schwarz gezeichnet",
    "way": 23493308,
    "gleis": "44"
   },
   {
-   "regel": "D11",
-   "x": null,
-   "y": null,
-   "text": "OSM-Perron ref 1 hat keine gleichnamige Gleisnummer im Plan"
+   "regel": "Z1",
+   "x": 514.1,
+   "y": 173.6,
+   "text": "Gleisnummer 1 53 px neben der Perronmitte"
   },
   {
    "regel": "W2",
-   "x": 571.8,
-   "y": 306.8,
+   "x": 578.0,
+   "y": 317.6,
    "text": "S-Kurve in der Mitte unter 103° (steiler oder flacher als 60°)"
   },
   {
    "regel": "F7",
-   "x": 582.9,
-   "y": 210.8,
+   "x": 589.1,
+   "y": 221.6,
    "text": "Zwischengerade 33 px im Spurwechsel ohne Perron und Nummer (eine Diagonale)"
   },
   {
    "regel": "A1",
    "x": 320.6,
-   "y": 214.2,
+   "y": 225.0,
    "text": "zwei Gleise nur 6.8 px auseinander über 49 px (Grenze 9.6 px)"
   },
   {
    "regel": "A1",
-   "x": 691.4,
-   "y": 318.2,
+   "x": 697.6,
+   "y": 329.0,
    "text": "zwei Gleise nur 6.9 px auseinander über 15 px (Grenze 9.6 px)"
   }
  ],
@@ -122,7 +122,7 @@
   "regel_G7": 1,
   "regel_G8": 3,
   "netz_T10": 1,
-  "netz_D11": 1,
+  "netz_Z1": 1,
   "netz_W2": 1,
   "netz_F7": 1,
   "netz_A1": 2,
