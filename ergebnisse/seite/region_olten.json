@@ -3,8 +3,8 @@
   "aarburg_oftringen": {
    "ok": true,
    "optionen": [],
-   "plan_geaendert": false,
-   "bare_geaendert": false,
+   "plan_geaendert": true,
+   "bare_geaendert": true,
    "netz": {
     "T10": 1
    },
@@ -18,15 +18,15 @@
     "topo_F": 0,
     "netz_T10": 1,
     "boegen_pax": 7,
-    "boegen_alle": 13,
+    "boegen_alle": 15,
     "randabstand": 0
    }
   },
   "dulliken": {
    "ok": true,
    "optionen": [],
-   "plan_geaendert": false,
-   "bare_geaendert": false,
+   "plan_geaendert": true,
+   "bare_geaendert": true,
    "netz": {},
    "topologie": "{}",
    "qualitaet": {
@@ -63,17 +63,17 @@
   "rothrist": {
    "ok": true,
    "optionen": [],
-   "plan_geaendert": false,
-   "bare_geaendert": false,
+   "plan_geaendert": true,
+   "bare_geaendert": true,
    "netz": {
     "T10": 1,
     "D11": 2,
     "F7": 1
    },
-   "topologie": "{}",
+   "topologie": "{'B': 1}",
    "qualitaet": {
     "topo_A": 0,
-    "topo_B": 0,
+    "topo_B": 1,
     "topo_C": 0,
     "topo_D": 0,
     "topo_E": 0,
@@ -81,16 +81,16 @@
     "netz_T10": 1,
     "netz_D11": 2,
     "netz_F7": 1,
-    "boegen_pax": 28,
-    "boegen_alle": 61,
+    "boegen_pax": 30,
+    "boegen_alle": 71,
     "randabstand": 0
    }
   },
   "safenwil": {
    "ok": true,
    "optionen": [],
-   "plan_geaendert": false,
-   "bare_geaendert": false,
+   "plan_geaendert": true,
+   "bare_geaendert": true,
    "netz": {},
    "topologie": "{}",
    "qualitaet": {
@@ -108,8 +108,8 @@
   "schonenwerd": {
    "ok": true,
    "optionen": [],
-   "plan_geaendert": false,
-   "bare_geaendert": false,
+   "plan_geaendert": true,
+   "bare_geaendert": true,
    "netz": {},
    "topologie": "{}",
    "qualitaet": {
@@ -127,34 +127,34 @@
   "tecknau": {
    "ok": true,
    "optionen": [],
-   "plan_geaendert": false,
-   "bare_geaendert": false,
+   "plan_geaendert": true,
+   "bare_geaendert": true,
    "netz": {
     "T10": 1,
     "D11": 2,
     "D12": 1
    },
-   "topologie": "{}",
+   "topologie": "{'D': 1}",
    "qualitaet": {
     "topo_A": 0,
     "topo_B": 0,
     "topo_C": 0,
-    "topo_D": 0,
+    "topo_D": 1,
     "topo_E": 0,
     "topo_F": 0,
     "netz_T10": 1,
     "netz_D11": 2,
     "netz_D12": 1,
     "boegen_pax": 0,
-    "boegen_alle": 18,
+    "boegen_alle": 24,
     "randabstand": 0
    }
   },
   "wangen_bei_olten": {
    "ok": true,
    "optionen": [],
-   "plan_geaendert": false,
-   "bare_geaendert": false,
+   "plan_geaendert": true,
+   "bare_geaendert": true,
    "netz": {
     "T10": 1
    },
@@ -193,8 +193,8 @@
     "netz_D11": 2,
     "netz_W2": 1,
     "netz_A1": 1,
-    "boegen_pax": 6,
-    "boegen_alle": 42,
+    "boegen_pax": 8,
+    "boegen_alle": 44,
     "randabstand": 0
    }
   },
@@ -203,8 +203,8 @@
    "optionen": [
     "--hauptgleise"
    ],
-   "plan_geaendert": false,
-   "bare_geaendert": false,
+   "plan_geaendert": true,
+   "bare_geaendert": true,
    "netz": {
     "D11": 1
    },
@@ -218,7 +218,7 @@
     "topo_F": 0,
     "netz_D11": 1,
     "boegen_pax": 0,
-    "boegen_alle": 26,
+    "boegen_alle": 30,
     "randabstand": 0
    }
   },
@@ -227,8 +227,8 @@
    "optionen": [
     "--hauptgleise"
    ],
-   "plan_geaendert": false,
-   "bare_geaendert": false,
+   "plan_geaendert": true,
+   "bare_geaendert": true,
    "netz": {
     "Z2": 4
    },
@@ -287,8 +287,11 @@
   "regional_rothrist": {
    "ok": true,
    "ordner": "regional_rothrist",
-   "topologie": "{}",
-   "geaendert": []
+   "topologie": "{'B': 1}",
+   "geaendert": [
+    "rothrist_bare.svg",
+    "rothrist_ports.json"
+   ]
   }
  },
  "region": {
@@ -298,7 +301,7 @@
   "pruefung": "  loses Ende #33 an Strecke ['451'] angeschlossen (Abzweig #43, 100 m)\nKnoten: Counter({'spurplan': 13, 'exit': 9, 'halt': 7, 'junction': 3}) Kanten: 33\nsenkrecht: ['Aarburg-Oftringen', 'Zofingen', 'Olten', 'Läufelfingen', 'Tecknau', 'Olten Ost']\nF11 quer ausgerichtet: {'Däniken': 3.0, 'Schönenwerd': 3.0}\n  Spurfolge Abzweig #31: 450 | 400 | 400 | 450\n  Spurwechsel auf freier Strecke: 11\n  Tunnel auf freier Strecke: 3\n  Spurwechsel ohne Platz weggelassen: Rothrist–Abzweig\n  Spurwechsel gezeichnet: 11\n  Stösse an Abzweigen zusammengeführt: 1\n  Kreuzungen mit Brücke: 1\n  Nebengleise/Spurwechsel freie Strecke gezeichnet: 6\nok 4123 3032\n\n== Prüfung 1: Gleise entlang der Strecken ==\n  Hinweis Abzweig #43: Gleis der Linie 453 (von Rothrist) wechselt auf Aarburg-Oftringen (451)\n  → 0 Befunde\n\n== Prüfung 2: Lage Nord/Süd und Ost/West gegenüber Geografie ==\n  → 0 Befunde\n\n== Prüfung 3: Achsen und Seiten der Spurpläne gegen die Karte ==\n  Dulliken: Abgang 540 (Aarau) liegt auf der Karte links von 540 (Aarau), im Plan rechts (Blick in Achsrichtung)\n  Olten Ost: Achse zeigt im Plan nach NO, auf der Karte nach SO (94°)\n  → 2 Befunde\n\n== Prüfung 4: freie Strecke gegen OSM ==\n  Planfenster: 13 von 13 Spurplänen\n  Rothrist – Olten: 55–130 m ab Rothrist: OSM 3 Gleise, Plan 2\n  Rothrist – Abzweig: 55–130 m ab Rothrist: OSM 3 Gleise, Plan 2\n  Rothrist – Abzweig: 1755–1880 m ab Rothrist: OSM 3 Gleise, Plan 2\n  Aarburg-Oftringen – Abzweig: 855–955 m ab Aarburg-Oftringen: OSM 3 Gleise, Plan 2\n  Olten – Olten Ost: 280–380 m ab Olten: OSM 4 Gleise, Plan 6\n  Dulliken – Däniken: 655–755 m ab Dulliken: OSM 5 Gleise, Plan 4\n  → 6 Befunde\n",
   "geometrie": {
    "plan": "/home/runner/work/topo-daten/topo-daten/spurplan/werkstatt/olten/feedback/region.svg",
-   "achse": 10.063803380660625,
+   "achse": 10.048113368705062,
    "befunde": [
     {
      "regel": "A1",
@@ -307,8 +310,14 @@
      "text": "zwei Streckengleise 11.8 px auseinander (1.17 Achsen) über 42 px"
     },
     {
+     "regel": "A1",
+     "x": 131.6,
+     "y": -206.6,
+     "text": "zwei Streckengleise 16.1 px auseinander (1.60 Achsen) über 47 px"
+    },
+    {
      "regel": "F11",
-     "x": -118.6,
+     "x": -118.7,
      "y": 770.5,
      "text": "Versatz 4.2 px ohne Grund zwischen zwei parallelen Stücken"
     },
@@ -385,7 +394,7 @@
    "topo_F": 0,
    "netz_T10": 1,
    "boegen_pax": 7,
-   "boegen_alle": 13,
+   "boegen_alle": 15,
    "randabstand": 0
   },
   "dulliken": {
@@ -412,7 +421,7 @@
   },
   "rothrist": {
    "topo_A": 0,
-   "topo_B": 0,
+   "topo_B": 1,
    "topo_C": 0,
    "topo_D": 0,
    "topo_E": 0,
@@ -420,8 +429,8 @@
    "netz_T10": 1,
    "netz_D11": 2,
    "netz_F7": 1,
-   "boegen_pax": 28,
-   "boegen_alle": 61,
+   "boegen_pax": 30,
+   "boegen_alle": 71,
    "randabstand": 0
   },
   "safenwil": {
@@ -450,14 +459,14 @@
    "topo_A": 0,
    "topo_B": 0,
    "topo_C": 0,
-   "topo_D": 0,
+   "topo_D": 1,
    "topo_E": 0,
    "topo_F": 0,
    "netz_T10": 1,
    "netz_D11": 2,
    "netz_D12": 1,
    "boegen_pax": 0,
-   "boegen_alle": 18,
+   "boegen_alle": 24,
    "randabstand": 0
   },
   "wangen_bei_olten": {
@@ -482,8 +491,8 @@
    "netz_D11": 2,
    "netz_W2": 1,
    "netz_A1": 1,
-   "boegen_pax": 6,
-   "boegen_alle": 42,
+   "boegen_pax": 8,
+   "boegen_alle": 44,
    "randabstand": 0
   },
   "daniken": {
@@ -495,7 +504,7 @@
    "topo_F": 0,
    "netz_D11": 1,
    "boegen_pax": 0,
-   "boegen_alle": 26,
+   "boegen_alle": 30,
    "randabstand": 0
   },
   "olten": {
@@ -525,14 +534,18 @@
  },
  "qualitaet": {
   "aarburg_oftringen": {
-   "status": "gleich",
-   "schlechter": {},
+   "status": "schlechter",
+   "schlechter": {
+    "boegen_alle": 2
+   },
    "besser": {},
    "topologie_offen": {}
   },
   "daniken": {
-   "status": "gleich",
-   "schlechter": {},
+   "status": "schlechter",
+   "schlechter": {
+    "boegen_alle": 4
+   },
    "besser": {},
    "topologie_offen": {}
   },
@@ -561,10 +574,16 @@
    "topologie_offen": {}
   },
   "rothrist": {
-   "status": "gleich",
-   "schlechter": {},
+   "status": "schlechter",
+   "schlechter": {
+    "boegen_alle": 10,
+    "boegen_pax": 2,
+    "topo_B": 1
+   },
    "besser": {},
-   "topologie_offen": {}
+   "topologie_offen": {
+    "topo_B": 1
+   }
   },
   "safenwil": {
    "status": "gleich",
@@ -579,8 +598,11 @@
    "topologie_offen": {}
   },
   "tecknau": {
-   "status": "gleich",
-   "schlechter": {},
+   "status": "schlechter",
+   "schlechter": {
+    "boegen_alle": 6,
+    "topo_D": 1
+   },
    "besser": {},
    "topologie_offen": {}
   },
@@ -593,12 +615,11 @@
   "zofingen": {
    "status": "schlechter",
    "schlechter": {
+    "boegen_alle": 2,
     "netz_A1": 1,
     "netz_W2": 1
    },
-   "besser": {
-    "boegen_pax": -2
-   },
+   "besser": {},
    "topologie_offen": {}
   }
  }

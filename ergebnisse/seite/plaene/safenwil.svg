@@ -1,22 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1116 277" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1108 277" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#fff"/>
 <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-<path d="M491.8,123.2H516.9M516.9,123.2H516.9Q519.9,123.2 521.5,125.9L532.3,144.5Q533.8,147.2 536.9,147.2H536.9 M487.2,123.2Q493.2,123.2 496.8,118.4L502.4,111.1Q503.2,110.0 504.6,110.0H504.6M504.6,110.0H517.4 M482.0,123.2H491.8 M402.9,123.2H482.0 M402.9,110.0H462.0M462.0,110.0H462.0Q467.0,110.0 470.0,114.0L474.0,119.2Q477.0,123.2 482.0,123.2H482.0 M402.9,110.0Q397.0,110.0 394.1,104.9L390.5,98.7 M402.9,123.2Q397.0,123.2 394.1,118.1L390.5,111.9" stroke="#111" stroke-width="1.6"/>
-<path d="M431.6,171.2H505.0 M500.0,171.2Q506.0,171.2 509.0,166.0L519.4,148.1Q519.9,147.2 520.9,147.2H520.9M520.9,147.2H536.9 M536.9,147.2H694.8M694.8,147.2H694.8Q697.8,147.2 699.4,149.9L710.2,168.5Q711.7,171.2 714.8,171.2H714.8 M505.0,171.2H714.8 M714.8,171.2H981.0 M223.6,171.2H431.6" stroke="#00862f" stroke-width="3.6"/>
+<path d="M491.8,123.2H506.4M506.4,123.2Q512.4,123.2 515.4,128.4L525.1,145.3Q526.2,147.2 528.4,147.2H528.4 M491.8,123.2H491.8Q498.8,123.2 502.3,129.3L509.2,141.1Q512.7,147.2 519.7,147.2H527.4 M482.0,123.2H491.8 M402.9,123.2H482.0 M402.9,110.0H462.0M462.0,110.0H462.0Q467.0,110.0 470.1,114.0L474.0,119.2Q477.0,123.2 482.0,123.2H482.0 M402.9,110.0Q397.0,110.0 394.1,104.9L390.5,98.7 M402.9,123.2Q397.0,123.2 394.1,118.1L390.5,111.9" stroke="#111" stroke-width="1.6"/>
+<path d="M431.6,171.2H495.6 M490.6,171.2Q496.6,171.2 499.6,166.0L510.0,148.1Q510.5,147.2 511.5,147.2H511.5M511.5,147.2H527.4 M527.4,147.2H528.4 M528.4,147.2H686.3M686.3,147.2H686.3Q689.4,147.2 691.0,149.9L701.7,168.5Q703.3,171.2 706.3,171.2H706.3 M495.6,171.2H706.3 M706.3,171.2H972.6 M223.6,171.2H431.6" stroke="#00862f" stroke-width="3.6"/>
 </g>
-<rect x="517.2" y="178.2" width="102.3" height="8" rx="1.5" fill="#00862f"/>
-<rect x="546.2" y="132.2" width="110.0" height="8" rx="1.5" fill="#00862f"/>
-<circle cx="517.4" cy="110.0" r="3.2" fill="#111"/>
+<rect x="507.8" y="178.2" width="103.4" height="8" rx="1.5" fill="#00862f"/>
+<rect x="537.8" y="132.2" width="110.0" height="8" rx="1.5" fill="#00862f"/>
 <path d="M386.0,90.9L394.0,96.7L387.0,100.7Z" fill="#111"/>
 <path d="M386.0,104.1L394.0,109.9L387.0,113.9Z" fill="#111"/>
-<rect x="555.3" y="163.2" width="26" height="16" fill="#fff"/>
-<text x="568.3" y="177.7" font-size="19" text-anchor="middle" fill="#00862f">1</text>
-<rect x="588.2" y="139.2" width="26" height="16" fill="#fff"/>
-<text x="601.2" y="153.7" font-size="19" text-anchor="middle" fill="#00862f">2</text>
-<path d="M959.0,171.2H981.0" stroke="#00862f" stroke-width="3.6" fill="none"/>
+<rect x="546.5" y="163.2" width="26" height="16" fill="#fff"/>
+<text x="559.5" y="177.7" font-size="19" text-anchor="middle" fill="#00862f">1</text>
+<rect x="579.8" y="139.2" width="26" height="16" fill="#fff"/>
+<text x="592.8" y="153.7" font-size="19" text-anchor="middle" fill="#00862f">2</text>
+<path d="M950.6,171.2H972.6" stroke="#00862f" stroke-width="3.6" fill="none"/>
 <path d="M245.6,171.2H223.6" stroke="#00862f" stroke-width="3.6" fill="none"/>
-<text x="993.0" y="158.2" font-size="22" text-anchor="start" fill="#00862f">Linie 504</text>
-<text x="993.0" y="184.2" font-size="22" text-anchor="start" fill="#00862f">Suhr →</text>
+<text x="984.6" y="158.2" font-size="22" text-anchor="start" fill="#00862f">Linie 504</text>
+<text x="984.6" y="184.2" font-size="22" text-anchor="start" fill="#00862f">Suhr →</text>
 <text x="211.6" y="158.2" font-size="22" text-anchor="end" fill="#00862f">Linie 504</text>
 <text x="211.6" y="184.2" font-size="22" text-anchor="end" fill="#00862f">← Zofingen</text>
-<text x="571.3" y="247.2" font-size="38" font-weight="700" text-anchor="middle" fill="#00862f">Safenwil</text><g class="befund"></g></svg>
+<text x="562.9" y="247.2" font-size="38" font-weight="700" text-anchor="middle" fill="#00862f">Safenwil</text><g class="befund"></g></svg>
