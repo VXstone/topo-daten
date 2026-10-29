@@ -60,14 +60,15 @@ def kreis_runs(w, c, R):
         elif cur:
             cur.append(rand(i - 1, i)); runs.append(cur); cur = []
     if cur: runs.append(cur)
-    runs = [r for r in runs if len(r) >= 2 and math.dist(xy(r[0][1]), xy(r[-1][1])) > 1.0]
-    # Verdichten: Stücke über 40 m ohne Knoten (Tunnel) alle 25 m teilen, damit das Planfenster nicht an der Weiche schneidet
+    runs = [r for r in runs if len(r) > 2 or (len(r) == 2 and math.dist(xy(r[0][1]), xy(r[-1][1])) > 1.0)]   # geschlossene Perronflächen behalten
+    # Verdichten: Randstücke über 40 m ohne Knoten (Tunnel) alle 25 m teilen, damit das Planfenster nicht an der Weiche schneidet
     out_ = []
     for ri, r in enumerate(runs):
         rr = [r[0]]
         for k_, ((n1, g1), (n2, g2)) in enumerate(zip(r, r[1:])):
             L_ = math.dist(xy(g1), xy(g2)); m_ = int(L_ // 25)
-            if L_ > 40:
+            _rand = lambda n_: -2 * 10 ** 15 < n_ < -10 ** 14
+            if L_ > 40 and (_rand(n1) or _rand(n2)):      # nur das Stück am Kreisrand (sonst ändern sich Bahnhofspläne)
                 for q in range(1, m_ + 1):
                     f_ = q / (m_ + 1)
                     rr.append((-3 * 10 ** 15 - (abs(w["id"]) * 100 + ri) * 10 ** 5 - k_ * 100 - q,
@@ -185,6 +186,10 @@ for st in betr:
     sp_here = {w["tags"].get("spur", "1435") for w in out_w if w["tags"].get("railway") == "rail" and min(math.dist(xy(g), c) for g in w["geometry"]) < 100}   # 100 m: Betriebsstellenknoten liegen in OSM oft neben dem Gleis (Selfranga Süd 61 m)
     for w in out_w:
         if w["tags"].get("railway") == "rail" and w["tags"].get("spur", "1435") not in sp_here: continue   # nur die Spuren dieses Betriebspunkts (Belmont: keine SBB-Gleise)
+        if w["tags"].get("railway") == "platform" or w["tags"].get("public_transport") == "platform":
+            # Perron nur beim nächstgelegenen Betriebspunkt (29.10.2026: Perron 3/4 Sagliains lag im Kreis des Autoverlads)
+            _pm = (sum(xy(g)[0] for g in w["geometry"]) / len(w["geometry"]), sum(xy(g)[1] for g in w["geometry"]) / len(w["geometry"]))
+            if min(betr, key=lambda b_: math.dist(xy(b_), _pm))["id"] != st["id"]: continue
         runs = kreis_runs(w, c, R)
         for k, r in enumerate(runs):
             v = dict(w); v["id"] = w["id"] if k == 0 else w["id"] * 100 + k

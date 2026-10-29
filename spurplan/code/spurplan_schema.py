@@ -101,7 +101,10 @@ for w in ways.values():
 LL = {n: (g["lat"], g["lon"]) for w in ways.values() for n, g in zip(w["nodes"], w["geometry"])}
 PLAT = [e for e in D if e["type"] == "way" and (e["tags"].get("railway") == "platform"
         or e["tags"].get("public_transport") == "platform")
-        and not (e["tags"].get("disused") == "yes" or "disused:public_transport" in e["tags"] or "abandoned:railway" in e["tags"])]   # stillgelegt nicht zeichnen (20.10.)
+        and not (e["tags"].get("disused") == "yes" or "disused:public_transport" in e["tags"] or "abandoned:railway" in e["tags"])
+        # Verladerampen sind keine Perrons (29.10.2026, Autoverlad Sagliains: railway=platform mit motor_vehicle=designated)
+        and not (e["tags"].get("motor_vehicle") in ("designated", "yes") or "loading" in e["tags"].get("description", "").lower()
+                 or e["tags"].get("platform") == "loading")]   # stillgelegt nicht zeichnen (20.10.)
 
 # Regel 27: OSM-Lücken schliessen - offenes Gleisende ohne Prellbock, das < 6 m neben einem Knoten
 # eines anderen Gleises liegt, wird mit diesem verbunden (Rothrist Gl. 1 endete 4,6 m vor der Weiche)
@@ -120,7 +123,7 @@ if _ends and CFG["rules"].get("r27", True):
         for dist_, j in zip(*_kd.query(P[n], k=min(6, len(_ids)))):
             if j >= len(_ids): continue          # weniger als 6 Knoten im Ausschnitt (Doppelspurbeginn im Vereinatunnel)
             m = _ids[j]
-            if m == n or dist_ > CFG.get("r27_m", 10) or _own[m] & _own[n] or m in w["nodes"]: continue     # 10 m (Susch Gl. 2: 9,1 m vor dem Streckengleis)
+            if m == n or dist_ > CFG.get("r27_m", 6) or _own[m] & _own[n] or m in w["nodes"]: continue     # cfg r27_m (Standard 6 m)
             # nur in Verlängerung des Gleises (nicht seitlich auf ein Nachbargleis)
             _pv = w["nodes"][k - 1] if k == -1 else w["nodes"][1]
             _u = np.subtract(P[n], P[_pv]); _v = np.subtract(P[m], P[n])
@@ -135,7 +138,7 @@ def at_data_edge(n, tol=60):
     if _circ and math.hypot(x_, y_) > _Rdata - 2 * tol: return True
     return min(x_ - min(_bx), max(_bx) - x_, y_ - min(_by), max(_by) - y_) < tol
 
-# Regel 27b (29.10.2026, Susch Gl. 1): offenes Gleisende ohne Prellbock, nicht am Ausschnittrand, das parallel (< 15°) und
+# Regel 27b (29.10.2026, Susch Gl. 1): offenes Ende eines Perrongleises ohne Prellbock, nicht am Ausschnittrand, das parallel (< 15°) und
 # höchstens 12 m neben einem Streckengleis aufhört: in OSM fehlt die Weiche. Das Gleis wird schräg vorwärts an das
 # Nachbargleis angeschlossen (Knoten 2,5 × Seitenabstand, mindestens 8 m, weiter vorne). cfg rules.r27b: false schaltet ab.
 if CFG["rules"].get("r27b", True):
@@ -148,10 +151,35 @@ if CFG["rules"].get("r27b", True):
         for j_ in idx:
             if math.dist(P[ns_[j_]], P[e_]) >= 20: return np.subtract(P[e_], P[ns_[j_]])
         return np.subtract(P[e_], P[ns_[0 if k_ == -1 else -1]])
+    # nur Perrongleise, die am anderen Ende angeschlossen sind: sie müssen durchfahrbar sein; andere offene Enden sind oft
+    # echte Stumpfgleise ohne Prellbock-Tag (Solothurn Gl. 953) oder isolierte Stücke (Klosters)
+    from shapely.geometry import LineString as _LS27
+    _pl_ls = [_LS27([xy(g) for g in e["geometry"]]) for e in PLAT if len(e["geometry"]) > 1]
+    _wn = collections.defaultdict(list)
+    for w_ in ways.values():
+        for n_ in (w_["nodes"][0], w_["nodes"][-1]): _wn[n_].append(w_)
+    def _am_perron(w0, n0):
+        """Gleis ab dem offenen Ende n0 bis zur nächsten Weiche: liegt es bis 15 m an einem Perron, und ist es am anderen
+        Ende über eine Weiche angeschlossen? (Susch: Ende 91 m nach dem Perron, Weiche am anderen Ende; Klosters: ein
+        an beiden Enden offenes Stück neben Perron 1 bleibt, wie es ist.)"""
+        if not _pl_ls: return False
+        seen, todo, nah, angeschl = {w0["id"]}, [(w0, n0)], False, False
+        while todo:
+            w_, von = todo.pop()
+            pts_ = [P[n_] for n_ in w_["nodes"] if n_ in P]
+            if len(pts_) >= 2 and any(_LS27(pts_).distance(q_) < 15 for q_ in _pl_ls): nah = True
+            for n_ in (w_["nodes"][0], w_["nodes"][-1]):
+                if n_ == von: continue
+                if _deg[n_] >= 3 or ntag.get(n_, {}).get("railway") == "switch": angeschl = True; continue
+                if _deg[n_] == 2:
+                    for x_ in _wn[n_]:
+                        if x_["id"] not in seen: seen.add(x_["id"]); todo.append((x_, n_))
+        return nah and angeschl
     for w in list(ways.values()):
         for k in (0, -1):
             n = w["nodes"][k]
             if _deg[n] != 1 or ntag.get(n, {}).get("railway") == "buffer_stop" or at_data_edge(n): continue
+            if not _am_perron(w, n): continue
             u = _richtung(w["nodes"], k); Lu = float(np.linalg.norm(u))
             if Lu < 5: continue
             u = u / Lu; best = None
@@ -734,23 +762,27 @@ if CFG.get("fahrwege", os.environ.get("SPUR_FAHRWEGE") == "1"):
         if a_ and b_ and not (a_ & b_):
             sg["flat"] = False
             if ARGS.dbg: print("FW-SPURWECHSEL", sg["way"], round(sg["s0"]), round(sg["s1"]))
-# Perrongleis setzt sich gerade fort (29.10.2026, Klosters Gl. 3): zwei gerade Stücke mit derselben Gleisnummer, verbunden
-# durch einen kurzen Bogen (< 120 m, keine weitere gerade Fortsetzung an den Bogenenden), sind ein Gleis – der Bogen wird
-# Teil der Kette, das Gleis bleibt auf einer Ebene; ein Nebengleis in der Flucht endet dann als Abzweig.
+# Perrongleis setzt sich gerade fort (29.10.2026, Klosters Gl. 1 und 3): zwei gerade Personengleis-Stücke, verbunden durch
+# einen kurzen Bogen (< 120 m), sind ein Gleis, wenn beide dieselbe Gleisnummer tragen oder das eine ein Streckengleis ohne
+# Nummer ist und geradeaus nur ein Nebengleis weiterläuft. Der Bogen wird Teil der Kette, das Gleis bleibt auf einer Ebene;
+# das Nebengleis in der Flucht endet als Abzweig.
 # cfg «perron_fortsetzung»: false schaltet ab.
 if CFG.get("perron_fortsetzung", True):
-    for A_ in [a for a in segs if a["flat"] and a["pax"] and a["ref"]]:
+    for A_ in [a for a in segs if a["flat"] and a["pax"]]:
         m0 = A_["nodes"][-1]
-        if [x for x in at[m0][1] if x["flat"]]: continue            # A läuft gerade weiter
+        if [x for x in at[m0][1] if x["flat"] and x["pax"]]: continue   # A läuft gerade in ein Personengleis weiter
+        if not A_["ref"] and not [x for x in at[m0][1] if x["flat"]]: continue   # Streckengleis ohne Nummer: nur wenn geradeaus ein Nebengleis weiterläuft (Klosters Gl. 1)
         # Bogen nach rechts: Folge nicht gerader Personen-Stücke (an Weichen geteilt), zusammen < 120 m
         weg, n_, L_ = [], m0, 0.0
         while True:
-            nx_ = [d for d in at[n_][1] if not d["flat"] and d["pax"] and (not d["ref"] or d["ref"] == A_["ref"])]
+            nx_ = [d for d in at[n_][1] if not d["flat"] and d["pax"] and (not d["ref"] or not A_["ref"] or d["ref"] == A_["ref"])]
             if len(nx_) != 1: break
             d = nx_[0]; L_ += d["s1"] - d["s0"]
             if L_ > 120: weg = []; break
             weg.append(d); n_ = d["nodes"][-1]
-            Bn = [x for x in at[n_][1] if x["flat"] and x["pax"] and x["ref"] == A_["ref"]]
+            _nur_neben = all(not y["pax"] for y in at[n_][0] if y["flat"])     # geradeaus kommt nur ein Nebengleis an
+            Bn = [x for x in at[n_][1] if x["flat"] and x["pax"] and (x["ref"] == A_["ref"] if (A_["ref"] and x["ref"]) else
+                                                                      (bool(x["ref"]) or bool(A_["ref"])) and (_nur_neben or not A_["ref"]))]
             if Bn: break
         else: Bn = []
         if not weg or not Bn: continue
