@@ -8,10 +8,9 @@
  },
  "osm": "region.json",
  "linienfarbe": {
-  "960": "#9a5b1e",
   "910": "#9a5b1e",
-  "940": "#9a5b1e",
-  "965": "#9a5b1e"
+  "960": "#9a5b1e",
+  "915": "#9a5b1e"
  },
  "cfg": {
   "cover_m": 200,
@@ -19,41 +18,32 @@
   "merge_junction_m": 200
  },
  "Susch": [
-  -342,
-  9
- ],
- "Lavin": [
-  85,
-  -320
+  472,
+  468
  ],
  "Klosters Platz": [
-  -334,
-  -385
+  283,
+  91
  ],
  "Sagliains": [
-  -108,
-  -221
+  613,
+  253
  ],
- "Abgang 910 #6": [
-  -284,
-  -663
+ "Abgang 910 #5": [
+  70,
+  -67
  ],
- "Abgang 915 #7": [
-  -387,
-  -644
+ "Abgang 960 #6": [
+  866,
+  160
  ],
- "Abgang 915 #8": [
-  -568,
-  -428
- ],
- "Abgang 960 #9": [
-  286,
-  -432
+ "Abgang 960 #7": [
+  347,
+  688
  ],
  "drehung_auto": {
-  "Susch": -60,
-  "Lavin": -30.0,
-  "Klosters Platz": 120,
+  "Susch": -61.2,
+  "Klosters Platz": 36.4,
   "Sagliains": -30
  }
 }

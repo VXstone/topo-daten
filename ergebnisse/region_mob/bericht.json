@@ -1,21 +1,15 @@
 {
  "region": "mob",
- "erzeugt": "2026-10-29 20:05 UTC",
+ "erzeugt": "2026-10-29 20:16 UTC",
  "bahnhoefe": {
-  "schonried": {
-   "name": "Schönried",
-   "ok": true,
-   "befunde": "Befunde: {}",
-   "optionen": []
-  },
   "la_tine": {
    "name": "La Tine",
    "ok": true,
    "befunde": "Befunde: {'A': 1}",
    "optionen": []
   },
-  "belmont_sur_montreux": {
-   "name": "Belmont-sur-Montreux",
+  "schonried": {
+   "name": "Schönried",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -24,6 +18,12 @@
    "name": "Les Avants",
    "ok": true,
    "befunde": "Befunde: {'F': 1}",
+   "optionen": []
+  },
+  "belmont_sur_montreux": {
+   "name": "Belmont-sur-Montreux",
+   "ok": true,
+   "befunde": "Befunde: {}",
    "optionen": []
   },
   "flendruz": {
@@ -38,14 +38,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "les_sciernes": {
-   "name": "Les Sciernes",
+  "chateau_d_oex": {
+   "name": "Château-d'Oex",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "chateau_d_oex": {
-   "name": "Château-d'Oex",
+  "les_sciernes": {
+   "name": "Les Sciernes",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -80,12 +80,6 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "st_stephan": {
-   "name": "St. Stephan",
-   "ok": true,
-   "befunde": "Befunde: {}",
-   "optionen": []
-  },
   "le_tremblex": {
    "name": "Le Tremblex",
    "ok": true,
@@ -94,6 +88,12 @@
   },
   "blankenburg": {
    "name": "Blankenburg",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "st_stephan": {
+   "name": "St. Stephan",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -126,14 +126,20 @@
     "--hauptgleise"
    ]
   },
+  "fontanivent": {
+   "name": "Fontanivent",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
   "chamby": {
    "name": "Chamby",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "fontanivent": {
-   "name": "Fontanivent",
+  "allieres": {
+   "name": "Allières",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -142,12 +148,6 @@
    "name": "Chernex",
    "ok": true,
    "befunde": "Befunde: {'F': 1}",
-   "optionen": []
-  },
-  "allieres": {
-   "name": "Allières",
-   "ok": true,
-   "befunde": "Befunde: {}",
    "optionen": []
   },
   "les_cases": {
@@ -162,14 +162,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "saanen": {
-   "name": "Saanen",
+  "jaman": {
+   "name": "Jaman",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "jaman": {
-   "name": "Jaman",
+  "saanen": {
+   "name": "Saanen",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -186,16 +186,16 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "gstaad": {
-   "name": "Gstaad",
-   "ok": true,
-   "befunde": "Befunde: {}",
-   "optionen": []
-  },
   "gruben": {
    "name": "Gruben",
    "ok": true,
    "befunde": "Befunde: {'A': 1}",
+   "optionen": []
+  },
+  "gstaad": {
+   "name": "Gstaad",
+   "ok": true,
+   "befunde": "Befunde: {}",
    "optionen": []
   },
   "lenk_im_simmental": {
