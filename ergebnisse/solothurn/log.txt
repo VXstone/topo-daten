@@ -5,87 +5,84 @@ $ sbb_perrons.py
 geschrieben solothurn_override.json
 
 $ spurplan_schema.py --src solothurn.json --nowarp
-Bahnhof Solothurn: Achse 2830 m, Ausschnitt s=429…2531, 57 Weichen, 8 Perrons
+Bahnhof Solothurn: Achse 2830 m, Ausschnitt s=429…2531, 58 Weichen, 8 Perrons
 G6: 1 Überstand(e) vor Ausrundung gekürzt
-chains 34 lanes 20 segs 133 W 2384 H 675
+chains 34 lanes 21 segs 135 W 2384 H 699
 
 $ spurplan_warp.py solothurn
 Optimization terminated successfully. (HiGHS Status 7: Optimal)
-Breite linear 1934 px -> entzerrt 1433 px
+Breite linear 1934 px -> entzerrt 1472 px
 
 $ spurplan_schema.py --src solothurn.json
-Bahnhof Solothurn: Achse 2830 m, Ausschnitt s=429…2531, 57 Weichen, 8 Perrons
+Bahnhof Solothurn: Achse 2830 m, Ausschnitt s=429…2531, 58 Weichen, 8 Perrons
 G6: 2 Überstand(e) vor Ausrundung gekürzt
-chains 34 lanes 20 segs 133 W 1883 H 675
+chains 34 lanes 21 segs 135 W 1922 H 699
 
 $ spurplan_warp.py solothurn
 Optimization terminated successfully. (HiGHS Status 7: Optimal)
-Breite linear 1934 px -> entzerrt 1415 px
+Breite linear 1934 px -> entzerrt 1452 px
 
 $ spurplan_schema.py --src solothurn.json
-Bahnhof Solothurn: Achse 2830 m, Ausschnitt s=429…2531, 57 Weichen, 8 Perrons
+Bahnhof Solothurn: Achse 2830 m, Ausschnitt s=429…2531, 58 Weichen, 8 Perrons
 G6: 2 Überstand(e) vor Ausrundung gekürzt
-chains 34 lanes 20 segs 133 W 1865 H 675
+chains 34 lanes 21 segs 135 W 1902 H 699
 
 $ spurplan_check.py --src solothurn.json --out /tmp/spurplan_lauf/_check_solothurn.svg
-Bahnhof Solothurn: Achse 2830 m, Ausschnitt s=429…2531, 57 Weichen, 8 Perrons
+Bahnhof Solothurn: Achse 2830 m, Ausschnitt s=429…2531, 58 Weichen, 8 Perrons
 G6: 2 Überstand(e) vor Ausrundung gekürzt
-chains 34 lanes 20 segs 133 W 1865 H 675
-Befunde: {'A': 3, 'B': 23, 'F': 2}
-eindeutig: {'A': 3, 'B': 21, 'F': 2}
-A x=   862 y=  280  Verbindung nicht geschlossen (21px): 444 (way 49565865)
-A x=  1436 y=  400  Verbindung nicht geschlossen (11px): siding (way 251195480)
-A x=  1436 y=  364  Verbindung nicht geschlossen (27px): siding (way 251195480), 914 (way 251195487)
-B x=  1385 y=  429  Überlagerung 217px: 961 (way 49565844) / yard (way 251195478)
-B x=  1389 y=  416  Überlagerung 220px: 960 (way 49565842) / yard (way 251195478)
-B x=  1392 y=  403  Überlagerung 230px: 959 (way 49565840) / yard (way 251195478)
-B x=  1392 y=  403  Überlagerung 230px: 959 (way 49565840) / siding (way 251195480)
-B x=  1395 y=  390  Überlagerung 252px: 958 (way 49565841) / yard (way 251195478)
-B x=  1395 y=  390  Überlagerung 252px: 958 (way 49565841) / siding (way 251195480)
-B x=  1398 y=  376  Überlagerung 263px: 957 (way 49565846) / yard (way 251195478)
-B x=  1398 y=  376  Überlagerung 263px: 957 (way 49565846) / siding (way 251195480)
-B x=  1410 y=  353  Überlagerung 95px: yard (way 251195478) / 956 (way 1534903300)
-B x=  1410 y=  353  Überlagerung 95px: siding (way 251195480) / 956 (way 1534903300)
-B x=  1425 y=  403  Überlagerung 263px: 959 (way 49565840) / yard (way 136053985)
-B x=  1428 y=  390  Überlagerung 285px: 958 (way 49565841) / yard (way 136053985)
-B x=  1432 y=  376  Überlagerung 297px: 957 (way 49565846) / yard (way 136053985)
-B x=  1447 y=  353  Überlagerung 126px: yard (way 136053985) / 956 (way 1534903300)
-B x=  1447 y=  353  Überlagerung 126px: siding (way 251195480) / 956 (way 1534903300)
-B x=  1457 y=  352  Scheinverbindung: 914 (way 251195487) berührt 956 (way 1534903300)
-B x=  1462 y=  354  Überlagerung 33px: siding (way 251195474) / 914 (way 251195487)
-B x=  1462 y=  354  Überlagerung 33px: siding (way 251195480) / 914 (way 251195487)
-B x=  1464 y=  352  Überlagerung 61px: 959 (way 49565840) / 956 (way 1534903300)
-B x=  1522 y=  429  Scheinverbindung: 904 (way 49565917) berührt yard (way 251195479)
-B x=  1522 y=  429  Scheinverbindung: yard (way 251195476) berührt yard (way 251195479)
-F x=  1128 y=  416  Weiche falsch herum: Weichenanfang in OSM 976 (way 49565885), gezeichnet 975 (way 1529724770)
-F x=  1373 y=  442  Weiche falsch herum: Weichenanfang in OSM siding (way 251195480), gezeichnet siding (way 251195480)
+chains 34 lanes 21 segs 135 W 1902 H 699
+Befunde: {'A': 3, 'B': 24, 'F': 2}
+eindeutig: {'A': 3, 'B': 22, 'F': 2}
+A x=   862 y=  304  Verbindung nicht geschlossen (21px): 444 (way 49565865)
+A x=  1459 y=  424  Verbindung nicht geschlossen (10px): siding (way 251195480)
+A x=  1460 y=  389  Verbindung nicht geschlossen (28px): siding (way 251195480), 914 (way 251195487)
+B x=  1407 y=  453  Überlagerung 226px: 961 (way 49565844) / yard (way 251195478)
+B x=  1411 y=  440  Überlagerung 228px: 960 (way 49565842) / yard (way 251195478)
+B x=  1415 y=  427  Überlagerung 240px: 959 (way 49565840) / yard (way 251195478)
+B x=  1415 y=  427  Überlagerung 240px: 959 (way 49565840) / siding (way 251195480)
+B x=  1418 y=  414  Überlagerung 262px: 958 (way 49565841) / yard (way 251195478)
+B x=  1418 y=  414  Überlagerung 262px: 958 (way 49565841) / siding (way 251195480)
+B x=  1421 y=  400  Überlagerung 272px: 957 (way 49565846) / yard (way 251195478)
+B x=  1421 y=  400  Überlagerung 272px: 957 (way 49565846) / siding (way 251195480)
+B x=  1434 y=  377  Überlagerung 95px: yard (way 251195478) / 956 (way 1534903300)
+B x=  1434 y=  377  Überlagerung 95px: siding (way 251195480) / 956 (way 1534903300)
+B x=  1448 y=  427  Überlagerung 273px: 959 (way 49565840) / yard (way 136053985)
+B x=  1452 y=  414  Überlagerung 296px: 958 (way 49565841) / yard (way 136053985)
+B x=  1455 y=  400  Überlagerung 306px: 957 (way 49565846) / yard (way 136053985)
+B x=  1471 y=  377  Überlagerung 126px: yard (way 136053985) / 956 (way 1534903300)
+B x=  1471 y=  377  Überlagerung 126px: siding (way 251195480) / 956 (way 1534903300)
+B x=  1481 y=  376  Scheinverbindung: 914 (way 251195487) berührt 956 (way 1534903300)
+B x=  1485 y=  379  Überlagerung 32px: siding (way 251195474) / 914 (way 251195487)
+B x=  1485 y=  379  Überlagerung 32px: siding (way 251195480) / 914 (way 251195487)
+B x=  1488 y=  376  Überlagerung 61px: 959 (way 49565840) / 956 (way 1534903300)
+B x=  1546 y=  453  Scheinverbindung: 904 (way 49565917) berührt yard (way 251195479)
+B x=  1546 y=  453  Scheinverbindung: yard (way 251195476) berührt yard (way 251195479)
+B x=  1546 y=  304  Scheinverbindung: 901 (way 49565915) berührt siding (way 1257920629)
+F x=  1142 y=  440  Weiche falsch herum: Weichenanfang in OSM 976 (way 49565885), gezeichnet 975 (way 1529724770)
+F x=  1396 y=  466  Weiche falsch herum: Weichenanfang in OSM siding (way 251195480), gezeichnet siding (way 251195480)
 
 $ spurplan_schema.py --src solothurn.json --bare --out solothurn_bare.svg
-Bahnhof Solothurn: Achse 2830 m, Ausschnitt s=429…2531, 57 Weichen, 8 Perrons
+Bahnhof Solothurn: Achse 2830 m, Ausschnitt s=429…2531, 58 Weichen, 8 Perrons
 G6: 2 Überstand(e) vor Ausrundung gekürzt
-chains 34 lanes 20 segs 133 W 1865 H 675
+chains 34 lanes 21 segs 135 W 1902 H 699
 
-Verbindungsprüfung solothurn: 0 Perrongleise, 7 Abgänge (Personenverkehr)
-  Abgang 410 Oensingen (edge y208 x1642): ok (2 Ziele)
-  Abgang 410 Biel/Bienne (edge y160 x227): ok (3 Ziele)
-  Abgang 410 Biel/Bienne (edge y184 x227): ok (2 Ziele)
-  Abgang 410 Oensingen (edge y160 x1642): ok (1 Ziele)
-  Abgang 410 Oensingen (edge y184 x1642): ok (2 Ziele)
-  Abgang 421 Burgdorf (side y288 x858): ok (0 Ziele)
-  Abgang 415 Lyss (side y254 x849): ok (0 Ziele)
-→ 0 Abweichungen
-Weichen ohne Ausrundung (Linienende unter >35° auf Gleis): 2
-   x850 y254  60°
-   x934 y280  36°
+Traceback (most recent call last):
+  File "/tmp/spurplan_lauf/solothurn/verbindungen_pruefen.py", line 55, in <module>
+    OADJ = osm_graph(); OADJ_N = osm_graph(True)
+           ^^^^^^^^^^^
+  File "/tmp/spurplan_lauf/solothurn/verbindungen_pruefen.py", line 50, in osm_graph
+    ns = WAY[s["way"]]["nodes"]; i, j = ns.index(s["a"]), ns.index(s["b"])
+                                        ^^^^^^^^^^^^^^^^
+ValueError: -1814 is not in list
 
 Netzprüfung solothurn: {'D11': 2, 'W1': 2, 'W2': 6}; Durchfahrgleise 0
-  D11  x=1167.6 y=184.4  Gleisnummer 2 ohne Perron daneben (Perron fehlt oder Nummer zu viel)
-  D11  x=1167.6 y=280.4  Gleisnummer 3 ohne Perron daneben (Perron fehlt oder Nummer zu viel)
-  W2   x=1422.8 y=410.6  S-Kurve in der Mitte unter 103° (steiler oder flacher als 60°)
-  W2   x=1392.8 y=397.4  S-Kurve in der Mitte unter 102° (steiler oder flacher als 60°)
-  W2   x=1475.1 y=390.8  S-Kurve in der Mitte unter 77° (steiler oder flacher als 60°)
-  W2   x=1342.2 y=208.4  S-Kurve in der Mitte unter 103° (steiler oder flacher als 60°)
-  W2   x=1374.5 y=455.6  Gleisstück unter 85° (nur 0° und 60° erlaubt)
-  W2   x=1127.5 y=409.4  Gleisstück unter 84° (nur 0° und 60° erlaubt)
-  W1   x=1374.5 y=455.6  Gleisstück unter 85° (steiler als 60°), 27 px
-  W1   x=1127.5 y=409.4  Gleisstück unter 84° (steiler als 60°), 13 px
+  D11  x=1179.5 y=184.4  Gleisnummer 2 ohne Perron daneben (Perron fehlt oder Nummer zu viel)
+  D11  x=1083.5 y=304.4  Gleisnummer 3 ohne Perron daneben (Perron fehlt oder Nummer zu viel)
+  W2   x=1446.7 y=434.6  S-Kurve in der Mitte unter 103° (steiler oder flacher als 60°)
+  W2   x=1415.9 y=421.4  S-Kurve in der Mitte unter 102° (steiler oder flacher als 60°)
+  W2   x=1494.1 y=414.8  S-Kurve in der Mitte unter 80° (steiler oder flacher als 60°)
+  W2   x=1369.9 y=208.4  S-Kurve in der Mitte unter 103° (steiler oder flacher als 60°)
+  W2   x=1399.3 y=479.6  Gleisstück unter 76° (nur 0° und 60° erlaubt)
+  W2   x=1141.4 y=433.4  Gleisstück unter 84° (nur 0° und 60° erlaubt)
+  W1   x=1399.3 y=479.6  Gleisstück unter 76° (steiler als 60°), 27 px
+  W1   x=1141.4 y=433.4  Gleisstück unter 84° (steiler als 60°), 13 px

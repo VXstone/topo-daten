@@ -1,6 +1,6 @@
 {
- "erzeugt": "2026-10-29 21:09 UTC",
- "lauf": "https://github.com/VXstone/topo-daten/actions/runs/40955164738",
+ "erzeugt": "2026-10-29 22:30 UTC",
+ "lauf": "https://github.com/VXstone/topo-daten/actions/runs/40966223065",
  "bahnhoefe": {
   "neuchatel": {
    "ok": true,
@@ -26,28 +26,32 @@
    "ok": true,
    "fehler": null,
    "topologie": "{'A': 1, 'B': 2}",
-   "verbindungen_abweichungen": 0,
+   "verbindungen_abweichungen": null,
    "gleich_wie_vergleich": null,
    "regeln": {
-    "G2": 4,
+    "G2": 5,
     "G7": 1,
-    "G8": 3
+    "G8": 2
    },
    "netz": {
     "T10": 1,
     "Z1": 1,
     "W2": 1,
     "F7": 1,
-    "A1": 2
+    "A1": 1
    },
    "differenz_stellen": null,
    "qualitaet": {
     "status": "schlechter",
     "schlechter": {
-     "netz_Z1": 1
+     "boegen_alle": 1,
+     "netz_Z1": 1,
+     "regel_G2": 1
     },
     "besser": {
-     "netz_D11": -1
+     "netz_A1": -1,
+     "netz_D11": -1,
+     "regel_G8": -1
     },
     "topologie_offen": {
      "topo_A": 1,
@@ -59,10 +63,11 @@
    "ok": true,
    "fehler": null,
    "topologie": "{}",
-   "verbindungen_abweichungen": 0,
+   "verbindungen_abweichungen": null,
    "gleich_wie_vergleich": null,
    "regeln": {
-    "G2": 1
+    "G2": 1,
+    "G8": 1
    },
    "netz": {},
    "differenz_stellen": null,
@@ -72,14 +77,14 @@
      "regel_G2": 1
     },
     "besser": {
-     "boegen_alle": -9,
+     "boegen_alle": -7,
      "netz_D11": -2,
      "netz_D12": -1,
      "netz_F7": -1,
      "netz_W2": -1,
      "netz_Z2": -1,
      "randabstand": -2,
-     "regel_G8": -6,
+     "regel_G8": -5,
      "topo_A": -1
     },
     "topologie_offen": {}
@@ -88,14 +93,14 @@
   "solothurn": {
    "ok": true,
    "fehler": null,
-   "topologie": "{'A': 3, 'B': 23, 'F': 2}",
-   "verbindungen_abweichungen": 0,
+   "topologie": "{'A': 3, 'B': 24, 'F': 2}",
+   "verbindungen_abweichungen": null,
    "gleich_wie_vergleich": null,
    "regeln": {
     "G2": 5,
     "G6": 7,
     "G7": 3,
-    "G8": 7
+    "G8": 9
    },
    "netz": {
     "D11": 2,
@@ -106,12 +111,15 @@
    "qualitaet": {
     "status": "schlechter",
     "schlechter": {
+     "boegen_alle": 3,
+     "regel_G8": 2,
+     "topo_B": 1,
      "topo_F": 2
     },
     "besser": {},
     "topologie_offen": {
      "topo_A": 3,
-     "topo_B": 23,
+     "topo_B": 24,
      "topo_F": 2
     }
    }
