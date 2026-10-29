@@ -93,6 +93,8 @@ for name, st in stations.items():
     betr.append(st)
 out_n = [e for e in nodes if e["id"] in used and e.get("tags", {}).get("railway") not in ("station", "halt")] + betr
 json.dump({"elements": out_n + out_w}, open(os.path.join(OUT, "region.json"), "w"))
+# Rohausschnitt (alle Elemente im Rahmen, alle Tags) für lokale Fehlersuche: region_lauf.py --daten roh.json.gz
+with gzip.open(os.path.join(OUT, "roh.json.gz"), "wt") as f_: json.dump({"elements": [e for e in D if (e["type"] == "node" and inbox(e)) or (e["type"] == "way" and "geometry" in e and any(inbox(g) for g in e["geometry"]))]}, f_)
 # je Betriebspunkt: Kreis, nur der eigene Stationsknoten
 BP = {}
 for st in betr:

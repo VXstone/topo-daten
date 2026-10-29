@@ -79,6 +79,8 @@ if os.path.exists(os.path.join(WORK, "region.svg")):
         import cairosvg
         cairosvg.svg2png(url=os.path.join(WORK, "region.svg"), write_to=os.path.join(OUT, "region.png"), output_width=3000, background_color="white")
     except Exception as e: LOG.append(f"PNG: {e}")
+for f_ in ("roh.json.gz", "betriebspunkte.json", f"{NAME}_topologie.json"):
+    if os.path.exists(os.path.join(WORK, f_)): shutil.copy(os.path.join(WORK, f_), OUT)
 json.dump(bericht, open(os.path.join(OUT, "bericht.json"), "w"), ensure_ascii=False, indent=1)
 open(os.path.join(OUT, "log.txt"), "w").write("\n\n".join(LOG))
 print(json.dumps({k: v for k, v in bericht.items() if k != "bahnhoefe"}, ensure_ascii=False))
