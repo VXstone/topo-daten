@@ -2607,6 +2607,10 @@ if ZEICHNEN_UEBER:                  # auch im Regionalplan (bare): "Unterführun
             out.append(f'<path d="M{f0[0]:.1f},{f0[1]:.1f}L{q0[0]:.1f},{q0[1]:.1f}L{q1[0]:.1f},{q1[1]:.1f}L{f1[0]:.1f},{f1[1]:.1f}" fill="none" stroke="{black}" stroke-width="1.2"/>')
     for pts_, pax_, rund_ in ZEICHNEN_UEBER:
         out.append(f'<path d="{_rund(pts_, rund_)}" stroke="{green if pax_ else black}" stroke-width="{3.6 if pax_ else 1.6}" fill="none"/>')
+# Regel T4 automatisch (29.10.2026, D. Eckenstein: «nur bei Gleis über/unter anderem Gleis, und ja programmieren»;
+# Rothrist Hinweis 5rte): kreuzen sich zwei gezeichnete Gleise ohne gemeinsamen OSM-Knoten und liegen sie laut OSM auf
+# verschiedener Höhe (bridge/tunnel/layer), bekommt das untere Gleis eine Lücke und das obere Brückenflügel.
+# Nur, wenn das Override keine Über-/Unterführung von Hand hat (Olten, Aarburg) oder cfg ueber_auto true ist.
 # Meterspur (Override "meterspur": Overpass-Datei mit gauge=1000) als eigene, braune Schicht ohne Verbindung zur Normalspur
 MS_COL = "#9a5b1e"; MS_LEG = False; MS_YMAX = None     # MS_YMAX: unterste Meterspur-Zeichnung (Titel darunter)
 if OVR.get("meterspur") and os.path.exists(OVR["meterspur"]) and (not ARGS.bare or OVR.get("meterspur_cfg", {}).get("regional", True)):   # auch im Regionalplan (Hinweis Region NE 20.10. "Wo ist die Meterspur?")
@@ -3228,6 +3232,74 @@ def _abgang_weichen():
             else: out.append(f'<path d="M{e_[0]:.1f},{e_[1] - 4:.1f}L{e_[0] + 9 * dx_:.1f},{e_[1]:.1f}L{e_[0]:.1f},{e_[1] + 4:.1f}Z" fill="{black}"/>')
             print(f"R39b Abgang {PORTS[si['port']].get('town')}: Weiche {d_:.0f} m hinter dem Planrand angedeutet (Way {wid})")
 _abgang_weichen()
+UEBER_AUTO = []
+def _t4_auto():
+  if CFG.get("ueber_auto", not ZEICHNEN_UEBER) and RU.get("t4_auto", True):
+      from shapely.geometry import LineString as _LSu, Point as _PTu
+      from svgpathtools import parse_path as _ppu
+      _sgid = {x_["id"]: x_ for x_ in segs}
+      def _lev(t_): return (1 if t_.get("bridge") not in (None, "no") else 0) - (1 if t_.get("tunnel") not in (None, "no") else 0) + float(t_.get("layer", 0) or 0)
+      _pl = []
+      for sid_, d_ in DBG:
+          sg_ = _sgid.get(sid_)
+          if sg_ is None: continue
+          try:
+              for sub_ in _ppu(d_).continuous_subpaths():
+                  L_ = sub_.length()
+                  if L_ < 6: continue
+                  pts_ = [(sub_.point(sub_.ilength(t_ * L_)).real, sub_.point(sub_.ilength(t_ * L_)).imag) for t_ in np.linspace(0, 1, max(3, int(L_ / 3)))]
+                  _pl.append((sg_, _LSu(pts_)))
+          except Exception: pass
+      for si_ in SIDE_INFO:                  # seitliche Abgänge (Rothrist: Linie 400 unter den Gleisen 450 durch)
+          if si_.get("ex") is None: continue
+          m_ = re.match(r'<path d="M(-?[\d.]+),(-?[\d.]+)L(-?[\d.]+),(-?[\d.]+)(?:L(-?[\d.]+),(-?[\d.]+))?"', out[si_["ex"]])
+          if not m_: continue
+          v_ = [float(t_) for t_ in m_.groups() if t_ is not None]
+          pts_ = [(v_[k_], v_[k_ + 1]) for k_ in range(0, len(v_), 2)]
+          pts_ = [p_ for k_, p_ in enumerate(pts_) if k_ == 0 or math.dist(p_, pts_[k_ - 1]) > 0.5]
+          if len(pts_) >= 2: _pl.append((si_["sg"], _LSu(pts_)))
+      _gesehen = set()
+      for i_ in range(len(_pl)):
+          sa_, la_ = _pl[i_]
+          for j_ in range(i_ + 1, len(_pl)):
+              sb_, lb_ = _pl[j_]
+              if sa_["way"] == sb_["way"] or (sa_["way"], sb_["way"]) in _gesehen: continue
+              wa_, wb_ = ways[sa_["way"]], ways[sb_["way"]]
+              if set(wa_["nodes"]) & set(wb_["nodes"]): continue
+              va_, vb_ = _lev(wa_["tags"]), _lev(wb_["tags"])
+              if va_ == vb_ or not la_.crosses(lb_): continue
+              X_ = la_.intersection(lb_)
+              for q_ in getattr(X_, "geoms", [X_]):
+                  if q_.geom_type != "Point": continue
+                  if min(q_.distance(_PTu(c_)) for l_ in (la_, lb_) for c_ in (l_.coords[0], l_.coords[-1])) < 10: continue
+                  ob_, un_ = ((sa_, la_), (sb_, lb_)) if va_ > vb_ else ((sb_, lb_), (sa_, la_))
+                  UEBER_AUTO.append((q_.x, q_.y, ob_, un_))
+                  _gesehen.add((sa_["way"], sb_["way"]))
+      def _rtg(l_, q_):
+          t_ = l_.project(_PTu(q_)); a_ = l_.interpolate(max(0, t_ - 6)); b_ = l_.interpolate(min(l_.length, t_ + 6))
+          v_ = (b_.x - a_.x, b_.y - a_.y); n_ = math.hypot(*v_) or 1; return (v_[0] / n_, v_[1] / n_)
+      _grp = []                                   # Kreuzungen am selben oberen Gleis bis 40 px auseinander: eine Brücke
+      for k_ in sorted(UEBER_AUTO, key=lambda k_: (k_[2][0]["way"], k_[2][1].project(_PTu(k_[0], k_[1])))):
+          if _grp and _grp[-1][-1][2][0]["way"] == k_[2][0]["way"] and math.dist(_grp[-1][-1][:2], k_[:2]) < 40: _grp[-1].append(k_)
+          else: _grp.append([k_])
+      for g_ in _grp:
+          for x_, y_, (so_, lo_), (su_, lu_) in g_:
+              uu_ = _rtg(lu_, (x_, y_)); wu_ = 3.6 if su_["pax"] else 1.6
+              out.append(f'<path d="M{x_ - uu_[0] * 10:.1f},{y_ - uu_[1] * 10:.1f}L{x_ + uu_[0] * 10:.1f},{y_ + uu_[1] * 10:.1f}" stroke="#fff" stroke-width="{wu_ + 4:.1f}"/>')
+          (xa_, ya_, (so_, lo_), _), (xb_, yb_, _, _) = g_[0], g_[-1]
+          uo_ = _rtg(lo_, (xa_, ya_)); wo_ = 3.6 if so_["pax"] else 1.6
+          if (xb_ - xa_) * uo_[0] + (yb_ - ya_) * uo_[1] < 0: uo_ = (-uo_[0], -uo_[1])
+          out.append(f'<path d="M{xa_ - uo_[0] * 12:.1f},{ya_ - uo_[1] * 12:.1f}L{xb_ + uo_[0] * 12:.1f},{yb_ + uo_[1] * 12:.1f}" stroke="{green if so_["pax"] else black}" stroke-width="{wo_}" fill="none"/>')
+          no_ = (-uo_[1], uo_[0])
+          for sg_ in (-1, 1):
+              o_ = wo_ / 2 + 3.5
+              q0 = (xa_ - uo_[0] * 9 + no_[0] * sg_ * o_, ya_ - uo_[1] * 9 + no_[1] * sg_ * o_)
+              q1 = (xb_ + uo_[0] * 9 + no_[0] * sg_ * o_, yb_ + uo_[1] * 9 + no_[1] * sg_ * o_)
+              f0 = (q0[0] - uo_[0] * 3 + no_[0] * sg_ * 3, q0[1] - uo_[1] * 3 + no_[1] * sg_ * 3)
+              f1 = (q1[0] + uo_[0] * 3 + no_[0] * sg_ * 3, q1[1] + uo_[1] * 3 + no_[1] * sg_ * 3)
+              out.append(f'<path d="M{f0[0]:.1f},{f0[1]:.1f}L{q0[0]:.1f},{q0[1]:.1f}L{q1[0]:.1f},{q1[1]:.1f}L{f1[0]:.1f},{f1[1]:.1f}" fill="none" stroke="{black}" stroke-width="1.2"/>')
+          print(f"T4 automatisch: Way {so_['way']} über {len(g_)} Gleis(e) bei ({xa_:.0f},{ya_:.0f})")
+_t4_auto()
 if ARGS.bare: EXITS = []
 _town = {}
 for e_ in EXITS:
