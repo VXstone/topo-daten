@@ -1,18 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 677 263" width="677" height="263" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 689 263" width="689" height="263" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#fff"/>
 <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-<path d="M348.1,134.0L362.1,134.0 M370.2,110.0H389.9 M346.0,134.0L362.1,134.0 M337.6,134.0H337.6Q340.7,134.0 342.3,136.7L353.0,155.3Q354.6,158.0 357.6,158.0H357.6M357.6,158.0H377.4M377.4,158.0H377.4Q380.4,158.0 382.0,155.3L392.8,136.7Q394.3,134.0 397.4,134.0H397.4" stroke="#9a5b1e" stroke-width="1.6"/>
-<path d="M404.1,134.0H449.5 M337.6,134.0H346.0 M346.0,134.0H348.1 M348.1,134.0H397.4 M397.4,134.0H404.1  M362.1,134.0H362.1Q369.1,134.0 372.6,127.9L379.4,116.1Q382.9,110.0 389.9,110.0H389.9 M221.7,134.0H337.6" stroke="#9a5b1e" stroke-width="3.6"/>
+<path d="M342.4,134.0L356.4,134.0 M370.2,110.0H402.0 M340.4,134.0L356.4,134.0 M337.6,134.0H337.6Q340.7,134.0 342.3,136.7L353.0,155.3Q354.6,158.0 357.6,158.0H357.6M357.6,158.0H389.5M389.5,158.0H389.5Q392.6,158.0 394.1,155.3L404.9,136.7Q406.4,134.0 409.5,134.0H409.5" stroke="#9a5b1e" stroke-width="1.6"/>
+<path d="M416.7,134.0H462.0 M337.6,134.0H340.4 M340.4,134.0H342.4 M342.4,134.0H409.5 M409.5,134.0H416.7  M356.4,134.0H374.2Q381.2,134.0 384.7,127.9L391.5,116.1Q395.0,110.0 402.0,110.0H402.0 M221.7,134.0H337.6" stroke="#9a5b1e" stroke-width="3.6"/>
 </g>
+<rect x="343.1" y="142.0" width="57.5" height="8" rx="1.5" fill="#9a5b1e"/>
+<rect x="345.6" y="119.0" width="39.2" height="8" rx="1.5" fill="#9a5b1e"/>
 <circle cx="370.2" cy="110.0" r="3.2" fill="#9a5b1e"/>
-<path d="M427.5,134.0H449.5" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
-<path d="M367.9,110.0H389.9" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
+<path d="M440.0,134.0H462.0" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
+<path d="M380.0,110.0H402.0" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
 <path d="M243.7,134.0H221.7" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
-<text x="461.5" y="121.0" font-size="22" text-anchor="start" fill="#9a5b1e">Linie 120</text>
-<text x="461.5" y="147.0" font-size="22" text-anchor="start" fill="#9a5b1e">Les Avants →</text>
-<text x="401.9" y="41.0" font-size="22" text-anchor="start" fill="#9a5b1e">Linie 114</text>
-<text x="401.9" y="67.0" font-size="22" text-anchor="start" fill="#9a5b1e">Blonay →</text>
+<text x="474.0" y="121.0" font-size="22" text-anchor="start" fill="#9a5b1e">Linie 120</text>
+<text x="474.0" y="147.0" font-size="22" text-anchor="start" fill="#9a5b1e">Les Avants →</text>
+<text x="414.0" y="41.0" font-size="22" text-anchor="start" fill="#9a5b1e">Linie 114</text>
+<text x="414.0" y="67.0" font-size="22" text-anchor="start" fill="#9a5b1e">Blonay →</text>
 <text x="209.7" y="121.0" font-size="22" text-anchor="end" fill="#9a5b1e">Linie 120</text>
 <text x="209.7" y="147.0" font-size="22" text-anchor="end" fill="#9a5b1e">← Montreux</text>
-<text x="361.7" y="218.0" font-size="38" font-weight="700" text-anchor="middle" fill="#9a5b1e">Chamby</text>
+<text x="366.0" y="218.0" font-size="38" font-weight="700" text-anchor="middle" fill="#9a5b1e">Chamby</text>
 </svg>

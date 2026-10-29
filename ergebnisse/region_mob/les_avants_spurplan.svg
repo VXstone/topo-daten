@@ -1,17 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 725 289" width="725" height="289" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 675 289" width="675" height="289" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#fff"/>
 <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-<path d="M309.6,147.2H309.6Q312.7,147.2 314.2,149.9L325.0,168.5Q326.6,171.2 329.6,171.2H329.6M329.6,171.2H349.4M349.4,171.2H349.4Q352.4,171.2 354.0,168.5L364.7,149.9Q366.3,147.2 369.4,147.2H369.4 M333.4,123.2H333.4Q340.4,123.2 343.9,129.3L350.7,141.1Q354.2,147.2 361.2,147.2H361.2 M334.4,110.0L332.4,123.2 M281.8,147.2C291.7,147.2 291.7,184.4 301.5,184.4M301.5,184.4H321.3 M331.6,123.2H333.4 M332.0,110.0H334.4" stroke="#9a5b1e" stroke-width="1.6"/>
-<path d="M393.2,147.2H503.5 M361.2,147.2H369.4 M309.6,147.2H361.2 M281.8,147.2H309.6 M226.6,147.2H281.8 M369.4,147.2H393.2" stroke="#9a5b1e" stroke-width="3.6"/>
+<path d="M315.9,147.2H315.9Q319.0,147.2 320.5,149.9L331.3,168.5Q332.9,171.2 335.9,171.2H335.9M335.9,171.2H376.4M376.4,171.2H376.4Q379.5,171.2 381.0,168.5L391.8,149.9Q393.3,147.2 396.4,147.2H396.4 M338.6,123.2H338.6Q345.6,123.2 349.1,129.3L356.0,141.1Q359.5,147.2 366.5,147.2H366.5 M338.9,110.0L337.6,123.2 M281.8,147.2C291.6,147.2 291.6,184.4 301.5,184.4M301.5,184.4H321.3 M333.1,123.2H338.6 M334.2,110.0H338.9" stroke="#9a5b1e" stroke-width="1.6"/>
+<path d="M420.3,147.2H530.6 M366.5,147.2H396.4 M315.9,147.2H366.5 M281.8,147.2H315.9 M226.6,147.2H281.8 M396.4,147.2H420.3" stroke="#9a5b1e" stroke-width="3.6"/>
 </g>
+<rect x="330.9" y="155.2" width="60.4" height="8" rx="1.5" fill="#9a5b1e"/>
+<rect x="338.2" y="178.2" width="53.9" height="8" rx="1.5" fill="#9a5b1e"/>
 <circle cx="321.3" cy="184.4" r="3.2" fill="#9a5b1e"/>
-<circle cx="331.6" cy="123.2" r="3.2" fill="#9a5b1e"/>
-<circle cx="332.0" cy="110.0" r="3.2" fill="#9a5b1e"/>
-<path d="M481.5,147.2H503.5" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
+<circle cx="333.1" cy="123.2" r="3.2" fill="#9a5b1e"/>
+<circle cx="334.2" cy="110.0" r="3.2" fill="#9a5b1e"/>
+<path d="M508.6,147.2H530.6" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
 <path d="M248.6,147.2H226.6" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
-<text x="515.5" y="134.2" font-size="22" text-anchor="start" fill="#9a5b1e">Linie 120</text>
-<text x="515.5" y="160.2" font-size="22" text-anchor="start" fill="#9a5b1e">Château-d'Oex →</text>
+<text x="542.6" y="134.2" font-size="22" text-anchor="start" fill="#9a5b1e">Linie 120</text>
+<text x="542.6" y="160.2" font-size="22" text-anchor="start" fill="#9a5b1e">Château-d'Oex →</text>
 <text x="214.6" y="134.2" font-size="22" text-anchor="end" fill="#9a5b1e">Linie 120</text>
 <text x="214.6" y="160.2" font-size="22" text-anchor="end" fill="#9a5b1e">← Chamby</text>
-<text x="356.4" y="244.4" font-size="38" font-weight="700" text-anchor="middle" fill="#9a5b1e">Les Avants</text>
+<text x="361.6" y="244.4" font-size="38" font-weight="700" text-anchor="middle" fill="#9a5b1e">Les Avants</text>
 </svg>

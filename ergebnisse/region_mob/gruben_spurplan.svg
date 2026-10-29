@@ -1,14 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 673 240" width="673" height="240" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 612 247" width="612" height="247" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#fff"/>
 <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-<path d="M297.5,134.0H297.5Q300.6,134.0 302.2,131.3L312.9,112.7Q314.5,110.0 317.5,110.0H317.5M317.5,110.0H337.3M337.3,110.0H337.3Q340.3,110.0 341.9,112.7L352.7,131.3Q354.2,134.0 357.3,134.0H357.3" stroke="#9a5b1e" stroke-width="1.6"/>
-<path d="M213.4,134.0H297.5 M297.5,134.0H357.3 M357.3,134.0H444.7" stroke="#9a5b1e" stroke-width="3.6"/>
+<path d="M145.9,134.0H145.9Q149.0,134.0 150.5,131.3L161.3,112.7Q162.8,110.0 165.9,110.0H165.9M165.9,110.0H276.2M276.2,110.0H276.2Q279.3,110.0 280.8,112.7L291.6,131.3Q293.2,134.0 296.2,134.0H296.2 M151.9,134.0Q145.9,134.0 142.9,139.2L132.9,156.5 M236.0,134.0Q230.0,134.0 227.0,139.2L217.0,156.5" stroke="#9a5b1e" stroke-width="1.6"/>
+<path d="M236.0,134.0H296.2 M296.2,134.0H383.7" stroke="#9a5b1e" stroke-width="3.6"/>
 </g>
-<path d="M235.4,134.0H213.4" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
-<path d="M422.7,134.0H444.7" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
-<text x="201.4" y="121.0" font-size="22" text-anchor="end" fill="#9a5b1e">Linie 120</text>
-<text x="201.4" y="147.0" font-size="22" text-anchor="end" fill="#9a5b1e">← Gstaad</text>
-<text x="456.7" y="121.0" font-size="22" text-anchor="start" fill="#9a5b1e">Linie 120</text>
-<text x="456.7" y="147.0" font-size="22" text-anchor="start" fill="#9a5b1e">Zweisimmen →</text>
-<text x="327.9" y="210.0" font-size="38" font-weight="700" text-anchor="middle" fill="#9a5b1e">Gruben</text>
+<rect x="244.2" y="95.0" width="45.4" height="8" rx="1.5" fill="#9a5b1e"/>
+<rect x="244.5" y="141.0" width="44.7" height="8" rx="1.5" fill="#9a5b1e"/>
+<path d="M128.4,164.3L129.4,154.5L136.4,158.5Z" fill="#9a5b1e"/>
+<path d="M212.5,164.3L213.5,154.5L220.5,158.5Z" fill="#9a5b1e"/>
+<path d="M167.9,134.0H145.9" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
+<path d="M361.7,134.0H383.7" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
+<text x="133.9" y="93.0" font-size="22" text-anchor="end" fill="#9a5b1e">Linie 120</text>
+<text x="133.9" y="119.0" font-size="22" text-anchor="end" fill="#9a5b1e">← Château-d'Oex</text>
+<text x="395.7" y="121.0" font-size="22" text-anchor="start" fill="#9a5b1e">Linie 120</text>
+<text x="395.7" y="147.0" font-size="22" text-anchor="start" fill="#9a5b1e">Zweisimmen →</text>
+<text x="261.2" y="216.5" font-size="38" font-weight="700" text-anchor="middle" fill="#9a5b1e">Gruben</text>
 </svg>

@@ -1,14 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1133 216" width="1133" height="216" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 216" width="800" height="216" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#fff"/>
 <g fill="none" stroke-linecap="round" stroke-linejoin="round">
 <path d="" stroke="#9a5b1e" stroke-width="1.6"/>
-<path d="M328.2,110.0H686.2 M686.2,110.0H916.4 M309.7,110.0H328.2 M226.6,110.0H243.4 M243.4,110.0H309.7" stroke="#9a5b1e" stroke-width="3.6"/>
+<path d="M229.2,110.0H385.3 M385.3,110.0H615.6" stroke="#9a5b1e" stroke-width="3.6"/>
 </g>
-<path d="M894.4,110.0H916.4" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
-<path d="M248.6,110.0H226.6" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
-<text x="928.4" y="97.0" font-size="22" text-anchor="start" fill="#9a5b1e">Linie 121</text>
-<text x="928.4" y="123.0" font-size="22" text-anchor="start" fill="#9a5b1e">Glion →</text>
-<text x="214.6" y="97.0" font-size="22" text-anchor="end" fill="#9a5b1e">Linie 121</text>
-<text x="214.6" y="123.0" font-size="22" text-anchor="end" fill="#9a5b1e">← Montreux</text>
-<text x="744.2" y="186.0" font-size="38" font-weight="700" text-anchor="middle" fill="#9a5b1e">Valmont</text>
+<path d="M251.2,110.0H229.2" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
+<path d="M593.6,110.0H615.6" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
+<text x="217.2" y="97.0" font-size="22" text-anchor="end" fill="#9a5b1e">Linie 121</text>
+<text x="217.2" y="123.0" font-size="22" text-anchor="end" fill="#9a5b1e">← Montreux</text>
+<text x="627.6" y="97.0" font-size="22" text-anchor="start" fill="#9a5b1e">Linie 121</text>
+<text x="627.6" y="123.0" font-size="22" text-anchor="start" fill="#9a5b1e">Glion →</text>
+<text x="421.9" y="186.0" font-size="38" font-weight="700" text-anchor="middle" fill="#9a5b1e">Valmont</text>
 </svg>

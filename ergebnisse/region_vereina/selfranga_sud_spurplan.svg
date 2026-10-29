@@ -2,14 +2,14 @@
 <rect width="100%" height="100%" fill="#fff"/>
 <g fill="none" stroke-linecap="round" stroke-linejoin="round">
 <path d="" stroke="#9a5b1e" stroke-width="1.6"/>
-<path d="M227.8,110.0H477.0M477.0,110.0H477.0Q480.1,110.0 481.6,112.7L492.4,131.3Q493.9,134.0 497.0,134.0H497.0 M227.8,134.0H497.0 M497.0,134.0H614.2" stroke="#9a5b1e" stroke-width="3.6"/>
+<path d="M227.8,110.0H497.0 M227.8,134.0H477.0M477.0,134.0H477.0Q480.1,134.0 481.6,131.3L492.4,112.7Q493.9,110.0 497.0,110.0H497.0 M497.0,110.0H614.2" stroke="#9a5b1e" stroke-width="3.6"/>
 </g>
 <path d="M249.8,110.0H227.8" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
 <path d="M249.8,134.0H227.8" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
-<path d="M592.2,134.0H614.2" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
+<path d="M592.2,110.0H614.2" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
 <text x="215.8" y="109.0" font-size="22" text-anchor="end" fill="#9a5b1e">Linie 910</text>
 <text x="215.8" y="135.0" font-size="22" text-anchor="end" fill="#9a5b1e">← Klosters Platz</text>
-<text x="626.2" y="121.0" font-size="22" text-anchor="start" fill="#9a5b1e">Linie 910</text>
-<text x="626.2" y="147.0" font-size="22" text-anchor="start" fill="#9a5b1e">Sagliains →</text>
+<text x="626.2" y="97.0" font-size="22" text-anchor="start" fill="#9a5b1e">Linie 910</text>
+<text x="626.2" y="123.0" font-size="22" text-anchor="start" fill="#9a5b1e">Sagliains →</text>
 <text x="421.0" y="210.0" font-size="38" font-weight="700" text-anchor="middle" fill="#9a5b1e">Selfranga Süd</text>
 </svg>

@@ -1,4 +1,4 @@
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/region_vorbereiten.py /home/runner/work/topo-daten/topo-daten/schweiz_bahn.json.gz /home/runner/work/topo-daten/topo-daten/spurplan/regionen/vereina/region.json /tmp/spurplan_region/vereina  (10.2 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/region_vorbereiten.py /home/runner/work/topo-daten/topo-daten/schweiz_bahn.json.gz /home/runner/work/topo-daten/topo-daten/spurplan/regionen/vereina/region.json /tmp/spurplan_region/vereina  (8.8 s, rc 0)
   ohne Weiche, kein Plan: Gatschieferspitz (B) (site)
   ohne Weiche, kein Plan: Pischahorn (B) (site)
   ohne Weiche, kein Plan: Val Torta (B) (site)
@@ -33,284 +33,284 @@ Kanten: 17 Knoten: Counter({'station': 11, 'exit': 5})
 ohne Strecke: ['Cavadürli', 'Davos Laret']
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src sagliains.json --nowarp  (1.6 s, rc 0)
-Bahnhof Sagliains: Achse 6340 m, Ausschnitt s=4485…4905, 2 Weichen, 0 Perrons
-chains 3 lanes 3 segs 8 W 794 H 271
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src susch.json --nowarp  (1.6 s, rc 0)
-Bahnhof Susch: Achse 7665 m, Ausschnitt s=3333…3884, 5 Weichen, 0 Perrons
-chains 3 lanes 3 segs 12 W 947 H 252
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src sagliains_autoverlad.json --nowarp  (1.7 s, rc 0)
-Bahnhof Sagliains Autoverlad: Achse 6720 m, Ausschnitt s=4313…4733, 7 Weichen, 1 Perrons
-chains 3 lanes 3 segs 18 W 730 H 264
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src klosters_platz.json --nowarp  (2.1 s, rc 0)
-Bahnhof Klosters Platz: Achse 7185 m, Ausschnitt s=2350…2984, 13 Weichen, 0 Perrons
-chains 8 lanes 5 segs 34 W 989 H 311
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py sagliains  (0.9 s, rc 0)
-Optimization terminated successfully. (HiGHS Status 7: Optimal)
-Breite linear 386 px -> entzerrt 294 px
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py sagliains_autoverlad  (1.0 s, rc 0)
-Optimization terminated successfully. (HiGHS Status 7: Optimal)
-Breite linear 386 px -> entzerrt 179 px
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py susch  (1.0 s, rc 0)
-Optimization terminated successfully. (HiGHS Status 7: Optimal)
-Breite linear 507 px -> entzerrt 405 px
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py klosters_platz  (0.8 s, rc 0)
-Optimization terminated successfully. (HiGHS Status 7: Optimal)
-Breite linear 584 px -> entzerrt 384 px
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src sagliains.json  (1.5 s, rc 0)
-Bahnhof Sagliains: Achse 6340 m, Ausschnitt s=4485…4905, 2 Weichen, 0 Perrons
-chains 3 lanes 3 segs 8 W 702 H 271
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src sagliains_autoverlad.json  (1.6 s, rc 0)
-Bahnhof Sagliains Autoverlad: Achse 6720 m, Ausschnitt s=4313…4733, 7 Weichen, 1 Perrons
-chains 3 lanes 3 segs 18 W 614 H 264
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src susch.json  (1.7 s, rc 0)
-Bahnhof Susch: Achse 7665 m, Ausschnitt s=3333…3884, 5 Weichen, 0 Perrons
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src sagliains.json --nowarp  (1.2 s, rc 0)
+Bahnhof Sagliains: Achse 6360 m, Ausschnitt s=4477…4921, 2 Weichen, 1 Perrons
 G6: 1 Überstand(e) vor Ausrundung gekürzt
-chains 3 lanes 3 segs 12 W 846 H 252
+chains 4 lanes 3 segs 8 W 825 H 271
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py sagliains  (1.0 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src sagliains_autoverlad.json --nowarp  (1.2 s, rc 0)
+Bahnhof Sagliains Autoverlad: Achse 6720 m, Ausschnitt s=4318…4738, 6 Weichen, 0 Perrons
+G6: 2 Überstand(e) vor Ausrundung gekürzt
+chains 4 lanes 4 segs 16 W 830 H 277
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src susch.json --nowarp  (1.3 s, rc 0)
+Bahnhof Susch: Achse 7665 m, Ausschnitt s=3333…3884, 5 Weichen, 2 Perrons
+chains 3 lanes 3 segs 12 W 947 H 263
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src klosters_platz.json --nowarp  (1.5 s, rc 0)
+Bahnhof Klosters Platz: Achse 7210 m, Ausschnitt s=2350…2984, 12 Weichen, 2 Perrons
+chains 6 lanes 5 segs 33 W 1021 H 311
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py sagliains  (0.7 s, rc 0)
 Optimization terminated successfully. (HiGHS Status 7: Optimal)
-Breite linear 386 px -> entzerrt 294 px
+Breite linear 408 px -> entzerrt 370 px
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py sagliains_autoverlad  (0.7 s, rc 0)
+Optimization terminated successfully. (HiGHS Status 7: Optimal)
+Breite linear 386 px -> entzerrt 243 px
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py susch  (0.7 s, rc 0)
+Optimization terminated successfully. (HiGHS Status 7: Optimal)
+Breite linear 507 px -> entzerrt 412 px
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py klosters_platz  (0.7 s, rc 0)
+Optimization terminated successfully. (HiGHS Status 7: Optimal)
+Breite linear 584 px -> entzerrt 393 px
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src sagliains.json  (1.1 s, rc 0)
+Bahnhof Sagliains: Achse 6360 m, Ausschnitt s=4477…4921, 2 Weichen, 1 Perrons
+G6: 1 Überstand(e) vor Ausrundung gekürzt
+chains 4 lanes 3 segs 8 W 786 H 271
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src sagliains_autoverlad.json  (1.2 s, rc 0)
+Bahnhof Sagliains Autoverlad: Achse 6720 m, Ausschnitt s=4318…4738, 6 Weichen, 0 Perrons
+G6: 2 Überstand(e) vor Ausrundung gekürzt
+chains 4 lanes 4 segs 16 W 687 H 277
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src susch.json  (1.4 s, rc 0)
+Bahnhof Susch: Achse 7665 m, Ausschnitt s=3333…3884, 5 Weichen, 2 Perrons
+G6: 1 Überstand(e) vor Ausrundung gekürzt
+chains 3 lanes 3 segs 12 W 852 H 263
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py sagliains  (0.6 s, rc 0)
+Optimization terminated successfully. (HiGHS Status 7: Optimal)
+Breite linear 408 px -> entzerrt 370 px
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src klosters_platz.json  (1.6 s, rc 0)
+Bahnhof Klosters Platz: Achse 7210 m, Ausschnitt s=2350…2984, 12 Weichen, 2 Perrons
+G6: 4 Überstand(e) vor Ausrundung gekürzt
+chains 6 lanes 5 segs 33 W 830 H 311
 
 
 $ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py sagliains_autoverlad  (0.9 s, rc 0)
 Optimization terminated successfully. (HiGHS Status 7: Optimal)
-Breite linear 386 px -> entzerrt 179 px
+Breite linear 386 px -> entzerrt 243 px
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src klosters_platz.json  (2.2 s, rc 0)
-Bahnhof Klosters Platz: Achse 7185 m, Ausschnitt s=2350…2984, 13 Weichen, 0 Perrons
-G6: 3 Überstand(e) vor Ausrundung gekürzt
-chains 8 lanes 5 segs 34 W 807 H 312
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py susch  (0.8 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py susch  (0.7 s, rc 0)
 Optimization terminated successfully. (HiGHS Status 7: Optimal)
-Breite linear 507 px -> entzerrt 405 px
+Breite linear 507 px -> entzerrt 412 px
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py klosters_platz  (1.0 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py klosters_platz  (0.7 s, rc 0)
 Optimization terminated successfully. (HiGHS Status 7: Optimal)
-Breite linear 584 px -> entzerrt 395 px
+Breite linear 584 px -> entzerrt 412 px
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src sagliains.json  (1.5 s, rc 0)
-Bahnhof Sagliains: Achse 6340 m, Ausschnitt s=4485…4905, 2 Weichen, 0 Perrons
-chains 3 lanes 3 segs 8 W 702 H 271
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src sagliains_autoverlad.json  (1.5 s, rc 0)
-Bahnhof Sagliains Autoverlad: Achse 6720 m, Ausschnitt s=4313…4733, 7 Weichen, 1 Perrons
-chains 3 lanes 3 segs 18 W 614 H 264
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src susch.json  (1.7 s, rc 0)
-Bahnhof Susch: Achse 7665 m, Ausschnitt s=3333…3884, 5 Weichen, 0 Perrons
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src sagliains.json  (1.1 s, rc 0)
+Bahnhof Sagliains: Achse 6360 m, Ausschnitt s=4477…4921, 2 Weichen, 1 Perrons
 G6: 1 Überstand(e) vor Ausrundung gekürzt
-chains 3 lanes 3 segs 12 W 846 H 252
+chains 4 lanes 3 segs 8 W 786 H 271
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src klosters_platz.json  (1.8 s, rc 0)
-Bahnhof Klosters Platz: Achse 7185 m, Ausschnitt s=2350…2984, 13 Weichen, 0 Perrons
-G6: 3 Überstand(e) vor Ausrundung gekürzt
-chains 8 lanes 5 segs 34 W 818 H 311
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src sagliains_autoverlad.json  (1.1 s, rc 0)
+Bahnhof Sagliains Autoverlad: Achse 6720 m, Ausschnitt s=4318…4738, 6 Weichen, 0 Perrons
+G6: 2 Überstand(e) vor Ausrundung gekürzt
+chains 4 lanes 4 segs 16 W 687 H 277
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src sagliains.json --out /tmp/_chk_sagliains.svg  (1.6 s, rc 0)
-Bahnhof Sagliains: Achse 6340 m, Ausschnitt s=4485…4905, 2 Weichen, 0 Perrons
-chains 3 lanes 3 segs 8 W 702 H 271
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src susch.json  (1.4 s, rc 0)
+Bahnhof Susch: Achse 7665 m, Ausschnitt s=3333…3884, 5 Weichen, 2 Perrons
+G6: 1 Überstand(e) vor Ausrundung gekürzt
+chains 3 lanes 3 segs 12 W 852 H 263
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src klosters_platz.json  (1.3 s, rc 0)
+Bahnhof Klosters Platz: Achse 7210 m, Ausschnitt s=2350…2984, 12 Weichen, 2 Perrons
+G6: 4 Überstand(e) vor Ausrundung gekürzt
+chains 6 lanes 5 segs 33 W 849 H 311
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src sagliains.json --out /tmp/_chk_sagliains.svg  (1.3 s, rc 0)
+Bahnhof Sagliains: Achse 6360 m, Ausschnitt s=4477…4921, 2 Weichen, 1 Perrons
+G6: 1 Überstand(e) vor Ausrundung gekürzt
+chains 4 lanes 3 segs 8 W 786 H 271
 Befunde: {}
 eindeutig: {}
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src sagliains_autoverlad.json --out /tmp/_chk_sagliains_autoverlad.svg  (1.4 s, rc 0)
-Bahnhof Sagliains Autoverlad: Achse 6720 m, Ausschnitt s=4313…4733, 7 Weichen, 1 Perrons
-chains 3 lanes 3 segs 18 W 614 H 264
-Befunde: {'B': 1}
-eindeutig: {'B': 1}
-B x=   258 y=  134  Überlagerung 49px: Gleis (way 1417611898) / Gleis (way 1417611899)
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src susch.json --out /tmp/_chk_susch.svg  (1.6 s, rc 0)
-Bahnhof Susch: Achse 7665 m, Ausschnitt s=3333…3884, 5 Weichen, 0 Perrons
-G6: 1 Überstand(e) vor Ausrundung gekürzt
-chains 3 lanes 3 segs 12 W 846 H 252
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src sagliains_autoverlad.json --out /tmp/_chk_sagliains_autoverlad.svg  (1.2 s, rc 0)
+Bahnhof Sagliains Autoverlad: Achse 6720 m, Ausschnitt s=4318…4738, 6 Weichen, 0 Perrons
+G6: 2 Überstand(e) vor Ausrundung gekürzt
+chains 4 lanes 4 segs 16 W 687 H 277
 Befunde: {}
 eindeutig: {}
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src sagliains.json --bare --out sagliains_bare.svg  (1.6 s, rc 0)
-Bahnhof Sagliains: Achse 6340 m, Ausschnitt s=4485…4905, 2 Weichen, 0 Perrons
-chains 3 lanes 3 segs 8 W 702 H 271
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src sagliains_autoverlad.json --bare --out sagliains_autoverlad_bare.svg  (1.5 s, rc 0)
-Bahnhof Sagliains Autoverlad: Achse 6720 m, Ausschnitt s=4313…4733, 7 Weichen, 1 Perrons
-chains 3 lanes 3 segs 18 W 614 H 263
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src klosters_platz.json --out /tmp/_chk_klosters_platz.svg  (1.9 s, rc 0)
-Bahnhof Klosters Platz: Achse 7185 m, Ausschnitt s=2350…2984, 13 Weichen, 0 Perrons
-G6: 3 Überstand(e) vor Ausrundung gekürzt
-chains 8 lanes 5 segs 34 W 818 H 311
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src susch.json --out /tmp/_chk_susch.svg  (1.1 s, rc 0)
+Bahnhof Susch: Achse 7665 m, Ausschnitt s=3333…3884, 5 Weichen, 2 Perrons
+G6: 1 Überstand(e) vor Ausrundung gekürzt
+chains 3 lanes 3 segs 12 W 852 H 263
 Befunde: {}
 eindeutig: {}
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src susch.json --bare --out susch_bare.svg  (1.5 s, rc 0)
-Bahnhof Susch: Achse 7665 m, Ausschnitt s=3333…3884, 5 Weichen, 0 Perrons
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src sagliains.json --bare --out sagliains_bare.svg  (1.1 s, rc 0)
+Bahnhof Sagliains: Achse 6360 m, Ausschnitt s=4477…4921, 2 Weichen, 1 Perrons
 G6: 1 Überstand(e) vor Ausrundung gekürzt
-chains 3 lanes 3 segs 12 W 846 H 252
+chains 4 lanes 3 segs 8 W 786 H 271
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src klosters_selfranga.json --nowarp  (1.5 s, rc 0)
-Bahnhof Klosters Selfranga: Achse 8975 m, Ausschnitt s=4281…4710, 7 Weichen, 0 Perrons
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src sagliains_autoverlad.json --bare --out sagliains_autoverlad_bare.svg  (1.0 s, rc 0)
+Bahnhof Sagliains Autoverlad: Achse 6720 m, Ausschnitt s=4318…4738, 6 Weichen, 0 Perrons
+G6: 2 Überstand(e) vor Ausrundung gekürzt
+chains 4 lanes 4 segs 16 W 687 H 276
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src klosters_platz.json --out /tmp/_chk_klosters_platz.svg  (1.6 s, rc 0)
+Bahnhof Klosters Platz: Achse 7210 m, Ausschnitt s=2350…2984, 12 Weichen, 2 Perrons
+G6: 4 Überstand(e) vor Ausrundung gekürzt
+chains 6 lanes 5 segs 33 W 849 H 311
+Befunde: {}
+eindeutig: {}
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src susch.json --bare --out susch_bare.svg  (1.4 s, rc 0)
+Bahnhof Susch: Achse 7665 m, Ausschnitt s=3333…3884, 5 Weichen, 2 Perrons
+G6: 1 Überstand(e) vor Ausrundung gekürzt
+chains 3 lanes 3 segs 12 W 852 H 263
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src klosters_selfranga.json --nowarp  (1.1 s, rc 0)
+Bahnhof Klosters Selfranga: Achse 8970 m, Ausschnitt s=4281…4710, 7 Weichen, 0 Perrons
 chains 5 lanes 4 segs 17 W 831 H 266
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src sagliains_sasslatsch.json --nowarp  (1.7 s, rc 0)
-Bahnhof Sagliains Sasslatsch: Achse 7560 m, Ausschnitt s=4105…4891, 6 Weichen, 1 Perrons
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src sagliains_sasslatsch.json --nowarp  (1.2 s, rc 0)
+Bahnhof Sagliains Sasslatsch: Achse 7560 m, Ausschnitt s=4105…4889, 6 Weichen, 0 Perrons
 chains 2 lanes 2 segs 12 W 782 H 377
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src sasslatsch.json --nowarp  (1.5 s, rc 0)
-Bahnhof Sasslatsch: Achse 3445 m, Ausschnitt s=1420…2113, 3 Weichen, 0 Perrons
-chains 2 lanes 2 segs 10 W 1083 H 240
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src klosters_platz.json --bare --out klosters_platz_bare.svg  (1.3 s, rc 0)
+Bahnhof Klosters Platz: Achse 7210 m, Ausschnitt s=2350…2984, 12 Weichen, 2 Perrons
+G6: 4 Überstand(e) vor Ausrundung gekürzt
+chains 6 lanes 5 segs 33 W 849 H 311
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src klosters_platz.json --bare --out klosters_platz_bare.svg  (1.9 s, rc 0)
-Bahnhof Klosters Platz: Achse 7185 m, Ausschnitt s=2350…2984, 13 Weichen, 0 Perrons
-G6: 3 Überstand(e) vor Ausrundung gekürzt
-chains 8 lanes 5 segs 34 W 818 H 311
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py klosters_selfranga  (1.0 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py klosters_selfranga  (0.7 s, rc 0)
 Optimization terminated successfully. (HiGHS Status 7: Optimal)
 Breite linear 395 px -> entzerrt 147 px
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py sagliains_sasslatsch  (0.9 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src sasslatsch.json --nowarp  (1.1 s, rc 0)
+Bahnhof Sasslatsch: Achse 3445 m, Ausschnitt s=1420…2113, 3 Weichen, 0 Perrons
+chains 2 lanes 2 segs 9 W 1083 H 240
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py sagliains_sasslatsch  (0.6 s, rc 0)
 Optimization terminated successfully. (HiGHS Status 7: Optimal)
-Breite linear 723 px -> entzerrt 211 px
+Breite linear 721 px -> entzerrt 211 px
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py sasslatsch  (0.9 s, rc 0)
-Optimization terminated successfully. (HiGHS Status 7: Optimal)
-Breite linear 637 px -> entzerrt 336 px
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src selfranga_sud.json --nowarp  (1.5 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src selfranga_sud.json --nowarp  (1.1 s, rc 0)
 Bahnhof Selfranga Süd: Achse 8975 m, Ausschnitt s=4282…4702, 1 Weichen, 0 Perrons
 chains 2 lanes 2 segs 3 W 839 H 240
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src sagliains_sasslatsch.json  (1.4 s, rc 0)
-Bahnhof Sagliains Sasslatsch: Achse 7560 m, Ausschnitt s=4105…4891, 6 Weichen, 1 Perrons
-T4 automatisch: Way 24484307 über 1 Gleis(e) bei (395,189)
-chains 2 lanes 2 segs 12 W 593 H 377
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py sasslatsch  (0.9 s, rc 0)
+Optimization terminated successfully. (HiGHS Status 7: Optimal)
+Breite linear 637 px -> entzerrt 393 px
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src sasslatsch.json  (1.5 s, rc 0)
-Bahnhof Sasslatsch: Achse 3445 m, Ausschnitt s=1420…2113, 3 Weichen, 0 Perrons
-chains 2 lanes 2 segs 10 W 782 H 240
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src klosters_selfranga.json  (1.7 s, rc 0)
-Bahnhof Klosters Selfranga: Achse 8975 m, Ausschnitt s=4281…4710, 7 Weichen, 0 Perrons
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src klosters_selfranga.json  (1.1 s, rc 0)
+Bahnhof Klosters Selfranga: Achse 8970 m, Ausschnitt s=4281…4710, 7 Weichen, 0 Perrons
 chains 5 lanes 4 segs 17 W 583 H 266
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py selfranga_sud  (0.9 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src sagliains_sasslatsch.json  (1.1 s, rc 0)
+Bahnhof Sagliains Sasslatsch: Achse 7560 m, Ausschnitt s=4105…4889, 6 Weichen, 0 Perrons
+W8 Abgang Susch: Schräge durchgezogen bis zum Abgang (430 -> 438 px)
+T4 automatisch: Way 24484307 über 1 Gleis(e) bei (400,198)
+chains 2 lanes 2 segs 12 W 593 H 377
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py selfranga_sud  (0.8 s, rc 0)
 Optimization terminated successfully. (HiGHS Status 7: Optimal)
 Breite linear 386 px -> entzerrt 386 px
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py sagliains_sasslatsch  (1.0 s, rc 0)
-Optimization terminated successfully. (HiGHS Status 7: Optimal)
-Breite linear 723 px -> entzerrt 211 px
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py sasslatsch  (0.9 s, rc 0)
-Optimization terminated successfully. (HiGHS Status 7: Optimal)
-Breite linear 637 px -> entzerrt 336 px
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py klosters_selfranga  (1.0 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py klosters_selfranga  (0.7 s, rc 0)
 Optimization terminated successfully. (HiGHS Status 7: Optimal)
 Breite linear 395 px -> entzerrt 147 px
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src selfranga_sud.json  (1.5 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py sagliains_sasslatsch  (0.6 s, rc 0)
+Optimization terminated successfully. (HiGHS Status 7: Optimal)
+Breite linear 721 px -> entzerrt 211 px
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src sasslatsch.json  (1.1 s, rc 0)
+Bahnhof Sasslatsch: Achse 3445 m, Ausschnitt s=1420…2113, 3 Weichen, 0 Perrons
+chains 2 lanes 2 segs 9 W 840 H 240
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src selfranga_sud.json  (1.0 s, rc 0)
 Bahnhof Selfranga Süd: Achse 8975 m, Ausschnitt s=4282…4702, 1 Weichen, 0 Perrons
 chains 2 lanes 2 segs 3 W 839 H 240
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src sasslatsch.json  (1.4 s, rc 0)
-Bahnhof Sasslatsch: Achse 3445 m, Ausschnitt s=1420…2113, 3 Weichen, 0 Perrons
-chains 2 lanes 2 segs 10 W 782 H 240
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py sasslatsch  (0.8 s, rc 0)
+Optimization terminated successfully. (HiGHS Status 7: Optimal)
+Breite linear 637 px -> entzerrt 393 px
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src sagliains_sasslatsch.json  (1.7 s, rc 0)
-Bahnhof Sagliains Sasslatsch: Achse 7560 m, Ausschnitt s=4105…4891, 6 Weichen, 1 Perrons
-T4 automatisch: Way 24484307 über 1 Gleis(e) bei (395,189)
-chains 2 lanes 2 segs 12 W 593 H 377
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src klosters_selfranga.json  (1.7 s, rc 0)
-Bahnhof Klosters Selfranga: Achse 8975 m, Ausschnitt s=4281…4710, 7 Weichen, 0 Perrons
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src klosters_selfranga.json  (1.3 s, rc 0)
+Bahnhof Klosters Selfranga: Achse 8970 m, Ausschnitt s=4281…4710, 7 Weichen, 0 Perrons
 chains 5 lanes 4 segs 17 W 583 H 266
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py selfranga_sud  (1.0 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src sagliains_sasslatsch.json  (1.2 s, rc 0)
+Bahnhof Sagliains Sasslatsch: Achse 7560 m, Ausschnitt s=4105…4889, 6 Weichen, 0 Perrons
+W8 Abgang Susch: Schräge durchgezogen bis zum Abgang (430 -> 438 px)
+T4 automatisch: Way 24484307 über 1 Gleis(e) bei (400,198)
+chains 2 lanes 2 segs 12 W 593 H 377
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py selfranga_sud  (0.7 s, rc 0)
 Optimization terminated successfully. (HiGHS Status 7: Optimal)
 Breite linear 386 px -> entzerrt 386 px
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src sasslatsch.json --out /tmp/_chk_sasslatsch.svg  (1.4 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src sasslatsch.json  (1.2 s, rc 0)
 Bahnhof Sasslatsch: Achse 3445 m, Ausschnitt s=1420…2113, 3 Weichen, 0 Perrons
-chains 2 lanes 2 segs 10 W 782 H 240
-Befunde: {}
-eindeutig: {}
+chains 2 lanes 2 segs 9 W 840 H 240
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src selfranga_sud.json  (1.3 s, rc 0)
-Bahnhof Selfranga Süd: Achse 8975 m, Ausschnitt s=4282…4702, 1 Weichen, 0 Perrons
-chains 2 lanes 2 segs 3 W 839 H 240
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src sagliains_sasslatsch.json --out /tmp/_chk_sagliains_sasslatsch.svg  (1.7 s, rc 0)
-Bahnhof Sagliains Sasslatsch: Achse 7560 m, Ausschnitt s=4105…4891, 6 Weichen, 1 Perrons
-T4 automatisch: Way 24484307 über 1 Gleis(e) bei (395,189)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src sagliains_sasslatsch.json --out /tmp/_chk_sagliains_sasslatsch.svg  (1.1 s, rc 0)
+Bahnhof Sagliains Sasslatsch: Achse 7560 m, Ausschnitt s=4105…4889, 6 Weichen, 0 Perrons
+W8 Abgang Susch: Schräge durchgezogen bis zum Abgang (430 -> 438 px)
+T4 automatisch: Way 24484307 über 1 Gleis(e) bei (400,198)
 chains 2 lanes 2 segs 12 W 593 H 377
 Befunde: {'B': 2}
 eindeutig: {'B': 2}
-B x=   413 y=  134  Scheinverbindung: Gleis (way 24484307) berührt Gleis (way 267701864)
-B x=   414 y=  134  Überlagerung 47px: Gleis (way 267701864) / Gleis (way 1394563638)
+B x=   416 y=  134  Scheinverbindung: Gleis (way 24484307) berührt Gleis (way 267701864)
+B x=   423 y=  134  Überlagerung 51px: Gleis (way 267701864) / Gleis (way 1394563638)
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src klosters_selfranga.json --out /tmp/_chk_klosters_selfranga.svg  (1.6 s, rc 0)
-Bahnhof Klosters Selfranga: Achse 8975 m, Ausschnitt s=4281…4710, 7 Weichen, 0 Perrons
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src klosters_selfranga.json --out /tmp/_chk_klosters_selfranga.svg  (1.2 s, rc 0)
+Bahnhof Klosters Selfranga: Achse 8970 m, Ausschnitt s=4281…4710, 7 Weichen, 0 Perrons
 chains 5 lanes 4 segs 17 W 583 H 266
 Befunde: {'B': 4}
 eindeutig: {'B': 2}
@@ -318,66 +318,103 @@ B x=   289 y=  110  Scheinverbindung: yard (way 100532819) berührt siding (way 
 B x=   289 y=  110  Scheinverbindung: yard (way 100532819) berührt siding (way 958390878)
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src sasslatsch.json --bare --out sasslatsch_bare.svg  (1.4 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src selfranga_sud.json  (1.0 s, rc 0)
+Bahnhof Selfranga Süd: Achse 8975 m, Ausschnitt s=4282…4702, 1 Weichen, 0 Perrons
+chains 2 lanes 2 segs 3 W 839 H 240
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src sasslatsch.json --out /tmp/_chk_sasslatsch.svg  (1.1 s, rc 0)
 Bahnhof Sasslatsch: Achse 3445 m, Ausschnitt s=1420…2113, 3 Weichen, 0 Perrons
-chains 2 lanes 2 segs 10 W 782 H 239
+chains 2 lanes 2 segs 9 W 840 H 240
+Befunde: {}
+eindeutig: {}
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src selfranga_sud.json --out /tmp/_chk_selfranga_sud.svg  (1.5 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src klosters_selfranga.json --bare --out klosters_selfranga_bare.svg  (1.1 s, rc 0)
+Bahnhof Klosters Selfranga: Achse 8970 m, Ausschnitt s=4281…4710, 7 Weichen, 0 Perrons
+chains 5 lanes 4 segs 17 W 583 H 265
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src sagliains_sasslatsch.json --bare --out sagliains_sasslatsch_bare.svg  (1.2 s, rc 0)
+Bahnhof Sagliains Sasslatsch: Achse 7560 m, Ausschnitt s=4105…4889, 6 Weichen, 0 Perrons
+chains 2 lanes 2 segs 12 W 593 H 239
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src selfranga_sud.json --out /tmp/_chk_selfranga_sud.svg  (1.1 s, rc 0)
 Bahnhof Selfranga Süd: Achse 8975 m, Ausschnitt s=4282…4702, 1 Weichen, 0 Perrons
 chains 2 lanes 2 segs 3 W 839 H 240
 Befunde: {}
 eindeutig: {}
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src sagliains_sasslatsch.json --bare --out sagliains_sasslatsch_bare.svg  (1.6 s, rc 0)
-Bahnhof Sagliains Sasslatsch: Achse 7560 m, Ausschnitt s=4105…4891, 6 Weichen, 1 Perrons
-chains 2 lanes 2 segs 12 W 593 H 239
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src sasslatsch.json --bare --out sasslatsch_bare.svg  (1.0 s, rc 0)
+Bahnhof Sasslatsch: Achse 3445 m, Ausschnitt s=1420…2113, 3 Weichen, 0 Perrons
+chains 2 lanes 2 segs 9 W 840 H 239
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src klosters_selfranga.json --bare --out klosters_selfranga_bare.svg  (1.6 s, rc 0)
-Bahnhof Klosters Selfranga: Achse 8975 m, Ausschnitt s=4281…4710, 7 Weichen, 0 Perrons
-chains 5 lanes 4 segs 17 W 583 H 265
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src vereina_nord.json --nowarp  (1.3 s, rc 0)
-Bahnhof Vereina Nord: Achse 8980 m, Ausschnitt s=4284…4704, 3 Weichen, 0 Perrons
-chains 3 lanes 3 segs 6 W 840 H 248
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src selfranga_sud.json --bare --out selfranga_sud_bare.svg  (1.4 s, rc 0)
-Bahnhof Selfranga Süd: Achse 8975 m, Ausschnitt s=4282…4702, 1 Weichen, 0 Perrons
-chains 2 lanes 2 segs 3 W 839 H 239
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src vereina_sud.json --nowarp  (1.4 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src vereina_sud.json --nowarp  (1.2 s, rc 0)
 Bahnhof Vereina Süd: Achse 8985 m, Ausschnitt s=4285…4705, 1 Weichen, 0 Perrons
 chains 2 lanes 2 segs 3 W 835 H 240
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py vereina_nord  (0.9 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src vereina_nord.json --nowarp  (1.2 s, rc 0)
+Bahnhof Vereina Nord: Achse 8980 m, Ausschnitt s=4284…4704, 2 Weichen, 0 Perrons
+chains 2 lanes 2 segs 5 W 840 H 240
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src selfranga_sud.json --bare --out selfranga_sud_bare.svg  (1.2 s, rc 0)
+Bahnhof Selfranga Süd: Achse 8975 m, Ausschnitt s=4282…4702, 1 Weichen, 0 Perrons
+chains 2 lanes 2 segs 3 W 839 H 239
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py vereina_sud  (0.6 s, rc 0)
 Optimization terminated successfully. (HiGHS Status 7: Optimal)
-Breite linear 386 px -> entzerrt 296 px
+Breite linear 386 px -> entzerrt 386 px
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src sagliains_nord.json --nowarp  (1.4 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src sagliains_nord.json --nowarp  (1.0 s, rc 0)
 Bahnhof Sagliains Nord: Achse 8965 m, Ausschnitt s=4286…4706, 1 Weichen, 0 Perrons
 chains 2 lanes 2 segs 3 W 829 H 240
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py vereina_sud  (0.7 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py vereina_nord  (0.7 s, rc 0)
+Optimization terminated successfully. (HiGHS Status 7: Optimal)
+Breite linear 386 px -> entzerrt 292 px
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py sagliains_nord  (0.6 s, rc 0)
 Optimization terminated successfully. (HiGHS Status 7: Optimal)
 Breite linear 386 px -> entzerrt 386 px
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py sagliains_nord  (0.9 s, rc 0)
-Optimization terminated successfully. (HiGHS Status 7: Optimal)
-Breite linear 386 px -> entzerrt 386 px
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src vereina_sud.json  (1.1 s, rc 0)
+Bahnhof Vereina Süd: Achse 8985 m, Ausschnitt s=4285…4705, 1 Weichen, 0 Perrons
+chains 2 lanes 2 segs 3 W 835 H 240
 
 
 $ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src vereina_nord.json  (1.1 s, rc 0)
-Bahnhof Vereina Nord: Achse 8980 m, Ausschnitt s=4284…4704, 3 Weichen, 0 Perrons
-chains 3 lanes 3 segs 6 W 750 H 248
+Bahnhof Vereina Nord: Achse 8980 m, Ausschnitt s=4284…4704, 2 Weichen, 0 Perrons
+chains 2 lanes 2 segs 5 W 746 H 240
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src sagliains_nord.json  (0.9 s, rc 0)
+Bahnhof Sagliains Nord: Achse 8965 m, Ausschnitt s=4286…4706, 1 Weichen, 0 Perrons
+chains 2 lanes 2 segs 3 W 829 H 240
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py vereina_sud  (0.6 s, rc 0)
+Optimization terminated successfully. (HiGHS Status 7: Optimal)
+Breite linear 386 px -> entzerrt 386 px
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py vereina_nord  (0.6 s, rc 0)
+Optimization terminated successfully. (HiGHS Status 7: Optimal)
+Breite linear 386 px -> entzerrt 292 px
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py sagliains_nord  (0.7 s, rc 0)
+Optimization terminated successfully. (HiGHS Status 7: Optimal)
+Breite linear 386 px -> entzerrt 386 px
 
 
 $ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src vereina_sud.json  (1.2 s, rc 0)
@@ -385,70 +422,45 @@ Bahnhof Vereina Süd: Achse 8985 m, Ausschnitt s=4285…4705, 1 Weichen, 0 Perro
 chains 2 lanes 2 segs 3 W 835 H 240
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py vereina_nord  (0.8 s, rc 0)
-Optimization terminated successfully. (HiGHS Status 7: Optimal)
-Breite linear 386 px -> entzerrt 296 px
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src vereina_nord.json  (1.0 s, rc 0)
+Bahnhof Vereina Nord: Achse 8980 m, Ausschnitt s=4284…4704, 2 Weichen, 0 Perrons
+chains 2 lanes 2 segs 5 W 746 H 240
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src sagliains_nord.json  (1.1 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src sagliains_nord.json  (1.0 s, rc 0)
 Bahnhof Sagliains Nord: Achse 8965 m, Ausschnitt s=4286…4706, 1 Weichen, 0 Perrons
 chains 2 lanes 2 segs 3 W 829 H 240
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py vereina_sud  (0.8 s, rc 0)
-Optimization terminated successfully. (HiGHS Status 7: Optimal)
-Breite linear 386 px -> entzerrt 386 px
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py sagliains_nord  (0.8 s, rc 0)
-Optimization terminated successfully. (HiGHS Status 7: Optimal)
-Breite linear 386 px -> entzerrt 386 px
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src vereina_nord.json  (1.4 s, rc 0)
-Bahnhof Vereina Nord: Achse 8980 m, Ausschnitt s=4284…4704, 3 Weichen, 0 Perrons
-chains 3 lanes 3 segs 6 W 750 H 248
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src vereina_sud.json  (0.9 s, rc 0)
-Bahnhof Vereina Süd: Achse 8985 m, Ausschnitt s=4285…4705, 1 Weichen, 0 Perrons
-chains 2 lanes 2 segs 3 W 835 H 240
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src sagliains_nord.json  (1.4 s, rc 0)
-Bahnhof Sagliains Nord: Achse 8965 m, Ausschnitt s=4286…4706, 1 Weichen, 0 Perrons
-chains 2 lanes 2 segs 3 W 829 H 240
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src vereina_sud.json --out /tmp/_chk_vereina_sud.svg  (1.1 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src vereina_sud.json --out /tmp/_chk_vereina_sud.svg  (0.9 s, rc 0)
 Bahnhof Vereina Süd: Achse 8985 m, Ausschnitt s=4285…4705, 1 Weichen, 0 Perrons
 chains 2 lanes 2 segs 3 W 835 H 240
 Befunde: {}
 eindeutig: {}
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src vereina_nord.json --out /tmp/_chk_vereina_nord.svg  (1.2 s, rc 0)
-Bahnhof Vereina Nord: Achse 8980 m, Ausschnitt s=4284…4704, 3 Weichen, 0 Perrons
-chains 3 lanes 3 segs 6 W 750 H 248
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src vereina_nord.json --out /tmp/_chk_vereina_nord.svg  (0.9 s, rc 0)
+Bahnhof Vereina Nord: Achse 8980 m, Ausschnitt s=4284…4704, 2 Weichen, 0 Perrons
+chains 2 lanes 2 segs 5 W 746 H 240
 Befunde: {}
 eindeutig: {}
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src sagliains_nord.json --out /tmp/_chk_sagliains_nord.svg  (1.1 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src sagliains_nord.json --out /tmp/_chk_sagliains_nord.svg  (1.0 s, rc 0)
 Bahnhof Sagliains Nord: Achse 8965 m, Ausschnitt s=4286…4706, 1 Weichen, 0 Perrons
 chains 2 lanes 2 segs 3 W 829 H 240
 Befunde: {}
 eindeutig: {}
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src vereina_sud.json --bare --out vereina_sud_bare.svg  (1.3 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src vereina_sud.json --bare --out vereina_sud_bare.svg  (0.8 s, rc 0)
 Bahnhof Vereina Süd: Achse 8985 m, Ausschnitt s=4285…4705, 1 Weichen, 0 Perrons
 chains 2 lanes 2 segs 3 W 835 H 239
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src vereina_nord.json --bare --out vereina_nord_bare.svg  (1.2 s, rc 0)
-Bahnhof Vereina Nord: Achse 8980 m, Ausschnitt s=4284…4704, 3 Weichen, 0 Perrons
-chains 3 lanes 3 segs 6 W 750 H 248
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src vereina_nord.json --bare --out vereina_nord_bare.svg  (0.9 s, rc 0)
+Bahnhof Vereina Nord: Achse 8980 m, Ausschnitt s=4284…4704, 2 Weichen, 0 Perrons
+chains 2 lanes 2 segs 5 W 746 H 239
 
 
 $ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src sagliains_nord.json --bare --out sagliains_nord_bare.svg  (0.8 s, rc 0)
@@ -456,7 +468,7 @@ Bahnhof Sagliains Nord: Achse 8965 m, Ausschnitt s=4286…4706, 1 Weichen, 0 Per
 chains 2 lanes 2 segs 3 W 829 H 239
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/netz_lage.py vereina_region Region Vereina (Klosters – Sagliains – Susch) region.svg --pruefen  (0.8 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/netz_lage.py vereina_region Region Vereina (Klosters – Sagliains – Susch) region.svg --pruefen  (0.6 s, rc 0)
  Platz – Klosters Selfranga: 248 m ab Klosters Platz: Spurwechsel (Way 556806232, crossover) nicht im Plan
   Klosters Platz – Abgang 915: 330–455 m ab Klosters Platz: OSM 2 Gleise, Plan 1
   Klosters Platz – Abgang 915: 505–1130 m ab Klosters Platz: OSM 2 Gleise, Plan 1
@@ -487,14 +499,19 @@ $ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/netz_lage.py ver
   → 36 Befunde
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/regel_pruefung.py region.svg --json regeln.json  (0.7 s, rc 0)
-G2	-426.9,-648.3	Klosters Platz	Weiche ohne Ausrundung (33°)
-G2	-426.9,-648.3	Klosters Platz	Weiche ohne Ausrundung (33°)
-G2	930.1,289.0	Sagliains	Weiche ohne Ausrundung (61°)
-G2	-406.3,-473.6	Klosters Selfranga	Weiche ohne Ausrundung (28°)
-G2	-82.6,-169.7	Vereina Nord	Weiche ohne Ausrundung (33°)
-G2	-82.6,-169.7	Vereina Nord	Weiche ohne Ausrundung (33°)
-G2	925.1,291.5	-	Weiche ohne Ausrundung (36°)
-G6	824.3,304.4	Sagliains	Linien stossen mit Knick 120° zusammen (Knubbel)
-G8	714.0,367.4	Sagliains Autoverlad	Gleise 10 px deckungsgleich
-Regelprüfung: {'G2': 7, 'G6': 1, 'G8': 1}
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/regel_pruefung.py region.svg --json regeln.json  (0.6 s, rc 0)
+G2	-382.0,-568.7	Klosters Platz	Weiche ohne Ausrundung (33°)
+G2	-390.9,-593.6	Klosters Platz	Weiche ohne Ausrundung (33°)
+G2	-390.9,-593.6	Klosters Platz	Weiche ohne Ausrundung (33°)
+G2	-455.2,-468.8	Klosters Platz	Weiche ohne Ausrundung (15°)
+G2	949.9,224.0	Sagliains	Weiche ohne Ausrundung (61°)
+G2	695.8,317.3	Sagliains Autoverlad	Weiche ohne Ausrundung (60°)
+G2	658.8,320.0	Sagliains Autoverlad	Weiche ohne Ausrundung (55°)
+G2	-363.2,-407.1	Klosters Selfranga	Weiche ohne Ausrundung (28°)
+G2	-198.4,-268.9	Selfranga Süd	Weiche ohne Ausrundung (19°)
+G2	-455.3,-468.5	-	Weiche ohne Ausrundung (14°)
+G6	700.2,314.1	Sagliains Autoverlad	Linien stossen mit Knick 90° zusammen (Knubbel)
+G6	705.3,322.8	Sagliains Autoverlad	Linien stossen mit Knick 90° zusammen (Knubbel)
+G6	543.5,291.9	-	Linien stossen mit Knick 120° zusammen (Knubbel)
+G8	538.0,459.3	Sasslatsch	Gleise 65 px deckungsgleich
+Regelprüfung: {'G2': 10, 'G6': 3, 'G8': 1}

@@ -1,15 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 691 263" width="691" height="263" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 607 263" width="607" height="263" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#fff"/>
 <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-<path d="M347.1,134.0H347.1Q350.2,134.0 351.8,136.7L362.5,155.3Q364.1,158.0 367.1,158.0H367.1M367.1,158.0H386.9M386.9,158.0H386.9Q389.9,158.0 391.5,155.3L402.2,136.7Q403.8,134.0 406.9,134.0H406.9 M383.2,110.0H398.0 M355.3,134.0H355.3Q362.3,134.0 365.8,127.9L372.7,116.1Q376.2,110.0 383.2,110.0H383.2" stroke="#9a5b1e" stroke-width="1.6"/>
-<path d="M347.1,134.0H355.3 M355.3,134.0H406.9 M225.5,134.0H347.1 M406.9,134.0H462.1" stroke="#9a5b1e" stroke-width="3.6"/>
+<path d="M237.7,134.0H237.7Q240.8,134.0 242.3,136.7L253.1,155.3Q254.7,158.0 257.7,158.0H257.7M257.7,158.0H302.8M302.8,158.0H302.8Q305.8,158.0 307.4,155.3L318.2,136.7Q319.7,134.0 322.8,134.0H322.8 M268.8,110.0H313.9 M241.0,134.0H241.0Q248.0,134.0 251.5,127.9L258.3,116.1Q261.8,110.0 268.8,110.0H268.8" stroke="#9a5b1e" stroke-width="1.6"/>
+<path d="M237.7,134.0H241.0 M241.0,134.0H322.8 M116.1,134.0H237.7 M322.8,134.0H378.0" stroke="#9a5b1e" stroke-width="3.6"/>
 </g>
-<circle cx="398.0" cy="110.0" r="3.2" fill="#9a5b1e"/>
-<path d="M247.5,134.0H225.5" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
-<path d="M440.1,134.0H462.1" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
-<text x="213.5" y="121.0" font-size="22" text-anchor="end" fill="#9a5b1e">Linie 120</text>
-<text x="213.5" y="147.0" font-size="22" text-anchor="end" fill="#9a5b1e">← Château-d'Oex</text>
-<text x="474.1" y="121.0" font-size="22" text-anchor="start" fill="#9a5b1e">Linie 120</text>
-<text x="474.1" y="147.0" font-size="22" text-anchor="start" fill="#9a5b1e">Gstaad →</text>
-<text x="386.2" y="218.0" font-size="38" font-weight="700" text-anchor="middle" fill="#9a5b1e">Rougemont</text>
+<rect x="242.4" y="142.0" width="71.5" height="8" rx="1.5" fill="#9a5b1e"/>
+<rect x="253.0" y="118.0" width="60.8" height="8" rx="1.5" fill="#9a5b1e"/>
+<circle cx="313.9" cy="110.0" r="3.2" fill="#9a5b1e"/>
+<path d="M138.1,134.0H116.1" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
+<path d="M356.0,134.0H378.0" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
+<text x="104.1" y="121.0" font-size="22" text-anchor="end" fill="#9a5b1e">Linie 120</text>
+<text x="104.1" y="147.0" font-size="22" text-anchor="end" fill="#9a5b1e">← Château-d'Oex</text>
+<text x="390.0" y="121.0" font-size="22" text-anchor="start" fill="#9a5b1e">Linie 120</text>
+<text x="390.0" y="147.0" font-size="22" text-anchor="start" fill="#9a5b1e">Gstaad →</text>
+<text x="282.5" y="218.0" font-size="38" font-weight="700" text-anchor="middle" fill="#9a5b1e">Rougemont</text>
 </svg>
