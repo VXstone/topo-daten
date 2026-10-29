@@ -760,3 +760,14 @@ Wunsch D. Eckenstein: Nutzung sparen, mehr in Git auslagern.
 - region_vorbereiten: `<bp>_fern.json` = je Knoten und Richtung der erste Punkt 3 km Luftlinie weiter auf dem Streckengleis (max. 15 km, volle Daten); spurplan_schema peilt Abgangsziele darauf (Kehren: Klosters → Davos/Sagliains statt Landquart).
 - spurplan_schema: Gleis mit service-Tag ist Perrongleis, wenn ein Perron bis 15 m daneben seine railway:track_ref in der ref führt (Klosters Gl. 2 am Perron «2;3»; Konolfingen Gl. 1: D11 weg, neu Z1 Nummer 53 px neben Perronmitte). Regel abschaltbar: rules.r_perron_ref=false.
 - Offen: Regionalplan-Abgang 915 West heisst noch «Landquart» (Topologie peilt am Achsende, Fernpunkt dort noch nicht genutzt); Lage am Dreieck Sasslatsch mit Bogen über dem Autoverlad; G2 ×11.
+
+## 29.10.2026 (4) – Vereina Runde 4: Code-Korrekturen (Wunsch D. Eckenstein «möglichst viel im Code»)
+- Schema, Lückenregel (Solothurn): nicht über Gleise mit eigener anderer Nummer (Klosters Gl. 4 wurde Perrongleis).
+- Schema, Perron-Fortsetzung (cfg perron_fortsetzung): zwei gerade Personengleis-Stücke über kurzen Bogen (< 120 m) = eine Kette, wenn gleiche Nummer oder Streckengleis→Perrongleis und geradeaus nur ein Nebengleis (Klosters Gl. 1 und 3 gerade).
+- Schema, Perron-Nummer (cfg perron_nummer): Perron mit genau einer Nummer gibt sie dem nächsten Gleis ohne track_ref bis 12 m (gleich nah: ohne service).
+- Schema, R27b (rules.r27b): offenes Ende eines Perrongleises, am anderen Ende über Weiche angeschlossen, parallel < 15° und ≤ 12 m neben Streckengleis → neue Weiche auf dem Streckengleis (2,5 × Seitenabstand vorne). Susch Gl. 1. Solothurn/Klosters-Stumpen bleiben. R27 wieder 6 m.
+- Schema: Verladerampen (motor_vehicle=designated, «loading») sind keine Perrons (Autoverlad Sagliains, B 43 → 0).
+- region_vorbereiten: Kreisausschnitt mit Randpunkten (ID −1e15…−2e15) statt Knotenauswahl; Randstücke > 40 m alle 25 m verdichtet (ID ≤ −3e15) – Tunnel-Dienststellen hatten fehlende Abgänge. Randpunkte gelten im Schema als Datenrand. Geschlossene Perronflächen bleiben; Perron nur im Ausschnitt des nächsten Betriebspunkts.
+- netz_lage: Abgangs-Liniennummer ohne Kante am Betriebspunkt zählt wie «ohne Nummer» (Sasslatsch: Ast 914 in OSM teils 910).
+- Prüfung: SBB-Bahnhöfe Neuchâtel/Solothurn/Konolfingen Befunde gleich, Vauseyon besser; MOB G2 53→38, aber G8 8→15, Montreux F 1→5 – Ursache liegt in der Ausschnittbildung (alter und neuer Schema-Code auf gleichem Ausschnitt identisch), offen.
+- Offen Vereina: Regionalplan-Abgang 915 West «Landquart», G2 ×10, G6 ×3 (Sagliains/Autoverlad).
