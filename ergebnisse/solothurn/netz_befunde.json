@@ -3,62 +3,62 @@
  "befunde": [
   {
    "regel": "D11",
-   "x": 1179.5,
+   "x": 1165.6,
    "y": 184.4,
    "text": "Gleisnummer 2 ohne Perron daneben (Perron fehlt oder Nummer zu viel)"
   },
   {
    "regel": "D11",
-   "x": 1083.5,
-   "y": 304.4,
+   "x": 1069.7,
+   "y": 280.4,
    "text": "Gleisnummer 3 ohne Perron daneben (Perron fehlt oder Nummer zu viel)"
   },
   {
    "regel": "W2",
-   "x": 1446.7,
-   "y": 434.6,
+   "x": 1422.8,
+   "y": 410.6,
    "text": "S-Kurve in der Mitte unter 103° (steiler oder flacher als 60°)"
   },
   {
    "regel": "W2",
-   "x": 1415.9,
-   "y": 421.4,
+   "x": 1392.8,
+   "y": 397.4,
    "text": "S-Kurve in der Mitte unter 102° (steiler oder flacher als 60°)"
   },
   {
    "regel": "W2",
-   "x": 1494.1,
-   "y": 414.8,
-   "text": "S-Kurve in der Mitte unter 80° (steiler oder flacher als 60°)"
+   "x": 1475.1,
+   "y": 390.8,
+   "text": "S-Kurve in der Mitte unter 77° (steiler oder flacher als 60°)"
   },
   {
    "regel": "W2",
-   "x": 1369.9,
+   "x": 1342.2,
    "y": 208.4,
    "text": "S-Kurve in der Mitte unter 103° (steiler oder flacher als 60°)"
   },
   {
    "regel": "W2",
-   "x": 1399.3,
-   "y": 479.6,
-   "text": "Gleisstück unter 76° (nur 0° und 60° erlaubt)"
+   "x": 1374.5,
+   "y": 455.6,
+   "text": "Gleisstück unter 85° (nur 0° und 60° erlaubt)"
   },
   {
    "regel": "W2",
-   "x": 1141.4,
-   "y": 433.4,
+   "x": 1127.5,
+   "y": 409.4,
    "text": "Gleisstück unter 84° (nur 0° und 60° erlaubt)"
   },
   {
    "regel": "W1",
-   "x": 1399.3,
-   "y": 479.6,
-   "text": "Gleisstück unter 76° (steiler als 60°), 27 px"
+   "x": 1374.5,
+   "y": 455.6,
+   "text": "Gleisstück unter 85° (steiler als 60°), 27 px"
   },
   {
    "regel": "W1",
-   "x": 1141.4,
-   "y": 433.4,
+   "x": 1127.5,
+   "y": 409.4,
    "text": "Gleisstück unter 84° (steiler als 60°), 13 px"
   }
  ],

@@ -7,245 +7,231 @@
   "5/6 Mittelperron 221.0 [1716] → 1508 1747 OSM-Perron",
   "geschrieben solothurn_override.json"
  ],
- "topologie": "{'A': 3, 'B': 24, 'F': 2}",
- "verbindungen_abweichungen": null,
+ "topologie": "{'A': 3, 'B': 23, 'F': 2}",
+ "verbindungen_abweichungen": 0,
  "verbindungen": [],
  "regeln": [
   {
    "regel": "G2",
-   "x": 1024.6,
+   "x": 1010.7,
+   "y": 352.4,
+   "bahnhof": null,
+   "text": "Weiche ohne Ausrundung (60°)"
+  },
+  {
+   "regel": "G2",
+   "x": 934.1,
+   "y": 280.4,
+   "bahnhof": null,
+   "text": "Weiche ohne Ausrundung (60°)"
+  },
+  {
+   "regel": "G2",
+   "x": 934.1,
+   "y": 280.4,
+   "bahnhof": null,
+   "text": "Weiche ohne Ausrundung (60°)"
+  },
+  {
+   "regel": "G2",
+   "x": 1152.3,
+   "y": 492.8,
+   "bahnhof": null,
+   "text": "Weiche ohne Ausrundung (60°)"
+  },
+  {
+   "regel": "G2",
+   "x": 849.5,
+   "y": 254.2,
+   "bahnhof": null,
+   "text": "Weiche ohne Ausrundung (60°)"
+  },
+  {
+   "regel": "G6",
+   "x": 1440.8,
+   "y": 389.6,
+   "bahnhof": null,
+   "text": "Linien stossen mit Knick 152° zusammen (Knubbel)"
+  },
+  {
+   "regel": "G6",
+   "x": 1439.8,
+   "y": 389.6,
+   "bahnhof": null,
+   "text": "Linien stossen mit Knick 152° zusammen (Knubbel)"
+  },
+  {
+   "regel": "G6",
+   "x": 1440.8,
    "y": 376.4,
-   "bahnhof": null,
-   "text": "Weiche ohne Ausrundung (60°)"
-  },
-  {
-   "regel": "G2",
-   "x": 948.0,
-   "y": 304.4,
-   "bahnhof": null,
-   "text": "Weiche ohne Ausrundung (60°)"
-  },
-  {
-   "regel": "G2",
-   "x": 948.0,
-   "y": 304.4,
-   "bahnhof": null,
-   "text": "Weiche ohne Ausrundung (60°)"
-  },
-  {
-   "regel": "G2",
-   "x": 1166.2,
-   "y": 516.8,
-   "bahnhof": null,
-   "text": "Weiche ohne Ausrundung (60°)"
-  },
-  {
-   "regel": "G2",
-   "x": 853.3,
-   "y": 271.6,
-   "bahnhof": null,
-   "text": "Weiche ohne Ausrundung (60°)"
-  },
-  {
-   "regel": "G6",
-   "x": 1464.1,
-   "y": 413.6,
-   "bahnhof": null,
-   "text": "Linien stossen mit Knick 152° zusammen (Knubbel)"
-  },
-  {
-   "regel": "G6",
-   "x": 1463.1,
-   "y": 413.6,
-   "bahnhof": null,
-   "text": "Linien stossen mit Knick 152° zusammen (Knubbel)"
-  },
-  {
-   "regel": "G6",
-   "x": 1464.1,
-   "y": 400.4,
    "bahnhof": null,
    "text": "Linien stossen mit Knick 28° zusammen (Knubbel)"
   },
   {
    "regel": "G6",
-   "x": 1141.1,
-   "y": 440.0,
+   "x": 1127.2,
+   "y": 416.0,
    "bahnhof": null,
    "text": "Linien stossen mit Knick 84° zusammen (Knubbel)"
   },
   {
    "regel": "G6",
-   "x": 1396.0,
-   "y": 466.4,
+   "x": 1373.3,
+   "y": 442.4,
    "bahnhof": null,
-   "text": "Linien stossen mit Knick 81° zusammen (Knubbel)"
+   "text": "Linien stossen mit Knick 90° zusammen (Knubbel)"
   },
   {
    "regel": "G6",
-   "x": 1142.1,
-   "y": 440.0,
+   "x": 1128.2,
+   "y": 416.0,
    "bahnhof": null,
    "text": "Linien stossen mit Knick 84° zusammen (Knubbel)"
   },
   {
    "regel": "G6",
-   "x": 1180.1,
-   "y": 540.8,
+   "x": 1166.2,
+   "y": 516.8,
    "bahnhof": null,
    "text": "Linien stossen mit Knick 60° zusammen (Knubbel)"
   },
   {
    "regel": "G7",
    "x": 826.7,
-   "y": 304.4,
+   "y": 280.4,
    "bahnhof": null,
    "text": "Gleisende nicht angebunden, nächstes Gleis 6.6 px"
   },
   {
    "regel": "G7",
    "x": 840.7,
-   "y": 304.4,
+   "y": 280.4,
    "bahnhof": null,
    "text": "Gleisende nicht angebunden, nächstes Gleis 5.5 px"
   },
   {
    "regel": "G7",
    "x": 863.1,
-   "y": 304.4,
+   "y": 280.4,
    "bahnhof": null,
    "text": "Gleisende nicht angebunden, nächstes Gleis 4.0 px"
   },
   {
    "regel": "G8",
-   "x": 1136.1,
-   "y": 466.4,
+   "x": 1122.3,
+   "y": 442.4,
    "bahnhof": null,
-   "text": "Gleise 22 px deckungsgleich"
+   "text": "Gleise 23 px deckungsgleich"
   },
   {
    "regel": "G8",
-   "x": 1105.4,
-   "y": 484.9,
+   "x": 1091.5,
+   "y": 461.0,
    "bahnhof": null,
-   "text": "Gleise 15 px deckungsgleich"
+   "text": "Gleise 16 px deckungsgleich"
   },
   {
    "regel": "G8",
-   "x": 1554.1,
-   "y": 453.2,
+   "x": 1529.3,
+   "y": 429.2,
    "bahnhof": null,
-   "text": "Gleise 17 px deckungsgleich"
+   "text": "Gleise 14 px deckungsgleich"
   },
   {
    "regel": "G8",
-   "x": 1572.3,
-   "y": 453.2,
-   "bahnhof": null,
-   "text": "Gleise 53 px deckungsgleich"
-  },
-  {
-   "regel": "G8",
-   "x": 1610.6,
-   "y": 439.9,
-   "bahnhof": null,
-   "text": "Gleise 10 px deckungsgleich"
-  },
-  {
-   "regel": "G8",
-   "x": 1526.3,
-   "y": 453.2,
+   "x": 1542.0,
+   "y": 429.2,
    "bahnhof": null,
    "text": "Gleise 39 px deckungsgleich"
   },
   {
    "regel": "G8",
-   "x": 1554.1,
-   "y": 453.2,
+   "x": 1529.3,
+   "y": 429.1,
    "bahnhof": null,
-   "text": "Gleise 17 px deckungsgleich"
+   "text": "Gleise 14 px deckungsgleich"
   },
   {
    "regel": "G8",
-   "x": 1468.3,
+   "x": 1445.1,
    "y": 160.4,
    "bahnhof": null,
    "text": "Gleise 24 px deckungsgleich"
   },
   {
    "regel": "G8",
-   "x": 1525.8,
+   "x": 1512.2,
    "y": 184.4,
    "bahnhof": null,
-   "text": "Gleise 42 px deckungsgleich"
+   "text": "Gleise 61 px deckungsgleich"
   }
  ],
  "planrand": [],
  "netz": [
   {
    "regel": "D11",
-   "x": 1179.5,
+   "x": 1165.6,
    "y": 184.4,
    "text": "Gleisnummer 2 ohne Perron daneben (Perron fehlt oder Nummer zu viel)"
   },
   {
    "regel": "D11",
-   "x": 1083.5,
-   "y": 304.4,
+   "x": 1069.7,
+   "y": 280.4,
    "text": "Gleisnummer 3 ohne Perron daneben (Perron fehlt oder Nummer zu viel)"
   },
   {
    "regel": "W2",
-   "x": 1446.7,
-   "y": 434.6,
+   "x": 1422.8,
+   "y": 410.6,
    "text": "S-Kurve in der Mitte unter 103° (steiler oder flacher als 60°)"
   },
   {
    "regel": "W2",
-   "x": 1415.9,
-   "y": 421.4,
+   "x": 1392.8,
+   "y": 397.4,
    "text": "S-Kurve in der Mitte unter 102° (steiler oder flacher als 60°)"
   },
   {
    "regel": "W2",
-   "x": 1494.1,
-   "y": 414.8,
-   "text": "S-Kurve in der Mitte unter 80° (steiler oder flacher als 60°)"
+   "x": 1475.1,
+   "y": 390.8,
+   "text": "S-Kurve in der Mitte unter 77° (steiler oder flacher als 60°)"
   },
   {
    "regel": "W2",
-   "x": 1369.9,
+   "x": 1342.2,
    "y": 208.4,
    "text": "S-Kurve in der Mitte unter 103° (steiler oder flacher als 60°)"
   },
   {
    "regel": "W2",
-   "x": 1399.3,
-   "y": 479.6,
-   "text": "Gleisstück unter 76° (nur 0° und 60° erlaubt)"
+   "x": 1374.5,
+   "y": 455.6,
+   "text": "Gleisstück unter 85° (nur 0° und 60° erlaubt)"
   },
   {
    "regel": "W2",
-   "x": 1141.4,
-   "y": 433.4,
+   "x": 1127.5,
+   "y": 409.4,
    "text": "Gleisstück unter 84° (nur 0° und 60° erlaubt)"
   },
   {
    "regel": "W1",
-   "x": 1399.3,
-   "y": 479.6,
-   "text": "Gleisstück unter 76° (steiler als 60°), 27 px"
+   "x": 1374.5,
+   "y": 455.6,
+   "text": "Gleisstück unter 85° (steiler als 60°), 27 px"
   },
   {
    "regel": "W1",
-   "x": 1141.4,
-   "y": 433.4,
+   "x": 1127.5,
+   "y": 409.4,
    "text": "Gleisstück unter 84° (steiler als 60°), 13 px"
   }
  ],
  "qualitaet": {
   "topo_A": 3,
-  "topo_B": 24,
+  "topo_B": 23,
   "topo_C": 0,
   "topo_D": 0,
   "topo_E": 0,
@@ -253,12 +239,12 @@
   "regel_G2": 5,
   "regel_G6": 7,
   "regel_G7": 3,
-  "regel_G8": 9,
+  "regel_G8": 7,
   "netz_D11": 2,
   "netz_W2": 6,
   "netz_W1": 2,
   "boegen_pax": 11,
-  "boegen_alle": 80,
+  "boegen_alle": 77,
   "randabstand": 0
  },
  "ok": true

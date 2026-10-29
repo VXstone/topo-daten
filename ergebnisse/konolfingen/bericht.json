@@ -8,16 +8,9 @@
   "geschrieben konolfingen_override.json"
  ],
  "topologie": "{'A': 1, 'B': 2}",
- "verbindungen_abweichungen": null,
+ "verbindungen_abweichungen": 0,
  "verbindungen": [],
  "regeln": [
-  {
-   "regel": "G2",
-   "x": 690.9,
-   "y": 317.6,
-   "bahnhof": null,
-   "text": "Weiche ohne Ausrundung (60°)"
-  },
   {
    "regel": "G2",
    "x": 299.4,
@@ -55,10 +48,17 @@
   },
   {
    "regel": "G8",
-   "x": 607.7,
-   "y": 341.6,
+   "x": 717.5,
+   "y": 351.6,
    "bahnhof": null,
-   "text": "Gleise 13 px deckungsgleich"
+   "text": "Gleise 30 px deckungsgleich"
+  },
+  {
+   "regel": "G8",
+   "x": 605.9,
+   "y": 351.6,
+   "bahnhof": null,
+   "text": "Gleise 30 px deckungsgleich"
   },
   {
    "regel": "G8",
@@ -68,7 +68,9 @@
    "text": "Gleise 16 px deckungsgleich"
   }
  ],
- "planrand": [],
+ "planrand": [
+  "konolfingen\trechts x804\tLinie 460/460: Abstand 48 px statt 24"
+ ],
  "netz": [
   {
    "regel": "T10",
@@ -101,6 +103,12 @@
    "x": 320.6,
    "y": 225.0,
    "text": "zwei Gleise nur 6.8 px auseinander über 49 px (Grenze 9.6 px)"
+  },
+  {
+   "regel": "A1",
+   "x": 697.6,
+   "y": 329.0,
+   "text": "zwei Gleise nur 6.9 px auseinander über 15 px (Grenze 9.6 px)"
   }
  ],
  "qualitaet": {
@@ -110,16 +118,16 @@
   "topo_D": 0,
   "topo_E": 0,
   "topo_F": 0,
-  "regel_G2": 5,
+  "regel_G2": 4,
   "regel_G7": 1,
-  "regel_G8": 2,
+  "regel_G8": 3,
   "netz_T10": 1,
   "netz_Z1": 1,
   "netz_W2": 1,
   "netz_F7": 1,
-  "netz_A1": 1,
+  "netz_A1": 2,
   "boegen_pax": 11,
-  "boegen_alle": 52,
+  "boegen_alle": 51,
   "randabstand": 1
  },
  "ok": true

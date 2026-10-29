@@ -5,22 +5,15 @@
   "1 Aussenperron 181.0 [1350] → übersprungen: Gleis 1 in OSM bei 745–745, SBB-Punkte daneben"
  ],
  "topologie": "{}",
- "verbindungen_abweichungen": null,
+ "verbindungen_abweichungen": 0,
  "verbindungen": [],
  "regeln": [
   {
    "regel": "G2",
-   "x": 970.8,
-   "y": 206.0,
+   "x": 991.5,
+   "y": 230.0,
    "bahnhof": null,
    "text": "Weiche ohne Ausrundung (15°)"
-  },
-  {
-   "regel": "G8",
-   "x": 659.9,
-   "y": 170.0,
-   "bahnhof": null,
-   "text": "Gleise 38 px deckungsgleich"
   }
  ],
  "planrand": [],
@@ -33,9 +26,8 @@
   "topo_E": 0,
   "topo_F": 0,
   "regel_G2": 1,
-  "regel_G8": 1,
   "boegen_pax": 3,
-  "boegen_alle": 11,
+  "boegen_alle": 9,
   "randabstand": 0
  },
  "ok": true

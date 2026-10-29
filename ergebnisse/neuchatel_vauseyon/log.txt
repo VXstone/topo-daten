@@ -3,53 +3,57 @@ $ sbb_perrons.py
 
 $ spurplan_schema.py --src neuchatel_vauseyon.json --nowarp
 T13: Planfenster links bis serrieres gekürzt (276 -> 742)
-Bahnhof Neuchâtel Vauseyon: Achse 2345 m, Ausschnitt s=742…1995, 11 Weichen, 2 Perrons
-chains 5 lanes 5 segs 28 W 1582 H 312
+Bahnhof Neuchâtel Vauseyon: Achse 2345 m, Ausschnitt s=742…1995, 9 Weichen, 2 Perrons
+chains 6 lanes 6 segs 26 W 1582 H 336
 
 $ spurplan_warp.py neuchatel_vauseyon
 Optimization terminated successfully. (HiGHS Status 7: Optimal)
-Breite linear 1153 px -> entzerrt 863 px
+Breite linear 1153 px -> entzerrt 883 px
 
 $ spurplan_schema.py --src neuchatel_vauseyon.json
 T13: Planfenster links bis serrieres gekürzt (276 -> 742)
-Bahnhof Neuchâtel Vauseyon: Achse 2345 m, Ausschnitt s=742…1995, 11 Weichen, 2 Perrons
-W8 Abgang La Chaux-de-Fonds: Schräge durchgezogen bis zum Abgang (672 -> 696 px)
+Bahnhof Neuchâtel Vauseyon: Achse 2345 m, Ausschnitt s=742…1995, 9 Weichen, 2 Perrons
+G6: 1 Überstand(e) vor Ausrundung gekürzt
+W8 Abgang La Chaux-de-Fonds: Schräge durchgezogen bis zum Abgang (678 -> 703 px)
 R39b Abgang La Chaux-de-Fonds: Weiche 133 m hinter dem Planrand angedeutet (Way 49801712)
-chains 5 lanes 5 segs 28 W 1292 H 312
+chains 6 lanes 6 segs 26 W 1313 H 336
 
 $ spurplan_warp.py neuchatel_vauseyon
 Optimization terminated successfully. (HiGHS Status 7: Optimal)
-Breite linear 1153 px -> entzerrt 863 px
+Breite linear 1153 px -> entzerrt 883 px
 
 $ spurplan_schema.py --src neuchatel_vauseyon.json
 T13: Planfenster links bis serrieres gekürzt (276 -> 742)
-Bahnhof Neuchâtel Vauseyon: Achse 2345 m, Ausschnitt s=742…1995, 11 Weichen, 2 Perrons
-W8 Abgang La Chaux-de-Fonds: Schräge durchgezogen bis zum Abgang (672 -> 696 px)
+Bahnhof Neuchâtel Vauseyon: Achse 2345 m, Ausschnitt s=742…1995, 9 Weichen, 2 Perrons
+G6: 1 Überstand(e) vor Ausrundung gekürzt
+W8 Abgang La Chaux-de-Fonds: Schräge durchgezogen bis zum Abgang (678 -> 703 px)
 R39b Abgang La Chaux-de-Fonds: Weiche 133 m hinter dem Planrand angedeutet (Way 49801712)
-chains 5 lanes 5 segs 28 W 1292 H 312
+chains 6 lanes 6 segs 26 W 1313 H 336
 
 $ spurplan_check.py --src neuchatel_vauseyon.json --out /tmp/spurplan_lauf/_check_neuchatel_vauseyon.svg
 T13: Planfenster links bis serrieres gekürzt (276 -> 742)
-Bahnhof Neuchâtel Vauseyon: Achse 2345 m, Ausschnitt s=742…1995, 11 Weichen, 2 Perrons
-W8 Abgang La Chaux-de-Fonds: Schräge durchgezogen bis zum Abgang (672 -> 696 px)
+Bahnhof Neuchâtel Vauseyon: Achse 2345 m, Ausschnitt s=742…1995, 9 Weichen, 2 Perrons
+G6: 1 Überstand(e) vor Ausrundung gekürzt
+W8 Abgang La Chaux-de-Fonds: Schräge durchgezogen bis zum Abgang (678 -> 703 px)
 R39b Abgang La Chaux-de-Fonds: Weiche 133 m hinter dem Planrand angedeutet (Way 49801712)
-chains 5 lanes 5 segs 28 W 1292 H 312
+chains 6 lanes 6 segs 26 W 1313 H 336
 Befunde: {}
 eindeutig: {}
 
 $ spurplan_schema.py --src neuchatel_vauseyon.json --bare --out neuchatel_vauseyon_bare.svg
 T13: Planfenster links bis serrieres gekürzt (276 -> 742)
-Bahnhof Neuchâtel Vauseyon: Achse 2345 m, Ausschnitt s=742…1995, 11 Weichen, 2 Perrons
-W8 Abgang La Chaux-de-Fonds: Schräge durchgezogen bis zum Abgang (672 -> 696 px)
-chains 5 lanes 5 segs 28 W 1292 H 311
+Bahnhof Neuchâtel Vauseyon: Achse 2345 m, Ausschnitt s=742…1995, 9 Weichen, 2 Perrons
+G6: 1 Überstand(e) vor Ausrundung gekürzt
+W8 Abgang La Chaux-de-Fonds: Schräge durchgezogen bis zum Abgang (678 -> 703 px)
+chains 6 lanes 6 segs 26 W 1313 H 335
 
-Traceback (most recent call last):
-  File "/tmp/spurplan_lauf/neuchatel_vauseyon/verbindungen_pruefen.py", line 55, in <module>
-    OADJ = osm_graph(); OADJ_N = osm_graph(True)
-           ^^^^^^^^^^^
-  File "/tmp/spurplan_lauf/neuchatel_vauseyon/verbindungen_pruefen.py", line 50, in osm_graph
-    ns = WAY[s["way"]]["nodes"]; i, j = ns.index(s["a"]), ns.index(s["b"])
-                                                          ^^^^^^^^^^^^^^^^
-ValueError: -1226 is not in list
+Verbindungsprüfung neuchatel_vauseyon: 0 Perrongleise, 5 Abgänge (Personenverkehr)
+  Abgang 210 Neuchâtel (edge y206 x1093): ok (2 Ziele)
+  Abgang 210 Neuchâtel (edge y230 x1093): ok (3 Ziele)
+  Abgang 210 Yverdon (edge y230 x209): ok (1 Ziele)
+  Abgang 210 Yverdon (edge y206 x209): ok (2 Ziele)
+  Abgang 223 La Chaux-de-Fonds (side y102 x703): ok (2 Ziele)
+→ 0 Abweichungen
+Weichen ohne Ausrundung (Linienende unter >35° auf Gleis): 0
 
 Netzprüfung neuchatel_vauseyon: keine Befunde; Durchfahrgleise 0
