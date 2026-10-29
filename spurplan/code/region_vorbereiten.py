@@ -167,6 +167,32 @@ for st in betr:
                    weichen=sum(1 for e in out_n if e.get("tags", {}).get("railway") == "switch" and math.dist(xy(e), c) < min(R, 600)),
                    normalspur=name in K.get("normalspur", {}))
 json.dump(BP, open(os.path.join(OUT, "betriebspunkte.json"), "w"), ensure_ascii=False, indent=1)
+# Fernpunkte für Abgangsziele (29.10.2026, Klosters: 910 und 915 verlassen den Bahnhof in Schleifen, die Peilung am
+# Planrand zeigt nach Westen). Aus den vollständigen Daten (nicht dem gekürzten Ausschnitt): je Knoten im Ausschnitt
+# eines Betriebspunkts und je Nachbar der erste Punkt 3 km Luftlinie weiter auf dem Streckengleis (gleiche Linie, möglichst gerade).
+# spurplan_schema.py peilt mit <slug>_fern.json auf diesen Punkt.
+import networkx as _nx
+_GF = _nx.Graph(); _PF = {}; _RF = {}
+for w in D:
+    if w["type"] != "way" or "geometry" not in w or w["tags"].get("railway") not in SCHMAL | {"rail"} or w["tags"].get("service"): continue
+    for n, g in zip(w["nodes"], w["geometry"]): _PF[n] = xy(g)
+    for a_, b_ in zip(w["nodes"], w["nodes"][1:]): _GF.add_edge(a_, b_); _RF[(a_, b_)] = _RF[(b_, a_)] = w["tags"].get("ref")
+def _fern(n0, n1, R_=3000.0, L=15000.0):
+    """Weiter auf der Strecke, bis 3 km Luftlinie erreicht sind (Kehren: Klosters–Cavadürli), höchstens 15 km Gleis."""
+    prev, cur, d = n0, n1, math.dist(_PF[n0], _PF[n1]); r0 = _RF.get((n0, n1))
+    while d < L and math.dist(_PF[cur], _PF[n0]) < R_:
+        nx_ = [m for m in _GF[cur] if m != prev]
+        if not nx_: break
+        h0 = math.atan2(_PF[cur][1] - _PF[prev][1], _PF[cur][0] - _PF[prev][0])
+        m = min(nx_, key=lambda m: (_RF.get((cur, m)) != r0, abs((math.atan2(_PF[m][1] - _PF[cur][1], _PF[m][0] - _PF[cur][0]) - h0 + math.pi) % (2 * math.pi) - math.pi)))
+        d += math.dist(_PF[cur], _PF[m]); prev, cur = cur, m
+    x_, y_ = _PF[cur]
+    return [S + y_ / KY, W + x_ / KX]
+for key, b in BP.items():
+    c = xy(b); F = {}
+    for n in _GF:
+        if math.dist(_PF[n], c) <= b["radius"]: F[str(n)] = {str(m): _fern(n, m) for m in _GF[n]}
+    json.dump(F, open(os.path.join(OUT, f"{key}_fern.json"), "w"))
 # Übersicht der Schmalspur-Linien im Ausschnitt (ref / Betreiber), damit neue Regionen die richtigen «linien» bekommen
 import collections
 _r = collections.Counter((w["tags"].get("ref", "-"), w["tags"].get("operator", "-"), w["tags"].get("name", "")[:30]) for w in ways if w["tags"].get("railway") in SCHMAL | {"rail"} and w["tags"].get("usage") in ("main", "branch", None))

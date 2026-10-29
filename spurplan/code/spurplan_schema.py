@@ -74,6 +74,7 @@ for k_, v_ in OVR.get("cfg", {}).items():
     else: CFG[k_] = v_
 RU = CFG["rules"]
 LINIENENDEN = json.load(open("linienenden.json")) if os.path.exists("linienenden.json") else {}   # nur im Workflow «plaene»
+FERN = json.load(open(f"{(ARGS.station or ARGS.src.split('.')[0])}_fern.json")) if os.path.exists(f"{(ARGS.station or ARGS.src.split('.')[0])}_fern.json") else {}   # topologie_linien.py
 LINE_TOWNS = {k: v for k, v in (json.load(open("region_lines.json")).items() if os.path.exists("region_lines.json") else []) if not k.startswith("_")}
 CFG["warp_file"] = ARGS.warp or f"{key}_warp.json"
 CFG["req_file"] = f"{key}_req.json"
@@ -318,6 +319,15 @@ for w in ways.values():
 def is_break(n):
     return use[n] > 1 or ntag.get(n, {}).get("railway") == "switch"
 
+def _seg_dist(q, pts):
+    """Abstand Punkt q zur Polylinie pts (n×2)."""
+    best = 1e9
+    for a, b in zip(pts[:-1], pts[1:]):
+        ab = b - a; L2 = float(ab @ ab)
+        t_ = 0.0 if L2 < 1e-9 else max(0.0, min(1.0, float((q - a) @ ab) / L2))
+        best = min(best, float(np.hypot(*(a + t_ * ab - q))))
+    return best
+
 def passenger(t):
     r = t.get("railway:track_ref")
     if t.get("service"): return False
@@ -490,6 +500,16 @@ for i, sg in enumerate(segs):
         sg["flat"] = True
     sg["schmal"] = sg["tags"].get("spur") in ("1000", "800")       # Schmalspur (region_vorbereiten.py, Region MOB 21.10.)
     sg["pax"] = passenger(sg["tags"]) or sg["tags"].get("railway:track_ref") in OVR.get("pax", []) or sg["way"] in OVR.get("pax_ways", [])
+    # Perrongleis trotz service-Tag (29.10.2026, Klosters Platz Gl. 2 = service=siding am Perron «2;3»): die Gleisnummer
+    # steht in der ref eines Perrons, der bis 15 m neben dem Gleis liegt
+    if not sg["pax"] and RU.get("r_perron_ref", True) and sg["tags"].get("railway:track_ref"):
+        _tr = sg["tags"]["railway:track_ref"]
+        _pts = np.array([P[n] for n in sg["nodes"]], dtype=float)
+        for _pl in PLAT:
+            if _tr not in [x.strip() for x in re.split(r"[;,/]", _pl["tags"].get("ref", ""))]: continue
+            _pp_ = np.array([xy(g) for g in _pl["geometry"]], dtype=float)
+            _d = min(np.min(np.hypot(*(_pts - q).T)) for q in _pp_)
+            if _d < 15 or min(_seg_dist(q, _pts) for q in _pp_) < 15: sg["pax"] = True; break
     if sg["way"] in OVR.get("kein_pax", []): sg["pax"] = False      # Override "kein_pax": Way schwarz (Twann Bauphasen, 15.10.)
     if ARGS.dbg and sg["way"] == 263977262: print("FLATDBG", _thru(sg["nodes"][0], sg["way"]), _thru(sg["nodes"][-1], sg["way"]), round(_par_run(p)), sg["flat"], round(sg["slope"], 4), round(L), sg["nodes"][0], sg["nodes"][-1], use[sg["nodes"][0]], use[sg["nodes"][-1]])
     sg["ref"] = sg["tags"].get("railway:track_ref")
@@ -1359,6 +1379,10 @@ def exit_town(sg, n_cut):
     j_out = 0 if w["nodes"].index(inner[0]) > i else len(w["nodes"]) - 1
     p0, p1 = LL[n_cut], LL[w["nodes"][j_out]]
     if p0 == p1: p0 = LL[inner[0]]
+    _f = FERN.get(str(n_cut), {})                            # Fernpunkt 4 km weiter auf der Strecke (Schleifen am Planrand)
+    _aus = w["nodes"][i + (1 if j_out > i else -1)] if j_out != i else None
+    _k = str(_aus) if _aus is not None and str(_aus) in _f else next((k_ for k_ in _f if int(k_) not in sg["nodes"]), None)
+    if _k: p0, p1 = LL[n_cut], tuple(_f[_k])
     br = math.atan2((p1[0] - p0[0]), (p1[1] - p0[1]) * math.cos(math.radians(lat0)))
     bestt = None
     cands = CFG["towns"].items()

@@ -60,17 +60,19 @@ def spine(ref):
     p = nx.shortest_path(Hc, a, b, weight="w")
     return LineString([P[n] for n in p]) if len(p) > 1 else None
 
-def cross_count(x, y, ux, uy, half=16):
+def cross_count(x, y, ux, uy, half=16, ref=None):
+    """Gleise quer zur Achse; mit ref nur Gleise dieser Linie (Sagliains: Vereina- und Engadinerlinie nebeneinander, 29.10.2026)."""
     seg = LineString([(x - uy * half, y + ux * half), (x + uy * half, y - ux * half)]); c = 0
-    for ls in WL.values():
+    for wid, ls in WL.items():
+        if ref is not None and wref.get(wid) != ref: continue
         if ls.distance(Point(x, y)) > half + 2: continue
         it = ls.intersection(seg)
         if not it.is_empty: c += len(getattr(it, "geoms", [it]))
     return c
-def tracks_at(ln, s_, half=16):
+def tracks_at(ln, s_, half=16, ref=None):
     p0, p1 = ln.interpolate(max(s_ - 5, 0)), ln.interpolate(min(s_ + 5, ln.length))
     L_ = math.dist((p0.x, p0.y), (p1.x, p1.y)) or 1
-    return cross_count((p0.x + p1.x) / 2, (p0.y + p1.y) / 2, (p1.x - p0.x) / L_, (p1.y - p0.y) / L_, half)
+    return cross_count((p0.x + p1.x) / 2, (p0.y + p1.y) / 2, (p1.x - p0.x) / L_, (p1.y - p0.y) / L_, half, ref)
 
 refs = sorted({r for r in wref.values() if r})
 SP = {r: spine(r) for r in refs}; SP = {r: ln for r, ln in SP.items() if ln is not None and ln.length > 150}
@@ -89,7 +91,11 @@ for r, ln in SP.items():
     for key, b in BP.items():
         pt = Point(nodes[bpid[key]]["x"], nodes[bpid[key]]["y"])
         if SPUR[r] not in b.get("spuren", []): continue          # nur Betriebspunkte derselben Spur (Montreux: 100/120/121 nebeneinander)
-        if ln.distance(pt) < K.get("bp_abstand_je", {}).get(b["name"], K.get("bp_abstand_m", 300)): on.append((ln.project(pt), bpid[key]))
+        _d = ln.distance(pt)
+        # Liegt der Punkt direkt auf einer Linie (< 60 m), gehören nur Linien bis 100 m dazu (Sasslatsch: 960 bei 1 m, 910 bei 269 m)
+        _auf = min(l_.distance(pt) for r_, l_ in SP.items() if SPUR[r_] in b.get("spuren", [])) < 60
+        if _auf and _d >= 100 and b["name"] not in K.get("bp_abstand_je", {}): continue
+        if _d < K.get("bp_abstand_je", {}).get(b["name"], K.get("bp_abstand_m", 300)): on.append((ln.project(pt), bpid[key]))
     on.sort()
     # Achsenden ohne Betriebspunkt: Abgang
     for s_end in (0.0, ln.length):
@@ -114,7 +120,7 @@ for r, ln in SP.items():
         sub = substring(ln, s0, s1)
         gg = [(round(x, 1), round(y, 1)) for x, y in sub.coords]
         gg = [(nodes[a]["x"], nodes[a]["y"])] + gg + [(nodes[b]["x"], nodes[b]["y"])]
-        tr = sorted(tracks_at(ln, s0 + (s1 - s0) * f) for f in (0.3, 0.5, 0.7))[1]
+        tr = sorted(tracks_at(ln, s0 + (s1 - s0) * f, ref=r) for f in (0.3, 0.5, 0.7))[1]
         edges.append(dict(a=a, b=b, ref=r, refs=[r], tracks=int(max(1, min(4, tr))), length=round(s1 - s0, 1), geom=[list(p) for p in gg]))
 for n in nodes:
     if n["kind"] not in ("station", "halt"): continue
@@ -137,3 +143,4 @@ for n in nodes:
     ln = SP[r]; s_ = ln.project(pt)
     sub = substring(ln, max(s_ - 3000, 0), min(s_ + 3000, ln.length))
     json.dump(dict(ref=r, coords=[to_ll(x, y) for x, y in sub.coords]), open(slug(n["name"]) + "_axis.json", "w"))
+
