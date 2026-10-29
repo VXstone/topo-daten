@@ -753,3 +753,10 @@ Wunsch D. Eckenstein: Nutzung sparen, mehr in Git auslagern.
 - Vereina: 11 Pläne (Klosters Platz, Klosters Selfranga, Selfranga Süd, Vereina Nord/Süd, Sagliains Nord, Sagliains Sasslatsch, Sasslatsch, Sagliains Autoverlad, Sagliains, Susch); Ref 914 = Tunnelast Susch.
 - MOB dadurch +10 Betriebspunkte (Vernex, Toveyre, Châtelard, Les Échets, …); Bahnhofsbefunde unverändert. Zurück auf alt: `"bp_typen": ["station", "halt"]` in regionen/mob/region.json.
 - Offen Vereina: Ast Davos (915) heisst «Landquart» (Peilung, Strecke läuft erst Richtung Cavadürli), Doppelspurinseln im Tunnel einspurig in der Lage, G2.
+
+## 29.10.2026 (3) – Vereina: Gewirr Sagliains, Klosters Gl. 2, Abgangsziele
+- topologie_linien: Betriebspunkt, der direkt auf einer Linie liegt (< 60 m), gehört nur zu Linien bis 100 m (vorher 300 m → Sasslatsch hing an 910, Doppelkanten, Kreis über den Autoverlad). `bp_abstand_je` hat Vorrang.
+- topologie_linien: Gleiszahl je Kante zählt nur Gleise derselben Linie (Sagliains: 910 und 960 nebeneinander wurden je doppelspurig). Ein-/Zweispurwechsel Vereina jetzt richtig (Selfranga–Selfranga Süd, Vereina Nord–Süd, Sagliains Nord–Sasslatsch zweigleisig).
+- region_vorbereiten: `<bp>_fern.json` = je Knoten und Richtung der erste Punkt 3 km Luftlinie weiter auf dem Streckengleis (max. 15 km, volle Daten); spurplan_schema peilt Abgangsziele darauf (Kehren: Klosters → Davos/Sagliains statt Landquart).
+- spurplan_schema: Gleis mit service-Tag ist Perrongleis, wenn ein Perron bis 15 m daneben seine railway:track_ref in der ref führt (Klosters Gl. 2 am Perron «2;3»; Konolfingen Gl. 1: D11 weg, neu Z1 Nummer 53 px neben Perronmitte). Regel abschaltbar: rules.r_perron_ref=false.
+- Offen: Regionalplan-Abgang 915 West heisst noch «Landquart» (Topologie peilt am Achsende, Fernpunkt dort noch nicht genutzt); Lage am Dreieck Sasslatsch mit Bogen über dem Autoverlad; G2 ×11.
