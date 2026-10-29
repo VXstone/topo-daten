@@ -60,6 +60,14 @@ for key, d, extra, name in ps.STATIONS:
 _bj = os.path.join(OL, "..", "..", "bahnhoefe.json")
 _zmeta = {p_["key"]: p_ for p_ in (json.load(open(os.path.join(HERE, "zusatz_plaene.json"))) if os.path.exists(os.path.join(HERE, "zusatz_plaene.json")) else [])}
 _rber = json.load(open(os.path.join(HERE, "repo_bericht.json"))) if os.path.exists(os.path.join(HERE, "repo_bericht.json")) else {}
+def _repo_counts(b_):
+    """Befundzahlen eines Repo-Bahnhofs für die Abnahme (29.10.2026: ohne counts fehlte der Knopf «Abnehmen»)"""
+    e_ = _rber.get("bahnhoefe", {}).get(b_) or {}
+    c_ = {f"netz_{k_}": v_ for k_, v_ in (e_.get("netz") or {}).items()}
+    import ast as _ast
+    try: c_.update({f"topo_{k_}": v_ for k_, v_ in _ast.literal_eval(e_.get("topologie") or "{}").items()})
+    except Exception: pass
+    return c_ or {"befunde": 0}
 for _b in ([k_ for k_ in json.load(open(_bj)) if not k_.startswith("_")] if os.path.exists(_bj) else []):
     _f = os.path.join(HERE, f"repo_{_b}.svg")
     if not os.path.exists(_f) or any(p_["key"] == _b for p_ in plans): continue
@@ -67,7 +75,7 @@ for _b in ([k_ for k_ in json.load(open(_bj)) if not k_.startswith("_")] if os.p
     _svg = open(_f).read(); _tt = re.findall(r'font-weight="700"[^>]*>([^<]+)</text>', _svg)
     plans.append(dict(key=_b, name=_m.get("name") or (_tt[-1] if _tt else _b), gruppe=_m.get("gruppe", "Repo-Bahnhöfe (Workflow plaene)"),
                       label=f"Workflow plaene {_rber.get('erzeugt', '')}" + (" · Netzprüfung " + ", ".join(f"{k_} {v_}" for k_, v_ in sorted(_nb.items())) if _nb else " · Netzprüfung ohne Befunde"),
-                      svg=strip(_svg), counts=_m.get("counts"), status=_m.get("status", "offen"), **({"region": _m["region"]} if _m.get("region") else {})))
+                      svg=strip(_svg), counts=_m.get("counts") or _repo_counts(_b), status=_m.get("status", "offen"), **({"region": _m["region"]} if _m.get("region") else {})))
 # Anker für mitwandernde Hinweis-Pins (26.10.2026): Weichen, Gleisenden, Kreuzungen aus dem Netzmodell des Bahnhofs
 def _anker(key_):
     for f_ in (os.path.join(HERE, f"repo_{key_}_netz.json"), os.path.join(OL, f"{key_}_netz.json")):
