@@ -1,0 +1,34 @@
+{
+ "region": "vereina",
+ "erzeugt": "2026-10-29 20:06 UTC",
+ "bahnhoefe": {
+  "lavin": {
+   "name": "Lavin",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "susch": {
+   "name": "Susch",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "sagliains": {
+   "name": "Sagliains",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "klosters_platz": {
+   "name": "Klosters Platz",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  }
+ },
+ "netz_lage": 0,
+ "regeln": {
+  "G2": 3
+ }
+}

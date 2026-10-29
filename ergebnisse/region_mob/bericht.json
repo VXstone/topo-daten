@@ -1,6 +1,6 @@
 {
  "region": "mob",
- "erzeugt": "2026-10-26 11:40 UTC",
+ "erzeugt": "2026-10-29 20:05 UTC",
  "bahnhoefe": {
   "schonried": {
    "name": "Schönried",
@@ -23,7 +23,7 @@
   "les_avants": {
    "name": "Les Avants",
    "ok": true,
-   "befunde": "Befunde: {}",
+   "befunde": "Befunde: {'F': 1}",
    "optionen": []
   },
   "flendruz": {
@@ -38,14 +38,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "chateau_d_oex": {
-   "name": "Château-d'Oex",
+  "les_sciernes": {
+   "name": "Les Sciernes",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "les_sciernes": {
-   "name": "Les Sciernes",
+  "chateau_d_oex": {
+   "name": "Château-d'Oex",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -77,7 +77,7 @@
   "sendy_sollard": {
    "name": "Sendy-Sollard",
    "ok": true,
-   "befunde": "Befunde: {'A': 1}",
+   "befunde": "Befunde: {}",
    "optionen": []
   },
   "st_stephan": {
@@ -98,25 +98,17 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "glion": {
-   "name": "Glion",
-   "ok": true,
-   "befunde": "Befunde: {'B': 2}",
-   "optionen": []
-  },
   "caux": {
    "name": "Caux",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "montreux": {
-   "name": "Montreux",
+  "glion": {
+   "name": "Glion",
    "ok": true,
-   "befunde": "Befunde: {'A': 4, 'B': 9}",
-   "optionen": [
-    "--hauptgleise"
-   ]
+   "befunde": "Befunde: {'B': 2}",
+   "optionen": []
   },
   "zweisimmen": {
    "name": "Zweisimmen",
@@ -126,17 +118,13 @@
     "--hauptgleise"
    ]
   },
-  "fontanivent": {
-   "name": "Fontanivent",
+  "montreux": {
+   "name": "Montreux",
    "ok": true,
-   "befunde": "Befunde: {}",
-   "optionen": []
-  },
-  "allieres": {
-   "name": "Allières",
-   "ok": true,
-   "befunde": "Befunde: {}",
-   "optionen": []
+   "befunde": "Befunde: {'A': 3, 'B': 39, 'D': 5, 'F': 3}",
+   "optionen": [
+    "--hauptgleise"
+   ]
   },
   "chamby": {
    "name": "Chamby",
@@ -144,8 +132,20 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
+  "fontanivent": {
+   "name": "Fontanivent",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
   "chernex": {
    "name": "Chernex",
+   "ok": true,
+   "befunde": "Befunde: {'F': 1}",
+   "optionen": []
+  },
+  "allieres": {
+   "name": "Allières",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -162,14 +162,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "jaman": {
-   "name": "Jaman",
+  "saanen": {
+   "name": "Saanen",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "saanen": {
-   "name": "Saanen",
+  "jaman": {
+   "name": "Jaman",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -220,8 +220,8 @@
  "netz_lage": 0,
  "regeln": {
   "G3": 2,
-  "G2": 49,
+  "G2": 36,
   "G6": 5,
-  "G8": 6
+  "G8": 7
  }
 }
