@@ -1,8 +1,8 @@
 Kreuzungsbahnhof kerzers: Kreuzungsbereich x=666…761, Äste Lyss 60°, Ins 120°, Bern 300°, Murten 240°, Zusatzabstand {'l': 7.150000000000105, 'r': 0.0}
 Variante {"ok": true, "ordner": "regional_kerzers", "topologie": "{}", "geaendert": []}
-ins {"ok": true, "optionen": [], "plan_geaendert": false, "bare_geaendert": false, "netz": {"T10": 1, "D11": 1}, "topologie": "{}", "qualitaet": {"topo_A": 0, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "topo_F": 0, "netz_T10": 1, "netz_D11": 1, "boegen_pax": 8, "boegen_alle": 19, "randabstand": 0}}
-Regionalgeometrie /home/runner/work/topo-daten/topo-daten/spurplan/werkstatt/olten/feedback/region_ne.svg: Achse 9.96 px, 91 Streckenpfade; keine Befunde
+ins {"ok": true, "optionen": [], "plan_geaendert": true, "bare_geaendert": true, "netz": {"T10": 1, "D11": 1}, "topologie": "{}", "qualitaet": {"topo_A": 0, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "topo_F": 0, "netz_T10": 1, "netz_D11": 1, "boegen_pax": 10, "boegen_alle": 19, "randabstand": 0}}
+Regionalgeometrie /home/runner/work/topo-daten/topo-daten/spurplan/werkstatt/olten/feedback/region_ne.svg: Achse 9.94 px, 91 Streckenpfade; keine Befunde
 
-Region Neuchâtel: {"ok": true, "geaendert": false, "geometrie": {"plan": "/home/runner/work/topo-daten/topo-daten/spurplan/werkstatt/olten/feedback/region_ne.svg", "achse": 9.958164635614578, "befunde": []}}
+Region Neuchâtel: {"ok": true, "geaendert": true, "geometrie": {"plan": "/home/runner/work/topo-daten/topo-daten/spurplan/werkstatt/olten/feedback/region_ne.svg", "achse": 9.94296191041188, "befunde": []}}
 Kennzahlen gegen die Basis:
-  ins                    gleich   
+  ins                    schlechter {'boegen_pax': 2}  
