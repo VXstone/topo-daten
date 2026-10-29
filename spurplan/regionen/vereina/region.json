@@ -1,5 +1,5 @@
 {
- "_zweck": "Region Vereina (29.10.2026, Test D. Eckenstein): RhB Meterspur Klosters Platz – Vereinatunnel – Sagliains und Sagliains – Susch, mit Autoverlad Selfranga/Sagliains. Linien nach Landquart, Davos, Zernez und Scuol nur angedeutet. Refs (Lauf 1): 910 Landquart–Klosters–Vereinatunnel, 960 Engadin, 915 Klosters–Davos (nur Ast).",
+ "_zweck": "Region Vereina (29.10.2026, Test D. Eckenstein): RhB Meterspur Klosters Platz – Vereinatunnel – Sagliains und Sagliains – Susch, mit Autoverlad Selfranga/Sagliains. Linien nach Landquart, Davos, Zernez und Scuol nur angedeutet. Refs (Lauf 1): 910 Landquart–Klosters–Vereinatunnel, 960 Engadin, 915 Klosters–Davos (nur Ast), 914 Sasslatsch–Susch (Tunnelast Vereina).",
  "titel": "Region Vereina (Klosters – Sagliains – Susch)",
  "bbox": [
   46.735,
@@ -9,6 +9,7 @@
  ],
  "linien": [
   "910",
+  "914",
   "960"
  ],
  "betreiber": [
@@ -75,7 +76,8 @@
   "linienfarbe": {
    "910": "#9a5b1e",
    "960": "#9a5b1e",
-   "915": "#9a5b1e"
+   "915": "#9a5b1e",
+   "914": "#9a5b1e"
   },
   "cfg": {
    "cover_m": 200,

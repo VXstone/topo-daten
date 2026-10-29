@@ -115,7 +115,8 @@ if _ends and CFG["rules"].get("r27", True):
     _ids = list(P); _kd = _KD(np.array([P[n] for n in _ids]))
     for w, k in _ends:
         n = w["nodes"][k]
-        for dist_, j in zip(*_kd.query(P[n], k=6)):
+        for dist_, j in zip(*_kd.query(P[n], k=min(6, len(_ids)))):
+            if j >= len(_ids): continue          # weniger als 6 Knoten im Ausschnitt (Doppelspurbeginn im Vereinatunnel)
             m = _ids[j]
             if m == n or dist_ > 6 or _own[m] & _own[n] or m in w["nodes"]: continue
             # nur in Verlängerung des Gleises (nicht seitlich auf ein Nachbargleis)

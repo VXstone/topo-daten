@@ -86,26 +86,69 @@ for w in keep:
     w["tags"] = t; out_w.append(w)
 used = {n for w in out_w for n in w["nodes"]}
 weg = K.get("weg_namen", [])
-betr = []
-for name, st in stations.items():
+# Betriebspunkte (29.10.2026, Vereina): nicht nur station/halt, sondern jede benannte Betriebsstelle aus OSM
+# (Kreuzungs-/Abzweigstellen, Autoverlad, Bahnhofsteile). Gleiche railway:ref = ein Betriebspunkt. Punkte ohne Weiche
+# fallen weg (Blockstellen), ausser Personenhalte. Netz: Hauptgleisweichen fern jedes Betriebspunkts werden gemeldet
+# und als «?»-Betriebspunkt gezeichnet, damit keine Weiche still verschwindet.
+BP_TYP = K.get("bp_typen", ["station", "halt", "yard", "junction", "spur_junction", "crossover", "service_station", "car_shuttle", "site"])
+RANG = {t_: i for i, t_ in enumerate(BP_TYP)}
+sw_nodes = [e for e in nodes if e.get("tags", {}).get("railway") == "switch" and e["id"] in used]
+def n_weichen(e, R=250): return sum(1 for q in sw_nodes if math.dist(xy(q), xy(e)) < R)
+kand = [e for e in nodes if e.get("tags", {}).get("railway") in BP_TYP and e["tags"].get("name")]
+gruppen = {}
+for e in sorted(kand, key=lambda e: RANG[e["tags"]["railway"]]):
+    t = e["tags"]; key_ = t.get("railway:ref")
+    if not key_:                                   # ohne Abkürzung: zum Punkt gleichen Namens oder zum nächsten bis 150 m
+        nah_ = [k_ for k_, g_ in gruppen.items() if g_[0]["tags"]["name"] == t["name"] or math.dist(xy(g_[0]), xy(e)) < 150]
+        key_ = nah_[0] if nah_ else f"_{e['id']}"
+    gruppen.setdefault(key_, []).append(e)
+betr, dienst = [], set()
+for key_, g_ in gruppen.items():
+    st = g_[0]; name = st["tags"]["name"]; typ = st["tags"]["railway"]
     if any(x in name for x in weg) or name in K.get("integriert", {}): continue      # integriert: Halt liegt im Plan des Nachbarbahnhofs (Regel R14)
-    if min((Point(xy(st)).distance(g) for g in G), default=1e9) > 40: continue
-    betr.append(st)
-out_n = [e for e in nodes if e["id"] in used and e.get("tags", {}).get("railway") not in ("station", "halt")] + betr
+    pv = any(e["tags"]["railway"] in ("station", "halt") for e in g_)
+    if min((Point(xy(st)).distance(g) for g in G), default=1e9) > (40 if pv else 80): continue
+    if not pv and n_weichen(st) == 0: print(f"  ohne Weiche, kein Plan: {name} ({typ})"); continue
+    stations[name] = st; betr.append(st)
+    if not pv: dienst.add(name)
+# Netz: jede Weiche auf einem Streckengleis der Linien gehört zu einem Betriebspunkt. Bis «weiche_bp_m» (1000 m) wird sie
+# dem nächsten zugeschlagen (dessen Radius wächst bis zur Weiche + 150 m, Kreuzungsschleifen im Vereinatunnel, Weichenkopf
+# Selfranga); weiter weg entsteht ein «?»-Betriebspunkt, der im Log gemeldet wird.
+haupt_n = {n for w in keep if w["tags"].get("ref") in LIN and not w["tags"].get("service") for n in w["nodes"]}
+R_MIN = {}
+frei = []
+for q in sw_nodes:
+    if q["id"] not in haupt_n or not betr: continue
+    b_ = min(betr, key=lambda b: math.dist(xy(q), xy(b))); d_ = math.dist(xy(q), xy(b_))
+    if d_ <= K.get("weiche_bp_m", 1000): R_MIN[b_["tags"]["name"]] = max(R_MIN.get(b_["tags"]["name"], 0), d_ + 150)
+    else: frei.append(q)
+cl = []
+for q in frei:
+    c_ = next((c_ for c_ in cl if any(math.dist(xy(q), xy(r_)) < 300 for r_ in c_)), None)
+    (c_.append(q) if c_ else cl.append([q]))
+for i, c_ in enumerate(cl):
+    la = sum(q["lat"] for q in c_) / len(c_); lo = sum(q["lon"] for q in c_) / len(c_)
+    nm = f"? Weichen {i + 1}"
+    print(f"  Hauptgleisweichen ohne Betriebspunkt: {len(c_)} bei {la:.5f},{lo:.5f} -> «{nm}»")
+    st = dict(type="node", id=-(i + 1), lat=la, lon=lo, tags=dict(railway="junction", name=nm))
+    stations[nm] = st; betr.append(st); dienst.add(nm); nodes.append(st)
+    R_MIN[nm] = max(math.dist(xy(q), xy(st)) for q in c_) + 150
+BPIDS = {b["id"] for b in betr}
+out_n = [e for e in nodes if e["id"] in used and e.get("tags", {}).get("railway") not in BP_TYP] + betr
 json.dump({"elements": out_n + out_w}, open(os.path.join(OUT, "region.json"), "w"))
 # Rohausschnitt (alle Elemente im Rahmen, alle Tags) für lokale Fehlersuche: region_lauf.py --daten roh.json.gz
 with gzip.open(os.path.join(OUT, "roh.json.gz"), "wt") as f_: json.dump({"elements": [e for e in D if (e["type"] == "node" and inbox(e)) or (e["type"] == "way" and "geometry" in e and any(inbox(g) for g in e["geometry"]))]}, f_)
 # je Betriebspunkt: Kreis, nur der eigene Stationsknoten
 BP = {}
 for st in betr:
-    name = st["tags"]["name"]; key = slug(name); R = K.get("radius_je", {}).get(name, K.get("radius", 700))
+    name = st["tags"]["name"]; key = slug(name); R = K.get("radius_je", {}).get(name, max(K.get("radius_dienst", 400), R_MIN.get(name, 0)) if name in dienst else K.get("radius", 700))   # Bahnhöfe: Radius unverändert (abgenommene Pläne)
     c = xy(st); el = []
     for e in out_n:
-        if e["type"] == "node" and e.get("tags", {}).get("railway") in ("station", "halt"):
+        if e["type"] == "node" and e["id"] in BPIDS:
             if e["id"] != st["id"]: continue
             e = dict(e); e["tags"] = dict(e["tags"], railway="station"); e["tags"].pop("public_transport", None)
         if math.dist(xy(e), c) <= R: el.append(e)
-    sp_here = {w["tags"].get("spur", "1435") for w in out_w if w["tags"].get("railway") == "rail" and min(math.dist(xy(g), c) for g in w["geometry"]) < 60}
+    sp_here = {w["tags"].get("spur", "1435") for w in out_w if w["tags"].get("railway") == "rail" and min(math.dist(xy(g), c) for g in w["geometry"]) < 100}   # 100 m: Betriebsstellenknoten liegen in OSM oft neben dem Gleis (Selfranga Süd 61 m)
     for w in out_w:
         if w["tags"].get("railway") == "rail" and w["tags"].get("spur", "1435") not in sp_here: continue   # nur die Spuren dieses Betriebspunkts (Belmont: keine SBB-Gleise)
         runs, cur = [], []
@@ -119,9 +162,9 @@ for st in betr:
             v["nodes"] = [n for n, _ in r]; v["geometry"] = [g for _, g in r]; el.append(v)
     json.dump({"elements": el}, open(os.path.join(OUT, f"{key}.json"), "w"))
     spuren = sorted({w["tags"].get("spur", "1435") for w in out_w if w["tags"].get("railway") == "rail"
-                     and min(math.dist(xy(g), c) for g in w["geometry"]) < 60})
+                     and min(math.dist(xy(g), c) for g in w["geometry"]) < 100})
     BP[key] = dict(name=name, id=st["id"], lat=st["lat"], lon=st["lon"], radius=R, spuren=spuren,
-                   weichen=sum(1 for e in out_n if e.get("tags", {}).get("railway") == "switch" and math.dist(xy(e), c) < 250),
+                   weichen=sum(1 for e in out_n if e.get("tags", {}).get("railway") == "switch" and math.dist(xy(e), c) < min(R, 600)),
                    normalspur=name in K.get("normalspur", {}))
 json.dump(BP, open(os.path.join(OUT, "betriebspunkte.json"), "w"), ensure_ascii=False, indent=1)
 # Übersicht der Schmalspur-Linien im Ausschnitt (ref / Betreiber), damit neue Regionen die richtigen «linien» bekommen
