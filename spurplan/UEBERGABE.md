@@ -739,3 +739,8 @@ Wunsch D. Eckenstein: Nutzung sparen, mehr in Git auslagern.
 - `netz_lage.py` (Olten): Lage-Schlüssel `strecke_hand` {"A|B": {"<Linie>": [[x,y],…]}} – Linien einer Strecke von Hand (Debug Env LINDBG listet alle Linien). Olten|Olten Ost Linien 4/5 nach Skizzen D. Eckenstein: kein V, waagrecht, dann 60° parallel ins Bündel zu den eigenen Anschlüssen an Olten Ost (6 Gleise). Fünfspurig (unteres Gleis mündet in Linie 3) und «gerade durch, wo 56 ist» brauchen eine angepasste Regionalvariante Olten Ost (fest, Unterordner) – offen.
 - Tunnelportale grau (#8a8a8a) und über Grün (Hinweis: «Schwarz hinter Grün nur bei Weichen»): `netz_lage.py` Olten + NE (Portale ans Ende von `out`), `spurplan_schema.py` Override `portale` grau.
 - B14 umgesetzt (`spurplan_schema.py`, cfg `perron_px` 110, 0 = alt): Perron höchstens 110 px um die eigene Mitte (nie länger als der freie Abschnitt; `perron_einheitlich`/`perrons_px` gehen vor), Gleisnummer in der Mitte ihres Perrons (`PERRON_PX`), Meterspur-Nummer in die Mitte des braunen Perrons (Ins 11). Referenzen Thun/Ins/Murten/Kerzers neu (Differenz nur Perrons/Nummern). Netzprüfung D11: Perron bis 26 px neben der Nummer (Mittelperron zwischen weit auseinanderliegenden Gleisen).
+
+## 29.10.2026 – Region Vereina (Test)
+- Neue Linien-Region `regionen/vereina` (Klosters Platz – Vereinatunnel – Sagliains – Susch). OSM-Refs: 910 Landquart–Klosters–Vereinatunnel, 960 Engadin, 915 Klosters–Davos.
+- `region_vorbereiten.py` listet jetzt die Linien-Refs im Ausschnitt im Log (für neue Regionen).
+- Offen: Ast Davos (915) fehlt im 2. Lauf (aeste wirkt nicht, da 915 nur als Achse kommt), Abgang Landquart doppelt gezeichnet, G2 ×4 an Klosters Platz, Autoverlad Selfranga/Sagliains noch nicht als eigene Anlagen geprüft.
