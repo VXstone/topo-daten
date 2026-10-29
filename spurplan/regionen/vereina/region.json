@@ -1,17 +1,86 @@
 {
- "_zweck": "Region Vereina (29.10.2026, Test D. Eckenstein): RhB Meterspur Klosters Platz – Vereinatunnel – Sagliains und Sagliains – Susch, mit Autoverlad Selfranga/Sagliains. Linien nach Landquart, Davos, Zernez und Scuol nur angedeutet.",
+ "_zweck": "Region Vereina (29.10.2026, Test D. Eckenstein): RhB Meterspur Klosters Platz – Vereinatunnel – Sagliains und Sagliains – Susch, mit Autoverlad Selfranga/Sagliains. Linien nach Landquart, Davos, Zernez und Scuol nur angedeutet. Refs (Lauf 1): 910 Landquart–Klosters–Vereinatunnel, 960 Engadin, 915 Klosters–Davos (nur Ast).",
  "titel": "Region Vereina (Klosters – Sagliains – Susch)",
- "bbox": [46.735, 9.865, 46.876, 10.115],
- "linien": ["960", "910", "940", "965"],
- "betreiber": ["RhB", "Rhätische Bahn"],
- "aeste": {"Klosters Platz": 500, "Susch": 300, "Sagliains": 400},
+ "bbox": [
+  46.735,
+  9.865,
+  46.876,
+  10.104
+ ],
+ "linien": [
+  "910",
+  "960"
+ ],
+ "betreiber": [
+  "RhB",
+  "Rhätische Bahn"
+ ],
+ "aeste": {
+  "Klosters Platz": 600
+ },
  "radius": 700,
- "radius_je": {"Klosters Platz": 900, "Sagliains": 900},
+ "radius_je": {
+  "Klosters Platz": 900,
+  "Sagliains": 900
+ },
  "name": "vereina_region",
- "override_standard": {"cfg": {"sw_search_m": 350, "min_half_window_m": 150, "s_pad": 60, "lt_dist_w": 2.0, "margin_x": 230,
-   "towns": {"Landquart": [46.9673, 9.5547], "Davos": [46.8090, 9.8380], "Zernez": [46.6990, 10.0920], "Scuol": [46.7960, 10.2970],
-             "Klosters Platz": [46.8693, 9.8812], "Sagliains": [46.7690, 10.0990], "Susch": [46.7480, 10.0790]}}},
- "lage": {"auto": {"c0": 30, "c1": 32, "p": 0.6, "gap": 58, "wg": 0.01}, "osm": "region.json",
-   "linienfarbe": {"960": "#9a5b1e", "910": "#9a5b1e", "940": "#9a5b1e", "965": "#9a5b1e"},
-   "cfg": {"cover_m": 200, "merge_station_m": 300, "merge_junction_m": 200}}
+ "override_standard": {
+  "cfg": {
+   "sw_search_m": 350,
+   "min_half_window_m": 150,
+   "s_pad": 60,
+   "lt_dist_w": 2.0,
+   "margin_x": 230,
+   "towns": {
+    "Landquart": [
+     46.9673,
+     9.5547
+    ],
+    "Davos": [
+     46.809,
+     9.838
+    ],
+    "Zernez": [
+     46.699,
+     10.092
+    ],
+    "Scuol": [
+     46.796,
+     10.297
+    ],
+    "Klosters Platz": [
+     46.8693,
+     9.8812
+    ],
+    "Sagliains": [
+     46.769,
+     10.099
+    ],
+    "Susch": [
+     46.748,
+     10.079
+    ]
+   }
+  }
+ },
+ "lage": {
+  "auto": {
+   "c0": 30,
+   "c1": 32,
+   "p": 0.6,
+   "gap": 58,
+   "wg": 0.01
+  },
+  "osm": "region.json",
+  "linienfarbe": {
+   "910": "#9a5b1e",
+   "960": "#9a5b1e",
+   "915": "#9a5b1e"
+  },
+  "cfg": {
+   "cover_m": 200,
+   "merge_station_m": 300,
+   "merge_junction_m": 200
+  }
+ }
 }
