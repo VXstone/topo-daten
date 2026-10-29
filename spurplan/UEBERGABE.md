@@ -744,3 +744,12 @@ Wunsch D. Eckenstein: Nutzung sparen, mehr in Git auslagern.
 - Neue Linien-Region `regionen/vereina` (Klosters Platz – Vereinatunnel – Sagliains – Susch). OSM-Refs: 910 Landquart–Klosters–Vereinatunnel, 960 Engadin, 915 Klosters–Davos.
 - `region_vorbereiten.py` listet jetzt die Linien-Refs im Ausschnitt im Log (für neue Regionen).
 - Offen: Ast Davos (915) fehlt im 2. Lauf (aeste wirkt nicht, da 915 nur als Achse kommt), Abgang Landquart doppelt gezeichnet, G2 ×4 an Klosters Platz, Autoverlad Selfranga/Sagliains noch nicht als eigene Anlagen geprüft.
+
+## 29.10.2026 (2) – Linien-Regionen: Betriebspunkte und Hauptgleisweichen robust (Wunsch D. Eckenstein)
+- `region_vorbereiten.py`: Betriebspunkte = alle benannten OSM-Betriebsstellen (`bp_typen`, Standard station, halt, yard, junction, spur_junction, crossover, service_station, car_shuttle, site); gleiche `railway:ref` = ein Punkt; ohne Weiche (Blockstellen) kein Plan, ausser Personenhalt.
+- Netz: jede Weiche auf einem Streckengleis (ref in `linien`, ohne service) gehört zum nächsten Betriebspunkt bis `weiche_bp_m` (1000 m); Dienststellen-Radius wächst bis Weiche + 150 m (`radius_dienst` 400 min.), Bahnhofsradien bleiben. Weiter weg: «? Weichen n» + Logzeile «Hauptgleisweichen ohne Betriebspunkt».
+- Spurerkennung je Betriebspunkt bis 100 m (OSM-Knoten neben dem Gleis, Selfranga Süd 61 m). Schema: Nachbarsuche (R27) bei < 6 Knoten absturzfrei.
+- Ergebnis enthält jetzt `roh.json.gz`, `betriebspunkte.json`, `<name>_topologie.json` → lokal: `region_lauf.py <r> --daten roh.json.gz`.
+- Vereina: 11 Pläne (Klosters Platz, Klosters Selfranga, Selfranga Süd, Vereina Nord/Süd, Sagliains Nord, Sagliains Sasslatsch, Sasslatsch, Sagliains Autoverlad, Sagliains, Susch); Ref 914 = Tunnelast Susch.
+- MOB dadurch +10 Betriebspunkte (Vernex, Toveyre, Châtelard, Les Échets, …); Bahnhofsbefunde unverändert. Zurück auf alt: `"bp_typen": ["station", "halt"]` in regionen/mob/region.json.
+- Offen Vereina: Ast Davos (915) heisst «Landquart» (Peilung, Strecke läuft erst Richtung Cavadürli), Doppelspurinseln im Tunnel einspurig in der Lage, G2.
