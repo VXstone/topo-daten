@@ -1,0 +1,62 @@
+{
+ "cavadurli": {
+  "name": "Cavadürli",
+  "id": 265654508,
+  "lat": 46.8705207,
+  "lon": 9.8680074,
+  "radius": 700,
+  "spuren": [
+   "1000"
+  ],
+  "weichen": 3,
+  "normalspur": false
+ },
+ "davos_laret": {
+  "name": "Davos Laret",
+  "id": 265654564,
+  "lat": 46.8481452,
+  "lon": 9.8732389,
+  "radius": 700,
+  "spuren": [
+   "1000"
+  ],
+  "weichen": 4,
+  "normalspur": false
+ },
+ "susch": {
+  "name": "Susch",
+  "id": 266207902,
+  "lat": 46.7520148,
+  "lon": 10.0794387,
+  "radius": 700,
+  "spuren": [
+   "1000"
+  ],
+  "weichen": 4,
+  "normalspur": false
+ },
+ "klosters_platz": {
+  "name": "Klosters Platz",
+  "id": 1231713221,
+  "lat": 46.869383,
+  "lon": 9.8809843,
+  "radius": 900,
+  "spuren": [
+   "1000"
+  ],
+  "weichen": 10,
+  "normalspur": false
+ },
+ "sagliains": {
+  "name": "Sagliains",
+  "id": 2731339186,
+  "lat": 46.7648182,
+  "lon": 10.1030516,
+  "radius": 900,
+  "spuren": [
+   "1000"
+  ],
+  "weichen": 2,
+  "normalspur": false
+ }
+}
