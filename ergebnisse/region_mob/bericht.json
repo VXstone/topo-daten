@@ -1,17 +1,17 @@
 {
  "region": "mob",
- "erzeugt": "2026-10-29 20:16 UTC",
+ "erzeugt": "2026-10-29 20:47 UTC",
  "bahnhoefe": {
-  "la_tine": {
-   "name": "La Tine",
-   "ok": true,
-   "befunde": "Befunde: {'A': 1}",
-   "optionen": []
-  },
   "schonried": {
    "name": "Schönried",
    "ok": true,
    "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "la_tine": {
+   "name": "La Tine",
+   "ok": true,
+   "befunde": "Befunde: {'A': 1}",
    "optionen": []
   },
   "les_avants": {
@@ -20,8 +20,8 @@
    "befunde": "Befunde: {'F': 1}",
    "optionen": []
   },
-  "belmont_sur_montreux": {
-   "name": "Belmont-sur-Montreux",
+  "chateau_d_oex": {
+   "name": "Château-d'Oex",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -38,8 +38,8 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "chateau_d_oex": {
-   "name": "Château-d'Oex",
+  "rochers_de_naye": {
+   "name": "Rochers de Naye",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -50,50 +50,20 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "rochers_de_naye": {
-   "name": "Rochers de Naye",
-   "ok": true,
-   "befunde": "Befunde: {}",
-   "optionen": []
-  },
   "matten": {
    "name": "Matten",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "paccot": {
-   "name": "Paccot",
-   "ok": true,
-   "befunde": "Befunde: {}",
-   "optionen": []
-  },
-  "planchamp": {
-   "name": "Planchamp",
-   "ok": true,
-   "befunde": "Befunde: {}",
-   "optionen": []
-  },
-  "sendy_sollard": {
-   "name": "Sendy-Sollard",
-   "ok": true,
-   "befunde": "Befunde: {}",
-   "optionen": []
-  },
-  "le_tremblex": {
-   "name": "Le Tremblex",
+  "st_stephan": {
+   "name": "St. Stephan",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
   "blankenburg": {
    "name": "Blankenburg",
-   "ok": true,
-   "befunde": "Befunde: {}",
-   "optionen": []
-  },
-  "st_stephan": {
-   "name": "St. Stephan",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -126,8 +96,8 @@
     "--hauptgleise"
    ]
   },
-  "fontanivent": {
-   "name": "Fontanivent",
+  "allieres": {
+   "name": "Allières",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -138,28 +108,10 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "allieres": {
-   "name": "Allières",
-   "ok": true,
-   "befunde": "Befunde: {}",
-   "optionen": []
-  },
   "chernex": {
    "name": "Chernex",
    "ok": true,
    "befunde": "Befunde: {'F': 1}",
-   "optionen": []
-  },
-  "les_cases": {
-   "name": "Les Cases",
-   "ok": true,
-   "befunde": "Befunde: {}",
-   "optionen": []
-  },
-  "jor": {
-   "name": "Jor",
-   "ok": true,
-   "befunde": "Befunde: {}",
    "optionen": []
   },
   "jaman": {
@@ -186,16 +138,16 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "gruben": {
-   "name": "Gruben",
-   "ok": true,
-   "befunde": "Befunde: {'A': 1}",
-   "optionen": []
-  },
   "gstaad": {
    "name": "Gstaad",
    "ok": true,
    "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "gruben": {
+   "name": "Gruben",
+   "ok": true,
+   "befunde": "Befunde: {'A': 1}",
    "optionen": []
   },
   "lenk_im_simmental": {
@@ -215,13 +167,121 @@
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
+  },
+  "belmont_sur_montreux": {
+   "name": "Belmont-sur-Montreux",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "vuarennes": {
+   "name": "Vuarennes",
+   "ok": true,
+   "befunde": "Befunde: {'B': 18}",
+   "optionen": []
+  },
+  "chatelard": {
+   "name": "Châtelard",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "la_perche": {
+   "name": "La Perche",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "cret_d_y_bau": {
+   "name": "Crêt-d'y-Bau",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "les_echets": {
+   "name": "Les Echets",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "paccot": {
+   "name": "Paccot",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "planchamp": {
+   "name": "Planchamp",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "sendy_sollard": {
+   "name": "Sendy-Sollard",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "montreux_les_planches": {
+   "name": "Montreux-Les Planches",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "toveyre": {
+   "name": "Toveyre",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "valmont": {
+   "name": "Valmont",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "le_tremblex": {
+   "name": "Le Tremblex",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "les_cases": {
+   "name": "Les Cases",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "fontanivent": {
+   "name": "Fontanivent",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "jor": {
+   "name": "Jor",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "glion_college": {
+   "name": "Glion-Collège",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "vernex": {
+   "name": "Vernex",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
   }
  },
  "netz_lage": 0,
  "regeln": {
   "G3": 2,
-  "G2": 36,
-  "G6": 5,
-  "G8": 7
+  "G2": 49,
+  "G6": 8,
+  "G8": 9
  }
 }

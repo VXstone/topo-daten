@@ -21,168 +21,203 @@
   "merge_junction_m": 200
  },
  "Schönried": [
-  208,
-  -743
- ],
- "Belmont-sur-Montreux": [
-  -3589,
-  1975
+  -1108,
+  -685
  ],
  "Les Avants": [
-  -2862,
-  203
+  -4180,
+  261
  ],
  "La Tine": [
-  -1602,
-  -194
+  -2919,
+  -136
  ],
  "Château-d'Oex": [
-  -1115,
-  -349
+  -2433,
+  -291
  ],
  "Flendruz": [
-  -836,
-  -430
+  -2153,
+  -372
  ],
  "Rougemont": [
-  -655,
-  -477
+  -1972,
+  -419
  ],
  "Les Sciernes": [
-  -1839,
-  -150
+  -3157,
+  -92
  ],
  "Rochers de Naye": [
-  -2119,
-  2371
+  -1894,
+  3454
  ],
  "Matten": [
-  1193,
-  -463
- ],
- "Paccot": [
-  -2510,
-  2314
- ],
- "Planchamp": [
-  -3524,
-  1575
- ],
- "Sendy-Sollard": [
-  -3064,
-  272
- ],
- "Le Tremblex": [
-  -3070,
-  2253
+  -123,
+  -405
  ],
  "St. Stephan": [
-  1109,
-  -636
+  -208,
+  -578
  ],
  "Blankenburg": [
-  1024,
-  -823
+  -293,
+  -765
  ],
  "Zweisimmen": [
-  904,
-  -1080
+  -413,
+  -1022
  ],
  "Montreux": [
-  -3652,
-  2186
+  -5103,
+  3124
  ],
  "Glion": [
-  -3336,
-  2228
+  -4205,
+  3219
  ],
  "Caux": [
-  -2802,
-  2290
+  -3311,
+  3310
  ],
  "Chernex": [
-  -3390,
-  827
+  -4718,
+  973
  ],
  "Chamby": [
-  -3268,
-  375
- ],
- "Fontanivent": [
-  -3444,
-  1164
+  -4587,
+  433
  ],
  "Allières": [
-  -2214,
-  -9
- ],
- "Les Cases": [
-  -2443,
-  52
- ],
- "Jor": [
-  -2661,
-  138
+  -3532,
+  49
  ],
  "Jaman": [
-  -2259,
-  2339
+  -2250,
+  3404
  ],
  "Saanen": [
-  -413,
-  -553
+  -1729,
+  -495
  ],
  "Saanenmöser": [
-  423,
-  -803
+  -894,
+  -745
  ],
  "Oeschseite": [
-  686,
-  -887
+  -630,
+  -829
  ],
  "Gstaad": [
-  -195,
-  -602
+  -1512,
+  -544
  ],
  "Gruben": [
-  -1,
-  -680
+  -1318,
+  -622
  ],
  "Lenk im Simmental": [
-  1310,
-  -304
+  -6,
+  -246
  ],
  "Rossinière": [
-  -1384,
-  -257
+  -2702,
+  -199
  ],
  "Montbovon": [
-  -1688,
-  -163
+  -3005,
+  -105
  ],
- "Abgang 100 #52": [
-  -3473,
-  2451
+ "Belmont-sur-Montreux": [
+  -4953,
+  2409
+ ],
+ "Vuarennes": [
+  -5020,
+  2804
+ ],
+ "Châtelard": [
+  -4906,
+  2121
+ ],
+ "La Perche": [
+  -2031,
+  3424
+ ],
+ "Crêt-d'y-Bau": [
+  -2767,
+  3356
+ ],
+ "Les Echets": [
+  -3055,
+  3329
+ ],
+ "Paccot": [
+  -2534,
+  3377
+ ],
+ "Planchamp": [
+  -4849,
+  1766
+ ],
+ "Sendy-Sollard": [
+  -4382,
+  330
+ ],
+ "Montreux-Les Planches": [
+  -4860,
+  3161
+ ],
+ "Toveyre": [
+  -4537,
+  3191
+ ],
+ "Le Tremblex": [
+  -3610,
+  3272
+ ],
+ "Fontanivent": [
+  -4772,
+  1338
+ ],
+ "Les Cases": [
+  -3761,
+  110
+ ],
+ "Jor": [
+  -3979,
+  196
+ ],
+ "Glion-Collège": [
+  -3915,
+  3246
+ ],
+ "Vernex": [
+  -5271,
+  2942
  ],
  "Abgang 100 #53": [
-  -3877,
-  1953
+  -4924,
+  3390
  ],
- "Abgang 114 #54": [
-  -3290,
-  154
+ "Abgang 100 #54": [
+  -5442,
+  2780
  ],
- "Abgang 247 #55": [
-  -1532,
-  -378
+ "Abgang 114 #55": [
+  -4608,
+  212
  ],
- "Abgang 320 #56": [
-  857,
-  -1388
+ "Abgang 247 #56": [
+  -2849,
+  -320
+ ],
+ "Abgang 320 #57": [
+  -459,
+  -1330
  ],
  "drehung_auto": {
   "Schönried": -16.8,
-  "Belmont-sur-Montreux": -78.9,
   "Les Avants": -18.8,
   "La Tine": -16.8,
   "Château-d'Oex": -16.8,
@@ -190,30 +225,40 @@
   "Rougemont": -16.8,
   "Les Sciernes": -18.8,
   "Rochers de Naye": -180,
-  "Matten": 63.4,
-  "Paccot": 5.7,
-  "Planchamp": -78.9,
-  "Sendy-Sollard": -18.8,
-  "Le Tremblex": 5.7,
-  "St. Stephan": 63.4,
-  "Blankenburg": 63.4,
+  "Matten": 63.3,
+  "St. Stephan": 63.3,
+  "Blankenburg": 63.3,
   "Zweisimmen": 60,
   "Montreux": 60,
-  "Glion": 5.7,
-  "Caux": 5.7,
-  "Chernex": -78.9,
+  "Glion": 5.3,
+  "Caux": 5.3,
+  "Chernex": -79.8,
   "Chamby": -60,
-  "Fontanivent": -78.9,
   "Allières": -18.8,
-  "Les Cases": -18.8,
-  "Jor": -18.8,
-  "Jaman": 5.7,
+  "Jaman": 5.3,
   "Saanen": -16.8,
   "Saanenmöser": -16.8,
   "Oeschseite": -16.8,
   "Gstaad": -16.8,
   "Gruben": -16.8,
   "Rossinière": -16.8,
-  "Montbovon": 150
+  "Montbovon": 150,
+  "Belmont-sur-Montreux": -79.8,
+  "Vuarennes": 100.2,
+  "Châtelard": -79.8,
+  "La Perche": 5.3,
+  "Crêt-d'y-Bau": 5.3,
+  "Les Echets": 5.3,
+  "Paccot": 5.3,
+  "Planchamp": -79.8,
+  "Sendy-Sollard": -18.8,
+  "Montreux-Les Planches": 5.3,
+  "Toveyre": 5.3,
+  "Le Tremblex": 5.3,
+  "Fontanivent": -79.8,
+  "Les Cases": -18.8,
+  "Jor": -18.8,
+  "Glion-Collège": 5.3,
+  "Vernex": 44.5
  }
 }

@@ -10,7 +10,8 @@
  "linienfarbe": {
   "910": "#9a5b1e",
   "960": "#9a5b1e",
-  "915": "#9a5b1e"
+  "915": "#9a5b1e",
+  "914": "#9a5b1e"
  },
  "cfg": {
   "cover_m": 200,
@@ -18,32 +19,80 @@
   "merge_junction_m": 200
  },
  "Susch": [
-  472,
-  468
+  231,
+  545
  ],
  "Klosters Platz": [
-  283,
-  91
+  -151,
+  -312
  ],
  "Sagliains": [
-  613,
-  253
+  706,
+  14
  ],
- "Abgang 910 #5": [
-  70,
-  -67
+ "Sagliains Autoverlad": [
+  530,
+  86
  ],
- "Abgang 960 #6": [
-  866,
-  160
+ "Klosters Selfranga": [
+  -85,
+  -169
  ],
- "Abgang 960 #7": [
-  347,
-  688
+ "Sagliains Sasslatsch": [
+  266,
+  168
+ ],
+ "Sasslatsch": [
+  320,
+  306
+ ],
+ "Selfranga Süd": [
+  0,
+  -89
+ ],
+ "Vereina Nord": [
+  78,
+  -26
+ ],
+ "Vereina Süd": [
+  145,
+  21
+ ],
+ "Sagliains Nord": [
+  232,
+  87
+ ],
+ "Abgang 910 #13": [
+  -100,
+  -589
+ ],
+ "Abgang 915 #14": [
+  -202,
+  -571
+ ],
+ "Abgang 915 #15": [
+  -383,
+  -358
+ ],
+ "Abgang 960 #16": [
+  936,
+  -52
+ ],
+ "Abgang 960 #17": [
+  166,
+  790
  ],
  "drehung_auto": {
-  "Susch": -61.2,
-  "Klosters Platz": 36.4,
-  "Sagliains": -30
+  "Susch": -76.0,
+  "Klosters Platz": 120,
+  "Sagliains": -18.8,
+  "Sagliains Autoverlad": -30,
+  "Klosters Selfranga": 37.1,
+  "Sagliains Sasslatsch": -30,
+  "Sasslatsch": 120,
+  "Selfranga Süd": 37.1,
+  "Vereina Nord": 37.1,
+  "Vereina Süd": 37.1,
+  "Sagliains Nord": 37.1
  }
 }

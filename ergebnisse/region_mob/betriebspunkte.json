@@ -1,0 +1,642 @@
+{
+ "schonried": {
+  "name": "Schönried",
+  "id": 187228398,
+  "lat": 46.5043881,
+  "lon": 7.2908891,
+  "radius": 700,
+  "spuren": [
+   "1000"
+  ],
+  "weichen": 2,
+  "normalspur": false
+ },
+ "les_avants": {
+  "name": "Les Avants",
+  "id": 264552651,
+  "lat": 46.4536346,
+  "lon": 6.9434565,
+  "radius": 700,
+  "spuren": [
+   "1000"
+  ],
+  "weichen": 5,
+  "normalspur": false
+ },
+ "la_tine": {
+  "name": "La Tine",
+  "id": 306504177,
+  "lat": 46.4671807,
+  "lon": 7.0465379,
+  "radius": 700,
+  "spuren": [
+   "1000"
+  ],
+  "weichen": 3,
+  "normalspur": false
+ },
+ "la_chaudanne_les_moulins": {
+  "name": "La Chaudanne-Les Moulins",
+  "id": 306504206,
+  "lat": 46.4660138,
+  "lon": 7.0967791,
+  "radius": 700,
+  "spuren": [
+   "1000"
+  ],
+  "weichen": 0,
+  "normalspur": false
+ },
+ "chateau_d_oex": {
+  "name": "Château-d'Oex",
+  "id": 306504255,
+  "lat": 46.4749072,
+  "lon": 7.1326107,
+  "radius": 700,
+  "spuren": [
+   "1000"
+  ],
+  "weichen": 7,
+  "normalspur": false
+ },
+ "les_granges_gerignoz": {
+  "name": "Les Granges-Gérignoz",
+  "id": 306507866,
+  "lat": 46.4741368,
+  "lon": 7.1548909,
+  "radius": 700,
+  "spuren": [
+   "1000"
+  ],
+  "weichen": 0,
+  "normalspur": false
+ },
+ "flendruz": {
+  "name": "Flendruz",
+  "id": 306507932,
+  "lat": 46.482389,
+  "lon": 7.186575,
+  "radius": 700,
+  "spuren": [
+   "1000"
+  ],
+  "weichen": 3,
+  "normalspur": false
+ },
+ "rougemont": {
+  "name": "Rougemont",
+  "id": 306507958,
+  "lat": 46.4883914,
+  "lon": 7.2089064,
+  "radius": 700,
+  "spuren": [
+   "1000"
+  ],
+  "weichen": 3,
+  "normalspur": false
+ },
+ "les_sciernes": {
+  "name": "Les Sciernes",
+  "id": 426953627,
+  "lat": 46.4916117,
+  "lon": 7.0346151,
+  "radius": 700,
+  "spuren": [
+   "1000"
+  ],
+  "weichen": 2,
+  "normalspur": false
+ },
+ "rochers_de_naye": {
+  "name": "Rochers de Naye",
+  "id": 454143274,
+  "lat": 46.4318411,
+  "lon": 6.9788166,
+  "radius": 700,
+  "spuren": [
+   "800"
+  ],
+  "weichen": 1,
+  "normalspur": false
+ },
+ "matten": {
+  "name": "Matten",
+  "id": 555006353,
+  "lat": 46.49385,
+  "lon": 7.4215537,
+  "radius": 700,
+  "spuren": [
+   "1000"
+  ],
+  "weichen": 2,
+  "normalspur": false
+ },
+ "boden": {
+  "name": "Boden",
+  "id": 983835278,
+  "lat": 46.4706045,
+  "lon": 7.4355201,
+  "radius": 700,
+  "spuren": [
+   "1000"
+  ],
+  "weichen": 0,
+  "normalspur": false
+ },
+ "stockli": {
+  "name": "Stöckli",
+  "id": 2662923136,
+  "lat": 46.5166906,
+  "lon": 7.388673,
+  "radius": 700,
+  "spuren": [
+   "1000"
+  ],
+  "weichen": 0,
+  "normalspur": false
+ },
+ "st_stephan": {
+  "name": "St. Stephan",
+  "id": 2662927320,
+  "lat": 46.5053789,
+  "lon": 7.4006906,
+  "radius": 700,
+  "spuren": [
+   "1000"
+  ],
+  "weichen": 6,
+  "normalspur": false
+ },
+ "blankenburg": {
+  "name": "Blankenburg",
+  "id": 2663516100,
+  "lat": 46.5413208,
+  "lon": 7.385312,
+  "radius": 700,
+  "spuren": [
+   "1000"
+  ],
+  "weichen": 2,
+  "normalspur": false
+ },
+ "zweisimmen": {
+  "name": "Zweisimmen",
+  "id": 2752093541,
+  "lat": 46.5534849,
+  "lon": 7.3747496,
+  "radius": 1000,
+  "spuren": [
+   "1000",
+   "1000;1435",
+   "1435"
+  ],
+  "weichen": 36,
+  "normalspur": true
+ },
+ "montreux": {
+  "name": "Montreux",
+  "id": 2793870896,
+  "lat": 46.4358597,
+  "lon": 6.9103688,
+  "radius": 1000,
+  "spuren": [
+   "1000",
+   "1435",
+   "800"
+  ],
+  "weichen": 29,
+  "normalspur": true
+ },
+ "glion": {
+  "name": "Glion",
+  "id": 2797580802,
+  "lat": 46.4319287,
+  "lon": 6.9240596,
+  "radius": 700,
+  "spuren": [
+   "800"
+  ],
+  "weichen": 8,
+  "normalspur": false
+ },
+ "caux": {
+  "name": "Caux",
+  "id": 2797614424,
+  "lat": 46.4311481,
+  "lon": 6.9385239,
+  "radius": 700,
+  "spuren": [
+   "800"
+  ],
+  "weichen": 4,
+  "normalspur": false
+ },
+ "chernex": {
+  "name": "Chernex",
+  "id": 2797750712,
+  "lat": 46.4463674,
+  "lon": 6.9095592,
+  "radius": 700,
+  "spuren": [
+   "1000"
+  ],
+  "weichen": 21,
+  "normalspur": false
+ },
+ "chamby": {
+  "name": "Chamby",
+  "id": 2797758582,
+  "lat": 46.4493209,
+  "lon": 6.9135244,
+  "radius": 700,
+  "spuren": [
+   "1000"
+  ],
+  "weichen": 19,
+  "normalspur": false
+ },
+ "allieres": {
+  "name": "Allières",
+  "id": 2827316047,
+  "lat": 46.4697112,
+  "lon": 7.0080463,
+  "radius": 700,
+  "spuren": [
+   "1000"
+  ],
+  "weichen": 3,
+  "normalspur": false
+ },
+ "jaman": {
+  "name": "Jaman",
+  "id": 2833545015,
+  "lat": 46.4414736,
+  "lon": 6.9769435,
+  "radius": 700,
+  "spuren": [
+   "800"
+  ],
+  "weichen": 2,
+  "normalspur": false
+ },
+ "les_combes": {
+  "name": "Les Combes",
+  "id": 3752152080,
+  "lat": 46.4774523,
+  "lon": 7.1718045,
+  "radius": 700,
+  "spuren": [
+   "1000"
+  ],
+  "weichen": 0,
+  "normalspur": false
+ },
+ "saanen": {
+  "name": "Saanen",
+  "id": 3877871123,
+  "lat": 46.4886037,
+  "lon": 7.2605015,
+  "radius": 700,
+  "spuren": [
+   "1000"
+  ],
+  "weichen": 7,
+  "normalspur": false
+ },
+ "saanenmoser": {
+  "name": "Saanenmöser",
+  "id": 3877902839,
+  "lat": 46.5174071,
+  "lon": 7.3114479,
+  "radius": 700,
+  "spuren": [
+   "1000"
+  ],
+  "weichen": 5,
+  "normalspur": false
+ },
+ "oeschseite": {
+  "name": "Oeschseite",
+  "id": 6136596724,
+  "lat": 46.5310796,
+  "lon": 7.3517718,
+  "radius": 700,
+  "spuren": [
+   "1000"
+  ],
+  "weichen": 3,
+  "normalspur": false
+ },
+ "gstaad": {
+  "name": "Gstaad",
+  "id": 6314721997,
+  "lat": 46.4750908,
+  "lon": 7.2841394,
+  "radius": 700,
+  "spuren": [
+   "1000"
+  ],
+  "weichen": 6,
+  "normalspur": false
+ },
+ "gruben": {
+  "name": "Gruben",
+  "id": 6314760040,
+  "lat": 46.4902893,
+  "lon": 7.2803213,
+  "radius": 700,
+  "spuren": [
+   "1000"
+  ],
+  "weichen": 2,
+  "normalspur": false
+ },
+ "chateau_d_oex_la_palaz": {
+  "name": "Château-d'Oex La Palaz",
+  "id": 7101631560,
+  "lat": 46.4758536,
+  "lon": 7.1437874,
+  "radius": 700,
+  "spuren": [
+   "1000"
+  ],
+  "weichen": 0,
+  "normalspur": false
+ },
+ "lenk_im_simmental": {
+  "name": "Lenk im Simmental",
+  "id": 8131826725,
+  "lat": 46.4579692,
+  "lon": 7.4437345,
+  "radius": 700,
+  "spuren": [
+   "1000"
+  ],
+  "weichen": 8,
+  "normalspur": false
+ },
+ "rossiniere": {
+  "name": "Rossinière",
+  "id": 8131835131,
+  "lat": 46.4647906,
+  "lon": 7.0829273,
+  "radius": 700,
+  "spuren": [
+   "1000"
+  ],
+  "weichen": 5,
+  "normalspur": false
+ },
+ "montbovon": {
+  "name": "Montbovon",
+  "id": 13992652435,
+  "lat": 46.4859108,
+  "lon": 7.0426078,
+  "radius": 700,
+  "spuren": [
+   "1000"
+  ],
+  "weichen": 17,
+  "normalspur": false
+ },
+ "belmont_sur_montreux": {
+  "name": "Belmont-sur-Montreux",
+  "id": 207308604,
+  "lat": 46.4420987,
+  "lon": 6.9059653,
+  "radius": 700,
+  "spuren": [
+   "1000"
+  ],
+  "weichen": 19,
+  "normalspur": false
+ },
+ "vuarennes": {
+  "name": "Vuarennes",
+  "id": 306500168,
+  "lat": 46.4391384,
+  "lon": 6.9109929,
+  "radius": 700,
+  "spuren": [
+   "1000"
+  ],
+  "weichen": 32,
+  "normalspur": false
+ },
+ "chatelard": {
+  "name": "Châtelard",
+  "id": 374342357,
+  "lat": 46.4467904,
+  "lon": 6.9011475,
+  "radius": 700,
+  "spuren": [
+   "1000"
+  ],
+  "weichen": 8,
+  "normalspur": false
+ },
+ "la_perche": {
+  "name": "La Perche",
+  "id": 477540610,
+  "lat": 46.4364296,
+  "lon": 6.9750765,
+  "radius": 700,
+  "spuren": [
+   "800"
+  ],
+  "weichen": 2,
+  "normalspur": false
+ },
+ "cret_d_y_bau": {
+  "name": "Crêt-d'y-Bau",
+  "id": 477540732,
+  "lat": 46.4352058,
+  "lon": 6.9555069,
+  "radius": 700,
+  "spuren": [
+   "800"
+  ],
+  "weichen": 1,
+  "normalspur": false
+ },
+ "les_echets": {
+  "name": "Les Echets",
+  "id": 983835736,
+  "lat": 46.4320053,
+  "lon": 6.9447922,
+  "radius": 700,
+  "spuren": [
+   "800"
+  ],
+  "weichen": 4,
+  "normalspur": false
+ },
+ "paccot": {
+  "name": "Paccot",
+  "id": 983835738,
+  "lat": 46.4377004,
+  "lon": 6.9636101,
+  "radius": 700,
+  "spuren": [
+   "800"
+  ],
+  "weichen": 2,
+  "normalspur": false
+ },
+ "planchamp": {
+  "name": "Planchamp",
+  "id": 983835739,
+  "lat": 46.4510495,
+  "lon": 6.9010588,
+  "radius": 700,
+  "spuren": [
+   "1000"
+  ],
+  "weichen": 3,
+  "normalspur": false
+ },
+ "sendy_sollard": {
+  "name": "Sendy-Sollard",
+  "id": 983835747,
+  "lat": 46.4471615,
+  "lon": 6.9301965,
+  "radius": 700,
+  "spuren": [
+   "1000"
+  ],
+  "weichen": 2,
+  "normalspur": false
+ },
+ "montreux_les_planches": {
+  "name": "Montreux-Les Planches",
+  "id": 983835749,
+  "lat": 46.4332751,
+  "lon": 6.9173482,
+  "radius": 700,
+  "spuren": [
+   "800"
+  ],
+  "weichen": 33,
+  "normalspur": false
+ },
+ "toveyre": {
+  "name": "Toveyre",
+  "id": 983835751,
+  "lat": 46.427891,
+  "lon": 6.9285684,
+  "radius": 700,
+  "spuren": [
+   "800"
+  ],
+  "weichen": 5,
+  "normalspur": false
+ },
+ "valmont": {
+  "name": "Valmont",
+  "id": 983835753,
+  "lat": 46.4285383,
+  "lon": 6.9293905,
+  "radius": 700,
+  "spuren": [
+   "800"
+  ],
+  "weichen": 5,
+  "normalspur": false
+ },
+ "le_tremblex": {
+  "name": "Le Tremblex",
+  "id": 983835754,
+  "lat": 46.4359414,
+  "lon": 6.9326309,
+  "radius": 700,
+  "spuren": [
+   "800"
+  ],
+  "weichen": 1,
+  "normalspur": false
+ },
+ "haut_de_caux": {
+  "name": "Haut-de-Caux",
+  "id": 983835765,
+  "lat": 46.4342828,
+  "lon": 6.9475692,
+  "radius": 700,
+  "spuren": [
+   "800"
+  ],
+  "weichen": 0,
+  "normalspur": false
+ },
+ "fontanivent": {
+  "name": "Fontanivent",
+  "id": 2797768526,
+  "lat": 46.4527988,
+  "lon": 6.9022556,
+  "radius": 700,
+  "spuren": [
+   "1000"
+  ],
+  "weichen": 3,
+  "normalspur": false
+ },
+ "les_cases": {
+  "name": "Les Cases",
+  "id": 2827598128,
+  "lat": 46.4559407,
+  "lon": 6.9978476,
+  "radius": 700,
+  "spuren": [
+   "1000"
+  ],
+  "weichen": 3,
+  "normalspur": false
+ },
+ "jor": {
+  "name": "Jor",
+  "id": 2827606185,
+  "lat": 46.4546413,
+  "lon": 6.9651467,
+  "radius": 700,
+  "spuren": [
+   "1000"
+  ],
+  "weichen": 4,
+  "normalspur": false
+ },
+ "glion_college": {
+  "name": "Glion-Collège",
+  "id": 5033962291,
+  "lat": 46.4347779,
+  "lon": 6.9287316,
+  "radius": 700,
+  "spuren": [
+   "800"
+  ],
+  "weichen": 9,
+  "normalspur": false
+ },
+ "sonzier": {
+  "name": "Sonzier",
+  "id": 6457421092,
+  "lat": 46.4393239,
+  "lon": 6.9215129,
+  "radius": 700,
+  "spuren": [
+   "1000"
+  ],
+  "weichen": 0,
+  "normalspur": false
+ },
+ "vernex": {
+  "name": "Vernex",
+  "id": 11500773557,
+  "lat": 46.4403063,
+  "lon": 6.9051954,
+  "radius": 400,
+  "spuren": [
+   "1435"
+  ],
+  "weichen": 5,
+  "normalspur": false
+ }
+}

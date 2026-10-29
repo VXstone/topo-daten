@@ -1,7 +1,13 @@
 {
  "region": "vereina",
- "erzeugt": "2026-10-29 20:41 UTC",
+ "erzeugt": "2026-10-29 20:49 UTC",
  "bahnhoefe": {
+  "sagliains_autoverlad": {
+   "name": "Sagliains Autoverlad",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
   "susch": {
    "name": "Susch",
    "ok": true,
@@ -19,10 +25,53 @@
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
+  },
+  "sagliains_sasslatsch": {
+   "name": "Sagliains Sasslatsch",
+   "ok": true,
+   "befunde": "Befunde: {'B': 2}",
+   "optionen": []
+  },
+  "klosters_selfranga": {
+   "name": "Klosters Selfranga",
+   "ok": true,
+   "befunde": "Befunde: {'B': 4}",
+   "optionen": []
+  },
+  "sasslatsch": {
+   "name": "Sasslatsch",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "selfranga_sud": {
+   "name": "Selfranga Süd",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "vereina_nord": {
+   "name": "Vereina Nord",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "vereina_sud": {
+   "name": "Vereina Süd",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "sagliains_nord": {
+   "name": "Sagliains Nord",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
   }
  },
  "netz_lage": 0,
  "regeln": {
-  "G2": 4
+  "G2": 11,
+  "G8": 3
  }
 }

@@ -44,7 +44,7 @@
   "spuren": [
    "1000"
   ],
-  "weichen": 10,
+  "weichen": 12,
   "normalspur": false
  },
  "sagliains": {
@@ -56,7 +56,103 @@
   "spuren": [
    "1000"
   ],
+  "weichen": 6,
+  "normalspur": false
+ },
+ "sagliains_autoverlad": {
+  "name": "Sagliains Autoverlad",
+  "id": 13839962934,
+  "lat": 46.7632845,
+  "lon": 10.0962817,
+  "radius": 400,
+  "spuren": [
+   "1000"
+  ],
+  "weichen": 6,
+  "normalspur": false
+ },
+ "klosters_selfranga": {
+  "name": "Klosters Selfranga",
+  "id": 13849975746,
+  "lat": 46.856284,
+  "lon": 9.8831911,
+  "radius": 796.3070935453794,
+  "spuren": [
+   "1000"
+  ],
+  "weichen": 9,
+  "normalspur": false
+ },
+ "sagliains_sasslatsch": {
+  "name": "Sagliains Sasslatsch",
+  "id": 13839962935,
+  "lat": 46.7618212,
+  "lon": 10.0869529,
+  "radius": 479.60703066263574,
+  "spuren": [
+   "1000"
+  ],
+  "weichen": 7,
+  "normalspur": false
+ },
+ "sasslatsch": {
+  "name": "Sasslatsch",
+  "id": 13839962936,
+  "lat": 46.7590892,
+  "lon": 10.0873985,
+  "radius": 400,
+  "spuren": [
+   "1000"
+  ],
+  "weichen": 4,
+  "normalspur": false
+ },
+ "selfranga_sud": {
+  "name": "Selfranga Süd",
+  "id": 13849975747,
+  "lat": 46.8446201,
+  "lon": 9.9068227,
+  "radius": 400,
+  "spuren": [
+   "1000"
+  ],
+  "weichen": 1,
+  "normalspur": false
+ },
+ "vereina_nord": {
+  "name": "Vereina Nord",
+  "id": 13849975750,
+  "lat": 46.8127933,
+  "lon": 9.9761816,
+  "radius": 400,
+  "spuren": [
+   "1000"
+  ],
   "weichen": 2,
+  "normalspur": false
+ },
+ "vereina_sud": {
+  "name": "Vereina Süd",
+  "id": 13849975751,
+  "lat": 46.8025667,
+  "lon": 9.9984323,
+  "radius": 400,
+  "spuren": [
+   "1000"
+  ],
+  "weichen": 1,
+  "normalspur": false
+ },
+ "sagliains_nord": {
+  "name": "Sagliains Nord",
+  "id": 13849975756,
+  "lat": 46.7693457,
+  "lon": 10.0705644,
+  "radius": 400,
+  "spuren": [
+   "1000"
+  ],
+  "weichen": 1,
   "normalspur": false
  }
 }
