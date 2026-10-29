@@ -37,17 +37,51 @@ ways = [e for e in D if e["type"] == "way" and "geometry" in e and any(inbox(g) 
 nodes = [e for e in D if e["type"] == "node" and inbox(e)]
 stations = {e["tags"]["name"]: e for e in nodes if e.get("tags", {}).get("railway") in ("station", "halt") and e["tags"].get("name")}
 
+RAND = {}        # künstlicher Randknoten -> (innerer Knoten, äusserer Knoten), für die Fernpunkte
+def kreis_runs(w, c, R):
+    """Teilstücke eines Ways im Kreis R um c. Am Kreisrand wird ein Punkt eingefügt (29.10.2026, Sagliains Nord: der
+    6,4 km lange Tunnel-Way hat im 400-m-Kreis nur seinen Endknoten und fiel ganz weg)."""
+    runs, cur = [], []
+    ns, gs = w["nodes"], w["geometry"]
+    def rand(i, j):                       # Schnittpunkt der Strecke i→j mit dem Kreis (i innen, j aussen)
+        a, b = xy(gs[i]), xy(gs[j]); lo, hi = 0.0, 1.0
+        for _ in range(30):
+            m = (lo + hi) / 2
+            if math.dist((a[0] + m * (b[0] - a[0]), a[1] + m * (b[1] - a[1])), c) <= R: lo = m
+            else: hi = m
+        g = dict(lat=gs[i]["lat"] + lo * (gs[j]["lat"] - gs[i]["lat"]), lon=gs[i]["lon"] + lo * (gs[j]["lon"] - gs[i]["lon"]))
+        nid = -(abs(w["id"]) * 1000 + min(i, j) * 2 + (0 if i < j else 1)) - 10 ** 15
+        RAND[nid] = (ns[i], ns[j]); return (nid, g)
+    for i, (n, g) in enumerate(zip(ns, gs)):
+        inn = math.dist(xy(g), c) <= R
+        if inn:
+            if not cur and i > 0: cur.append(rand(i, i - 1))
+            cur.append((n, g))
+        elif cur:
+            cur.append(rand(i - 1, i)); runs.append(cur); cur = []
+    if cur: runs.append(cur)
+    runs = [r for r in runs if len(r) >= 2 and math.dist(xy(r[0][1]), xy(r[-1][1])) > 1.0]
+    # Verdichten: Stücke über 40 m ohne Knoten (Tunnel) alle 25 m teilen, damit das Planfenster nicht an der Weiche schneidet
+    out_ = []
+    for ri, r in enumerate(runs):
+        rr = [r[0]]
+        for k_, ((n1, g1), (n2, g2)) in enumerate(zip(r, r[1:])):
+            L_ = math.dist(xy(g1), xy(g2)); m_ = int(L_ // 25)
+            if L_ > 40:
+                for q in range(1, m_ + 1):
+                    f_ = q / (m_ + 1)
+                    rr.append((-3 * 10 ** 15 - (abs(w["id"]) * 100 + ri) * 10 ** 5 - k_ * 100 - q,
+                               dict(lat=g1["lat"] + f_ * (g2["lat"] - g1["lat"]), lon=g1["lon"] + f_ * (g2["lon"] - g1["lon"]))))
+            rr.append((n2, g2))
+        out_.append(rr)
+    return out_
+
 def kreis(w, name, R):
     """Teil des Ways im Umkreis R um den Stationsknoten (ID wie cut.py)."""
     st = stations[name]; c = xy(st)
-    runs, cur = [], []
-    for n, g in zip(w["nodes"], w["geometry"]):
-        if math.dist(xy(g), c) <= R: cur.append((n, g))
-        elif cur: runs.append(cur); cur = []
-    if cur: runs.append(cur)
+    runs = kreis_runs(w, c, R)
     out = []
     for k, r in enumerate(runs):
-        if len(r) < 2: continue
         v = dict(w); v["id"] = w["id"] if k == 0 else w["id"] * 100 + k
         v["nodes"] = [n for n, _ in r]; v["geometry"] = [g for _, g in r]; out.append(v)
     return out
@@ -151,13 +185,8 @@ for st in betr:
     sp_here = {w["tags"].get("spur", "1435") for w in out_w if w["tags"].get("railway") == "rail" and min(math.dist(xy(g), c) for g in w["geometry"]) < 100}   # 100 m: Betriebsstellenknoten liegen in OSM oft neben dem Gleis (Selfranga Süd 61 m)
     for w in out_w:
         if w["tags"].get("railway") == "rail" and w["tags"].get("spur", "1435") not in sp_here: continue   # nur die Spuren dieses Betriebspunkts (Belmont: keine SBB-Gleise)
-        runs, cur = [], []
-        for n, g in zip(w["nodes"], w["geometry"]):
-            if math.dist(xy(g), c) <= R: cur.append((n, g))
-            elif cur: runs.append(cur); cur = []
-        if cur: runs.append(cur)
+        runs = kreis_runs(w, c, R)
         for k, r in enumerate(runs):
-            if len(r) < 2: continue
             v = dict(w); v["id"] = w["id"] if k == 0 else w["id"] * 100 + k
             v["nodes"] = [n for n, _ in r]; v["geometry"] = [g for _, g in r]; el.append(v)
     json.dump({"elements": el}, open(os.path.join(OUT, f"{key}.json"), "w"))
@@ -192,6 +221,8 @@ for key, b in BP.items():
     c = xy(b); F = {}
     for n in _GF:
         if math.dist(_PF[n], c) <= b["radius"]: F[str(n)] = {str(m): _fern(n, m) for m in _GF[n]}
+    for rid, (i_, o_) in RAND.items():    # künstliche Randknoten: Richtung innen → aussen
+        if i_ in _GF and o_ in _GF[i_]: F[str(rid)] = {str(o_): _fern(i_, o_)}
     json.dump(F, open(os.path.join(OUT, f"{key}_fern.json"), "w"))
 # Übersicht der Schmalspur-Linien im Ausschnitt (ref / Betreiber), damit neue Regionen die richtigen «linien» bekommen
 import collections

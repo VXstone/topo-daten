@@ -110,7 +110,8 @@ _own = collections.defaultdict(set)
 for w in ways.values():
     for n in w["nodes"]: _own[n].add(w["id"])
 _ends = [(w, k) for w in ways.values() for k in (0, -1)
-         if _deg[w["nodes"][k]] == 1 and ntag.get(w["nodes"][k], {}).get("railway") != "buffer_stop"]
+         if _deg[w["nodes"][k]] == 1 and ntag.get(w["nodes"][k], {}).get("railway") != "buffer_stop"
+         and w["nodes"][k] > -10 ** 14]      # künstliche Randknoten des Kreisausschnitts (region_vorbereiten) sind Datenrand
 if _ends and CFG["rules"].get("r27", True):
     from scipy.spatial import cKDTree as _KD
     _ids = list(P); _kd = _KD(np.array([P[n] for n in _ids]))
@@ -119,7 +120,7 @@ if _ends and CFG["rules"].get("r27", True):
         for dist_, j in zip(*_kd.query(P[n], k=min(6, len(_ids)))):
             if j >= len(_ids): continue          # weniger als 6 Knoten im Ausschnitt (Doppelspurbeginn im Vereinatunnel)
             m = _ids[j]
-            if m == n or dist_ > 6 or _own[m] & _own[n] or m in w["nodes"]: continue
+            if m == n or dist_ > CFG.get("r27_m", 10) or _own[m] & _own[n] or m in w["nodes"]: continue     # 10 m (Susch Gl. 2: 9,1 m vor dem Streckengleis)
             # nur in Verlängerung des Gleises (nicht seitlich auf ein Nachbargleis)
             _pv = w["nodes"][k - 1] if k == -1 else w["nodes"][1]
             _u = np.subtract(P[n], P[_pv]); _v = np.subtract(P[m], P[n])
@@ -129,9 +130,55 @@ _bx = [p[0] for p in P.values()]; _by = [p[1] for p in P.values()]
 _Rdata = max(math.hypot(*p) for p in P.values())
 _circ = sum(math.hypot(*p) > 0.93 * _Rdata for p in P.values()) > 6     # Daten kreisförmig ausgeschnitten (cut.py)
 def at_data_edge(n, tol=60):
+    if -2 * 10 ** 15 < n < -10 ** 14: return True     # künstlicher Randknoten des Kreisausschnitts (region_vorbereiten.kreis_runs; ≤ -3e15: Verdichtung)
     x_, y_ = P[n]
     if _circ and math.hypot(x_, y_) > _Rdata - 2 * tol: return True
     return min(x_ - min(_bx), max(_bx) - x_, y_ - min(_by), max(_by) - y_) < tol
+
+# Regel 27b (29.10.2026, Susch Gl. 1): offenes Gleisende ohne Prellbock, nicht am Ausschnittrand, das parallel (< 15°) und
+# höchstens 12 m neben einem Streckengleis aufhört: in OSM fehlt die Weiche. Das Gleis wird schräg vorwärts an das
+# Nachbargleis angeschlossen (Knoten 2,5 × Seitenabstand, mindestens 8 m, weiter vorne). cfg rules.r27b: false schaltet ab.
+if CFG["rules"].get("r27b", True):
+    _deg = collections.Counter(n for w in ways.values() for n in w["nodes"])
+    _own = collections.defaultdict(set)
+    for w in ways.values():
+        for n in w["nodes"]: _own[n].add(w["id"])
+    def _richtung(ns_, k_):                 # Richtung am Ende k_ über ~20 m
+        e_ = ns_[k_]; idx = range(len(ns_) - 2, -1, -1) if k_ == -1 else range(1, len(ns_))
+        for j_ in idx:
+            if math.dist(P[ns_[j_]], P[e_]) >= 20: return np.subtract(P[e_], P[ns_[j_]])
+        return np.subtract(P[e_], P[ns_[0 if k_ == -1 else -1]])
+    for w in list(ways.values()):
+        for k in (0, -1):
+            n = w["nodes"][k]
+            if _deg[n] != 1 or ntag.get(n, {}).get("railway") == "buffer_stop" or at_data_edge(n): continue
+            u = _richtung(w["nodes"], k); Lu = float(np.linalg.norm(u))
+            if Lu < 5: continue
+            u = u / Lu; best = None
+            for w2 in ways.values():
+                if w2["id"] in _own[n] or w2["tags"].get("service"): continue      # nur an Streckengleise (Stumpen bleiben Stumpen)
+                for i2 in range(len(w2["nodes"]) - 1):
+                    A_, B_ = np.array(P[w2["nodes"][i2]], float), np.array(P[w2["nodes"][i2 + 1]], float)
+                    t_ = B_ - A_; Lt = float(np.linalg.norm(t_))
+                    if Lt < 1e-6 or abs(float(t_ @ u)) / Lt < math.cos(math.radians(15)): continue
+                    # Seitenabstand des Endes zum Gleis, Treffpunkt der Schräge 2,5 × Seitenabstand (mind. 8 m) weiter vorne
+                    lat_ = abs(float((np.array(P[n]) - A_) @ np.array([-t_[1], t_[0]]) / Lt))
+                    if lat_ > 12 or lat_ < 1.5: continue
+                    q_ = np.array(P[n]) + u * max(8.0, 2.5 * lat_)
+                    f_ = float((q_ - A_) @ t_) / (Lt * Lt)
+                    if not 0 <= f_ <= 1: continue
+                    if best is None or lat_ < best[0]: best = (lat_, w2, i2, A_ + f_ * t_, f_)
+            if best:
+                lat_, w2, i2, pt_, f_ = best
+                nid = -(len(P) + 1000)
+                P[nid] = (float(pt_[0]), float(pt_[1])); ntag[nid] = {"railway": "switch"}
+                _a, _b = w2["nodes"][i2], w2["nodes"][i2 + 1]
+                LL[nid] = tuple(np.array(LL[_a]) + f_ * (np.array(LL[_b]) - np.array(LL[_a]))) if _a in LL and _b in LL else LL.get(_a)
+                w2["nodes"].insert(i2 + 1, nid)
+                if k == -1: w["nodes"].append(nid)
+                else: w["nodes"].insert(0, nid)
+                _deg[nid] += 3; _deg[n] += 1
+                if ARGS.dbg: print("R27b", w["id"], "Ende", n, "-> neue Weiche auf", w2["id"], f"Seitenabstand {lat_:.1f} m")
 
 # ------------------------------------------------------ 1. Referenzachse
 G = collections.defaultdict(list)
@@ -517,6 +564,28 @@ for i, sg in enumerate(segs):
     for _r, _ws in OVR.get("gleise", {}).items():
         if sg["way"] in _ws: sg["ref"] = _r
 
+# Perron mit genau einer Nummer, daneben ein Gleis ohne railway:track_ref (29.10.2026, Susch: Gl. 2 = service=yard ohne
+# Nummer am Perron «2»): das nächste Gleis ohne Nummer bis 12 m bekommt die Nummer und ist Perrongleis. Gibt es im Plan
+# schon ein Gleis mit dieser Nummer, bleibt alles, wie es ist. cfg «perron_nummer»: false schaltet ab.
+if CFG.get("perron_nummer", True):
+    _hat = {sg["ref"] for sg in segs if sg["ref"]}
+    for _pl in PLAT:
+        _rs = [x.strip() for x in re.split(r"[;,/]", _pl["tags"].get("ref", "")) if x.strip()]
+        if len(_rs) != 1 or _rs[0] in _hat or not _rs[0].isdigit(): continue
+        _pp_ = np.array([xy(g) for g in _pl["geometry"]], dtype=float)
+        _kand = []
+        for sg in segs:
+            if sg["ref"] or sg["tags"].get("service") in ("crossover", "spur"): continue
+            _pts = np.array([P[n] for n in sg["nodes"]], dtype=float)
+            _d = min(_seg_dist(q, _pts) for q in _pp_)
+            if _d < 12: _kand.append((_d + (1.0 if sg["tags"].get("service") else 0), sg["way"]))     # gleich nah: Gleis ohne service-Tag
+        if not _kand: continue
+        _w = min(_kand)[1]
+        for sg in segs:
+            if sg["way"] == _w and not sg["ref"]: sg["ref"] = _rs[0]; sg["pax"] = True
+        _hat.add(_rs[0])
+        if ARGS.dbg: print("PERRON-NUMMER", _rs[0], "->", _w)
+
 # Regel 43 (opt-in r43): Verbindungen zwischen zwei Personengleisen sind Fahrwege des Personenverkehrs (dunkelgrün),
 # auch wenn OSM sie als service=crossover führt (D. Eckenstein: Perrongleise müssen in Dunkelgrün erreichbar sein)
 if RU.get("r43", False):
@@ -580,6 +649,7 @@ if _PLM:
                 n_ = q_.pop(0)
                 if n_ == e_[1]: break
                 for x in _adj[n_]:
+                    if x["ref"] and x["ref"] != R_: continue      # nicht über ein Gleis mit eigener anderer Nummer (Klosters: Gl. 4 als «Lücke» in Gl. 3)
                     m_ = x["nodes"][-1] if x["nodes"][0] == n_ else x["nodes"][0]
                     if m_ not in prev and (m_ == e_[1] or not _ppf[m_]): prev[m_] = (n_, x); q_.append(m_)
             if e_[1] not in prev: continue
@@ -664,6 +734,30 @@ if CFG.get("fahrwege", os.environ.get("SPUR_FAHRWEGE") == "1"):
         if a_ and b_ and not (a_ & b_):
             sg["flat"] = False
             if ARGS.dbg: print("FW-SPURWECHSEL", sg["way"], round(sg["s0"]), round(sg["s1"]))
+# Perrongleis setzt sich gerade fort (29.10.2026, Klosters Gl. 3): zwei gerade Stücke mit derselben Gleisnummer, verbunden
+# durch einen kurzen Bogen (< 120 m, keine weitere gerade Fortsetzung an den Bogenenden), sind ein Gleis – der Bogen wird
+# Teil der Kette, das Gleis bleibt auf einer Ebene; ein Nebengleis in der Flucht endet dann als Abzweig.
+# cfg «perron_fortsetzung»: false schaltet ab.
+if CFG.get("perron_fortsetzung", True):
+    for A_ in [a for a in segs if a["flat"] and a["pax"] and a["ref"]]:
+        m0 = A_["nodes"][-1]
+        if [x for x in at[m0][1] if x["flat"]]: continue            # A läuft gerade weiter
+        # Bogen nach rechts: Folge nicht gerader Personen-Stücke (an Weichen geteilt), zusammen < 120 m
+        weg, n_, L_ = [], m0, 0.0
+        while True:
+            nx_ = [d for d in at[n_][1] if not d["flat"] and d["pax"] and (not d["ref"] or d["ref"] == A_["ref"])]
+            if len(nx_) != 1: break
+            d = nx_[0]; L_ += d["s1"] - d["s0"]
+            if L_ > 120: weg = []; break
+            weg.append(d); n_ = d["nodes"][-1]
+            Bn = [x for x in at[n_][1] if x["flat"] and x["pax"] and x["ref"] == A_["ref"]]
+            if Bn: break
+        else: Bn = []
+        if not weg or not Bn: continue
+        for d in weg: d["flat"] = True
+        k_ = [A_] + weg + [Bn[0]]
+        for x, y in zip(k_, k_[1:]): FW_PAARE.add((x["id"], y["id"]))
+        if ARGS.dbg: print("PERRON-FORTSETZUNG Gl.", A_["ref"], [x["way"] for x in k_])
 for n, (L, Rr) in at.items():
     fl = [a for a in L if a["flat"]]; fr = [b for b in Rr if b["flat"]]
     # Weiterlauf: gleiche Richtung, gleicher Way bevorzugt; Weichenverbindungen (service=crossover) nur, wenn nichts anderes

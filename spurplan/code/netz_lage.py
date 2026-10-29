@@ -166,8 +166,12 @@ for i in [i for i in ids if nodes[i]["inset"]]:
     P = PORTS[i]["ports"]; cx = (PORTS[i]["x_lo"] + PORTS[i]["x_hi"]) / 2; cy = (PORTS[i]["y_lo"] + PORTS[i]["y_hi"]) / 2
     es = [(e, geo_bearing(e, i)) for e in inc[i]]
     taken = set()
+    # Liniennummer des Abgangs, die an diesem Betriebspunkt keine Kante hat, ist eine OSM-Unschärfe (Sasslatsch: Ast 914 in
+    # OSM teils als 910) und zählt wie «ohne Nummer» (29.10.2026)
+    _refs_hier = {r_ for e_ in inc[i] for r_ in e_["refs"]}
+    _strafe = lambda p, e: 0 if p["ref"] in e["refs"] else (12 if p["ref"] is None or p["ref"] not in _refs_hier else 45)
     for e, br in sorted(es, key=lambda t: min([adiff(t[1], p["bearing"]) for p in P] or [999])):
-        cand = sorted((adiff(br, p["bearing"]) + (0 if p["ref"] in e["refs"] else (12 if p["ref"] is None else 45)), k) for k, p in enumerate(P) if k not in taken)
+        cand = sorted((adiff(br, p["bearing"]) + _strafe(p, e), k) for k, p in enumerate(P) if k not in taken)
         cand = [c for c in cand if c[0] < 70]
         if cand:
             k0 = cand[0][1]; v0 = port_vec(P[k0])
