@@ -122,5 +122,10 @@ for st in betr:
                    weichen=sum(1 for e in out_n if e.get("tags", {}).get("railway") == "switch" and math.dist(xy(e), c) < 250),
                    normalspur=name in K.get("normalspur", {}))
 json.dump(BP, open(os.path.join(OUT, "betriebspunkte.json"), "w"), ensure_ascii=False, indent=1)
+# Übersicht der Schmalspur-Linien im Ausschnitt (ref / Betreiber), damit neue Regionen die richtigen «linien» bekommen
+import collections
+_r = collections.Counter((w["tags"].get("ref", "-"), w["tags"].get("operator", "-"), w["tags"].get("name", "")[:30]) for w in ways if w["tags"].get("railway") in SCHMAL | {"rail"} and w["tags"].get("usage") in ("main", "branch", None))
+print("Linien im Ausschnitt (ref, Betreiber, Name: Anzahl Ways):")
+for (r_, o_, n_), c_ in sorted(_r.items(), key=lambda x: -x[1])[:25]: print(f"  {r_:8s} {o_:20s} {n_:30s} {c_}")
 print(f"Region: {len(out_w)} Ways, {len(out_n)} Knoten, {len(BP)} Betriebspunkte")
 for k, v in sorted(BP.items(), key=lambda x: x[1]["lon"]): print(f"  {k:28s} {v['name']:28s} Weichen {v['weichen']:2d} Spur {','.join(v['spuren'])}")
