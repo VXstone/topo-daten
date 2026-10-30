@@ -1,6 +1,6 @@
 {
  "region": "mob",
- "erzeugt": "2026-10-30 19:35 UTC",
+ "erzeugt": "2026-10-30 19:41 UTC",
  "bahnhoefe": {
   "schonried": {
    "name": "Schönried",
@@ -96,6 +96,12 @@
     "--hauptgleise"
    ]
   },
+  "chamby": {
+   "name": "Chamby",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
   "allieres": {
    "name": "Allières",
    "ok": true,
@@ -106,12 +112,6 @@
    "name": "Chernex",
    "ok": true,
    "befunde": "Befunde: {'F': 1}",
-   "optionen": []
-  },
-  "chamby": {
-   "name": "Chamby",
-   "ok": true,
-   "befunde": "Befunde: {}",
    "optionen": []
   },
   "jaman": {
@@ -126,14 +126,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "saanenmoser": {
-   "name": "Saanenmöser",
+  "oeschseite": {
+   "name": "Oeschseite",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "oeschseite": {
-   "name": "Oeschseite",
+  "saanenmoser": {
+   "name": "Saanenmöser",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -144,16 +144,16 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "lenk_im_simmental": {
-   "name": "Lenk im Simmental",
-   "ok": true,
-   "befunde": "Befunde: {}",
-   "optionen": []
-  },
   "gruben": {
    "name": "Gruben",
    "ok": true,
    "befunde": "Befunde: {'A': 1}",
+   "optionen": []
+  },
+  "lenk_im_simmental": {
+   "name": "Lenk im Simmental",
+   "ok": true,
+   "befunde": "Befunde: {}",
    "optionen": []
   },
   "rossiniere": {
@@ -162,14 +162,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "belmont_sur_montreux": {
-   "name": "Belmont-sur-Montreux",
+  "montbovon": {
+   "name": "Montbovon",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "montbovon": {
-   "name": "Montbovon",
+  "belmont_sur_montreux": {
+   "name": "Belmont-sur-Montreux",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -192,14 +192,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "les_echets": {
-   "name": "Les Echets",
+  "cret_d_y_bau": {
+   "name": "Crêt-d'y-Bau",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "cret_d_y_bau": {
-   "name": "Crêt-d'y-Bau",
+  "les_echets": {
+   "name": "Les Echets",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -285,8 +285,8 @@
  "netz_lage": 0,
  "regeln": {
   "G3": 2,
-  "G2": 32,
+  "G2": 34,
   "G6": 7,
-  "G8": 11
+  "G8": 13
  }
 }
