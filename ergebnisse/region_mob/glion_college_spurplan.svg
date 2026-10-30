@@ -1,16 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1082 240" width="1082" height="240" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 787 223" width="787" height="223" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#fff"/>
 <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-<path d="" stroke="#9a5b1e" stroke-width="1.6"/>
-<path d="M223.8,134.0H400.7 M815.4,134.0Q821.4,134.0 824.4,128.8L834.7,111.0Q835.3,110.0 836.5,110.0H836.5M836.5,110.0H852.7 M400.7,134.0H408.1 M820.3,134.0H852.7 M408.1,134.0H820.3" stroke="#9a5b1e" stroke-width="3.6"/>
+<path d="M236.0,110.0Q230.0,110.0 227.0,115.2L217.0,132.5 M551.0,110.0Q557.0,110.0 560.0,115.2L570.0,132.5" stroke="#9a5b1e" stroke-width="1.6"/>
+<path d="M236.0,110.0H298.7 M298.7,110.0H306.0 M306.0,110.0H551.0" stroke="#9a5b1e" stroke-width="3.6"/>
 </g>
-<rect x="279.0" y="119.0" width="31.5" height="8" rx="1.5" fill="#9a5b1e"/>
-<path d="M245.8,134.0H223.8" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
-<path d="M830.7,110.0H852.7" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
-<path d="M830.7,134.0H852.7" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
-<text x="211.8" y="121.0" font-size="22" text-anchor="end" fill="#9a5b1e">Linie 122</text>
-<text x="211.8" y="147.0" font-size="22" text-anchor="end" fill="#9a5b1e">← Glion</text>
-<text x="864.7" y="109.0" font-size="22" text-anchor="start" fill="#9a5b1e">Linie 122</text>
-<text x="864.7" y="135.0" font-size="22" text-anchor="start" fill="#9a5b1e">Rochers-de-Naye →</text>
-<text x="358.5" y="210.0" font-size="38" font-weight="700" text-anchor="middle" fill="#9a5b1e">Glion-Collège</text>
+<path d="M212.5,140.3L213.5,130.5L220.5,134.5Z" fill="#9a5b1e" data-pfeil="0"/>
+<path d="M574.5,140.3L566.5,134.5L573.5,130.5Z" fill="#9a5b1e" data-pfeil="1"/>
+<path d="M252.0,110.0H230.0" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
+<path d="M535.0,110.0H557.0" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
+<text x="218.0" y="69.0" font-size="22" text-anchor="end" fill="#9a5b1e">Linie 122</text>
+<text x="218.0" y="95.0" font-size="22" text-anchor="end" fill="#9a5b1e">← Glion</text>
+<text x="569.0" y="69.0" font-size="22" text-anchor="start" fill="#9a5b1e">Linie 122</text>
+<text x="569.0" y="95.0" font-size="22" text-anchor="start" fill="#9a5b1e">Rochers-de-Naye →</text>
+<text x="256.4" y="192.5" font-size="38" font-weight="700" text-anchor="middle" fill="#9a5b1e">Glion-Collège</text>
 </svg>

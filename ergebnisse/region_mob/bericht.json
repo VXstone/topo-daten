@@ -1,17 +1,17 @@
 {
  "region": "mob",
- "erzeugt": "2026-10-29 22:42 UTC",
+ "erzeugt": "2026-10-30 19:35 UTC",
  "bahnhoefe": {
-  "la_tine": {
-   "name": "La Tine",
-   "ok": true,
-   "befunde": "Befunde: {'A': 1, 'B': 1}",
-   "optionen": []
-  },
   "schonried": {
    "name": "Schönried",
    "ok": true,
    "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "la_tine": {
+   "name": "La Tine",
+   "ok": true,
+   "befunde": "Befunde: {'A': 1, 'B': 1}",
    "optionen": []
   },
   "les_avants": {
@@ -91,21 +91,21 @@
   "montreux": {
    "name": "Montreux",
    "ok": true,
-   "befunde": "Befunde: {'B': 41, 'D': 4, 'F': 5}",
+   "befunde": "Befunde: {'A': 3, 'B': 39, 'D': 4, 'F': 2}",
    "optionen": [
     "--hauptgleise"
    ]
-  },
-  "chernex": {
-   "name": "Chernex",
-   "ok": true,
-   "befunde": "Befunde: {'F': 1}",
-   "optionen": []
   },
   "allieres": {
    "name": "Allières",
    "ok": true,
    "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "chernex": {
+   "name": "Chernex",
+   "ok": true,
+   "befunde": "Befunde: {'F': 1}",
    "optionen": []
   },
   "chamby": {
@@ -144,26 +144,20 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "gruben": {
-   "name": "Gruben",
-   "ok": true,
-   "befunde": "Befunde: {'A': 1}",
-   "optionen": []
-  },
   "lenk_im_simmental": {
    "name": "Lenk im Simmental",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "rossiniere": {
-   "name": "Rossinière",
+  "gruben": {
+   "name": "Gruben",
    "ok": true,
-   "befunde": "Befunde: {}",
+   "befunde": "Befunde: {'A': 1}",
    "optionen": []
   },
-  "montbovon": {
-   "name": "Montbovon",
+  "rossiniere": {
+   "name": "Rossinière",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -174,8 +168,8 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "chatelard": {
-   "name": "Châtelard",
+  "montbovon": {
+   "name": "Montbovon",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -183,7 +177,13 @@
   "vuarennes": {
    "name": "Vuarennes",
    "ok": true,
-   "befunde": "Befunde: {'B': 18}",
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "chatelard": {
+   "name": "Châtelard",
+   "ok": true,
+   "befunde": "Befunde: {}",
    "optionen": []
   },
   "la_perche": {
@@ -192,14 +192,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "cret_d_y_bau": {
-   "name": "Crêt-d'y-Bau",
+  "les_echets": {
+   "name": "Les Echets",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "les_echets": {
-   "name": "Les Echets",
+  "cret_d_y_bau": {
+   "name": "Crêt-d'y-Bau",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -216,14 +216,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "sendy_sollard": {
-   "name": "Sendy-Sollard",
+  "montreux_les_planches": {
+   "name": "Montreux-Les Planches",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "montreux_les_planches": {
-   "name": "Montreux-Les Planches",
+  "sendy_sollard": {
+   "name": "Sendy-Sollard",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -277,11 +277,16 @@
    "optionen": []
   }
  },
+ "verkettung": {
+  "V1": 2,
+  "V2": 2,
+  "V3": 0
+ },
  "netz_lage": 0,
  "regeln": {
   "G3": 2,
-  "G2": 38,
-  "G6": 9,
-  "G8": 15
+  "G2": 32,
+  "G6": 7,
+  "G8": 11
  }
 }

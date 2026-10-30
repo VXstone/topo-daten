@@ -1,0 +1,257 @@
+{
+ "paare": {
+  "sasslatsch|susch": {
+   "susch": [
+    [
+     "ports",
+     true,
+     "960"
+    ]
+   ],
+   "sasslatsch": [
+    [
+     "ports",
+     true,
+     "960"
+    ]
+   ]
+  },
+  "klosters_platz|klosters_selfranga": {
+   "klosters_platz": [
+    [
+     "ports",
+     true,
+     "910"
+    ]
+   ],
+   "klosters_selfranga": [
+    [
+     "ports",
+     true,
+     "910"
+    ]
+   ]
+  },
+  "sagliains|sagliains_autoverlad": {
+   "sagliains": [
+    [
+     "ports",
+     true,
+     "960"
+    ],
+    [
+     "ports",
+     true,
+     "910"
+    ],
+    [
+     "pfeile",
+     false,
+     null
+    ]
+   ],
+   "sagliains_autoverlad": [
+    [
+     "ports",
+     true,
+     "960"
+    ],
+    [
+     "ports",
+     true,
+     "910"
+    ],
+    [
+     "pfeile",
+     false,
+     null
+    ]
+   ]
+  },
+  "sagliains_autoverlad|sagliains_sasslatsch": {
+   "sagliains_autoverlad": [
+    [
+     "ports",
+     true,
+     "910"
+    ],
+    [
+     "ports",
+     true,
+     "960"
+    ],
+    [
+     "pfeile",
+     false,
+     null
+    ],
+    [
+     "pfeile",
+     false,
+     null
+    ]
+   ],
+   "sagliains_sasslatsch": [
+    [
+     "ports",
+     true,
+     "960"
+    ],
+    [
+     "ports",
+     true,
+     "910"
+    ],
+    [
+     "pfeile",
+     false,
+     null
+    ]
+   ]
+  },
+  "klosters_selfranga|selfranga_sud": {
+   "klosters_selfranga": [
+    [
+     "ports",
+     true,
+     null
+    ],
+    [
+     "ports",
+     true,
+     "910"
+    ]
+   ],
+   "selfranga_sud": [
+    [
+     "ports",
+     true,
+     "910"
+    ],
+    [
+     "ports",
+     true,
+     "910"
+    ]
+   ]
+  },
+  "sagliains_nord|sagliains_sasslatsch": {
+   "sagliains_sasslatsch": [
+    [
+     "ports",
+     true,
+     "910"
+    ],
+    [
+     "ports",
+     true,
+     null
+    ]
+   ],
+   "sagliains_nord": [
+    [
+     "ports",
+     true,
+     "910"
+    ],
+    [
+     "ports",
+     true,
+     "910"
+    ]
+   ]
+  },
+  "sagliains_sasslatsch|sasslatsch": {
+   "sagliains_sasslatsch": [
+    [
+     "ports",
+     true,
+     "960"
+    ],
+    [
+     "ports",
+     true,
+     "914"
+    ]
+   ],
+   "sasslatsch": [
+    [
+     "ports",
+     true,
+     "914"
+    ],
+    [
+     "ports",
+     true,
+     "960"
+    ]
+   ]
+  },
+  "selfranga_sud|vereina_nord": {
+   "selfranga_sud": [
+    [
+     "ports",
+     true,
+     "910"
+    ]
+   ],
+   "vereina_nord": [
+    [
+     "ports",
+     true,
+     "910"
+    ]
+   ]
+  },
+  "vereina_nord|vereina_sud": {
+   "vereina_nord": [
+    [
+     "ports",
+     true,
+     null
+    ],
+    [
+     "ports",
+     true,
+     "910"
+    ]
+   ],
+   "vereina_sud": [
+    [
+     "ports",
+     true,
+     "910"
+    ],
+    [
+     "ports",
+     true,
+     "910"
+    ]
+   ]
+  },
+  "sagliains_nord|vereina_sud": {
+   "vereina_sud": [
+    [
+     "ports",
+     true,
+     "910"
+    ]
+   ],
+   "sagliains_nord": [
+    [
+     "ports",
+     true,
+     "910"
+    ]
+   ]
+  }
+ },
+ "befunde": [
+  {
+   "regel": "V1",
+   "a": "sagliains_autoverlad",
+   "b": "sagliains_sasslatsch",
+   "text": "Sagliains Autoverlad: 4 Gleise nach Sagliains Sasslatsch, Sagliains Sasslatsch: 3 Gleise nach Sagliains Autoverlad"
+  }
+ ]
+}

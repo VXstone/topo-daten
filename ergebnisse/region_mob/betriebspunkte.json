@@ -9,7 +9,8 @@
    "1000"
   ],
   "weichen": 2,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": false
  },
  "les_avants": {
   "name": "Les Avants",
@@ -21,7 +22,8 @@
    "1000"
   ],
   "weichen": 5,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": false
  },
  "la_tine": {
   "name": "La Tine",
@@ -33,7 +35,8 @@
    "1000"
   ],
   "weichen": 3,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": false
  },
  "la_chaudanne_les_moulins": {
   "name": "La Chaudanne-Les Moulins",
@@ -45,7 +48,8 @@
    "1000"
   ],
   "weichen": 0,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": false
  },
  "chateau_d_oex": {
   "name": "Château-d'Oex",
@@ -57,7 +61,8 @@
    "1000"
   ],
   "weichen": 7,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": false
  },
  "les_granges_gerignoz": {
   "name": "Les Granges-Gérignoz",
@@ -69,7 +74,8 @@
    "1000"
   ],
   "weichen": 0,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": false
  },
  "flendruz": {
   "name": "Flendruz",
@@ -81,7 +87,8 @@
    "1000"
   ],
   "weichen": 3,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": false
  },
  "rougemont": {
   "name": "Rougemont",
@@ -93,7 +100,8 @@
    "1000"
   ],
   "weichen": 3,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": false
  },
  "les_sciernes": {
   "name": "Les Sciernes",
@@ -105,7 +113,8 @@
    "1000"
   ],
   "weichen": 2,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": false
  },
  "rochers_de_naye": {
   "name": "Rochers de Naye",
@@ -117,7 +126,8 @@
    "800"
   ],
   "weichen": 1,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": false
  },
  "matten": {
   "name": "Matten",
@@ -129,7 +139,8 @@
    "1000"
   ],
   "weichen": 2,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": false
  },
  "boden": {
   "name": "Boden",
@@ -141,7 +152,8 @@
    "1000"
   ],
   "weichen": 0,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": false
  },
  "stockli": {
   "name": "Stöckli",
@@ -153,7 +165,8 @@
    "1000"
   ],
   "weichen": 0,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": false
  },
  "st_stephan": {
   "name": "St. Stephan",
@@ -165,7 +178,8 @@
    "1000"
   ],
   "weichen": 6,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": false
  },
  "blankenburg": {
   "name": "Blankenburg",
@@ -177,7 +191,8 @@
    "1000"
   ],
   "weichen": 2,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": false
  },
  "zweisimmen": {
   "name": "Zweisimmen",
@@ -191,7 +206,8 @@
    "1435"
   ],
   "weichen": 36,
-  "normalspur": true
+  "normalspur": true,
+  "dienst": false
  },
  "montreux": {
   "name": "Montreux",
@@ -205,7 +221,8 @@
    "800"
   ],
   "weichen": 29,
-  "normalspur": true
+  "normalspur": true,
+  "dienst": false
  },
  "glion": {
   "name": "Glion",
@@ -217,7 +234,8 @@
    "800"
   ],
   "weichen": 8,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": false
  },
  "caux": {
   "name": "Caux",
@@ -229,7 +247,8 @@
    "800"
   ],
   "weichen": 4,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": false
  },
  "chernex": {
   "name": "Chernex",
@@ -241,7 +260,8 @@
    "1000"
   ],
   "weichen": 21,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": false
  },
  "chamby": {
   "name": "Chamby",
@@ -253,7 +273,8 @@
    "1000"
   ],
   "weichen": 19,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": false
  },
  "allieres": {
   "name": "Allières",
@@ -265,7 +286,8 @@
    "1000"
   ],
   "weichen": 3,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": false
  },
  "jaman": {
   "name": "Jaman",
@@ -277,7 +299,8 @@
    "800"
   ],
   "weichen": 2,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": false
  },
  "les_combes": {
   "name": "Les Combes",
@@ -289,7 +312,8 @@
    "1000"
   ],
   "weichen": 0,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": false
  },
  "saanen": {
   "name": "Saanen",
@@ -301,7 +325,8 @@
    "1000"
   ],
   "weichen": 7,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": false
  },
  "saanenmoser": {
   "name": "Saanenmöser",
@@ -313,7 +338,8 @@
    "1000"
   ],
   "weichen": 5,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": false
  },
  "oeschseite": {
   "name": "Oeschseite",
@@ -325,7 +351,8 @@
    "1000"
   ],
   "weichen": 3,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": false
  },
  "gstaad": {
   "name": "Gstaad",
@@ -337,7 +364,8 @@
    "1000"
   ],
   "weichen": 6,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": false
  },
  "gruben": {
   "name": "Gruben",
@@ -349,7 +377,8 @@
    "1000"
   ],
   "weichen": 2,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": false
  },
  "chateau_d_oex_la_palaz": {
   "name": "Château-d'Oex La Palaz",
@@ -361,7 +390,8 @@
    "1000"
   ],
   "weichen": 0,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": false
  },
  "lenk_im_simmental": {
   "name": "Lenk im Simmental",
@@ -373,7 +403,8 @@
    "1000"
   ],
   "weichen": 8,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": false
  },
  "rossiniere": {
   "name": "Rossinière",
@@ -385,7 +416,8 @@
    "1000"
   ],
   "weichen": 5,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": false
  },
  "montbovon": {
   "name": "Montbovon",
@@ -397,7 +429,8 @@
    "1000"
   ],
   "weichen": 17,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": false
  },
  "belmont_sur_montreux": {
   "name": "Belmont-sur-Montreux",
@@ -409,7 +442,8 @@
    "1000"
   ],
   "weichen": 19,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": false
  },
  "vuarennes": {
   "name": "Vuarennes",
@@ -421,7 +455,8 @@
    "1000"
   ],
   "weichen": 32,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": false
  },
  "chatelard": {
   "name": "Châtelard",
@@ -433,7 +468,8 @@
    "1000"
   ],
   "weichen": 8,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": false
  },
  "la_perche": {
   "name": "La Perche",
@@ -445,7 +481,8 @@
    "800"
   ],
   "weichen": 2,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": false
  },
  "cret_d_y_bau": {
   "name": "Crêt-d'y-Bau",
@@ -457,7 +494,8 @@
    "800"
   ],
   "weichen": 1,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": false
  },
  "les_echets": {
   "name": "Les Echets",
@@ -469,7 +507,8 @@
    "800"
   ],
   "weichen": 4,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": false
  },
  "paccot": {
   "name": "Paccot",
@@ -481,7 +520,8 @@
    "800"
   ],
   "weichen": 2,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": false
  },
  "planchamp": {
   "name": "Planchamp",
@@ -493,7 +533,8 @@
    "1000"
   ],
   "weichen": 3,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": false
  },
  "sendy_sollard": {
   "name": "Sendy-Sollard",
@@ -505,7 +546,8 @@
    "1000"
   ],
   "weichen": 2,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": false
  },
  "montreux_les_planches": {
   "name": "Montreux-Les Planches",
@@ -517,7 +559,8 @@
    "800"
   ],
   "weichen": 33,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": false
  },
  "toveyre": {
   "name": "Toveyre",
@@ -529,7 +572,8 @@
    "800"
   ],
   "weichen": 5,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": false
  },
  "valmont": {
   "name": "Valmont",
@@ -541,7 +585,8 @@
    "800"
   ],
   "weichen": 5,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": false
  },
  "le_tremblex": {
   "name": "Le Tremblex",
@@ -553,7 +598,8 @@
    "800"
   ],
   "weichen": 1,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": false
  },
  "haut_de_caux": {
   "name": "Haut-de-Caux",
@@ -565,7 +611,8 @@
    "800"
   ],
   "weichen": 0,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": false
  },
  "fontanivent": {
   "name": "Fontanivent",
@@ -577,7 +624,8 @@
    "1000"
   ],
   "weichen": 3,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": false
  },
  "les_cases": {
   "name": "Les Cases",
@@ -589,7 +637,8 @@
    "1000"
   ],
   "weichen": 3,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": false
  },
  "jor": {
   "name": "Jor",
@@ -601,7 +650,8 @@
    "1000"
   ],
   "weichen": 4,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": false
  },
  "glion_college": {
   "name": "Glion-Collège",
@@ -613,7 +663,8 @@
    "800"
   ],
   "weichen": 9,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": false
  },
  "sonzier": {
   "name": "Sonzier",
@@ -625,7 +676,8 @@
    "1000"
   ],
   "weichen": 0,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": false
  },
  "vernex": {
   "name": "Vernex",
@@ -637,6 +689,7 @@
    "1435"
   ],
   "weichen": 5,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": true
  }
 }

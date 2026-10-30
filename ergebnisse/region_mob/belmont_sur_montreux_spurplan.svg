@@ -1,15 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 239" width="720" height="239" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 773 239" width="773" height="239" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#fff"/>
 <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-<path d="M375.8,110.0H375.8Q378.9,110.0 380.4,112.7L391.2,131.3Q392.8,134.0 395.8,134.0H395.8M395.8,134.0H415.6M415.6,134.0H415.6Q418.6,134.0 420.2,131.3L430.9,112.7Q432.5,110.0 435.6,110.0H435.6" stroke="#9a5b1e" stroke-width="1.6"/>
-<path d="M75.7,110.0H375.8 M375.8,110.0H435.6 M435.6,110.0H490.8" stroke="#9a5b1e" stroke-width="3.6"/>
+<path d="M505.8,110.0Q511.8,110.0 514.8,115.2L525.1,133.0Q525.7,134.0 526.8,134.0H526.8M526.8,134.0H542.8 M236.0,110.0Q230.0,110.0 227.0,115.2L217.0,132.5" stroke="#9a5b1e" stroke-width="1.6"/>
+<path d="M236.0,110.0H510.7 M510.7,110.0H542.8" stroke="#9a5b1e" stroke-width="3.6"/>
 </g>
-<rect x="239.6" y="117.0" width="61.6" height="8" rx="1.5" fill="#9a5b1e"/>
-<path d="M97.7,110.0H75.7" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
-<path d="M468.8,110.0H490.8" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
-<text x="63.7" y="97.0" font-size="22" text-anchor="end" fill="#9a5b1e">Linie 120</text>
-<text x="63.7" y="123.0" font-size="22" text-anchor="end" fill="#9a5b1e">← Montreux</text>
-<text x="502.8" y="97.0" font-size="22" text-anchor="start" fill="#9a5b1e">Linie 120</text>
-<text x="502.8" y="123.0" font-size="22" text-anchor="start" fill="#9a5b1e">Les Avants →</text>
-<text x="269.4" y="194.0" font-size="38" font-weight="700" text-anchor="middle" fill="#9a5b1e">Belmont-sur-Montreux</text>
+<rect x="374.5" y="117.0" width="61.6" height="8" rx="1.5" fill="#9a5b1e"/>
+<path d="M212.5,140.3L213.5,130.5L220.5,134.5Z" fill="#9a5b1e" data-pfeil="0"/>
+<path d="M542.8,130.0L551.8,134.0L542.8,138.0Z" fill="#9a5b1e" data-pfeil="1"/>
+<path d="M252.0,110.0H230.0" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
+<path d="M520.8,110.0H542.8" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
+<text x="218.0" y="69.0" font-size="22" text-anchor="end" fill="#9a5b1e">Linie 120</text>
+<text x="218.0" y="95.0" font-size="22" text-anchor="end" fill="#9a5b1e">← Montreux</text>
+<text x="554.8" y="97.0" font-size="22" text-anchor="start" fill="#9a5b1e">Linie 120</text>
+<text x="554.8" y="123.0" font-size="22" text-anchor="start" fill="#9a5b1e">Chamby →</text>
+<text x="404.2" y="194.0" font-size="38" font-weight="700" text-anchor="middle" fill="#9a5b1e">Belmont-sur-Montreux</text>
 </svg>

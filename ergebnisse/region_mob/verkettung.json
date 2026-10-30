@@ -1,0 +1,764 @@
+{
+ "paare": {
+  "gruben|schonried": {
+   "schonried": [
+    [
+     "ports",
+     true,
+     "120"
+    ]
+   ],
+   "gruben": [
+    [
+     "ports",
+     true,
+     "120"
+    ]
+   ]
+  },
+  "saanenmoser|schonried": {
+   "schonried": [
+    [
+     "ports",
+     true,
+     "120"
+    ]
+   ],
+   "saanenmoser": [
+    [
+     "ports",
+     true,
+     "120"
+    ]
+   ]
+  },
+  "jor|les_avants": {
+   "les_avants": [
+    [
+     "ports",
+     true,
+     "120"
+    ]
+   ],
+   "jor": [
+    [
+     "ports",
+     true,
+     "120"
+    ]
+   ]
+  },
+  "les_avants|sendy_sollard": {
+   "les_avants": [
+    [
+     "ports",
+     true,
+     "120"
+    ]
+   ],
+   "sendy_sollard": [
+    [
+     "ports",
+     true,
+     "120"
+    ]
+   ]
+  },
+  "la_tine|rossiniere": {
+   "la_tine": [
+    [
+     "ports",
+     true,
+     "120"
+    ]
+   ],
+   "rossiniere": [
+    [
+     "ports",
+     true,
+     "120"
+    ]
+   ]
+  },
+  "la_tine|montbovon": {
+   "la_tine": [
+    [
+     "ports",
+     true,
+     "120"
+    ]
+   ],
+   "montbovon": [
+    [
+     "ports",
+     true,
+     "120"
+    ],
+    [
+     "ports",
+     true,
+     "120"
+    ]
+   ]
+  },
+  "chateau_d_oex|rossiniere": {
+   "chateau_d_oex": [
+    [
+     "ports",
+     true,
+     "120"
+    ]
+   ],
+   "rossiniere": [
+    [
+     "ports",
+     true,
+     "120"
+    ]
+   ]
+  },
+  "chateau_d_oex|flendruz": {
+   "chateau_d_oex": [
+    [
+     "ports",
+     true,
+     "120"
+    ]
+   ],
+   "flendruz": [
+    [
+     "ports",
+     true,
+     "120"
+    ]
+   ]
+  },
+  "flendruz|rougemont": {
+   "flendruz": [
+    [
+     "ports",
+     true,
+     "120"
+    ]
+   ],
+   "rougemont": [
+    [
+     "ports",
+     true,
+     "120"
+    ]
+   ]
+  },
+  "rougemont|saanen": {
+   "rougemont": [
+    [
+     "ports",
+     true,
+     "120"
+    ]
+   ],
+   "saanen": [
+    [
+     "ports",
+     true,
+     "120"
+    ]
+   ]
+  },
+  "les_sciernes|montbovon": {
+   "les_sciernes": [
+    [
+     "ports",
+     true,
+     "120"
+    ]
+   ],
+   "montbovon": [
+    [
+     "ports",
+     true,
+     "120"
+    ]
+   ]
+  },
+  "allieres|les_sciernes": {
+   "les_sciernes": [
+    [
+     "ports",
+     true,
+     "120"
+    ]
+   ],
+   "allieres": [
+    [
+     "ports",
+     true,
+     "120"
+    ]
+   ]
+  },
+  "la_perche|rochers_de_naye": {
+   "rochers_de_naye": [
+    [
+     "ports",
+     true,
+     "122"
+    ]
+   ],
+   "la_perche": [
+    [
+     "ports",
+     true,
+     "122"
+    ]
+   ]
+  },
+  "lenk_im_simmental|matten": {
+   "matten": [
+    [
+     "ports",
+     true,
+     "321"
+    ]
+   ],
+   "lenk_im_simmental": [
+    [
+     "pfeile",
+     false,
+     null
+    ]
+   ]
+  },
+  "matten|st_stephan": {
+   "matten": [
+    [
+     "ports",
+     true,
+     "321"
+    ]
+   ],
+   "st_stephan": [
+    [
+     "ports",
+     true,
+     "321"
+    ]
+   ]
+  },
+  "blankenburg|st_stephan": {
+   "st_stephan": [
+    [
+     "ports",
+     true,
+     "321"
+    ]
+   ],
+   "blankenburg": [
+    [
+     "ports",
+     true,
+     "321"
+    ]
+   ]
+  },
+  "blankenburg|zweisimmen": {
+   "blankenburg": [
+    [
+     "ports",
+     true,
+     "321"
+    ]
+   ],
+   "zweisimmen": [
+    [
+     "ports",
+     true,
+     "321"
+    ]
+   ]
+  },
+  "oeschseite|zweisimmen": {
+   "zweisimmen": [
+    [
+     "ports",
+     true,
+     "120"
+    ]
+   ],
+   "oeschseite": [
+    [
+     "ports",
+     true,
+     "120"
+    ]
+   ]
+  },
+  "montreux|vernex": {
+   "montreux": [
+    [
+     "ports",
+     true,
+     "100"
+    ],
+    [
+     "ports",
+     true,
+     "100"
+    ]
+   ],
+   "vernex": [
+    [
+     "ports",
+     true,
+     "100"
+    ],
+    [
+     "ports",
+     true,
+     "100"
+    ]
+   ]
+  },
+  "montreux|vuarennes": {
+   "montreux": [
+    [
+     "ports",
+     true,
+     "120"
+    ]
+   ],
+   "vuarennes": [
+    [
+     "ports",
+     true,
+     "120"
+    ]
+   ]
+  },
+  "montreux|montreux_les_planches": {
+   "montreux": [
+    [
+     "ports",
+     true,
+     "121"
+    ]
+   ],
+   "montreux_les_planches": [
+    [
+     "ports",
+     true,
+     "121"
+    ]
+   ]
+  },
+  "glion|valmont": {
+   "glion": [
+    [
+     "ports",
+     true,
+     "121"
+    ]
+   ],
+   "valmont": [
+    [
+     "ports",
+     true,
+     "121"
+    ]
+   ]
+  },
+  "glion|glion_college": {
+   "glion": [
+    [
+     "ports",
+     true,
+     "122"
+    ]
+   ],
+   "glion_college": [
+    [
+     "ports",
+     true,
+     "122"
+    ]
+   ]
+  },
+  "caux|les_echets": {
+   "caux": [
+    [
+     "ports",
+     true,
+     "122"
+    ]
+   ],
+   "les_echets": [
+    [
+     "ports",
+     true,
+     "122"
+    ]
+   ]
+  },
+  "caux|le_tremblex": {
+   "caux": [
+    [
+     "ports",
+     true,
+     "122"
+    ]
+   ],
+   "le_tremblex": [
+    [
+     "ports",
+     true,
+     "122"
+    ]
+   ]
+  },
+  "chernex|fontanivent": {
+   "chernex": [
+    [
+     "ports",
+     true,
+     "120"
+    ]
+   ],
+   "fontanivent": [
+    [
+     "ports",
+     true,
+     "120"
+    ]
+   ]
+  },
+  "chamby|chernex": {
+   "chernex": [
+    [
+     "ports",
+     true,
+     "120"
+    ]
+   ],
+   "chamby": [
+    [
+     "ports",
+     true,
+     "120"
+    ]
+   ]
+  },
+  "chamby|sendy_sollard": {
+   "chamby": [
+    [
+     "ports",
+     true,
+     "120"
+    ]
+   ],
+   "sendy_sollard": [
+    [
+     "ports",
+     true,
+     "120"
+    ]
+   ]
+  },
+  "allieres|les_cases": {
+   "allieres": [
+    [
+     "ports",
+     true,
+     "120"
+    ]
+   ],
+   "les_cases": [
+    [
+     "ports",
+     true,
+     "120"
+    ]
+   ]
+  },
+  "jaman|paccot": {
+   "jaman": [
+    [
+     "ports",
+     true,
+     "122"
+    ]
+   ],
+   "paccot": [
+    [
+     "ports",
+     true,
+     "122"
+    ]
+   ]
+  },
+  "jaman|la_perche": {
+   "jaman": [
+    [
+     "ports",
+     true,
+     "122"
+    ]
+   ],
+   "la_perche": [
+    [
+     "ports",
+     true,
+     "122"
+    ]
+   ]
+  },
+  "gstaad|saanen": {
+   "saanen": [
+    [
+     "ports",
+     true,
+     "120"
+    ],
+    [
+     "ports",
+     true,
+     "120"
+    ]
+   ],
+   "gstaad": [
+    [
+     "ports",
+     true,
+     "120"
+    ],
+    [
+     "ports",
+     true,
+     "120"
+    ]
+   ]
+  },
+  "oeschseite|saanenmoser": {
+   "saanenmoser": [
+    [
+     "ports",
+     true,
+     "120"
+    ]
+   ],
+   "oeschseite": [
+    [
+     "ports",
+     true,
+     "120"
+    ]
+   ]
+  },
+  "gruben|gstaad": {
+   "gstaad": [
+    [
+     "ports",
+     true,
+     "120"
+    ]
+   ],
+   "gruben": [
+    [
+     "ports",
+     true,
+     "120"
+    ]
+   ]
+  },
+  "belmont_sur_montreux|vuarennes": {
+   "belmont_sur_montreux": [
+    [
+     "ports",
+     true,
+     "120"
+    ]
+   ],
+   "vuarennes": [
+    [
+     "ports",
+     true,
+     "120"
+    ]
+   ]
+  },
+  "belmont_sur_montreux|chatelard": {
+   "belmont_sur_montreux": [
+    [
+     "ports",
+     true,
+     "120"
+    ],
+    [
+     "pfeile",
+     false,
+     null
+    ]
+   ],
+   "chatelard": [
+    [
+     "ports",
+     true,
+     "120"
+    ]
+   ]
+  },
+  "chatelard|planchamp": {
+   "chatelard": [
+    [
+     "ports",
+     true,
+     "120"
+    ]
+   ],
+   "planchamp": [
+    [
+     "ports",
+     true,
+     "120"
+    ]
+   ]
+  },
+  "cret_d_y_bau|les_echets": {
+   "cret_d_y_bau": [
+    [
+     "ports",
+     true,
+     "122"
+    ]
+   ],
+   "les_echets": [
+    [
+     "ports",
+     true,
+     "122"
+    ]
+   ]
+  },
+  "cret_d_y_bau|paccot": {
+   "cret_d_y_bau": [
+    [
+     "ports",
+     true,
+     "122"
+    ]
+   ],
+   "paccot": [
+    [
+     "ports",
+     true,
+     "122"
+    ]
+   ]
+  },
+  "fontanivent|planchamp": {
+   "planchamp": [
+    [
+     "ports",
+     true,
+     "120"
+    ]
+   ],
+   "fontanivent": [
+    [
+     "ports",
+     true,
+     "120"
+    ]
+   ]
+  },
+  "montreux_les_planches|toveyre": {
+   "montreux_les_planches": [
+    [
+     "ports",
+     true,
+     "121"
+    ]
+   ],
+   "toveyre": [
+    [
+     "ports",
+     true,
+     "121"
+    ]
+   ]
+  },
+  "toveyre|valmont": {
+   "toveyre": [
+    [
+     "ports",
+     true,
+     "121"
+    ]
+   ],
+   "valmont": [
+    [
+     "ports",
+     true,
+     "121"
+    ]
+   ]
+  },
+  "glion_college|le_tremblex": {
+   "le_tremblex": [
+    [
+     "ports",
+     true,
+     "122"
+    ]
+   ],
+   "glion_college": [
+    [
+     "ports",
+     true,
+     "122"
+    ]
+   ]
+  },
+  "jor|les_cases": {
+   "les_cases": [
+    [
+     "ports",
+     true,
+     "120"
+    ]
+   ],
+   "jor": [
+    [
+     "ports",
+     true,
+     "120"
+    ]
+   ]
+  }
+ },
+ "befunde": [
+  {
+   "regel": "V1",
+   "a": "belmont_sur_montreux",
+   "b": "chatelard",
+   "text": "Belmont-sur-Montreux: 2 Gleise nach Châtelard, Châtelard: 1 Gleise nach Belmont-sur-Montreux"
+  },
+  {
+   "regel": "V2",
+   "a": "belmont_sur_montreux",
+   "b": "chatelard",
+   "text": "Belmont-sur-Montreux – Châtelard: Gleis im einen Plan als Pfeil, im anderen als Abgang"
+  },
+  {
+   "regel": "V1",
+   "a": "la_tine",
+   "b": "montbovon",
+   "text": "La Tine: 1 Gleise nach Montbovon, Montbovon: 2 Gleise nach La Tine"
+  },
+  {
+   "regel": "V2",
+   "a": "lenk_im_simmental",
+   "b": "matten",
+   "text": "Lenk im Simmental – Matten: Gleis im einen Plan als Pfeil, im anderen als Abgang"
+  }
+ ]
+}

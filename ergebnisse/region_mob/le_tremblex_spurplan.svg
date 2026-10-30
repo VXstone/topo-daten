@@ -1,15 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 688 240" width="688" height="240" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 756 247" width="756" height="247" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#fff"/>
 <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-<path d="" stroke="#9a5b1e" stroke-width="1.6"/>
-<path d="M392.9,134.0H463.1 M317.9,134.0Q323.9,134.0 326.9,128.8L337.3,110.9Q337.8,110.0 338.8,110.0H338.8M338.8,110.0H354.7 M365.5,134.0H392.9 M322.9,134.0H365.5 M121.0,134.0H322.9" stroke="#9a5b1e" stroke-width="3.6"/>
+<path d="M236.0,134.0Q230.0,134.0 227.0,139.2L217.0,156.5" stroke="#9a5b1e" stroke-width="1.6"/>
+<path d="M461.2,134.0H531.4 M386.2,134.0Q392.2,134.0 395.2,128.8L405.6,110.9Q406.1,110.0 407.1,110.0H407.1M407.1,110.0H423.1 M433.8,134.0H461.2 M391.2,134.0H433.8 M236.0,134.0H391.2" stroke="#9a5b1e" stroke-width="3.6"/>
 </g>
-<circle cx="354.7" cy="110.0" r="4.5" fill="#9a5b1e"/>
-<path d="M441.1,134.0H463.1" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
-<path d="M143.0,134.0H121.0" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
-<text x="475.1" y="121.0" font-size="22" text-anchor="start" fill="#9a5b1e">Linie 122</text>
-<text x="475.1" y="147.0" font-size="22" text-anchor="start" fill="#9a5b1e">Rochers-de-Naye →</text>
-<text x="109.0" y="121.0" font-size="22" text-anchor="end" fill="#9a5b1e">Linie 122</text>
-<text x="109.0" y="147.0" font-size="22" text-anchor="end" fill="#9a5b1e">← Glion</text>
-<text x="312.2" y="210.0" font-size="38" font-weight="700" text-anchor="middle" fill="#9a5b1e">Le Tremblex</text>
+<circle cx="423.1" cy="110.0" r="4.5" fill="#9a5b1e"/>
+<path d="M212.5,164.3L213.5,154.5L220.5,158.5Z" fill="#9a5b1e" data-pfeil="0"/>
+<path d="M509.4,134.0H531.4" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
+<path d="M252.0,134.0H230.0" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
+<text x="543.4" y="121.0" font-size="22" text-anchor="start" fill="#9a5b1e">Linie 122</text>
+<text x="543.4" y="147.0" font-size="22" text-anchor="start" fill="#9a5b1e">Rochers-de-Naye →</text>
+<text x="218.0" y="93.0" font-size="22" text-anchor="end" fill="#9a5b1e">Linie 122</text>
+<text x="218.0" y="119.0" font-size="22" text-anchor="end" fill="#9a5b1e">← Glion</text>
+<text x="380.5" y="216.5" font-size="38" font-weight="700" text-anchor="middle" fill="#9a5b1e">Le Tremblex</text>
 </svg>

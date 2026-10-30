@@ -9,7 +9,8 @@
    "1000"
   ],
   "weichen": 3,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": false
  },
  "davos_laret": {
   "name": "Davos Laret",
@@ -21,7 +22,8 @@
    "1000"
   ],
   "weichen": 4,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": false
  },
  "susch": {
   "name": "Susch",
@@ -33,7 +35,8 @@
    "1000"
   ],
   "weichen": 4,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": false
  },
  "klosters_platz": {
   "name": "Klosters Platz",
@@ -45,7 +48,8 @@
    "1000"
   ],
   "weichen": 12,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": false
  },
  "sagliains": {
   "name": "Sagliains",
@@ -57,7 +61,8 @@
    "1000"
   ],
   "weichen": 6,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": false
  },
  "sagliains_autoverlad": {
   "name": "Sagliains Autoverlad",
@@ -69,7 +74,8 @@
    "1000"
   ],
   "weichen": 6,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": true
  },
  "klosters_selfranga": {
   "name": "Klosters Selfranga",
@@ -81,7 +87,8 @@
    "1000"
   ],
   "weichen": 9,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": true
  },
  "sagliains_sasslatsch": {
   "name": "Sagliains Sasslatsch",
@@ -93,7 +100,8 @@
    "1000"
   ],
   "weichen": 7,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": true
  },
  "sasslatsch": {
   "name": "Sasslatsch",
@@ -105,7 +113,8 @@
    "1000"
   ],
   "weichen": 4,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": true
  },
  "selfranga_sud": {
   "name": "Selfranga Süd",
@@ -117,7 +126,8 @@
    "1000"
   ],
   "weichen": 1,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": true
  },
  "vereina_nord": {
   "name": "Vereina Nord",
@@ -129,7 +139,8 @@
    "1000"
   ],
   "weichen": 2,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": true
  },
  "vereina_sud": {
   "name": "Vereina Süd",
@@ -141,7 +152,8 @@
    "1000"
   ],
   "weichen": 1,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": true
  },
  "sagliains_nord": {
   "name": "Sagliains Nord",
@@ -153,6 +165,7 @@
    "1000"
   ],
   "weichen": 1,
-  "normalspur": false
+  "normalspur": false,
+  "dienst": true
  }
 }

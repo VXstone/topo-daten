@@ -1,15 +1,15 @@
 {
  "region": "vereina",
- "erzeugt": "2026-10-29 22:42 UTC",
+ "erzeugt": "2026-10-30 19:34 UTC",
  "bahnhoefe": {
-  "sagliains": {
-   "name": "Sagliains",
+  "sagliains_autoverlad": {
+   "name": "Sagliains Autoverlad",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "sagliains_autoverlad": {
-   "name": "Sagliains Autoverlad",
+  "sagliains": {
+   "name": "Sagliains",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -69,10 +69,14 @@
    "optionen": []
   }
  },
+ "verkettung": {
+  "V1": 1,
+  "V2": 0,
+  "V3": 0
+ },
  "netz_lage": 0,
  "regeln": {
-  "G2": 10,
-  "G6": 3,
-  "G8": 1
+  "G2": 11,
+  "G6": 5
  }
 }
