@@ -76,3 +76,9 @@ Stand 21.10.2026.
 - B17 grosser Knoten = grosse Nebengleisanlage (Olten, Bern, Basel, Däniken RB, RB Limmattal, Buchs SG, Bern Weyermannshaus; nicht Olten Hammer). Schwelle aus OSM, daran geeicht.
 - Grundsatz 3 auch in grossen Knoten: jede Weiche einzeln als Pfeil.
 - B2: Fehlt Platz, Nebengleise enger statt Plan länger, Untergrenze 40 % (~10 px).
+
+## Verkettung (D. Eckenstein 29./30.10.2026)
+- Jede Hauptgleisweiche gehört zu einem Betriebspunkt und steht in dessen Plan (im Code, nicht per Override).
+- Ein- und Zweispurwechsel erkennt der Code selbst (Gleiszahl je Strecke aus OSM bzw. aus den verketteten Plänen).
+- Pfeile und Abgänge kommen beim nächsten Bahnhof an: im Regionalplan werden Pfeilpaare als Gleis verbunden; Prüfung V1 (Gleiszahl beidseits), V2 (Pfeil gegen Abgang), V3 (Gleis kommt nicht zurück) in `verkettung.json` / `bericht.json`.
+- Parallele Linien auf einer Doppelspur (Klosters Platz – Klosters Dorf) sind eine Strecke mit beiden Liniennummern.

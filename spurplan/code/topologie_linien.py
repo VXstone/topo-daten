@@ -148,7 +148,7 @@ if K.get("abgaenge_zusammen", True):
             haupt, neben = (e1, e2) if l1.length >= l2.length else (e2, e1)
             haupt["refs"] = sorted(set(haupt.get("refs", [haupt["ref"]])) | set(neben.get("refs", [neben["ref"]])))
             haupt["tracks"] = int(min(4, haupt["tracks"] + neben["tracks"]))
-            xh = haupt["b"] if haupt["a"] in _ex else haupt["a"]; xn = neben["b"] if neben["a"] in _ex else neben["a"]
+            xh = haupt["a"] if haupt["a"] in _ex else haupt["b"]; xn = neben["a"] if neben["a"] in _ex else neben["b"]
             nodes[xh]["refs"] = haupt["refs"]
             if not nodes[xh].get("town"): nodes[xh]["town"] = nodes[xn].get("town")
             _weg.add(id(neben))

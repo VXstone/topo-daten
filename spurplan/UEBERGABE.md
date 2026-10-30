@@ -771,3 +771,12 @@ Wunsch D. Eckenstein: Nutzung sparen, mehr in Git auslagern.
 - netz_lage: Abgangs-Liniennummer ohne Kante am Betriebspunkt zählt wie «ohne Nummer» (Sasslatsch: Ast 914 in OSM teils 910).
 - Prüfung: SBB-Bahnhöfe Neuchâtel/Solothurn/Konolfingen Befunde gleich, Vauseyon besser; MOB G2 53→38, aber G8 8→15, Montreux F 1→5 – Ursache liegt in der Ausschnittbildung (alter und neuer Schema-Code auf gleichem Ausschnitt identisch), offen.
 - Offen Vereina: Regionalplan-Abgang 915 West «Landquart», G2 ×10, G6 ×3 (Sagliains/Autoverlad).
+
+## 30.10.2026 – Verkettung der Bahnhofspläne (Linien-Regionen)
+- region_vorbereiten: Bereich je Betriebspunkt statt überlappender Kreise; Grenze zwischen den äussersten Verzweigungen zweier Nachbarn (`bp_voronoi`, `bp_voronoi_m`). Fernpunkte an Datenenden (`fern_enden.json`), auch an künstlichen Randpunkten. `dienst` in betriebspunkte.json.
+- verkettung.py (neu, in region_lauf vor netz_lage): folgt jedem Abgang/Pfeil in den Regionsdaten bis zum nächsten Gleis, das ein anderer Plan zeichnet → `ziel` in <b>_ports.json. Prüfung V1–V3. Mit `--topologie` (Konfig `topologie_aus_verkettung`, Standard an): Strecken zwischen Plänen nach der Verkettung (neu/entfällt/Gleiszahl = kleinere Seite; parallele Linien zwischen denselben Plänen = eine Strecke; keine neue Strecke, wo schon ein Weg über Halte besteht).
+- spurplan_schema: Ports und Pfeile mit Herkunft (way, knoten, ll, aus, aus_ll), Pfeile mit `data-pfeil`-Id im SVG und `pfeile` in ports.json, `knoten` = gezeichnete Knoten. Gleis an künstlichem Randknoten = Abgang/Pfeil. Fenster auch über Verzweigungen ohne Weichen-Tag (`fenster_verzweigungen`). Gleicher Way am selben Rand nur einmal als Port.
+- netz_lage: Abgang zur Strecke seines Ziel-Plans; Pfeilpaare verbunden (Lage `pfeile_verbinden`), Pfeil auf Abgang weg; Abgangsbeschriftung «Linien 910 / 915».
+- topologie_linien: parallele Abgänge eines Bahnhofs zusammengelegt (`abgaenge_zusammen`); Abgangsziel über Fernpunkt.
+- region_lauf: Dienststellen suchen Weichen im ganzen Bereich (`weichen_ganzer_bereich`).
+- Stand Vereina: V1 nur Autoverlad ↔ Sagliains Sasslatsch (zwei Ladegleise, im Nachbarplan eines). MOB: V1 Belmont/Châtelard, La Tine/Montbovon; V2 Lenk/Matten. SBB-Pläne unverändert.

@@ -269,11 +269,16 @@ FE = {}
 for w in out_w:
     if w["tags"].get("railway") != "rail" or w["tags"].get("service"): continue
     for n in (w["nodes"][0], w["nodes"][-1]):
-        if _deg_k[n] != 1 or n in _mid_k or n not in _GF: continue
+        if _deg_k[n] != 1 or n in _mid_k: continue
+        if n in RAND:                      # künstlicher Randpunkt (Kreis um einen Ast): innen -> aussen
+            i_, o_ = RAND[n]
+            if i_ in _GF and o_ in _GF[i_]: FE[str(n)] = _fern(i_, o_)
+            continue
+        if n not in _GF: continue
         drin = w["nodes"][1] if n == w["nodes"][0] else w["nodes"][-2]
         for m in _GF[n]:
             if m != drin and m in _PF: FE[str(n)] = _fern(n, m); break
-json.dump(FE, open(os.path.join(OUT, "fern_enden.json"), "w"))
+json.dump(FE, open(os.path.join(OUT, "fern_enden.json"), "w")); print("Fernpunkte an Datenenden:", len(FE))
 # Übersicht der Schmalspur-Linien im Ausschnitt (ref / Betreiber), damit neue Regionen die richtigen «linien» bekommen
 import collections
 _r = collections.Counter((w["tags"].get("ref", "-"), w["tags"].get("operator", "-"), w["tags"].get("name", "")[:30]) for w in ways if w["tags"].get("railway") in SCHMAL | {"rail"} and w["tags"].get("usage") in ("main", "branch", None))
