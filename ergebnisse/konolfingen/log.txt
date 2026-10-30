@@ -5,7 +5,7 @@ $ sbb_perrons.py
 geschrieben konolfingen_override.json
 
 $ spurplan_schema.py --src konolfingen.json --nowarp
-Bahnhof Konolfingen: Achse 3695 m, Ausschnitt s=1206…2230, 28 Weichen, 3 Perrons
+Bahnhof Konolfingen: Achse 3695 m, Ausschnitt s=1206…2230, 29 Weichen, 3 Perrons
 G6: 2 Überstand(e) vor Ausrundung gekürzt
 chains 18 lanes 13 segs 62 W 1256 H 553
 
@@ -14,7 +14,7 @@ Optimization terminated successfully. (HiGHS Status 7: Optimal)
 Breite linear 942 px -> entzerrt 627 px
 
 $ spurplan_schema.py --src konolfingen.json
-Bahnhof Konolfingen: Achse 3695 m, Ausschnitt s=1206…2230, 28 Weichen, 3 Perrons
+Bahnhof Konolfingen: Achse 3695 m, Ausschnitt s=1206…2230, 29 Weichen, 3 Perrons
 G6: 3 Überstand(e) vor Ausrundung gekürzt
 chains 18 lanes 13 segs 62 W 945 H 553
 
@@ -23,12 +23,12 @@ Optimization terminated successfully. (HiGHS Status 7: Optimal)
 Breite linear 942 px -> entzerrt 627 px
 
 $ spurplan_schema.py --src konolfingen.json
-Bahnhof Konolfingen: Achse 3695 m, Ausschnitt s=1206…2230, 28 Weichen, 3 Perrons
+Bahnhof Konolfingen: Achse 3695 m, Ausschnitt s=1206…2230, 29 Weichen, 3 Perrons
 G6: 3 Überstand(e) vor Ausrundung gekürzt
 chains 18 lanes 13 segs 62 W 945 H 553
 
 $ spurplan_check.py --src konolfingen.json --out /tmp/spurplan_lauf/_check_konolfingen.svg
-Bahnhof Konolfingen: Achse 3695 m, Ausschnitt s=1206…2230, 28 Weichen, 3 Perrons
+Bahnhof Konolfingen: Achse 3695 m, Ausschnitt s=1206…2230, 29 Weichen, 3 Perrons
 G6: 3 Überstand(e) vor Ausrundung gekürzt
 chains 18 lanes 13 segs 62 W 945 H 553
 Befunde: {'A': 1, 'B': 2}
@@ -38,7 +38,7 @@ B x=   403 y=  318  Überlagerung 22px: 11 (way 33390862) / yard (way 739598378)
 B x=   403 y=  318  Überlagerung 22px: Gleis (way 606745360) / yard (way 739598378)
 
 $ spurplan_schema.py --src konolfingen.json --bare --out konolfingen_bare.svg
-Bahnhof Konolfingen: Achse 3695 m, Ausschnitt s=1206…2230, 28 Weichen, 3 Perrons
+Bahnhof Konolfingen: Achse 3695 m, Ausschnitt s=1206…2230, 29 Weichen, 3 Perrons
 G6: 3 Überstand(e) vor Ausrundung gekürzt
 chains 18 lanes 13 segs 62 W 945 H 471
 

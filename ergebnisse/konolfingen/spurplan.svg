@@ -26,10 +26,10 @@
 <circle cx="236.8" cy="123.2" r="3.2" fill="#111"/>
 <circle cx="527.7" cy="173.6" r="4.5" fill="#00862f"/>
 <circle cx="243.3" cy="136.4" r="3.2" fill="#111"/>
-<path d="M730.3,371.9L722.3,366.1L729.3,362.1Z" fill="#111"/>
-<path d="M695.3,311.3L703.3,317.1L696.3,321.1Z" fill="#111"/>
-<path d="M618.7,371.9L610.7,366.1L617.6,362.1Z" fill="#111"/>
-<path d="M295.4,92.9L294.4,102.7L287.4,98.7Z" fill="#111"/>
+<path d="M730.3,371.9L722.3,366.1L729.3,362.1Z" fill="#111" data-pfeil="0"/>
+<path d="M695.3,311.3L703.3,317.1L696.3,321.1Z" fill="#111" data-pfeil="1"/>
+<path d="M618.7,371.9L610.7,366.1L617.6,362.1Z" fill="#111" data-pfeil="2"/>
+<path d="M295.4,92.9L294.4,102.7L287.4,98.7Z" fill="#111" data-pfeil="3"/>
 <rect x="497.2" y="261.6" width="26" height="16" fill="#fff"/>
 <text x="510.2" y="276.1" font-size="19" text-anchor="middle" fill="#00862f">4</text>
 <rect x="494.3" y="309.6" width="26" height="16" fill="#fff"/>
