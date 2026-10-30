@@ -17,6 +17,7 @@ from shapely.ops import substring
 SRC, BPF, KONF, NAME = sys.argv[1:5]
 D = json.load(open(SRC))["elements"]; BP = json.load(open(BPF)); K = json.load(open(KONF))
 ORTE = json.load(open("orte.json")) if os.path.exists("orte.json") else {}
+FERN_E = json.load(open("fern_enden.json")) if os.path.exists("fern_enden.json") else {}
 LINE_TOWNS = {k: v for k, v in (json.load(open("region_lines.json")).items() if os.path.exists("region_lines.json") else []) if not k.startswith("_")}
 lats = [g["lat"] for e in D if e["type"] == "way" for g in e["geometry"]]
 lons = [g["lon"] for e in D if e["type"] == "way" for g in e["geometry"]]
@@ -106,6 +107,8 @@ for r, ln in SP.items():
         if on and min(math.dist((q.x, q.y), (nodes[i_]["x"], nodes[i_]["y"])) for _, i_ in on) < K.get("abgang_ab_m", 150): continue
         inner = ln.interpolate(min(max(s_end + (300 if s_end == 0 else -300), 0), ln.length))
         bx, by = q.x - inner.x, q.y - inner.y; town, best = None, None
+        if str(_n_end) in FERN_E:          # Fernpunkt 3 km weiter auf der Strecke (region_vorbereiten): Peilung von dort
+            fx, fy = xy(*FERN_E[str(_n_end)]); bx, by = fx - q.x, fy - q.y
         for t in LINE_TOWNS.get(r, list(ORTE)):
             if t not in ORTE: continue
             tx, ty = xy(*ORTE[t])
@@ -126,6 +129,31 @@ for n in nodes:
     if n["kind"] not in ("station", "halt"): continue
     best = min(SP.items(), key=lambda t: t[1].distance(Point(n["x"], n["y"])))
     n["tracks"] = tracks_at(best[1], best[1].project(Point(n["x"], n["y"])), half=30)
+# Parallele Abgänge zusammenlegen (30.10.2026, Klosters Platz – Klosters Dorf: 910 und 915 laufen auf der Doppelspur
+# nebeneinander und wurden zwei getrennte Strecken mit zwei Beschriftungen): zwei Abgänge desselben Bahnhofs, deren
+# Strecken über mindestens 70 % der kürzeren Länge höchstens 30 m auseinanderliegen, sind eine Strecke mit der Summe
+# der Gleise und beiden Liniennummern. Konfig «abgaenge_zusammen»: false schaltet ab.
+if K.get("abgaenge_zusammen", True):
+    _ex = {n["id"] for n in nodes if n["kind"] == "exit"}
+    _ee = [e for e in edges if (e["a"] in _ex) != (e["b"] in _ex)]
+    _weg = set()
+    for i_, e1 in enumerate(_ee):
+        for e2 in _ee[i_ + 1:]:
+            if id(e1) in _weg or id(e2) in _weg: continue
+            s1 = e1["b"] if e1["a"] in _ex else e1["a"]; s2 = e2["b"] if e2["a"] in _ex else e2["a"]
+            if s1 != s2: continue
+            l1, l2 = LineString(e1["geom"]), LineString(e2["geom"])
+            kurz, lang = (l1, l2) if l1.length <= l2.length else (l2, l1)
+            if kurz.length < 100 or kurz.intersection(lang.buffer(30)).length < 0.7 * kurz.length: continue
+            haupt, neben = (e1, e2) if l1.length >= l2.length else (e2, e1)
+            haupt["refs"] = sorted(set(haupt.get("refs", [haupt["ref"]])) | set(neben.get("refs", [neben["ref"]])))
+            haupt["tracks"] = int(min(4, haupt["tracks"] + neben["tracks"]))
+            xh = haupt["b"] if haupt["a"] in _ex else haupt["a"]; xn = neben["b"] if neben["a"] in _ex else neben["a"]
+            nodes[xh]["refs"] = haupt["refs"]
+            if not nodes[xh].get("town"): nodes[xh]["town"] = nodes[xn].get("town")
+            _weg.add(id(neben))
+            print("Abgänge zusammengelegt:", nodes[s1]["name"], haupt["refs"], "->", nodes[xh].get("town"), haupt["tracks"], "Gleise")
+    edges = [e for e in edges if id(e) not in _weg]
 used = {e["a"] for e in edges} | {e["b"] for e in edges}
 BB = [min(x for x, _ in P.values()), min(y for _, y in P.values()), max(x for x, _ in P.values()), max(y for _, y in P.values())]
 json.dump(dict(nodes=[n for n in nodes if n["id"] in used], edges=edges, bbox=BB), open(f"{NAME}_topologie.json", "w"), ensure_ascii=False)

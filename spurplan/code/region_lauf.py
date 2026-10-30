@@ -42,9 +42,15 @@ bericht = dict(region=REG, erzeugt=time.strftime("%Y-%m-%d %H:%M UTC", time.gmti
 def _bahnhof(n):
     b = key_of[n["name"]]; ov = os.path.join(WORK, f"{b}_override.json")
     o = json.load(open(ov)) if os.path.exists(ov) else {}
+    _eigen_sw = "sw_search_m" in o.get("cfg", {})           # Bahnhofs-Override legt die Weichensuche selbst fest
     for k_, v_ in STD.items():                              # Standard-Override der Region, Bahnhofs-Override hat Vorrang
         if k_ == "cfg": o["cfg"] = {**v_, **o.get("cfg", {})}
         else: o.setdefault(k_, v_)
+    # Weichensuche über den ganzen Bereich einer Dienststelle (30.10.2026): der Ausschnitt enthält nur die eigenen Gleise
+    # (Bereichsgrenze zum Nachbarn), also gehört jede Weiche darin in diesen Plan (Selfranga: Doppelspurbeginn 600 m
+    # vom Betriebspunkt; Sagliains Sasslatsch: Abzweig Nebengleis am Fensterrand). Bahnhofs-Override hat Vorrang.
+    if not _eigen_sw and K.get("weichen_ganzer_bereich", True) and BP[b].get("dienst"):     # nur Dienststellen (Bahnhöfe: Fenster wie bisher, Zweisimmen)
+        o.setdefault("cfg", {})["sw_search_m"] = max(o.get("cfg", {}).get("sw_search_m", 0), BP[b]["radius"])
     json.dump(o, open(ov, "w"), ensure_ascii=False, indent=1)
     if NUR_LAGE and os.path.exists(os.path.join(WORK, f"{b}_ports.json")): return
     opt = K.get("optionen_je", {}).get(n["name"], K.get("optionen", []))
@@ -63,6 +69,13 @@ def _bahnhof(n):
 from concurrent.futures import ThreadPoolExecutor
 with ThreadPoolExecutor(max_workers=os.cpu_count() or 2) as ex:
     list(ex.map(_bahnhof, [n for n in T["nodes"] if n["kind"] == "station" and n["name"] in key_of]))
+# Verkettung (30.10.2026): Ziel-Bahnhof je Abgang und Pfeil in <b>_ports.json, Prüfung V1–V3
+_vk = sh(["python3", py("verkettung.py"), "region.json", "betriebspunkte.json", "--bericht", "verkettung.json"]
+         + (["--topologie", f"{NAME}_topologie.json"] if K.get("topologie_aus_verkettung", True) else []))
+if os.path.exists(os.path.join(WORK, "verkettung.json")):
+    _vb = json.load(open(os.path.join(WORK, "verkettung.json")))["befunde"]
+    bericht["verkettung"] = {r_: sum(1 for b_ in _vb if b_["regel"] == r_) for r_ in ("V1", "V2", "V3")}
+    shutil.copy(os.path.join(WORK, "verkettung.json"), OUT)
 # Lage: aus der Konfig (Schlüssel "lage"), Koordinaten erzeugt netz_lage.py selbst (auto)
 LF = os.path.join(WORK, f"{NAME}_lage.json")
 if not os.path.exists(LF) or not NUR_LAGE: json.dump(K.get("lage", {"auto": {"c0": 30, "c1": 32, "p": 0.6, "gap": 58, "wg": 0.01}}), open(LF, "w"), ensure_ascii=False, indent=1)

@@ -74,6 +74,16 @@ for k_, v_ in OVR.get("cfg", {}).items():
     else: CFG[k_] = v_
 RU = CFG["rules"]
 LINIENENDEN = json.load(open("linienenden.json")) if os.path.exists("linienenden.json") else {}   # nur im Workflow «plaene»
+PFEIL_ZIEL = []        # (x, y, Winkel, Herkunft) bei der Entstehung eines Pfeils; beim Zeichnen nach Lage zugeordnet
+def _herkunft(sg, n, aus=None):
+    """Woher ein Abgang/Pfeil kommt: Way, Knoten am Planrand, nächster Knoten nach aussen (für verkettung.py)."""
+    if aus is None and sg is not None:
+        wn_ = ways[sg["way"]]["nodes"] if sg["way"] in ways else []
+        i_ = wn_.index(n) if n in wn_ else None
+        aus = next((wn_[j] for j in ((i_ - 1, i_ + 1) if i_ is not None else ()) if 0 <= j < len(wn_) and wn_[j] not in sg["nodes"]), None)
+    h_ = dict(way=int(sg["way"]) if sg is not None else None, knoten=n, ll=list(LL[n]) if n in LL else None)
+    if aus is not None: h_.update(aus=aus, aus_ll=list(LL[aus]) if aus in LL else None)
+    return h_
 FERN = json.load(open(f"{(ARGS.station or ARGS.src.split('.')[0])}_fern.json")) if os.path.exists(f"{(ARGS.station or ARGS.src.split('.')[0])}_fern.json") else {}   # topologie_linien.py
 LINE_TOWNS = {k: v for k, v in (json.load(open("region_lines.json")).items() if os.path.exists("region_lines.json") else []) if not k.startswith("_")}
 CFG["warp_file"] = ARGS.warp or f"{key}_warp.json"
@@ -347,6 +357,13 @@ SD = {n: project(p) for n, p in P.items()}
 if os.environ.get("SPUR_SD"): json.dump({str(n): [SD[n][0], SD[n][1], LL[n][0], LL[n][1]] for n in SD if n in LL}, open(os.environ["SPUR_SD"], "w"))
 sw_s = [SD[n][0] for n, t in ntag.items() if t.get("railway") == "switch" and n in SD
         and math.hypot(*P[n]) < CFG["sw_search_m"] and abs(SD[n][1]) < CFG["d_lim"]]
+# Verzweigungen ohne Weichen-Tag (30.10.2026, Autoverlad Sagliains: zwei Ladegleise laufen in einem Knoten ohne
+# railway=switch zusammen und fielen aus dem Fenster): jeder Knoten, an dem drei Gleisstücke zusammenkommen, zählt mit.
+# cfg «fenster_verzweigungen»: false = nur getaggte Weichen.
+if CFG.get("fenster_verzweigungen", True):
+    _dg3 = collections.Counter(n for w in ways.values() for a_, b_ in zip(w["nodes"], w["nodes"][1:]) for n in (a_, b_))
+    sw_s += [SD[n][0] for n, k in _dg3.items() if k >= 3 and n in SD and ntag.get(n, {}).get("railway") != "switch"
+             and math.hypot(*P[n]) < CFG["sw_search_m"] and abs(SD[n][1]) < CFG["d_lim"]]
 pl_s = [project(xy(g))[0] for e in PLAT for g in e["geometry"] if math.hypot(*xy(g)) < CFG["sw_search_m"]]
 _s_st = project((0.0, 0.0))[0]                      # Bahnhofsknoten liegt im Ursprung
 CFG["s_min"] = max(min(sw_s + pl_s + [_s_st - CFG["min_half_window_m"]]) - CFG["s_pad"], SS[0] + 1)
@@ -452,6 +469,10 @@ for sg in segs:
         for e_, n_ in ((0, sg["nodes"][i0]), (1, sg["nodes"][i1])):
             if use[n_] == 1 and ntag.get(n_, {}).get("railway") != "buffer_stop" and at_data_edge(n_):
                 sg["cut%d" % e_] = True
+    # Grenze zum Bereich des Nachbar-Betriebspunkts (künstlicher Randknoten aus region_vorbereiten): jedes Gleis läuft
+    # dort weiter, auch Neben- und Verbindungsgleise (30.10.2026, Verkettung Sagliains Sasslatsch – Autoverlad)
+    for e_, n_ in ((0, sg["nodes"][i0]), (1, sg["nodes"][i1])):
+        if -2 * 10 ** 15 < n_ < -10 ** 14 and use[n_] == 1: sg["cut%d" % e_] = True
     # Regel 42: eine Weichenverbindung (crossover), die an einem Randknoten auf das Streckengleis trifft, läuft nicht
     # aus dem Plan - sie endet dort an der Weiche (Olten Hammer West: zweiter Spurwechsel fehlte)
     _xo42 = RU.get("r42", True) and sg["tags"].get("service") == "crossover"
@@ -1794,8 +1815,10 @@ for sg in segs:
         if not sg.get("cut%d" % end): continue
         n_out = sg["nodes"][-1 if end else 0]
         if sg["pax"] and n_out not in PAX_SIDE: continue
+        _z_ = _herkunft(sg, n_out)
         if (SD[n_out][0] <= CFG["s_min"] + 15 and not end) or (SD[n_out][0] >= CFG["s_max"] - 15 and end) or n_out in EDGE_LONG:
             arrows.append((xe, ye, dr))                       # läuft am Planrand weiter
+            PFEIL_ZIEL.append((xe, ye, 0.0 if dr > 0 else math.pi, _z_))
         else:                                                 # läuft seitlich aus dem Plan
             # Stück ohne Länge (Abgang direkt an der Weiche, Regel 28): Pfeil an der Weiche selbst ansetzen, nicht eine
             # Ebene daneben in der Luft (Vauseyon 28.10., Hinweis gjx6: «Weiche in die andere Richtung?», Topologie A)
@@ -1844,6 +1867,7 @@ for sg in segs:
             svg_paths[False].append(f"M{xe:.1f},{ye:.1f}L{ex:.1f},{ey:.1f}")
             ang = math.atan2(ey - ye, ex - xe)
             STUBS.append((ex, ey, ang)); STUB_SRC.append((sg["way"], f"M{xe:.1f},{ye:.1f}L{ex:.1f},{ey:.1f}", (ex, ey, ang)))
+            PFEIL_ZIEL.append((ex, ey, ang, _z_))
             if _an_weiche: DBG.append((sg["id"], f"M{xe:.1f},{ye:.1f}L{ex:.1f},{ey:.1f}"))     # für die Topologieprüfung: Gleis = Stummel
             if ARGS.dbg: print("STUB", sg["way"], sg["tags"].get("service"), sg["tags"].get("usage"), sg["tags"].get("name"), round(xe), round(ye), up)
 
@@ -1914,6 +1938,8 @@ if ARGS.hauptgleise and RU.get("r38", True):
             L_ = 22; ex_, ey_ = xe_ + dr_ * L_ * 0.5, ye_ + up_ * L_ * 0.866
             svg_paths[False].append(f"M{xe_:.1f},{ye_:.1f}L{ex_:.1f},{ey_:.1f}")
             STUBS.append((ex_, ey_, math.atan2(ey_ - ye_, ex_ - xe_)))
+            PFEIL_ZIEL.append((ex_, ey_, STUBS[-1][2], dict(way=int(e["id"]), knoten=n_, ll=list(LL[n_]) if n_ in LL else None,
+                                                           aus_ll=[e["geometry"][k_ + 1 if k_ < len(nn_) - 1 else k_ - 1][q] for q in ("lat", "lon")])))
             R38_ST.setdefault(e["id"], []).append((n_, f"M{xe_:.1f},{ye_:.1f}L{ex_:.1f},{ey_:.1f}", STUBS[-1]))
 # Override "zusatz_spurwechsel": Spurwechsel nach Ortskenntnis, der in den OSM-Daten fehlt (liegt z. B. ausserhalb
 # des Datenausschnitts): [{"von": "1", "nach": "2", "s": 5440}] -> 60°-Schräge ab s auf Gleis "von" nach Gleis "nach"
@@ -1952,6 +1978,7 @@ for n_, dr_ in CONT38.items():
     _xa, _ya = xpos(n_, SD[n_][0]), ypos(n_)
     if _PST: svg_paths[False].append(f"M{_xa:.1f},{_ya:.1f}L{_xa + dr_ * _PST:.1f},{_ya:.1f}")
     arrows.append((_xa + dr_ * _PST, _ya, dr_))
+    PFEIL_ZIEL.append((_xa + dr_ * _PST, _ya, 0.0 if dr_ > 0 else math.pi, dict(way=None, knoten=n_, ll=list(LL[n_]) if n_ in LL else None)))
 dots = [(xpos(n, SD[n][0]), ypos(n), any(sg["pax"] for sg in segs if n in sg["nodes"])) for n in stops]
 
 _pl_s = [x for pl in OVR.get("platforms", []) if "s" in pl for x in pl["s"]] or \
@@ -3120,10 +3147,22 @@ for _dp in OVR.get("dkw_px", []):
 out.extend(DKW_EXTRA)
 for x, y, pax in dots:
     out.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{4.5 if pax else 3.2}" fill="{green if pax else black}"/>')
+PFEILE = []         # gezeichnete Pfeile mit Herkunft (verkettung.py bestimmt daraus den Nachbarplan, in dem das Gleis ankommt)
+def _pfeil_ziel(x, y, a):
+    best_ = None
+    for x0_, y0_, a0_, z0_ in PFEIL_ZIEL:
+        da_ = abs((a - a0_ + math.pi) % (2 * math.pi) - math.pi)
+        d_ = math.hypot(x - x0_, y - y0_) + 30 * da_
+        if da_ < 0.8 and math.hypot(x - x0_, y - y0_) < 60 and (best_ is None or d_ < best_[0]): best_ = (d_, z0_)
+    return best_[1] if best_ else None
+def _pfeil_attr(x, y, a):
+    h_ = _pfeil_ziel(x, y, a)
+    PFEILE.append(dict(x=round(x, 1), y=round(y, 1), a=round(a, 3), id=len(PFEILE), **(h_ or {})))
+    return f' data-pfeil="{PFEILE[-1]["id"]}"'
 for x, y, a in STUBS:
     c, s_ = math.cos(a), math.sin(a)
     pts = [(x + 9 * c, y + 9 * s_), (x - 4 * s_, y + 4 * c), (x + 4 * s_, y - 4 * c)]
-    out.append('<path d="M' + "L".join(f"{px:.1f},{py:.1f}" for px, py in pts) + f'Z" fill="{black}"/>')
+    out.append('<path d="M' + "L".join(f"{px:.1f},{py:.1f}" for px, py in pts) + f'Z" fill="{black}"{_pfeil_attr(x, y, a)}/>')
 # Pfeile, die auf dem Ende eines Hauptgleises liegen (Nebengleis läuft im selben Punkt aus), weglassen
 # (Hinweise Zofingen/Schönenwerd: "Pfeil direkt auf dem Streckengleis")
 _pax_ends = []
@@ -3136,7 +3175,7 @@ for sg in segs:
 _pax_y = {round(Y(seglane[sg["id"]])) for sg in segs if sg["pax"] and sg["id"] in seglane} | {round(py) for px, py in _pax_ends}
 arrows = [a for a in arrows if not (round(a[1]) in _pax_y and any(abs(a[0] - px) < 30 and abs(a[1] - py) < 1.5 for px, py in _pax_ends))]
 for x, y, dr in arrows:
-    out.append(f'<path d="M{x:.1f},{y - 4:.1f}L{x + 9 * dr:.1f},{y:.1f}L{x:.1f},{y + 4:.1f}Z" fill="{black}"/>')
+    out.append(f'<path d="M{x:.1f},{y - 4:.1f}L{x + 9 * dr:.1f},{y:.1f}L{x:.1f},{y + 4:.1f}Z" fill="{black}"{_pfeil_attr(x, y, 0.0 if dr > 0 else math.pi)}/>')
 # Regel Z7 (27.10.2026, Hinweis 1zg2 Vauseyon «Perron-Gleis Nummer?»): Betriebspunkt ohne Perron – keine Gleisnummern
 if not any('rx="1.5"' in o_ for o_ in out + globals().get("MS_TXT", [])) and not OVR.get("nummern"): labels = {}
 for r, (l, a, b, _) in labels.items():
@@ -3188,7 +3227,7 @@ for sg in segs:
                         _xs = _hl
             out.append(f'<path d="M{_xs:.1f},{y:.1f}H{x:.1f}" stroke="{_c}" stroke-width="{_w}" fill="none"/>')   # Abgang bis an den Rand
             PORTS.append(dict(kind="edge", x=x, y=y, dx=1 if end else -1, dy=0, ref=exit_ref(sg), town=exit_town(sg, n),
-                              bearing=port_bearing(sg, n), lat=LL[n][0], lon=LL[n][1], pax=sg["pax"], way=sg["way"]))
+                              bearing=port_bearing(sg, n), lat=LL[n][0], lon=LL[n][1], pax=sg["pax"], way=sg["way"], **{k_: v_ for k_, v_ in _herkunft(sg, n).items() if k_ != "way"}))
             EXITS.append((x + (12 if end else -12), y + 6, exit_ref(sg), "start" if end else "end", exit_town(sg, n)))
 for x, y, end, dy, sg, n in SIDE:
     _fil = False
@@ -3234,7 +3273,7 @@ for x, y, end, dy, sg, n in SIDE:
             x, y = xf_, yf_; _fil = True
     L = 105; x2, y2 = x - (1 - 2 * end) * L * 0.5, y + dy * L * 0.866
     PORTS.append(dict(kind="side", x=x, y=y, dx=-(1 - 2 * end), dy=dy, ref=exit_ref(sg), town=exit_town(sg, n),
-                      bearing=port_bearing(sg, n), lat=LL[n][0], lon=LL[n][1], pax=sg["pax"], way=sg["way"]))
+                      bearing=port_bearing(sg, n), lat=LL[n][0], lon=LL[n][1], pax=sg["pax"], way=sg["way"], **{k_: v_ for k_, v_ in _herkunft(sg, n).items() if k_ != "way"}))
     if not ARGS.bare:
         x0_ = x if _fil else xpos(n, sg["s1"] if end else sg["s0"])
         out.append(f'<path d="M{x0_:.1f},{y:.1f}L{x:.1f},{y:.1f}L{x2:.1f},{y2:.1f}" stroke="{green}" stroke-width="3.6" stroke-linecap="round" fill="none"/>')
@@ -3518,10 +3557,17 @@ for p_ in PORTS:                     # doppelte Abgänge (zwei Ways enden im sel
     if k_ in _seen: continue
     _seen.add(k_); _pp.append(p_)
 PORTS = _pp
+# derselbe Way zweimal am selben Rand auf gleicher Höhe (Selfranga 910: Stück vor und nach einer Weiche): nur der äusserste
+_gr = {}
+for p_ in PORTS:
+    k_ = (p_["kind"], p_.get("way"), p_["dx"], round(p_["y"]))
+    if k_ not in _gr or p_["x"] * p_["dx"] > _gr[k_]["x"] * _gr[k_]["dx"]: _gr[k_] = p_
+PORTS = [p_ for p_ in PORTS if _gr[(p_["kind"], p_.get("way"), p_["dx"], round(p_["y"]))] is p_]
 # Anschlüsse nur aus dem Regionalplan-Lauf (--bare) oder dem Standardlauf schreiben: ein Prüflauf mit --out in eine Zwischendatei
 # (spurplan_check aus ne_zusatz_update) überschrieb sonst die Anschlüsse der bare-Fassung (Auvernier 219, Hinweis 20.10.)
 if ARGS.bare or ARGS.out in (None, f"{key}_spurplan.svg"):
-    json.dump(dict(ports=PORTS, W=W, H=H, title=CFG["title"], x_lo=CFG["margin_x"], x_hi=W - CFG["margin_x"],
+    json.dump(dict(ports=PORTS, pfeile=PFEILE, knoten=sorted({int(n_) for sg in segs if sg["id"] in seglane or sg["pax"] for n_ in sg["nodes"] if int(n_) > 0}),
+                   W=W, H=H, title=CFG["title"], x_lo=CFG["margin_x"], x_hi=W - CFG["margin_x"],
                    y_lo=CFG["margin_y"] - 40, y_hi=Y(0) + 20, ways=sorted({int(sg["way"]) for sg in segs})), open(f"{key}_ports.json", "w"))
 H = max(H, ty + 30)
 if DKW_FILLET:

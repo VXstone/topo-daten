@@ -169,7 +169,12 @@ for i in [i for i in ids if nodes[i]["inset"]]:
     # Liniennummer des Abgangs, die an diesem Betriebspunkt keine Kante hat, ist eine OSM-Unschärfe (Sasslatsch: Ast 914 in
     # OSM teils als 910) und zählt wie «ohne Nummer» (29.10.2026)
     _refs_hier = {r_ for e_ in inc[i] for r_ in e_["refs"]}
-    _strafe = lambda p, e: 0 if p["ref"] in e["refs"] else (12 if p["ref"] is None or p["ref"] not in _refs_hier else 45)
+    # Verkettung (30.10.2026, verkettung.py): ein Abgang, dessen Gleis im Nachbarplan X ankommt, gehört zur Strecke nach X
+    _ende = lambda e: nodes[e["b"] if e["a"] == i else e["a"]].get("inset")
+    def _strafe(p, e):
+        z_ = p.get("ziel")
+        if z_ and _ende(e): return -40 if z_ == _ende(e) else 80
+        return 0 if p["ref"] in e["refs"] else (12 if p["ref"] is None or p["ref"] not in _refs_hier else 45)
     for e, br in sorted(es, key=lambda t: min([adiff(t[1], p["bearing"]) for p in P] or [999])):
         cand = sorted((adiff(br, p["bearing"]) + _strafe(p, e), k) for k, p in enumerate(P) if k not in taken)
         cand = [c for c in cand if c[0] < 70]
@@ -559,10 +564,50 @@ def offset_poly(pts, o):
         m = nrm[k_ - 1] + nrm[k_]; m = m / (np.linalg.norm(m) or 1); res.append(pts[k_] + m * o / max(m @ nrm[k_], 0.3))
     res.append(pts[-1] + nrm[-1] * o)
     return res
+# Verkettung der Pfeile (30.10.2026, Wunsch D. Eckenstein: «merken, dass die Pfeile beim nächsten Bahnhof ankommen»):
+# zeigt ein Pfeil in Plan A auf ein Gleis, das in Plan B als Pfeil zurückkommt (verkettung.py, Feld "ziel"), werden die
+# beiden Pfeilspitzen durch ein Gleis verbunden und die Pfeile entfallen. Lage "pfeile_verbinden": false schaltet ab.
+PF_WEG = collections.defaultdict(set); PF_LINIEN = []
+def _pf_reg(n, q):
+    P_ = PORTS[n]; cx_ = (P_["x_lo"] + P_["x_hi"]) / 2; cy_ = (P_["y_lo"] + P_["y_hi"]) / 2; a_ = ROT.get(n, 0)
+    p_ = pos[n] + rotv(np.array([q["x"] * S - cx_ * S, q["y"] * S - cy_ * S]), a_)
+    u_ = rotv(np.array([math.cos(q["a"]), math.sin(q["a"])]), a_)
+    return p_, u_ / (np.linalg.norm(u_) or 1)
+if L0.get("pfeile_verbinden", True):
+    _key = {nodes[n]["inset"]: n for n in ids if nodes[n]["inset"]}
+    _pf = {n: [q for q in PORTS[n].get("pfeile", []) if q.get("ziel") and not q.get("doppelt")] for n in _key.values()}
+    for a_n in _key.values():
+        for b_n in _key.values():
+            if a_n >= b_n: continue
+            pa = [q for q in _pf[a_n] if q["ziel"] == nodes[b_n]["inset"]]
+            pb = [q for q in _pf[b_n] if q["ziel"] == nodes[a_n]["inset"]]
+            if not pa or not pb: continue
+            A_ = [(q, *_pf_reg(a_n, q)) for q in pa]; B_ = [(q, *_pf_reg(b_n, q)) for q in pb]
+            while A_ and B_:
+                qa, pa_, ua = min(A_, key=lambda t: min(np.linalg.norm(t[1] - b[1]) for b in B_))
+                qb, pb_, ub = min(B_, key=lambda t: np.linalg.norm(t[1] - pa_))
+                A_ = [t for t in A_ if t[0] is not qa]; B_ = [t for t in B_ if t[0] is not qb]
+                PF_WEG[a_n].add(qa["id"]); PF_WEG[b_n].add(qb["id"])
+                # Verbindung wie ein Parallelgleis zur Strecke (Richtung Plan A -> Plan B): ab der Spitze parallel, in der
+                # Mitte unter 60° auf die Seitenlage der anderen Spitze, dann parallel bis zu ihr (keine Spitze, kein Zickzack)
+                d_ = pos[b_n] - pos[a_n] if math.dist(pos[a_n], pos[b_n]) > 1 else pb_ - pa_
+                d_ = d_ / (np.linalg.norm(d_) or 1); nr_ = np.array([-d_[1], d_[0]])
+                A_l = float((pb_ - pa_) @ d_); D_l = float((pb_ - pa_) @ nr_); t_ = abs(D_l) / TAN60
+                if A_l > t_ + 12:
+                    m_ = A_l / 2
+                    PF_LINIEN.append(((a_n, b_n), [pa_, pa_ + d_ * (m_ - t_ / 2), pa_ + d_ * (m_ + t_ / 2) + nr_ * D_l, pb_]))
+                else:
+                    PF_LINIEN.append(((a_n, b_n), [pa_, pb_]))
+    # Pfeil auf einem Abgang (dasselbe Gleis läuft als Strecke weiter): im Regionalplan überflüssig
+    for n_ in _key.values():
+        for q in PORTS[n_].get("pfeile", []):
+            if q.get("doppelt") and q.get("ziel"): PF_WEG[n_].add(q["id"])
 # Spurpläne
 for n in [n for n in ids if nodes[n]["inset"]]:
     P = PORTS[n]; cx = (P["x_lo"] + P["x_hi"]) / 2; cy = (P["y_lo"] + P["y_hi"]) / 2
     svg = open(nodes[n]["inset"] + "_bare.svg").read()
+    for _id in PF_WEG.get(n, ()):           # verbundene Pfeile: Spitze weglassen, der Stummel bleibt
+        svg = re.sub(r'<path[^>]*data-pfeil="%d"[^>]*/>' % _id, "", svg)
     a_ = ROT.get(n, 0)
     body = re.sub(r"^.*?<svg[^>]*>", "", svg, flags=re.S).replace("</svg>", "").replace('<rect width="100%" height="100%" fill="#fff"/>', "")
     body = re.sub(r'<rect[^>]*width="100%"[^>]*/>', "", body)   # Blatt-Hintergrund jeder Form (auch mit x/y): deckt sonst Nachbarpläne ab
@@ -1138,6 +1183,11 @@ for r_, l_, c_, w_ in DEFER_L:
     _CUR[0] = r_
     if len(l_) > 1: path(_dp([np.asarray(p_, float) for p_ in l_]) if not L0.get("ohne_glaettung") else l_, c_, w_)
 _CUR[0] = None
+# verbundene Pfeile (Verkettung): dünnes Gleis von Spitze zu Spitze, Farbe wie die Strecke zwischen den beiden Plänen
+for (a_n, b_n), pts_ in PF_LINIEN:
+    _CUR[0] = next((r_ for r_ in routes if {r_["a"], r_["b"]} == {a_n, b_n}), next((r_ for r_ in routes if a_n in (r_["a"], r_["b"])), None))
+    path(pts_, BK, 1.3)
+_CUR[0] = None
 # Kreuzungen ohne Verbindung (Hinweis Region Olten 15.10.: "Unterführungssymbol?"): obere Strecke mit Brückenflügeln,
 # untere unterbrochen. Oben/unten aus OSM (bridge/tunnel/layer der Gleise am Kreuzungspunkt).
 def _kreuzungen():
@@ -1484,7 +1534,8 @@ for n in [n for n in MAJOR if nodes[n]["kind"] == "exit"]:
     arrow = "→" if v[0] > 0.3 else ("←" if v[0] < -0.3 else ("↑" if v[1] < 0 else "↓"))
     anc = "start" if v[0] > 0.3 else ("end" if v[0] < -0.3 else "middle")
     dy = -5 if abs(v[1]) < 0.7 else (-22 if v[1] < 0 else 14)
-    text(p[0], p[1] + dy, f"Linie {nodes[n].get('ref', '')}", 13, anc)
+    _rl = nodes[n].get("refs") or [nodes[n].get("ref", "")]
+    text(p[0], p[1] + dy, ("Linien " if len(_rl) > 1 else "Linie ") + " / ".join(str(x_) for x_ in _rl), 13, anc)
     town = nodes[n].get("town") or ""
     text(p[0], p[1] + dy + 16, (f"{arrow} {town}" if anc == "end" else f"{town} {arrow}").strip(), 13, anc)
 
