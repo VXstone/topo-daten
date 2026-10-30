@@ -30,7 +30,11 @@
    "ok": true,
    "ordner": "regional_kerzers",
    "topologie": "{}",
-   "geaendert": []
+   "geaendert": [
+    "kerzers_bare.svg",
+    "kerzers_ports.json",
+    "kerzers_spurplan.svg"
+   ]
   }
  },
  "region": {

@@ -28,13 +28,13 @@
 <path d="M793.5,257.0Q803.8,257.0 808.9,265.9" fill="none" stroke="#00862f" stroke-opacity="0.55" stroke-width="2.2" stroke-linecap="round"/>
 <path d="M817.5,251.0Q807.2,251.0 802.1,242.1" fill="none" stroke="#00862f" stroke-opacity="0.55" stroke-width="2.2" stroke-linecap="round"/>
 <circle cx="234.0" cy="206.0" r="3.2" fill="#111"/>
-<path d="M1400.4,155.2L1399.4,164.9L1392.5,160.9Z" fill="#111"/>
-<path d="M1431.0,155.2L1430.0,164.9L1423.0,160.9Z" fill="#111"/>
-<path d="M1367.8,155.2L1375.8,160.9L1368.9,164.9Z" fill="#111"/>
-<path d="M868.6,160.2L867.5,170.0L860.6,166.0Z" fill="#111"/>
-<path d="M863.4,297.8L855.5,292.0L862.4,288.0Z" fill="#111"/>
-<path d="M981.0,314.0L972.0,318.0L972.0,310.0Z" fill="#111"/>
-<path d="M932.5,136.2L940.5,142.0L933.5,146.0Z" fill="#111"/>
+<path d="M1400.4,155.2L1399.4,164.9L1392.5,160.9Z" fill="#111" data-pfeil="0"/>
+<path d="M1431.0,155.2L1430.0,164.9L1423.0,160.9Z" fill="#111" data-pfeil="1"/>
+<path d="M1367.8,155.2L1375.8,160.9L1368.9,164.9Z" fill="#111" data-pfeil="2"/>
+<path d="M868.6,160.2L867.5,170.0L860.6,166.0Z" fill="#111" data-pfeil="3"/>
+<path d="M863.4,297.8L855.5,292.0L862.4,288.0Z" fill="#111" data-pfeil="4"/>
+<path d="M981.0,314.0L972.0,318.0L972.0,310.0Z" fill="#111" data-pfeil="5"/>
+<path d="M932.5,136.2L940.5,142.0L933.5,146.0Z" fill="#111" data-pfeil="6"/>
 <rect x="625.2" y="318.0" width="26" height="16" fill="#fff"/>
 <text x="638.2" y="332.5" font-size="19" text-anchor="middle" fill="#00862f">11</text>
 <rect x="625.1" y="294.0" width="26" height="16" fill="#fff"/>

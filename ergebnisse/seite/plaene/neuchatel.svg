@@ -24,17 +24,17 @@
 <path d="M895.0,185.0Q905.3,185.0 910.4,193.9" fill="none" stroke="#00862f" stroke-opacity="0.55" stroke-width="2.2" stroke-linecap="round"/>
 <path d="M1041.9,179.0Q1052.2,179.0 1057.3,170.1" fill="none" stroke="#00862f" stroke-opacity="0.55" stroke-width="2.2" stroke-linecap="round"/>
 <path d="M1065.9,185.0Q1055.6,185.0 1050.5,193.9" fill="none" stroke="#00862f" stroke-opacity="0.55" stroke-width="2.2" stroke-linecap="round"/>
-<path d="M708.4,83.2L707.4,92.9L700.4,88.9Z" fill="#111"/>
-<path d="M739.7,83.2L738.6,92.9L731.7,88.9Z" fill="#111"/>
-<path d="M949.3,280.8L941.3,275.1L948.3,271.1Z" fill="#111"/>
-<path d="M1504.2,155.2L1503.2,164.9L1496.3,160.9Z" fill="#111"/>
-<path d="M546.9,256.8L548.0,247.1L554.9,251.1Z" fill="#111"/>
-<path d="M759.4,280.8L751.4,275.1L758.3,271.1Z" fill="#111"/>
-<path d="M1366.6,280.8L1367.6,271.1L1374.6,275.1Z" fill="#111"/>
-<path d="M493.6,237.8L494.6,228.0L501.6,232.0Z" fill="#111"/>
-<path d="M801.2,285.8L793.2,280.0L800.2,276.0Z" fill="#111"/>
-<path d="M1072.2,150.2L1071.2,160.0L1064.2,156.0Z" fill="#111"/>
-<path d="M786.1,106.0L795.1,110.0L786.1,114.0Z" fill="#111"/>
+<path d="M708.4,83.2L707.4,92.9L700.4,88.9Z" fill="#111" data-pfeil="0"/>
+<path d="M739.7,83.2L738.6,92.9L731.7,88.9Z" fill="#111" data-pfeil="1"/>
+<path d="M949.3,280.8L941.3,275.1L948.3,271.1Z" fill="#111" data-pfeil="2"/>
+<path d="M1504.2,155.2L1503.2,164.9L1496.3,160.9Z" fill="#111" data-pfeil="3"/>
+<path d="M546.9,256.8L548.0,247.1L554.9,251.1Z" fill="#111" data-pfeil="4"/>
+<path d="M759.4,280.8L751.4,275.1L758.3,271.1Z" fill="#111" data-pfeil="5"/>
+<path d="M1366.6,280.8L1367.6,271.1L1374.6,275.1Z" fill="#111" data-pfeil="6"/>
+<path d="M493.6,237.8L494.6,228.0L501.6,232.0Z" fill="#111" data-pfeil="7"/>
+<path d="M801.2,285.8L793.2,280.0L800.2,276.0Z" fill="#111" data-pfeil="8"/>
+<path d="M1072.2,150.2L1071.2,160.0L1064.2,156.0Z" fill="#111" data-pfeil="9"/>
+<path d="M786.1,106.0L795.1,110.0L786.1,114.0Z" fill="#111" data-pfeil="10"/>
 <rect x="667.0" y="150.0" width="26" height="16" fill="#fff"/>
 <text x="680.0" y="164.5" font-size="19" text-anchor="middle" fill="#00862f">5</text>
 <rect x="659.9" y="102.0" width="26" height="16" fill="#fff"/>

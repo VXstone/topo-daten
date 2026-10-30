@@ -7,8 +7,8 @@
 <rect x="517.2" y="178.2" width="102.3" height="8" rx="1.5" fill="#00862f"/>
 <rect x="546.2" y="132.2" width="110.0" height="8" rx="1.5" fill="#00862f"/>
 <circle cx="517.4" cy="110.0" r="3.2" fill="#111"/>
-<path d="M386.0,90.9L394.0,96.7L387.0,100.7Z" fill="#111"/>
-<path d="M386.0,104.1L394.0,109.9L387.0,113.9Z" fill="#111"/>
+<path d="M386.0,90.9L394.0,96.7L387.0,100.7Z" fill="#111" data-pfeil="0"/>
+<path d="M386.0,104.1L394.0,109.9L387.0,113.9Z" fill="#111" data-pfeil="1"/>
 <rect x="555.3" y="163.2" width="26" height="16" fill="#fff"/>
 <text x="568.3" y="177.7" font-size="19" text-anchor="middle" fill="#00862f">1</text>
 <rect x="588.2" y="139.2" width="26" height="16" fill="#fff"/>

@@ -89,8 +89,8 @@
   "safenwil": {
    "ok": true,
    "optionen": [],
-   "plan_geaendert": false,
-   "bare_geaendert": false,
+   "plan_geaendert": true,
+   "bare_geaendert": true,
    "netz": {},
    "topologie": "{}",
    "qualitaet": {
@@ -153,8 +153,8 @@
   "wangen_bei_olten": {
    "ok": true,
    "optionen": [],
-   "plan_geaendert": false,
-   "bare_geaendert": false,
+   "plan_geaendert": true,
+   "bare_geaendert": true,
    "netz": {
     "T10": 1
    },
@@ -203,8 +203,8 @@
    "optionen": [
     "--hauptgleise"
    ],
-   "plan_geaendert": false,
-   "bare_geaendert": false,
+   "plan_geaendert": true,
+   "bare_geaendert": true,
    "netz": {
     "D11": 1
    },
@@ -227,8 +227,8 @@
    "optionen": [
     "--hauptgleise"
    ],
-   "plan_geaendert": false,
-   "bare_geaendert": false,
+   "plan_geaendert": true,
+   "bare_geaendert": true,
    "netz": {
     "Z2": 4
    },
@@ -251,8 +251,8 @@
    "optionen": [
     "--hauptgleise"
    ],
-   "plan_geaendert": false,
-   "bare_geaendert": false,
+   "plan_geaendert": true,
+   "bare_geaendert": true,
    "netz": {
     "D11": 8
    },
@@ -276,18 +276,25 @@
    "ok": true,
    "ordner": "olten_ost",
    "topologie": "{}",
-   "geaendert": []
+   "geaendert": [
+    "olten_ost_bare.svg",
+    "olten_ost_ports.json",
+    "olten_ost_spurplan.svg"
+   ]
   },
   "regional_olten_ost": {
    "ok": true,
    "ordner": "regional_olten_ost",
    "topologie": "{}",
-   "geaendert": []
+   "geaendert": [
+    "olten_ost_bare.svg",
+    "olten_ost_ports.json"
+   ]
   },
   "regional_rothrist": {
    "ok": true,
    "ordner": "regional_rothrist",
-   "topologie": "{'B': 2}",
+   "topologie": "{}",
    "geaendert": [
     "rothrist_bare.svg",
     "rothrist_ports.json"

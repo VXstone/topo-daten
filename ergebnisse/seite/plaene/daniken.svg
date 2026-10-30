@@ -7,10 +7,10 @@
 <rect x="680.4" y="166.0" width="110.0" height="8" rx="1.5" fill="#00862f"/>
 <rect x="680.4" y="119.0" width="110.0" height="8" rx="1.5" fill="#00862f"/>
 <circle cx="1143.3" cy="110.0" r="3.2" fill="#111"/>
-<path d="M958.4,83.2L966.3,88.9L959.4,92.9Z" fill="#111"/>
-<path d="M306.5,232.8L298.5,227.1L305.5,223.1Z" fill="#111"/>
-<path d="M626.1,232.8L627.1,223.1L634.1,227.1Z" fill="#111"/>
-<path d="M1001.5,83.2L1000.4,92.9L993.5,88.9Z" fill="#111"/>
+<path d="M958.4,83.2L966.3,88.9L959.4,92.9Z" fill="#111" data-pfeil="0"/>
+<path d="M306.5,232.8L298.5,227.1L305.5,223.1Z" fill="#111" data-pfeil="1"/>
+<path d="M626.1,232.8L627.1,223.1L634.1,227.1Z" fill="#111" data-pfeil="2"/>
+<path d="M1001.5,83.2L1000.4,92.9L993.5,88.9Z" fill="#111" data-pfeil="3"/>
 <rect x="722.4" y="174.0" width="26" height="16" fill="#fff"/>
 <text x="735.4" y="188.5" font-size="19" text-anchor="middle" fill="#00862f">2</text>
 <rect x="722.4" y="150.0" width="26" height="16" fill="#fff"/>
