@@ -294,7 +294,7 @@
   "regional_rothrist": {
    "ok": true,
    "ordner": "regional_rothrist",
-   "topologie": "{}",
+   "topologie": "{'B': 2}",
    "geaendert": [
     "rothrist_bare.svg",
     "rothrist_ports.json"
