@@ -1,7 +1,7 @@
 {
  "vorbereitung": {
-  "erzeugt": "2026-10-26 13:07 UTC",
-  "lauf": "https://github.com/VXstone/topo-daten/actions/runs/40327513223",
+  "erzeugt": "2026-11-02 11:43 UTC",
+  "lauf": "https://github.com/VXstone/topo-daten/actions/runs/41438667719",
   "schritte": {
    "osm": "OK",
    "sbb": "OK",
@@ -61,8 +61,8 @@
     "katalog": {
      "perronkante": [],
      "haltekante": [
-      "haltestelle-haltekante",
       "21196_behig-haltekantepunkt",
+      "haltestelle-haltekante",
       "21197_behig-haltekantesegment"
      ]
     },
@@ -218,7 +218,7 @@
       "anzahl": 30747
      }
     },
-    "anzahl": 495839,
+    "anzahl": 495989,
     "felder": [
      "bps",
      "bps_abk",
@@ -254,28 +254,29 @@
     "katalog": {
      "betriebspunkt": [
       "haltestelle-uhr",
-      "haltestelle-wartehallen",
-      "linie-mit-betriebspunkten"
+      "linie-mit-betriebspunkten",
+      "haltestelle-wartehallen"
      ],
      "dienststelle": [
       "haltestelle-haltekante",
       "dienststellen-gemass-opentransportdataswiss"
      ],
      "didok": [
-      "haltestelle-haltekante",
       "anzahl-sbb-bahnhofbenutzer",
       "graphischer-fahrplan",
+      "haltestelle-haltekante",
       "dienststellen-gemass-opentransportdataswiss",
       "mobiliar-im-bahnhof"
      ]
     },
-    "anzahl": 1894,
+    "anzahl": 1901,
     "felder": [
      "abkurzung_bpk",
      "bezeichnung_bps",
      "bezeichnung_offiziell",
      "bpuic",
      "didok",
+     "globalid",
      "km",
      "linie",
      "linienname",
@@ -283,7 +284,7 @@
      "sloid"
     ],
     "geometrie": {
-     "Point": 1894
+     "Point": 1901
     }
    },
    "schweiz_bahn (OSM, Release daten)": {
@@ -293,22 +294,22 @@
   "ergebnisse": {
    "betriebspunkte": {
     "status": "OK",
-    "anzahl": 1596,
+    "anzahl": 1597,
     "nach_quellen": {
-     "OSM+SBB-Betriebspunkt": 707,
-     "SBB-Betriebspunkt": 595,
-     "OSM+OSM+SBB-Betriebspunkt": 17,
+     "OSM+SBB-Betriebspunkt": 710,
+     "SBB-Betriebspunkt": 596,
+     "OSM+OSM+SBB-Betriebspunkt": 14,
      "SBB-Perron": 1,
      "OSM": 276
     },
-    "ohne_osm_stationsknoten": 596,
-    "mit_ersatzknoten": 596,
-    "personenverkehr": 1066
+    "ohne_osm_stationsknoten": 597,
+    "mit_ersatzknoten": 597,
+    "personenverkehr": 1068
    },
    "gleisnummern": {
     "status": "OK",
-    "betriebspunkte": 1361,
-    "quelle_sbb_kante": 915,
+    "betriebspunkte": 1362,
+    "quelle_sbb_kante": 916,
     "quelle_sbb": 170,
     "quelle_osm": 276,
     "mit_fragezeichen": 100,
@@ -334,7 +335,7 @@
    },
    "aenderungen": {
     "status": "OK",
-    "betriebspunkte_mit_aenderung": 320
+    "betriebspunkte_mit_aenderung": 48
    }
   },
   "stichprobe": {
@@ -365,6 +366,19 @@
      "personenverkehr": false
     },
     {
+     "name": "Olten Hammer",
+     "abk": "OLH",
+     "typ": null,
+     "bahnhof": "Olten Hammer",
+     "quellen": [
+      "SBB-Betriebspunkt",
+      "OSM"
+     ],
+     "osm_node": 3081128624,
+     "synthetisch_node": null,
+     "personenverkehr": true
+    },
+    {
      "name": "Olten Nord (Abzw)",
      "abk": "OLN",
      "typ": "Abzweigstelle",
@@ -374,18 +388,6 @@
      ],
      "osm_node": null,
      "synthetisch_node": 1501985410,
-     "personenverkehr": false
-    },
-    {
-     "name": "Olten Tunnel (Spw)",
-     "abk": "OLTU",
-     "typ": null,
-     "bahnhof": "Olten Tunnel (Spw)",
-     "quellen": [
-      "SBB-Betriebspunkt"
-     ],
-     "osm_node": null,
-     "synthetisch_node": 1510193404,
      "personenverkehr": false
     }
    ],
@@ -405,6 +407,18 @@
    ],
    "Rothrist": [
     {
+     "name": "Rothrist West (Abzw)",
+     "abk": "RTRW",
+     "typ": "Abzweigstelle",
+     "bahnhof": "Rothrist",
+     "quellen": [
+      "SBB-Betriebspunkt"
+     ],
+     "osm_node": null,
+     "synthetisch_node": 360472204,
+     "personenverkehr": false
+    },
+    {
      "name": "Rothrist",
      "abk": "RTR",
      "typ": null,
@@ -416,18 +430,6 @@
      "osm_node": 3876626738,
      "synthetisch_node": null,
      "personenverkehr": true
-    },
-    {
-     "name": "Rothrist West (Abzw)",
-     "abk": "RTRW",
-     "typ": "Abzweigstelle",
-     "bahnhof": "Rothrist",
-     "quellen": [
-      "SBB-Betriebspunkt"
-     ],
-     "osm_node": null,
-     "synthetisch_node": 360472204,
-     "personenverkehr": false
     }
    ],
    "Neuchâtel": [
@@ -456,6 +458,19 @@
      "personenverkehr": false
     },
     {
+     "name": "Neuchâtel",
+     "abk": "NE",
+     "typ": null,
+     "bahnhof": "Neuchatel",
+     "quellen": [
+      "SBB-Betriebspunkt",
+      "OSM"
+     ],
+     "osm_node": 3081154414,
+     "synthetisch_node": null,
+     "personenverkehr": true
+    },
+    {
      "name": "Neuchâtel-Serrières",
      "abk": "NESE",
      "typ": null,
@@ -466,18 +481,6 @@
      "osm_node": null,
      "synthetisch_node": 10106458581,
      "personenverkehr": true
-    },
-    {
-     "name": "Neuchâtel-Vauseyon",
-     "abk": "NEVS",
-     "typ": null,
-     "bahnhof": "Neuchatel-Vauseyon",
-     "quellen": [
-      "SBB-Betriebspunkt"
-     ],
-     "osm_node": null,
-     "synthetisch_node": 11288506527,
-     "personenverkehr": false
     }
    ],
    "Neuchâtel-Vauseyon": [
@@ -685,108 +688,111 @@
    ],
    "perronkante": [
     {
-     "haltekante_fid": 200288750.0,
-     "bps": "Daniken SO",
-     "bps_abk": "DK",
-     "linie": 540.0,
-     "kundengleisnr": "4",
+     "haltekante_fid": 35280083.0,
+     "bps": "Bern Wankdorf",
+     "bps_abk": "BNWD",
+     "linie": 450.0,
+     "kundengleisnr": "7",
      "legende": "18_P 55 / - / - / - / -",
      "konformitaet": "P 55 / - / - / - / -",
-     "id_gleisstrang": 229310.0,
-     "punkt_stationierung": 644.0,
-     "richtung_gs_zu_haltekante": -1.0,
-     "punkt_radius": 0.0,
-     "punkt_uh": 0.0,
+     "id_gleisstrang": 511010.0,
+     "punkt_stationierung": 775.0,
+     "richtung_gs_zu_haltekante": 1.0,
+     "punkt_radius": 1723.176,
+     "punkt_uh": 36.56,
      "id_hilfstritt": 12.0,
      "text_normhoehe": null,
-     "n": 1245220.2,
-     "e": 2640790.8,
-     "perronkante_fid": 183036657.0,
-     "perronkante_laenge": 233.4665,
-     "haltekante_laenge": 231.042,
+     "n": 1201879.4,
+     "e": 2602091.4,
+     "perronkante_fid": 35319365.0,
+     "perronkante_laenge": 226.0405,
+     "haltekante_laenge": 222.541,
      "konf": "18"
     },
     {
-     "haltekante_fid": 200288750.0,
-     "bps": "Daniken SO",
-     "bps_abk": "DK",
-     "linie": 540.0,
-     "kundengleisnr": "4",
+     "haltekante_fid": 35280083.0,
+     "bps": "Bern Wankdorf",
+     "bps_abk": "BNWD",
+     "linie": 450.0,
+     "kundengleisnr": "7",
      "legende": "18_P 55 / - / - / - / -",
      "konformitaet": "P 55 / - / - / - / -",
-     "id_gleisstrang": 229310.0,
-     "punkt_stationierung": 645.0,
-     "richtung_gs_zu_haltekante": -1.0,
-     "punkt_radius": 0.0,
-     "punkt_uh": 0.0,
+     "id_gleisstrang": 511010.0,
+     "punkt_stationierung": 777.0,
+     "richtung_gs_zu_haltekante": 1.0,
+     "punkt_radius": 1824.685,
+     "punkt_uh": 34.527,
      "id_hilfstritt": 12.0,
      "text_normhoehe": null,
-     "n": 1245220.7,
-     "e": 2640791.7,
-     "perronkante_fid": 183036657.0,
-     "perronkante_laenge": 233.4665,
-     "haltekante_laenge": 231.042,
+     "n": 1201878.7,
+     "e": 2602089.5,
+     "perronkante_fid": 35319365.0,
+     "perronkante_laenge": 226.0405,
+     "haltekante_laenge": 222.541,
      "konf": "18"
     },
     {
-     "haltekante_fid": 200288750.0,
-     "bps": "Daniken SO",
-     "bps_abk": "DK",
-     "linie": 540.0,
-     "kundengleisnr": "4",
+     "haltekante_fid": 35280083.0,
+     "bps": "Bern Wankdorf",
+     "bps_abk": "BNWD",
+     "linie": 450.0,
+     "kundengleisnr": "7",
      "legende": "18_P 55 / - / - / - / -",
      "konformitaet": "P 55 / - / - / - / -",
-     "id_gleisstrang": 229310.0,
-     "punkt_stationierung": 648.0,
-     "richtung_gs_zu_haltekante": -1.0,
-     "punkt_radius": 0.0,
-     "punkt_uh": 0.0,
+     "id_gleisstrang": 511010.0,
+     "punkt_stationierung": 781.0,
+     "richtung_gs_zu_haltekante": 1.0,
+     "punkt_radius": 2068.374,
+     "punkt_uh": 30.459,
      "id_hilfstritt": 12.0,
      "text_normhoehe": null,
-     "n": 1245222.2,
-     "e": 2640794.2,
-     "perronkante_fid": 183036657.0,
-     "perronkante_laenge": 233.4665,
-     "haltekante_laenge": 231.042,
+     "n": 1201877.5,
+     "e": 2602085.7,
+     "perronkante_fid": 35319365.0,
+     "perronkante_laenge": 226.0405,
+     "haltekante_laenge": 222.541,
      "konf": "18"
     }
    ],
    "betriebspunkte": [
     {
-     "abkurzung_bpk": "BY",
-     "bezeichnung_bps": "Bussigny",
-     "linie": 169,
-     "km": 14.92027,
-     "linienname": "Lausanne-Triage sect. - Bussigny",
-     "didok": 1117,
-     "bpuic": 8501117,
-     "bezeichnung_offiziell": "Bussigny",
+     "abkurzung_bpk": "ECL",
+     "bezeichnung_bps": "Eclepens",
+     "linie": 210,
+     "km": 21.379,
+     "linienname": "Daillens - Biel/Bienne",
+     "didok": 1114,
+     "bpuic": 8501114,
+     "bezeichnung_offiziell": "Eclépens",
      "lod": "http://lod.opentransportdata.swiss/didok/didok85",
-     "sloid": "ch:1:sloid:1117"
+     "sloid": "ch:1:sloid:1114",
+     "globalid": null
     },
     {
-     "abkurzung_bpk": "BY",
-     "bezeichnung_bps": "Bussigny",
-     "linie": 200,
-     "km": 6.9281,
-     "linienname": "Renens VD Ouest - Vallorbe",
-     "didok": 1117,
-     "bpuic": 8501117,
-     "bezeichnung_offiziell": "Bussigny",
+     "abkurzung_bpk": "EFG",
+     "bezeichnung_bps": "Effingen",
+     "linie": 700,
+     "km": 42.43553,
+     "linienname": "Brugg - Pratteln Ost",
+     "didok": 307,
+     "bpuic": 8500307,
+     "bezeichnung_offiziell": "Effingen",
      "lod": "http://lod.opentransportdata.swiss/didok/didok85",
-     "sloid": "ch:1:sloid:1117"
+     "sloid": "ch:1:sloid:307",
+     "globalid": null
     },
     {
-     "abkurzung_bpk": "BYE",
-     "bezeichnung_bps": "Bussigny",
-     "linie": 206,
-     "km": 6.33829,
-     "linienname": "Renens VD Ouest - Bussigny Est",
-     "didok": 15312,
-     "bpuic": 8515312,
-     "bezeichnung_offiziell": "Bussigny Est (bif)",
+     "abkurzung_bpk": "EGW",
+     "bezeichnung_bps": "Eggwald (Spw)",
+     "linie": 600,
+     "km": 66.62448,
+     "linienname": "Immensee - Bellinzona - Chiasso",
+     "didok": 5142,
+     "bpuic": 8505142,
+     "bezeichnung_offiziell": "Eggwald (Spw)",
      "lod": "http://lod.opentransportdata.swiss/didok/didok85",
-     "sloid": "ch:1:sloid:15312"
+     "sloid": "ch:1:sloid:5142",
+     "globalid": null
     }
    ]
   },
