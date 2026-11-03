@@ -525,7 +525,10 @@ for sg in segs:
     # Regel 16: offenes Ende eines Streckengleises (kein Prellbock, Rand der Daten) = Abgang
     if not sg["tags"].get("service"):
         for e_, n_ in ((0, sg["nodes"][i0]), (1, sg["nodes"][i1])):
-            if use[n_] == 1 and ntag.get(n_, {}).get("railway") != "buffer_stop" and at_data_edge(n_):
+            # nur echte Way-Enden (3.11.2026, Saanen: Weichenknoten mitten im Streckengleis, Abzweig mit --hauptgleise
+            # weggelassen, lag < 60 m vom Datenrand -> Stück galt beidseitig als Abgang und fehlte: Lücke im Hauptgleis)
+            _we = n_ in (ways[sg["way"]]["nodes"][0], ways[sg["way"]]["nodes"][-1])
+            if use[n_] == 1 and _we and ntag.get(n_, {}).get("railway") != "buffer_stop" and at_data_edge(n_):
                 sg["cut%d" % e_] = True
     # Grenze zum Bereich des Nachbar-Betriebspunkts (künstlicher Randknoten aus region_vorbereiten): jedes Gleis läuft
     # dort weiter, auch Neben- und Verbindungsgleise (30.10.2026, Verkettung Sagliains Sasslatsch – Autoverlad)
@@ -580,6 +583,9 @@ clipped = [sg for sg in clipped if not ((sg["tags"].get("service") == "yard" or 
                     and sg["tags"].get("railway:track_ref") not in OVR.get("pax", []) and _side_cut(sg))]
 segs = [sg for sg in clipped if not (sg["cut0"] and sg["cut1"] and not passenger(sg["tags"])
         and _u[sg["nodes"][0]] == 1 and _u[sg["nodes"][-1]] == 1)]
+if os.environ.get("SEGDBG"):
+    for sg in clipped: 
+        if str(sg["way"]) == os.environ["SEGDBG"]: print("SEG", sg["way"], round(SD[sg["nodes"][0]][0]), round(SD[sg["nodes"][-1]][0]), [round(SD[n][1]) for n in sg["nodes"]][:12], sg.get("cut0"), sg.get("cut1"))
 # Knoten, durch den ein anderer Way durchläuft (nicht dort endet) -> dort liegt eine Weiche auf einem durchgehenden Gleis
 _thru_n = collections.defaultdict(set)
 for _w, _wd in ways.items():

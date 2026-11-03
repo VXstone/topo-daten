@@ -1693,7 +1693,24 @@ if "--pruefen" in sys.argv:
     if os.environ.get("TDBG"):
         for (eid, n), a_ in anchor.items():
             if nodes[n]["name"] == os.environ["TDBG"]: print("ANKER", [nodes[x]["name"] for r_ in routes for x in (r_["a"], r_["b"]) if id(r_["first"]) == eid or id(r_["last"]) == eid], a_.get("strang"), a_.get("refs"))
-    print("\n== Topologie Region (T1–T4) ==")
+    # T6 Haken (3.11.2026, Sendy-Sollard): Strecke kehrt auf kurzem Weg um (Knick > 120°) oder läuft gegen die
+    # Austrittsrichtung des Anschlusses in den Plan (Winkel zwischen Gleis und Anschluss > 120°)
+    for r in routes:
+        try: g_ = route_geom(r)
+        except Exception: continue
+        nm_ = f"{nodes[r['a']]['name']} – {nodes[r['b']]['name']}"; _h = 0
+        for l_ in g_["lines"]:
+            q_ = [np.asarray(p_, float) for k_, p_ in enumerate(l_) if k_ == 0 or np.linalg.norm(np.asarray(p_) - np.asarray(l_[k_ - 1])) > 1.5]
+            ds_ = [(b - a) / np.linalg.norm(b - a) for a, b in zip(q_, q_[1:])]
+            _h += sum(1 for u_, v_ in zip(ds_, ds_[1:]) if turn(u_, v_) > 120)
+            for n_, e_, d_ in ((r["a"], r["first"], ds_[0] if ds_ else None), (r["b"], r["last"], -ds_[-1] if ds_ else None)):
+                a_ = anchor.get((id(e_), n_))
+                if a_ is None or d_ is None: continue
+                v_ = rotv(np.asarray(a_["v"], float), ROT.get(n_, 0)) if "rotv" in globals() else np.asarray(a_["v"], float)
+                v_ = v_ / (np.linalg.norm(v_) or 1)
+                if turn(v_, d_) > 120: _h += 1
+        if _h: TOPO_R.append(dict(regel="T6", plan=nm_, text=f"{nm_}: {_h} Haken (Umkehr > 120° oder gegen die Anschlussrichtung)"))
+    print("\n== Topologie Region (T1–T6) ==")
     for t_ in TOPO_R: print(" ", t_["regel"], t_["text"])
     if not TOPO_R: print("  keine Befunde")
     json.dump(TOPO_R, open("topologie_region.json", "w"), ensure_ascii=False, indent=1)

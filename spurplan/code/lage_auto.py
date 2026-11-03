@@ -280,6 +280,15 @@ def ketten(nodes, MAJOR, routes, anchor, PORTS, S, P, fix, L0):
                 # quer so verschieben, dass die Anschlusspunkte auf der Kettenachse liegen (keine Stufe zwischen Nachbarn)
                 nv = np.array([-u[1], u[0]])
                 q = np.mean([float(rotv(np.array(anc(k, n)["off"], float), rot[n]) @ nv) for k in inc[n] if anc(k, n) is not None] or [0.0])
+                # Durchgehende Gerade (3.11.2026, Regel 1, MOB La Tine – Oeschseite): nicht die Mitte der Anschlussbündel,
+                # sondern das durchgehende Gleis auf die Kettenachse: das Anschlusspaar links/rechts mit dem kleinsten
+                # Querversatz (das Gleis, das gerade durch den Bahnhof läuft). Lage auto.gerade_kette (Standard an).
+                _as = [anc(k, n) for k in inc[n] if anc(k, n) is not None and anc(k, n).get("pts")]
+                if P.get("gerade_kette", True) and len(_as) == 2:
+                    _q1 = [float(rotv(np.array(p_, float), rot[n]) @ nv) for p_ in _as[0]["pts"]]
+                    _q2 = [float(rotv(np.array(p_, float), rot[n]) @ nv) for p_ in _as[1]["pts"]]
+                    x_, y_ = min(((x_, y_) for x_ in _q1 for y_ in _q2), key=lambda t: abs(t[0] - t[1]))
+                    q = (x_ + y_) / 2
                 pos[n] = pos[n] - nv * q
         return pos
     def bbox(n, p):

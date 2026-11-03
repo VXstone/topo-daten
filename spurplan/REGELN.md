@@ -110,3 +110,10 @@ Stand 21.10.2026.
 - R28f (Regionen): Streckengleis im Bogen nahe am Planende läuft an den Planrand statt als Stummel (Gruben, La Tine).
 - Perronfarbe nach Spur der anliegenden Gleise (Schmalspur braun), Halte im Regionalplan in Linienfarbe.
 - Feedbackkarte: Label der Regionalpläne automatisch aus bericht.json (Stand, Topologie, Verkettung) + «notiz» (regionalplaene.json).
+
+## Ruhe und Topologie (3.11. spät)
+- Kette: durchgehendes Gleis der inneren Bahnhöfe auf der Kettenachse (Anschlusspaar mit kleinstem Querversatz, `gerade_kette`).
+- Regel 16 (Abgang am Datenrand) nur an echten Way-Enden – Saanen: Weichenknoten mitten im Streckengleis galt als Datenrand, Hauptgleis-Stück fehlte (betrifft alle Pläne, im Workflow plaene geprüft).
+- T5 (gleisenden.py, je Bahnhofsplan): Streckengleis endet im Leeren (nicht an Gleis, Anschluss, Pfeil, Prellbock, Planrand oder seitlichem Abgang).
+- T6 (netz_lage --pruefen): Haken – Strecke kehrt um > 120° oder läuft gegen die Anschlussrichtung in den Plan.
+- T5/T6 stehen im Bericht unter «topologie_region» und damit auf der Feedbackkarte.

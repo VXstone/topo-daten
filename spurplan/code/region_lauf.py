@@ -109,9 +109,14 @@ shutil.copy(os.path.join(KDIR, "region.json"), os.path.join(WORK, "_konfig.json"
 r = sh(["python3", py("netz_lage.py"), NAME, K.get("titel", REG), "region.svg", "--pruefen"], timeout=1800)
 bericht["netz_lage"] = r.returncode
 # Topologie über die ganze Region (3.11.2026, T1–T4 aus netz_lage --pruefen): oberste Regel
+# T5 je Bahnhofsplan: Streckengleis endet im Leeren (3.11.2026, Saanen)
+sh(["python3", py("gleisenden.py"), ".", "--json", "gleisenden.json"])
 if os.path.exists(os.path.join(WORK, "topologie_region.json")):
     import collections as _c
     _tr = json.load(open(os.path.join(WORK, "topologie_region.json")))
+    if os.path.exists(os.path.join(WORK, "gleisenden.json")):
+        _tr += json.load(open(os.path.join(WORK, "gleisenden.json")))
+        json.dump(_tr, open(os.path.join(WORK, "topologie_region.json"), "w"), ensure_ascii=False, indent=1)
     bericht["topologie_region"] = dict(_c.Counter(t_["regel"] for t_ in _tr))
     shutil.copy(os.path.join(WORK, "topologie_region.json"), OUT)
 if os.path.exists(os.path.join(WORK, "region.svg")):
