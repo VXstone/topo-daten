@@ -101,38 +101,6 @@
     ]
    ]
   },
-  "chateau_d_oex|rossiniere": {
-   "chateau_d_oex": [
-    [
-     "ports",
-     true,
-     "120"
-    ]
-   ],
-   "rossiniere": [
-    [
-     "ports",
-     true,
-     "120"
-    ]
-   ]
-  },
-  "chateau_d_oex|flendruz": {
-   "chateau_d_oex": [
-    [
-     "ports",
-     true,
-     "120"
-    ]
-   ],
-   "flendruz": [
-    [
-     "ports",
-     true,
-     "120"
-    ]
-   ]
-  },
   "flendruz|rougemont": {
    "flendruz": [
     [
@@ -158,6 +126,11 @@
     ]
    ],
    "saanen": [
+    [
+     "ports",
+     true,
+     "120"
+    ],
     [
      "ports",
      true,
@@ -213,22 +186,6 @@
     ]
    ]
   },
-  "lenk_im_simmental|matten": {
-   "matten": [
-    [
-     "ports",
-     true,
-     "321"
-    ]
-   ],
-   "lenk_im_simmental": [
-    [
-     "pfeile",
-     false,
-     null
-    ]
-   ]
-  },
   "matten|st_stephan": {
    "matten": [
     [
@@ -238,22 +195,6 @@
     ]
    ],
    "st_stephan": [
-    [
-     "ports",
-     true,
-     "321"
-    ]
-   ]
-  },
-  "blankenburg|st_stephan": {
-   "st_stephan": [
-    [
-     "ports",
-     true,
-     "321"
-    ]
-   ],
-   "blankenburg": [
     [
      "ports",
      true,
@@ -283,6 +224,11 @@
      "ports",
      true,
      "120"
+    ],
+    [
+     "pfeile",
+     false,
+     null
     ]
    ],
    "oeschseite": [
@@ -431,22 +377,6 @@
     ]
    ]
   },
-  "chamby|chernex": {
-   "chernex": [
-    [
-     "ports",
-     true,
-     "120"
-    ]
-   ],
-   "chamby": [
-    [
-     "ports",
-     true,
-     "120"
-    ]
-   ]
-  },
   "chamby|sendy_sollard": {
    "chamby": [
     [
@@ -517,11 +447,6 @@
      "ports",
      true,
      "120"
-    ],
-    [
-     "ports",
-     true,
-     "120"
     ]
    ],
    "gstaad": [
@@ -566,6 +491,15 @@
      "ports",
      true,
      "120"
+    ]
+   ]
+  },
+  "lenk_im_simmental|matten": {
+   "lenk_im_simmental": [
+    [
+     "pfeile",
+     false,
+     null
     ]
    ]
   },
@@ -619,22 +553,6 @@
      "ports",
      true,
      "120"
-    ]
-   ]
-  },
-  "cret_d_y_bau|les_echets": {
-   "cret_d_y_bau": [
-    [
-     "ports",
-     true,
-     "122"
-    ]
-   ],
-   "les_echets": [
-    [
-     "ports",
-     true,
-     "122"
     ]
    ]
   },
@@ -750,15 +668,83 @@
   },
   {
    "regel": "V1",
+   "a": "gstaad",
+   "b": "saanen",
+   "text": "Gstaad: 2 Gleise nach Saanen, Saanen: 1 Gleise nach Gstaad"
+  },
+  {
+   "regel": "V1",
    "a": "la_tine",
    "b": "montbovon",
    "text": "La Tine: 1 Gleise nach Montbovon, Montbovon: 2 Gleise nach La Tine"
   },
   {
-   "regel": "V2",
+   "regel": "V3",
    "a": "lenk_im_simmental",
    "b": "matten",
-   "text": "Lenk im Simmental – Matten: Gleis im einen Plan als Pfeil, im anderen als Abgang"
+   "text": "Lenk im Simmental: 1 Gleis(e) nach Matten, dort kommt keines zurück"
+  },
+  {
+   "regel": "V1",
+   "a": "oeschseite",
+   "b": "zweisimmen",
+   "text": "Oeschseite: 1 Gleise nach Zweisimmen, Zweisimmen: 2 Gleise nach Oeschseite"
+  },
+  {
+   "regel": "V2",
+   "a": "oeschseite",
+   "b": "zweisimmen",
+   "text": "Oeschseite – Zweisimmen: Gleis im einen Plan als Pfeil, im anderen als Abgang"
+  },
+  {
+   "regel": "V1",
+   "a": "rougemont",
+   "b": "saanen",
+   "text": "Rougemont: 1 Gleise nach Saanen, Saanen: 2 Gleise nach Rougemont"
+  },
+  {
+   "regel": "S1",
+   "a": "montbovon",
+   "b": "la_tine",
+   "text": "Montbovon: 2 Streckengleis(e) nach La Tine, Strangbild 1"
+  },
+  {
+   "regel": "S1",
+   "a": "lenk_im_simmental",
+   "b": "boden",
+   "text": "Lenk im Simmental: 0 Streckengleis(e) nach Boden, Strangbild 1"
+  },
+  {
+   "regel": "S1",
+   "a": "gstaad",
+   "b": "saanen",
+   "text": "Gstaad: 2 Streckengleis(e) nach Saanen, Strangbild 1"
+  },
+  {
+   "regel": "S1",
+   "a": "saanen",
+   "b": "rougemont",
+   "text": "Saanen: 2 Streckengleis(e) nach Rougemont, Strangbild 1"
+  },
+  {
+   "regel": "S2",
+   "a": "zweisimmen",
+   "text": "Zweisimmen: Fahrbeziehung Abgang Spiez → Blankenburg, im Plan fehlt der Abgang nach Abgang Spiez"
+  },
+  {
+   "regel": "S3",
+   "a": "chamby",
+   "text": "Chamby: Fahrbeziehung Abgang Blonay → Sonzier im Plan nicht durchgehend gezeichnet"
+  },
+  {
+   "regel": "S2",
+   "a": "zweisimmen",
+   "text": "Zweisimmen: Fahrbeziehung Blankenburg → Abgang Spiez, im Plan fehlt der Abgang nach Abgang Spiez"
+  },
+  {
+   "regel": "S3",
+   "a": "chamby",
+   "text": "Chamby: Fahrbeziehung Sonzier → Abgang Blonay im Plan nicht durchgehend gezeichnet"
   }
  ]
 }

@@ -76,11 +76,6 @@
      "910"
     ],
     [
-     "ports",
-     true,
-     "960"
-    ],
-    [
      "pfeile",
      false,
      null
@@ -95,17 +90,33 @@
     [
      "ports",
      true,
-     "960"
-    ],
-    [
-     "ports",
-     true,
      "910"
     ],
     [
      "pfeile",
      false,
      null
+    ],
+    [
+     "pfeile",
+     false,
+     null
+    ]
+   ]
+  },
+  "sagliains_autoverlad|sasslatsch": {
+   "sagliains_autoverlad": [
+    [
+     "ports",
+     true,
+     "960"
+    ]
+   ],
+   "sasslatsch": [
+    [
+     "ports",
+     true,
+     "960"
     ]
    ]
   },
@@ -166,11 +177,6 @@
     [
      "ports",
      true,
-     "960"
-    ],
-    [
-     "ports",
-     true,
      "914"
     ]
    ],
@@ -179,11 +185,6 @@
      "ports",
      true,
      "914"
-    ],
-    [
-     "ports",
-     true,
-     "960"
     ]
    ]
   },
@@ -246,12 +247,5 @@
    ]
   }
  },
- "befunde": [
-  {
-   "regel": "V1",
-   "a": "sagliains_autoverlad",
-   "b": "sagliains_sasslatsch",
-   "text": "Sagliains Autoverlad: 4 Gleise nach Sagliains Sasslatsch, Sagliains Sasslatsch: 3 Gleise nach Sagliains Autoverlad"
-  }
- ]
+ "befunde": []
 }

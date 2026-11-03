@@ -1,6 +1,6 @@
 {
  "region": "mob",
- "erzeugt": "2026-10-30 19:41 UTC",
+ "erzeugt": "2026-11-03 05:41 UTC",
  "bahnhoefe": {
   "schonried": {
    "name": "Schönried",
@@ -102,16 +102,16 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "allieres": {
-   "name": "Allières",
-   "ok": true,
-   "befunde": "Befunde: {}",
-   "optionen": []
-  },
   "chernex": {
    "name": "Chernex",
    "ok": true,
    "befunde": "Befunde: {'F': 1}",
+   "optionen": []
+  },
+  "allieres": {
+   "name": "Allières",
+   "ok": true,
+   "befunde": "Befunde: {}",
    "optionen": []
   },
   "jaman": {
@@ -165,7 +165,7 @@
   "montbovon": {
    "name": "Montbovon",
    "ok": true,
-   "befunde": "Befunde: {}",
+   "befunde": "Befunde: {'B': 1}",
    "optionen": []
   },
   "belmont_sur_montreux": {
@@ -278,15 +278,18 @@
   }
  },
  "verkettung": {
-  "V1": 2,
+  "V1": 5,
   "V2": 2,
-  "V3": 0
+  "V3": 1,
+  "S1": 4,
+  "S2": 2,
+  "S3": 2
  },
  "netz_lage": 0,
  "regeln": {
   "G3": 2,
-  "G2": 34,
-  "G6": 7,
-  "G8": 13
+  "G2": 38,
+  "G6": 8,
+  "G8": 12
  }
 }

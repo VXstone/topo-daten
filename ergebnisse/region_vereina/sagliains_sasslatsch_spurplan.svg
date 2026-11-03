@@ -1,31 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -42 593 419" width="593" height="419" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
-<rect y="-42" width="100%" height="100%" fill="#fff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 875 377" width="875" height="377" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
+<rect width="100%" height="100%" fill="#fff"/>
 <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-<path d="M361.4,110.0L438.0,110.0 M432.0,110.0Q438.0,110.0 441.0,104.8L451.0,87.5 M282.1,110.0H282.1Q289.1,110.0 292.6,116.1L299.4,127.9Q302.9,134.0 309.9,134.0H309.9 M282.1,110.0H361.4 M333.5,134.0H333.5Q340.5,134.0 344.0,127.9L350.9,116.1Q354.4,110.0 361.4,110.0H361.4" stroke="#9a5b1e" stroke-width="1.6"/>
-<path d="M417.8,134.0L431.8,134.0  M363.3,134.0L438.0,134.0 M333.5,134.0H354.3 M226.9,134.0H309.9 M226.9,110.0H282.1 M309.9,134.0H333.5" stroke="#9a5b1e" stroke-width="3.6"/>
+<path d="M600.4,134.0H652.9 M361.4,110.0H652.9 M282.1,110.0H282.1Q289.1,110.0 292.6,116.1L299.4,127.9Q302.9,134.0 309.9,134.0H309.9 M282.1,110.0H361.4 M333.5,134.0H333.5Q340.5,134.0 344.0,127.9L350.9,116.1Q354.4,110.0 361.4,110.0H361.4" stroke="#9a5b1e" stroke-width="1.6"/>
+<path d=" M374.6,134.0H600.4 M333.5,134.0H374.6 M600.4,134.0H600.4Q603.5,134.0 605.0,136.7L615.8,155.3Q617.3,158.0 620.4,158.0H620.4M620.4,158.0H652.9 M226.9,134.0H309.9 M226.9,110.0H282.1 M309.9,134.0H333.5" stroke="#9a5b1e" stroke-width="3.6"/>
 </g>
-<path d="M455.5,79.7L454.5,89.5L447.5,85.5Z" fill="#9a5b1e" data-pfeil="0"/>
+<path d="M652.9,130.0L661.9,134.0L652.9,138.0Z" fill="#9a5b1e" data-pfeil="0"/>
+<path d="M652.9,106.0L661.9,110.0L652.9,114.0Z" fill="#9a5b1e" data-pfeil="1"/>
+<path d="M630.9,158.0H652.9" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
 <path d="M248.9,134.0H226.9" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
 <path d="M248.9,110.0H226.9" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
-<path d="M416.0,134.0H438.0" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
-<path d="M431.8,134.0L431.8,134.0L379.3,224.9" stroke="#9a5b1e" stroke-width="3.6" stroke-linecap="round" fill="none"/>
-<path d="M354.3,134.0Q363.3,134.0 367.8,141.8" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
-<path d="M367.8,141.8L367.8,141.8L420.3,232.7" stroke="#9a5b1e" stroke-width="3.6" stroke-linecap="round" fill="none"/>
-<path d="M438.0,134.0L438.0,134.0L490.5,43.1" stroke="#9a5b1e" stroke-width="3.6" stroke-linecap="round" fill="none"/>
-<path d="M392.5,184.6L402.5,202.0" stroke="#fff" stroke-width="7.6"/>
-<path d="M403.5,182.9L391.5,203.7" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
-<path d="M410.7,187.1L406.6,188.2L397.6,203.7L398.7,207.8" fill="none" stroke="#9a5b1e" stroke-width="1.2"/>
-<path d="M396.4,178.8L397.5,182.9L388.5,198.4L384.4,199.5" fill="none" stroke="#9a5b1e" stroke-width="1.2"/>
+<path d="M365.6,134.0Q374.6,134.0 379.1,141.8" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
+<path d="M379.1,141.8L379.1,141.8L431.6,232.7" stroke="#9a5b1e" stroke-width="3.6" stroke-linecap="round" fill="none"/>
+<text x="664.9" y="145.0" font-size="22" text-anchor="start" fill="#9a5b1e">Linie 910</text>
+<text x="664.9" y="171.0" font-size="22" text-anchor="start" fill="#9a5b1e">Sagliains →</text>
 <text x="214.9" y="121.0" font-size="22" text-anchor="end" fill="#9a5b1e">Linie 910</text>
 <text x="214.9" y="147.0" font-size="22" text-anchor="end" fill="#9a5b1e">← Klosters Platz</text>
 <text x="214.9" y="82.0" font-size="22" text-anchor="end" fill="#9a5b1e">← Klosters Platz</text>
-<text x="450.0" y="121.0" font-size="22" text-anchor="start" fill="#9a5b1e">Linie 960</text>
-<text x="450.0" y="147.0" font-size="22" text-anchor="start" fill="#9a5b1e">Scuol →</text>
-<text x="379.3" y="249.9" font-size="22" text-anchor="middle" fill="#9a5b1e">Linie 960</text>
-<text x="379.3" y="275.9" font-size="22" text-anchor="middle" fill="#9a5b1e">Susch →</text>
-<text x="420.3" y="313.7" font-size="22" text-anchor="middle" fill="#9a5b1e">Linie 914</text>
-<text x="420.3" y="339.7" font-size="22" text-anchor="middle" fill="#9a5b1e">Susch →</text>
-<text x="490.5" y="-15.9" font-size="22" text-anchor="middle" fill="#9a5b1e">Linie 910</text>
-<text x="490.5" y="10.1" font-size="22" text-anchor="middle" fill="#9a5b1e">Sagliains →</text>
-<text x="368.7" y="346.7" font-size="38" font-weight="700" text-anchor="middle" fill="#9a5b1e">Sagliains Sasslatsch</text>
+<text x="431.6" y="257.7" font-size="22" text-anchor="middle" fill="#9a5b1e">Linie 914</text>
+<text x="431.6" y="283.7" font-size="22" text-anchor="middle" fill="#9a5b1e">← Susch</text>
+<text x="381.0" y="346.7" font-size="38" font-weight="700" text-anchor="middle" fill="#9a5b1e">Sagliains Sasslatsch</text>
 </svg>

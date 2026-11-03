@@ -1,15 +1,15 @@
 {
  "region": "vereina",
- "erzeugt": "2026-10-30 19:40 UTC",
+ "erzeugt": "2026-11-03 05:43 UTC",
  "bahnhoefe": {
-  "sagliains": {
-   "name": "Sagliains",
+  "sagliains_autoverlad": {
+   "name": "Sagliains Autoverlad",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "sagliains_autoverlad": {
-   "name": "Sagliains Autoverlad",
+  "sagliains": {
+   "name": "Sagliains",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -26,6 +26,12 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
+  "sagliains_sasslatsch": {
+   "name": "Sagliains Sasslatsch",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
   "sasslatsch": {
    "name": "Sasslatsch",
    "ok": true,
@@ -36,12 +42,6 @@
    "name": "Klosters Selfranga",
    "ok": true,
    "befunde": "Befunde: {'B': 4}",
-   "optionen": []
-  },
-  "sagliains_sasslatsch": {
-   "name": "Sagliains Sasslatsch",
-   "ok": true,
-   "befunde": "Befunde: {'B': 2}",
    "optionen": []
   },
   "selfranga_sud": {
@@ -70,13 +70,16 @@
   }
  },
  "verkettung": {
-  "V1": 1,
+  "V1": 0,
   "V2": 0,
-  "V3": 0
+  "V3": 0,
+  "S1": 0,
+  "S2": 0,
+  "S3": 0
  },
  "netz_lage": 0,
  "regeln": {
-  "G2": 11,
-  "G6": 5
+  "G2": 9,
+  "G6": 7
  }
 }
