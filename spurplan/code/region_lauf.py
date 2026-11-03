@@ -49,6 +49,7 @@ if K.get("strangbild", True):
 T = json.load(open(os.path.join(WORK, f"{NAME}_topologie.json")))
 BP = json.load(open(os.path.join(WORK, "betriebspunkte.json"))); key_of = {v["name"]: k for k, v in BP.items()}
 STD = K.get("override_standard", {})
+_SB_ANKER = json.load(open(os.path.join(WORK, f"{NAME}_straenge.json"))).get("anker_m", {}) if os.path.exists(os.path.join(WORK, f"{NAME}_straenge.json")) else {}
 bericht = dict(region=REG, erzeugt=time.strftime("%Y-%m-%d %H:%M UTC", time.gmtime()), bahnhoefe={})
 def _bahnhof(n):
     b = key_of[n["name"]]; ov = os.path.join(WORK, f"{b}_override.json")
@@ -64,7 +65,12 @@ def _bahnhof(n):
         o.setdefault("cfg", {})["sw_search_m"] = max(o.get("cfg", {}).get("sw_search_m", 0), BP[b]["radius"])
     o.setdefault("cfg", {}).setdefault("haupt_fortsetzung", 0.15)  # Hauptgleis gerade weiter (3.11.2026), nur Regionen
     o["cfg"].setdefault("rules", {}).setdefault("r28e", True)       # Personengleis am Randpunkt läuft längs an den Rand
+    o["cfg"].setdefault("perron_frei", True)                          # Perron nicht über Gleise/Weichenbögen (3.11.2026, MOB)
     o["cfg"]["rules"].setdefault("r49", True)                       # zu eng für 60°: volle Schräge statt 90° (Sagliains West)
+    # Fenster bis zur fernsten Weiche, an der ein Strang dieses Betriebspunkts beginnt (3.11.2026, Montbovon; Strangbild)
+    _am = _SB_ANKER.get(b)
+    if _am and not _eigen_sw and K.get("fenster_strangbild", True):
+        o.setdefault("cfg", {})["sw_search_m"] = max(o.get("cfg", {}).get("sw_search_m", 0), _am + 30)
     if BP[b].get("titel"):                                  # Knotenplan: Titel mit allen Betriebspunkten, Weichen im ganzen Bereich
         o.setdefault("cfg", {}).setdefault("titel", BP[b]["titel"])
         if not _eigen_sw: o["cfg"]["sw_search_m"] = max(o["cfg"].get("sw_search_m", 0), BP[b]["radius"])

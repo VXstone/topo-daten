@@ -95,10 +95,15 @@ H = [LineString([xy(g) for g in w["geometry"]]) for w in haupt]
 def nah(w, m):
     L = LineString([xy(g) for g in w["geometry"]]) if len(w["geometry"]) > 1 else Point(xy(w["geometry"][0]))
     return any(L.distance(h) < m for h in H)
+# Gleise anderer Linien, die mit einem Ende in ein Streckengleis der Region münden, ganz übernehmen (3.11.2026, Montbovon:
+# Südende von Gleis 3 gehört der TPF, wurde am 300-m-Kreis des Astes abgeschnitten und erschien als Abgang «247 Bulle»,
+# obwohl es in die MOB nach La Tine mündet). Konfig «aeste_muendung»: false = nur Kreis.
+_HN = {n for w in ways if w["tags"].get("railway") in SCHMAL and w["tags"].get("ref") in LIN for n in w["nodes"]}
+def _muendet(w): return K.get("aeste_muendung", True) and not w["tags"].get("ref") and (w["nodes"][0] in _HN or w["nodes"][-1] in _HN)
 for w in ways:
     t = w["tags"]; rw = t.get("railway")
     if rw in SCHMAL:
-        if t.get("ref") in LIN or (t.get("operator") in BET and not t.get("ref")) or (not t.get("operator") and not t.get("ref") and nah(w, 60)):
+        if t.get("ref") in LIN or (t.get("operator") in BET and not t.get("ref")) or (not t.get("operator") and not t.get("ref") and nah(w, 60)) or _muendet(w):
             keep.append(w); continue
         for st_, R in K.get("aeste", {}).items(): keep += kreis(w, st_, R)
     elif rw == "rail":

@@ -224,6 +224,20 @@ if K.get("knotenplaene", True):
         if a in BP and b in BP and SW_EIGEN[a] and SW_EIGEN[b] and (len(ix) >= 2 or K.get("knoten_einspur", False)):
             L_ = min(STR[i]["laenge"] for i in ix)
             if L_ < K.get("knoten_ruhig_m", 500): _kand.append((L_, a, b))
+    # Nebengleis zwischen zwei Betriebspunkten (3.11.2026, D. Eckenstein: «Betriebspunkte vergrössern, damit Nebengleise
+    # nicht über Betriebspunkte hinweg gehen», Sagliains Sasslatsch – Autoverlad: zwei Ladegleise): Nebengleise (service),
+    # die Weichen zweier Betriebspunkte mit eigenen Weichen verbinden, legen beide in einen Plan. Konfig «knoten_nebengleis».
+    if K.get("knoten_nebengleis", True):
+        GS = graph([w for w in RAIL if w["tags"].get("service")])
+        for comp in nx.connected_components(GS):
+            bps_ = {ANKER[n] for n in comp if n in ANKER and ANKER[n] in BP and SW_EIGEN[ANKER[n]]}
+            bps_ = sorted(bps_)
+            for x_, y_ in zip(bps_, bps_[1:]):
+                L_ = sum(math.dist(P[a], P[b]) for a, b in GS.subgraph(comp).edges())
+                # nur nahe Betriebspunkte (Belmont – Châtelard 236 m); Sagliains – Sagliains Sasslatsch (1,2 km, Tunnel-
+                # einmündung) ergab einen Plan ohne Einmündung und Schenkel (6 Topologie-Befunde)
+                if math.dist(BPX[x_], BPX[y_]) > K.get("knoten_nebengleis_m", 600): continue
+                _kand.append((-1.0, x_, y_)); print("Nebengleis verbindet", BP[x_]["name"], "–", BP[y_]["name"], f"({L_:.0f} m Nebengleis)")
     for L_, a, b in sorted(_kand):                                   # kürzeste (unruhigste) Verbindung zuerst
         ra, rb = _f(a), _f(b)
         if ra == rb: continue
@@ -246,7 +260,11 @@ out = dict(knoten={k: dict(name=v["name"], art=KIND[k]) for k, v in BP.items()},
            abgaenge={x: dict(bp=v["bp"], knoten=v["knoten"], refs=sorted(v["refs"]), ort=ziel_ort(v)) for x, v in EX.items()},
            straenge=STR, strecken={f"{a}|{b}": dict(straenge=ix, gleise=len(ix), refs=sorted({r for i in ix for r in STR[i]["refs"]}))
                                      for (a, b), ix in STRECKE.items()},
-           fahrbeziehungen=[dict(von=a, bp=b, nach=c) for a, b, c in FBK], dreiecke=DREI, befunde=BEF, knotenplaene=KNOTEN)
+           fahrbeziehungen=[dict(von=a, bp=b, nach=c) for a, b, c in FBK], dreiecke=DREI, befunde=BEF, knotenplaene=KNOTEN,
+           # Reichweite je Betriebspunkt (3.11.2026, Montbovon: Zusammenlauf in die Einspur nach La Tine 399 m vom Punkt,
+           # Weichensuche 350 m -> Plan endete vor der Weiche, sah aus wie Doppelspur): fernste Weiche, an der ein Strang beginnt
+           anker_m={k: round(max(math.dist(P[n], BPX[k]) for n, k2 in ANKER.items() if k2 == k and GA.degree(n) >= 3), 1)
+                    for k in BP if any(k2 == k and GA.degree(n) >= 3 for n, k2 in ANKER.items())})
 json.dump(out, open(f"{NAME}_straenge.json", "w"), ensure_ascii=False, indent=1, default=str)
 print(f"Strangbild: {len(STR)} Stränge, {len(STRECKE)} Strecken, {len(EX)} Abgänge, {len(FBK)} Fahrbeziehungen, {len(DREI)} Dreiecke")
 for (a, b), ix in sorted(STRECKE.items(), key=lambda t: (name(t[0][0]), name(t[0][1]))):

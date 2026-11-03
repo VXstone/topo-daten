@@ -3095,6 +3095,44 @@ for e in ([] if OVR.get("platforms") is not None else PLAT):
     if _PPX and x1_ - x0_ > _PPX: _m = (x0_ + x1_) / 2; x0_, x1_ = _m - _PPX / 2, _m + _PPX / 2      # B14
     PERRON_PX.append((x0_, x1_, yb))
     out.append(f'<rect x="{x0_:.1f}" y="{yb - 4:.1f}" width="{x1_ - x0_:.1f}" height="8" rx="1.5" fill="{green}"/>')
+# Perron frei (3.11.2026, MOB: Perron länger als das gerade Stück seines Gleises deckte Weichenbögen und Gleise ab,
+# La Tine, Flendruz, Saanenmöser u. a.): jeder Perronbalken wird auf den längsten Abschnitt um seine Mitte gekürzt, in dem
+# kein gezeichnetes Gleis durch den Balken läuft; unter 24 px fällt er weg. cfg «perron_frei» (Regionen: an).
+if CFG.get("perron_frei", False):
+    from svgpathtools import parse_path as _ppf
+    _gp = []
+    for _d, _w in re.findall(r'<path d="([^"]+)" stroke="[^"]+" stroke-width="([\d.]+)"', "".join(o_ for o_ in out if o_.startswith("<path"))):
+        try: _pa = _ppf(_d)
+        except Exception: continue
+        for _sg in _pa:
+            _L = _sg.length()
+            if _L < 1e-6: continue
+            for _t in np.linspace(0, 1, max(2, int(_L / 1.5))):
+                _z = _sg.point(_t); _gp.append((_z.real, _z.imag, float(_w)))
+    _GP = np.array(_gp) if _gp else np.zeros((0, 3))
+    def _frei(x0, x1, yb):
+        if not len(_GP): return x0, x1
+        m = (_GP[:, 0] > x0) & (_GP[:, 0] < x1) & (np.abs(_GP[:, 1] - yb) < 4 + _GP[:, 2] / 2 + 1.0)
+        xs = sorted(_GP[m, 0])
+        if not xs: return x0, x1
+        cuts = [x0] + [x for x in xs] + [x1]; best = None; mid = (x0 + x1) / 2
+        for a, b in zip(cuts, cuts[1:]):
+            a2, b2 = (a + 3 if a != x0 else a), (b - 3 if b != x1 else b)
+            if b2 - a2 <= 0: continue
+            sc = (b2 - a2) - 0.3 * abs((a2 + b2) / 2 - mid)
+            if best is None or sc > best[0]: best = (sc, a2, b2)
+        return (best[1], best[2]) if best else (x0, x0)
+    _neu = []
+    for o_ in out:
+        m_ = re.match(r'<rect x="([-\d.]+)" y="([-\d.]+)" width="([\d.]+)" height="8" rx="1.5" fill="([^"]+)"/>$', o_)
+        if not m_: _neu.append(o_); continue
+        x0, y0, w0 = float(m_.group(1)), float(m_.group(2)), float(m_.group(3))
+        a, b = _frei(x0, x0 + w0, y0 + 4)
+        if b - a < 24: continue
+        _neu.append(f'<rect x="{a:.1f}" y="{y0:.1f}" width="{b - a:.1f}" height="8" rx="1.5" fill="{m_.group(4)}"/>')
+        for k_, (px0, px1, py) in enumerate(PERRON_PX):
+            if abs(py - (y0 + 4)) < 0.5 and abs(px0 - x0) < 0.5: PERRON_PX[k_] = (a, b, py)
+    out[:] = _neu
 # Doppelkreuzungsweichen (OSM railway:switch=double_slip): X mit den beiden Bogenverbindungen
 from svgpathtools import parse_path as _pp
 def _arm(d, nx_, ny_, reach=26):
