@@ -1,27 +1,27 @@
 {
  "region": "vereina",
- "erzeugt": "2026-11-03 15:38 UTC",
+ "erzeugt": "2026-11-03 16:31 UTC",
  "bahnhoefe": {
-  "susch": {
-   "name": "Susch",
-   "ok": true,
-   "befunde": "Befunde: {}",
-   "optionen": []
-  },
   "klosters_selfranga": {
    "name": "Klosters Selfranga",
    "ok": true,
    "befunde": "Befunde: {'B': 4}",
    "optionen": []
   },
-  "klosters_platz": {
-   "name": "Klosters Platz",
+  "susch": {
+   "name": "Susch",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
   "sagliains": {
    "name": "Sagliains",
+   "ok": true,
+   "befunde": "Befunde: {'B': 2}",
+   "optionen": []
+  },
+  "klosters_platz": {
+   "name": "Klosters Platz",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -73,7 +73,8 @@
  },
  "netz_lage": 0,
  "regeln": {
-  "G2": 10,
-  "G6": 7
+  "G2": 8,
+  "G6": 4,
+  "G8": 1
  }
 }
