@@ -31,9 +31,15 @@ py = lambda s: os.path.join(HERE, s)
 shutil.copy(os.path.join(HERE, "spurplan_schema.py"), WORK)      # spurplan_check.py führt das Schema aus dem Arbeitsordner aus
 import atexit
 atexit.register(lambda: open(os.path.join(OUT, "log.txt"), "w").write("\n\n".join(LOG)))   # Log auch bei Abbruch
+NAME = K.get("name", f"{REG}_region")
 if not NUR_LAGE:
     sh(["python3", py("region_vorbereiten.py"), DATEN, os.path.join(KDIR, "region.json"), WORK])
-NAME = K.get("name", f"{REG}_region")
+    # Knotenpläne (3.11.2026): Strangbild zeigt, wo zwischen Betriebspunkten keine ruhige Strecke liegt; dann die Region
+    # mit gemeinsamen Plänen neu vorbereiten (Konfig «knotenplaene»: false = ein Plan je Betriebspunkt wie bisher)
+    if K.get("strangbild", True) and K.get("knotenplaene", True):
+        sh(["python3", py("straenge.py"), "region.json", "betriebspunkte.json", os.path.join(KDIR, "region.json"), NAME, "--knoten"])
+        if os.path.exists(os.path.join(WORK, "knoten.json")) and json.load(open(os.path.join(WORK, "knoten.json"))):
+            sh(["python3", py("region_vorbereiten.py"), DATEN, os.path.join(KDIR, "region.json"), WORK, "knoten.json"])
 sh(["python3", py("topologie_linien.py"), "region.json", "betriebspunkte.json", os.path.join(KDIR, "region.json"), NAME])
 # Strangbild (3.11.2026, Strangprüfer): Strecken, Gleiszahl und Fahrbeziehungen aus OSM; ersetzt die Topologie der
 # Linienachsen (die Achsdateien je Bahnhof bleiben aus topologie_linien.py). Konfig «strangbild»: false = Linienachsen.
@@ -56,6 +62,9 @@ def _bahnhof(n):
     # vom Betriebspunkt; Sagliains Sasslatsch: Abzweig Nebengleis am Fensterrand). Bahnhofs-Override hat Vorrang.
     if not _eigen_sw and K.get("weichen_ganzer_bereich", True) and BP[b].get("dienst"):     # nur Dienststellen (Bahnhöfe: Fenster wie bisher, Zweisimmen)
         o.setdefault("cfg", {})["sw_search_m"] = max(o.get("cfg", {}).get("sw_search_m", 0), BP[b]["radius"])
+    if BP[b].get("titel"):                                  # Knotenplan: Titel mit allen Betriebspunkten, Weichen im ganzen Bereich
+        o.setdefault("cfg", {}).setdefault("titel", BP[b]["titel"])
+        if not _eigen_sw: o["cfg"]["sw_search_m"] = max(o["cfg"].get("sw_search_m", 0), BP[b]["radius"])
     json.dump(o, open(ov, "w"), ensure_ascii=False, indent=1)
     if NUR_LAGE and os.path.exists(os.path.join(WORK, f"{b}_ports.json")): return
     opt = K.get("optionen_je", {}).get(n["name"], K.get("optionen", []))

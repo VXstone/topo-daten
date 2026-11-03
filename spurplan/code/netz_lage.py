@@ -638,12 +638,12 @@ for n in [n for n in ids if nodes[n]["inset"]]:
         body = re.sub(r'<text x="([-\d.]+)" y="([-\d.]+)"', lambda m: f'<text transform="rotate({-a_} {m.group(1)} {float(m.group(2)) - 4:.1f})" x="{m.group(1)}" y="{m.group(2)}"', body)
     out.append(f'<g data-st="{nodes[n]["inset"].replace("_regional", "")}" data-name="{nodes[n]["name"]}" transform="translate({pos[n][0]:.1f},{pos[n][1]:.1f}) rotate({a_}) translate({-cx * S:.1f},{-cy * S:.1f}) scale({S})">{body}</g>')
     bx_ = boxes()[n]
-    if abs(a_) == 90: text(bx_[2] + 8, pos[n][1] + 6, nodes[n]["name"], 16, "start", 700)
-    elif a_ and abs(a_) != 180 and 40 < abs(a_) % 180 < 140: text(pos[n][0] + 34, pos[n][1] + 6, nodes[n]["name"], 16, "start", 700)   # steil: rechts neben der Mitte
+    if abs(a_) == 90: text(bx_[2] + 8, pos[n][1] + 6, nodes[n].get("titel", nodes[n]["name"]), 16, "start", 700)
+    elif a_ and abs(a_) != 180 and 40 < abs(a_) % 180 < 140: text(pos[n][0] + 34, pos[n][1] + 6, nodes[n].get("titel", nodes[n]["name"]), 16, "start", 700)   # steil: rechts neben der Mitte
     elif a_ and abs(a_) != 180:       # leicht schräg: über dem Kasten, quer zur Achse versetzt
         _h = (P["y_hi"] - P["y_lo"] + 50) * S / 2 + 10; _aa = a_ if abs(a_) < 90 else a_ - math.copysign(180, a_)
-        _o = rotv(np.array([0.0, -_h]), _aa); text(pos[n][0] + _o[0], pos[n][1] + _o[1], nodes[n]["name"], 16, weight=700)
-    else: text(pos[n][0], bx_[1] + 4, nodes[n]["name"], 16, weight=700)
+        _o = rotv(np.array([0.0, -_h]), _aa); text(pos[n][0] + _o[0], pos[n][1] + _o[1], nodes[n].get("titel", nodes[n]["name"]), 16, weight=700)
+    else: text(pos[n][0], bx_[1] + 4, nodes[n].get("titel", nodes[n]["name"]), 16, weight=700)
 # Strecken
 def track_ends(e, n, k):
     """k Anschlusspunkte (SVG) am Knoten n, quer sortiert."""

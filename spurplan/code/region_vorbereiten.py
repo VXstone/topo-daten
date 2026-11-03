@@ -16,7 +16,7 @@ Schmalspur wird für die Skripte als railway=rail / gauge=1435 geführt, die ech
 (Zeichnung braun). Ausgabe: region.json (alle Elemente der Region), <slug>.json je Betriebspunkt (Kreis, nur der
 eigene Stationsknoten als railway=station), betriebspunkte.json.
 """
-import gzip, json, math, os, re, sys, unicodedata
+import gzip, json, math, os, re, sys, unicodedata, collections
 from shapely.geometry import LineString, Point
 
 SRC, KONF, OUT = sys.argv[1], sys.argv[2], sys.argv[3]
@@ -169,7 +169,24 @@ for i, c_ in enumerate(cl):
     st = dict(type="node", id=-(i + 1), lat=la, lon=lo, tags=dict(railway="junction", name=nm))
     stations[nm] = st; betr.append(st); dienst.add(nm); nodes.append(st)
     R_MIN[nm] = max(math.dist(xy(q), xy(st)) for q in c_) + 150
-BPIDS = {b["id"] for b in betr}
+# Knotenpläne (3.11.2026): Betriebspunkte ohne ruhige Strecke dazwischen bilden einen gemeinsamen Plan (knoten.json aus
+# straenge.py, zweiter Durchgang von region_lauf.py). Der Hauptpunkt behält Namen und Stationsknoten, sein Bereich ist die
+# Vereinigung der Bereiche aller Mitglieder; der Plantitel nennt alle.
+KNOTEN = json.load(open(sys.argv[4])) if len(sys.argv) > 4 and os.path.exists(sys.argv[4]) else []
+ZU = {}                                   # Mitglied -> Hauptpunkt
+for g_ in KNOTEN:
+    if g_["haupt"] not in stations or not any(b["tags"]["name"] == g_["haupt"] for b in betr): continue
+    for m_ in g_["mitglieder"]:
+        if m_ != g_["haupt"] and any(b["tags"]["name"] == m_ for b in betr): ZU[m_] = g_["haupt"]
+MIT = collections.defaultdict(list)       # Hauptpunkt -> Mitglieder (Knoten), Hauptpunkt zuerst
+for b in betr:
+    MIT[ZU.get(b["tags"]["name"], b["tags"]["name"])].append(b)
+for h_ in MIT: MIT[h_].sort(key=lambda b: b["tags"]["name"] != h_)
+alle_bp = list(betr)
+betr = [b for b in betr if b["tags"]["name"] not in ZU]
+for h_, ms_ in MIT.items():
+    if len(ms_) > 1: print(f"  Knotenplan {h_}: " + " · ".join(b["tags"]["name"] for b in ms_))
+BPIDS = {b["id"] for b in alle_bp}
 out_n = [e for e in nodes if e["id"] in used and e.get("tags", {}).get("railway") not in BP_TYP] + betr
 json.dump({"elements": out_n + out_w}, open(os.path.join(OUT, "region.json"), "w"))
 # Rohausschnitt (alle Elemente im Rahmen, alle Tags) für lokale Fehlersuche: region_lauf.py --daten roh.json.gz
@@ -179,7 +196,7 @@ BP = {}
 def _radius(st):
     name = st["tags"]["name"]
     return K.get("radius_je", {}).get(name, max(K.get("radius_dienst", 400), R_MIN.get(name, 0)) if name in dienst else K.get("radius", 700))   # Bahnhöfe: Radius unverändert (abgenommene Pläne)
-_KR = [(st["id"], xy(st), _radius(st)) for st in betr]
+_KR = [(st["id"], xy(m_), _radius(m_)) for st in betr for m_ in MIT[st["tags"]["name"]]]   # Knotenplan: ein Kreis je Mitglied, gleiche id
 # Bereiche (30.10.2026, Verkettung): überlappen sich zwei Kreise, gehört jeder Punkt nur zum nächsten Betriebspunkt
 # (Grenze in der Mitte, «bp_voronoi_m» Zuschlag über die Mitte hinaus). Vorher lagen dieselben Gleise in zwei Plänen
 # (Sasslatsch / Sagliains Sasslatsch, Sagliains / Autoverlad) und erschienen im Regionalplan doppelt oder als Pfeile.
@@ -200,25 +217,28 @@ for n in _verzw:
 _KERN = {i_: _np.array(v_, float) for i_, v_ in _KERN.items()}
 def _dk(p_, i_): return float(_np.min(_np.hypot(*(_KERN[i_] - _np.array(p_, float)).T)))
 def _bereich(sid, c, R):
-    andere = [(i2, c2, R2) for i2, c2, R2 in _KR if i2 != sid and math.dist(c, c2) < R + R2 + 200]
-    if not _VOR or not andere: return lambda p_: math.dist(p_, c) <= R
-    return lambda p_: math.dist(p_, c) <= R and all(_dk(p_, sid) <= _dk(p_, i2) + _VTOL for i2, c2, R2 in andere if math.dist(p_, c2) <= R2)
+    eigen = [(c1, R1) for i1, c1, R1 in _KR if i1 == sid] or [(c, R)]
+    andere = [(i2, c2, R2) for i2, c2, R2 in _KR if i2 != sid and any(math.dist(c1, c2) < R1 + R2 + 200 for c1, R1 in eigen)]
+    drin = lambda p_: any(math.dist(p_, c1) <= R1 for c1, R1 in eigen)
+    if not _VOR or not andere: return drin
+    return lambda p_: drin(p_) and all(_dk(p_, sid) <= _dk(p_, i2) + _VTOL for i2, c2, R2 in andere if math.dist(p_, c2) <= R2)
 for st in betr:
     name = st["tags"]["name"]; key = slug(name); R = _radius(st)
     c = xy(st); el = []; innen_ = _bereich(st["id"], c, R)
+    _ms = MIT[name]; R = max(math.dist(c, xy(m_)) + _radius(m_) for m_ in _ms)      # Knotenplan: Kreis um alle Mitglieder
     for e in out_n:
         if e["type"] == "node" and e["id"] in BPIDS:
             if e["id"] != st["id"]: continue
             e = dict(e); e["tags"] = dict(e["tags"], railway="station"); e["tags"].pop("public_transport", None)
             el.append(e); continue
         if innen_(xy(e)): el.append(e)
-    sp_here = {w["tags"].get("spur", "1435") for w in out_w if w["tags"].get("railway") == "rail" and min(math.dist(xy(g), c) for g in w["geometry"]) < 100}   # 100 m: Betriebsstellenknoten liegen in OSM oft neben dem Gleis (Selfranga Süd 61 m)
+    sp_here = {w["tags"].get("spur", "1435") for w in out_w if w["tags"].get("railway") == "rail" and min(math.dist(xy(g), xy(m_)) for g in w["geometry"] for m_ in _ms) < 100}   # 100 m: Betriebsstellenknoten liegen in OSM oft neben dem Gleis (Selfranga Süd 61 m)
     for w in out_w:
         if w["tags"].get("railway") == "rail" and w["tags"].get("spur", "1435") not in sp_here: continue   # nur die Spuren dieses Betriebspunkts (Belmont: keine SBB-Gleise)
         if w["tags"].get("railway") == "platform" or w["tags"].get("public_transport") == "platform":
             # Perron nur beim nächstgelegenen Betriebspunkt (29.10.2026: Perron 3/4 Sagliains lag im Kreis des Autoverlads)
             _pm = (sum(xy(g)[0] for g in w["geometry"]) / len(w["geometry"]), sum(xy(g)[1] for g in w["geometry"]) / len(w["geometry"]))
-            if min(betr, key=lambda b_: math.dist(xy(b_), _pm))["id"] != st["id"]: continue
+            if min(alle_bp, key=lambda b_: math.dist(xy(b_), _pm)) not in _ms: continue
         _perron = w["tags"].get("railway") == "platform" or w["tags"].get("public_transport") == "platform"
         runs = kreis_runs(w, c, R, None if _perron else innen_)     # Perrons ganz (schon dem nächsten Betriebspunkt zugeteilt)
         for k, r in enumerate(runs):
@@ -230,6 +250,13 @@ for st in betr:
     BP[key] = dict(name=name, id=st["id"], lat=st["lat"], lon=st["lon"], radius=R, spuren=spuren,
                    weichen=sum(1 for e in out_n if e.get("tags", {}).get("railway") == "switch" and math.dist(xy(e), c) < min(R, 600)),
                    normalspur=name in K.get("normalspur", {}), dienst=name in dienst)
+    if len(_ms) > 1:
+        BP[key]["mitglieder"] = [m_["tags"]["name"] for m_ in _ms]
+        # Titel: Hauptpunkt, dann die übrigen ohne wiederholten Ortsnamen (Sagliains · Autoverlad · Sasslatsch)
+        _alle = {b_["tags"]["name"] for b_ in alle_bp}
+        _kurz = lambda m_: m_[len(name):].strip() if m_.startswith(name + " ") and m_[len(name):].strip() not in _alle else m_
+        BP[key]["titel"] = " · ".join([name] + [_kurz(m_) for m_ in BP[key]["mitglieder"][1:]])
+        BP[key]["weichen"] = sum(1 for e in out_n if e.get("tags", {}).get("railway") == "switch" and innen_(xy(e)))
 json.dump(BP, open(os.path.join(OUT, "betriebspunkte.json"), "w"), ensure_ascii=False, indent=1)
 # Fernpunkte für Abgangsziele (29.10.2026, Klosters: 910 und 915 verlassen den Bahnhof in Schleifen, die Peilung am
 # Planrand zeigt nach Westen). Aus den vollständigen Daten (nicht dem gekürzten Ausschnitt): je Knoten im Ausschnitt

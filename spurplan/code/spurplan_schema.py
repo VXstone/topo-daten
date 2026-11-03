@@ -100,7 +100,7 @@ allpts = [(g["lat"], g["lon"]) for w in ways.values() for g in w["geometry"]]
 def nearest_rail(e):
     return min((e["lat"] - la) ** 2 + ((e["lon"] - lo) * 0.68) ** 2 for la, lo in allpts)
 ST = min(STN, key=nearest_rail) if STN else None
-CFG["title"] = ST["tags"].get("name", key).split("/")[0].strip() if ST else key
+CFG["title"] = CFG.get("titel") or (ST["tags"].get("name", key).split("/")[0].strip() if ST else key)   # «titel»: Knotenplan (3.11.2026)
 lat0, lon0 = (ST["lat"], ST["lon"]) if ST else np.mean(allpts, axis=0)
 kx = 111320 * math.cos(math.radians(lat0)); ky = 110540
 xy = lambda p: ((p["lon"] - lon0) * kx, (p["lat"] - lat0) * ky)

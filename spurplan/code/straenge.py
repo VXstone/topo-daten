@@ -204,13 +204,46 @@ NB = collections.defaultdict(set)
 for a, b in STRECKE: NB[a].add(b); NB[b].add(a)
 DREI = sorted({tuple(sorted((a, b, c))) for a in NB for b in NB[a] for c in NB[b] if c in NB[a] and len({a, b, c}) == 3})
 
+# ---- Knotenpläne (3.11.2026, Wunsch D. Eckenstein: «Bahnhofpläne flexibel … bis zwei Gleise wirklich parallel weggehen
+# und die Situation klar, ruhig, eine Strecke ist»). Pläne werden nur an ruhigen Stellen geschnitten: einem Strang ohne
+# Weiche von mindestens «knoten_ruhig_m» (500 m) Länge. Liegen zwei Betriebspunkte mit eigenen Weichen näher beieinander,
+# entsteht ein gemeinsamer Plan (Sagliains – Autoverlad – Sagliains Sasslatsch – Sasslatsch). Halte ohne Weiche schneiden
+# nie (sie liegen am Gleis, ruhig). Höchstens «knoten_max_m» (2500 m) Ausdehnung, sonst bleibt die kürzeste Verbindung offen.
+SW_EIGEN = collections.Counter(k for n, k in ANKER.items() if GA.degree(n) >= 3 and k in BP)
+KNOTEN = []
+if K.get("knotenplaene", True):
+    _par = {}
+    def _f(x):
+        while _par.get(x, x) != x: x = _par[x]
+        return x
+    _kand = []
+    for (a, b), ix in STRECKE.items():
+        if a in BP and b in BP and SW_EIGEN[a] and SW_EIGEN[b]:
+            L_ = min(STR[i]["laenge"] for i in ix)
+            if L_ < K.get("knoten_ruhig_m", 500): _kand.append((L_, a, b))
+    for L_, a, b in sorted(_kand):                                   # kürzeste (unruhigste) Verbindung zuerst
+        ra, rb = _f(a), _f(b)
+        if ra == rb: continue
+        mem = [k for k in BP if _f(k) in (ra, rb)]
+        if max(math.dist(BPX[x], BPX[y]) for x in mem for y in mem) > K.get("knoten_max_m", 2500): continue
+        _par[ra] = rb
+    _g = collections.defaultdict(list)
+    for k in BP: _g[_f(k)].append(k)
+    for v in _g.values():
+        if len(v) < 2: continue
+        # Hauptpunkt: Personenbahnhof vor Dienststelle, dann meiste eigene Weichen
+        h = max(v, key=lambda k: (not BP[k].get("dienst"), SW_EIGEN[k], KIND[k] == "station"))
+        KNOTEN.append(dict(haupt=BP[h]["name"], mitglieder=[BP[k]["name"] for k in sorted(v, key=lambda k: BPX[k][0])]))
+    for g_ in KNOTEN: print("Knotenplan:", " · ".join(g_["mitglieder"]), "(Hauptpunkt", g_["haupt"] + ")")
+    if "--knoten" in sys.argv: json.dump(KNOTEN, open("knoten.json", "w"), ensure_ascii=False, indent=1)
+
 name = lambda k: BP[k]["name"] if k in BP else (f"Abgang {'/'.join(sorted(EX[k]['refs']))}" if k in EX else str(k))
 BEF = [dict(regel="S0", text=f"Abzweig ohne Betriebspunkt bei Knoten {n}") for n, k in ANKER.items() if str(k).startswith("_abzweig_")]
 out = dict(knoten={k: dict(name=v["name"], art=KIND[k]) for k, v in BP.items()},
            abgaenge={x: dict(bp=v["bp"], knoten=v["knoten"], refs=sorted(v["refs"]), ort=ziel_ort(v)) for x, v in EX.items()},
            straenge=STR, strecken={f"{a}|{b}": dict(straenge=ix, gleise=len(ix), refs=sorted({r for i in ix for r in STR[i]["refs"]}))
                                      for (a, b), ix in STRECKE.items()},
-           fahrbeziehungen=[dict(von=a, bp=b, nach=c) for a, b, c in FBK], dreiecke=DREI, befunde=BEF)
+           fahrbeziehungen=[dict(von=a, bp=b, nach=c) for a, b, c in FBK], dreiecke=DREI, befunde=BEF, knotenplaene=KNOTEN)
 json.dump(out, open(f"{NAME}_straenge.json", "w"), ensure_ascii=False, indent=1, default=str)
 print(f"Strangbild: {len(STR)} Stränge, {len(STRECKE)} Strecken, {len(EX)} Abgänge, {len(FBK)} Fahrbeziehungen, {len(DREI)} Dreiecke")
 for (a, b), ix in sorted(STRECKE.items(), key=lambda t: (name(t[0][0]), name(t[0][1]))):
@@ -225,7 +258,7 @@ if "--topologie" in sys.argv:
     def add(key, **kw):
         kw["id"] = len(nodes); nodes.append(kw); idx[key] = kw["id"]; return kw["id"]
     for k, v in BP.items():
-        x, y = BPX[k]; add(k, name=v["name"], kind=KIND[k], x=x, y=y)
+        x, y = BPX[k]; add(k, name=v["name"], kind=KIND[k], x=x, y=y, **({"titel": v["titel"]} if v.get("titel") else {}))
     for x_, v in EX.items():
         px, py = (sum(P[n][0] for n in v["knoten"]) / len(v["knoten"]), sum(P[n][1] for n in v["knoten"]) / len(v["knoten"]))
         rs = sorted(v["refs"]); add(x_, name=f"Abgang {rs[0] if rs else ''}", kind="exit", x=px, y=py, ref=rs[0] if rs else None,

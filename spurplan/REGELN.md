@@ -89,3 +89,9 @@ Stand 21.10.2026.
 - Fahrbeziehungen je Betriebspunkt (über Weichen fahrbar, keine Spitzkehre) und Dreiecke kommen aus dem Strangbild (Vereina: Sagliains Sasslatsch – Sasslatsch – Autoverlad).
 - Die Regionaltopologie kommt aus dem Strangbild. Prüfung S1 (Streckengleise je Nachbar = Gleiszahl), S2 (Abgang je Fahrbeziehung vorhanden), S3 (Fahrbeziehung im Plan durchgehend gezeichnet).
 - R33b: Streckengleis nach der letzten Weiche ohne weitere Abzweigung läuft auf seiner Ebene gerade aus dem Plan (Klosters → Selfranga).
+
+## Knotenpläne (3.11.)
+- Pläne werden nur an ruhigen Stellen geschnitten: Strang ohne Weiche ≥ `knoten_ruhig_m` (500 m). Liegen zwei Betriebspunkte mit eigenen Weichen näher beieinander, entsteht ein gemeinsamer Plan (Titel nennt alle, Hauptpunkt = Personenbahnhof bzw. meiste Weichen). Halte ohne Weiche schneiden nie. Ausdehnung höchstens `knoten_max_m` (2500 m). `knotenplaene: false` = ein Plan je Betriebspunkt.
+- Ablauf: region_vorbereiten → straenge --knoten (knoten.json) → region_vorbereiten mit knoten.json → wie bisher.
+- Ergibt Vereina: Sagliains · Autoverlad · Sagliains Sasslatsch · Sasslatsch; MOB: Belmont-sur-Montreux · Châtelard.
+- Offen: Gleisdreieck im Knotenplan (eine Achse) noch nicht sauber gezeichnet.
