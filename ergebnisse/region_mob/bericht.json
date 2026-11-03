@@ -1,6 +1,6 @@
 {
  "region": "mob",
- "erzeugt": "2026-11-03 20:20 UTC",
+ "erzeugt": "2026-11-03 21:18 UTC",
  "bahnhoefe": {
   "schonried": {
    "name": "Schönried",
@@ -71,7 +71,7 @@
   "zweisimmen": {
    "name": "Zweisimmen",
    "ok": true,
-   "befunde": "Befunde: {}",
+   "befunde": "Befunde: {'A': 1, 'B': 8}",
    "optionen": [
     "--hauptgleise"
    ]
@@ -91,7 +91,7 @@
   "montreux": {
    "name": "Montreux",
    "ok": true,
-   "befunde": "Befunde: {'A': 4, 'B': 40, 'D': 4, 'F': 2}",
+   "befunde": "Befunde: {'A': 4, 'B': 31, 'D': 4, 'F': 1}",
    "optionen": [
     "--hauptgleise"
    ]
@@ -123,7 +123,7 @@
   "saanen": {
    "name": "Saanen",
    "ok": true,
-   "befunde": "Befunde: {}",
+   "befunde": "Befunde: {'A': 1}",
    "optionen": []
   },
   "saanenmoser": {
@@ -138,16 +138,16 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "gstaad": {
-   "name": "Gstaad",
+  "gruben": {
+   "name": "Gruben",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "gruben": {
-   "name": "Gruben",
+  "gstaad": {
+   "name": "Gstaad",
    "ok": true,
-   "befunde": "Befunde: {'A': 1}",
+   "befunde": "Befunde: {}",
    "optionen": []
   },
   "lenk_im_simmental": {
@@ -162,14 +162,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "montbovon": {
-   "name": "Montbovon",
+  "belmont_sur_montreux": {
+   "name": "Belmont-sur-Montreux",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "belmont_sur_montreux": {
-   "name": "Belmont-sur-Montreux",
+  "montbovon": {
+   "name": "Montbovon",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -264,32 +264,32 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "vernex": {
-   "name": "Vernex",
+  "glion_college": {
+   "name": "Glion-Collège",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "glion_college": {
-   "name": "Glion-Collège",
+  "vernex": {
+   "name": "Vernex",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   }
  },
  "verkettung": {
-  "V1": 2,
+  "V1": 1,
   "V2": 1,
   "V3": 1,
-  "S1": 2,
+  "S1": 1,
   "S2": 2,
   "S3": 2
  },
  "netz_lage": 0,
  "topologie_region": {},
  "regeln": {
-  "G2": 19,
-  "G6": 5,
-  "G8": 10
+  "G2": 25,
+  "G6": 6,
+  "G8": 9
  }
 }

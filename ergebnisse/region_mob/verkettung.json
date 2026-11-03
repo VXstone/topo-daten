@@ -125,11 +125,6 @@
      "ports",
      true,
      "120"
-    ],
-    [
-     "ports",
-     true,
-     "120"
     ]
    ]
   },
@@ -482,8 +477,8 @@
   "lenk_im_simmental|matten": {
    "lenk_im_simmental": [
     [
-     "pfeile",
-     false,
+     "ports",
+     true,
      null
     ]
    ]
@@ -658,22 +653,10 @@
    "text": "Lenk im Simmental: 1 Gleis(e) nach Matten, dort kommt keines zurück"
   },
   {
-   "regel": "V1",
-   "a": "rougemont",
-   "b": "saanen",
-   "text": "Rougemont: 1 Gleise nach Saanen, Saanen: 2 Gleise nach Rougemont"
-  },
-  {
    "regel": "S1",
    "a": "lenk_im_simmental",
    "b": "boden",
    "text": "Lenk im Simmental: 0 Streckengleis(e) nach Boden, Strangbild 1"
-  },
-  {
-   "regel": "S1",
-   "a": "saanen",
-   "b": "rougemont",
-   "text": "Saanen: 2 Streckengleis(e) nach Rougemont, Strangbild 1"
   },
   {
    "regel": "S2",
