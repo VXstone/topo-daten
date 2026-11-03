@@ -117,3 +117,7 @@ Stand 21.10.2026.
 - T5 (gleisenden.py, je Bahnhofsplan): Streckengleis endet im Leeren (nicht an Gleis, Anschluss, Pfeil, Prellbock, Planrand oder seitlichem Abgang).
 - T6 (netz_lage --pruefen): Haken – Strecke kehrt um > 120° oder läuft gegen die Anschlussrichtung in den Plan.
 - T5/T6 stehen im Bericht unter «topologie_region» und damit auf der Feedbackkarte.
+- R36b (Regionen): Weiche direkt vor dem Planrand mit Haupt- und Nebengleis – das Streckengleis läuft weiter (Sendy-Sollard: Kreuzungsgleis lief als «Montreux» weiter, Streckengleis fehlte).
+- Gleis bleibt Gleis (`gleis_mindestlaenge`, Regionen): gerades Gleis mit Ebenenwechsel an den Enden behält ≥ 40 px bzw. 35 % seiner Länge (Sendy-Sollard: 190-m-Kreuzungsgleis auf 32 px gestaucht; Flendruz: Perron wieder da).
+- Halt bleibt Halt (netz_lage `halt_ohne_schlaufe`): Halte ohne Weiche nie als Schlaufe.
+- Offen: Château-d'Oex – durchgehendes Gleis wechselt im Plan zwei Ebenen (links Gl. unten, rechts oben) → Versatz auf den Nachbarstrecken (La Chaudanne, Les Granges). Lösung: Punkt 4 (durchgehendes Hauptgleis im Plan gerade).

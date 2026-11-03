@@ -1599,6 +1599,9 @@ for hi_, (n, (p, d, k)) in enumerate(HALT_AT.items()):
             return _lab_hits(lab_ + np.array([0, 4]), nodes[n]["name"], anc_)[0]
         if _cand(-nv) < _cand(nv): nv = -nv
     nt = nodes[n].get("tracks", 1) or 1
+    # Halt bleibt Halt (3.11.2026, La Chaudanne-Les Moulins, Les Granges: Halt ohne Weiche als Kreuzungsstelle mit
+    # S-Kurve gezeichnet, weil OSM dort zwei Gleise kennt): nur ein Betriebspunkt mit Weichen bekommt die Schlaufe
+    if nodes[n]["kind"] == "halt" and L0.get("halt_ohne_schlaufe", True): nt = 1
     if k == 1 and nt >= 2:
         L_ = 30; run = TG / TAN60 + 3
         path([p - d * L_, p - d * (L_ - run) + nv * TG, p + d * (L_ - run) + nv * TG, p + d * L_], _hc, 2.4)

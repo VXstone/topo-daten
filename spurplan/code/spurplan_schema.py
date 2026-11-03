@@ -554,12 +554,17 @@ for sg in clipped:
 if RU.get("r36", True):
     for n_ in EDGE_NODES:
         at_ = [(sg, e_) for sg in clipped for e_, m_ in ((0, sg["nodes"][0]), (1, sg["nodes"][-1])) if m_ == n_ and sg["cut%d" % e_]]
-        if len(at_) < 2 or len(EDGE_OUTS[n_]) >= len(at_) or not all(passenger(t[0]["tags"]) for t in at_): continue
+        # R36b (3.11.2026, Sendy-Sollard: Kreuzungsgleis und Streckengleis enden an der Weiche direkt vor dem Planrand,
+        # beide galten als Abgang, das Kreuzungsgleis lief als «Montreux» weiter): auch gemischt Haupt-/Nebengleis – dann
+        # läuft das Streckengleis weiter. Nur Regionen (rules «r36b»).
+        _gem = RU.get("r36b", False) and any(passenger(t[0]["tags"]) for t in at_)
+        if len(at_) < 2 or len(EDGE_OUTS[n_]) >= len(at_) or not (all(passenger(t[0]["tags"]) for t in at_) or _gem): continue
+        if _gem and not all(passenger(t[0]["tags"]) for t in at_): at_ = [t for t in at_ if passenger(t[0]["tags"])] + [t for t in at_ if not passenger(t[0]["tags"])]
         vo = np.subtract(P[EDGE_OUT[n_]], P[n_]); vo = vo / (np.linalg.norm(vo) or 1)
         def _al(t):
             sg, e_ = t; m_ = sg["nodes"][1] if e_ == 0 else sg["nodes"][-2]
             vi = np.subtract(P[n_], P[m_]); return float(vi @ vo) / (np.linalg.norm(vi) or 1)
-        best = max(at_, key=_al)
+        best = max([t for t in at_ if passenger(t[0]["tags"])] or at_, key=_al)
         if ARGS.dbg: print("R36", n_, [(t[0]["way"], t[0]["tags"].get("service"), round(_al(t), 2)) for t in at_], len(EDGE_OUTS[n_]))
         for t in at_:
             if t is not best: t[0]["cut%d" % t[1]] = False
@@ -3797,7 +3802,13 @@ for sg in segs:
         for n_ in (sg["nodes"][0], sg["nodes"][-1]):
             dl = abs(home[n_] - seglane[sg["id"]])
             if dl > 0.01 and n_ not in diag_dir: need += abs(LY(home[n_]) - LY(seglane[sg["id"]])) / TAN + R2
-        if need: REQ.append((sg["s0"], sg["s1"], need + 4, 0.3))
+        if need:
+            # Gleis bleibt Gleis (3.11.2026, Sendy-Sollard: 190-m-Kreuzungsgleis auf 32 px gestaucht, nur noch zwei
+            # Schrägen): ein gerades Gleis mit Ebenenwechsel an den Enden behält neben den Schrägen mindestens 40 px bzw.
+            # 35 % seiner massstäblichen Länge und zieht nicht zum Stauchen. cfg «gleis_mindestlaenge» (Regionen an).
+            if CFG.get("gleis_mindestlaenge", False):
+                REQ.append((sg["s0"], sg["s1"], need + max(40.0, 0.35 * (sg["s1"] - sg["s0"]) * CFG["px_per_m"]), 0.0))
+            else: REQ.append((sg["s0"], sg["s1"], need + 4, 0.3))
 # Regel 32: parallele Weichenverbindungen, die sich in der Höhe überschneiden, brauchen Längsabstand, damit sie
 # mindestens einen Gleisabstand auseinander liegen (sonst wirken zwei Verbindungen wie eine)
 if RU.get("r32", True):
