@@ -1,9 +1,15 @@
 {
  "region": "mob",
- "erzeugt": "2026-11-03 05:45 UTC",
+ "erzeugt": "2026-11-03 18:26 UTC",
  "bahnhoefe": {
   "schonried": {
    "name": "Schönried",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "chateau_d_oex": {
+   "name": "Château-d'Oex",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -17,13 +23,7 @@
   "les_avants": {
    "name": "Les Avants",
    "ok": true,
-   "befunde": "Befunde: {'F': 1}",
-   "optionen": []
-  },
-  "chateau_d_oex": {
-   "name": "Château-d'Oex",
-   "ok": true,
-   "befunde": "Befunde: {}",
+   "befunde": "Befunde: {'A': 1, 'F': 1}",
    "optionen": []
   },
   "flendruz": {
@@ -32,14 +32,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "rougemont": {
-   "name": "Rougemont",
+  "rochers_de_naye": {
+   "name": "Rochers de Naye",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "rochers_de_naye": {
-   "name": "Rochers de Naye",
+  "rougemont": {
+   "name": "Rougemont",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -76,40 +76,40 @@
     "--hauptgleise"
    ]
   },
-  "caux": {
-   "name": "Caux",
-   "ok": true,
-   "befunde": "Befunde: {}",
-   "optionen": []
-  },
   "glion": {
    "name": "Glion",
    "ok": true,
    "befunde": "Befunde: {'F': 1}",
    "optionen": []
   },
-  "montreux": {
-   "name": "Montreux",
-   "ok": true,
-   "befunde": "Befunde: {'A': 3, 'B': 39, 'D': 4, 'F': 2}",
-   "optionen": [
-    "--hauptgleise"
-   ]
-  },
-  "chamby": {
-   "name": "Chamby",
+  "caux": {
+   "name": "Caux",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
+  "montreux": {
+   "name": "Montreux",
+   "ok": true,
+   "befunde": "Befunde: {'A': 4, 'B': 40, 'D': 4, 'F': 2}",
+   "optionen": [
+    "--hauptgleise"
+   ]
+  },
   "chernex": {
    "name": "Chernex",
    "ok": true,
-   "befunde": "Befunde: {'F': 1}",
+   "befunde": "Befunde: {'B': 1, 'F': 1}",
    "optionen": []
   },
   "allieres": {
    "name": "Allières",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "chamby": {
+   "name": "Chamby",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -162,16 +162,16 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "belmont_sur_montreux": {
-   "name": "Belmont-sur-Montreux",
+  "montbovon": {
+   "name": "Montbovon",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "montbovon": {
-   "name": "Montbovon",
+  "belmont_sur_montreux": {
+   "name": "Belmont-sur-Montreux",
    "ok": true,
-   "befunde": "Befunde: {'B': 1}",
+   "befunde": "Befunde: {}",
    "optionen": []
   },
   "vuarennes": {
@@ -216,14 +216,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "montreux_les_planches": {
-   "name": "Montreux-Les Planches",
+  "sendy_sollard": {
+   "name": "Sendy-Sollard",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "sendy_sollard": {
-   "name": "Sendy-Sollard",
+  "montreux_les_planches": {
+   "name": "Montreux-Les Planches",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -234,14 +234,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "valmont": {
-   "name": "Valmont",
+  "le_tremblex": {
+   "name": "Le Tremblex",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "le_tremblex": {
-   "name": "Le Tremblex",
+  "valmont": {
+   "name": "Valmont",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -286,10 +286,10 @@
   "S3": 2
  },
  "netz_lage": 0,
+ "topologie_region": {},
  "regeln": {
-  "G3": 2,
-  "G2": 38,
-  "G6": 8,
-  "G8": 12
+  "G2": 29,
+  "G6": 5,
+  "G8": 10
  }
 }
