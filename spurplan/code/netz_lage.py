@@ -185,6 +185,13 @@ for i in [i for i in ids if nodes[i]["inset"]]:
             nt = max(1, min(6, e["tracks"]))
             _dn = lambda k: min([abs(P[k]["y"] - P[j]["y"]) for j in g_ref] or [0])
             grp = g_ref[:6] if len(g_ref) >= nt else g_ref + [k for k in sorted(g_oth, key=_dn) if _dn(k) <= 30 or not g_ref][:nt - len(g_ref)]
+            # Verbindung nach Strang (3.11.2026, oberste Regel Topologie; Selfranga: oberes Streckengleis ohne Liniennummer,
+            # 61 px neben dem Hauptgleis, blieb frei und die Strecke fächerte zwei Phantomgleise auf): alle freien Anschlüsse
+            # derselben Austrittsrichtung, deren Gleis im Plan am anderen Ende der Strecke ankommt, gehören ins Bündel.
+            if _ende(e):
+                g_z = [k for k in range(len(P)) if k not in taken and P[k].get("ziel") == _ende(e) and np.allclose(port_vec(P[k]), v0)]
+                if g_z and set(grp) <= set(g_z) | set(k for k in grp if not P[k].get("ziel")) and len(g_z) > len(grp):
+                    grp = g_z[:6]
             grp = sorted(grp, key=lambda k: P[k]["y"])
             for k in grp: taken.add(k)
             pp = [port_xy(PORTS[i], P[k], cx, cy) for k in grp]
@@ -192,7 +199,8 @@ for i in [i for i in ids if nodes[i]["inset"]]:
                 vn = v0 / np.linalg.norm(v0); fr = max(float(a @ vn) for a, b in pp)
                 pp = [(a + vn * (fr - float(a @ vn)), b) for a, b in pp]
             pts = [a for a, b in pp]
-            anchor[(id(e), i)] = dict(off=np.mean(pts, axis=0), v=v0, pts=pts, pax=all(P[k]["pax"] for k in grp), ext=pp, refs=[P[k]["ref"] for k in grp], side=all(P[k]["kind"] == "side" for k in grp))
+            anchor[(id(e), i)] = dict(off=np.mean(pts, axis=0), v=v0, pts=pts, pax=all(P[k]["pax"] for k in grp), ext=pp, refs=[P[k]["ref"] for k in grp], side=all(P[k]["kind"] == "side" for k in grp),
+                                      strang=[P[k].get("strang") for k in grp])
         elif [k for k in range(len(P)) if k not in taken and P[k]["ref"] in e["refs"]]:
             # Fallback: freier Anschluss derselben Linie
             k0 = [k for k in range(len(P)) if k not in taken and P[k]["ref"] in e["refs"]][0]; v0 = port_vec(P[k0])
@@ -203,7 +211,8 @@ for i in [i for i in ids if nodes[i]["inset"]]:
                 vn = v0 / np.linalg.norm(v0); fr = max(float(a @ vn) for a, b in pp)
                 pp = [(a + vn * (fr - float(a @ vn)), b) for a, b in pp]
             pts = [a for a, b in pp]
-            anchor[(id(e), i)] = dict(off=np.mean(pts, axis=0), v=v0, pts=pts, pax=all(P[k]["pax"] for k in grp), ext=pp, refs=[P[k]["ref"] for k in grp], side=all(P[k]["kind"] == "side" for k in grp))
+            anchor[(id(e), i)] = dict(off=np.mean(pts, axis=0), v=v0, pts=pts, pax=all(P[k]["pax"] for k in grp), ext=pp, refs=[P[k]["ref"] for k in grp], side=all(P[k]["kind"] == "side" for k in grp),
+                                      strang=[P[k].get("strang") for k in grp])
         else:     # kein passender Anschluss: Kastenende in Streckenrichtung
             right = math.cos(math.radians(br)) >= 0
             off = np.array([((PORTS[i]["x_hi"] - cx) if right else (PORTS[i]["x_lo"] - cx)) * S, 0.0])
@@ -461,6 +470,15 @@ def connector(A, a, B, b):
             P1 = A1 + a * t; P2 = P1 + u * m
             cands.append((score([a, a, u, -b, -b], [t, m, t]) - 0.5, [A, A1, P1, P2, B1, B]))
     if np.linalg.norm(d) < 1e-6: return [A, B]
+    # Ruhiger Versatz (3.11.2026, Selfranga – Selfranga Süd): gegenüberliegende Anschlüsse mit kleinem Seitenversatz ->
+    # gerade, ein Versatz von höchstens 30° in der Mitte, gerade (statt Zickzack über Rasterrichtungen)
+    if AUTO and L0.get("ein_versatz", True) and turn(a, -b) < 2:
+        dd_ = B - A; nn_ = np.array([-a[1], a[0]]); al_, la_ = float(dd_ @ a), float(dd_ @ nn_)
+        if al_ > 0 and abs(la_) < 0.5: return [A, B]
+        run_ = abs(la_) / math.tan(math.radians(30))
+        if al_ > 0 and run_ < al_ - 8:
+            P1 = A + a * (al_ - run_) / 2
+            return [A, P1, P1 + a * run_ + nn_ * la_, B]
     for v in DV:                                   # gerade
         if abs(_cr(v, d)) < 1e-6 and v @ d > 0: cands.append((score([a, v, -b], [np.linalg.norm(d)]) - 1, [A, A1, B1, B]))
     if AUTO:                                       # automatische Lage: gerade Strecke in beliebiger Richtung (16.10.)
@@ -549,6 +567,19 @@ def track_line(core, ps, pe, o, defer_px=250, stub=6, defer_s=True, defer_e=True
     # (Hinweise Region: "alle Gleise eine S-Kurve")
     if RAUS_S and not corners and max(abs(hs - o), abs(he - o)) < 6 and (abs(hs - o) > 0.5 or abs(he - o) > 0.5):
         return [np.array(ps, float), np.array(pe, float)]
+    # Ein ruhiger Versatz (3.11.2026, Selfranga – Selfranga Süd: zwei 60°-Haken an beiden Enden der kurzen Strecke):
+    # gerade Strecke ohne Knick, Seitenversatz zwischen den Enden -> ein einziger Versatz von höchstens 30° in der Mitte.
+    # Lage-Option «ein_versatz» (Standard: an bei automatischer Lage).
+    if not corners and not late and L0.get("ein_versatz", AUTO is not None):
+        ps_, pe_ = np.array(ps, float), np.array(pe, float); u_ = U[0]; n_ = N[0]
+        along, lat = float((pe_ - ps_) @ u_), float((pe_ - ps_) @ n_)
+        if along > 2 * stub and abs(lat) > 0.5:
+            run = abs(lat) / math.tan(math.radians(30))
+            if run > along - 2 * stub: run = abs(lat) / TAN60          # zu kurz für 30°: 60°
+            if run <= along - 2 * stub:
+                a_ = (along - run) / 2
+                return [ps_, ps_ + u_ * a_, ps_ + u_ * (a_ + run) + n_ * lat, pe_]
+        elif abs(lat) <= 0.5: return [ps_, pe_]
     if abs(hs - o) > 0.5:
         if defer_s and corners and np.linalg.norm(C[corners[0]] - C[0]) < defer_px:
             for i in range(corners[0]): W[i] = hs
@@ -772,9 +803,22 @@ def route_geom(r):
     def _cross(ls):
         G_ = [_LSx([tuple(p) for p in l]) for l in ls]
         return sum(1 for i in range(len(G_)) for j in range(i + 1, len(G_)) if G_[i].crosses(G_[j]))
+    # Paarung nach Strang (3.11.2026): tragen beide Enden dieselben Strang-Nummern, verbindet jedes Gleis seinen Partner
+    # (nicht oberstes mit oberstem). Kreuzen sich die Gleise dabei, liegen die Stränge in den beiden Plänen verschieden
+    # (Gleissprung ohne Weiche) -> Befund T2.
+    def _sm(n, e):
+        a_ = anchor.get((id(e), n))
+        if not a_ or not a_.get("strang") or None in a_["strang"]: return None
+        return {tuple(np.round(pos[n] + p, 3)): s_ for p, s_ in zip(a_["pts"], a_["strang"])}
+    sa_, sb_ = _sm(na, ea), _sm(nb, eb)
+    _paare = [(pa, pb), (pa, pb[::-1]), (pa[::-1], pb), (pa[::-1], pb[::-1])]
+    if sa_ and sb_ and len(sa_) == len(pa) == len(pb) == len(sb_) and set(sa_.values()) == set(sb_.values()):
+        _q = {s_: p for p in pb for t_, s_ in sb_.items() if np.allclose(t_, np.round(p, 3))}
+        pb_s = [_q.get(sa_.get(tuple(np.round(p, 3)))) for p in pa]
+        if all(x is not None for x in pb_s): _paare = [(pa, pb_s)]; r["_strangpaar"] = True
     best_ = None
-    for pa_ in (pa, pa[::-1]):
-        for pb_ in (pb, pb[::-1]):
+    for pa_, pb_ in _paare:
+        if True:
             ls = _lines(pa_, pb_); sc = (_cross(ls), sum(_LSx([tuple(p) for p in l]).length for l in ls))
             if best_ is None or sc < best_[0]: best_ = (sc, ls)
     def _refs(n, e):
@@ -783,6 +827,8 @@ def route_geom(r):
         return {tuple(np.round(pos[n] + p, 3)): rf for p, rf in zip(a_["pts"], a_["refs"])}
     ra, rb = _refs(na, ea), _refs(nb, eb)
     ref_of = [ra.get(tuple(np.round(l[0], 3))) or rb.get(tuple(np.round(l[-1], 3))) for l in best_[1]]
+    if os.environ.get("CDBG") and os.environ["CDBG"] in (nodes[na]["name"], nodes[nb]["name"]):
+        print("LINES", nodes[na]["name"], nodes[nb]["name"], "pa", [np.round(p, 1).tolist() for p in pa], "pb", [np.round(p, 1).tolist() for p in pb], [[np.round(q, 1).tolist() for q in l] for l in best_[1]])
     return dict(lines=best_[1], nx=best_[0][0], core=core, k=k, col=col, w=w, ref_of=ref_of)
 
 # Spurfolge an Abzweigen: Stammstrecke mit bekannten Gleis-Linien (aus dem Spurplan) auf die Äste verteilen,
@@ -1606,6 +1652,49 @@ if "--info" in sys.argv:
 # ------------------------------------------------------------------ Prüfungen (--pruefen)
 if "--pruefen" in sys.argv:
     nm = lambda n: nodes[n]["name"] + ("" if nodes[n]["inset"] else f" #{n}")
+    # ---- Topologie über die ganze Region (3.11.2026, oberste Regel D. Eckenstein: «topologische Verbindungen stimmen –
+    # keine 1-2-Gleissprünge oder nicht verbundene Gleise über Strecken»). Grundlage: Strang-Nummern der Anschlüsse
+    # (verkettung.py) und das Strangbild (straenge.py).
+    #   T1  Gleis endet im Leeren: Anschluss eines Plans, dessen Gleis im Nachbarplan ankommt, ist mit keiner Strecke verbunden
+    #   T2  Gleissprung: Gleise einer Strecke sind nach Strang verbunden und kreuzen sich (Reihenfolge in den Plänen verschieden)
+    #   T3  Strang fehlt: Streckengleis zwischen zwei Plänen laut Strangbild ist an einem Ende nicht als Anschluss gezeichnet
+    #   T4  Gleise nicht nach Strang verbunden: Strecke zwischen zwei Plänen, deren Enden verschiedene Stränge tragen
+    TOPO_R = []
+    _ins = {nodes[i]["inset"]: i for i in ids if nodes[i]["inset"]}
+    for i in _ins.values():
+        P_ = PORTS[i]["ports"]
+        _belegt = {(round(float(a_["pts"][j][0]), 2), round(float(a_["pts"][j][1]), 2)) for (eid, n), a_ in anchor.items() if n == i for j in range(len(a_["pts"]))}
+        _str_belegt = {s_ for (eid, n), a_ in anchor.items() if n == i for s_ in (a_.get("strang") or [])}
+        for p_ in P_:
+            if p_.get("ziel") in _ins and p_.get("ziel") != nodes[i]["inset"] and p_.get("strang") is not None and p_["strang"] not in _str_belegt:
+                TOPO_R.append(dict(regel="T1", plan=nodes[i]["name"], strang=p_["strang"], text=f"{nodes[i]['name']}: Gleis (Strang {p_['strang']}) nach {nodes[_ins[p_['ziel']]]['name']} endet im Leeren"))
+    for r in routes:
+        sa = anchor.get((id(r["first"]), r["a"])); sb = anchor.get((id(r["last"]), r["b"]))
+        if not (sa and sb and nodes[r["a"]]["inset"] and nodes[r["b"]]["inset"]): continue
+        A_, B_ = set(x for x in (sa.get("strang") or []) if x is not None), set(x for x in (sb.get("strang") or []) if x is not None)
+        nm_ = f"{nodes[r['a']]['name']} – {nodes[r['b']]['name']}"
+        if A_ and B_ and A_ != B_ and r["first"] is r["last"]:      # über Halte hinweg wechselt die Strang-Nummer (MOB)
+            TOPO_R.append(dict(regel="T4", plan=nm_, text=f"{nm_}: Stränge {sorted(A_)} / {sorted(B_)} – Gleise nach Lage statt nach Strang verbunden"))
+        if r.get("_strangpaar") and ROUTE_X.get((r["a"], r["b"])):
+            TOPO_R.append(dict(regel="T2", plan=nm_, text=f"{nm_}: Gleissprung ({ROUTE_X[(r['a'], r['b'])]} Kreuzung ohne Weiche)"))
+    if os.path.exists(f"{NAME}_straenge.json"):
+        _SB = json.load(open(f"{NAME}_straenge.json"))
+        _str_an = collections.defaultdict(set)
+        for (eid, n), a_ in anchor.items():
+            if nodes[n]["inset"]: _str_an[nodes[n]["inset"]] |= {x for x in (a_.get("strang") or []) if x is not None}
+        for j_, s_ in enumerate(_SB["straenge"]):
+            a_, b_ = str(s_["a"]), str(s_["b"])
+            if a_ in _ins and b_ in _ins:
+                for k_ in (a_, b_):
+                    if j_ not in _str_an[k_]:
+                        TOPO_R.append(dict(regel="T3", plan=nodes[_ins[k_]]["name"], strang=j_, text=f"{nodes[_ins[k_]]['name']}: Streckengleis {nodes[_ins[a_]]['name']} – {nodes[_ins[b_]]['name']} (Strang {j_}) nicht angeschlossen"))
+    if os.environ.get("TDBG"):
+        for (eid, n), a_ in anchor.items():
+            if nodes[n]["name"] == os.environ["TDBG"]: print("ANKER", [nodes[x]["name"] for r_ in routes for x in (r_["a"], r_["b"]) if id(r_["first"]) == eid or id(r_["last"]) == eid], a_.get("strang"), a_.get("refs"))
+    print("\n== Topologie Region (T1–T4) ==")
+    for t_ in TOPO_R: print(" ", t_["regel"], t_["text"])
+    if not TOPO_R: print("  keine Befunde")
+    json.dump(TOPO_R, open("topologie_region.json", "w"), ensure_ascii=False, indent=1)
     print("\n== Prüfung 1: Gleise entlang der Strecken ==")
     bad1 = 0
     for r in routes:

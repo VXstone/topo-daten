@@ -96,3 +96,8 @@ Stand 21.10.2026.
 - Nur Mehrgleiszonen werden zusammengelegt (Strecke mit ≥ 2 Gleisen); ein kurzer einspuriger Schenkel bleibt Schnittstelle/Abgang (`knoten_einspur: true` legt auch diese zusammen). Dreiecke bleiben so im Regionalplan Dreiecke: Achse (Susch – Sagliains), Schenkel der Zulaufstrecke je unter 90° (D. Eckenstein 3.11.: «die Lösung, die am meisten Ruhe bringt, je nach Ort»).
 - Ergibt Vereina: Sagliains · Autoverlad; MOB: keine Änderung.
 - 3.11. abends (Sagliains – Susch): Rest eines fremden Strangs aus lauter künstlichen Punkten fällt aus dem Ausschnitt (straenge --bereiche; 960-Stück im Plan Sagliains Sasslatsch). Regionen: `haupt_fortsetzung` 0.15 (Hauptgleis läuft an der Weiche im Hauptgleis weiter, nicht im Nebengleis), Regel `r28e` (Personengleis am Randpunkt läuft längs an den Planrand statt 60°-Stummel), `r49` (zu eng für 60°: volle Schräge statt 90°). Bahnhöfe aus «plaene» unverändert (abgenommen).
+
+## Topologie über die Region (3.11. abends, oberste Regel)
+- Regionalplan verbindet Gleise zwischen zwei Plänen nach Strang (Strang-Nummer der Anschlüsse aus verkettung.py), nicht oberstes mit oberstem. Anschlüsse ohne Liniennummer, deren Gleis im Plan am anderen Ende ankommt, gehören ins Bündel (Selfranga).
+- Gerade Strecke mit kleinem Seitenversatz zwischen gegenüberliegenden Anschlüssen: ein Versatz ≤ 30° in der Mitte statt Zickzack (Lage-Option `ein_versatz`, Standard an bei automatischer Lage).
+- Prüfung `netz_lage --pruefen` → topologie_region.json, Bericht «topologie_region»: T1 Gleis endet im Leeren, T2 Gleissprung (nach Strang verbunden und gekreuzt), T3 Streckengleis laut Strangbild nicht angeschlossen, T4 Strecke nach Lage statt nach Strang verbunden (nur direkte Strecken ohne Halt dazwischen).
