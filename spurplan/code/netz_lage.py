@@ -874,6 +874,12 @@ if os.path.exists(_OSM_F):
     print(f"  Spurwechsel auf freier Strecke: {sum(len(v) for v in XO.values())}")
     # Tunnel auf freier Strecke (Hinweis Hauenstein 15.10.: "Tunnelportal mitnehmen"): Anteile der Strecke im Tunnel
     TUN = collections.defaultdict(list)
+    _tw = collections.defaultdict(set)                 # Knoten -> Tunnel ja/nein der Streckengleise, die dort enden/beginnen
+    for w_ in _R:
+        if w_["tags"].get("service") or len(w_["nodes"]) < 2: continue
+        t_ = w_["tags"].get("tunnel") in ("yes", "building_passage")
+        for n_ in (w_["nodes"][0], w_["nodes"][-1]): _tw[n_].add(t_)
+    _PORTALE_OSM = [_P[n_] for n_, v_ in _tw.items() if v_ == {True, False} and n_ in _P]
     _RLT = {k_: _LSg(v_) for k_, v_ in _RPT.items() if len(v_) > 1}
     for rid, ln in _RLT.items():
         iv = []
@@ -889,7 +895,15 @@ if os.path.exists(_OSM_F):
             if mg and a_ < mg[-1][1] + 80:
                 if b_ > mg[-1][1]: mg[-1][1] = b_; mg[-1][3] = wb_
             else: mg.append([a_, b_, wa_, wb_])
-        TUN[rid] = [(a_ / ln.length, b_ / ln.length, wa_, wb_) for a_, b_, wa_, wb_ in mg if b_ - a_ > 400]
+        # Portal nur, wo der Tunnel in OSM wirklich endet (3.11.2026, Vereinatunnel: «nur drei Portale – Selfranga,
+        # Sagliains und vor dem Einmünden Richtung Susch»): Tunnel-Streckengleis trifft ein Gleis ohne Tunnel. Endet das
+        # Tunnelstück nur am Bahnhofsplan (Betriebspunkt im Tunnel), kein Portal.
+        def _echt(t_):
+            q_ = ln.interpolate(t_); return any(math.dist((q_.x, q_.y), pp_) < 150 for pp_ in _PORTALE_OSM)
+        # kurze Stücke (< 400 m) nur, wenn sie Fortsetzung eines Tunnels aus dem Bahnhof sind (914 Sagliains Sasslatsch –
+        # Sasslatsch: Portal vor dem Einmünden in die Linie nach Susch)
+        TUN[rid] = [((a_ / ln.length) if _echt(a_) else -1.0, (b_ / ln.length) if _echt(b_) else 2.0, wa_, wb_)
+                    for a_, b_, wa_, wb_ in mg if b_ - a_ > 400 or (b_ - a_ > 60 and (_echt(a_) != _echt(b_)))]
         if os.environ.get("TUNDBG") and TUN[rid]: print("TUN", rid, [(round(a_), round(b_), round(ln.length), wa_, wb_) for a_, b_, wa_, wb_ in mg if b_ - a_ > 400])
     print(f"  Tunnel auf freier Strecke: {sum(len(v) for v in TUN.values())}")
     if os.environ.get("TUNDBG"):
