@@ -1,15 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 696 240" width="696" height="240" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 838 240" width="838" height="240" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#fff"/>
 <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-<path d="M230.0,110.0H241.9M241.9,110.0H241.9Q244.9,110.0 246.5,112.7L257.2,131.3Q258.8,134.0 261.9,134.0H261.9" stroke="#9a5b1e" stroke-width="1.6"/>
-<path d="M432.5,134.0H469.2 M284.8,134.0H363.0 M261.9,110.0L259.9,134.0M259.9,134.0H261.9 M261.9,134.0H284.8 M406.5,134.0H432.5 M363.0,134.0H406.5" stroke="#9a5b1e" stroke-width="3.6"/>
+<path d="M230.0,134.0H230.0Q233.1,134.0 234.6,131.3L245.4,112.7Q246.9,110.0 250.0,110.0H250.0M250.0,110.0H383.3M383.3,110.0H383.3Q386.4,110.0 387.9,112.7L398.7,131.3Q400.2,134.0 403.3,134.0H403.3" stroke="#9a5b1e" stroke-width="1.6"/>
+<path d="M574.0,134.0H610.7 M426.2,134.0H504.5 M174.8,134.0H403.3 M403.3,134.0H426.2 M547.9,134.0H574.0 M504.5,134.0H547.9" stroke="#9a5b1e" stroke-width="3.6"/>
 </g>
-<path d="M230.0,106.0L221.0,110.0L230.0,114.0Z" fill="#9a5b1e" data-pfeil="0"/>
-<path d="M447.2,134.0H469.2" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
-<path d="M283.9,110.0H261.9" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
-<text x="481.2" y="121.0" font-size="22" text-anchor="start" fill="#9a5b1e">Linie 120</text>
-<text x="481.2" y="147.0" font-size="22" text-anchor="start" fill="#9a5b1e">Château-d'Oex →</text>
-<text x="249.9" y="69.0" font-size="22" text-anchor="end" fill="#9a5b1e">Linie 120</text>
-<text x="249.9" y="95.0" font-size="22" text-anchor="end" fill="#9a5b1e">← Montreux</text>
-<text x="259.9" y="210.0" font-size="38" font-weight="700" text-anchor="middle" fill="#9a5b1e">Sendy-Sollard</text>
+<path d="M588.7,134.0H610.7" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
+<path d="M196.8,134.0H174.8" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
+<text x="622.7" y="121.0" font-size="22" text-anchor="start" fill="#9a5b1e">Linie 120</text>
+<text x="622.7" y="147.0" font-size="22" text-anchor="start" fill="#9a5b1e">Château-d'Oex →</text>
+<text x="162.8" y="121.0" font-size="22" text-anchor="end" fill="#9a5b1e">Linie 120</text>
+<text x="162.8" y="147.0" font-size="22" text-anchor="end" fill="#9a5b1e">← Montreux</text>
+<text x="392.7" y="210.0" font-size="38" font-weight="700" text-anchor="middle" fill="#9a5b1e">Sendy-Sollard</text>
 </svg>
