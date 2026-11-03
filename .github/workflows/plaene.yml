@@ -38,12 +38,18 @@ jobs:
           mkdir -p /tmp/erg && cp -r ergebnisse /tmp/erg/ 2>/dev/null || true
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git fetch origin ergebnisse || true
-          if git rev-parse --verify origin/ergebnisse >/dev/null 2>&1; then git checkout -q -B ergebnisse origin/ergebnisse; else git checkout -q --orphan ergebnisse; git rm -rq --cached . || true; fi
-          mkdir -p /tmp/regionen && mv ergebnisse/region_* ergebnisse/seite /tmp/regionen/ 2>/dev/null || true   # Regionalpläne (regionen) und Seite (seite) behalten
-          find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
-          cp -r /tmp/erg/ergebnisse . 2>/dev/null || mkdir ergebnisse
-          mv /tmp/regionen/* ergebnisse/ 2>/dev/null || true
-          git add -A ergebnisse
-          git commit -qm "Pläne $(date -u +%Y-%m-%dT%H:%MZ) (${{ github.sha }})" || echo "keine Änderung"
-          git push -q origin ergebnisse
+          # bis 3 Versuche (3.11.2026: paralleler Lauf «regionen» pushte in derselben Minute -> rejected); jeder Versuch
+          # baut den Commit auf dem neuesten Stand von «ergebnisse» neu auf (Regionalpläne und Seite von dort behalten)
+          for i in 1 2 3; do
+            git fetch -q origin ergebnisse || true
+            if git rev-parse --verify origin/ergebnisse >/dev/null 2>&1; then git checkout -q -f -B ergebnisse origin/ergebnisse; else git checkout -q --orphan ergebnisse; git rm -rq --cached . || true; fi
+            rm -rf /tmp/regionen; mkdir -p /tmp/regionen && mv ergebnisse/region_* ergebnisse/seite /tmp/regionen/ 2>/dev/null || true   # Regionalpläne (regionen) und Seite (seite) behalten
+            find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+            cp -r /tmp/erg/ergebnisse . 2>/dev/null || mkdir ergebnisse
+            mv /tmp/regionen/* ergebnisse/ 2>/dev/null || true
+            git add -A ergebnisse
+            git commit -qm "Pläne $(date -u +%Y-%m-%dT%H:%MZ) (${{ github.sha }})" || echo "keine Änderung"
+            git push -q origin ergebnisse && break
+            echo "Push abgelehnt (paralleler Lauf), Versuch $i"; sleep 20
+            [ $i = 3 ] && exit 1
+          done
