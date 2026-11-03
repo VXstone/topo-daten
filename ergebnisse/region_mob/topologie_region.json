@@ -1,1 +1,53 @@
-[]
+[
+ {
+  "regel": "T6",
+  "plan": "La Tine – Montbovon",
+  "text": "La Tine – Montbovon: 1 Haken (Umkehr > 120° oder gegen die Anschlussrichtung)"
+ },
+ {
+  "regel": "T6",
+  "plan": "Les Sciernes – Montbovon",
+  "text": "Les Sciernes – Montbovon: 1 Haken (Umkehr > 120° oder gegen die Anschlussrichtung)"
+ },
+ {
+  "regel": "T6",
+  "plan": "Rochers de Naye – La Perche",
+  "text": "Rochers de Naye – La Perche: 1 Haken (Umkehr > 120° oder gegen die Anschlussrichtung)"
+ },
+ {
+  "regel": "T6",
+  "plan": "Zweisimmen – Oeschseite",
+  "text": "Zweisimmen – Oeschseite: 1 Haken (Umkehr > 120° oder gegen die Anschlussrichtung)"
+ },
+ {
+  "regel": "T6",
+  "plan": "Zweisimmen – Abgang ",
+  "text": "Zweisimmen – Abgang : 2 Haken (Umkehr > 120° oder gegen die Anschlussrichtung)"
+ },
+ {
+  "regel": "T6",
+  "plan": "Zweisimmen – Abgang 320",
+  "text": "Zweisimmen – Abgang 320: 1 Haken (Umkehr > 120° oder gegen die Anschlussrichtung)"
+ },
+ {
+  "regel": "T5",
+  "x": 356.2,
+  "y": 123.2,
+  "plan": "la_tine",
+  "text": "la_tine: Streckengleis endet im Leeren bei x=356.2, y=123.2"
+ },
+ {
+  "regel": "T5",
+  "x": 301.2,
+  "y": 110.0,
+  "plan": "rochers_de_naye",
+  "text": "rochers_de_naye: Streckengleis endet im Leeren bei x=301.2, y=110.0"
+ },
+ {
+  "regel": "T5",
+  "x": 283.9,
+  "y": 110.0,
+  "plan": "sendy_sollard",
+  "text": "sendy_sollard: Streckengleis endet im Leeren bei x=283.9, y=110.0"
+ }
+]

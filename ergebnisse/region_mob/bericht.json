@@ -1,6 +1,6 @@
 {
  "region": "mob",
- "erzeugt": "2026-11-03 21:18 UTC",
+ "erzeugt": "2026-11-03 22:02 UTC",
  "bahnhoefe": {
   "schonried": {
    "name": "Schönried",
@@ -123,7 +123,7 @@
   "saanen": {
    "name": "Saanen",
    "ok": true,
-   "befunde": "Befunde: {'A': 1}",
+   "befunde": "Befunde: {}",
    "optionen": []
   },
   "saanenmoser": {
@@ -138,14 +138,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "gruben": {
-   "name": "Gruben",
+  "gstaad": {
+   "name": "Gstaad",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "gstaad": {
-   "name": "Gstaad",
+  "gruben": {
+   "name": "Gruben",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -286,9 +286,13 @@
   "S3": 2
  },
  "netz_lage": 0,
- "topologie_region": {},
+ "topologie_region": {
+  "T6": 6,
+  "T5": 3
+ },
  "regeln": {
-  "G2": 25,
+  "G2": 24,
+  "G4": 1,
   "G6": 6,
   "G8": 9
  }
