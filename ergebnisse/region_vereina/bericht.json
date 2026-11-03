@@ -1,9 +1,9 @@
 {
  "region": "vereina",
- "erzeugt": "2026-11-03 20:18 UTC",
+ "erzeugt": "2026-11-03 21:22 UTC",
  "bahnhoefe": {
-  "susch": {
-   "name": "Susch",
+  "sagliains": {
+   "name": "Sagliains",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -14,10 +14,10 @@
    "befunde": "Befunde: {'B': 4}",
    "optionen": []
   },
-  "sagliains": {
-   "name": "Sagliains",
+  "susch": {
+   "name": "Susch",
    "ok": true,
-   "befunde": "Befunde: {'B': 2}",
+   "befunde": "Befunde: {}",
    "optionen": []
   },
   "klosters_platz": {
@@ -74,8 +74,8 @@
  "netz_lage": 0,
  "topologie_region": {},
  "regeln": {
-  "G2": 10,
-  "G6": 1,
-  "G8": 3
+  "G2": 6,
+  "G6": 2,
+  "G8": 1
  }
 }

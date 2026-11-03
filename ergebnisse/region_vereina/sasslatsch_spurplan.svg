@@ -2,17 +2,16 @@
 <rect y="-74" width="100%" height="100%" fill="#fff"/>
 <g fill="none" stroke-linecap="round" stroke-linejoin="round">
 <path d="" stroke="#9a5b1e" stroke-width="1.6"/>
-<path d="M311.8,110.0H467.8 M289.4,110.0H297.8M297.8,110.0L311.8,110.0 M208.4,110.0H299.6 " stroke="#9a5b1e" stroke-width="3.6"/>
+<path d="M311.8,110.0H467.8 M289.4,102.5H291.5M291.5,102.5H291.5Q296.7,102.5 300.8,105.6L302.5,106.9Q306.7,110.0 311.8,110.0H311.8 M208.4,110.0H299.6 M299.6,110.0H311.8" stroke="#9a5b1e" stroke-width="3.6"/>
 </g>
 <path d="M445.8,110.0H467.8" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
 <path d="M230.4,110.0H208.4" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
-<path d="M320.8,110.0Q311.8,110.0 307.3,102.2" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
-<path d="M307.3,102.2L307.3,102.2L254.8,11.3" stroke="#9a5b1e" stroke-width="3.6" stroke-linecap="round" fill="none"/>
+<path d="M208.4,102.5L208.4,102.5L155.9,11.5" stroke="#9a5b1e" stroke-width="3.6" stroke-linecap="round" fill="none"/>
 <text x="479.8" y="97.0" font-size="22" text-anchor="start" fill="#9a5b1e">Linie 960</text>
 <text x="479.8" y="123.0" font-size="22" text-anchor="start" fill="#9a5b1e">Susch →</text>
 <text x="196.4" y="97.0" font-size="22" text-anchor="end" fill="#9a5b1e">Linie 914</text>
 <text x="196.4" y="123.0" font-size="22" text-anchor="end" fill="#9a5b1e">← Sagliains</text>
-<text x="254.8" y="-47.7" font-size="22" text-anchor="middle" fill="#9a5b1e">Linie 960</text>
-<text x="254.8" y="-21.7" font-size="22" text-anchor="middle" fill="#9a5b1e">← Sagliains</text>
+<text x="155.9" y="-47.5" font-size="22" text-anchor="middle" fill="#9a5b1e">Linie 960</text>
+<text x="155.9" y="-21.5" font-size="22" text-anchor="middle" fill="#9a5b1e">← Sagliains</text>
 <text x="306.3" y="186.0" font-size="38" font-weight="700" text-anchor="middle" fill="#9a5b1e">Sasslatsch</text>
 </svg>
