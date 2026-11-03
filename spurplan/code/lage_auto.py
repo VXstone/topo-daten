@@ -148,12 +148,28 @@ def ketten(nodes, MAJOR, routes, anchor, PORTS, S, P, fix, L0):
             chains.append(dict(seq=seq, ks=ks, km=sum(routes[x]["length"] for x in ks) / 1000.0))
     # Drehung der Knoten-Bahnhöfe
     rot = dict(fix)
+    _slug = {nodes[m]["inset"]: m for m in MAJOR if nodes[m].get("inset")}
+    def _peil(n, p):
+        """Peilung eines Anschlusses für die Drehung: Richtung zum Zielbahnhof, wenn bekannt (3.11.2026, Montbovon: die
+        Gleise nach La Tine peilten nach OSM-Fernpunkt nach Südwesten, der Plan lag 120–150° gedreht und die Strecke
+        machte eine Schlaufe). Lage auto.peilung_ziel (Standard aus: verschlechterte Zweisimmen und Rochers de Naye)."""
+        z_ = _slug.get(p.get("ziel")) if P.get("peilung_ziel", False) else None
+        if z_ is None or z_ == n: return p["bearing"]
+        return math.degrees(math.atan2(nodes[z_]["y"] - nodes[n]["y"], nodes[z_]["x"] - nodes[n]["x"])) % 360
     for n in hubs:
         if not nodes[n]["inset"] or n in rot: continue
-        Pp = PORTS[n]["ports"]
+        Pp = [dict(p, bearing=_peil(n, p)) for p in PORTS[n]["ports"]]
         bb = [p["bearing"] for p in Pp if p["kind"] == "edge" and p["dx"] > 0] + [p["bearing"] + 180 for p in Pp if p["kind"] == "edge" and p["dx"] < 0]
         if not bb: rot[n] = 0; continue
         th = math.degrees(math.atan2(np.mean([math.sin(math.radians(b)) for b in bb]), np.mean([math.cos(math.radians(b)) for b in bb])))
+        # je Seite eine Stimme (3.11.2026, Sagliains Sasslatsch: zwei Tunnelgleise links überstimmten den Schenkel rechts,
+        # der Plan lag in Tunnelrichtung und die Gleise zum Autoverlad machten ein V). Lage auto.seiten_stimme (Standard an)
+        if P.get("seiten_stimme", True):
+            _sd = []
+            for sg_ in (1, -1):
+                b_ = [p["bearing"] + (0 if sg_ > 0 else 180) for p in Pp if p["kind"] == "edge" and p["dx"] * sg_ > 0]
+                if b_: _sd.append(math.atan2(np.mean([math.sin(math.radians(b)) for b in b_]), np.mean([math.cos(math.radians(b)) for b in b_])))
+            th = math.degrees(math.atan2(np.mean([math.sin(a_) for a_ in _sd]), np.mean([math.cos(a_) for a_ in _sd])))
         a = round(-th / P["schritt"]) * P["schritt"]; rot[n] = ((a + 180) % 360) - 180
     def port(n, k):         # Anschlusspunkt der Strecke k am Knoten n relativ zur Mitte (gedreht)
         a_ = anc(k, n)
