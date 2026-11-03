@@ -28,8 +28,20 @@ if "data-st=" not in reg: print("Warnung: Regionalplan ohne data-st-Kennungen")
 plans.append(dict(key="region", name="Region Olten", gruppe="Region", label=region_label, svg=strip(reg), counts=None, status=None))
 # weitere Regionalpläne (feedback/regionalplaene.json: [{key, name, label, svg}], z. B. Region Neuchâtel 15.10.)
 _rp = os.path.join(HERE, "regionalplaene.json")
+def _auto_label(_r):
+    """Kartenlabel aus dem Bericht des letzten Laufs (3.11.2026, D. Eckenstein: «am Ende eines zufriedenstellenden Laufs
+    die Feedback-Karte aktualisieren»): Stand, Topologie- und Verkettungsbefunde; «notiz» aus regionalplaene.json dahinter."""
+    _bf = os.path.join(HERE, f"{_r['key']}_bericht.json")
+    if not os.path.exists(_bf) or not _r.get("label_auto", True): return _r["label"]
+    b = json.load(open(_bf)); import datetime as _dt
+    try: t_ = _dt.datetime.strptime(b["erzeugt"], "%Y-%m-%d %H:%M UTC").replace(tzinfo=_dt.timezone.utc).astimezone(_dt.timezone(_dt.timedelta(hours=1))).strftime("%-d.%-m. %H:%M")
+    except Exception: t_ = b.get("erzeugt", "?")
+    tr = sum((b.get("topologie_region") or {}).values()); vk = sum((b.get("verkettung") or {}).values())
+    teile = [f"Stand {t_}", "Topologie ok" if tr == 0 else f"Topologie {tr} Befunde", "Verkettung ok" if vk == 0 else f"Verkettung {vk} Befunde"]
+    if _r.get("notiz"): teile.append(_r["notiz"])
+    return " · ".join(teile)
 for _r in (json.load(open(_rp)) if os.path.exists(_rp) else []):
-    plans.append(dict(key=_r["key"], name=_r["name"], gruppe="Region", label=_r["label"], svg=strip(open(_r["svg"]).read()), counts=None, status=None))
+    plans.append(dict(key=_r["key"], name=_r["name"], gruppe="Region", label=_auto_label(_r), svg=strip(open(_r["svg"]).read()), counts=None, status=None))
 # Werkzeugkasten: Blaupausen-Bahnhof (alle Zeichenelemente, für Designentscheide und Hinweise)
 import subprocess as _sp; _sp.run(["python3", os.path.join(HERE, "blaupause.py")], check=True)
 plans.append(dict(key="blaupause", name="Blaupausen-Bahnhof", gruppe="Werkzeugkasten", label=f"Stand {stand}",

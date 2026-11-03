@@ -116,6 +116,64 @@ PLAT = [e for e in D if e["type"] == "way" and (e["tags"].get("railway") == "pla
         and not (e["tags"].get("motor_vehicle") in ("designated", "yes") or "loading" in e["tags"].get("description", "").lower()
                  or e["tags"].get("platform") == "loading")]   # stillgelegt nicht zeichnen (20.10.)
 
+# Hauptgleis aus Funktion (3.11.2026, MOB: «Streckengleis fett und Nebengleis dünn» stimmte nicht – Lenk: die 321 endet
+# vor dem Bahnhof und läuft als service=siding/yard zu den Perrons, alles dünn; Zweisimmen: Zufahrt zu Gl. 3/5 dünn).
+# cfg «hauptgleis_funktion» (Regionen an): ein Nebengleis gilt als Hauptgleis, wenn
+#   a) es auf mindestens 30 m höchstens 12 m neben einem Perron liegt (Perrongleis), oder
+#   b) ein Streckengleis an seinem Ende endet und es dort allein weiterläuft (Fortsetzung des Streckengleises),
+#      weiter bis zum nächsten Perrongleis, einer Verzweigung oder dem Gleisende.
+if CFG.get("hauptgleis_funktion", False):
+    from shapely.geometry import LineString as _LSh
+    _pl = [_LSh([xy(g) for g in e["geometry"]]) for e in PLAT if len(e.get("geometry", [])) > 1]
+    _neu_h = set()
+    _wl = {w["id"]: _LSh([P[n] for n in w["nodes"]]) for w in ways.values() if len(w["nodes"]) > 1}
+    _an = lambda L_, pl_: L_.distance(pl_) <= 12 and L_.intersection(pl_.buffer(12)).length >= 30
+    for pl_ in _pl:
+        # Perron, an dem schon ein Hauptgleis liegt: nichts ändern (Zweisimmen: Abstellgleise neben BLS-Perrons)
+        if any(_an(_wl[w["id"]], pl_) for w in ways.values() if w["id"] in _wl and not w["tags"].get("service")): continue
+        for w in ways.values():
+            if w["id"] in _wl and w["tags"].get("service") and w["tags"].get("service") != "crossover" and _an(_wl[w["id"]], pl_): _neu_h.add(w["id"])
+    _ends = collections.defaultdict(list)
+    for w in ways.values():
+        for n in (w["nodes"][0], w["nodes"][-1]): _ends[n].append(w["id"])
+    _mid = collections.Counter(n for w in ways.values() for n in w["nodes"][1:-1])
+    # b) nur eine Kette, die ein Perrongleis erreicht (sonst liefe die Fortsetzung in Abstellanlagen, Zweisimmen)
+    _perron_h = set(_neu_h)
+    for w0 in [w for w in ways.values() if not w["tags"].get("service")]:
+        for n0 in (w0["nodes"][0], w0["nodes"][-1]):
+            kette, n, prev = [], n0, w0["id"]
+            while not _mid[n] and len(_ends[n]) == 2 and len(kette) < 6:
+                nx_ = [x for x in _ends[n] if x != prev][0]; sv = ways[nx_]
+                if not sv["tags"].get("service") or (sv["tags"].get("service") == "crossover" and sv["tags"].get("usage") not in ("main", "branch")): break   # Zweisimmen: Zufahrt als crossover/usage=branch
+                kette.append(nx_)
+                if nx_ in _perron_h: break
+                prev = nx_; n = sv["nodes"][-1] if sv["nodes"][0] == n else sv["nodes"][0]
+            if kette and kette[-1] in _perron_h: _neu_h |= set(kette)
+    # c) Verbindung mit usage=main/branch zwischen zwei Streckengleisen (Zweisimmen: Zufahrt der MOB zu Gl. 3/5 als
+    #    service=crossover, usage=branch, dünn gezeichnet)
+    _hn = collections.defaultdict(set)
+    for w in ways.values():
+        if not w["tags"].get("service"):
+            for n in w["nodes"]: _hn[n].add(w["id"])
+    _xw = [w for w in ways.values() if w["tags"].get("service") == "crossover" and w["tags"].get("usage") in ("main", "branch")]
+    _par_x = {w["id"]: w["id"] for w in _xw}
+    def _fx(a):
+        while _par_x[a] != a: a = _par_x[a]
+        return a
+    _xn = collections.defaultdict(list)
+    for w in _xw:
+        for n in (w["nodes"][0], w["nodes"][-1]): _xn[n].append(w["id"])
+    for n, l_ in _xn.items():
+        for a, b in zip(l_, l_[1:]): _par_x[_fx(a)] = _fx(b)
+    _kx = collections.defaultdict(list)
+    for w in _xw: _kx[_fx(w["id"])].append(w)
+    for ks in _kx.values():                  # Kette von Verbindungen, die an beiden Enden Streckengleise erreicht
+        _ber = {wid for w in ks for n in (w["nodes"][0], w["nodes"][-1]) for wid in _hn[n]}
+        if len(_ber) >= 2: _neu_h |= {w["id"] for w in ks}
+    for wid in _neu_h:
+        t_ = dict(ways[wid]["tags"]); t_["_service"] = t_.pop("service"); ways[wid] = dict(ways[wid], tags=t_)
+    if _neu_h: print("Hauptgleis aus Funktion:", sorted(_neu_h))
+
 # Regel 27: OSM-Lücken schliessen - offenes Gleisende ohne Prellbock, das < 6 m neben einem Knoten
 # eines anderen Gleises liegt, wird mit diesem verbunden (Rothrist Gl. 1 endete 4,6 m vor der Weiche)
 _deg = collections.Counter(n for w in ways.values() for n in w["nodes"])
@@ -1419,6 +1477,13 @@ for sg in segs:
                 LAT_CUT[nc] = CFG["s_min"] if _ds < 0 else CFG["s_max"]
                 LAT_OWN[nc] = sg["id"]
                 continue
+        # Regel 28f (3.11.2026, MOB Gruben/La Tine: Strecke im Bogen verliess den Plan seitlich als 60°-Stummel, daneben
+        # der Abgang): Streckengleis (ohne service), das nahe am Planende seitlich ausläuft, läuft längs an den Planrand.
+        # Nur Regionen (rules «r28f»).
+        if RU.get("r28f", False) and sg["pax"] and not sg["tags"].get("service") and _near_end:
+            LAT_CUT[nc] = CFG["s_min"] if SD[nc][0] - CFG["s_min"] < CFG["s_max"] - SD[nc][0] else CFG["s_max"]
+            LAT_OWN[nc] = sg["id"]; EDGE_LONG.add(nc)
+            continue
         # Regel 28d: bei mehreren Nachbarn (Weiche am Wayende, Tecknau Süd) zählt der Nachbar ausserhalb des Ausschnitts
         if RU.get("r28d", False):
             _nb = sorted(_nb, key=lambda m: CFG["s_min"] <= SD[m][0] <= CFG["s_max"] if m in SD else True)
@@ -3094,7 +3159,12 @@ for e in ([] if OVR.get("platforms") is not None else PLAT):
     x0_, x1_ = X(a_), X(b_)
     if _PPX and x1_ - x0_ > _PPX: _m = (x0_ + x1_) / 2; x0_, x1_ = _m - _PPX / 2, _m + _PPX / 2      # B14
     PERRON_PX.append((x0_, x1_, yb))
-    out.append(f'<rect x="{x0_:.1f}" y="{yb - 4:.1f}" width="{x1_ - x0_:.1f}" height="8" rx="1.5" fill="{green}"/>')
+    # Perronfarbe nach Spur der anliegenden Gleise (3.11.2026, D. Eckenstein: «Perrons in braun allgemein» – Zweisimmen,
+    # Montreux: MOB-Perrons waren grün wie die Normalspur)
+    _nb_l = {r_[1] for r_ in (up[:1] + dn[-1:])}
+    _sch = [x.get("schmal") for c in C if c["lane"] in _nb_l and c["s0"] <= sm_ <= c["s1"] for x in c["segs"]]
+    _pc = MS_BRAUN if _sch and all(_sch) else green
+    out.append(f'<rect x="{x0_:.1f}" y="{yb - 4:.1f}" width="{x1_ - x0_:.1f}" height="8" rx="1.5" fill="{_pc}"/>')
 # Perron frei (3.11.2026, MOB: Perron länger als das gerade Stück seines Gleises deckte Weichenbögen und Gleise ab,
 # La Tine, Flendruz, Saanenmöser u. a.): jeder Perronbalken wird auf den längsten Abschnitt um seine Mitte gekürzt, in dem
 # kein gezeichnetes Gleis durch den Balken läuft; unter 24 px fällt er weg. cfg «perron_frei» (Regionen: an).
@@ -3605,7 +3675,7 @@ for (ref, anc, town), grp in _LGROUPS:
     lines1 = [" ".join(lines2)] if len(lines2) > 1 else lines2
     xx = x if anc == "middle" else (min if anc == "end" else max)(e[0] for e in grp)
     def _box(x0, y0, lines):
-        w_ = max(len(t) for t in lines) * 0.56 * 22; h_ = 26 * len(lines)
+        w_ = max([len(t) for t in lines] or [0]) * 0.56 * 22; h_ = 26 * len(lines)
         xl = x0 - (w_ if anc == "end" else w_ / 2 if anc == "middle" else 0)
         top = y0 - 6 - 13 * (len(lines) - 1) - 17
         return _sbox(xl, top, xl + w_, top + h_)

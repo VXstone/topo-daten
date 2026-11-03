@@ -65,8 +65,10 @@ def _bahnhof(n):
         o.setdefault("cfg", {})["sw_search_m"] = max(o.get("cfg", {}).get("sw_search_m", 0), BP[b]["radius"])
     o.setdefault("cfg", {}).setdefault("haupt_fortsetzung", 0.15)  # Hauptgleis gerade weiter (3.11.2026), nur Regionen
     o["cfg"].setdefault("rules", {}).setdefault("r28e", True)       # Personengleis am Randpunkt läuft längs an den Rand
+    o["cfg"].setdefault("hauptgleis_funktion", True)                 # Perron-/Fortsetzungsgleise sind Hauptgleise (3.11.2026, MOB)
     o["cfg"].setdefault("perron_frei", True)                          # Perron nicht über Gleise/Weichenbögen (3.11.2026, MOB)
-    o["cfg"]["rules"].setdefault("r49", True)                       # zu eng für 60°: volle Schräge statt 90° (Sagliains West)
+    o["cfg"]["rules"].setdefault("r49", True)
+    o["cfg"]["rules"].setdefault("r28f", True)                      # Streckengleis im Bogen läuft an den Planrand (Gruben, La Tine)                       # zu eng für 60°: volle Schräge statt 90° (Sagliains West)
     # Fenster bis zur fernsten Weiche, an der ein Strang dieses Betriebspunkts beginnt (3.11.2026, Montbovon; Strangbild)
     _am = _SB_ANKER.get(b)
     if _am and not _eigen_sw and K.get("fenster_strangbild", True):

@@ -106,3 +106,7 @@ Stand 21.10.2026.
 - Ast-Gleise, die in ein Streckengleis der Region münden, werden ganz übernommen (`aeste_muendung`); Montbovon Gl. 3 Süd (TPF) war am 300-m-Kreis abgeschnitten und erschien als «247 Bulle».
 - Perron frei (`perron_frei`, Regionen): Perronbalken auf den freien Abschnitt gekürzt, unter 24 px weg (Flendruz: Perron fällt weg – offen).
 - Knotenplan über Nebengleis (`knoten_nebengleis`, nur bis 600 m Abstand der Betriebspunkte). Sagliains + Sagliains Sasslatsch (1,2 km) getestet: Plan verlor Tunneleinmündung und Schenkel, 6 Topologie-Befunde → nicht zusammengelegt.
+- Hauptgleis aus Funktion (`hauptgleis_funktion`, Regionen): Nebengleis gilt als Hauptgleis, wenn es Perrongleis ist (≤12 m neben einem Perron ohne anderes Hauptgleis, Lenk), wenn es ein endendes Streckengleis bis zum Perrongleis fortsetzt, oder wenn eine Kette von Verbindungen mit usage=main/branch zwei Streckengleise verbindet (Zweisimmen Zufahrt Gl. 3/5).
+- R28f (Regionen): Streckengleis im Bogen nahe am Planende läuft an den Planrand statt als Stummel (Gruben, La Tine).
+- Perronfarbe nach Spur der anliegenden Gleise (Schmalspur braun), Halte im Regionalplan in Linienfarbe.
+- Feedbackkarte: Label der Regionalpläne automatisch aus bericht.json (Stand, Topologie, Verkettung) + «notiz» (regionalplaene.json).

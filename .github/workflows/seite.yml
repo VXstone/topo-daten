@@ -34,6 +34,7 @@ jobs:
           for r in $(git ls-tree --name-only origin/ergebnisse ergebnisse/ 2>/dev/null | grep '/region_' || true); do
             k=$(basename $r)
             git show origin/ergebnisse:$r/region.svg > spurplan/werkstatt/olten/feedback/$k.svg 2>/dev/null || rm -f spurplan/werkstatt/olten/feedback/$k.svg
+            git show origin/ergebnisse:$r/bericht.json > spurplan/werkstatt/olten/feedback/${k}_bericht.json 2>/dev/null || rm -f spurplan/werkstatt/olten/feedback/${k}_bericht.json   # Kartenlabel (bauen.py)
           done
           # Bahnhöfe aus dem Workflow «plaene» (26.10.2026): Plan + Gesamtbericht für bauen.py
           git show origin/ergebnisse:ergebnisse/bericht.json > spurplan/werkstatt/olten/feedback/repo_bericht.json 2>/dev/null || true

@@ -1591,6 +1591,8 @@ def _lab_hits(lab, txt, anc, size=12):
 LABS = []
 for hi_, (n, (p, d, k)) in enumerate(HALT_AT.items()):
     nv = np.array([-d[1], d[0]]); half = (k - 1) / 2 * TG
+    # Perronfarbe nach Linie (3.11.2026, «Perrons in braun allgemein»: Halte der Schmalspur grün gezeichnet)
+    _hc = next((_spur_col(r_) for r_ in routes if n in r_.get("seq", [])), None) or G
     if k == 1:          # Seite mit weniger Überlagerung wählen
         def _cand(nv_):
             lab_ = p + nv_ * (half + 20); anc_ = "middle" if abs(nv_[0]) < 0.4 else ("start" if nv_[0] > 0 else "end")
@@ -1599,11 +1601,11 @@ for hi_, (n, (p, d, k)) in enumerate(HALT_AT.items()):
     nt = nodes[n].get("tracks", 1) or 1
     if k == 1 and nt >= 2:
         L_ = 30; run = TG / TAN60 + 3
-        path([p - d * L_, p - d * (L_ - run) + nv * TG, p + d * (L_ - run) + nv * TG, p + d * L_], G, 2.4)
-        for o in (-6, TG + 6): path([p - d * 15 + nv * o, p + d * 15 + nv * o], G, 4.2)
+        path([p - d * L_, p - d * (L_ - run) + nv * TG, p + d * (L_ - run) + nv * TG, p + d * L_], _hc, 2.4)
+        for o in (-6, TG + 6): path([p - d * 15 + nv * o, p + d * 15 + nv * o], _hc, 4.2)
         lab = p + nv * (TG + 20)
     else:
-        for o in ((-(half + 6), half + 6) if k >= 2 else (half + 6,)): path([p - d * 14 + nv * o, p + d * 14 + nv * o], G, 4.2)
+        for o in ((-(half + 6), half + 6) if k >= 2 else (half + 6,)): path([p - d * 14 + nv * o, p + d * 14 + nv * o], _hc, 4.2)
         lab = p + nv * (half + 20)
     anc = "middle" if abs(nv[0]) < 0.4 else ("start" if nv[0] > 0 else "end")
     text(lab[0], lab[1] + 4, nodes[n]["name"], 12, anc)
