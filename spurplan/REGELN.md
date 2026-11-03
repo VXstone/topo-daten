@@ -93,5 +93,5 @@ Stand 21.10.2026.
 ## Knotenpläne (3.11.)
 - Pläne werden nur an ruhigen Stellen geschnitten: Strang ohne Weiche ≥ `knoten_ruhig_m` (500 m). Liegen zwei Betriebspunkte mit eigenen Weichen näher beieinander, entsteht ein gemeinsamer Plan (Titel nennt alle, Hauptpunkt = Personenbahnhof bzw. meiste Weichen). Halte ohne Weiche schneiden nie. Ausdehnung höchstens `knoten_max_m` (2500 m). `knotenplaene: false` = ein Plan je Betriebspunkt.
 - Ablauf: region_vorbereiten → straenge --knoten (knoten.json) → region_vorbereiten mit knoten.json → wie bisher.
-- Ergibt Vereina: Sagliains · Autoverlad · Sagliains Sasslatsch · Sasslatsch; MOB: Belmont-sur-Montreux · Châtelard.
-- Offen: Gleisdreieck im Knotenplan (eine Achse) noch nicht sauber gezeichnet.
+- Nur Mehrgleiszonen werden zusammengelegt (Strecke mit ≥ 2 Gleisen); ein kurzer einspuriger Schenkel bleibt Schnittstelle/Abgang (`knoten_einspur: true` legt auch diese zusammen). Dreiecke bleiben so im Regionalplan Dreiecke: Achse (Susch – Sagliains), Schenkel der Zulaufstrecke je unter 90° (D. Eckenstein 3.11.: «die Lösung, die am meisten Ruhe bringt, je nach Ort»).
+- Ergibt Vereina: Sagliains · Autoverlad; MOB: keine Änderung.

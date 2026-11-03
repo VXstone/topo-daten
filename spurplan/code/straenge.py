@@ -218,7 +218,10 @@ if K.get("knotenplaene", True):
         return x
     _kand = []
     for (a, b), ix in STRECKE.items():
-        if a in BP and b in BP and SW_EIGEN[a] and SW_EIGEN[b]:
+        # nur Mehrgleiszonen auf der Achse (Sagliains – Autoverlad, 2 Gleise 305 m); ein kurzer einspuriger Schenkel ist eine
+        # saubere Schnittstelle und bleibt Abgang (Dreieck Sagliains: Schenkel nach Sasslatsch, Wunsch D. Eckenstein 3.11.:
+        # «Susch–Sagliains eine Achse, die Linie von Klosters verteilt sich auf zwei Winkel unter 90°»)
+        if a in BP and b in BP and SW_EIGEN[a] and SW_EIGEN[b] and (len(ix) >= 2 or K.get("knoten_einspur", False)):
             L_ = min(STR[i]["laenge"] for i in ix)
             if L_ < K.get("knoten_ruhig_m", 500): _kand.append((L_, a, b))
     for L_, a, b in sorted(_kand):                                   # kürzeste (unruhigste) Verbindung zuerst
