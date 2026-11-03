@@ -82,3 +82,10 @@ Stand 21.10.2026.
 - Ein- und Zweispurwechsel erkennt der Code selbst (Gleiszahl je Strecke aus OSM bzw. aus den verketteten Plänen).
 - Pfeile und Abgänge kommen beim nächsten Bahnhof an: im Regionalplan werden Pfeilpaare als Gleis verbunden; Prüfung V1 (Gleiszahl beidseits), V2 (Pfeil gegen Abgang), V3 (Gleis kommt nicht zurück) in `verkettung.json` / `bericht.json`.
 - Parallele Linien auf einer Doppelspur (Klosters Platz – Klosters Dorf) sind eine Strecke mit beiden Liniennummern.
+
+## Strangbild (D. Eckenstein 3.11.2026)
+- Aus OSM allein: Betriebspunkte mit ihren Weichen (und Perrons/Halten) sind Knoten, durchgehende Streckengleise zwischen zwei Knoten sind Stränge. Ein Gleis berührt einen Betriebspunkt nur an einer Weiche, einem Perron oder als Halt; eine Kreuzung ohne Weiche zählt nicht.
+- Ein Strang gehört nur den beiden Betriebspunkten an seinen Enden; er wird nie im Plan eines dritten gezeichnet.
+- Fahrbeziehungen je Betriebspunkt (über Weichen fahrbar, keine Spitzkehre) und Dreiecke kommen aus dem Strangbild (Vereina: Sagliains Sasslatsch – Sasslatsch – Autoverlad).
+- Die Regionaltopologie kommt aus dem Strangbild. Prüfung S1 (Streckengleise je Nachbar = Gleiszahl), S2 (Abgang je Fahrbeziehung vorhanden), S3 (Fahrbeziehung im Plan durchgehend gezeichnet).
+- R33b: Streckengleis nach der letzten Weiche ohne weitere Abzweigung läuft auf seiner Ebene gerade aus dem Plan (Klosters → Selfranga).

@@ -20,6 +20,7 @@ Prüfung (Regel V, Befunde in verkettung.json und im Log):
 """
 import json, math, sys, os, collections
 import networkx as nx
+from shapely.geometry import LineString as _LSv, Point as _Ptv
 
 SRC, BPF = sys.argv[1], sys.argv[2]
 OUTF = sys.argv[sys.argv.index("--bericht") + 1] if "--bericht" in sys.argv else "verkettung.json"
@@ -92,17 +93,55 @@ def ziel(own, it):
         return zs.pop() if len(zs) == 1 else None
     return None
 
+# Strangbild (straenge.py): ein Streckenabgang führt zum Betriebspunkt am anderen Ende seines Strangs (Durchfahren eines
+# fremden Plans ohne Weiche zählt nicht, Sagliains Sasslatsch / 960)
+SB = json.load(open(sys.argv[sys.argv.index("--straenge") + 1])) if "--straenge" in sys.argv else None
+STRW = collections.defaultdict(list)          # Way -> Stränge
+if SB:
+    for i_, st_ in enumerate(SB["straenge"]):
+        for w_ in st_["ways"]: STRW[w_].append(i_)
+def ziel_strang(own, it):
+    w = it.get("way")
+    if w is None: return None, None
+    cand = STRW.get(w) or STRW.get(w // 100) or []
+    ll = it.get("ll")
+    best = None
+    for i_ in cand:
+        st_ = SB["straenge"][i_]
+        if own not in (st_["a"], st_["b"]): continue
+        pts_ = [P[n] for n in st_["knoten"] if n in P]
+        d_ = (_LSv(pts_).distance(_Ptv(xy(*ll))) if len(pts_) > 1 else 1e9) if ll else 0     # Abstand zur Linie (Tunnel: wenige Knoten)
+        if best is None or d_ < best[0]: best = (d_, i_)
+    if best is None or best[0] > 80: return None, None
+    st_ = SB["straenge"][best[1]]
+    return (st_["b"] if st_["a"] == own else st_["a"]), best[1]
+
 BEF = []; PAAR = collections.defaultdict(lambda: collections.defaultdict(list))
 for k, p in PL.items():
     _pk = {it.get("knoten") for it in p.get("ports", [])}
+    _belegt = set()
     _seen = set()
     for art in ("ports", "pfeile"):
         for it in p.get(art, []):
-            it["ziel"] = ziel(k, it)
+            it["ziel"] = None; it["strang"] = None
+            if SB and art == "ports" and it.get("pax"):
+                z_, i_ = ziel_strang(k, it)
+                if i_ is not None: it["ziel"], it["strang"] = (z_ if z_ in BP else None), i_
+            if it["strang"] is None:
+                it["ziel"] = ziel(k, it)
+                # Abgang auf einem Gleis im Bahnhof, das erst nach einer weiteren Weiche in den Strang übergeht (Autoverlad
+                # 910 West): Strang zwischen den beiden Betriebspunkten, dessen eigenes Ende am nächsten liegt
+                if SB and art == "ports" and it.get("pax") and it["ziel"] and it.get("ll"):
+                    _c = [(math.dist(xy(*it["ll"]), P[st_["knoten"][0] if st_["a"] == k else st_["knoten"][-1]]), i_)
+                          for i_, st_ in enumerate(SB["straenge"]) if {st_["a"], st_["b"]} == {k, it["ziel"]}
+                          and (st_["knoten"][0] if st_["a"] == k else st_["knoten"][-1]) in P and i_ not in _belegt]
+                    if _c: it["strang"] = min(_c)[1]
+            if it.get("strang") is not None and art == "ports": _belegt.add(it["strang"])
             # derselbe Randknoten zweimal (Pfeil auf einem Abgang, zwei Pfeile übereinander): nur einmal zählen
             it["doppelt"] = (art == "pfeile" and it.get("knoten") in _pk) or (art, it.get("knoten"), it.get("way")) in _seen
             _seen.add((art, it.get("knoten"), it.get("way")))
-            if it["ziel"] and not it["doppelt"]: PAAR[tuple(sorted((k, it["ziel"])))][k].append((art, it.get("pax", False), it.get("ref")))
+            if it["ziel"] and not it["doppelt"] and it["ziel"] in PL:      # nur Pläne (ein Halt ohne Plan zeigt nichts zurück)
+                PAAR[tuple(sorted((k, it["ziel"])))][k].append((art, it.get("pax", False), it.get("ref")))
     json.dump(p, open(f"{k}_ports.json", "w"), ensure_ascii=False)
 
 name = lambda k: BP.get(k, {}).get("name", k)
@@ -116,6 +155,44 @@ for (a, b), seiten in sorted(PAAR.items()):
     if na and not nb or nb and not na:
         x, y = (a, b) if na else (b, a)
         BEF.append(dict(regel="V3", a=x, b=y, text=f"{name(x)}: {len(seiten[x])} Gleis(e) nach {name(y)}, dort kommt keines zurück"))
+# Prüfung gegen das Strangbild (Regel S)
+#   S1  Streckengleise eines Plans zu einem Nachbarn ≠ Gleiszahl der Strecke im Strangbild
+#   S2  Fahrbeziehung X → A → Y, aber Plan A hat keinen Abgang zum Strang nach X oder nach Y
+#   S3  Fahrbeziehung X → A → Y: im Plan A sind die beiden Stränge nicht durch gezeichnete Gleise verbunden
+if SB:
+    for key_, st in SB["strecken"].items():
+        a, b = key_.split("|")
+        for x, y in ((a, b), (b, a)):
+            if x not in PL or y not in BP: continue
+            n_ = sum(1 for it in PL[x].get("ports", []) if it.get("ziel") == y and it.get("pax") and not it.get("doppelt"))
+            if n_ != st["gleise"]:
+                BEF.append(dict(regel="S1", a=x, b=y, text=f"{name(x)}: {n_} Streckengleis(e) nach {name(y)}, Strangbild {st['gleise']}"))
+    GA_ = G
+    for fb in SB["fahrbeziehungen"]:
+        A = fb["bp"]
+        if A not in PL: continue
+        st_von = [i_ for i_, st_ in enumerate(SB["straenge"]) if {str(st_["a"]), str(st_["b"])} == {fb["von"], A}]
+        st_nach = [i_ for i_, st_ in enumerate(SB["straenge"]) if {str(st_["a"]), str(st_["b"])} == {fb["nach"], A}]
+        hat = {it.get("strang") for it in PL[A].get("ports", []) if it.get("strang") is not None}
+        _nmx = lambda x: name(x) if x in BP else (f"Abgang {SB['abgaenge'].get(x, {}).get('ort') or '/'.join(SB['abgaenge'].get(x, {}).get('refs', []))}")
+        nm_v, nm_n = _nmx(fb["von"]), _nmx(fb["nach"])
+        if not (hat & set(st_von)) or not (hat & set(st_nach)):
+            BEF.append(dict(regel="S2", a=A, text=f"{name(A)}: Fahrbeziehung {nm_v} → {nm_n}, im Plan fehlt der Abgang "
+                                                    + (f"nach {nm_v}" if not (hat & set(st_von)) else f"nach {nm_n}")))
+            continue
+        gez = GEZ.get(A, set())
+        H = G.subgraph([n for n in gez if n in G])
+        def _q(sts):        # gezeichnete Knoten der Abgänge zu diesen Strängen (Way des Abgangs) und der Stränge selbst
+            ws = {it.get("way") for it in PL[A].get("ports", []) if it.get("strang") in sts}
+            ws |= {w // 100 for w in ws if w and w not in WN}
+            return {n for w in ws if w in WN for n in WN[w] if n in gez} | {n for i_ in sts for n in SB["straenge"][i_]["knoten"] if n in gez}
+        qa, qb = _q(set(st_von)), _q(set(st_nach))
+        _ok = False
+        if qa and qb:
+            for comp in nx.connected_components(H):
+                if comp & qa and comp & qb: _ok = True; break
+        if not _ok:
+            BEF.append(dict(regel="S3", a=A, text=f"{name(A)}: Fahrbeziehung {nm_v} → {nm_n} im Plan nicht durchgehend gezeichnet"))
 json.dump(dict(paare={f"{a}|{b}": {k: v for k, v in s.items()} for (a, b), s in PAAR.items()}, befunde=BEF),
           open(OUTF, "w"), ensure_ascii=False, indent=1)
 for (a, b), s in sorted(PAAR.items()):

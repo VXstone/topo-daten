@@ -35,6 +35,11 @@ if not NUR_LAGE:
     sh(["python3", py("region_vorbereiten.py"), DATEN, os.path.join(KDIR, "region.json"), WORK])
 NAME = K.get("name", f"{REG}_region")
 sh(["python3", py("topologie_linien.py"), "region.json", "betriebspunkte.json", os.path.join(KDIR, "region.json"), NAME])
+# Strangbild (3.11.2026, Strangprüfer): Strecken, Gleiszahl und Fahrbeziehungen aus OSM; ersetzt die Topologie der
+# Linienachsen (die Achsdateien je Bahnhof bleiben aus topologie_linien.py). Konfig «strangbild»: false = Linienachsen.
+if K.get("strangbild", True):
+    sh(["python3", py("straenge.py"), "region.json", "betriebspunkte.json", os.path.join(KDIR, "region.json"), NAME, "--topologie"]
+       + (["--bereiche"] if not NUR_LAGE else []))
 T = json.load(open(os.path.join(WORK, f"{NAME}_topologie.json")))
 BP = json.load(open(os.path.join(WORK, "betriebspunkte.json"))); key_of = {v["name"]: k for k, v in BP.items()}
 STD = K.get("override_standard", {})
@@ -71,10 +76,11 @@ with ThreadPoolExecutor(max_workers=os.cpu_count() or 2) as ex:
     list(ex.map(_bahnhof, [n for n in T["nodes"] if n["kind"] == "station" and n["name"] in key_of]))
 # Verkettung (30.10.2026): Ziel-Bahnhof je Abgang und Pfeil in <b>_ports.json, Prüfung V1–V3
 _vk = sh(["python3", py("verkettung.py"), "region.json", "betriebspunkte.json", "--bericht", "verkettung.json"]
-         + (["--topologie", f"{NAME}_topologie.json"] if K.get("topologie_aus_verkettung", True) else []))
+         + (["--topologie", f"{NAME}_topologie.json"] if K.get("topologie_aus_verkettung", not K.get("strangbild", True)) else [])
+         + (["--straenge", f"{NAME}_straenge.json"] if K.get("strangbild", True) else []))
 if os.path.exists(os.path.join(WORK, "verkettung.json")):
     _vb = json.load(open(os.path.join(WORK, "verkettung.json")))["befunde"]
-    bericht["verkettung"] = {r_: sum(1 for b_ in _vb if b_["regel"] == r_) for r_ in ("V1", "V2", "V3")}
+    bericht["verkettung"] = {r_: sum(1 for b_ in _vb if b_["regel"] == r_) for r_ in ("V1", "V2", "V3", "S1", "S2", "S3")}
     shutil.copy(os.path.join(WORK, "verkettung.json"), OUT)
 # Lage: aus der Konfig (Schlüssel "lage"), Koordinaten erzeugt netz_lage.py selbst (auto)
 LF = os.path.join(WORK, f"{NAME}_lage.json")
@@ -92,7 +98,7 @@ if os.path.exists(os.path.join(WORK, "region.svg")):
         import cairosvg
         cairosvg.svg2png(url=os.path.join(WORK, "region.svg"), write_to=os.path.join(OUT, "region.png"), output_width=3000, background_color="white")
     except Exception as e: LOG.append(f"PNG: {e}")
-for f_ in ("roh.json.gz", "betriebspunkte.json", f"{NAME}_topologie.json"):
+for f_ in ("roh.json.gz", "betriebspunkte.json", f"{NAME}_topologie.json", f"{NAME}_straenge.json"):
     if os.path.exists(os.path.join(WORK, f_)): shutil.copy(os.path.join(WORK, f_), OUT)
 json.dump(bericht, open(os.path.join(OUT, "bericht.json"), "w"), ensure_ascii=False, indent=1)
 open(os.path.join(OUT, "log.txt"), "w").write("\n\n".join(LOG))

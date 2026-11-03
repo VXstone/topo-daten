@@ -717,6 +717,30 @@ for sg in segs:
     if len(nb) == 2 and all(not x["flat"] for x in nb) and all(len(_inc[n]) == 2 for n in (sg["nodes"][0], sg["nodes"][-1])):
         sg["flat"] = False
 
+# Regel 33b (3.11.2026, Hinweis Klosters Platz → Selfranga: «kurze Zwischengerade beim Tunnelportal»): ein
+# Streckengleis, das nach der letzten Weiche ohne weitere Abzweigung aus dem Plan läuft, bleibt auf seiner Ebene, auch
+# wenn es real schon in der Kurve liegt (sonst Schräge und kurzes Gerades am Planrand). Nicht bei seitlichem Abgang
+# (Ende weit neben der Achse). cfg «abgang_gerade_m» (Standard 150 m Länge bis zum Rand, 0 = aus).
+if CFG.get("abgang_gerade_m", 150):
+    _deg33 = collections.Counter(n for sg in segs for n in (sg["nodes"][0], sg["nodes"][-1]))
+    _an33 = collections.defaultdict(list)
+    for sg in segs: _an33[sg["nodes"][0]].append(sg); _an33[sg["nodes"][-1]].append(sg)
+    for sg in segs:
+        if sg["tags"].get("service") or not sg["pax"]: continue
+        for e_ in (0, 1):
+            if not sg.get("cut%d" % e_): continue
+            n_end = sg["nodes"][-1 if e_ else 0]
+            if abs(SD[n_end][1]) > d_lim_at(SD[n_end][0]) - 25: continue          # seitlicher Abgang
+            kette, cur, n_ = [sg], sg, sg["nodes"][0 if e_ else -1]
+            while _deg33[n_] == 2:                                               # zurück bis zur letzten Weiche
+                nxt = [x for x in _an33[n_] if x is not cur]
+                if not nxt or nxt[0]["tags"].get("service"): break
+                cur = nxt[0]; kette.append(cur); n_ = cur["nodes"][0] if cur["nodes"][-1] == n_ else cur["nodes"][-1]
+            if sum(x["s1"] - x["s0"] for x in kette) > CFG.get("abgang_gerade_m", 150): continue
+            if all(x["flat"] for x in kette): continue
+            if not any(x["flat"] for x in _an33[n_] if x not in kette): continue  # an der Weiche läuft ein gerades Gleis weiter
+            for x in kette: x["flat"] = True
+            if ARGS.dbg: print("R33b", [x["way"] for x in kette])
 # ------------------------------------------------------ 3. Ketten
 parent = list(range(len(segs)))
 def find(a):

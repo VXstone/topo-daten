@@ -493,6 +493,27 @@ def connector(A, a, B, b):
                 if max(turn(p, q) for p, q in zip(dirs, dirs[1:])) > 91: continue
                 if sum(1 for p, q in zip(dirs, dirs[1:]) if turn(p, q) > 3) > 1: continue
                 cands.append((score(dirs, [np.linalg.norm(x) for x in segs]) - 2, [A, A1, P1, B1, B]))
+    # Steile Ausfahrt (3.11.2026, Hinweis Klosters Platz → Selfranga: «kurze Zwischengerade beim Tunnelportal»): liegt das
+    # andere Ende mehr als 90° neben der Portrichtung, gibt es keinen erlaubten Kandidaten und die Strecke lief direkt
+    # quer zum Port (Zickzack mit kurzer Zwischengeraden). Dann ein Bogen aus höchstens zwei 60°-Knicken: ein Stück in
+    # Portrichtung, dann in der Richtung (Raster), die dem Ziel am nächsten kommt, dann frei zum anderen Ende.
+    def _maxturn(pl):
+        ds = [a] + [(q - p) / np.linalg.norm(q - p) for p, q in zip(pl, pl[1:]) if np.linalg.norm(q - p) > 1] + [-b]
+        return max(turn(p, q) for p, q in zip(ds, ds[1:]))
+    _bc = min(cands, key=lambda c: c[0]) if cands else None
+    if _bc is None or _bc[0] >= 1e4 or _maxturn(_bc[1]) > 75:
+        best_ = None
+        for u in DV:
+            if turn(a, u) > 61 or turn(a, u) < 3: continue
+            for t in np.arange(st / 2, 8 * st + 1, st / 4):
+                P1 = A1 + u * t; e = B1 - P1; Le = float(np.linalg.norm(e))
+                if Le < 1: continue
+                dirs = [a, u, e / Le, -b]
+                mx = max(turn(p, q) for p, q in zip(dirs, dirs[1:]))
+                if mx > 61: continue
+                sc_ = score(dirs, [t, Le])
+                if best_ is None or sc_ < best_[0]: best_ = (sc_, [A, A1, P1, B1, B])
+        if best_: return best_[1]
     return min(cands, key=lambda c: c[0])[1] if cands else [A, B]
 RAUS_S = False      # Versuch "kleine Versätze direkt verbinden": erzeugte mehr Stufen, deshalb aus
 def track_line(core, ps, pe, o, defer_px=250, stub=6, defer_s=True, defer_e=True, late=False, late_f=None):

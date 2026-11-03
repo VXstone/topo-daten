@@ -780,3 +780,11 @@ Wunsch D. Eckenstein: Nutzung sparen, mehr in Git auslagern.
 - topologie_linien: parallele Abgänge eines Bahnhofs zusammengelegt (`abgaenge_zusammen`); Abgangsziel über Fernpunkt.
 - region_lauf: Dienststellen suchen Weichen im ganzen Bereich (`weichen_ganzer_bereich`).
 - Stand Vereina: V1 nur Autoverlad ↔ Sagliains Sasslatsch (zwei Ladegleise, im Nachbarplan eines). MOB: V1 Belmont/Châtelard, La Tine/Montbovon; V2 Lenk/Matten. SBB-Pläne unverändert.
+
+## 3.11.2026 – Strangprüfer / Strangbild (Wunsch D. Eckenstein)
+- Neu `code/straenge.py` (in region_lauf nach topologie_linien, Konfig `strangbild`, Standard an): Strangbild aus region.json → `<name>_straenge.json` (Stränge, Strecken, Abgänge, Fahrbeziehungen, Dreiecke, S0) und mit `--topologie` die Regionaltopologie (Format wie topologie_linien; Achsdateien bleiben aus topologie_linien). `--bereiche`: Knoten fremder Stränge aus den Bahnhofsausschnitten entfernen, Randpunkte −1.9e15… (wie Kreisrand behandelt).
+- Anker: Weiche auf beliebiges Gleis oder Ende des Streckengleises an Nebengleis (im Radius eines BP), Perrongleis bis 15 m an einem Perron des BP, Halt bis 60 m. Abgänge: offenes Ende mit Fernpunkt, künstlicher Randpunkt oder bbox-Rand; nahe Enden desselben BP = ein Abgang.
+- verkettung.py `--straenge`: Streckenabgang → Ziel = anderes Ende seines Strangs (Bahnhofsgleis vor der letzten Weiche: Strang zwischen den beiden BP mit nächstem Ende); Prüfung S1–S3; Paare nur zwischen Plänen. `topologie_aus_verkettung` jetzt nur ohne Strangbild.
+- netz_lage: Ausfahrt mit > 75° Knick am Port als Bogen aus zwei 60°-Knicken. spurplan_schema: R33b (`abgang_gerade_m`).
+- Vereina-Bbox Ost 10.107 (Bahnhofsausfahrt Sagliains nicht mehr am Rand).
+- Stand lokal: Vereina V/S alle 0, Dreieck vorhanden. MOB: V1 Belmont/Châtelard, Gstaad/Saanen, La Tine/Montbovon, Oeschseite/Zweisimmen, Rougemont/Saanen; S1 Montbovon, Lenk, Gstaad, Saanen; S2 Zweisimmen (Abgang Spiez?), S3 Chamby – noch nicht angesehen.
