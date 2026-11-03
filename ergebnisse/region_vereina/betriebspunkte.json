@@ -4,7 +4,7 @@
   "id": 265654508,
   "lat": 46.8705207,
   "lon": 9.8680074,
-  "radius": 700,
+  "radius": 700.0,
   "spuren": [
    "1000"
   ],
@@ -17,7 +17,7 @@
   "id": 265654564,
   "lat": 46.8481452,
   "lon": 9.8732389,
-  "radius": 700,
+  "radius": 700.0,
   "spuren": [
    "1000"
   ],
@@ -30,7 +30,7 @@
   "id": 266207902,
   "lat": 46.7520148,
   "lon": 10.0794387,
-  "radius": 700,
+  "radius": 700.0,
   "spuren": [
    "1000"
   ],
@@ -43,7 +43,7 @@
   "id": 1231713221,
   "lat": 46.869383,
   "lon": 9.8809843,
-  "radius": 900,
+  "radius": 900.0,
   "spuren": [
    "1000"
   ],
@@ -56,26 +56,18 @@
   "id": 2731339186,
   "lat": 46.7648182,
   "lon": 10.1030516,
-  "radius": 900,
+  "radius": 942.9846439737428,
   "spuren": [
    "1000"
   ],
-  "weichen": 7,
+  "weichen": 9,
   "normalspur": false,
-  "dienst": false
- },
- "sagliains_autoverlad": {
-  "name": "Sagliains Autoverlad",
-  "id": 13839962934,
-  "lat": 46.7632845,
-  "lon": 10.0962817,
-  "radius": 400,
-  "spuren": [
-   "1000"
+  "dienst": false,
+  "mitglieder": [
+   "Sagliains",
+   "Sagliains Autoverlad"
   ],
-  "weichen": 6,
-  "normalspur": false,
-  "dienst": true
+  "titel": "Sagliains · Autoverlad"
  },
  "klosters_selfranga": {
   "name": "Klosters Selfranga",
@@ -108,7 +100,7 @@
   "id": 13839962936,
   "lat": 46.7590892,
   "lon": 10.0873985,
-  "radius": 400,
+  "radius": 400.0,
   "spuren": [
    "1000"
   ],
@@ -121,7 +113,7 @@
   "id": 13849975747,
   "lat": 46.8446201,
   "lon": 9.9068227,
-  "radius": 400,
+  "radius": 400.0,
   "spuren": [
    "1000"
   ],
@@ -134,7 +126,7 @@
   "id": 13849975750,
   "lat": 46.8127933,
   "lon": 9.9761816,
-  "radius": 400,
+  "radius": 400.0,
   "spuren": [
    "1000"
   ],
@@ -147,7 +139,7 @@
   "id": 13849975751,
   "lat": 46.8025667,
   "lon": 9.9984323,
-  "radius": 400,
+  "radius": 400.0,
   "spuren": [
    "1000"
   ],
@@ -160,7 +152,7 @@
   "id": 13849975756,
   "lat": 46.7693457,
   "lon": 10.0705644,
-  "radius": 400,
+  "radius": 400.0,
   "spuren": [
    "1000"
   ],

@@ -1,15 +1,21 @@
 {
  "region": "vereina",
- "erzeugt": "2026-11-03 10:10 UTC",
+ "erzeugt": "2026-11-03 15:38 UTC",
  "bahnhoefe": {
-  "sagliains_autoverlad": {
-   "name": "Sagliains Autoverlad",
+  "susch": {
+   "name": "Susch",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "susch": {
-   "name": "Susch",
+  "klosters_selfranga": {
+   "name": "Klosters Selfranga",
+   "ok": true,
+   "befunde": "Befunde: {'B': 4}",
+   "optionen": []
+  },
+  "klosters_platz": {
+   "name": "Klosters Platz",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -20,22 +26,10 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "klosters_platz": {
-   "name": "Klosters Platz",
-   "ok": true,
-   "befunde": "Befunde: {}",
-   "optionen": []
-  },
   "sasslatsch": {
    "name": "Sasslatsch",
    "ok": true,
    "befunde": "Befunde: {}",
-   "optionen": []
-  },
-  "klosters_selfranga": {
-   "name": "Klosters Selfranga",
-   "ok": true,
-   "befunde": "Befunde: {'B': 4}",
    "optionen": []
   },
   "sagliains_sasslatsch": {
@@ -50,14 +44,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "vereina_sud": {
-   "name": "Vereina Süd",
+  "vereina_nord": {
+   "name": "Vereina Nord",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "vereina_nord": {
-   "name": "Vereina Nord",
+  "vereina_sud": {
+   "name": "Vereina Süd",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -79,7 +73,7 @@
  },
  "netz_lage": 0,
  "regeln": {
-  "G2": 9,
+  "G2": 10,
   "G6": 7
  }
 }

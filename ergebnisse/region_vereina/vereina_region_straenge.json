@@ -20,10 +20,6 @@
    "name": "Sagliains",
    "art": "station"
   },
-  "sagliains_autoverlad": {
-   "name": "Sagliains Autoverlad",
-   "art": "station"
-  },
   "klosters_selfranga": {
    "name": "Klosters Selfranga",
    "art": "station"
@@ -214,7 +210,7 @@
   },
   {
    "a": "sasslatsch",
-   "b": "sagliains_autoverlad",
+   "b": "sagliains",
    "knoten": [
     2215377067,
     12909622213,
@@ -741,43 +737,6 @@
    "spur": "1000"
   },
   {
-   "a": "sagliains",
-   "b": "sagliains_autoverlad",
-   "knoten": [
-    14057057691,
-    8859593802,
-    8859593801,
-    8863709881,
-    8859593800,
-    2215377213,
-    8859593799,
-    2215377200,
-    2731239300,
-    2215377187,
-    8863834501,
-    8859593805,
-    2215377176,
-    8859518595,
-    2215377167,
-    8859518594,
-    8859518593,
-    2215377155,
-    8863709902,
-    8863709882,
-    2215377136
-   ],
-   "ways": [
-    211549218,
-    1417611900
-   ],
-   "laenge": 305.2,
-   "ref": "910",
-   "refs": [
-    "910"
-   ],
-   "spur": "1000"
-  },
-  {
    "a": "vereina_nord",
    "b": "vereina_sud",
    "knoten": [
@@ -798,7 +757,7 @@
   },
   {
    "a": "sagliains_sasslatsch",
-   "b": "sagliains_autoverlad",
+   "b": "sagliains",
    "knoten": [
     2215377086,
     10608501147,
@@ -961,50 +920,6 @@
     "910"
    ],
    "spur": "1000"
-  },
-  {
-   "a": "sagliains_autoverlad",
-   "b": "sagliains",
-   "knoten": [
-    2215377129,
-    8863709859,
-    8863709861,
-    8859593793,
-    8859593794,
-    8863709901,
-    8859518606,
-    8859518592,
-    8863709865,
-    2215377164,
-    2215377172,
-    8863834502,
-    2215377178,
-    8859593804,
-    8859593803,
-    2215377192,
-    8859593795,
-    8859593798,
-    8863834500,
-    8859593797,
-    8859593796,
-    2215377216,
-    2215377224,
-    2215377232,
-    8859593806,
-    8863834499,
-    8863709866,
-    8863709867
-   ],
-   "ways": [
-    73551246,
-    1417611896
-   ],
-   "laenge": 527.9,
-   "ref": "960",
-   "refs": [
-    "960"
-   ],
-   "spur": "1000"
   }
  ],
  "strecken": {
@@ -1026,7 +941,7 @@
     "914"
    ]
   },
-  "sagliains_autoverlad|sasslatsch": {
+  "sagliains|sasslatsch": {
    "straenge": [
     2
    ],
@@ -1093,37 +1008,26 @@
   "_abgang_3|klosters_platz": {
    "straenge": [
     10,
-    18
+    17
    ],
    "gleise": 2,
    "refs": [
     "910"
-   ]
-  },
-  "sagliains|sagliains_autoverlad": {
-   "straenge": [
-    11,
-    19
-   ],
-   "gleise": 2,
-   "refs": [
-    "910",
-    "960"
    ]
   },
   "vereina_nord|vereina_sud": {
    "straenge": [
-    12,
-    14
+    11,
+    13
    ],
    "gleise": 2,
    "refs": [
     "910"
    ]
   },
-  "sagliains_autoverlad|sagliains_sasslatsch": {
+  "sagliains|sagliains_sasslatsch": {
    "straenge": [
-    13
+    12
    ],
    "gleise": 1,
    "refs": [
@@ -1132,7 +1036,7 @@
   },
   "sagliains_nord|vereina_sud": {
    "straenge": [
-    15
+    14
    ],
    "gleise": 1,
    "refs": [
@@ -1141,8 +1045,8 @@
   },
   "sagliains_nord|sagliains_sasslatsch": {
    "straenge": [
-    16,
-    17
+    15,
+    16
    ],
    "gleise": 2,
    "refs": [
@@ -1159,7 +1063,12 @@
   {
    "von": "_abgang_1",
    "bp": "sagliains",
-   "nach": "sagliains_autoverlad"
+   "nach": "sagliains_sasslatsch"
+  },
+  {
+   "von": "_abgang_1",
+   "bp": "sagliains",
+   "nach": "sasslatsch"
   },
   {
    "von": "_abgang_2",
@@ -1193,33 +1102,18 @@
   },
   {
    "von": "sagliains",
-   "bp": "sagliains_autoverlad",
-   "nach": "sagliains_sasslatsch"
-  },
-  {
-   "von": "sagliains",
-   "bp": "sagliains_autoverlad",
-   "nach": "sasslatsch"
-  },
-  {
-   "von": "sagliains_autoverlad",
-   "bp": "sagliains",
-   "nach": "_abgang_1"
-  },
-  {
-   "von": "sagliains_autoverlad",
    "bp": "sagliains_sasslatsch",
    "nach": "sagliains_nord"
   },
   {
-   "von": "sagliains_autoverlad",
+   "von": "sagliains",
    "bp": "sasslatsch",
    "nach": "susch"
   },
   {
    "von": "sagliains_nord",
    "bp": "sagliains_sasslatsch",
-   "nach": "sagliains_autoverlad"
+   "nach": "sagliains"
   },
   {
    "von": "sagliains_nord",
@@ -1233,8 +1127,8 @@
   },
   {
    "von": "sagliains_sasslatsch",
-   "bp": "sagliains_autoverlad",
-   "nach": "sagliains"
+   "bp": "sagliains",
+   "nach": "_abgang_1"
   },
   {
    "von": "sagliains_sasslatsch",
@@ -1248,8 +1142,8 @@
   },
   {
    "von": "sasslatsch",
-   "bp": "sagliains_autoverlad",
-   "nach": "sagliains"
+   "bp": "sagliains",
+   "nach": "_abgang_1"
   },
   {
    "von": "sasslatsch",
@@ -1274,7 +1168,7 @@
   {
    "von": "susch",
    "bp": "sasslatsch",
-   "nach": "sagliains_autoverlad"
+   "nach": "sagliains"
   },
   {
    "von": "susch",
@@ -1304,10 +1198,11 @@
  ],
  "dreiecke": [
   [
-   "sagliains_autoverlad",
+   "sagliains",
    "sagliains_sasslatsch",
    "sasslatsch"
   ]
  ],
- "befunde": []
+ "befunde": [],
+ "knotenplaene": []
 }

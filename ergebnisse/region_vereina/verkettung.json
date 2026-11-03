@@ -32,44 +32,8 @@
     ]
    ]
   },
-  "sagliains|sagliains_autoverlad": {
+  "sagliains|sagliains_sasslatsch": {
    "sagliains": [
-    [
-     "ports",
-     true,
-     "960"
-    ],
-    [
-     "ports",
-     true,
-     "910"
-    ],
-    [
-     "pfeile",
-     false,
-     null
-    ]
-   ],
-   "sagliains_autoverlad": [
-    [
-     "ports",
-     true,
-     "960"
-    ],
-    [
-     "ports",
-     true,
-     "910"
-    ],
-    [
-     "pfeile",
-     false,
-     null
-    ]
-   ]
-  },
-  "sagliains_autoverlad|sagliains_sasslatsch": {
-   "sagliains_autoverlad": [
     [
      "ports",
      true,
@@ -104,8 +68,8 @@
     ]
    ]
   },
-  "sagliains_autoverlad|sasslatsch": {
-   "sagliains_autoverlad": [
+  "sagliains|sasslatsch": {
+   "sagliains": [
     [
      "ports",
      true,
