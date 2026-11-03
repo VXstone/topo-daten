@@ -1,6 +1,6 @@
 {
  "region": "vereina",
- "erzeugt": "2026-11-03 05:43 UTC",
+ "erzeugt": "2026-11-03 05:44 UTC",
  "bahnhoefe": {
   "sagliains_autoverlad": {
    "name": "Sagliains Autoverlad",
@@ -26,12 +26,6 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "sagliains_sasslatsch": {
-   "name": "Sagliains Sasslatsch",
-   "ok": true,
-   "befunde": "Befunde: {}",
-   "optionen": []
-  },
   "sasslatsch": {
    "name": "Sasslatsch",
    "ok": true,
@@ -42,6 +36,12 @@
    "name": "Klosters Selfranga",
    "ok": true,
    "befunde": "Befunde: {'B': 4}",
+   "optionen": []
+  },
+  "sagliains_sasslatsch": {
+   "name": "Sagliains Sasslatsch",
+   "ok": true,
+   "befunde": "Befunde: {}",
    "optionen": []
   },
   "selfranga_sud": {
