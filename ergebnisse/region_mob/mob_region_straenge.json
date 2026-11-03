@@ -265,14 +265,6 @@
    "ort": "Bulle"
   },
   "_abgang_5": {
-   "bp": "montbovon",
-   "knoten": [
-    -1001076041206012
-   ],
-   "refs": [],
-   "ort": "Château-d'Oex"
-  },
-  "_abgang_6": {
    "bp": "montreux",
    "knoten": [
     -1000097211370006,
@@ -5423,29 +5415,8 @@
    "spur": "800"
   },
   {
-   "a": "montbovon",
-   "b": "_abgang_5",
-   "knoten": [
-    6734556944,
-    8875362931,
-    6732387142,
-    8875362932,
-    6734556945,
-    6732387139,
-    8875362933,
-    -1001076041206012
-   ],
-   "ways": [
-    1076041206
-   ],
-   "laenge": 68.5,
-   "ref": null,
-   "refs": [],
-   "spur": "1000"
-  },
-  {
    "a": "montreux",
-   "b": "_abgang_6",
+   "b": "_abgang_5",
    "knoten": [
     7297173584,
     8025596403,
@@ -5504,7 +5475,7 @@
   },
   {
    "a": "montreux",
-   "b": "_abgang_6",
+   "b": "_abgang_5",
    "knoten": [
     7297184385,
     8025596404,
@@ -6334,17 +6305,10 @@
     "121"
    ]
   },
-  "_abgang_5|montbovon": {
+  "_abgang_5|montreux": {
    "straenge": [
-    56
-   ],
-   "gleise": 1,
-   "refs": []
-  },
-  "_abgang_6|montreux": {
-   "straenge": [
-    57,
-    58
+    56,
+    57
    ],
    "gleise": 2,
    "refs": [
@@ -6353,7 +6317,7 @@
   },
   "chateau_d_oex_la_palaz|les_granges_gerignoz": {
    "straenge": [
-    59
+    58
    ],
    "gleise": 1,
    "refs": [
@@ -6362,7 +6326,7 @@
   },
   "les_combes|les_granges_gerignoz": {
    "straenge": [
-    60
+    59
    ],
    "gleise": 1,
    "refs": [
@@ -6371,7 +6335,7 @@
   },
   "cret_d_y_bau|haut_de_caux": {
    "straenge": [
-    61
+    60
    ],
    "gleise": 1,
    "refs": [
@@ -6380,7 +6344,7 @@
   },
   "haut_de_caux|les_echets": {
    "straenge": [
-    62
+    61
    ],
    "gleise": 1,
    "refs": [
@@ -6407,20 +6371,10 @@
   {
    "von": "_abgang_4",
    "bp": "montbovon",
-   "nach": "_abgang_5"
-  },
-  {
-   "von": "_abgang_4",
-   "bp": "montbovon",
    "nach": "la_tine"
   },
   {
    "von": "_abgang_5",
-   "bp": "montbovon",
-   "nach": "_abgang_4"
-  },
-  {
-   "von": "_abgang_6",
    "bp": "montreux",
    "nach": "vernex"
   },
@@ -6912,7 +6866,7 @@
   {
    "von": "vernex",
    "bp": "montreux",
-   "nach": "_abgang_6"
+   "nach": "_abgang_5"
   },
   {
    "von": "vuarennes",
@@ -6932,5 +6886,42 @@
  ],
  "dreiecke": [],
  "befunde": [],
- "knotenplaene": []
+ "knotenplaene": [],
+ "anker_m": {
+  "schonried": 85.0,
+  "les_avants": 195.5,
+  "la_tine": 174.3,
+  "chateau_d_oex": 202.0,
+  "flendruz": 107.8,
+  "rougemont": 150.0,
+  "les_sciernes": 268.1,
+  "rochers_de_naye": 87.2,
+  "matten": 53.5,
+  "st_stephan": 128.9,
+  "blankenburg": 100.2,
+  "zweisimmen": 802.0,
+  "montreux": 130.8,
+  "glion": 106.7,
+  "caux": 73.8,
+  "chernex": 144.7,
+  "chamby": 121.9,
+  "allieres": 226.8,
+  "jaman": 62.0,
+  "saanen": 143.3,
+  "saanenmoser": 203.3,
+  "oeschseite": 216.4,
+  "gstaad": 431.4,
+  "gruben": 120.3,
+  "rossiniere": 133.6,
+  "montbovon": 398.5,
+  "belmont_sur_montreux": 115.5,
+  "chatelard": 289.6,
+  "paccot": 152.5,
+  "sendy_sollard": 199.6,
+  "le_tremblex": 9.9,
+  "fontanivent": 99.9,
+  "les_cases": 132.7,
+  "jor": 137.2,
+  "vernex": 122.7
+ }
 }

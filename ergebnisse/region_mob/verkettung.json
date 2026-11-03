@@ -93,11 +93,6 @@
      "ports",
      true,
      "120"
-    ],
-    [
-     "ports",
-     true,
-     "120"
     ]
    ]
   },
@@ -224,11 +219,6 @@
      "ports",
      true,
      "120"
-    ],
-    [
-     "pfeile",
-     false,
-     null
     ]
    ],
    "oeschseite": [
@@ -454,11 +444,6 @@
      "ports",
      true,
      "120"
-    ],
-    [
-     "ports",
-     true,
-     "120"
     ]
    ]
   },
@@ -667,34 +652,10 @@
    "text": "Belmont-sur-Montreux – Châtelard: Gleis im einen Plan als Pfeil, im anderen als Abgang"
   },
   {
-   "regel": "V1",
-   "a": "gstaad",
-   "b": "saanen",
-   "text": "Gstaad: 2 Gleise nach Saanen, Saanen: 1 Gleise nach Gstaad"
-  },
-  {
-   "regel": "V1",
-   "a": "la_tine",
-   "b": "montbovon",
-   "text": "La Tine: 1 Gleise nach Montbovon, Montbovon: 2 Gleise nach La Tine"
-  },
-  {
    "regel": "V3",
    "a": "lenk_im_simmental",
    "b": "matten",
    "text": "Lenk im Simmental: 1 Gleis(e) nach Matten, dort kommt keines zurück"
-  },
-  {
-   "regel": "V1",
-   "a": "oeschseite",
-   "b": "zweisimmen",
-   "text": "Oeschseite: 1 Gleise nach Zweisimmen, Zweisimmen: 2 Gleise nach Oeschseite"
-  },
-  {
-   "regel": "V2",
-   "a": "oeschseite",
-   "b": "zweisimmen",
-   "text": "Oeschseite – Zweisimmen: Gleis im einen Plan als Pfeil, im anderen als Abgang"
   },
   {
    "regel": "V1",
@@ -704,21 +665,9 @@
   },
   {
    "regel": "S1",
-   "a": "montbovon",
-   "b": "la_tine",
-   "text": "Montbovon: 2 Streckengleis(e) nach La Tine, Strangbild 1"
-  },
-  {
-   "regel": "S1",
    "a": "lenk_im_simmental",
    "b": "boden",
    "text": "Lenk im Simmental: 0 Streckengleis(e) nach Boden, Strangbild 1"
-  },
-  {
-   "regel": "S1",
-   "a": "gstaad",
-   "b": "saanen",
-   "text": "Gstaad: 2 Streckengleis(e) nach Saanen, Strangbild 1"
   },
   {
    "regel": "S1",
