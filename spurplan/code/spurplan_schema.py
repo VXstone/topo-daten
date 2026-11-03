@@ -839,7 +839,11 @@ for n, (L, Rr) in at.items():
     fl = [a for a in L if a["flat"]]; fr = [b for b in Rr if b["flat"]]
     # Weiterlauf: gleiche Richtung, gleicher Way bevorzugt; Weichenverbindungen (service=crossover) nur, wenn nichts anderes
     _xo = lambda x: 0.05 if x["tags"].get("service") == "crossover" else 0
-    pairs = sorted(((abs(dir_at(a, 1) - dir_at(b, 0)) + (0 if a["way"] == b["way"] else CFG.get("way_pen", 0.06)) + _xo(a) + _xo(b)
+    # Hauptgleis setzt sich im Hauptgleis fort (3.11.2026, Sagliains Sasslatsch: die 910 knickte ab, das Ladegleis lief
+    # gerade weiter). cfg «haupt_fortsetzung» (Regionen: an, Bahnhöfe aus «plaene»: aus, abgenommene Pläne)
+    _hf = CFG.get("haupt_fortsetzung", 0)
+    _hm = lambda a, b: _hf if bool(a["tags"].get("service")) != bool(b["tags"].get("service")) else 0
+    pairs = sorted(((abs(dir_at(a, 1) - dir_at(b, 0)) + (0 if a["way"] == b["way"] else CFG.get("way_pen", 0.06)) + _xo(a) + _xo(b) + _hm(a, b)
                      - (10 if (a["id"], b["id"]) in FW_PAARE else 0), a["id"], b["id"])
                     for a in fl for b in fr))
     usedl, usedr = set(), set()
@@ -1405,6 +1409,16 @@ for sg in segs:
             LAT_CUT[nc] = CFG["s_min"] if SD[nc][0] - CFG["s_min"] < CFG["s_max"] - SD[nc][0] else CFG["s_max"]
             LAT_OWN[nc] = sg["id"]; EDGE_LONG.add(nc)
             continue
+        # Regel 28e (3.11.2026, Sasslatsch: Schenkel nach Sagliains Sasslatsch als 60°-Stummel neben dem Abgang): endet ein
+        # Personengleis an einem Randpunkt des Ausschnitts (Strecke läuft weiter, Nachbar nicht in den Daten) und läuft es
+        # dort eher längs als quer, wird es wie Regel 28 bis an den Planrand gezogen. Nur Regionen (rules «r28e»).
+        if RU.get("r28e", False) and not _nb and sg["pax"] and -2 * 10 ** 15 < nc < -10 ** 14 and len(sg["nodes"]) > 1:
+            _np_ = sg["nodes"][-2] if end else sg["nodes"][1]
+            _ds, _dd = SD[nc][0] - SD[_np_][0], SD[nc][1] - SD[_np_][1]
+            if abs(_ds) >= abs(_dd) and abs(_ds) > 0:
+                LAT_CUT[nc] = CFG["s_min"] if _ds < 0 else CFG["s_max"]
+                LAT_OWN[nc] = sg["id"]
+                continue
         # Regel 28d: bei mehreren Nachbarn (Weiche am Wayende, Tecknau Süd) zählt der Nachbar ausserhalb des Ausschnitts
         if RU.get("r28d", False):
             _nb = sorted(_nb, key=lambda m: CFG["s_min"] <= SD[m][0] <= CFG["s_max"] if m in SD else True)

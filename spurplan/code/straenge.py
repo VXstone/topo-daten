@@ -291,6 +291,14 @@ if "--bereiche" in sys.argv:
     INNEN = collections.defaultdict(set)                             # Strang-Innenknoten -> Betriebspunkte, denen sie gehören
     for s in STR:
         for n in s["knoten"][1:-1]: INNEN[n] |= {str(s["a"]), str(s["b"])}
+    WEG_BP = collections.defaultdict(set)                            # Way -> Betriebspunkte an den Enden seiner Stränge
+    for s in STR:
+        for w_ in s["ways"]: WEG_BP[w_] |= {str(s["a"]), str(s["b"])}
+    def _fremd_rest(w, k, ns):
+        """Rest eines fremden Strangs aus lauter künstlichen Punkten (Kreisrand, Verdichtung, Randpunkt): weg
+        (3.11.2026, Sagliains Sasslatsch: 2 Punkte der 960 blieben als Gleis «Linie 910 Sagliains →» im Plan)."""
+        o_ = w["id"] if w["id"] in WEG_BP else w["id"] // 100
+        return o_ in WEG_BP and k not in WEG_BP[o_] and all(n < -10 ** 14 for n in ns)
     cnt = [0]; geaendert = []
     for k in BP:
         f = f"{k}.json"
@@ -300,7 +308,9 @@ if "--bereiche" in sys.argv:
             if w["type"] != "way" or w["tags"].get("railway") != "rail" or w["tags"].get("service"):
                 neu.append(w); continue
             ok = [not (n in INNEN and k not in INNEN[n]) for n in w["nodes"]]
-            if all(ok): neu.append(w); continue
+            if all(ok):
+                if _fremd_rest(w, k, w["nodes"]): weg += len(w["nodes"]); continue
+                neu.append(w); continue
             weg += sum(1 for o in ok if not o)
             runs, cur = [], []
             for i, (n, g) in enumerate(zip(w["nodes"], w["geometry"])):
@@ -315,7 +325,7 @@ if "--bereiche" in sys.argv:
                     runs.append(cur); cur = []
             if cur: runs.append(cur)
             for j, r in enumerate(runs):
-                if len(r) < 2: continue
+                if len(r) < 2 or _fremd_rest(w, k, [n for n, _ in r]): continue
                 v = dict(w); v["id"] = w["id"] if j == 0 else w["id"] * 100 + 50 + j
                 v["nodes"] = [n for n, _ in r]; v["geometry"] = [g for _, g in r]; neu.append(v)
         if weg:

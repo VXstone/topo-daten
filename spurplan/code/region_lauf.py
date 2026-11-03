@@ -62,6 +62,9 @@ def _bahnhof(n):
     # vom Betriebspunkt; Sagliains Sasslatsch: Abzweig Nebengleis am Fensterrand). Bahnhofs-Override hat Vorrang.
     if not _eigen_sw and K.get("weichen_ganzer_bereich", True) and BP[b].get("dienst"):     # nur Dienststellen (Bahnhöfe: Fenster wie bisher, Zweisimmen)
         o.setdefault("cfg", {})["sw_search_m"] = max(o.get("cfg", {}).get("sw_search_m", 0), BP[b]["radius"])
+    o.setdefault("cfg", {}).setdefault("haupt_fortsetzung", 0.15)  # Hauptgleis gerade weiter (3.11.2026), nur Regionen
+    o["cfg"].setdefault("rules", {}).setdefault("r28e", True)       # Personengleis am Randpunkt läuft längs an den Rand
+    o["cfg"]["rules"].setdefault("r49", True)                       # zu eng für 60°: volle Schräge statt 90° (Sagliains West)
     if BP[b].get("titel"):                                  # Knotenplan: Titel mit allen Betriebspunkten, Weichen im ganzen Bereich
         o.setdefault("cfg", {}).setdefault("titel", BP[b]["titel"])
         if not _eigen_sw: o["cfg"]["sw_search_m"] = max(o["cfg"].get("sw_search_m", 0), BP[b]["radius"])
