@@ -2093,6 +2093,14 @@ if ARGS.hauptgleise and RU.get("r38", True):
             # Regel D. Eckenstein 20.10. abends: Pfeil nur drehen, wenn die Verzweigung so liegt)
             if OVR.get("r38_seite", {}).get(str(e["id"])) == "gerade": CONT38[n_] = dr_; continue
             if str(e["id"]) in OVR.get("r38_seite", {}): up_ = -1 if OVR["r38_seite"][str(e["id"])] == "oben" else 1
+            # Pfeile nur nach aussen (4.11.2026, Zweisimmen: Pfeile zeigten direkt auf das Nachbargleis – dort liegt meist nur
+            # ein kurzer Stumpen): liegt auf der Pfeilseite innerhalb von 1,5 Ebenen ein gezeichnetes Gleis, entfällt der Pfeil.
+            # cfg «pfeil_aussen» (Standard an in Regionen).
+            if CFG.get("pfeil_aussen", False):
+                _l0 = home.get(n_, seglane.get(_kept_end[n_]["id"]) if n_ in _kept_end else None)
+                if _l0 is not None and any(c["s0"] - 5 <= SD[n_][0] <= c["s1"] + 5 and 0 < (c["lane"] - _l0) * (-up_) <= 1.5 for c in C):
+                    if ARGS.dbg: print("R38 nach innen, weggelassen", e["id"])
+                    continue
             if n_ in home: xe_, ye_ = xpos(n_, SD[n_][0]), ypos(n_)
             else:                              # r38m: Weiche mitten im Stück, nur auf geraden Gleisen
                 sg_ = _kept_end[n_]; ha_, hb_ = home.get(sg_["nodes"][0]), home.get(sg_["nodes"][-1])
@@ -2886,6 +2894,16 @@ _z = re.compile(r"M([-\d.]+),([-\d.]+)L\1,\2(?=[\s\"M]|$)")
 svg_paths = {k_: [_z.sub("", d_) for d_ in v_] for k_, v_ in svg_paths.items()}
 _GREEN_IDX = len(out)
 out.append(f'<path d="{" ".join(svg_paths[True])}" stroke="{green}" stroke-width="3.6"/>')
+# Dreischienengleis (4.11.2026, D. Eckenstein: «braun-grün gestrichelt»; Zweisimmen Gl. 6/7, Chur–Ems, Worblaufen–
+# Zollikofen): OSM gauge «1000;1435» – über dem grünen Gleis ein braun gestrichelter Strich gleicher Breite
+_drei = {sg["id"] for sg in segs if ";" in str(sg["tags"].get("spur", "")) or ";" in str(sg["tags"].get("gauge", ""))}
+if _drei:
+    _dd = [d_ for i_, d_ in DBG if i_ in _drei]
+    if _dd:
+        _pw = {sg["id"]: sg["pax"] for sg in segs}
+        for pax_ in (True, False):
+            _ds = [d_ for i_, d_ in DBG if i_ in _drei and _pw.get(i_) == pax_]
+            if _ds: out.append(f'<path d="{" ".join(_ds)}" stroke="{MS_BRAUN}" stroke-width="{3.6 if pax_ else 1.6}" stroke-dasharray="{"7 7" if pax_ else "4 4"}"/>')
 if _BRAUN[True]: out.append(f'<path d="{" ".join(_BRAUN[True])}" stroke="{MS_BRAUN}" stroke-width="3.6"/>')
 # Override "portale": [{"s": m, "y": [ebenen-ref...], "dir": +1}] - Tunnelportal nach Blaupause E7 (öffnet nach aussen)
 for _pt in OVR.get("portale", []):        # auch im Regionalplan (bare) zeichnen (Hinweis Region Olten 15.10.)
@@ -3212,6 +3230,7 @@ for e in ([] if OVR.get("platforms") is not None else PLAT):
     sm_, dm_ = (a_ + b_) / 2, float(np.mean(dd_))
     rows = sorted((d_at(c, sm_), c["lane"]) for c in C if c["s0"] <= sm_ <= c["s1"])
     up = [r for r in rows if r[0] > dm_]; dn = [r for r in rows if r[0] < dm_]
+    if os.environ.get("PERDBG"): print("PERRON", e["id"], round(a_), round(b_), round(sm_), round(dm_, 1), [(round(d, 1), l) for d, l in rows])
     if up and dn and up[0][1] != dn[-1][1]:
         yb = (Y(up[0][1]) + Y(dn[-1][1])) / 2
     elif up: yb = Y(up[0][1]) + 11

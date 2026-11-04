@@ -129,3 +129,6 @@ Stand 21.10.2026.
 - Prüfung T7 (ruhe.py): je Bahnhofsplan (Streckengleise) und im Regionalplan (Strecken und Nebengleis-Verbindungen ausserhalb der Spurpläne). Treppe = innerhalb 100 px > 12° hin und zurück (Netto < 6°) ohne Anschluss dazwischen; Ecke = Knick > 8° mit beiden Schenkeln < 40 px, unbegründet. Bericht «ruhe» {treppen, ecken}, Feedbackkarte «Ruhe: …».
 - Pfeilpaare (verkettete Nebengleise) in Querreihenfolge gepaart und mit dem Strecken-Connector gezeichnet (Sagliains Sasslatsch – Autoverlad: keine Kreuzung, keine Treppe).
 - Kleiner Versatz zwischen gegenüberliegenden Anschlüssen (≤ 8°, `schraeg_max`): leicht schräge Gerade statt Treppe.
+- Dreischienengleis (OSM gauge «1000;1435»): grün mit braun gestricheltem Strich darüber (alle Pläne; Zweisimmen Gl. 6/7, Chur–Ems, Worblaufen–Zollikofen).
+- Pfeile nur nach aussen (`pfeil_aussen`, Regionen): R38-Pfeil entfällt, wenn auf seiner Seite innerhalb 1,5 Ebenen ein gezeichnetes Gleis liegt.
+- Offen Zweisimmen: Einfahrt wirkt einspurig/DKW (Gstaad- und Lenk-Linie laufen über Verbindungen zusammen), Perron 7/8 (OSM-Fläche 845 m, Relation) an falscher Stelle, Abstand 8/12.
