@@ -1,6 +1,6 @@
 {
  "region": "mob",
- "erzeugt": "2026-11-03 22:44 UTC",
+ "erzeugt": "2026-11-04 08:26 UTC",
  "bahnhoefe": {
   "schonried": {
    "name": "Schönried",
@@ -26,14 +26,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "flendruz": {
-   "name": "Flendruz",
+  "rougemont": {
+   "name": "Rougemont",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "rougemont": {
-   "name": "Rougemont",
+  "flendruz": {
+   "name": "Flendruz",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -76,16 +76,16 @@
     "--hauptgleise"
    ]
   },
-  "glion": {
-   "name": "Glion",
-   "ok": true,
-   "befunde": "Befunde: {'F': 1}",
-   "optionen": []
-  },
   "caux": {
    "name": "Caux",
    "ok": true,
    "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "glion": {
+   "name": "Glion",
+   "ok": true,
+   "befunde": "Befunde: {'F': 1}",
    "optionen": []
   },
   "montreux": {
@@ -102,14 +102,14 @@
    "befunde": "Befunde: {'B': 1, 'F': 1}",
    "optionen": []
   },
-  "chamby": {
-   "name": "Chamby",
+  "allieres": {
+   "name": "Allières",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "allieres": {
-   "name": "Allières",
+  "chamby": {
+   "name": "Chamby",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -126,14 +126,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "saanenmoser": {
-   "name": "Saanenmöser",
+  "oeschseite": {
+   "name": "Oeschseite",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "oeschseite": {
-   "name": "Oeschseite",
+  "saanenmoser": {
+   "name": "Saanenmöser",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -162,14 +162,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "montbovon": {
-   "name": "Montbovon",
+  "belmont_sur_montreux": {
+   "name": "Belmont-sur-Montreux",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "belmont_sur_montreux": {
-   "name": "Belmont-sur-Montreux",
+  "montbovon": {
+   "name": "Montbovon",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -287,11 +287,11 @@
  },
  "netz_lage": 0,
  "topologie_region": {
-  "T6": 6
+  "T6": 7
  },
  "regeln": {
   "G2": 20,
-  "G6": 4,
-  "G8": 12
+  "G6": 5,
+  "G8": 8
  }
 }

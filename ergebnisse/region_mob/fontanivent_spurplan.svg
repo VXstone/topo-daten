@@ -1,16 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 739 240" width="739" height="240" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 797 253" width="797" height="253" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#fff"/>
 <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-<path d="M412.4,134.0H413.4Q420.4,134.0 423.9,127.9L430.8,116.1Q434.3,110.0 441.3,110.0H442.3 M442.3,110.0H443.3Q450.3,110.0 453.8,116.1L460.7,127.9Q464.2,134.0 471.2,134.0H472.2 M417.9,110.0H442.3 M352.6,110.0H417.9" stroke="#9a5b1e" stroke-width="1.6"/>
-<path d="M470.2,134.0H571.7 M414.4,134.0H470.2 M228.0,134.0H414.4" stroke="#9a5b1e" stroke-width="3.6"/>
+<path d="M428.7,110.0H480.6M480.6,110.0H480.6Q485.6,110.0 488.6,114.0L492.6,119.2Q495.6,123.2 500.6,123.2H500.6 M500.6,123.2H501.6Q508.6,123.2 512.1,129.3L519.0,141.1Q522.5,147.2 529.5,147.2H530.5 M416.6,123.2H500.6 M352.6,123.2H416.6" stroke="#9a5b1e" stroke-width="1.6"/>
+<path d="M528.5,147.2H630.0 M228.0,147.2H528.5" stroke="#9a5b1e" stroke-width="3.6"/>
 </g>
-<rect x="388.7" y="141.0" width="49.0" height="8" rx="1.5" fill="#9a5b1e"/>
-<circle cx="352.6" cy="110.0" r="3.2" fill="#9a5b1e"/>
-<path d="M549.7,134.0H571.7" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
-<path d="M250.0,134.0H228.0" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
-<text x="583.7" y="121.0" font-size="22" text-anchor="start" fill="#9a5b1e">Linie 120</text>
-<text x="583.7" y="147.0" font-size="22" text-anchor="start" fill="#9a5b1e">Les Avants →</text>
-<text x="216.0" y="121.0" font-size="22" text-anchor="end" fill="#9a5b1e">Linie 120</text>
-<text x="216.0" y="147.0" font-size="22" text-anchor="end" fill="#9a5b1e">← Montreux</text>
-<text x="427.8" y="210.0" font-size="38" font-weight="700" text-anchor="middle" fill="#9a5b1e">Fontanivent</text>
+<rect x="388.7" y="154.2" width="81.8" height="8" rx="1.5" fill="#9a5b1e"/>
+<circle cx="428.7" cy="110.0" r="3.2" fill="#9a5b1e"/>
+<circle cx="352.6" cy="123.2" r="3.2" fill="#9a5b1e"/>
+<path d="M608.0,147.2H630.0" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
+<path d="M250.0,147.2H228.0" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
+<text x="642.0" y="134.2" font-size="22" text-anchor="start" fill="#9a5b1e">Linie 120</text>
+<text x="642.0" y="160.2" font-size="22" text-anchor="start" fill="#9a5b1e">Les Avants →</text>
+<text x="216.0" y="134.2" font-size="22" text-anchor="end" fill="#9a5b1e">Linie 120</text>
+<text x="216.0" y="160.2" font-size="22" text-anchor="end" fill="#9a5b1e">← Montreux</text>
+<text x="443.5" y="223.2" font-size="38" font-weight="700" text-anchor="middle" fill="#9a5b1e">Fontanivent</text>
 </svg>
