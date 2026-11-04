@@ -289,6 +289,25 @@ def ketten(nodes, MAJOR, routes, anchor, PORTS, S, P, fix, L0):
                     _q2 = [float(rotv(np.array(p_, float), rot[n]) @ nv) for p_ in _as[1]["pts"]]
                     x_, y_ = min(((x_, y_) for x_ in _q1 for y_ in _q2), key=lambda t: abs(t[0] - t[1]))
                     q = (x_ + y_) / 2
+                    # Kippen statt Versatz (4.11.2026, Punkt 4, Château-d'Oex: Einspur links auf Gl. 1, rechts auf Gl. 3):
+                    # liegen Ein- und Ausfahrt quer versetzt, wird der Plan um höchstens «kipp_max» Grad (8°) gedreht,
+                    # sodass beide auf der Kettenachse liegen; die Nachbarstrecken bleiben gerade.
+                    if abs(x_ - y_) > 0.5 and P.get("kipp_max", 8) > 0:
+                        _p1 = min(_as[0]["pts"], key=lambda p_: abs(float(rotv(np.array(p_, float), rot[n]) @ nv) - x_))
+                        _p2 = min(_as[1]["pts"], key=lambda p_: abs(float(rotv(np.array(p_, float), rot[n]) @ nv) - y_))
+                        best_k = (abs(x_ - y_), 0.0)
+                        _v = rotv(np.array(_p2, float) - np.array(_p1, float), rot[n])
+                        _a0 = math.degrees(math.atan2(float(_v @ nv), float(_v @ u)))
+                        for a_ in (_a0, -_a0, 180 - _a0, _a0 - 180):
+                            a_ = ((a_ + 180) % 360) - 180
+                            if abs(a_) > P.get("kipp_max", 8): continue
+                            r_ = rot[n] + a_
+                            d_ = abs(float(rotv(np.array(_p1, float), r_) @ nv) - float(rotv(np.array(_p2, float), r_) @ nv))
+                            if d_ < best_k[0] - 1e-6: best_k = (d_, a_)
+                        if os.environ.get("KIPPDBG"): print("KIPP", nodes[n]["name"], round(x_, 1), round(y_, 1), best_k)
+                        if best_k[1] and best_k[0] < 0.5:
+                            rot[n] = rot[n] + best_k[1]
+                            q = (float(rotv(np.array(_p1, float), rot[n]) @ nv) + float(rotv(np.array(_p2, float), rot[n]) @ nv)) / 2
                 pos[n] = pos[n] - nv * q
         return pos
     def bbox(n, p):

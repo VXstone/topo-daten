@@ -265,6 +265,12 @@ if CFG["rules"].get("r27b", True):
                     if not 0 <= f_ <= 1: continue
                     if best is None or lat_ < best[0]: best = (lat_, w2, i2, A_ + f_ * t_, f_)
             if best:
+                # kein drittes Gleis zwischen Ende und Streckengleis (3.11.2026, La Tine: Stumpen neben dem Kreuzungsgleis
+                # wurde über dieses hinweg ans Streckengleis angeschlossen; D. Eckenstein: «Stumpen nur Seite Zweisimmen»)
+                _sch = _LS27([P[n], tuple(best[3])])
+                if any(_LS27([P[m_] for m_ in w3["nodes"] if m_ in P]).distance(_sch) < 1.0 for w3 in ways.values()
+                       if w3["id"] not in _own[n] and w3["id"] != best[1]["id"] and len(w3["nodes"]) > 1): best = None
+            if best:
                 lat_, w2, i2, pt_, f_ = best
                 nid = -(len(P) + 1000)
                 P[nid] = (float(pt_[0]), float(pt_[1])); ntag[nid] = {"railway": "switch"}
@@ -1287,6 +1293,48 @@ if CFG.get("f10", True):
             if ARGS.dbg: print("F10", c["lane"], "->", ziel, [sg["way"] for sg in c["segs"]][:3])
             c["lane"] = ziel
 
+# Punkt 4 «Einspur gerade durch» (4.11.2026, Château-d'Oex: die Einspur trat links auf Gl. 1, rechts auf Gl. 3 aus, im
+# Regionalplan entstand auf beiden Nachbarstrecken ein Versatz): tritt die Strecke beidseits mit je genau einem
+# Streckengleis aus, liegen beide Randstücke auf derselben Ebene. Das kürzere Randstück (bis zur ersten Weiche) wechselt
+# auf die Ebene des anderen, wenn sie dort frei ist. cfg «einspur_gerade» (Regionen an).
+EINSPUR_HOME = {}
+if CFG.get("einspur_gerade", False):
+    _sl, _sh = CFG["s_min"], CFG["s_max"]
+    _hp = lambda c: any(sg["pax"] and not sg["tags"].get("service") for sg in c["segs"])
+    _L = [c for c in C if c["s0"] <= _sl + 15 and _hp(c)]; _R = [c for c in C if c["s1"] >= _sh - 15 and _hp(c)]
+    _dn = collections.defaultdict(int)                  # Knoten, an denen eine Schräge (Weichenverbindung) hängt
+    for sg in segs:
+        if not sg["flat"]: _dn[sg["nodes"][0]] += 1; _dn[sg["nodes"][-1]] += 1
+    def _stummel(c, rechts):
+        """Randstück der Kette c bis zur äussersten Weiche: (Teil-Segmente, s der Weiche) oder None."""
+        ss = sorted(c["segs"], key=lambda x: x["s0"])
+        if rechts:
+            for i_ in range(len(ss) - 1, 0, -1):
+                if _dn[ss[i_]["nodes"][0]]: return ss[i_:], ss[i_]["s0"], ss[:i_]
+        else:
+            for i_ in range(len(ss) - 1):
+                if _dn[ss[i_]["nodes"][-1]]: return ss[:i_ + 1], ss[i_]["s1"], ss[i_ + 1:]
+        return None
+    def _frei_l(l_, s0_, s1_, ausser): return all(o is ausser or o["lane"] != l_ or min(o["s1"], s1_) - max(o["s0"], s0_) < 1 for o in C)
+    if len(_L) == 1 and len(_R) == 1 and _L[0]["lane"] != _R[0]["lane"]:
+        a_, b_ = _L[0], _R[0]
+        for mv, zi, rechts in ((b_, a_, True), (a_, b_, False)):
+            st_ = _stummel(mv, rechts)
+            if not st_: continue
+            teil, sw_, rest = st_
+            s0_, s1_ = (sw_, mv["s1"]) if rechts else (mv["s0"], sw_)
+            if not rest or not _frei_l(zi["lane"], s0_ + 1, s1_, None): continue
+            # Kette teilen: Randstück wird eigene Kette auf der Ebene der Gegenseite
+            neu = dict(id=max(c["id"] for c in C) + 1, segs=teil, s0=min(x["s0"] for x in teil), s1=max(x["s1"] for x in teil),
+                       pts=np.vstack([x["p"] for x in teil]), lane=zi["lane"])
+            neu["pts"] = neu["pts"][neu["pts"][:, 0].argsort()]
+            mv["segs"] = rest; mv["s0"] = min(x["s0"] for x in rest); mv["s1"] = max(x["s1"] for x in rest)
+            mv["pts"] = np.vstack([x["p"] for x in rest]); mv["pts"] = mv["pts"][mv["pts"][:, 0].argsort()]
+            C.append(neu)
+            EINSPUR_HOME[(teil[0]["nodes"][0] if rechts else teil[-1]["nodes"][-1])] = zi["lane"]   # Weiche liegt auf der durchgehenden Ebene
+            if ARGS.dbg: print("EINSPUR", "rechts" if rechts else "links", "Randstück auf Ebene", zi["lane"])
+            break
+
 # x-Abbildung: linear oder entzerrt (warp.json aus spurplan_warp.py)
 import os
 WARP = None
@@ -1539,6 +1587,7 @@ for sg in segs:
     if sg["flat"] and sg["id"] in seglane:
         if sg["cut0"]: home[sg["nodes"][0]] = seglane[sg["id"]]
         if sg["cut1"]: home[sg["nodes"][-1]] = seglane[sg["id"]]
+for n, l_ in EINSPUR_HOME.items(): home[n] = l_      # Punkt 4: Weiche am Randstück liegt auf der durchgehenden Ebene
 
 # Weichen auf einer Weichenstrassen-Diagonale: x so setzen, dass der Punkt
 # exakt auf der gezeichneten Diagonale liegt.
@@ -2093,7 +2142,8 @@ for n_, dr_ in CONT38.items():
     if _PST: svg_paths[False].append(f"M{_xa:.1f},{_ya:.1f}L{_xa + dr_ * _PST:.1f},{_ya:.1f}")
     arrows.append((_xa + dr_ * _PST, _ya, dr_))
     PFEIL_ZIEL.append((_xa + dr_ * _PST, _ya, 0.0 if dr_ > 0 else math.pi, dict(way=None, knoten=n_, ll=list(LL[n_]) if n_ in LL else None)))
-dots = [(xpos(n, SD[n][0]), ypos(n), any(sg["pax"] for sg in segs if n in sg["nodes"])) for n in stops]
+dots = [(xpos(n, SD[n][0]), ypos(n), any(sg["pax"] for sg in segs if n in sg["nodes"]),
+         any(sg.get("schmal") for sg in segs if n in sg["nodes"])) for n in stops]     # 4.: Meterspur -> Prellbock braun (4.11.2026)
 
 _pl_s = [x for pl in OVR.get("platforms", []) if "s" in pl for x in pl["s"]] or \
         [project(xy(g))[0] for e in PLAT for g in e["geometry"]]
@@ -3302,8 +3352,9 @@ for _dp in OVR.get("dkw_px", []):
     for a_, b_ in _dp["arme"]:
         DKW_EXTRA.append(_dkw_klammer(c0, a_, b_, bool(_dp.get("pax")), bool(_dp.get("rund_pax", _dp.get("pax")))))
 out.extend(DKW_EXTRA)
-for x, y, pax in dots:
-    out.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{4.5 if pax else 3.2}" fill="{green if pax else black}"/>')
+for d_ in dots:
+    x, y, pax = d_[:3]; _ms = len(d_) > 3 and d_[3]
+    out.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{4.5 if pax else 3.2}" fill="{MS_BRAUN if _ms else (green if pax else black)}"/>')
 PFEILE = []         # gezeichnete Pfeile mit Herkunft (verkettung.py bestimmt daraus den Nachbarplan, in dem das Gleis ankommt)
 def _pfeil_ziel(x, y, a):
     best_ = None

@@ -121,3 +121,5 @@ Stand 21.10.2026.
 - Gleis bleibt Gleis (`gleis_mindestlaenge`, Regionen): gerades Gleis mit Ebenenwechsel an den Enden behält ≥ 40 px bzw. 35 % seiner Länge (Sendy-Sollard: 190-m-Kreuzungsgleis auf 32 px gestaucht; Flendruz: Perron wieder da).
 - Halt bleibt Halt (netz_lage `halt_ohne_schlaufe`): Halte ohne Weiche nie als Schlaufe.
 - Offen: Château-d'Oex – durchgehendes Gleis wechselt im Plan zwei Ebenen (links Gl. unten, rechts oben) → Versatz auf den Nachbarstrecken (La Chaudanne, Les Granges). Lösung: Punkt 4 (durchgehendes Hauptgleis im Plan gerade).
+- 4.11.: R27b ergänzt keine Weiche über ein drittes Gleis hinweg (La Tine: Stumpen, nur Seite Zweisimmen angeschlossen). Prellböcke an Meterspur braun.
+- Punkt 4 «Einspur gerade durch»: im Bahnhofsplan (`einspur_gerade`) zerlegt es die Weichenstrasse (Château-d'Oex) → aus. Stattdessen im Regionalplan «Kippen statt Versatz» (lage_auto `kipp_max` 8°): liegen Ein- und Ausfahrt eines Kettenbahnhofs quer versetzt, wird er so gedreht, dass beide auf der Kettenachse liegen. La Tine – Flendruz jetzt eine Gerade.
