@@ -1,21 +1,9 @@
 {
  "region": "mob",
- "erzeugt": "2026-11-04 15:15 UTC",
+ "erzeugt": "2026-11-04 16:02 UTC",
  "bahnhoefe": {
-  "la_tine": {
-   "name": "La Tine",
-   "ok": true,
-   "befunde": "Befunde: {}",
-   "optionen": []
-  },
   "schonried": {
    "name": "Schönried",
-   "ok": true,
-   "befunde": "Befunde: {}",
-   "optionen": []
-  },
-  "chateau_d_oex": {
-   "name": "Château-d'Oex",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -24,6 +12,18 @@
    "name": "Les Avants",
    "ok": true,
    "befunde": "Befunde: {'A': 1, 'F': 1}",
+   "optionen": []
+  },
+  "la_tine": {
+   "name": "La Tine",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "chateau_d_oex": {
+   "name": "Château-d'Oex",
+   "ok": true,
+   "befunde": "Befunde: {}",
    "optionen": []
   },
   "flendruz": {
@@ -38,14 +38,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "rochers_de_naye": {
-   "name": "Rochers de Naye",
+  "les_sciernes": {
+   "name": "Les Sciernes",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "les_sciernes": {
-   "name": "Les Sciernes",
+  "rochers_de_naye": {
+   "name": "Rochers de Naye",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -76,16 +76,16 @@
     "--hauptgleise"
    ]
   },
-  "glion": {
-   "name": "Glion",
-   "ok": true,
-   "befunde": "Befunde: {'F': 1}",
-   "optionen": []
-  },
   "caux": {
    "name": "Caux",
    "ok": true,
    "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "glion": {
+   "name": "Glion",
+   "ok": true,
+   "befunde": "Befunde: {'F': 1}",
    "optionen": []
   },
   "montreux": {
@@ -126,26 +126,26 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "oeschseite": {
-   "name": "Oeschseite",
-   "ok": true,
-   "befunde": "Befunde: {}",
-   "optionen": []
-  },
   "saanenmoser": {
    "name": "Saanenmöser",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "gruben": {
-   "name": "Gruben",
+  "oeschseite": {
+   "name": "Oeschseite",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
   "gstaad": {
    "name": "Gstaad",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "gruben": {
+   "name": "Gruben",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -287,15 +287,15 @@
  },
  "netz_lage": 0,
  "topologie_region": {
-  "T6": 7
+  "T6": 4
  },
  "ruhe": {
-  "treppen": 14,
-  "ecken": 7
+  "treppen": 12,
+  "ecken": 6
  },
  "regeln": {
   "G2": 20,
-  "G6": 5,
-  "G8": 10
+  "G6": 4,
+  "G8": 8
  }
 }

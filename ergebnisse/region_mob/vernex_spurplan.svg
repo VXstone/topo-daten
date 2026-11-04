@@ -1,16 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 837 264" width="837" height="264" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 678 240" width="678" height="240" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#fff"/>
 <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-<path d="" stroke="#111" stroke-width="1.6"/>
-<path d="M227.7,110.0H309.3 M309.3,110.0H533.9 M533.9,110.0H614.1 M426.7,158.0H614.1 M416.9,158.0H426.7 M227.7,158.0H416.9 M426.7,158.0H426.7Q433.7,158.0 437.2,151.9L457.9,116.1Q461.4,110.0 468.4,110.0H533.9 M309.3,110.0H375.2Q382.2,110.0 385.7,116.1L406.4,151.9Q409.9,158.0 416.9,158.0H416.9" stroke="#00862f" stroke-width="3.6"/>
+<path d="M347.0,134.0H348.0Q355.0,134.0 358.5,127.9L365.4,116.1Q368.9,110.0 375.9,110.0H376.9 M309.3,110.0H310.3Q317.3,110.0 320.8,116.1L327.7,127.9Q331.2,134.0 338.2,134.0H339.2" stroke="#111" stroke-width="1.6"/>
+<path d="M227.7,110.0H309.3 M309.3,110.0H374.9 M374.9,110.0H455.1 M347.0,134.0H455.1 M337.2,134.0H347.0 M227.7,134.0H337.2" stroke="#00862f" stroke-width="3.6"/>
 </g>
 <path d="M249.7,110.0H227.7" stroke="#00862f" stroke-width="3.6" fill="none"/>
-<path d="M592.1,110.0H614.1" stroke="#00862f" stroke-width="3.6" fill="none"/>
-<path d="M592.1,158.0H614.1" stroke="#00862f" stroke-width="3.6" fill="none"/>
-<path d="M249.7,158.0H227.7" stroke="#00862f" stroke-width="3.6" fill="none"/>
-<text x="215.7" y="121.0" font-size="22" text-anchor="end" fill="#00862f">Linie 100</text>
-<text x="215.7" y="147.0" font-size="22" text-anchor="end" fill="#00862f">← Lausanne</text>
-<text x="626.1" y="121.0" font-size="22" text-anchor="start" fill="#00862f">Linie 100</text>
-<text x="626.1" y="147.0" font-size="22" text-anchor="start" fill="#00862f">Villeneuve →</text>
-<text x="420.9" y="234.0" font-size="38" font-weight="700" text-anchor="middle" fill="#00862f">Vernex</text>
+<path d="M433.1,110.0H455.1" stroke="#00862f" stroke-width="3.6" fill="none"/>
+<path d="M433.1,134.0H455.1" stroke="#00862f" stroke-width="3.6" fill="none"/>
+<path d="M249.7,134.0H227.7" stroke="#00862f" stroke-width="3.6" fill="none"/>
+<text x="215.7" y="109.0" font-size="22" text-anchor="end" fill="#00862f">Linie 100</text>
+<text x="215.7" y="135.0" font-size="22" text-anchor="end" fill="#00862f">← Lausanne</text>
+<text x="467.1" y="109.0" font-size="22" text-anchor="start" fill="#00862f">Linie 100</text>
+<text x="467.1" y="135.0" font-size="22" text-anchor="start" fill="#00862f">Villeneuve →</text>
+<text x="341.2" y="210.0" font-size="38" font-weight="700" text-anchor="middle" fill="#00862f">Vernex</text>
 </svg>
