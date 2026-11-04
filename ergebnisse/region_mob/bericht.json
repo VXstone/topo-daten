@@ -1,15 +1,15 @@
 {
  "region": "mob",
- "erzeugt": "2026-11-04 08:26 UTC",
+ "erzeugt": "2026-11-04 11:54 UTC",
  "bahnhoefe": {
-  "schonried": {
-   "name": "Schönried",
+  "la_tine": {
+   "name": "La Tine",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "la_tine": {
-   "name": "La Tine",
+  "schonried": {
+   "name": "Schönried",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -26,12 +26,6 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "rougemont": {
-   "name": "Rougemont",
-   "ok": true,
-   "befunde": "Befunde: {}",
-   "optionen": []
-  },
   "flendruz": {
    "name": "Flendruz",
    "ok": true,
@@ -40,6 +34,12 @@
   },
   "rochers_de_naye": {
    "name": "Rochers de Naye",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "rougemont": {
+   "name": "Rougemont",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -56,14 +56,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "st_stephan": {
-   "name": "St. Stephan",
+  "blankenburg": {
+   "name": "Blankenburg",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "blankenburg": {
-   "name": "Blankenburg",
+  "st_stephan": {
+   "name": "St. Stephan",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -126,14 +126,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "oeschseite": {
-   "name": "Oeschseite",
+  "saanenmoser": {
+   "name": "Saanenmöser",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "saanenmoser": {
-   "name": "Saanenmöser",
+  "oeschseite": {
+   "name": "Oeschseite",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -288,6 +288,10 @@
  "netz_lage": 0,
  "topologie_region": {
   "T6": 7
+ },
+ "ruhe": {
+  "treppen": 15,
+  "ecken": 10
  },
  "regeln": {
   "G2": 20,
