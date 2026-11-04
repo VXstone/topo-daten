@@ -134,19 +134,19 @@
     "D11": 2,
     "D12": 1
    },
-   "topologie": "{'D': 1}",
+   "topologie": "{}",
    "qualitaet": {
     "topo_A": 0,
     "topo_B": 0,
     "topo_C": 0,
-    "topo_D": 1,
+    "topo_D": 0,
     "topo_E": 0,
     "topo_F": 0,
     "netz_T10": 1,
     "netz_D11": 2,
     "netz_D12": 1,
     "boegen_pax": 0,
-    "boegen_alle": 20,
+    "boegen_alle": 18,
     "randabstand": 0
    }
   },
@@ -302,7 +302,7 @@
   "regional_rothrist": {
    "ok": true,
    "ordner": "regional_rothrist",
-   "topologie": "{}",
+   "topologie": "{'B': 2}",
    "geaendert": [
     "rothrist_bare.svg",
     "rothrist_ports.json"
@@ -313,10 +313,10 @@
   "ok": true,
   "log": "  loses Ende #33 an Strecke ['451'] angeschlossen (Abzweig #43, 100 m)\nKnoten: Counter({'spurplan': 13, 'exit': 9, 'halt': 7, 'junction': 3}) Kanten: 33\nsenkrecht: ['Aarburg-Oftringen', 'Zofingen', 'Olten', 'Läufelfingen', 'Tecknau', 'Olten Ost']\nF11 quer ausgerichtet: {'Däniken': 3.0, 'Schönenwerd': 3.0}\n  Spurfolge Abzweig #31: 450 | 400 | 400 | 450\n  Spurwechsel auf freier Strecke: 11\n  Tunnel auf freier Strecke: 3\n  Spurwechsel ohne Platz weggelassen: Rothrist–Abzweig\n  Spurwechsel gezeichnet: 11\n  Stösse an Abzweigen zusammengeführt: 1\n  Kreuzungen mit Brücke: 1\n  Nebengleise/Spurwechsel freie Strecke gezeichnet: 6\nok 4153 3032\n",
   "geaendert": true,
-  "pruefung": "  loses Ende #33 an Strecke ['451'] angeschlossen (Abzweig #43, 100 m)\nKnoten: Counter({'spurplan': 13, 'exit': 9, 'halt': 7, 'junction': 3}) Kanten: 33\nsenkrecht: ['Aarburg-Oftringen', 'Zofingen', 'Olten', 'Läufelfingen', 'Tecknau', 'Olten Ost']\nF11 quer ausgerichtet: {'Däniken': 3.0, 'Schönenwerd': 3.0}\n  Spurfolge Abzweig #31: 450 | 400 | 400 | 450\n  Spurwechsel auf freier Strecke: 11\n  Tunnel auf freier Strecke: 3\n  Spurwechsel ohne Platz weggelassen: Rothrist–Abzweig\n  Spurwechsel gezeichnet: 11\n  Stösse an Abzweigen zusammengeführt: 1\n  Kreuzungen mit Brücke: 1\n  Nebengleise/Spurwechsel freie Strecke gezeichnet: 6\nok 4153 3032\n\n== Topologie Region (T1–T6) ==\n  T6 Zofingen – Abgang 500: 3 Haken (Umkehr > 120° oder gegen die Anschlussrichtung)\n\n== Prüfung 1: Gleise entlang der Strecken ==\n  Aarburg-Oftringen – Olten: Olten: 1 Anschlüsse für 2 Gleise\n  Hinweis Abzweig #43: Gleis der Linie 453 (von Rothrist) wechselt auf Aarburg-Oftringen (451)\n  → 1 Befunde\n\n== Prüfung 2: Lage Nord/Süd und Ost/West gegenüber Geografie ==\n  → 0 Befunde\n\n== Prüfung 3: Achsen und Seiten der Spurpläne gegen die Karte ==\n  Dulliken: Abgang 540 (Aarau) liegt auf der Karte links von 540 (Aarau), im Plan rechts (Blick in Achsrichtung)\n  Olten Ost: Achse zeigt im Plan nach NO, auf der Karte nach SO (94°)\n  → 2 Befunde\n\n== Prüfung 4: freie Strecke gegen OSM ==\n  Planfenster: 13 von 13 Spurplänen\n  Rothrist – Olten: 55–130 m ab Rothrist: OSM 3 Gleise, Plan 2\n  Rothrist – Abzweig: 55–130 m ab Rothrist: OSM 3 Gleise, Plan 2\n  Rothrist – Abzweig: 1755–1880 m ab Rothrist: OSM 3 Gleise, Plan 2\n  Aarburg-Oftringen – Abzweig: 855–955 m ab Aarburg-Oftringen: OSM 3 Gleise, Plan 2\n  Olten – Olten Ost: 280–380 m ab Olten: OSM 4 Gleise, Plan 6\n  Dulliken – Däniken: 655–755 m ab Dulliken: OSM 5 Gleise, Plan 4\n  → 6 Befunde\n",
+  "pruefung": "  loses Ende #33 an Strecke ['451'] angeschlossen (Abzweig #43, 100 m)\nKnoten: Counter({'spurplan': 13, 'exit': 9, 'halt': 7, 'junction': 3}) Kanten: 33\nsenkrecht: ['Aarburg-Oftringen', 'Zofingen', 'Olten', 'Läufelfingen', 'Tecknau', 'Olten Ost']\nF11 quer ausgerichtet: {'Däniken': 3.0, 'Schönenwerd': 3.0}\n  Spurfolge Abzweig #31: 450 | 400 | 400 | 450\n  Spurwechsel auf freier Strecke: 11\n  Tunnel auf freier Strecke: 3\n  Spurwechsel ohne Platz weggelassen: Rothrist–Abzweig\n  Spurwechsel gezeichnet: 11\n  Stösse an Abzweigen zusammengeführt: 1\n  Kreuzungen mit Brücke: 1\n  Nebengleise/Spurwechsel freie Strecke gezeichnet: 6\nok 4153 3032\n\n== Topologie Region (T1–T6) ==\n  T6 Zofingen – Abgang 500: 3 Haken (Umkehr > 120° oder gegen die Anschlussrichtung)\n\n== Prüfung 1: Gleise entlang der Strecken ==\n  Aarburg-Oftringen – Olten: Olten: 1 Anschlüsse für 2 Gleise\n  Hinweis Abzweig #43: Gleis der Linie 453 (von Rothrist) wechselt auf Aarburg-Oftringen (451)\n  Olten – Olten Ost: Gleise kreuzen sich 1× (Fahrrichtungsseite wechselt)\n  → 2 Befunde\n\n== Prüfung 2: Lage Nord/Süd und Ost/West gegenüber Geografie ==\n  → 0 Befunde\n\n== Prüfung 3: Achsen und Seiten der Spurpläne gegen die Karte ==\n  Dulliken: Abgang 540 (Aarau) liegt auf der Karte links von 540 (Aarau), im Plan rechts (Blick in Achsrichtung)\n  Olten Ost: Achse zeigt im Plan nach NO, auf der Karte nach SO (94°)\n  → 2 Befunde\n\n== Prüfung 4: freie Strecke gegen OSM ==\n  Planfenster: 13 von 13 Spurplänen\n  Rothrist – Olten: 55–130 m ab Rothrist: OSM 3 Gleise, Plan 2\n  Rothrist – Abzweig: 55–130 m ab Rothrist: OSM 3 Gleise, Plan 2\n  Rothrist – Abzweig: 1755–1880 m ab Rothrist: OSM 3 Gleise, Plan 2\n  Aarburg-Oftringen – Abzweig: 855–955 m ab Aarburg-Oftringen: OSM 3 Gleise, Plan 2\n  Olten – Olten Ost: 280–380 m ab Olten: OSM 4 Gleise, Plan 6\n  Dulliken – Däniken: 655–755 m ab Dulliken: OSM 5 Gleise, Plan 4\n  → 6 Befunde\n",
   "geometrie": {
    "plan": "/home/runner/work/topo-daten/topo-daten/spurplan/werkstatt/olten/feedback/region.svg",
-   "achse": 10.07655769078969,
+   "achse": 10.076557292883134,
    "befunde": [
     {
      "regel": "A1",
@@ -468,14 +468,14 @@
    "topo_A": 0,
    "topo_B": 0,
    "topo_C": 0,
-   "topo_D": 1,
+   "topo_D": 0,
    "topo_E": 0,
    "topo_F": 0,
    "netz_T10": 1,
    "netz_D11": 2,
    "netz_D12": 1,
    "boegen_pax": 0,
-   "boegen_alle": 20,
+   "boegen_alle": 18,
    "randabstand": 0
   },
   "wangen_bei_olten": {
@@ -611,11 +611,8 @@
    "topologie_offen": {}
   },
   "tecknau": {
-   "status": "schlechter",
-   "schlechter": {
-    "boegen_alle": 2,
-    "topo_D": 1
-   },
+   "status": "gleich",
+   "schlechter": {},
    "besser": {},
    "topologie_offen": {}
   },

@@ -39,35 +39,41 @@
  },
  "region": {
   "ok": true,
-  "log": "Knoten: Counter({'spurplan': 57, 'exit': 9}) Kanten: 66\nsenkrecht: []\n  Überlappungen: [('Saint Blaise-Lac', 'Saint-Blaise CFF'), ('Les Deurres', 'Neuchâtel Vauseyon')]\n  Lage Ketten: 18 Ketten, 18 Knoten, 48 Bahnhöfe auf Ketten, 30 Durchgänge, Rest-Überlappungen 2\nF11 quer ausgerichtet: {'Auvernier': 5.0, 'Neuchâtel Vauseyon': -5.0, 'Muntelier-Löwenberg': 4.2}\n  Spurwechsel auf freier Strecke: 4\n  Tunnel auf freier Strecke: 6\n  Spurwechsel gezeichnet: 1\n  Kreuzungen mit Brücke: 0\n  Nebengleise/Spurwechsel freie Strecke gezeichnet: 8\nok 7240 5428\n",
+  "log": "Knoten: Counter({'spurplan': 57, 'exit': 9}) Kanten: 66\nsenkrecht: []\n  Überlappungen: [('Saint Blaise-Lac', 'Saint-Blaise CFF'), ('Les Deurres', 'Neuchâtel Vauseyon')]\n  Lage Ketten: 18 Ketten, 18 Knoten, 48 Bahnhöfe auf Ketten, 30 Durchgänge, Rest-Überlappungen 2\nF11 quer ausgerichtet: {'Muntelier-Löwenberg': 4.2}\n  Spurwechsel auf freier Strecke: 4\n  Tunnel auf freier Strecke: 6\n  Spurwechsel gezeichnet: 3\n  Kreuzungen mit Brücke: 0\n  Nebengleise/Spurwechsel freie Strecke gezeichnet: 6\nok 7240 5442\n",
   "geaendert": true,
-  "pruefung": "Knoten: Counter({'spurplan': 57, 'exit': 9}) Kanten: 66\nsenkrecht: []\n  Überlappungen: [('Saint Blaise-Lac', 'Saint-Blaise CFF'), ('Les Deurres', 'Neuchâtel Vauseyon')]\n  Lage Ketten: 18 Ketten, 18 Knoten, 48 Bahnhöfe auf Ketten, 30 Durchgänge, Rest-Überlappungen 2\nF11 quer ausgerichtet: {'Auvernier': 5.0, 'Neuchâtel Vauseyon': -5.0, 'Muntelier-Löwenberg': 4.2}\n  Spurwechsel auf freier Strecke: 4\n  Tunnel auf freier Strecke: 6\n  Spurwechsel gezeichnet: 1\n  Kreuzungen mit Brücke: 0\n  Nebengleise/Spurwechsel freie Strecke gezeichnet: 8\nok 7240 5428\n\n== Topologie Region (T1–T6) ==\n  keine Befunde\n\n== Prüfung 1: Gleise entlang der Strecken ==\n  → 0 Befunde\n\n== Prüfung 2: Lage Nord/Süd und Ost/West gegenüber Geografie ==\n  Abgang 219 #67 liegt 3.1 km westlich von Couvet, im Plan rechts davon\n  Cressier FR liegt 2.6 km östlich von Murten, im Plan links davon\n  Münchenwiler-Courgevaux liegt 2.6 km westlich von Cressier FR, im Plan rechts davon\n  Chambrelien liegt 1.7 km westlich von Boudry, im Plan rechts davon\n  → 4 Befunde\n\n== Prüfung 3: Achsen und Seiten der Spurpläne gegen die Karte ==\n  Bern Brünnen Westside: Achse zeigt im Plan nach SO, auf der Karte nach O (72°)\n  Riedbach: Achse zeigt im Plan nach SO, auf der Karte nach O (71°)\n  Rosshäusern: Achse zeigt im Plan nach SO, auf der Karte nach NO (85°)\n  → 3 Befunde\n\n== Prüfung 4: freie Strecke gegen OSM ==\n  Planfenster: 56 von 57 Spurplänen\n  Noiraigue – Champ du Moulin: 780–855 m ab Noiraigue: OSM 2 Gleise, Plan 1\n  → 1 Befunde\n",
+  "pruefung": "Knoten: Counter({'spurplan': 57, 'exit': 9}) Kanten: 66\nsenkrecht: []\n  Überlappungen: [('Saint Blaise-Lac', 'Saint-Blaise CFF'), ('Les Deurres', 'Neuchâtel Vauseyon')]\n  Lage Ketten: 18 Ketten, 18 Knoten, 48 Bahnhöfe auf Ketten, 30 Durchgänge, Rest-Überlappungen 2\nF11 quer ausgerichtet: {'Muntelier-Löwenberg': 4.2}\n  Spurwechsel auf freier Strecke: 4\n  Tunnel auf freier Strecke: 6\n  Spurwechsel gezeichnet: 3\n  Kreuzungen mit Brücke: 0\n  Nebengleise/Spurwechsel freie Strecke gezeichnet: 6\nok 7240 5442\n\n== Topologie Region (T1–T6) ==\n  keine Befunde\n\n== Prüfung 1: Gleise entlang der Strecken ==\n  → 0 Befunde\n\n== Prüfung 2: Lage Nord/Süd und Ost/West gegenüber Geografie ==\n  Abgang 219 #67 liegt 3.1 km westlich von Couvet, im Plan rechts davon\n  Cressier FR liegt 2.6 km östlich von Murten, im Plan links davon\n  Münchenwiler-Courgevaux liegt 2.6 km westlich von Cressier FR, im Plan rechts davon\n  Chambrelien liegt 1.7 km westlich von Boudry, im Plan rechts davon\n  → 4 Befunde\n\n== Prüfung 3: Achsen und Seiten der Spurpläne gegen die Karte ==\n  Bern Brünnen Westside: Achse zeigt im Plan nach SO, auf der Karte nach O (72°)\n  Riedbach: Achse zeigt im Plan nach SO, auf der Karte nach O (71°)\n  Rosshäusern: Achse zeigt im Plan nach SO, auf der Karte nach NO (85°)\n  → 3 Befunde\n\n== Prüfung 4: freie Strecke gegen OSM ==\n  Planfenster: 56 von 57 Spurplänen\n  Noiraigue – Champ du Moulin: 780–855 m ab Noiraigue: OSM 2 Gleise, Plan 1\n  → 1 Befunde\n",
   "geometrie": {
    "plan": "/home/runner/work/topo-daten/topo-daten/spurplan/werkstatt/olten/feedback/region_ne.svg",
-   "achse": 10.0513123147649,
+   "achse": 10.059258921007087,
    "befunde": [
     {
      "regel": "A1",
-     "x": 2380.0,
-     "y": -2661.1,
-     "text": "zwei Streckengleise 8.0 px auseinander (0.80 Achsen) über 74 px"
+     "x": 2386.9,
+     "y": -2670.5,
+     "text": "zwei Streckengleise 8.0 px auseinander (0.79 Achsen) über 63 px"
     },
     {
      "regel": "A1",
-     "x": -3551.3,
-     "y": 2415.5,
-     "text": "zwei Streckengleise 8.2 px auseinander (0.82 Achsen) über 154 px"
+     "x": -3517.1,
+     "y": 2389.6,
+     "text": "zwei Streckengleise 11.7 px auseinander (1.17 Achsen) über 69 px"
+    },
+    {
+     "regel": "A1",
+     "x": -3580.7,
+     "y": 2453.2,
+     "text": "zwei Streckengleise 4.9 px auseinander (0.48 Achsen) über 60 px"
     },
     {
      "regel": "F11",
-     "x": 2974.9,
-     "y": 1130.4,
+     "x": 2985.1,
+     "y": 1148.6,
      "text": "Versatz 4.4 px ohne Grund zwischen zwei parallelen Stücken"
     },
     {
      "regel": "F11",
-     "x": 2341.6,
-     "y": -2624.1,
+     "x": 2352.5,
+     "y": -2651.6,
      "text": "Versatz 4.0 px ohne Grund zwischen zwei parallelen Stücken"
     }
    ]
