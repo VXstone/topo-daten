@@ -820,3 +820,8 @@ REGELN.md «Haken». Code: lage_auto (peilung_ziel_ab, Abgang gerade), straenge 
 - Vereina: T6 0, Ruhe 4/0 (Ecken 5→0); Klosters Platz senkrecht, 915 «Davos ↓».
 - MOB: Zweisimmen – Oeschseite und Zweisimmen – Spiez ohne Haken, Phantom-Abgang weg (S2 2→0), T6 4→2, Ruhe 11/6→10/3, G2 22.
 - Offen: La Tine – Montbovon, Rochers de Naye – La Perche (T6), Les Sciernes – Montbovon (Anker), Glion-Zickzack; Olten/Neuchâtel unberührt (Regeln nur Linien-Regionen).
+
+## 4.11.2026 spät (3) – Perrons, Portale, Glion-Depot
+REGELN.md «Perrons, Portale, Schiebebühne». Code: spurplan_schema (perron_min_m/px, perron_frei, Schiebebühne), netz_lage (Portale), region_lauf (P1, cfg), regel_pruefung (Symbole).
+- MOB/Vereina Berichte unverändert (P1 0, Planrand 0); Olten, Neuchâtel und SBB-Bahnhöfe byte-gleich.
+- Offen Glion: Bahnhof liegt im Bogen, die Plan-Achse (6 km) schneidet ihn – Strecke 121 liegt am Rand 11,6 m neben der Achse und springt über zwei Ebenen (Achsenfrage, nicht Kettenbildung; `ref_fortsetzung` getestet, ohne Wirkung).

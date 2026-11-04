@@ -1181,20 +1181,46 @@ for r in routes:
         if (tb_ - ta_) * _Lp_ < 18:
             _m_ = (ta_ + tb_) / 2; ta_, tb_ = _m_ - 9 / _Lp_, _m_ + 9 / _Lp_
         # Portal nicht in einen Bogen setzen (Kerzers–Gümmenen 20.10.): beide gemeinsam ins nächste gerade Stück schieben
+        # alle Gleise gerade und parallel (4.11. spät, Selfranga: Klammer im S-Bogen der Doppelspur lag neben dem Gleis)
+        def _quer_(t_):
+            """Punkte aller Gleise quer zur Strecke an der Stelle t_ des ersten Gleises (statt gleicher Längenanteil)."""
+            c0_, d0_ = _at(g_["lines"][0], t_); out_ = [(c0_, d0_)]
+            for l_ in g_["lines"][1:]:
+                L2_ = _LSg([tuple(map(float, q_)) for q_ in l_])
+                if L2_.length < 1e-6: out_.append((c0_, d0_)); continue
+                t2_ = L2_.project(_Ptg(tuple(map(float, c0_)))) / L2_.length
+                out_.append(_at(l_, t2_))
+            return out_
+        _GW = float(L0.get("portal_gerade_px", 18 if _LINIEN else 9))     # gerades Stück beidseits (Klammer + Ausrundung)
         def _gerade_(t_):
             if not 0.02 < t_ < 0.98: return True
-            d0_ = _at(g_["lines"][0], max(0, t_ - 9 / _Lp_))[1]; d1_ = _at(g_["lines"][0], min(1, t_ + 9 / _Lp_))[1]
-            return float(d0_ @ d1_) > 0.996
+            dm_ = _at(g_["lines"][0], t_)[1]
+            for k_ in (-1, -0.5, 0.5, 1):
+                if float(_at(g_["lines"][0], min(1, max(0, t_ + k_ * _GW / _Lp_)))[1] @ dm_) <= 0.996: return False
+            if len(g_["lines"]) > 1:
+                Q_ = _quer_(t_)
+                if any(abs(float(q_[1] @ Q_[0][1])) < 0.996 for q_ in Q_[1:]): return False
+                for l_ in g_["lines"][1:]:
+                    L2_ = _LSg([tuple(map(float, q_)) for q_ in l_]); t2_ = L2_.project(_Ptg(tuple(map(float, Q_[0][0])))) / (L2_.length or 1)
+                    e0_ = _at(l_, max(0, t2_ - _GW / (L2_.length or 1)))[1]; e1_ = _at(l_, min(1, t2_ + _GW / (L2_.length or 1)))[1]
+                    if float(e0_ @ e1_) <= 0.996: return False
+            return True
         if not (_gerade_(ta_) and _gerade_(tb_)):
-            for _k in [k_ * sg2_ for k_ in range(1, 70) for sg2_ in (1, -1)]:
-                _d = 3 * _k / _Lp_
-                if _gerade_(ta_ + _d) and _gerade_(tb_ + _d) and 0.02 < ta_ + _d and tb_ + _d < 0.98: ta_, tb_ = ta_ + _d, tb_ + _d; break
+            _GW0 = _GW
+            # kein Platz mit vollem Fenster (kurze Strecke, Selfranga – Selfranga Süd 61 px): Fenster schrittweise kleiner
+            for _GW in ([_GW0, 0.6 * _GW0, 6.0] if _LINIEN else [_GW0]):
+                _ok = False
+                for _k in [k_ * sg2_ for k_ in range(1, 70) for sg2_ in (1, -1)]:
+                    _d = 3 * _k / _Lp_
+                    if _gerade_(ta_ + _d) and _gerade_(tb_ + _d) and 0.02 < ta_ + _d and tb_ + _d < 0.98: ta_, tb_ = ta_ + _d, tb_ + _d; _ok = True; break
+                if _ok: break
+            _GW = _GW0
         for tt_, sg_, wq_, nq_ in ((ta_, -1, wa_, na), (tb_, 1, wb_, nb)):
             if not 0.02 < tt_ < 0.98: continue
             # Portal liegt im Spurplan des Bahnhofs und wird dort gezeichnet (Olten 17.10.) - nur, wenn der Spurplan Portale hat;
             # sonst fehlte das zweite Portal (Gümmenen 20.10.: "Tunnelportale beidseitig vom Tunnel")
             if wq_ in ST_WAYS(nq_) and _hat_portale(nq_): continue
-            P_ = [_at(l, tt_) for l in g_["lines"]]
+            P_ = _quer_(tt_)
             d_ = P_[0][1]; n_ = np.array([-d_[1], d_[0]])
             ofs = sorted(float((p_[0] - P_[0][0]) @ n_) for p_ in P_)
             c_ = P_[0][0]; grp_ = [[ofs[0]]]

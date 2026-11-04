@@ -157,3 +157,9 @@ Stand 21.10.2026.
 - Abgang gerade aus dem Plan (Linien-Regionen, `abgang_knick` 60°): liegt der Abgang mehr als 60° neben der Anschlussrichtung (Kehre gleich nach dem Plan, Klosters – Davos), kommt er in Anschlussrichtung.
 - Abgangsziel: hat ein anderer Abgang desselben Bahnhofs schon dieses Ziel, gilt der andere Ort der Linie (915 Davos statt Landquart).
 - Kein eigener Abgang (Strangbild): offenes Ende eines Gleises ohne Liniennummer, dessen Fortsetzung nach < 300 m endet oder dessen Fernpunkt ≤ 1 km neben dem Fernpunkt eines Abgangs mit Liniennummer liegt (Zweisimmen Gl. 86/87 Richtung Umspuranlage: Phantom «Linie None / Spiez» mit 2 Gleisen).
+
+## Perrons, Portale, Schiebebühne (4.11. spät)
+- Jeder Perron aus OSM wird gezeichnet (Regionen `perron_min_m` 3 m statt 20 m: Valmont, Toveyre, Paccot, Crêt-d'y-Bau, Le Tremblex hatten keinen Perron), mindestens `perron_min_px` 40 px. `perron_frei` löscht nie mehr: reicht der freie Abschnitt nicht (< 24 px), gilt die Mindestlänge; reicht er, bleibt er (Chamby: nicht in den Weichenbogen).
+- Prüfung P1 (region_lauf, perrons.json): Perron aus OSM (≥ 10 m) nicht gezeichnet. Alter Stand hätte 10 Bahnhöfe gemeldet.
+- Portale: Klammer nur, wo alle Gleise gerade und parallel laufen (±18 px, Linien-Regionen; sonst ±9 px wie bisher); Punkte der Nachbargleise quer zur Strecke statt gleicher Längenanteil. Ohne Platz mit vollem Fenster schrittweise kleiner (Selfranga – Selfranga Süd ist nur 61 px lang). Klosters Platz: Portal vom Knick aufs gerade Stück.
+- Schiebebühne (Regionen `schiebebuehne`): Way mit railway=traverser oder note «shifting/traverser/Schiebebühne»; beidseits offene kurze Gleise daneben sind Depotgleise: gemeinsamer Anfang, mindestens 40 px, Bühne als gestrichelte Querlinie (Glion). regel_pruefung überspringt gestrichelte Symbole.

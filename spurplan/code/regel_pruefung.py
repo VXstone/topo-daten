@@ -56,6 +56,7 @@ def walk(el, M, st, col, w):
     col = el.get("stroke", col); w = el.get("stroke-width", w)
     if tag == "circle": v_ = M @ np.array([float(el.get("cx", 0)), float(el.get("cy", 0)), 1.0]); dots.append((float(v_[0]), float(v_[1])))
     if tag == "path" and el.get("stroke-opacity"): return          # DKW-Klammern
+    if tag == "path" and el.get("stroke-dasharray") and el.get("stroke") not in (None, "none"): return   # Symbole (Schiebebühne, 4.11.)
     if tag == "path" and el.get("d") and (el.get("stroke") or "").lower() in ("#fff", "#ffffff"):
         try:
             for sg_ in parse_path(el.get("d")):

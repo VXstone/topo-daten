@@ -11,7 +11,7 @@ Ablauf in /tmp/spurplan_region/<region>:
 Ergebnis nach ergebnisse/region_<region>/: region.svg, region.png, bericht.json, log.txt, je Bahnhof <b>_spurplan.svg.
 Konfig: spurplan/regionen/<region>/region.json (+ optionale <bahnhof>_override.json im selben Ordner).
 """
-import json, os, sys, shutil, subprocess, time, glob
+import json, os, sys, shutil, subprocess, time, glob, math
 HERE = os.path.dirname(os.path.abspath(__file__)); REPO = os.path.dirname(os.path.dirname(HERE))
 REG = sys.argv[1]
 DATEN = os.path.abspath(sys.argv[sys.argv.index("--daten") + 1] if "--daten" in sys.argv else os.path.join(REPO, "schweiz_bahn.json.gz"))
@@ -70,6 +70,9 @@ def _bahnhof(n):
     o["cfg"].setdefault("gleis_mindestlaenge", True)                 # Kreuzungsgleis nicht auf Schrägen stauchen (Sendy-Sollard)
     o["cfg"].setdefault("perron_abschnitt", True)                    # Perronlage, wo seine Gleise liegen (Zweisimmen 7/8)
     o["cfg"].setdefault("pfeil_aussen", True)                         # Pfeile nie auf ein Nachbargleis (Zweisimmen)
+    o["cfg"].setdefault("perron_min_m", 3)                            # jeder Perron aus OSM (Halte, 4.11. spät)
+    o["cfg"].setdefault("perron_min_px", 40)                          # mindestens 40 px lang
+    o["cfg"].setdefault("schiebebuehne", True)                        # Depot mit Schiebebühne (Glion, 4.11. spät)
     o["cfg"].setdefault("randzone", True)                             # Streckengleise am Planrand im Standardabstand (Selfranga)
     o["cfg"].setdefault("einspur_gerade", False)                     # Punkt 4 im Plan zerlegt die Weichenstrasse (Château-d'Oex) – stattdessen Kippen im Regionalplan
     o["cfg"]["rules"].setdefault("r49", True)                       # zu eng für 60°: volle Schräge statt 90° (Sagliains West)
@@ -147,6 +150,24 @@ if os.path.exists(os.path.join(WORK, "region.svg")):
     except Exception as e: LOG.append(f"PNG: {e}")
 for f_ in ("roh.json.gz", "betriebspunkte.json", f"{NAME}_topologie.json", f"{NAME}_straenge.json"):
     if os.path.exists(os.path.join(WORK, f_)): shutil.copy(os.path.join(WORK, f_), OUT)
+# P1 Perron aus OSM nicht gezeichnet (4.11. spät, MOB: Halte ohne Perron fielen in keinem Bericht auf). Splitter unter 10 m
+# neben einem gezeichneten Perron zählen nicht.
+_p1 = []
+for _f in sorted(glob.glob(os.path.join(WORK, "*_netz.json"))):
+    try: _N = json.load(open(_f))
+    except Exception: continue
+    _po = []
+    for _e in _N.get("perrons_osm", []):
+        _pt = _e.get("punkte", [])
+        _L = sum(math.dist(((a[1] - b[1]) * 76000, (a[0] - b[0]) * 111200), (0, 0)) for a, b in zip(_pt, _pt[1:]))
+        if _L >= 10: _po.append(_L)
+    _n = len(_N.get("perrons", []))
+    if len(_po) > _n:
+        _p1.append(dict(regel="P1", plan=os.path.basename(_f)[:-10], text=f"{os.path.basename(_f)[:-10]}: {len(_po) - _n} Perron(s) aus OSM nicht gezeichnet"))
+if _p1:
+    bericht["perrons"] = {"P1": len(_p1)}
+    LOG.append("== Perrons (P1) ==\n" + "\n".join(x["text"] for x in _p1))
+json.dump(_p1, open(os.path.join(OUT, "perrons.json"), "w"), ensure_ascii=False, indent=1)
 json.dump(bericht, open(os.path.join(OUT, "bericht.json"), "w"), ensure_ascii=False, indent=1)
 open(os.path.join(OUT, "log.txt"), "w").write("\n\n".join(LOG))
 print(json.dumps({k: v for k, v in bericht.items() if k != "bahnhoefe"}, ensure_ascii=False))

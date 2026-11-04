@@ -1997,6 +1997,41 @@ if RU.get("r44", False) and RU.get("r44v", True):
             if 0 < abs(xt - xo) < 25 and not (o in EDGE_NODES if "EDGE_NODES" in globals() else False):
                 xs_over[o] = _Xinv(xt)
 svg_paths = {True: [], False: []}
+# Schiebebühne (4.11. spät, Glion: Depot der Rochers-de-Naye-Bahn, OSM-Way mit note «shifting – lateral movement from track
+# to track»; sieben je ~25 m lange Depotgleise ohne Gleisverbindung erschienen als Punktreihe). Depotgleise hinter der Bühne
+# beginnen gemeinsam auf Höhe ihres Anfangs und sind mindestens «schiebe_px» (40 px) lang; die Bühne wird als gestrichelte
+# Querlinie vom Streckengleis über alle Depotgleise gezeichnet. cfg «schiebebuehne» (Regionen an).
+SCHIEBE_SVG = []
+if CFG.get("schiebebuehne", False):
+    _deg_all = collections.Counter(n_ for w_ in ways.values() for n_ in w_["nodes"])
+    _tv = [sg for sg in segs if sg["tags"].get("railway") == "traverser"
+           or any(k_ in sg["tags"].get("note", "").lower() for k_ in ("shifting", "traverser", "schiebeb"))]
+    for tv in _tv:
+        st0, st1 = tv["s0"], tv["s1"]
+        _lt = seglane.get(tv["id"], home.get(tv["nodes"][0]))
+        if _lt is None: continue
+        dep = []
+        for c in C:
+            if c["lane"] == _lt or c["s1"] - c["s0"] > 60 or not all(sg["flat"] for sg in c["segs"]): continue
+            ss_ = sorted(c["segs"], key=lambda x: x["s0"])
+            ends_ = (ss_[0]["nodes"][0], ss_[-1]["nodes"][-1])
+            if any(_deg_all[n_] > 1 for n_ in ends_): continue                     # beidseits offen: nur über die Bühne erreichbar
+            if not (st0 - 20 <= c["s0"] <= st1 + 40): continue
+            dep.append(c)
+        if len(dep) < 2: continue
+        s_a = min(c["s0"] for c in dep); s_b = max(c["s1"] for c in dep)
+        s_b = Xm_inv(max(X(s_b), X(s_a) + CFG.get("schiebe_px", 40)))
+        for c in dep:
+            for sg in c["segs"]:
+                for n_ in sg["nodes"]:
+                    if n_ in SD: xs_over[n_] = s_a + (SD[n_][0] - c["s0"]) * (s_b - s_a) / max(c["s1"] - c["s0"], 1e-6)
+            c["s0"], c["s1"] = s_a, s_b
+            for sg in c["segs"]: sg["s0"], sg["s1"] = (xs_over.get(sg["nodes"][0], sg["s0"]), xs_over.get(sg["nodes"][-1], sg["s1"]))
+        _ys = [Y(c["lane"]) for c in dep] + [Y(_lt)]
+        _x = X(s_a) - 3
+        _col = MS_BRAUN if tv.get("schmal") or tv["tags"].get("spur") not in (None, "1435") else "#008a37"
+        SCHIEBE_SVG.append(f'<path d="M{_x:.1f},{min(_ys):.1f}L{_x:.1f},{max(_ys):.1f}" fill="none" stroke="{_col}" stroke-width="1.6" stroke-dasharray="4 3"/>')
+        if ARGS.dbg: print("SCHIEBEBUEHNE", tv["way"], len(dep), "Depotgleise", round(s_a), round(s_b))
 STUB_SRC = []
 DBG = []
 STUBS = []
@@ -3368,7 +3403,9 @@ for e in ([] if OVR.get("platforms") is not None else PLAT):
     pts = [project(xy(g)) for g in e["geometry"]]
     ss_ = [p[0] for p in pts]; dd_ = [p[1] for p in pts]
     a_, b_ = max(min(ss_), CFG["s_min"]), min(max(ss_), CFG["s_max"])
-    if b_ - a_ < 20 or abs(np.mean(dd_)) > CFG["d_lim"]: continue
+    # Halte ohne Perron (4.11. spät, MOB Valmont 8 m, Toveyre 12 m, Paccot 19 m: Perrons unter 20 m fielen weg). cfg
+    # «perron_min_m» (Regionen 3 m, sonst 20 m wie bisher)
+    if b_ - a_ < CFG.get("perron_min_m", 20) or abs(np.mean(dd_)) > CFG["d_lim"]: continue
     sm_, dm_ = (a_ + b_) / 2, float(np.mean(dd_))
     # Perron länger als seine Gleise (4.11.2026, Zweisimmen 7/8: OSM-Fläche 845 m, Gleis 8 endet vorher – an der Mitte
     # fehlte Gl. 8, der Perron landete auf dem Gleis): Lage dort bestimmen, wo auf beiden Seiten (bzw. auf der näheren)
@@ -3408,6 +3445,10 @@ for e in ([] if OVR.get("platforms") is not None else PLAT):
     else: continue
     x0_, x1_ = X(a_), X(b_)
     if _PPX and x1_ - x0_ > _PPX: _m = (x0_ + x1_) / 2; x0_, x1_ = _m - _PPX / 2, _m + _PPX / 2      # B14
+    _PMIN = CFG.get("perron_min_px", 0)                   # Mindestlänge gezeichnet (Regionen 40 px, 4.11. spät)
+    if _PMIN and x1_ - x0_ < _PMIN:
+        _m = (x0_ + x1_) / 2; _m = min(max(_m, X(CFG["s_min"]) + _PMIN / 2), X(CFG["s_max"]) - _PMIN / 2)
+        x0_, x1_ = _m - _PMIN / 2, _m + _PMIN / 2
     PERRON_PX.append((x0_, x1_, yb))
     # Perronfarbe nach Spur der anliegenden Gleise (3.11.2026, D. Eckenstein: «Perrons in braun allgemein» – Zweisimmen,
     # Montreux: MOB-Perrons waren grün wie die Normalspur)
@@ -3415,6 +3456,7 @@ for e in ([] if OVR.get("platforms") is not None else PLAT):
     _sch = [x.get("schmal") for c in C if c["lane"] in _nb_l and c["s0"] <= sm_ <= c["s1"] for x in c["segs"]]
     _pc = MS_BRAUN if _sch and all(_sch) else green
     out.append(f'<rect x="{x0_:.1f}" y="{yb - 4:.1f}" width="{x1_ - x0_:.1f}" height="8" rx="1.5" fill="{_pc}"/>')
+out.extend(SCHIEBE_SVG)
 # Perron frei (3.11.2026, MOB: Perron länger als das gerade Stück seines Gleises deckte Weichenbögen und Gleise ab,
 # La Tine, Flendruz, Saanenmöser u. a.): jeder Perronbalken wird auf den längsten Abschnitt um seine Mitte gekürzt, in dem
 # kein gezeichnetes Gleis durch den Balken läuft; unter 24 px fällt er weg. cfg «perron_frei» (Regionen: an).
@@ -3448,7 +3490,14 @@ if CFG.get("perron_frei", False):
         if not m_: _neu.append(o_); continue
         x0, y0, w0 = float(m_.group(1)), float(m_.group(2)), float(m_.group(3))
         a, b = _frei(x0, x0 + w0, y0 + 4)
-        if b - a < 24: continue
+        _PMIN = CFG.get("perron_min_px", 0)
+        if b - a < 24:                       # zu wenig frei: bisher gelöscht
+            if not _PMIN: continue
+            # nie löschen (4.11. spät, Les Échets): Mindestlänge um die Mitte des freien Stücks. Reicht das freie Stück
+            # (≥ 24 px), bleibt es so – sonst läge der Perron im Weichenbogen (Chamby)
+            _c = (a + b) / 2 if b > a else x0 + w0 / 2
+            a, b = max(x0, _c - _PMIN / 2), min(x0 + w0, _c + _PMIN / 2)
+            if b - a < _PMIN: a, b = (a, a + _PMIN) if a == x0 else (b - _PMIN, b)
         _neu.append(f'<rect x="{a:.1f}" y="{y0:.1f}" width="{b - a:.1f}" height="8" rx="1.5" fill="{m_.group(4)}"/>')
         for k_, (px0, px1, py) in enumerate(PERRON_PX):
             if abs(py - (y0 + 4)) < 0.5 and abs(px0 - x0) < 0.5: PERRON_PX[k_] = (a, b, py)
