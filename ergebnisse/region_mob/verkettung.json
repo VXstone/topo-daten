@@ -474,15 +474,6 @@
     ]
    ]
   },
-  "lenk_im_simmental|matten": {
-   "lenk_im_simmental": [
-    [
-     "ports",
-     true,
-     null
-    ]
-   ]
-  },
   "belmont_sur_montreux|vuarennes": {
    "belmont_sur_montreux": [
     [
@@ -505,11 +496,6 @@
      "ports",
      true,
      "120"
-    ],
-    [
-     "pfeile",
-     false,
-     null
     ]
    ],
    "chatelard": [
@@ -633,40 +619,5 @@
    ]
   }
  },
- "befunde": [
-  {
-   "regel": "V1",
-   "a": "belmont_sur_montreux",
-   "b": "chatelard",
-   "text": "Belmont-sur-Montreux: 2 Gleise nach Châtelard, Châtelard: 1 Gleise nach Belmont-sur-Montreux"
-  },
-  {
-   "regel": "V2",
-   "a": "belmont_sur_montreux",
-   "b": "chatelard",
-   "text": "Belmont-sur-Montreux – Châtelard: Gleis im einen Plan als Pfeil, im anderen als Abgang"
-  },
-  {
-   "regel": "V3",
-   "a": "lenk_im_simmental",
-   "b": "matten",
-   "text": "Lenk im Simmental: 1 Gleis(e) nach Matten, dort kommt keines zurück"
-  },
-  {
-   "regel": "S1",
-   "a": "lenk_im_simmental",
-   "b": "boden",
-   "text": "Lenk im Simmental: 0 Streckengleis(e) nach Boden, Strangbild 1"
-  },
-  {
-   "regel": "S3",
-   "a": "chamby",
-   "text": "Chamby: Fahrbeziehung Abgang Blonay → Sonzier im Plan nicht durchgehend gezeichnet"
-  },
-  {
-   "regel": "S3",
-   "a": "chamby",
-   "text": "Chamby: Fahrbeziehung Sonzier → Abgang Blonay im Plan nicht durchgehend gezeichnet"
-  }
- ]
+ "befunde": []
 }

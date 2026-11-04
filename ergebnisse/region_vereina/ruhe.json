@@ -36,5 +36,25 @@
   "neben": false,
   "plan": "Regionalplan",
   "text": "Regionalplan: Treppe bei x=-239.8, y=-190.1"
+ },
+ {
+  "regel": "T7",
+  "art": "Treppe",
+  "x": 772.5,
+  "y": 380.8,
+  "versatz": 33.8,
+  "neben": true,
+  "plan": "Regionalplan",
+  "text": "Regionalplan: Treppe bei x=772.5, y=380.8 (Nebengleis)"
+ },
+ {
+  "regel": "T7",
+  "art": "Treppe",
+  "x": 771.0,
+  "y": 373.4,
+  "versatz": 28.1,
+  "neben": true,
+  "plan": "Regionalplan",
+  "text": "Regionalplan: Treppe bei x=771.0, y=373.4 (Nebengleis)"
  }
 ]

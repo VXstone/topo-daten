@@ -1,9 +1,15 @@
 {
  "region": "mob",
- "erzeugt": "2026-11-04 22:45 UTC",
+ "erzeugt": "2026-11-04 23:19 UTC",
  "bahnhoefe": {
   "schonried": {
    "name": "Schönried",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "chateau_d_oex": {
+   "name": "Château-d'Oex",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -18,12 +24,6 @@
    "name": "Les Avants",
    "ok": true,
    "befunde": "Befunde: {'A': 1, 'F': 1}",
-   "optionen": []
-  },
-  "chateau_d_oex": {
-   "name": "Château-d'Oex",
-   "ok": true,
-   "befunde": "Befunde: {}",
    "optionen": []
   },
   "flendruz": {
@@ -102,14 +102,14 @@
    "befunde": "Befunde: {'B': 1, 'F': 1}",
    "optionen": []
   },
-  "allieres": {
-   "name": "Allières",
+  "chamby": {
+   "name": "Chamby",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "chamby": {
-   "name": "Chamby",
+  "allieres": {
+   "name": "Allières",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -126,14 +126,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "saanenmoser": {
-   "name": "Saanenmöser",
+  "oeschseite": {
+   "name": "Oeschseite",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "oeschseite": {
-   "name": "Oeschseite",
+  "saanenmoser": {
+   "name": "Saanenmöser",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -278,12 +278,12 @@
   }
  },
  "verkettung": {
-  "V1": 1,
-  "V2": 1,
-  "V3": 1,
-  "S1": 1,
+  "V1": 0,
+  "V2": 0,
+  "V3": 0,
+  "S1": 0,
   "S2": 0,
-  "S3": 2
+  "S3": 0
  },
  "netz_lage": 0,
  "topologie_region": {
@@ -294,8 +294,8 @@
   "ecken": 3
  },
  "regeln": {
-  "G2": 22,
-  "G6": 4,
-  "G8": 7
+  "G2": 23,
+  "G6": 3,
+  "G8": 8
  }
 }
