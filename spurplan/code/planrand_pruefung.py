@@ -20,7 +20,8 @@ for f in sorted(glob.glob(os.path.join(d, "*_ports.json"))):
         ps.sort(key=lambda p: p["y"])
         for a, b in zip(ps, ps[1:]):
             dy = round(b["y"] - a["y"], 1)
-            soll = LANE if a.get("ref") == b.get("ref") else 2 * LANE
+            # gleiche Linie oder ein Gleis ohne Liniennummer (Randzone 4.11.2026, Selfranga): Doppelspurabstand
+            soll = LANE if (a.get("ref") == b.get("ref") or not a.get("ref") or not b.get("ref")) else 2 * LANE
             if abs(dy - soll) > 0.6 and not (a.get("ref") != b.get("ref") and abs(dy - LANE) <= 0.6):
                 n += 1
                 print(f"{st}\t{'rechts' if dx > 0 else 'links'} x{x}\tLinie {a.get('ref')}/{b.get('ref')}: Abstand {dy:g} px statt {soll:g}")

@@ -70,6 +70,7 @@ def _bahnhof(n):
     o["cfg"].setdefault("gleis_mindestlaenge", True)                 # Kreuzungsgleis nicht auf Schrägen stauchen (Sendy-Sollard)
     o["cfg"].setdefault("perron_abschnitt", True)                    # Perronlage, wo seine Gleise liegen (Zweisimmen 7/8)
     o["cfg"].setdefault("pfeil_aussen", True)                         # Pfeile nie auf ein Nachbargleis (Zweisimmen)
+    o["cfg"].setdefault("randzone", True)                             # Streckengleise am Planrand im Standardabstand (Selfranga)
     o["cfg"].setdefault("einspur_gerade", False)                     # Punkt 4 im Plan zerlegt die Weichenstrasse (Château-d'Oex) – stattdessen Kippen im Regionalplan
     o["cfg"]["rules"].setdefault("r49", True)                       # zu eng für 60°: volle Schräge statt 90° (Sagliains West)
     o["cfg"]["rules"].setdefault("r28f", True)                      # Streckengleis im Bogen läuft an den Planrand (Gruben, La Tine)

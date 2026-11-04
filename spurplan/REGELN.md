@@ -133,3 +133,12 @@ Stand 21.10.2026.
 - Pfeile nur nach aussen (`pfeil_aussen`, Regionen): zeigt ein R38-Pfeil auf ein Nachbargleis (innerhalb 1,5 Ebenen), wird stattdessen ein Stumpen gezeichnet (Schräge bis knapp vor die Mitte, kurzes Gleis in Richtung der Anlage, Prellbock, ausgerundet) – nicht ersatzlos löschen (D. Eckenstein 4.11.).
 - Perronlage dort, wo seine Gleise liegen (`perron_abschnitt`, Regionen): Zweisimmen 7/8 (OSM 845 m, Gl. 8 endet vorher) sass auf Gl. 8.
 - Offen Zweisimmen: Einfahrt wirkt einspurig/DKW (Gstaad- und Lenk-Linie laufen über Verbindungen zusammen); Perron an Gl. 12 fehlt in OSM.
+
+## Randzone (4.11., D. Eckenstein: Streckengleise am Planrand im Standardabstand)
+- Streckengleise treten am Planrand im Standardabstand aus: gleiche Linie **oder ein Gleis ohne Liniennummer** eine Ebene (24 px), zwei verschiedene Linien zwei Ebenen (E5). Gilt in Regionen (`randzone`, via region_lauf an); SBB-Bahnhöfe aus «plaene» unverändert (Prüflauf offen, Punkt 2).
+- Ablauf im Schema (nach A4): zuerst die ganze Kette auf die Nachbarebene, wenn Ziel- und Zwischenebenen frei sind. Sonst nur das Randstück: eine gerade Teilstrecke (≥ `randzone_m` 60 m) hinter der letzten Belegung wird Schräge, das Stück bis zum Rand liegt im Standardabstand. Versetzt wird die Kette mit weniger Streckengleis – das durchgehende Hauptgleis bleibt liegen (Sagliains Sasslatsch).
+- Lage der Schräge: am inneren Ende, gleich hinter dem Ende des Gleises auf der Zielebene (6 px Luft). Beginnt am selben Weichenknoten ein Gleiswechsel in dieselbe Richtung, liegt die Schräge auf ihm (Gleis biegt auf der Zielebene ab, der Gleiswechsel läuft weiter – Selfranga Gl. 2). regel_pruefung meldet das als G8 (gewollt).
+- Beschriftung: Abgang ohne Liniennummer neben Abgang mit Nummer und gleichem Ziel (≤ 1,5 Ebenen) gehört ins Bündel – eine Beschriftung «Linie 910 / Sagliains».
+- Gleiswechsel (service=crossover) zwischen zwei verschiedenen Streckengleisen ist immer Schräge, auch ohne Querversatz in OSM (Vernex: Streckengleise schwingen ±3,5 m auseinander, Wechsel liegen gerade in der Mitte).
+- `hauptgleis_funktion` c) gilt nicht für Spurwechsel: Kette zwischen zwei parallel laufenden Streckengleisen derselben Linie (jedes Ende ≤ 6 m neben dem anderen Gleis) bleibt Gleiswechsel (Vernex Linie 100 lag im doppelten Abstand). Zweisimmen unverändert.
+- planrand_pruefung: Gleis ohne Liniennummer neben einer Linie = Doppelspurabstand (vorher 48 px verlangt).

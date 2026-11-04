@@ -169,7 +169,19 @@ if CFG.get("hauptgleis_funktion", False):
     for w in _xw: _kx[_fx(w["id"])].append(w)
     for ks in _kx.values():                  # Kette von Verbindungen, die an beiden Enden Streckengleise erreicht
         _ber = {wid for w in ks for n in (w["nodes"][0], w["nodes"][-1]) for wid in _hn[n]}
-        if len(_ber) >= 2: _neu_h |= {w["id"] for w in ks}
+        if len(_ber) < 2: continue
+        # Spurwechsel (Randzone 4.11.2026, Vernex Linie 100): verbindet die Kette zwei parallel laufende Streckengleise
+        # derselben Linie (jedes Ende ≤ 6 m neben dem anderen Gleis), bleibt sie Gleiswechsel
+        _ec = collections.Counter(n for w in ks for n in (w["nodes"][0], w["nodes"][-1]))
+        _en = [n for n, k in _ec.items() if k == 1]
+        if len(_en) == 2:
+            from shapely.geometry import Point as _PtSh
+            _a, _b = _en
+            if any(A != B and ways[A]["tags"].get("ref") and ways[A]["tags"].get("ref") == ways[B]["tags"].get("ref")
+                   and A in _wl and B in _wl and _wl[A].distance(_PtSh(P[_b])) <= 6 and _wl[B].distance(_PtSh(P[_a])) <= 6
+                   for A in _hn[_a] for B in _hn[_b]):
+                continue
+        _neu_h |= {w["id"] for w in ks}
     for wid in _neu_h:
         t_ = dict(ways[wid]["tags"]); t_["_service"] = t_.pop("service"); ways[wid] = dict(ways[wid], tags=t_)
     if _neu_h: print("Hauptgleis aus Funktion:", sorted(_neu_h))
@@ -910,6 +922,20 @@ if CFG.get("perron_fortsetzung", True):
         k_ = [A_] + weg + [Bn[0]]
         for x, y in zip(k_, k_[1:]): FW_PAARE.add((x["id"], y["id"]))
         if ARGS.dbg: print("PERRON-FORTSETZUNG Gl.", A_["ref"], [x["way"] for x in k_])
+# Randzone (4.11.2026, Vernex): ein Gleiswechsel (service=crossover) zwischen zwei verschiedenen Streckengleisen ist immer
+# eine Schräge, auch wenn er in OSM kaum quer versetzt ist (die Streckengleise schwingen dort auseinander) - sonst wird er
+# eigenes Gleis auf einer Zwischenebene und die Doppelspur tritt im doppelten Abstand aus. cfg «randzone».
+if CFG.get("randzone", False):
+    _st_w = collections.defaultdict(set)
+    for sg in segs:
+        if sg["pax"] and not sg["tags"].get("service"):
+            for n_ in sg["nodes"]: _st_w[n_].add(sg["way"])
+    for sg in segs:
+        if not sg["flat"] or sg["tags"].get("service") != "crossover": continue
+        wa, wb = _st_w.get(sg["nodes"][0], set()), _st_w.get(sg["nodes"][-1], set())
+        if wa and wb and not (wa & wb):
+            sg["flat"] = False
+            if ARGS.dbg: print("RANDZONE Gleiswechsel", sg["way"])
 for n, (L, Rr) in at.items():
     fl = [a for a in L if a["flat"]]; fr = [b for b in Rr if b["flat"]]
     # Weiterlauf: gleiche Richtung, gleicher Way bevorzugt; Weichenverbindungen (service=crossover) nur, wenn nichts anderes
@@ -1262,6 +1288,93 @@ if CFG.get("a4_rand", True):
                     if _mv["lane"] != _alt:
                         if ARGS.dbg: print("A4RAND", _r, _rand, _alt, "->", _mv["lane"], [sg["way"] for sg in _mv["segs"]][:4])
                         break
+
+# Randzone (4.11.2026, D. Eckenstein, Klosters Selfranga): Streckengleise treten am Planrand immer im Standardabstand
+# aus (gleiche Linie oder ein Gleis ohne Liniennummer: eine Ebene; zwei verschiedene Linien: zwei Ebenen). A4 oben
+# rückt nur ganze Ketten derselben Linie. Hier zählen auch Streckengleise ohne «ref» (Selfranga: 2. Gleis nach
+# Sagliains), und wo die ganze Kette nicht rücken kann (weiter innen liegt ein Nebengleis dazwischen), wird nur das
+# Randstück versetzt: eine gerade Teilstrecke der Kette hinter der letzten Belegung der Zwischenebenen wird zur Schräge,
+# das Stück bis zum Rand liegt im Standardabstand. cfg «randzone» (Regionen an), «randzone_m» Mindestlänge der Schräge.
+RANDZONE = []
+if CFG.get("randzone", False):
+    # Planrand = äusserste gezeichnete Gleisenden (das Fenster s_min/s_max kann weiter reichen, Selfranga: 60 m)
+    _sl, _sh = max(CFG["s_min"], min(c["s0"] for c in C)), min(CFG["s_max"], max(c["s1"] for c in C))
+    _gap = CFG["lane_gap_m"]; _rzm = CFG.get("randzone_m", 60)
+    def _rz_ref(c): return next((sg["tags"].get("ref") for sg in c["segs"] if sg["tags"].get("ref")), None)
+    _rz_strecke = lambda c: any(sg["pax"] and not sg["tags"].get("service") for sg in c["segs"])
+    def _rz_belegt(l_, s0_, s1_, ausser):
+        return [o for o in C if o not in ausser and o["lane"] == l_ and min(o["s1"], s1_) - max(o["s0"], s0_) > -_gap]
+    def _rz_pts(sl_):
+        p_ = np.vstack([x["p"] for x in sl_]); return p_[p_[:, 0].argsort()]
+    for _rand in ("lo", "hi"):
+        _hi = _rand == "hi"
+        _am = (lambda c: c["s1"] >= _sh - 40) if _hi else (lambda c: c["s0"] <= _sl + 40)
+        for _it in range(4):
+            _ec = sorted([c for c in C if _am(c) and _rz_strecke(c)], key=lambda c: c["lane"])
+            _done = False
+            for a_, b_ in zip(_ec, _ec[1:]):
+                ra, rb = _rz_ref(a_), _rz_ref(b_)
+                soll = 2 if (ra and rb and ra != rb) else 1
+                if b_["lane"] - a_["lane"] <= soll: continue
+                # versetzt wird die Kette mit weniger Streckengleis (das durchgehende Hauptgleis bleibt liegen; Sagliains
+                # Sasslatsch: 2. Gleis Richtung Klosters geht nach 50 m in Abstellgleise über)
+                _hl = lambda c: sum(sg["s1"] - sg["s0"] for sg in c["segs"] if sg["pax"] and not sg["tags"].get("service"))
+                for mv, zi in sorted(((b_, a_), (a_, b_)), key=lambda t: _hl(t[0])):
+                    st_ = 1 if mv["lane"] > zi["lane"] else -1
+                    t_ = zi["lane"] + st_ * soll                         # Zielebene am Rand
+                    zw = [l_ for l_ in range(min(mv["lane"], t_), max(mv["lane"], t_) + 1) if l_ != mv["lane"]]
+                    # 1. ganze Kette, wenn Ziel- und Zwischenebenen über ihre Länge frei sind
+                    if not any(_rz_belegt(l_, mv["s0"], mv["s1"], (mv,)) for l_ in zw):
+                        if ARGS.dbg: print("RANDZONE ganz", _rand, mv["lane"], "->", t_, [sg["way"] for sg in mv["segs"]][:3])
+                        RANDZONE.append(dict(art="ganz", rand=_rand, von=mv["lane"], nach=t_))
+                        mv["lane"] = t_; _done = True; break
+                    # 2. nur das Randstück
+                    ss = sorted(mv["segs"], key=lambda x: x["s0"])
+                    if not _hi: ss = ss[::-1]                            # ss[0] innen ... ss[-1] am Rand
+                    for i_ in range(1, len(ss) - 1):                    # Schräge möglichst weit innen, Randstück nicht leer
+                        g_ = ss[i_]
+                        if g_["s1"] - g_["s0"] < _rzm or g_.get("cut0") or g_.get("cut1"): continue
+                        rand_ = ss[i_ + 1:]; rest = ss[:i_]
+                        r0, r1 = min(x["s0"] for x in rand_), max(x["s1"] for x in rand_)
+                        if _rz_belegt(t_, r0, r1, (mv,)): continue                     # Zielebene am Rand frei
+                        # Zwischenebenen auf der Länge der Schräge frei (Ende eines Nebengleises an ihrem Anfang erlaubt)
+                        _z = [o for l_ in zw if l_ != t_ for o in _rz_belegt(l_, g_["s0"], g_["s1"], (mv,))
+                              if min(o["s1"], g_["s1"]) - max(o["s0"], g_["s0"]) > 1]
+                        # Zielebene: nur ein Gleis, das am inneren Ende der Schräge endet (Selfranga: Abstellgleis)
+                        _zt = [o for o in _rz_belegt(t_, g_["s0"], g_["s1"], (mv,))
+                               if ((o["s1"] > g_["s0"] + 15) if _hi else (o["s0"] < g_["s1"] - 15))]
+                        if _z or _zt: continue
+                        g_["flat"] = False
+                        # Schräge am inneren Ende verankern, gleich hinter dem Ende eines Gleises auf der Zielebene
+                        _ende = [o["s1"] if _hi else o["s0"] for o in _rz_belegt(t_, g_["s0"], g_["s1"], (mv,))]
+                        g_["rz_s"] = (max([g_["s0"]] + _ende) if _hi else min([g_["s1"]] + _ende))
+                        g_["rz_hi"] = _hi
+                        # beginnt am inneren Knoten schon eine Schräge in dieselbe Richtung (Gleiswechsel), liegt die
+                        # Randzone-Schräge auf ihr: das Gleis biegt auf der Zielebene ab, der Gleiswechsel läuft weiter
+                        _kn = g_["nodes"][0] if _hi else g_["nodes"][-1]
+                        def _ln(n_):                        # Ebene des Gleises am Knoten (ohne die zu teilende Kette)
+                            for c_ in C:
+                                if c_ is not mv and any(n_ in (x["nodes"][0], x["nodes"][-1]) for x in c_["segs"]): return c_["lane"]
+                            return None
+                        _dg = (t_ - mv["lane"]) if _hi else (mv["lane"] - t_)          # Ebenenwechsel der Schräge in s-Richtung
+                        g_["rz_knoten"] = False
+                        for x in segs:
+                            if x["flat"] or x is g_ or _kn not in (x["nodes"][0], x["nodes"][-1]): continue
+                            _o = x["nodes"][-1] if x["nodes"][0] == _kn else x["nodes"][0]
+                            _lo_ = _ln(_o)
+                            if _lo_ is None: continue
+                            _dx = (_lo_ - mv["lane"]) if x["nodes"][0] == _kn else (mv["lane"] - _lo_)
+                            if _dx * _dg > 0 and abs(_dx) >= abs(_dg): g_["rz_knoten"] = True    # läuft gleich oder weiter
+                        neu = dict(id=max(c["id"] for c in C) + 1, segs=rand_, s0=r0, s1=r1, pts=_rz_pts(rand_), lane=t_)
+                        mv["segs"] = rest; mv["s0"] = min(x["s0"] for x in rest); mv["s1"] = max(x["s1"] for x in rest)
+                        mv["pts"] = _rz_pts(rest); C.append(neu)
+                        RANDZONE.append(dict(art="randstueck", rand=_rand, way=g_["way"], von=mv["lane"], nach=t_))
+                        if ARGS.dbg: print("RANDZONE stueck", _rand, "Way", g_["way"], mv["lane"], "->", t_, round(g_["s0"]), round(g_["s1"]))
+                        _done = True; break
+                    if _done: break
+                if _done: break
+            if not _done: break
+    if RANDZONE: print(f"Randzone: {len(RANDZONE)} Randstück(e) in Standardabstand", [(r['rand'], r['von'], r['nach']) for r in RANDZONE])
 
 # F10 Badewanne (Solothurn 26.10.2026): ein kurzes waagrechtes Stück ohne Nummer, das über Schrägen an beiden Enden mit
 # Ketten auf Ebenen derselben Seite verbunden ist (hinunter und gleich wieder hinauf), kommt auf die nähere dieser Ebenen,
@@ -1931,7 +2044,12 @@ for sg in segs:
             p = sg["p"]; dm = (p[0, 1] + p[-1, 1]) / 2
             sm = p[np.argmin(np.abs(p[:, 1] - dm)), 0]   # dort wechselt das echte Gleis die Seite
             _need = abs(y1 - y0) / math.tan(math.radians(CFG["sw_angle"])) + 2 * CFG["sw_radius"] + 2
-            if RU.get("r49", False) and abs(y1 - y0) > 0.5 and x1 - x0 < _need:
+            if "rz_s" in sg and x1 - x0 >= _need + 12:       # Randzone: Schräge am inneren Ende (6 px Luft)
+                _xs = X(sg["rz_s"]) + 6 if sg["rz_hi"] else X(sg["rz_s"]) - 6 - _need
+                if sg.get("rz_knoten"): _xs = x0 if sg["rz_hi"] else x1 - _need
+                _xs = min(max(_xs, x0), x1 - _need)
+                d = f"M{x0:.1f},{y0:.1f}H{_xs:.1f}" + scurve(_xs, y0, _xs + _need, y1) + f"M{_xs + _need:.1f},{y1:.1f}H{x1:.1f}"
+            elif RU.get("r49", False) and abs(y1 - y0) > 0.5 and x1 - x0 < _need:
                 # zu eng für 60° (sonst Bogen/90°, Neuchâtel 19.10.): Schräge in voller Länge, läuft auf dem anschliessenden Gleis aus
                 if any(o["flat"] and o["nodes"][0] == n1 for o in segs): d = scurve(x0, y0, x0 + _need, y1)
                 elif any(o["flat"] and o["nodes"][-1] == n0 for o in segs): d = scurve(x1 - _need, y0, x1, y1)
@@ -3779,6 +3897,13 @@ for _sid, _d in DBG + [(None, d_) for d_ in svg_paths[False] if d_ not in dict(D
     except Exception: pass
 _LBOX = []
 done = set()
+# Randzone (4.11.2026): Abgang ohne Liniennummer neben einem Abgang mit Nummer und gleichem Ziel (Abstand bis 1,5 Ebenen)
+# gehört ins selbe Bündel – eine Beschriftung «Linie 910 / Sagliains» statt zwei (Selfranga)
+if CFG.get("randzone", False):
+    for _i, (x, y, ref, anc, town) in enumerate(EXITS):
+        if ref or anc == "middle": continue
+        _nb = [e for e in EXITS if e[2] and e[3] == anc and e[4] == town and abs(e[1] - y) <= 1.5 * CFG["lane_px"]]
+        if _nb: EXITS[_i] = (x, y, min(_nb, key=lambda e: abs(e[1] - y))[2], anc, town)
 # Gruppen: gleiche Linie/Richtung/Ziel, aber nur zusammenhängende Abgänge (kein fremder Abgang dazwischen)
 _LGROUPS = []
 for x, y, ref, anc, town in EXITS:
