@@ -131,4 +131,5 @@ Stand 21.10.2026.
 - Kleiner Versatz zwischen gegenüberliegenden Anschlüssen (≤ 8°, `schraeg_max`): leicht schräge Gerade statt Treppe.
 - Dreischienengleis (OSM gauge «1000;1435»): grün mit braun gestricheltem Strich darüber (alle Pläne; Zweisimmen Gl. 6/7, Chur–Ems, Worblaufen–Zollikofen).
 - Pfeile nur nach aussen (`pfeil_aussen`, Regionen): R38-Pfeil entfällt, wenn auf seiner Seite innerhalb 1,5 Ebenen ein gezeichnetes Gleis liegt.
-- Offen Zweisimmen: Einfahrt wirkt einspurig/DKW (Gstaad- und Lenk-Linie laufen über Verbindungen zusammen), Perron 7/8 (OSM-Fläche 845 m, Relation) an falscher Stelle, Abstand 8/12.
+- Perronlage dort, wo seine Gleise liegen (`perron_abschnitt`, Regionen): Zweisimmen 7/8 (OSM 845 m, Gl. 8 endet vorher) sass auf Gl. 8.
+- Offen Zweisimmen: Einfahrt wirkt einspurig/DKW (Gstaad- und Lenk-Linie laufen über Verbindungen zusammen); Perron an Gl. 12 fehlt in OSM.

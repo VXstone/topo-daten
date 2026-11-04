@@ -3228,9 +3228,37 @@ for e in ([] if OVR.get("platforms") is not None else PLAT):
     a_, b_ = max(min(ss_), CFG["s_min"]), min(max(ss_), CFG["s_max"])
     if b_ - a_ < 20 or abs(np.mean(dd_)) > CFG["d_lim"]: continue
     sm_, dm_ = (a_ + b_) / 2, float(np.mean(dd_))
+    # Perron länger als seine Gleise (4.11.2026, Zweisimmen 7/8: OSM-Fläche 845 m, Gleis 8 endet vorher – an der Mitte
+    # fehlte Gl. 8, der Perron landete auf dem Gleis): Lage dort bestimmen, wo auf beiden Seiten (bzw. auf der näheren)
+    # ein Gleis bis 8 m neben dem Perron liegt; der Perron wird auf diesen Abschnitt gekürzt. cfg «perron_abschnitt».
+    if CFG.get("perron_abschnitt", False):
+        _ss = np.linspace(a_, b_, 25); _ok = []
+        _ps = sorted(zip(ss_, dd_)); _pS = [p_[0] for p_ in _ps]; _pD = [p_[1] for p_ in _ps]
+        for s_ in _ss:
+            _dl = dm_
+            _r = [(d_at(c, s_), c["lane"]) for c in C if c["s0"] <= s_ <= c["s1"]]
+            _u = [r for r in _r if 0 < r[0] - _dl < 8]; _dn = [r for r in _r if 0 < _dl - r[0] < 8]
+            _ok.append(2 if (_u and _dn) else (1 if (_u or _dn) else 0))
+        def _lauf(minv):
+            _run, _cur = None, None
+            for i_, v_ in enumerate(_ok):
+                if v_ >= minv: _cur = (_cur[0], i_) if _cur else (i_, i_)
+                else: _cur = None
+                if _cur and (_run is None or _cur[1] - _cur[0] > _run[1] - _run[0]): _run = _cur
+            return _run
+        _best = max(_ok)
+        if _best:
+            _r1, _r2 = _lauf(1), (_lauf(2) if _best == 2 else None)
+            # beidseitig nur, wenn der Abschnitt nicht viel kürzer ist (Zweisimmen 3/4: Gl. 4 nicht gezeichnet)
+            _run = _r2 if _r2 and (_r2[1] - _r2[0]) >= 0.6 * (_r1[1] - _r1[0]) else _r1
+            a_, b_ = float(_ss[_run[0]]), float(_ss[_run[1]])
+            if b_ - a_ < 20: a_, b_ = max(a_ - 10, CFG["s_min"]), min(b_ + 10, CFG["s_max"])
+            sm_ = (a_ + b_) / 2
     rows = sorted((d_at(c, sm_), c["lane"]) for c in C if c["s0"] <= sm_ <= c["s1"])
     up = [r for r in rows if r[0] > dm_]; dn = [r for r in rows if r[0] < dm_]
-    if os.environ.get("PERDBG"): print("PERRON", e["id"], round(a_), round(b_), round(sm_), round(dm_, 1), [(round(d, 1), l) for d, l in rows])
+    if os.environ.get("PERDBG"):
+        print("PERRON", e["id"], round(a_), round(b_), round(sm_), round(dm_, 1), [(round(d, 1), l) for d, l in rows])
+        for c in C: print("   KETTE", c["lane"], round(c["s0"]), round(c["s1"]), sorted({str(x["tags"].get("railway:track_ref")) for x in c["segs"]}), round(d_at(c, sm_), 1) if c["s0"] <= sm_ <= c["s1"] else None)
     if up and dn and up[0][1] != dn[-1][1]:
         yb = (Y(up[0][1]) + Y(dn[-1][1])) / 2
     elif up: yb = Y(up[0][1]) + 11
