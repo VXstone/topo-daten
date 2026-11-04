@@ -20,71 +20,71 @@
  {
   "regel": "T7",
   "art": "Ecke",
-  "x": -546.3,
-  "y": -377.7,
+  "x": -555.6,
+  "y": -369.3,
   "winkel": -51.6,
   "neben": false,
   "plan": "Regionalplan",
-  "text": "Regionalplan: Ecke bei x=-546.3, y=-377.7"
+  "text": "Regionalplan: Ecke bei x=-555.6, y=-369.3"
  },
  {
   "regel": "T7",
   "art": "Ecke",
-  "x": -563.9,
-  "y": -389.1,
+  "x": -573.3,
+  "y": -380.7,
   "winkel": 28.7,
   "neben": false,
   "plan": "Regionalplan",
-  "text": "Regionalplan: Ecke bei x=-563.9, y=-389.1"
+  "text": "Regionalplan: Ecke bei x=-573.3, y=-380.7"
  },
  {
   "regel": "T7",
   "art": "Ecke",
-  "x": -694.2,
-  "y": -520.0,
-  "winkel": -27.4,
-  "neben": false,
-  "plan": "Regionalplan",
-  "text": "Regionalplan: Ecke bei x=-694.2, y=-520.0"
- },
- {
-  "regel": "T7",
-  "art": "Ecke",
-  "x": -411.8,
-  "y": -653.9,
+  "x": -703.5,
+  "y": -511.7,
   "winkel": -27.5,
   "neben": false,
   "plan": "Regionalplan",
-  "text": "Regionalplan: Ecke bei x=-411.8, y=-653.9"
+  "text": "Regionalplan: Ecke bei x=-703.5, y=-511.7"
  },
  {
   "regel": "T7",
   "art": "Ecke",
-  "x": -401.7,
-  "y": -651.2,
+  "x": -421.1,
+  "y": -645.5,
+  "winkel": -27.5,
+  "neben": false,
+  "plan": "Regionalplan",
+  "text": "Regionalplan: Ecke bei x=-421.1, y=-645.5"
+ },
+ {
+  "regel": "T7",
+  "art": "Ecke",
+  "x": -411.0,
+  "y": -642.8,
   "winkel": -27.8,
   "neben": false,
   "plan": "Regionalplan",
-  "text": "Regionalplan: Ecke bei x=-401.7, y=-651.2"
+  "text": "Regionalplan: Ecke bei x=-411.0, y=-642.8"
  },
  {
   "regel": "T7",
   "art": "Treppe",
-  "x": -225.2,
-  "y": -171.4,
+  "x": -234.5,
+  "y": -163.0,
   "versatz": 24.0,
   "neben": false,
   "plan": "Regionalplan",
-  "text": "Regionalplan: Treppe bei x=-225.2, y=-171.4"
+  "text": "Regionalplan: Treppe bei x=-234.5, y=-163.0"
  },
  {
   "regel": "T7",
   "art": "Treppe",
-  "x": -230.5,
-  "y": -161.8,
+  "x": -239.8,
+  "y": -153.3,
   "versatz": 24.0,
   "neben": false,
   "plan": "Regionalplan",
-  "text": "Regionalplan: Treppe bei x=-230.5, y=-161.8"
+  "text": "Regionalplan: Treppe bei x=-239.8, y=-153.3"
  }
 ]

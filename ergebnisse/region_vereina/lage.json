@@ -4,7 +4,8 @@
   "c1": 32,
   "p": 0.6,
   "gap": 58,
-  "wg": 0.01
+  "wg": 0.01,
+  "linien_region": true
  },
  "osm": "region.json",
  "linienfarbe": {
@@ -19,60 +20,60 @@
   "merge_junction_m": 200
  },
  "Susch": [
-  640,
-  871
+  643,
+  854
  ],
  "Klosters Platz": [
-  -476,
-  -511
+  -486,
+  -503
  ],
  "Sagliains": [
-  1004,
+  1019,
   343
  ],
  "Klosters Selfranga": [
-  -352,
-  -285
+  -361,
+  -276
  ],
  "Sagliains Sasslatsch": [
-  649,
-  418
+  639,
+  427
  ],
  "Sasslatsch": [
-  686,
-  626
+  689,
+  609
  ],
  "Selfranga Süd": [
-  -141,
-  -100
+  -150,
+  -91
  ],
  "Vereina Nord": [
-  45,
-  41
+  35,
+  49
  ],
  "Vereina Süd": [
-  211,
-  167
+  202,
+  175
  ],
  "Sagliains Nord": [
-  421,
-  313
+  412,
+  322
  ],
  "Abgang 915 #12": [
-  -717,
-  -522
+  -727,
+  -513
  ],
  "Abgang 960 #13": [
-  1351,
+  1366,
   198
  ],
  "Abgang 960 #14": [
-  567,
-  1137
+  570,
+  1120
  ],
  "Abgang 910 #15": [
-  -469,
-  -822
+  -479,
+  -813
  ],
  "drehung_auto": {
   "Susch": -75.9,

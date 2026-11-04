@@ -1,9 +1,15 @@
 {
  "region": "vereina",
- "erzeugt": "2026-11-04 16:02 UTC",
+ "erzeugt": "2026-11-04 20:41 UTC",
  "bahnhoefe": {
   "susch": {
    "name": "Susch",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "sagliains": {
+   "name": "Sagliains",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -14,26 +20,20 @@
    "befunde": "Befunde: {'B': 4}",
    "optionen": []
   },
-  "sagliains": {
-   "name": "Sagliains",
-   "ok": true,
-   "befunde": "Befunde: {}",
-   "optionen": []
-  },
   "klosters_platz": {
    "name": "Klosters Platz",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "sasslatsch": {
-   "name": "Sasslatsch",
+  "sagliains_sasslatsch": {
+   "name": "Sagliains Sasslatsch",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "sagliains_sasslatsch": {
-   "name": "Sagliains Sasslatsch",
+  "sasslatsch": {
+   "name": "Sasslatsch",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -73,15 +73,14 @@
  },
  "netz_lage": 0,
  "topologie_region": {
-  "T6": 1,
-  "T5": 1
+  "T6": 2
  },
  "ruhe": {
   "treppen": 4,
   "ecken": 5
  },
  "regeln": {
-  "G2": 2,
+  "G2": 4,
   "G6": 2,
   "G8": 8
  }

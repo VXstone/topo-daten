@@ -1,9 +1,15 @@
 {
  "region": "mob",
- "erzeugt": "2026-11-04 16:02 UTC",
+ "erzeugt": "2026-11-04 20:41 UTC",
  "bahnhoefe": {
   "schonried": {
    "name": "Schönried",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "la_tine": {
+   "name": "La Tine",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -12,12 +18,6 @@
    "name": "Les Avants",
    "ok": true,
    "befunde": "Befunde: {'A': 1, 'F': 1}",
-   "optionen": []
-  },
-  "la_tine": {
-   "name": "La Tine",
-   "ok": true,
-   "befunde": "Befunde: {}",
    "optionen": []
   },
   "chateau_d_oex": {
@@ -38,14 +38,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "les_sciernes": {
-   "name": "Les Sciernes",
+  "rochers_de_naye": {
+   "name": "Rochers de Naye",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "rochers_de_naye": {
-   "name": "Rochers de Naye",
+  "les_sciernes": {
+   "name": "Les Sciernes",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -91,7 +91,7 @@
   "montreux": {
    "name": "Montreux",
    "ok": true,
-   "befunde": "Befunde: {'A': 1, 'B': 38, 'D': 4, 'F': 1}",
+   "befunde": "Befunde: {'A': 1, 'B': 47, 'D': 4}",
    "optionen": [
     "--hauptgleise"
    ]
@@ -102,14 +102,14 @@
    "befunde": "Befunde: {'B': 1, 'F': 1}",
    "optionen": []
   },
-  "allieres": {
-   "name": "Allières",
+  "chamby": {
+   "name": "Chamby",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "chamby": {
-   "name": "Chamby",
+  "allieres": {
+   "name": "Allières",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -126,14 +126,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "saanenmoser": {
-   "name": "Saanenmöser",
+  "oeschseite": {
+   "name": "Oeschseite",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "oeschseite": {
-   "name": "Oeschseite",
+  "saanenmoser": {
+   "name": "Saanenmöser",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -162,14 +162,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "belmont_sur_montreux": {
-   "name": "Belmont-sur-Montreux",
+  "montbovon": {
+   "name": "Montbovon",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "montbovon": {
-   "name": "Montbovon",
+  "belmont_sur_montreux": {
+   "name": "Belmont-sur-Montreux",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -186,14 +186,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "la_perche": {
-   "name": "La Perche",
+  "cret_d_y_bau": {
+   "name": "Crêt-d'y-Bau",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "cret_d_y_bau": {
-   "name": "Crêt-d'y-Bau",
+  "la_perche": {
+   "name": "La Perche",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -290,11 +290,11 @@
   "T6": 4
  },
  "ruhe": {
-  "treppen": 12,
+  "treppen": 11,
   "ecken": 6
  },
  "regeln": {
-  "G2": 20,
+  "G2": 21,
   "G6": 4,
   "G8": 8
  }
