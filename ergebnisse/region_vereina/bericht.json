@@ -1,6 +1,6 @@
 {
  "region": "vereina",
- "erzeugt": "2026-11-04 08:28 UTC",
+ "erzeugt": "2026-11-04 11:57 UTC",
  "bahnhoefe": {
   "klosters_selfranga": {
    "name": "Klosters Selfranga",
@@ -32,14 +32,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "selfranga_sud": {
-   "name": "Selfranga Süd",
+  "sagliains_sasslatsch": {
+   "name": "Sagliains Sasslatsch",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "sagliains_sasslatsch": {
-   "name": "Sagliains Sasslatsch",
+  "selfranga_sud": {
+   "name": "Selfranga Süd",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -75,6 +75,10 @@
  "topologie_region": {
   "T6": 1,
   "T5": 1
+ },
+ "ruhe": {
+  "treppen": 4,
+  "ecken": 5
  },
  "regeln": {
   "G2": 2,

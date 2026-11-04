@@ -1,0 +1,89 @@
+[
+ {
+  "regel": "T7",
+  "art": "Treppe",
+  "x": 341.9,
+  "y": 146.0,
+  "versatz": 31.5,
+  "plan": "klosters_platz",
+  "text": "klosters_platz: Treppe bei x=341.9, y=146.0"
+ },
+ {
+  "regel": "T7",
+  "art": "Treppe",
+  "x": 362.6,
+  "y": 172.4,
+  "versatz": 20.3,
+  "plan": "sagliains",
+  "text": "sagliains: Treppe bei x=362.6, y=172.4"
+ },
+ {
+  "regel": "T7",
+  "art": "Treppe",
+  "x": 333.9,
+  "y": 122.0,
+  "versatz": 20.2,
+  "plan": "vereina_nord",
+  "text": "vereina_nord: Treppe bei x=333.9, y=122.0"
+ },
+ {
+  "regel": "T7",
+  "art": "Ecke",
+  "x": -563.7,
+  "y": -385.0,
+  "winkel": -51.6,
+  "neben": false,
+  "plan": "Regionalplan",
+  "text": "Regionalplan: Ecke bei x=-563.7, y=-385.0"
+ },
+ {
+  "regel": "T7",
+  "art": "Ecke",
+  "x": -581.4,
+  "y": -396.5,
+  "winkel": 28.7,
+  "neben": false,
+  "plan": "Regionalplan",
+  "text": "Regionalplan: Ecke bei x=-581.4, y=-396.5"
+ },
+ {
+  "regel": "T7",
+  "art": "Ecke",
+  "x": -711.6,
+  "y": -527.4,
+  "winkel": -27.7,
+  "neben": false,
+  "plan": "Regionalplan",
+  "text": "Regionalplan: Ecke bei x=-711.6, y=-527.4"
+ },
+ {
+  "regel": "T7",
+  "art": "Ecke",
+  "x": -429.2,
+  "y": -661.3,
+  "winkel": -27.7,
+  "neben": false,
+  "plan": "Regionalplan",
+  "text": "Regionalplan: Ecke bei x=-429.2, y=-661.3"
+ },
+ {
+  "regel": "T7",
+  "art": "Ecke",
+  "x": -419.2,
+  "y": -658.6,
+  "winkel": -27.7,
+  "neben": false,
+  "plan": "Regionalplan",
+  "text": "Regionalplan: Ecke bei x=-419.2, y=-658.6"
+ },
+ {
+  "regel": "T7",
+  "art": "Treppe",
+  "x": -236.5,
+  "y": -161.4,
+  "versatz": 24.0,
+  "neben": false,
+  "plan": "Regionalplan",
+  "text": "Regionalplan: Treppe bei x=-236.5, y=-161.4"
+ }
+]
