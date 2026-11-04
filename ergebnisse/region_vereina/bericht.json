@@ -1,15 +1,15 @@
 {
  "region": "vereina",
- "erzeugt": "2026-11-04 12:54 UTC",
+ "erzeugt": "2026-11-04 12:59 UTC",
  "bahnhoefe": {
-  "sagliains": {
-   "name": "Sagliains",
+  "susch": {
+   "name": "Susch",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "susch": {
-   "name": "Susch",
+  "sagliains": {
+   "name": "Sagliains",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -26,14 +26,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "sasslatsch": {
-   "name": "Sasslatsch",
+  "sagliains_sasslatsch": {
+   "name": "Sagliains Sasslatsch",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "sagliains_sasslatsch": {
-   "name": "Sagliains Sasslatsch",
+  "sasslatsch": {
+   "name": "Sasslatsch",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
