@@ -1,21 +1,15 @@
 {
  "region": "mob",
- "erzeugt": "2026-11-04 12:56 UTC",
+ "erzeugt": "2026-11-04 15:15 UTC",
  "bahnhoefe": {
-  "schonried": {
-   "name": "Schönried",
+  "la_tine": {
+   "name": "La Tine",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "les_avants": {
-   "name": "Les Avants",
-   "ok": true,
-   "befunde": "Befunde: {'A': 1, 'F': 1}",
-   "optionen": []
-  },
-  "la_tine": {
-   "name": "La Tine",
+  "schonried": {
+   "name": "Schönried",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -24,6 +18,12 @@
    "name": "Château-d'Oex",
    "ok": true,
    "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "les_avants": {
+   "name": "Les Avants",
+   "ok": true,
+   "befunde": "Befunde: {'A': 1, 'F': 1}",
    "optionen": []
   },
   "flendruz": {
@@ -56,14 +56,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "blankenburg": {
-   "name": "Blankenburg",
+  "st_stephan": {
+   "name": "St. Stephan",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "st_stephan": {
-   "name": "St. Stephan",
+  "blankenburg": {
+   "name": "Blankenburg",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -76,16 +76,16 @@
     "--hauptgleise"
    ]
   },
-  "caux": {
-   "name": "Caux",
-   "ok": true,
-   "befunde": "Befunde: {}",
-   "optionen": []
-  },
   "glion": {
    "name": "Glion",
    "ok": true,
    "befunde": "Befunde: {'F': 1}",
+   "optionen": []
+  },
+  "caux": {
+   "name": "Caux",
+   "ok": true,
+   "befunde": "Befunde: {}",
    "optionen": []
   },
   "montreux": {
@@ -126,26 +126,26 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "saanenmoser": {
-   "name": "Saanenmöser",
-   "ok": true,
-   "befunde": "Befunde: {}",
-   "optionen": []
-  },
   "oeschseite": {
    "name": "Oeschseite",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "gstaad": {
-   "name": "Gstaad",
+  "saanenmoser": {
+   "name": "Saanenmöser",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
   "gruben": {
    "name": "Gruben",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "gstaad": {
+   "name": "Gstaad",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -287,16 +287,15 @@
  },
  "netz_lage": 0,
  "topologie_region": {
-  "T6": 7,
-  "T5": 1
+  "T6": 7
  },
  "ruhe": {
   "treppen": 14,
-  "ecken": 10
+  "ecken": 7
  },
  "regeln": {
-  "G2": 16,
+  "G2": 20,
   "G6": 5,
-  "G8": 8
+  "G8": 10
  }
 }
