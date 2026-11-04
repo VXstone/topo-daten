@@ -6,9 +6,9 @@
 <path d="M229.7,267.2H893.6 M893.6,267.2L910.3,267.2 M229.7,291.2H893.8 M893.8,291.2L910.3,291.2" stroke="#00862f" stroke-width="3.6"/>
 <path d="M910.3,14.0L729.7,14.0 M583.3,243.2H583.3Q590.3,243.2 593.8,237.1L719.2,20.1Q722.7,14.0 729.7,14.0H729.7 M389.0,134.0H536.9 M536.9,134.0H566.1 M598.2,134.0L598.2,134.0 M309.0,182.0H404.6 M320.9,110.0H361.1 M361.1,110.0H362.1Q369.1,110.0 372.6,116.1L379.5,127.9Q383.0,134.0 390.0,134.0H391.0 M389.0,158.0H509.6 M509.6,158.0H509.6Q512.6,158.0 514.2,160.7L525.0,179.3Q526.5,182.0 529.6,182.0H529.6 M361.1,110.0H516.9 M516.9,110.0H516.9Q520.0,110.0 521.5,112.7L532.3,131.3Q533.9,134.0 536.9,134.0H536.9 M582.0,134.0H598.2 M581.7,134.0H582.0 M580.2,134.0H581.7 M566.1,134.0H580.2 M439.4,243.2H569.3 M569.3,243.2L583.3,243.2 M404.6,243.2H439.4 M308.3,243.2H404.6" stroke="#9a5b1e" stroke-width="3.6"/>
 </g>
-<rect x="493.7" y="275.2" width="110.0" height="8" rx="1.5" fill="#9a5b1e"/>
-<rect x="490.3" y="298.2" width="110.0" height="8" rx="1.5" fill="#00862f"/>
-<rect x="363.9" y="142.0" width="110.0" height="8" rx="1.5" fill="#9a5b1e"/>
+<rect x="301.2" y="275.2" width="100.4" height="8" rx="1.5" fill="#00862f"/>
+<rect x="569.8" y="275.2" width="110.0" height="8" rx="1.5" fill="#00862f"/>
+<rect x="367.5" y="142.0" width="110.0" height="8" rx="1.5" fill="#9a5b1e"/>
 <rect x="384.9" y="118.0" width="64.1" height="8" rx="1.5" fill="#9a5b1e"/>
 <circle cx="880.5" cy="315.2" r="3.2" fill="#9a5b1e"/>
 <circle cx="879.5" cy="243.2" r="3.2" fill="#9a5b1e"/>
@@ -29,10 +29,10 @@
 <text x="368.8" y="188.5" font-size="19" text-anchor="middle" fill="#00862f">6</text>
 <rect x="403.9" y="102.0" width="26" height="16" fill="#fff"/>
 <text x="416.9" y="116.5" font-size="19" text-anchor="middle" fill="#00862f">9</text>
-<rect x="405.9" y="150.0" width="26" height="16" fill="#fff"/>
-<text x="418.9" y="164.5" font-size="19" text-anchor="middle" fill="#00862f">7</text>
-<rect x="535.7" y="259.2" width="26" height="16" fill="#fff"/>
-<text x="548.7" y="273.7" font-size="19" text-anchor="middle" fill="#00862f">3</text>
+<rect x="409.5" y="150.0" width="26" height="16" fill="#fff"/>
+<text x="422.5" y="164.5" font-size="19" text-anchor="middle" fill="#00862f">7</text>
+<rect x="338.4" y="259.2" width="26" height="16" fill="#fff"/>
+<text x="351.4" y="273.7" font-size="19" text-anchor="middle" fill="#00862f">3</text>
 <rect x="395.8" y="235.2" width="26" height="16" fill="#fff"/>
 <text x="408.8" y="249.7" font-size="19" text-anchor="middle" fill="#00862f">5</text>
 <path d="M251.7,267.2H229.7" stroke="#00862f" stroke-width="3.6" fill="none"/>

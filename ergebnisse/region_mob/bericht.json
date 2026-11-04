@@ -1,15 +1,9 @@
 {
  "region": "mob",
- "erzeugt": "2026-11-04 12:51 UTC",
+ "erzeugt": "2026-11-04 12:56 UTC",
  "bahnhoefe": {
   "schonried": {
    "name": "Schönried",
-   "ok": true,
-   "befunde": "Befunde: {}",
-   "optionen": []
-  },
-  "la_tine": {
-   "name": "La Tine",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -18,6 +12,12 @@
    "name": "Les Avants",
    "ok": true,
    "befunde": "Befunde: {'A': 1, 'F': 1}",
+   "optionen": []
+  },
+  "la_tine": {
+   "name": "La Tine",
+   "ok": true,
+   "befunde": "Befunde: {}",
    "optionen": []
   },
   "chateau_d_oex": {
@@ -56,14 +56,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "st_stephan": {
-   "name": "St. Stephan",
+  "blankenburg": {
+   "name": "Blankenburg",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "blankenburg": {
-   "name": "Blankenburg",
+  "st_stephan": {
+   "name": "St. Stephan",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
