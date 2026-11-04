@@ -19,72 +19,22 @@
  },
  {
   "regel": "T7",
-  "art": "Ecke",
-  "x": -555.6,
-  "y": -369.3,
-  "winkel": -51.6,
-  "neben": false,
-  "plan": "Regionalplan",
-  "text": "Regionalplan: Ecke bei x=-555.6, y=-369.3"
- },
- {
-  "regel": "T7",
-  "art": "Ecke",
-  "x": -573.3,
-  "y": -380.7,
-  "winkel": 28.7,
-  "neben": false,
-  "plan": "Regionalplan",
-  "text": "Regionalplan: Ecke bei x=-573.3, y=-380.7"
- },
- {
-  "regel": "T7",
-  "art": "Ecke",
-  "x": -703.5,
-  "y": -511.7,
-  "winkel": -27.5,
-  "neben": false,
-  "plan": "Regionalplan",
-  "text": "Regionalplan: Ecke bei x=-703.5, y=-511.7"
- },
- {
-  "regel": "T7",
-  "art": "Ecke",
-  "x": -421.1,
-  "y": -645.5,
-  "winkel": -27.5,
-  "neben": false,
-  "plan": "Regionalplan",
-  "text": "Regionalplan: Ecke bei x=-421.1, y=-645.5"
- },
- {
-  "regel": "T7",
-  "art": "Ecke",
-  "x": -411.0,
-  "y": -642.8,
-  "winkel": -27.8,
-  "neben": false,
-  "plan": "Regionalplan",
-  "text": "Regionalplan: Ecke bei x=-411.0, y=-642.8"
- },
- {
-  "regel": "T7",
   "art": "Treppe",
-  "x": -234.5,
-  "y": -163.0,
-  "versatz": 24.0,
+  "x": -234.6,
+  "y": -199.7,
+  "versatz": 23.9,
   "neben": false,
   "plan": "Regionalplan",
-  "text": "Regionalplan: Treppe bei x=-234.5, y=-163.0"
+  "text": "Regionalplan: Treppe bei x=-234.6, y=-199.7"
  },
  {
   "regel": "T7",
   "art": "Treppe",
   "x": -239.8,
-  "y": -153.3,
-  "versatz": 24.0,
+  "y": -190.1,
+  "versatz": 23.9,
   "neben": false,
   "plan": "Regionalplan",
-  "text": "Regionalplan: Treppe bei x=-239.8, y=-153.3"
+  "text": "Regionalplan: Treppe bei x=-239.8, y=-190.1"
  }
 ]

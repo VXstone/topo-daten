@@ -228,15 +228,6 @@
   "_abgang_1": {
    "bp": "zweisimmen",
    "knoten": [
-    9464160433,
-    8880374759
-   ],
-   "refs": [],
-   "ort": "Spiez"
-  },
-  "_abgang_2": {
-   "bp": "zweisimmen",
-   "knoten": [
     -1000201325764175
    ],
    "refs": [
@@ -244,7 +235,7 @@
    ],
    "ort": "Spiez"
   },
-  "_abgang_3": {
+  "_abgang_2": {
    "bp": "chamby",
    "knoten": [
     -1000532550009005
@@ -254,7 +245,7 @@
    ],
    "ort": "Blonay"
   },
-  "_abgang_4": {
+  "_abgang_3": {
    "bp": "montbovon",
    "knoten": [
     -1000231762476001
@@ -264,7 +255,7 @@
    ],
    "ort": "Bulle"
   },
-  "_abgang_5": {
+  "_abgang_4": {
    "bp": "montreux",
    "knoten": [
     -1000097211370006,
@@ -2870,21 +2861,6 @@
    "a": "zweisimmen",
    "b": "_abgang_1",
    "knoten": [
-    1667842076,
-    9464160433
-   ],
-   "ways": [
-    1026495423
-   ],
-   "laenge": 44.2,
-   "ref": null,
-   "refs": [],
-   "spur": "1000"
-  },
-  {
-   "a": "zweisimmen",
-   "b": "_abgang_2",
-   "knoten": [
     4030969920,
     8880468321,
     13124267647,
@@ -4331,23 +4307,6 @@
    "spur": "1000"
   },
   {
-   "a": "zweisimmen",
-   "b": "_abgang_1",
-   "knoten": [
-    1667842094,
-    8880374760,
-    5300983617,
-    8880374759
-   ],
-   "ways": [
-    400546222
-   ],
-   "laenge": 54.1,
-   "ref": null,
-   "refs": [],
-   "spur": "1000"
-  },
-  {
    "a": "rougemont",
    "b": "flendruz",
    "knoten": [
@@ -4585,7 +4544,7 @@
   },
   {
    "a": "chamby",
-   "b": "_abgang_3",
+   "b": "_abgang_2",
    "knoten": [
     361187524,
     361187522,
@@ -5201,7 +5160,7 @@
   },
   {
    "a": "montbovon",
-   "b": "_abgang_4",
+   "b": "_abgang_3",
    "knoten": [
     1800157314,
     2400959700,
@@ -5416,7 +5375,7 @@
   },
   {
    "a": "montreux",
-   "b": "_abgang_5",
+   "b": "_abgang_4",
    "knoten": [
     7297173584,
     8025596403,
@@ -5475,7 +5434,7 @@
   },
   {
    "a": "montreux",
-   "b": "_abgang_5",
+   "b": "_abgang_4",
    "knoten": [
     7297184385,
     8025596404,
@@ -6020,15 +5979,7 @@
   },
   "_abgang_1|zweisimmen": {
    "straenge": [
-    23,
-    40
-   ],
-   "gleise": 2,
-   "refs": []
-  },
-  "_abgang_2|zweisimmen": {
-   "straenge": [
-    24
+    23
    ],
    "gleise": 1,
    "refs": [
@@ -6037,7 +5988,7 @@
   },
   "st_stephan|stockli": {
    "straenge": [
-    25
+    24
    ],
    "gleise": 1,
    "refs": [
@@ -6046,7 +5997,7 @@
   },
   "matten|st_stephan": {
    "straenge": [
-    26
+    25
    ],
    "gleise": 1,
    "refs": [
@@ -6055,7 +6006,7 @@
   },
   "jaman|la_perche": {
    "straenge": [
-    27
+    26
    ],
    "gleise": 1,
    "refs": [
@@ -6064,7 +6015,7 @@
   },
   "jaman|paccot": {
    "straenge": [
-    28
+    27
    ],
    "gleise": 1,
    "refs": [
@@ -6073,7 +6024,7 @@
   },
   "cret_d_y_bau|paccot": {
    "straenge": [
-    29
+    28
    ],
    "gleise": 1,
    "refs": [
@@ -6082,7 +6033,7 @@
   },
   "gstaad|saanen": {
    "straenge": [
-    30
+    29
    ],
    "gleise": 1,
    "refs": [
@@ -6091,7 +6042,7 @@
   },
   "rougemont|saanen": {
    "straenge": [
-    31
+    30
    ],
    "gleise": 1,
    "refs": [
@@ -6100,7 +6051,7 @@
   },
   "boden|matten": {
    "straenge": [
-    32
+    31
    ],
    "gleise": 1,
    "refs": [
@@ -6109,7 +6060,7 @@
   },
   "allieres|les_sciernes": {
    "straenge": [
-    33
+    32
    ],
    "gleise": 1,
    "refs": [
@@ -6118,7 +6069,7 @@
   },
   "glion|glion_college": {
    "straenge": [
-    34
+    33
    ],
    "gleise": 1,
    "refs": [
@@ -6127,7 +6078,7 @@
   },
   "caux|le_tremblex": {
    "straenge": [
-    35
+    34
    ],
    "gleise": 1,
    "refs": [
@@ -6136,7 +6087,7 @@
   },
   "glion_college|le_tremblex": {
    "straenge": [
-    36
+    35
    ],
    "gleise": 1,
    "refs": [
@@ -6145,7 +6096,7 @@
   },
   "caux|les_echets": {
    "straenge": [
-    37
+    36
    ],
    "gleise": 1,
    "refs": [
@@ -6154,7 +6105,7 @@
   },
   "les_avants|sendy_sollard": {
    "straenge": [
-    38
+    37
    ],
    "gleise": 1,
    "refs": [
@@ -6163,7 +6114,7 @@
   },
   "saanenmoser|schonried": {
    "straenge": [
-    39
+    38
    ],
    "gleise": 1,
    "refs": [
@@ -6172,7 +6123,7 @@
   },
   "flendruz|rougemont": {
    "straenge": [
-    41
+    39
    ],
    "gleise": 1,
    "refs": [
@@ -6181,7 +6132,7 @@
   },
   "flendruz|les_combes": {
    "straenge": [
-    42
+    40
    ],
    "gleise": 1,
    "refs": [
@@ -6190,16 +6141,16 @@
   },
   "chernex|sonzier": {
    "straenge": [
-    43
+    41
    ],
    "gleise": 1,
    "refs": [
     "120"
    ]
   },
-  "_abgang_3|chamby": {
+  "_abgang_2|chamby": {
    "straenge": [
-    44
+    42
    ],
    "gleise": 1,
    "refs": [
@@ -6208,7 +6159,7 @@
   },
   "montreux|montreux_les_planches": {
    "straenge": [
-    45
+    43
    ],
    "gleise": 1,
    "refs": [
@@ -6217,7 +6168,7 @@
   },
   "chateau_d_oex|la_chaudanne_les_moulins": {
    "straenge": [
-    46
+    44
    ],
    "gleise": 1,
    "refs": [
@@ -6226,7 +6177,7 @@
   },
   "chateau_d_oex|chateau_d_oex_la_palaz": {
    "straenge": [
-    47
+    45
    ],
    "gleise": 1,
    "refs": [
@@ -6235,7 +6186,7 @@
   },
   "gruben|schonried": {
    "straenge": [
-    48
+    46
    ],
    "gleise": 1,
    "refs": [
@@ -6244,7 +6195,7 @@
   },
   "belmont_sur_montreux|vuarennes": {
    "straenge": [
-    49
+    47
    ],
    "gleise": 1,
    "refs": [
@@ -6253,7 +6204,7 @@
   },
   "belmont_sur_montreux|chatelard": {
    "straenge": [
-    50
+    48
    ],
    "gleise": 1,
    "refs": [
@@ -6262,16 +6213,16 @@
   },
   "chatelard|planchamp": {
    "straenge": [
-    51
+    49
    ],
    "gleise": 1,
    "refs": [
     "120"
    ]
   },
-  "_abgang_4|montbovon": {
+  "_abgang_3|montbovon": {
    "straenge": [
-    52
+    50
    ],
    "gleise": 1,
    "refs": [
@@ -6280,7 +6231,7 @@
   },
   "montreux|vuarennes": {
    "straenge": [
-    53
+    51
    ],
    "gleise": 1,
    "refs": [
@@ -6289,7 +6240,7 @@
   },
   "toveyre|valmont": {
    "straenge": [
-    54
+    52
    ],
    "gleise": 1,
    "refs": [
@@ -6298,17 +6249,17 @@
   },
   "montreux_les_planches|toveyre": {
    "straenge": [
-    55
+    53
    ],
    "gleise": 1,
    "refs": [
     "121"
    ]
   },
-  "_abgang_5|montreux": {
+  "_abgang_4|montreux": {
    "straenge": [
-    56,
-    57
+    54,
+    55
    ],
    "gleise": 2,
    "refs": [
@@ -6317,7 +6268,7 @@
   },
   "chateau_d_oex_la_palaz|les_granges_gerignoz": {
    "straenge": [
-    58
+    56
    ],
    "gleise": 1,
    "refs": [
@@ -6326,7 +6277,7 @@
   },
   "les_combes|les_granges_gerignoz": {
    "straenge": [
-    59
+    57
    ],
    "gleise": 1,
    "refs": [
@@ -6335,7 +6286,7 @@
   },
   "cret_d_y_bau|haut_de_caux": {
    "straenge": [
-    60
+    58
    ],
    "gleise": 1,
    "refs": [
@@ -6344,7 +6295,7 @@
   },
   "haut_de_caux|les_echets": {
    "straenge": [
-    61
+    59
    ],
    "gleise": 1,
    "refs": [
@@ -6359,22 +6310,17 @@
    "nach": "montreux"
   },
   {
-   "von": "_abgang_1",
-   "bp": "zweisimmen",
-   "nach": "blankenburg"
-  },
-  {
-   "von": "_abgang_3",
+   "von": "_abgang_2",
    "bp": "chamby",
    "nach": "sonzier"
   },
   {
-   "von": "_abgang_4",
+   "von": "_abgang_3",
    "bp": "montbovon",
    "nach": "la_tine"
   },
   {
-   "von": "_abgang_5",
+   "von": "_abgang_4",
    "bp": "montreux",
    "nach": "vernex"
   },
@@ -6402,11 +6348,6 @@
    "von": "blankenburg",
    "bp": "stockli",
    "nach": "st_stephan"
-  },
-  {
-   "von": "blankenburg",
-   "bp": "zweisimmen",
-   "nach": "_abgang_1"
   },
   {
    "von": "boden",
@@ -6591,7 +6532,7 @@
   {
    "von": "la_tine",
    "bp": "montbovon",
-   "nach": "_abgang_4"
+   "nach": "_abgang_3"
   },
   {
    "von": "la_tine",
@@ -6811,7 +6752,7 @@
   {
    "von": "sonzier",
    "bp": "chamby",
-   "nach": "_abgang_3"
+   "nach": "_abgang_2"
   },
   {
    "von": "sonzier",
@@ -6866,7 +6807,7 @@
   {
    "von": "vernex",
    "bp": "montreux",
-   "nach": "_abgang_5"
+   "nach": "_abgang_4"
   },
   {
    "von": "vuarennes",

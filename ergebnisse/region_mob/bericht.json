@@ -1,6 +1,6 @@
 {
  "region": "mob",
- "erzeugt": "2026-11-04 20:41 UTC",
+ "erzeugt": "2026-11-04 22:12 UTC",
  "bahnhoefe": {
   "schonried": {
    "name": "Schönried",
@@ -102,14 +102,14 @@
    "befunde": "Befunde: {'B': 1, 'F': 1}",
    "optionen": []
   },
-  "chamby": {
-   "name": "Chamby",
+  "allieres": {
+   "name": "Allières",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "allieres": {
-   "name": "Allières",
+  "chamby": {
+   "name": "Chamby",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -126,14 +126,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "oeschseite": {
-   "name": "Oeschseite",
+  "saanenmoser": {
+   "name": "Saanenmöser",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "saanenmoser": {
-   "name": "Saanenmöser",
+  "oeschseite": {
+   "name": "Oeschseite",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -162,14 +162,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "montbovon": {
-   "name": "Montbovon",
+  "belmont_sur_montreux": {
+   "name": "Belmont-sur-Montreux",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "belmont_sur_montreux": {
-   "name": "Belmont-sur-Montreux",
+  "montbovon": {
+   "name": "Montbovon",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -186,14 +186,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "cret_d_y_bau": {
-   "name": "Crêt-d'y-Bau",
+  "la_perche": {
+   "name": "La Perche",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "la_perche": {
-   "name": "La Perche",
+  "cret_d_y_bau": {
+   "name": "Crêt-d'y-Bau",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -264,14 +264,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "glion_college": {
-   "name": "Glion-Collège",
+  "vernex": {
+   "name": "Vernex",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "vernex": {
-   "name": "Vernex",
+  "glion_college": {
+   "name": "Glion-Collège",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -282,19 +282,19 @@
   "V2": 1,
   "V3": 1,
   "S1": 1,
-  "S2": 2,
+  "S2": 0,
   "S3": 2
  },
  "netz_lage": 0,
  "topologie_region": {
-  "T6": 4
+  "T6": 2
  },
  "ruhe": {
-  "treppen": 11,
-  "ecken": 6
+  "treppen": 10,
+  "ecken": 3
  },
  "regeln": {
-  "G2": 21,
+  "G2": 22,
   "G6": 4,
   "G8": 8
  }
