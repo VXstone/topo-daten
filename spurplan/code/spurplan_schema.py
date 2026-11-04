@@ -2040,6 +2040,7 @@ CONT38 = {}
 R38_ST = {}
 R47_P = []
 _done38 = set()
+R38_DOTS = []          # Prellböcke der Stumpen (statt Pfeil nach innen)
 if ARGS.hauptgleise and RU.get("r38", True):
     _kept_end = {}
     for sg in segs:
@@ -2093,19 +2094,37 @@ if ARGS.hauptgleise and RU.get("r38", True):
             # Regel D. Eckenstein 20.10. abends: Pfeil nur drehen, wenn die Verzweigung so liegt)
             if OVR.get("r38_seite", {}).get(str(e["id"])) == "gerade": CONT38[n_] = dr_; continue
             if str(e["id"]) in OVR.get("r38_seite", {}): up_ = -1 if OVR["r38_seite"][str(e["id"])] == "oben" else 1
-            # Pfeile nur nach aussen (4.11.2026, Zweisimmen: Pfeile zeigten direkt auf das Nachbargleis – dort liegt meist nur
-            # ein kurzer Stumpen): liegt auf der Pfeilseite innerhalb von 1,5 Ebenen ein gezeichnetes Gleis, entfällt der Pfeil.
-            # cfg «pfeil_aussen» (Standard an in Regionen).
+            # Pfeile nur nach aussen (4.11.2026, Zweisimmen: Pfeile zeigten direkt auf das Nachbargleis; D. Eckenstein: «nicht
+            # ersatzlos löschen, eher den Stumpen richtig zeichnen»): liegt auf der Pfeilseite innerhalb von 1,5 Ebenen ein
+            # gezeichnetes Gleis, wird statt des Pfeils ein Stumpen gezeichnet – Schräge bis knapp vor die Mitte zum
+            # Nachbargleis, kurzes Gleis in Richtung der Anlage, Prellbock. cfg «pfeil_aussen» (Regionen an).
+            _stumpf = None
             if CFG.get("pfeil_aussen", False):
                 _l0 = home.get(n_, seglane.get(_kept_end[n_]["id"]) if n_ in _kept_end else None)
-                if _l0 is not None and any(c["s0"] - 5 <= SD[n_][0] <= c["s1"] + 5 and 0 < (c["lane"] - _l0) * (-up_) <= 1.5 for c in C):
-                    if ARGS.dbg: print("R38 nach innen, weggelassen", e["id"])
-                    continue
+                _nb38 = [c["lane"] for c in C if c["s0"] - 5 <= SD[n_][0] <= c["s1"] + 5 and _l0 is not None and 0 < (c["lane"] - _l0) * (-up_) <= 1.5]
+                if _nb38:
+                    _stumpf = min(_nb38, key=lambda l_: abs(l_ - _l0))
+                    if ARGS.dbg: print("R38 nach innen -> Stumpen", e["id"])
             if n_ in home: xe_, ye_ = xpos(n_, SD[n_][0]), ypos(n_)
             else:                              # r38m: Weiche mitten im Stück, nur auf geraden Gleisen
                 sg_ = _kept_end[n_]; ha_, hb_ = home.get(sg_["nodes"][0]), home.get(sg_["nodes"][-1])
                 if ha_ is None or ha_ != hb_: continue
                 xe_, ye_ = X(SD[n_][0]), Y(ha_)
+            if _stumpf is not None:
+                _gap = abs(Y(_stumpf) - ye_); _h = 0.45 * _gap; _run = _h / math.tan(math.radians(60))
+                _lm = max(abs(a_[0] - SD[n_][0]) for a_ in acc_) if acc_ else 20
+                _len = min(max(_lm * CFG["px_per_m"] * 0.5, 14), 40)
+                _p1 = (xe_ + dr_ * _run, ye_ + up_ * _h); _p2 = (_p1[0] + dr_ * _len, _p1[1])
+                # ausgerundet wie Weichen (G3): vom Gleis her, beide Knicke mit Radius 6
+                _q = [(xe_ - dr_ * 8, ye_), (xe_, ye_), _p1, _p2]; _d = f"M{_q[0][0]:.1f},{_q[0][1]:.1f}"
+                for _i in (1, 2):
+                    (_ax, _ay), (_bx, _by), (_cx, _cy) = _q[_i - 1], _q[_i], _q[_i + 1]
+                    _l1 = math.hypot(_bx - _ax, _by - _ay) or 1; _l2 = math.hypot(_cx - _bx, _cy - _by) or 1; _r = min(6.0, _l1 / 2, _l2 / 2)
+                    _d += (f"L{_bx + (_ax - _bx) * _r / _l1:.1f},{_by + (_ay - _by) * _r / _l1:.1f}"
+                           f"Q{_bx:.1f},{_by:.1f} {_bx + (_cx - _bx) * _r / _l2:.1f},{_by + (_cy - _by) * _r / _l2:.1f}")
+                svg_paths[False].append(_d + f"L{_p2[0]:.1f},{_p2[1]:.1f}")
+                R38_DOTS.append((_p2[0], _p2[1], False, str(e["tags"].get("spur", e["tags"].get("gauge", ""))) in ("1000", "800")))
+                continue
             L_ = 22; ex_, ey_ = xe_ + dr_ * L_ * 0.5, ye_ + up_ * L_ * 0.866
             svg_paths[False].append(f"M{xe_:.1f},{ye_:.1f}L{ex_:.1f},{ey_:.1f}")
             STUBS.append((ex_, ey_, math.atan2(ey_ - ye_, ex_ - xe_)))
@@ -2152,6 +2171,7 @@ for n_, dr_ in CONT38.items():
     PFEIL_ZIEL.append((_xa + dr_ * _PST, _ya, 0.0 if dr_ > 0 else math.pi, dict(way=None, knoten=n_, ll=list(LL[n_]) if n_ in LL else None)))
 dots = [(xpos(n, SD[n][0]), ypos(n), any(sg["pax"] for sg in segs if n in sg["nodes"]),
          any(sg.get("schmal") for sg in segs if n in sg["nodes"])) for n in stops]     # 4.: Meterspur -> Prellbock braun (4.11.2026)
+dots += R38_DOTS
 
 _pl_s = [x for pl in OVR.get("platforms", []) if "s" in pl for x in pl["s"]] or \
         [project(xy(g))[0] for e in PLAT for g in e["geometry"]]

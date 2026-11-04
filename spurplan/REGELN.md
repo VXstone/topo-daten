@@ -130,6 +130,6 @@ Stand 21.10.2026.
 - Pfeilpaare (verkettete Nebengleise) in Querreihenfolge gepaart und mit dem Strecken-Connector gezeichnet (Sagliains Sasslatsch – Autoverlad: keine Kreuzung, keine Treppe).
 - Kleiner Versatz zwischen gegenüberliegenden Anschlüssen (≤ 8°, `schraeg_max`): leicht schräge Gerade statt Treppe.
 - Dreischienengleis (OSM gauge «1000;1435»): grün mit braun gestricheltem Strich darüber (alle Pläne; Zweisimmen Gl. 6/7, Chur–Ems, Worblaufen–Zollikofen).
-- Pfeile nur nach aussen (`pfeil_aussen`, Regionen): R38-Pfeil entfällt, wenn auf seiner Seite innerhalb 1,5 Ebenen ein gezeichnetes Gleis liegt.
+- Pfeile nur nach aussen (`pfeil_aussen`, Regionen): zeigt ein R38-Pfeil auf ein Nachbargleis (innerhalb 1,5 Ebenen), wird stattdessen ein Stumpen gezeichnet (Schräge bis knapp vor die Mitte, kurzes Gleis in Richtung der Anlage, Prellbock, ausgerundet) – nicht ersatzlos löschen (D. Eckenstein 4.11.).
 - Perronlage dort, wo seine Gleise liegen (`perron_abschnitt`, Regionen): Zweisimmen 7/8 (OSM 845 m, Gl. 8 endet vorher) sass auf Gl. 8.
 - Offen Zweisimmen: Einfahrt wirkt einspurig/DKW (Gstaad- und Lenk-Linie laufen über Verbindungen zusammen); Perron an Gl. 12 fehlt in OSM.
