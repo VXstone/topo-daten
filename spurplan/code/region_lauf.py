@@ -125,6 +125,13 @@ if os.path.exists(os.path.join(WORK, "topologie_region.json")):
 if os.path.exists(os.path.join(WORK, "region.svg")):
     shutil.copy(os.path.join(WORK, "region.svg"), OUT); shutil.copy(LF, os.path.join(OUT, "lage.json"))
     rp = sh(["python3", py("regel_pruefung.py"), "region.svg", "--json", "regeln.json"])
+    # Ruhe (T7, 4.11.2026): unmotivierte Ecken und Treppen in den Bahnhofsplänen und im Regionalplan
+    sh(["python3", py("ruhe.py"), ".", "--json", "ruhe_plaene.json"]); sh(["python3", py("ruhe.py"), ".", "--region", "region.svg", "--json", "ruhe_region.json"])
+    _ru = []
+    for f_ in ("ruhe_plaene.json", "ruhe_region.json"):
+        if os.path.exists(os.path.join(WORK, f_)): _ru += json.load(open(os.path.join(WORK, f_)))
+    bericht["ruhe"] = dict(treppen=sum(1 for x in _ru if x["art"] == "Treppe"), ecken=sum(1 for x in _ru if x["art"] == "Ecke"))
+    json.dump(_ru, open(os.path.join(OUT, "ruhe.json"), "w"), ensure_ascii=False, indent=1)
     if os.path.exists(os.path.join(WORK, "regeln.json")):
         import collections
         bericht["regeln"] = dict(collections.Counter(x.get("regel", x.get("art", "?")) for x in json.load(open(os.path.join(WORK, "regeln.json")))))

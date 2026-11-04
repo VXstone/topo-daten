@@ -475,6 +475,9 @@ def connector(A, a, B, b):
     if AUTO and L0.get("ein_versatz", True) and turn(a, -b) < 2:
         dd_ = B - A; nn_ = np.array([-a[1], a[0]]); al_, la_ = float(dd_ @ a), float(dd_ @ nn_)
         if al_ > 0 and abs(la_) < 0.5: return [A, B]
+        # kleiner Versatz auf langer Strecke: eine leicht schräge Gerade statt Treppe (4.11.2026, T7: Sasslatsch –
+        # Autoverlad, Selfranga – Selfranga Süd); Knick an den Anschlüssen höchstens «schraeg_max» (8°)
+        if al_ > 0 and math.degrees(math.atan2(abs(la_), al_)) <= L0.get("schraeg_max", 8): return [A, B]
         run_ = abs(la_) / math.tan(math.radians(30))
         if al_ > 0 and run_ < al_ - 8:
             P1 = A + a * (al_ - run_) / 2
@@ -635,17 +638,33 @@ if L0.get("pfeile_verbinden", True):
             pb = [q for q in _pf[b_n] if q["ziel"] == nodes[a_n]["inset"]]
             if not pa or not pb: continue
             A_ = [(q, *_pf_reg(a_n, q)) for q in pa]; B_ = [(q, *_pf_reg(b_n, q)) for q in pb]
-            while A_ and B_:
-                qa, pa_, ua = min(A_, key=lambda t: min(np.linalg.norm(t[1] - b[1]) for b in B_))
-                qb, pb_, ub = min(B_, key=lambda t: np.linalg.norm(t[1] - pa_))
-                A_ = [t for t in A_ if t[0] is not qa]; B_ = [t for t in B_ if t[0] is not qb]
+            # Paarung in Querreihenfolge (4.11.2026, Sagliains Sasslatsch – Autoverlad: nächste Spitze zuerst kreuzte die
+            # beiden Ladegleise, Treppen): beide Seiten quer zur Verbindungsrichtung sortiert, das k-te mit dem k-ten
+            _d0 = pos[b_n] - pos[a_n] if math.dist(pos[a_n], pos[b_n]) > 1 else np.array([1.0, 0.0])
+            _d0 = _d0 / (np.linalg.norm(_d0) or 1); _n0 = np.array([-_d0[1], _d0[0]])
+            if L0.get("pfeile_reihenfolge", True) and len(A_) == len(B_):
+                _pa = sorted(A_, key=lambda t: float(t[1] @ _n0)); _pb = sorted(B_, key=lambda t: float(t[1] @ _n0))
+                _paare = list(zip(_pa, _pb))
+            else:
+                _paare = []
+                while A_ and B_:
+                    ta = min(A_, key=lambda t: min(np.linalg.norm(t[1] - b[1]) for b in B_))
+                    tb = min(B_, key=lambda t: np.linalg.norm(t[1] - ta[1]))
+                    A_ = [t for t in A_ if t is not ta]; B_ = [t for t in B_ if t is not tb]; _paare.append((ta, tb))
+            for (qa, pa_, ua), (qb, pb_, ub) in _paare:
                 PF_WEG[a_n].add(qa["id"]); PF_WEG[b_n].add(qb["id"])
                 # Verbindung wie ein Parallelgleis zur Strecke (Richtung Plan A -> Plan B): ab der Spitze parallel, in der
                 # Mitte unter 60° auf die Seitenlage der anderen Spitze, dann parallel bis zu ihr (keine Spitze, kein Zickzack)
                 d_ = pos[b_n] - pos[a_n] if math.dist(pos[a_n], pos[b_n]) > 1 else pb_ - pa_
                 d_ = d_ / (np.linalg.norm(d_) or 1); nr_ = np.array([-d_[1], d_[0]])
-                A_l = float((pb_ - pa_) @ d_); D_l = float((pb_ - pa_) @ nr_); t_ = abs(D_l) / TAN60
-                if A_l > t_ + 12:
+                A_l = float((pb_ - pa_) @ d_); D_l = float((pb_ - pa_) @ nr_)
+                # ruhiger Versatz: unter 30° statt 60° (wie die Strecken), kleiner Versatz gerade
+                t_ = abs(D_l) / (math.tan(math.radians(30)) if A_l > abs(D_l) / math.tan(math.radians(30)) + 12 else TAN60)
+                if L0.get("pfeile_connector", True) and AUTO:
+                    # wie die Strecken: aus der Pfeilrichtung heraus, möglichst wenige Knicke (4.11.2026, Treppen Sagliains)
+                    PF_LINIEN.append(((a_n, b_n), connector(pa_, ua, pb_, ub)))
+                elif abs(D_l) < 2.5: PF_LINIEN.append(((a_n, b_n), [pa_, pb_]))
+                elif A_l > t_ + 12:
                     m_ = A_l / 2
                     PF_LINIEN.append(((a_n, b_n), [pa_, pa_ + d_ * (m_ - t_ / 2), pa_ + d_ * (m_ + t_ / 2) + nr_ * D_l, pb_]))
                 else:

@@ -123,3 +123,9 @@ Stand 21.10.2026.
 - Offen: Château-d'Oex – durchgehendes Gleis wechselt im Plan zwei Ebenen (links Gl. unten, rechts oben) → Versatz auf den Nachbarstrecken (La Chaudanne, Les Granges). Lösung: Punkt 4 (durchgehendes Hauptgleis im Plan gerade).
 - 4.11.: R27b ergänzt keine Weiche über ein drittes Gleis hinweg (La Tine: Stumpen, nur Seite Zweisimmen angeschlossen). Prellböcke an Meterspur braun.
 - Punkt 4 «Einspur gerade durch»: im Bahnhofsplan (`einspur_gerade`) zerlegt es die Weichenstrasse (Château-d'Oex) → aus. Stattdessen im Regionalplan «Kippen statt Versatz» (lage_auto `kipp_max` 8°): liegen Ein- und Ausfahrt eines Kettenbahnhofs quer versetzt, wird er so gedreht, dass beide auf der Kettenachse liegen. La Tine – Flendruz jetzt eine Gerade.
+
+## Ruhe (4.11.)
+- Definition (D. Eckenstein): Ruhe = keine Treppen und keine unmotiviert erscheinenden Ecken – unmotiviert, weil auf kurzem Stück und ohne sonstige Änderung (keine Weiche, keine Gleiszahländerung, kein Abzweig).
+- Prüfung T7 (ruhe.py): je Bahnhofsplan (Streckengleise) und im Regionalplan (Strecken und Nebengleis-Verbindungen ausserhalb der Spurpläne). Treppe = innerhalb 100 px > 12° hin und zurück (Netto < 6°) ohne Anschluss dazwischen; Ecke = Knick > 8° mit beiden Schenkeln < 40 px, unbegründet. Bericht «ruhe» {treppen, ecken}, Feedbackkarte «Ruhe: …».
+- Pfeilpaare (verkettete Nebengleise) in Querreihenfolge gepaart und mit dem Strecken-Connector gezeichnet (Sagliains Sasslatsch – Autoverlad: keine Kreuzung, keine Treppe).
+- Kleiner Versatz zwischen gegenüberliegenden Anschlüssen (≤ 8°, `schraeg_max`): leicht schräge Gerade statt Treppe.

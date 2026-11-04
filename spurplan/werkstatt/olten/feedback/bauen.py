@@ -38,6 +38,8 @@ def _auto_label(_r):
     except Exception: t_ = b.get("erzeugt", "?")
     tr = sum((b.get("topologie_region") or {}).values()); vk = sum((b.get("verkettung") or {}).values())
     teile = [f"Stand {t_}", "Topologie ok" if tr == 0 else f"Topologie {tr} Befunde", "Verkettung ok" if vk == 0 else f"Verkettung {vk} Befunde"]
+    if b.get("ruhe") is not None:
+        r_ = b["ruhe"]; teile.append("Ruhe ok" if not (r_["treppen"] or r_["ecken"]) else f"Ruhe: {r_['treppen']} Treppen, {r_['ecken']} Ecken")
     if _r.get("notiz"): teile.append(_r["notiz"])
     return " · ".join(teile)
 for _r in (json.load(open(_rp)) if os.path.exists(_rp) else []):
