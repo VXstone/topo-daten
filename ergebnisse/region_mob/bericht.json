@@ -1,15 +1,15 @@
 {
  "region": "mob",
- "erzeugt": "2026-11-04 11:54 UTC",
+ "erzeugt": "2026-11-04 12:51 UTC",
  "bahnhoefe": {
-  "la_tine": {
-   "name": "La Tine",
+  "schonried": {
+   "name": "Schönried",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "schonried": {
-   "name": "Schönried",
+  "la_tine": {
+   "name": "La Tine",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -32,14 +32,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "rochers_de_naye": {
-   "name": "Rochers de Naye",
+  "rougemont": {
+   "name": "Rougemont",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "rougemont": {
-   "name": "Rougemont",
+  "rochers_de_naye": {
+   "name": "Rochers de Naye",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -56,14 +56,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "blankenburg": {
-   "name": "Blankenburg",
+  "st_stephan": {
+   "name": "St. Stephan",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "st_stephan": {
-   "name": "St. Stephan",
+  "blankenburg": {
+   "name": "Blankenburg",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -287,14 +287,15 @@
  },
  "netz_lage": 0,
  "topologie_region": {
-  "T6": 7
+  "T6": 7,
+  "T5": 1
  },
  "ruhe": {
-  "treppen": 15,
+  "treppen": 14,
   "ecken": 10
  },
  "regeln": {
-  "G2": 20,
+  "G2": 16,
   "G6": 5,
   "G8": 8
  }
