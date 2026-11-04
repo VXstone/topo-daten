@@ -1,6 +1,6 @@
 {
  "region": "mob",
- "erzeugt": "2026-11-04 22:12 UTC",
+ "erzeugt": "2026-11-04 22:45 UTC",
  "bahnhoefe": {
   "schonried": {
    "name": "Schönried",
@@ -264,14 +264,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "vernex": {
-   "name": "Vernex",
+  "glion_college": {
+   "name": "Glion-Collège",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "glion_college": {
-   "name": "Glion-Collège",
+  "vernex": {
+   "name": "Vernex",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -296,6 +296,6 @@
  "regeln": {
   "G2": 22,
   "G6": 4,
-  "G8": 8
+  "G8": 7
  }
 }
