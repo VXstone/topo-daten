@@ -111,6 +111,9 @@ if os.path.exists(os.path.join(WORK, "verkettung.json")):
 # Lage: aus der Konfig (Schlüssel "lage"), Koordinaten erzeugt netz_lage.py selbst (auto)
 LF = os.path.join(WORK, f"{NAME}_lage.json")
 if not os.path.exists(LF) or not NUR_LAGE: json.dump(K.get("lage", {"auto": {"c0": 30, "c1": 32, "p": 0.6, "gap": 58, "wg": 0.01}}), open(LF, "w"), ensure_ascii=False, indent=1)
+# Linien-Regionen (4.11. abends): Lage-Regeln, die nur hier gelten (seitlicher Anschluss gibt nach, Platz für Halte,
+# direkte Gerade von Anschluss zu Anschluss). Regionalpläne Olten/Neuchâtel (werkstatt) bleiben unverändert.
+_lf = json.load(open(LF)); _lf.setdefault("auto", {}); _lf["auto"].setdefault("linien_region", True); json.dump(_lf, open(LF, "w"), ensure_ascii=False, indent=1)
 shutil.copy(os.path.join(KDIR, "region.json"), os.path.join(WORK, "_konfig.json"))
 r = sh(["python3", py("netz_lage.py"), NAME, K.get("titel", REG), "region.svg", "--pruefen"], timeout=1800)
 bericht["netz_lage"] = r.returncode

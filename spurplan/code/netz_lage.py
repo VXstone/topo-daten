@@ -235,6 +235,7 @@ for i in [i for i in ids if nodes[i]["inset"]]:
 ROT = {}
 OVR_LAGE = json.load(open(f"{NAME}_lage.json")) if os.path.exists(f"{NAME}_lage.json") else {}
 AUTO = OVR_LAGE.get("auto") if "auto" in OVR_LAGE else None
+_LINIEN = isinstance(AUTO, dict) and bool(AUTO.get("linien_region"))     # Linien-Region (region_lauf), 4.11. abends
 if AUTO is not None and not AUTO: AUTO = {"_": 1}
 def rotv(v, a):
     if a == -90: return np.array([v[1], -v[0]])
@@ -446,7 +447,7 @@ def text(x, y, t, size=14, anchor_="middle", weight=400, color=G):
     out.append(f'<text x="{x:.1f}" y="{y:.1f}" font-size="{size}" font-weight="{weight}" text-anchor="{anchor_}" fill="{color}">{t}</text>')
 DV = [uvec(a) for a in DIRS]
 def turn(u, v): return math.degrees(math.acos(max(-1, min(1, float(u @ v)))))
-def connector(A, a, B, b):
+def connector(A, a, B, b, direkt=False):
     st = CFG["stub"] * 2; A1 = A + a * st; B1 = B + b * st; d = B1 - A1; best = None
     def score(dirs, lens):
         sc_ = sum(turn(p, q) ** 1.5 for p, q in zip(dirs, dirs[1:])) * 0.1 + sum(lens) * 0.01
@@ -491,6 +492,15 @@ def connector(A, a, B, b):
             # Müntschemier: «oben ein Winkel, der es in die Ebene Richtung Neuenburg bringt»)
             _schief = sum(1 for q_ in (turn(a, dn), turn(dn, -b)) if 8 < q_ < 52)
             cands.append((score([a, dn, -b], [np.linalg.norm(d)]) - 3 + 40 * _schief, [A, A1, B1, B]))
+        # direkte Gerade von Anschluss zu Anschluss (4.11. abends, Sagliains Sasslatsch – Sasslatsch: 60°-Abgang, senkrechte
+        # Einfahrt; die Gerade zwischen den Stummelenden hatte zwei schiefe Knicke und verlor gegen einen Absatz = Treppe)
+        dAB0 = (B - A) / (np.linalg.norm(B - A) or 1)
+        if _LINIEN and direkt and turn(a, dAB0) <= L0.get("auto_knick", 61) and turn(dAB0, -b) <= L0.get("auto_knick", 61):
+            _schief0 = sum(1 for q_ in (turn(a, dAB0), turn(dAB0, -b)) if 8 < q_ < 52)
+            _s0 = CFG["stub"]; A0_, B0_ = A + a * _s0, B + b * _s0      # kurze Stummel: dort wird ausgerundet (G2)
+            dAB1 = (B0_ - A0_) / (np.linalg.norm(B0_ - A0_) or 1)
+            if float(dAB1 @ dAB0) > 0.9:
+                cands.append((score([a, dAB1, -b], [np.linalg.norm(B0_ - A0_)]) - 3 + 40 * _schief0, [A, A0_, B0_, B]))
         # genau ein Knick am Schnittpunkt der beiden Portgeraden (Hinweis 18.10.: "mit den Ästen aus dem Bahnhof raus auf 60 Grad
         # gehen, dann braucht es den Knick nicht"): liegt ein Ende auf der Kettenachse, knickt die Strecke direkt am Port
         dAB = (B - A) / (np.linalg.norm(B - A) or 1)
@@ -804,7 +814,7 @@ def route_geom(r):
         pp_ = [pos[n] + nv_ * o * TG for o in lanes[:k]]
         return np.mean(pp_, axis=0), u, pp_ + [pos[n] + nv_ * lanes[-1] * TG] * max(0, k - len(lanes)), True
     A, va, pa, xa = endinfo(na, ea, nb); B, vb, pb, xb = endinfo(nb, eb, na)
-    core = connector(A, va, B, vb)
+    core = connector(A, va, B, vb, direkt=bool(nodes[na]["inset"] and nodes[nb]["inset"]))   # direkte Gerade nur zwischen zwei Plänen
     if os.environ.get("CDBG") and os.environ["CDBG"] in (nodes[na]["name"], nodes[nb]["name"]): print("CORE", nodes[na]["name"], nodes[nb]["name"], A.round(1), va.round(2), B.round(1), vb.round(2), [np.round(c_, 1).tolist() for c_ in core])
     col, w = (G, 2.4) if (xa and xb) else (BK, 1.3)
     offs = [(j - (k - 1) / 2) * TG for j in range(k)]
@@ -1232,6 +1242,7 @@ for r in routes:
         _a0, _a1 = 0.10 * _PLh.length, 0.90 * _PLh.length
         for i_, nid in enumerate(_hl):
             s_ = _a0 + (_a1 - _a0) * (i_ + 0.5) / len(_hl)
+            if _LINIEN: s_ = _PLh.length * (i_ + 1) / (len(_hl) + 1)   # automatische Lage: gleichmässig, auch zu den Plänen (4.11. abends, Château-d'Oex)
             p_ = np.array(_PLh.interpolate(s_).coords[0]); q0_ = np.array(_PLh.interpolate(max(0, s_ - 6)).coords[0])
             q1_ = np.array(_PLh.interpolate(min(_PLh.length, s_ + 6)).coords[0]); u_ = (q1_ - q0_) / (np.linalg.norm(q1_ - q0_) or 1)
             HALT_AT[nid] = (p_, u_, k)
@@ -1715,23 +1726,52 @@ if "--pruefen" in sys.argv:
     if os.environ.get("TDBG"):
         for (eid, n), a_ in anchor.items():
             if nodes[n]["name"] == os.environ["TDBG"]: print("ANKER", [nodes[x]["name"] for r_ in routes for x in (r_["a"], r_["b"]) if id(r_["first"]) == eid or id(r_["last"]) == eid], a_.get("strang"), a_.get("refs"))
-    # T6 Haken (3.11.2026, Sendy-Sollard): Strecke kehrt auf kurzem Weg um (Knick > 120°) oder läuft gegen die
-    # Austrittsrichtung des Anschlusses in den Plan (Winkel zwischen Gleis und Anschluss > 120°)
+    # T6 Haken (3.11.2026, Sendy-Sollard; 4.11. abends neu gefasst): die Strecke kehrt auf kurzem Weg um. Gezählt wird die
+    # aufsummierte Richtungsänderung über höchstens «haken_px» (120 px) Strecke, Grenze «haken_grad» (110°), einschliesslich der Anschlussrichtung an
+    # beiden Plänen (Anker sind schon gedreht). Umkehr > 120° = Haken - auch aus zwei Knicken unter 120° (Montbovon,
+    # Zweisimmen – Oeschseite, Rochers de Naye); die alte Fassung sah nur Einzelknicke und drehte die Anker doppelt.
+    _HL = float(L0.get("haken_px", 120))
+    def _sturn(u_, v_): return math.degrees(math.atan2(u_[0] * v_[1] - u_[1] * v_[0], float(u_ @ v_)))
     for r in routes:
         try: g_ = route_geom(r)
         except Exception: continue
         nm_ = f"{nodes[r['a']]['name']} – {nodes[r['b']]['name']}"; _h = 0
         for l_ in g_["lines"]:
             q_ = [np.asarray(p_, float) for k_, p_ in enumerate(l_) if k_ == 0 or np.linalg.norm(np.asarray(p_) - np.asarray(l_[k_ - 1])) > 1.5]
+            if len(q_) < 2: continue
             ds_ = [(b - a) / np.linalg.norm(b - a) for a, b in zip(q_, q_[1:])]
-            _h += sum(1 for u_, v_ in zip(ds_, ds_[1:]) if turn(u_, v_) > 120)
-            for n_, e_, d_ in ((r["a"], r["first"], ds_[0] if ds_ else None), (r["b"], r["last"], -ds_[-1] if ds_ else None)):
+            ls_ = [float(np.linalg.norm(b - a)) for a, b in zip(q_, q_[1:])]
+            # Anschlussrichtungen als Anfangs-/Endrichtung (Länge 0), nur wenn der Linienanfang am Anschluss liegt
+            for n_, e_, am_anfang in ((r["a"], r["first"], True), (r["b"], r["last"], False)):
                 a_ = anchor.get((id(e_), n_))
-                if a_ is None or d_ is None: continue
-                v_ = rotv(np.asarray(a_["v"], float), ROT.get(n_, 0)) if "rotv" in globals() else np.asarray(a_["v"], float)
-                v_ = v_ / (np.linalg.norm(v_) or 1)
-                if turn(v_, d_) > 120: _h += 1
-        if _h: TOPO_R.append(dict(regel="T6", plan=nm_, text=f"{nm_}: {_h} Haken (Umkehr > 120° oder gegen die Anschlussrichtung)"))
+                if a_ is None: continue
+                v_ = np.asarray(a_["v"], float); v_ = v_ / (np.linalg.norm(v_) or 1)
+                base_ = pos[n_] + STACK.get((id(e_), n_), a_["off"]) if n_ in pos else None
+                p_ = q_[0] if am_anfang else q_[-1]
+                if base_ is not None and np.linalg.norm(p_ - np.asarray(base_, float)) > 3 * TG: continue
+                if am_anfang: ds_.insert(0, v_); ls_.insert(0, 0.0)
+                else: ds_.append(-v_); ls_.append(0.0)
+            i_ = 0
+            while i_ < len(ds_) - 1:
+                acc_, L_, hit_ = 0.0, 0.0, False
+                for j_ in range(i_ + 1, len(ds_)):
+                    if j_ > i_ + 1: L_ += ls_[j_ - 1]
+                    if L_ > _HL: break
+                    acc_ += _sturn(ds_[j_ - 1], ds_[j_])
+                    if abs(acc_) > float(L0.get("haken_grad", 110)): hit_ = True; break
+                if hit_: _h += 1; i_ = j_
+                else: i_ += 1
+        if _h: TOPO_R.append(dict(regel="T6", plan=nm_, text=f"{nm_}: {_h} Haken (Umkehr > {L0.get('haken_grad', 110)}° auf kurzem Stück)"))
+    # T8 Halte zu nah (4.11. abends, Château-d'Oex – Flendruz): zwei aufeinanderfolgende Halte einer Strecke liegen näher
+    # als 90 % von «halt_abstand_min» (Regel vom 26.10.: Sommerau, Rümlingen, Buckten)
+    _hm8 = float(L0.get("halt_abstand_min", 60))
+    for r in routes:
+        hl_ = [nid for nid in r["seq"][1:-1] if nodes[nid]["kind"] == "halt" and nid in HALT_AT]
+        for h1_, h2_ in zip(hl_, hl_[1:]):
+            d8_ = float(np.linalg.norm(np.asarray(HALT_AT[h1_][0], float) - np.asarray(HALT_AT[h2_][0], float)))
+            if d8_ < 0.9 * _hm8:
+                TOPO_R.append(dict(regel="T8", plan=f"{nodes[h1_]['name']} – {nodes[h2_]['name']}",
+                                   text=f"Halte {nodes[h1_]['name']} – {nodes[h2_]['name']}: {d8_:.0f} px statt mindestens {_hm8:.0f} px"))
     print("\n== Topologie Region (T1–T6) ==")
     for t_ in TOPO_R: print(" ", t_["regel"], t_["text"])
     if not TOPO_R: print("  keine Befunde")

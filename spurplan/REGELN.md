@@ -142,3 +142,12 @@ Stand 21.10.2026.
 - Gleiswechsel (service=crossover) zwischen zwei verschiedenen Streckengleisen ist immer Schräge, auch ohne Querversatz in OSM (Vernex: Streckengleise schwingen ±3,5 m auseinander, Wechsel liegen gerade in der Mitte).
 - `hauptgleis_funktion` c) gilt nicht für Spurwechsel: Kette zwischen zwei parallel laufenden Streckengleisen derselben Linie (jedes Ende ≤ 6 m neben dem anderen Gleis) bleibt Gleiswechsel (Vernex Linie 100 lag im doppelten Abstand). Zweisimmen unverändert.
 - planrand_pruefung: Gleis ohne Liniennummer neben einer Linie = Doppelspurabstand (vorher 48 px verlangt).
+
+## Bestehende Regeln sauber (4.11. abends, D. Eckenstein: «zuerst die bestehenden Regeln dort, wo wir prüfen»)
+- R28f nur, wenn das Gleis am Schnitt ≤ `r28f_d_max` (8 m) neben der Achse liegt. Sasslatsch: die abzweigende 960 nach Sagliains (54 m daneben) wurde an den Planrand gezogen – Haken an der Weiche, Strecke endete im Leeren (T5). Ebenso betroffen: Montbovon, Montreux, Chamby, Zweisimmen, Glion, Klosters Platz.
+- T6 Haken neu: aufsummierte Richtungsänderung über ≤ `haken_px` (120 px) Strecke inkl. Anschlussrichtung beider Pläne, Grenze `haken_grad` (110°). Die alte Fassung drehte die Anker doppelt (Fehlalarme, z. B. Klosters Platz – Abgang 910) und sah Umkehr aus zwei Knicken nicht.
+- T8 (neu): zwei Halte einer Strecke näher als 90 % von `halt_abstand_min` (60 px).
+- Nur Linien-Regionen (`auto.linien_region`, setzt region_lauf; Olten/Neuchâtel byte-gleich):
+  - Halte bekommen Platz: Zwischenraum einer Strecke mit h Halten mindestens (h + 1) × `halt_abstand_min`, Halte gleichmässig über die ganze Strecke (Château-d'Oex – Flendruz: La Palaz, Les Granges, Les Combes lagen 40 px auseinander).
+  - Seitlicher Anschluss gibt in der Ausgleichsrechnung nach (`seite_nachgiebig` 0.6).
+  - Zwischen zwei Plänen auch die direkte Gerade von Anschluss zu Anschluss (mit kurzen Stummeln zum Ausrunden), statt Absatz/Treppe (Sagliains Sasslatsch – Sasslatsch). Nicht für Abgänge.

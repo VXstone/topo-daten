@@ -1652,7 +1652,11 @@ for sg in segs:
         # Regel 28f (3.11.2026, MOB Gruben/La Tine: Strecke im Bogen verliess den Plan seitlich als 60°-Stummel, daneben
         # der Abgang): Streckengleis (ohne service), das nahe am Planende seitlich ausläuft, läuft längs an den Planrand.
         # Nur Regionen (rules «r28f»).
-        if RU.get("r28f", False) and sg["pax"] and not sg["tags"].get("service") and _near_end:
+        # Nur wenn das Gleis am Schnitt nahe der Achse liegt (4.11. abends, Sasslatsch: abzweigende 960 nach Sagliains liegt
+        # 54 m daneben und wurde an den Planrand gezogen - Haken an der Weiche, Abgang hing in der Luft; ebenso Montbovon,
+        # Montreux, Chamby, Zweisimmen). cfg «r28f_d_max» (8 m).
+        if RU.get("r28f", False) and sg["pax"] and not sg["tags"].get("service") and _near_end \
+                and abs(SD[nc][1]) <= CFG.get("r28f_d_max", 8.0):
             LAT_CUT[nc] = CFG["s_min"] if SD[nc][0] - CFG["s_min"] < CFG["s_max"] - SD[nc][0] else CFG["s_max"]
             LAT_OWN[nc] = sg["id"]; EDGE_LONG.add(nc)
             continue

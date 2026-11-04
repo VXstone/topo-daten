@@ -806,3 +806,11 @@ Regeln in REGELN.md «Randzone». Code: spurplan_schema (`randzone`, nach A4; Gl
 - Vernex (MOB, Linie 100): Spurwechsel wieder Schrägen, Doppelspur im Standardabstand.
 - Stand lokal (Rohdaten der letzten Läufe): Planrand Vereina 1→0, MOB 2→0. Vereina Verkettung 0, Topologie 2, Ruhe 4/5 (gleich), G6 3→2, G8 5→8 (Selfranga/Sasslatsch gewollte Überlagerung an der Weiche, Sagliains verschoben). MOB Topologie 7→4, Ruhe 14/7→12/6, G6 5→4, G8 10→8. SBB-Bahnhöfe (Konolfingen, Neuchâtel, Vauseyon, Solothurn) byte-gleich, Planrand 0.
 - Offen: Versatz zwischen Selfranga und Selfranga Süd (bestand schon; jetzt laufen beide Gleise gemeinsam durch, T7 zählt ihn 2×). Nächster Punkt: (2) Prüflauf neuer Regionsregeln über die abgenommenen SBB-Bahnhöfe.
+
+## 4.11.2026 spät – Bestehende Regeln sauber (Hinweis D. Eckenstein: Mindestabstand Château-d'Oex – Saanen, Sasslatsch)
+Regeln in REGELN.md «Bestehende Regeln sauber». Code: spurplan_schema (R28f), netz_lage (T6 neu, T8, Halte, direkte Gerade, `_LINIEN`), lage_auto (Halte-Platz, seitlich nachgiebig), region_lauf (`linien_region`).
+- Sasslatsch: 960 nach Sagliains mündet an der Weiche (T5 weg), 914 als eine Schräge, 910 Sagliains Sasslatsch – Sagliains mit einem Knick.
+- Château-d'Oex – Flendruz: drei Halte je ≥ 60 px (T8 0).
+- Gegenprobe: Regionalpläne Olten und Neuchâtel byte-gleich, SBB-Bahnhöfe unverändert.
+- Stand lokal: Vereina Verkettung 0, T6 2 (Klosters Platz – Selfranga, Klosters Platz – Abgang 915: echte Schlaufen), Ruhe 4/5, G2 4. MOB T6 4 (La Tine – Montbovon, Rochers de Naye, Zweisimmen – Oeschseite, Zweisimmen – Spiez: echt), Ruhe 11/6 (vorher 12/6), G2 21.
+- Offen: T6 erkennt Les Sciernes – Montbovon nicht (Anker v von Montbovon passt nicht zum gezeichneten Gleis); Beschriftung Halte (La Palaz liegt auf der Strecke); Versatz Selfranga – Selfranga Süd (G2 13°/19°). Danach Punkt (2) Prüflauf SBB-Bahnhöfe.

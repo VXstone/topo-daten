@@ -178,7 +178,14 @@ def ketten(nodes, MAJOR, routes, anchor, PORTS, S, P, fix, L0):
     def need(ch):           # Platzbedarf der inneren Bahnhöfe entlang der Kette (an Abzweigen mehr Luft)
         inn = ch["seq"][1:-1]
         extra_ = sum((P["abzweig_gap"] if not nodes[h_]["inset"] else P["knoten_gap"]) - P["gap"] for h_ in (ch["seq"][0], ch["seq"][-1]) if nodes[h_]["kind"] != "exit")
-        return sum(boxwh(n)[0] for n in inn) + (len(inn) + 1) * P["gap"] + extra_
+        # Halte brauchen Platz (4.11. abends, Château-d'Oex – Flendruz: drei Halte auf 40 px, Beschriftungen übereinander):
+        # je Strecke mit h Halten mindestens (h + 1) × halt_abstand_min statt des normalen Abstands
+        _hm = float(L0.get("halt_abstand_min", 60)) if isinstance(L0, dict) else 60.0
+        _gaps = 0.0
+        for k_ in ch["ks"]:
+            nh_ = sum(1 for x_ in routes[k_].get("seq", [])[1:-1] if nodes[x_]["kind"] == "halt")
+            _gaps += max(P["gap"], (nh_ + 1) * _hm) if (nh_ and P.get("linien_region")) else P["gap"]
+        return sum(boxwh(n)[0] for n in inn) + _gaps + extra_
     for ch in chains:
         a, b = ch["seq"][0], ch["seq"][-1]
         ex = nodes[a]["kind"] == "exit" or nodes[b]["kind"] == "exit"
@@ -200,6 +207,15 @@ def ketten(nodes, MAJOR, routes, anchor, PORTS, S, P, fix, L0):
             u_ = rotv(np.array(a_["v"], float), rot.get(h_, 0)); u_ = sg_ * u_ / (np.linalg.norm(u_) or 1)
             if float(u_ @ d) > 0.5 * (np.linalg.norm(d) or 1): ch["T"] = u_ * L; ch["w"] = P.get("seiten_gewicht", 1.0); ch["seite"] = (j_, u_)
             if os.environ.get("KDBG"): print("SEITE", [nodes[x]["name"] for x in ch["seq"]], u_.round(2), (d / (np.linalg.norm(d) or 1)).round(2))
+    # Seitlicher Anschluss gibt nach (4.11. abends, Sasslatsch: der seitliche Abgang 960 zog Sagliains 14 px tiefer, die
+    # gerade 910 von Sagliains Sasslatsch machte ein V): eine Kette, die an einem Ende seitlich (Abgang quer aus dem Plan)
+    # anschliesst, ist ohnehin schräg und bekommt in der Ausgleichsrechnung das Gewicht auto.seite_nachgiebig (Linien-Regionen 0.6, sonst 1).
+    if P.get("seite_nachgiebig", 0.6 if P.get("linien_region") else 1.0) != 1.0:
+        for ch in chains:
+            if "w" in ch: continue
+            if any((a_ := anc(ch["ks"][j_], h_)) and a_.get("side") and h_ not in inner
+                   for j_, h_ in ((0, ch["seq"][0]), (-1, ch["seq"][-1]))):
+                ch["w"] = P.get("seite_nachgiebig", 0.6 if P.get("linien_region") else 1.0)
     # Ketten, die an einem Knoten fast in dieselbe Richtung abgehen, auf mindestens 28° spreizen (sonst überlagern sie sich)
     for h in hubs:
         cs = [(ch, 1) for ch in chains if ch["seq"][0] == h] + [(ch, -1) for ch in chains if ch["seq"][-1] == h]
@@ -259,17 +275,23 @@ def ketten(nodes, MAJOR, routes, anchor, PORTS, S, P, fix, L0):
                     if rest and sum(rest) > dl:
                         for i_ in range(len(gaps)):
                             if i_ != k_: gaps[i_] -= dl * gaps[i_] / sum(rest)
-            # kein Zwischenraum unter dem Mindestabstand (sonst überlagern sich die Stummel zweier Bahnhöfe)
-            for _ in range(5):
-                lo = [i_ for i_, g_ in enumerate(gaps) if g_ < P["gap"] - 0.5]
+            # kein Zwischenraum unter dem Mindestabstand (sonst überlagern sich die Stummel zweier Bahnhöfe); mit Halten
+            # (h + 1) × halt_abstand_min (4.11. abends, Château-d'Oex – Flendruz)
+            _hm = float(L0.get("halt_abstand_min", 60)) if isinstance(L0, dict) else 60.0
+            mins = []
+            for k_ in ch["ks"]:
+                nh_ = sum(1 for x_ in routes[k_].get("seq", [])[1:-1] if nodes[x_]["kind"] == "halt")
+                mins.append(max(P["gap"], (nh_ + 1) * _hm) if (nh_ and P.get("linien_region")) else P["gap"])
+            for _ in range(8):
+                lo = [i_ for i_, g_ in enumerate(gaps) if g_ < mins[i_] - 0.5]
                 if not lo: break
-                dl = sum(P["gap"] - gaps[i_] for i_ in lo)
-                hi = [i_ for i_, g_ in enumerate(gaps) if g_ > P["gap"] + 0.5]
-                cap = sum(gaps[i_] - P["gap"] for i_ in hi)
-                for i_ in lo: gaps[i_] = P["gap"]
+                dl = sum(mins[i_] - gaps[i_] for i_ in lo)
+                hi = [i_ for i_, g_ in enumerate(gaps) if g_ > mins[i_] + 0.5]
+                cap = sum(gaps[i_] - mins[i_] for i_ in hi)
+                for i_ in lo: gaps[i_] = mins[i_]
                 if cap > 0:
                     f_ = min(1.0, dl / cap)
-                    for i_ in hi: gaps[i_] -= (gaps[i_] - P["gap"]) * f_
+                    for i_ in hi: gaps[i_] -= (gaps[i_] - mins[i_]) * f_
             s = 0.0
             for j, n in enumerate(inn):
                 s += gaps[j] + ws[j] / 2; pos[n] = (B - u * (Ltot - s)) if (_sei and _sei[0] == -1) else (A + u * s); s += ws[j] / 2
