@@ -153,9 +153,16 @@ def ketten(nodes, MAJOR, routes, anchor, PORTS, S, P, fix, L0):
         """Peilung eines Anschlusses für die Drehung: Richtung zum Zielbahnhof, wenn bekannt (3.11.2026, Montbovon: die
         Gleise nach La Tine peilten nach OSM-Fernpunkt nach Südwesten, der Plan lag 120–150° gedreht und die Strecke
         machte eine Schlaufe). Lage auto.peilung_ziel (Standard aus: verschlechterte Zweisimmen und Rochers de Naye)."""
-        z_ = _slug.get(p.get("ziel")) if P.get("peilung_ziel", False) else None
+        _ab = P.get("peilung_ziel_ab", 60 if P.get("linien_region") else None)
+        z_ = _slug.get(p.get("ziel")) if (P.get("peilung_ziel", False) or _ab is not None) else None
         if z_ is None or z_ == n: return p["bearing"]
-        return math.degrees(math.atan2(nodes[z_]["y"] - nodes[n]["y"], nodes[z_]["x"] - nodes[n]["x"])) % 360
+        zb_ = math.degrees(math.atan2(nodes[z_]["y"] - nodes[n]["y"], nodes[z_]["x"] - nodes[n]["x"])) % 360
+        # Kurvenbahnhof (4.11. spät, Klosters Platz: Gleis zeigt am Südende nach Westen, Selfranga liegt im Süden, Haken):
+        # Peilung zum Zielplan nur, wenn sie mehr als «peilung_ziel_ab» (Linien-Regionen 60°) von der Gleisrichtung abweicht
+        if not P.get("peilung_ziel", False) and _ab is not None:
+            dd_ = abs((zb_ - p["bearing"] + 180) % 360 - 180)
+            if dd_ <= _ab: return p["bearing"]
+        return zb_
     for n in hubs:
         if not nodes[n]["inset"] or n in rot: continue
         Pp = [dict(p, bearing=_peil(n, p)) for p in PORTS[n]["ports"]]
@@ -216,6 +223,21 @@ def ketten(nodes, MAJOR, routes, anchor, PORTS, S, P, fix, L0):
             if any((a_ := anc(ch["ks"][j_], h_)) and a_.get("side") and h_ not in inner
                    for j_, h_ in ((0, ch["seq"][0]), (-1, ch["seq"][-1]))):
                 ch["w"] = P.get("seite_nachgiebig", 0.6 if P.get("linien_region") else 1.0)
+    # Abgang gerade aus dem Plan (4.11. spät, Klosters Platz – Abgang 915 Davos: Kehre gleich nach dem Plan, der Abgang lag
+    # nach der Kehre und die Strecke machte einen Haken): weicht die Richtung zum Abgang um mehr als «abgang_knick» (60°)
+    # von der Anschlussrichtung ab, liegt der Abgang in Anschlussrichtung. Nur Linien-Regionen.
+    if P.get("linien_region"):
+        for ch in chains:
+            a, b = ch["seq"][0], ch["seq"][-1]
+            if len(ch["seq"]) != 2 or (nodes[a]["kind"] == "exit") == (nodes[b]["kind"] == "exit"): continue
+            j_, h_, sg_ = (0, a, 1) if nodes[b]["kind"] == "exit" else (-1, b, -1)
+            a_ = anc(ch["ks"][j_], h_)
+            if not a_ or h_ in inner: continue
+            u_ = rotv(np.array(a_["v"], float), rot.get(h_, 0)); u_ = sg_ * u_ / (np.linalg.norm(u_) or 1)
+            T_ = np.asarray(ch["T"], float); L_ = float(np.linalg.norm(T_)) or 1.0
+            if float(u_ @ T_) / L_ < math.cos(math.radians(P.get("abgang_knick", 60))):
+                if os.environ.get("KDBG"): print("ABGANG gerade", nodes[h_]["name"], (T_ / L_).round(2), u_.round(2))
+                ch["T"] = u_ * L_
     # Ketten, die an einem Knoten fast in dieselbe Richtung abgehen, auf mindestens 28° spreizen (sonst überlagern sie sich)
     for h in hubs:
         cs = [(ch, 1) for ch in chains if ch["seq"][0] == h] + [(ch, -1) for ch in chains if ch["seq"][-1] == h]

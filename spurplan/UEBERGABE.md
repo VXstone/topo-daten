@@ -814,3 +814,9 @@ Regeln in REGELN.md «Bestehende Regeln sauber». Code: spurplan_schema (R28f), 
 - Gegenprobe: Regionalpläne Olten und Neuchâtel byte-gleich, SBB-Bahnhöfe unverändert.
 - Stand lokal: Vereina Verkettung 0, T6 2 (Klosters Platz – Selfranga, Klosters Platz – Abgang 915: echte Schlaufen), Ruhe 4/5, G2 4. MOB T6 4 (La Tine – Montbovon, Rochers de Naye, Zweisimmen – Oeschseite, Zweisimmen – Spiez: echt), Ruhe 11/6 (vorher 12/6), G2 21.
 - Offen: T6 erkennt Les Sciernes – Montbovon nicht (Anker v von Montbovon passt nicht zum gezeichneten Gleis); Beschriftung Halte (La Palaz liegt auf der Strecke); Versatz Selfranga – Selfranga Süd (G2 13°/19°). Danach Punkt (2) Prüflauf SBB-Bahnhöfe.
+
+## 4.11.2026 spät (2) – Haken
+REGELN.md «Haken». Code: lage_auto (peilung_ziel_ab, Abgang gerade), straenge (Abgangsziele, kein eigener Abgang).
+- Vereina: T6 0, Ruhe 4/0 (Ecken 5→0); Klosters Platz senkrecht, 915 «Davos ↓».
+- MOB: Zweisimmen – Oeschseite und Zweisimmen – Spiez ohne Haken, Phantom-Abgang weg (S2 2→0), T6 4→2, Ruhe 11/6→10/3, G2 22.
+- Offen: La Tine – Montbovon, Rochers de Naye – La Perche (T6), Les Sciernes – Montbovon (Anker), Glion-Zickzack; Olten/Neuchâtel unberührt (Regeln nur Linien-Regionen).

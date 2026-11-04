@@ -151,3 +151,9 @@ Stand 21.10.2026.
   - Halte bekommen Platz: Zwischenraum einer Strecke mit h Halten mindestens (h + 1) × `halt_abstand_min`, Halte gleichmässig über die ganze Strecke (Château-d'Oex – Flendruz: La Palaz, Les Granges, Les Combes lagen 40 px auseinander).
   - Seitlicher Anschluss gibt in der Ausgleichsrechnung nach (`seite_nachgiebig` 0.6).
   - Zwischen zwei Plänen auch die direkte Gerade von Anschluss zu Anschluss (mit kurzen Stummeln zum Ausrunden), statt Absatz/Treppe (Sagliains Sasslatsch – Sasslatsch). Nicht für Abgänge.
+
+## Haken (4.11. spät)
+- Kurvenbahnhof (Linien-Regionen, `peilung_ziel_ab` 60°): weicht die Gleisrichtung am Planrand um mehr als 60° von der Richtung zum Nachbarplan ab, zählt für die Drehung die Richtung zum Nachbarplan (Klosters Platz: Gleis zeigt am Südende nach Westen, Selfranga liegt im Süden). Global (`peilung_ziel`) bleibt aus – es verdrehte Sasslatsch.
+- Abgang gerade aus dem Plan (Linien-Regionen, `abgang_knick` 60°): liegt der Abgang mehr als 60° neben der Anschlussrichtung (Kehre gleich nach dem Plan, Klosters – Davos), kommt er in Anschlussrichtung.
+- Abgangsziel: hat ein anderer Abgang desselben Bahnhofs schon dieses Ziel, gilt der andere Ort der Linie (915 Davos statt Landquart).
+- Kein eigener Abgang (Strangbild): offenes Ende eines Gleises ohne Liniennummer, dessen Fortsetzung nach < 300 m endet oder dessen Fernpunkt ≤ 1 km neben dem Fernpunkt eines Abgangs mit Liniennummer liegt (Zweisimmen Gl. 86/87 Richtung Umspuranlage: Phantom «Linie None / Spiez» mit 2 Gleisen).

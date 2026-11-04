@@ -103,6 +103,18 @@ def _am_rand(n):
     return min(la - _bb[0], _bb[2] - la) * KY < 300 or min(lo - _bb[1], _bb[3] - lo) * KX < 300 or not (_bb[0] <= la <= _bb[2] and _bb[1] <= lo <= _bb[3])
 for n in GM:
     if GM.degree(n) == 1 and n not in ANKER and ntag.get(n, {}).get("railway") != "buffer_stop" and _am_rand(n): ENDE[n] = True
+# Kein eigener Abgang (4.11. spät, Zweisimmen Gl. 86/87 Richtung Umspuranlage, «Linie None / Spiez» mit 2 Gleisen):
+# ein offenes Ende eines Gleises ohne Liniennummer, dessen Fortsetzung nach weniger als 300 m endet (Stumpen) oder dessen
+# Fernpunkt höchstens 1 km neben dem Fernpunkt eines Abgangs mit Liniennummer liegt (mündet ausserhalb in diese Strecke).
+_REF_N = collections.defaultdict(set)
+for w in MAIN:
+    for n_ in (w["nodes"][0], w["nodes"][-1]): _REF_N[n_].add(w["tags"].get("ref"))
+def _fxy(n_): return xy(*FERN_E[str(n_)]) if str(n_) in FERN_E else None
+_mit_ref = [n_ for n_ in ENDE if any(_REF_N[n_]) and _fxy(n_)]
+for n_ in [n_ for n_ in ENDE if n_ > 0 and not any(_REF_N[n_]) and _fxy(n_)]:
+    f_ = _fxy(n_)
+    if math.dist(f_, P[n_]) < 300 or any(math.dist(f_, _fxy(m_)) <= 1000 for m_ in _mit_ref):
+        del ENDE[n_]; print("kein eigener Abgang (mündet in Strecke/Stumpen):", n_)
 
 # ---- Stränge
 def weiter(prev, cur):
@@ -161,6 +173,27 @@ def ziel_ort(ex):
         ca = (bx * (tx - q[0]) + by * (ty - q[1])) / (math.hypot(bx, by) * math.hypot(tx - q[0], ty - q[1]) + 1e-9)
         if best is None or ca > best: best, town = ca, t
     return town if best is not None and best > 0.2 else None
+
+# Abgangsziele je Betriebspunkt (4.11. spät, Klosters Platz: die 915 nach Davos hiess «Landquart», weil die Strecke nach
+# einer Kehre zuerst nach Nordwesten läuft; Landquart ist am selben Bahnhof schon Ziel der 910): ein Ort, den ein anderer
+# Abgang desselben Betriebspunkts schon als Ziel hat, weicht dem anderen Ort der Linie, wenn es einen gibt.
+def _ziele():
+    Z = {x: ziel_ort(v) for x, v in EX.items()}
+    for x, v in EX.items():
+        if not Z[x]: continue
+        andere = [y for y, w in EX.items() if y != x and w["bp"] == v["bp"] and Z.get(y) == Z[x]]
+        if not andere or not v["refs"]: continue
+        # nur der Abgang mit der schlechter passenden Linie weicht: der andere führt den Ort in seiner Linienliste
+        if not any(Z[x] in LINE_TOWNS.get(r, []) for y in andere for r in EX[y]["refs"]): continue
+        alt = [t for r in sorted(v["refs"]) for t in LINE_TOWNS.get(r, []) if t != Z[x] and t in ORTE
+               and math.dist(xy(*ORTE[t]), P[v["knoten"][0]]) >= 1200 and t != BP.get(v["bp"], {}).get("name")]
+        if alt: print("Abgangsziel", v["bp"], sorted(v["refs"]), Z[x], "->", alt[0]); Z[x] = alt[0]
+    return Z
+ZIEL_ORT = None
+def _zo(x):
+    global ZIEL_ORT
+    if ZIEL_ORT is None: ZIEL_ORT = _ziele()
+    return ZIEL_ORT.get(x)
 
 # Strecken: Stränge zwischen denselben Knoten
 STRECKE = collections.defaultdict(list)
@@ -257,7 +290,7 @@ if K.get("knotenplaene", True):
 name = lambda k: BP[k]["name"] if k in BP else (f"Abgang {'/'.join(sorted(EX[k]['refs']))}" if k in EX else str(k))
 BEF = [dict(regel="S0", text=f"Abzweig ohne Betriebspunkt bei Knoten {n}") for n, k in ANKER.items() if str(k).startswith("_abzweig_")]
 out = dict(knoten={k: dict(name=v["name"], art=KIND[k]) for k, v in BP.items()},
-           abgaenge={x: dict(bp=v["bp"], knoten=v["knoten"], refs=sorted(v["refs"]), ort=ziel_ort(v)) for x, v in EX.items()},
+           abgaenge={x: dict(bp=v["bp"], knoten=v["knoten"], refs=sorted(v["refs"]), ort=_zo(x)) for x, v in EX.items()},
            straenge=STR, strecken={f"{a}|{b}": dict(straenge=ix, gleise=len(ix), refs=sorted({r for i in ix for r in STR[i]["refs"]}))
                                      for (a, b), ix in STRECKE.items()},
            fahrbeziehungen=[dict(von=a, bp=b, nach=c) for a, b, c in FBK], dreiecke=DREI, befunde=BEF, knotenplaene=KNOTEN,
@@ -283,7 +316,7 @@ if "--topologie" in sys.argv:
     for x_, v in EX.items():
         px, py = (sum(P[n][0] for n in v["knoten"]) / len(v["knoten"]), sum(P[n][1] for n in v["knoten"]) / len(v["knoten"]))
         rs = sorted(v["refs"]); add(x_, name=f"Abgang {rs[0] if rs else ''}", kind="exit", x=px, y=py, ref=rs[0] if rs else None,
-                                     refs=rs if len(rs) > 1 else None, town=ziel_ort(v))
+                                     refs=rs if len(rs) > 1 else None, town=_zo(x_))
     edges = []
     for (a, b), ix in STRECKE.items():
         if a not in idx or b not in idx: continue
