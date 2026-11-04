@@ -216,9 +216,23 @@ _dg_all = collections.Counter(n for w in out_w if w["tags"].get("railway") == "r
 _npos = {n: xy(g) for w in out_w if w["tags"].get("railway") == "rail" for n, g in zip(w["nodes"], w["geometry"])}
 _verzw = [n for n in _npos if _dg_all[n] >= 3 or ntag_.get(n, {}).get("railway") == "switch"]
 _KERN = {i_: [c_] for i_, c_, R_ in _KR}
+_ZU = {}
 for n in _verzw:
     _cov = [(math.dist(_npos[n], c_), i_) for i_, c_, R_ in _KR if math.dist(_npos[n], c_) <= R_]
-    if _cov: _KERN[min(_cov)[1]].append(_npos[n])
+    if _cov: _ZU[n] = min(_cov)
+# Kreuzungsgleis (5.11.2026, Belmont – Châtelard): Nebengleis bis «kreuzungsgleis_m» (600 m) mit beiden Enden auf demselben
+# Streckengleis - beide Weichen zum Betriebspunkt des näheren Endes (sonst schneidet die Bereichsgrenze das Gleis)
+_mw = collections.defaultdict(set)
+for w in out_w:
+    if w["tags"].get("railway") == "rail" and not w["tags"].get("service"):
+        for n in w["nodes"]: _mw[n].add(w["id"])
+for w in out_w:
+    if w["tags"].get("railway") != "rail" or not w["tags"].get("service"): continue
+    a_, b_ = w["nodes"][0], w["nodes"][-1]
+    if a_ not in _ZU or b_ not in _ZU or _ZU[a_][1] == _ZU[b_][1] or not (_mw[a_] and _mw[b_]): continue
+    if sum(math.dist(_npos[x], _npos[y]) for x, y in zip(w["nodes"], w["nodes"][1:]) if x in _npos and y in _npos) > K.get("kreuzungsgleis_m", 600): continue
+    z_ = min(_ZU[a_], _ZU[b_]); _ZU[a_] = (_ZU[a_][0], z_[1]); _ZU[b_] = (_ZU[b_][0], z_[1])
+for n, (d_, i_) in _ZU.items(): _KERN[i_].append(_npos[n])
 _KERN = {i_: _np.array(v_, float) for i_, v_ in _KERN.items()}
 def _dk(p_, i_): return float(_np.min(_np.hypot(*(_KERN[i_] - _np.array(p_, float)).T)))
 def _bereich(sid, c, R):

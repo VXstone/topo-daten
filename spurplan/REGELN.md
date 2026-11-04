@@ -163,3 +163,10 @@ Stand 21.10.2026.
 - Prüfung P1 (region_lauf, perrons.json): Perron aus OSM (≥ 10 m) nicht gezeichnet. Alter Stand hätte 10 Bahnhöfe gemeldet.
 - Portale: Klammer nur, wo alle Gleise gerade und parallel laufen (±18 px, Linien-Regionen; sonst ±9 px wie bisher); Punkte der Nachbargleise quer zur Strecke statt gleicher Längenanteil. Ohne Platz mit vollem Fenster schrittweise kleiner (Selfranga – Selfranga Süd ist nur 61 px lang). Klosters Platz: Portal vom Knick aufs gerade Stück.
 - Schiebebühne (Regionen `schiebebuehne`): Way mit railway=traverser oder note «shifting/traverser/Schiebebühne»; beidseits offene kurze Gleise daneben sind Depotgleise: gemeinsamer Anfang, mindestens 40 px, Bühne als gestrichelte Querlinie (Glion). regel_pruefung überspringt gestrichelte Symbole.
+
+## Verkettung MOB, Sagliains (5.11.)
+- Kreuzungsgleis (`kreuzungsgleis_m` 600 m): Nebengleis mit beiden Enden als Weichen auf demselben Streckengleis gehört mit beiden Weichen zum Betriebspunkt des näheren Endes – in region_vorbereiten (Bereichskerne) und straenge (Anker). Belmont – Châtelard: V1/V2 weg, Belmont zeigt das ganze Gleis.
+- Streckenende ohne Weiche (Regionen `fenster_streckenende`): endet ein Streckengleis und läuft nur ein Nebengleis weiter (auch «Hauptgleis aus Funktion»), zählt der Punkt fürs Planfenster; straenge `anker_m` zählt ihn mit +60 m. Lenk: Abgang «Linie 321 ← Zweisimmen» statt Abstellgleis ohne Nummer (V3, S1 weg).
+- Gezeichnete Knoten (ports.json `knoten`) enthalten auch Schrägen von Nebengleisen; S3 sah den Weg Blonay → Abstellgleis-Schräge → Hauptgleis in Chamby als unterbrochen.
+- Pfeilverbindungen knicken nicht an der Pfeilspitze (Linien-Regionen): Sagliains Ladegleise ohne Knubbel (G6). Offen: V der Ladegleise – der Pfeilstummel zeigt nach aussen, die Ladegleise kommen von der anderen Seite; braucht im Bahnhofplan das Wissen, welche Pfeile verbunden werden (längs statt Pfeil).
+- Bekannt: G8 «deckungsgleich» meldet den Randstummel (22 px über dem Gleisende, alle Pläne) – Prüffehler.

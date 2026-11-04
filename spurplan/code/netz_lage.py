@@ -447,7 +447,7 @@ def text(x, y, t, size=14, anchor_="middle", weight=400, color=G):
     out.append(f'<text x="{x:.1f}" y="{y:.1f}" font-size="{size}" font-weight="{weight}" text-anchor="{anchor_}" fill="{color}">{t}</text>')
 DV = [uvec(a) for a in DIRS]
 def turn(u, v): return math.degrees(math.acos(max(-1, min(1, float(u @ v)))))
-def connector(A, a, B, b, direkt=False):
+def connector(A, a, B, b, direkt=False, pfeil=False):
     st = CFG["stub"] * 2; A1 = A + a * st; B1 = B + b * st; d = B1 - A1; best = None
     def score(dirs, lens):
         sc_ = sum(turn(p, q) ** 1.5 for p, q in zip(dirs, dirs[1:])) * 0.1 + sum(lens) * 0.01
@@ -504,7 +504,9 @@ def connector(A, a, B, b, direkt=False):
         # genau ein Knick am Schnittpunkt der beiden Portgeraden (Hinweis 18.10.: "mit den Ästen aus dem Bahnhof raus auf 60 Grad
         # gehen, dann braucht es den Knick nicht"): liegt ein Ende auf der Kettenachse, knickt die Strecke direkt am Port
         dAB = (B - A) / (np.linalg.norm(B - A) or 1)
-        if turn(a, dAB) <= L0.get("auto_knick", 61) and turn(dAB, -b) <= 8:      # Knick direkt am Port (andere Ende liegt auf der Linie)
+        # Pfeilverbindung (4.11. spät, Sagliains Ladegleise): an der Pfeilspitze nicht abknicken - dort stösst der Stummel
+        # aus dem Spurplan an, zwei Pfade mit Knick ergaben einen Knubbel (G6) und ein V
+        if (not pfeil or turn(a, dAB) <= 3) and turn(a, dAB) <= L0.get("auto_knick", 61) and turn(dAB, -b) <= 8:      # Knick direkt am Port (andere Ende liegt auf der Linie)
             cands.append((score([a, dAB, -b], [np.linalg.norm(B - A)]) - 8, [A, B]))
         M_ = np.array([a, -b]).T
         if abs(np.linalg.det(M_)) > 1e-6:
@@ -672,7 +674,7 @@ if L0.get("pfeile_verbinden", True):
                 t_ = abs(D_l) / (math.tan(math.radians(30)) if A_l > abs(D_l) / math.tan(math.radians(30)) + 12 else TAN60)
                 if L0.get("pfeile_connector", True) and AUTO:
                     # wie die Strecken: aus der Pfeilrichtung heraus, möglichst wenige Knicke (4.11.2026, Treppen Sagliains)
-                    PF_LINIEN.append(((a_n, b_n), connector(pa_, ua, pb_, ub)))
+                    PF_LINIEN.append(((a_n, b_n), connector(pa_, ua, pb_, ub, pfeil=bool(_LINIEN))))
                 elif abs(D_l) < 2.5: PF_LINIEN.append(((a_n, b_n), [pa_, pb_]))
                 elif A_l > t_ + 12:
                     m_ = A_l / 2

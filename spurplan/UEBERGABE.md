@@ -825,3 +825,9 @@ REGELN.md «Haken». Code: lage_auto (peilung_ziel_ab, Abgang gerade), straenge 
 REGELN.md «Perrons, Portale, Schiebebühne». Code: spurplan_schema (perron_min_m/px, perron_frei, Schiebebühne), netz_lage (Portale), region_lauf (P1, cfg), regel_pruefung (Symbole).
 - MOB/Vereina Berichte unverändert (P1 0, Planrand 0); Olten, Neuchâtel und SBB-Bahnhöfe byte-gleich.
 - Offen Glion: Bahnhof liegt im Bogen, die Plan-Achse (6 km) schneidet ihn – Strecke 121 liegt am Rand 11,6 m neben der Achse und springt über zwei Ebenen (Achsenfrage, nicht Kettenbildung; `ref_fortsetzung` getestet, ohne Wirkung).
+
+## 5.11.2026 nachts – Sagliains, Verkettung MOB
+REGELN.md «Verkettung MOB, Sagliains». Code: region_vorbereiten, straenge, spurplan_schema (fenster_streckenende, knoten), netz_lage (Pfeilverbindung), region_lauf.
+- MOB Verkettung V1–V3/S1–S3 alle 0 (vorher 1/1/1/1/0/2). Vereina G6 2→0 (Treppen 4→6: dieselbe V-Stelle der Ladegleise zählt jetzt als Treppe).
+- Olten, Neuchâtel, SBB-Bahnhöfe byte-gleich.
+- Offen: V Ladegleise Sagliains (Pfeil längs), Chamby: Anschluss 114 knickt am Planrand 17° (G2) seit dem grösseren Fenster, Glion-Achse, Haken Montbovon/Rochers, Versatz Selfranga – Selfranga Süd, Halt-Beschriftung, G8-Prüffehler Randstummel, Punkt (2) Prüflauf SBB.

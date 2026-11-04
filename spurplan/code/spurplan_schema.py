@@ -440,6 +440,16 @@ if CFG.get("fenster_verzweigungen", True):
     _dg3 = collections.Counter(n for w in ways.values() for a_, b_ in zip(w["nodes"], w["nodes"][1:]) for n in (a_, b_))
     sw_s += [SD[n][0] for n, k in _dg3.items() if k >= 3 and n in SD and ntag.get(n, {}).get("railway") != "switch"
              and math.hypot(*P[n]) < CFG["sw_search_m"] and abs(SD[n][1]) < CFG["d_lim"]]
+# Streckenende ohne Weiche (5.11.2026, Lenk: Linie 321 geht ohne Weiche in ein Abstellgleis über; das Fenster begann an
+# diesem Übergang, der Abgang war das Abstellgleis ohne Liniennummer): Knoten, an dem ein Streckengleis endet und nur ein
+# Nebengleis weiterläuft, zählt fürs Fenster (mit s_pad liegt ein Stück Strecke im Plan). cfg «fenster_streckenende».
+if CFG.get("fenster_streckenende", False):
+    _end_m = collections.defaultdict(list)
+    for w in ways.values():
+        if w["tags"].get("railway") not in ("rail", "narrow_gauge") and not w["tags"].get("spur"): continue
+        for n_ in (w["nodes"][0], w["nodes"][-1]): _end_m[n_].append(bool(w["tags"].get("service") or w["tags"].get("_service")))   # _service: Hauptgleis aus Funktion
+    sw_s += [SD[n][0] for n, v in _end_m.items() if n in SD and sorted(v) == [False, True] and ntag.get(n, {}).get("railway") != "switch"
+             and math.hypot(*P[n]) < CFG["sw_search_m"] and abs(SD[n][1]) < CFG["d_lim"]]
 pl_s = [project(xy(g))[0] for e in PLAT for g in e["geometry"] if math.hypot(*xy(g)) < CFG["sw_search_m"]]
 _s_st = project((0.0, 0.0))[0]                      # Bahnhofsknoten liegt im Ursprung
 CFG["s_min"] = max(min(sw_s + pl_s + [_s_st - CFG["min_half_window_m"]]) - CFG["s_pad"], SS[0] + 1)
@@ -4019,7 +4029,7 @@ PORTS = [p_ for p_ in PORTS if _gr[(p_["kind"], p_.get("way"), p_["dx"], round(p
 # Anschlüsse nur aus dem Regionalplan-Lauf (--bare) oder dem Standardlauf schreiben: ein Prüflauf mit --out in eine Zwischendatei
 # (spurplan_check aus ne_zusatz_update) überschrieb sonst die Anschlüsse der bare-Fassung (Auvernier 219, Hinweis 20.10.)
 if ARGS.bare or ARGS.out in (None, f"{key}_spurplan.svg"):
-    json.dump(dict(ports=PORTS, pfeile=PFEILE, knoten=sorted({int(n_) for sg in segs if sg["id"] in seglane or sg["pax"] for n_ in sg["nodes"] if int(n_) > 0}),
+    json.dump(dict(ports=PORTS, pfeile=PFEILE, knoten=sorted({int(n_) for sg in segs if sg["id"] in seglane or sg["pax"] or not sg["flat"] for n_ in sg["nodes"] if int(n_) > 0}),   # auch Schrägen von Nebengleisen (5.11., Chamby S3)
                    W=W, H=H, title=CFG["title"], x_lo=CFG["margin_x"], x_hi=W - CFG["margin_x"],
                    y_lo=CFG["margin_y"] - 40, y_hi=Y(0) + 20, ways=sorted({int(sg["way"]) for sg in segs})), open(f"{key}_ports.json", "w"))
 H = max(H, ty + 30)

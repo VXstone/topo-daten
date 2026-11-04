@@ -67,6 +67,21 @@ for n in GM:
     cov = [(math.dist(P[n], c), k) for k, c in BPX.items() if math.dist(P[n], c) <= BP[k].get("radius", 700)]
     if cov: ANKER[n] = min(cov)[1]
     elif GM.degree(n) >= 3: ANKER[n] = f"_abzweig_{n}"               # Abzweig zweier Strecken ohne Betriebspunkt (Befund S0)
+# Kreuzungsgleis auf freier Strecke (5.11.2026, Belmont – Châtelard: Nebengleis 250 m, beide Enden Weichen auf der
+# Linie 120; die ferne Weiche fiel an Châtelard, Belmont zeichnete einen Pfeil, Châtelard nichts - V1/V2): ein Nebengleis
+# bis «kreuzungsgleis_m» (600 m), dessen beide Enden Weichen auf demselben Streckengleis sind, gehört mit beiden Weichen
+# zum Betriebspunkt, dem eines seiner Enden am nächsten liegt.
+_MAINW = collections.defaultdict(set)
+for w in MAIN:
+    for n in w["nodes"]: _MAINW[n].add(w["id"])
+for w in RAIL:
+    if not w["tags"].get("service"): continue
+    a_, b_ = w["nodes"][0], w["nodes"][-1]
+    if a_ not in ANKER or b_ not in ANKER or ANKER[a_] == ANKER[b_] or str(ANKER[a_]).startswith("_") or str(ANKER[b_]).startswith("_"): continue
+    if not (_MAINW[a_] & _MAINW[b_]) and not (_MAINW[a_] and _MAINW[b_]): continue
+    if sum(math.dist(P[x], P[y]) for x, y in zip(w["nodes"], w["nodes"][1:])) > K.get("kreuzungsgleis_m", 600): continue
+    k_ = min(((math.dist(P[n], BPX[ANKER[n]]), ANKER[n]) for n in (a_, b_)))[1]
+    print("Kreuzungsgleis", w["id"], "ganz zu", BP[k_]["name"]); ANKER[a_] = ANKER[b_] = k_
 # Perrongleis ohne Weiche im Bahnhof (Sagliains: die 960 läuft am Perron 4 vorbei, ihre Weichen liegen im Autoverlad):
 # ein Streckengleis, das bis 15 m an einem Perron des Betriebspunkts liegt, berührt ihn dort
 from shapely.geometry import LineString as _LS, Point as _Pt
@@ -296,8 +311,11 @@ out = dict(knoten={k: dict(name=v["name"], art=KIND[k]) for k, v in BP.items()},
            fahrbeziehungen=[dict(von=a, bp=b, nach=c) for a, b, c in FBK], dreiecke=DREI, befunde=BEF, knotenplaene=KNOTEN,
            # Reichweite je Betriebspunkt (3.11.2026, Montbovon: Zusammenlauf in die Einspur nach La Tine 399 m vom Punkt,
            # Weichensuche 350 m -> Plan endete vor der Weiche, sah aus wie Doppelspur): fernste Weiche, an der ein Strang beginnt
-           anker_m={k: round(max(math.dist(P[n], BPX[k]) for n, k2 in ANKER.items() if k2 == k and GA.degree(n) >= 3), 1)
-                    for k in BP if any(k2 == k and GA.degree(n) >= 3 for n, k2 in ANKER.items())})
+           # Streckengleis endet ohne Weiche in einem Nebengleis (5.11.2026, Lenk: Linie 321 geht 200 m vor dem Bahnhof in
+           # ein Abstellgleis über, der Plan begann am Übergang - Abgang ohne Liniennummer, S1/V3): dieser Punkt + 60 m zählt mit
+           anker_m={k: round(max([math.dist(P[n], BPX[k]) for n, k2 in ANKER.items() if k2 == k and GA.degree(n) >= 3]
+                                 + [math.dist(P[n], BPX[k]) + 60 for n, k2 in ANKER.items() if k2 == k and GM.degree(n) == 1 and GA.degree(n) == 2]), 1)
+                    for k in BP if any(k2 == k and (GA.degree(n) >= 3 or (GM.degree(n) == 1 and GA.degree(n) == 2)) for n, k2 in ANKER.items())})
 json.dump(out, open(f"{NAME}_straenge.json", "w"), ensure_ascii=False, indent=1, default=str)
 print(f"Strangbild: {len(STR)} Stränge, {len(STRECKE)} Strecken, {len(EX)} Abgänge, {len(FBK)} Fahrbeziehungen, {len(DREI)} Dreiecke")
 for (a, b), ix in sorted(STRECKE.items(), key=lambda t: (name(t[0][0]), name(t[0][1]))):

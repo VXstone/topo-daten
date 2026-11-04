@@ -72,6 +72,7 @@ def _bahnhof(n):
     o["cfg"].setdefault("pfeil_aussen", True)                         # Pfeile nie auf ein Nachbargleis (Zweisimmen)
     o["cfg"].setdefault("perron_min_m", 3)                            # jeder Perron aus OSM (Halte, 4.11. spät)
     o["cfg"].setdefault("perron_min_px", 40)                          # mindestens 40 px lang
+    o["cfg"].setdefault("fenster_streckenende", True)                 # Strecke endet ohne Weiche (Lenk)
     o["cfg"].setdefault("schiebebuehne", True)                        # Depot mit Schiebebühne (Glion, 4.11. spät)
     o["cfg"].setdefault("randzone", True)                             # Streckengleise am Planrand im Standardabstand (Selfranga)
     o["cfg"].setdefault("einspur_gerade", False)                     # Punkt 4 im Plan zerlegt die Weichenstrasse (Château-d'Oex) – stattdessen Kippen im Regionalplan
