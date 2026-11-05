@@ -30,57 +30,48 @@
   "regel": "T7",
   "art": "Treppe",
   "x": 350.4,
-  "y": 266.0,
+  "y": 242.0,
   "versatz": 20.3,
   "plan": "zweisimmen",
-  "text": "zweisimmen: Treppe bei x=350.4, y=266.0"
+  "text": "zweisimmen: Treppe bei x=350.4, y=242.0"
  },
  {
   "regel": "T7",
   "art": "Treppe",
-  "x": 354.0,
-  "y": 218.0,
-  "versatz": 20.2,
+  "x": 361.0,
+  "y": 158.0,
+  "versatz": 48.0,
   "plan": "zweisimmen",
-  "text": "zweisimmen: Treppe bei x=354.0, y=218.0"
- },
- {
-  "regel": "T7",
-  "art": "Treppe",
-  "x": 481.0,
-  "y": 146.0,
-  "versatz": 20.2,
-  "plan": "zweisimmen",
-  "text": "zweisimmen: Treppe bei x=481.0, y=146.0"
+  "text": "zweisimmen: Treppe bei x=361.0, y=158.0"
  },
  {
   "regel": "T7",
   "art": "Treppe",
   "x": -3872.5,
-  "y": 2438.3,
-  "versatz": 61.2,
+  "y": 2465.9,
+  "versatz": 65.5,
   "neben": false,
   "plan": "Regionalplan",
-  "text": "Regionalplan: Treppe bei x=-3872.5, y=2438.3"
+  "text": "Regionalplan: Treppe bei x=-3872.5, y=2465.9"
  },
  {
   "regel": "T7",
   "art": "Treppe",
-  "x": -3558.2,
-  "y": 2429.4,
-  "versatz": 37.0,
+  "x": -3560.3,
+  "y": 2456.1,
+  "versatz": 37.1,
   "neben": false,
   "plan": "Regionalplan",
-  "text": "Regionalplan: Treppe bei x=-3558.2, y=2429.4"
+  "text": "Regionalplan: Treppe bei x=-3560.3, y=2456.1"
  },
  {
   "regel": "T7",
   "art": "Ecke",
-  "x": -2365.5,
-  "y": -67.2,
-  "winkel": 34.4,
+  "x": -2367.6,
+  "y": -40.5,
+  "winkel": 34.6,
   "neben": false,
   "plan": "Regionalplan",
-  "text": "Regionalplan: Ecke bei x=-2365.5, y=-67.2"
+  "text": "Regionalplan: Ecke bei x=-2367.6, y=-40.5"
  }
 ]
