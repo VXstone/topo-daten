@@ -1,7 +1,13 @@
 {
  "region": "vereina",
- "erzeugt": "2026-11-05 21:07 UTC",
+ "erzeugt": "2026-11-05 21:37 UTC",
  "bahnhoefe": {
+  "susch": {
+   "name": "Susch",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
   "klosters_selfranga": {
    "name": "Klosters Selfranga",
    "ok": true,
@@ -10,12 +16,6 @@
   },
   "sagliains": {
    "name": "Sagliains",
-   "ok": true,
-   "befunde": "Befunde: {}",
-   "optionen": []
-  },
-  "susch": {
-   "name": "Susch",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
