@@ -38,7 +38,7 @@ nodes = [e for e in D if e["type"] == "node" and inbox(e)]
 # Gleisnummer in "ref" (6.11.2026, Susch Gl. 1: siding mit ref=1 fiel als «fremde Linie 1» weg, Hinweis f72c…): auf
 # Nebengleisen (service) oder in Gleisnummernform (1, 12, 3a) ist ref die Gleisnummer, keine Linie -> railway:track_ref
 _GLNR = re.compile(r"^\d{1,2}[a-zA-Z]?$")
-for w in ways:
+for w in (ways if K.get("gleisnummer_aus_ref", True) else []):     # Konfig «gleisnummer_aus_ref»: false = alter Stand
     t = w.get("tags", {}); r_ = t.get("ref")
     if t.get("railway") not in SCHMAL | {"rail"}: continue        # nur Gleise: Perron-ref ist die Perronnummer (MOB P1, 6.11.)
     if r_ and r_ not in K.get("linien", []) and (t.get("service") or _GLNR.match(r_)):
