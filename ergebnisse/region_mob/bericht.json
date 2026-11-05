@@ -1,6 +1,6 @@
 {
  "region": "mob",
- "erzeugt": "2026-11-05 20:20 UTC",
+ "erzeugt": "2026-11-05 21:02 UTC",
  "bahnhoefe": {
   "schonried": {
    "name": "Schönried",
@@ -14,16 +14,16 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "chateau_d_oex": {
-   "name": "Château-d'Oex",
-   "ok": true,
-   "befunde": "Befunde: {}",
-   "optionen": []
-  },
   "les_avants": {
    "name": "Les Avants",
    "ok": true,
    "befunde": "Befunde: {'A': 1, 'F': 1}",
+   "optionen": []
+  },
+  "chateau_d_oex": {
+   "name": "Château-d'Oex",
+   "ok": true,
+   "befunde": "Befunde: {}",
    "optionen": []
   },
   "flendruz": {
@@ -102,14 +102,14 @@
    "befunde": "Befunde: {'B': 1, 'F': 1}",
    "optionen": []
   },
-  "chamby": {
-   "name": "Chamby",
+  "allieres": {
+   "name": "Allières",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "allieres": {
-   "name": "Allières",
+  "chamby": {
+   "name": "Chamby",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -126,14 +126,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "oeschseite": {
-   "name": "Oeschseite",
+  "saanenmoser": {
+   "name": "Saanenmöser",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "saanenmoser": {
-   "name": "Saanenmöser",
+  "oeschseite": {
+   "name": "Oeschseite",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -286,8 +286,8 @@
   "S3": 0
  },
  "lage_suche": {
-  "ausgang": 683,
-  "ergebnis": 551,
+  "ausgang": 543,
+  "ergebnis": 371,
   "drehung": {
    "Chamby": -30,
    "Montbovon": 60,
@@ -308,7 +308,7 @@
  "planrand": 0,
  "lage": {
   "L2": 30,
-  "L3": 9
+  "L3a": 9
  },
  "kennzahlen": {
   "verk_V1": 0,
@@ -323,32 +323,32 @@
   "ruhe_ecken": 1,
   "planrand": 0,
   "lage_L2": 30,
-  "lage_L3": 9
+  "lage_L3a": 9
  },
- "unruhe": 591,
+ "unruhe": 411,
  "unruhe_teile": {
   "regel_G2": 42,
   "regel_G6": 9,
   "ruhe_treppen": 56,
   "ruhe_ecken": 4,
-  "lage_L2": 300,
-  "lage_L3": 180
+  "lage_L2": 300
  },
  "vergleich": {
-  "status": "schlechter",
-  "schlechter": {
-   "lage_L3": 2
-  },
+  "status": "besser",
+  "schlechter": {},
   "besser": {
    "lage_L2": -4,
+   "lage_L3": -7,
    "regel_G2": -2,
    "ruhe_ecken": -2,
    "ruhe_treppen": -3,
    "topo_T6": -3
   },
   "topologie_offen": {},
-  "neu": {},
-  "unruhe": 591,
+  "neu": {
+   "lage_L3a": 9
+  },
+  "unruhe": 411,
   "unruhe_basis": 777
  }
 }
