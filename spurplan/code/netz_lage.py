@@ -1917,8 +1917,10 @@ if "--pruefen" in sys.argv:
         ang = math.degrees(math.acos(max(-1, min(1, float(sg_ @ sp_)))))
         name = nodes[i]["name"]
         if ang > 60:
-            bad3 += 1; print(f"  {name}: Achse zeigt im Plan nach {compass(sp_)}, auf der Karte nach {compass(sg_)} ({ang:.0f}°)")
-            LAGE_R.append(dict(regel="L3", plan=name, text=f"{name}: Achse im Plan nach {compass(sp_)}, auf der Karte nach {compass(sg_)} ({ang:.0f}°)"))
+            print(f"  {name}: Achse zeigt im Plan nach {compass(sp_)}, auf der Karte nach {compass(sg_)} ({ang:.0f}°)")
+            # Geografie leitet die Reihenfolge, nicht die Lage (D. Eckenstein 5.11.2026): gedrehte Achse allein ist kein Mangel,
+            # nur Hinweis L3a (Gewicht 0); Mängel sind vertauschte Paare (L2), Seiten/Reihenfolge (L3) und Abgangsrichtung (L4)
+            LAGE_R.append(dict(regel="L3a", plan=name, text=f"{name}: Achse im Plan nach {compass(sp_)}, auf der Karte nach {compass(sg_)} ({ang:.0f}°)"))
         # Seitenlage: Abgänge am selben Ende / seitliche Abgänge links oder rechts der Achse wie auf der Karte?
         cg = np.mean([geo(p) for p in ports], 0)
         cp = np.mean([plan_map(rotv(np.array([(p["x"] - cx) * S, (p["y"] - cy) * S]), r_)) for p in ports], 0)

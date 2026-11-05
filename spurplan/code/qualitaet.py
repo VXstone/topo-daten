@@ -76,6 +76,8 @@ GEWICHTE = {
     "randabstand": 5, "planrand": 5,
     # Lage gegen die Karte (Grundsatz 2): L2 vertauschtes Paar N/S bzw. O/W (zählt paarweise), L3 Achse/Seite/Reihenfolge
     "lage_L2": 10, "lage_L3": 20, "lage_L4": 30,
+    # L3a Achse > 60° neben der Karte: nur Hinweis (D. Eckenstein 5.11.: Geografie leitet die Reihenfolge, nicht die Lage)
+    "lage_L3a": 0,
     # reine Zählgrössen, kein Mangel
     "boegen_pax": 0, "boegen_alle": 0,
 }
@@ -108,6 +110,7 @@ def vergleichen(mess, basis):
         # Kennzahl, die es in der Basis noch nicht gab (neue Prüfung): nicht als Verschlechterung werten, nur melden
         neu_ = {x: k[x] for x in k if x not in alt and not x.startswith(("topo_", "verk_", "perron_"))}
         d = {x: k.get(x, 0) - alt.get(x, 0) for x in sorted(set(k) | set(alt)) if k.get(x, 0) != alt.get(x, 0) and x not in neu_}
+        d = {x: v for x, v in d.items() if not (x.startswith("lage_") and GEWICHTE.get(x) == 0)}   # Hinweise (L3a) nie schlechter/besser
         schlechter = {x: v for x, v in d.items() if v > 0}; besser = {x: v for x, v in d.items() if v < 0}
         # Topologiebefunde (A offene Verbindung, B Scheinverbindung/Überlagerung, F Weichenrichtung) sind nie «normal»,
         # auch wenn sie in der Basis stehen (28.10.2026, Vauseyon: A stand seit Beginn in der Basis und fiel nicht auf)
