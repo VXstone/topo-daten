@@ -120,6 +120,17 @@ if not os.path.exists(LF) or not NUR_LAGE: json.dump(K.get("lage", {"auto": {"c0
 # direkte Gerade von Anschluss zu Anschluss). Regionalpläne Olten/Neuchâtel (werkstatt) bleiben unverändert.
 _lf = json.load(open(LF)); _lf.setdefault("auto", {}); _lf["auto"].setdefault("linien_region", True); json.dump(_lf, open(LF, "w"), ensure_ascii=False, indent=1)
 shutil.copy(os.path.join(KDIR, "region.json"), os.path.join(WORK, "_konfig.json"))
+# Suche für die Regionallage (Stufe C, 5.11.2026): erst automatische Lage, dann je Knotenbahnhof Drehungen ausprobieren und
+# die Variante mit dem kleinsten Unruhe-Wert behalten (lage_suche.py). Lage auto.suche false = aus; bei --nur-lage nur mit
+# --suche (sonst bleibt die gespeicherte Drehung). Protokoll: lage_suche.json im Ergebnis.
+if (_lf["auto"].get("suche", True) and not NUR_LAGE) or "--suche" in sys.argv:
+    _lf = json.load(open(LF)); _lf.pop("drehung", None) if not K.get("lage", {}).get("drehung") else None; json.dump(_lf, open(LF, "w"), ensure_ascii=False, indent=1)
+    sh(["python3", py("netz_lage.py"), NAME, K.get("titel", REG), "region.svg"], timeout=1800)
+    sh(["python3", py("lage_suche.py"), NAME, "--max-sek", str(_lf["auto"].get("suche_max_sek", 1500)), "--json", "lage_suche.json"], timeout=2400)
+    if os.path.exists(os.path.join(WORK, "lage_suche.json")):
+        _ls = json.load(open(os.path.join(WORK, "lage_suche.json")))
+        bericht["lage_suche"] = dict(ausgang=_ls["ausgang"]["unruhe"], ergebnis=_ls["ergebnis"]["unruhe"], drehung=_ls["drehung"], varianten=len(_ls["varianten"]))
+        shutil.copy(os.path.join(WORK, "lage_suche.json"), OUT)
 r = sh(["python3", py("netz_lage.py"), NAME, K.get("titel", REG), "region.svg", "--pruefen"], timeout=1800)
 bericht["netz_lage"] = r.returncode
 # Topologie über die ganze Region (3.11.2026, T1–T4 aus netz_lage --pruefen): oberste Regel
@@ -177,6 +188,10 @@ _ber_p = os.path.join(WORK, "planrand.txt")
 _pr = subprocess.run(["python3", py("planrand_pruefung.py"), "."], cwd=WORK, capture_output=True, text=True)
 _m_pr = re.search(r"Planrand: (\d+) Befunde", _pr.stderr + _pr.stdout)
 bericht["planrand"] = int(_m_pr.group(1)) if _m_pr else None
+if os.path.exists(os.path.join(WORK, "lage_pruefung.json")):     # Grundsatz 2 (L2/L3, netz_lage --pruefen)
+    import collections as _cl
+    _lp = json.load(open(os.path.join(WORK, "lage_pruefung.json")))
+    bericht["lage"] = dict(_cl.Counter(x["regel"] for x in _lp)); shutil.copy(os.path.join(WORK, "lage_pruefung.json"), OUT)
 _kz = _Q.region_kennzahlen(bericht); _u, _ut = _Q.unruhe(_kz)
 bericht["kennzahlen"] = _kz; bericht["unruhe"] = _u; bericht["unruhe_teile"] = _ut
 _bas = os.path.join(KDIR, "basis.json")

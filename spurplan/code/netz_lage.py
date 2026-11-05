@@ -1853,10 +1853,25 @@ if "--pruefen" in sys.argv:
     for (a_, b_), nx_ in ROUTE_X.items():
         if nx_: bad1 += 1; print(f"  {nm(a_)} – {nm(b_)}: Gleise kreuzen sich {nx_}× (Fahrrichtungsseite wechselt)")
     print(f"  → {bad1} Befunde")
+    # Massgebend ist der Zielort (orte.json), nicht der Datenrand: die 915 fährt ab Klosters zuerst nach Nordwesten (Kehre)
+    _ORTE_ = json.load(open("orte.json")) if os.path.exists("orte.json") else {}
+    _BP_ = json.load(open("betriebspunkte.json")) if os.path.exists("betriebspunkte.json") else {}
+    _ref_ = [(v_["lon"], v_["lat"], n_["x"], n_["y"]) for n_ in (nodes.values() if isinstance(nodes, dict) else nodes)
+             for v_ in _BP_.values() if v_.get("name") == n_.get("name") and n_.get("kind") != "exit"]
+    _geo_xy = None
+    if len(_ref_) >= 2:                       # lineare Abbildung lon/lat -> Topologie-Koordinaten (gleiche Achsen, je ein Massstab)
+        _A = np.array(_ref_, float)
+        kx_, x0_ = np.polyfit(_A[:, 0], _A[:, 2], 1); ky_, y0_ = np.polyfit(_A[:, 1], _A[:, 3], 1)
+        _geo_xy = lambda la, lo: (kx_ * lo + x0_, ky_ * la + y0_)
+    def _G(n_):                               # Kartenlage; Abgang: Lage des Zielorts (falls bekannt)
+        o_ = nodes[n_].get("town")
+        if nodes[n_]["kind"] == "exit" and _geo_xy and o_ in _ORTE_: return _geo_xy(*_ORTE_[o_])
+        return nodes[n_]["x"], nodes[n_]["y"]
     print("\n== Prüfung 2: Lage Nord/Süd und Ost/West gegenüber Geografie ==")
     bad2 = []
     for i, a in enumerate(MAJOR):
         for b in MAJOR[i + 1:]:
+            if nodes[a]["kind"] == "exit" or nodes[b]["kind"] == "exit": continue      # Abgänge: Richtung prüft L4 (5.11.2026)
             gx = nodes[b]["x"] - nodes[a]["x"]; gy = nodes[b]["y"] - nodes[a]["y"]; gd = math.hypot(gx, gy)
             if gd < 1500: continue
             px_, py_ = pos[b][0] - pos[a][0], -(pos[b][1] - pos[a][1])
@@ -1866,6 +1881,23 @@ if "--pruefen" in sys.argv:
                 bad2.append((abs(gx), f"{nm(b)} liegt {abs(gx)/1000:.1f} km {'östlich' if gx > 0 else 'westlich'} von {nm(a)}, im Plan {'links' if gx > 0 else 'rechts'} davon"))
     for _, m in sorted(bad2, reverse=True): print("  " + m)
     print(f"  → {len(bad2)} Befunde")
+    LAGE_R = [dict(regel="L2", text=m) for _, m in sorted(bad2, reverse=True)]     # Grundsatz 2 als Befund (5.11.2026)
+    # L4 Abgangsrichtung (5.11.2026, Vereina: Abgang 915 Davos lief nach Osten, Davos liegt im Südwesten): Richtung vom
+    # Bahnhof zum Abgang im Plan gegen die Richtung zum Fernpunkt bzw. Abgangspunkt auf der Karte, Abweichung > 100°
+    for r_ in routes:
+        for a_, b_ in ((r_["a"], r_["b"]), (r_["b"], r_["a"])):
+            if nodes[b_]["kind"] != "exit" or not nodes[a_].get("inset") or a_ not in pos or b_ not in pos: continue
+            gx_, gy_ = nodes[b_]["x"] - nodes[a_]["x"], nodes[b_]["y"] - nodes[a_]["y"]
+            _ort = nodes[b_].get("town")
+            if _geo_xy and _ort in _ORTE_:
+                tx_, ty_ = _geo_xy(*_ORTE_[_ort]); gx_, gy_ = tx_ - nodes[a_]["x"], ty_ - nodes[a_]["y"]
+            if math.hypot(gx_, gy_) < 200: continue
+            px_, py_ = pos[b_][0] - pos[a_][0], -(pos[b_][1] - pos[a_][1])
+            if math.hypot(px_, py_) < 1: continue
+            w_ = math.degrees(math.acos(max(-1, min(1, (gx_ * px_ + gy_ * py_) / (math.hypot(gx_, gy_) * math.hypot(px_, py_))))))
+            if w_ > 100:
+                LAGE_R.append(dict(regel="L4", plan=nodes[a_]["name"], text=f"{nodes[a_]['name']}: {nm(b_)} weicht im Plan {w_:.0f}° von der Kartenrichtung ab"))
+                print(f"  L4 {nodes[a_]['name']}: {nm(b_)} weicht im Plan {w_:.0f}° von der Kartenrichtung ab")
     # ---------------------------------------------------------------- Prüfung 3: Achs- und Seitenlage gegen die Karte
     print("\n== Prüfung 3: Achsen und Seiten der Spurpläne gegen die Karte ==")
     bad3 = 0
@@ -1886,6 +1918,7 @@ if "--pruefen" in sys.argv:
         name = nodes[i]["name"]
         if ang > 60:
             bad3 += 1; print(f"  {name}: Achse zeigt im Plan nach {compass(sp_)}, auf der Karte nach {compass(sg_)} ({ang:.0f}°)")
+            LAGE_R.append(dict(regel="L3", plan=name, text=f"{name}: Achse im Plan nach {compass(sp_)}, auf der Karte nach {compass(sg_)} ({ang:.0f}°)"))
         # Seitenlage: Abgänge am selben Ende / seitliche Abgänge links oder rechts der Achse wie auf der Karte?
         cg = np.mean([geo(p) for p in ports], 0)
         cp = np.mean([plan_map(rotv(np.array([(p["x"] - cx) * S, (p["y"] - cy) * S]), r_)) for p in ports], 0)
@@ -1899,13 +1932,13 @@ if "--pruefen" in sys.argv:
                     gside = float(_cr(sg_, geo(pb_) - geo(pa_)))
                     pside = float(_cr(sp_, plan_map(rotv(np.array([(pb_["x"] - pa_["x"]) * S, (pb_["y"] - pa_["y"]) * S]), r_))))
                     if abs(gside) > 8 and abs(pside) > 3 and gside * pside < 0:
-                        bad3 += 1
+                        bad3 += 1; LAGE_R.append(dict(regel="L3", plan=name, text=f"{name}: Abgänge {pa_['ref']}/{pb_['ref']} seitenverkehrt"))
                         print(f"  {name}: Abgang {pb_['ref']} ({pb_['town']}) liegt auf der Karte {'links' if gside > 0 else 'rechts'} von {pa_['ref']} ({pa_['town']}), im Plan {'links' if pside > 0 else 'rechts'} (Blick in Achsrichtung)")
         for p in [p for p in ports if p["kind"] == "side"]:
             gside = float(_cr(sg_, geo(p) - cg))
             pside = float(_cr(sp_, plan_map(rotv(np.array([(p["x"] - cx) * S, (p["y"] - cy) * S]), r_)) - cp))
             if abs(gside) > 30 and gside * pside < 0:
-                bad3 += 1; print(f"  {name}: seitlicher Abgang {p['ref']} ({p['town']}) liegt auf der Karte {'links' if gside > 0 else 'rechts'} der Achse, im Plan auf der anderen Seite")
+                bad3 += 1; LAGE_R.append(dict(regel="L3", plan=name, text=f"{name}: seitlicher Abgang {p['ref']} auf der falschen Seite")); print(f"  {name}: seitlicher Abgang {p['ref']} ({p['town']}) liegt auf der Karte {'links' if gside > 0 else 'rechts'} der Achse, im Plan auf der anderen Seite")
     # Strecken an derselben Spurplanseite: Reihenfolge wie auf der Karte?
     for (n, vk), lst in _grp.items():
         if len(lst) < 2 or not nodes[n]["inset"]: continue
@@ -1929,7 +1962,9 @@ if "--pruefen" in sys.argv:
         if [t[0] for t in order_plan] != [t[0] for t in order_geo]:
             a_ = [nm(t[2]) for t in order_plan]; b_ = [nm(t[2]) for t in order_geo]
             bad3 += 1; print(f"  {nodes[n]['name']}: Strecken-Reihenfolge an einer Seite im Plan {a_}, auf der Karte {b_}")
+            LAGE_R.append(dict(regel="L3", plan=nodes[n]["name"], text=f"{nodes[n]['name']}: Streckenreihenfolge {a_} statt {b_}"))
     print(f"  → {bad3} Befunde")
+    json.dump(LAGE_R, open("lage_pruefung.json", "w"), ensure_ascii=False, indent=1)
 
     # ---------------------------------------------------------------- Prüfung 4: freie Strecke gegen OSM (17.10.)
     # Hinweis D. Eckenstein: "Zwischen Regionalplan und Bahnhöfen können Dinge zwischen Stuhl und Bank fallen"

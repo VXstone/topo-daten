@@ -74,6 +74,8 @@ GEWICHTE = {
     # Zeichenregeln: 90° (G4) und nicht angebunden (G7) schwer, Knubbel G6, Weiche ohne Ausrundung G2, deckungsgleich G8
     "regel_G4": 10, "regel_G7": 10, "regel_G6": 3, "regel_G8": 3, "regel_G2": 2, "regel_G1": 1,
     "randabstand": 5, "planrand": 5,
+    # Lage gegen die Karte (Grundsatz 2): L2 vertauschtes Paar N/S bzw. O/W (zählt paarweise), L3 Achse/Seite/Reihenfolge
+    "lage_L2": 10, "lage_L3": 20, "lage_L4": 30,
     # reine Zählgrössen, kein Mangel
     "boegen_pax": 0, "boegen_alle": 0,
 }
@@ -94,6 +96,7 @@ def region_kennzahlen(b):
     for g, n in (b.get("regeln") or {}).items(): k[f"regel_{g}"] = int(n)
     if b.get("ruhe"): k["ruhe_treppen"] = int(b["ruhe"].get("treppen", 0)); k["ruhe_ecken"] = int(b["ruhe"].get("ecken", 0))
     if b.get("planrand") is not None: k["planrand"] = int(b["planrand"])
+    for g, n in (b.get("lage") or {}).items(): k[f"lage_{g}"] = int(n)
     return k
 
 
