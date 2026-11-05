@@ -855,3 +855,10 @@ Nicht übernommen (unklar/nicht verifiziert): Betriebspunkt-Zuordnung, PCA-Richt
 - Lokal MOB (mob_roh): Unruhe 591 (vorher 617, Basis 777); L3 +2 gegenüber Basis. SBB-Bahnhöfe byte-gleich. Sagliains offen.
 - Workflows 02f0891: MOB Unruhe 591 (Drehung nur noch Chamby −30, Montbovon +60, Montreux +30), Vereina 59 unverändert; Seite: nur region_mob.svg geändert (Olten/NE/SBB gleich). Feedbackseite Version 129 veröffentlicht.
 - Offen: Montbovon +60 im Regionalplan mit scharfen Bögen (evtl. von Hand fixieren, Rückfrage Daniel); Perron-Standardlänge 80 px zur Begutachtung; Sagliains.
+
+## 5.11.2026 spät – Geografie leitet die Reihenfolge (L3a), R1/R2
+REGELN.md «Lage gegen die Karte und Suche» (neuer Punkt). Code: netz_lage (Achse > 60° → `L3a`), qualitaet (`lage_L3a` 0, Hinweise nie schlechter/besser). Arbeitsliste: spurplan/IDEEN_REVIEW.md.
+- Läufe 6a35ba0: MOB Unruhe 591 → 411, Status «besser» (L3 −7, L2 −4, T6 −3; L3a 9 als Hinweis), Drehungen unverändert (Chamby −30, Montbovon +60, Montreux +30), Zeichnung gleich. Vereina 59 «besser», Zeichnung nur durch Perron-Standardlänge 80 px geändert.
+- R1/R2 umgesetzt (c884f5d), wirkt ab dem nächsten Vorbereitungslauf.
+- Feedbackseite Version 130.
+- Offen: MOB L2 = 30 (Ast Rochers de Naye im Plan nach Osten → Kettenrichtung); Montbovon +60 scharfe Bögen (Rückfrage Daniel); Perron 80 px (Urteil Daniel); danach Bahnhofsausfahrt Selfranga/Sagliains (IDEEN_REVIEW).
