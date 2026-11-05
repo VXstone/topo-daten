@@ -20,70 +20,78 @@
   "merge_junction_m": 200
  },
  "Susch": [
-  643,
-  817
+  668,
+  840
  ],
  "Klosters Platz": [
-  -550,
-  -554
+  -526,
+  -530
  ],
  "Sagliains": [
-  1019,
-  306
+  975,
+  271
  ],
  "Klosters Selfranga": [
-  -361,
-  -313
+  -338,
+  -289
  ],
  "Sagliains Sasslatsch": [
-  639,
-  390
+  663,
+  414
  ],
  "Sasslatsch": [
-  689,
-  572
+  714,
+  595
  ],
  "Selfranga Süd": [
-  -150,
-  -128
+  -127,
+  -104
  ],
  "Vereina Nord": [
-  35,
-  13
+  59,
+  37
  ],
  "Vereina Süd": [
-  202,
-  139
+  226,
+  163
  ],
  "Sagliains Nord": [
-  412,
-  285
+  435,
+  309
  ],
  "Abgang 915 #12": [
-  -564,
-  -227
+  -540,
+  -203
  ],
  "Abgang 960 #13": [
-  1366,
-  162
+  1265,
+  55
  ],
  "Abgang 960 #14": [
-  570,
-  1083
+  596,
+  1106
  ],
  "Abgang 910 #15": [
-  -600,
-  -878
+  -576,
+  -853
  ],
  "drehung_auto": {
   "Susch": -75.9,
   "Klosters Platz": 90,
-  "Sagliains": -30,
+  "Sagliains": -60,
   "Klosters Selfranga": 37.1,
   "Sasslatsch": 90,
   "Selfranga Süd": 37.1,
   "Vereina Nord": 37.1,
   "Vereina Süd": 37.1,
   "Sagliains Nord": 37.1
+ },
+ "drehung": {
+  "Sagliains": -60
+ },
+ "suche": {
+  "drehung": {
+   "Sagliains": -60
+  }
  }
 }
