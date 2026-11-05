@@ -831,3 +831,6 @@ REGELN.md «Verkettung MOB, Sagliains». Code: region_vorbereiten, straenge, spu
 - MOB Verkettung V1–V3/S1–S3 alle 0 (vorher 1/1/1/1/0/2). Vereina G6 2→0 (Treppen 4→6: dieselbe V-Stelle der Ladegleise zählt jetzt als Treppe).
 - Olten, Neuchâtel, SBB-Bahnhöfe byte-gleich.
 - Offen: V Ladegleise Sagliains (Pfeil längs), Chamby: Anschluss 114 knickt am Planrand 17° (G2) seit dem grösseren Fenster, Glion-Achse, Haken Montbovon/Rochers, Versatz Selfranga – Selfranga Süd, Halt-Beschriftung, G8-Prüffehler Randstummel, Punkt (2) Prüflauf SBB.
+
+## 5.11.2026 – Feedbackseite veröffentlicht (Version 127, Build 02b5a73)
+- Befund: je Commit zwei `seite`-Läufe (nach `plaene` und nach `regionen`); die Regionalpläne Olten und Neuchâtel kommen dabei abwechselnd in zwei leicht verschiedenen Fassungen (Neuchâtel viewBox 5428 vs. 5442, Olten ein Stummel), unabhängig vom Code (seit 4.11. 13:00 gleich; lokal ohne `--osm` immer die erste). Vermutlich je Lauf anderer OSM-Ausschnitt. Offen: Ursache im Workflow `seite` klären, damit die Abnahmegrundlage stabil bleibt.
