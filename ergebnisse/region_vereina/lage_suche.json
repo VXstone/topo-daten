@@ -55,10 +55,10 @@
    "drehung": {
     "Klosters Platz": 60
    },
-   "unruhe": 63,
+   "unruhe": 67,
    "kennzahlen": {
     "lage_L3": 1,
-    "regel_G2": 4,
+    "regel_G2": 6,
     "regel_G8": 1,
     "ruhe_treppen": 4
    }
@@ -98,12 +98,12 @@
    "drehung": {
     "Klosters Platz": -180
    },
-   "unruhe": 123,
+   "unruhe": 127,
    "kennzahlen": {
     "topo_T6": 1,
     "lage_L4": 1,
     "lage_L3a": 1,
-    "regel_G2": 2,
+    "regel_G2": 4,
     "regel_G8": 1,
     "ruhe_ecken": 1,
     "ruhe_treppen": 4
@@ -156,10 +156,10 @@
    "drehung": {
     "Sagliains": 30
    },
-   "unruhe": 79,
+   "unruhe": 83,
    "kennzahlen": {
     "lage_L3": 1,
-    "regel_G2": 2,
+    "regel_G2": 4,
     "regel_G8": 1,
     "ruhe_ecken": 5,
     "ruhe_treppen": 4
@@ -457,10 +457,10 @@
    "drehung": {
     "Sagliains": 30
    },
-   "unruhe": 79,
+   "unruhe": 83,
    "kennzahlen": {
     "lage_L3": 1,
-    "regel_G2": 2,
+    "regel_G2": 4,
     "regel_G8": 1,
     "ruhe_ecken": 5,
     "ruhe_treppen": 4

@@ -47,31 +47,31 @@
  {
   "regel": "T7",
   "art": "Treppe",
-  "x": -3872.5,
-  "y": 2465.9,
-  "versatz": 65.5,
+  "x": -3819.7,
+  "y": 2618.0,
+  "versatz": 61.2,
   "neben": false,
   "plan": "Regionalplan",
-  "text": "Regionalplan: Treppe bei x=-3872.5, y=2465.9"
+  "text": "Regionalplan: Treppe bei x=-3819.7, y=2618.0"
  },
  {
   "regel": "T7",
   "art": "Treppe",
-  "x": -3560.3,
-  "y": 2456.1,
+  "x": -3505.4,
+  "y": 2609.2,
   "versatz": 37.1,
   "neben": false,
   "plan": "Regionalplan",
-  "text": "Regionalplan: Treppe bei x=-3560.3, y=2456.1"
+  "text": "Regionalplan: Treppe bei x=-3505.4, y=2609.2"
  },
  {
   "regel": "T7",
   "art": "Ecke",
-  "x": -2367.6,
-  "y": -40.5,
-  "winkel": 34.6,
+  "x": -2403.0,
+  "y": -254.6,
+  "winkel": 34.4,
   "neben": false,
   "plan": "Regionalplan",
-  "text": "Regionalplan: Ecke bei x=-2367.6, y=-40.5"
+  "text": "Regionalplan: Ecke bei x=-2403.0, y=-254.6"
  }
 ]

@@ -1,21 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 263" width="880" height="263" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#fff"/>
 <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-<path d="M373.8,110.0H437.2 M437.2,110.0H508.7M508.7,110.0H508.7Q511.7,110.0 513.3,112.7L524.0,131.3Q525.6,134.0 528.7,134.0H528.7 M409.3,134.0H410.3Q417.3,134.0 420.8,127.9L427.7,116.1Q431.2,110.0 438.2,110.0H439.2" stroke="#9a5b1e" stroke-width="1.6"/>
-<path d="M601.9,134.0H657.1 M390.8,134.0H390.8Q393.9,134.0 395.4,136.7L406.2,155.3Q407.7,158.0 410.8,158.0H410.8M410.8,158.0H581.9M581.9,158.0H581.9Q585.0,158.0 586.5,155.3L597.3,136.7Q598.8,134.0 601.9,134.0H601.9 M345.2,134.0H390.8 M409.3,134.0H528.7 M528.7,134.0H601.9 M226.2,134.0H345.2 M390.8,134.0H409.3" stroke="#9a5b1e" stroke-width="3.6"/>
+<path d="M373.8,110.0H437.2 M390.8,134.0H390.8Q393.9,134.0 395.4,136.7L406.2,155.3Q407.7,158.0 410.8,158.0H410.8M410.8,158.0H581.9M581.9,158.0H581.9Q585.0,158.0 586.5,155.3L597.3,136.7Q598.8,134.0 601.9,134.0H601.9 M437.2,110.0H508.7M508.7,110.0H508.7Q511.7,110.0 513.3,112.7L524.0,131.3Q525.6,134.0 528.7,134.0H528.7 M409.3,134.0H410.3Q417.3,134.0 420.8,127.9L427.7,116.1Q431.2,110.0 438.2,110.0H439.2" stroke="#9a5b1e" stroke-width="1.6"/>
+<path d="M601.9,134.0H657.1 M345.2,134.0H390.8 M409.3,134.0H528.7 M528.7,134.0H601.9 M226.2,134.0H345.2 M390.8,134.0H409.3" stroke="#9a5b1e" stroke-width="3.6"/>
 </g>
 <rect x="454.5" y="142.0" width="80.0" height="8" rx="1.5" fill="#9a5b1e"/>
 <rect x="455.6" y="165.0" width="80.0" height="8" rx="1.5" fill="#9a5b1e"/>
 <circle cx="373.8" cy="110.0" r="3.2" fill="#9a5b1e"/>
 <rect x="481.5" y="126.0" width="26" height="16" fill="#fff"/>
 <text x="494.5" y="140.5" font-size="19" text-anchor="middle" fill="#9a5b1e">2</text>
-<rect x="482.6" y="150.0" width="26" height="16" fill="#fff"/>
-<text x="495.6" y="164.5" font-size="19" text-anchor="middle" fill="#9a5b1e">1</text>
 <path d="M635.1,134.0H657.1" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
 <path d="M248.2,134.0H226.2" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
 <text x="669.1" y="121.0" font-size="22" text-anchor="start" fill="#9a5b1e">Linie 120</text>
 <text x="669.1" y="147.0" font-size="22" text-anchor="start" fill="#9a5b1e">Zweisimmen →</text>
 <text x="214.2" y="121.0" font-size="22" text-anchor="end" fill="#9a5b1e">Linie 120</text>
 <text x="214.2" y="147.0" font-size="22" text-anchor="end" fill="#9a5b1e">← Gstaad</text>
-<text x="480.7" y="218.0" font-size="38" font-weight="700" text-anchor="middle" fill="#9a5b1e">Saanenmöser</text>
+<text x="467.1" y="218.0" font-size="38" font-weight="700" text-anchor="middle" fill="#9a5b1e">Saanenmöser</text>
 </svg>

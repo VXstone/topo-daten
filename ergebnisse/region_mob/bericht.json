@@ -1,6 +1,6 @@
 {
  "region": "mob",
- "erzeugt": "2026-11-05 21:30 UTC",
+ "erzeugt": "2026-11-05 23:20 UTC",
  "bahnhoefe": {
   "schonried": {
    "name": "Schönried",
@@ -56,14 +56,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "st_stephan": {
-   "name": "St. Stephan",
+  "blankenburg": {
+   "name": "Blankenburg",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "blankenburg": {
-   "name": "Blankenburg",
+  "st_stephan": {
+   "name": "St. Stephan",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -91,7 +91,7 @@
   "montreux": {
    "name": "Montreux",
    "ok": true,
-   "befunde": "Befunde: {'A': 1, 'B': 47, 'D': 4}",
+   "befunde": "Befunde: {'A': 4, 'B': 47, 'D': 4}",
    "optionen": [
     "--hauptgleise"
    ]
@@ -102,14 +102,14 @@
    "befunde": "Befunde: {'B': 1, 'F': 1}",
    "optionen": []
   },
-  "allieres": {
-   "name": "Allières",
+  "chamby": {
+   "name": "Chamby",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "chamby": {
-   "name": "Chamby",
+  "allieres": {
+   "name": "Allières",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -216,14 +216,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "sendy_sollard": {
-   "name": "Sendy-Sollard",
+  "montreux_les_planches": {
+   "name": "Montreux-Les Planches",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "montreux_les_planches": {
-   "name": "Montreux-Les Planches",
+  "sendy_sollard": {
+   "name": "Sendy-Sollard",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -286,12 +286,12 @@
   "S3": 0
  },
  "lage_suche": {
-  "ausgang": 203,
-  "ergebnis": 71,
+  "ausgang": 205,
+  "ergebnis": 75,
   "drehung": {
-   "Chamby": -30,
    "Montbovon": 60,
-   "Montreux": 30
+   "Montreux": 30,
+   "Zweisimmen": -60
   },
   "varianten": 73
  },
@@ -302,12 +302,15 @@
   "ecken": 1
  },
  "regeln": {
-  "G2": 21,
+  "G2": 23,
   "G6": 3
+ },
+ "perrons": {
+  "P1": 1
  },
  "planrand": 0,
  "lage": {
-  "L3a": 9
+  "L3a": 8
  },
  "kennzahlen": {
   "verk_V1": 0,
@@ -316,36 +319,39 @@
   "verk_S1": 0,
   "verk_S2": 0,
   "verk_S3": 0,
-  "regel_G2": 21,
+  "perron_P1": 1,
+  "regel_G2": 23,
   "regel_G6": 3,
   "ruhe_treppen": 7,
   "ruhe_ecken": 1,
   "planrand": 0,
-  "lage_L3a": 9
+  "lage_L3a": 8
  },
- "unruhe": 111,
+ "unruhe": 145,
  "unruhe_teile": {
-  "regel_G2": 42,
+  "perron_P1": 30,
+  "regel_G2": 46,
   "regel_G6": 9,
   "ruhe_treppen": 56,
   "ruhe_ecken": 4
  },
  "vergleich": {
-  "status": "besser",
-  "schlechter": {},
+  "status": "schlechter",
+  "schlechter": {
+   "perron_P1": 1
+  },
   "besser": {
    "lage_L2": -34,
    "lage_L3": -7,
-   "regel_G2": -2,
    "ruhe_ecken": -2,
    "ruhe_treppen": -3,
    "topo_T6": -3
   },
   "topologie_offen": {},
   "neu": {
-   "lage_L3a": 9
+   "lage_L3a": 8
   },
-  "unruhe": 111,
+  "unruhe": 145,
   "unruhe_basis": 777
  }
 }
