@@ -16,6 +16,14 @@ on:
 permissions:
   contents: write
 concurrency: { group: seite, cancel-in-progress: false }   # eigene Gruppe: in einer gemeinsamen Gruppe ersetzt ein wartender Lauf den anderen
+# Gleiche Rechnung auf jedem Runner (5.11.2026: zwei seite-Läufe je Commit ergaben abwechselnd zwei Fassungen von Olten und
+# Neuchâtel; lokal immer gleich – vermutlich unterschiedliche Runner-CPUs mit anderen OpenBLAS-Kerneln)
+env:
+  OPENBLAS_CORETYPE: Haswell
+  OPENBLAS_NUM_THREADS: "1"
+  OMP_NUM_THREADS: "1"
+  MKL_NUM_THREADS: "1"
+  PYTHONHASHSEED: "0"
 jobs:
   bauen:
     runs-on: ubuntu-24.04
@@ -49,6 +57,7 @@ jobs:
       - name: Regionen Olten und Neuchâtel bauen (Bahnhofspläne + Regionalplan aus der Werkstatt, 26.10.2026)
         run: |
           mkdir -p /tmp/seite
+          { lscpu | grep -E "Model name|Flags" | cut -c1-200; python3 -c "import numpy, scipy, shapely; print('numpy', numpy.__version__, 'scipy', scipy.__version__, 'shapely', shapely.__version__)"; python3 -c "import numpy; numpy.show_runtime()" 2>&1 | grep -iE "architecture|internal_api|num_threads" ; } > /tmp/seite/umgebung.txt 2>&1 || true
           python3 spurplan/code/region_olten_lauf.py --osm /tmp/schweiz_bahn.json.gz --bericht /tmp/seite/region_olten.json 2>&1 | tee /tmp/seite/region_olten_log.txt
           python3 spurplan/code/region_olten_lauf.py --konfig spurplan/werkstatt/ne/region_ne.json --bericht /tmp/seite/region_ne.json 2>&1 | tee /tmp/seite/region_ne_log.txt
       - name: Seite bauen und Ausschnitte

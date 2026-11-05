@@ -40,6 +40,9 @@ def _auto_label(_r):
     teile = [f"Stand {t_}", "Topologie ok" if tr == 0 else f"Topologie {tr} Befunde", "Verkettung ok" if vk == 0 else f"Verkettung {vk} Befunde"]
     if b.get("ruhe") is not None:
         r_ = b["ruhe"]; teile.append("Ruhe ok" if not (r_["treppen"] or r_["ecken"]) else f"Ruhe: {r_['treppen']} Treppen, {r_['ecken']} Ecken")
+    if b.get("unruhe") is not None:            # Unruhe-Wert (5.11.2026): kleiner ist besser, Δ gegen die Basis der Region
+        v_ = b.get("vergleich") or {}; ub_ = v_.get("unruhe_basis")
+        teile.append(f"Unruhe {b['unruhe']}" + (f" ({b['unruhe'] - ub_:+d} zur Basis)" if isinstance(ub_, int) and ub_ != b["unruhe"] else (" (= Basis)" if ub_ is not None else "")))
     if _r.get("notiz"): teile.append(_r["notiz"])
     return " · ".join(teile)
 for _r in (json.load(open(_rp)) if os.path.exists(_rp) else []):

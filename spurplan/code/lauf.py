@@ -71,6 +71,8 @@ for b in liste:
         rc, o = sh(py + ["netz_pruefung.py", b], w); log.append(o[-3000:])      # Netzmodell (25.10.): Befunde mit Regel-ID und OSM-Way
         _nb = os.path.join(w, f"{b}_netz_befunde.json")
         ber["netz"] = json.load(open(_nb))["befunde"] if os.path.exists(_nb) else o[-500:]
+        rc, o = sh(py + ["ruhe.py", ".", "--json", f"{b}_ruhe.json"], w)     # T7 auch hier (5.11.2026)
+        ber["ruhe"] = json.load(open(os.path.join(w, f"{b}_ruhe.json"))) if os.path.exists(os.path.join(w, f"{b}_ruhe.json")) else o[-300:]
         rc, o = sh(py + ["qualitaet.py", "messen", b, "--check", str(ber.get("topologie") or "{}"), "--regeln", "regeln.json"], w)
         _qj = os.path.join(w, f"{b}_qualitaet.json")
         ber["qualitaet"] = json.load(open(_qj)) if os.path.exists(_qj) else o[-300:]      # Kennzahlen (27.10.)

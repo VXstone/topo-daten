@@ -1777,8 +1777,18 @@ if "--pruefen" in sys.argv:
                 base_ = pos[n_] + STACK.get((id(e_), n_), a_["off"]) if n_ in pos else None
                 p_ = q_[0] if am_anfang else q_[-1]
                 if base_ is not None and np.linalg.norm(p_ - np.asarray(base_, float)) > 3 * TG: continue
-                if am_anfang: ds_.insert(0, v_); ls_.insert(0, 0.0)
-                else: ds_.append(-v_); ls_.append(0.0)
+                # seitlicher Anschluss (5.11.2026, Les Sciernes – Montbovon): im Plan biegt das Gleis nach dem 60°-Stummel
+                # noch auf die Planachse ab - diese Richtung zählt mit (sonst sieht T6 nur den halben Haken)
+                _in = None
+                if a_.get("side"):
+                    v0_ = rotv(v_, -ROT.get(n_, 0)); sx_ = 1.0 if v0_[0] > 0 else -1.0
+                    _in = rotv(np.array([sx_, 0.0]), ROT.get(n_, 0)); _in = _in / (np.linalg.norm(_in) or 1)
+                if am_anfang:
+                    ds_.insert(0, v_); ls_.insert(0, 0.0)
+                    if _in is not None: ds_.insert(0, _in); ls_.insert(0, 0.0)
+                else:
+                    ds_.append(-v_); ls_.append(0.0)
+                    if _in is not None: ds_.append(-_in); ls_.append(0.0)
             i_ = 0
             while i_ < len(ds_) - 1:
                 acc_, L_, hit_ = 0.0, 0.0, False

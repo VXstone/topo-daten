@@ -11,7 +11,7 @@ Ablauf in /tmp/spurplan_region/<region>:
 Ergebnis nach ergebnisse/region_<region>/: region.svg, region.png, bericht.json, log.txt, je Bahnhof <b>_spurplan.svg.
 Konfig: spurplan/regionen/<region>/region.json (+ optionale <bahnhof>_override.json im selben Ordner).
 """
-import json, os, sys, shutil, subprocess, time, glob, math
+import json, os, sys, shutil, subprocess, time, glob, math, re
 HERE = os.path.dirname(os.path.abspath(__file__)); REPO = os.path.dirname(os.path.dirname(HERE))
 REG = sys.argv[1]
 DATEN = os.path.abspath(sys.argv[sys.argv.index("--daten") + 1] if "--daten" in sys.argv else os.path.join(REPO, "schweiz_bahn.json.gz"))
@@ -170,6 +170,22 @@ if _p1:
     bericht["perrons"] = {"P1": len(_p1)}
     LOG.append("== Perrons (P1) ==\n" + "\n".join(x["text"] for x in _p1))
 json.dump(_p1, open(os.path.join(OUT, "perrons.json"), "w"), ensure_ascii=False, indent=1)
+# Unruhe-Wert und Vergleich mit der Basis (5.11.2026, Stufe A): spurplan/regionen/<r>/basis.json = Kennzahlen des
+# Referenzstands (abgenommen bzw. zuletzt als gut bestätigt). Verschlechterung steht im Bericht und auf der Karte.
+sys.path.insert(0, HERE); import qualitaet as _Q
+_ber_p = os.path.join(WORK, "planrand.txt")
+_pr = subprocess.run(["python3", py("planrand_pruefung.py"), "."], cwd=WORK, capture_output=True, text=True)
+_m_pr = re.search(r"Planrand: (\d+) Befunde", _pr.stderr + _pr.stdout)
+bericht["planrand"] = int(_m_pr.group(1)) if _m_pr else None
+_kz = _Q.region_kennzahlen(bericht); _u, _ut = _Q.unruhe(_kz)
+bericht["kennzahlen"] = _kz; bericht["unruhe"] = _u; bericht["unruhe_teile"] = _ut
+_bas = os.path.join(KDIR, "basis.json")
+if os.path.exists(_bas):
+    _bk = json.load(open(_bas)); _v = _Q.vergleichen({REG: _kz}, {REG: _bk})[REG]
+    bericht["vergleich"] = _v
+    LOG.append(f"== Unruhe {_u} (Basis {_v.get('unruhe_basis')}) {_v['status']}: schlechter {_v.get('schlechter')} besser {_v.get('besser')}")
+else: LOG.append(f"== Unruhe {_u} (keine Basis {_bas})")
+if "--basis" in sys.argv: json.dump(_kz, open(_bas, "w"), ensure_ascii=False, indent=1); LOG.append(f"Basis geschrieben: {_bas}")
 json.dump(bericht, open(os.path.join(OUT, "bericht.json"), "w"), ensure_ascii=False, indent=1)
 open(os.path.join(OUT, "log.txt"), "w").write("\n\n".join(LOG))
 print(json.dumps({k: v for k, v in bericht.items() if k != "bahnhoefe"}, ensure_ascii=False))

@@ -214,6 +214,11 @@ for i, pc in enumerate(pieces):
         ov = Li.intersection(lines[k][1].buffer(0.8))
         Lk = lines[k][1]; short_ = min((Li, pc), (Lk, pieces[j]), key=lambda t: t[0].length)
         if len(short_[1]["seq"]) == 1 and short_[0].length <= 30 and ov.length >= 0.9 * short_[0].length: continue   # Randstück Abgang
+        # Schindel (5.11.2026): endet eine der beiden Linien innerhalb der Überdeckung, ist es dasselbe Gleis doppelt
+        # gezeichnet (Weichenbogen läuft auf dem Gleis aus, Ketten überlappen am Stoss) - sichtbar ist nur ein Gleis.
+        # Zwei verschiedene Gleise übereinander laufen beidseits über die Überdeckung hinaus (Neuchâtel 20.10.).
+        _ovb = ov.buffer(1.5)
+        if any(_ovb.contains(Point(q_)) for L_ in (Li, Lk) for q_ in (L_.coords[0], L_.coords[-1])): continue
         if ov.length > 10:
             c_ = ov.centroid; bef("G8", c_.x, c_.y, pc["st"], f"Gleise {ov.length:.0f} px deckungsgleich")
 

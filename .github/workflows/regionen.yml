@@ -12,6 +12,14 @@ on:
 permissions:
   contents: write
 concurrency: { group: regionen, cancel-in-progress: false }   # eigene Gruppe: in einer gemeinsamen Gruppe ersetzt ein wartender Lauf den anderen
+# Gleiche Rechnung auf jedem Runner (5.11.2026: zwei seite-Läufe je Commit ergaben abwechselnd zwei Fassungen von Olten und
+# Neuchâtel; lokal immer gleich – vermutlich unterschiedliche Runner-CPUs mit anderen OpenBLAS-Kerneln)
+env:
+  OPENBLAS_CORETYPE: Haswell
+  OPENBLAS_NUM_THREADS: "1"
+  OMP_NUM_THREADS: "1"
+  MKL_NUM_THREADS: "1"
+  PYTHONHASHSEED: "0"
 jobs:
   bauen:
     runs-on: ubuntu-24.04
@@ -32,7 +40,7 @@ jobs:
         run: |
           R="${{ github.event.inputs.region }}"
           if [ -z "$R" ]; then R=$(ls spurplan/regionen); fi
-          for r in $R; do python3 spurplan/code/region_lauf.py "$r" --daten schweiz_bahn.json.gz; done
+          for r in $R; do python3 spurplan/code/region_lauf.py "$r" --daten schweiz_bahn.json.gz; mkdir -p ergebnisse/region_$r; { lscpu | grep "Model name"; python3 -c "import numpy; numpy.show_runtime()" 2>&1 | grep -iE "architecture|internal_api"; } > ergebnisse/region_$r/umgebung.txt 2>&1 || true; done
       - name: Ergebnisse auf Branch «ergebnisse» (nur die Regionsordner ersetzen)
         if: always()
         run: |

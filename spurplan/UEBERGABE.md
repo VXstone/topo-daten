@@ -835,3 +835,8 @@ REGELN.md «Verkettung MOB, Sagliains». Code: region_vorbereiten, straenge, spu
 ## 5.11.2026 – Feedbackseite veröffentlicht (Version 127, Build 02b5a73)
 - Befund: je Commit zwei `seite`-Läufe (nach `plaene` und nach `regionen`); die Regionalpläne Olten und Neuchâtel kommen dabei abwechselnd in zwei leicht verschiedenen Fassungen (Neuchâtel viewBox 5428 vs. 5442, Olten ein Stummel), unabhängig vom Code (seit 4.11. 13:00 gleich; lokal ohne `--osm` immer die erste). Vermutlich je Lauf anderer OSM-Ausschnitt. Offen: Ursache im Workflow `seite` klären, damit die Abnahmegrundlage stabil bleibt.
 - 5.11. abends: Rückfrage Zweisimmen Gl. 12 beantwortet (Perron 7/12 und 7/8 ist ein OSM-Perron) → `perron_teile`; Zweisimmen jetzt mit Perron an 12. Berichte MOB unverändert, SBB-Bahnhöfe byte-gleich.
+
+## 5.11.2026 abends – Stufe A (verlässlich messen)
+REGELN.md «Messung». Code: regel_pruefung (G8), netz_lage (T6 seitlich), qualitaet (unruhe, region_kennzahlen, neue Kennzahlen), region_lauf (Unruhe, Basis, Planrand), lauf (T7), bauen.py (Label), Workflows (env, umgebung.txt). Basen: regionen/vereina|mob/basis.json = Stand 5.11. abends (Vereina Unruhe 59, MOB 297: T6 ×3 = 150).
+- Zu prüfen nach den Läufen: alle seite-Läufe desselben Commits müssen gleiche Regionalpläne Olten/NE liefern (Hash der PLANS-svg), sonst umgebung.txt vergleichen.
+- Nächster Schritt: Stufe C (Suche Regionallage über den Unruhe-Wert).

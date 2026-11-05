@@ -16,6 +16,8 @@ Kennzahlen:
   boegen_pax       Ausrundungen in Personengleisen (jeder Versatz/Knick im grünen Gleis kostet zwei)
   boegen_alle      Ausrundungen in allen Gleisen
   randabstand      Streckengleise derselben Linie am Planrand, die mehr als eine Achse auseinanderliegen (A4)
+  ruhe_treppen/ruhe_ecken  T7 (ruhe.py), wenn <b>_ruhe.json im Arbeitsordner liegt
+Unruhe-Wert: unruhe(kennzahlen) mit GEWICHTE (Topologie 50 je Befund, Treppe 8, Ecke 4, G4/G7 10, G6/G8 3, G2 2 …).
 """
 import json, os, re, sys, ast, collections
 
@@ -48,6 +50,9 @@ def messen(b, check=None, regeln=None):
             ba += q
             if 'stroke="#00862f"' in at and float(sw.group(1)) == 3.6: bp += q
         k["boegen_pax"] = bp; k["boegen_alle"] = ba
+    rj = f"{b}_ruhe.json"                        # T7 je Bahnhofsplan (5.11.2026, auch im Workflow plaene)
+    if os.path.exists(rj):
+        r_ = json.load(open(rj)); k["ruhe_treppen"] = sum(1 for x in r_ if x.get("art") == "Treppe"); k["ruhe_ecken"] = sum(1 for x in r_ if x.get("art") == "Ecke")
     pj = f"{b}_ports.json"
     if os.path.exists(pj):
         P = json.load(open(pj))["ports"]
@@ -58,18 +63,54 @@ def messen(b, check=None, regeln=None):
     return k
 
 
+# Unruhe-Wert (5.11.2026, Stufe A «verlässlich messen»): eine Zahl je Plan bzw. Region, kleiner ist besser. Topologie wiegt so
+# schwer, dass ein einziger Befund jede Verschönerung überwiegt (oberste Regel). Gewichte: GEWICHTE, Schlüssel ohne Eintrag 1.
+GEWICHTE = {
+    # Topologie (hart): Bahnhofsplan A–F, Region T1–T8, Verkettung V/S, Perron fehlt P1
+    **{f"topo_{x}": 50 for x in "ABCDEF"}, **{f"topo_T{i}": 50 for i in range(1, 9)},
+    **{f"verk_{x}": 50 for x in ("V1", "V2", "V3", "S1", "S2", "S3")}, "perron_P1": 30,
+    # Ruhe (D. Eckenstein 4.11.: Treppen sehr unruhig, dann unmotivierte Ecken)
+    "ruhe_treppen": 8, "ruhe_ecken": 4,
+    # Zeichenregeln: 90° (G4) und nicht angebunden (G7) schwer, Knubbel G6, Weiche ohne Ausrundung G2, deckungsgleich G8
+    "regel_G4": 10, "regel_G7": 10, "regel_G6": 3, "regel_G8": 3, "regel_G2": 2, "regel_G1": 1,
+    "randabstand": 5, "planrand": 5,
+    # reine Zählgrössen, kein Mangel
+    "boegen_pax": 0, "boegen_alle": 0,
+}
+def unruhe(k):
+    """(Summe, {Kennzahl: Beitrag}) – Netzbefunde (netz_*) zählen je 2, unbekannte Kennzahlen je 1."""
+    teile = {}
+    for x, n in (k or {}).items():
+        if not isinstance(n, (int, float)) or not n: continue
+        w = GEWICHTE.get(x, 2 if x.startswith("netz_") else 1)
+        if w: teile[x] = w * n
+    return sum(teile.values()), teile
+def region_kennzahlen(b):
+    """Kennzahlen eines Regionsberichts (region_lauf bericht.json) in derselben Form wie die Bahnhofsmessung."""
+    k = {}
+    for g, n in (b.get("topologie_region") or {}).items(): k[f"topo_{g}"] = int(n)
+    for g, n in (b.get("verkettung") or {}).items(): k[f"verk_{g}"] = int(n)
+    for g, n in (b.get("perrons") or {}).items(): k[f"perron_{g}"] = int(n)
+    for g, n in (b.get("regeln") or {}).items(): k[f"regel_{g}"] = int(n)
+    if b.get("ruhe"): k["ruhe_treppen"] = int(b["ruhe"].get("treppen", 0)); k["ruhe_ecken"] = int(b["ruhe"].get("ecken", 0))
+    if b.get("planrand") is not None: k["planrand"] = int(b["planrand"])
+    return k
+
+
 def vergleichen(mess, basis):
     out = {}
     for b, k in sorted(mess.items()):
         alt = basis.get(b)
         if alt is None: out[b] = dict(status="neu"); continue
-        d = {x: k.get(x, 0) - alt.get(x, 0) for x in sorted(set(k) | set(alt)) if k.get(x, 0) != alt.get(x, 0)}
+        # Kennzahl, die es in der Basis noch nicht gab (neue Prüfung): nicht als Verschlechterung werten, nur melden
+        neu_ = {x: k[x] for x in k if x not in alt and not x.startswith(("topo_", "verk_", "perron_"))}
+        d = {x: k.get(x, 0) - alt.get(x, 0) for x in sorted(set(k) | set(alt)) if k.get(x, 0) != alt.get(x, 0) and x not in neu_}
         schlechter = {x: v for x, v in d.items() if v > 0}; besser = {x: v for x, v in d.items() if v < 0}
         # Topologiebefunde (A offene Verbindung, B Scheinverbindung/Überlagerung, F Weichenrichtung) sind nie «normal»,
         # auch wenn sie in der Basis stehen (28.10.2026, Vauseyon: A stand seit Beginn in der Basis und fiel nicht auf)
         offen = {x: k[x] for x in ("topo_A", "topo_B", "topo_F") if k.get(x, 0) > 0}
         out[b] = dict(status="schlechter" if schlechter else ("besser" if besser else "gleich"), schlechter=schlechter, besser=besser,
-                      topologie_offen=offen)
+                      topologie_offen=offen, neu=neu_, unruhe=unruhe(k)[0], unruhe_basis=unruhe({**alt, **neu_})[0])
     return out
 
 

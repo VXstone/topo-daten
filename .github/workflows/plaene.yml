@@ -12,6 +12,14 @@ on:
 permissions:
   contents: write
 concurrency: { group: plaene, cancel-in-progress: false }
+# Gleiche Rechnung auf jedem Runner (5.11.2026: zwei seite-Läufe je Commit ergaben abwechselnd zwei Fassungen von Olten und
+# Neuchâtel; lokal immer gleich – vermutlich unterschiedliche Runner-CPUs mit anderen OpenBLAS-Kerneln)
+env:
+  OPENBLAS_CORETYPE: Haswell
+  OPENBLAS_NUM_THREADS: "1"
+  OMP_NUM_THREADS: "1"
+  MKL_NUM_THREADS: "1"
+  PYTHONHASHSEED: "0"
 jobs:
   bauen:
     runs-on: ubuntu-24.04
