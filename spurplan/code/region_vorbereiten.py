@@ -40,6 +40,7 @@ nodes = [e for e in D if e["type"] == "node" and inbox(e)]
 _GLNR = re.compile(r"^\d{1,2}[a-zA-Z]?$")
 for w in ways:
     t = w.get("tags", {}); r_ = t.get("ref")
+    if t.get("railway") not in SCHMAL | {"rail"}: continue        # nur Gleise: Perron-ref ist die Perronnummer (MOB P1, 6.11.)
     if r_ and r_ not in K.get("linien", []) and (t.get("service") or _GLNR.match(r_)):
         t = dict(t); t.setdefault("railway:track_ref", r_); del t["ref"]; w["tags"] = t
 stations = {e["tags"]["name"]: e for e in nodes if e.get("tags", {}).get("railway") in ("station", "halt") and e["tags"].get("name")}
