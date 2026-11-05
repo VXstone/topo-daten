@@ -1,6 +1,6 @@
 {
  "region": "vereina",
- "erzeugt": "2026-11-04 23:18 UTC",
+ "erzeugt": "2026-11-05 18:18 UTC",
  "bahnhoefe": {
   "susch": {
    "name": "Susch",
@@ -26,12 +26,6 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "sagliains_sasslatsch": {
-   "name": "Sagliains Sasslatsch",
-   "ok": true,
-   "befunde": "Befunde: {}",
-   "optionen": []
-  },
   "sasslatsch": {
    "name": "Sasslatsch",
    "ok": true,
@@ -40,6 +34,12 @@
   },
   "selfranga_sud": {
    "name": "Selfranga Süd",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "sagliains_sasslatsch": {
+   "name": "Sagliains Sasslatsch",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -79,6 +79,35 @@
  },
  "regeln": {
   "G2": 4,
-  "G8": 8
+  "G8": 1
+ },
+ "planrand": 0,
+ "kennzahlen": {
+  "verk_V1": 0,
+  "verk_V2": 0,
+  "verk_V3": 0,
+  "verk_S1": 0,
+  "verk_S2": 0,
+  "verk_S3": 0,
+  "regel_G2": 4,
+  "regel_G8": 1,
+  "ruhe_treppen": 6,
+  "ruhe_ecken": 0,
+  "planrand": 0
+ },
+ "unruhe": 59,
+ "unruhe_teile": {
+  "regel_G2": 8,
+  "regel_G8": 3,
+  "ruhe_treppen": 48
+ },
+ "vergleich": {
+  "status": "gleich",
+  "schlechter": {},
+  "besser": {},
+  "topologie_offen": {},
+  "neu": {},
+  "unruhe": 59,
+  "unruhe_basis": 59
  }
 }

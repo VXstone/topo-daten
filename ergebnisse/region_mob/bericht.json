@@ -1,6 +1,6 @@
 {
  "region": "mob",
- "erzeugt": "2026-11-05 18:04 UTC",
+ "erzeugt": "2026-11-05 18:16 UTC",
  "bahnhoefe": {
   "schonried": {
    "name": "Schönried",
@@ -287,7 +287,7 @@
  },
  "netz_lage": 0,
  "topologie_region": {
-  "T6": 2
+  "T6": 3
  },
  "ruhe": {
   "treppen": 10,
@@ -295,7 +295,38 @@
  },
  "regeln": {
   "G2": 23,
-  "G6": 3,
-  "G8": 7
+  "G6": 3
+ },
+ "planrand": 0,
+ "kennzahlen": {
+  "topo_T6": 3,
+  "verk_V1": 0,
+  "verk_V2": 0,
+  "verk_V3": 0,
+  "verk_S1": 0,
+  "verk_S2": 0,
+  "verk_S3": 0,
+  "regel_G2": 23,
+  "regel_G6": 3,
+  "ruhe_treppen": 10,
+  "ruhe_ecken": 3,
+  "planrand": 0
+ },
+ "unruhe": 297,
+ "unruhe_teile": {
+  "topo_T6": 150,
+  "regel_G2": 46,
+  "regel_G6": 9,
+  "ruhe_treppen": 80,
+  "ruhe_ecken": 12
+ },
+ "vergleich": {
+  "status": "gleich",
+  "schlechter": {},
+  "besser": {},
+  "topologie_offen": {},
+  "neu": {},
+  "unruhe": 297,
+  "unruhe_basis": 297
  }
 }
