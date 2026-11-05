@@ -42,17 +42,14 @@ jobs:
 
       - name: Betriebspunkte (SBB) mit OSM-Stationen abgleichen
         id: betriebspunkte
-        continue-on-error: true
         run: python3 skripte/vorbereitung/betriebspunkte.py eingang aus/betriebspunkte.json
 
       - name: Gleisnummern je Bahnhof (SBB vor OSM)
         id: gleisnummern
-        continue-on-error: true
         run: python3 skripte/vorbereitung/gleisnummern.py eingang aus/betriebspunkte.json aus/gleisnummern.json
 
       - name: Ausschnitte je Region und Betriebspunkt
         id: ausschnitte
-        continue-on-error: true
         run: python3 skripte/vorbereitung/ausschnitte.py eingang/schweiz_bahn.json.gz aus/betriebspunkte.json konfig/regionen.json aus
 
       - name: Änderungen gegenüber Vormonat
@@ -65,7 +62,6 @@ jobs:
 
       - name: Release "vorbereitung" erneuern
         id: release
-        continue-on-error: true
         env: { GH_TOKEN: "${{ github.token }}" }
         run: |
           cp eingang/schweiz_bahn.json.gz aus/schweiz_bahn_vorher.json.gz

@@ -13,7 +13,9 @@ BP = json.load(open(bpf))
 TAGS = ("railway", "service", "usage", "railway:track_ref", "gauge", "ref", "disused", "bridge", "tunnel")
 def sig(e):
     t = e.get("tags", {})
-    if e["type"] == "way": return hashlib.md5(json.dumps([e["nodes"], [t.get(k) for k in TAGS]]).encode()).hexdigest()
+    if e["type"] == "way":     # mit gerundeter Geometrie (~1 m): verschobenes Gleis ohne neue Knoten wird erkannt (Review R2, 5.11.2026)
+        geo = [(round(g["lat"], 5), round(g["lon"], 5)) for g in e.get("geometry", [])]
+        return hashlib.md5(json.dumps([e["nodes"], [t.get(k) for k in TAGS], geo]).encode()).hexdigest()
     return hashlib.md5(json.dumps([round(e["lat"], 6), round(e["lon"], 6), t.get("railway"), t.get("railway:switch")]).encode()).hexdigest()
 def lage(e):
     if e["type"] == "node": return (e["lat"], e["lon"])

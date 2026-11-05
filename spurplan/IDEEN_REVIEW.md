@@ -18,4 +18,4 @@ Eigene Datei, damit sie nicht mit Übergaben anderer Chats kollidiert. Nach Umse
 - Schon vorhanden: Topologie vor Geometrie (T1–T6), Ruhe (T7), Bewertungsfunktion (Unruhe + lage_suche), Regression (Basis + Differenzbild), Pfeilverkettung (V/S).
 
 ## Datenaufbereitung (Review topo-daten) – siehe UEBERGABE 5.11. spät
-- R1 Release-Gate in vorbereitung.yml, R2 Geometrie in der Änderungssignatur (aenderungen.py). Beide im Code bestätigt.
+- R1 Release-Gate in vorbereitung.yml, R2 Geometrie in der Änderungssignatur (aenderungen.py). **Umgesetzt 5.11.2026:** betriebspunkte, gleisnummern, ausschnitte und release ohne continue-on-error (Fehler → kein Release, Vormonatsdatei bleibt, stand.json hält Teilfehler fest); sbb, perronkanten, aenderungen bleiben optional. Way-Signatur mit Geometrie auf 1e-5° gerundet. Wirkt ab dem nächsten Vorbereitungslauf.
