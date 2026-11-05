@@ -1,6 +1,6 @@
 {
  "region": "mob",
- "erzeugt": "2026-11-05 23:31 UTC",
+ "erzeugt": "2026-11-05 23:38 UTC",
  "bahnhoefe": {
   "schonried": {
    "name": "Schönried",
@@ -91,7 +91,7 @@
   "montreux": {
    "name": "Montreux",
    "ok": true,
-   "befunde": "Befunde: {'A': 4, 'B': 47, 'D': 4}",
+   "befunde": "Befunde: {'A': 1, 'B': 47, 'D': 4}",
    "optionen": [
     "--hauptgleise"
    ]
@@ -286,8 +286,8 @@
   "S3": 0
  },
  "lage_suche": {
-  "ausgang": 205,
-  "ergebnis": 75,
+  "ausgang": 193,
+  "ergebnis": 69,
   "drehung": {
    "Montbovon": 60,
    "Montreux": 30,
@@ -302,11 +302,8 @@
   "ecken": 1
  },
  "regeln": {
-  "G2": 23,
+  "G2": 20,
   "G6": 3
- },
- "perrons": {
-  "P1": 1
  },
  "planrand": 0,
  "lage": {
@@ -319,30 +316,27 @@
   "verk_S1": 0,
   "verk_S2": 0,
   "verk_S3": 0,
-  "perron_P1": 1,
-  "regel_G2": 23,
+  "regel_G2": 20,
   "regel_G6": 3,
   "ruhe_treppen": 7,
   "ruhe_ecken": 1,
   "planrand": 0,
   "lage_L3a": 8
  },
- "unruhe": 145,
+ "unruhe": 109,
  "unruhe_teile": {
-  "perron_P1": 30,
-  "regel_G2": 46,
+  "regel_G2": 40,
   "regel_G6": 9,
   "ruhe_treppen": 56,
   "ruhe_ecken": 4
  },
  "vergleich": {
-  "status": "schlechter",
-  "schlechter": {
-   "perron_P1": 1
-  },
+  "status": "besser",
+  "schlechter": {},
   "besser": {
    "lage_L2": -34,
    "lage_L3": -7,
+   "regel_G2": -3,
    "ruhe_ecken": -2,
    "ruhe_treppen": -3,
    "topo_T6": -3
@@ -351,7 +345,7 @@
   "neu": {
    "lage_L3a": 8
   },
-  "unruhe": 145,
+  "unruhe": 109,
   "unruhe_basis": 777
  }
 }
