@@ -8,6 +8,9 @@
   "spuren": [
    "1000"
   ],
+  "gleisenden": [
+   2305399172
+  ],
   "weichen": 3,
   "normalspur": false,
   "dienst": false
@@ -20,6 +23,10 @@
   "radius": 700.0,
   "spuren": [
    "1000"
+  ],
+  "gleisenden": [
+   2305399014,
+   2305399028
   ],
   "weichen": 4,
   "normalspur": false,
@@ -34,6 +41,10 @@
   "spuren": [
    "1000"
   ],
+  "gleisenden": [
+   2345851630,
+   2345851642
+  ],
   "weichen": 4,
   "normalspur": false,
   "dienst": false
@@ -47,6 +58,10 @@
   "spuren": [
    "1000"
   ],
+  "gleisenden": [
+   2731398809,
+   2731398821
+  ],
   "weichen": 12,
   "normalspur": false,
   "dienst": false
@@ -59,6 +74,10 @@
   "radius": 942.9846439737428,
   "spuren": [
    "1000"
+  ],
+  "gleisenden": [
+   2215377128,
+   14057057671
   ],
   "weichen": 9,
   "normalspur": false,
@@ -78,6 +97,16 @@
   "spuren": [
    "1000"
   ],
+  "gleisenden": [
+   1162146436,
+   1162146569,
+   1162146838,
+   1162146871,
+   1162147018,
+   1162147100,
+   3343734112,
+   13269209270
+  ],
   "weichen": 9,
   "normalspur": false,
   "dienst": true
@@ -91,6 +120,7 @@
   "spuren": [
    "1000"
   ],
+  "gleisenden": [],
   "weichen": 7,
   "normalspur": false,
   "dienst": true
@@ -104,6 +134,7 @@
   "spuren": [
    "1000"
   ],
+  "gleisenden": [],
   "weichen": 4,
   "normalspur": false,
   "dienst": true
@@ -117,6 +148,7 @@
   "spuren": [
    "1000"
   ],
+  "gleisenden": [],
   "weichen": 1,
   "normalspur": false,
   "dienst": true
@@ -129,6 +161,9 @@
   "radius": 400.0,
   "spuren": [
    "1000"
+  ],
+  "gleisenden": [
+   9623661036
   ],
   "weichen": 2,
   "normalspur": false,
@@ -143,6 +178,7 @@
   "spuren": [
    "1000"
   ],
+  "gleisenden": [],
   "weichen": 1,
   "normalspur": false,
   "dienst": true
@@ -156,6 +192,7 @@
   "spuren": [
    "1000"
   ],
+  "gleisenden": [],
   "weichen": 1,
   "normalspur": false,
   "dienst": true
