@@ -1,6 +1,6 @@
 {
  "region": "mob",
- "erzeugt": "2026-11-05 23:20 UTC",
+ "erzeugt": "2026-11-05 23:31 UTC",
  "bahnhoefe": {
   "schonried": {
    "name": "Schönried",
@@ -56,14 +56,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "blankenburg": {
-   "name": "Blankenburg",
+  "st_stephan": {
+   "name": "St. Stephan",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "st_stephan": {
-   "name": "St. Stephan",
+  "blankenburg": {
+   "name": "Blankenburg",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -102,14 +102,14 @@
    "befunde": "Befunde: {'B': 1, 'F': 1}",
    "optionen": []
   },
-  "chamby": {
-   "name": "Chamby",
+  "allieres": {
+   "name": "Allières",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "allieres": {
-   "name": "Allières",
+  "chamby": {
+   "name": "Chamby",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -216,14 +216,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "montreux_les_planches": {
-   "name": "Montreux-Les Planches",
+  "sendy_sollard": {
+   "name": "Sendy-Sollard",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "sendy_sollard": {
-   "name": "Sendy-Sollard",
+  "montreux_les_planches": {
+   "name": "Montreux-Les Planches",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
