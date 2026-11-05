@@ -842,3 +842,9 @@ REGELN.md «Messung». Code: regel_pruefung (G8), netz_lage (T6 seitlich), quali
 - Nächster Schritt: Stufe C (Suche Regionallage über den Unruhe-Wert).
 - 5.11. spät: Stufe C eingebaut (REGELN «Lage gegen die Karte und Suche»): lage_suche.py, L2–L4 in netz_lage, Gewichte in qualitaet. Basen mit lage_* aus dem Ausgang vor der Suche ergänzt. Olten/NE/SBB byte-gleich. Determinismus bestätigt: 3 Seiten-Builds auf zwei CPU-Typen identisch (EPYC 9V45/7763).
 - Offen für C: Kettenwinkel und Kippen als weitere Stellschrauben; MOB L2 30 (Ast Rochers de Naye läuft im Plan nach Osten – braucht Kettenrichtung, nicht Drehung); Vereina Sagliains: Abgang Scuol knickt nach der Drehung oben einmal.
+
+## 5.11.2026 spät – Externer Review topo-daten: nur offensichtliche Punkte übernommen
+Geprüft im Code, beide bestätigt (Reihenfolge: nach den offenen Spurplan-Punkten):
+- (R1) **vorbereitung.yml ohne Release-Gate:** alle Schritte inkl. `release` mit `continue-on-error: true`; schlägt z. B. `betriebspunkte` fehl, lädt `release` trotzdem `aus/*` hoch, und `schweiz_bahn_vorher.json.gz` wird auch bei Fehler mit dem neuen Stand überschrieben (Vormonatsvergleich geht verloren). Ziel: Pflichtschritte (osm, betriebspunkte, gleisnummern, ausschnitte) brechen ab, nur `sbb`/`aenderungen` optional; Release nur wenn Pflichtschritte ok; stand.json weist Teilfehler aus.
+- (R2) **aenderungen.py erkennt Geometrieverschiebungen nicht:** Way-Signatur = Knoten-IDs + Tags; einfache Formknoten sind nicht «relevant» → verschobenes Gleis ohne neue Knoten bleibt unsichtbar. Ziel: gerundete `geometry` (≈ 1e-5°, ~1 m) in die Way-Signatur.
+Nicht übernommen (unklar/nicht verifiziert): Betriebspunkt-Zuordnung, PCA-Richtung Gleisnummern, Mittelpunkt in gemeinsam.py, Overrides als Standardweg (widerspricht «im Code lösen»).
