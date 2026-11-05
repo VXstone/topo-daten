@@ -1869,12 +1869,32 @@ if "--pruefen" in sys.argv:
         return nodes[n_]["x"], nodes[n_]["y"]
     print("\n== Prüfung 2: Lage Nord/Süd und Ost/West gegenüber Geografie ==")
     bad2 = []
+    # Grob parallele Linien (D. Eckenstein 5.11.2026, Rochers de Naye neben MOB 100): bei Paaren auf verschiedenen Linien zählt
+    # nur die Seite (welche Linie liegt nördlich/südlich bzw. östlich/westlich), nicht die Lage längs der gemeinsamen Richtung.
+    _nref = {n_: {r_ for e_ in inc[n_] for r_ in e_.get("refs", []) if r_} for n_ in MAJOR}
+    _rdir = {}
+    for r_ in {r_ for v_ in _nref.values() for r_ in v_}:
+        P_ = np.array([(nodes[n_]["x"], nodes[n_]["y"]) for n_ in MAJOR if r_ in _nref[n_] and nodes[n_]["kind"] != "exit"], float)
+        if len(P_) >= 3 and np.ptp(P_, 0).max() > 2000:
+            _w, _v = np.linalg.eigh(np.cov((P_ - P_.mean(0)).T)); _rdir[r_] = _v[:, -1]
+    def _laengs(a_, b_):                                   # Achse längs der gemeinsamen Richtung ("x"/"y") oder None
+        ra_, rb_ = _nref.get(a_, set()), _nref.get(b_, set())
+        if not ra_ or not rb_ or ra_ & rb_: return None
+        D_ = [(_rdir[x_], _rdir[y_]) for x_ in ra_ for y_ in rb_ if x_ in _rdir and y_ in _rdir]
+        if not D_: return None
+        u_, w_ = D_[0]
+        if abs(float(u_ @ w_)) < math.cos(math.radians(60)): return None      # nicht grob parallel: volle Prüfung
+        m_ = u_ + (w_ if float(u_ @ w_) >= 0 else -w_)
+        return "x" if abs(m_[0]) >= abs(m_[1]) else "y"
     for i, a in enumerate(MAJOR):
         for b in MAJOR[i + 1:]:
             if nodes[a]["kind"] == "exit" or nodes[b]["kind"] == "exit": continue      # Abgänge: Richtung prüft L4 (5.11.2026)
             gx = nodes[b]["x"] - nodes[a]["x"]; gy = nodes[b]["y"] - nodes[a]["y"]; gd = math.hypot(gx, gy)
             if gd < 1500: continue
             px_, py_ = pos[b][0] - pos[a][0], -(pos[b][1] - pos[a][1])
+            _lg = _laengs(a, b)
+            if _lg == "y": gy = 0.0
+            if _lg == "x": gx = 0.0
             if abs(gy) > 0.5 * gd and abs(gy) > 1500 and py_ * gy < 0 and abs(py_) > 60:
                 bad2.append((abs(gy), f"{nm(b)} liegt {abs(gy)/1000:.1f} km {'nördlich' if gy > 0 else 'südlich'} von {nm(a)}, im Plan {'darunter' if gy > 0 else 'darüber'}"))
             if abs(gx) > 0.5 * gd and abs(gx) > 1500 and px_ * gx < 0 and abs(px_) > 60:
