@@ -262,11 +262,11 @@ if CFG["rules"].get("r27b", True):
         while todo:
             w_, von = todo.pop()
             pts_ = [P[n_] for n_ in w_["nodes"] if n_ in P]
-            # wirklich am Perron entlang (≥ 40 m im 15-m-Band), nicht nur daran gestreift (6.11.2026, Susch: das
-            # Abstellgleis berührte Perron 1 auf 9 m und wurde an das Streckengleis angeschlossen, Hinweis f72c…)
+            # wirklich am Perron entlang (≥ 30 m im 15-m-Band), nicht nur daran gestreift (6.11.2026, Susch: das
+            # Abstellgleis lag 24 m im Band (Caux, bisher angeschlossen: 36 m) und wurde an das Streckengleis angeschlossen, Hinweis f72c…)
             if len(pts_) >= 2:
                 _L_ = _LS27(pts_); ab_sum += _L_.intersection(_pl_band).length
-                if ab_sum >= CFG.get("r27b_perron_m", 40): nah = True
+                if ab_sum >= CFG.get("r27b_perron_m", 30): nah = True
             for n_ in (w_["nodes"][0], w_["nodes"][-1]):
                 if n_ == von: continue
                 if _deg[n_] >= 3 or ntag.get(n_, {}).get("railway") == "switch": angeschl = True; continue
