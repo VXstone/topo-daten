@@ -853,3 +853,5 @@ Nicht übernommen (unklar/nicht verifiziert): Betriebspunkt-Zuordnung, PCA-Richt
 - Montbovon: der kleine Perron an Gl. 3 war die Bushaltekante «Montbovon, gare» → Bushalte-Filter (auch Lenk A/B/C).
 - Perrons Regionen: Standardlänge 80 px (`perron_standard_px`).
 - Lokal MOB (mob_roh): Unruhe 591 (vorher 617, Basis 777); L3 +2 gegenüber Basis. SBB-Bahnhöfe byte-gleich. Sagliains offen.
+- Workflows 02f0891: MOB Unruhe 591 (Drehung nur noch Chamby −30, Montbovon +60, Montreux +30), Vereina 59 unverändert; Seite: nur region_mob.svg geändert (Olten/NE/SBB gleich). Feedbackseite Version 129 veröffentlicht.
+- Offen: Montbovon +60 im Regionalplan mit scharfen Bögen (evtl. von Hand fixieren, Rückfrage Daniel); Perron-Standardlänge 80 px zur Begutachtung; Sagliains.
