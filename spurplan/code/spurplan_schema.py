@@ -115,6 +115,17 @@ PLAT = [e for e in D if e["type"] == "way" and (e["tags"].get("railway") == "pla
         # Verladerampen sind keine Perrons (29.10.2026, Autoverlad Sagliains: railway=platform mit motor_vehicle=designated)
         and not (e["tags"].get("motor_vehicle") in ("designated", "yes") or "loading" in e["tags"].get("description", "").lower()
                  or e["tags"].get("platform") == "loading")]   # stillgelegt nicht zeichnen (20.10.)
+# Bushaltekanten sind keine Perrons (5.11.2026, Montbovon: Bushalt «Montbovon, gare» als 16-m-Perron an Gl. 3; Lenk A/B/C):
+# highway=platform ohne railway=platform, im Mittel mehr als 6 m vom nächsten Gleis. (St. Stephan: Bahnperron nur als
+# highway=platform getaggt, 1,8 m neben dem Gleis – bleibt.)
+def _bushalt(e):
+    if e["tags"].get("highway") != "platform" or e["tags"].get("railway") == "platform": return False
+    from shapely.geometry import LineString as _LSb, Point as _Pb
+    _gl = [_LSb([xy(g) for g in w["geometry"]]) for w in ways.values() if len(w["geometry"]) > 1]
+    if not _gl: return False
+    _pt = [xy(g) for g in e["geometry"]]
+    return sum(min(l_.distance(_Pb(p_)) for l_ in _gl) for p_ in _pt) / len(_pt) > 6
+PLAT = [e for e in PLAT if not _bushalt(e)]
 
 # Hauptgleis aus Funktion (3.11.2026, MOB: «Streckengleis fett und Nebengleis dünn» stimmte nicht – Lenk: die 321 endet
 # vor dem Bahnhof und läuft als service=siding/yard zu den Perrons, alles dünn; Zweisimmen: Zufahrt zu Gl. 3/5 dünn).
@@ -212,8 +223,10 @@ if _ends and CFG["rules"].get("r27", True):
 _bx = [p[0] for p in P.values()]; _by = [p[1] for p in P.values()]
 _Rdata = max(math.hypot(*p) for p in P.values())
 _circ = sum(math.hypot(*p) > 0.93 * _Rdata for p in P.values()) > 6     # Daten kreisförmig ausgeschnitten (cut.py)
+_GLEISENDEN = set(CFG.get("gleisenden", []))      # Regionen: Knoten, die auch in den Schweiz-Daten Gleisenden sind (Rochers de Naye)
 def at_data_edge(n, tol=60):
-    if -2 * 10 ** 15 < n < -10 ** 14: return True     # künstlicher Randknoten des Kreisausschnitts (region_vorbereiten.kreis_runs; ≤ -3e15: Verdichtung)
+    if -2 * 10 ** 15 < n < -10 ** 14: return True
+    if n in _GLEISENDEN: return False     # künstlicher Randknoten des Kreisausschnitts (region_vorbereiten.kreis_runs; ≤ -3e15: Verdichtung)
     x_, y_ = P[n]
     if _circ and math.hypot(x_, y_) > _Rdata - 2 * tol: return True
     return min(x_ - min(_bx), max(_bx) - x_, y_ - min(_by), max(_by) - y_) < tol
@@ -260,6 +273,10 @@ if CFG["rules"].get("r27b", True):
             n = w["nodes"][k]
             if _deg[n] != 1 or ntag.get(n, {}).get("railway") == "buffer_stop" or at_data_edge(n): continue
             if not _am_perron(w, n): continue
+            # Endet daneben (< 30 m) ein weiteres Gleis, ist es ein Kopfbahnhof mit Stumpfgleisen, keine fehlende Weiche
+            # (5.11.2026, Rochers de Naye: beide Endgleise hören vor dem Tunnel nebeneinander auf)
+            if any(m_ != n and _deg[m_] == 1 and m_ > -10 ** 14 and m_ in P and math.dist(P[m_], P[n]) < 30
+                   for w_ in ways.values() for m_ in (w_["nodes"][0], w_["nodes"][-1])): continue
             u = _richtung(w["nodes"], k); Lu = float(np.linalg.norm(u))
             if Lu < 5: continue
             u = u / Lu; best = None
@@ -3496,6 +3513,13 @@ for e in ([] if OVR.get("platforms") is not None else PLAT):
         if _PMIN and x1_ - x0_ < _PMIN:
             _m = (x0_ + x1_) / 2; _m = min(max(_m, X(CFG["s_min"]) + _PMIN / 2), X(CFG["s_max"]) - _PMIN / 2)
             x0_, x1_ = _m - _PMIN / 2, _m + _PMIN / 2
+        # Standardlänge (5.11.2026, D. Eckenstein MOB: «Perrons noch eine Knacknuss, auch Standardlänge»): im Regionalplan
+        # jeder Perron gleich lang um seine Mitte (nicht die OSM-Länge); perron_frei kürzt danach auf den freien Abschnitt.
+        # Teile eines Perrons (Zweisimmen 7/12 und 7/8) bleiben, wie sie sind. cfg «perron_standard_px» (0 = aus).
+        _PST = CFG.get("perron_standard_px", 0)
+        if _PST and len(_teile) == 1:
+            _m = (x0_ + x1_) / 2; _m = min(max(_m, X(CFG["s_min"]) + _PST / 2), X(CFG["s_max"]) - _PST / 2)
+            x0_, x1_ = _m - _PST / 2, _m + _PST / 2
         PERRON_PX.append((x0_, x1_, yb))
         # Perronfarbe nach Spur der anliegenden Gleise (3.11.2026, D. Eckenstein: «Perrons in braun allgemein» – Zweisimmen,
         # Montreux: MOB-Perrons waren grün wie die Normalspur)

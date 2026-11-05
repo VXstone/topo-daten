@@ -37,6 +37,8 @@ ways = [e for e in D if e["type"] == "way" and "geometry" in e and any(inbox(g) 
 nodes = [e for e in D if e["type"] == "node" and inbox(e)]
 stations = {e["tags"]["name"]: e for e in nodes if e.get("tags", {}).get("railway") in ("station", "halt") and e["tags"].get("name")}
 
+_DEG_D = collections.Counter(n for e in D if e["type"] == "way" and e.get("tags", {}).get("railway") not in (None, "platform")
+                             for n in e["nodes"])     # Knotengrad in den vollständigen Daten (Gleisenden)
 RAND = {}        # künstlicher Randknoten -> (innerer Knoten, äusserer Knoten), für die Fernpunkte
 def kreis_runs(w, c, R, innen=None):
     """Teilstücke eines Ways im Kreis R um c (oder im Bereich innen(p)). Am Rand wird ein Punkt eingefügt (29.10.2026,
@@ -264,9 +266,14 @@ for st in betr:
             v = dict(w); v["id"] = w["id"] if k == 0 else w["id"] * 100 + k
             v["nodes"] = [n for n, _ in r]; v["geometry"] = [g for _, g in r]; el.append(v)
     json.dump({"elements": el}, open(os.path.join(OUT, f"{key}.json"), "w"))
+    # Echte Gleisenden (5.11.2026, Rochers de Naye: das Endgleis der Zahnradbahn endet am Rand des Ausschnitts und galt
+    # als Datenrand, also als Abgang «Linie 122 Glion →» mit Pfeil). Die Schweiz-Daten haben dort keinen Rand: ein Knoten,
+    # der auch in den vollständigen Daten nur an einem Gleis hängt, ist ein Gleisende (Stumpen), kein Abgang.
+    _ge = sorted({v["nodes"][k_] for v in el if v["type"] == "way" and v["tags"].get("railway") in SCHMAL | {"rail"}
+                  for k_ in (0, -1) if v["nodes"][k_] > 0 and _DEG_D[v["nodes"][k_]] == 1})
     spuren = sorted({w["tags"].get("spur", "1435") for w in out_w if w["tags"].get("railway") == "rail"
                      and min(math.dist(xy(g), c) for g in w["geometry"]) < 100})
-    BP[key] = dict(name=name, id=st["id"], lat=st["lat"], lon=st["lon"], radius=R, spuren=spuren,
+    BP[key] = dict(name=name, id=st["id"], lat=st["lat"], lon=st["lon"], radius=R, spuren=spuren, gleisenden=_ge,
                    weichen=sum(1 for e in out_n if e.get("tags", {}).get("railway") == "switch" and math.dist(xy(e), c) < min(R, 600)),
                    normalspur=name in K.get("normalspur", {}), dienst=name in dienst)
     if len(_ms) > 1:
