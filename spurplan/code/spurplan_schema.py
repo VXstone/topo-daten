@@ -3417,6 +3417,7 @@ for e in ([] if OVR.get("platforms") is not None else PLAT):
     # «perron_min_m» (Regionen 3 m, sonst 20 m wie bisher)
     if b_ - a_ < CFG.get("perron_min_m", 20) or abs(np.mean(dd_)) > CFG["d_lim"]: continue
     sm_, dm_ = (a_ + b_) / 2, float(np.mean(dd_))
+    _a0, _b0, _dm0 = a_, b_, dm_                       # ganze Perronlänge (für perron_teile)
     # Perron länger als seine Gleise (4.11.2026, Zweisimmen 7/8: OSM-Fläche 845 m, Gleis 8 endet vorher – an der Mitte
     # fehlte Gl. 8, der Perron landete auf dem Gleis): Lage dort bestimmen, wo auf beiden Seiten (bzw. auf der näheren)
     # ein Gleis bis 8 m neben dem Perron liegt; der Perron wird auf diesen Abschnitt gekürzt. cfg «perron_abschnitt».
@@ -3443,29 +3444,65 @@ for e in ([] if OVR.get("platforms") is not None else PLAT):
             a_, b_ = float(_ss[_run[0]]), float(_ss[_run[1]])
             if b_ - a_ < 20: a_, b_ = max(a_ - 10, CFG["s_min"]), min(b_ + 10, CFG["s_max"])
             sm_ = (a_ + b_) / 2
-    rows = sorted((d_at(c, sm_), c["lane"]) for c in C if c["s0"] <= sm_ <= c["s1"])
-    up = [r for r in rows if r[0] > dm_]; dn = [r for r in rows if r[0] < dm_]
-    if os.environ.get("PERDBG"):
-        print("PERRON", e["id"], round(a_), round(b_), round(sm_), round(dm_, 1), [(round(d, 1), l) for d, l in rows])
-        for c in C: print("   KETTE", c["lane"], round(c["s0"]), round(c["s1"]), sorted({str(x["tags"].get("railway:track_ref")) for x in c["segs"]}), round(d_at(c, sm_), 1) if c["s0"] <= sm_ <= c["s1"] else None)
-    if up and dn and up[0][1] != dn[-1][1]:
-        yb = (Y(up[0][1]) + Y(dn[-1][1])) / 2
-    elif up: yb = Y(up[0][1]) + 11
-    elif dn: yb = Y(dn[-1][1]) - 11
-    else: continue
-    x0_, x1_ = X(a_), X(b_)
-    if _PPX and x1_ - x0_ > _PPX: _m = (x0_ + x1_) / 2; x0_, x1_ = _m - _PPX / 2, _m + _PPX / 2      # B14
-    _PMIN = CFG.get("perron_min_px", 0)                   # Mindestlänge gezeichnet (Regionen 40 px, 4.11. spät)
-    if _PMIN and x1_ - x0_ < _PMIN:
-        _m = (x0_ + x1_) / 2; _m = min(max(_m, X(CFG["s_min"]) + _PMIN / 2), X(CFG["s_max"]) - _PMIN / 2)
-        x0_, x1_ = _m - _PMIN / 2, _m + _PMIN / 2
-    PERRON_PX.append((x0_, x1_, yb))
-    # Perronfarbe nach Spur der anliegenden Gleise (3.11.2026, D. Eckenstein: «Perrons in braun allgemein» – Zweisimmen,
-    # Montreux: MOB-Perrons waren grün wie die Normalspur)
-    _nb_l = {r_[1] for r_ in (up[:1] + dn[-1:])}
-    _sch = [x.get("schmal") for c in C if c["lane"] in _nb_l and c["s0"] <= sm_ <= c["s1"] for x in c["segs"]]
-    _pc = MS_BRAUN if _sch and all(_sch) else green
-    out.append(f'<rect x="{x0_:.1f}" y="{yb - 4:.1f}" width="{x1_ - x0_:.1f}" height="8" rx="1.5" fill="{_pc}"/>')
+    # Perron an mehreren Gleispaaren (5.11.2026, D. Eckenstein Zweisimmen: «der Perron ist in OSM, zuerst zwischen 7 und 12,
+    # dann zwischen 7 und 8, weil es sich zwischen 7 und 12 öffnet»): liegen auf dem Perron nacheinander verschiedene
+    # Gleispaare beidseits (je ≥ 60 m bzw. 15 % der Länge), wird je Paar ein eigener Balken gezeichnet. cfg «perron_teile».
+    _teile = [(a_, b_, dm_, None)]
+    if CFG.get("perron_teile", False) and _b0 - _a0 >= 120:
+        # Perronumriss alle 4 m; jeder Punkt liegt zwischen zwei Gleisen (je bis 8 m daneben) -> Gleispaar je Punkt,
+        # je 10-m-Abschnitt das häufigste Paar
+        _geo = [xy(g) for g in e["geometry"]]; _pp = []
+        for (x1, y1), (x2, y2) in zip(_geo, _geo[1:]):
+            k_ = max(1, int(math.hypot(x2 - x1, y2 - y1) / 4))
+            _pp += [project((x1 + (x2 - x1) * t_ / k_, y1 + (y2 - y1) * t_ / k_)) for t_ in range(k_)]
+        _bins = collections.defaultdict(collections.Counter)
+        for s_, d_ in _pp:
+            if not (_a0 <= s_ <= _b0): continue
+            _r = [(d_at(c, s_), c["lane"]) for c in C if c["s0"] <= s_ <= c["s1"]]
+            # nächstes Gleis je Seite bis 14 m (Zweisimmen: Gl. 12 läuft vom Perron weg, «es öffnet sich»)
+            _u = sorted(r for r in _r if 0 < r[0] - d_ < 14); _dn = sorted(r for r in _r if 0 < d_ - r[0] < 14)
+            if _u and _dn: _bins[int((s_ - _a0) // 10)][(_u[0][1], _dn[-1][1])] += 1
+        _keys = [(_bins[i_].most_common(1)[0][0] if _bins.get(i_) else None) for i_ in range(int((_b0 - _a0) // 10) + 1)]
+        _ss2 = [_a0 + 10 * i_ for i_ in range(len(_keys))] + [_b0]
+        _runs = []
+        for i_, k_ in enumerate(_keys):
+            if k_ is None: continue                                  # Lücke (Weichenbereich) unterbricht nicht
+            if _runs and _runs[-1][0] == k_: _runs[-1][2] = i_
+            else: _runs.append([k_, i_, i_])
+        _dloc = lambda s0_, s1_: float(np.median([d_ for s_, d_ in _pp if s0_ <= s_ <= s1_] or [_dm0]))
+        _gut = [(k_, _ss2[i0_], min(_ss2[i1_ + 1], _b0)) for k_, i0_, i1_ in _runs
+                if min(_ss2[i1_ + 1], _b0) - _ss2[i0_] >= max(50, 0.12 * (_b0 - _a0))]
+        if len(_gut) >= 2 and len({g_[0] for g_ in _gut}) >= 2:
+            _teile = [(s0_, s1_, _dloc(s0_, s1_), k_) for k_, s0_, s1_ in _gut]
+            if ARGS.dbg or os.environ.get("PERDBG"): print("PERRON-TEILE", e["id"], [(k_, round(s0_), round(s1_)) for k_, s0_, s1_ in _gut])
+
+    for a_, b_, dm_, _pk in _teile:
+        sm_ = (a_ + b_) / 2
+        rows = sorted((d_at(c, sm_), c["lane"]) for c in C if c["s0"] <= sm_ <= c["s1"])
+        up = [r for r in rows if r[0] > dm_]; dn = [r for r in rows if r[0] < dm_]
+        if os.environ.get("PERDBG"):
+            print("PERRON", e["id"], round(a_), round(b_), round(sm_), round(dm_, 1), [(round(d, 1), l) for d, l in rows])
+            for c in C: print("   KETTE", c["lane"], round(c["s0"]), round(c["s1"]), sorted({str(x["tags"].get("railway:track_ref")) for x in c["segs"]}), round(d_at(c, sm_), 1) if c["s0"] <= sm_ <= c["s1"] else None)
+        if _pk:                                   # Teil eines Perrons: zwischen genau diesem Gleispaar
+            up, dn = [(0.0, _pk[0])], [(0.0, _pk[1])]
+        if up and dn and up[0][1] != dn[-1][1]:
+            yb = (Y(up[0][1]) + Y(dn[-1][1])) / 2
+        elif up: yb = Y(up[0][1]) + 11
+        elif dn: yb = Y(dn[-1][1]) - 11
+        else: continue
+        x0_, x1_ = X(a_), X(b_)
+        if _PPX and x1_ - x0_ > _PPX: _m = (x0_ + x1_) / 2; x0_, x1_ = _m - _PPX / 2, _m + _PPX / 2      # B14
+        _PMIN = CFG.get("perron_min_px", 0)                   # Mindestlänge gezeichnet (Regionen 40 px, 4.11. spät)
+        if _PMIN and x1_ - x0_ < _PMIN:
+            _m = (x0_ + x1_) / 2; _m = min(max(_m, X(CFG["s_min"]) + _PMIN / 2), X(CFG["s_max"]) - _PMIN / 2)
+            x0_, x1_ = _m - _PMIN / 2, _m + _PMIN / 2
+        PERRON_PX.append((x0_, x1_, yb))
+        # Perronfarbe nach Spur der anliegenden Gleise (3.11.2026, D. Eckenstein: «Perrons in braun allgemein» – Zweisimmen,
+        # Montreux: MOB-Perrons waren grün wie die Normalspur)
+        _nb_l = {r_[1] for r_ in (up[:1] + dn[-1:])}
+        _sch = [x.get("schmal") for c in C if c["lane"] in _nb_l and c["s0"] <= sm_ <= c["s1"] for x in c["segs"]]
+        _pc = MS_BRAUN if _sch and all(_sch) else green
+        out.append(f'<rect x="{x0_:.1f}" y="{yb - 4:.1f}" width="{x1_ - x0_:.1f}" height="8" rx="1.5" fill="{_pc}"/>')
 out.extend(SCHIEBE_SVG)
 # Perron frei (3.11.2026, MOB: Perron länger als das gerade Stück seines Gleises deckte Weichenbögen und Gleise ab,
 # La Tine, Flendruz, Saanenmöser u. a.): jeder Perronbalken wird auf den längsten Abschnitt um seine Mitte gekürzt, in dem

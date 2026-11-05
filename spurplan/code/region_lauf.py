@@ -69,6 +69,7 @@ def _bahnhof(n):
     o["cfg"].setdefault("perron_frei", True)                         # Perron nicht über Gleise/Weichenbögen (3.11.2026, MOB)
     o["cfg"].setdefault("gleis_mindestlaenge", True)                 # Kreuzungsgleis nicht auf Schrägen stauchen (Sendy-Sollard)
     o["cfg"].setdefault("perron_abschnitt", True)                    # Perronlage, wo seine Gleise liegen (Zweisimmen 7/8)
+    o["cfg"].setdefault("perron_teile", True)                         # Perron an mehreren Gleispaaren (Zweisimmen 7/12, 7/8)
     o["cfg"].setdefault("pfeil_aussen", True)                         # Pfeile nie auf ein Nachbargleis (Zweisimmen)
     o["cfg"].setdefault("perron_min_m", 3)                            # jeder Perron aus OSM (Halte, 4.11. spät)
     o["cfg"].setdefault("perron_min_px", 40)                          # mindestens 40 px lang

@@ -834,3 +834,4 @@ REGELN.md «Verkettung MOB, Sagliains». Code: region_vorbereiten, straenge, spu
 
 ## 5.11.2026 – Feedbackseite veröffentlicht (Version 127, Build 02b5a73)
 - Befund: je Commit zwei `seite`-Läufe (nach `plaene` und nach `regionen`); die Regionalpläne Olten und Neuchâtel kommen dabei abwechselnd in zwei leicht verschiedenen Fassungen (Neuchâtel viewBox 5428 vs. 5442, Olten ein Stummel), unabhängig vom Code (seit 4.11. 13:00 gleich; lokal ohne `--osm` immer die erste). Vermutlich je Lauf anderer OSM-Ausschnitt. Offen: Ursache im Workflow `seite` klären, damit die Abnahmegrundlage stabil bleibt.
+- 5.11. abends: Rückfrage Zweisimmen Gl. 12 beantwortet (Perron 7/12 und 7/8 ist ein OSM-Perron) → `perron_teile`; Zweisimmen jetzt mit Perron an 12. Berichte MOB unverändert, SBB-Bahnhöfe byte-gleich.
