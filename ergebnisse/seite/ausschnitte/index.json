@@ -1,31 +1,17 @@
 [
  {
-  "id": "am5twqnilzi7se6soula",
-  "plan": "region",
-  "text": "da fehlt \"Platz\" für den langen Hauensteintunnel der auch mehrere Spurwechsel (doppelte) auf der Strecke hat",
+  "id": "0bw9nnym5m5luilotwzk",
+  "plan": "solothurn",
+  "text": "dieses Gleis macht auch was komisches nach unten dann knick, dann über anderen Gleisen nach oben",
   "status": "offen",
-  "png": "am5twqnilzi7se6soula.png"
+  "png": "0bw9nnym5m5luilotwzk.png"
  },
  {
-  "id": "druqnj7ghzdzwq9ljk6q",
-  "plan": "region",
-  "text": "Das Portal müsste doch hier sein und der Abzweig nach Trimbach vorher",
+  "id": "0fpodu3uvthbowtib2di",
+  "plan": "solothurn",
+  "text": "und hier ein sauberes Gleis ins nichts",
   "status": "offen",
-  "png": "druqnj7ghzdzwq9ljk6q.png"
- },
- {
-  "id": "fw9u1gykuqzw7kvc4b5a",
-  "plan": "region",
-  "text": "Die sind ja alle auf einem Flexk",
-  "status": "offen",
-  "png": "fw9u1gykuqzw7kvc4b5a.png"
- },
- {
-  "id": "eojeak1xonq1k48e0gyd",
-  "plan": "region_ne",
-  "text": "Sinnvoll Kerzers in zwei kreuzende 60 Grad zueinander achsen? Alles diese 90 Grad Winkel auf jedem Ast wären so weg",
-  "status": "offen",
-  "png": "eojeak1xonq1k48e0gyd.png"
+  "png": "0fpodu3uvthbowtib2di.png"
  },
  {
   "id": "3za5possrk2xb0k94bb1",
@@ -35,13 +21,6 @@
   "png": "3za5possrk2xb0k94bb1.png"
  },
  {
-  "id": "9oxng3sh2mls0r6coyx7",
-  "plan": "region",
-  "text": "Regel: Schwarz hinter grün",
-  "status": "offen",
-  "png": "9oxng3sh2mls0r6coyx7.png"
- },
- {
   "id": "4xdm1q0bw47yeso6zkbv",
   "plan": "region",
   "text": "dazwischen geht noch ein Gleisanschluss raus, oder? Prüfalgorhythmus, der alle Verbindungen checkt?",
@@ -49,60 +28,67 @@
   "png": "4xdm1q0bw47yeso6zkbv.png"
  },
  {
-  "id": "lld9ys5a6ksdz6xxwrcy",
+  "id": "7ma7j244xvt4xey2r2hg",
+  "plan": "solothurn",
+  "text": "nach links gehen zwei Linien, Oensingen und Richtung Wanzwil, den Bahnhof so weit ziehen, dass ein Abzweiger mit drauf ist - OSM-Regel die schaut sind die Gleise über 500m 1000m (?) im Abstand und haben \"nur\" noch Spurwechsel untereinander?",
+  "status": "offen",
+  "png": "7ma7j244xvt4xey2r2hg.png"
+ },
+ {
+  "id": "ce8rilwzf07i0nr6qe0x",
+  "plan": "solothurn",
+  "text": "und hier 90 Grad",
+  "status": "offen",
+  "png": "ce8rilwzf07i0nr6qe0x.png"
+ },
+ {
+  "id": "dmr7iutmnhu3tb3dp0nr",
   "plan": "region",
-  "text": "diese Anschlussgleise südlich von Olten? Woher kommen diese? Olten scheint mir komplett, ebenso Olten Hammer und die Streckeb bis Rothrist",
+  "text": "diese sehen nun wie eine DKW aus... alle Weichen unterhalb etwas nach unten rücken -> aber hier sollte es auch eine Regel geben, die merkt, dass Weichen fast zur DKW werden",
   "status": "offen",
-  "png": "lld9ys5a6ksdz6xxwrcy.png"
+  "png": "dmr7iutmnhu3tb3dp0nr.png"
  },
  {
-  "id": "of4dx1zk7w3uayt110tr",
-  "plan": "onnens_bonvillars",
-  "text": "DKW?",
-  "status": "offen",
-  "png": "of4dx1zk7w3uayt110tr.png"
- },
- {
-  "id": "eh1civ1dzr80annhem8g",
-  "plan": "neuchatel",
-  "text": "noch weitere Weichen bis Ende bhf?",
-  "status": "offen",
-  "png": "eh1civ1dzr80annhem8g.png"
- },
- {
-  "id": "1v507u9g14qh71941icj",
-  "plan": "neuchatel",
-  "text": "Zeichenregel Rundung / Gleislänge",
-  "status": "offen",
-  "png": "1v507u9g14qh71941icj.png"
- },
- {
-  "id": "xxvpmg453y1iysxvvr0d",
+  "id": "f3mpjp2t1fhl7bkq6mth",
   "plan": "region",
-  "text": "dieses Gleis in den 1-Achse-Abstand vom nächsten Gleis (also eines nach rechts versetzen und das abzweigende Gleis dann als Weiche nach links raus)",
+  "text": "nicht ausgerundeter Knick? hier und auf dem parallelen Gleis -> Regel zur Verbindung der Gleise?",
   "status": "offen",
-  "png": "xxvpmg453y1iysxvvr0d.png"
+  "png": "f3mpjp2t1fhl7bkq6mth.png"
  },
  {
-  "id": "k9zbnjd652zs03q9eban",
-  "plan": "region",
-  "text": "noch weniger lang parallel, die Gleise steiler weg -> damit",
+  "id": "f72cc64rxkyvzpaii304",
+  "plan": "region_vereina",
+  "text": "der Bahnhof Susch ist noch eine Fehlinterpretation oder?",
   "status": "offen",
-  "png": "k9zbnjd652zs03q9eban.png"
+  "png": "f72cc64rxkyvzpaii304.png"
  },
  {
-  "id": "m1ama0shvi5is3e60k2i",
-  "plan": "region",
-  "text": "von 57 -> damit hier kein Knick, die Gleise gerade durchziehen und dann wieder ein Winkel RIchtung Tunnel",
+  "id": "foiync5mm6ftfi9uy4j3",
+  "plan": "solothurn",
+  "text": "Regel etwas suchen lassen, dieses Gleis ist doch nicht mehr sehr lange, oder?",
   "status": "offen",
-  "png": "m1ama0shvi5is3e60k2i.png"
+  "png": "foiync5mm6ftfi9uy4j3.png"
  },
  {
-  "id": "5o16cik02oi3ra5wdfx2",
-  "plan": "region",
-  "text": "da stimmt was nicht (mehr) in Rothrist!",
+  "id": "gx6snl6kjusc55vq9fot",
+  "plan": "region_vereina",
+  "text": "Portal auch auf den Nebengleisen",
   "status": "offen",
-  "png": "5o16cik02oi3ra5wdfx2.png"
+  "png": "gx6snl6kjusc55vq9fot.png"
+ },
+ {
+  "id": "h9o961eb0gwvh3ybd1wf",
+  "plan": "region_vereina",
+  "text": "diese Gleise müssten doch parallel laufen?",
+  "status": "offen",
+  "png": "h9o961eb0gwvh3ybd1wf.png"
+ },
+ {
+  "id": "j57vc7k78xhb5qgqsbpp",
+  "plan": "region",
+  "text": "kleiner Knubbel vom geraden Strang sichtbar",
+  "status": "offen",
+  "png": "j57vc7k78xhb5qgqsbpp.png"
  },
  {
   "id": "jbs12ofny2vyq8mel03r",
@@ -112,45 +98,52 @@
   "png": "jbs12ofny2vyq8mel03r.png"
  },
  {
-  "id": "yfi1pm6102v50sop5euu",
-  "plan": "tuscherz",
-  "text": "fehlt da nicht eine Weiche?",
+  "id": "jxpf1k85qn2fh3prrfzg",
+  "plan": "region_vereina",
+  "text": "eine Ruheregel müsste doch entlang der Strecke suchen gehen und merken: In Klosters könnte ich das GLeise leicht weiter unten anbinden und dann diese S-Kurve sparen (oder auf der anderen Seite des Vereina in Sagliains alles etwas \"weiter oben\"",
   "status": "offen",
-  "png": "yfi1pm6102v50sop5euu.png"
+  "png": "jxpf1k85qn2fh3prrfzg.png"
  },
  {
-  "id": "olvnrgp65hwz6p3fsqks",
-  "plan": "region_ne",
-  "text": "Meterspur Perron braun",
+  "id": "lld9ys5a6ksdz6xxwrcy",
+  "plan": "region",
+  "text": "diese Anschlussgleise südlich von Olten? Woher kommen diese? Olten scheint mir komplett, ebenso Olten Hammer und die Streckeb bis Rothrist",
   "status": "offen",
-  "png": "olvnrgp65hwz6p3fsqks.png"
+  "png": "lld9ys5a6ksdz6xxwrcy.png"
  },
  {
-  "id": "2ayijyy37uvnfgst9306",
-  "plan": "region_ne",
-  "text": "Anbindung hier",
+  "id": "obvpbw7iesse9tor1zun",
+  "plan": "solothurn",
+  "text": "90 Grad Knick?",
   "status": "offen",
-  "png": "2ayijyy37uvnfgst9306.png"
+  "png": "obvpbw7iesse9tor1zun.png"
  },
  {
-  "id": "drd6z7fe3szw6rearb6e",
-  "plan": "ins",
-  "text": "Da ist fast 90 Grad und dann wieder schräg, sollte irgendwie keine S Kurven geben ausser eng verschachtelte Weichensituationen lassen sich nicht anders lösen?",
+  "id": "t6x02b9nuadgwrwfht9z",
+  "plan": "solothurn",
+  "text": "ist hier eine Kreuzung im OSM?",
   "status": "offen",
-  "png": "drd6z7fe3szw6rearb6e.png"
+  "png": "t6x02b9nuadgwrwfht9z.png"
  },
  {
-  "id": "5rte65pcbd37z01tvuqd",
-  "plan": "rothrist",
-  "text": "Zwei Gleis unten durch?",
+  "id": "uyuegakpencttc2e6isq",
+  "plan": "solothurn",
+  "text": "Perron auf GLeis und oben ein \"gerader knubbel\" von GLeis 10 her",
   "status": "offen",
-  "png": "5rte65pcbd37z01tvuqd.png"
+  "png": "uyuegakpencttc2e6isq.png"
  },
  {
-  "id": "yj1ralip1fvp5982bby2",
-  "plan": "neuchatel",
-  "text": "Pfeil auf Gleis drauf",
+  "id": "xke0q8que3hufliwbag9",
+  "plan": "solothurn",
+  "text": "da macht es eine Zwischengerade und dann geht das Anschlussgleis wieder runte -> es würde doch reichen wenn zwischen 2 und 3 ein doppelter Abstand wäre und das Anschlussgleis einfach direkt aus der SChräge ginge?",
   "status": "offen",
-  "png": "yj1ralip1fvp5982bby2.png"
+  "png": "xke0q8que3hufliwbag9.png"
+ },
+ {
+  "id": "zcz3v5yhncmbd21obybz",
+  "plan": "solothurn",
+  "text": "da scheint ein wenig was nicht verbunden -> auch hier mit Regel danach suchen?",
+  "status": "offen",
+  "png": "zcz3v5yhncmbd21obybz.png"
  }
 ]
