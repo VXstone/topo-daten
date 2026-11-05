@@ -1,9 +1,8 @@
 {
  "ausgang": {
-  "unruhe": 543,
+  "unruhe": 203,
   "kennzahlen": {
    "topo_T6": 2,
-   "lage_L2": 34,
    "lage_L3a": 7,
    "regel_G2": 22,
    "regel_G4": 1,
@@ -13,9 +12,8 @@
   }
  },
  "ergebnis": {
-  "unruhe": 371,
+  "unruhe": 71,
   "kennzahlen": {
-   "lage_L2": 30,
    "lage_L3a": 9,
    "regel_G2": 21,
    "regel_G6": 3,
@@ -39,10 +37,9 @@
     "Rochers de Naye": 60,
     "Zweisimmen": -90
    },
-   "unruhe": 543,
+   "unruhe": 203,
    "kennzahlen": {
     "topo_T6": 2,
-    "lage_L2": 34,
     "lage_L3a": 7,
     "regel_G2": 22,
     "regel_G4": 1,
@@ -56,10 +53,9 @@
    "drehung": {
     "Chamby": -30
    },
-   "unruhe": 514,
+   "unruhe": 194,
    "kennzahlen": {
     "topo_T6": 2,
-    "lage_L2": 32,
     "lage_L3a": 8,
     "regel_G2": 21,
     "regel_G6": 4,
@@ -72,10 +68,9 @@
    "drehung": {
     "Chamby": -90
    },
-   "unruhe": 566,
+   "unruhe": 196,
    "kennzahlen": {
     "topo_T6": 2,
-    "lage_L2": 37,
     "lage_L3a": 7,
     "regel_G2": 22,
     "regel_G6": 4,
@@ -88,10 +83,9 @@
    "drehung": {
     "Chamby": 0
    },
-   "unruhe": 558,
+   "unruhe": 228,
    "kennzahlen": {
     "topo_T6": 2,
-    "lage_L2": 33,
     "lage_L4": 1,
     "lage_L3a": 8,
     "regel_G2": 21,
@@ -105,10 +99,9 @@
    "drehung": {
     "Chamby": -120
    },
-   "unruhe": 647,
+   "unruhe": 247,
    "kennzahlen": {
     "topo_T6": 3,
-    "lage_L2": 40,
     "lage_L3a": 7,
     "regel_G2": 22,
     "regel_G6": 3,
@@ -121,10 +114,9 @@
    "drehung": {
     "Chamby": 30
    },
-   "unruhe": 595,
+   "unruhe": 275,
    "kennzahlen": {
     "topo_T6": 3,
-    "lage_L2": 32,
     "lage_L4": 1,
     "lage_L3a": 8,
     "regel_G2": 21,
@@ -138,10 +130,9 @@
    "drehung": {
     "Chamby": -150
    },
-   "unruhe": 692,
+   "unruhe": 282,
    "kennzahlen": {
     "topo_T6": 3,
-    "lage_L2": 41,
     "lage_L3a": 7,
     "lage_L3": 1,
     "regel_G2": 21,
@@ -156,10 +147,9 @@
    "drehung": {
     "Lenk im Simmental": 90
    },
-   "unruhe": 515,
+   "unruhe": 195,
    "kennzahlen": {
     "topo_T6": 2,
-    "lage_L2": 32,
     "lage_L3a": 8,
     "regel_G2": 23,
     "regel_G6": 3,
@@ -172,10 +162,9 @@
    "drehung": {
     "Lenk im Simmental": 30
    },
-   "unruhe": 511,
+   "unruhe": 191,
    "kennzahlen": {
     "topo_T6": 2,
-    "lage_L2": 32,
     "lage_L3a": 8,
     "regel_G2": 21,
     "regel_G6": 3,
@@ -188,10 +177,9 @@
    "drehung": {
     "Lenk im Simmental": 120
    },
-   "unruhe": 511,
+   "unruhe": 191,
    "kennzahlen": {
     "topo_T6": 2,
-    "lage_L2": 32,
     "lage_L3a": 8,
     "regel_G2": 21,
     "regel_G6": 3,
@@ -204,10 +192,9 @@
    "drehung": {
     "Lenk im Simmental": 0
    },
-   "unruhe": 511,
+   "unruhe": 191,
    "kennzahlen": {
     "topo_T6": 2,
-    "lage_L2": 32,
     "lage_L3a": 8,
     "regel_G2": 21,
     "regel_G6": 3,
@@ -220,10 +207,9 @@
    "drehung": {
     "Lenk im Simmental": 150
    },
-   "unruhe": 514,
+   "unruhe": 194,
    "kennzahlen": {
     "topo_T6": 2,
-    "lage_L2": 32,
     "lage_L3a": 8,
     "regel_G2": 21,
     "regel_G6": 4,
@@ -236,10 +222,9 @@
    "drehung": {
     "Lenk im Simmental": -30
    },
-   "unruhe": 577,
+   "unruhe": 257,
    "kennzahlen": {
     "topo_T6": 3,
-    "lage_L2": 32,
     "lage_L3a": 8,
     "regel_G2": 21,
     "regel_G6": 3,
@@ -252,10 +237,10 @@
    "drehung": {
     "Montbovon": 150
    },
-   "unruhe": 497,
+   "unruhe": 217,
    "kennzahlen": {
     "topo_T6": 2,
-    "lage_L2": 30,
+    "lage_L2": 2,
     "lage_L3a": 8,
     "regel_G2": 22,
     "regel_G6": 3,
@@ -268,10 +253,9 @@
    "drehung": {
     "Montbovon": 90
    },
-   "unruhe": 455,
+   "unruhe": 145,
    "kennzahlen": {
     "topo_T6": 1,
-    "lage_L2": 31,
     "lage_L3a": 8,
     "regel_G2": 23,
     "regel_G6": 3,
@@ -284,10 +268,10 @@
    "drehung": {
     "Montbovon": -180
    },
-   "unruhe": 484,
+   "unruhe": 234,
    "kennzahlen": {
     "topo_T6": 2,
-    "lage_L2": 29,
+    "lage_L2": 4,
     "lage_L3a": 9,
     "regel_G2": 21,
     "regel_G6": 4,
@@ -300,9 +284,8 @@
    "drehung": {
     "Montbovon": 60
    },
-   "unruhe": 390,
+   "unruhe": 100,
    "kennzahlen": {
-    "lage_L2": 29,
     "lage_L3a": 9,
     "regel_G2": 21,
     "regel_G4": 1,
@@ -316,10 +299,10 @@
    "drehung": {
     "Montbovon": -150
    },
-   "unruhe": 496,
+   "unruhe": 266,
    "kennzahlen": {
     "topo_T6": 2,
-    "lage_L2": 27,
+    "lage_L2": 4,
     "lage_L4": 1,
     "lage_L3a": 9,
     "regel_G2": 24,
@@ -333,9 +316,9 @@
    "drehung": {
     "Montbovon": 30
    },
-   "unruhe": 393,
+   "unruhe": 103,
    "kennzahlen": {
-    "lage_L2": 31,
+    "lage_L2": 2,
     "lage_L3a": 9,
     "regel_G2": 21,
     "regel_G6": 3,
@@ -347,9 +330,8 @@
    "drehung": {
     "Montreux": 90
    },
-   "unruhe": 382,
+   "unruhe": 92,
    "kennzahlen": {
-    "lage_L2": 29,
     "lage_L3a": 9,
     "regel_G2": 21,
     "regel_G4": 1,
@@ -363,9 +345,8 @@
    "drehung": {
     "Montreux": 30
    },
-   "unruhe": 371,
+   "unruhe": 71,
    "kennzahlen": {
-    "lage_L2": 30,
     "lage_L3a": 9,
     "regel_G2": 21,
     "regel_G6": 3,
@@ -378,10 +359,9 @@
    "drehung": {
     "Montreux": 120
    },
-   "unruhe": 533,
+   "unruhe": 243,
    "kennzahlen": {
     "topo_T6": 3,
-    "lage_L2": 29,
     "lage_L3a": 9,
     "regel_G2": 22,
     "regel_G6": 3,
@@ -394,9 +374,8 @@
    "drehung": {
     "Montreux": 0
    },
-   "unruhe": 391,
+   "unruhe": 91,
    "kennzahlen": {
-    "lage_L2": 30,
     "lage_L3a": 10,
     "regel_G2": 22,
     "regel_G4": 1,
@@ -410,10 +389,9 @@
    "drehung": {
     "Montreux": 150
    },
-   "unruhe": 647,
+   "unruhe": 257,
    "kennzahlen": {
     "topo_T6": 3,
-    "lage_L2": 39,
     "lage_L3a": 10,
     "regel_G2": 25,
     "regel_G6": 3,
@@ -426,10 +404,9 @@
    "drehung": {
     "Montreux": -30
    },
-   "unruhe": 503,
+   "unruhe": 203,
    "kennzahlen": {
     "topo_T6": 2,
-    "lage_L2": 30,
     "lage_L3a": 10,
     "regel_G2": 25,
     "regel_G6": 3,
@@ -442,10 +419,9 @@
    "drehung": {
     "Rochers de Naye": 90
    },
-   "unruhe": 433,
+   "unruhe": 133,
    "kennzahlen": {
     "topo_T6": 1,
-    "lage_L2": 30,
     "lage_L3a": 9,
     "regel_G2": 21,
     "regel_G6": 3,
@@ -458,9 +434,8 @@
    "drehung": {
     "Rochers de Naye": 30
    },
-   "unruhe": 378,
+   "unruhe": 78,
    "kennzahlen": {
-    "lage_L2": 30,
     "lage_L3a": 9,
     "regel_G2": 23,
     "regel_G6": 4,
@@ -473,10 +448,9 @@
    "drehung": {
     "Rochers de Naye": 120
    },
-   "unruhe": 433,
+   "unruhe": 133,
    "kennzahlen": {
     "topo_T6": 1,
-    "lage_L2": 30,
     "lage_L3a": 9,
     "regel_G2": 21,
     "regel_G6": 3,
@@ -489,9 +463,8 @@
    "drehung": {
     "Rochers de Naye": 0
    },
-   "unruhe": 371,
+   "unruhe": 71,
    "kennzahlen": {
-    "lage_L2": 30,
     "lage_L3a": 9,
     "regel_G2": 21,
     "regel_G6": 3,
@@ -504,10 +477,9 @@
    "drehung": {
     "Rochers de Naye": 150
    },
-   "unruhe": 425,
+   "unruhe": 125,
    "kennzahlen": {
     "topo_T6": 1,
-    "lage_L2": 30,
     "lage_L3a": 9,
     "regel_G2": 21,
     "regel_G6": 3,
@@ -520,9 +492,8 @@
    "drehung": {
     "Rochers de Naye": -30
    },
-   "unruhe": 371,
+   "unruhe": 71,
    "kennzahlen": {
-    "lage_L2": 30,
     "lage_L3a": 9,
     "regel_G2": 21,
     "regel_G6": 3,
@@ -535,9 +506,8 @@
    "drehung": {
     "Zweisimmen": -60
    },
-   "unruhe": 370,
+   "unruhe": 70,
    "kennzahlen": {
-    "lage_L2": 30,
     "lage_L3a": 9,
     "regel_G2": 19,
     "regel_G6": 4,
@@ -550,10 +520,10 @@
    "drehung": {
     "Zweisimmen": -120
    },
-   "unruhe": 442,
+   "unruhe": 142,
    "kennzahlen": {
     "topo_T6": 1,
-    "lage_L2": 31,
+    "lage_L2": 1,
     "lage_L3a": 9,
     "regel_G2": 19,
     "regel_G6": 4,
@@ -566,9 +536,8 @@
    "drehung": {
     "Zweisimmen": -30
    },
-   "unruhe": 375,
+   "unruhe": 75,
    "kennzahlen": {
-    "lage_L2": 30,
     "lage_L3a": 10,
     "regel_G2": 19,
     "regel_G6": 3,
@@ -581,10 +550,10 @@
    "drehung": {
     "Zweisimmen": -150
    },
-   "unruhe": 461,
+   "unruhe": 161,
    "kennzahlen": {
     "topo_T6": 1,
-    "lage_L2": 31,
+    "lage_L2": 1,
     "lage_L4": 1,
     "lage_L3a": 10,
     "regel_G2": 19,
@@ -598,10 +567,9 @@
    "drehung": {
     "Zweisimmen": 0
    },
-   "unruhe": 444,
+   "unruhe": 144,
    "kennzahlen": {
     "topo_T6": 1,
-    "lage_L2": 30,
     "lage_L3a": 10,
     "lage_L3": 1,
     "regel_G2": 19,
@@ -615,10 +583,10 @@
    "drehung": {
     "Zweisimmen": -180
    },
-   "unruhe": 463,
+   "unruhe": 163,
    "kennzahlen": {
     "topo_T6": 1,
-    "lage_L2": 31,
+    "lage_L2": 1,
     "lage_L4": 1,
     "lage_L3a": 10,
     "regel_G2": 20,
@@ -632,9 +600,8 @@
    "drehung": {
     "Chamby": 0
    },
-   "unruhe": 452,
+   "unruhe": 112,
    "kennzahlen": {
-    "lage_L2": 34,
     "lage_L4": 1,
     "lage_L3a": 9,
     "regel_G2": 23,
@@ -648,9 +615,8 @@
    "drehung": {
     "Chamby": -60
    },
-   "unruhe": 423,
+   "unruhe": 73,
    "kennzahlen": {
-    "lage_L2": 35,
     "lage_L3a": 8,
     "regel_G2": 22,
     "regel_G6": 3,
@@ -663,10 +629,9 @@
    "drehung": {
     "Chamby": 30
    },
-   "unruhe": 498,
+   "unruhe": 158,
    "kennzahlen": {
     "topo_T6": 1,
-    "lage_L2": 34,
     "lage_L4": 1,
     "lage_L3a": 9,
     "regel_G2": 21,
@@ -680,9 +645,8 @@
    "drehung": {
     "Chamby": -90
    },
-   "unruhe": 443,
+   "unruhe": 73,
    "kennzahlen": {
-    "lage_L2": 37,
     "lage_L3a": 8,
     "regel_G2": 22,
     "regel_G6": 3,
@@ -695,10 +659,9 @@
    "drehung": {
     "Chamby": 60
    },
-   "unruhe": 525,
+   "unruhe": 175,
    "kennzahlen": {
     "topo_T6": 1,
-    "lage_L2": 35,
     "lage_L4": 1,
     "lage_L3a": 9,
     "lage_L3": 1,
@@ -713,10 +676,9 @@
    "drehung": {
     "Chamby": -120
    },
-   "unruhe": 505,
+   "unruhe": 125,
    "kennzahlen": {
     "topo_T6": 1,
-    "lage_L2": 38,
     "lage_L3a": 8,
     "regel_G2": 21,
     "regel_G6": 3,
@@ -729,9 +691,8 @@
    "drehung": {
     "Lenk im Simmental": 90
    },
-   "unruhe": 378,
+   "unruhe": 78,
    "kennzahlen": {
-    "lage_L2": 30,
     "lage_L3a": 9,
     "regel_G2": 23,
     "regel_G6": 4,
@@ -744,9 +705,8 @@
    "drehung": {
     "Lenk im Simmental": 30
    },
-   "unruhe": 374,
+   "unruhe": 74,
    "kennzahlen": {
-    "lage_L2": 30,
     "lage_L3a": 9,
     "regel_G2": 21,
     "regel_G6": 4,
@@ -759,9 +719,8 @@
    "drehung": {
     "Lenk im Simmental": 120
    },
-   "unruhe": 374,
+   "unruhe": 74,
    "kennzahlen": {
-    "lage_L2": 30,
     "lage_L3a": 9,
     "regel_G2": 21,
     "regel_G6": 4,
@@ -774,9 +733,8 @@
    "drehung": {
     "Lenk im Simmental": 0
    },
-   "unruhe": 371,
+   "unruhe": 71,
    "kennzahlen": {
-    "lage_L2": 30,
     "lage_L3a": 9,
     "regel_G2": 21,
     "regel_G6": 3,
@@ -789,9 +747,8 @@
    "drehung": {
     "Lenk im Simmental": 150
    },
-   "unruhe": 371,
+   "unruhe": 71,
    "kennzahlen": {
-    "lage_L2": 30,
     "lage_L3a": 9,
     "regel_G2": 21,
     "regel_G6": 3,
@@ -804,10 +761,9 @@
    "drehung": {
     "Lenk im Simmental": -30
    },
-   "unruhe": 437,
+   "unruhe": 137,
    "kennzahlen": {
     "topo_T6": 1,
-    "lage_L2": 30,
     "lage_L3a": 9,
     "regel_G2": 21,
     "regel_G6": 3,
@@ -820,10 +776,9 @@
    "drehung": {
     "Montbovon": 90
    },
-   "unruhe": 452,
+   "unruhe": 132,
    "kennzahlen": {
     "topo_T6": 1,
-    "lage_L2": 32,
     "lage_L3a": 8,
     "regel_G2": 23,
     "regel_G6": 4,
@@ -836,9 +791,9 @@
    "drehung": {
     "Montbovon": 30
    },
-   "unruhe": 380,
+   "unruhe": 90,
    "kennzahlen": {
-    "lage_L2": 31,
+    "lage_L2": 2,
     "lage_L3a": 9,
     "regel_G2": 21,
     "regel_G6": 4,
@@ -850,10 +805,9 @@
    "drehung": {
     "Montbovon": 120
    },
-   "unruhe": 505,
+   "unruhe": 175,
    "kennzahlen": {
     "topo_T6": 2,
-    "lage_L2": 33,
     "lage_L3a": 8,
     "regel_G2": 21,
     "regel_G6": 3,
@@ -866,9 +820,9 @@
    "drehung": {
     "Montbovon": 0
    },
-   "unruhe": 390,
+   "unruhe": 100,
    "kennzahlen": {
-    "lage_L2": 32,
+    "lage_L2": 3,
     "lage_L3a": 9,
     "regel_G2": 21,
     "regel_G6": 4,
@@ -880,10 +834,10 @@
    "drehung": {
     "Montbovon": 150
    },
-   "unruhe": 501,
+   "unruhe": 211,
    "kennzahlen": {
     "topo_T6": 2,
-    "lage_L2": 31,
+    "lage_L2": 2,
     "lage_L3a": 8,
     "regel_G2": 24,
     "regel_G6": 5,
@@ -896,9 +850,9 @@
    "drehung": {
     "Montbovon": -30
    },
-   "unruhe": 437,
+   "unruhe": 147,
    "kennzahlen": {
-    "lage_L2": 33,
+    "lage_L2": 4,
     "lage_L4": 1,
     "lage_L3a": 9,
     "regel_G2": 21,
@@ -912,9 +866,8 @@
    "drehung": {
     "Montreux": 60
    },
-   "unruhe": 390,
+   "unruhe": 100,
    "kennzahlen": {
-    "lage_L2": 29,
     "lage_L3a": 9,
     "regel_G2": 21,
     "regel_G4": 1,
@@ -928,9 +881,8 @@
    "drehung": {
     "Montreux": 0
    },
-   "unruhe": 391,
+   "unruhe": 91,
    "kennzahlen": {
-    "lage_L2": 30,
     "lage_L3a": 10,
     "regel_G2": 22,
     "regel_G4": 1,
@@ -944,9 +896,8 @@
    "drehung": {
     "Montreux": 90
    },
-   "unruhe": 382,
+   "unruhe": 92,
    "kennzahlen": {
-    "lage_L2": 29,
     "lage_L3a": 9,
     "regel_G2": 21,
     "regel_G4": 1,
@@ -960,10 +911,9 @@
    "drehung": {
     "Montreux": -30
    },
-   "unruhe": 503,
+   "unruhe": 203,
    "kennzahlen": {
     "topo_T6": 2,
-    "lage_L2": 30,
     "lage_L3a": 10,
     "regel_G2": 25,
     "regel_G6": 3,
@@ -976,10 +926,9 @@
    "drehung": {
     "Montreux": 120
    },
-   "unruhe": 533,
+   "unruhe": 243,
    "kennzahlen": {
     "topo_T6": 3,
-    "lage_L2": 29,
     "lage_L3a": 9,
     "regel_G2": 22,
     "regel_G6": 3,
@@ -992,10 +941,9 @@
    "drehung": {
     "Montreux": -60
    },
-   "unruhe": 590,
+   "unruhe": 230,
    "kennzahlen": {
     "topo_T6": 2,
-    "lage_L2": 36,
     "lage_L4": 1,
     "lage_L3a": 10,
     "regel_G2": 22,
@@ -1009,10 +957,9 @@
    "drehung": {
     "Rochers de Naye": 90
    },
-   "unruhe": 433,
+   "unruhe": 133,
    "kennzahlen": {
     "topo_T6": 1,
-    "lage_L2": 30,
     "lage_L3a": 9,
     "regel_G2": 21,
     "regel_G6": 3,
@@ -1025,9 +972,8 @@
    "drehung": {
     "Rochers de Naye": 30
    },
-   "unruhe": 378,
+   "unruhe": 78,
    "kennzahlen": {
-    "lage_L2": 30,
     "lage_L3a": 9,
     "regel_G2": 23,
     "regel_G6": 4,
@@ -1040,10 +986,9 @@
    "drehung": {
     "Rochers de Naye": 120
    },
-   "unruhe": 433,
+   "unruhe": 133,
    "kennzahlen": {
     "topo_T6": 1,
-    "lage_L2": 30,
     "lage_L3a": 9,
     "regel_G2": 21,
     "regel_G6": 3,
@@ -1056,9 +1001,8 @@
    "drehung": {
     "Rochers de Naye": 0
    },
-   "unruhe": 371,
+   "unruhe": 71,
    "kennzahlen": {
-    "lage_L2": 30,
     "lage_L3a": 9,
     "regel_G2": 21,
     "regel_G6": 3,
@@ -1071,10 +1015,9 @@
    "drehung": {
     "Rochers de Naye": 150
    },
-   "unruhe": 425,
+   "unruhe": 125,
    "kennzahlen": {
     "topo_T6": 1,
-    "lage_L2": 30,
     "lage_L3a": 9,
     "regel_G2": 21,
     "regel_G6": 3,
@@ -1087,9 +1030,8 @@
    "drehung": {
     "Rochers de Naye": -30
    },
-   "unruhe": 371,
+   "unruhe": 71,
    "kennzahlen": {
-    "lage_L2": 30,
     "lage_L3a": 9,
     "regel_G2": 21,
     "regel_G6": 3,
@@ -1102,9 +1044,8 @@
    "drehung": {
     "Zweisimmen": -60
    },
-   "unruhe": 370,
+   "unruhe": 70,
    "kennzahlen": {
-    "lage_L2": 30,
     "lage_L3a": 9,
     "regel_G2": 19,
     "regel_G6": 4,
@@ -1117,10 +1058,10 @@
    "drehung": {
     "Zweisimmen": -120
    },
-   "unruhe": 442,
+   "unruhe": 142,
    "kennzahlen": {
     "topo_T6": 1,
-    "lage_L2": 31,
+    "lage_L2": 1,
     "lage_L3a": 9,
     "regel_G2": 19,
     "regel_G6": 4,
@@ -1133,9 +1074,8 @@
    "drehung": {
     "Zweisimmen": -30
    },
-   "unruhe": 375,
+   "unruhe": 75,
    "kennzahlen": {
-    "lage_L2": 30,
     "lage_L3a": 10,
     "regel_G2": 19,
     "regel_G6": 3,
@@ -1148,10 +1088,10 @@
    "drehung": {
     "Zweisimmen": -150
    },
-   "unruhe": 461,
+   "unruhe": 161,
    "kennzahlen": {
     "topo_T6": 1,
-    "lage_L2": 31,
+    "lage_L2": 1,
     "lage_L4": 1,
     "lage_L3a": 10,
     "regel_G2": 19,
@@ -1165,10 +1105,9 @@
    "drehung": {
     "Zweisimmen": 0
    },
-   "unruhe": 444,
+   "unruhe": 144,
    "kennzahlen": {
     "topo_T6": 1,
-    "lage_L2": 30,
     "lage_L3a": 10,
     "lage_L3": 1,
     "regel_G2": 19,
@@ -1182,10 +1121,10 @@
    "drehung": {
     "Zweisimmen": -180
    },
-   "unruhe": 463,
+   "unruhe": 163,
    "kennzahlen": {
     "topo_T6": 1,
-    "lage_L2": 31,
+    "lage_L2": 1,
     "lage_L4": 1,
     "lage_L3a": 10,
     "regel_G2": 20,
