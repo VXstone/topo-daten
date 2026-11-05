@@ -248,6 +248,8 @@ if CFG["rules"].get("r27b", True):
     # echte Stumpfgleise ohne Prellbock-Tag (Solothurn Gl. 953) oder isolierte Stücke (Klosters)
     from shapely.geometry import LineString as _LS27
     _pl_ls = [_LS27([xy(g) for g in e["geometry"]]) for e in PLAT if len(e["geometry"]) > 1]
+    from shapely.ops import unary_union as _uu27
+    _pl_band = _uu27([q_.buffer(15) for q_ in _pl_ls]) if _pl_ls else None      # Perron-Band, nicht doppelt zählen
     _wn = collections.defaultdict(list)
     for w_ in ways.values():
         for n_ in (w_["nodes"][0], w_["nodes"][-1]): _wn[n_].append(w_)
@@ -256,11 +258,15 @@ if CFG["rules"].get("r27b", True):
         Ende über eine Weiche angeschlossen? (Susch: Ende 91 m nach dem Perron, Weiche am anderen Ende; Klosters: ein
         an beiden Enden offenes Stück neben Perron 1 bleibt, wie es ist.)"""
         if not _pl_ls: return False
-        seen, todo, nah, angeschl = {w0["id"]}, [(w0, n0)], False, False
+        seen, todo, nah, angeschl, ab_sum = {w0["id"]}, [(w0, n0)], False, False, 0.0
         while todo:
             w_, von = todo.pop()
             pts_ = [P[n_] for n_ in w_["nodes"] if n_ in P]
-            if len(pts_) >= 2 and any(_LS27(pts_).distance(q_) < 15 for q_ in _pl_ls): nah = True
+            # wirklich am Perron entlang (≥ 40 m im 15-m-Band), nicht nur daran gestreift (6.11.2026, Susch: das
+            # Abstellgleis berührte Perron 1 auf 9 m und wurde an das Streckengleis angeschlossen, Hinweis f72c…)
+            if len(pts_) >= 2:
+                _L_ = _LS27(pts_); ab_sum += _L_.intersection(_pl_band).length
+                if ab_sum >= CFG.get("r27b_perron_m", 40): nah = True
             for n_ in (w_["nodes"][0], w_["nodes"][-1]):
                 if n_ == von: continue
                 if _deg[n_] >= 3 or ntag.get(n_, {}).get("railway") == "switch": angeschl = True; continue

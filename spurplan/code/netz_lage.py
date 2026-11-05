@@ -401,6 +401,9 @@ def uvec(dg): return np.array([math.cos(math.radians(dg)), -math.sin(math.radian
 # ------------------------------------------------------------------ 5. Zeichnen
 out = []
 POLYS = []
+_LIN_REC = []       # alle gezeichneten Linien ausserhalb der Spurpläne (6.11.2026, Hinweis gx6s: «Portal auch auf den Nebengleisen»)
+_PORTAL_Q = []      # vorgemerkte Portale: (Mitte, Richtung, Normale, Gleisoffsets, Öffnungsseite, Gleise am OSM-Portal)
+_PORTAL_K = {}      # (Strecke, Anteil) -> Anzahl Gleise, die am OSM-Portal den Tunnel verlassen (inkl. Nebengleise)
 _CUR = [None]      # Strecke, die gerade gezeichnet wird (Farbe je Linie, Lage "linienfarbe")
 def _spur_col(r):
     if r is None: return None
@@ -418,6 +421,7 @@ def path(pts, color=G, w=2.4):
         if np.linalg.norm(p - cl[-1]) > 0.3: cl.append(p)
     pts = cl
     if len(pts) < 2: return
+    if color != PORTAL: _LIN_REC.append([q_.copy() for q_ in pts])          # alle Linien (Portalbreite, Hinweis gx6s)
     # Regel W8 (27.10.2026, Hinweis x42t: «es kommt schräg, wieso muss es vertikal und dann 90° nach horizontal?»):
     # ein kurzes Zwischenstück (< 1.5 Gleisachsen) zwischen zwei Knicken entfällt, wenn die beiden Nachbarstücke sich
     # direkt unter höchstens 60° treffen; der Knick liegt dann im Schnittpunkt. Abschalten: Lage "w8_aus": true
@@ -957,6 +961,24 @@ if os.path.exists(_OSM_F):
         t_ = w_["tags"].get("tunnel") in ("yes", "building_passage")
         for n_ in (w_["nodes"][0], w_["nodes"][-1]): _tw[n_].add(t_)
     _PORTALE_OSM = [_P[n_] for n_, v_ in _tw.items() if v_ == {True, False} and n_ in _P]
+    # Portalbreite aus OSM (6.11.2026, Hinweis gx6s, Vereina Süd: Streckengleis und zwei Nebengleise verlassen den Tunnel):
+    # Gleisenden mit Tunnelwechsel inkl. Nebengleise, zu Portalen zusammengefasst (Kette < 60 m)
+    _twa = collections.defaultdict(set)
+    for w_ in _R:
+        if len(w_["nodes"]) < 2: continue
+        t_ = w_["tags"].get("tunnel") in ("yes", "building_passage")
+        for n_ in (w_["nodes"][0], w_["nodes"][-1]): _twa[n_].add(t_)
+    _PA = [_P[n_] for n_, v_ in _twa.items() if v_ == {True, False} and n_ in _P]
+    def _gleise_am_portal(q_):
+        if not _PA: return 0
+        i0_ = min(range(len(_PA)), key=lambda i_: math.dist(_PA[i_], (q_.x, q_.y)))
+        if math.dist(_PA[i0_], (q_.x, q_.y)) > 150: return 0
+        cl_, neu_ = {i0_}, [i0_]
+        while neu_:
+            j_ = neu_.pop()
+            for i_ in range(len(_PA)):
+                if i_ not in cl_ and math.dist(_PA[i_], _PA[j_]) < 60: cl_.add(i_); neu_.append(i_)
+        return len(cl_)
     _RLT = {k_: _LSg(v_) for k_, v_ in _RPT.items() if len(v_) > 1}
     for rid, ln in _RLT.items():
         iv = []
@@ -981,6 +1003,9 @@ if os.path.exists(_OSM_F):
         # Sasslatsch: Portal vor dem Einmünden in die Linie nach Susch)
         TUN[rid] = [((a_ / ln.length) if _echt(a_) else -1.0, (b_ / ln.length) if _echt(b_) else 2.0, wa_, wb_)
                     for a_, b_, wa_, wb_ in mg if b_ - a_ > 400 or (b_ - a_ > 60 and (_echt(a_) != _echt(b_)))]
+        for a_, b_, *_ in mg:
+            for t_ in (a_, b_):
+                if _echt(t_): _PORTAL_K[(rid, round(t_ / ln.length, 5))] = _gleise_am_portal(ln.interpolate(t_))
         if os.environ.get("TUNDBG") and TUN[rid]: print("TUN", rid, [(round(a_), round(b_), round(ln.length), wa_, wb_) for a_, b_, wa_, wb_ in mg if b_ - a_ > 400])
     print(f"  Tunnel auf freier Strecke: {sum(len(v) for v in TUN.values())}")
     if os.environ.get("TUNDBG"):
@@ -1178,6 +1203,7 @@ for r in routes:
     elif f'{nodes[nb]["name"]}|{nodes[na]["name"]}' in _th_:
         _tun_ = [(1 - b_, 1 - a_, None, None) for a_, b_ in _th_[f'{nodes[nb]["name"]}|{nodes[na]["name"]}']]
     for ta_, tb_, wa_, wb_ in _tun_:
+        _K_ = {-1: _PORTAL_K.get((id(r), round(ta_, 5)), 0), 1: _PORTAL_K.get((id(r), round(tb_, 5)), 0)}
         # kurzer Tunnel: Portale mindestens 18 px auseinander, sonst liegen sie aufeinander (Kerzers–Gümmenen 20.10.)
         _Lp_ = float(np.sum(np.hypot(*np.diff(np.asarray(g_["lines"][0], float), axis=0).T))) or 1
         if (tb_ - ta_) * _Lp_ < 18:
@@ -1230,8 +1256,7 @@ for r in routes:
                 if o_ - grp_[-1][-1] <= 1.5 * TG: grp_[-1].append(o_)
                 else: grp_.append([o_])
             for gq in grp_:
-                a0, a1 = c_ + n_ * (gq[0] - 4.5), c_ + n_ * (gq[-1] + 4.5)
-                path([a0 + d_ * sg_ * 5 - n_ * 3, a0, a1, a1 + d_ * sg_ * 5 + n_ * 3], PORTAL, 1.2)
+                _PORTAL_Q.append((c_.copy(), d_.copy(), n_.copy(), list(gq), sg_, _K_[sg_] if len(grp_) == 1 else 0))
     # manuelle Spurwechsel (Ortskenntnis, z. B. Abzweig Zofingen Nord): Lage "xo_manuell" [{"a","b","t"}]
     for xm in OVR_LAGE.get("xo_manuell", []):
         nm_a, nm_b = nodes[na]["name"], nodes[nb]["name"]
@@ -1634,6 +1659,34 @@ def _nebengleise():
             NEBEN_N[0] += 1
     print(f"  Nebengleise/Spurwechsel freie Strecke gezeichnet: {NEBEN_N[0]}")
 if not L0.get("ohne_nebengleise"): _nebengleise()
+def _portale_zeichnen():
+    """Tunnelportale (Blaupause E7) nach allen Linien: Klammer quer über die Gleise der Strecke; verlassen am OSM-Portal
+    mehr Gleise den Tunnel (Nebengleise, Abstellgleise), greift die Klammer über so viele benachbarte, an der
+    Portalstelle parallel (< 20°) durchlaufende Planlinien (6.11.2026, Vereina Süd/Sagliains, Hinweis gx6s)."""
+    lin_ = [_LSg([tuple(map(float, q_)) for q_ in l_]) for l_ in _LIN_REC if len(l_) > 1]
+    if os.environ.get("PORTDBG"): print("PORTDBG", [(round(float(c_[0])), round(float(c_[1])), len(gq), k_) for c_, d_, n_, gq, sg_, k_ in _PORTAL_Q])
+    for c_, d_, n_, gq, sg_, k_ in _PORTAL_Q:
+        gq = sorted(gq)
+        while len(gq) < k_:
+            best_ = None
+            for o_lo, o_hi in ((gq[0] - 1.6 * TG, gq[0] - 0.5), (gq[-1] + 0.5, gq[-1] + 1.6 * TG)):
+                q_ = _LSg([tuple(c_ + n_ * o_lo), tuple(c_ + n_ * o_hi)])
+                for L_ in lin_:
+                    x_ = L_.intersection(q_)
+                    for pt_ in getattr(x_, "geoms", [x_]):
+                        if pt_.is_empty or pt_.geom_type != "Point": continue
+                        s_ = L_.project(pt_); a_ = L_.interpolate(max(s_ - 3, 0)); b_ = L_.interpolate(min(s_ + 3, L_.length))
+                        v_ = np.array([b_.x - a_.x, b_.y - a_.y]); nv_ = float(np.linalg.norm(v_))
+                        if nv_ < 1e-6 or abs(float(v_ @ d_)) / nv_ < math.cos(math.radians(20)): continue
+                        o_ = float((np.array([pt_.x, pt_.y]) - c_) @ n_)
+                        if any(abs(o_ - g_) < 0.5 for g_ in gq): continue
+                        r_ = min(abs(o_ - gq[0]), abs(o_ - gq[-1]))
+                        if best_ is None or r_ < best_[0]: best_ = (r_, o_)
+            if best_ is None: break
+            gq = sorted(gq + [best_[1]])
+        a0, a1 = c_ + n_ * (gq[0] - 4.5), c_ + n_ * (gq[-1] + 4.5)
+        path([a0 + d_ * sg_ * 5 - n_ * 3, a0, a1, a1 + d_ * sg_ * 5 + n_ * 3], PORTAL, 1.2)
+_portale_zeichnen()
 _CUR[0] = None
 for (eid_, n_), a_ in anchor.items():
     if n_ not in pos: continue

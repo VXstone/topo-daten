@@ -35,6 +35,13 @@ def slug(s):
 
 ways = [e for e in D if e["type"] == "way" and "geometry" in e and any(inbox(g) for g in e["geometry"])]
 nodes = [e for e in D if e["type"] == "node" and inbox(e)]
+# Gleisnummer in "ref" (6.11.2026, Susch Gl. 1: siding mit ref=1 fiel als «fremde Linie 1» weg, Hinweis f72c…): auf
+# Nebengleisen (service) oder in Gleisnummernform (1, 12, 3a) ist ref die Gleisnummer, keine Linie -> railway:track_ref
+_GLNR = re.compile(r"^\d{1,2}[a-zA-Z]?$")
+for w in ways:
+    t = w.get("tags", {}); r_ = t.get("ref")
+    if r_ and r_ not in K.get("linien", []) and (t.get("service") or _GLNR.match(r_)):
+        t = dict(t); t.setdefault("railway:track_ref", r_); del t["ref"]; w["tags"] = t
 stations = {e["tags"]["name"]: e for e in nodes if e.get("tags", {}).get("railway") in ("station", "halt") and e["tags"].get("name")}
 
 _DEG_D = collections.Counter(n for e in D if e["type"] == "way" and e.get("tags", {}).get("railway") not in (None, "platform")
