@@ -862,3 +862,5 @@ REGELN.md «Lage gegen die Karte und Suche» (neuer Punkt). Code: netz_lage (Ach
 - R1/R2 umgesetzt (c884f5d), wirkt ab dem nächsten Vorbereitungslauf.
 - Feedbackseite Version 130.
 - Offen: MOB L2 = 30 (Ast Rochers de Naye im Plan nach Osten → Kettenrichtung); Montbovon +60 scharfe Bögen (Rückfrage Daniel); Perron 80 px (Urteil Daniel); danach Bahnhofsausfahrt Selfranga/Sagliains (IDEEN_REVIEW).
+- 5.11. 22:40: L2 grob parallele Linien (a7f223a): MOB L2 30 → 0, Unruhe 111 (Basis 777), Zeichnung unverändert. Seite Version 131.
+- Neue Hinweise Vereina (offen, nächste Runde): jxpf… S-Kurve Klosters – Selfranga (Daniel: Ruheregel soll entlang der Kette die Anbindungsebene suchen, Klosters tiefer oder Sagliains höher anbinden → = «Bahnhofsausfahrt als Ganzes», IDEEN_REVIEW 1); h9o9… Sagliains Nebengleise laufen nicht parallel (Trichter); gx6s… Portal auch auf den Nebengleisen (Sasslatsch); f72c… Susch Fehlinterpretation (Plan gekippt, Gl. 1/2 und Nebengleis verdreht).
