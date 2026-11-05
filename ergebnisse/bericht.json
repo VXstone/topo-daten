@@ -1,6 +1,6 @@
 {
- "erzeugt": "2026-11-05 18:04 UTC",
- "lauf": "https://github.com/VXstone/topo-daten/actions/runs/42080604560",
+ "erzeugt": "2026-11-05 18:16 UTC",
+ "lauf": "https://github.com/VXstone/topo-daten/actions/runs/42082463685",
  "bahnhoefe": {
   "neuchatel": {
    "ok": true,
@@ -10,16 +10,23 @@
    "gleich_wie_vergleich": false,
    "regeln": {
     "G2": 14,
-    "G6": 1,
-    "G8": 1
+    "G6": 1
    },
    "netz": {},
    "differenz_stellen": 7,
    "qualitaet": {
-    "status": "gleich",
+    "status": "besser",
     "schlechter": {},
-    "besser": {},
-    "topologie_offen": {}
+    "besser": {
+     "regel_G8": -1
+    },
+    "topologie_offen": {},
+    "neu": {
+     "ruhe_treppen": 3,
+     "ruhe_ecken": 0
+    },
+    "unruhe": 55,
+    "unruhe_basis": 58
    }
   },
   "konolfingen": {
@@ -30,8 +37,7 @@
    "gleich_wie_vergleich": null,
    "regeln": {
     "G2": 4,
-    "G7": 1,
-    "G8": 3
+    "G7": 1
    },
    "netz": {
     "T10": 1,
@@ -42,17 +48,23 @@
    },
    "differenz_stellen": null,
    "qualitaet": {
-    "status": "schlechter",
-    "schlechter": {
-     "netz_Z1": 1
-    },
+    "status": "besser",
+    "schlechter": {},
     "besser": {
-     "netz_D11": -1
+     "netz_D11": -1,
+     "regel_G8": -3
     },
     "topologie_offen": {
      "topo_A": 1,
      "topo_B": 2
-    }
+    },
+    "neu": {
+     "netz_Z1": 1,
+     "ruhe_treppen": 1,
+     "ruhe_ecken": 0
+    },
+    "unruhe": 193,
+    "unruhe_basis": 204
    }
   },
   "neuchatel_vauseyon": {
@@ -67,10 +79,8 @@
    "netz": {},
    "differenz_stellen": null,
    "qualitaet": {
-    "status": "schlechter",
-    "schlechter": {
-     "regel_G2": 1
-    },
+    "status": "besser",
+    "schlechter": {},
     "besser": {
      "boegen_alle": -9,
      "netz_D11": -2,
@@ -82,7 +92,14 @@
      "regel_G8": -6,
      "topo_A": -1
     },
-    "topologie_offen": {}
+    "topologie_offen": {},
+    "neu": {
+     "regel_G2": 1,
+     "ruhe_treppen": 0,
+     "ruhe_ecken": 0
+    },
+    "unruhe": 2,
+    "unruhe_basis": 92
    }
   },
   "solothurn": {
@@ -94,8 +111,7 @@
    "regeln": {
     "G2": 5,
     "G6": 7,
-    "G7": 3,
-    "G8": 7
+    "G7": 3
    },
    "netz": {
     "D11": 2,
@@ -108,12 +124,20 @@
     "schlechter": {
      "topo_F": 2
     },
-    "besser": {},
+    "besser": {
+     "regel_G8": -7
+    },
     "topologie_offen": {
      "topo_A": 3,
      "topo_B": 23,
      "topo_F": 2
-    }
+    },
+    "neu": {
+     "ruhe_treppen": 3,
+     "ruhe_ecken": 0
+    },
+    "unruhe": 1505,
+    "unruhe_basis": 1426
    }
   }
  }

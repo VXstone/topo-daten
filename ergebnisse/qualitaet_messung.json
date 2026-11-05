@@ -8,9 +8,10 @@
   "topo_F": 0,
   "regel_G2": 14,
   "regel_G6": 1,
-  "regel_G8": 1,
   "boegen_pax": 34,
   "boegen_alle": 55,
+  "ruhe_treppen": 3,
+  "ruhe_ecken": 0,
   "randabstand": 0
  },
  "konolfingen": {
@@ -22,7 +23,6 @@
   "topo_F": 0,
   "regel_G2": 4,
   "regel_G7": 1,
-  "regel_G8": 3,
   "netz_T10": 1,
   "netz_Z1": 1,
   "netz_W2": 1,
@@ -30,6 +30,8 @@
   "netz_A1": 2,
   "boegen_pax": 11,
   "boegen_alle": 51,
+  "ruhe_treppen": 1,
+  "ruhe_ecken": 0,
   "randabstand": 1
  },
  "neuchatel_vauseyon": {
@@ -42,6 +44,8 @@
   "regel_G2": 1,
   "boegen_pax": 3,
   "boegen_alle": 9,
+  "ruhe_treppen": 0,
+  "ruhe_ecken": 0,
   "randabstand": 0
  },
  "solothurn": {
@@ -54,12 +58,13 @@
   "regel_G2": 5,
   "regel_G6": 7,
   "regel_G7": 3,
-  "regel_G8": 7,
   "netz_D11": 2,
   "netz_W2": 6,
   "netz_W1": 2,
   "boegen_pax": 11,
   "boegen_alle": 77,
+  "ruhe_treppen": 3,
+  "ruhe_ecken": 0,
   "randabstand": 0
  }
 }

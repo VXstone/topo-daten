@@ -18,6 +18,7 @@
  ],
  "planrand": [],
  "netz": [],
+ "ruhe": [],
  "qualitaet": {
   "topo_A": 0,
   "topo_B": 0,
@@ -28,6 +29,8 @@
   "regel_G2": 1,
   "boegen_pax": 3,
   "boegen_alle": 9,
+  "ruhe_treppen": 0,
+  "ruhe_ecken": 0,
   "randabstand": 0
  },
  "ok": true

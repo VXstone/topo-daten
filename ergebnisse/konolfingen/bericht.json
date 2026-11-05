@@ -45,27 +45,6 @@
    "y": 317.6,
    "bahnhof": null,
    "text": "Gleisende nicht angebunden, nächstes Gleis 2.8 px"
-  },
-  {
-   "regel": "G8",
-   "x": 717.5,
-   "y": 351.6,
-   "bahnhof": null,
-   "text": "Gleise 30 px deckungsgleich"
-  },
-  {
-   "regel": "G8",
-   "x": 605.9,
-   "y": 351.6,
-   "bahnhof": null,
-   "text": "Gleise 30 px deckungsgleich"
-  },
-  {
-   "regel": "G8",
-   "x": 415.8,
-   "y": 293.6,
-   "bahnhof": null,
-   "text": "Gleise 16 px deckungsgleich"
   }
  ],
  "planrand": [
@@ -111,6 +90,17 @@
    "text": "zwei Gleise nur 6.9 px auseinander über 15 px (Grenze 9.6 px)"
   }
  ],
+ "ruhe": [
+  {
+   "regel": "T7",
+   "art": "Treppe",
+   "x": 635.7,
+   "y": 233.6,
+   "versatz": 75.7,
+   "plan": "konolfingen",
+   "text": "konolfingen: Treppe bei x=635.7, y=233.6"
+  }
+ ],
  "qualitaet": {
   "topo_A": 1,
   "topo_B": 2,
@@ -120,7 +110,6 @@
   "topo_F": 0,
   "regel_G2": 4,
   "regel_G7": 1,
-  "regel_G8": 3,
   "netz_T10": 1,
   "netz_Z1": 1,
   "netz_W2": 1,
@@ -128,6 +117,8 @@
   "netz_A1": 2,
   "boegen_pax": 11,
   "boegen_alle": 51,
+  "ruhe_treppen": 1,
+  "ruhe_ecken": 0,
   "randabstand": 1
  },
  "ok": true

@@ -115,55 +115,6 @@
    "y": 280.4,
    "bahnhof": null,
    "text": "Gleisende nicht angebunden, nächstes Gleis 4.0 px"
-  },
-  {
-   "regel": "G8",
-   "x": 1122.3,
-   "y": 442.4,
-   "bahnhof": null,
-   "text": "Gleise 23 px deckungsgleich"
-  },
-  {
-   "regel": "G8",
-   "x": 1091.5,
-   "y": 461.0,
-   "bahnhof": null,
-   "text": "Gleise 16 px deckungsgleich"
-  },
-  {
-   "regel": "G8",
-   "x": 1529.3,
-   "y": 429.2,
-   "bahnhof": null,
-   "text": "Gleise 14 px deckungsgleich"
-  },
-  {
-   "regel": "G8",
-   "x": 1542.0,
-   "y": 429.2,
-   "bahnhof": null,
-   "text": "Gleise 39 px deckungsgleich"
-  },
-  {
-   "regel": "G8",
-   "x": 1529.3,
-   "y": 429.1,
-   "bahnhof": null,
-   "text": "Gleise 14 px deckungsgleich"
-  },
-  {
-   "regel": "G8",
-   "x": 1445.1,
-   "y": 160.4,
-   "bahnhof": null,
-   "text": "Gleise 24 px deckungsgleich"
-  },
-  {
-   "regel": "G8",
-   "x": 1512.2,
-   "y": 184.4,
-   "bahnhof": null,
-   "text": "Gleise 61 px deckungsgleich"
   }
  ],
  "planrand": [],
@@ -229,6 +180,35 @@
    "text": "Gleisstück unter 84° (steiler als 60°), 13 px"
   }
  ],
+ "ruhe": [
+  {
+   "regel": "T7",
+   "art": "Treppe",
+   "x": 1470.8,
+   "y": 173.0,
+   "versatz": 28.8,
+   "plan": "solothurn",
+   "text": "solothurn: Treppe bei x=1470.8, y=173.0"
+  },
+  {
+   "regel": "T7",
+   "art": "Treppe",
+   "x": 1342.2,
+   "y": 208.4,
+   "versatz": 34.3,
+   "plan": "solothurn",
+   "text": "solothurn: Treppe bei x=1342.2, y=208.4"
+  },
+  {
+   "regel": "T7",
+   "art": "Treppe",
+   "x": 1243.3,
+   "y": 304.4,
+   "versatz": 48.0,
+   "plan": "solothurn",
+   "text": "solothurn: Treppe bei x=1243.3, y=304.4"
+  }
+ ],
  "qualitaet": {
   "topo_A": 3,
   "topo_B": 23,
@@ -239,12 +219,13 @@
   "regel_G2": 5,
   "regel_G6": 7,
   "regel_G7": 3,
-  "regel_G8": 7,
   "netz_D11": 2,
   "netz_W2": 6,
   "netz_W1": 2,
   "boegen_pax": 11,
   "boegen_alle": 77,
+  "ruhe_treppen": 3,
+  "ruhe_ecken": 0,
   "randabstand": 0
  },
  "ok": true

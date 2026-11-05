@@ -116,17 +116,39 @@
    "y": 182.0,
    "bahnhof": null,
    "text": "Linien stossen mit Knick 60° zusammen (Knubbel)"
-  },
-  {
-   "regel": "G8",
-   "x": 900.0,
-   "y": 206.0,
-   "bahnhof": null,
-   "text": "Gleise 19 px deckungsgleich"
   }
  ],
  "planrand": [],
  "netz": [],
+ "ruhe": [
+  {
+   "regel": "T7",
+   "art": "Treppe",
+   "x": 587.7,
+   "y": 146.0,
+   "versatz": 20.2,
+   "plan": "neuchatel",
+   "text": "neuchatel: Treppe bei x=587.7, y=146.0"
+  },
+  {
+   "regel": "T7",
+   "art": "Treppe",
+   "x": 1069.8,
+   "y": 230.0,
+   "versatz": 48.0,
+   "plan": "neuchatel",
+   "text": "neuchatel: Treppe bei x=1069.8, y=230.0"
+  },
+  {
+   "regel": "T7",
+   "art": "Treppe",
+   "x": 841.9,
+   "y": 194.0,
+   "versatz": 20.2,
+   "plan": "neuchatel",
+   "text": "neuchatel: Treppe bei x=841.9, y=194.0"
+  }
+ ],
  "qualitaet": {
   "topo_A": 0,
   "topo_B": 0,
@@ -136,9 +158,10 @@
   "topo_F": 0,
   "regel_G2": 14,
   "regel_G6": 1,
-  "regel_G8": 1,
   "boegen_pax": 34,
   "boegen_alle": 55,
+  "ruhe_treppen": 3,
+  "ruhe_ecken": 0,
   "randabstand": 0
  },
  "gleich_wie_vergleich": false,
