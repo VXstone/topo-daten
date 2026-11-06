@@ -1,6 +1,6 @@
 {
  "region": "mob",
- "erzeugt": "2026-11-06 00:10 UTC",
+ "erzeugt": "2026-11-06 20:17 UTC",
  "bahnhoefe": {
   "schonried": {
    "name": "Schönried",
@@ -126,14 +126,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "saanenmoser": {
-   "name": "Saanenmöser",
+  "oeschseite": {
+   "name": "Oeschseite",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "oeschseite": {
-   "name": "Oeschseite",
+  "saanenmoser": {
+   "name": "Saanenmöser",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -258,14 +258,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "jor": {
-   "name": "Jor",
+  "glion_college": {
+   "name": "Glion-Collège",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "glion_college": {
-   "name": "Glion-Collège",
+  "jor": {
+   "name": "Jor",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
