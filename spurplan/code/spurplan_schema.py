@@ -263,7 +263,7 @@ if CFG["rules"].get("r27b", True):
             w_, von = todo.pop()
             pts_ = [P[n_] for n_ in w_["nodes"] if n_ in P]
             # wirklich am Perron entlang (≥ 30 m im 15-m-Band), nicht nur daran gestreift (6.11.2026, Susch: das
-            # Abstellgleis lag 24 m im Band (Caux, bisher angeschlossen: 36 m) und wurde an das Streckengleis angeschlossen, Hinweis f72c…)
+            # Abstellgleis lag 24 m im Band und wurde an das Streckengleis angeschlossen, Hinweis f72c…; Caux-Abstellgleis 18 m, seither Stumpen, Rückfrage)
             if len(pts_) >= 2:
                 _L_ = _LS27(pts_); ab_sum += _L_.intersection(_pl_band).length
                 if ab_sum >= CFG.get("r27b_perron_m", 30): nah = True
@@ -1851,7 +1851,7 @@ def exit_town(sg, n_cut):
         sc_ = []
         for name in lt:
             la, lo = CFG["towns"][name]
-            if math.hypot(la - lat0, (lo - lon0) * math.cos(math.radians(lat0))) < 0.004: continue
+            if math.hypot(la - lat0, (lo - lon0) * math.cos(math.radians(lat0))) < 0.004 or name == CFG.get("title"): continue
             bt = math.atan2(la - p0[0], (lo - p0[1]) * math.cos(math.radians(lat0)))
             _dd = math.hypot(la - lat0, (lo - lon0) * math.cos(math.radians(lat0)))
             sc_.append((abs((bt - br + math.pi) % (2 * math.pi) - math.pi) + CFG.get("lt_dist_w", 0) * _dd, name))   # cfg.lt_dist_w: näherer Zielort bevorzugt (Region Neuchâtel)
@@ -1868,6 +1868,7 @@ def exit_town(sg, n_cut):
             continue
         dd = math.hypot(la - lat0, (lo - lon0) * math.cos(math.radians(lat0)))
         if dd < 0.004 or (dd > 0.25 and not _le): continue
+        if name == CFG.get("title"): continue      # nie der eigene Bahnhof als Ziel (6.11.2026, Susch: «← Susch»)
         bt = math.atan2(la - p0[0], (lo - p0[1]) * math.cos(math.radians(lat0)))
         dang = abs((bt - br + math.pi) % (2 * math.pi) - math.pi)
         if dang < math.radians(70):
@@ -1875,7 +1876,7 @@ def exit_town(sg, n_cut):
             if bestt is None or sc < bestt[0]: bestt = (sc, name)
     if bestt is None and _le:      # Strecke biegt nach dem Planrand ab (Solothurn 421 → Burgdorf): einziges Ende nehmen
         _r = [(abs((math.atan2(la - p0[0], (lo - p0[1]) * math.cos(math.radians(lat0))) - br + math.pi) % (2 * math.pi) - math.pi), n_)
-              for n_, (la, lo) in cands if math.hypot(la - lat0, (lo - lon0) * math.cos(math.radians(lat0))) >= 0.004]
+              for n_, (la, lo) in cands if math.hypot(la - lat0, (lo - lon0) * math.cos(math.radians(lat0))) >= 0.004 and n_ != CFG.get("title")]
         if _r and math.degrees(min(_r)[0]) < 135: return min(_r)[1]
     return bestt[1] if bestt else None
 
