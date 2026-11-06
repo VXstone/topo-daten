@@ -4,7 +4,7 @@
 |---|---|---|---|---|---|---|
 | kerzers | Referenz | Archivbeginn (Abnahme 2026-10-14) | 7 | schlechter? | G2 3→4, T7 1→3 | 2026-10-27T22:00 |
 | wangen_bei_olten | Region Olten | Archivbeginn (Abnahme 2026-10-13) | 4 | schlechter? | G2 2→4 | 2026-10-30T19:38 |
-| region_mob | Region | veröffentlicht | 3 | schlechter? | G2 20→23 | 2026-11-05T23:46 |
+| region_mob | Region | veröffentlicht | 3 | schlechter? | G2 20→23 | 2026-11-06T22:36 |
 | dulliken | Region Olten | Archivbeginn (Abnahme 2026-10-13) | 12 | gleichwertig |  | 2026-10-29T22:45 |
 | schonenwerd | Region Olten | Archivbeginn (Abnahme 2026-10-13) | 8 | gleichwertig |  | 2026-10-29T22:45 |
 | thun | Referenz | Archivbeginn (Abnahme 2026-10-15) | 7 | gleichwertig |  | 2026-10-26T07:19 |
