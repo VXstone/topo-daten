@@ -882,3 +882,13 @@ REGELN.md «Lage gegen die Karte und Suche» (neuer Punkt). Code: netz_lage (Ach
 - Lokal testen ohne Release-Datei: `region_lauf.py <r> --daten <roh.json.gz aus ergebnisse/region_<r>/>` (Landquart erscheint dabei doppelspurig – Artefakt des Ausschnitts).
 - **Offen, Reihenfolge:** (1) h9o9… Sagliains Nebengleise parallel, (2) jxpf… S-Kurve Klosters – Selfranga, (3) Montreux Gl. 4 / Caux-Weiche (Daniel), danach wie 5.11. Nacht.
 - **Einstieg:** «Weiter mit UEBERGABE.md, Eintrag 6.11. Nacht – zuerst Sagliains Nebengleise (h9o9)».
+
+## 6.11.2026 abends – Entscheid: Standards / Blaupausen-Prüfstand zuerst (D. Eckenstein)
+- Ursache h9o9 geklärt und Plan in `IDEEN_REVIEW.md` «Standards / Blaupausen-Prüfstand»: parallel bleibt parallel im gleichen Querabstand, in jeder Drehung und jedem Abgangswinkel.
+- Ersetzt die Reihenfolge vom 6.11. Nacht. Je Schritt ein eigener Chat, nacheinander:
+  1. «Weiter mit UEBERGABE.md, Eintrag 6.11. abends – Schritt 1: Blaupausen-Prüfstand aufbauen»
+  2. «… Schritt 2: Pfeile/Stummel bei schrägen Abgängen (h9o9 Sagliains)»
+  3. «… Schritt 3: Bahnhofsausfahrt als Ganzes (Selfranga/jxpf, Chamby)»
+  4. «… Schritt 4: Bündel als Einheit»
+  5. «… Schritt 5: Montbovon im Prüfstand, Prüflauf SBB-Bahnhöfe»
+- Offen bei Daniel (Feedbackseite, kein Chat): Montreux Gl. 4, Weiche Caux, Kreuzung ohne Verbindung, Nebengleise dünner, Perron 80 px.
