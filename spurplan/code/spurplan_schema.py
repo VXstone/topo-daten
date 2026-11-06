@@ -751,10 +751,12 @@ if CFG.get("perron_nummer", True):
         _pp_ = np.array([xy(g) for g in _pl["geometry"]], dtype=float)
         _kand = []
         for sg in segs:
-            if sg["ref"] or sg["tags"].get("service") in ("crossover", "spur"): continue
+            # nur Gleise ohne service-Tag (6.11.2026, Caux: Perron «1» liegt nur an Abstellgleisen, der Stumpen aus Gl. 2
+            # Richtung Rochers-de-Naye wurde dadurch fett – D. Eckenstein: Nebengleis, dünn). Susch Gl. 2 (Anlass) hat keinen.
+            if sg["ref"] or sg["tags"].get("service"): continue
             _pts = np.array([P[n] for n in sg["nodes"]], dtype=float)
             _d = min(_seg_dist(q, _pts) for q in _pp_)
-            if _d < 12: _kand.append((_d + (1.0 if sg["tags"].get("service") else 0), sg["way"]))     # gleich nah: Gleis ohne service-Tag
+            if _d < 12: _kand.append((_d, sg["way"]))
         if not _kand: continue
         _w = min(_kand)[1]
         for sg in segs:
@@ -3094,6 +3096,7 @@ if RU.get("g6_knubbel", True):
     _nk = _knubbel(svg_paths)
     if _nk: print(f"G6: {_nk} Überstand(e) vor Ausrundung gekürzt")
 _BRAUN = {True: [], False: []}
+_ks = _kn = None
 if SCHMAL_GEMISCHT:
     # gemischter Bahnhof (Montreux, Zweisimmen): Teilpfade nach der nächstgelegenen Spur trennen, Schmalspur braun
     from svgpathtools import parse_path as _ppS
@@ -3526,6 +3529,27 @@ for e in ([] if OVR.get("platforms") is not None else PLAT):
             _teile = [(s0_, s1_, _dloc(s0_, s1_), k_) for k_, s0_, s1_ in _gut]
             if ARGS.dbg or os.environ.get("PERDBG"): print("PERRON-TEILE", e["id"], [(k_, round(s0_), round(s1_)) for k_, s0_, s1_ in _gut])
 
+    # Perron beidseitig eines Gleises (6.11.2026, D. Eckenstein: Montreux – der Mittelperron 3/5 öffnet sich, Gl. 4 liegt
+    # dazwischen mit Perron auf beiden Seiten; Gl. 7 beidseitig; ebenso Zweisimmen; Zwillingsperrons Le Noirmont, Renens m1).
+    # Trägt ein Perron drei oder mehr Gleisnummern (OSM ref «3;4;5»), deren Gleise im Plan auf direkt benachbarten Ebenen
+    # liegen (kein fremdes Gleis dazwischen), wird je benachbartes Paar ein Balken gezeichnet, über den Abschnitt, in dem
+    # beide Gleise und der Perron liegen. Kein Perron fällt dadurch weg (P1). cfg «perron_beidseitig» (Standard an).
+    _rf = [x.strip() for x in re.split(r"[;,/]", e["tags"].get("ref", "")) if x.strip()]
+    if CFG.get("perron_beidseitig", True) and len(_rf) >= 3 and len(_teile) == 1 and _teile[0][3] is None:
+        _sp = {r_: ref_span(r_) for r_ in _rf}
+        if all(v_ and v_[2] is not None for v_ in _sp.values()) and len({v_[2] for v_ in _sp.values()}) == len(_rf):
+            _ln = sorted((v_[2], r_) for r_, v_ in _sp.items())
+            _alle = sorted({c["lane"] for c in C if c["s1"] > _a0 and c["s0"] < _b0})
+            _zw = [l_ for l_ in _alle if _ln[0][0] < l_ < _ln[-1][0] and l_ not in {x[0] for x in _ln}]
+            if not _zw:
+                _neu = []
+                for (l1_, r1_), (l2_, r2_) in zip(_ln, _ln[1:]):
+                    s0_ = max(_a0, _sp[r1_][0], _sp[r2_][0]); s1_ = min(_b0, _sp[r1_][1], _sp[r2_][1])
+                    if s1_ - s0_ < 10: s0_, s1_ = max(_a0, min(_sp[r1_][1], _sp[r2_][1]) - 40), min(_sp[r1_][1], _sp[r2_][1])
+                    if s1_ > s0_: _neu.append((s0_, s1_, dm_, (l2_, l1_) if Y(l2_) < Y(l1_) else (l1_, l2_)))
+                if _neu:
+                    _teile = _neu
+                    if ARGS.dbg or os.environ.get("PERDBG"): print("PERRON-BEIDSEITIG", e["id"], _rf, [(round(a__), round(b__), k__) for a__, b__, _d, k__ in _neu])
     for a_, b_, dm_, _pk in _teile:
         sm_ = (a_ + b_) / 2
         rows = sorted((d_at(c, sm_), c["lane"]) for c in C if c["s0"] <= sm_ <= c["s1"])
@@ -3709,10 +3733,19 @@ def _pfeil_attr(x, y, a):
     h_ = _pfeil_ziel(x, y, a)
     PFEILE.append(dict(x=round(x, 1), y=round(y, 1), a=round(a, 3), id=len(PFEILE), **(h_ or {})))
     return f' data-pfeil="{PFEILE[-1]["id"]}"'
+# Pfeile an Meterspur braun (6.11.2026, D. Eckenstein): im reinen Schmalspurbahnhof ist «black» schon braun; im gemischten
+# Bahnhof (Montreux, Zweisimmen) bekommt jeder Pfeil die Farbe der Spur, deren Gleis seiner Wurzel am nächsten liegt.
+def _pfeil_farbe(x, y, a):
+    if not SCHMAL_GEMISCHT or _ks is None: return black
+    q_ = [(x - 6 * math.cos(a), y - 6 * math.sin(a))]
+    ds_, _ = _ks.query(q_)
+    if _kn is None: return MS_BRAUN
+    dn_, _ = _kn.query(q_)
+    return MS_BRAUN if float(ds_[0]) < float(dn_[0]) else black
 for x, y, a in STUBS:
     c, s_ = math.cos(a), math.sin(a)
     pts = [(x + 9 * c, y + 9 * s_), (x - 4 * s_, y + 4 * c), (x + 4 * s_, y - 4 * c)]
-    out.append('<path d="M' + "L".join(f"{px:.1f},{py:.1f}" for px, py in pts) + f'Z" fill="{black}"{_pfeil_attr(x, y, a)}/>')
+    out.append('<path d="M' + "L".join(f"{px:.1f},{py:.1f}" for px, py in pts) + f'Z" fill="{_pfeil_farbe(x, y, a)}"{_pfeil_attr(x, y, a)}/>')
 # Pfeile, die auf dem Ende eines Hauptgleises liegen (Nebengleis läuft im selben Punkt aus), weglassen
 # (Hinweise Zofingen/Schönenwerd: "Pfeil direkt auf dem Streckengleis")
 _pax_ends = []
@@ -3725,7 +3758,7 @@ for sg in segs:
 _pax_y = {round(Y(seglane[sg["id"]])) for sg in segs if sg["pax"] and sg["id"] in seglane} | {round(py) for px, py in _pax_ends}
 arrows = [a for a in arrows if not (round(a[1]) in _pax_y and any(abs(a[0] - px) < 30 and abs(a[1] - py) < 1.5 for px, py in _pax_ends))]
 for x, y, dr in arrows:
-    out.append(f'<path d="M{x:.1f},{y - 4:.1f}L{x + 9 * dr:.1f},{y:.1f}L{x:.1f},{y + 4:.1f}Z" fill="{black}"{_pfeil_attr(x, y, 0.0 if dr > 0 else math.pi)}/>')
+    out.append(f'<path d="M{x:.1f},{y - 4:.1f}L{x + 9 * dr:.1f},{y:.1f}L{x:.1f},{y + 4:.1f}Z" fill="{_pfeil_farbe(x, y, 0.0 if dr > 0 else math.pi)}"{_pfeil_attr(x, y, 0.0 if dr > 0 else math.pi)}/>')
 # Regel Z7 (27.10.2026, Hinweis 1zg2 Vauseyon «Perron-Gleis Nummer?»): Betriebspunkt ohne Perron – keine Gleisnummern
 if not any('rx="1.5"' in o_ for o_ in out + globals().get("MS_TXT", [])) and not OVR.get("nummern"): labels = {}
 for r, (l, a, b, _) in labels.items():

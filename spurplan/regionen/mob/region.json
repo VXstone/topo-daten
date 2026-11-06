@@ -148,6 +148,6 @@
    "merge_junction_m": 200
   }
  },
- "gleisnummer_aus_ref": false,
- "_gleisnummer_aus_ref": "6.11.2026: aus, bis Montreux Gl. 4 (MOB-Nebengleis mit ref=4, Way 274706710) geprüft ist – eingeschaltet wird Gl. 4 übernommen, der Plan aber unruhiger und ein Perron fehlt (P1). Entscheid D. Eckenstein offen."
+ "gleisnummer_aus_ref": true,
+ "_gleisnummer_aus_ref": "6.11.2026 abends: wieder an (Schritt 0). Montreux Gl. 4 im Plan; Perron 3;4;5 und 6;7;8 beidseitig (Regel perron_beidseitig), P1 = 0."
 }
