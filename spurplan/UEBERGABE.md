@@ -67,7 +67,7 @@ und hakt den Schritt in der Statusliste ab. Ist «Daniel danach» nicht leer, wa
 (Live-Fassung vorher mit letztem Build vergleichen) → Hinweise beantworten → Nachtrag hier. Nie abnehmen, nie «erledigt».
 
 ### Statusliste
-- [ ] A  Regression Olten und alle Pläne
+- [x] A  Regression Olten und alle Pläne (6.11. abends, Seite v133)
 - [ ] 0  Antworten 6.11. umsetzen
 - [ ] 1  Blaupausen-Prüfstand aufbauen
 - [ ] 2  Pfeile/Stummel bei schrägen Abgängen (h9o9 Sagliains)
@@ -147,3 +147,25 @@ und hakt den Schritt in der Statusliste ab. Ist «Daniel danach» nicht leer, wa
   wie Kerzers durchgezogen) – wird nach seiner Antwort ein eigener Schritt nach 5.
 
 ## Nachträge
+
+### 6.11.2026 abends – Schritt A erledigt (Seite v133)
+- **Prüfung aller Pläne im Workflow `seite`**: `alle_plaene_pruefen.py ... --neu /tmp/seite/plaene --seite index.html`, Ergebnis
+  `ergebnisse/seite/regression/` (tabelle.md/json, `<key>_diff.png`, `<key>_alt/neu.svg`). Basis: `spurplan/abnahmen.json`
+  (Export der Sammlung `abnahme`, jede Runde neu exportieren und committen) bzw. `spurplan/veroeffentlicht.json` (Commit auf
+  `ergebnisse` der veröffentlichten Seite – **beim Veröffentlichen nachführen**). Einordnung je Plan nach Rangfolge (Wunsch
+  Daniel: «vorschlagen, wo ein Plan verändert, aber vielleicht verbessert wurde»): Regelprüfung G5–G8 = Topologie zuerst, dann
+  G1–G4 + Ruhe T7 → «Fehler? Topologie» / «schlechter?» / «gleichwertig» / «vermutlich besser»; steht im Kartenlabel und im
+  Untertitel der Seite. Achtung: eine **neu erfundene Weiche** erkennt die Zählung nicht (Zofingen, Aarburg) – «gleichwertig»
+  heisst nur «Zahlen gleich», Differenzbild trotzdem ansehen.
+- **Olten**: Ursache R33b (89c5d46). Fix: R33b nicht im parallelen Bündel (Nachbar < 8 m schräg, oder Nachbarn beidseitig).
+  Olten byte-gleich wie 30.10.; Klosters Platz/Selfranga (Anlässe R33b) unverändert. 4 Olten-Hinweise vom 6.11. «behoben».
+- **Zofingen und Aarburg-Oftringen** (abgenommen): R27b (8e58a0b, 29.10.) erfand Weichen – Zofingen Gl. 40 (Linie 504) an
+  Gl. 1, Aarburg Abstellgleis an die Aarebrücke. Fix: R27b nie bei Gleis mit `railway:track_ref`, nie auf Gleis anderer
+  Ebene/Brücke/Tunnel. Eine Bedingung «nicht bei service=*» wäre zu breit (änderte Sagliains, Chamby, Rossinière, Saanen) – verworfen.
+- Vereina (Unruhe 59) und MOB (109) lokal und im Workflow byte-gleich, Verkettung 0.
+- **Kerzers**: im X alle 6 Gleise vorhanden; Gl. 2 und 5 ohne Nummer, weil ohne Perron (R6/E10). Frage an Daniel offen.
+- Regression 16/80 geändert: 4 Topologie zurück (Olten, Zofingen, Aarburg, Regionalplan Olten = Stand 30.10. inkl. 4 alter G6),
+  1 vermutlich besser (Wangen, nur Perron), Kerzers, 10 nur Perrons (B13/B14). Konolfingen, Solothurn, Region NE: gleich wie v132.
+- Übersicht für Daniel: Artifact «Regression Spurpläne 6.11.» (https://claude.ai/artifact/P88qVKqSjntvYvJCgchdDv).
+- **Daniel danach**: Perrons so lassen oder zurück; Kerzers Gl. 2/5 Nummern; Olten, Zofingen, Aarburg ansehen.
+- Nächster Schritt: «Weiter mit UEBERGABE.md – Schritt 0: Antworten 6.11. umsetzen» (wartet nicht auf die Perron-Antwort).
