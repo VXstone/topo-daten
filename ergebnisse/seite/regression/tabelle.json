@@ -1,0 +1,930 @@
+{
+ "erzeugt": "2026-11-06 20:18 UTC",
+ "plaene": 80,
+ "geaendert": 16,
+ "einordnung": {
+  "Fehler? Topologie": 1,
+  "gleichwertig": 11,
+  "schlechter?": 2,
+  "vermutlich besser": 2
+ },
+ "zeilen": [
+  {
+   "key": "region",
+   "name": "Region Olten",
+   "gruppe": "Region",
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "c99b7e2",
+   "stellen": 12,
+   "letzte_aenderung": "2026-11-05T18:17",
+   "einordnung": "Fehler? Topologie",
+   "delta": "G2 44→47, G6 3→7, G7 19→3, T7 19→18",
+   "alt": {
+    "G3": 2,
+    "G2": 44,
+    "G6": 3,
+    "G7": 19,
+    "T7": 19
+   },
+   "neu": {
+    "G3": 2,
+    "G2": 47,
+    "G6": 7,
+    "G7": 3,
+    "T7": 18
+   }
+  },
+  {
+   "key": "region_ne",
+   "name": "Region Neuchâtel",
+   "gruppe": "Region",
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "c99b7e2",
+   "stellen": 0
+  },
+  {
+   "key": "region_mob",
+   "name": "Region MOB / Rochers-de-Naye",
+   "gruppe": "Region",
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "fb912a2",
+   "stellen": 0
+  },
+  {
+   "key": "region_vereina",
+   "name": "Region Vereina (Klosters – Sagliains – Susch)",
+   "gruppe": "Region",
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "bdf5c5b",
+   "stellen": 0
+  },
+  {
+   "key": "blaupause",
+   "name": "Blaupausen-Bahnhof",
+   "gruppe": "Werkzeugkasten",
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "09c9132",
+   "stellen": 0
+  },
+  {
+   "key": "blaupause2",
+   "name": "Blaupause 2 – Bahnhofstypen",
+   "gruppe": "Werkzeugkasten",
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "09c9132",
+   "stellen": 0
+  },
+  {
+   "key": "thun",
+   "name": "Thun",
+   "gruppe": "Referenz",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-15)",
+   "basis_commit": "09c9132",
+   "stellen": 7,
+   "letzte_aenderung": "2026-10-26T07:19",
+   "einordnung": "gleichwertig",
+   "delta": "",
+   "alt": {
+    "G2": 16,
+    "G6": 2,
+    "T7": 0
+   },
+   "neu": {
+    "G2": 16,
+    "G6": 2,
+    "T7": 0
+   }
+  },
+  {
+   "key": "ins",
+   "name": "Ins",
+   "gruppe": "Referenz",
+   "abgenommen": true,
+   "basis": "Abnahme 2026-10-26",
+   "basis_commit": "75cc38e",
+   "stellen": 0
+  },
+  {
+   "key": "murten",
+   "name": "Murten",
+   "gruppe": "Referenz",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-13)",
+   "basis_commit": "09c9132",
+   "stellen": 7,
+   "letzte_aenderung": "2026-10-26T07:19",
+   "einordnung": "gleichwertig",
+   "delta": "",
+   "alt": {
+    "G2": 2,
+    "T7": 3
+   },
+   "neu": {
+    "G2": 2,
+    "T7": 3
+   }
+  },
+  {
+   "key": "kerzers",
+   "name": "Kerzers",
+   "gruppe": "Referenz",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-14)",
+   "basis_commit": "09c9132",
+   "stellen": 7,
+   "letzte_aenderung": "2026-10-27T22:00",
+   "einordnung": "schlechter?",
+   "delta": "G2 3→4, T7 1→3",
+   "alt": {
+    "G2": 3,
+    "T7": 1
+   },
+   "neu": {
+    "G2": 4,
+    "T7": 3
+   }
+  },
+  {
+   "key": "olten",
+   "name": "Olten",
+   "gruppe": "Region Olten",
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "8465a2c",
+   "stellen": 6,
+   "letzte_aenderung": "2026-11-03T05:43",
+   "einordnung": "vermutlich besser",
+   "delta": "G2 5→7, G7 7→2, T7 21→22",
+   "alt": {
+    "G3": 6,
+    "G2": 5,
+    "G7": 7,
+    "T7": 21
+   },
+   "neu": {
+    "G3": 6,
+    "G2": 7,
+    "G7": 2,
+    "T7": 22
+   }
+  },
+  {
+   "key": "aarburg_oftringen",
+   "name": "Aarburg-Oftringen",
+   "gruppe": "Region Olten",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-14)",
+   "basis_commit": "09c9132",
+   "stellen": 7,
+   "letzte_aenderung": "2026-10-29T22:32",
+   "einordnung": "gleichwertig",
+   "delta": "",
+   "alt": {
+    "G2": 2,
+    "G7": 1,
+    "T7": 0
+   },
+   "neu": {
+    "G2": 2,
+    "G7": 1,
+    "T7": 0
+   }
+  },
+  {
+   "key": "rothrist",
+   "name": "Rothrist",
+   "gruppe": "Region Olten",
+   "abgenommen": true,
+   "basis": "Abnahme 2026-10-29",
+   "basis_commit": "eb6aec9",
+   "stellen": 0,
+   "letzte_aenderung": "2026-10-30T19:38",
+   "einordnung": "gleichwertig",
+   "delta": "",
+   "alt": {
+    "G3": 4,
+    "G2": 6,
+    "G6": 1,
+    "T7": 8
+   },
+   "neu": {
+    "G3": 4,
+    "G2": 6,
+    "G6": 1,
+    "T7": 8
+   }
+  },
+  {
+   "key": "zofingen",
+   "name": "Zofingen",
+   "gruppe": "Region Olten",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-14)",
+   "basis_commit": "09c9132",
+   "stellen": 28,
+   "letzte_aenderung": "2026-10-29T22:32",
+   "einordnung": "vermutlich besser",
+   "delta": "G2 4→2, T7 2→1",
+   "alt": {
+    "G2": 4,
+    "T7": 2
+   },
+   "neu": {
+    "G2": 2,
+    "T7": 1
+   }
+  },
+  {
+   "key": "safenwil",
+   "name": "Safenwil",
+   "gruppe": "Region Olten",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-14)",
+   "basis_commit": "09c9132",
+   "stellen": 6,
+   "letzte_aenderung": "2026-10-30T19:38",
+   "einordnung": "gleichwertig",
+   "delta": "",
+   "alt": {
+    "T7": 0
+   },
+   "neu": {
+    "T7": 0
+   }
+  },
+  {
+   "key": "wangen_bei_olten",
+   "name": "Wangen b. O.",
+   "gruppe": "Region Olten",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-13)",
+   "basis_commit": "09c9132",
+   "stellen": 4,
+   "letzte_aenderung": "2026-10-30T19:38",
+   "einordnung": "schlechter?",
+   "delta": "G2 2→4",
+   "alt": {
+    "G2": 2,
+    "T7": 0
+   },
+   "neu": {
+    "G2": 4,
+    "T7": 0
+   }
+  },
+  {
+   "key": "dulliken",
+   "name": "Dulliken",
+   "gruppe": "Region Olten",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-13)",
+   "basis_commit": "09c9132",
+   "stellen": 12,
+   "letzte_aenderung": "2026-10-29T22:45",
+   "einordnung": "gleichwertig",
+   "delta": "",
+   "alt": {
+    "T7": 0
+   },
+   "neu": {
+    "T7": 0
+   }
+  },
+  {
+   "key": "daniken",
+   "name": "Däniken",
+   "gruppe": "Region Olten",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-14)",
+   "basis_commit": "09c9132",
+   "stellen": 6,
+   "letzte_aenderung": "2026-10-30T19:38",
+   "einordnung": "gleichwertig",
+   "delta": "",
+   "alt": {
+    "T7": 0
+   },
+   "neu": {
+    "T7": 0
+   }
+  },
+  {
+   "key": "schonenwerd",
+   "name": "Schönenwerd",
+   "gruppe": "Region Olten",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-13)",
+   "basis_commit": "09c9132",
+   "stellen": 8,
+   "letzte_aenderung": "2026-10-29T22:45",
+   "einordnung": "gleichwertig",
+   "delta": "",
+   "alt": {
+    "G2": 2,
+    "T7": 0
+   },
+   "neu": {
+    "G2": 2,
+    "T7": 0
+   }
+  },
+  {
+   "key": "tecknau",
+   "name": "Tecknau",
+   "gruppe": "Region Olten",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-13)",
+   "basis_commit": "09c9132",
+   "stellen": 3,
+   "letzte_aenderung": "2026-11-04T08:29",
+   "einordnung": "gleichwertig",
+   "delta": "",
+   "alt": {
+    "G2": 2,
+    "T7": 0
+   },
+   "neu": {
+    "G2": 2,
+    "T7": 0
+   }
+  },
+  {
+   "key": "laufelfingen",
+   "name": "Läufelfingen",
+   "gruppe": "Region Olten",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-13)",
+   "basis_commit": "09c9132",
+   "stellen": 4,
+   "letzte_aenderung": "2026-10-26T07:19",
+   "einordnung": "gleichwertig",
+   "delta": "",
+   "alt": {
+    "T7": 0
+   },
+   "neu": {
+    "T7": 0
+   }
+  },
+  {
+   "key": "olten_hammer",
+   "name": "Olten Hammer",
+   "gruppe": "Region Olten",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-13)",
+   "basis_commit": "09c9132",
+   "stellen": 3,
+   "letzte_aenderung": "2026-10-30T19:38",
+   "einordnung": "gleichwertig",
+   "delta": "",
+   "alt": {
+    "T7": 0
+   },
+   "neu": {
+    "T7": 0
+   }
+  },
+  {
+   "key": "neuchatel",
+   "name": "Neuchâtel",
+   "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
+   "abgenommen": true,
+   "basis": "Abnahme 2026-10-26",
+   "basis_commit": "f78f4a6",
+   "stellen": 1,
+   "letzte_aenderung": "2026-10-30T19:38",
+   "einordnung": "gleichwertig",
+   "delta": "",
+   "alt": {
+    "G2": 14,
+    "G6": 1,
+    "T7": 3
+   },
+   "neu": {
+    "G2": 14,
+    "G6": 1,
+    "T7": 3
+   }
+  },
+  {
+   "key": "konolfingen",
+   "name": "Konolfingen",
+   "gruppe": "Repo-Bahnhöfe (Workflow plaene)",
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "1fa061d",
+   "stellen": 0
+  },
+  {
+   "key": "neuchatel_vauseyon",
+   "name": "Neuchâtel Vauseyon",
+   "gruppe": "Repo-Bahnhöfe (Workflow plaene)",
+   "abgenommen": true,
+   "basis": "Abnahme 2026-10-29",
+   "basis_commit": "b3c7870",
+   "stellen": 0
+  },
+  {
+   "key": "solothurn",
+   "name": "Solothurn",
+   "gruppe": "Repo-Bahnhöfe (Workflow plaene)",
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "1fa061d",
+   "stellen": 0
+  },
+  {
+   "key": "basel",
+   "name": "Basel SBB",
+   "gruppe": "Grosse Knoten (Entwurf 2)",
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "09c9132",
+   "stellen": 0
+  },
+  {
+   "key": "bern",
+   "name": "Bern",
+   "gruppe": "Grosse Knoten (Entwurf 2)",
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "09c9132",
+   "stellen": 0
+  },
+  {
+   "key": "saint_blaise_lac",
+   "name": "Saint-Blaise Lac",
+   "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-15)",
+   "basis_commit": "09c9132",
+   "stellen": 0
+  },
+  {
+   "key": "marin_epagnier",
+   "name": "Marin-Epagnier",
+   "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-15)",
+   "basis_commit": "09c9132",
+   "stellen": 0
+  },
+  {
+   "key": "zihlbruecke",
+   "name": "Zihlbrücke",
+   "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-15)",
+   "basis_commit": "09c9132",
+   "stellen": 0
+  },
+  {
+   "key": "gampelen",
+   "name": "Gampelen",
+   "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-15)",
+   "basis_commit": "09c9132",
+   "stellen": 0
+  },
+  {
+   "key": "muntschemier",
+   "name": "Müntschemier",
+   "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-16)",
+   "basis_commit": "09c9132",
+   "stellen": 0
+  },
+  {
+   "key": "gummenen",
+   "name": "Gümmenen",
+   "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-17)",
+   "basis_commit": "09c9132",
+   "stellen": 0
+  },
+  {
+   "key": "rosshausern",
+   "name": "Rosshäusern",
+   "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-20)",
+   "basis_commit": "09c9132",
+   "stellen": 0
+  },
+  {
+   "key": "riedbach",
+   "name": "Riedbach",
+   "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-20)",
+   "basis_commit": "09c9132",
+   "stellen": 0
+  },
+  {
+   "key": "bern_brunnen_westside",
+   "name": "Bern Brünnen Westside",
+   "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-20)",
+   "basis_commit": "09c9132",
+   "stellen": 0
+  },
+  {
+   "key": "sugiez",
+   "name": "Sugiez",
+   "gruppe": "NE 2 · Ins – Sugiez – Murten",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-16)",
+   "basis_commit": "09c9132",
+   "stellen": 0
+  },
+  {
+   "key": "muntelier_lowenberg",
+   "name": "Muntelier-Löwenberg",
+   "gruppe": "NE 2 · Ins – Sugiez – Murten",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-16)",
+   "basis_commit": "09c9132",
+   "stellen": 0
+  },
+  {
+   "key": "kallnach",
+   "name": "Kallnach",
+   "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-20)",
+   "basis_commit": "09c9132",
+   "stellen": 0
+  },
+  {
+   "key": "fraschels",
+   "name": "Fräschels",
+   "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-19)",
+   "basis_commit": "09c9132",
+   "stellen": 0
+  },
+  {
+   "key": "kerzers_papiliorama",
+   "name": "Kerzers Papiliorama",
+   "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-19)",
+   "basis_commit": "09c9132",
+   "stellen": 0
+  },
+  {
+   "key": "galmiz",
+   "name": "Galmiz",
+   "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-16)",
+   "basis_commit": "09c9132",
+   "stellen": 0
+  },
+  {
+   "key": "faoug",
+   "name": "Faoug",
+   "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-16)",
+   "basis_commit": "09c9132",
+   "stellen": 0
+  },
+  {
+   "key": "avenches",
+   "name": "Avenches",
+   "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-19)",
+   "basis_commit": "09c9132",
+   "stellen": 0
+  },
+  {
+   "key": "domdidier",
+   "name": "Domdidier",
+   "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-19)",
+   "basis_commit": "09c9132",
+   "stellen": 0
+  },
+  {
+   "key": "dompierre",
+   "name": "Dompierre",
+   "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-19)",
+   "basis_commit": "09c9132",
+   "stellen": 0
+  },
+  {
+   "key": "munchenwiler_courgevaux",
+   "name": "Münchenwiler-Courgevaux",
+   "gruppe": "NE 4 · Murten – Fribourg",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-20)",
+   "basis_commit": "09c9132",
+   "stellen": 0
+  },
+  {
+   "key": "cressier_fr",
+   "name": "Cressier FR",
+   "gruppe": "NE 4 · Murten – Fribourg",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-20)",
+   "basis_commit": "09c9132",
+   "stellen": 0
+  },
+  {
+   "key": "courtepin",
+   "name": "Courtepin",
+   "gruppe": "NE 4 · Murten – Fribourg",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-20)",
+   "basis_commit": "09c9132",
+   "stellen": 0
+  },
+  {
+   "key": "pensier",
+   "name": "Pensier",
+   "gruppe": "NE 4 · Murten – Fribourg",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-20)",
+   "basis_commit": "09c9132",
+   "stellen": 0
+  },
+  {
+   "key": "saint_blaise_cff",
+   "name": "Saint-Blaise CFF",
+   "gruppe": "NE 5 · Neuchâtel – Biel",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-15)",
+   "basis_commit": "09c9132",
+   "stellen": 0
+  },
+  {
+   "key": "cornaux",
+   "name": "Cornaux",
+   "gruppe": "NE 5 · Neuchâtel – Biel",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-15)",
+   "basis_commit": "09c9132",
+   "stellen": 0
+  },
+  {
+   "key": "cressier",
+   "name": "Cressier NE",
+   "gruppe": "NE 5 · Neuchâtel – Biel",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-15)",
+   "basis_commit": "09c9132",
+   "stellen": 0
+  },
+  {
+   "key": "le_landeron",
+   "name": "Le Landeron",
+   "gruppe": "NE 5 · Neuchâtel – Biel",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-20)",
+   "basis_commit": "09c9132",
+   "stellen": 0
+  },
+  {
+   "key": "la_neuveville",
+   "name": "La Neuveville",
+   "gruppe": "NE 5 · Neuchâtel – Biel",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-15)",
+   "basis_commit": "09c9132",
+   "stellen": 0
+  },
+  {
+   "key": "ligerz",
+   "name": "Ligerz",
+   "gruppe": "NE 5 · Neuchâtel – Biel",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-17)",
+   "basis_commit": "09c9132",
+   "stellen": 0
+  },
+  {
+   "key": "twann",
+   "name": "Twann",
+   "gruppe": "NE 5 · Neuchâtel – Biel",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-15)",
+   "basis_commit": "09c9132",
+   "stellen": 0
+  },
+  {
+   "key": "tuscherz",
+   "name": "Tüscherz",
+   "gruppe": "NE 5 · Neuchâtel – Biel",
+   "abgenommen": true,
+   "basis": "Abnahme 2026-10-26",
+   "basis_commit": "d3db3f8",
+   "stellen": 0
+  },
+  {
+   "key": "serrieres",
+   "name": "Serrières",
+   "gruppe": "NE 6 · Neuchâtel – Yverdon",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-15)",
+   "basis_commit": "09c9132",
+   "stellen": 0
+  },
+  {
+   "key": "auvernier",
+   "name": "Auvernier",
+   "gruppe": "NE 6 · Neuchâtel – Yverdon",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-20)",
+   "basis_commit": "09c9132",
+   "stellen": 0
+  },
+  {
+   "key": "colombier",
+   "name": "Colombier",
+   "gruppe": "NE 6 · Neuchâtel – Yverdon",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-16)",
+   "basis_commit": "09c9132",
+   "stellen": 0
+  },
+  {
+   "key": "boudry",
+   "name": "Boudry",
+   "gruppe": "NE 6 · Neuchâtel – Yverdon",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-15)",
+   "basis_commit": "09c9132",
+   "stellen": 0
+  },
+  {
+   "key": "bevaix",
+   "name": "Bevaix",
+   "gruppe": "NE 6 · Neuchâtel – Yverdon",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-20)",
+   "basis_commit": "09c9132",
+   "stellen": 0
+  },
+  {
+   "key": "gorgier_saint_aubin",
+   "name": "Gorgier-Saint-Aubin",
+   "gruppe": "NE 6 · Neuchâtel – Yverdon",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-20)",
+   "basis_commit": "09c9132",
+   "stellen": 0
+  },
+  {
+   "key": "onnens_bonvillars",
+   "name": "Onnens-Bonvillars",
+   "gruppe": "NE 6 · Neuchâtel – Yverdon",
+   "abgenommen": true,
+   "basis": "Abnahme 2026-10-26",
+   "basis_commit": "e05d4dc",
+   "stellen": 0
+  },
+  {
+   "key": "concise",
+   "name": "Concise",
+   "gruppe": "NE 6 · Neuchâtel – Yverdon",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-20)",
+   "basis_commit": "09c9132",
+   "stellen": 0
+  },
+  {
+   "key": "grandson",
+   "name": "Grandson",
+   "gruppe": "NE 6 · Neuchâtel – Yverdon",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-20)",
+   "basis_commit": "09c9132",
+   "stellen": 0
+  },
+  {
+   "key": "bole",
+   "name": "Bôle",
+   "gruppe": "NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-20)",
+   "basis_commit": "09c9132",
+   "stellen": 0
+  },
+  {
+   "key": "champ_du_moulin",
+   "name": "Champ-du-Moulin",
+   "gruppe": "NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-15)",
+   "basis_commit": "09c9132",
+   "stellen": 0
+  },
+  {
+   "key": "noiraigue",
+   "name": "Noiraigue",
+   "gruppe": "NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-15)",
+   "basis_commit": "09c9132",
+   "stellen": 0
+  },
+  {
+   "key": "travers",
+   "name": "Travers",
+   "gruppe": "NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-15)",
+   "basis_commit": "09c9132",
+   "stellen": 0
+  },
+  {
+   "key": "la_presta_mines_d_asphalte",
+   "name": "La Presta - Mines d'Asphalte",
+   "gruppe": "NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-19)",
+   "basis_commit": "09c9132",
+   "stellen": 0
+  },
+  {
+   "key": "couvet",
+   "name": "Couvet",
+   "gruppe": "NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-20)",
+   "basis_commit": "09c9132",
+   "stellen": 0
+  },
+  {
+   "key": "motiers",
+   "name": "Môtiers",
+   "gruppe": "NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-20)",
+   "basis_commit": "09c9132",
+   "stellen": 0
+  },
+  {
+   "key": "les_deurres",
+   "name": "Les Deurres",
+   "gruppe": "NE 8 · Neuchâtel – La Chaux-de-Fonds",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-20)",
+   "basis_commit": "09c9132",
+   "stellen": 0
+  },
+  {
+   "key": "corcelles_peseux",
+   "name": "Corcelles-Peseux",
+   "gruppe": "NE 8 · Neuchâtel – La Chaux-de-Fonds",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-15)",
+   "basis_commit": "09c9132",
+   "stellen": 0
+  },
+  {
+   "key": "chambrelien",
+   "name": "Chambrelien",
+   "gruppe": "NE 8 · Neuchâtel – La Chaux-de-Fonds",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-20)",
+   "basis_commit": "09c9132",
+   "stellen": 0
+  },
+  {
+   "key": "les_geneveys_sur_coffrane",
+   "name": "Les Geneveys-sur-Coffrane",
+   "gruppe": "NE 8 · Neuchâtel – La Chaux-de-Fonds",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-19)",
+   "basis_commit": "09c9132",
+   "stellen": 0
+  },
+  {
+   "key": "les_hauts_geneveys",
+   "name": "Les Hauts-Geneveys",
+   "gruppe": "NE 8 · Neuchâtel – La Chaux-de-Fonds",
+   "abgenommen": true,
+   "basis": "Archivbeginn (Abnahme 2026-10-20)",
+   "basis_commit": "09c9132",
+   "stellen": 0
+  }
+ ]
+}
