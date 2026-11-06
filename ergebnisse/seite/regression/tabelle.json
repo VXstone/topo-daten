@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-11-06 20:18 UTC",
+ "erzeugt": "2026-11-06 20:21 UTC",
  "plaene": 80,
  "geaendert": 16,
  "einordnung": {
@@ -17,7 +17,7 @@
    "basis": "veröffentlicht",
    "basis_commit": "c99b7e2",
    "stellen": 12,
-   "letzte_aenderung": "2026-11-05T18:17",
+   "letzte_aenderung": "2026-11-06T20:18",
    "einordnung": "Fehler? Topologie",
    "delta": "G2 44→47, G6 3→7, G7 19→3, T7 19→18",
    "alt": {
@@ -159,7 +159,7 @@
    "basis": "veröffentlicht",
    "basis_commit": "8465a2c",
    "stellen": 6,
-   "letzte_aenderung": "2026-11-03T05:43",
+   "letzte_aenderung": "2026-11-06T20:18",
    "einordnung": "vermutlich besser",
    "delta": "G2 5→7, G7 7→2, T7 21→22",
    "alt": {
@@ -183,7 +183,7 @@
    "basis": "Archivbeginn (Abnahme 2026-10-14)",
    "basis_commit": "09c9132",
    "stellen": 7,
-   "letzte_aenderung": "2026-10-29T22:32",
+   "letzte_aenderung": "2026-11-06T20:18",
    "einordnung": "gleichwertig",
    "delta": "",
    "alt": {
@@ -205,7 +205,7 @@
    "basis": "Abnahme 2026-10-29",
    "basis_commit": "eb6aec9",
    "stellen": 0,
-   "letzte_aenderung": "2026-10-30T19:38",
+   "letzte_aenderung": "2026-11-06T20:18",
    "einordnung": "gleichwertig",
    "delta": "",
    "alt": {
@@ -229,7 +229,7 @@
    "basis": "Archivbeginn (Abnahme 2026-10-14)",
    "basis_commit": "09c9132",
    "stellen": 28,
-   "letzte_aenderung": "2026-10-29T22:32",
+   "letzte_aenderung": "2026-11-06T20:18",
    "einordnung": "vermutlich besser",
    "delta": "G2 4→2, T7 2→1",
    "alt": {
