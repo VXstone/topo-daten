@@ -204,5 +204,12 @@ Stand 21.10.2026.
 - **Nebengleise:** Strichstärke bleibt wie sie ist (keine weitere Hierarchie). **Pfeile an Meterspur braun** (sind noch schwarz).
 - **Kreuzung ohne Verbindung:** Lücke im untergeordneten Gleis nur bei echter Niveautrennung (Brücke, Über-/Unterführung, Tunnel). Gleisdurchschneidung (Kreuzung auf gleicher Ebene, z. B. Kerzers) → beide Gleise durchgezogen. Details folgen (D. Eckenstein).
 
+## Antworten D. Eckenstein 6.11.2026 abends (nach Schritt A)
+- **Wangen bei Olten:** neuer Stand passt (nur Perron).
+- **Kerzers:** Gl. 2 und 5 bleiben ohne Nummer – Nummern nur an Perrongleisen (R6/E10 bestätigt).
+- **Verbundene Perrons / Spezialperrons** brauchen eine eigene Lösung im Code: Thun Gl. 16/18 hängen an Perron 1,
+  Montreux (verbundene Perrons), Zweisimmen, Bern Gl. 49/50, Basel um Gl. 3 und um Gl. 35. Deshalb kommt die Perronfrage
+  (kürzere 110-px-Perrons in abgenommenen Plänen) nach diesem Schritt nochmals; bis dahin nichts zurückstellen.
+
 ## Regression über alle Pläne (6.11.2026, Befund Olten)
 - Jede Runde vergleicht `code/alle_plaene_pruefen.py` alle Pläne der Feedback-Seite mit ihrer Abnahme-Fassung (sonst erste bzw. zuletzt veröffentlichte Fassung). Geänderte Pläne brauchen eine Erklärung (Regel nach E9 oder Fehler) und ein Differenzbild für Daniel. «Byte-gleich» nur noch behaupten, wenn dieser Lauf es zeigt.

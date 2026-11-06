@@ -69,6 +69,7 @@ und hakt den Schritt in der Statusliste ab. Ist «Daniel danach» nicht leer, wa
 ### Statusliste
 - [x] A  Regression Olten und alle Pläne (6.11. abends, Seite v133)
 - [ ] 0  Antworten 6.11. umsetzen
+- [ ] P  Verbundene Perrons / Spezialperrons (Thun 16/18, Montreux, Zweisimmen, Bern 49/50, Basel 3 und 35)
 - [ ] 1  Blaupausen-Prüfstand aufbauen
 - [ ] 2  Pfeile/Stummel bei schrägen Abgängen (h9o9 Sagliains)
 - [ ] 3  Bahnhofsausfahrt als Ganzes (Selfranga/jxpf, Chamby)
@@ -102,7 +103,19 @@ und hakt den Schritt in der Statusliste ab. Ist «Daniel danach» nicht leer, wa
   `gleisnummer_aus_ref` wieder an, Montreux Gl. 4 im Plan.
 - Fertig, wenn: MOB mit `gleisnummer_aus_ref` an, P1 = 0, Unruhe nicht schlechter als 109; Caux und Pfeile korrekt;
   Prüfung aller Pläne ohne unerklärte Änderung.
-- Daniel danach: Montreux ansehen.
+- Daniel danach: Montreux ansehen. **Ausserdem nochmals vorlegen (Wunsch 6.11. abends):** (1) Perrons kürzer in abgenommenen
+  Plänen – so lassen oder zurück; (4) Olten, Zofingen, Aarburg-Oftringen ansehen (Topologie wieder wie Abnahme/30.10.).
+  Übersicht: Artifact «Regression Spurpläne 6.11.».
+
+### P – Verbundene Perrons / Spezialperrons (neu 6.11. abends)
+- Einstieg: «Weiter mit UEBERGABE.md – Schritt P: Verbundene Perrons»
+- Anlass: ein Perron bedient mehrere Gleise über Eck oder hängt an einem anderen Perron. Fälle: Thun Gl. 16/18 an Perron 1,
+  Montreux (verbundene Perrons), Zweisimmen, Bern Gl. 49/50, Basel um Gl. 3 und um Gl. 35. Baut auf Schritt 0 (3) auf
+  (Perron beidseitig eines Gleises).
+- Arbeiten: Perronflächen aus SBB Open Data/OSM als zusammenhängende Fläche erkennen, die mehrere Gleise bedient; Darstellung
+  im Code (eine Regel, kein Override je Bahnhof), Prüfung «kein Perron fällt weg» (P1) über alle Pläne.
+- Fertig, wenn: die fünf Fälle im Plan richtig, Prüfung aller Pläne ohne unerklärte Änderung.
+- Daniel danach: die fünf Fälle und die Perronfrage aus Schritt A abschliessend beurteilen.
 
 ### 1 – Blaupausen-Prüfstand aufbauen
 - Einstieg: «Weiter mit UEBERGABE.md – Schritt 1: Blaupausen-Prüfstand aufbauen»
@@ -169,3 +182,7 @@ und hakt den Schritt in der Statusliste ab. Ist «Daniel danach» nicht leer, wa
 - Übersicht für Daniel: Artifact «Regression Spurpläne 6.11.» (https://claude.ai/artifact/P88qVKqSjntvYvJCgchdDv).
 - **Daniel danach**: Perrons so lassen oder zurück; Kerzers Gl. 2/5 Nummern; Olten, Zofingen, Aarburg ansehen.
 - Nächster Schritt: «Weiter mit UEBERGABE.md – Schritt 0: Antworten 6.11. umsetzen» (wartet nicht auf die Perron-Antwort).
+
+### 6.11.2026 22:54 – Antworten Daniel zu Schritt A
+- Wangen passt. Kerzers: Gl. 2/5 ohne Nummer bleibt (nur Perrongleise). Perronfrage (1) und Olten/Zofingen/Aarburg (4)
+  nach Schritt 0 nochmals vorlegen. Neuer Schritt P «Verbundene Perrons» eingefügt (nach 0).
