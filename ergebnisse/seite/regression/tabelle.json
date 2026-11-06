@@ -1,12 +1,11 @@
 {
- "erzeugt": "2026-11-06 20:29 UTC",
+ "erzeugt": "2026-11-06 20:37 UTC",
  "plaene": 80,
- "geaendert": 16,
+ "geaendert": 14,
  "einordnung": {
-  "Fehler? Topologie": 1,
   "gleichwertig": 11,
   "schlechter?": 2,
-  "vermutlich besser": 2
+  "vermutlich besser": 1
  },
  "zeilen": [
   {
@@ -15,25 +14,8 @@
    "gruppe": "Region",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "c99b7e2",
-   "stellen": 12,
-   "letzte_aenderung": "2026-11-06T20:18",
-   "einordnung": "Fehler? Topologie",
-   "delta": "G2 44→47, G6 3→7, G7 19→3, T7 19→18",
-   "alt": {
-    "G3": 2,
-    "G2": 44,
-    "G6": 3,
-    "G7": 19,
-    "T7": 19
-   },
-   "neu": {
-    "G3": 2,
-    "G2": 47,
-    "G6": 7,
-    "G7": 3,
-    "T7": 18
-   }
+   "basis_commit": "73d910b",
+   "stellen": 0
   },
   {
    "key": "region_ne",
@@ -157,23 +139,8 @@
    "gruppe": "Region Olten",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "8465a2c",
-   "stellen": 6,
-   "letzte_aenderung": "2026-11-06T20:18",
-   "einordnung": "vermutlich besser",
-   "delta": "G2 5→7, G7 7→2, T7 21→22",
-   "alt": {
-    "G3": 6,
-    "G2": 5,
-    "G7": 7,
-    "T7": 21
-   },
-   "neu": {
-    "G3": 6,
-    "G2": 7,
-    "G7": 2,
-    "T7": 22
-   }
+   "basis_commit": "73d910b",
+   "stellen": 0
   },
   {
    "key": "aarburg_oftringen",
