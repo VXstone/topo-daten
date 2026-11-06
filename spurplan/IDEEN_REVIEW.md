@@ -28,7 +28,7 @@ Eigene Datei, damit sie nicht mit Übergaben anderer Chats kollidiert. Nach Umse
   4. Bündel als Einheit (Zeichenlogik 2) im connector, als Schutz, wenn die Enden aus OSM-Gründen nicht passen.
   5. Montbovon +60° im Prüfstand nachstellen statt von Hand fixieren; danach Prüflauf über die abgenommenen SBB-Bahnhöfe (E9: Änderung zulässig bei gleicher Topologie, im Differenzbild).
 - Perron-Standardlänge 80 px gehört als Standard in die Blaupause (Begutachtung Daniel).
-- Unabhängig, Entscheid Daniel (kein eigener Chat nötig, Antwort auf der Feedbackseite): Montreux Gl. 4 (`gleisnummer_aus_ref` MOB), Weiche Caux, Kreuzung ohne Verbindung (Zeichenlogik 3), Nebengleise dünner (Zeichenlogik 4).
+- Entschieden 6.11. abends (REGELN.md «Antworten D. Eckenstein 6.11.2026»): Caux stimmt, Stumpen Gl. 2 dünn; Montreux Gl. 4 rein, Perrons beidseitig; 80 px ok; Nebengleise bleiben, Meterspur-Pfeile braun; Kreuzung: Lücke nur bei Niveautrennung, Gleisdurchschneidung durchgezogen (Details folgen). Zeichenlogik 4 (Hierarchie) damit erledigt.
 
 ## Datenaufbereitung (Review topo-daten) – siehe UEBERGABE 5.11. spät
 - R1 Release-Gate in vorbereitung.yml, R2 Geometrie in der Änderungssignatur (aenderungen.py). **Umgesetzt 5.11.2026:** betriebspunkte, gleisnummern, ausschnitte und release ohne continue-on-error (Fehler → kein Release, Vormonatsdatei bleibt, stand.json hält Teilfehler fest); sbb, perronkanten, aenderungen bleiben optional. Way-Signatur mit Geometrie auf 1e-5° gerundet. Wirkt ab dem nächsten Vorbereitungslauf.

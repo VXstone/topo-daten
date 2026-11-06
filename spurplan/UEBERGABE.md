@@ -892,3 +892,4 @@ REGELN.md «Lage gegen die Karte und Suche» (neuer Punkt). Code: netz_lage (Ach
   4. «… Schritt 4: Bündel als Einheit»
   5. «… Schritt 5: Montbovon im Prüfstand, Prüflauf SBB-Bahnhöfe»
 - Offen bei Daniel (Feedbackseite, kein Chat): Montreux Gl. 4, Weiche Caux, Kreuzung ohne Verbindung, Nebengleise dünner, Perron 80 px.
+- **6.11. 17:44 Antworten Daniel** → REGELN.md «Antworten D. Eckenstein 6.11.2026». Daraus neue Arbeit, vor Schritt 1 als eigener kurzer Chat («Schritt 0: Antworten 6.11. umsetzen»): (a) Caux Stumpen Gl. 2 Rtg. Rochers dünn, (b) Pfeile an Meterspur braun (Code, alle Regionen), (c) Montreux Gl. 4 mit Perrons beidseitig (Mittelperron 3/5 offen, Gl. 7 beidseitig), dann MOB `gleisnummer_aus_ref` wieder an (P1 muss 0 bleiben). Kreuzungen (Lücke nur bei Niveautrennung, Kerzers durchgezogen) erst nach Details von Daniel.

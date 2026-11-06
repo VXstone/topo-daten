@@ -190,3 +190,12 @@ Stand 21.10.2026.
 - **R27b**: endet daneben (< 30 m) ein weiteres Gleis, ist es ein Kopfbahnhof mit Stumpfgleisen, keine fehlende Weiche.
 - **Bushalte**: highway=platform ohne railway=platform, im Mittel > 6 m vom nächsten Gleis, ist kein Perron (Montbovon «Montbovon, gare», Lenk A/B/C). Bahnperron nur als highway=platform (St. Stephan, 1,8 m) bleibt.
 - **Perron-Standardlänge** (Regionen, cfg `perron_standard_px` 80): jeder Perron gleich lang um seine Mitte, perron_frei kürzt auf den freien Abschnitt; Perronteile (Zweisimmen) bleiben.
+
+## Antworten D. Eckenstein 6.11.2026 (Gleisnummer aus ref, Perrons beidseitig, Pfeile, Kreuzungen)
+- **Parallel bleibt parallel:** parallele Gleise behalten denselben Abstand quer zum Gleis, in jeder Drehung und jedem Abgangswinkel (Plan in `IDEEN_REVIEW.md` «Standards / Blaupausen-Prüfstand»). Standardisiert wird der Abstand, nicht der Winkel.
+- **Caux:** 4 Weichen, Plan stimmt (auch Satellitenbild). Der Stumpen aus Gl. 2 Richtung Rochers-de-Naye ist ein Nebengleis → dünn zeichnen, nicht fett.
+- **Gleisnummer aus `ref`:** Gleise mit `ref` in Gleisnummernform sind Gleise, keine Linien (Susch Gl. 1, Montreux Gl. 4). Montreux Gl. 4 hat Zugsverkehr → gehört in den Plan; MOB-Schalter `gleisnummer_aus_ref` wieder einschalten, sobald der Plan damit stimmt.
+- **Perron beidseitig / Spezialperrons:** ein Gleis kann auf beiden Seiten einen Perron haben. Montreux: Mittelperron 3/5 öffnet sich, Gl. 4 liegt dazwischen mit Perron auf beiden Seiten (bedient von 3 her); Gl. 7 hat beidseitig Perron (bedient von 6 her, der andere ist einfach vorhanden). Ebenso Zweisimmen. Echte Zwillingsperrons (beide Seiten bedient): Le Noirmont, Renens m1. Kein Perron darf deswegen wegfallen (P1).
+- **Perron-Standardlänge 80 px** (Linien-Regionen): bestätigt.
+- **Nebengleise:** Strichstärke bleibt wie sie ist (keine weitere Hierarchie). **Pfeile an Meterspur braun** (sind noch schwarz).
+- **Kreuzung ohne Verbindung:** Lücke im untergeordneten Gleis nur bei echter Niveautrennung (Brücke, Über-/Unterführung, Tunnel). Gleisdurchschneidung (Kreuzung auf gleicher Ebene, z. B. Kerzers) → beide Gleise durchgezogen. Details folgen (D. Eckenstein).
