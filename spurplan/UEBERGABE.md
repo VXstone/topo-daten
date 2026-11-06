@@ -56,16 +56,94 @@ beidseitig (Mittelperron 3/5 offen, Gl. 7; Zweisimmen; Zwillingsperrons Le Noirm
 Nebengleise bleiben, Meterspur-Pfeile braun · Kreuzung: Lücke nur bei Niveautrennung, Gleisdurchschneidung (Kerzers)
 durchgezogen – Details folgen.
 
-## 6. Nächste Chats (je einer, nacheinander, nicht parallel)
-| # | Einstieg | Inhalt |
-|---|---|---|
-| A | «Weiter mit UEBERGABE.md – Schritt A: Regression Olten und alle Pläne» | Ursache Olten bestätigen (Code 1fa061d vs 8465a2c lokal, dann Commits dazwischen) und beheben; Kerzers Gl. 2/5; Zofingen, Aarburg, Konolfingen, Solothurn, Region Olten/NE ansehen; Perron-Differenzbilder für Daniel; `alle_plaene_pruefen.py` in den Workflow `seite` einbauen (Bericht auf der Seite) |
-| 0 | «… Schritt 0: Antworten 6.11. umsetzen» | Caux Stumpen dünn, Meterspur-Pfeile braun, Montreux Gl. 4 + Perrons beidseitig, dann MOB `gleisnummer_aus_ref` an (P1 = 0) |
-| 1 | «… Schritt 1: Blaupausen-Prüfstand aufbauen» | IDEEN_REVIEW «Standards» |
-| 2 | «… Schritt 2: Pfeile/Stummel bei schrägen Abgängen (h9o9 Sagliains)» | |
-| 3 | «… Schritt 3: Bahnhofsausfahrt als Ganzes (Selfranga/jxpf, Chamby)» | |
-| 4 | «… Schritt 4: Bündel als Einheit» | |
-| 5 | «… Schritt 5: Montbovon im Prüfstand, Prüflauf SBB-Bahnhöfe» | |
-Offen bei Daniel: Details Kreuzungen; Urteil Perron-Differenzbilder (nach Schritt A).
+## 6. Fahrplan – was passiert, in welcher Reihenfolge
+Dies ist die **einzige** gültige Reihenfolge (IDEEN_REVIEW.md und REGELN.md verweisen hierher). Je Schritt **ein neuer
+Chat**, Einstieg = der Satz in Anführungszeichen. **Nacheinander, nie parallel** (alle Schritte ändern denselben Code).
+Ein Schritt ist fertig, wenn sein «Fertig, wenn» erfüllt ist; dann trägt der Chat in «Nachträge» ein, was erledigt ist,
+und hakt den Schritt in der Statusliste ab. Ist «Daniel danach» nicht leer, wartet der nächste Schritt auf Daniel.
+
+**Gilt in jedem Schritt (feste Runde):** Hinweise holen → ändern → Workflows abwarten → `alle_plaene_pruefen.py` über alle
+80 Pläne → jede Änderung erklärt (Regel nach E9 oder Fehler), Differenzbilder an Daniel → Seite veröffentlichen
+(Live-Fassung vorher mit letztem Build vergleichen) → Hinweise beantworten → Nachtrag hier. Nie abnehmen, nie «erledigt».
+
+### Statusliste
+- [ ] A  Regression Olten und alle Pläne
+- [ ] 0  Antworten 6.11. umsetzen
+- [ ] 1  Blaupausen-Prüfstand aufbauen
+- [ ] 2  Pfeile/Stummel bei schrägen Abgängen (h9o9 Sagliains)
+- [ ] 3  Bahnhofsausfahrt als Ganzes (Selfranga/jxpf, Chamby)
+- [ ] 4  Bündel als Einheit
+- [ ] 5  Montbovon im Prüfstand, Prüflauf SBB-Bahnhöfe
+
+### A – Regression Olten und alle Pläne
+- Einstieg: «Weiter mit UEBERGABE.md – Schritt A: Regression Olten und alle Pläne»
+- Warum zuerst: Topologie ist die oberste Regel, Olten ist kaputt, und ohne Prüfung aller Pläne sieht kein späterer
+  Schritt, was er sonst noch verändert.
+- Arbeiten, in dieser Reihenfolge:
+  1. `alle_plaene_pruefen.py` in den Workflow `seite` einbauen (Tabelle + Differenzbilder nach `ergebnisse/seite/regression/`,
+     Zusammenfassung im Kartenlabel). Basis = Abnahme-Export; ohne Abnahme die zuletzt veröffentlichte Fassung.
+  2. Olten: Ursache bestätigen – Kette lokal mit Code 1fa061d/15afeb5 (gut) gegen 89c5d46 (schlecht), Werkstatt-Datei
+     `werkstatt/olten/olten.json`, Option `--hauptgleise`; dann den schuldigen Commit eingrenzen und im Code beheben
+     (kein Override). Olten muss topologisch wieder dem Stand 30.10. entsprechen.
+  3. Kerzers: Gl. 2 und 5 im X – fehlen Gleise oder nur Nummern? Beheben.
+  4. Zofingen, Aarburg-Oftringen, Konolfingen, Solothurn, Region Olten, Region NE: Differenzbilder ansehen, jede Stelle
+     als gewollt (Regel) oder Fehler einordnen; Fehler beheben.
+  5. Perrons: Differenzbilder der abgenommenen Bahnhöfe mit kürzeren/verschobenen Perrons (Thun, Murten, Schönenwerd,
+     Dulliken, Aarburg-Oftringen, Zofingen …) als eine Übersicht an Daniel.
+- Fertig, wenn: Olten topologisch wie 30.10.; Prüfung aller Pläne läuft in `seite`; jede geänderte Zeile der Tabelle ist
+  erklärt; keine unerklärte Änderung an abgenommenen Plänen.
+- Daniel danach: Perron-Übersicht beurteilen (so lassen oder zurück); Olten neu ansehen.
+
+### 0 – Antworten 6.11. umsetzen
+- Einstieg: «Weiter mit UEBERGABE.md – Schritt 0: Antworten 6.11. umsetzen»
+- Arbeiten: (1) Caux: Stumpen aus Gl. 2 Richtung Rochers-de-Naye dünn (Nebengleis). (2) Pfeile an Meterspur braun – im
+  Code, alle Regionen. (3) Perron beidseitig eines Gleises erlauben (Montreux: Gl. 4 zwischen offenem Mittelperron 3/5,
+  Gl. 7 beidseitig; Zweisimmen; Zwillingsperrons Le Noirmont, Renens m1) – Regel im Code. (4) Danach MOB
+  `gleisnummer_aus_ref` wieder an, Montreux Gl. 4 im Plan.
+- Fertig, wenn: MOB mit `gleisnummer_aus_ref` an, P1 = 0, Unruhe nicht schlechter als 109; Caux und Pfeile korrekt;
+  Prüfung aller Pläne ohne unerklärte Änderung.
+- Daniel danach: Montreux ansehen.
+
+### 1 – Blaupausen-Prüfstand aufbauen
+- Einstieg: «Weiter mit UEBERGABE.md – Schritt 1: Blaupausen-Prüfstand aufbauen»
+- Ziel: Grundsatz «parallel bleibt parallel im gleichen Querabstand, in jeder Drehung und jedem Abgangswinkel» prüfbar.
+- Arbeiten: Reinformen und Zusätze aus `vorlage.py` (Blaupause 2) in Drehungen 0, ±30, ±60, 90° und mit Abgängen
+  gerade/30°/60° erzeugen; automatische Prüfung (Querabstand gleich, parallel bleibt parallel, Pfeile eines Bündels im
+  Gleisabstand, Weichen gerundet, nichts unter 90°); zwei gedrehte Blaupausen-Bahnhöfe verbinden (Verbindung gerade).
+  Der Sagliains-Fall (zwei Nebengleise unter 60°) als Baustein. Perron 80 px als Standard aufnehmen. Prüfstand als
+  eigener Plan «Prüfstand» auf der Seite. Nur messen, noch nichts korrigieren.
+- Fertig, wenn: Prüfstand läuft im Workflow, Befundliste vorhanden (welche Bausteine verletzen den Grundsatz).
+- Daniel danach: Prüfstand ansehen und Bausteine beurteilen.
+
+### 2 – Pfeile/Stummel bei schrägen Abgängen (h9o9)
+- Einstieg: «Weiter mit UEBERGABE.md – Schritt 2: Pfeile/Stummel bei schrägen Abgängen (h9o9 Sagliains)»
+- Ursache h9o9: im Plan Sagliains · Autoverlad stehen zwei 60°-Abgänge senkrecht übereinander (13,2 px) → quer zur
+  Schräge 6,6 px, im Regionalplan 2,7 px statt 10 px; der connector gleicht je Gleis einzeln aus → ein Gleis schräg.
+- Arbeiten: Pfeile/Stummel bei schrägen Abgängen im Gleisabstand quer zur Schräge setzen (Code); alle Befunde des
+  Prüfstands zu diesem Baustein beheben.
+- Fertig, wenn: Prüfstand für Abgänge ohne Befund; Sagliains beide Nebengleise parallel; h9o9 «behoben».
+
+### 3 – Bahnhofsausfahrt als Ganzes
+- Einstieg: «Weiter mit UEBERGABE.md – Schritt 3: Bahnhofsausfahrt als Ganzes (Selfranga/jxpf, Chamby)»
+- Arbeiten: Ausfahrt gleichmässig auffächern, Gleisreihenfolge bleibt (IDEEN_REVIEW Zeichenlogik 1). Testfälle
+  Selfranga / jxpf S-Kurve Klosters – Selfranga, Sagliains Abgang Scuol, Chamby Knick.
+- Fertig, wenn: Testfälle ohne Treppe/S-Kurve, Prüfstand ohne Befund, jxpf «behoben».
+
+### 4 – Bündel als Einheit
+- Einstieg: «Weiter mit UEBERGABE.md – Schritt 4: Bündel als Einheit»
+- Arbeiten: parallele Pfeilpaare zwischen zwei Plänen als Bündel verbinden; ein nötiger Versatz gilt für das ganze Bündel
+  (Schutz, wenn die Enden aus OSM-Gründen nicht passen). Treppen-Zahl (T7) in MOB/Vereina darf nicht steigen.
+- Fertig, wenn: keine Einzelgleis-Schrägen in Bündeln, Unruhe MOB/Vereina nicht schlechter.
+
+### 5 – Montbovon und Prüflauf SBB-Bahnhöfe
+- Einstieg: «Weiter mit UEBERGABE.md – Schritt 5: Montbovon im Prüfstand, Prüflauf SBB-Bahnhöfe»
+- Arbeiten: Montbovon +60° (scharfe Bögen) im Prüfstand nachstellen und im Code beheben statt von Hand; danach alle neuen
+  Regionsregeln über die abgenommenen SBB-Bahnhöfe laufen lassen (vorher/nachher, E9: nur bei gleicher Topologie).
+- Fertig, wenn: Montbovon ohne scharfe Bögen; Prüflauf-Tabelle mit Erklärung je Änderung an Daniel.
+- Daniel danach: Prüflauf beurteilen.
+
+### Offen bei Daniel (kein eigener Chat, Antwort auf der Feedbackseite oder nebenbei)
+- Details zu Kreuzungen ohne Verbindung (bis dahin: Lücke nur bei Brücke/Über-/Unterführung/Tunnel, Gleisdurchschneidung
+  wie Kerzers durchgezogen) – wird nach seiner Antwort ein eigener Schritt nach 5.
 
 ## Nachträge

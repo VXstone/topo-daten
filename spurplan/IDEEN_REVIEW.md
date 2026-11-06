@@ -21,12 +21,7 @@ Eigene Datei, damit sie nicht mit Übergaben anderer Chats kollidiert. Nach Umse
 - **Grundsatz:** parallel bleibt parallel im gleichen Abstand – gemessen quer zum Gleis, nicht senkrecht im Plan –, egal wie der Plan gedreht ist und unter welchem Winkel ein Gleis ihn verlässt. Standardisiert wird der Abstand, nicht der Winkel (kein fester Winkelsatz; Kippen ≤ 8° wie Château-d'Oex bleibt erlaubt).
 - **Anlass:** h9o9 Sagliains. Im Plan Sagliains · Autoverlad verlassen zwei Nebengleise den Plan unter 60°, die Pfeile stehen senkrecht übereinander (13,2 px) → quer zur Schräge nur 6,6 px, im Regionalplan (Drehung −60°, Massstab 0,42) 2,7 px statt 10 px. Der connector gleicht die ~7 px je Gleis einzeln aus (T7 «leicht schräge Gerade») → ein Gleis läuft schräg.
 - **Prüfstand:** jede Reinform/jeden Zusatz aus vorlage.py (Blaupause 2) in Drehungen 0, ±30, ±60, 90° und mit Abgängen gerade/30°/60° erzeugen; automatisch prüfen: Querabstand gleich, parallel bleibt parallel, Pfeile eines Bündels im Gleisabstand, Weichen gerundet, nichts unter 90°; zwei Blaupausen-Bahnhöfe gedreht nebeneinander verbinden → Verbindung gerade. Die Blaupause erzeugt nur die einfachen Bahnhöfe (Neuchâtel); geprüft werden die gemeinsamen Bausteine (Stummel, Pfeile, Ports, Rundungen, connector), die auch die OSM-Pläne (Vereina, MOB) benutzen.
-- **Reihenfolge (je ein eigener Chat, nacheinander, nicht parallel – gleicher Code):**
-  1. Prüfstand aufbauen (mit dem Sagliains-Fall als Baustein).
-  2. Pfeile/Stummel bei schrägen Abgängen korrigieren → h9o9; Prüfstand zeigt weitere Stellen mit derselben Ursache.
-  3. Bahnhofsausfahrt als Ganzes (Zeichenlogik 1): Selfranga / jxpf S-Kurve Klosters – Selfranga, Chamby.
-  4. Bündel als Einheit (Zeichenlogik 2) im connector, als Schutz, wenn die Enden aus OSM-Gründen nicht passen.
-  5. Montbovon +60° im Prüfstand nachstellen statt von Hand fixieren; danach Prüflauf über die abgenommenen SBB-Bahnhöfe (E9: Änderung zulässig bei gleicher Topologie, im Differenzbild).
+- **Reihenfolge:** nur noch in `UEBERGABE.md` Abschnitt 6 «Fahrplan» (Schritte A, 0, 1–5).
 - Perron-Standardlänge 80 px gehört als Standard in die Blaupause (Begutachtung Daniel).
 - Entschieden 6.11. abends (REGELN.md «Antworten D. Eckenstein 6.11.2026»): Caux stimmt, Stumpen Gl. 2 dünn; Montreux Gl. 4 rein, Perrons beidseitig; 80 px ok; Nebengleise bleiben, Meterspur-Pfeile braun; Kreuzung: Lücke nur bei Niveautrennung, Gleisdurchschneidung durchgezogen (Details folgen). Zeichenlogik 4 (Hierarchie) damit erledigt.
 
