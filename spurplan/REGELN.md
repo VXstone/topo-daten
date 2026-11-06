@@ -89,6 +89,8 @@ Stand 21.10.2026.
 - Fahrbeziehungen je Betriebspunkt (über Weichen fahrbar, keine Spitzkehre) und Dreiecke kommen aus dem Strangbild (Vereina: Sagliains Sasslatsch – Sasslatsch – Autoverlad).
 - Die Regionaltopologie kommt aus dem Strangbild. Prüfung S1 (Streckengleise je Nachbar = Gleiszahl), S2 (Abgang je Fahrbeziehung vorhanden), S3 (Fahrbeziehung im Plan durchgehend gezeichnet).
 - R33b: Streckengleis nach der letzten Weiche ohne weitere Abzweigung läuft auf seiner Ebene gerade aus dem Plan (Klosters → Selfranga).
+  Seit 6.11. nicht im parallelen Bündel: liegt im Doppelspurabstand (< 8 m) ein Gleis daneben, das schräg bleibt, oder auf
+  beiden Seiten ein Gleis, bleibt das Gleis schräg (Regression Olten 3.11.–6.11.: unterbrochene Gleise).
 
 ## Knotenpläne (3.11.)
 - Pläne werden nur an ruhigen Stellen geschnitten: Strang ohne Weiche ≥ `knoten_ruhig_m` (500 m). Liegen zwei Betriebspunkte mit eigenen Weichen näher beieinander, entsteht ein gemeinsamer Plan (Titel nennt alle, Hauptpunkt = Personenbahnhof bzw. meiste Weichen). Halte ohne Weiche schneiden nie. Ausdehnung höchstens `knoten_max_m` (2500 m). `knotenplaene: false` = ein Plan je Betriebspunkt.
@@ -188,6 +190,8 @@ Stand 21.10.2026.
 ## Gleisenden, Bushalte, Perron-Standardlänge (5.11.2026, Rückmeldung MOB)
 - **Echte Gleisenden** (Regionen): region_vorbereiten schreibt je Betriebspunkt `gleisenden` = Knoten, die auch in den Schweiz-Daten nur an einem Gleis hängen; region_lauf gibt sie als cfg `gleisenden` weiter. Sie gelten nie als Datenrand → Stumpen mit Prellbock statt Abgang mit Pfeil (Rochers de Naye).
 - **R27b**: endet daneben (< 30 m) ein weiteres Gleis, ist es ein Kopfbahnhof mit Stumpfgleisen, keine fehlende Weiche.
+- **R27b (6.11.)**: nie bei einem Gleis mit eigener OSM-Gleisnummer (`railway:track_ref`, Zofingen Gl. 40) und nie auf ein
+  Gleis auf Brücke/im Tunnel/anderer Ebene (Aarburg-Oftringen, Aarebrücke). Regressionen seit 29.10., abgenommene Pläne.
 - **Bushalte**: highway=platform ohne railway=platform, im Mittel > 6 m vom nächsten Gleis, ist kein Perron (Montbovon «Montbovon, gare», Lenk A/B/C). Bahnperron nur als highway=platform (St. Stephan, 1,8 m) bleibt.
 - **Perron-Standardlänge** (Regionen, cfg `perron_standard_px` 80): jeder Perron gleich lang um seine Mitte, perron_frei kürzt auf den freien Abschnitt; Perronteile (Zweisimmen) bleiben.
 

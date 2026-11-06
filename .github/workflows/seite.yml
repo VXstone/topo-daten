@@ -9,7 +9,7 @@ on:
       label: { description: "Label des Regionalplans Olten", required: false, default: "Region Olten" }
   push:
     branches: [main]
-    paths: ["spurplan/werkstatt/**", "spurplan/hinweise.json", "spurplan/code/ausschnitte.py"]
+    paths: ["spurplan/werkstatt/**", "spurplan/hinweise.json", "spurplan/code/ausschnitte.py", "spurplan/code/alle_plaene_pruefen.py", "spurplan/abnahmen.json"]
   workflow_run:
     workflows: ["regionen", "plaene"]
     types: [completed]
@@ -68,6 +68,12 @@ jobs:
           python3 feedback/bauen.py "${{ github.event.inputs.label || 'Region Olten' }}" feedback/region.svg 2>&1 | tee /tmp/seite/log.txt
           cp feedback/index.html /tmp/seite/
           python3 ../../code/ausschnitte.py /tmp/seite/plaene ../../hinweise.json /tmp/seite/ausschnitte 2>&1 | tee -a /tmp/seite/log.txt
+      - name: Regression über alle Pläne (6.11.2026, Befund Olten) – Tabelle, Differenzbilder, Einordnung, Kartenlabel
+        run: |
+          git fetch -q --depth 400 origin ergebnisse:refs/remotes/origin/ergebnisse -f || true
+          SEIT=$(python3 -c "import json;print(json.load(open('spurplan/veroeffentlicht.json'))['ergebnisse'])" 2>/dev/null || true)
+          python3 spurplan/code/alle_plaene_pruefen.py spurplan/abnahmen.json /tmp/seite/regression \
+            --neu /tmp/seite/plaene --seite /tmp/seite/index.html ${SEIT:+--seit $SEIT} 2>&1 | tee -a /tmp/seite/log.txt || true
       - name: Ergebnisse auf Branch «ergebnisse» (nur ergebnisse/seite ersetzen)
         if: always()
         run: |

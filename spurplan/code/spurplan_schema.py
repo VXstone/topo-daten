@@ -279,6 +279,10 @@ if CFG["rules"].get("r27b", True):
             n = w["nodes"][k]
             if _deg[n] != 1 or ntag.get(n, {}).get("railway") == "buffer_stop" or at_data_edge(n): continue
             if not _am_perron(w, n): continue
+            # Gleis mit eigener Gleisnummer in OSM (railway:track_ref): sorgfältig erfasst, das offene Ende ist ein echtes
+            # Stumpfende (6.11.2026, Regression Zofingen: Gl. 40 der Linie 504 endet 5 m neben Gl. 1 und wurde seit 29.10.
+            # an Gl. 1 angeschlossen – Topologie gegen OSM und gegen die Abnahme). Susch Gl. 1 (Anlass) hat keine Nummer.
+            if w["tags"].get("railway:track_ref"): continue
             # Endet daneben (< 30 m) ein weiteres Gleis, ist es ein Kopfbahnhof mit Stumpfgleisen, keine fehlende Weiche
             # (5.11.2026, Rochers de Naye: beide Endgleise hören vor dem Tunnel nebeneinander auf)
             if any(m_ != n and _deg[m_] == 1 and m_ > -10 ** 14 and m_ in P and math.dist(P[m_], P[n]) < 30
@@ -288,6 +292,9 @@ if CFG["rules"].get("r27b", True):
             u = u / Lu; best = None
             for w2 in ways.values():
                 if w2["id"] in _own[n] or w2["tags"].get("service"): continue      # nur an Streckengleise (Stumpen bleiben Stumpen)
+                if (w2["tags"].get("layer", "0") != w["tags"].get("layer", "0") or w2["tags"].get("bridge") or w2["tags"].get("tunnel")) \
+                        and not (w["tags"].get("bridge") or w["tags"].get("tunnel")): continue      # keine Weiche auf Brücke/in Tunnel einer anderen Ebene
+                # (6.11.2026, Regression Aarburg-Oftringen: Abstellgleis über Gl. 3 wurde an die Aarebrücke, layer=1, angeschlossen)
                 for i2 in range(len(w2["nodes"]) - 1):
                     A_, B_ = np.array(P[w2["nodes"][i2]], float), np.array(P[w2["nodes"][i2 + 1]], float)
                     t_ = B_ - A_; Lt = float(np.linalg.norm(t_))
@@ -859,6 +866,25 @@ if CFG.get("abgang_gerade_m", 150):
             if sum(x["s1"] - x["s0"] for x in kette) > CFG.get("abgang_gerade_m", 150): continue
             if all(x["flat"] for x in kette): continue
             if not any(x["flat"] for x in _an33[n_] if x not in kette): continue  # an der Weiche läuft ein gerades Gleis weiter
+            # 6.11.2026 (Regression Olten seit 3.11.: unterbrochene Gleise, Gleis verdoppelt). R33b stellt nur ein Gleis gerade,
+            # das am Planrand nicht Teil eines parallelen Bündels ist (Grundsatz «parallel bleibt parallel»). Nicht gerade
+            # stellen, wenn ein anderes Gleis im Doppelspurabstand (cfg «abgang_gerade_nachbar_m», Standard 8 m) daneben
+            #   a) selbst schräg bleibt (Olten Richtung Aarau: Linie 531 3,6 m daneben in der Kurve), oder
+            #   b) auf beiden Seiten liegt – das Gleis liegt mitten im Bündel (Olten Richtung Basel: 2,7 m und 4,4 m).
+            # Weiter erlaubt: Klosters Platz → Sagliains (Linie 915 13 m daneben) und Klosters Selfranga (ein gerades
+            # Nachbargleis 3,9 m auf einer Seite) – die beiden Anlässe von R33b.
+            _nb33 = CFG.get("abgang_gerade_nachbar_m", 8); _seiten33 = set(); _schraeg33 = False
+            for o in segs:
+                for e2 in (0, 1):
+                    if o is sg or o in kette or not o.get("cut%d" % e2): continue
+                    ne_ = o["nodes"][-1 if e2 else 0]
+                    dd_ = SD[ne_][1] - SD[n_end][1]
+                    if abs(SD[ne_][0] - SD[n_end][0]) >= 60 or abs(dd_) >= _nb33: continue
+                    _seiten33.add(dd_ > 0)
+                    if not o["flat"]: _schraeg33 = True
+            if _schraeg33 or len(_seiten33) == 2:
+                if ARGS.dbg: print("R33b im Bündel, bleibt", [x["way"] for x in kette], "schräger Nachbar" if _schraeg33 else "beidseitig")
+                continue
             for x in kette: x["flat"] = True
             if ARGS.dbg: print("R33b", [x["way"] for x in kette])
 # ------------------------------------------------------ 3. Ketten
