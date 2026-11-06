@@ -8,7 +8,7 @@ on:
       bahnhoefe: { description: "Bahnhöfe (Leerzeichen getrennt), leer = alle", required: false, default: "" }
   push:
     branches: [main]
-    paths: ["spurplan/**", "!spurplan/regionen/**", "!spurplan/werkstatt/**", "!spurplan/hinweise.json", "!spurplan/UEBERGABE.md"]
+    paths: ["spurplan/**", "!spurplan/regionen/**", "!spurplan/werkstatt/**", "!spurplan/hinweise.json", "!spurplan/UEBERGABE.md", "!spurplan/UEBERGABE_ARCHIV*", "!spurplan/IDEEN_REVIEW.md", "!spurplan/REGELN.md"]
 permissions:
   contents: write
 concurrency: { group: plaene, cancel-in-progress: false }

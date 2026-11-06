@@ -199,3 +199,6 @@ Stand 21.10.2026.
 - **Perron-Standardlänge 80 px** (Linien-Regionen): bestätigt.
 - **Nebengleise:** Strichstärke bleibt wie sie ist (keine weitere Hierarchie). **Pfeile an Meterspur braun** (sind noch schwarz).
 - **Kreuzung ohne Verbindung:** Lücke im untergeordneten Gleis nur bei echter Niveautrennung (Brücke, Über-/Unterführung, Tunnel). Gleisdurchschneidung (Kreuzung auf gleicher Ebene, z. B. Kerzers) → beide Gleise durchgezogen. Details folgen (D. Eckenstein).
+
+## Regression über alle Pläne (6.11.2026, Befund Olten)
+- Jede Runde vergleicht `code/alle_plaene_pruefen.py` alle Pläne der Feedback-Seite mit ihrer Abnahme-Fassung (sonst erste bzw. zuletzt veröffentlichte Fassung). Geänderte Pläne brauchen eine Erklärung (Regel nach E9 oder Fehler) und ein Differenzbild für Daniel. «Byte-gleich» nur noch behaupten, wenn dieser Lauf es zeigt.
