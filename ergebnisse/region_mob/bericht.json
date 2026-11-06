@@ -1,6 +1,6 @@
 {
  "region": "mob",
- "erzeugt": "2026-11-06 20:17 UTC",
+ "erzeugt": "2026-11-06 22:23 UTC",
  "bahnhoefe": {
   "schonried": {
    "name": "Schönried",
@@ -91,7 +91,7 @@
   "montreux": {
    "name": "Montreux",
    "ok": true,
-   "befunde": "Befunde: {'A': 1, 'B': 47, 'D': 4}",
+   "befunde": "Befunde: {'A': 4, 'B': 47, 'D': 4}",
    "optionen": [
     "--hauptgleise"
    ]
@@ -102,14 +102,14 @@
    "befunde": "Befunde: {'B': 1, 'F': 1}",
    "optionen": []
   },
-  "allieres": {
-   "name": "Allières",
+  "chamby": {
+   "name": "Chamby",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "chamby": {
-   "name": "Chamby",
+  "allieres": {
+   "name": "Allières",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -126,14 +126,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "oeschseite": {
-   "name": "Oeschseite",
+  "saanenmoser": {
+   "name": "Saanenmöser",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "saanenmoser": {
-   "name": "Saanenmöser",
+  "oeschseite": {
+   "name": "Oeschseite",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -216,14 +216,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "montreux_les_planches": {
-   "name": "Montreux-Les Planches",
+  "sendy_sollard": {
+   "name": "Sendy-Sollard",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "sendy_sollard": {
-   "name": "Sendy-Sollard",
+  "montreux_les_planches": {
+   "name": "Montreux-Les Planches",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -240,26 +240,20 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "le_tremblex": {
-   "name": "Le Tremblex",
-   "ok": true,
-   "befunde": "Befunde: {}",
-   "optionen": []
-  },
   "fontanivent": {
    "name": "Fontanivent",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "les_cases": {
-   "name": "Les Cases",
+  "le_tremblex": {
+   "name": "Le Tremblex",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "glion_college": {
-   "name": "Glion-Collège",
+  "les_cases": {
+   "name": "Les Cases",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -275,6 +269,12 @@
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
+  },
+  "glion_college": {
+   "name": "Glion-Collège",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
   }
  },
  "verkettung": {
@@ -286,8 +286,8 @@
   "S3": 0
  },
  "lage_suche": {
-  "ausgang": 193,
-  "ergebnis": 69,
+  "ausgang": 205,
+  "ergebnis": 75,
   "drehung": {
    "Montbovon": 60,
    "Montreux": 30,
@@ -302,7 +302,7 @@
   "ecken": 1
  },
  "regeln": {
-  "G2": 20,
+  "G2": 23,
   "G6": 3
  },
  "planrand": 0,
@@ -316,16 +316,16 @@
   "verk_S1": 0,
   "verk_S2": 0,
   "verk_S3": 0,
-  "regel_G2": 20,
+  "regel_G2": 23,
   "regel_G6": 3,
   "ruhe_treppen": 7,
   "ruhe_ecken": 1,
   "planrand": 0,
   "lage_L3a": 8
  },
- "unruhe": 109,
+ "unruhe": 115,
  "unruhe_teile": {
-  "regel_G2": 40,
+  "regel_G2": 46,
   "regel_G6": 9,
   "ruhe_treppen": 56,
   "ruhe_ecken": 4
@@ -336,7 +336,6 @@
   "besser": {
    "lage_L2": -34,
    "lage_L3": -7,
-   "regel_G2": -3,
    "ruhe_ecken": -2,
    "ruhe_treppen": -3,
    "topo_T6": -3
@@ -345,7 +344,7 @@
   "neu": {
    "lage_L3a": 8
   },
-  "unruhe": 109,
+  "unruhe": 115,
   "unruhe_basis": 777
  }
 }
