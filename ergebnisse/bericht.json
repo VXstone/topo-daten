@@ -1,6 +1,6 @@
 {
- "erzeugt": "2026-11-07 22:06 UTC",
- "lauf": "https://github.com/VXstone/topo-daten/actions/runs/42418970155",
+ "erzeugt": "2026-11-07 22:39 UTC",
+ "lauf": "https://github.com/VXstone/topo-daten/actions/runs/42421532155",
  "bahnhoefe": {
   "neuchatel": {
    "ok": true,
@@ -9,7 +9,7 @@
    "verbindungen_abweichungen": 1,
    "gleich_wie_vergleich": false,
    "regeln": {
-    "G2": 14,
+    "G2": 4,
     "G6": 1
    },
    "netz": {},
@@ -18,6 +18,7 @@
     "status": "besser",
     "schlechter": {},
     "besser": {
+     "regel_G2": -10,
      "regel_G8": -1
     },
     "topologie_offen": {},
@@ -25,7 +26,7 @@
      "ruhe_treppen": 3,
      "ruhe_ecken": 0
     },
-    "unruhe": 55,
+    "unruhe": 35,
     "unruhe_basis": 58
    }
   },
@@ -36,7 +37,7 @@
    "verbindungen_abweichungen": 0,
    "gleich_wie_vergleich": null,
    "regeln": {
-    "G2": 4,
+    "G2": 2,
     "G7": 1
    },
    "netz": {
@@ -52,6 +53,7 @@
     "schlechter": {},
     "besser": {
      "netz_D11": -1,
+     "regel_G2": -2,
      "regel_G8": -3
     },
     "topologie_offen": {
@@ -63,7 +65,7 @@
      "ruhe_treppen": 1,
      "ruhe_ecken": 0
     },
-    "unruhe": 193,
+    "unruhe": 189,
     "unruhe_basis": 204
    }
   },
@@ -109,7 +111,7 @@
    "verbindungen_abweichungen": 0,
    "gleich_wie_vergleich": null,
    "regeln": {
-    "G2": 5,
+    "G2": 3,
     "G6": 7,
     "G7": 3
    },
@@ -125,6 +127,7 @@
      "topo_F": 2
     },
     "besser": {
+     "regel_G2": -2,
      "regel_G8": -7
     },
     "topologie_offen": {
@@ -136,7 +139,7 @@
      "ruhe_treppen": 3,
      "ruhe_ecken": 0
     },
-    "unruhe": 1505,
+    "unruhe": 1501,
     "unruhe_basis": 1426
    }
   }

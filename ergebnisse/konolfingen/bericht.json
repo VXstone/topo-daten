@@ -13,22 +13,8 @@
  "regeln": [
   {
    "regel": "G2",
-   "x": 299.4,
-   "y": 123.2,
-   "bahnhof": null,
-   "text": "Weiche ohne Ausrundung (16°)"
-  },
-  {
-   "regel": "G2",
    "x": 319.9,
    "y": 136.4,
-   "bahnhof": null,
-   "text": "Weiche ohne Ausrundung (60°)"
-  },
-  {
-   "regel": "G2",
-   "x": 628.8,
-   "y": 245.6,
    "bahnhof": null,
    "text": "Weiche ohne Ausrundung (60°)"
   },
@@ -108,7 +94,7 @@
   "topo_D": 0,
   "topo_E": 0,
   "topo_F": 0,
-  "regel_G2": 4,
+  "regel_G2": 2,
   "regel_G7": 1,
   "netz_T10": 1,
   "netz_Z1": 1,

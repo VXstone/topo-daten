@@ -20,20 +20,6 @@
   },
   {
    "regel": "G2",
-   "x": 934.1,
-   "y": 280.4,
-   "bahnhof": null,
-   "text": "Weiche ohne Ausrundung (60°)"
-  },
-  {
-   "regel": "G2",
-   "x": 934.1,
-   "y": 280.4,
-   "bahnhof": null,
-   "text": "Weiche ohne Ausrundung (60°)"
-  },
-  {
-   "regel": "G2",
    "x": 1152.3,
    "y": 492.8,
    "bahnhof": null,
@@ -216,7 +202,7 @@
   "topo_D": 0,
   "topo_E": 0,
   "topo_F": 2,
-  "regel_G2": 5,
+  "regel_G2": 3,
   "regel_G6": 7,
   "regel_G7": 3,
   "netz_D11": 2,

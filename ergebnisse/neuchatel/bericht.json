@@ -21,20 +21,6 @@
   },
   {
    "regel": "G2",
-   "x": 782.9,
-   "y": 254.0,
-   "bahnhof": null,
-   "text": "Weiche ohne Ausrundung (60°)"
-  },
-  {
-   "regel": "G2",
-   "x": 854.8,
-   "y": 206.0,
-   "bahnhof": null,
-   "text": "Weiche ohne Ausrundung (24°)"
-  },
-  {
-   "regel": "G2",
    "x": 600.6,
    "y": 134.0,
    "bahnhof": null,
@@ -49,66 +35,10 @@
   },
   {
    "regel": "G2",
-   "x": 854.8,
-   "y": 206.0,
-   "bahnhof": null,
-   "text": "Weiche ohne Ausrundung (24°)"
-  },
-  {
-   "regel": "G2",
-   "x": 586.8,
-   "y": 182.0,
-   "bahnhof": null,
-   "text": "Weiche ohne Ausrundung (24°)"
-  },
-  {
-   "regel": "G2",
-   "x": 907.4,
-   "y": 182.0,
-   "bahnhof": null,
-   "text": "Weiche ohne Ausrundung (30°)"
-  },
-  {
-   "regel": "G2",
-   "x": 1089.7,
-   "y": 254.0,
-   "bahnhof": null,
-   "text": "Weiche ohne Ausrundung (24°)"
-  },
-  {
-   "regel": "G2",
-   "x": 907.4,
-   "y": 182.0,
-   "bahnhof": null,
-   "text": "Weiche ohne Ausrundung (30°)"
-  },
-  {
-   "regel": "G2",
    "x": 764.6,
    "y": 230.0,
    "bahnhof": null,
    "text": "Weiche ohne Ausrundung (22°)"
-  },
-  {
-   "regel": "G2",
-   "x": 586.8,
-   "y": 182.0,
-   "bahnhof": null,
-   "text": "Weiche ohne Ausrundung (24°)"
-  },
-  {
-   "regel": "G2",
-   "x": 1089.7,
-   "y": 254.0,
-   "bahnhof": null,
-   "text": "Weiche ohne Ausrundung (24°)"
-  },
-  {
-   "regel": "G2",
-   "x": 782.9,
-   "y": 254.0,
-   "bahnhof": null,
-   "text": "Weiche ohne Ausrundung (60°)"
   },
   {
    "regel": "G6",
@@ -156,7 +86,7 @@
   "topo_D": 0,
   "topo_E": 0,
   "topo_F": 0,
-  "regel_G2": 14,
+  "regel_G2": 4,
   "regel_G6": 1,
   "boegen_pax": 34,
   "boegen_alle": 55,
