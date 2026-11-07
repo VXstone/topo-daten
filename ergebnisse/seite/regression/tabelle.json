@@ -1,10 +1,9 @@
 {
- "erzeugt": "2026-11-07 04:18 UTC",
+ "erzeugt": "2026-11-07 04:38 UTC",
  "plaene": 80,
- "geaendert": 14,
+ "geaendert": 5,
  "einordnung": {
-  "gleichwertig": 11,
-  "schlechter?": 2,
+  "gleichwertig": 4,
   "vermutlich besser": 1
  },
  "zeilen": [
@@ -98,40 +97,18 @@
    "name": "Murten",
    "gruppe": "Referenz",
    "abgenommen": true,
-   "basis": "Archivbeginn (Abnahme 2026-10-13)",
-   "basis_commit": "09c9132",
-   "stellen": 7,
-   "letzte_aenderung": "2026-10-26T07:19",
-   "einordnung": "gleichwertig",
-   "delta": "",
-   "alt": {
-    "G2": 2,
-    "T7": 3
-   },
-   "neu": {
-    "G2": 2,
-    "T7": 3
-   }
+   "basis": "bestätigt 2026-11-07",
+   "basis_commit": "75cc38e",
+   "stellen": 0
   },
   {
    "key": "kerzers",
    "name": "Kerzers",
    "gruppe": "Referenz",
    "abgenommen": true,
-   "basis": "Archivbeginn (Abnahme 2026-10-14)",
-   "basis_commit": "09c9132",
-   "stellen": 7,
-   "letzte_aenderung": "2026-10-27T22:00",
-   "einordnung": "schlechter?",
-   "delta": "G2 3→4, T7 1→3",
-   "alt": {
-    "G2": 3,
-    "T7": 1
-   },
-   "neu": {
-    "G2": 4,
-    "T7": 3
-   }
+   "basis": "bestätigt 2026-11-07",
+   "basis_commit": "ede23ea",
+   "stellen": 0
   },
   {
    "key": "olten",
@@ -213,74 +190,36 @@
    "name": "Safenwil",
    "gruppe": "Region Olten",
    "abgenommen": true,
-   "basis": "Archivbeginn (Abnahme 2026-10-14)",
-   "basis_commit": "09c9132",
-   "stellen": 6,
-   "letzte_aenderung": "2026-10-30T19:38",
-   "einordnung": "gleichwertig",
-   "delta": "",
-   "alt": {
-    "T7": 0
-   },
-   "neu": {
-    "T7": 0
-   }
+   "basis": "bestätigt 2026-11-07",
+   "basis_commit": "1fa061d",
+   "stellen": 0
   },
   {
    "key": "wangen_bei_olten",
    "name": "Wangen b. O.",
    "gruppe": "Region Olten",
    "abgenommen": true,
-   "basis": "Archivbeginn (Abnahme 2026-10-13)",
-   "basis_commit": "09c9132",
-   "stellen": 4,
-   "letzte_aenderung": "2026-10-30T19:38",
-   "einordnung": "schlechter?",
-   "delta": "G2 2→4",
-   "alt": {
-    "G2": 2,
-    "T7": 0
-   },
-   "neu": {
-    "G2": 4,
-    "T7": 0
-   }
+   "basis": "bestätigt 2026-11-07",
+   "basis_commit": "1fa061d",
+   "stellen": 0
   },
   {
    "key": "dulliken",
    "name": "Dulliken",
    "gruppe": "Region Olten",
    "abgenommen": true,
-   "basis": "Archivbeginn (Abnahme 2026-10-13)",
-   "basis_commit": "09c9132",
-   "stellen": 12,
-   "letzte_aenderung": "2026-10-29T22:45",
-   "einordnung": "gleichwertig",
-   "delta": "",
-   "alt": {
-    "T7": 0
-   },
-   "neu": {
-    "T7": 0
-   }
+   "basis": "bestätigt 2026-11-07",
+   "basis_commit": "a808d4c",
+   "stellen": 0
   },
   {
    "key": "daniken",
    "name": "Däniken",
    "gruppe": "Region Olten",
    "abgenommen": true,
-   "basis": "Archivbeginn (Abnahme 2026-10-14)",
-   "basis_commit": "09c9132",
-   "stellen": 6,
-   "letzte_aenderung": "2026-10-30T19:38",
-   "einordnung": "gleichwertig",
-   "delta": "",
-   "alt": {
-    "T7": 0
-   },
-   "neu": {
-    "T7": 0
-   }
+   "basis": "bestätigt 2026-11-07",
+   "basis_commit": "1fa061d",
+   "stellen": 0
   },
   {
    "key": "schonenwerd",
@@ -307,56 +246,27 @@
    "name": "Tecknau",
    "gruppe": "Region Olten",
    "abgenommen": true,
-   "basis": "Archivbeginn (Abnahme 2026-10-13)",
-   "basis_commit": "09c9132",
-   "stellen": 3,
-   "letzte_aenderung": "2026-11-04T08:29",
-   "einordnung": "gleichwertig",
-   "delta": "",
-   "alt": {
-    "G2": 2,
-    "T7": 0
-   },
-   "neu": {
-    "G2": 2,
-    "T7": 0
-   }
+   "basis": "bestätigt 2026-11-07",
+   "basis_commit": "255d606",
+   "stellen": 0
   },
   {
    "key": "laufelfingen",
    "name": "Läufelfingen",
    "gruppe": "Region Olten",
    "abgenommen": true,
-   "basis": "Archivbeginn (Abnahme 2026-10-13)",
-   "basis_commit": "09c9132",
-   "stellen": 4,
-   "letzte_aenderung": "2026-10-26T07:19",
-   "einordnung": "gleichwertig",
-   "delta": "",
-   "alt": {
-    "T7": 0
-   },
-   "neu": {
-    "T7": 0
-   }
+   "basis": "bestätigt 2026-11-07",
+   "basis_commit": "75cc38e",
+   "stellen": 0
   },
   {
    "key": "olten_hammer",
    "name": "Olten Hammer",
    "gruppe": "Region Olten",
    "abgenommen": true,
-   "basis": "Archivbeginn (Abnahme 2026-10-13)",
-   "basis_commit": "09c9132",
-   "stellen": 3,
-   "letzte_aenderung": "2026-10-30T19:38",
-   "einordnung": "gleichwertig",
-   "delta": "",
-   "alt": {
-    "T7": 0
-   },
-   "neu": {
-    "T7": 0
-   }
+   "basis": "bestätigt 2026-11-07",
+   "basis_commit": "1fa061d",
+   "stellen": 0
   },
   {
    "key": "neuchatel",

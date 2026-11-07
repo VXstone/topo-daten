@@ -2,21 +2,12 @@
 18 Einträge
 index.html 798 KB, 80 Pläne
 21 Hinweise, 21 Ausschnitte
-/home/runner/work/topo-daten/topo-daten/spurplan/code/alle_plaene_pruefen.py:130: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+/home/runner/work/topo-daten/topo-daten/spurplan/code/alle_plaene_pruefen.py:137: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
   json.dump(dict(erzeugt=datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"), plaene=len(zeilen), geaendert=len(gz),
 thun                         Archivbeginn (Abnahme 2026-10-15)    7 Stellen  gleichwertig  
-murten                       Archivbeginn (Abnahme 2026-10-13)    7 Stellen  gleichwertig  
-kerzers                      Archivbeginn (Abnahme 2026-10-14)    7 Stellen  schlechter?  G2 3→4, T7 1→3
 aarburg_oftringen            Archivbeginn (Abnahme 2026-10-14)    7 Stellen  gleichwertig  
 rothrist                     Abnahme 2026-10-29                  0 Stellen  gleichwertig  
 zofingen                     Archivbeginn (Abnahme 2026-10-14)   28 Stellen  vermutlich besser  G2 4→2, T7 2→1
-safenwil                     Archivbeginn (Abnahme 2026-10-14)    6 Stellen  gleichwertig  
-wangen_bei_olten             Archivbeginn (Abnahme 2026-10-13)    4 Stellen  schlechter?  G2 2→4
-dulliken                     Archivbeginn (Abnahme 2026-10-13)   12 Stellen  gleichwertig  
-daniken                      Archivbeginn (Abnahme 2026-10-14)    6 Stellen  gleichwertig  
 schonenwerd                  Archivbeginn (Abnahme 2026-10-13)    8 Stellen  gleichwertig  
-tecknau                      Archivbeginn (Abnahme 2026-10-13)    3 Stellen  gleichwertig  
-laufelfingen                 Archivbeginn (Abnahme 2026-10-13)    4 Stellen  gleichwertig  
-olten_hammer                 Archivbeginn (Abnahme 2026-10-13)    3 Stellen  gleichwertig  
 neuchatel                    Abnahme 2026-10-26                  1 Stellen  gleichwertig  
-Regression: 80 Pläne, 14 geändert {'gleichwertig': 11, 'schlechter?': 2, 'vermutlich besser': 1}
+Regression: 80 Pläne, 5 geändert {'gleichwertig': 4, 'vermutlich besser': 1}
