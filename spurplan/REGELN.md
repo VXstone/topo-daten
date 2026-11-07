@@ -213,3 +213,40 @@ Stand 21.10.2026.
 
 ## Regression über alle Pläne (6.11.2026, Befund Olten)
 - Jede Runde vergleicht `code/alle_plaene_pruefen.py` alle Pläne der Feedback-Seite mit ihrer Abnahme-Fassung (sonst erste bzw. zuletzt veröffentlichte Fassung). Geänderte Pläne brauchen eine Erklärung (Regel nach E9 oder Fehler) und ein Differenzbild für Daniel. «Byte-gleich» nur noch behaupten, wenn dieser Lauf es zeigt.
+
+## Verschachtelte Weichenanlagen – Referenz Montreux Westende Gl. 5/6 (D. Eckenstein 7.11.2026, bestätigt 23:00)
+Referenzbild (Soll): `vergleich/montreux_westende_skizze.png` (Fassung 3). Gilt für Schritt E (DKW-Automatik) und als
+Baustein im Prüfstand (Schritt 1).
+
+**Aufbau (Topologie, stimmt 1:1 mit OSM):**
+1. Ab Prellbock je eine **spitze Weiche gegen das andere Gleis**: auf 6 (W 1126121816 → Way 97211358/8290-Ast), auf 5
+   (W 1126121501 → Way 97211375).
+2. Die beiden Schrägen kreuzen sich im **Mittelstück** (X 2793859963, OSM `railway_crossing`) – zusammen eine Schere.
+3. Jede Schräge endet auf dem anderen Gleis in einer **DKW in Fortsetzung des Gleises**: auf 6 DKW 1126121469, auf 5
+   DKW 207308647. In OSM je eine Kreuzung mit vier Weichen ≤ 20 m und zwei kurzen Bogen-Ways (E3).
+4. Die Stränge nach aussen kreuzen je ein Gleis als **Durchschneidung** (keine Verbindung): der Ast aus der DKW auf 6 den
+   Ast von Gl. 7 (X 1126121838), der Ast aus der DKW auf 5 die Zufahrt von Gl. 4 (X 8914106524).
+5. Gl. 7 läuft ohne Weiche in den **Ast von 7**; dieser bildet mit dem Gleis von 6 die **DKW 1126121977** und geht stumpf in
+   das Streckengleis (W 1126122400). Gl. 6 läuft nach der DKW 1977 in einen Stumpen.
+6. **Gl. 4 geht nur in Gl. 5** (W 2793859953, stumpf).
+7. Der Ast aus der DKW auf 6 hat nach der Durchschneidung die **Verbindung zur Rochers-de-Naye** (W 1126121532, einzige
+   Verbindung MOB–MGN), **stumpf von links**, und endet im Stumpen. Der Ast aus der DKW auf 5 öffnet nach der Durchschneidung
+   mit W 1126122358 ins **Abstellfeld**.
+
+**Zeichenregeln (allgemein, nicht nur Montreux):**
+- **V1 Einheitlicher Winkel:** alle Diagonalen einer Anlage unter demselben Winkel (60°); nicht variieren, um Platz zu
+  gewinnen.
+- **V2 Durchschneidung mittig:** jede Kreuzung ohne Verbindung (Mittelstück einer Schere, Durchschneidung) liegt in der
+  Mitte zwischen zwei Diagonalen – nicht auf einer Gleisebene. Gleise, die dort enden und weiterlaufen (Gl. 7 → Ast von 7,
+  Gl. 4 → Zufahrt in 5), werden dafür selbst zur Diagonale.
+- **V3 Eine Schräge, eine Linie:** eine Schräge läuft gerade durch Mittelstück, DKW und Durchschneidung (R45), keine
+  Hilfsebenen dazwischen.
+- **V4 DKW an Ort:** eine DKW bleibt auf ihrem Gleis, mit Symbol; die Bogen-Ways und ihre Weichen zeigt das Symbol. Die
+  durchgehenden Gleise (hier 5 und 6) laufen gerade weiter.
+- **V5 Fett** nur die Perrongleise und die Fahrwege von den Perrongleisen ins Streckengleis (Montreux: von 6 und 7 über
+  DKW 1977, von 4 über W 9953). Schere, Äste zum Abstellfeld und zum Stumpen dünn.
+- **V6 Abzweigrichtung wie real:** stumpf/spitz und links/rechts einer Weiche wie in OSM (Rochers-de-Naye stumpf von links).
+
+**Backlog (Idee D. Eckenstein):** Topologie in zwei Durchgängen – einfache Lösung, Plausibilitätsprüfung («ach nee»),
+dann nur die auffällige Stelle mit feinerem Suchradius und Mustern (Schere, DKW, EKW, Durchschneidung). Siehe
+`IDEEN_REVIEW.md`.

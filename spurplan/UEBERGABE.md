@@ -137,7 +137,8 @@ und hakt den Schritt in der Statusliste ab. Ist «Daniel danach» nicht leer, wa
   (gerade 60°-Linie durch die DKW). (3) cfg-Schalter, zuerst nur Regionen; Werkstatt/plaene erst nach Prüfung aller Pläne.
   (4) Verbindung 963685765 endet heute zeichnerisch nicht genau auf 97211358 – mit der DKW erledigt.
   (5) Hinweise Montreux 7.11.: 6yof, afkt, 9636, 8gyi (siehe Nachtrag 7.11. 11:45).
-- Fertig, wenn: Montreux Westende ohne Knubbel/Hilfsebenen, Topologie/Verkettung 0, MOB-Unruhe ≤ 109 oder jeder Rest
+- Ziel-Bild und Regeln: REGELN.md «Verschachtelte Weichenanlagen» (V1–V6), `vergleich/montreux_westende_skizze.png`.
+- Fertig, wenn: Montreux Westende wie das Ziel-Bild (V1–V6), ohne Knubbel/Hilfsebenen, Topologie/Verkettung 0, MOB-Unruhe ≤ 109 oder jeder Rest
   ausserhalb Montreux erklärt; Rothrist/Thun unverändert; Prüfung aller Pläne ohne unerklärte Änderung.
 - Daniel danach: Montreux ansehen.
 
@@ -363,3 +364,8 @@ und hakt den Schritt in der Statusliste ab. Ist «Daniel danach» nicht leer, wa
   Gl. 4 → 5), nicht auf einer Gleisebene.
 - Skizze Fassung 3: `spurplan/vergleich/montreux_westende_skizze.png`. Backlog-Idee «Topologie in zwei Durchgängen» in
   IDEEN_REVIEW.md.
+
+### 7.11.2026 23:00 – Daniel bestätigt Skizze Fassung 3
+- Westende Montreux als Referenz in `REGELN.md` («Verschachtelte Weichenanlagen», Aufbau 1–7, Zeichenregeln V1–V6) und im
+  Doc «Regelwerk Spurpläne» dokumentiert. Schritt E setzt das um; Ziel-Bild `spurplan/vergleich/montreux_westende_skizze.png`.
+- Nächster Einstieg: «Weiter mit UEBERGABE.md – Schritt E: DKW-Automatik».
