@@ -306,3 +306,17 @@ und hakt den Schritt in der Statusliste ab. Ist «Daniel danach» nicht leer, wa
     sein», es9y «Perronnummern bei Meterspur überall braun».
   - eigene Regel, später: mp8h «halt alles entsprechend mitdrehen» (Weichenwinkel in gedrehten Bahnhöfen, damit 60° nicht
     senkrecht wirkt); rap4 Glion «Nebengleis nicht fett?».
+
+### 7.11.2026 (Mittag) – Schritt E begonnen (im selben Chat wie M), Zwischenstand, nichts veröffentlicht
+- Code `cfg dkw_auto` (spurplan_schema, direkt nach dem Einlesen der Ways), **noch aus** (region_lauf setzt false):
+  Kreuzung `railway_crossing` mit je einer Weiche ≤ `dkw_m` (20 m) vor/nach auf beiden Ways + genau zwei Bogen-Ways
+  ≤ 25 m (je eine Seite des einen mit der Gegenseite des anderen) → `railway:switch=double_slip`, Fahrwege der Bögen werden
+  die zwei Gleise, Bogen-Ways entfallen; im stärker geknickten Fahrweg entfallen die vier Bogenweichen (sonst Hilfsebenen).
+- Montreux: erkannt (1126121469; Bögen 963685765/963685766). Real ist es keine X-Kreuzung, sondern ein «Kuss»: der eine
+  Fahrweg (Gl. 6) läuft gerade durch, der andere kommt von Gl. 5 hinauf an Gl. 6 und geht gleich wieder hinunter zu den
+  Abstellgleisen. Ergebnis Bahnhofplan: Gl. 6 gerade, alle 5 Perrons, G2 6/G6 1 (vorher 4/4). **Offen:** im Bare-Plan landet
+  der geknickte Fahrweg nach der DKW wieder auf der Ebene von Gl. 5 (Lage von 8914081514), Regionalplan Montreux G2 +4,
+  MOB-Unruhe 117 statt 115; das DKW-Symbol erscheint nicht (Zeichnung erwartet zwei sich kreuzende Gleise).
+- **Frage an Daniel** (Bilder im Chat): soll so ein «Kuss» als V (zwei Weichen am selben Punkt von Gl. 6) oder als DKW-Symbol
+  auf Gl. 6 gezeichnet werden? Danach: Ebene des Endpunkts nach der DKW richtig (nicht Gl. 5), dann einschalten,
+  Gegenprobe Rothrist/Thun (dort `als_dkw` von Hand), Prüfung aller Pläne.
