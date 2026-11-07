@@ -69,7 +69,8 @@ und hakt den Schritt in der Statusliste ab. Ist «Daniel danach» nicht leer, wa
 ### Statusliste
 - [x] A  Regression Olten und alle Pläne (6.11. abends, Seite v133)
 - [ ] 0  Antworten 6.11. umsetzen
-- [ ] M  Montreux und U-Abgang (neu 7.11., vor P)
+- [x] M  Montreux und U-Abgang (7.11., Seite v137; Unruhe-Ziel ≤ 109 geht an Schritt E)
+- [ ] E  DKW-Automatik nach E3 (neu 7.11., vor P; Westende Montreux Gl. 5)
 - [ ] P  Verbundene Perrons / Spezialperrons (Thun 16/18, Montreux, Zweisimmen, Bern 49/50, Basel 3 und 35)
 - [ ] 1  Blaupausen-Prüfstand aufbauen
 - [ ] 2  Pfeile/Stummel bei schrägen Abgängen (h9o9 Sagliains)
@@ -122,6 +123,22 @@ und hakt den Schritt in der Statusliste ab. Ist «Daniel danach» nicht leer, wa
 - Fertig, wenn: Montreux ohne Knick > 90°, ohne Kreuzung ohne Knoten, Abstellgleise richtig; MOB-Unruhe ≤ 109 (damit auch
   Schritt 0 fertig); Prüfung aller Pläne ohne unerklärte Änderung.
 - Daniel danach: Montreux ansehen.
+
+### E – DKW-Automatik nach E3 (neu 7.11.2026, vor P)
+- Einstieg: «Weiter mit UEBERGABE.md – Schritt E: DKW-Automatik»
+- Anlass: Entscheid Daniel 7.11. (nach Schritt M). Regel E3 (REGELN.md): mehrere OSM-Elemente < 20 m (Weichen + Kreuzung),
+  die zusammen ein Gleis kreuzen, sind eine DKW mit Symbol – bisher nur von Hand (`als_dkw`, `dkw_px`), «Automatik offen».
+- Testfall: Montreux Westende Gl. 5 – Kreuzung 1126121469 (`railway_crossing`) mit den Kurzverbindungen 963685765 (15 m)
+  und 963685766 (13 m); daneben Kreuzung 2793859963 (reine Kreuzung ohne Bogen, bleibt X). Dazu die schon von Hand
+  gesetzten DKW (Rothrist `als_dkw`, Thun) als Gegenprobe: Automatik muss sie gleich erkennen.
+- Arbeiten: (1) Erkennung im Code: Kreuzungsknoten + Weichen, deren Verbindungen < 20 m die beiden gekreuzten Gleise
+  verbinden → ein DKW-Knoten (einfache/doppelte Kreuzungsweiche je nach Zahl der Bögen); die Kurzverbindungen werden nicht
+  als eigene Gleise gezeichnet, sondern als Klammern des DKW-Symbols (E3). (2) Zeichnung über die bestehende R45-Kette
+  (gerade 60°-Linie durch die DKW). (3) cfg-Schalter, zuerst nur Regionen; Werkstatt/plaene erst nach Prüfung aller Pläne.
+  (4) Verbindung 963685765 endet heute zeichnerisch nicht genau auf 97211358 – mit der DKW erledigt.
+- Fertig, wenn: Montreux Westende ohne Knubbel/Hilfsebenen, Topologie/Verkettung 0, MOB-Unruhe ≤ 109 oder jeder Rest
+  ausserhalb Montreux erklärt; Rothrist/Thun unverändert; Prüfung aller Pläne ohne unerklärte Änderung.
+- Daniel danach: Montreux ansehen; offen aus M: U-Ende 180° (veröffentlicht) oder 120°, Rückfragen j93a, mp8h, 5yz7.
 
 ### P – Verbundene Perrons / Spezialperrons (neu 6.11. abends)
 - Einstieg: «Weiter mit UEBERGABE.md – Schritt P: Verbundene Perrons»
@@ -266,3 +283,8 @@ und hakt den Schritt in der Statusliste ab. Ist «Daniel danach» nicht leer, wa
 - Prüfung aller Pläne: nur `region_mob` geändert («vermutlich besser»: G6 4→3, G2 21→23 durch Zweisimmen-Drehung).
 - **Schritt M bleibt offen** bis Daniel entscheidet: (a) Montreux so abnehmen bzw. Unruhe-Ziel für M aufgeben (Rest ist
   ausserhalb Montreux), oder (b) E3-DKW-Automatik als eigenen Schritt vor P einschieben. Dazu U 180° oder 120°.
+
+### 7.11.2026 11:02 – Entscheid Daniel
+- «DKW-Automatik klingt vielversprechend»: neuer Schritt **E – DKW-Automatik nach E3** vor P eingefügt. Schritt M abgehakt;
+  sein Unruhe-Ziel (≤ 109) und das Westende Gl. 5 gehen an Schritt E. Reihenfolge jetzt: 0 (Rest) → E → P → 1 → 2 → 3 → 4 → 5.
+- Nächster Einstieg: «Weiter mit UEBERGABE.md – Schritt E: DKW-Automatik».
