@@ -3987,7 +3987,7 @@ def _u_abgang(x, y, end, dy, sg, n):
     if th_g >= 179.0:
         lb = max(lb, abs(pts_[-1][0] - xen_) if (pts_[-1][0] - xen_) * arr > 0 else lb)
     else:
-        lb = CFG.get("u_rest_px", 24.0)
+        lb = CFG.get("u_rest_px", 56.0)                  # Schlussgerade nach der Ausrundung >= 40 px, sonst kurze Ecke (T7)
     pts_.append((pts_[-1][0] + vx_ * lb, pts_[-1][1] + vy_ * lb))
     d_ = _rund(pts_, r_)
     _c = MS_BRAUN if sg.get("schmal") else green
