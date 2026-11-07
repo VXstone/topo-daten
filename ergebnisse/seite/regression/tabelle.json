@@ -1,10 +1,9 @@
 {
- "erzeugt": "2026-11-07 10:37 UTC",
+ "erzeugt": "2026-11-07 10:45 UTC",
  "plaene": 80,
  "geaendert": 6,
  "einordnung": {
-  "schlechter?": 1,
-  "gleichwertig": 4,
+  "gleichwertig": 5,
   "vermutlich besser": 1
  },
  "zeilen": [
@@ -33,10 +32,10 @@
    "abgenommen": false,
    "basis": "veröffentlicht",
    "basis_commit": "25a05e5",
-   "stellen": 6,
+   "stellen": 2,
    "letzte_aenderung": "2026-11-07T10:21",
-   "einordnung": "schlechter?",
-   "delta": "T7 0→1",
+   "einordnung": "gleichwertig",
+   "delta": "",
    "alt": {
     "G2": 23,
     "G6": 3,
@@ -45,7 +44,7 @@
    "neu": {
     "G2": 23,
     "G6": 3,
-    "T7": 1
+    "T7": 0
    }
   },
   {
