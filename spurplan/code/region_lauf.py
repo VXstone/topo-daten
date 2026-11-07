@@ -79,7 +79,7 @@ def _bahnhof(n):
     o["cfg"].setdefault("schiebebuehne", True)                        # Depot mit Schiebebühne (Glion, 4.11. spät)
     o["cfg"].setdefault("spurgruppe_seite", True)
     o["cfg"].setdefault("kreuzung_schnitt", True)
-    o["cfg"].setdefault("dkw_auto", False)                            # E3 automatisch (Schritt E, in Arbeit): erst einschalten, wenn Montreux sauber                     # Kreuzungsknoten zweier Schrägen im Schnittpunkt (Montreux, 7.11.)                     # Normalspur-Block an den Rand ihrer realen Seite (Montreux, 7.11.)
+    o["cfg"].setdefault("dkw_auto", True)                             # E3 automatisch (Schritt E, 8.11.2026): DKW an Ort, Anlage im 60°-Gitter
     o["cfg"].setdefault("randzone", True)                             # Streckengleise am Planrand im Standardabstand (Selfranga)
     o["cfg"].setdefault("einspur_gerade", False)                     # Punkt 4 im Plan zerlegt die Weichenstrasse (Château-d'Oex) – stattdessen Kippen im Regionalplan
     o["cfg"]["rules"].setdefault("r49", True)                       # zu eng für 60°: volle Schräge statt 90° (Sagliains West)

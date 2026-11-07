@@ -138,6 +138,12 @@ for pc in pieces:
                 bef("G3", *a[2], pc["st"], f"Knick {t:.0f}° ohne Ausrundung")
 
 # G2 Weichen ausgerundet / G4 90°: Linienenden auf fremden Linien
+_ENDEN_G2 = []
+for i, pc in enumerate(pieces):
+    s = pc["seq"]
+    for end, sg in ((0, s[0]), (1, s[-1])):
+        v = dirv(sg, end)
+        _ENDEN_G2.append((i, sg[2] if end else sg[1], (-v[0], -v[1]) if end == 0 else v))
 for i, pc in enumerate(pieces):
     s = pc["seq"]
     if len(s) == 1 and s[0][0] == "L" and math.dist(s[0][1], s[0][2]) < 4: continue       # Kleinststücke
@@ -156,6 +162,9 @@ for i, pc in enumerate(pieces):
             if math.hypot(*u) < 1: continue
             a_ = ang(v, u); a_ = min(a_, 180 - a_)
             if t_ < 1.5 or t_ > L_.length - 1.5: continue           # Enden treffen sich: Fortsetzung, keine Weiche
+            # Kreuzung/DKW (Schritt E, 8.11.2026): an dieser Stelle läuft ein anderes Stück gerade weiter – das Gleis
+            # kreuzt die Linie, es zweigt nicht ab
+            if any(math.dist(p_e, p) < 1.2 and ang(v, v_e) > 176 for i_e, p_e, v_e in _ENDEN_G2 if i_e != i and i_e != j): break
             if a_ > 75 and pc["col"] in BLACK and pieces[j]["col"] in BLACK: continue    # Klammer an Klammer
             if a_ > 75:
                 if pc["w"] <= 1.4 and len(s) == 3: continue           # Portal/Brückenflügel

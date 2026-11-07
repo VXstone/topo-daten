@@ -104,7 +104,7 @@ ntag = {e["id"]: e["tags"] for e in D if e["type"] == "node"}
 # (railway:switch=double_slip wie in OSM getaggte DKW), die Bogen-Ways entfallen und ihre vier Weichen werden gewöhnliche
 # Punkte – das Symbol zeigt sie. Die beiden Linien bleiben unverändert (V4: die durchgehenden Gleise laufen gerade weiter;
 # die Schräge zieht R45 als eine Linie durch). Mit nur einem Bogen (EKW) bleibt alles wie in OSM. cfg «dkw_auto».
-DKW_AUTO = {}
+DKW_AUTO = {}; LINIEN_X = {}
 if CFG.get("dkw_auto", False):
     def _gm(g1, g2): return math.hypot((g1["lon"] - g2["lon"]) * 111320 * math.cos(math.radians(g1["lat"])), (g1["lat"] - g2["lat"]) * 110540)
     _wn = collections.defaultdict(list)
@@ -147,6 +147,7 @@ if CFG.get("dkw_auto", False):
             for k_, (w_, i_, d_) in enumerate(l_):
                 n_, L_ = _nachbar(ways[w_], i_, d_)
                 nb[(li_, k_)] = n_ if n_ is not None and L_ <= _dkw_m else None
+        LINIEN_X[X_] = [[a_[0] for a_ in l_] for l_ in linien]      # Linien je Kreuzung (auch ohne DKW, V2/V3)
         if None in nb.values() or len(set(nb.values())) != 4: continue
         _lw = {a_[0] for l_ in linien for a_ in l_}
         boegen = []
@@ -1066,8 +1067,42 @@ if CFG.get("randzone", False):
         if wa and wb and not (wa & wb):
             sg["flat"] = False
             if ARGS.dbg: print("RANDZONE Gleiswechsel", sg["way"])
+# Schritt E (V2–V4, Montreux Westende): an einer automatisch erkannten DKW läuft die Linie ohne Durchschneidung in der Nähe
+# als durchgehendes Gleis gerade weiter (Gl. 5/6), die andere ist die Schräge (sie kreuzt auch Mittelstück oder
+# Durchschneidung). An einer Kreuzung verbinden Ketten nur Stücke derselben Linie (Gl. 7 läuft in den Ast von 7, nicht in
+# den gekreuzten Ast zur Rochers-de-Naye); wechselt eine Linie über die Kreuzung die Ebene, wird ihr kürzeres Stück dort
+# Schräge (Gl. 4 → 5 über X 6524). Nur mit cfg «dkw_auto».
+X_LINIE = {}                 # Kreuzungs-/DKW-Knoten -> {way: Linie 0/1}
+X_DURCH = {}                 # DKW-Knoten -> Index der durchgehenden Linie
+if CFG.get("dkw_auto", False) and LINIEN_X:
+    for X_, ls_ in LINIEN_X.items(): X_LINIE[X_] = {w_: k_ for k_, l_ in enumerate(ls_) for w_ in l_}
+    _xw = collections.defaultdict(set)        # way -> Kreuzungen ohne DKW, durch die er läuft
+    for X_, ls_ in LINIEN_X.items():
+        if X_ in DKW_AUTO: continue
+        for l_ in ls_:
+            for w_ in l_: _xw[w_].add(X_)
+    for X_ in DKW_AUTO:
+        _hat = [any(_xw[w_] for w_ in l_) for l_ in LINIEN_X[X_]]
+        if _hat.count(True) == 1: X_DURCH[X_] = _hat.index(False)
+    for X_, k_ in X_DURCH.items():
+        for b_ in at[X_][1] + at[X_][0]:
+            b_["flat"] = X_LINIE[X_].get(b_["way"]) == k_ or (X_LINIE[X_].get(b_["way"]) is None and b_["flat"])
+        _l = [a for a in at[X_][0] if X_LINIE[X_].get(a["way"]) == k_]; _r = [b for b in at[X_][1] if X_LINIE[X_].get(b["way"]) == k_]
+        if len(_l) == 1 and len(_r) == 1: FW_PAARE.add((_l[0]["id"], _r[0]["id"]))
+    for X_, ls_ in LINIEN_X.items():
+        if X_ in DKW_AUTO: continue
+        for k_ in range(len(ls_)):
+            ab_ = [b_ for b_ in at[X_][0] + at[X_][1] if X_LINIE[X_].get(b_["way"]) == k_]
+            if len(ab_) != 2 or not all(b_["flat"] for b_ in ab_): continue
+            _o = [b_["nodes"][0] if b_["nodes"][-1] == X_ else b_["nodes"][-1] for b_ in ab_]
+            if all(o_ in SD for o_ in _o) and abs(SD[_o[0]][1] - SD[_o[1]][1]) > 0.5 * CFG.get("lane_m", 4.5):
+                min(ab_, key=lambda b_: b_["s1"] - b_["s0"])["flat"] = False     # Gl. 4 → 5 über X 6524
+    if ARGS.dbg or os.environ.get("DKWDBG"): print("DKW_DURCH", X_DURCH)
 for n, (L, Rr) in at.items():
     fl = [a for a in L if a["flat"]]; fr = [b for b in Rr if b["flat"]]
+    if n in X_LINIE and n not in X_DURCH:         # Kreuzung: nur gleiche Linie verketten
+        fl_ = [(a, b) for a in fl for b in fr if X_LINIE[n].get(a["way"]) is not None and X_LINIE[n].get(a["way"]) == X_LINIE[n].get(b["way"])]
+        fl = [a for a, _ in fl_]; fr = [b for _, b in fl_]
     # Weiterlauf: gleiche Richtung, gleicher Way bevorzugt; Weichenverbindungen (service=crossover) nur, wenn nichts anderes
     _xo = lambda x: 0.05 if x["tags"].get("service") == "crossover" else 0
     # Hauptgleis setzt sich im Hauptgleis fort (3.11.2026, Sagliains Sasslatsch: die 910 knickte ab, das Ladegleis lief
@@ -1646,6 +1681,11 @@ def LY(l):
     return float(np.interp(l, LY_L, LY_Y))
 build_ly()
 
+if os.environ.get("CHAINDBG"):           # Diagnose Schritt E: Ketten mit Ebene
+    _a_, _b_ = map(float, os.environ["CHAINDBG"].split(","))
+    for c in C:
+        if c["s1"] >= _a_ and c["s0"] <= _b_:
+            print("CHAIN", c["lane"], round(c["s0"]), round(c["s1"]), [(sg["way"], sg["nodes"][0], sg["nodes"][-1]) for sg in c["segs"]])
 # Knoten -> Heimat-Lane (Gleis, auf dem die Weiche liegt)
 seglane = {}
 for c in C:
@@ -1991,6 +2031,113 @@ if CFG.get("u_abgang", False):
                     if pfad.index(m_) < i_w: xs_over[m_] = s_w
             if ARGS.dbg or os.environ.get("SEGDUMP"): print("U-ABGANG", n0, "Ebene", lane_, "Richtung", arr, "Wende s", round(s_w), "Knoten", len(pfad))
 
+# Schritt E, V2: eine Kreuzung ohne Verbindung (Mittelstück, Durchschneidung) liegt in der Mitte zwischen zwei Ebenen. Je
+# Linie die Ebenen der nächsten Knoten davor/danach (andere Kreuzungen übersprungen); die Linie mit dem kleinsten
+# Ebenenwechsel bestimmt die Mitte (Montreux: 9963 zwischen 5 und 6, 1838 zwischen 6 und 7, 6524 zwischen 4 und 5).
+X_HALB = {}
+def _x_halb():
+    if not X_LINIE: return
+    _nb = collections.defaultdict(list)
+    for sg in segs:
+        _nb[sg["nodes"][0]].append((sg["way"], sg["nodes"][-1])); _nb[sg["nodes"][-1]].append((sg["way"], sg["nodes"][0]))
+    def _weiter(X_, w0_, m_, tiefe=0):
+        while m_ in X_LINIE and m_ not in X_DURCH and m_ not in DKW_AUTO and tiefe < 6:
+            k_ = X_LINIE[m_].get(w0_)
+            nx_ = [(w_, q_) for w_, q_ in _nb[m_] if q_ != X_ and X_LINIE[m_].get(w_) == k_ and k_ is not None]
+            if not nx_: return None
+            X_, (w0_, m_) = m_, nx_[0]; tiefe += 1
+        return home.get(m_)
+    for X_, lw_ in X_LINIE.items():
+        if X_ in DKW_AUTO or X_ not in home: continue
+        best = None
+        for k_ in set(lw_.values()):
+            ls_ = [_weiter(X_, w_, q_) for w_, q_ in _nb[X_] if lw_.get(w_) == k_]
+            if len(ls_) != 2 or None in ls_ or abs(ls_[0] - ls_[1]) < 0.5: continue
+            if best is None or abs(ls_[0] - ls_[1]) < best[0]: best = (abs(ls_[0] - ls_[1]), ls_)
+        if best:
+            lo_ = min(best[1]); hi_ = max(best[1]); hl_ = home[X_]
+            # Mitte zwischen den beiden ganzen Ebenen, zwischen denen die Kreuzung liegt
+            mid_ = math.floor(hl_) + 0.5 if lo_ <= math.floor(hl_) and math.floor(hl_) + 1 <= hi_ else (lo_ + hi_) / 2
+            if abs(hl_ - mid_) > 0.6: mid_ = (lo_ + hi_) / 2 if hi_ - lo_ <= 1.01 else lo_ + 0.5 if abs(hl_ - lo_) < abs(hl_ - hi_) else hi_ - 0.5
+            home[X_] = mid_; X_HALB[X_] = mid_
+    # Endknoten einer Schrägen (über ein schräges Stück an einer Kreuzung/DKW), an dem ein Gleis beginnt: Ebene des
+    # Gleises, das der Anlage am nächsten liegt (Montreux W 2358: Abstellfeld, nicht der Stumpen dahinter)
+    for sg in segs:
+        if sg["flat"]: continue
+        for x_, o_ in ((sg["nodes"][0], sg["nodes"][-1]), (sg["nodes"][-1], sg["nodes"][0])):
+            if x_ not in X_LINIE or o_ in X_LINIE or o_ not in home or x_ not in home: continue
+            ls_ = {l_ for k_, _, l_ in cand.get(o_, [])}
+            if len(ls_) > 1 and not any(k_ == 2 for k_, _, _ in cand.get(o_, [])):
+                home[o_] = min(ls_, key=lambda l_: abs(l_ - home[x_]))
+    if X_HALB and (ARGS.dbg or os.environ.get("DKWDBG")): print("X_HALB", X_HALB)
+_x_halb()
+# Schritt E, V1/V3: in einer Weichenanlage mit DKW/Kreuzungen liegen alle Knoten einer Schrägen auf einer 60°-Linie. Von
+# jeder Kreuzung/DKW aus bekommt jeder Nachbar über ein schräges Stück x = x(Knoten) ± ΔY / tan 60° (Seite wie real);
+# Ausgang ist der westlichste Knoten der Anlage mit seiner bisherigen Lage. Ergebnis als xs_over (s-Wert).
+X_GITTER = {}
+def _x_gitter():
+    if not X_LINIE: return
+    _t = math.tan(math.radians(CFG["sw_angle"]))
+    kanten = collections.defaultdict(list)
+    for sg in segs:
+        if sg["flat"]: continue
+        a_, b_ = sg["nodes"][0], sg["nodes"][-1]
+        if (a_ in X_LINIE or b_ in X_LINIE) and a_ in home and b_ in home and a_ in SD and b_ in SD:
+            kanten[a_].append(b_); kanten[b_].append(a_)
+    gesehen = set()
+    for st_ in sorted(kanten, key=lambda n_: SD[n_][0]):
+        if st_ in gesehen: continue
+        comp, q_ = [st_], [st_]; gesehen.add(st_)
+        while q_:
+            m_ = q_.pop()
+            for o_ in kanten[m_]:
+                if o_ not in gesehen: gesehen.add(o_); comp.append(o_); q_.append(o_)
+        if not any(n_ in DKW_AUTO for n_ in comp): continue
+        a0 = min(comp, key=lambda n_: SD[n_][0]); xp = {a0: Xm(xs_over.get(a0, SD[a0][0]))}; q_ = [a0]
+        while q_:
+            m_ = q_.pop(0)
+            for o_ in kanten[m_]:
+                if o_ in xp: continue
+                xp[o_] = xp[m_] + np.sign(SD[o_][0] - SD[m_][0]) * abs(LY(home[o_]) - LY(home[m_])) / _t
+                q_.append(o_)
+        # Lage der Anlage: östlicher Rand bleibt, wo er war (die Anlage zieht sich nach Osten zusammen; so bleibt den
+        # Perrongleisen davor die Länge, Montreux Gl. 4/7)
+        _art = CFG.get("dkw_gitter_lage", "ost")
+        if _art == "ost":
+            e0 = max(xp, key=lambda n_: SD[n_][0]); _dx = Xm(xs_over.get(e0, SD[e0][0])) - xp[e0]
+        else: _dx = float(np.median([Xm(SD[n_][0]) - x_ for n_, x_ in xp.items()]))
+        # Spielraum: kein Knoten der Anlage vor/hinter einen Nachbarknoten ausserhalb (Abstellfeld hinter W 2358)
+        _nbx = collections.defaultdict(set)
+        for sg in segs: _nbx[sg["nodes"][0]].add(sg["nodes"][-1]); _nbx[sg["nodes"][-1]].add(sg["nodes"][0])
+        _lo, _hi = -1e9, 1e9
+        for n_ in xp:
+            for o_ in _nbx[n_]:
+                if o_ in xp or o_ not in SD: continue
+                xo_ = Xm(xs_over.get(o_, SD[o_][0]))
+                if SD[o_][0] > SD[n_][0]: _hi = min(_hi, xo_ - 8 - xp[n_])
+                else: _lo = max(_lo, xo_ + 8 - xp[n_])
+        if _lo <= _hi: _dx = min(max(_dx, _lo), _hi)
+        xp = {n_: x_ + _dx for n_, x_ in xp.items()}
+        _alt = {n_: Xm(xs_over.get(n_, SD[n_][0])) for n_ in xp}
+        for n_, x_ in xp.items():
+            xs_over[n_] = Xm_inv(x_); X_GITTER[n_] = round(x_ - _alt[n_], 1)
+        # nur wenn der Spielraum fehlt: Knoten gleich hinter einem verschobenen Endknoten mitschieben
+        for n_, x_ in xp.items():
+            dlt = x_ - _alt[n_]
+            if abs(dlt) < 2 or _lo <= _hi: continue
+            q_ = [n_]; besucht = set(xp)
+            while q_:
+                m_ = q_.pop()
+                for o_ in _nbx[m_]:
+                    if o_ in besucht or o_ not in SD: continue
+                    besucht.add(o_)
+                    xo_ = Xm(xs_over.get(o_, SD[o_][0]))
+                    if np.sign(SD[o_][0] - SD[n_][0]) != np.sign(dlt): continue
+                    if (x_ + 12 - xo_) * np.sign(dlt) <= 0: continue
+                    xs_over[o_] = Xm_inv(xo_ + dlt); q_.append(o_)
+        if os.environ.get("DKWDBG"): print("GITTER-KOMP", [(n_, home[n_], round(xp[n_], 1), round(Xm(SD[n_][0]), 1), n_ in xs_over) for n_ in sorted(xp, key=lambda q: xp[q])], {k: v for k, v in kanten.items() if k in xp})
+    if X_GITTER and (ARGS.dbg or os.environ.get("DKWDBG")): print("X_GITTER", X_GITTER)
+_x_gitter()
 def ypos(n): return Y(home[n])
 def xpos(n, s_default): return X(xs_over.get(n, s_default))
 
@@ -2654,11 +2801,12 @@ def _alle_pax(n):
     """Ausrundung einer DKW grün nur, wenn alle Gleise am Knoten Personengleise sind (sonst Nebengleis-Fahrweg, schwarz)"""
     xs_ = [x for x in segs if n in (x["nodes"][0], x["nodes"][-1])]
     return bool(xs_) and all(x["pax"] for x in xs_)
-def _dkw_klammer(c0, a_, b_, hp, rp=None):
+def _dkw_klammer(c0, a_, b_, hp, rp=None, sk=1.0):
     a_, b_ = np.array(a_, float), np.array(b_, float)
     a_ = a_ / np.linalg.norm(a_); b_ = b_ / np.linalg.norm(b_)
     bis = a_ + b_; bis = bis / (np.linalg.norm(bis) or 1)
     st = DKW_STD[bool(hp)]; _c = green if hp else black
+    if sk < 1.0: st = dict(st, L=st["L"] * sk, OFF=st["OFF"] * max(sk, 0.6))
     half = math.acos(max(-1.0, min(1.0, float(a_ @ b_)))) / 2
     p0 = c0 + a_ * st["L"] + _perp(a_, bis) * st["OFF"]
     p1 = c0 + b_ * st["L"] + _perp(b_, bis) * st["OFF"]
@@ -3038,6 +3186,111 @@ if RU.get("r45", True):
             R45_DKW[n] = (xline(yn), yn, np.sign(ya - yn), np.sign(yb - yn), any(o["pax"] for o in segs if n in (o["nodes"][0], o["nodes"][-1])))
         if ARGS.dbg: print("R45", [x["way"] for x in g], len(dk), round(xa2), round(xb2))
 
+# Schritt E (V1–V3): Weichenanlage mit automatisch erkannten DKW als Ganzes zeichnen. Alle Knoten liegen im 60°-Gitter
+# (X_GITTER); jede Schräge ist eine gerade Linie durch ihre Knoten. Endet sie an einer Durchschneidung, an der ihre Linie
+# als gerades Gleis weiterläuft (Gl. 7 → Ast von 7, Gl. 4 → 9953, Ast zur Rochers-de-Naye), läuft die Schräge bis auf
+# dessen Ebene und das Gleis endet dort ohne eigenen Bogen. Sonst rundet sie in das Gleis ihres Endknotens aus.
+ANLAGE_IDS = set()
+if CFG.get("dkw_auto", False) and X_GITTER:
+    _gk = set(X_GITTER)
+    _gs = [sg for sg in segs if not sg["flat"] and sg["nodes"][0] in _gk and sg["nodes"][-1] in _gk]
+    _P = lambda n_: (xpos(n_, SD[n_][0]), ypos(n_))
+    def _linie(n_, sg_):
+        return X_LINIE[n_].get(sg_["way"]) if n_ in X_LINIE else None
+    def _steig(sg_):
+        (xa_, ya_), (xb_, yb_) = _P(sg_["nodes"][0]), _P(sg_["nodes"][-1])
+        return np.sign((yb_ - ya_) * (xb_ - xa_))
+    _an = collections.defaultdict(list)
+    for sg in _gs: _an[sg["nodes"][0]].append(sg); _an[sg["nodes"][-1]].append(sg)
+    _frei = {sg["id"] for sg in _gs}; _laeufe = []
+    for sg in sorted(_gs, key=lambda q: min(_P(q["nodes"][0])[0], _P(q["nodes"][-1])[0])):
+        if sg["id"] not in _frei: continue
+        lauf = [sg]; _frei.discard(sg["id"])
+        for ende in (0, 1):                     # in beide Richtungen verlängern, solange die Linie gerade weiterläuft
+            cur = sg; n_ = sg["nodes"][-1] if ende else sg["nodes"][0]
+            while n_ in X_LINIE:
+                nx_ = [o for o in _an[n_] if o["id"] in _frei and _steig(o) == _steig(cur) and _linie(n_, o) == _linie(n_, cur)]
+                if not nx_: break
+                cur = nx_[0]; _frei.discard(cur["id"]); lauf.append(cur)
+                n_ = cur["nodes"][-1] if cur["nodes"][0] == n_ else cur["nodes"][0]
+        _laeufe.append(lauf)
+    # V5: fett nur die Fahrwege von einem Perrongleis durch die Anlage auf ein Personengleis gegenüber (Montreux: von 6
+    # und 7 über DKW 1977 auf den Ast von 7, von 4 über W 9953). Weg je Einfahrt: nur vorwärts in x, an Kreuzungen auf
+    # der eigenen Linie, an DKW und Weichen frei; wenigste Schrägen, dann kürzester.
+    _ein = collections.defaultdict(list); _gfl = [sg for sg in segs if sg["flat"] and sg["nodes"][0] in _gk and sg["nodes"][-1] in _gk]
+    for sg in segs:
+        a_, b_ = sg["nodes"][0], sg["nodes"][-1]
+        if not sg["pax"] or (a_ in _gk) == (b_ in _gk) or sg in _gs or sg in _gfl: continue
+        n_, o_ = (a_, b_) if a_ in _gk else (b_, a_)
+        _ein[n_].append((sg, np.sign(SD[n_][0] - SD[o_][0])))    # +1: kommt von links
+    _kan = collections.defaultdict(list)
+    for sg in _gs + _gfl:
+        a_, b_ = sg["nodes"][0], sg["nodes"][-1]
+        _kan[a_].append((sg, b_)); _kan[b_].append((sg, a_))
+    V5_FETT = set()
+    import heapq as _hq
+    for st_, lst_ in _ein.items():
+        for sg0, rich in lst_:
+            if not rich: continue
+            ziele = {n_ for n_, l2 in _ein.items() for sg1, r1 in l2 if r1 == -rich and n_ != st_}
+            best = None; hq_ = [(0, 0.0, st_, sg0["id"], ())]; seen_ = set()
+            while hq_:
+                k_, L_, n_, via, weg = _hq.heappop(hq_)
+                if n_ in ziele and weg: best = weg; break
+                if (n_, via) in seen_: continue
+                seen_.add((n_, via))
+                via_sg = next((x for x in segs if x["id"] == via), None)
+                for sg, o_ in _kan[n_]:
+                    if sg["id"] == via or (_P(o_)[0] - _P(n_)[0]) * rich <= 0.05: continue
+                    if n_ in X_LINIE and n_ not in DKW_AUTO and via_sg is not None and _linie(n_, sg) != _linie(n_, via_sg): continue
+                    _hq.heappush(hq_, (k_ + (0 if sg["flat"] else 1), L_ + abs(_P(o_)[0] - _P(n_)[0]), o_, sg["id"], weg + (sg["id"],)))
+            if best: V5_FETT |= set(best)
+    if os.environ.get("DKWDBG"): print("V5_EIN", {n_: [(x["way"], r) for x, r in l_] for n_, l_ in _ein.items()}, "PAXSEGS", [(x["way"], x["nodes"][0], x["nodes"][-1]) for x in segs if x["pax"] and (x["nodes"][0] in _gk or x["nodes"][-1] in _gk)])
+    if ARGS.dbg or os.environ.get("DKWDBG"): print("V5_FETT", sorted({x["way"] for x in segs if x["id"] in V5_FETT}))
+    for sg in _gfl:                              # Gleise in der Anlage: fett nur auf einem Fahrweg
+        if (sg["id"] in V5_FETT) == sg["pax"]: continue
+        dd_ = [d0 for i_, d0 in DBG if i_ == sg["id"]]
+        for d0 in dd_:
+            for k_ in (True, False):
+                if d0 in svg_paths[k_]: svg_paths[k_].remove(d0)
+            svg_paths[sg["id"] in V5_FETT].append(d0)
+    _flach_neu = {}
+    _t = math.tan(math.radians(CFG["sw_angle"]))
+    for lauf in _laeufe:
+        kn = sorted({n_ for x in lauf for n_ in (x["nodes"][0], x["nodes"][-1])}, key=lambda n_: _P(n_)[0])
+        pts = [_P(n_) for n_ in kn]
+        (x0, y0), (x1, y1) = pts[0], pts[-1]
+        dx_dy = (x1 - x0) / (y1 - y0) if abs(y1 - y0) > 0.1 else 0
+        ids_ = {x["id"] for x in lauf}
+        for i_e, n_ in ((0, kn[0]), (-1, kn[-1])):
+            xe, ye = pts[i_e]
+            fl_ = [o for o in segs if o["flat"] and n_ in (o["nodes"][0], o["nodes"][-1]) and n_ in X_HALB
+                   and _linie(n_, o) is not None and _linie(n_, o) == _linie(n_, lauf[0] if n_ in (lauf[0]["nodes"][0], lauf[0]["nodes"][-1]) else lauf[-1])]
+            if fl_:                              # Linie läuft als gerades Gleis weiter: Schräge bis auf dessen Ebene
+                o = fl_[0]; yl = Y(seglane[o["id"]]); xl = xe + (yl - ye) * dx_dy
+                oth = o["nodes"][-1] if o["nodes"][0] == n_ else o["nodes"][0]
+                xo = _xpos_sg(oth, SD[oth][0], o)
+                # Ausrundung ins weiterlaufende Gleis gehört zur Schrägen (kein Knubbel); das Gleis endet 7 px davor
+                xr = xl + (7 if xo > xl else -7)
+                pts[i_e] = (xl, yl)
+                pts.insert(0 if i_e == 0 else len(pts), (xr, yl))
+                if abs(ypos(oth) - yl) < 0.5: _flach_neu[o["id"]] = (o, f"M{min(xo, xr):.1f},{yl:.1f}H{max(xo, xr):.1f}")
+                if o["pax"] and px_ is False and any(x["id"] in V5_FETT for x in lauf): pass
+            else:                                # Ausrundung ins Gleis des Endknotens
+                pts.insert(0 if i_e == 0 else len(pts), (xe - 7, ye) if i_e == 0 else (xe + 7, ye))
+        pts = sorted(pts, key=lambda p_: p_[0])
+        # Stubs an beiden Enden + die beiden äussersten Punkte der Geraden (Zwischenknoten liegen auf ihr)
+        _st0 = pts[0][1] == pts[1][1]; _st1 = pts[-1][1] == pts[-2][1]
+        _kern = pts[(1 if _st0 else 0):(len(pts) - 1 if _st1 else len(pts))]
+        d_ = _rund(([pts[0]] if _st0 else []) + [_kern[0], _kern[-1]] + ([pts[-1]] if _st1 else []))
+        px_ = any(x["id"] in V5_FETT for x in lauf)
+        for k_ in (True, False): svg_paths[k_] = [q for q in svg_paths[k_] if q not in {d0 for i_, d0 in DBG if i_ in ids_}]
+        svg_paths[px_].append(d_); DBG[:] = [(i_, q) for i_, q in DBG if i_ not in ids_] + [(next(iter(ids_)), d_)]
+        ANLAGE_IDS |= ids_
+        if ARGS.dbg or os.environ.get("DKWDBG"): print("ANLAGE-LAUF", [x["way"] for x in lauf], kn, [tuple(round(v, 1) for v in p_) for p_ in pts])
+    for i_, (o, d_) in _flach_neu.items():
+        for k_ in (True, False): svg_paths[k_] = [q for q in svg_paths[k_] if q not in {d0 for j_, d0 in DBG if j_ == i_}]
+        svg_paths[o["pax"]].append(d_); DBG[:] = [(j_, q) for j_, q in DBG if j_ != i_] + [(i_, d_)]
 # Override "dkw_gerade" {node: [sa, sb]}: DKW-Symbol für eine von Hand (zeichnen) gerade durchgezogene Schräge
 for n_, (sa_, sb_) in OVR.get("dkw_gerade", {}).items():
     n_ = int(n_)
@@ -3867,7 +4120,10 @@ for n, t in list(ntag.items()) + [(n_, {"railway:switch": "double_slip"}) for n_
     if n in {int(a) for a, _ in OVR.get("dkw_symbol", [])}: continue      # Symbol per Override, nicht doppelt zeichnen
     if n in R45_DKW:      # Regel 45: Symbol am Schnittpunkt der geraden Kette mit der Ebene der DKW
         x45, y45, sa_, sb_, hp_ = R45_DKW[n]; c0 = np.array([x45, y45])
-        out.append(_dkw_klammer(c0, (-1, 0), (0.5, 0.866 * sb_), hp_)); out.append(_dkw_klammer(c0, (1, 0), (-0.5, 0.866 * sa_), hp_))
+        # dichte Anlage (Schritt E, Montreux): Klammern höchstens 45 % des Abstands zum nächsten DKW-Symbol
+        _dn = min((math.dist((x45, y45), v_[:2]) for m_, v_ in R45_DKW.items() if m_ != n), default=1e9)
+        _sk = min(1.0, 0.45 * _dn / DKW_STD[bool(hp_)]["L"]) if CFG.get("dkw_auto", False) else 1.0
+        out.append(_dkw_klammer(c0, (-1, 0), (0.5, 0.866 * sb_), hp_, sk=_sk)); out.append(_dkw_klammer(c0, (1, 0), (-0.5, 0.866 * sa_), hp_, sk=_sk))
         continue
     if n in R44_DKW:      # gerade durchlaufende Schräge (Regel 44): Klammern in den beiden stumpfen Winkeln
         sa_, sb_, hp_ = R44_DKW[n]; c0 = np.array([xpos(n, SD[n][0]), ypos(n)])
@@ -3971,6 +4227,12 @@ for r, (l, a, b, _) in labels.items():
     if _pp:
         p_ = min(_pp, key=lambda q_: (abs(q_[2] - y), abs((q_[0] + q_[1]) / 2 - xs)))
         xs = min(max((p_[0] + p_[1]) / 2, X(a) + 20), X(b) - 20)
+    # Schritt E: Nummer nicht in eine Weichenanlage im 60°-Gitter (Montreux Gl. 5 lag auf W 1501)
+    if globals().get("X_GITTER"):
+        _gx = [xpos(n_, SD[n_][0]) for n_ in X_GITTER if n_ in home and abs(ypos(n_) - y) <= 0.6 * CFG["lane_px"]]
+        if _gx and xs + 19 > min(_gx) - 10 and xs - 19 < max(_gx) + 10:
+            if min(_gx) - 29 >= X(a) + 20: xs = min(_gx) - 29
+            elif max(_gx) + 29 <= X(b) - 20: xs = max(_gx) + 29
     out.append(f'<rect x="{xs - 13:.1f}" y="{y - 8:.1f}" width="26" height="16" fill="#fff"/>')
     out.append(f'<text x="{xs:.1f}" y="{y + 6.5:.1f}" font-size="19" text-anchor="middle" fill="{green}">{r}</text>')
 TITLE_X = X(pax_mid)
@@ -4524,6 +4786,10 @@ for _a, _b, _px in OVR.get("platz", []):      # Override "platz": Mindestbreite 
 json.dump(dict(req=REQ, s_min=CFG["s_min"], s_max=CFG["s_max"], px_per_m=CFG["px_per_m"], warp_min=CFG.get("warp_min", 0.15),
                nodes=sorted({float(SD[n][0]) for sg in segs for n in sg["nodes"]})), open(CFG["req_file"], "w"))
 
+if os.environ.get("KNOTDBG"):            # Diagnose Schritt E: Lage einzelner Knoten
+    for n_ in map(int, os.environ["KNOTDBG"].split(",")):
+        print("KNOT", n_, ntag.get(n_, {}).get("railway"), round(SD[n_][0], 1) if n_ in SD else None, round(SD[n_][1], 1) if n_ in SD else None, home.get(n_),
+              round(ypos(n_), 1) if n_ in home else None, round(xpos(n_, SD[n_][0]), 1) if n_ in SD else None)
 # ---- Diagnose
 if ARGS.dbg:
     for sg in segs:
