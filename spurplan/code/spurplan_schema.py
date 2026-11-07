@@ -1925,6 +1925,60 @@ if CFG.get("u_abgang", False):
 def ypos(n): return Y(home[n])
 def xpos(n, s_default): return X(xs_over.get(n, s_default))
 
+# Kreuzung zweier Schrägen (Schritt M, 7.11.2026, Montreux Westende Gl. 5): ein Kreuzungsknoten (OSM railway=railway_crossing),
+# durch den zwei Ways schräg laufen, bekam eine Ebene; die Stücke bis zu den Nachbarweichen wurden zu kurzen Geraden auf
+# eigenen Hilfsebenen mit Knubbeln (G6 152°/28°). Neu liegt der Knoten im Schnittpunkt der beiden Schrägen (Nachbarknoten zu
+# Nachbarknoten), die vier Stücke sind Schrägen. cfg «kreuzung_schnitt» (Regionen: an).
+KREUZ_SCHNITT = {}
+if CFG.get("kreuzung_schnitt", False):
+    def _ly_inv(y_):                       # y ohne Rand -> (gebrochene) Ebene, Umkehrung von LY
+        return float(np.interp(y_, LY_Y[::-1], LY_L[::-1]))
+    _ks_at = collections.defaultdict(list)
+    for sg in segs:
+        _ks_at[sg["nodes"][0]].append((sg, 0)); _ks_at[sg["nodes"][-1]].append((sg, 1))
+    for _pass in range(2):
+        for n, t in ntag.items():
+            if t.get("railway") != "railway_crossing" or n not in home or n not in SD or len(_ks_at.get(n, [])) != 4: continue
+            per_way = collections.defaultdict(list)
+            for sg, e_ in _ks_at[n]: per_way[sg["way"]].append((sg, sg["nodes"][0] if e_ else sg["nodes"][-1]))
+            if len(per_way) != 2 or any(len(v) != 2 for v in per_way.values()): continue
+            # nur Hilfsstücke: kein Stück darf zu einem Gleis mit eigener Ebene gehören, das länger als 15 m ist (Gl. 4 bleibt gerade)
+            _lang = False
+            for sg, _ in _ks_at[n]:
+                for c_ in C:
+                    if any(x_ is sg for x_ in c_["segs"]) and c_["s1"] - c_["s0"] > CFG.get("kreuzung_schnitt_m", 15): _lang = True
+            if _lang: continue
+            lines = []
+            for w_, v in per_way.items():
+                (sa, na), (sb, nb) = v
+                if na not in home or nb not in home: break
+                pa = (xpos(na, SD[na][0]), ypos(na)); pb = (xpos(nb, SD[nb][0]), ypos(nb))
+                if abs(pa[1] - pb[1]) < 0.5 or abs(pa[0] - pb[0]) < 1: break
+                lines.append((pa, pb))
+            if len(lines) != 2: continue
+            (a1, b1), (a2, b2) = lines
+            d1 = np.subtract(b1, a1); d2 = np.subtract(b2, a2); den = d1[0] * d2[1] - d1[1] * d2[0]
+            if abs(den) < 1e-6: continue
+            tt = ((a2[0] - a1[0]) * d2[1] - (a2[1] - a1[1]) * d2[0]) / den
+            uu = ((a2[0] - a1[0]) * d1[1] - (a2[1] - a1[1]) * d1[0]) / den
+            if not (0.05 < tt < 0.95 and 0.05 < uu < 0.95): continue
+            px_, py_ = a1[0] + tt * d1[0], a1[1] + tt * d1[1]
+            home[n] = _ly_inv(py_ - CFG["margin_y"])
+            xs_over[n] = Xm_inv(px_ - CFG["margin_x"] + Xm(s_lo))
+            for w_, v in per_way.items():          # je Way eine durchgehende Schräge (eine Gruppe) durch den Kreuzungspunkt
+                (sa, na), (sb, nb) = v
+                if sa["nodes"][-1] == n and sb["nodes"][0] == n: g_ = [sa, sb]
+                elif sb["nodes"][-1] == n and sa["nodes"][0] == n: g_ = [sb, sa]
+                else: g_ = None
+                for sg in (sa, sb):
+                    sg["flat"] = False
+                    if len(sg.get("group") or []) > 1 and g_: g_ = None
+                for sg in (sa, sb):
+                    sg["group"] = g_ if g_ else [sg]
+            KREUZ_SCHNITT[n] = (round(px_, 1), round(py_, 1))
+    if KREUZ_SCHNITT and (ARGS.dbg or os.environ.get("SEGDUMP")): print("KREUZUNG_SCHNITT", KREUZ_SCHNITT)
+
+
 def exit_ref(sg):
     # Override "abgang": {"<way>": {"ref": "...", "ort": "..."}} - eigene Linie am Planrand (Thun: Gürbetal); "~Text" ohne "Linie"
     if str(sg["way"]) in OVR.get("abgang", {}) and "ref" in OVR["abgang"][str(sg["way"])]: return OVR["abgang"][str(sg["way"])]["ref"]
