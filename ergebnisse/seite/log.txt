@@ -4,11 +4,10 @@ index.html 799 KB, 80 Pläne
 21 Hinweise, 21 Ausschnitte
 /home/runner/work/topo-daten/topo-daten/spurplan/code/alle_plaene_pruefen.py:137: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
   json.dump(dict(erzeugt=datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"), plaene=len(zeilen), geaendert=len(gz),
-region_mob                   veröffentlicht                      2 Stellen  gleichwertig  
 thun                         Archivbeginn (Abnahme 2026-10-15)    7 Stellen  gleichwertig  
 aarburg_oftringen            Archivbeginn (Abnahme 2026-10-14)    7 Stellen  gleichwertig  
 rothrist                     Abnahme 2026-10-29                  0 Stellen  gleichwertig  
 zofingen                     Archivbeginn (Abnahme 2026-10-14)   28 Stellen  vermutlich besser  G2 4→2, T7 2→1
 schonenwerd                  Archivbeginn (Abnahme 2026-10-13)    8 Stellen  gleichwertig  
 neuchatel                    Abnahme 2026-10-26                  1 Stellen  gleichwertig  
-Regression: 80 Pläne, 6 geändert {'gleichwertig': 5, 'vermutlich besser': 1}
+Regression: 80 Pläne, 5 geändert {'gleichwertig': 4, 'vermutlich besser': 1}
