@@ -1,6 +1,6 @@
 {
  "region": "mob",
- "erzeugt": "2026-11-07 10:35 UTC",
+ "erzeugt": "2026-11-07 22:41 UTC",
  "bahnhoefe": {
   "schonried": {
    "name": "Schönried",
@@ -82,24 +82,30 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
+  "montreux": {
+   "name": "Montreux",
+   "ok": true,
+   "befunde": "Befunde: {'D': 6}",
+   "optionen": [
+    "--hauptgleise"
+   ]
+  },
   "glion": {
    "name": "Glion",
    "ok": true,
    "befunde": "Befunde: {'F': 1}",
    "optionen": []
   },
-  "montreux": {
-   "name": "Montreux",
-   "ok": true,
-   "befunde": "Befunde: {'A': 6, 'B': 6, 'D': 6, 'F': 1}",
-   "optionen": [
-    "--hauptgleise"
-   ]
-  },
   "chernex": {
    "name": "Chernex",
    "ok": true,
    "befunde": "Befunde: {'B': 1, 'F': 1}",
+   "optionen": []
+  },
+  "jaman": {
+   "name": "Jaman",
+   "ok": true,
+   "befunde": "Befunde: {}",
    "optionen": []
   },
   "allieres": {
@@ -114,26 +120,20 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "jaman": {
-   "name": "Jaman",
-   "ok": true,
-   "befunde": "Befunde: {}",
-   "optionen": []
-  },
   "saanen": {
    "name": "Saanen",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "oeschseite": {
-   "name": "Oeschseite",
+  "saanenmoser": {
+   "name": "Saanenmöser",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "saanenmoser": {
-   "name": "Saanenmöser",
+  "oeschseite": {
+   "name": "Oeschseite",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -162,14 +162,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "belmont_sur_montreux": {
-   "name": "Belmont-sur-Montreux",
+  "montbovon": {
+   "name": "Montbovon",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "montbovon": {
-   "name": "Montbovon",
+  "belmont_sur_montreux": {
+   "name": "Belmont-sur-Montreux",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -286,8 +286,8 @@
   "S3": 0
  },
  "lage_suche": {
-  "ausgang": 217,
-  "ergebnis": 75,
+  "ausgang": 179,
+  "ergebnis": 65,
   "drehung": {
    "Montbovon": 60,
    "Montreux": 30
@@ -301,7 +301,7 @@
   "ecken": 1
  },
  "regeln": {
-  "G2": 23,
+  "G2": 18,
   "G6": 3
  },
  "planrand": 0,
@@ -315,16 +315,16 @@
   "verk_S1": 0,
   "verk_S2": 0,
   "verk_S3": 0,
-  "regel_G2": 23,
+  "regel_G2": 18,
   "regel_G6": 3,
   "ruhe_treppen": 7,
   "ruhe_ecken": 1,
   "planrand": 0,
   "lage_L3a": 8
  },
- "unruhe": 115,
+ "unruhe": 105,
  "unruhe_teile": {
-  "regel_G2": 46,
+  "regel_G2": 36,
   "regel_G6": 9,
   "ruhe_treppen": 56,
   "ruhe_ecken": 4
@@ -335,6 +335,7 @@
   "besser": {
    "lage_L2": -34,
    "lage_L3": -7,
+   "regel_G2": -5,
    "ruhe_ecken": -2,
    "ruhe_treppen": -3,
    "topo_T6": -3
@@ -343,7 +344,7 @@
   "neu": {
    "lage_L3a": 8
   },
-  "unruhe": 115,
+  "unruhe": 105,
   "unruhe_basis": 777
  }
 }
