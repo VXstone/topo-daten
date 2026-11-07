@@ -12,7 +12,12 @@
  {
   "regel": "L3a",
   "plan": "Chernex",
-  "text": "Chernex: Achse im Plan nach N, auf der Karte nach SO (122°)"
+  "text": "Chernex: Achse im Plan nach N, auf der Karte nach SO (125°)"
+ },
+ {
+  "regel": "L3a",
+  "plan": "Chamby",
+  "text": "Chamby: Achse im Plan nach NO, auf der Karte nach N (76°)"
  },
  {
   "regel": "L3a",
@@ -37,6 +42,6 @@
  {
   "regel": "L3a",
   "plan": "Fontanivent",
-  "text": "Fontanivent: Achse im Plan nach N, auf der Karte nach S (145°)"
+  "text": "Fontanivent: Achse im Plan nach N, auf der Karte nach S (148°)"
  }
 ]
