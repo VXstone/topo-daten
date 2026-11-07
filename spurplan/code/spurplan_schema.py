@@ -1523,6 +1523,34 @@ def Xm_inv(x):
 def ppm(sa, sb):   # lokaler Massstab px/m
     return (Xm(sb) - Xm(sa)) / (sb - sa) if sb - sa > 1e-6 else CFG["px_per_m"]
 
+# Spurgruppe auf ihrer Seite (Schritt M, 7.11.2026, Montreux: MOB-Abstellgleise lagen unter den SBB-Gleisen, weil die
+# Achse der gekrümmten Normalspur folgt und lange, gerade Abstellgleise in Achskoordinaten «durch» sie hindurch laufen).
+# Liegen die Ebenen der Normalspur als zusammenhängender Block zwischen Schmalspur-Ebenen und hat keine Schmalspur ein
+# gemeinsames Gleisstück/einen Knoten mit der Normalspur, kommt der Normalspur-Block an den Rand, auf dem sie real liegt
+# (Median d der Normalspur gegen Median d der Schmalspur-Hauptgleise); die Reihenfolge der übrigen Ebenen bleibt.
+# cfg «spurgruppe_seite» (Regionen: an).
+SPURGRUPPE_TAUSCH = None
+if CFG.get("spurgruppe_seite", False) and C:
+    def _normal(c): return all(not sg.get("schmal") for sg in c["segs"])
+    _nl = sorted({c["lane"] for c in C if _normal(c)}); _ml = sorted({c["lane"] for c in C if not _normal(c)})
+    _nn = {n_ for c in C if _normal(c) for sg in c["segs"] for n_ in sg["nodes"]}
+    _verb = any(n_ in _nn for c in C if not _normal(c) for sg in c["segs"] for n_ in sg["nodes"])
+    _verb = _verb or any(not sg.get("schmal") and not any(sg in c["segs"] for c in C) and
+                         any(n_ in {m_ for c in C if not _normal(c) for s2 in c["segs"] for m_ in s2["nodes"]} for n_ in sg["nodes"])
+                         for sg in segs)
+    _alle = sorted(set(_nl) | set(_ml))
+    if _nl and _ml and not (set(_nl) & set(_ml)) and not _verb and _nl == [l_ for l_ in _alle if _nl[0] <= l_ <= _nl[-1]]:
+        _unten = [l_ for l_ in _alle if l_ < _nl[0]]; _oben = [l_ for l_ in _alle if l_ > _nl[-1]]
+        if _unten and _oben:
+            _dn = float(np.median([d_ for c in C if _normal(c) for d_ in c["pts"][:, 1]]))
+            _mh = [c for c in C if not _normal(c) and any(sg["pax"] for sg in c["segs"])] or [c for c in C if not _normal(c)]
+            _dm = float(np.median([d_ for c in _mh for d_ in c["pts"][:, 1]]))
+            _neu = (_nl + _unten + _oben) if _dn < _dm else (_unten + _oben + _nl)
+            _map = {alt_: neu_ for alt_, neu_ in zip(_neu, _alle)}
+            for c in C: c["lane"] = _map[c["lane"]]
+            SPURGRUPPE_TAUSCH = _map
+            if ARGS.dbg or os.environ.get("SEGDUMP"): print("SPURGRUPPE", "Normalspur", _nl, "->", [_map[l_] for l_ in _nl])
+
 # Ebenenabstände: Personengleise voller Abstand, reine Neben-/Abstell-/Güterebenen enger (Regel 24)
 def build_ly():
     global LY_L, LY_Y
@@ -1845,6 +1873,54 @@ build_ly()
 H = CFG["margin_y"] + LY(min(c["lane"] for c in C)) + 105
 X = lambda s: CFG["margin_x"] + Xm(s) - Xm(s_lo)
 Y = lambda l: CFG["margin_y"] + LY(l)
+
+# U-Abgang (Schritt M, 7.11.2026, Vorschlag D. Eckenstein, Montreux Linie 120): kehrt eine Strecke vor dem Planrand um
+# (Wendeschleife, die Achse läuft zuerst weiter und dann zurück) und verlässt den Plan seitlich nach hinten, entstand
+# bisher ein Knick über 90°: das Gleis tauchte über mehrere Ebenen ab und die Schräge lief zurück quer über den Bahnhof.
+# Neu bleibt die Strecke ab dem letzten Gleis mit Ebene auf dieser Ebene bis zum Wendepunkt; dort zeichnet der Abgang
+# ein U mit zwei Ausrundungen (siehe SIDE unten). cfg «u_abgang» (vorerst nur Region MOB).
+U_ABGANG = {}       # Randknoten -> dict(lane, arr, s_w, pfad)
+if CFG.get("u_abgang", False):
+    _ua_nb = collections.defaultdict(list)
+    for sg in segs:
+        if not sg["pax"]: continue
+        _ua_nb[sg["nodes"][0]].append((sg, sg["nodes"][-1])); _ua_nb[sg["nodes"][-1]].append((sg, sg["nodes"][0]))
+    for sg0 in segs:
+        if not sg0["pax"] or not (sg0["cut0"] or sg0["cut1"]): continue
+        _ref0 = sg0["tags"].get("ref")
+        for end in (0, 1):
+            if not sg0["cut%d" % end]: continue
+            n0 = sg0["nodes"][-1 if end else 0]
+            if n0 not in SD or abs(SD[n0][1]) <= d_lim_at(SD[n0][0]) - 25: continue     # nur seitliche Abgänge
+            # vom Randknoten der Strecke entlang (gleiche Liniennummer) bis zum ersten Gleis mit Ebene
+            pfad = [n0]; cur, prev_sg = n0, sg0; ziel = None; seen = {n0}
+            if seglane.get(sg0["id"]) is not None: continue
+            nxt = sg0["nodes"][0] if end else sg0["nodes"][-1]
+            while True:
+                pfad.append(nxt); seen.add(nxt)
+                if seglane.get(prev_sg["id"]) is not None: ziel = (prev_sg, nxt); break
+                weiter = [(s_, m_) for s_, m_ in _ua_nb[nxt] if s_ is not prev_sg and m_ not in seen and s_["tags"].get("ref") == _ref0]
+                if len(weiter) != 1: break
+                prev_sg, nxt = weiter[0]
+                if seglane.get(prev_sg["id"]) is not None: ziel = (prev_sg, nxt); pfad.append(nxt); break
+            if not ziel or len(pfad) < 3: continue
+            ss = [SD[m_][0] for m_ in pfad if m_ in SD]
+            if len(ss) != len(pfad): continue
+            s_m = ss[-1]                                   # letzter Knoten auf dem Gleis mit Ebene
+            arr = 1 if max(ss) - s_m > min(ss) - s_m and max(ss) > s_m + 3 else (-1 if min(ss) < s_m - 3 else 0)
+            if not arr: continue
+            s_w = max(ss) if arr > 0 else min(ss)
+            if abs(s_w - ss[0]) < 3: continue                 # kein Rücklauf: Abgang ist nicht rückwärts
+            if (ss[0] - s_w) * arr >= 0: continue
+            lane_ = seglane[ziel[0]["id"]]
+            U_ABGANG[n0] = dict(lane=lane_, arr=arr, s_w=s_w, pfad=pfad, sg=sg0["id"])
+            for m_ in pfad[:-1]:
+                home[m_] = lane_
+                if (SD[m_][0] - s_w) * arr < 0 and m_ != pfad[-1]:
+                    # nach dem Wendepunkt (Rücklauf): x nicht zurück, sondern am Wendepunkt
+                    i_w = ss.index(s_w)
+                    if pfad.index(m_) < i_w: xs_over[m_] = s_w
+            if ARGS.dbg or os.environ.get("SEGDUMP"): print("U-ABGANG", n0, "Ebene", lane_, "Richtung", arr, "Wende s", round(s_w), "Knoten", len(pfad))
 
 def ypos(n): return Y(home[n])
 def xpos(n, s_default): return X(xs_over.get(n, s_default))
@@ -3812,7 +3888,54 @@ for sg in segs:
             PORTS.append(dict(kind="edge", x=x, y=y, dx=1 if end else -1, dy=0, ref=exit_ref(sg), town=exit_town(sg, n),
                               bearing=port_bearing(sg, n), lat=LL[n][0], lon=LL[n][1], pax=sg["pax"], way=sg["way"], **{k_: v_ for k_, v_ in _herkunft(sg, n).items() if k_ != "way"}))
             EXITS.append((x + (12 if end else -12), y + 6, exit_ref(sg), "start" if end else "end", exit_town(sg, n)))
+U_INFO = []
+def _u_abgang(x, y, end, dy, sg, n):
+    """U-Abgang (Schritt M): vom Wendepunkt weiter in Ankunftsrichtung bis hinter alles, was zwischen dem Gleis und dem
+    oberen/unteren Planrand liegt, Ausrundung, senkrecht über alle Ebenen, zweite Ausrundung, zurück. Port am Ende,
+    Austritt waagrecht zurück (kind side, dy 0)."""
+    ua = U_ABGANG[n]; arr = ua["arr"]; r_ = CFG.get("u_radius_px", 12.0); gap_ = CFG.get("u_abstand_px", 14.0)
+    pf = set(ua["pfad"])
+    ys_ = [ypos(m_) for s2 in segs for m_ in (s2["nodes"][0], s2["nodes"][-1]) if m_ in home]
+    _uh = CFG.get("u_hoehe_lanes", 2.0) * CFG["lane_px"]       # Kreuzungen anderer Abgänge mitten im senkrechten Teil
+    yt = (min(ys_) - _uh) if dy < 0 else (max(ys_) + _uh)
+    xe_ = x
+    for s2 in segs:
+        if s2["id"] == sg["id"] or (s2["nodes"][0] in pf and s2["nodes"][-1] in pf): continue
+        a_, b_ = s2["nodes"][0], s2["nodes"][-1]
+        if a_ not in home or b_ not in home: continue
+        ya_, yb_ = ypos(a_), ypos(b_)
+        if dy < 0 and not (min(ya_, yb_) < y - 1 and max(ya_, yb_) >= yt): continue
+        if dy > 0 and not (max(ya_, yb_) > y + 1 and min(ya_, yb_) <= yt): continue
+        for xx_ in (xpos(a_, s2["s0"]), xpos(b_, s2["s1"])):
+            if (xx_ - xe_) * arr > 0: xe_ = xx_
+    xu = xe_ + arr * gap_ + arr * r_ if (xe_ - x) * arr > 0.5 else x + arr * (r_ + gap_)
+    # Rückweg zurück bis über den Anfang des U (symmetrisch): Abgänge, die zwischen Gleis und Rückweg zur selben Seite
+    # weggehen (Montreux Linie 121 unter der Schleife), kreuzen den Rückweg, wie real die Schleife über dem Tunnel liegt
+    _xr = [x] + [x2_ - arr * CFG["lane_px"] for x2_, y2_, e2_, dy2_, s2_, n2_ in SIDE
+                 if n2_ != n and n2_ not in U_ABGANG and dy2_ == dy and min(yt, y) <= y2_ <= max(yt, y)]
+    xen_ = min(_xr) if arr > 0 else max(_xr)
+    lb = max(CFG.get("u_rest_px", 18.0), abs(xu - arr * r_ - xen_))
+    # Gesamtdrehung (cfg «u_winkel», Standard 180° = U): erste Ausrundung 90° in die Senkrechte, zweite den Rest;
+    # bei 120° endet der Abgang unter 60° zurück (wie ein seitlicher Abgang), bei 180° waagrecht zurück
+    th = math.radians(min(180.0, max(90.0, CFG.get("u_winkel", 180.0))))
+    vx_, vy_ = arr * math.cos(th), dy * math.sin(th)                # Endrichtung
+    t2 = r_ * math.tan((th - math.pi / 2) / 2)                       # Tangentenlänge der zweiten Ausrundung
+    if th < math.pi - 1e-6: lb = CFG.get("u_rest_px", 18.0)
+    q = [(x, y), (xu - arr * r_, y), ("Q", xu, y, xu, y + dy * r_), (xu, yt - dy * t2), ("Q", xu, yt, xu + vx_ * t2, yt + vy_ * t2),
+         (xu + vx_ * (t2 + lb), yt + vy_ * (t2 + lb))]
+    d_ = f"M{x:.1f},{y:.1f}"
+    for p_ in q[1:]:
+        d_ += f"Q{p_[1]:.1f},{p_[2]:.1f} {p_[3]:.1f},{p_[4]:.1f}" if p_[0] == "Q" else f"L{p_[0]:.1f},{p_[1]:.1f}"
+    _c = MS_BRAUN if sg.get("schmal") else green
+    out.append(f'<path d="{d_}" stroke="{_c}" stroke-width="3.6" stroke-linecap="round" fill="none" data-u="1"/>')
+    xen, yen = q[-1]
+    PORTS.append(dict(kind="side", x=xen, y=yen, dx=-arr, dy=(dy if th < math.pi - 1e-6 else 0), u=True, ref=exit_ref(sg), town=exit_town(sg, n),
+                      bearing=port_bearing(sg, n), lat=LL[n][0], lon=LL[n][1], pax=sg["pax"], way=sg["way"], **{k_: v_ for k_, v_ in _herkunft(sg, n).items() if k_ != "way"}))
+    EXITS.append((xen - arr * 10, yen + (-14 if dy < 0 else 30), exit_ref(sg), "end" if arr > 0 else "start", exit_town(sg, n)))
+    U_INFO.append(dict(x=x, y=y, xu=xu, yt=yt, arr=arr, dy=dy, n=n))
 for x, y, end, dy, sg, n in SIDE:
+    if n in U_ABGANG:
+        _u_abgang(x, y, end, dy, sg, n); continue
     _fil = False
     if sg["way"] in ZEICHNEN_PORT:
         x, y = ZEICHNEN_PORT[sg["way"]]; _fil = True

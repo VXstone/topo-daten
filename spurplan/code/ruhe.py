@@ -18,6 +18,7 @@ def _polys(svg):
     for el in re.findall(r'<path\b[^>]*>', s):
         m_d = re.search(r'\sd="([^"]+)"', el); m_w = re.search(r'stroke-width="([\d.]+)"', el)
         if not m_d or not m_w or 'stroke="none"' in el or '#8a8a8a' in el: continue      # Tunnelportale (grau) zählen nicht
+        if 'data-fluegel="1"' in el: continue                                                 # Brückenflügel an Kreuzungen (U-Abgang, 7.11.)
         d, w = m_d.group(1), m_w.group(1)
         try: p = parse_path(d)
         except Exception: continue

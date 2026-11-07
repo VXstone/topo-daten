@@ -1454,6 +1454,59 @@ def _kreuzungen():
                 n_br += 1
     print(f"  Kreuzungen mit Brücke: {n_br}")
 if not os.environ.get("OHNE_KREUZUNG") and not OVR_LAGE.get("ohne_kreuzungen"): _kreuzungen()
+# U-Abgang (Schritt M, 7.11.2026, Montreux): das U liegt im Bahnhofplan, eine Strecke desselben Bahnhofs kreuzt es
+# ausserhalb des Kastens (Linie 121 unter der Schleife der Linie 120). Oben/unten aus OSM (Ebene der beiden Abgangsgleise);
+# untere Linie mit Lücke, obere mit Brückenflügeln. Gleiche Ebene: beide durchgezogen (Gleisdurchschneidung, 6.11.).
+def _u_kreuzungen():
+    from shapely.geometry import LineString as _L2, Point as _Pt2
+    n_u = 0
+    def _lev(t_): return (1 if t_.get("bridge") not in (None, "no") else 0) - (1 if t_.get("tunnel") not in (None, "no") else 0) + float(t_.get("layer", 0) or 0)
+    for n in [n for n in ids if nodes[n]["inset"]]:
+        P = PORTS[n]; up = [p for p in P["ports"] if p.get("u")]
+        if not up: continue
+        svg = open(nodes[n]["inset"] + "_bare.svg").read()
+        m_ = re.search(r'<path d="([^"]*)" stroke="([^"]*)"[^>]*data-u="1"', svg)
+        if not m_: continue
+        cx = (P["x_lo"] + P["x_hi"]) / 2; cy = (P["y_lo"] + P["y_hi"]) / 2; a_ = ROT.get(n, 0)
+        nums = [float(v) for v in re.findall(r"-?[\d.]+", m_.group(1))]
+        pts = [np.array(nums[i:i + 2]) for i in range(0, len(nums), 2)]
+        poly = [pos[n] + rotv(np.array([(p_[0] - cx) * S, (p_[1] - cy) * S]), a_) for p_ in pts]
+        try: _W = {e["id"]: e["tags"] for e in json.load(open(nodes[n]["inset"] + ".json"))["elements"] if e["type"] == "way"}
+        except Exception: _W = {}
+        lev_u = _lev(_W.get(up[0].get("way"), {}))
+        LU = _L2(poly); wu = 3.6 * 0.72
+        for r, Ls, col, w in RLINES:
+            if n not in (r["a"], r["b"]): continue
+            e_ = r["first"] if r["a"] == n else r["last"]; an_ = anchor.get((id(e_), n))
+            if not an_ or any(rf_ == up[0]["ref"] for rf_ in an_["refs"]): continue
+            pw = [p for p in P["ports"] if not p.get("u") and p["ref"] in an_["refs"]]
+            lev_o = _lev(_W.get(pw[0]["way"], {})) if pw else lev_u
+            for l in Ls:
+                if len(l) < 2: continue
+                x_ = LU.intersection(_L2(l))
+                for g in getattr(x_, "geoms", [x_]):
+                    if g.is_empty or g.geom_type != "Point": continue
+                    X_ = np.array([g.x, g.y])
+                    def _ri(LL_):
+                        d_ = LL_.project(_Pt2(X_)); a0 = LL_.interpolate(max(0, d_ - 2)); a1 = LL_.interpolate(min(LL_.length, d_ + 2))
+                        v_ = np.array([a1.x - a0.x, a1.y - a0.y]); return v_ / (np.linalg.norm(v_) or 1)
+                    uu_, uo_ = _ri(LU), _ri(_L2(l))
+                    if lev_u == lev_o: continue
+                    (uo, wo, co, uu, wu_) = (uu_, wu, m_.group(2), uo_, w) if lev_u > lev_o else (uo_, w, col, uu_, wu)
+                    no = np.array([-uo[1], uo[0]]); sn = abs(float(uu @ no)) or 1.0; half = (wo / 2 + 5) / sn + 3
+                    out.append(f'<path d="M{(X_ - uu * half)[0]:.1f},{(X_ - uu * half)[1]:.1f}L{(X_ + uu * half)[0]:.1f},{(X_ + uu * half)[1]:.1f}" stroke="#fff" stroke-width="{wu_ + 3.5:.1f}" fill="none"/>')
+                    _lr = (wu_ + 3.5) / 2 / (abs(float(uu @ no)) or 1.0) + 2      # nur so weit, wie die Lücke die obere Linie anschneidet
+                    _f = lambda q_: " ".join(f"{v_[0]:.1f},{v_[1]:.1f}" for v_ in q_)
+                    a_l, b_l = X_ - uo * _lr, X_ + uo * _lr      # direkt ins SVG (nicht über path(): zählt nicht als Linie)
+                    out.append(f'<path d="M{a_l[0]:.1f},{a_l[1]:.1f}L{b_l[0]:.1f},{b_l[1]:.1f}" stroke="{co}" stroke-width="{wo:.2f}" fill="none" data-fluegel="1"/>')
+                    ln_ = half * abs(float(uu @ uo)) + 6
+                    for sg_, o_ in ((-1, -wo / 2 - 3), (1, wo / 2 + 3)):
+                        b0 = X_ + no * o_; a0 = b0 - uo * ln_; a1 = b0 + uo * ln_
+                        q_ = [a0 + no * sg_ * 4 - uo * 3, a0, a1, a1 + no * sg_ * 4 + uo * 3]
+                        out.append(f'<path d="M{_f(q_[:1])}L{_f(q_[1:2])}L{_f(q_[2:3])}L{_f(q_[3:])}" stroke="{BK}" stroke-width="1.2" fill="none" stroke-linecap="round" data-fluegel="1"/>')
+                    n_u += 1
+    if n_u: print(f"  U-Abgang-Kreuzungen: {n_u}")
+if not os.environ.get("OHNE_KREUZUNG") and not OVR_LAGE.get("ohne_kreuzungen"): _u_kreuzungen()
 # Planfenster der Spurpläne und Nebengleise/Spurwechsel auf der freien Strecke (17.10., Hinweis "zwischen Stuhl und Bank":
 # Schafis, Serrières–Neuchâtel, Olten–Dulliken). Fenster: spurplan_schema.py mit SPUR_FENSTER=1 -> <bahnhof>_fenster.json
 FEN_U = None; NEBEN_DONE = set(); NEBEN_N = [0]
