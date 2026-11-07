@@ -320,3 +320,23 @@ und hakt den Schritt in der Statusliste ab. Ist «Daniel danach» nicht leer, wa
 - **Frage an Daniel** (Bilder im Chat): soll so ein «Kuss» als V (zwei Weichen am selben Punkt von Gl. 6) oder als DKW-Symbol
   auf Gl. 6 gezeichnet werden? Danach: Ebene des Endpunkts nach der DKW richtig (nicht Gl. 5), dann einschalten,
   Gegenprobe Rothrist/Thun (dort `als_dkw` von Hand), Prüfung aller Pläne.
+
+### 7.11.2026 21:00 – Daniel: Aufbau Westende Gl. 5/6 (stimmt 1:1 mit OSM), Konsequenz für Schritt E
+- Beschreibung Daniel, mit OSM-Knoten (Skizze `spurplan/vergleich/montreux_westende_skizze.png`):
+  - ab Prellbock je eine spitze Weiche gegen das andere Gleis: auf 6 W 1126121816 (→ 8290), auf 5 W 1126121501 (→ 1375);
+  - beide Schrägen kreuzen sich im **Mittelstück** X 2793859963 (railway_crossing);
+  - dann je eine **DKW in Fortsetzung der Gleise**: auf 6 X 1126121469 (Bögen 963685765/963685766, Weichen 8914106518/
+    -520/-517, 1126121525), auf 5 X 207308647 (Bögen 963691444/963691445, Weichen 8914141694/-695/-696/-697);
+  - die Stränge nach aussen münden je in eine **Kreuzung/Durchschneidung**: von der DKW auf 6 (1375) in X 1126121838,
+    wo Gl. 7 (274706713) als DKW ins Gleis von 6 mündet; von der DKW auf 5 (97211377) in X 8914106524 über Gl. 4;
+  - Gl. 4 mündet stumpf in 5 (W 2793859953); vom Gleis 6 her geht es hinüber ins Gleis von 5 (1112528289 → W 1126122400),
+    das ist das Hauptgleis auf die Strecke 120; das von 6 her endet im Stumpen (1362), ebenso der Ast der 6 nach der
+    Durchschneidung, dort die stumpfe Verbindungsweiche zu den Rochers-de-Naye-Gleisen (einzige Verbindung MOB–MGN);
+    der Ast von 5 nach der Durchschneidung führt ins Abstellfeld (97211363 …).
+- **Konsequenz für Schritt E (ersetzt den Ansatz vom Mittag):** nicht die Fahrwege zusammenlegen, sondern jede erkannte DKW
+  **an Ort** als DKW-Knoten markieren (wie `als_dkw`, Bögen und Bogenweichen entfallen, das Symbol zeigt sie) und die
+  Schrägen über R45 als **eine gerade 60°-Linie** ziehen: Weiche → Mittelstück → DKW auf dem anderen Gleis → Kreuzung
+  aussen. Erkennung muss auch die DKW auf 5 finden (X 207308647 liegt auf dem durchgehenden Gleis 5 selbst, 3 Ways am
+  Knoten – die Mittags-Erkennung verlangte genau 2) und X 1838 als DKW (Gl. 7) bzw. Kreuzung behandeln. Die Ebenen 5/6
+  dürfen durch die DKW nicht verspringen (Gl. 5 und 6 sind die durchgehenden Gleise, die Schrägen kreuzen sie).
+- Daniel: Skizze bestätigen; dann Umsetzung im neuen Chat «Weiter mit UEBERGABE.md – Schritt E: DKW-Automatik».
