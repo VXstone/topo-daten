@@ -369,3 +369,22 @@ und hakt den Schritt in der Statusliste ab. Ist «Daniel danach» nicht leer, wa
 - Westende Montreux als Referenz in `REGELN.md` («Verschachtelte Weichenanlagen», Aufbau 1–7, Zeichenregeln V1–V6) und im
   Doc «Regelwerk Spurpläne» dokumentiert. Schritt E setzt das um; Ziel-Bild `spurplan/vergleich/montreux_westende_skizze.png`.
 - Nächster Einstieg: «Weiter mit UEBERGABE.md – Schritt E: DKW-Automatik».
+
+### 7.11.2026 23:30 – Schritt E, Teil 1: Erkennung «DKW an Ort» (V4) gebaut, noch aus, nichts veröffentlicht
+- `spurplan_schema.py` (cfg `dkw_auto`, region_lauf setzt weiter false): Ansatz vom Mittag (Fahrwege zusammenlegen) ersetzt.
+  Am `railway_crossing` werden zwei **Linien** gebildet – durchlaufender Way oder zwei Way-Enden, die sich gerade fortsetzen
+  (≤ 30° Abweichung) –, je Arm eine Weiche ≤ `dkw_m`, zwei Bogen-Ways ≤ dkw_m+5 über alle vier Arme → Knoten wird
+  `railway=switch` + `double_slip` an Ort, Bögen entfallen, die vier Bogenweichen werden gewöhnliche Punkte. Linien bleiben.
+- Montreux: alle drei DKW erkannt (1126121469, 207308647, 1126121977); 9963, 1838, 6524 bleiben Kreuzungen (richtig).
+  Check-Befunde Bahnhofplan A6/B6/D6/F1 → A1/B4/D6.
+- Mit `dkw_auto` laufen R45-Ketten auch durch `railway_crossing` (V3): Schräge A 1816→9963→8647→6524→2358 und
+  Schräge B 1501→9963→1469→1838 werden je eine Linie; Kette «Ast von 7» 1838→1977→2400 wird verworfen (Kette beginnt an
+  der Durchschneidung, Gl. 7 274706713 gehört noch nicht dazu).
+- **Offen (Teil 2, Lage):** Bilder `vergleich/montreux_e_ohne.png` / `montreux_e_dkw_an_ort.png`. Die ganze Anlage liegt
+  noch auf ~20 px in x zusammengedrückt (reale Abstände 8–20 m): Mittelstück 9963 und DKW 1469/8647 fast am gleichen x,
+  Symbole überlagern sich. Nötig: (a) V2 – Kreuzungsknoten ohne Verbindung auf halbe Ebene zwischen die zwei Gleise
+  (ypos), Gl. 7 und Gl. 4 werden dafür selbst Diagonale; (b) x-Abstand entlang einer Schräge aus 60° und Ebenenabstand
+  (Δx = Δy / tan 60°) als Mindestabstand in der Warp-Anforderung (`*_req.json`) statt aus Metern; (c) Kette Ast von 7 ab
+  Gl. 7 beginnen lassen; (d) V5 fett/dünn, V6 Rochers-de-Naye stumpf von links prüfen. Danach Regionalplan MOB,
+  Gegenprobe Rothrist/Thun (dort `als_dkw` von Hand), Prüfung aller Pläne.
+- Nächster Einstieg: «Weiter mit UEBERGABE.md – Schritt E: DKW-Automatik, Teil 2 Lage».
