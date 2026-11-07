@@ -136,15 +136,18 @@ und hakt den Schritt in der Statusliste ab. Ist «Daniel danach» nicht leer, wa
   als eigene Gleise gezeichnet, sondern als Klammern des DKW-Symbols (E3). (2) Zeichnung über die bestehende R45-Kette
   (gerade 60°-Linie durch die DKW). (3) cfg-Schalter, zuerst nur Regionen; Werkstatt/plaene erst nach Prüfung aller Pläne.
   (4) Verbindung 963685765 endet heute zeichnerisch nicht genau auf 97211358 – mit der DKW erledigt.
+  (5) Hinweise Montreux 7.11.: 6yof, afkt, 9636, 8gyi (siehe Nachtrag 7.11. 11:45).
 - Fertig, wenn: Montreux Westende ohne Knubbel/Hilfsebenen, Topologie/Verkettung 0, MOB-Unruhe ≤ 109 oder jeder Rest
   ausserhalb Montreux erklärt; Rothrist/Thun unverändert; Prüfung aller Pläne ohne unerklärte Änderung.
-- Daniel danach: Montreux ansehen; offen aus M: U-Ende 180° (veröffentlicht) oder 120°, Rückfragen j93a, mp8h, 5yz7.
+- Daniel danach: Montreux ansehen.
 
 ### P – Verbundene Perrons / Spezialperrons (neu 6.11. abends)
 - Einstieg: «Weiter mit UEBERGABE.md – Schritt P: Verbundene Perrons»
 - Anlass: ein Perron bedient mehrere Gleise über Eck oder hängt an einem anderen Perron. Fälle: Thun Gl. 16/18 an Perron 1,
   Montreux (verbundene Perrons), Zweisimmen, Bern Gl. 49/50, Basel um Gl. 3 und um Gl. 35. Baut auf Schritt 0 (3) auf
   (Perron beidseitig eines Gleises).
+- Dazu Hinweise Montreux 7.11.: 6rwy (kein Mittelperron Normalspur), 5yz7 (Perron zwischen 4 und 3), es9y (Perronnummern
+  Meterspur braun).
 - Arbeiten: Perronflächen aus SBB Open Data/OSM als zusammenhängende Fläche erkennen, die mehrere Gleise bedient; Darstellung
   im Code (eine Regel, kein Override je Bahnhof), Prüfung «kein Perron fällt weg» (P1) über alle Pläne.
 - Fertig, wenn: die fünf Fälle im Plan richtig, Prüfung aller Pläne ohne unerklärte Änderung.
@@ -288,3 +291,18 @@ und hakt den Schritt in der Statusliste ab. Ist «Daniel danach» nicht leer, wa
 - «DKW-Automatik klingt vielversprechend»: neuer Schritt **E – DKW-Automatik nach E3** vor P eingefügt. Schritt M abgehakt;
   sein Unruhe-Ziel (≤ 109) und das Westende Gl. 5 gehen an Schritt E. Reihenfolge jetzt: 0 (Rest) → E → P → 1 → 2 → 3 → 4 → 5.
 - Nächster Einstieg: «Weiter mit UEBERGABE.md – Schritt E: DKW-Automatik».
+
+### 7.11.2026 11:45 – U-Ende nach Skizze Daniel (Seite v138)
+- Hinweis py1c (Skizze): U in gleichen Drehschritten ≤ 60°, Schlussgerade schon im Winkel der Fortsetzung. MOB `u_winkel`
+  150 (Richtung Belmont), Schlussgerade 56 px (`u_rest_px`, < 40 px zählte als kurze Ecke T7). Port hat eigene
+  Austrittsrichtung `vx/vy` (netz_lage `port_vec`, gleisenden.py lesen sie).
+- Hinweis xntw: unteres Gleis im Tunnel → nur Lücke, keine Brückenflügel (vorerst nur `_u_kreuzungen`; die allgemeine
+  `_kreuzungen` in netz_lage hat die Regel noch nicht – Olten/NE prüfen, bevor sie dort gilt).
+- MOB Unruhe 115 (Ecke Montreux weg), Topologie/Verkettung 0. Prüfung aller Pläne: nur region_mob «gleichwertig».
+- py1c, xntw, j93a behoben. **Neue offene Hinweise Montreux (7.11. 08:5x UTC)** – nicht in Schritt M bearbeitet:
+  - in Schritt E (Westende/Gleisgewirr): 6yof «Gleise überlappen», afkt «Mindestabstand?», 9636 «von Gl. 6 und 7 fett auf
+    die Strecke» (Hauptgleis-Fortsetzung), 8gyi «Knick vor Tunnelportal» (Abgang 121 an Gl. 8).
+  - in Schritt P (Perrons): 6rwy «Normalspur hat keinen Mittelperron, jetzt zwei», 5yz7 «zwischen 4 und 3 müsste ein Perron
+    sein», es9y «Perronnummern bei Meterspur überall braun».
+  - eigene Regel, später: mp8h «halt alles entsprechend mitdrehen» (Weichenwinkel in gedrehten Bahnhöfen, damit 60° nicht
+    senkrecht wirkt); rap4 Glion «Nebengleis nicht fett?».
