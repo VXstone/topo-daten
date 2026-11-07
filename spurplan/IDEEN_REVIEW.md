@@ -27,3 +27,12 @@ Eigene Datei, damit sie nicht mit Übergaben anderer Chats kollidiert. Nach Umse
 
 ## Datenaufbereitung (Review topo-daten) – siehe UEBERGABE 5.11. spät
 - R1 Release-Gate in vorbereitung.yml, R2 Geometrie in der Änderungssignatur (aenderungen.py). **Umgesetzt 5.11.2026:** betriebspunkte, gleisnummern, ausschnitte und release ohne continue-on-error (Fehler → kein Release, Vormonatsdatei bleibt, stand.json hält Teilfehler fest); sbb, perronkanten, aenderungen bleiben optional. Way-Signatur mit Geometrie auf 1e-5° gerundet. Wirkt ab dem nächsten Vorbereitungslauf.
+
+## Backlog: Topologie in zwei Durchgängen (Idee D. Eckenstein 7.11.2026 22:48)
+- Anlass: Montreux Westende (Schere mit Mittelstück, 3 DKW, 2 Durchschneidungen auf ~200 m) – die einfache Erkennung
+  (Weiche/Kreuzung je Knoten, feste Suchradien) verfehlt verschachtelte Anlagen.
+- Idee: erster Lauf mit der einfachen Lösung; eine Plausibilitätsprüfung merkt «ach nee» (z. B. Hilfsebenen, Knubbel,
+  Kreuzung ohne erkannte Struktur, Fahrweg springt die Ebene, Gleisbündel mit vielen kurzen Ways < 20 m) und rechnet nur
+  diesen Bereich nochmals mit feinerem Suchradius / feinerer Mustererkennung (Schere, DKW, EKW, Durchschneidung,
+  Weichenstrasse) – lokal, nicht den ganzen Plan.
+- Voraussetzung: Schritt E (DKW-Automatik) als erstes Muster; Prüfstand (Schritt 1) für die Bausteine.

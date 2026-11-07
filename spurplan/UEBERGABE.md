@@ -353,3 +353,13 @@ und hakt den Schritt in der Statusliste ab. Ist «Daniel danach» nicht leer, wa
 - DKW für die Automatik also: 1126121469 (auf 6), 207308647 (auf 5), 1126121977 (Ast von 7 × Gl. 6). Bei 1977 und 8647 läuft
   ein Gleis am Knoten als neuer Way weiter (Ende/Anfang) – die Erkennung muss das als durchgehend behandeln.
   Skizze korrigiert: `spurplan/vergleich/montreux_westende_skizze.png`.
+
+### 7.11.2026 22:48 – Daniel: Zeichenvorgaben Westende (Fassung 3 der Skizze, gilt für Schritt E)
+- **Fett** nur die Perrongleise und die Fahrwege ins Streckengleis: von 6 und von 7 (beide über DKW 1977 auf den Ast von 7,
+  W 1126122400) und von 4 (W 2793859953). Schere, Diagonalen zum Abstellfeld und zum Stumpen dünn.
+- Verbindung zur Rochers-de-Naye (W 1126121532, Way 274706714) zweigt **stumpf von links** ab (nicht nach rechts).
+- **Einheitlicher Winkel** (alle Diagonalen 60°, nicht variieren); **jede Durchschneidung in der Mitte zwischen zwei
+  Diagonalen** wie das Mittelstück 9963 – also auch X 1838 (Diagonale B × Ast von 7) und X 6524 (Diagonale A × Zufahrt
+  Gl. 4 → 5), nicht auf einer Gleisebene.
+- Skizze Fassung 3: `spurplan/vergleich/montreux_westende_skizze.png`. Backlog-Idee «Topologie in zwei Durchgängen» in
+  IDEEN_REVIEW.md.
