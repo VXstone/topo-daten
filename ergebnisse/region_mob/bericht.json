@@ -1,6 +1,6 @@
 {
  "region": "mob",
- "erzeugt": "2026-11-07 10:12 UTC",
+ "erzeugt": "2026-11-07 10:35 UTC",
  "bahnhoefe": {
   "schonried": {
    "name": "Schönried",
@@ -102,14 +102,14 @@
    "befunde": "Befunde: {'B': 1, 'F': 1}",
    "optionen": []
   },
-  "chamby": {
-   "name": "Chamby",
+  "allieres": {
+   "name": "Allières",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "allieres": {
-   "name": "Allières",
+  "chamby": {
+   "name": "Chamby",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -126,14 +126,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "saanenmoser": {
-   "name": "Saanenmöser",
+  "oeschseite": {
+   "name": "Oeschseite",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "oeschseite": {
-   "name": "Oeschseite",
+  "saanenmoser": {
+   "name": "Saanenmöser",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -286,12 +286,11 @@
   "S3": 0
  },
  "lage_suche": {
-  "ausgang": 197,
+  "ausgang": 217,
   "ergebnis": 75,
   "drehung": {
    "Montbovon": 60,
-   "Montreux": 30,
-   "Rochers de Naye": 0
+   "Montreux": 30
   },
   "varianten": 73
  },
