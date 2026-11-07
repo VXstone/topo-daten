@@ -1,9 +1,8 @@
 {
- "erzeugt": "2026-11-07 05:44 UTC",
+ "erzeugt": "2026-11-07 05:51 UTC",
  "plaene": 80,
- "geaendert": 6,
+ "geaendert": 5,
  "einordnung": {
-  "Fehler? Topologie": 1,
   "gleichwertig": 4,
   "vermutlich besser": 1
  },
@@ -32,21 +31,8 @@
    "gruppe": "Region",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "96c14f5",
-   "stellen": 3,
-   "letzte_aenderung": "2026-11-06T22:36",
-   "einordnung": "Fehler? Topologie",
-   "delta": "G2 23→21, G6 3→4",
-   "alt": {
-    "G2": 23,
-    "G6": 3,
-    "T7": 0
-   },
-   "neu": {
-    "G2": 21,
-    "G6": 4,
-    "T7": 0
-   }
+   "basis_commit": "e2004a4",
+   "stellen": 0
   },
   {
    "key": "region_vereina",
