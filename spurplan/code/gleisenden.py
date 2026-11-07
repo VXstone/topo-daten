@@ -41,7 +41,7 @@ def pruefe(svg, ports):
             _seit = False
             for q in P.get("ports", []):
                 if q.get("kind") != "side": continue
-                o_ = np.array([q["x"], q["y"]]); u_ = np.array([q["dx"] * 0.5, q["dy"] * 0.866]); u_ = u_ / (np.linalg.norm(u_) or 1)
+                o_ = np.array([q["x"], q["y"]]); u_ = np.array([q["vx"], q["vy"]]) if "vx" in q else np.array([q["dx"] * 0.5, q["dy"] * 0.866]); u_ = u_ / (np.linalg.norm(u_) or 1)
                 t_ = float((e - o_) @ u_)
                 if 0 < t_ < 250 and np.linalg.norm(e - o_ - u_ * t_) < 8: _seit = True
                 if 0 < t_ < 250 and np.linalg.norm(e - o_ - np.array([u_[0], -u_[1]]) * t_) < 8: _seit = True

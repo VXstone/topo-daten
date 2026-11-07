@@ -159,6 +159,7 @@ def port_xy(P, p, cx, cy):
         x = max(P["x_hi"], x) if p["dx"] > 0 else min(P["x_lo"], x)
     return np.array([(x - cx) * S, (p["y"] - cy) * S]), np.array([(p["x"] - cx) * S, (p["y"] - cy) * S])
 def port_vec(p):
+    if "vx" in p: return np.array([float(p["vx"]), float(p["vy"])])                 # U-Abgang: Austritt in Fortsetzungsrichtung (7.11.)
     if p["kind"] == "side": return np.array([p["dx"] * 0.5, -p["dy"] * 0.866 * -1])   # SVG-y nach unten: dy=+1 -> unten
     return np.array([float(p["dx"]), 0.0])
 anchor = {}        # (id(e), node) -> dict(off=np.array (px, rel. Kastenmitte, SVG-Koordinaten), v=Austritt, ports=[...])
@@ -1480,7 +1481,8 @@ def _u_kreuzungen():
             e_ = r["first"] if r["a"] == n else r["last"]; an_ = anchor.get((id(e_), n))
             if not an_ or any(rf_ == up[0]["ref"] for rf_ in an_["refs"]): continue
             pw = [p for p in P["ports"] if not p.get("u") and p["ref"] in an_["refs"]]
-            lev_o = _lev(_W.get(pw[0]["way"], {})) if pw else lev_u
+            t_o = _W.get(pw[0]["way"], {}) if pw else {}
+            lev_o = _lev(t_o) if pw else lev_u
             for l in Ls:
                 if len(l) < 2: continue
                 x_ = LU.intersection(_L2(l))
@@ -1493,14 +1495,17 @@ def _u_kreuzungen():
                     uu_, uo_ = _ri(LU), _ri(_L2(l))
                     if lev_u == lev_o: continue
                     (uo, wo, co, uu, wu_) = (uu_, wu, m_.group(2), uo_, w) if lev_u > lev_o else (uo_, w, col, uu_, wu)
-                    no = np.array([-uo[1], uo[0]]); sn = abs(float(uu @ no)) or 1.0; half = (wo / 2 + 5) / sn + 3
+                    no = np.array([-uo[1], uo[0]]); sn = abs(float(uu @ no)) or 1.0; half = (wo / 2 + 3) / sn + 1.5
                     out.append(f'<path d="M{(X_ - uu * half)[0]:.1f},{(X_ - uu * half)[1]:.1f}L{(X_ + uu * half)[0]:.1f},{(X_ + uu * half)[1]:.1f}" stroke="#fff" stroke-width="{wu_ + 3.5:.1f}" fill="none"/>')
                     _lr = (wu_ + 3.5) / 2 / (abs(float(uu @ no)) or 1.0) + 2      # nur so weit, wie die Lücke die obere Linie anschneidet
                     _f = lambda q_: " ".join(f"{v_[0]:.1f},{v_[1]:.1f}" for v_ in q_)
                     a_l, b_l = X_ - uo * _lr, X_ + uo * _lr      # direkt ins SVG (nicht über path(): zählt nicht als Linie)
                     out.append(f'<path d="M{a_l[0]:.1f},{a_l[1]:.1f}L{b_l[0]:.1f},{b_l[1]:.1f}" stroke="{co}" stroke-width="{wo:.2f}" fill="none" data-fluegel="1"/>')
+                    # untere Linie im Tunnel (Hinweis xntw 7.11.): nur Lücke, kein Brückensymbol
+                    t_unten = t_o if lev_u > lev_o else _W.get(up[0].get("way"), {})
+                    _fl = [] if t_unten.get("tunnel") not in (None, "no") else ((-1, -wo / 2 - 3), (1, wo / 2 + 3))
                     ln_ = half * abs(float(uu @ uo)) + 6
-                    for sg_, o_ in ((-1, -wo / 2 - 3), (1, wo / 2 + 3)):
+                    for sg_, o_ in _fl:
                         b0 = X_ + no * o_; a0 = b0 - uo * ln_; a1 = b0 + uo * ln_
                         q_ = [a0 + no * sg_ * 4 - uo * 3, a0, a1, a1 + no * sg_ * 4 + uo * 3]
                         out.append(f'<path d="M{_f(q_[:1])}L{_f(q_[1:2])}L{_f(q_[2:3])}L{_f(q_[3:])}" stroke="{BK}" stroke-width="1.2" fill="none" stroke-linecap="round" data-fluegel="1"/>')

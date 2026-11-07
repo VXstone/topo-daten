@@ -3971,22 +3971,32 @@ def _u_abgang(x, y, end, dy, sg, n):
     lb = max(CFG.get("u_rest_px", 18.0), abs(xu - arr * r_ - xen_))
     # Gesamtdrehung (cfg «u_winkel», Standard 180° = U): erste Ausrundung 90° in die Senkrechte, zweite den Rest;
     # bei 120° endet der Abgang unter 60° zurück (wie ein seitlicher Abgang), bei 180° waagrecht zurück
-    th = math.radians(min(180.0, max(90.0, CFG.get("u_winkel", 180.0))))
-    vx_, vy_ = arr * math.cos(th), dy * math.sin(th)                # Endrichtung
-    t2 = r_ * math.tan((th - math.pi / 2) / 2)                       # Tangentenlänge der zweiten Ausrundung
-    if th < math.pi - 1e-6: lb = CFG.get("u_rest_px", 18.0)
-    q = [(x, y), (xu - arr * r_, y), ("Q", xu, y, xu, y + dy * r_), (xu, yt - dy * t2), ("Q", xu, yt, xu + vx_ * t2, yt + vy_ * t2),
-         (xu + vx_ * (t2 + lb), yt + vy_ * (t2 + lb))]
-    d_ = f"M{x:.1f},{y:.1f}"
-    for p_ in q[1:]:
-        d_ += f"Q{p_[1]:.1f},{p_[2]:.1f} {p_[3]:.1f},{p_[4]:.1f}" if p_[0] == "Q" else f"L{p_[0]:.1f},{p_[1]:.1f}"
+    # Gesamtdrehung (cfg «u_winkel»): in gleichen Schritten von höchstens 60° (keine 90°-Ecke, Hinweis py1c 7.11.); die
+    # letzte Gerade läuft schon in der Richtung, in der die Strecke weitergeht (MOB 150°: Richtung Belmont). 180° = U.
+    th_g = min(180.0, max(60.0, CFG.get("u_winkel", 180.0))); k_ = max(2, math.ceil(th_g / 60.0 - 1e-6))
+    phis = [math.radians(th_g * i / k_) for i in range(k_ + 1)]
+    hd = lambda f_: (arr * math.cos(f_), dy * math.sin(f_))
+    climb = sum(math.sin(f_) for f_ in phis[1:-1]); hz = sum(math.cos(f_) for f_ in phis[1:-1])
+    Lm = abs(yt - y) / climb if climb > 1e-6 else 2 * r_
+    p1x = xu - arr * max(hz, 0) * Lm if (xe_ - x) * arr > 0.5 else x + arr * (gap_ + r_)
+    if (p1x - x) * arr < r_: p1x = x + arr * r_
+    pts_ = [(x, y), (p1x, y)]
+    for f_ in phis[1:-1]:
+        h_ = hd(f_); pts_.append((pts_[-1][0] + h_[0] * Lm, pts_[-1][1] + h_[1] * Lm))
+    vx_, vy_ = hd(phis[-1])
+    if th_g >= 179.0:
+        lb = max(lb, abs(pts_[-1][0] - xen_) if (pts_[-1][0] - xen_) * arr > 0 else lb)
+    else:
+        lb = CFG.get("u_rest_px", 24.0)
+    pts_.append((pts_[-1][0] + vx_ * lb, pts_[-1][1] + vy_ * lb))
+    d_ = _rund(pts_, r_)
     _c = MS_BRAUN if sg.get("schmal") else green
     out.append(f'<path d="{d_}" stroke="{_c}" stroke-width="3.6" stroke-linecap="round" fill="none" data-u="1"/>')
-    xen, yen = q[-1]
-    PORTS.append(dict(kind="side", x=xen, y=yen, dx=-arr, dy=(dy if th < math.pi - 1e-6 else 0), u=True, ref=exit_ref(sg), town=exit_town(sg, n),
+    xen, yen = pts_[-1]
+    PORTS.append(dict(kind="side", x=xen, y=yen, dx=-arr, dy=(dy if th_g < 179.0 else 0), vx=round(vx_, 4), vy=round(vy_, 4), u=True, ref=exit_ref(sg), town=exit_town(sg, n),
                       bearing=port_bearing(sg, n), lat=LL[n][0], lon=LL[n][1], pax=sg["pax"], way=sg["way"], **{k_: v_ for k_, v_ in _herkunft(sg, n).items() if k_ != "way"}))
     EXITS.append((xen - arr * 10, yen + (-14 if dy < 0 else 30), exit_ref(sg), "end" if arr > 0 else "start", exit_town(sg, n)))
-    U_INFO.append(dict(x=x, y=y, xu=xu, yt=yt, arr=arr, dy=dy, n=n))
+    U_INFO.append(dict(x=x, y=y, yt=yt, arr=arr, dy=dy, n=n, winkel=th_g))
 for x, y, end, dy, sg, n in SIDE:
     if n in U_ABGANG:
         _u_abgang(x, y, end, dy, sg, n); continue
