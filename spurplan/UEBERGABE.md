@@ -248,3 +248,21 @@ und hakt den Schritt in der Statusliste ab. Ist «Daniel danach» nicht leer, wa
 - Hinweise: eyn8, d3r3 behoben; j93a, mp8h (60°-Verbindung wirkt im 30°-gedrehten Plan senkrecht), 5yz7 Rückfrage.
 - **Schritt M bleibt offen**: Unruhe ≤ 109 nicht erreicht (Westende Gl. 5 als Nächstes). **Daniel danach**: Montreux ansehen,
   U (180°) oder 120°-Ende entscheiden, Rückfragen j93a/mp8h/5yz7.
+
+### 7.11.2026 (Vormittag) – Schritt M, Westende Gl. 5 (Seite v137), Unruhe-Ziel nicht erreicht
+- **Kreuzung im Schnittpunkt** (`cfg kreuzung_schnitt`, region_lauf: an): ein `railway=railway_crossing`-Knoten, durch den
+  zwei Ways schräg laufen, liegt im Schnittpunkt der beiden Schrägen (je Way eine Gruppe durch den Knoten), nicht mehr auf
+  einer Hilfsebene. Nur wenn keines der vier Stücke zu einem Gleis > 15 m gehört (Gl. 4 bleibt gerade). Montreux:
+  Knoten 1126121469 und 2793859963; Bahnhofplan G2 7 → 4, Regionalplan Montreux G2 7 → 6, G6 4 → 3.
+- Verworfen (getestet, schlechter): Hilfsebenen ganzer Ways auflösen (Gruppen über mehrere Ways → G8, lose Stummel);
+  Nachbarweiche auf ihr gerades Gleis legen (G4, G8); `als_dkw` an 1126121469.
+- Das Westende bleibt unruhig: 1126121469 ist mit den Kurzverbindungen 963685765/963685766 (< 20 m) eigentlich eine DKW
+  (E3, «Automatik offen»). Saubere Lösung = E3-Automatik (eigener Schritt). Verbindung 963685765 endet wie schon vorher
+  zeichnerisch nicht genau auf 97211358 (keine Topologie-Meldung).
+- MOB: Unruhe 119 (Workflow = lokal, Lagesuche ist deterministisch, reagiert aber auf jede Kastengrösse: Zweisimmen
+  diesmal ohne −60°, dadurch G2 +2 ausserhalb Montreux). Test Zweisimmen −60 fest: 118. Montreux selbst trägt jetzt
+  G2 6, G6 3, Ecke 1 bei (vorher G2 8, G6 3). Den Rest der Unruhe tragen Treppen in Glion (2), Zweisimmen (2), Lenk,
+  Montbovon, Toveyre (7 × 8 = 56) – ausserhalb Montreux.
+- Prüfung aller Pläne: nur `region_mob` geändert («vermutlich besser»: G6 4→3, G2 21→23 durch Zweisimmen-Drehung).
+- **Schritt M bleibt offen** bis Daniel entscheidet: (a) Montreux so abnehmen bzw. Unruhe-Ziel für M aufgeben (Rest ist
+  ausserhalb Montreux), oder (b) E3-DKW-Automatik als eigenen Schritt vor P einschieben. Dazu U 180° oder 120°.
