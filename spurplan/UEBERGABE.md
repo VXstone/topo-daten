@@ -226,3 +226,25 @@ und hakt den Schritt in der Statusliste ab. Ist «Daniel danach» nicht leer, wa
   dazu Wangen und Kerzers (Antworten 6.11. abends). Neu `spurplan/regression_ok.json`: Basis der Regression ab diesem Stand.
   Nur auf Daniels Aussage eintragen.
 - Noch offen bei Daniel (in Ruhe): Thun, Schönenwerd, Neuchâtel (Perrons) und Olten, Zofingen, Aarburg-Oftringen (Topologie).
+
+### 7.11.2026 (Morgen) – Schritt M umgesetzt (Seite v136), zwei Kriterien offen
+- (1) **U-Abgang** (`cfg u_abgang`, Region MOB über `override_standard`): kehrt eine Strecke vor dem Planrand um und geht
+  seitlich nach hinten weg, bleibt sie ab dem letzten Gleis mit Ebene auf dieser Ebene bis zum Wendepunkt (home/xs_over der
+  Strecke) und verlässt den Plan mit einem U (zwei Ausrundungen, Rückweg bis vor andere Abgänge derselben Seite). Port
+  `kind side, dy 0, u true`. Schalter `u_winkel` (180 = U; 120 = Ende unter 60° zurück, im Regionalplan ohne Ecke zur
+  Linie Belmont, getestet: Unruhe 120 statt 118 – Daniel entscheidet), `u_radius_px`, `u_hoehe_lanes` (2).
+- (2) **Spurgruppe auf ihrer Seite** (`cfg spurgruppe_seite`, in region_lauf für alle Linien-Regionen an): Normalspur-Block
+  zwischen unverbundenen Schmalspur-Ebenen kommt an den Rand ihrer realen Seite. Montreux: MOB-Abstellgleise jetzt
+  zwischen MOB und SBB. Ursache: Achse = gekrümmte SBB-Linie 100, lange gerade Abstellgleise liefen in Achskoordinaten
+  scheinbar durch sie hindurch. Vereina unverändert.
+- (3) **Kreuzung am U** (netz_lage `_u_kreuzungen`): Linie 121 kreuzt das U (OSM: 121 layer −2 unter 120 layer −1) →
+  Lücke in 121, Flügel an 120. Flügel mit `data-fluegel`, zählen in ruhe.py/regel_pruefung.py nicht.
+- (4) **Westende Gl. 5 nicht gemacht** (Gleisgewirr 963685765/97211358/97211375/1112528290, G6 152°/28°).
+- MOB: Unruhe 118 (Basis 115, Ziel ≤ 109), Topologie/Verkettung 0. Montreux G2 8→7, G6 3→4 (neu: Knubbel 40° an der
+  Doppelverbindung 1112528289/97211362 bei den unteren Abstellgleisen, gleiche Topologie wie vorher, nur andere Ebenen),
+  Ecke +1 (Linie Belmont am Ende des U). Die Lagesuche streut ±10 Unruhe zwischen Läufen mit kleinen Änderungen.
+- Prüfung aller Pläne: 4 geändert, davon nur `region_mob` durch Schritt M (Aarburg, Rothrist, Zofingen = bekannte Stände
+  seit Archivbeginn, Prüfsummen vor/nach gleich).
+- Hinweise: eyn8, d3r3 behoben; j93a, mp8h (60°-Verbindung wirkt im 30°-gedrehten Plan senkrecht), 5yz7 Rückfrage.
+- **Schritt M bleibt offen**: Unruhe ≤ 109 nicht erreicht (Westende Gl. 5 als Nächstes). **Daniel danach**: Montreux ansehen,
+  U (180°) oder 120°-Ende entscheiden, Rückfragen j93a/mp8h/5yz7.
