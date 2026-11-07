@@ -91,12 +91,19 @@ else:
 m_pl = re.search(r"const PLANS = (\[.*?\]);\n", html, re.S)
 PLANS = json.loads(m_pl.group(1))
 A = abnahmen(ABN)
+# Von Daniel bestätigte Änderungen (7.11.2026: «Murten, Dulliken … sind ok»): neuere Basis als die Abnahme, keine Abnahme
+_OKF = os.path.join(os.path.dirname(os.path.abspath(ABN)) if os.path.isfile(ABN) else ".", "regression_ok.json")
+OK = {k: v for k, v in (json.load(open(_OKF)).items() if os.path.exists(_OKF) else []) if not k.startswith("_")}
 zeilen = []
 for p in PLANS:
     k = p["key"]; path = f"ergebnisse/seite/plaene/{k}.svg"
     log = [l.split() for l in git("log", REF, "--format=%h %cI", "--", path).decode().splitlines() if l.strip()]
     if not log: zeilen.append(dict(key=k, gruppe=p.get("gruppe"), basis="neu", stellen=None)); continue
-    if k in A:
+    if k in OK and (k not in A or OK[k] > A[k]):
+        t = datetime.datetime.fromisoformat(OK[k].replace("Z", "+00:00"))
+        vor = [x for x in log if datetime.datetime.fromisoformat(x[1]) <= t]
+        base, art = (vor[0], "bestätigt " + OK[k][:10]) if vor else (log[-1], "bestätigt " + OK[k][:10])
+    elif k in A:
         t = datetime.datetime.fromisoformat(A[k].replace("Z", "+00:00"))
         vor = [x for x in log if datetime.datetime.fromisoformat(x[1]) <= t]
         base, art = (vor[0], "Abnahme " + A[k][:10]) if vor else (log[-1], "Archivbeginn (Abnahme " + A[k][:10] + ")")

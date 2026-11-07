@@ -69,6 +69,7 @@ und hakt den Schritt in der Statusliste ab. Ist «Daniel danach» nicht leer, wa
 ### Statusliste
 - [x] A  Regression Olten und alle Pläne (6.11. abends, Seite v133)
 - [ ] 0  Antworten 6.11. umsetzen
+- [ ] M  Montreux und U-Abgang (neu 7.11., vor P)
 - [ ] P  Verbundene Perrons / Spezialperrons (Thun 16/18, Montreux, Zweisimmen, Bern 49/50, Basel 3 und 35)
 - [ ] 1  Blaupausen-Prüfstand aufbauen
 - [ ] 2  Pfeile/Stummel bei schrägen Abgängen (h9o9 Sagliains)
@@ -106,6 +107,21 @@ und hakt den Schritt in der Statusliste ab. Ist «Daniel danach» nicht leer, wa
 - Daniel danach: Montreux ansehen. **Ausserdem nochmals vorlegen (Wunsch 6.11. abends):** (1) Perrons kürzer in abgenommenen
   Plänen – so lassen oder zurück; (4) Olten, Zofingen, Aarburg-Oftringen ansehen (Topologie wieder wie Abnahme/30.10.).
   Übersicht: Artifact «Regression Spurpläne 6.11.».
+
+### M – Montreux und U-Abgang (neu 7.11.2026, vor P)
+- Einstieg: «Weiter mit UEBERGABE.md – Schritt M: Montreux und U-Abgang»
+- Warum vor P: Topologie/Lage vor Perrondarstellung; Schritt 0 ist nur wegen Montreux offen (Unruhe 115); P baut die
+  Montreux-Perrons um, eine spätere Lageänderung müsste sonst nachgezogen werden.
+- Befund Daniel 7.11.: Knicke bis über 90°, MOB-Abstellgleise auf der falschen Seite der SBB-Gleise, Linien kreuzen sich,
+  während beide im Tunnel sind. Offene Hinweise dort: 5yz7, d3r3, eyn8, j93a, mp8h.
+- Arbeiten: (1) **U-Abgang** (Vorschlag Daniel): muss ein Gleis wegen der Drehung des Bahnhofs (Anschlüsse anderer Linien)
+  um mehr als 90° weg, zeichnet der Code ein U mit zwei Ausrundungen statt eines Knicks; Bündel im gleichen Querabstand.
+  Schalter je Region (`cfg`), vorerst nur MOB; später als Baustein in den Prüfstand (Schritt 1). (2) Abstellgleise auf die
+  richtige Seite der SBB-Gleise. (3) Kreuzungen im Tunnel entflechten (keine Kreuzung ohne realen Knoten). (4) Westende Gl. 5
+  (Einmündung in Gl. 4) beruhigen.
+- Fertig, wenn: Montreux ohne Knick > 90°, ohne Kreuzung ohne Knoten, Abstellgleise richtig; MOB-Unruhe ≤ 109 (damit auch
+  Schritt 0 fertig); Prüfung aller Pläne ohne unerklärte Änderung.
+- Daniel danach: Montreux ansehen.
 
 ### P – Verbundene Perrons / Spezialperrons (neu 6.11. abends)
 - Einstieg: «Weiter mit UEBERGABE.md – Schritt P: Verbundene Perrons»
@@ -203,3 +219,10 @@ und hakt den Schritt in der Statusliste ab. Ist «Daniel danach» nicht leer, wa
 - **Daniel danach**: Montreux ansehen; Fragen aus Schritt A nochmals: (1) Perrons kürzer – so lassen oder zurück (mit Blick
   auf Schritt P), (4) Olten, Zofingen, Aarburg-Oftringen. Übersicht «Regression Spurpläne 6.11.» aktualisiert.
 - Schritt 0 bleibt offen, bis Montreux die Unruhe ≤ 109 erreicht oder Daniel 115 akzeptiert.
+
+### 7.11.2026 05:35 – Antworten Daniel
+- Reihenfolge: 0 (Rest) → **M** → P → 1 → 2 → 3 → 4 → 5. Schritt M «Montreux und U-Abgang» eingefügt.
+- Perronänderungen bestätigt (keine Abnahme): Murten, Dulliken, Däniken, Safenwil, Tecknau, Läufelfingen, Olten Hammer;
+  dazu Wangen und Kerzers (Antworten 6.11. abends). Neu `spurplan/regression_ok.json`: Basis der Regression ab diesem Stand.
+  Nur auf Daniels Aussage eintragen.
+- Noch offen bei Daniel (in Ruhe): Thun, Schönenwerd, Neuchâtel (Perrons) und Olten, Zofingen, Aarburg-Oftringen (Topologie).
