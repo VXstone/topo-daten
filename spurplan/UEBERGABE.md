@@ -340,3 +340,16 @@ und hakt den Schritt in der Statusliste ab. Ist «Daniel danach» nicht leer, wa
   Knoten – die Mittags-Erkennung verlangte genau 2) und X 1838 als DKW (Gl. 7) bzw. Kreuzung behandeln. Die Ebenen 5/6
   dürfen durch die DKW nicht verspringen (Gl. 5 und 6 sind die durchgehenden Gleise, die Schrägen kreuzen sie).
 - Daniel: Skizze bestätigen; dann Umsetzung im neuen Chat «Weiter mit UEBERGABE.md – Schritt E: DKW-Automatik».
+
+### 7.11.2026 21:33 – Korrektur Daniel zum Westende (OSM bestätigt)
+- **X 1126121838 ist nur eine Durchschneidung**: Gl. 7 (274706713) endet dort und läuft ohne Weiche als 1112528289 weiter
+  (der «Ast von 7»), 97211375 (Ast aus der DKW auf 6) kreuzt nur. Rechts von 1838 ist keine Weiche.
+- Der Ast von 7 bildet mit dem Gleis von 6 die **DKW X 1126121977** (Bögen 963685763: 8914081510→8914081511 und
+  963685764: 8914081514→8914081515; Gl. 6 = 97211358 endet dort, läuft als 97211362 weiter zum Stumpen 2052) und geht dann
+  stumpf in die Strecke (W 1126122400 auf 677497302/«6932»).
+- 97211375 nach 1838: W 1126121532 (274706714, einzige Verbindung zur Rochers-de-Naye), dann Stumpen (Prellbock 1126122414).
+- **X 8914106524 ist nur eine Durchschneidung** mit Gl. 4; im Ast von 5 (97211377) öffnet danach W 1126122358 ins
+  Abstellfeld (97211363). **Gl. 4 geht nur in Gl. 5** (W 2793859953).
+- DKW für die Automatik also: 1126121469 (auf 6), 207308647 (auf 5), 1126121977 (Ast von 7 × Gl. 6). Bei 1977 und 8647 läuft
+  ein Gleis am Knoten als neuer Way weiter (Ende/Anfang) – die Erkennung muss das als durchgehend behandeln.
+  Skizze korrigiert: `spurplan/vergleich/montreux_westende_skizze.png`.
