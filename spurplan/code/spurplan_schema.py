@@ -95,6 +95,79 @@ ways = {e["id"]: e for e in D if e["type"] == "way" and e["tags"].get("railway")
         and e["tags"].get("gauge", "1435") == "1435" and (e["tags"].get("service") not in _DROP
             or e["tags"].get("railway:track_ref") in OVR.get("pax", []) or e["id"] in OVR.get("behalten", []))}   # Personengleise bleiben (Neuchâtel 19.10.)
 ntag = {e["id"]: e["tags"] for e in D if e["type"] == "node"}
+# Regel E3 automatisch (Schritt E, 7.11.2026, Montreux Westende Gl. 5): OSM bildet eine DKW oft als Kreuzung
+# (railway=railway_crossing) mit vier Weichen und zwei kurzen Bogenverbindungen ab. Liegen die vier Weichen je höchstens
+# «dkw_m» (20 m) vor/nach der Kreuzung auf den beiden kreuzenden Ways und verbinden zwei kurze Ways (≤ 25 m) je eine Seite
+# des einen mit der Gegenseite des anderen, ist das eine DKW: die Kreuzung wird ein DKW-Knoten (railway:switch=double_slip),
+# die beiden Fahrwege der Bogenverbindungen werden die zwei durchgehenden Gleise, die Bogen-Ways entfallen (das Symbol
+# zeigt sie). Mit nur einer Bogenverbindung (EKW) bleibt alles wie in OSM. cfg «dkw_auto».
+DKW_AUTO = {}
+if CFG.get("dkw_auto", False):
+    def _gm(g1, g2): return math.hypot((g1["lon"] - g2["lon"]) * 111320 * math.cos(math.radians(g1["lat"])), (g1["lat"] - g2["lat"]) * 110540)
+    _wn = collections.defaultdict(list)
+    for w_ in ways.values():
+        for i_, n_ in enumerate(w_["nodes"]): _wn[n_].append((w_["id"], i_))
+    def _knoten(n_): return len(_wn[n_]) >= 2
+    def _nachbar(w_, i_, d_):
+        L_ = 0.0; j_ = i_
+        while 0 <= j_ + d_ < len(w_["nodes"]):
+            L_ += _gm(w_["geometry"][j_], w_["geometry"][j_ + d_]); j_ += d_
+            if _knoten(w_["nodes"][j_]): return w_["nodes"][j_], L_
+        return None, L_
+    def _laenge(w_): return sum(_gm(a_, b_) for a_, b_ in zip(w_["geometry"], w_["geometry"][1:]))
+    _dkw_m = CFG.get("dkw_m", 20.0)
+    for X_, t_ in list(ntag.items()):
+        if t_.get("railway") != "railway_crossing" or X_ not in _wn: continue
+        occ = [(w_, i_) for w_, i_ in _wn[X_] if w_ in ways and 0 < i_ < len(ways[w_]["nodes"]) - 1]
+        if len(occ) != 2 or len(_wn[X_]) != 2 or occ[0][0] == occ[1][0]: continue
+        (wa, ia), (wb, ib) = occ; A_, B_ = ways[wa], ways[wb]
+        nb = {}
+        for key_, W_, i_ in (("a", A_, ia), ("b", B_, ib)):
+            for d_ in (-1, 1):
+                n_, L_ = _nachbar(W_, i_, d_)
+                nb[(key_, d_)] = n_ if n_ is not None and L_ <= _dkw_m else None
+        if None in nb.values() or len(set(nb.values())) != 4: continue
+        boegen = []
+        for w_ in ways.values():
+            if w_["id"] in (wa, wb) or _laenge(w_) > _dkw_m + 5: continue
+            e_ = {w_["nodes"][0], w_["nodes"][-1]}
+            if any(_knoten(n_) for n_ in w_["nodes"][1:-1]): continue
+            for da in (-1, 1):
+                for db in (-1, 1):
+                    if e_ == {nb[("a", da)], nb[("b", db)]}: boegen.append((w_["id"], da, db))
+        if len(boegen) != 2 or {b_[1] for b_ in boegen} != {-1, 1} or {b_[2] for b_ in boegen} != {-1, 1}: continue
+        neu = []
+        for bid_, da, db in boegen:            # Fahrweg des Bogens: A-Seite da bis X, dann B-Seite db ab X
+            pa = list(range(ia, -1, -1)) if da < 0 else list(range(ia, len(A_["nodes"])))
+            pb = list(range(ib, -1, -1)) if db < 0 else list(range(ib, len(B_["nodes"])))
+            idx_ = [("a", k) for k in pa[::-1]] + [("b", k) for k in pb[1:]]
+            nodes_ = [(A_ if q_ == "a" else B_)["nodes"][k] for q_, k in idx_]
+            geom_ = [(A_ if q_ == "a" else B_)["geometry"][k] for q_, k in idx_]
+            neu.append((nodes_, geom_))
+        # Knick am DKW-Knoten je Fahrweg (Richtung je 15 m davor/danach): der geradere ist das durchgehende Gleis und behält
+        # seine Punkte; im geknickten (Montreux: von Gl. 5 hinauf an Gl. 6 und wieder hinab) sind die Weichen der Bögen nach
+        # dem Zusammenfassen gewöhnliche Punkte und entfallen, sonst bekommt er an ihnen eigene Hilfsebenen.
+        def _knick(nodes_, geom_):
+            i_ = nodes_.index(X_); g0 = geom_[i_]
+            def _pt(d_):
+                L_, j_ = 0.0, i_
+                while 0 <= j_ + d_ < len(geom_) and L_ < 15: L_ += _gm(geom_[j_], geom_[j_ + d_]); j_ += d_
+                return geom_[j_]
+            a1, a2 = _pt(-1), _pt(1)
+            v1 = ((g0["lon"] - a1["lon"]) * 0.69, g0["lat"] - a1["lat"]); v2 = ((a2["lon"] - g0["lon"]) * 0.69, a2["lat"] - g0["lat"])
+            return abs(math.degrees(math.atan2(v1[0] * v2[1] - v1[1] * v2[0], v1[0] * v2[0] + v1[1] * v2[1])))
+        _kn = [_knick(n_, g_) for n_, g_ in neu]
+        k_ = int(np.argmax(_kn))
+        if _kn[k_] > 3:
+            _weg = set(nb.values())
+            n_, g_ = neu[k_]; keep_ = [i_ for i_, m_ in enumerate(n_) if m_ not in _weg]
+            neu[k_] = ([n_[i_] for i_ in keep_], [g_[i_] for i_ in keep_])
+        for (nodes_, geom_), W_ in zip(neu, (A_, B_)):
+            W_["nodes"], W_["geometry"] = nodes_, geom_
+        for bid_, _, _ in boegen: ways.pop(bid_, None)
+        ntag[X_] = {**t_, "railway:switch": "double_slip"}
+        DKW_AUTO[X_] = dict(ways=(wa, wb), boegen=[b_[0] for b_ in boegen])
+    if DKW_AUTO and (ARGS.dbg or os.environ.get("SEGDUMP")): print("DKW_AUTO", DKW_AUTO)
 # Bahnhof: Stationsknoten, der dem Normalspurnetz am nächsten liegt
 allpts = [(g["lat"], g["lon"]) for w in ways.values() for g in w["geometry"]]
 def nearest_rail(e):
