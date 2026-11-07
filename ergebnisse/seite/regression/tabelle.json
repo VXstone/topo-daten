@@ -1,10 +1,10 @@
 {
- "erzeugt": "2026-11-06 22:45 UTC",
+ "erzeugt": "2026-11-07 04:18 UTC",
  "plaene": 80,
- "geaendert": 15,
+ "geaendert": 14,
  "einordnung": {
-  "schlechter?": 3,
   "gleichwertig": 11,
+  "schlechter?": 2,
   "vermutlich besser": 1
  },
  "zeilen": [
@@ -32,21 +32,8 @@
    "gruppe": "Region",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "fb912a2",
-   "stellen": 3,
-   "letzte_aenderung": "2026-11-06T22:36",
-   "einordnung": "schlechter?",
-   "delta": "G2 20→23",
-   "alt": {
-    "G2": 20,
-    "G6": 3,
-    "T7": 0
-   },
-   "neu": {
-    "G2": 23,
-    "G6": 3,
-    "T7": 0
-   }
+   "basis_commit": "96c14f5",
+   "stellen": 0
   },
   {
    "key": "region_vereina",
