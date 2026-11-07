@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-11-07 22:10 UTC",
+ "erzeugt": "2026-11-07 22:42 UTC",
  "plaene": 80,
  "geaendert": 5,
  "einordnung": {
@@ -73,12 +73,12 @@
    "einordnung": "gleichwertig",
    "delta": "",
    "alt": {
-    "G2": 16,
+    "G2": 5,
     "G6": 2,
     "T7": 0
    },
    "neu": {
-    "G2": 16,
+    "G2": 5,
     "G6": 2,
     "T7": 0
    }
@@ -131,12 +131,10 @@
    "einordnung": "gleichwertig",
    "delta": "",
    "alt": {
-    "G2": 2,
     "G7": 1,
     "T7": 0
    },
    "neu": {
-    "G2": 2,
     "G7": 1,
     "T7": 0
    }
@@ -154,13 +152,11 @@
    "delta": "",
    "alt": {
     "G3": 4,
-    "G2": 6,
     "G6": 1,
     "T7": 8
    },
    "neu": {
     "G3": 4,
-    "G2": 6,
     "G6": 1,
     "T7": 8
    }
@@ -175,13 +171,11 @@
    "stellen": 28,
    "letzte_aenderung": "2026-11-06T20:18",
    "einordnung": "vermutlich besser",
-   "delta": "G2 4→2, T7 2→1",
+   "delta": "T7 2→1",
    "alt": {
-    "G2": 4,
     "T7": 2
    },
    "neu": {
-    "G2": 2,
     "T7": 1
    }
   },
@@ -280,12 +274,12 @@
    "einordnung": "gleichwertig",
    "delta": "",
    "alt": {
-    "G2": 14,
+    "G2": 4,
     "G6": 1,
     "T7": 3
    },
    "neu": {
-    "G2": 14,
+    "G2": 4,
     "G6": 1,
     "T7": 3
    }
