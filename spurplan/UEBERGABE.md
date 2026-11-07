@@ -186,3 +186,20 @@ und hakt den Schritt in der Statusliste ab. Ist «Daniel danach» nicht leer, wa
 ### 6.11.2026 22:54 – Antworten Daniel zu Schritt A
 - Wangen passt. Kerzers: Gl. 2/5 ohne Nummer bleibt (nur Perrongleise). Perronfrage (1) und Olten/Zofingen/Aarburg (4)
   nach Schritt 0 nochmals vorlegen. Neuer Schritt P «Verbundene Perrons» eingefügt (nach 0).
+
+### 7.11.2026 (Nacht) – Schritt 0 umgesetzt (Seite v134), ein Kriterium offen
+- (1) **Caux**: Stumpen aus Gl. 2 Richtung Rochers-de-Naye jetzt dünn. Ursache: Regel «Perron mit einer Nummer gibt sie dem
+  nächsten Gleis ohne Nummer» schenkte Perron «1» einem Abstellgleis. Neu: nur an Gleise ohne `service`-Tag (Susch unverändert).
+- (2) **Pfeile an Meterspur braun**: reine Schmalspurbahnhöfe waren schon braun; im gemischten Bahnhof (Montreux, Zweisimmen)
+  bekommt jeder Pfeil jetzt die Farbe der Spur, deren Gleis seiner Wurzel am nächsten liegt (`_pfeil_farbe`).
+- (3) **Perron beidseitig** (`cfg perron_beidseitig`, Standard an): Perron mit ≥ 3 Gleisnummern (OSM `ref` «3;4;5»), deren
+  Gleise auf direkt benachbarten Ebenen liegen → je Gleispaar ein Balken. Montreux 3;4;5 und 6;7;8. Eine geometrische
+  Variante (Gleis im Perronquerschnitt) wurde verworfen: Gl. 4 endet in der Öffnung, in der Kurve wandert der Querschnitt.
+  Le Noirmont / Renens m1 sind in keinem Plan – beim Ausbau prüfen.
+- (4) **MOB `gleisnummer_aus_ref` an**: Montreux Gl. 4 im Plan, P1 = 0, Verkettung 0. **Offen:** Unruhe 115 statt ≤ 109 –
+  +3 G2 im Gleisgewirr am Westende von Gl. 5 (Gl. 5 mündet in Gl. 4), das erst mit Gl. 4 sichtbar wird. Keine Folge der
+  Perronregel. Gehört zur Montreux-Durchsicht (offene Hinweise 5yz7, d3r3, eyn8, j93a, mp8h liegen dort).
+- Prüfung aller Pläne: ausser MOB (Montreux, Caux, Zweisimmen, Regionalplan G2 20→23) keine Änderung durch Schritt 0.
+- **Daniel danach**: Montreux ansehen; Fragen aus Schritt A nochmals: (1) Perrons kürzer – so lassen oder zurück (mit Blick
+  auf Schritt P), (4) Olten, Zofingen, Aarburg-Oftringen. Übersicht «Regression Spurpläne 6.11.» aktualisiert.
+- Schritt 0 bleibt offen, bis Montreux die Unruhe ≤ 109 erreicht oder Daniel 115 akzeptiert.
