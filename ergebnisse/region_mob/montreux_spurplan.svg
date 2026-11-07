@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -42 1063 500" width="1063" height="500" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
-<rect y="-42" width="100%" height="100%" fill="#fff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -70 1063 528" width="1063" height="528" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
+<rect y="-70" width="100%" height="100%" fill="#fff"/>
 <g fill="none" stroke-linecap="round" stroke-linejoin="round">
 <path d="" stroke="#111" stroke-width="1.6"/>
 <path d="M645.5,291.2H750.3 M750.3,291.2H819.2 M750.3,291.2H750.3Q753.4,291.2 754.9,288.5L765.7,269.9Q767.2,267.2 770.3,267.2H770.3 M770.3,267.2H818.2 M404.6,182.0H454.6 M454.6,182.0H475.4Q482.4,182.0 485.9,188.1L500.4,213.1Q503.9,219.2 510.9,219.2H531.7 M584.5,291.2H610.8 M610.8,291.2L624.8,291.2 M624.8,291.2H640.2 M612.3,291.2H613.3Q620.3,291.2 623.8,285.1L630.7,273.3Q634.2,267.2 641.2,267.2H642.2 M640.2,267.2H679.0 M537.9,304.4H537.9Q542.9,304.4 545.9,300.4L549.9,295.2Q552.9,291.2 557.9,291.2H557.9 M557.9,291.2H610.2 M610.2,291.2H640.9 M640.9,291.2H642.8 M642.8,291.2H645.5 M643.5,291.2H643.5Q650.3,291.2 654.4,296.6L656.2,299.0Q660.3,304.4 667.1,304.4H667.1 M419.2,243.2H419.2Q426.2,243.2 429.7,237.1L444.1,212.1Q447.6,206.0 454.6,206.0H454.6 M454.6,206.0H456.2 M456.2,206.0H456.2Q457.6,206.0 458.9,205.3L466.4,201.5Q467.6,200.9 469.1,200.9H469.1 M469.1,200.9H469.1Q476.1,200.9 479.6,194.8L483.5,188.1Q487.0,182.0 494.0,182.0H516.3 M516.3,182.0H577.0 M577.0,182.0H667.7 M667.7,182.0H673.7 M537.9,304.4H741.7 M486.6,225.3Q483.1,219.2 476.1,219.2H456.2 M456.2,206.0C456.7,206.0 456.7,219.2 457.2,219.2 M454.6,182.0H516.3 M453.9,243.2L471.6,243.2 M577.0,182.0H577.0Q584.0,182.0 587.5,188.1L629.7,261.1Q633.2,267.2 640.2,267.2H640.2 M641.2,267.2L612.3,291.2 M404.6,182.0H404.6Q411.6,182.0 415.1,188.1L443.4,237.1Q446.9,243.2 453.9,243.2H453.9 M446.9,233.7L450.4,233.7Q453.9,233.7 457.0,235.3L510.2,263.9Q516.4,267.2 519.9,273.3L536.1,301.4Q537.9,304.4 541.4,304.4L544.9,304.4 M602.2,291.2L606.8,291.2Q610.2,291.2 611.9,294.2L611.9,294.2Q613.6,297.1 617.1,297.1L628.5,297.1 M634.8,291.2L639.4,291.2Q642.8,291.2 644.5,294.2L644.5,294.2Q646.2,297.1 649.7,297.1L686.2,297.1 M632.9,291.2L637.4,291.2Q640.9,291.2 642.6,294.2L642.6,294.2Q644.3,297.1 647.7,297.1L674.3,297.1 M673.7,182.0Q667.7,182.0 664.7,176.8L656.7,162.9 M608.6,134.0Q614.6,134.0 617.6,139.2L625.6,153.1 M649.0,134.0Q643.0,134.0 640.0,128.8L632.0,114.9" stroke="#9a5b1e" stroke-width="1.6"/>
@@ -45,15 +45,15 @@
 <path d="M827.0,328.4H849.0" stroke="#00862f" stroke-width="3.6" fill="none"/>
 <path d="M251.7,352.4H229.7" stroke="#00862f" stroke-width="3.6" fill="none"/>
 <path d="M827.0,352.4H849.0" stroke="#00862f" stroke-width="3.6" fill="none"/>
-<path d="M696.1,243.2L710.1,243.2Q722.1,243.2 722.1,231.2L722.1,74.0Q722.1,62.0 710.1,62.0L630.6,62.0" stroke="#9a5b1e" stroke-width="3.6" stroke-linecap="round" fill="none" data-u="1"/>
+<path d="M696.1,243.2L710.1,243.2Q722.1,243.2 729.8,234.0L780.9,173.1Q788.6,163.9 786.5,152.1L772.7,73.8Q770.6,62.0 760.2,56.0L749.8,50.0" stroke="#9a5b1e" stroke-width="3.6" stroke-linecap="round" fill="none" data-u="1"/>
 <path d="M654.6,134.0L654.6,134.0L707.1,43.1" stroke="#00862f" stroke-width="3.6" stroke-linecap="round" fill="none"/>
 <text x="217.7" y="327.4" font-size="22" text-anchor="end" fill="#00862f">Linie 100</text>
 <text x="217.7" y="353.4" font-size="22" text-anchor="end" fill="#00862f">← Lausanne</text>
 <text x="861.0" y="327.4" font-size="22" text-anchor="start" fill="#00862f">Linie 100</text>
 <text x="861.0" y="353.4" font-size="22" text-anchor="start" fill="#00862f">Villeneuve →</text>
-<text x="620.6" y="29.0" font-size="22" text-anchor="end" fill="#00862f">Linie 120</text>
-<text x="620.6" y="55.0" font-size="22" text-anchor="end" fill="#00862f">← Les Avants</text>
-<text x="707.1" y="-15.9" font-size="22" text-anchor="middle" fill="#00862f">Linie 121</text>
-<text x="707.1" y="10.1" font-size="22" text-anchor="middle" fill="#00862f">Glion →</text>
+<text x="739.8" y="17.0" font-size="22" text-anchor="end" fill="#00862f">Linie 120</text>
+<text x="739.8" y="43.0" font-size="22" text-anchor="end" fill="#00862f">← Les Avants</text>
+<text x="707.1" y="-43.9" font-size="22" text-anchor="middle" fill="#00862f">Linie 121</text>
+<text x="707.1" y="-17.9" font-size="22" text-anchor="middle" fill="#00862f">Glion →</text>
 <text x="453.1" y="428.4" font-size="38" font-weight="700" text-anchor="middle" fill="#00862f">Montreux</text>
 </svg>

@@ -1,6 +1,6 @@
 {
  "region": "mob",
- "erzeugt": "2026-11-07 09:12 UTC",
+ "erzeugt": "2026-11-07 10:12 UTC",
  "bahnhoefe": {
   "schonried": {
    "name": "Schönried",
@@ -102,14 +102,14 @@
    "befunde": "Befunde: {'B': 1, 'F': 1}",
    "optionen": []
   },
-  "allieres": {
-   "name": "Allières",
+  "chamby": {
+   "name": "Chamby",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "chamby": {
-   "name": "Chamby",
+  "allieres": {
+   "name": "Allières",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -258,12 +258,6 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "vernex": {
-   "name": "Vernex",
-   "ok": true,
-   "befunde": "Befunde: {}",
-   "optionen": []
-  },
   "jor": {
    "name": "Jor",
    "ok": true,
@@ -272,6 +266,12 @@
   },
   "glion_college": {
    "name": "Glion-Collège",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "vernex": {
+   "name": "Vernex",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -287,10 +287,11 @@
  },
  "lage_suche": {
   "ausgang": 197,
-  "ergebnis": 79,
+  "ergebnis": 75,
   "drehung": {
    "Montbovon": 60,
-   "Montreux": 30
+   "Montreux": 30,
+   "Rochers de Naye": 0
   },
   "varianten": 73
  },
@@ -298,7 +299,7 @@
  "topologie_region": {},
  "ruhe": {
   "treppen": 7,
-  "ecken": 2
+  "ecken": 1
  },
  "regeln": {
   "G2": 23,
@@ -318,16 +319,16 @@
   "regel_G2": 23,
   "regel_G6": 3,
   "ruhe_treppen": 7,
-  "ruhe_ecken": 2,
+  "ruhe_ecken": 1,
   "planrand": 0,
   "lage_L3a": 8
  },
- "unruhe": 119,
+ "unruhe": 115,
  "unruhe_teile": {
   "regel_G2": 46,
   "regel_G6": 9,
   "ruhe_treppen": 56,
-  "ruhe_ecken": 8
+  "ruhe_ecken": 4
  },
  "vergleich": {
   "status": "besser",
@@ -335,7 +336,7 @@
   "besser": {
    "lage_L2": -34,
    "lage_L3": -7,
-   "ruhe_ecken": -1,
+   "ruhe_ecken": -2,
    "ruhe_treppen": -3,
    "topo_T6": -3
   },
@@ -343,7 +344,7 @@
   "neu": {
    "lage_L3a": 8
   },
-  "unruhe": 119,
+  "unruhe": 115,
   "unruhe_basis": 777
  }
 }
