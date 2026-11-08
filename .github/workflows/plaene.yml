@@ -51,7 +51,7 @@ jobs:
           for i in 1 2 3; do
             git fetch -q origin ergebnisse || true
             if git rev-parse --verify origin/ergebnisse >/dev/null 2>&1; then git checkout -q -f -B ergebnisse origin/ergebnisse; else git checkout -q --orphan ergebnisse; git rm -rq --cached . || true; fi
-            rm -rf /tmp/regionen; mkdir -p /tmp/regionen && mv ergebnisse/region_* ergebnisse/seite /tmp/regionen/ 2>/dev/null || true   # Regionalpläne (regionen) und Seite (seite) behalten
+            rm -rf /tmp/regionen; mkdir -p /tmp/regionen && mv ergebnisse/region_* ergebnisse/seite ergebnisse/pruefstand /tmp/regionen/ 2>/dev/null || true   # Regionalpläne (regionen), Seite (seite) und Prüfstand (pruefstand) behalten
             find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
             cp -r /tmp/erg/ergebnisse . 2>/dev/null || mkdir ergebnisse
             mv /tmp/regionen/* ergebnisse/ 2>/dev/null || true
