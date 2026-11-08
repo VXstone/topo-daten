@@ -1,0 +1,3313 @@
+[
+ {
+  "bahnhof": "Montreux",
+  "perrons": [
+   {
+    "osm": 274707242,
+    "ref": null,
+    "laenge": 91,
+    "kanten": [
+     {
+      "gleis": "(way 677497302)",
+      "seite": "rechts",
+      "laenge": 97,
+      "spur": "1000",
+      "service": null
+     }
+    ],
+    "kopf": [],
+    "verbunden": [],
+    "form": "Seitenperron"
+   },
+   {
+    "osm": 566734461,
+    "ref": null,
+    "laenge": 23,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 996277001,
+    "ref": null,
+    "laenge": 72,
+    "kanten": [
+     {
+      "gleis": "(way 677497302)",
+      "seite": "links",
+      "laenge": 77,
+      "spur": "1000",
+      "service": null
+     }
+    ],
+    "kopf": [],
+    "verbunden": [],
+    "form": "Seitenperron"
+   },
+   {
+    "osm": 4076517440,
+    "ref": "3;4;5",
+    "laenge": 403,
+    "kanten": [
+     {
+      "gleis": "3",
+      "seite": "links",
+      "laenge": 382,
+      "spur": "1435",
+      "service": null
+     },
+     {
+      "gleis": "(way 274706710)",
+      "seite": "rechts",
+      "laenge": 45,
+      "spur": "1000",
+      "service": "siding"
+     },
+     {
+      "gleis": "(way 97211375)",
+      "seite": "rechts",
+      "laenge": 17,
+      "spur": "1000",
+      "service": "siding"
+     },
+     {
+      "gleis": "5",
+      "seite": "rechts",
+      "laenge": 170,
+      "spur": "1000",
+      "service": null
+     }
+    ],
+    "kopf": [
+     {
+      "gleis": "6",
+      "prellbock": false,
+      "abstand": 4.8,
+      "ende": "Stirnseite",
+      "laengs": 1.0
+     },
+     {
+      "gleis": "(way 97211377)",
+      "prellbock": true,
+      "abstand": 5.0,
+      "ende": "Stirnseite",
+      "laengs": 0.98
+     },
+     {
+      "gleis": "(way 274706710)",
+      "prellbock": true,
+      "abstand": 1.4,
+      "ende": "Längsseite",
+      "laengs": 0.93
+     },
+     {
+      "gleis": "5",
+      "prellbock": false,
+      "abstand": 1.1,
+      "ende": "Stirnseite",
+      "laengs": 1.0
+     }
+    ],
+    "verbunden": [],
+    "form": "Mittelperron + Kopfkante (U)"
+   },
+   {
+    "osm": 4118071790,
+    "ref": "1",
+    "laenge": 409,
+    "kanten": [
+     {
+      "gleis": "214",
+      "seite": "links",
+      "laenge": 416,
+      "spur": "1435",
+      "service": null
+     }
+    ],
+    "kopf": [],
+    "verbunden": [],
+    "form": "Seitenperron"
+   },
+   {
+    "osm": 4118047730,
+    "ref": "6;7;8",
+    "laenge": 179,
+    "kanten": [
+     {
+      "gleis": "7",
+      "seite": "links",
+      "laenge": 44,
+      "spur": "1000",
+      "service": "siding"
+     },
+     {
+      "gleis": "8",
+      "seite": "links",
+      "laenge": 92,
+      "spur": "800",
+      "service": null
+     },
+     {
+      "gleis": "(way 97211358)",
+      "seite": "rechts",
+      "laenge": 41,
+      "spur": "1000",
+      "service": "siding"
+     },
+     {
+      "gleis": "(way 97211375)",
+      "seite": "rechts",
+      "laenge": 31,
+      "spur": "1000",
+      "service": "siding"
+     },
+     {
+      "gleis": "6",
+      "seite": "rechts",
+      "laenge": 132,
+      "spur": "1000",
+      "service": "siding"
+     },
+     {
+      "gleis": "7",
+      "seite": "rechts",
+      "laenge": 22,
+      "spur": "1000",
+      "service": "siding"
+     }
+    ],
+    "kopf": [
+     {
+      "gleis": "6",
+      "prellbock": false,
+      "abstand": 1.7,
+      "ende": "Stirnseite",
+      "laengs": 0.99
+     },
+     {
+      "gleis": "7",
+      "prellbock": true,
+      "abstand": 1.3,
+      "ende": "Längsseite",
+      "laengs": 0.98
+     },
+     {
+      "gleis": "5",
+      "prellbock": false,
+      "abstand": 5.4,
+      "ende": "Stirnseite",
+      "laengs": 0.99
+     }
+    ],
+    "verbunden": [],
+    "form": "beidseitig (dasselbe Gleis) + Kopfkante (U)"
+   },
+   {
+    "osm": 4180060680,
+    "ref": "8;9",
+    "laenge": 70,
+    "kanten": [
+     {
+      "gleis": "9",
+      "seite": "links",
+      "laenge": 77,
+      "spur": "800",
+      "service": "siding"
+     },
+     {
+      "gleis": "8",
+      "seite": "rechts",
+      "laenge": 78,
+      "spur": "800",
+      "service": null
+     }
+    ],
+    "kopf": [],
+    "verbunden": [],
+    "form": "Mittelperron"
+   }
+  ],
+  "sbb": [
+   {
+    "p_nr": "1",
+    "typ": "Hausperron",
+    "laenge": 410
+   },
+   {
+    "p_nr": "3",
+    "typ": "Mittelperron",
+    "laenge": 405
+   },
+   {
+    "p_nr": "4",
+    "typ": "Mittelperron",
+    "laenge": 170
+   },
+   {
+    "p_nr": "4",
+    "typ": "Mittelperron",
+    "laenge": 170
+   },
+   {
+    "p_nr": "4",
+    "typ": "Mittelperron",
+    "laenge": 170
+   },
+   {
+    "p_nr": "7",
+    "typ": "Aussenperron",
+    "laenge": 200
+   },
+   {
+    "p_nr": "7",
+    "typ": "Aussenperron",
+    "laenge": 200
+   },
+   {
+    "p_nr": "7",
+    "typ": "Aussenperron",
+    "laenge": 200
+   }
+  ]
+ },
+ {
+  "bahnhof": "Zweisimmen",
+  "perrons": [
+   {
+    "osm": 154217573,
+    "ref": "5;6",
+    "laenge": 258,
+    "kanten": [
+     {
+      "gleis": "6",
+      "seite": "links",
+      "laenge": 257,
+      "spur": "1000;1435",
+      "service": null
+     },
+     {
+      "gleis": "5",
+      "seite": "rechts",
+      "laenge": 139,
+      "spur": "1000",
+      "service": null
+     }
+    ],
+    "kopf": [
+     {
+      "gleis": "5",
+      "prellbock": true,
+      "abstand": 1.6,
+      "ende": "Längsseite",
+      "laengs": 0.99
+     }
+    ],
+    "verbunden": [],
+    "form": "Mittelperron + Stumpen an der Längsseite"
+   },
+   {
+    "osm": 4090444260,
+    "ref": null,
+    "laenge": 260,
+    "kanten": [
+     {
+      "gleis": "12",
+      "seite": "links",
+      "laenge": 260,
+      "spur": "1435",
+      "service": null
+     },
+     {
+      "gleis": "(way 270134484)",
+      "seite": "rechts",
+      "laenge": 20,
+      "spur": "1000",
+      "service": "yard"
+     },
+     {
+      "gleis": "7",
+      "seite": "rechts",
+      "laenge": 259,
+      "spur": "1000;1435",
+      "service": null
+     },
+     {
+      "gleis": "8",
+      "seite": "rechts",
+      "laenge": 118,
+      "spur": "1000",
+      "service": null
+     }
+    ],
+    "kopf": [
+     {
+      "gleis": "8",
+      "prellbock": true,
+      "abstand": 1.5,
+      "ende": "Längsseite",
+      "laengs": 1.0
+     }
+    ],
+    "verbunden": [],
+    "form": "Mittelperron + Stumpen an der Längsseite"
+   },
+   {
+    "osm": 1462441537,
+    "ref": "3;4",
+    "laenge": 102,
+    "kanten": [
+     {
+      "gleis": "4",
+      "seite": "links",
+      "laenge": 105,
+      "spur": "1000",
+      "service": "yard"
+     },
+     {
+      "gleis": "(way 204052921)",
+      "seite": "rechts",
+      "laenge": 23,
+      "spur": "1000",
+      "service": "yard"
+     },
+     {
+      "gleis": "3",
+      "seite": "rechts",
+      "laenge": 94,
+      "spur": "1000",
+      "service": null
+     }
+    ],
+    "kopf": [
+     {
+      "gleis": "5",
+      "prellbock": true,
+      "abstand": 5.0,
+      "ende": "Stirnseite",
+      "laengs": 1.0
+     },
+     {
+      "gleis": "3",
+      "prellbock": true,
+      "abstand": 1.1,
+      "ende": "Stirnseite",
+      "laengs": 1.0
+     },
+     {
+      "gleis": "4",
+      "prellbock": true,
+      "abstand": 1.5,
+      "ende": "Stirnseite",
+      "laengs": 1.0
+     },
+     {
+      "gleis": "(way 154217567)",
+      "prellbock": true,
+      "abstand": 4.8,
+      "ende": "Stirnseite",
+      "laengs": 1.0
+     }
+    ],
+    "verbunden": [],
+    "form": "Mittelperron + Kopfkante (U)"
+   }
+  ],
+  "sbb": []
+ },
+ {
+  "bahnhof": "Thun",
+  "perrons": [
+   {
+    "osm": 53180406,
+    "ref": null,
+    "laenge": 181,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 601814939,
+    "ref": null,
+    "laenge": 24,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 637068267,
+    "ref": "X",
+    "laenge": 25,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 1540249316,
+    "ref": null,
+    "laenge": 22,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 1540249318,
+    "ref": null,
+    "laenge": 22,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 4162039720,
+    "ref": "4;5",
+    "laenge": 222,
+    "kanten": [
+     {
+      "gleis": "(way 520460326)",
+      "seite": "links",
+      "laenge": 19,
+      "spur": "1435",
+      "service": null
+     },
+     {
+      "gleis": "5",
+      "seite": "links",
+      "laenge": 209,
+      "spur": "1435",
+      "service": null
+     },
+     {
+      "gleis": "4",
+      "seite": "rechts",
+      "laenge": 225,
+      "spur": "1435",
+      "service": null
+     }
+    ],
+    "kopf": [],
+    "verbunden": [],
+    "form": "Mittelperron"
+   },
+   {
+    "osm": 4070787400,
+    "ref": "1",
+    "laenge": 540,
+    "kanten": [
+     {
+      "gleis": "1",
+      "seite": "links",
+      "laenge": 431,
+      "spur": "1435",
+      "service": null
+     },
+     {
+      "gleis": "16",
+      "seite": "links",
+      "laenge": 117,
+      "spur": "1435",
+      "service": null
+     },
+     {
+      "gleis": "18",
+      "seite": "rechts",
+      "laenge": 142,
+      "spur": "1435",
+      "service": null
+     }
+    ],
+    "kopf": [
+     {
+      "gleis": "16",
+      "prellbock": false,
+      "abstand": 1.8,
+      "ende": "Längsseite",
+      "laengs": 1.0
+     },
+     {
+      "gleis": "(way 172026923)",
+      "prellbock": true,
+      "abstand": 3.0,
+      "ende": "Stirnseite",
+      "laengs": 1.0
+     },
+     {
+      "gleis": "18",
+      "prellbock": false,
+      "abstand": 2.1,
+      "ende": "Längsseite",
+      "laengs": 1.0
+     },
+     {
+      "gleis": "707",
+      "prellbock": false,
+      "abstand": 2.9,
+      "ende": "Stirnseite",
+      "laengs": 0.93
+     }
+    ],
+    "verbunden": [],
+    "form": "Mittelperron + Kopfkante (U)"
+   },
+   {
+    "osm": 4070787390,
+    "ref": "2;3",
+    "laenge": 447,
+    "kanten": [
+     {
+      "gleis": "(way 520460286)",
+      "seite": "links",
+      "laenge": 29,
+      "spur": "1435",
+      "service": "crossover"
+     },
+     {
+      "gleis": "(way 520460329)",
+      "seite": "links",
+      "laenge": 34,
+      "spur": "1435",
+      "service": null
+     },
+     {
+      "gleis": "3",
+      "seite": "links",
+      "laenge": 411,
+      "spur": "1435",
+      "service": null
+     },
+     {
+      "gleis": "2",
+      "seite": "rechts",
+      "laenge": 457,
+      "spur": "1435",
+      "service": null
+     }
+    ],
+    "kopf": [],
+    "verbunden": [],
+    "form": "Mittelperron"
+   }
+  ],
+  "sbb": []
+ },
+ {
+  "bahnhof": "Bern",
+  "perrons": [
+   {
+    "osm": 67799256,
+    "ref": "1;2",
+    "laenge": 33,
+    "kanten": [
+     {
+      "gleis": "1",
+      "seite": "links",
+      "laenge": 39,
+      "spur": "1435",
+      "service": "siding"
+     },
+     {
+      "gleis": "402",
+      "seite": "rechts",
+      "laenge": 37,
+      "spur": "1435",
+      "service": null
+     }
+    ],
+    "kopf": [],
+    "verbunden": [
+     "1;2"
+    ],
+    "form": "Mittelperron · verbunden"
+   },
+   {
+    "osm": 67803452,
+    "ref": "21;22",
+    "laenge": 117,
+    "kanten": [
+     {
+      "gleis": "(way 176531645)",
+      "seite": "links",
+      "laenge": 15,
+      "spur": "1000",
+      "service": null
+     },
+     {
+      "gleis": "21",
+      "seite": "links",
+      "laenge": 92,
+      "spur": "1000",
+      "service": null
+     },
+     {
+      "gleis": "(way 176531639)",
+      "seite": "rechts",
+      "laenge": 18,
+      "spur": "1000",
+      "service": null
+     },
+     {
+      "gleis": "22",
+      "seite": "rechts",
+      "laenge": 90,
+      "spur": "1000",
+      "service": null
+     }
+    ],
+    "kopf": [
+     {
+      "gleis": "22",
+      "prellbock": true,
+      "abstand": 0.1,
+      "ende": "Stirnseite",
+      "laengs": 1.0
+     },
+     {
+      "gleis": "21",
+      "prellbock": true,
+      "abstand": 2.6,
+      "ende": "Stirnseite",
+      "laengs": 1.0
+     },
+     {
+      "gleis": "23",
+      "prellbock": true,
+      "abstand": 4.1,
+      "ende": "Stirnseite",
+      "laengs": 1.0
+     }
+    ],
+    "verbunden": [
+     "1;2",
+     "3;4",
+     "5;6",
+     "7;8",
+     "9;10",
+     "12;13"
+    ],
+    "form": "Mittelperron + Kopfkante (U) · verbunden"
+   },
+   {
+    "osm": 67803455,
+    "ref": "23;24",
+    "laenge": 116,
+    "kanten": [
+     {
+      "gleis": "(way 67736433)",
+      "seite": "links",
+      "laenge": 18,
+      "spur": "1000",
+      "service": null
+     },
+     {
+      "gleis": "(way 67736434)",
+      "seite": "links",
+      "laenge": 18,
+      "spur": "1000",
+      "service": null
+     },
+     {
+      "gleis": "23",
+      "seite": "links",
+      "laenge": 91,
+      "spur": "1000",
+      "service": null
+     },
+     {
+      "gleis": "(way 190977019)",
+      "seite": "rechts",
+      "laenge": 17,
+      "spur": "1000",
+      "service": null
+     },
+     {
+      "gleis": "24",
+      "seite": "rechts",
+      "laenge": 90,
+      "spur": "1000",
+      "service": null
+     }
+    ],
+    "kopf": [
+     {
+      "gleis": "24",
+      "prellbock": true,
+      "abstand": 0.8,
+      "ende": "Stirnseite",
+      "laengs": 1.0
+     },
+     {
+      "gleis": "23",
+      "prellbock": true,
+      "abstand": 2.4,
+      "ende": "Stirnseite",
+      "laengs": 1.0
+     }
+    ],
+    "verbunden": [
+     "1;2",
+     "3;4",
+     "5;6",
+     "7;8",
+     "9;10",
+     "12;13"
+    ],
+    "form": "Mittelperron + Kopfkante (U) · verbunden"
+   },
+   {
+    "osm": 122078648,
+    "ref": "J",
+    "laenge": 61,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 312031690,
+    "ref": "E",
+    "laenge": 27,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 312777527,
+    "ref": "A",
+    "laenge": 55,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 312781570,
+    "ref": "B",
+    "laenge": 56,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 314810559,
+    "ref": "F",
+    "laenge": 41,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 314931386,
+    "ref": "B",
+    "laenge": 32,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 314931387,
+    "ref": "A",
+    "laenge": 48,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 568790021,
+    "ref": "B",
+    "laenge": 62,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 603146012,
+    "ref": "B",
+    "laenge": 30,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 604002981,
+    "ref": "A",
+    "laenge": 48,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 657702062,
+    "ref": null,
+    "laenge": 50,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 657702064,
+    "ref": null,
+    "laenge": 49,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 723702437,
+    "ref": "N",
+    "laenge": 46,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 1554458176,
+    "ref": null,
+    "laenge": 34,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 1554459504,
+    "ref": "A",
+    "laenge": 29,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 1554460257,
+    "ref": null,
+    "laenge": 30,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 1554461453,
+    "ref": null,
+    "laenge": 33,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 1554461621,
+    "ref": null,
+    "laenge": 18,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 1554462045,
+    "ref": null,
+    "laenge": 18,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 1554462323,
+    "ref": null,
+    "laenge": 15,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 1559297581,
+    "ref": null,
+    "laenge": 18,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 1560155205,
+    "ref": null,
+    "laenge": 36,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 1560155206,
+    "ref": null,
+    "laenge": 29,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 1560155207,
+    "ref": null,
+    "laenge": 26,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 1560155208,
+    "ref": null,
+    "laenge": 25,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 1560155209,
+    "ref": null,
+    "laenge": 25,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 1561938385,
+    "ref": null,
+    "laenge": 8,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 4146685130,
+    "ref": "9;10",
+    "laenge": 5,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [
+     "9;10"
+    ],
+    "form": "ohne Gleis · verbunden"
+   },
+   {
+    "osm": 4057088340,
+    "ref": "1;2",
+    "laenge": 308,
+    "kanten": [
+     {
+      "gleis": "(way 176625510)",
+      "seite": "links",
+      "laenge": 20,
+      "spur": "1435",
+      "service": "crossover"
+     },
+     {
+      "gleis": "2",
+      "seite": "links",
+      "laenge": 259,
+      "spur": "1435",
+      "service": null
+     },
+     {
+      "gleis": "402",
+      "seite": "links",
+      "laenge": 65,
+      "spur": "1435",
+      "service": null
+     },
+     {
+      "gleis": "1",
+      "seite": "rechts",
+      "laenge": 336,
+      "spur": "1435",
+      "service": "siding"
+     }
+    ],
+    "kopf": [
+     {
+      "gleis": "24",
+      "prellbock": true,
+      "abstand": 4.1,
+      "ende": "Längsseite",
+      "laengs": 0.02
+     }
+    ],
+    "verbunden": [
+     "1;2",
+     "21;22",
+     "23;24",
+     "1;2"
+    ],
+    "form": "Mittelperron + Stumpen an der Längsseite · verbunden"
+   },
+   {
+    "osm": 4102289580,
+    "ref": "1;2",
+    "laenge": 182,
+    "kanten": [
+     {
+      "gleis": "2",
+      "seite": "links",
+      "laenge": 188,
+      "spur": "1435",
+      "service": null
+     },
+     {
+      "gleis": "(way 64686618)",
+      "seite": "rechts",
+      "laenge": 20,
+      "spur": "1435",
+      "service": "siding"
+     },
+     {
+      "gleis": "(way 65596816)",
+      "seite": "rechts",
+      "laenge": 19,
+      "spur": "1435",
+      "service": "siding"
+     },
+     {
+      "gleis": "1",
+      "seite": "rechts",
+      "laenge": 169,
+      "spur": "1435",
+      "service": "siding"
+     }
+    ],
+    "kopf": [],
+    "verbunden": [
+     "1;2"
+    ],
+    "form": "Mittelperron · verbunden"
+   },
+   {
+    "osm": 4057088350,
+    "ref": "3;4",
+    "laenge": 287,
+    "kanten": [
+     {
+      "gleis": "(way 67736439)",
+      "seite": "links",
+      "laenge": 27,
+      "spur": "1435",
+      "service": null
+     },
+     {
+      "gleis": "4",
+      "seite": "links",
+      "laenge": 301,
+      "spur": "1435",
+      "service": "siding"
+     },
+     {
+      "gleis": "(way 176625510)",
+      "seite": "rechts",
+      "laenge": 24,
+      "spur": "1435",
+      "service": "crossover"
+     },
+     {
+      "gleis": "3",
+      "seite": "rechts",
+      "laenge": 304,
+      "spur": "1435",
+      "service": "siding"
+     }
+    ],
+    "kopf": [],
+    "verbunden": [
+     "21;22",
+     "23;24",
+     "3;4"
+    ],
+    "form": "Mittelperron · verbunden"
+   },
+   {
+    "osm": 4102289590,
+    "ref": "3;4",
+    "laenge": 210,
+    "kanten": [
+     {
+      "gleis": "4",
+      "seite": "links",
+      "laenge": 216,
+      "spur": "1435",
+      "service": null
+     },
+     {
+      "gleis": "3",
+      "seite": "rechts",
+      "laenge": 216,
+      "spur": "1435",
+      "service": "siding"
+     }
+    ],
+    "kopf": [],
+    "verbunden": [
+     "3;4"
+    ],
+    "form": "Mittelperron · verbunden"
+   },
+   {
+    "osm": 4057088360,
+    "ref": "5;6",
+    "laenge": 283,
+    "kanten": [
+     {
+      "gleis": "(way 67736431)",
+      "seite": "links",
+      "laenge": 31,
+      "spur": "1435",
+      "service": "siding"
+     },
+     {
+      "gleis": "6",
+      "seite": "links",
+      "laenge": 293,
+      "spur": "1435",
+      "service": "siding"
+     },
+     {
+      "gleis": "(way 67736429)",
+      "seite": "rechts",
+      "laenge": 20,
+      "spur": "1435",
+      "service": "siding"
+     },
+     {
+      "gleis": "(way 67736439)",
+      "seite": "rechts",
+      "laenge": 20,
+      "spur": "1435",
+      "service": null
+     },
+     {
+      "gleis": "5",
+      "seite": "rechts",
+      "laenge": 301,
+      "spur": "1435",
+      "service": "siding"
+     }
+    ],
+    "kopf": [],
+    "verbunden": [
+     "21;22",
+     "23;24",
+     "5;6"
+    ],
+    "form": "Mittelperron · verbunden"
+   },
+   {
+    "osm": 4102289600,
+    "ref": "5;6",
+    "laenge": 213,
+    "kanten": [
+     {
+      "gleis": "6",
+      "seite": "links",
+      "laenge": 215,
+      "spur": "1435",
+      "service": "siding"
+     },
+     {
+      "gleis": "5",
+      "seite": "rechts",
+      "laenge": 219,
+      "spur": "1435",
+      "service": "siding"
+     }
+    ],
+    "kopf": [],
+    "verbunden": [
+     "5;6"
+    ],
+    "form": "Mittelperron · verbunden"
+   },
+   {
+    "osm": 4057088370,
+    "ref": "7;8",
+    "laenge": 266,
+    "kanten": [
+     {
+      "gleis": "8",
+      "seite": "links",
+      "laenge": 273,
+      "spur": "1435",
+      "service": null
+     },
+     {
+      "gleis": "(way 67736431)",
+      "seite": "rechts",
+      "laenge": 22,
+      "spur": "1435",
+      "service": "siding"
+     },
+     {
+      "gleis": "7",
+      "seite": "rechts",
+      "laenge": 269,
+      "spur": "1435",
+      "service": "siding"
+     }
+    ],
+    "kopf": [],
+    "verbunden": [
+     "21;22",
+     "23;24",
+     "7;8"
+    ],
+    "form": "Mittelperron · verbunden"
+   },
+   {
+    "osm": 4102289610,
+    "ref": "7;8",
+    "laenge": 247,
+    "kanten": [
+     {
+      "gleis": "(way 185262711)",
+      "seite": "links",
+      "laenge": 56,
+      "spur": "1435",
+      "service": null
+     },
+     {
+      "gleis": "(way 64686643)",
+      "seite": "links",
+      "laenge": 34,
+      "spur": "1435",
+      "service": "yard"
+     },
+     {
+      "gleis": "(way 739839095)",
+      "seite": "links",
+      "laenge": 37,
+      "spur": "1435",
+      "service": "siding"
+     },
+     {
+      "gleis": "8",
+      "seite": "links",
+      "laenge": 197,
+      "spur": "1435",
+      "service": null
+     },
+     {
+      "gleis": "7",
+      "seite": "rechts",
+      "laenge": 253,
+      "spur": "1435",
+      "service": "siding"
+     }
+    ],
+    "kopf": [],
+    "verbunden": [
+     "7;8"
+    ],
+    "form": "Mittelperron · verbunden"
+   },
+   {
+    "osm": 4057088380,
+    "ref": "9;10",
+    "laenge": 269,
+    "kanten": [
+     {
+      "gleis": "(way 67736426)",
+      "seite": "links",
+      "laenge": 32,
+      "spur": "1435",
+      "service": "siding"
+     },
+     {
+      "gleis": "10",
+      "seite": "links",
+      "laenge": 273,
+      "spur": "1435",
+      "service": "siding"
+     },
+     {
+      "gleis": "8",
+      "seite": "rechts",
+      "laenge": 40,
+      "spur": "1435",
+      "service": null
+     },
+     {
+      "gleis": "9",
+      "seite": "rechts",
+      "laenge": 281,
+      "spur": "1435",
+      "service": "siding"
+     }
+    ],
+    "kopf": [],
+    "verbunden": [
+     "21;22",
+     "23;24",
+     "9;10",
+     "9;10"
+    ],
+    "form": "Mittelperron · verbunden"
+   },
+   {
+    "osm": 4146668880,
+    "ref": "9;10",
+    "laenge": 99,
+    "kanten": [
+     {
+      "gleis": "(way 65596804)",
+      "seite": "links",
+      "laenge": 19,
+      "spur": "1435",
+      "service": "siding"
+     },
+     {
+      "gleis": "(way 67850761)",
+      "seite": "links",
+      "laenge": 29,
+      "spur": "1435",
+      "service": "siding"
+     },
+     {
+      "gleis": "10",
+      "seite": "links",
+      "laenge": 86,
+      "spur": "1435",
+      "service": "siding"
+     },
+     {
+      "gleis": "50",
+      "seite": "links",
+      "laenge": 19,
+      "spur": "1435",
+      "service": "siding"
+     },
+     {
+      "gleis": "(way 67736424)",
+      "seite": "rechts",
+      "laenge": 54,
+      "spur": "1435",
+      "service": "siding"
+     },
+     {
+      "gleis": "9",
+      "seite": "rechts",
+      "laenge": 51,
+      "spur": "1435",
+      "service": "siding"
+     }
+    ],
+    "kopf": [],
+    "verbunden": [
+     "9;10",
+     "49;50"
+    ],
+    "form": "Mittelperron · verbunden"
+   },
+   {
+    "osm": 4057088330,
+    "ref": "12;13",
+    "laenge": 253,
+    "kanten": [
+     {
+      "gleis": "13",
+      "seite": "links",
+      "laenge": 133,
+      "spur": "1435",
+      "service": null
+     },
+     {
+      "gleis": "33",
+      "seite": "links",
+      "laenge": 123,
+      "spur": "1435",
+      "service": null
+     },
+     {
+      "gleis": "34",
+      "seite": "links",
+      "laenge": 27,
+      "spur": "1435",
+      "service": "siding"
+     },
+     {
+      "gleis": "(way 67736427)",
+      "seite": "rechts",
+      "laenge": 28,
+      "spur": "1435",
+      "service": "siding"
+     },
+     {
+      "gleis": "(way 67736428)",
+      "seite": "rechts",
+      "laenge": 17,
+      "spur": "1435",
+      "service": "siding"
+     },
+     {
+      "gleis": "12",
+      "seite": "rechts",
+      "laenge": 265,
+      "spur": "1435",
+      "service": null
+     }
+    ],
+    "kopf": [],
+    "verbunden": [
+     "21;22",
+     "23;24",
+     "12;13"
+    ],
+    "form": "Mittelperron · verbunden"
+   },
+   {
+    "osm": 4102289570,
+    "ref": "12;13",
+    "laenge": 104,
+    "kanten": [
+     {
+      "gleis": "(way 64686689)",
+      "seite": "links",
+      "laenge": 30,
+      "spur": "1435",
+      "service": null
+     },
+     {
+      "gleis": "(way 65596803)",
+      "seite": "links",
+      "laenge": 32,
+      "spur": "1435",
+      "service": "siding"
+     },
+     {
+      "gleis": "33",
+      "seite": "links",
+      "laenge": 78,
+      "spur": "1435",
+      "service": null
+     },
+     {
+      "gleis": "(way 65596798)",
+      "seite": "rechts",
+      "laenge": 61,
+      "spur": "1435",
+      "service": null
+     },
+     {
+      "gleis": "12",
+      "seite": "rechts",
+      "laenge": 50,
+      "spur": "1435",
+      "service": null
+     }
+    ],
+    "kopf": [],
+    "verbunden": [
+     "12;13"
+    ],
+    "form": "Mittelperron · verbunden"
+   },
+   {
+    "osm": 4102288550,
+    "ref": "49;50",
+    "laenge": 362,
+    "kanten": [
+     {
+      "gleis": "(way 739839090)",
+      "seite": "links",
+      "laenge": 23,
+      "spur": "1435",
+      "service": "yard"
+     },
+     {
+      "gleis": "50",
+      "seite": "links",
+      "laenge": 346,
+      "spur": "1435",
+      "service": "siding"
+     },
+     {
+      "gleis": "751",
+      "seite": "links",
+      "laenge": 24,
+      "spur": "1435",
+      "service": "yard"
+     },
+     {
+      "gleis": "(way 65790689)",
+      "seite": "rechts",
+      "laenge": 57,
+      "spur": "1435",
+      "service": "siding"
+     },
+     {
+      "gleis": "(way 67736424)",
+      "seite": "rechts",
+      "laenge": 27,
+      "spur": "1435",
+      "service": "siding"
+     },
+     {
+      "gleis": "(way 739839092)",
+      "seite": "rechts",
+      "laenge": 26,
+      "spur": "1435",
+      "service": "siding"
+     },
+     {
+      "gleis": "(way 739839095)",
+      "seite": "rechts",
+      "laenge": 29,
+      "spur": "1435",
+      "service": "siding"
+     },
+     {
+      "gleis": "49",
+      "seite": "rechts",
+      "laenge": 288,
+      "spur": "1435",
+      "service": "siding"
+     }
+    ],
+    "kopf": [
+     {
+      "gleis": "751",
+      "prellbock": false,
+      "abstand": 6.0,
+      "ende": "Längsseite",
+      "laengs": 1.0
+     },
+     {
+      "gleis": "748",
+      "prellbock": false,
+      "abstand": 5.9,
+      "ende": "Längsseite",
+      "laengs": 0.99
+     }
+    ],
+    "verbunden": [
+     "9;10"
+    ],
+    "form": "Mittelperron + Stumpen an der Längsseite · verbunden"
+   }
+  ],
+  "sbb": [
+   {
+    "p_nr": "1/2",
+    "typ": "Mittelperron",
+    "laenge": 539
+   },
+   {
+    "p_nr": "1/2",
+    "typ": "Mittelperron",
+    "laenge": 539
+   },
+   {
+    "p_nr": "12/13",
+    "typ": "Mittelperron",
+    "laenge": 362
+   },
+   {
+    "p_nr": "12/13",
+    "typ": "Mittelperron",
+    "laenge": 362
+   },
+   {
+    "p_nr": "12/13",
+    "typ": "Mittelperron",
+    "laenge": 362
+   },
+   {
+    "p_nr": "12/13",
+    "typ": "Mittelperron",
+    "laenge": 362
+   },
+   {
+    "p_nr": "3/4",
+    "typ": "Mittelperron",
+    "laenge": 510
+   },
+   {
+    "p_nr": "3/4",
+    "typ": "Mittelperron",
+    "laenge": 510
+   },
+   {
+    "p_nr": "49/50",
+    "typ": "Mittelperron",
+    "laenge": 368
+   },
+   {
+    "p_nr": "5/6",
+    "typ": "Mittelperron",
+    "laenge": 506
+   },
+   {
+    "p_nr": "5/6",
+    "typ": "Mittelperron",
+    "laenge": 506
+   },
+   {
+    "p_nr": "5/6",
+    "typ": "Mittelperron",
+    "laenge": 506
+   },
+   {
+    "p_nr": "5/6",
+    "typ": "Mittelperron",
+    "laenge": 506
+   },
+   {
+    "p_nr": "7/8",
+    "typ": "Mittelperron",
+    "laenge": 521
+   },
+   {
+    "p_nr": "7/8",
+    "typ": "Mittelperron",
+    "laenge": 521
+   },
+   {
+    "p_nr": "7/8",
+    "typ": "Mittelperron",
+    "laenge": 521
+   },
+   {
+    "p_nr": "9/10",
+    "typ": "Mittelperron",
+    "laenge": 369
+   },
+   {
+    "p_nr": "9/10",
+    "typ": "Mittelperron",
+    "laenge": 369
+   }
+  ]
+ },
+ {
+  "bahnhof": "Basel SBB",
+  "perrons": [
+   {
+    "osm": 130282749,
+    "ref": "J",
+    "laenge": 60,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 130282752,
+    "ref": "D",
+    "laenge": 46,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 132752452,
+    "ref": "G",
+    "laenge": 38,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 132752457,
+    "ref": "E",
+    "laenge": 24,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 132752460,
+    "ref": null,
+    "laenge": 43,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 132752467,
+    "ref": "A",
+    "laenge": 57,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 132752484,
+    "ref": "H",
+    "laenge": 45,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 132752485,
+    "ref": null,
+    "laenge": 41,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 132752489,
+    "ref": "B",
+    "laenge": 88,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 132752494,
+    "ref": "F",
+    "laenge": 43,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 132752497,
+    "ref": "D",
+    "laenge": 17,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 132752501,
+    "ref": "D",
+    "laenge": 77,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 132752502,
+    "ref": "C",
+    "laenge": 84,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 132762014,
+    "ref": null,
+    "laenge": 94,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 132762019,
+    "ref": null,
+    "laenge": 65,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 132762021,
+    "ref": null,
+    "laenge": 46,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 132762022,
+    "ref": null,
+    "laenge": 49,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 179608401,
+    "ref": null,
+    "laenge": 232,
+    "kanten": [
+     {
+      "gleis": "31",
+      "seite": "links",
+      "laenge": 234,
+      "spur": "1435",
+      "service": "siding"
+     },
+     {
+      "gleis": "33",
+      "seite": "rechts",
+      "laenge": 240,
+      "spur": "1435",
+      "service": "siding"
+     }
+    ],
+    "kopf": [
+     {
+      "gleis": "33",
+      "prellbock": true,
+      "abstand": 1.2,
+      "ende": "Stirnseite",
+      "laengs": 0.98
+     },
+     {
+      "gleis": "31",
+      "prellbock": true,
+      "abstand": 1.5,
+      "ende": "Stirnseite",
+      "laengs": 0.98
+     }
+    ],
+    "verbunden": [
+     "(way 4203630700)"
+    ],
+    "form": "Mittelperron + Kopfkante (U) · verbunden"
+   },
+   {
+    "osm": 179608402,
+    "ref": "30;31",
+    "laenge": 436,
+    "kanten": [
+     {
+      "gleis": "(way 137354594)",
+      "seite": "links",
+      "laenge": 31,
+      "spur": "1435",
+      "service": "siding"
+     },
+     {
+      "gleis": "30",
+      "seite": "links",
+      "laenge": 303,
+      "spur": "1435",
+      "service": "siding"
+     },
+     {
+      "gleis": "A46",
+      "seite": "links",
+      "laenge": 100,
+      "spur": "1435",
+      "service": "siding"
+     },
+     {
+      "gleis": "31",
+      "seite": "rechts",
+      "laenge": 442,
+      "spur": "1435",
+      "service": "siding"
+     }
+    ],
+    "kopf": [
+     {
+      "gleis": "31",
+      "prellbock": true,
+      "abstand": 1.6,
+      "ende": "Stirnseite",
+      "laengs": 0.93
+     },
+     {
+      "gleis": "30",
+      "prellbock": true,
+      "abstand": 1.6,
+      "ende": "Längsseite",
+      "laengs": 0.95
+     }
+    ],
+    "verbunden": [
+     "(way 4203630700)"
+    ],
+    "form": "Mittelperron + Kopfkante (U) · verbunden"
+   },
+   {
+    "osm": 179608759,
+    "ref": "33;35",
+    "laenge": 414,
+    "kanten": [
+     {
+      "gleis": "33",
+      "seite": "links",
+      "laenge": 425,
+      "spur": "1435",
+      "service": "siding"
+     },
+     {
+      "gleis": "35",
+      "seite": "rechts",
+      "laenge": 421,
+      "spur": "1435",
+      "service": "siding"
+     }
+    ],
+    "kopf": [
+     {
+      "gleis": "35",
+      "prellbock": true,
+      "abstand": 2.1,
+      "ende": "Stirnseite",
+      "laengs": 0.96
+     },
+     {
+      "gleis": "33",
+      "prellbock": true,
+      "abstand": 1.8,
+      "ende": "Stirnseite",
+      "laengs": 0.93
+     }
+    ],
+    "verbunden": [
+     "(way 4203630700)"
+    ],
+    "form": "Mittelperron + Kopfkante (U) · verbunden"
+   },
+   {
+    "osm": 316081994,
+    "ref": "R",
+    "laenge": 80,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 316081996,
+    "ref": "P",
+    "laenge": 46,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 316200564,
+    "ref": null,
+    "laenge": 100,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 316200584,
+    "ref": null,
+    "laenge": 99,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 316207352,
+    "ref": null,
+    "laenge": 60,
+    "kanten": [
+     {
+      "gleis": "(way 1006443906)",
+      "seite": "links",
+      "laenge": 27,
+      "spur": "1435",
+      "service": "spur"
+     },
+     {
+      "gleis": "C28",
+      "seite": "links",
+      "laenge": 19,
+      "spur": "1435",
+      "service": "spur"
+     },
+     {
+      "gleis": "C29",
+      "seite": "links",
+      "laenge": 36,
+      "spur": "1435",
+      "service": "spur"
+     }
+    ],
+    "kopf": [],
+    "verbunden": [],
+    "form": "eine Seite, mehrere Gleise"
+   },
+   {
+    "osm": 316207353,
+    "ref": null,
+    "laenge": 60,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 377462330,
+    "ref": "A",
+    "laenge": 35,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 377462331,
+    "ref": "B",
+    "laenge": 45,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 377464576,
+    "ref": "D",
+    "laenge": 27,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 377464577,
+    "ref": "C",
+    "laenge": 30,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 377466170,
+    "ref": "B",
+    "laenge": 54,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 377466171,
+    "ref": "A",
+    "laenge": 52,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 377471149,
+    "ref": null,
+    "laenge": 62,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 377471153,
+    "ref": null,
+    "laenge": 63,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 377476965,
+    "ref": "L",
+    "laenge": 27,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 377476966,
+    "ref": "M",
+    "laenge": 27,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 377480946,
+    "ref": null,
+    "laenge": 27,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 377480947,
+    "ref": null,
+    "laenge": 27,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 377484841,
+    "ref": "C",
+    "laenge": 27,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 377484843,
+    "ref": "B",
+    "laenge": 27,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 377484844,
+    "ref": "A",
+    "laenge": 27,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 377489170,
+    "ref": "A",
+    "laenge": 27,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 377491660,
+    "ref": "C",
+    "laenge": 27,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 377491661,
+    "ref": "B",
+    "laenge": 27,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 377496471,
+    "ref": null,
+    "laenge": 49,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 377496472,
+    "ref": null,
+    "laenge": 62,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 378145909,
+    "ref": null,
+    "laenge": 26,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 378150787,
+    "ref": null,
+    "laenge": 93,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 378499058,
+    "ref": null,
+    "laenge": 51,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 378499061,
+    "ref": null,
+    "laenge": 66,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 378623075,
+    "ref": null,
+    "laenge": 51,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 378623732,
+    "ref": null,
+    "laenge": 50,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 378623733,
+    "ref": null,
+    "laenge": 60,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 378674868,
+    "ref": "H",
+    "laenge": 55,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 378674871,
+    "ref": "G",
+    "laenge": 56,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 379369080,
+    "ref": null,
+    "laenge": 66,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 379369082,
+    "ref": null,
+    "laenge": 66,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 379723585,
+    "ref": null,
+    "laenge": 42,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 379723586,
+    "ref": null,
+    "laenge": 45,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 379736178,
+    "ref": null,
+    "laenge": 55,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 379736179,
+    "ref": null,
+    "laenge": 51,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 620135743,
+    "ref": null,
+    "laenge": 50,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 731130217,
+    "ref": null,
+    "laenge": 35,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 865500064,
+    "ref": null,
+    "laenge": 47,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 865500065,
+    "ref": null,
+    "laenge": 47,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 865500066,
+    "ref": null,
+    "laenge": 51,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 4178808660,
+    "ref": null,
+    "laenge": 129,
+    "kanten": [],
+    "kopf": [
+     {
+      "gleis": "2",
+      "prellbock": true,
+      "abstand": 1.9,
+      "ende": "Stirnseite",
+      "laengs": 0.99
+     },
+     {
+      "gleis": "1",
+      "prellbock": true,
+      "abstand": 1.6,
+      "ende": "Stirnseite",
+      "laengs": 0.98
+     }
+    ],
+    "verbunden": [
+     "1;2",
+     "3;4"
+    ],
+    "form": "nur Kopf + Kopfkante (L) · verbunden"
+   },
+   {
+    "osm": 1098014201,
+    "ref": "Q",
+    "laenge": 33,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 1098014202,
+    "ref": "S",
+    "laenge": 80,
+    "kanten": [],
+    "kopf": [],
+    "verbunden": [],
+    "form": "ohne Gleis"
+   },
+   {
+    "osm": 4134758140,
+    "ref": "1;2",
+    "laenge": 225,
+    "kanten": [
+     {
+      "gleis": "2",
+      "seite": "links",
+      "laenge": 231,
+      "spur": "1435",
+      "service": "siding"
+     },
+     {
+      "gleis": "1",
+      "seite": "rechts",
+      "laenge": 227,
+      "spur": "1435",
+      "service": "siding"
+     }
+    ],
+    "kopf": [
+     {
+      "gleis": "1",
+      "prellbock": true,
+      "abstand": 2.7,
+      "ende": "Stirnseite",
+      "laengs": 1.0
+     }
+    ],
+    "verbunden": [
+     "(way 4178808660)"
+    ],
+    "form": "Mittelperron + Kopfkante (U) · verbunden"
+   },
+   {
+    "osm": 4134758150,
+    "ref": "3;4",
+    "laenge": 463,
+    "kanten": [
+     {
+      "gleis": "4",
+      "seite": "links",
+      "laenge": 467,
+      "spur": "1435",
+      "service": "siding"
+     },
+     {
+      "gleis": "(way 27258724)",
+      "seite": "rechts",
+      "laenge": 35,
+      "spur": "1435",
+      "service": "siding"
+     },
+     {
+      "gleis": "3",
+      "seite": "rechts",
+      "laenge": 245,
+      "spur": "1435",
+      "service": "siding"
+     }
+    ],
+    "kopf": [
+     {
+      "gleis": "3",
+      "prellbock": true,
+      "abstand": 1.7,
+      "ende": "Längsseite",
+      "laengs": 1.0
+     },
+     {
+      "gleis": "4",
+      "prellbock": true,
+      "abstand": 2.3,
+      "ende": "Stirnseite",
+      "laengs": 1.0
+     }
+    ],
+    "verbunden": [
+     "(way 4178808660)",
+     "(way 4203630700)"
+    ],
+    "form": "Mittelperron + Kopfkante (U) · verbunden"
+   },
+   {
+    "osm": 4134758210,
+    "ref": "5;6",
+    "laenge": 644,
+    "kanten": [
+     {
+      "gleis": "(way 179634229)",
+      "seite": "links",
+      "laenge": 84,
+      "spur": "1435",
+      "service": "yard"
+     },
+     {
+      "gleis": "6",
+      "seite": "links",
+      "laenge": 563,
+      "spur": "1435",
+      "service": "siding"
+     },
+     {
+      "gleis": "(way 179634231)",
+      "seite": "rechts",
+      "laenge": 26,
+      "spur": "1435",
+      "service": "siding"
+     },
+     {
+      "gleis": "(way 27258722)",
+      "seite": "rechts",
+      "laenge": 75,
+      "spur": "1435",
+      "service": "siding"
+     },
+     {
+      "gleis": "5",
+      "seite": "rechts",
+      "laenge": 458,
+      "spur": "1435",
+      "service": "siding"
+     },
+     {
+      "gleis": "A79",
+      "seite": "rechts",
+      "laenge": 19,
+      "spur": "1435",
+      "service": "siding"
+     }
+    ],
+    "kopf": [
+     {
+      "gleis": "A78",
+      "prellbock": true,
+      "abstand": 5.9,
+      "ende": "Stirnseite",
+      "laengs": 0.97
+     },
+     {
+      "gleis": "A80",
+      "prellbock": true,
+      "abstand": 5.7,
+      "ende": "Stirnseite",
+      "laengs": 0.98
+     },
+     {
+      "gleis": "(way 179634229)",
+      "prellbock": false,
+      "abstand": 1.4,
+      "ende": "Stirnseite",
+      "laengs": 1.0
+     },
+     {
+      "gleis": "A79",
+      "prellbock": true,
+      "abstand": 1.0,
+      "ende": "Stirnseite",
+      "laengs": 0.98
+     },
+     {
+      "gleis": "5",
+      "prellbock": true,
+      "abstand": 2.0,
+      "ende": "Längsseite",
+      "laengs": 1.0
+     }
+    ],
+    "verbunden": [
+     "(way 4203630700)"
+    ],
+    "form": "Mittelperron + Kopfkante (U) · verbunden"
+   },
+   {
+    "osm": 4134758200,
+    "ref": "7;8",
+    "laenge": 531,
+    "kanten": [
+     {
+      "gleis": "8",
+      "seite": "links",
+      "laenge": 537,
+      "spur": "1435",
+      "service": "siding"
+     },
+     {
+      "gleis": "7",
+      "seite": "rechts",
+      "laenge": 539,
+      "spur": "1435",
+      "service": "siding"
+     }
+    ],
+    "kopf": [],
+    "verbunden": [],
+    "form": "Mittelperron"
+   },
+   {
+    "osm": 4134758190,
+    "ref": "9;10",
+    "laenge": 504,
+    "kanten": [
+     {
+      "gleis": "(way 1304119771)",
+      "seite": "links",
+      "laenge": 16,
+      "spur": "1435",
+      "service": "siding"
+     },
+     {
+      "gleis": "(way 1304119772)",
+      "seite": "links",
+      "laenge": 17,
+      "spur": "1435",
+      "service": "siding"
+     },
+     {
+      "gleis": "10",
+      "seite": "links",
+      "laenge": 478,
+      "spur": "1435",
+      "service": "siding"
+     },
+     {
+      "gleis": "9",
+      "seite": "rechts",
+      "laenge": 492,
+      "spur": "1435",
+      "service": "siding"
+     }
+    ],
+    "kopf": [],
+    "verbunden": [],
+    "form": "Mittelperron"
+   },
+   {
+    "osm": 4134758180,
+    "ref": "11;12",
+    "laenge": 444,
+    "kanten": [
+     {
+      "gleis": "(way 138926648)",
+      "seite": "links",
+      "laenge": 16,
+      "spur": "1435",
+      "service": "siding"
+     },
+     {
+      "gleis": "12",
+      "seite": "links",
+      "laenge": 450,
+      "spur": "1435",
+      "service": "siding"
+     },
+     {
+      "gleis": "11",
+      "seite": "rechts",
+      "laenge": 417,
+      "spur": "1435",
+      "service": "siding"
+     }
+    ],
+    "kopf": [
+     {
+      "gleis": "13",
+      "prellbock": true,
+      "abstand": 5.8,
+      "ende": "Stirnseite",
+      "laengs": 1.0
+     }
+    ],
+    "verbunden": [],
+    "form": "Mittelperron + Kopfkante (U)"
+   },
+   {
+    "osm": 4134758170,
+    "ref": "14;15",
+    "laenge": 407,
+    "kanten": [
+     {
+      "gleis": "15",
+      "seite": "links",
+      "laenge": 406,
+      "spur": "1435",
+      "service": "siding"
+     },
+     {
+      "gleis": "16",
+      "seite": "links",
+      "laenge": 17,
+      "spur": "1435",
+      "service": "siding"
+     },
+     {
+      "gleis": "14",
+      "seite": "rechts",
+      "laenge": 330,
+      "spur": "1435",
+      "service": "siding"
+     }
+    ],
+    "kopf": [
+     {
+      "gleis": "15",
+      "prellbock": true,
+      "abstand": 2.4,
+      "ende": "Stirnseite",
+      "laengs": 1.0
+     }
+    ],
+    "verbunden": [],
+    "form": "Mittelperron + Kopfkante (U)"
+   },
+   {
+    "osm": 4179161750,
+    "ref": "19;20",
+    "laenge": 458,
+    "kanten": [
+     {
+      "gleis": "19",
+      "seite": "links",
+      "laenge": 433,
+      "spur": "1435",
+      "service": null
+     },
+     {
+      "gleis": "20",
+      "seite": "rechts",
+      "laenge": 425,
+      "spur": "1435",
+      "service": "siding"
+     }
+    ],
+    "kopf": [
+     {
+      "gleis": "20",
+      "prellbock": true,
+      "abstand": 1.7,
+      "ende": "Stirnseite",
+      "laengs": 1.0
+     }
+    ],
+    "verbunden": [],
+    "form": "Mittelperron + Kopfkante (U)"
+   },
+   {
+    "osm": 4203630700,
+    "ref": null,
+    "laenge": 103,
+    "kanten": [],
+    "kopf": [
+     {
+      "gleis": "4",
+      "prellbock": true,
+      "abstand": 1.7,
+      "ende": "Stirnseite",
+      "laengs": 0.99
+     },
+     {
+      "gleis": "A80",
+      "prellbock": true,
+      "abstand": 1.6,
+      "ende": "Stirnseite",
+      "laengs": 1.0
+     },
+     {
+      "gleis": "A79",
+      "prellbock": true,
+      "abstand": 1.4,
+      "ende": "Stirnseite",
+      "laengs": 1.0
+     },
+     {
+      "gleis": "5",
+      "prellbock": true,
+      "abstand": 4.2,
+      "ende": "Stirnseite",
+      "laengs": 0.99
+     },
+     {
+      "gleis": "33",
+      "prellbock": true,
+      "abstand": 0.2,
+      "ende": "Längsseite",
+      "laengs": 1.0
+     },
+     {
+      "gleis": "31",
+      "prellbock": true,
+      "abstand": 2.0,
+      "ende": "Längsseite",
+      "laengs": 1.0
+     },
+     {
+      "gleis": "30",
+      "prellbock": true,
+      "abstand": 3.2,
+      "ende": "Stirnseite",
+      "laengs": 1.0
+     }
+    ],
+    "verbunden": [
+     "(way 179608401)",
+     "30;31",
+     "33;35",
+     "3;4",
+     "5;6"
+    ],
+    "form": "nur Kopf + Kopfkante (L) · verbunden"
+   },
+   {
+    "osm": 4189414650,
+    "ref": "16",
+    "laenge": 341,
+    "kanten": [
+     {
+      "gleis": "16",
+      "seite": "rechts",
+      "laenge": 336,
+      "spur": "1435",
+      "service": "siding"
+     }
+    ],
+    "kopf": [
+     {
+      "gleis": "16",
+      "prellbock": true,
+      "abstand": 2.1,
+      "ende": "Stirnseite",
+      "laengs": 1.0
+     }
+    ],
+    "verbunden": [
+     "18"
+    ],
+    "form": "Seitenperron + Kopfkante (L) · verbunden"
+   },
+   {
+    "osm": 4134758160,
+    "ref": "18",
+    "laenge": 342,
+    "kanten": [
+     {
+      "gleis": "18",
+      "seite": "rechts",
+      "laenge": 313,
+      "spur": "1435",
+      "service": null
+     }
+    ],
+    "kopf": [],
+    "verbunden": [
+     "16"
+    ],
+    "form": "Seitenperron · verbunden"
+   }
+  ],
+  "sbb": [
+   {
+    "p_nr": "0",
+    "typ": "Dienstperron",
+    "laenge": 197
+   },
+   {
+    "p_nr": "1/2",
+    "typ": "Mittelperron",
+    "laenge": 230
+   },
+   {
+    "p_nr": "1/2",
+    "typ": "Mittelperron",
+    "laenge": 230
+   },
+   {
+    "p_nr": "11/12",
+    "typ": "Mittelperron",
+    "laenge": 444
+   },
+   {
+    "p_nr": "11/12",
+    "typ": "Mittelperron",
+    "laenge": 444
+   },
+   {
+    "p_nr": "11/12",
+    "typ": "Mittelperron",
+    "laenge": 444
+   },
+   {
+    "p_nr": "14/15",
+    "typ": "Mittelperron",
+    "laenge": 413
+   },
+   {
+    "p_nr": "14/15",
+    "typ": "Mittelperron",
+    "laenge": 413
+   },
+   {
+    "p_nr": "14/15",
+    "typ": "Mittelperron",
+    "laenge": 413
+   },
+   {
+    "p_nr": "14/15",
+    "typ": "Mittelperron",
+    "laenge": 413
+   },
+   {
+    "p_nr": "14/15",
+    "typ": "Mittelperron",
+    "laenge": 413
+   },
+   {
+    "p_nr": "16/17",
+    "typ": "Aussenperron",
+    "laenge": 331
+   },
+   {
+    "p_nr": "16/17",
+    "typ": "Aussenperron",
+    "laenge": 331
+   },
+   {
+    "p_nr": "16/17",
+    "typ": "Aussenperron",
+    "laenge": 331
+   },
+   {
+    "p_nr": "16/17",
+    "typ": "Aussenperron",
+    "laenge": 331
+   },
+   {
+    "p_nr": "16/17",
+    "typ": "Aussenperron",
+    "laenge": 331
+   },
+   {
+    "p_nr": "18",
+    "typ": "Aussenperron",
+    "laenge": 343
+   },
+   {
+    "p_nr": "19/20",
+    "typ": "Mittelperron",
+    "laenge": 460
+   },
+   {
+    "p_nr": "3/4",
+    "typ": "Mittelperron",
+    "laenge": 414
+   },
+   {
+    "p_nr": "3/4",
+    "typ": "Mittelperron",
+    "laenge": 414
+   },
+   {
+    "p_nr": "3/4",
+    "typ": "Mittelperron",
+    "laenge": 414
+   },
+   {
+    "p_nr": "30/31",
+    "typ": "Mittelperron",
+    "laenge": 572
+   },
+   {
+    "p_nr": "30/31",
+    "typ": "Mittelperron",
+    "laenge": 572
+   },
+   {
+    "p_nr": "30/31",
+    "typ": "Mittelperron",
+    "laenge": 572
+   },
+   {
+    "p_nr": "31",
+    "typ": "Dienstperron",
+    "laenge": 235
+   },
+   {
+    "p_nr": "33/35",
+    "typ": "Mittelperron",
+    "laenge": 425
+   },
+   {
+    "p_nr": "5/6",
+    "typ": "Mittelperron",
+    "laenge": 558
+   },
+   {
+    "p_nr": "5/6",
+    "typ": "Mittelperron",
+    "laenge": 558
+   },
+   {
+    "p_nr": "5/6",
+    "typ": "Mittelperron",
+    "laenge": 558
+   },
+   {
+    "p_nr": "7/8",
+    "typ": "Mittelperron",
+    "laenge": 556
+   },
+   {
+    "p_nr": "7/8",
+    "typ": "Mittelperron",
+    "laenge": 556
+   },
+   {
+    "p_nr": "9/10",
+    "typ": "Mittelperron",
+    "laenge": 505
+   },
+   {
+    "p_nr": "9/10",
+    "typ": "Mittelperron",
+    "laenge": 505
+   },
+   {
+    "p_nr": "9/10",
+    "typ": "Mittelperron",
+    "laenge": 505
+   },
+   {
+    "p_nr": "9/10",
+    "typ": "Mittelperron",
+    "laenge": 505
+   }
+  ]
+ },
+ {
+  "bahnhof": "Aarau",
+  "perrons": [
+   {
+    "osm": 33789949,
+    "ref": "6",
+    "laenge": 479,
+    "kanten": [
+     {
+      "gleis": "(way 34013596)",
+      "seite": "links",
+      "laenge": 40,
+      "spur": "1435",
+      "service": "siding"
+     },
+     {
+      "gleis": "28",
+      "seite": "links",
+      "laenge": 89,
+      "spur": "1435",
+      "service": "siding"
+     },
+     {
+      "gleis": "6",
+      "seite": "links",
+      "laenge": 396,
+      "spur": "1435",
+      "service": "siding"
+     },
+     {
+      "gleis": "(way 303424039)",
+      "seite": "rechts",
+      "laenge": 75,
+      "spur": "1000",
+      "service": null
+     }
+    ],
+    "kopf": [],
+    "verbunden": [],
+    "form": "Mittelperron"
+   },
+   {
+    "osm": 4056933710,
+    "ref": "4;5",
+    "laenge": 428,
+    "kanten": [
+     {
+      "gleis": "(way 197751777)",
+      "seite": "links",
+      "laenge": 34,
+      "spur": "1435",
+      "service": "crossover"
+     },
+     {
+      "gleis": "14",
+      "seite": "links",
+      "laenge": 46,
+      "spur": "1435",
+      "service": null
+     },
+     {
+      "gleis": "4",
+      "seite": "links",
+      "laenge": 388,
+      "spur": "1435",
+      "service": null
+     },
+     {
+      "gleis": "5",
+      "seite": "rechts",
+      "laenge": 434,
+      "spur": "1435",
+      "service": null
+     }
+    ],
+    "kopf": [],
+    "verbunden": [],
+    "form": "Mittelperron"
+   },
+   {
+    "osm": 4056933700,
+    "ref": "2;3",
+    "laenge": 427,
+    "kanten": [
+     {
+      "gleis": "2",
+      "seite": "links",
+      "laenge": 433,
+      "spur": "1435",
+      "service": null
+     },
+     {
+      "gleis": "(way 197751777)",
+      "seite": "rechts",
+      "laenge": 33,
+      "spur": "1435",
+      "service": "crossover"
+     },
+     {
+      "gleis": "3",
+      "seite": "rechts",
+      "laenge": 433,
+      "spur": "1435",
+      "service": null
+     }
+    ],
+    "kopf": [],
+    "verbunden": [],
+    "form": "Mittelperron"
+   },
+   {
+    "osm": 4056933680,
+    "ref": "0;1",
+    "laenge": 485,
+    "kanten": [
+     {
+      "gleis": "1",
+      "seite": "links",
+      "laenge": 491,
+      "spur": "1435",
+      "service": "siding"
+     },
+     {
+      "gleis": "10",
+      "seite": "rechts",
+      "laenge": 181,
+      "spur": "1435",
+      "service": "siding"
+     }
+    ],
+    "kopf": [
+     {
+      "gleis": "10",
+      "prellbock": true,
+      "abstand": 2.0,
+      "ende": "Längsseite",
+      "laengs": 1.0
+     }
+    ],
+    "verbunden": [],
+    "form": "Mittelperron + Stumpen an der Längsseite"
+   },
+   {
+    "osm": 4056933690,
+    "ref": "12;13",
+    "laenge": 122,
+    "kanten": [
+     {
+      "gleis": "12",
+      "seite": "links",
+      "laenge": 126,
+      "spur": "1000",
+      "service": null
+     },
+     {
+      "gleis": "13",
+      "seite": "rechts",
+      "laenge": 130,
+      "spur": "1000",
+      "service": null
+     }
+    ],
+    "kopf": [],
+    "verbunden": [],
+    "form": "Mittelperron"
+   }
+  ],
+  "sbb": [
+   {
+    "p_nr": "0",
+    "typ": "Dienstperron",
+    "laenge": null
+   },
+   {
+    "p_nr": "1/10",
+    "typ": "Hausperron",
+    "laenge": 486
+   },
+   {
+    "p_nr": "2/3",
+    "typ": "Mittelperron",
+    "laenge": 428
+   },
+   {
+    "p_nr": "4/5",
+    "typ": "Mittelperron",
+    "laenge": 428
+   },
+   {
+    "p_nr": "6",
+    "typ": "Aussenperron",
+    "laenge": 480
+   }
+  ]
+ }
+]

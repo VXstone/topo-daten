@@ -19,14 +19,6 @@
   1770,
   -550.8
  ],
- "Abgang 540 #36": [
-  2110,
-  -548.0
- ],
- "Abgang 650 #42": [
-  1480,
-  -370
- ],
  "Tecknau": [
   -1.7,
   -961.0
@@ -247,5 +239,19 @@
   }
  },
  "_tecknau_26_10": "Hinweis am5t (D. Eckenstein 19.10./26.10.): Hauptlinie gerade aus Olten nach Tecknau, kein Knick im Tunnel → Tecknau und Abgang 500 um 110.3 px nach links, genau über die Olten-Ausfahrt",
- "_kompakt_26_10": "D. Eckenstein 26.10.: «einigermassen gedrängt, aber stimmig» – Schönenwerd 1830→1770, Abgang 540 2200→2110 (1680 gab Haarnadel), Abgang 650 1500→1480"
+ "_kompakt_26_10": "D. Eckenstein 26.10.: «einigermassen gedrängt, aber stimmig» – Schönenwerd 1830→1770, Abgang 540 2200→2110 (1680 gab Haarnadel), Abgang 650 1500→1480",
+ "osm": "olten_region_osm.json",
+ "osm_versatz": [
+  -3676.2,
+  0.0
+ ],
+ "Aarau": [
+  3250,
+  -470
+ ],
+ "Abgang 650 #42": [
+  4420,
+  -490
+ ],
+ "_aarau_8_11": "D. Eckenstein 8.11.: Aarau angehängt (aarau_anhaengen.py). Aarau tiefer als Schönenwerd: 540 kommt von oben, 650 von unten, nur das eine 540-Gleis unterquert bei Aarau West die 650 (−640 gab eine zweite, falsche Kreuzung 650×540 östlich Schönenwerd). Alte Abgänge #36/#42 entfernt; «osm»/«osm_versatz»: Spurwechsel-Suche über die erweiterte OSM-Datei."
 }

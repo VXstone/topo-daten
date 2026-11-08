@@ -18,6 +18,9 @@
   ],
   "olten_hammer": [
    "--hauptgleise"
+  ],
+  "aarau": [
+   "--hauptgleise"
   ]
  },
  "fest": {
@@ -125,7 +128,14 @@
    7.878208,
    47.366821,
    7.923721
+  ],
+  "aarau": [
+   47.376,
+   8.012,
+   47.4,
+   8.1
   ]
  },
- "_osm_bbox": "26.10.2026: Ausschnitte aus dem Release «daten» (Workflow seite, --osm). bbox so bestimmt, dass alle Gleise des bisherigen Werkstatt-Ausschnitts drin sind. Nicht umgestellt: olten (Handzeichnung Olten Nord hängt an den alten OSM-Knoten, neue Daten geben Lücken im Fächer) und rothrist (Werkstatt-Ausschnitt ist ein Regionsausschnitt; mit Rechteck wird Roggwil-Wynau als Bahnhof gewählt)."
+ "_osm_bbox": "26.10.2026: Ausschnitte aus dem Release «daten» (Workflow seite, --osm). bbox so bestimmt, dass alle Gleise des bisherigen Werkstatt-Ausschnitts drin sind. Nicht umgestellt: olten (Handzeichnung Olten Nord hängt an den alten OSM-Knoten, neue Daten geben Lücken im Fächer) und rothrist (Werkstatt-Ausschnitt ist ein Regionsausschnitt; mit Rechteck wird Roggwil-Wynau als Bahnhof gewählt).",
+ "_aarau": "8.11.2026 (Wunsch D. Eckenstein, Testfall Schritt P): Aarau bis in den Wald vor Rupperswil, angehängt an den Regionalplan (aarau_anhaengen.py: Abgänge #36/#42 → Aarau #36, Abgang 650 Lenzburg #42)."
 }

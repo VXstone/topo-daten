@@ -1,0 +1,43 @@
+{
+ "_quelle": "Testfall Aarau (Wunsch D. Eckenstein 8.11.2026, Schritt P): Aarau bis in den Wald vor Rupperswil; Regionalplan Olten.",
+ "cfg": {
+  "s_min_fix": 2350,
+  "s_max_fix": 9350
+ },
+ "abgang": {
+  "302923818": {
+   "ref": "540",
+   "ort": "Schönenwerd"
+  },
+  "393563368": {
+   "ref": "540",
+   "ort": "Schönenwerd"
+  },
+  "313264479": {
+   "ref": "650",
+   "ort": "Olten"
+  },
+  "313264480": {
+   "ref": "650",
+   "ort": "Olten"
+  },
+  "88889327": {
+   "ref": "650",
+   "ort": "Lenzburg"
+  },
+  "89041552": {
+   "ref": "650",
+   "ort": "Lenzburg"
+  },
+  "89041564": {
+   "ref": "650",
+   "ort": "Lenzburg"
+  },
+  "109104547": {
+   "ref": "650",
+   "ort": "Lenzburg"
+  }
+ },
+ "_abgang": "8.11.2026: West 540 (Schönenwerd, seitlich; ein Gleis unterquert bei Aarau West die 650) und 650 (Eppenbergtunnel, Richtung Olten über Däniken); OSM taggt die 540 bei Aarau West als 650. Ost: Richtung Rupperswil/Lenzburg, Plan endet vor dem Wald (s_max_fix).",
+ "_fenster": "Achse = 650 aus dem Eppenbergtunnel; s 2350 = vor der Unterwerfung 540/650 (dort noch 540 und 650 je paarweise), s 9350 = Ende der Anschlussgleise Buchs-Rohr, vor dem Wald."
+}

@@ -20,13 +20,13 @@ BASIS = os.path.join(HERE, "pruefstand_basis.json")
 ERG = os.path.join(HERE, "pruefstand_ergebnis.json")
 SCRIPTS = ["spurplan_schema.py", "spurplan_warp.py", "spurplan_check.py", "run.sh"]
 
-GROSS = {"olten", "daniken", "olten_hammer"}          # grosse Knoten: im Regionalplan nur Hauptgleise (Detailblatt separat); kleine Bahnhöfe ganze Anlage
+GROSS = {"olten", "daniken", "olten_hammer", "aarau"}          # grosse Knoten: im Regionalplan nur Hauptgleise (Detailblatt separat); kleine Bahnhöfe ganze Anlage
 # (Schlüssel, Verzeichnis, Zusatzargumente, Anzeigename)
 STATIONS = [("thun", REG, [], "Thun"), ("ins", REG, [], "Ins"), ("murten", REG, [], "Murten"), ("kerzers", REG, [], "Kerzers")] + [
     (k, HERE, ["--hauptgleise"] if k in GROSS else [], n) for k, n in [
         ("olten", "Olten"), ("aarburg_oftringen", "Aarburg-Oftringen"), ("rothrist", "Rothrist"), ("zofingen", "Zofingen"),
         ("safenwil", "Safenwil"), ("wangen_bei_olten", "Wangen b. O."), ("dulliken", "Dulliken"), ("daniken", "Däniken"),
-        ("schonenwerd", "Schönenwerd"), ("tecknau", "Tecknau"), ("laufelfingen", "Läufelfingen"), ("olten_hammer", "Olten Hammer")]]
+        ("schonenwerd", "Schönenwerd"), ("tecknau", "Tecknau"), ("laufelfingen", "Läufelfingen"), ("olten_hammer", "Olten Hammer"), ("aarau", "Aarau")]]
 GRUND = [("1 Topologie", ["A", "B", "C"]), ("2 Lage", ["D"]), ("3 Weiche sichtbar", ["W"]), ("4 Keine 90°", ["R"]), ("5 Abstand", ["E"])]
 # 6 Gerade, 7 Detailgrad, 8 Darstellung: noch ohne automatische Prüfung
 KEYS = ["A", "B", "C", "D", "E", "W", "R"]
