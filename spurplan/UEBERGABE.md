@@ -605,3 +605,16 @@ Overrides nur, wo eine Regel nicht passt.
   Z5-Stumpenabstand.
 - Nächster Einstieg: «Weiter mit UEBERGABE.md – Schritt R1: Bündel parallel» (zuerst Prüfstand-Fall, dann Code, bis Q/F am
   Planrand und Sagliains ohne Befund; der Workflow `pruefstand` zeigt jede Verbesserung gegen die Basis).
+
+### 8.11.2026 22:49 – Antworten Daniel zu den offenen Punkten
+- **Regression bestätigt** (in `regression_ok.json`, keine Abnahme): Zofingen gut; Aarburg-Oftringen kein Unterschied sichtbar → gut;
+  Olten Regression ok (am Regionalplan Olten ist sonst noch etwas offen); Schönenwerd und Neuchâtel aus Perronsicht erledigt.
+  **Thun**: bleibt offen über seinen Hinweis auf der Seite.
+- **Aarau**: Fenster passt («geht schon bis Rupperswil, vorher kommen keine Weichen»); die Vierspur östlich Aarau muss parallel
+  laufen → Prüfung in R1 (Bündel parallel), Rest Aarau in N.
+- **Kreuzungen ohne Verbindung**: Daniel fragt, was die Frage ist. «Details folgen» war sein Zusatz vom 6.11.; Vorschlag Claude
+  (Antwort im Chat), damit K ohne weitere Angaben starten kann: Lücke im **unteren** Gleis nach OSM (layer/bridge/tunnel), wie am
+  U-Abgang Montreux schon umgesetzt: Brücke → Lücke + Flügel am oberen Gleis, Tunnel → nur Lücke; Gleisdurchschneidung gleicher
+  Ebene durchgezogen; im Bahnhofplan wird eine Werfung als Ebenenwechsel unter/über der Kreuzung gezeichnet (Aarau West, R2).
+- **Chamby, Rossinière, Zweisimmen** (kollineare Enden aus Schritt E): Daniel hat dort Kommentare auf der Seite; Zweisimmen viele,
+  dazu DKW und schief erkannte Gleise → beim nächsten Schritt mit den Hinweisen dieser Bahnhöfe ansehen.
