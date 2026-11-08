@@ -33,17 +33,18 @@ LANE_B = 24.0               # Ebenenabstand im Bahnhofplan
 VARIANTEN = [("d0", 0, 0), ("d30", 30, 30), ("dm30", -30, -30), ("d60", 60, 60), ("dm60", -60, -60), ("d90", 90, 90),
              ("a30", 30, 0), ("a60", 60, 0)]          # (Name, Drehung der Geografie, Drehung der Bahnhöfe im Plan)
 REGELN = ["T", "PF", "X", "E", "K", "Q", "P", "F", "Z", "D", "G2", "G3", "G4", "G5", "G6", "G7", "G8"]   # Rangfolge: Topologie zuerst
-ERWARTUNG = {       # je OSM-Baustein: Strecken am Planrand {ref: Gleise}, Perronflächen je Bahnhof, Formen (Flächen mit >1 Balken)
-    "r3_kreuzung": dict(strecken={"900": 1}, perrons={"alpha": 2}),
-    "r5_halt": dict(strecken={"900": 2}, perrons={"alpha": 2}),
-    "r7_ueberholung": dict(strecken={"900": 2}, perrons={"alpha": 2}),
-    "ab30": dict(strecken={"900": 2, "901": 2}, perrons={"alpha": 2}),
-    "ab60": dict(strecken={"900": 2, "901": 2}, perrons={"alpha": 2}),
-    "sagliains": dict(strecken={"900": 2}, perrons={"alpha": 2}),
-    "unterwerfung": dict(strecken={"900": 2, "901": 1}, perrons={"alpha": 2}),
-    "zwischengerade": dict(strecken={"900": 2}, perrons={"alpha": 2}),
-    "gleissprung": dict(strecken={"900": 2}, perrons={"alpha": 2}),
-    "perronformen": dict(strecken={"900": 2}, perrons={"alpha": 3}, formen={"alpha": 2}),
+ERWARTUNG = {       # je OSM-Baustein: gesamt = freie Gleisenden am Planrand (Abgänge; zu wenig = Strecke/Gleis fehlt, zu viel = lose
+                    # Stücke), strecken {ref: Gleise} nur zur Auskunft, Perronflächen je Bahnhof, Formen (Flächen mit >1 Balken)
+    "r3_kreuzung": dict(gesamt=2, strecken={"900": 1}, perrons={"alpha": 2}),
+    "r5_halt": dict(gesamt=4, strecken={"900": 2}, perrons={"alpha": 2}),
+    "r7_ueberholung": dict(gesamt=4, strecken={"900": 2}, perrons={"alpha": 2}),
+    "ab30": dict(gesamt=6, strecken={"900": 2, "901": 2}, perrons={"alpha": 2}),
+    "ab60": dict(gesamt=6, strecken={"900": 2, "901": 2}, perrons={"alpha": 2}),
+    "sagliains": dict(gesamt=4, strecken={"900": 2}, perrons={"alpha": 2}),
+    "unterwerfung": dict(gesamt=6, strecken={"900": 2, "901": 1}, perrons={"alpha": 2}),
+    "zwischengerade": dict(gesamt=4, strecken={"900": 2}, perrons={"alpha": 2}),
+    "gleissprung": dict(gesamt=4, strecken={"900": 2}, perrons={"alpha": 2}),
+    "perronformen": dict(gesamt=4, strecken={"900": 2}, perrons={"alpha": 3}, formen={"alpha": 2}),
 }
 
 
@@ -123,11 +124,10 @@ def _auswerten(res, d, erw):
     # T: erwartete Strecken am Planrand mit ihrer Gleiszahl (oberste Regel Topologie)
     if erw.get("gesamt"):
         hat = m["freie_enden"]; n = erw["gesamt"]
-        if hat < n: z["T"] += n - hat; bef.append(dict(regel="T", x=None, y=None, text=f"{hat} statt {n} Gleise an den Abgängen"))
-    for ref, n in erw.get("strecken", {}).items():
-        hat = m["strecken"].get(ref, [])
-        if not hat: z["T"] += n; bef.append(dict(regel="T", x=None, y=None, text=f"Strecke {ref} fehlt im Plan ({n} Gleise erwartet)"))
-        elif max(hat) < n: z["T"] += n - max(hat); bef.append(dict(regel="T", x=None, y=None, text=f"Strecke {ref}: {max(hat)} statt {n} Gleise"))
+        if hat != n:
+            z["T"] += abs(n - hat)
+            bef.append(dict(regel="T", x=None, y=None, text=f"{hat} statt {n} freie Gleisenden am Planrand ("
+                            + ("Strecke oder Gleis fehlt" if hat < n else "lose Gleisstücke") + ")"))
     bahnhof = {}
     for f in sorted(os.listdir(d)):
         if not f.endswith("_spurplan.svg"): continue
