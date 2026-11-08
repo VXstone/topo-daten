@@ -66,17 +66,26 @@ und hakt den Schritt in der Statusliste ab. Ist «Daniel danach» nicht leer, wa
 80 Pläne → jede Änderung erklärt (Regel nach E9 oder Fehler), Differenzbilder an Daniel → Seite veröffentlichen
 (Live-Fassung vorher mit letztem Build vergleichen) → Hinweise beantworten → Nachtrag hier. Nie abnehmen, nie «erledigt».
 
-### Statusliste
+### Statusliste (neu geordnet 8.11.2026, Entscheid Daniel: mehr im Code, weniger Nutzung)
 - [x] A  Regression Olten und alle Pläne (6.11. abends, Seite v133)
-- [ ] 0  Antworten 6.11. umsetzen
-- [x] M  Montreux und U-Abgang (7.11., Seite v137; Unruhe-Ziel ≤ 109 geht an Schritt E)
-- [x] E  DKW-Automatik nach E3 (8.11., Seite v139; MOB Unruhe 105, Westende im 60°-Gitter)
-- [ ] P  Verbundene Perrons / Spezialperrons (Thun 16/18, Montreux, Zweisimmen, Bern 49/50, Basel 3 und 35)
-- [ ] 1  Blaupausen-Prüfstand aufbauen
-- [ ] 2  Pfeile/Stummel bei schrägen Abgängen (h9o9 Sagliains)
-- [ ] 3  Bahnhofsausfahrt als Ganzes (Selfranga/jxpf, Chamby)
-- [ ] 4  Bündel als Einheit
-- [ ] 5  Montbovon im Prüfstand, Prüflauf SBB-Bahnhöfe
+- [ ] 0  Antworten 6.11. umsetzen (Rest: Unruhe-Ziel geht an R1/R3)
+- [x] M  Montreux und U-Abgang (7.11., Seite v137)
+- [x] E  DKW-Automatik nach E3 (8.11., Seite v139)
+- [x] P1 Perron-Inventar + Testfall Aarau angehängt (8.11., Seite v140; Formen von Daniel bestätigt)
+- [ ] 1  Prüfstand als Test im Workflow (mit Bausteinen Unterwerfung, Zwischengerade, Gleissprung, schräger Abgang, Perron U/L/T)
+- [ ] R1 Bündel parallel (nimmt Schritte 2 und 4 auf, h9o9)
+- [ ] R2 Ebenentreue und Zwischengeraden (Aarau West, Basel, Olten)
+- [ ] K  Kreuzungen ohne Verbindung (erst nach Daniels Detail-Antwort; passt nach R2)
+- [ ] R3 Bahnhofsausfahrt als Ganzes + Reparaturpass + Weichenwinkel mitdrehen (nimmt Schritt 3 auf, jxpf, mp8h)
+- [ ] P2 Perron-Modell (U/L/T, Ebenen, SBB «a/b»), Bern/Basel wieder aus dem Code
+- [ ] N  Neue Bahnhöfe nur mit Konfiguration (Aarau ohne Hand-Overrides, Buchs-Rohr, Spurwechsel Schönenwerd, AVA-Meterspur)
+- [ ] 5  Montbovon im Prüfstand, Prüflauf SBB-Bahnhöfe (am Schluss, alle neuen Regeln über die abgenommenen Pläne)
+- Aufgegangen: 2 → R1, 3 → R3, 4 → R1 (Abschnitte unten bleiben als Hintergrund stehen).
+
+**Arbeitsweise in jedem Schritt ab 1 (zusätzlich zur festen Runde):** zuerst ein Prüfstand-Fall, der den Fehler zeigt; dann Code,
+bis der Fall besteht; dann `alle_plaene_pruefen.py` im Workflow. Claude liest Tabellen/Zahlen, Bilder nur als Differenzbilder für
+Daniel. Jeder Hinweis Daniels, den der Prüfstand nicht erkennt, wird nach Möglichkeit ein neuer Prüfstand-Fall. Lösungen im Code,
+Overrides nur, wo eine Regel nicht passt.
 
 ### A – Regression Olten und alle Pläne
 - Einstieg: «Weiter mit UEBERGABE.md – Schritt A: Regression Olten und alle Pläne»
@@ -162,7 +171,66 @@ und hakt den Schritt in der Statusliste ab. Ist «Daniel danach» nicht leer, wa
   Stumpenperron Seite Zürich neben Gl. 1 (muss als eigener Perron/Querperron erscheinen). Noch kein Plan im Repo – als
   Repo-Bahnhof (`plaene`, `bahnhoefe.json`) oder eigener Ausschnitt anlegen; Ostgrenze vor Rupperswil festlegen.
 
-### 1 – Blaupausen-Prüfstand aufbauen
+### 1 – Prüfstand als Test im Workflow (neu gefasst 8.11.2026)
+- Einstieg: «Weiter mit UEBERGABE.md – Schritt 1: Blaupausen-Prüfstand aufbauen»
+- Wie bisherige Fassung unten (Drehungen 0, ±30, ±60, 90°, Abgänge gerade/30°/60°, nur messen), zusätzlich: Bausteine
+  **Unterwerfung** (Aarau West: ein Gleis taucht unter einem Bündel durch), **Zwischengerade** (zwei Knicke mit kurzer Gerade),
+  **Gleissprung** (durchgehendes Gleis wechselt Ebene ohne Weiche, Basel), **schräger Abgang** (Sagliains h9o9), **Perronformen**
+  U/L/T (Montreux, Thun, Basel). Prüfungen: Querabstand gleich, parallel bleibt parallel, Pfeile im Gleisabstand, Weichen gerundet,
+  nichts unter 90°, keine Zwischengerade < Mindestlänge, kein Ebenenwechsel ohne Weiche/Werfung.
+- Ausgabe: Zahlentabelle je Baustein × Drehung (JSON + Markdown) auf `ergebnisse`, im Kartenlabel «Prüfstand»; der Workflow
+  meldet Verschlechterungen gegen die Prüfstand-Basis als Fehler.
+- Fertig, wenn: Prüfstand läuft im Workflow, Befundliste vorhanden, Basis gesetzt.
+- Daniel danach: Bausteine und Befundliste ansehen.
+
+### R1 – Bündel parallel (neu 8.11.2026, nimmt Schritte 2 und 4 auf)
+- Einstieg: «Weiter mit UEBERGABE.md – Schritt R1: Bündel parallel»
+- Arbeiten: Gleise, die in OSM parallel laufen, bilden im Bahnhofplan ein Bündel mit festem Querabstand (Versatz nur gemeinsam);
+  Pfeile/Stummel bei schrägen Abgängen im Gleisabstand quer zur Schräge (h9o9); Regionalstrecken docken als Bündel an, ein
+  nötiger Versatz gilt fürs ganze Bündel.
+- Testfälle: Sagliains, Basel, Prüfstand-Bausteine; MOB/Vereina Unruhe und Treppen (T7) dürfen nicht steigen.
+- Fertig, wenn: Prüfstand für Bündel/Abgänge ohne Befund, Sagliains beide Nebengleise parallel, h9o9 «behoben», alle Pläne ohne
+  unerklärte Änderung.
+
+### R2 – Ebenentreue und Zwischengeraden (neu 8.11.2026)
+- Einstieg: «Weiter mit UEBERGABE.md – Schritt R2: Ebenentreue und Zwischengeraden»
+- Arbeiten: ein durchgehendes Gleis wechselt die Ebene nur an einer Weiche oder an einer echten Unter-/Überwerfung; die Werfung
+  wird als Ebenenwechsel unter/über der Kreuzung im Bahnhofplan gezeichnet (Aarau West: 540-Gleis unter der 650 → im Regionalplan
+  kein X, keine Stummel). Knicke mit kurzer Gerade dazwischen werden im Solver zusammengelegt (W8), Versätze ohne Grund (F11)
+  gibt es nicht mehr.
+- Testfälle: Aarau (Regionalplan G5 4, G7 +2 an Aarau West), Basel (springende Gleise), Olten.
+- Fertig, wenn: Prüfstand Gleissprung/Zwischengerade/Unterwerfung ohne Befund, Aarau West ohne G5/G7, alle Pläne ohne unerklärte
+  Änderung.
+
+### R3 – Ausfahrt als Ganzes, Reparaturpass, Weichenwinkel mitdrehen (neu 8.11.2026, nimmt Schritt 3 auf)
+- Einstieg: «Weiter mit UEBERGABE.md – Schritt R3: Ausfahrt und Reparaturpass»
+- Arbeiten: Bahnhofsausfahrt gleichmässig auffächern, Gleisreihenfolge bleibt (Selfranga/jxpf, Chamby, Sagliains Abgang Scuol);
+  Reparaturpass: verbleibende W8/F11/A1-Befunde korrigiert der Code selbst (auf gemeinsame Ebene schieben, Knicke zusammenlegen)
+  und prüft neu; Weichenwinkel in gedrehten Bahnhöfen mitdrehen (mp8h, Montreux im Regionalplan um 30° gedreht).
+- Fertig, wenn: Testfälle ohne Treppe/S-Kurve, Prüfstand ohne Befund, jxpf und mp8h «behoben», Unruhe MOB/Vereina nicht schlechter.
+
+### P2 – Perron-Modell (neu 8.11.2026, Schritt P Teil 2)
+- Einstieg: «Weiter mit UEBERGABE.md – Schritt P2: Perron-Modell»
+- Grundlage: Inventar `code/perron_inventar.py`, Formen von Daniel bestätigt (Nachträge 8.11. 14:14/14:17).
+- Arbeiten: ein Modell im Code – Balken je bediente Kante + Verbindungsstücke (U/L/T); Inventar mit Ebenen (layer/level, RBS Bern
+  21–24 nicht «verbunden»); SBB-Abgleich auch für «a/b»-Hausperrons (Aarau 1/10); Gleis ohne track_ref an der Kante über die
+  Topologie zuordnen (Montreux Gl. 4); Prüfung P1 (kein Perron fällt weg) über alle Pläne. Bern und Basel wieder aus dem Code
+  erzeugen (jede Änderung im Differenzbild).
+- Reihenfolge der Fälle: Montreux (U um Gl. 4 und Gl. 7; 6rwy, 5yz7, es9y) → Zweisimmen (Mittelperron + Stumpen) → Thun (16/18
+  liegendes L, Gl. 1 unten angeschlossen) → Aarau (langes Mittelperron, Gl. 10 auf einem Drittel, Rest Hausperron) → Bern (49/50
+  nahtlos in 9/10) → Basel (liegende L/T an den Köpfen, Perron 3/4 über das Ende von Gl. 3 hinaus, 33/35 U).
+- Fertig, wenn: alle Fälle wie bestätigt, Prüfstand Perronformen ohne Befund, P1 = 0, alle Pläne ohne unerklärte Änderung.
+- Daniel danach: die Fälle und die Perronfrage aus Schritt A abschliessend beurteilen.
+
+### N – Neue Bahnhöfe nur mit Konfiguration (neu 8.11.2026)
+- Einstieg: «Weiter mit UEBERGABE.md – Schritt N: Neue Bahnhöfe per Konfiguration»
+- Arbeiten: Fenster aus Betriebspunkten/letzter Weiche (statt `s_min_fix`/`s_max_fix`), Abgangsrichtungen aus `linienenden.json`
+  und Topologie (statt `abgang`), Anbindung an die Regionstopologie automatisch (statt `aarau_anhaengen.py`). Aarau damit ohne
+  Hand-Overrides nachbauen; dazu Aarau (b) Anschluss Buchs-Rohr trotz `--hauptgleise` im Kasten statt auf der freien Strecke,
+  (c) Spurwechsel östlich Schönenwerd (OSM vs. `zusatz_spurwechsel`), (d) AVA-Meterspur. Probe mit einem zweiten neuen Bahnhof.
+- Fertig, wenn: ein neuer Bahnhof braucht nur Name + Ausschnitt; Aarau gleich gut oder besser als von Hand.
+
+### 1 (bisherige Fassung, Hintergrund) – Blaupausen-Prüfstand aufbauen
 - Einstieg: «Weiter mit UEBERGABE.md – Schritt 1: Blaupausen-Prüfstand aufbauen»
 - Ziel: Grundsatz «parallel bleibt parallel im gleichen Querabstand, in jeder Drehung und jedem Abgangswinkel» prüfbar.
 - Arbeiten: Reinformen und Zusätze aus `vorlage.py` (Blaupause 2) in Drehungen 0, ±30, ±60, 90° und mit Abgängen
@@ -173,7 +241,7 @@ und hakt den Schritt in der Statusliste ab. Ist «Daniel danach» nicht leer, wa
 - Fertig, wenn: Prüfstand läuft im Workflow, Befundliste vorhanden (welche Bausteine verletzen den Grundsatz).
 - Daniel danach: Prüfstand ansehen und Bausteine beurteilen.
 
-### 2 – Pfeile/Stummel bei schrägen Abgängen (h9o9)
+### 2 – Pfeile/Stummel bei schrägen Abgängen (h9o9) – aufgegangen in R1
 - Einstieg: «Weiter mit UEBERGABE.md – Schritt 2: Pfeile/Stummel bei schrägen Abgängen (h9o9 Sagliains)»
 - Ursache h9o9: im Plan Sagliains · Autoverlad stehen zwei 60°-Abgänge senkrecht übereinander (13,2 px) → quer zur
   Schräge 6,6 px, im Regionalplan 2,7 px statt 10 px; der connector gleicht je Gleis einzeln aus → ein Gleis schräg.
@@ -181,13 +249,13 @@ und hakt den Schritt in der Statusliste ab. Ist «Daniel danach» nicht leer, wa
   Prüfstands zu diesem Baustein beheben.
 - Fertig, wenn: Prüfstand für Abgänge ohne Befund; Sagliains beide Nebengleise parallel; h9o9 «behoben».
 
-### 3 – Bahnhofsausfahrt als Ganzes
+### 3 – Bahnhofsausfahrt als Ganzes – aufgegangen in R3
 - Einstieg: «Weiter mit UEBERGABE.md – Schritt 3: Bahnhofsausfahrt als Ganzes (Selfranga/jxpf, Chamby)»
 - Arbeiten: Ausfahrt gleichmässig auffächern, Gleisreihenfolge bleibt (IDEEN_REVIEW Zeichenlogik 1). Testfälle
   Selfranga / jxpf S-Kurve Klosters – Selfranga, Sagliains Abgang Scuol, Chamby Knick.
 - Fertig, wenn: Testfälle ohne Treppe/S-Kurve, Prüfstand ohne Befund, jxpf «behoben».
 
-### 4 – Bündel als Einheit
+### 4 – Bündel als Einheit – aufgegangen in R1
 - Einstieg: «Weiter mit UEBERGABE.md – Schritt 4: Bündel als Einheit»
 - Arbeiten: parallele Pfeilpaare zwischen zwei Plänen als Bündel verbinden; ein nötiger Versatz gilt für das ganze Bündel
   (Schutz, wenn die Enden aus OSM-Gründen nicht passen). Treppen-Zahl (T7) in MOB/Vereina darf nicht steigen.
@@ -485,3 +553,7 @@ und hakt den Schritt in der Statusliste ab. Ist «Daniel danach» nicht leer, wa
   Perron 3/4 läuft übers Ende von Gl. 3 hinaus); **Montreux** 3;4;5 als U um Gl. 4 (Balken 3|4 und 4|5, Querstück am Prellbock
   Gl. 4), 6;7;8 als U um Gl. 7; Gl. 4 ohne track_ref an der Kante über die Topologie zuordnen. Neuer Fahrplan: Vorschlag im Chat,
   wird nach Daniels Zustimmung in Abschnitt 6 eingetragen.
+
+### 8.11.2026 14:20 – Fahrplan neu geordnet (Daniel: «ja eintragen»)
+- Reihenfolge: 1 Prüfstand → R1 → R2 → (K) → R3 → P2 → N → 5. Schritte 2/3/4 aufgegangen in R1/R3. Schritt P Teil 1 erledigt (P1).
+- Nächster Einstieg: «Weiter mit UEBERGABE.md – Schritt 1: Blaupausen-Prüfstand aufbauen».
