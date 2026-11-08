@@ -72,7 +72,7 @@ und hakt den Schritt in der Statusliste ab. Ist «Daniel danach» nicht leer, wa
 - [x] M  Montreux und U-Abgang (7.11., Seite v137)
 - [x] E  DKW-Automatik nach E3 (8.11., Seite v139)
 - [x] P1 Perron-Inventar + Testfall Aarau angehängt (8.11., Seite v140; Formen von Daniel bestätigt)
-- [ ] 1  Prüfstand als Test im Workflow (mit Bausteinen Unterwerfung, Zwischengerade, Gleissprung, schräger Abgang, Perron U/L/T)
+- [x] 1  Prüfstand als Test im Workflow (8.11., Workflow «pruefstand», Basis gesetzt; Befundliste im Nachtrag 8.11. Nachmittag)
 - [ ] R1 Bündel parallel (nimmt Schritte 2 und 4 auf, h9o9)
 - [ ] R2 Ebenentreue und Zwischengeraden (Aarau West, Basel, Olten)
 - [ ] K  Kreuzungen ohne Verbindung (erst nach Daniels Detail-Antwort; passt nach R2)
@@ -557,3 +557,51 @@ Overrides nur, wo eine Regel nicht passt.
 ### 8.11.2026 14:20 – Fahrplan neu geordnet (Daniel: «ja eintragen»)
 - Reihenfolge: 1 Prüfstand → R1 → R2 → (K) → R3 → P2 → N → 5. Schritte 2/3/4 aufgegangen in R1/R3. Schritt P Teil 1 erledigt (P1).
 - Nächster Einstieg: «Weiter mit UEBERGABE.md – Schritt 1: Blaupausen-Prüfstand aufbauen».
+
+### 8.11.2026 (Nachmittag) – Schritt 1: Blaupausen-Prüfstand im Workflow (nur messen, keine Änderung an der Zeichnung)
+- **Code** (alles neu, Zeichencode unverändert):
+  - `code/pruefstand_bausteine.py` – Bausteine als synthetisches OSM (Meterspur, Linien 900/901, Betreiber «PS»), in lokalen
+    Metern gebaut und beliebig gedreht: r3_kreuzung, r5_halt, r7_ueberholung, ab30/ab60 (Doppelspur zweigt unter 30°/60° ab),
+    sagliains (h9o9: zwei Nebengleise unter 60° aus dem Plan), unterwerfung (Aarau West: 901 taucht unter der Doppelspur durch,
+    layer −1), zwischengerade (40 m geografischer Versatz mit 25 m Zwischengerade), gleissprung (Basel: Gl. 3 rückt ohne Weiche
+    nach aussen), perronformen (U um Gl. 4, L an Gl. 3).
+  - `code/blaupausen_pruefstand.py` – Stufe **osm**: Bausteine durch `region_lauf.py` (Kette MOB/Vereina, Drehung über
+    `lage.drehung`); Stufe **vorlage**: Felder der Blaupause 2 (`vorlage.py`, Kette NE) durch `netz_lage.py` mit fester Lage,
+    Abgänge genau in der Bündelflucht. Varianten d0, d30, dm30, d60, dm60, d90 (Bahnhof und Strecke gleich gedreht) und a30, a60
+    (Bahnhof waagrecht, Strecke unter 30°/60°). 224 Fälle, im Workflow ~8 min.
+  - `code/pruefstand_messen.py` – Q Querabstand (≠ 1 Ebene), P nicht parallel, F Pfeile nicht im Gleisabstand, K Spitzkehre
+    > 90°, Z Zwischengerade < 2 Ebenen, E Ebenenwechsel 0,4–2,5 Ebenen ohne Anschluss, X Kreuzung ohne Knoten/Lücke,
+    T freie Gleisenden am Planrand ≠ Erwartung, PF Perronflächen/-formen, D Bahnhofplan gedreht ≠ ungedreht; dazu G2–G8.
+  - Workflow `pruefstand` (Push auf `spurplan/code/**` oder Basis): Ergebnis `ergebnisse/pruefstand/` (tabelle.md/json,
+    pruefstand.svg/png, label.txt); **Verschlechterung gegen `spurplan/pruefstand_basis.json` = Lauf rot**. Neue Basis nur
+    bewusst: `blaupausen_pruefstand.py --basis-aus <tabelle.json aus ergebnisse> --basis spurplan/pruefstand_basis.json`.
+  - Seite: Plan «Prüfstand – Bausteine × Drehungen» im Werkzeugkasten (seite.yml holt pruefstand.svg + Label; seite läuft auch
+    nach `pruefstand`). `alle_plaene_pruefen.py` überspringt diesen Plan (eigener Vergleich).
+- Rechnung reproduzierbar: drei Workflow-Läufe bei gleichem Code zahlengleich (die erste T-Zählung über die Beschriftung
+  schwankte und wurde durch die freien Gleisenden ersetzt).
+- **Befundliste (Basis 8.11.)**, nach Ursache, mit Schritt, der sie beheben soll:
+  1. **Querabstand am Planrand bei ±60°** (Q in r5, r7, ab, sagliains, zwischengerade, gleissprung, perronformen): die Gleise
+     einer 60°-Strecke stehen am Planrand waagrecht 10 px auseinander → quer 7,7 px statt 10,1. Gleiche Ursache wie h9o9, hier
+     schon ohne Nebengleise. → **R1**.
+  2. **Pfeile schräger Nebengleise** (F 2 in allen 8 Varianten von sagliains): Bahnhofplan 35,9 px (1,5 Ebenen), Regionalplan
+     15,1 px quer – h9o9 nachgestellt, unabhängig von der Drehung. → **R1**.
+  3. **Abzweigende Doppelspur** (Topologie): ab30 – Strecke 901 fehlt in allen Varianten (T 2, nur Stummel in Alpha); ab60 –
+     901 einspurig bzw. lose Stücke (T 1–4), X, Querabstand 6 px, Bahnhofplan bei −30°/−60° anders als ungedreht (D). Oberste
+     Regel – **Daniel: eigener Schritt vor R1 oder in R1?**
+  4. **Unterwerfung** (X 2 in allen Varianten): 901 kreuzt die Doppelspur als X ohne Lücke statt darunter durch. → **R2**.
+  5. **Zwischengerade**: geografischer Versatz wird bei 0–60° ruhig gezeichnet (ohne Befund); bei **90°** Spitzkehren (K 4),
+     X 3 und Bahnhofplan anders (D). → **R2/R3**.
+  6. **Gleissprung**: Baustein löst keinen Befund aus (nur Ursache 1) – entweder hält der Code die Ebene, oder der Baustein
+     trifft den Basler Fall nicht. In R2 an Basel nachschärfen.
+  7. **Perronformen** (PF 2 in allen Varianten): U und L werden als getrennte Balken gezeichnet. → **P2**.
+  8. **Vorlage-Pläne (Kette NE) bei ±60°** (E/Z in allen 15 Feldern): ein um 60° gedrehter Vorlage-Bahnhof bekommt beidseits
+     einen grundlosen Versatz mit kurzer waagrechter Zwischengeraden, obwohl die Abgänge in der Flucht liegen. → **R3**
+     (Ausfahrt, W8). Dazu Z3 (doppelter Spurwechsel) G2 2 ab 30°, Z5 (Anschluss aussen, zwei Stumpen) Querabstand 5,5/15,6 px in
+     jeder Drehung (Stumpen-Abstand 0,55 Ebenen in vorlage.py – gewollt?), Z7 E 1 bei 0°.
+  9. Nebenbei: `netz_lage.py` brach in einem frühen Aufbau (Z7, Abgang 60°, Abgänge neben der Flucht) mit
+     `NameError: _RPT` in `_kreuzungen` ab – latenter Fehler, tritt mit dem jetzigen Aufbau nicht auf; bei R2 (Kreuzungen) beheben.
+- Prüfung aller Pläne: unverändert (nur die bekannten Stände Schönenwerd, Thun, Aarburg-Oftringen, Neuchâtel, Zofingen).
+- **Daniel danach**: Plan «Prüfstand» auf der Seite ansehen, Bausteine beurteilen (treffen sie die Fälle?), Frage zu Punkt 3,
+  Z5-Stumpenabstand.
+- Nächster Einstieg: «Weiter mit UEBERGABE.md – Schritt R1: Bündel parallel» (zuerst Prüfstand-Fall, dann Code, bis Q/F am
+  Planrand und Sagliains ohne Befund; der Workflow `pruefstand` zeigt jede Verbesserung gegen die Basis).

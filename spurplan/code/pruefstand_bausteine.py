@@ -260,9 +260,9 @@ def perronformen(N):
     """Perronformen U/L/T (Montreux, Thun, Basel): Kopfgleise 3 und 4 östlich enden an Prellböcken;
     U um Gl. 4 (beide Kanten + Querstück am Prellbock), L an Gl. 3 (Längsbalken + Querstück), T verbindet die Mittelperrons
     1|2 und L am Kopf"""
-    g1, g2 = _doppelspur(N, [(0, "Alpha"), (3000, "Beta")], perrons="keine", extra_schnitte=(-300, -260))
-    # Stumpengleise 3, 4 nördlich von Gl. 1, Prellböcke bei x = 90
-    for q, nr, t0 in ((A + 6, "3", -300), (2 * A + 12, "4", -260)):
+    g1, g2 = _doppelspur(N, [(0, "Alpha"), (3000, "Beta")], perrons="keine", extra_schnitte=(-380, -330))
+    # Stumpengleise 3, 4 nördlich von Gl. 1 (Weichen westlich des Spurwechsels bei −260 m), Prellböcke bei x = 90
+    for q, nr, t0 in ((A + 6, "3", -330), (2 * A + 12, "4", -380)):
         s = g1.at(t0, dict(railway="switch")); ns = N.kette([s, (t0 + 40, q), (90, q)], **MS, service="siding", **{"railway:track_ref": nr})
         N.tag(ns[-1], dict(railway="buffer_stop"))
     q3, q4 = A + 6, 2 * A + 12
