@@ -1,10 +1,9 @@
 {
- "erzeugt": "2026-11-08 16:10 UTC",
+ "erzeugt": "2026-11-08 21:53 UTC",
  "plaene": 81,
- "geaendert": 5,
+ "geaendert": 1,
  "einordnung": {
-  "gleichwertig": 4,
-  "vermutlich besser": 1
+  "gleichwertig": 1
  },
  "zeilen": [
   {
@@ -115,7 +114,7 @@
    "name": "Olten",
    "gruppe": "Region Olten",
    "abgenommen": false,
-   "basis": "veröffentlicht",
+   "basis": "bestätigt 2026-11-08",
    "basis_commit": "73d910b",
    "stellen": 0
   },
@@ -124,20 +123,9 @@
    "name": "Aarburg-Oftringen",
    "gruppe": "Region Olten",
    "abgenommen": true,
-   "basis": "Archivbeginn (Abnahme 2026-10-14)",
-   "basis_commit": "09c9132",
-   "stellen": 7,
-   "letzte_aenderung": "2026-11-06T20:18",
-   "einordnung": "gleichwertig",
-   "delta": "",
-   "alt": {
-    "G7": 1,
-    "T7": 0
-   },
-   "neu": {
-    "G7": 1,
-    "T7": 0
-   }
+   "basis": "bestätigt 2026-11-08",
+   "basis_commit": "73d910b",
+   "stellen": 0
   },
   {
    "key": "rothrist",
@@ -166,18 +154,9 @@
    "name": "Zofingen",
    "gruppe": "Region Olten",
    "abgenommen": true,
-   "basis": "Archivbeginn (Abnahme 2026-10-14)",
-   "basis_commit": "09c9132",
-   "stellen": 28,
-   "letzte_aenderung": "2026-11-06T20:18",
-   "einordnung": "vermutlich besser",
-   "delta": "T7 2→1",
-   "alt": {
-    "T7": 2
-   },
-   "neu": {
-    "T7": 1
-   }
+   "basis": "bestätigt 2026-11-08",
+   "basis_commit": "73d910b",
+   "stellen": 0
   },
   {
    "key": "safenwil",
@@ -220,20 +199,9 @@
    "name": "Schönenwerd",
    "gruppe": "Region Olten",
    "abgenommen": true,
-   "basis": "Archivbeginn (Abnahme 2026-10-13)",
-   "basis_commit": "09c9132",
-   "stellen": 8,
-   "letzte_aenderung": "2026-10-29T22:45",
-   "einordnung": "gleichwertig",
-   "delta": "",
-   "alt": {
-    "G2": 2,
-    "T7": 0
-   },
-   "neu": {
-    "G2": 2,
-    "T7": 0
-   }
+   "basis": "bestätigt 2026-11-08",
+   "basis_commit": "a808d4c",
+   "stellen": 0
   },
   {
    "key": "tecknau",
@@ -276,22 +244,9 @@
    "name": "Neuchâtel",
    "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
    "abgenommen": true,
-   "basis": "Abnahme 2026-10-26",
-   "basis_commit": "f78f4a6",
-   "stellen": 1,
-   "letzte_aenderung": "2026-10-30T19:38",
-   "einordnung": "gleichwertig",
-   "delta": "",
-   "alt": {
-    "G2": 4,
-    "G6": 1,
-    "T7": 3
-   },
-   "neu": {
-    "G2": 4,
-    "G6": 1,
-    "T7": 3
-   }
+   "basis": "bestätigt 2026-11-08",
+   "basis_commit": "1fa061d",
+   "stellen": 0
   },
   {
    "key": "konolfingen",
