@@ -224,6 +224,14 @@ def messen(svg_text, lane):
         n_ = sum(1 for _, q, _ in enden if np.linalg.norm(q - p_) < 45)
         for r_ in (re.findall(r"\d+", m_.group(1)) or ["?"]): strecken.setdefault(r_, []).append(n_)
 
+    # freie Gleisenden (Abgänge am Planrand): Ende ohne anderes Gleis, Prellbock oder Pfeil daneben
+    frei = 0
+    for li, q, v in enden:
+        if any(lj != li and np.linalg.norm(q - q2) < 2.5 for lj, q2, _ in enden): continue
+        if any(lj != li and -1 < float((q - a) @ u) < L + 1 and abs(float((q - a) @ np.array([-u[1], u[0]]))) < 2.0 for a, b, u, L, lj in segs): continue
+        if any(np.linalg.norm(q - d_) < 6 for d_ in punkte) or any(np.linalg.norm(q - t_) < 16 for t_, _ in pfeile): continue
+        frei += 1
+
     # PF: Perronflächen (Balken, die sich berühren, bilden eine Fläche)
     from shapely.geometry import Polygon
     from shapely.ops import unary_union
@@ -234,7 +242,7 @@ def messen(svg_text, lane):
         for g in geoms: flaechen.append(sum(1 for x in pg if x.intersects(g)))
     zaehl = collections.Counter(b["regel"] for b in B)
     return dict(zaehl=dict(zaehl), befunde=B, perron_flaechen=sorted(flaechen, reverse=True), linien=len(polys), pfeile=len(pfeile),
-                strecken={k: sorted(v) for k, v in sorted(strecken.items())})
+                strecken={k: sorted(v) for k, v in sorted(strecken.items())}, freie_enden=frei)
 
 
 def regeln(svg_pfad):

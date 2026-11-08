@@ -122,7 +122,7 @@ def _auswerten(res, d, erw):
     bef = list(m["befunde"])
     # T: erwartete Strecken am Planrand mit ihrer Gleiszahl (oberste Regel Topologie)
     if erw.get("gesamt"):
-        hat = sum(m["strecken"].get("?", [])); n = erw["gesamt"]
+        hat = m["freie_enden"]; n = erw["gesamt"]
         if hat < n: z["T"] += n - hat; bef.append(dict(regel="T", x=None, y=None, text=f"{hat} statt {n} Gleise an den Abgängen"))
     for ref, n in erw.get("strecken", {}).items():
         hat = m["strecken"].get(ref, [])
