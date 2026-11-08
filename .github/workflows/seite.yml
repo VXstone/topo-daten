@@ -11,7 +11,7 @@ on:
     branches: [main]
     paths: ["spurplan/werkstatt/**", "spurplan/hinweise.json", "spurplan/code/ausschnitte.py", "spurplan/code/alle_plaene_pruefen.py", "spurplan/abnahmen.json"]
   workflow_run:
-    workflows: ["regionen", "plaene"]
+    workflows: ["regionen", "plaene", "pruefstand"]
     types: [completed]
 permissions:
   contents: write
@@ -50,6 +50,9 @@ jobs:
             git show origin/ergebnisse:ergebnisse/$b/spurplan.svg > spurplan/werkstatt/olten/feedback/repo_$b.svg 2>/dev/null || rm -f spurplan/werkstatt/olten/feedback/repo_$b.svg
             git show origin/ergebnisse:ergebnisse/$b/netz.json > spurplan/werkstatt/olten/feedback/repo_${b}_netz.json 2>/dev/null || rm -f spurplan/werkstatt/olten/feedback/repo_${b}_netz.json
           done
+          # Blaupausen-Prüfstand (8.11.2026): Kontaktbogen + Kartenlabel für den Plan «Prüfstand» (Werkzeugkasten)
+          git show origin/ergebnisse:ergebnisse/pruefstand/pruefstand.svg > spurplan/werkstatt/olten/feedback/pruefstand.svg 2>/dev/null || rm -f spurplan/werkstatt/olten/feedback/pruefstand.svg
+          git show origin/ergebnisse:ergebnisse/pruefstand/label.txt > spurplan/werkstatt/olten/feedback/pruefstand_label.txt 2>/dev/null || rm -f spurplan/werkstatt/olten/feedback/pruefstand_label.txt
           ls spurplan/werkstatt/olten/feedback/*.svg
       - name: Daten (Release «daten») für die OSM-Ausschnitte der Region Olten
         env: { GH_TOKEN: "${{ github.token }}" }

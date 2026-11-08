@@ -1,0 +1,56 @@
+# Blaupausen-Prüfstand (Schritt 1, UEBERGABE 8.11.2026): synthetische Bausteine (Reinformen, schräger Abgang Sagliains,
+# Unterwerfung Aarau West, Zwischengerade, Gleissprung Basel, Perronformen U/L/T) und die Felder der Blaupause 2 in den
+# Drehungen 0, ±30, ±60, 90° und mit Abgängen unter 30°/60° durch den Code der echten Pläne rechnen und messen.
+# Keine Daten nötig (Bausteine werden im Lauf erzeugt). Ergebnis: Branch «ergebnisse», Ordner ergebnisse/pruefstand/
+# (tabelle.md/json, pruefstand.svg = Plan «Prüfstand» der Feedback-Seite, label.txt). Verschlechterung gegen
+# spurplan/pruefstand_basis.json = Lauf rot (nach dem Hochladen der Ergebnisse).
+name: pruefstand
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["spurplan/code/**", "spurplan/pruefstand_basis.json", ".github/workflows/pruefstand.yml"]
+permissions:
+  contents: write
+concurrency: { group: pruefstand, cancel-in-progress: false }
+env:
+  OPENBLAS_CORETYPE: Haswell
+  OPENBLAS_NUM_THREADS: "1"
+  OMP_NUM_THREADS: "1"
+  MKL_NUM_THREADS: "1"
+  PYTHONHASHSEED: "0"
+jobs:
+  pruefen:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with: { python-version: "3.12" }
+      - run: |
+          sudo apt-get install -y -q libcairo2 >/dev/null
+          pip install -q numpy scipy shapely svgpathtools cairosvg pillow networkx
+      - name: Prüfstand rechnen und gegen die Basis vergleichen
+        id: lauf
+        run: |
+          set +e
+          python3 spurplan/code/blaupausen_pruefstand.py /tmp/pruefstand --basis spurplan/pruefstand_basis.json --jobs 4 2>&1 | tee /tmp/pruefstand_log.txt
+          echo "rc=${PIPESTATUS[0]}" >> "$GITHUB_OUTPUT"
+      - name: Ergebnisse auf Branch «ergebnisse» (nur ergebnisse/pruefstand ersetzen)
+        if: always()
+        run: |
+          mkdir -p /tmp/erg/pruefstand
+          cp /tmp/pruefstand/tabelle.md /tmp/pruefstand/tabelle.json /tmp/pruefstand/pruefstand.svg /tmp/pruefstand/label.txt /tmp/pruefstand_log.txt /tmp/erg/pruefstand/ 2>/dev/null || true
+          python3 -c "import cairosvg; cairosvg.svg2png(url='/tmp/erg/pruefstand/pruefstand.svg', write_to='/tmp/erg/pruefstand/pruefstand.png', output_width=4000)" || true
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin ergebnisse || true
+          git stash -u -q || true
+          if git rev-parse --verify origin/ergebnisse >/dev/null 2>&1; then git checkout -q -B ergebnisse origin/ergebnisse; else git checkout -q --orphan ergebnisse; git rm -rq --cached . || true; fi
+          mkdir -p ergebnisse && rm -rf ergebnisse/pruefstand && cp -r /tmp/erg/pruefstand ergebnisse/
+          git add -A ergebnisse/pruefstand
+          git commit -qm "Prüfstand $(date -u +%Y-%m-%dT%H:%MZ) (${{ github.sha }})" || echo "keine Änderung"
+          git push -q origin ergebnisse || { sleep 20; git fetch -q origin ergebnisse && git rebase -q origin/ergebnisse && git push -q origin ergebnisse; }
+      - name: Verschlechterung gegen die Basis?
+        run: |
+          if [ "${{ steps.lauf.outputs.rc }}" != "0" ]; then grep -E "^SCHLECHTER|^FEHLER" /tmp/pruefstand_log.txt || true; echo "Prüfstand schlechter als Basis"; exit 1; fi

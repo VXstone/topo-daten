@@ -97,6 +97,7 @@ OK = {k: v for k, v in (json.load(open(_OKF)).items() if os.path.exists(_OKF) el
 zeilen = []
 for p in PLANS:
     k = p["key"]; path = f"ergebnisse/seite/plaene/{k}.svg"
+    if k == "pruefstand": continue     # Prüfstand (8.11.2026): eigener Vergleich gegen spurplan/pruefstand_basis.json im Workflow «pruefstand»
     log = [l.split() for l in git("log", REF, "--format=%h %cI", "--", path).decode().splitlines() if l.strip()]
     if not log: zeilen.append(dict(key=k, gruppe=p.get("gruppe"), basis="neu", stellen=None)); continue
     if k in OK and (k not in A or OK[k] > A[k]):

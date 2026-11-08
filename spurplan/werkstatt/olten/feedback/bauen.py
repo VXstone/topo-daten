@@ -57,6 +57,12 @@ if os.path.exists(_vp):
     _sp.run(["python3", _vp, "--blaupause2", os.path.join(HERE, "blaupause2.svg")], check=True, cwd=os.path.dirname(_vp), capture_output=True)
     plans.append(dict(key="blaupause2", name="Blaupause 2 – Bahnhofstypen", gruppe="Werkzeugkasten", label=f"Reinform + Zusätze · Stand {stand}",
                       svg=strip(open(os.path.join(HERE, "blaupause2.svg")).read()), counts=None, status=None))
+# Prüfstand (Schritt 1, 8.11.2026): Kontaktbogen Bausteine × Drehungen vom Workflow «pruefstand» (Branch «ergebnisse»)
+if os.path.exists(os.path.join(HERE, "pruefstand.svg")):
+    _pl = os.path.join(HERE, "pruefstand_label.txt")
+    plans.append(dict(key="pruefstand", name="Prüfstand – Bausteine × Drehungen", gruppe="Werkzeugkasten",
+                      label=open(_pl).read().strip() if os.path.exists(_pl) else "Workflow pruefstand",
+                      svg=strip(open(os.path.join(HERE, "pruefstand.svg")).read()), counts=None, status=None))
 for key, d, extra, name in ps.STATIONS:
     a = open(os.path.join(d, f"{key}_spurplan.svg")).read()
     c = open(os.path.join(d, f"{key}_spurplan_check.svg")).read()
