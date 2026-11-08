@@ -1,8 +1,9 @@
 {
- "erzeugt": "2026-11-08 02:15 UTC",
- "plaene": 80,
- "geaendert": 5,
+ "erzeugt": "2026-11-08 07:55 UTC",
+ "plaene": 81,
+ "geaendert": 6,
  "einordnung": {
+  "Fehler? Topologie": 1,
   "gleichwertig": 4,
   "vermutlich besser": 1
  },
@@ -14,7 +15,25 @@
    "abgenommen": false,
    "basis": "veröffentlicht",
    "basis_commit": "73d910b",
-   "stellen": 0
+   "stellen": 1,
+   "letzte_aenderung": "2026-11-06T20:18",
+   "einordnung": "Fehler? Topologie",
+   "delta": "G2 17→24, G5 0→4, G7 3→5",
+   "alt": {
+    "G3": 2,
+    "G2": 17,
+    "G6": 7,
+    "G7": 3,
+    "T7": 18
+   },
+   "neu": {
+    "G3": 2,
+    "G2": 24,
+    "G6": 7,
+    "G7": 5,
+    "G5": 4,
+    "T7": 18
+   }
   },
   {
    "key": "region_ne",
@@ -261,6 +280,12 @@
    "basis": "bestätigt 2026-11-07",
    "basis_commit": "1fa061d",
    "stellen": 0
+  },
+  {
+   "key": "aarau",
+   "gruppe": "Region Olten",
+   "basis": "neu",
+   "stellen": null
   },
   {
    "key": "neuchatel",
