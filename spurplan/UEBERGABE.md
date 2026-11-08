@@ -70,7 +70,7 @@ und hakt den Schritt in der Statusliste ab. Ist «Daniel danach» nicht leer, wa
 - [x] A  Regression Olten und alle Pläne (6.11. abends, Seite v133)
 - [ ] 0  Antworten 6.11. umsetzen
 - [x] M  Montreux und U-Abgang (7.11., Seite v137; Unruhe-Ziel ≤ 109 geht an Schritt E)
-- [ ] E  DKW-Automatik nach E3 (neu 7.11., vor P; Westende Montreux Gl. 5)
+- [x] E  DKW-Automatik nach E3 (8.11., Seite v139; MOB Unruhe 105, Westende im 60°-Gitter)
 - [ ] P  Verbundene Perrons / Spezialperrons (Thun 16/18, Montreux, Zweisimmen, Bern 49/50, Basel 3 und 35)
 - [ ] 1  Blaupausen-Prüfstand aufbauen
 - [ ] 2  Pfeile/Stummel bei schrägen Abgängen (h9o9 Sagliains)
@@ -388,3 +388,41 @@ und hakt den Schritt in der Statusliste ab. Ist «Daniel danach» nicht leer, wa
   Gl. 7 beginnen lassen; (d) V5 fett/dünn, V6 Rochers-de-Naye stumpf von links prüfen. Danach Regionalplan MOB,
   Gegenprobe Rothrist/Thun (dort `als_dkw` von Hand), Prüfung aller Pläne.
 - Nächster Einstieg: «Weiter mit UEBERGABE.md – Schritt E: DKW-Automatik, Teil 2 Lage».
+
+### 8.11.2026 – Schritt E, Teil 2: Weichenanlage im 60°-Gitter (Montreux Westende), Regionen eingeschaltet
+- `region_lauf.py`: `dkw_auto` jetzt **true** für Linien-Regionen (MOB, Vereina). Werkstatt (Olten, NE, Referenzen) und
+  `plaene` unverändert (Schalter dort aus; alle neuen Teile hängen an `dkw_auto`).
+- Neu in `spurplan_schema.py` (alles nur mit `dkw_auto`):
+  - Linien je `railway_crossing` (`LINIEN_X`, auch ohne DKW). An einer erkannten DKW ist die Linie **ohne** Kreuzung in der
+    Nähe das durchgehende Gleis (`X_DURCH`, Gl. 5/6), die andere die Schräge; Ketten laufen durch die DKW (FW_PAARE).
+  - Kreuzung: Ketten verbinden nur Stücke derselben Linie (Gl. 7 nicht mehr in den Ast zur Rochers-de-Naye). Wechselt eine
+    Linie über die Kreuzung die Ebene, wird ihr kürzeres Stück Schräge (Gl. 4 → W 9953 über X 6524).
+  - V2 `_x_halb`: Kreuzung ohne Verbindung auf halbe Ebene (9963 5½, 1838 6½, 6524 4½). Endknoten einer Schrägen, an dem
+    ein Gleis beginnt, auf die Ebene des Gleises nächst der Anlage (W 2358 Abstellfeld).
+  - V1/V3 `_x_gitter`: alle Knoten der Anlage im 60°-Gitter (Δx = ΔY/tan 60°), als `xs_over`; Lage der Anlage so weit
+    östlich wie möglich, ohne vor/hinter einen Nachbarknoten ausserhalb zu geraten (Spielraum), sonst Nachbarn mitschieben.
+  - Zeichnung `ANLAGE_IDS`: jede Schräge eine gerade Linie durch ihre Knoten; endet sie an einer Durchschneidung, an der
+    ihre Linie als Gleis weiterläuft, läuft sie bis auf dessen Ebene (Gl. 7, Gl. 4, Ast Rochers-de-Naye).
+  - V5 `V5_FETT`: fett nur Fahrwege Perrongleis → Personengleis gegenüber (wenigste Schrägen): Gl. 6 und 7 über DKW 1977,
+    Gl. 4 über W 9953; Schere, Abstellfeld, Stumpen dünn.
+  - DKW-Klammern in dichten Anlagen höchstens 45 % des Abstands zum nächsten DKW-Symbol; Gleisnummer nicht in die Anlage.
+  - Diagnose: `KNOTDBG=<ids>`, `CHAINDBG=<s0>,<s1>`, `DKWDBG=1`.
+- Montreux Bahnhofplan: Check-Befunde A6/B5/D6/F1 → D6 (D = Abstellfeld-Reihenfolge, schon vorher).
+- `regel_pruefung.py` G2: liegt ein Linienende auf einer fremden Linie und läuft am selben Punkt ein anderes Stück gerade
+  weiter (> 176°), ist das eine Kreuzung, keine Weiche ohne Ausrundung. Wirkt auch auf lage_suche und alle_plaene_pruefen
+  (nur Zählung): im Regionalplan MOB fallen so auch Chamby, Rossinière und Zweisimmen (1 von 2 an derselben Stelle) weg –
+  dort enden zwei Stücke kollinear auf der Linie; Plan dort unverändert. Daniel ansehen, ob das dort wirklich eine Kreuzung
+  ist.
+- Workflow `regionen` (7742a52): MOB Unruhe **105** (Basis 115; mit neuer Prüfung auf der Basis wären es 99), Topologie und
+  Verkettung 0, Lage-Suche Montbovon 60 / Montreux 30; Vereina 59 unverändert.
+- `alle_plaene_pruefen.py` gegen v138 (b1630ff): 80 Pläne, **1 geändert** – region_mob «schlechter?» G2 15→18. Erklärt:
+  Westende neu (gewollt, Schritt E); +3 G2: zwei an den Abstellfeld-Weichen gleich hinter W 2358 (Fächer liegt jetzt an der
+  Anlage, 31° im gedrehten Plan) und eine an W 2400; übrige Pläne der Region um 5–10 px verschoben (Lage). Alle anderen 79
+  Pläne unverändert. Seite **v139** veröffentlicht (Live war = v138).
+- Hinweise: 9636 (fett auf die Strecke) und 6yof (Überlappung) behoben; afkt (Mindestabstand) Antwort + Rückfrage, offen;
+  8gyi (Knick vor Tunnelportal) nicht Teil von E, offen.
+- **Offen / für später:** (1) Im Regionalplan ist Montreux um 30° gedreht – die 60°-Schrägen der Anlage stehen dort senkrecht
+  (mp8h «Weichenwinkel mitdrehen»). (2) Ast zur Rochers-de-Naye liegt auf der Ebene von Gl. 7 (Skizze: eine Ebene höher);
+  Gl. 8 belegt die Ebene darüber. (3) Die drei G2 oben. (4) Werkstatt/plaene weiter ohne `dkw_auto` (Rothrist/Thun
+  unverändert, `als_dkw` von Hand); einschalten erst nach eigener Prüfung.
+- Nächster Schritt: «Weiter mit UEBERGABE.md – Schritt P: Verbundene Perrons».
