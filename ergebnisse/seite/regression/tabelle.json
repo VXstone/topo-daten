@@ -1,9 +1,8 @@
 {
- "erzeugt": "2026-11-08 07:58 UTC",
+ "erzeugt": "2026-11-08 12:56 UTC",
  "plaene": 81,
- "geaendert": 6,
+ "geaendert": 5,
  "einordnung": {
-  "Fehler? Topologie": 1,
   "gleichwertig": 4,
   "vermutlich besser": 1
  },
@@ -14,26 +13,8 @@
    "gruppe": "Region",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "73d910b",
-   "stellen": 1,
-   "letzte_aenderung": "2026-11-08T07:55",
-   "einordnung": "Fehler? Topologie",
-   "delta": "G2 17→24, G5 0→4, G7 3→5",
-   "alt": {
-    "G3": 2,
-    "G2": 17,
-    "G6": 7,
-    "G7": 3,
-    "T7": 18
-   },
-   "neu": {
-    "G3": 2,
-    "G2": 24,
-    "G6": 7,
-    "G7": 5,
-    "G5": 4,
-    "T7": 18
-   }
+   "basis_commit": "9524db1",
+   "stellen": 0
   },
   {
    "key": "region_ne",
@@ -286,7 +267,7 @@
    "name": "Aarau",
    "gruppe": "Region Olten",
    "abgenommen": false,
-   "basis": "erste Fassung",
+   "basis": "veröffentlicht",
    "basis_commit": "9524db1",
    "stellen": 0
   },
