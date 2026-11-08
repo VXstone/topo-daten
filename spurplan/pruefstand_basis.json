@@ -1,0 +1,494 @@
+{
+ "faelle": {
+  "osm/ab30/a30": {
+   "T": 2
+  },
+  "osm/ab30/a60": {
+   "T": 2
+  },
+  "osm/ab30/d0": {
+   "T": 2
+  },
+  "osm/ab30/d30": {
+   "T": 2
+  },
+  "osm/ab30/d60": {
+   "Q": 1,
+   "T": 2
+  },
+  "osm/ab30/d90": {
+   "T": 2
+  },
+  "osm/ab30/dm30": {
+   "T": 2
+  },
+  "osm/ab30/dm60": {
+   "Q": 1,
+   "T": 2
+  },
+  "osm/ab60/a30": {
+   "Q": 1,
+   "T": 3,
+   "X": 3
+  },
+  "osm/ab60/a60": {
+   "X": 1
+  },
+  "osm/ab60/d0": {
+   "Q": 1,
+   "T": 3,
+   "X": 1,
+   "Z": 1
+  },
+  "osm/ab60/d30": {
+   "Q": 1,
+   "T": 3,
+   "X": 1,
+   "Z": 1
+  },
+  "osm/ab60/d60": {
+   "Q": 1,
+   "X": 1
+  },
+  "osm/ab60/d90": {
+   "Q": 1,
+   "T": 3,
+   "X": 1
+  },
+  "osm/ab60/dm30": {
+   "D": 1,
+   "T": 1
+  },
+  "osm/ab60/dm60": {
+   "D": 1,
+   "G2": 1,
+   "G7": 1,
+   "P": 2,
+   "Q": 1,
+   "T": 4
+  },
+  "osm/gleissprung/a30": {},
+  "osm/gleissprung/a60": {},
+  "osm/gleissprung/d0": {},
+  "osm/gleissprung/d30": {},
+  "osm/gleissprung/d60": {
+   "Q": 2
+  },
+  "osm/gleissprung/d90": {},
+  "osm/gleissprung/dm30": {},
+  "osm/gleissprung/dm60": {},
+  "osm/perronformen/a30": {
+   "PF": 2
+  },
+  "osm/perronformen/a60": {
+   "PF": 2
+  },
+  "osm/perronformen/d0": {
+   "PF": 2
+  },
+  "osm/perronformen/d30": {
+   "PF": 2
+  },
+  "osm/perronformen/d60": {
+   "PF": 2,
+   "Q": 1
+  },
+  "osm/perronformen/d90": {
+   "PF": 2
+  },
+  "osm/perronformen/dm30": {
+   "PF": 2
+  },
+  "osm/perronformen/dm60": {
+   "PF": 2,
+   "Q": 1
+  },
+  "osm/r3_kreuzung/a30": {},
+  "osm/r3_kreuzung/a60": {},
+  "osm/r3_kreuzung/d0": {},
+  "osm/r3_kreuzung/d30": {},
+  "osm/r3_kreuzung/d60": {},
+  "osm/r3_kreuzung/d90": {},
+  "osm/r3_kreuzung/dm30": {},
+  "osm/r3_kreuzung/dm60": {},
+  "osm/r5_halt/a30": {},
+  "osm/r5_halt/a60": {},
+  "osm/r5_halt/d0": {},
+  "osm/r5_halt/d30": {},
+  "osm/r5_halt/d60": {
+   "Q": 1
+  },
+  "osm/r5_halt/d90": {},
+  "osm/r5_halt/dm30": {},
+  "osm/r5_halt/dm60": {
+   "Q": 1
+  },
+  "osm/r7_ueberholung/a30": {},
+  "osm/r7_ueberholung/a60": {},
+  "osm/r7_ueberholung/d0": {},
+  "osm/r7_ueberholung/d30": {},
+  "osm/r7_ueberholung/d60": {
+   "Q": 1
+  },
+  "osm/r7_ueberholung/d90": {},
+  "osm/r7_ueberholung/dm30": {},
+  "osm/r7_ueberholung/dm60": {
+   "Q": 1
+  },
+  "osm/sagliains/a30": {
+   "F": 2
+  },
+  "osm/sagliains/a60": {
+   "F": 2
+  },
+  "osm/sagliains/d0": {
+   "F": 2
+  },
+  "osm/sagliains/d30": {
+   "F": 2
+  },
+  "osm/sagliains/d60": {
+   "F": 2,
+   "Q": 1
+  },
+  "osm/sagliains/d90": {
+   "F": 2
+  },
+  "osm/sagliains/dm30": {
+   "F": 2
+  },
+  "osm/sagliains/dm60": {
+   "F": 2,
+   "Q": 1
+  },
+  "osm/unterwerfung/a30": {
+   "X": 2
+  },
+  "osm/unterwerfung/a60": {
+   "Q": 1,
+   "X": 2
+  },
+  "osm/unterwerfung/d0": {
+   "X": 2
+  },
+  "osm/unterwerfung/d30": {
+   "X": 2
+  },
+  "osm/unterwerfung/d60": {
+   "Q": 1,
+   "X": 2
+  },
+  "osm/unterwerfung/d90": {
+   "X": 2
+  },
+  "osm/unterwerfung/dm30": {
+   "X": 2,
+   "Z": 1
+  },
+  "osm/unterwerfung/dm60": {
+   "E": 2,
+   "Q": 2,
+   "X": 2,
+   "Z": 3
+  },
+  "osm/zwischengerade/a30": {},
+  "osm/zwischengerade/a60": {},
+  "osm/zwischengerade/d0": {},
+  "osm/zwischengerade/d30": {},
+  "osm/zwischengerade/d60": {
+   "Q": 1
+  },
+  "osm/zwischengerade/d90": {
+   "D": 1,
+   "K": 4,
+   "X": 3
+  },
+  "osm/zwischengerade/dm30": {},
+  "osm/zwischengerade/dm60": {
+   "Q": 1
+  },
+  "vorlage/L1/a30": {},
+  "vorlage/L1/a60": {},
+  "vorlage/L1/d0": {},
+  "vorlage/L1/d30": {},
+  "vorlage/L1/d60": {
+   "E": 2,
+   "Z": 2
+  },
+  "vorlage/L1/d90": {},
+  "vorlage/L1/dm30": {},
+  "vorlage/L1/dm60": {
+   "E": 2,
+   "Z": 2
+  },
+  "vorlage/L2/a30": {},
+  "vorlage/L2/a60": {},
+  "vorlage/L2/d0": {},
+  "vorlage/L2/d30": {},
+  "vorlage/L2/d60": {
+   "E": 2,
+   "Z": 1
+  },
+  "vorlage/L2/d90": {},
+  "vorlage/L2/dm30": {},
+  "vorlage/L2/dm60": {
+   "E": 2,
+   "Z": 1
+  },
+  "vorlage/R1/a30": {},
+  "vorlage/R1/a60": {},
+  "vorlage/R1/d0": {},
+  "vorlage/R1/d30": {},
+  "vorlage/R1/d60": {
+   "E": 2,
+   "Z": 2
+  },
+  "vorlage/R1/d90": {},
+  "vorlage/R1/dm30": {},
+  "vorlage/R1/dm60": {
+   "E": 2,
+   "Z": 2
+  },
+  "vorlage/R2/a30": {},
+  "vorlage/R2/a60": {},
+  "vorlage/R2/d0": {},
+  "vorlage/R2/d30": {},
+  "vorlage/R2/d60": {
+   "E": 2,
+   "Z": 2
+  },
+  "vorlage/R2/d90": {},
+  "vorlage/R2/dm30": {},
+  "vorlage/R2/dm60": {
+   "E": 2,
+   "Z": 2
+  },
+  "vorlage/R3/a30": {},
+  "vorlage/R3/a60": {},
+  "vorlage/R3/d0": {},
+  "vorlage/R3/d30": {},
+  "vorlage/R3/d60": {
+   "E": 2,
+   "Z": 1
+  },
+  "vorlage/R3/d90": {},
+  "vorlage/R3/dm30": {},
+  "vorlage/R3/dm60": {
+   "E": 2,
+   "Z": 1
+  },
+  "vorlage/R4/a30": {},
+  "vorlage/R4/a60": {},
+  "vorlage/R4/d0": {},
+  "vorlage/R4/d30": {},
+  "vorlage/R4/d60": {
+   "E": 2,
+   "Z": 1
+  },
+  "vorlage/R4/d90": {},
+  "vorlage/R4/dm30": {},
+  "vorlage/R4/dm60": {
+   "E": 2,
+   "Z": 1
+  },
+  "vorlage/R5/a30": {},
+  "vorlage/R5/a60": {},
+  "vorlage/R5/d0": {},
+  "vorlage/R5/d30": {},
+  "vorlage/R5/d60": {
+   "E": 4,
+   "Z": 4
+  },
+  "vorlage/R5/d90": {},
+  "vorlage/R5/dm30": {},
+  "vorlage/R5/dm60": {
+   "E": 4,
+   "Z": 4
+  },
+  "vorlage/R6/a30": {},
+  "vorlage/R6/a60": {},
+  "vorlage/R6/d0": {},
+  "vorlage/R6/d30": {},
+  "vorlage/R6/d60": {
+   "E": 4,
+   "Z": 4
+  },
+  "vorlage/R6/d90": {},
+  "vorlage/R6/dm30": {},
+  "vorlage/R6/dm60": {
+   "E": 4,
+   "Z": 4
+  },
+  "vorlage/R7/a30": {},
+  "vorlage/R7/a60": {},
+  "vorlage/R7/d0": {},
+  "vorlage/R7/d30": {},
+  "vorlage/R7/d60": {
+   "E": 4,
+   "Z": 4
+  },
+  "vorlage/R7/d90": {},
+  "vorlage/R7/dm30": {},
+  "vorlage/R7/dm60": {
+   "E": 4,
+   "Z": 4
+  },
+  "vorlage/R8/a30": {},
+  "vorlage/R8/a60": {},
+  "vorlage/R8/d0": {},
+  "vorlage/R8/d30": {},
+  "vorlage/R8/d60": {
+   "E": 4,
+   "Z": 2
+  },
+  "vorlage/R8/d90": {},
+  "vorlage/R8/dm30": {},
+  "vorlage/R8/dm60": {
+   "E": 4,
+   "Z": 2
+  },
+  "vorlage/Z1/a30": {},
+  "vorlage/Z1/a60": {},
+  "vorlage/Z1/d0": {},
+  "vorlage/Z1/d30": {},
+  "vorlage/Z1/d60": {
+   "E": 4,
+   "Z": 4
+  },
+  "vorlage/Z1/d90": {},
+  "vorlage/Z1/dm30": {},
+  "vorlage/Z1/dm60": {
+   "E": 4,
+   "Z": 4
+  },
+  "vorlage/Z2/a30": {},
+  "vorlage/Z2/a60": {},
+  "vorlage/Z2/d0": {},
+  "vorlage/Z2/d30": {},
+  "vorlage/Z2/d60": {
+   "E": 4,
+   "Z": 4
+  },
+  "vorlage/Z2/d90": {},
+  "vorlage/Z2/dm30": {},
+  "vorlage/Z2/dm60": {
+   "E": 4,
+   "Z": 4
+  },
+  "vorlage/Z3/a30": {},
+  "vorlage/Z3/a60": {},
+  "vorlage/Z3/d0": {},
+  "vorlage/Z3/d30": {
+   "G2": 2
+  },
+  "vorlage/Z3/d60": {
+   "E": 4,
+   "G2": 2,
+   "Z": 4
+  },
+  "vorlage/Z3/d90": {
+   "G2": 2
+  },
+  "vorlage/Z3/dm30": {
+   "G2": 2
+  },
+  "vorlage/Z3/dm60": {
+   "E": 4,
+   "G2": 2,
+   "Z": 4
+  },
+  "vorlage/Z4/a30": {},
+  "vorlage/Z4/a60": {},
+  "vorlage/Z4/d0": {},
+  "vorlage/Z4/d30": {},
+  "vorlage/Z4/d60": {
+   "E": 2,
+   "Z": 2
+  },
+  "vorlage/Z4/d90": {},
+  "vorlage/Z4/dm30": {},
+  "vorlage/Z4/dm60": {
+   "E": 2,
+   "Z": 2
+  },
+  "vorlage/Z5/a30": {
+   "Q": 2
+  },
+  "vorlage/Z5/a60": {
+   "Q": 2
+  },
+  "vorlage/Z5/d0": {
+   "Q": 2
+  },
+  "vorlage/Z5/d30": {
+   "Q": 2
+  },
+  "vorlage/Z5/d60": {
+   "E": 2,
+   "Q": 2,
+   "Z": 2
+  },
+  "vorlage/Z5/d90": {
+   "Q": 2
+  },
+  "vorlage/Z5/dm30": {
+   "Q": 2
+  },
+  "vorlage/Z5/dm60": {
+   "E": 2,
+   "Q": 2,
+   "Z": 2
+  },
+  "vorlage/Z6/a30": {},
+  "vorlage/Z6/a60": {},
+  "vorlage/Z6/d0": {},
+  "vorlage/Z6/d30": {},
+  "vorlage/Z6/d60": {
+   "E": 4,
+   "Z": 4
+  },
+  "vorlage/Z6/d90": {},
+  "vorlage/Z6/dm30": {},
+  "vorlage/Z6/dm60": {
+   "E": 4,
+   "Z": 4
+  },
+  "vorlage/Z7/a30": {
+   "E": 1
+  },
+  "vorlage/Z7/a60": {
+   "E": 1
+  },
+  "vorlage/Z7/d0": {
+   "E": 1
+  },
+  "vorlage/Z7/d30": {},
+  "vorlage/Z7/d60": {
+   "E": 3,
+   "Z": 3
+  },
+  "vorlage/Z7/d90": {},
+  "vorlage/Z7/dm30": {},
+  "vorlage/Z7/dm60": {
+   "E": 2,
+   "Z": 2
+  },
+  "vorlage/Z8/a30": {},
+  "vorlage/Z8/a60": {},
+  "vorlage/Z8/d0": {},
+  "vorlage/Z8/d30": {},
+  "vorlage/Z8/d60": {
+   "E": 3,
+   "Z": 3
+  },
+  "vorlage/Z8/d90": {},
+  "vorlage/Z8/dm30": {},
+  "vorlage/Z8/dm60": {
+   "E": 3,
+   "Z": 3
+  }
+ },
+ "fehler": [],
+ "gesetzt": "2026-11-08 15:58 UTC",
+ "quelle": "ci4.json"
+}
