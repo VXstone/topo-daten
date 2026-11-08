@@ -434,3 +434,37 @@ und hakt den Schritt in der Statusliste ab. Ist «Daniel danach» nicht leer, wa
   Gl. 8 belegt die Ebene darüber. (3) Die drei G2 oben. (4) Werkstatt/plaene weiter ohne `dkw_auto` (Rothrist/Thun
   unverändert, `als_dkw` von Hand); einschalten erst nach eigener Prüfung.
 - Nächster Schritt: «Weiter mit UEBERGABE.md – Schritt P: Verbundene Perrons».
+
+### 8.11.2026 (Vormittag) – Schritt P, Teil 1: Aarau angehängt, Perron-Inventar (Seite v140), keine Code-Änderung an der Zeichnung
+- **Aarau** als Bahnhof der Region Olten (Werkstatt): `aarau.json` = Release-Ausschnitt `osm_bbox` [47.376, 8.012, 47.400, 8.100],
+  Optionen `--hauptgleise` (wie Olten; in `pruefstand.py` GROSS). Override: Fenster `s_min_fix` 2350 / `s_max_fix` 10000 entlang
+  der Achse 650 (Eppenbergtunnel), d. h. vor der Unterwerfung 540×650 bei Aarau West bis Ende Anschluss Buchs-Rohr (Plan endet
+  real bei 8.0926°, die Achse hört dort auf); `abgang`: 540 ← Schönenwerd (seitlich, OSM taggt sie bei Aarau West als 650),
+  650 ← Olten, 650 Lenzburg →. Check-Befunde {} ; regel_pruefung Plan: G2 1 (31° bei x 2685), G7 1 (x 878, Unterwerfung).
+- **Regionalplan**: `werkstatt/olten/aarau_anhaengen.py` ersetzt die Abgänge 540/650 Aarau durch Kanten Schönenwerd–Aarau (540),
+  Abzweig #28–Aarau (650) und Aarau–Abgang 650 Lenzburg. Ids **#36 = Aarau, #42 = Abgang Lenzburg** (wiederverwendet: netz_lage
+  nummeriert eigene Abzweige ab max+1, «Abzweig #43» steht in der Lage). Lage Aarau [3250, −470] (tiefer als Schönenwerd: 540
+  von oben, 650 von unten; −640 gab eine zweite, falsche Kreuzung). `olten_region_osm.json` = region.json + Bahnelemente bis
+  Rupperswil, in der Lage `osm` + `osm_versatz` [−3676.2, 0] (Bezug der Topologie bleibt region.json).
+- Prüfung aller Pläne (be7a032): 81 Pläne (Aarau neu), 6 geändert; durch diesen Schritt nur `region`: G2 17→24, G5 0→4, G7 3→5,
+  alle an Aarau. Übrige Region unverändert (Pixelvergleich: nur östlich Schönenwerd anders). Die anderen 5 (Schönenwerd, Thun,
+  Aarburg-Oftringen, Neuchâtel, Zofingen) sind die bekannten Stände vor diesem Schritt (Perron-/Topologiefragen bei Daniel).
+- **Offen Aarau (Befunde im Regionalplan, bewusst ohne Override gelassen):** (a) Unterwerfung Aarau West: ein 540-Gleis taucht
+  unter der 650 durch; der Plan führt es auf der untersten Ebene bis zum Rand, es verlässt den Plan als Seitenabgang schräg nach
+  oben → im Regionalplan X der beiden 540-Gleise (G5) und zwei lose Stummel (G7). Lösung im Code: Ebenenwechsel unter einer
+  Kreuzung (Überwerfung) im Bahnhofplan. (b) Anschluss Buchs-Rohr: mit `--hauptgleise` fehlen die Anschlussgleise im Plan,
+  netz_lage zeichnet sie als «Nebengleis auf freier Strecke» östlich des Kastens (Gleissprung vor dem Abgang Lenzburg).
+  (c) Spurwechsel 540 östlich Schönenwerd (369861203/204) kommen jetzt aus OSM und überlagern sich mit `zusatz_spurwechsel` von
+  Schönenwerd (Override vom 13.10.: «Gegenwechsel ausserhalb der OSM-Daten») – ein X und ein V; Override prüfen.
+  (d) Meterspur AVA (Tiefbahnhof Gl. 12/13, Torfeld) noch nicht gezeichnet (Override `meterspur` möglich).
+- **Perron-Inventar** (`code/perron_inventar.py`, Ergebnis `vergleich/perron_inventar_2026-11-08.json/.txt`): je OSM-Perronfläche
+  bediente Gleiskanten (≤ 3,5 m, ≥ 15 m, Seite gegen die Mittellinie des Perrons), Kopfkanten (Gleisende ≤ 6 m), verbundene
+  Flächen (≤ 1 m), Formvorschlag; daneben SBB-Einträge. Kernbefunde: Aarau OSM «0;1» = SBB «Hausperron 1/10», Gl. 1 lang auf
+  einer Seite, Gl. 10 Stumpen mit Prellbock auf der anderen (181 m) – `sbb_perrons.py` überspringt ihn heute. Thun Perron 1:
+  Gl. 1 + Gl. 16 (Stumpen, gleiche Seite) + Gl. 18 gegenüber. Bern 49/50 hängt am kurzen Perron 9/10 (verbunden); Bern 21–24
+  (RBS, unterirdisch) erscheinen fälschlich «verbunden» mit 1–13 (Ebene/layer noch nicht berücksichtigt). Basel: Querperrons an
+  den Köpfen 1/2/3/4 und 4/5/30/31/33/35, Gl. 3 endet am Perron 3/4 (um Gl. 3), 33/35 als U. Montreux 3;4;5: Gl. 3 + Gl. 5
+  (170 m) + Köpfe 5/6 – Gl. 4 ohne track_ref an der Kante. Zweisimmen: Perron ohne ref an 7/8 (gegenüber 12) + Kopf 8.
+- **Daniel danach**: Inventar-Tabelle beurteilen (Form je Perron, Darstellung U/L), bevor das Perron-Modell im Code gebaut
+  wird; Aarau ansehen (Fenster bis Wald richtig? Meterspur AVA dazu?), Punkte (a)–(c).
+- Nächster Einstieg nach Daniels Antwort: «Weiter mit UEBERGABE.md – Schritt P: Verbundene Perrons, Teil 2 (Perron-Modell)».
