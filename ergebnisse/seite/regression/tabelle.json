@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-11-08 07:55 UTC",
+ "erzeugt": "2026-11-08 07:58 UTC",
  "plaene": 81,
  "geaendert": 6,
  "einordnung": {
@@ -16,7 +16,7 @@
    "basis": "veröffentlicht",
    "basis_commit": "73d910b",
    "stellen": 1,
-   "letzte_aenderung": "2026-11-06T20:18",
+   "letzte_aenderung": "2026-11-08T07:55",
    "einordnung": "Fehler? Topologie",
    "delta": "G2 17→24, G5 0→4, G7 3→5",
    "alt": {
@@ -283,9 +283,12 @@
   },
   {
    "key": "aarau",
+   "name": "Aarau",
    "gruppe": "Region Olten",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "erste Fassung",
+   "basis_commit": "9524db1",
+   "stellen": 0
   },
   {
    "key": "neuchatel",
