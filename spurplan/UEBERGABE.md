@@ -468,3 +468,16 @@ und hakt den Schritt in der Statusliste ab. Ist «Daniel danach» nicht leer, wa
 - **Daniel danach**: Inventar-Tabelle beurteilen (Form je Perron, Darstellung U/L), bevor das Perron-Modell im Code gebaut
   wird; Aarau ansehen (Fenster bis Wald richtig? Meterspur AVA dazu?), Punkte (a)–(c).
 - Nächster Einstieg nach Daniels Antwort: «Weiter mit UEBERGABE.md – Schritt P: Verbundene Perrons, Teil 2 (Perron-Modell)».
+
+### 8.11.2026 14:14 – Antworten Daniel zum Perron-Inventar (gilt für Schritt P, Teil 2)
+- **Aarau 1/10**: langes Mittelperron; Gl. 10 liegt nur auf etwa einem Drittel davon (Stumpen Seite Zürich), die übrigen
+  zwei Drittel sind Hausperron (nur Gl. 1).
+- **Thun Perron 1**: 16/18 als liegendes L, am unteren Ende des L schliesst Gl. 1 an.
+- **Bern 49/50**: doppeltes Mittelperron – 49/50 geht nahtlos ins Mittelperron 9/10 über (eine durchgehende Fläche).
+- **Basel Gl. 3 / 35**: Querperrons als liegende L/T, die an die Mittelperrons anschliessen (Frage Daniel: «alle als L/T?» –
+  Vorschlag Claude: ja; T, wo ein Querperron mehrere Mittelperrons verbindet, L am letzten).
+- **Montreux 3;4;5**: komplex – Claude macht einen Vorschlag (siehe Antwort im Chat 8.11. 14:xx).
+- **Zweisimmen**: Mittelperron plus Stumpen – bestätigt.
+- Daniels Frage dazu: mehr in den Code statt Nutzung – Zwischengeraden/Achsensprünge (Aarau), springende Gleise (Basel),
+  Unparallelität (Sagliains) müsste der Code abfangen. Vorschlag Claude im Chat (Regeln als Bedingungen im Layout statt
+  Nachprüfung, Prüfstand als Test im Workflow, Reparaturpass); Reihenfolge entscheidet Daniel.
