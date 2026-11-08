@@ -481,3 +481,7 @@ und hakt den Schritt in der Statusliste ab. Ist «Daniel danach» nicht leer, wa
 - Daniels Frage dazu: mehr in den Code statt Nutzung – Zwischengeraden/Achsensprünge (Aarau), springende Gleise (Basel),
   Unparallelität (Sagliains) müsste der Code abfangen. Vorschlag Claude im Chat (Regeln als Bedingungen im Layout statt
   Nachprüfung, Prüfstand als Test im Workflow, Reparaturpass); Reihenfolge entscheidet Daniel.
+- 14:17 Daniel: Annahmen passen – Basel als liegende L/T (T wo ein Querperron mehrere Mittelperrons verbindet, L am letzten;
+  Perron 3/4 läuft übers Ende von Gl. 3 hinaus); **Montreux** 3;4;5 als U um Gl. 4 (Balken 3|4 und 4|5, Querstück am Prellbock
+  Gl. 4), 6;7;8 als U um Gl. 7; Gl. 4 ohne track_ref an der Kante über die Topologie zuordnen. Neuer Fahrplan: Vorschlag im Chat,
+  wird nach Daniels Zustimmung in Abschnitt 6 eingetragen.
