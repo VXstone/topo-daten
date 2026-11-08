@@ -153,6 +153,14 @@ und hakt den Schritt in der Statusliste ab. Ist «Daniel danach» nicht leer, wa
   im Code (eine Regel, kein Override je Bahnhof), Prüfung «kein Perron fällt weg» (P1) über alle Pläne.
 - Fertig, wenn: die fünf Fälle im Plan richtig, Prüfung aller Pläne ohne unerklärte Änderung.
 - Daniel danach: die fünf Fälle und die Perronfrage aus Schritt A abschliessend beurteilen.
+- **Entscheide Daniel 8.11. (vor Beginn):** Vorgehen wie vorgeschlagen – (1) Inventar Perronfläche → bediente Gleiskanten →
+  Form (Seiten-, Mittel-, beidseitig, über Eck/Querperron, verbunden), Tabelle an Daniel vor Code-Änderung; (2) ein Modell im
+  Code: Balken je bediente Kante + Verbindungsstück; (3) Prüfung P1 über alle Pläne; (4) Reihenfolge Montreux (6rwy, 5yz7,
+  es9y) → Zweisimmen → Thun → Bern/Basel. **Über Eck: als U oder L** um die Gleisenden zeichnen. **Bern und Basel dürfen
+  wieder aus dem Code erzeugt werden** (bisher «fest» seit 23.10.; jede andere Änderung dort im Differenzbild zeigen).
+- **Neuer Testfall Aarau** (Wunsch Daniel 8.11.): Aarau bis in den Wald vor Rupperswil zeichnen; Aarau hat ein kleines
+  Stumpenperron Seite Zürich neben Gl. 1 (muss als eigener Perron/Querperron erscheinen). Noch kein Plan im Repo – als
+  Repo-Bahnhof (`plaene`, `bahnhoefe.json`) oder eigener Ausschnitt anlegen; Ostgrenze vor Rupperswil festlegen.
 
 ### 1 – Blaupausen-Prüfstand aufbauen
 - Einstieg: «Weiter mit UEBERGABE.md – Schritt 1: Blaupausen-Prüfstand aufbauen»
