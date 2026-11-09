@@ -625,3 +625,13 @@ Overrides nur, wo eine Regel nicht passt.
 - Fehler gefunden: Workflow `plaene` löschte beim Neuaufbau von `ergebnisse` den Ordner `ergebnisse/pruefstand` (Prüfstand fehlte
   in der ersten Seite) – plaene.yml behält ihn jetzt wie region_* und seite. Bei neuen Ordnern auf `ergebnisse` dort eintragen.
 - h9o9 (Sagliains): Zwischenstand geschrieben (im Prüfstand nachgestellt, Behebung in R1), Status offen.
+
+### 9.11.2026 08:0x – Seite v142: Gruppen neu (Wunsch Daniel), keine Planänderung
+- Seitenleiste: Regionalpläne · Werkzeugkasten · Grosse Knoten (Basel, Bern) · Bahnhöfe ohne Regionalplan (Thun, Konolfingen,
+  Solothurn) · Olten 1–5 nach Linien · NE 1–8 (Ins/Kerzers → NE 1, Murten → NE 3, Vauseyon → NE 8) · MOB · Bahnhöfe (45) und
+  Vereina · Bahnhöfe (10) neu als eigene Karten (Schlüssel `<region>__<bahnhof>`, seite.yml holt `region_*/…_spurplan.svg`).
+  Zuordnung in bauen.py (`_GRP_OLTEN`, `_GRP_NE`, `_OHNE`). Label beginnt mit «aus Code» oder «fest seit …».
+- Befund dabei: die NE-Bahnhöfe ausser Ins, Kerzers, Murten, Neuchâtel, Vauseyon sind auf der Seite **fest seit 21.10.**
+  (zusatz_plaene.json); auch der Regionalplan NE nimmt sie als fertige Werkstatt-Dateien. Code-Verbesserungen erreichen sie erst,
+  wenn sie wieder aus dem Code erzeugt werden (Schritt N / Typvorlagen nachbauen).
+- MOB/Vereina-Regionalpläne rechnet nur der Workflow `regionen`; nach Code-Änderungen von Hand mitstarten.
