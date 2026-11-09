@@ -618,3 +618,10 @@ Overrides nur, wo eine Regel nicht passt.
   Ebene durchgezogen; im Bahnhofplan wird eine Werfung als Ebenenwechsel unter/über der Kreuzung gezeichnet (Aarau West, R2).
 - **Chamby, Rossinière, Zweisimmen** (kollineare Enden aus Schritt E): Daniel hat dort Kommentare auf der Seite; Zweisimmen viele,
   dazu DKW und schief erkannte Gleise → beim nächsten Schritt mit den Hinweisen dieser Bahnhöfe ansehen.
+
+### 9.11.2026 (Nacht) – Seite v141 veröffentlicht (Prüfstand)
+- Plan «Prüfstand – Bausteine × Drehungen» im Werkzeugkasten; sonst nur Kartenlabels/Untertitel (kein Plan-SVG geändert,
+  Live war = v140). `veroeffentlicht.json` → d61286f / 141.
+- Fehler gefunden: Workflow `plaene` löschte beim Neuaufbau von `ergebnisse` den Ordner `ergebnisse/pruefstand` (Prüfstand fehlte
+  in der ersten Seite) – plaene.yml behält ihn jetzt wie region_* und seite. Bei neuen Ordnern auf `ergebnisse` dort eintragen.
+- h9o9 (Sagliains): Zwischenstand geschrieben (im Prüfstand nachgestellt, Behebung in R1), Status offen.
