@@ -13,7 +13,6 @@
    "T": 2
   },
   "osm/ab30/d60": {
-   "Q": 1,
    "T": 2
   },
   "osm/ab30/d90": {
@@ -23,7 +22,6 @@
    "T": 2
   },
   "osm/ab30/dm60": {
-   "Q": 1,
    "T": 2
   },
   "osm/ab60/a30": {
@@ -47,7 +45,6 @@
    "Z": 1
   },
   "osm/ab60/d60": {
-   "Q": 1,
    "X": 1
   },
   "osm/ab60/d90": {
@@ -64,16 +61,13 @@
    "G2": 1,
    "G7": 1,
    "P": 2,
-   "Q": 1,
    "T": 4
   },
   "osm/gleissprung/a30": {},
   "osm/gleissprung/a60": {},
   "osm/gleissprung/d0": {},
   "osm/gleissprung/d30": {},
-  "osm/gleissprung/d60": {
-   "Q": 2
-  },
+  "osm/gleissprung/d60": {},
   "osm/gleissprung/d90": {},
   "osm/gleissprung/dm30": {},
   "osm/gleissprung/dm60": {},
@@ -90,8 +84,7 @@
    "PF": 2
   },
   "osm/perronformen/d60": {
-   "PF": 2,
-   "Q": 1
+   "PF": 2
   },
   "osm/perronformen/d90": {
    "PF": 2
@@ -100,8 +93,7 @@
    "PF": 2
   },
   "osm/perronformen/dm60": {
-   "PF": 2,
-   "Q": 1
+   "PF": 2
   },
   "osm/r3_kreuzung/a30": {},
   "osm/r3_kreuzung/a60": {},
@@ -115,57 +107,30 @@
   "osm/r5_halt/a60": {},
   "osm/r5_halt/d0": {},
   "osm/r5_halt/d30": {},
-  "osm/r5_halt/d60": {
-   "Q": 1
-  },
+  "osm/r5_halt/d60": {},
   "osm/r5_halt/d90": {},
   "osm/r5_halt/dm30": {},
-  "osm/r5_halt/dm60": {
-   "Q": 1
-  },
+  "osm/r5_halt/dm60": {},
   "osm/r7_ueberholung/a30": {},
   "osm/r7_ueberholung/a60": {},
   "osm/r7_ueberholung/d0": {},
   "osm/r7_ueberholung/d30": {},
-  "osm/r7_ueberholung/d60": {
-   "Q": 1
-  },
+  "osm/r7_ueberholung/d60": {},
   "osm/r7_ueberholung/d90": {},
   "osm/r7_ueberholung/dm30": {},
-  "osm/r7_ueberholung/dm60": {
-   "Q": 1
-  },
-  "osm/sagliains/a30": {
-   "F": 2
-  },
-  "osm/sagliains/a60": {
-   "F": 2
-  },
-  "osm/sagliains/d0": {
-   "F": 2
-  },
-  "osm/sagliains/d30": {
-   "F": 2
-  },
-  "osm/sagliains/d60": {
-   "F": 2,
-   "Q": 1
-  },
-  "osm/sagliains/d90": {
-   "F": 2
-  },
-  "osm/sagliains/dm30": {
-   "F": 2
-  },
-  "osm/sagliains/dm60": {
-   "F": 2,
-   "Q": 1
-  },
+  "osm/r7_ueberholung/dm60": {},
+  "osm/sagliains/a30": {},
+  "osm/sagliains/a60": {},
+  "osm/sagliains/d0": {},
+  "osm/sagliains/d30": {},
+  "osm/sagliains/d60": {},
+  "osm/sagliains/d90": {},
+  "osm/sagliains/dm30": {},
+  "osm/sagliains/dm60": {},
   "osm/unterwerfung/a30": {
    "X": 2
   },
   "osm/unterwerfung/a60": {
-   "Q": 1,
    "X": 2
   },
   "osm/unterwerfung/d0": {
@@ -175,7 +140,6 @@
    "X": 2
   },
   "osm/unterwerfung/d60": {
-   "Q": 1,
    "X": 2
   },
   "osm/unterwerfung/d90": {
@@ -186,27 +150,21 @@
    "Z": 1
   },
   "osm/unterwerfung/dm60": {
-   "E": 2,
-   "Q": 2,
    "X": 2,
-   "Z": 3
+   "Z": 1
   },
   "osm/zwischengerade/a30": {},
   "osm/zwischengerade/a60": {},
   "osm/zwischengerade/d0": {},
   "osm/zwischengerade/d30": {},
-  "osm/zwischengerade/d60": {
-   "Q": 1
-  },
+  "osm/zwischengerade/d60": {},
   "osm/zwischengerade/d90": {
    "D": 1,
    "K": 4,
    "X": 3
   },
   "osm/zwischengerade/dm30": {},
-  "osm/zwischengerade/dm60": {
-   "Q": 1
-  },
+  "osm/zwischengerade/dm60": {},
   "vorlage/L1/a30": {},
   "vorlage/L1/a60": {},
   "vorlage/L1/d0": {},
@@ -489,6 +447,6 @@
   }
  },
  "fehler": [],
- "gesetzt": "2026-11-08 15:58 UTC",
- "quelle": "ci4.json"
+ "gesetzt": "2026-11-09 19:40 UTC",
+ "quelle": "tabelle.json"
 }

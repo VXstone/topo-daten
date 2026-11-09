@@ -58,7 +58,7 @@ Wird Abschnitt 6 länger als ~60 Zeilen, die ältesten Nachträge ins Archiv ver
 | Fest | Blaupause, Blaupause 2, Basel, Bern (dürfen wieder aus dem Code, Schritt P2) | – |
 | Werkzeugkasten | Prüfstand – Bausteine × Drehungen | `pruefstand` |
 
-## 3. Stand (9.11.2026, Commit 1120d6a, Seite live v142)
+## 3. Stand (9.11.2026, Commit af9b149, Seite live v143) – Nachtrag R1a in Abschnitt 6 beachten
 - **Prüfstand** 224 Fälle: T 33, PF 16, X 27, E 110, K 4, Q 20, P 2, Z 101, D 3, G2 11, G7 1 – nicht schlechter als Basis
   (R1 Teil 1: Q 40 → 20, F 16 → 0). Basis noch auf dem Stand 8.11. – nach Schritt R1a neu setzen.
 - **Unruhe** MOB 105, Vereina 59; Topologie/Verkettung 0.
@@ -80,7 +80,7 @@ Grösse: ein Schritt = **ein Thema, ein Codebereich, ein Chat** (Richtwert: 1–
 Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten statt im selben Chat weiterzumachen.
 
 - [x] A, 0, M, E, P1, 1, R1 Teil 1 – siehe Archiv
-- [ ] **R1a Regression R1 Teil 1 abschliessen** (klein)
+- [x] **R1a Regression R1 Teil 1 abschliessen** (klein) – 9.11. abends, Seite v143
 - [ ] **R1b Bündel docken an** (mittel)
 - [ ] **A2 Abzweigende Doppelspur** (mittel, Topologie)
 - [ ] **K Kreuzungen und Werfungen** (mittel; nimmt R2-Teil Unterwerfung auf)
@@ -173,3 +173,14 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - Alte Fassung samt Nachträgen 6.–9.11. → `UEBERGABE_ARCHIV_2026-11-06_bis_11-09.md`. Fahrplan neu geschnitten (Wunsch Daniel:
   weniger Nutzung, gute Schrittgrössen). R1 aufgeteilt in R1a/R1b, R2-Teil Unterwerfung in K, R3 in R3a/R3b, P2 in P2a/P2b,
   N in N1/N2, neu A2 (abzweigende Doppelspur) und H1/H2 (Hinweisrunden Solothurn/Konolfingen).
+
+### 9.11.2026 ~21:00 – Schritt R1a abgeschlossen, Seite v143
+- Region Olten G7 5→6 war **Fehler aus `netz_lage` (nicht `_stub_buendel`)**: Querabstand `TG/|nv·n|` griff auch an Abzweigknoten
+  → Aarburg-Verbindung Richtung Rothrist hing ½ Ebene neben dem Streckengleis. Jetzt nur noch `kind != "junction"`.
+- `_stub_buendel` nur noch für Stummel mit Pfeil am Planrand (≤ `stub_buendel_rand`·lane, Standard 2): Sagliains 4 px vom Rand;
+  verschobene innere Stummel (Rothrist, Safenwil, Olten, Olten Hammer, Aarau, Neuchâtel, Montreux) kollidierten mit Prellböcken.
+- Regression danach 3/136, alle erklärt: thun (alter Stand seit 26.10.), region_mob/region_ne = gewollte Querabstand-Korrektur
+  an Linienenden (Linie 100 Villeneuve/Lausanne, Linie 210 Yverdon/Biel) + Fusszeile. Region Olten = Stand vor R1.
+- Montreux: der zufällig verbesserte Pfeil (zeigte nach innen auf Prellbock) ist wieder wie v142 → Thema für R3b/MOB-Hinweise.
+- Prüfstand 224 Fälle wie R1 Teil 1, Basis neu gesetzt (19:40 UTC). h9o9 → behoben (v143). Vereina unverändert seit v142.
+
