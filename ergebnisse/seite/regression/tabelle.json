@@ -1,10 +1,10 @@
 {
- "erzeugt": "2026-11-09 18:51 UTC",
+ "erzeugt": "2026-11-09 18:54 UTC",
  "plaene": 136,
- "geaendert": 8,
+ "geaendert": 10,
  "einordnung": {
   "Fehler? Topologie": 1,
-  "gleichwertig": 7
+  "gleichwertig": 9
  },
  "zeilen": [
   {
@@ -15,7 +15,7 @@
    "basis": "veröffentlicht",
    "basis_commit": "9524db1",
    "stellen": 6,
-   "letzte_aenderung": "2026-11-08T07:55",
+   "letzte_aenderung": "2026-11-09T18:51",
    "einordnung": "Fehler? Topologie",
    "delta": "G2 24→26, G6 7→6, G7 5→6",
    "alt": {
@@ -43,7 +43,7 @@
    "basis": "veröffentlicht",
    "basis_commit": "c99b7e2",
    "stellen": 1,
-   "letzte_aenderung": "2026-11-05T18:17",
+   "letzte_aenderung": "2026-11-09T18:51",
    "einordnung": "gleichwertig",
    "delta": "",
    "alt": {
@@ -68,7 +68,20 @@
    "abgenommen": false,
    "basis": "veröffentlicht",
    "basis_commit": "e8f83eb",
-   "stellen": 0
+   "stellen": 2,
+   "letzte_aenderung": "2026-11-07T22:49",
+   "einordnung": "gleichwertig",
+   "delta": "",
+   "alt": {
+    "G2": 18,
+    "G6": 3,
+    "T7": 0
+   },
+   "neu": {
+    "G2": 18,
+    "G6": 3,
+    "T7": 0
+   }
   },
   {
    "key": "region_vereina",
@@ -163,7 +176,7 @@
    "basis": "bestätigt 2026-11-08",
    "basis_commit": "73d910b",
    "stellen": 1,
-   "letzte_aenderung": "2026-11-06T20:18",
+   "letzte_aenderung": "2026-11-09T18:51",
    "einordnung": "gleichwertig",
    "delta": "",
    "alt": {
@@ -187,7 +200,7 @@
    "basis": "bestätigt 2026-11-07",
    "basis_commit": "1fa061d",
    "stellen": 1,
-   "letzte_aenderung": "2026-10-30T19:38",
+   "letzte_aenderung": "2026-11-09T18:51",
    "einordnung": "gleichwertig",
    "delta": "",
    "alt": {
@@ -245,7 +258,7 @@
    "basis": "bestätigt 2026-11-07",
    "basis_commit": "1fa061d",
    "stellen": 1,
-   "letzte_aenderung": "2026-10-30T19:38",
+   "letzte_aenderung": "2026-11-09T18:51",
    "einordnung": "gleichwertig",
    "delta": "",
    "alt": {
@@ -290,7 +303,7 @@
    "basis": "veröffentlicht",
    "basis_commit": "9524db1",
    "stellen": 2,
-   "letzte_aenderung": "2026-11-08T07:55",
+   "letzte_aenderung": "2026-11-09T18:51",
    "einordnung": "gleichwertig",
    "delta": "",
    "alt": {
@@ -357,7 +370,7 @@
    "basis": "bestätigt 2026-11-08",
    "basis_commit": "1fa061d",
    "stellen": 1,
-   "letzte_aenderung": "2026-10-30T19:38",
+   "letzte_aenderung": "2026-11-09T18:51",
    "einordnung": "gleichwertig",
    "delta": "",
    "alt": {
@@ -1116,7 +1129,20 @@
    "abgenommen": false,
    "basis": "veröffentlicht",
    "basis_commit": "af2f7aa",
-   "stellen": 0
+   "stellen": 1,
+   "letzte_aenderung": "2026-11-09T07:02",
+   "einordnung": "gleichwertig",
+   "delta": "",
+   "alt": {
+    "G2": 2,
+    "G6": 1,
+    "T7": 0
+   },
+   "neu": {
+    "G2": 2,
+    "G6": 1,
+    "T7": 0
+   }
   },
   {
    "key": "mob__oeschseite",

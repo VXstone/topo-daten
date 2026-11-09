@@ -6,6 +6,7 @@ index.html 1828 KB, 137 Pläne
   json.dump(dict(erzeugt=datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"), plaene=len(zeilen), geaendert=len(gz),
 region                       veröffentlicht                      6 Stellen  Fehler? Topologie  G2 24→26, G6 7→6, G7 5→6
 region_ne                    veröffentlicht                      1 Stellen  gleichwertig  
+region_mob                   veröffentlicht                      2 Stellen  gleichwertig  
 thun                         Archivbeginn (Abnahme 2026-10-15)    7 Stellen  gleichwertig  
 olten                        bestätigt 2026-11-08                1 Stellen  gleichwertig  
 olten_hammer                 bestätigt 2026-11-07                1 Stellen  gleichwertig  
@@ -13,4 +14,5 @@ rothrist                     Abnahme 2026-10-29                  0 Stellen  glei
 safenwil                     bestätigt 2026-11-07                1 Stellen  gleichwertig  
 aarau                        veröffentlicht                      2 Stellen  gleichwertig  
 neuchatel                    bestätigt 2026-11-08                1 Stellen  gleichwertig  
-Regression: 136 Pläne, 8 geändert {'Fehler? Topologie': 1, 'gleichwertig': 7}
+mob__montreux                veröffentlicht                      1 Stellen  gleichwertig  
+Regression: 136 Pläne, 10 geändert {'Fehler? Topologie': 1, 'gleichwertig': 9}
