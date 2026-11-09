@@ -3477,6 +3477,12 @@ def _stub_buendel():
     pat_l = re.compile(r"M%s,%sL%s,%s" % (N_, N_, N_, N_))                                   # gerader Stummel
     pat_q = re.compile(r"M%s,%sQ%s,%s %s,%sL%s,%s(?=\s|$)" % (N_, N_, N_, N_, N_, N_, N_, N_))  # Gleisende mit Ausrundung
     st_ = []                                    # dict(k, i, txt, x0, y0, cx, x1, y1, a)
+    # R1a (9.11.2026): nur Stummel, deren Pfeil am Planrand liegt (Abgang in den Regionalplan, Sagliains: 4 px vom Rand).
+    # Innere Pfeile (Anschluss-/Abstellgleise Rothrist, Safenwil, Olten, Aarau, Neuchâtel, Montreux: 140–2000 px vom Rand)
+    # bleiben, wo sie sind – dort kollidierte der verschobene Stummel mit Prellböcken und Ausrundungen.
+    _xs = [float(a) for d_ in sum(svg_paths.values(), []) for a, _b in re.findall(N_ + "," + N_, d_)]
+    _xlo, _xhi = (min(_xs), max(_xs)) if _xs else (0.0, 0.0)
+    _rand = float(CFG.get("stub_buendel_rand", 2.0)) * lane_
     for k_, v_ in svg_paths.items():
         for i_, d_ in enumerate(v_):
             m_ = pat_l.fullmatch(d_)
@@ -3490,6 +3496,7 @@ def _stub_buendel():
                 if not m_: continue
                 x0, y0, cx, _, xa, ya, x1, y1 = map(float, m_.groups())
             if (round(x1, 1), round(y1, 1)) not in _stub_end: continue
+            if min(x1 - _xlo, _xhi - x1) > _rand: continue                  # innerer Pfeil, kein Abgang am Planrand
             a_ = math.atan2(y1 - ya, x1 - xa)
             if abs(math.sin(a_)) < 0.3 or abs(math.cos(a_)) < 0.05: continue      # nur schräge Stummel
             st_.append(dict(k=k_, i=i_, txt=m_.group(0), x0=x0, y0=y0, cx=cx, x1=x1, y1=y1, a=a_))

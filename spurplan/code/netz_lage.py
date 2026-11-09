@@ -820,8 +820,10 @@ def route_geom(r):
         if lanes is None: lanes = [j - (k - 1) / 2 for j in range(k)]
         # R1 (9.11.2026, Prüfstand Q bei ±60°): Gleise einer schrägen Strecke liegen am Abgang auf der Achse nv_, aber
         # quer zur Strecke im Gleisabstand TG -> Schritt auf der Achse TG / |nv_ · Normale|; waagrecht/senkrecht unverändert
+        # R1a (9.11.): nicht an Abzweigknoten (junction) – dort müssen die Gleise auf den Gleisen der durchgehenden Strecke
+        # ankommen (Aarburg: Verbindung Richtung Rothrist hing sonst ½ Ebene neben dem Streckengleis, G7)
         _nq = abs(float(nv_ @ np.array([-u[1], u[0]])))
-        _tg = TG / _nq if 0.3 < _nq < 0.999 else TG
+        _tg = TG / _nq if 0.3 < _nq < 0.999 and nodes[n]["kind"] != "junction" else TG
         pp_ = [pos[n] + nv_ * o * _tg for o in lanes[:k]]
         return np.mean(pp_, axis=0), u, pp_ + [pos[n] + nv_ * lanes[-1] * _tg] * max(0, k - len(lanes)), True
     A, va, pa, xa = endinfo(na, ea, nb); B, vb, pb, xb = endinfo(nb, eb, na)
