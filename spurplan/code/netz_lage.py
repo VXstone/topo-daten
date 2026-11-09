@@ -818,8 +818,12 @@ def route_geom(r):
         nv_ = np.array([1.0, 0.0]) if VERT(n) or (nodes[n]["kind"] != "junction" and abs(u[0]) <= 0.5) else np.array([0.0, 1.0])
         lanes = JLANE.get((n, id(r)))
         if lanes is None: lanes = [j - (k - 1) / 2 for j in range(k)]
-        pp_ = [pos[n] + nv_ * o * TG for o in lanes[:k]]
-        return np.mean(pp_, axis=0), u, pp_ + [pos[n] + nv_ * lanes[-1] * TG] * max(0, k - len(lanes)), True
+        # R1 (9.11.2026, Prüfstand Q bei ±60°): Gleise einer schrägen Strecke liegen am Abgang auf der Achse nv_, aber
+        # quer zur Strecke im Gleisabstand TG -> Schritt auf der Achse TG / |nv_ · Normale|; waagrecht/senkrecht unverändert
+        _nq = abs(float(nv_ @ np.array([-u[1], u[0]])))
+        _tg = TG / _nq if 0.3 < _nq < 0.999 else TG
+        pp_ = [pos[n] + nv_ * o * _tg for o in lanes[:k]]
+        return np.mean(pp_, axis=0), u, pp_ + [pos[n] + nv_ * lanes[-1] * _tg] * max(0, k - len(lanes)), True
     A, va, pa, xa = endinfo(na, ea, nb); B, vb, pb, xb = endinfo(nb, eb, na)
     core = connector(A, va, B, vb, direkt=bool(nodes[na]["inset"] and nodes[nb]["inset"]))   # direkte Gerade nur zwischen zwei Plänen
     if os.environ.get("CDBG") and os.environ["CDBG"] in (nodes[na]["name"], nodes[nb]["name"]): print("CORE", nodes[na]["name"], nodes[nb]["name"], A.round(1), va.round(2), B.round(1), vb.round(2), [np.round(c_, 1).tolist() for c_ in core])

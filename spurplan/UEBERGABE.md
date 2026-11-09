@@ -635,3 +635,19 @@ Overrides nur, wo eine Regel nicht passt.
   (zusatz_plaene.json); auch der Regionalplan NE nimmt sie als fertige Werkstatt-Dateien. Code-Verbesserungen erreichen sie erst,
   wenn sie wieder aus dem Code erzeugt werden (Schritt N / Typvorlagen nachbauen).
 - MOB/Vereina-Regionalpläne rechnet nur der Workflow `regionen`; nach Code-Änderungen von Hand mitstarten.
+
+### 9.11.2026 abends – Schritt R1, Teil 1: Querabstand schräger Abgänge, Bündel-Stummel (h9o9)
+- `netz_lage.py` `route_geom/endinfo`: Abgänge einer schrägen Strecke (AUTO-Lage, ±60°) lagen auf der Achse im Gleisabstand TG →
+  quer nur 7,7 px. Jetzt Schritt auf der Achse TG / |Achse · Normale| (quer genau TG); waagrechte/senkrechte Abgänge unverändert.
+  Prüfstand: alle Q in r5, r7, ab30/60, sagliains, zwischengerade, gleissprung, perronformen weg (Q 40 → 20; Rest: Z5, unterwerfung).
+- `spurplan_schema.py` `_stub_buendel` (cfg `stub_buendel`, Standard an): schräge Stummel gleicher Richtung (±3°), die nahe
+  nebeneinander den Plan verlassen, liegen quer genau eine Ebene (lane_px) auseinander. Ein Stummel rückt waagrecht entlang seines
+  Gleises; endet dort ein Gleis (Stummel = Fortsetzung, Sagliains), wird dessen waagrechtes Ende mitgezogen. Welcher rückt: nicht auf
+  eine andere Weiche/Ausrundung desselben Gleises, dann der, der quer von den nahen Hauptgleisen weggeht (sonst landet er im
+  gedrehten Regionalplan auf dem Streckengleis), dann der kleinere Versatz.
+  Prüfstand: alle F weg (16 → 0). Sagliains · Autoverlad: oberes Nebengleis knickt 20 px später, im Regionalplan laufen die zwei
+  Nebengleise und Linie 910 im gleichen Abstand parallel (h9o9). Wirkt auch in Montreux (1 Stummel +5,9 px) und Rossinière (+4 px).
+- Lokal: Vereina Unruhe 59, MOB 105 (beide = Basis), Topologie/Verkettung 0. Klosters Platz zeigte lokal einmal «Landquart →» statt
+  «Davos →» als Abgangsbeschriftung – nicht durch diesen Code (Daten roh.json.gz vs. Release), im Workflow prüfen.
+- Offen in R1: Regionalstrecken als Bündel andocken (Versatz fürs ganze Bündel, alter Schritt 4), Vierspur östlich Aarau parallel,
+  Basel. Nach dem Workflow: Prüfung aller Pläne lesen, Differenzbilder Montreux/Rossinière/Sagliains an Daniel.

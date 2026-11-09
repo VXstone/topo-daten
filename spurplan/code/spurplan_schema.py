@@ -3467,6 +3467,91 @@ if len(_keep) < len(STUBS):
     svg_paths = {k_: [d_ for d_ in v_ if not _is_drop(d_)] for k_, v_ in svg_paths.items()}
     STUBS = _keep
     _stub_end = {(round(x_, 1), round(y_, 1)) for x_, y_, _ in STUBS}
+# R1 Bündel-Stummel (9.11.2026, Hinweis h9o9 Sagliains, Prüfstand F): schräge Stummel mit gleicher Richtung, die nebeneinander
+# den Plan verlassen, liegen quer zur Schräge im Gleisabstand (lane_px), nicht in einem zufälligen Abstand. Der äussere Stummel
+# rückt dazu entlang seines Gleises (waagrecht) so wenig wie möglich; Wurzel bleibt auf dem Gleis.
+def _stub_buendel():
+    global svg_paths, STUBS, _stub_end
+    if not CFG.get("stub_buendel", True): return
+    lane_ = float(CFG["lane_px"]); N_ = r"(-?[\d.]+)"
+    pat_l = re.compile(r"M%s,%sL%s,%s" % (N_, N_, N_, N_))                                   # gerader Stummel
+    pat_q = re.compile(r"M%s,%sQ%s,%s %s,%sL%s,%s(?=\s|$)" % (N_, N_, N_, N_, N_, N_, N_, N_))  # Gleisende mit Ausrundung
+    st_ = []                                    # dict(k, i, txt, x0, y0, cx, x1, y1, a)
+    for k_, v_ in svg_paths.items():
+        for i_, d_ in enumerate(v_):
+            m_ = pat_l.fullmatch(d_)
+            if m_:
+                x0, y0, x1, y1 = map(float, m_.groups()); xa, ya = x0, y0; cx = None
+            else:
+                m_ = None
+                for mq_ in pat_q.finditer(d_):
+                    g_ = list(map(float, mq_.groups()))
+                    if (round(g_[6], 1), round(g_[7], 1)) in _stub_end and abs(g_[3] - g_[1]) < 0.05: m_ = mq_; break
+                if not m_: continue
+                x0, y0, cx, _, xa, ya, x1, y1 = map(float, m_.groups())
+            if (round(x1, 1), round(y1, 1)) not in _stub_end: continue
+            a_ = math.atan2(y1 - ya, x1 - xa)
+            if abs(math.sin(a_)) < 0.3 or abs(math.cos(a_)) < 0.05: continue      # nur schräge Stummel
+            st_.append(dict(k=k_, i=i_, txt=m_.group(0), x0=x0, y0=y0, cx=cx, x1=x1, y1=y1, a=a_))
+    st_.sort(key=lambda t: (round(t["a"], 2), t["x1"], t["y1"]))
+    moved = set()
+    _pax_pts = np.array([[float(a), float(b)] for d_ in svg_paths[True] for a, b in re.findall(N_ + "," + N_, d_)] or np.zeros((0, 2)))
+    _qpts = [(float(a), float(b)) for d_ in sum(svg_paths.values(), []) for a, b in re.findall(N_ + "," + N_ + r"(?=Q)", d_)] + \
+            [(float(a), float(b)) for d_ in sum(svg_paths.values(), []) for a, b in re.findall(r"Q" + N_ + "," + N_, d_)]
+    def _schieben(S_, sh_):
+        k_, i_ = S_["k"], S_["i"]
+        neu_ = re.sub(N_ + "," + N_, lambda m: f"{float(m[1]) + sh_:.1f},{m[2]}", S_["txt"])
+        svg_paths[k_][i_] = svg_paths[k_][i_].replace(S_["txt"], neu_, 1)
+        # Gleis, das im Wurzelpunkt endet (Stummel = Fortsetzung eines Gleisendes, Sagliains), mitziehen: nur rein waagrechte
+        # Teilpfade «Mx,y0Lx2,y0» / «Mx,y0Hx2» auf y0, deren Endpunkt der Wurzelpunkt ist (bzw. Tangentenpunkt cx bei Ausrundung)
+        px_ = S_["cx"] if S_["cx"] is not None else S_["x0"]; y0_ = S_["y0"]
+        pat_h = re.compile(r"M%s,%s(?:L%s,%s|H%s)(?=\s|M|$)" % (N_, N_, N_, N_, N_))
+        def _hz(m):
+            g_ = [float(v) if v is not None else None for v in m.groups()]
+            xa_, ya_ = g_[0], g_[1]; xb_ = g_[2] if g_[2] is not None else g_[4]; yb_ = g_[3] if g_[3] is not None else ya_
+            if abs(ya_ - y0_) > 0.05 or abs(yb_ - y0_) > 0.05: return m[0]
+            if abs(xa_ - px_) < 0.06: xa_ += sh_
+            elif abs(xb_ - px_) < 0.06: xb_ += sh_
+            else: return m[0]
+            return f"M{xa_:.1f},{y0_:.1f}L{xb_:.1f},{y0_:.1f}"
+        for kk_, vv_ in svg_paths.items():
+            for ii_, dd_ in enumerate(vv_):
+                if (kk_, ii_) != (k_, i_): vv_[ii_] = pat_h.sub(_hz, dd_)
+        old_ = (round(S_["x1"], 1), round(S_["y1"], 1))
+        for jj_, t_ in enumerate(STUBS):
+            if (round(t_[0], 1), round(t_[1], 1)) == old_: STUBS[jj_] = (t_[0] + sh_, t_[1], t_[2])
+        _stub_end.discard(old_); _stub_end.add((round(S_["x1"] + sh_, 1), round(S_["y1"], 1)))
+        for f_ in ("x0", "x1"): S_[f_] += sh_
+        if S_["cx"] is not None: S_["cx"] += sh_
+        S_["txt"] = neu_; moved.add((k_, i_, S_["y1"]))
+        print(f"  R1 Bündel-Stummel: {old_} um {sh_:+.1f} px")
+    for i in range(len(st_)):
+        for j in range(i + 1, len(st_)):
+            A, B = st_[i], st_[j]
+            if abs((A["a"] - B["a"] + math.pi) % (2 * math.pi) - math.pi) > math.radians(3): continue
+            if (B["k"], B["i"], B["y1"]) in moved or (A["k"], A["i"], A["y1"]) in moved: continue
+            c_, s_ = math.cos(A["a"]), math.sin(A["a"]); nx_, ny_ = -s_, c_
+            if abs(nx_) < 0.2 or math.hypot(B["x1"] - A["x1"], B["y1"] - A["y1"]) > 3 * lane_: continue
+            q_ = (B["x1"] - A["x1"]) * nx_ + (B["y1"] - A["y1"]) * ny_       # Querabstand (vorzeichenbehaftet)
+            if abs(q_) < 0.15 * lane_ or abs(q_) > 2.5 * lane_ or abs(abs(q_) - lane_) <= 0.1 * lane_: continue
+            shB = (math.copysign(lane_, q_) - q_) / nx_; shA = -shB          # B oder A waagrecht verschieben
+            # welcher Stummel rückt: der, der dabei quer von den Hauptgleisen weg geht (sonst landet er im Regionalplan
+            # auf dem Streckengleis, Sagliains gedreht); ohne Hauptgleise der Knick nach aussen
+            def _weg(S_, sh_):
+                if not len(_pax_pts): return 0 if sh_ * (1 if c_ > 0 else -1) > 0 else 1
+                d_ = np.hypot(_pax_pts[:, 0] - S_["x1"], _pax_pts[:, 1] - S_["y1"]); P_ = _pax_pts[d_ < 4 * lane_]
+                if not len(P_): P_ = _pax_pts[np.argsort(d_)[:3]]
+                m_ = float(np.mean(P_[:, 0] * nx_ + P_[:, 1] * ny_)); t_ = S_["x1"] * nx_ + S_["y1"] * ny_
+                return 0 if abs(t_ + sh_ * nx_ - m_) > abs(t_ - m_) else 1
+            def _frei(S_, sh_):        # neue Wurzel nicht auf eine Weiche/Ausrundung desselben Gleises (Prüfstand sagliains a60)
+                xr_ = S_["x0"] + sh_
+                return all(not (abs(qy_ - S_["y0"]) < 1.0 and abs(qx_ - xr_) < 0.6 * lane_) for qx_, qy_ in _qpts
+                           if not (abs(qx_ - S_["x0"]) < 0.2 or (S_["cx"] is not None and abs(qx_ - S_["cx"]) < 0.2)))
+            cand_ = sorted([(B, shB), (A, shA)], key=lambda t: (0 if _frei(*t) else 1, _weg(*t), abs(t[1])))
+            S_, sh_ = cand_[0]
+            if abs(sh_) > 1.5 * lane_ or not _frei(S_, sh_): continue
+            _schieben(S_, sh_)
+_stub_buendel()
 _RS = []
 def _rund_stub2(d_):
     n_ = _rund_stub(d_)
