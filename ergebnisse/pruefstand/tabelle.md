@@ -1,19 +1,19 @@
-# Prüfstand – Bausteine × Drehungen (2026-11-08 22:15 UTC)
+# Prüfstand – Bausteine × Drehungen (2026-11-09 18:57 UTC)
 
 Zählung je Fall (Regel Anzahl); leer = ohne Befund. Rangfolge der Regeln: T, PF, X, E, K, Q, P, F, Z, D, G2, G3, G4, G5, G6, G7, G8
 
 | Stufe | Baustein | d0 | d30 | dm30 | d60 | dm60 | d90 | a30 | a60 |
 |---|---|---|---|---|---|---|---|---|---|
 | osm | r3_kreuzung |  |  |  |  |  |  |  |  |
-| osm | r5_halt |  |  |  | Q 1 | Q 1 |  |  |  |
-| osm | r7_ueberholung |  |  |  | Q 1 | Q 1 |  |  |  |
-| osm | ab30 | T 2 | T 2 | T 2 | T 2 Q 1 | T 2 Q 1 | T 2 | T 2 | T 2 |
-| osm | ab60 | T 3 X 1 Q 1 Z 1 | T 3 X 1 Q 1 Z 1 | T 1 D 1 | X 1 Q 1 | T 4 Q 1 P 2 G2 1 G7 1 D 1 | T 3 X 1 Q 1 | T 3 X 3 Q 1 | X 1 |
-| osm | sagliains | F 2 | F 2 | F 2 | Q 1 F 2 | Q 1 F 2 | F 2 | F 2 | F 2 |
-| osm | unterwerfung | X 2 | X 2 | X 2 Z 1 | X 2 Q 1 | X 2 E 2 Q 2 Z 3 | X 2 | X 2 | X 2 Q 1 |
-| osm | zwischengerade |  |  |  | Q 1 | Q 1 | X 3 K 4 D 1 |  |  |
-| osm | gleissprung |  |  |  | Q 2 |  |  |  |  |
-| osm | perronformen | PF 2 | PF 2 | PF 2 | PF 2 Q 1 | PF 2 Q 1 | PF 2 | PF 2 | PF 2 |
+| osm | r5_halt |  |  |  |  |  |  |  |  |
+| osm | r7_ueberholung |  |  |  |  |  |  |  |  |
+| osm | ab30 | T 2 | T 2 | T 2 | T 2 | T 2 | T 2 | T 2 | T 2 |
+| osm | ab60 | T 3 X 1 Q 1 Z 1 | T 3 X 1 Q 1 Z 1 | T 1 D 1 | X 1 | T 4 P 2 G2 1 G7 1 D 1 | T 3 X 1 Q 1 | T 3 X 3 Q 1 | X 1 |
+| osm | sagliains |  |  |  |  |  |  |  |  |
+| osm | unterwerfung | X 2 | X 2 | X 2 Z 1 | X 2 | X 2 Z 1 | X 2 | X 2 | X 2 |
+| osm | zwischengerade |  |  |  |  |  | X 3 K 4 D 1 |  |  |
+| osm | gleissprung |  |  |  |  |  |  |  |  |
+| osm | perronformen | PF 2 | PF 2 | PF 2 | PF 2 | PF 2 | PF 2 | PF 2 | PF 2 |
 | vorlage | R1 |  |  |  | E 2 Z 2 | E 2 Z 2 |  |  |  |
 | vorlage | R2 |  |  |  | E 2 Z 2 | E 2 Z 2 |  |  |  |
 | vorlage | R3 |  |  |  | E 2 Z 1 | E 2 Z 1 |  |  |  |
@@ -35,24 +35,45 @@ Zählung je Fall (Regel Anzahl); leer = ohne Befund. Rangfolge der Regeln: T, PF
 
 ## Befunde je Regel (Summe über alle Fälle)
 
-T 33 · PF 16 · X 27 · E 112 · K 4 · Q 40 · P 2 · F 16 · Z 103 · D 3 · G2 11 · G7 1
+T 33 · PF 16 · X 27 · E 110 · K 4 · Q 20 · P 2 · Z 101 · D 3 · G2 11 · G7 1
 
 ## Gegen die Basis
 
-- keine Verschlechterung
+- osm/r5_halt/d60: Q 1 → 0 (besser)
+- osm/r5_halt/dm60: Q 1 → 0 (besser)
+- osm/r7_ueberholung/d60: Q 1 → 0 (besser)
+- osm/r7_ueberholung/dm60: Q 1 → 0 (besser)
+- osm/ab30/d60: Q 1 → 0 (besser)
+- osm/ab30/dm60: Q 1 → 0 (besser)
+- osm/ab60/d60: Q 1 → 0 (besser)
+- osm/ab60/dm60: Q 1 → 0 (besser)
+- osm/sagliains/d0: F 2 → 0 (besser)
+- osm/sagliains/d30: F 2 → 0 (besser)
+- osm/sagliains/dm30: F 2 → 0 (besser)
+- osm/sagliains/d60: Q 1 → 0 (besser)
+- osm/sagliains/d60: F 2 → 0 (besser)
+- osm/sagliains/dm60: Q 1 → 0 (besser)
+- osm/sagliains/dm60: F 2 → 0 (besser)
+- osm/sagliains/d90: F 2 → 0 (besser)
+- osm/sagliains/a30: F 2 → 0 (besser)
+- osm/sagliains/a60: F 2 → 0 (besser)
+- osm/unterwerfung/d60: Q 1 → 0 (besser)
+- osm/unterwerfung/dm60: E 2 → 0 (besser)
+- osm/unterwerfung/dm60: Q 2 → 0 (besser)
+- osm/unterwerfung/dm60: Z 3 → 1 (besser)
+- osm/unterwerfung/a60: Q 1 → 0 (besser)
+- osm/zwischengerade/d60: Q 1 → 0 (besser)
+- osm/zwischengerade/dm60: Q 1 → 0 (besser)
+- osm/gleissprung/d60: Q 2 → 0 (besser)
+- osm/perronformen/d60: Q 1 → 0 (besser)
+- osm/perronformen/dm60: Q 1 → 0 (besser)
 
 ## Befundliste
 
-- osm r5_halt d60: **Q** Querabstand 7.7 px statt 10.1
-- osm r5_halt dm60: **Q** Querabstand 7.7 px statt 10.1
-- osm r7_ueberholung d60: **Q** Querabstand 7.7 px statt 10.1
-- osm r7_ueberholung dm60: **Q** Querabstand 7.7 px statt 10.1
 - osm ab30 d0: **T** 4 statt 6 freie Gleisenden am Planrand (Strecke oder Gleis fehlt)
 - osm ab30 d30: **T** 4 statt 6 freie Gleisenden am Planrand (Strecke oder Gleis fehlt)
 - osm ab30 dm30: **T** 4 statt 6 freie Gleisenden am Planrand (Strecke oder Gleis fehlt)
-- osm ab30 d60: **Q** Querabstand 7.6 px statt 10.1
 - osm ab30 d60: **T** 4 statt 6 freie Gleisenden am Planrand (Strecke oder Gleis fehlt)
-- osm ab30 dm60: **Q** Querabstand 7.6 px statt 10.1
 - osm ab30 dm60: **T** 4 statt 6 freie Gleisenden am Planrand (Strecke oder Gleis fehlt)
 - osm ab30 d90: **T** 4 statt 6 freie Gleisenden am Planrand (Strecke oder Gleis fehlt)
 - osm ab30 a30: **T** 4 statt 6 freie Gleisenden am Planrand (Strecke oder Gleis fehlt)
@@ -67,11 +88,9 @@ T 33 · PF 16 · X 27 · E 112 · K 4 · Q 40 · P 2 · F 16 · Z 103 · D 3 · 
 - osm ab60 d30: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (60°) (Bahnhof alpha)
 - osm ab60 dm30: **T** 5 statt 6 freie Gleisenden am Planrand (Strecke oder Gleis fehlt)
 - osm ab60 dm30: **D** Bahnhofplan anders als ungedreht (Linien 13→14, Befunde {'X': 1}→{}) (Bahnhof alpha)
-- osm ab60 d60: **Q** Querabstand 7.6 px statt 10.1
 - osm ab60 d60: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (60°) (Bahnhof alpha)
-- osm ab60 dm60: **Q** Querabstand 7.6 px statt 10.1
 - osm ab60 dm60: **P** Gleise nebeneinander nicht parallel (2.9°)
-- osm ab60 dm60: **P** Gleise nebeneinander nicht parallel (3.0°)
+- osm ab60 dm60: **P** Gleise nebeneinander nicht parallel (2.9°)
 - osm ab60 dm60: **T** 10 statt 6 freie Gleisenden am Planrand (lose Gleisstücke)
 - osm ab60 dm60: **D** Bahnhofplan anders als ungedreht (Linien 13→14, Befunde {'X': 1}→{}) (Bahnhof alpha)
 - osm ab60 d90: **Q** Querabstand 6.0 px statt 10.1
@@ -83,24 +102,6 @@ T 33 · PF 16 · X 27 · E 112 · K 4 · Q 40 · P 2 · F 16 · Z 103 · D 3 · 
 - osm ab60 a30: **T** 9 statt 6 freie Gleisenden am Planrand (lose Gleisstücke)
 - osm ab60 a30: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (60°) (Bahnhof alpha)
 - osm ab60 a60: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (60°) (Bahnhof alpha)
-- osm sagliains d0: **F** Pfeile quer 15.1 px auseinander (Ebene 10.1)
-- osm sagliains d0: **F** Pfeile quer 35.9 px auseinander (Ebene 24.0) (Bahnhof alpha)
-- osm sagliains d30: **F** Pfeile quer 14.9 px auseinander (Ebene 10.1)
-- osm sagliains d30: **F** Pfeile quer 35.4 px auseinander (Ebene 24.0) (Bahnhof alpha)
-- osm sagliains dm30: **F** Pfeile quer 15.1 px auseinander (Ebene 10.1)
-- osm sagliains dm30: **F** Pfeile quer 35.9 px auseinander (Ebene 24.0) (Bahnhof alpha)
-- osm sagliains d60: **Q** Querabstand 7.6 px statt 10.1
-- osm sagliains d60: **F** Pfeile quer 14.9 px auseinander (Ebene 10.1)
-- osm sagliains d60: **F** Pfeile quer 35.4 px auseinander (Ebene 24.0) (Bahnhof alpha)
-- osm sagliains dm60: **Q** Querabstand 7.6 px statt 10.1
-- osm sagliains dm60: **F** Pfeile quer 15.1 px auseinander (Ebene 10.1)
-- osm sagliains dm60: **F** Pfeile quer 35.9 px auseinander (Ebene 24.0) (Bahnhof alpha)
-- osm sagliains d90: **F** Pfeile quer 15.1 px auseinander (Ebene 10.1)
-- osm sagliains d90: **F** Pfeile quer 35.9 px auseinander (Ebene 24.0) (Bahnhof alpha)
-- osm sagliains a30: **F** Pfeile quer 14.9 px auseinander (Ebene 10.1)
-- osm sagliains a30: **F** Pfeile quer 35.4 px auseinander (Ebene 24.0) (Bahnhof alpha)
-- osm sagliains a60: **F** Pfeile quer 14.9 px auseinander (Ebene 10.1)
-- osm sagliains a60: **F** Pfeile quer 35.4 px auseinander (Ebene 24.0) (Bahnhof alpha)
 - osm unterwerfung d0: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (60°)
 - osm unterwerfung d0: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (60°)
 - osm unterwerfung d30: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (30°)
@@ -108,15 +109,8 @@ T 33 · PF 16 · X 27 · E 112 · K 4 · Q 40 · P 2 · F 16 · Z 103 · D 3 · 
 - osm unterwerfung dm30: **Z** Zwischengerade 16.8 px
 - osm unterwerfung dm30: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (30°)
 - osm unterwerfung dm30: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (30°)
-- osm unterwerfung d60: **Q** Querabstand 7.7 px statt 10.1
 - osm unterwerfung d60: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (60°)
 - osm unterwerfung d60: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (60°)
-- osm unterwerfung dm60: **Q** Querabstand 5.0 px statt 10.1
-- osm unterwerfung dm60: **Q** Querabstand 5.1 px statt 10.1
-- osm unterwerfung dm60: **Z** Zwischengerade 10.1 px
-- osm unterwerfung dm60: **E** Ebenenwechsel 5.1 px ohne Weiche
-- osm unterwerfung dm60: **Z** Zwischengerade 10.1 px
-- osm unterwerfung dm60: **E** Ebenenwechsel 5.0 px ohne Weiche
 - osm unterwerfung dm60: **Z** Zwischengerade 16.8 px
 - osm unterwerfung dm60: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (30°)
 - osm unterwerfung dm60: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (30°)
@@ -124,11 +118,8 @@ T 33 · PF 16 · X 27 · E 112 · K 4 · Q 40 · P 2 · F 16 · Z 103 · D 3 · 
 - osm unterwerfung d90: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (30°)
 - osm unterwerfung a30: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (60°)
 - osm unterwerfung a30: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (60°)
-- osm unterwerfung a60: **Q** Querabstand 7.8 px statt 10.1
 - osm unterwerfung a60: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (60°)
 - osm unterwerfung a60: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (60°)
-- osm zwischengerade d60: **Q** Querabstand 7.6 px statt 10.1
-- osm zwischengerade dm60: **Q** Querabstand 7.6 px statt 10.1
 - osm zwischengerade d90: **K** Spitzkehre 149°
 - osm zwischengerade d90: **K** Spitzkehre 150°
 - osm zwischengerade d90: **K** Spitzkehre 120°
@@ -137,14 +128,10 @@ T 33 · PF 16 · X 27 · E 112 · K 4 · Q 40 · P 2 · F 16 · Z 103 · D 3 · 
 - osm zwischengerade d90: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (149°)
 - osm zwischengerade d90: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (150°)
 - osm zwischengerade d90: **D** Bahnhofplan anders als ungedreht (Linien 7→9, Befunde {}→{}) (Bahnhof alpha)
-- osm gleissprung d60: **Q** Querabstand 7.7 px statt 10.1
-- osm gleissprung d60: **Q** Querabstand 7.6 px statt 10.1
 - osm perronformen d0: **PF** 0 statt 2 Perronformen (U/L/T als eine Fläche) (Bahnhof alpha)
 - osm perronformen d30: **PF** 0 statt 2 Perronformen (U/L/T als eine Fläche) (Bahnhof alpha)
 - osm perronformen dm30: **PF** 0 statt 2 Perronformen (U/L/T als eine Fläche) (Bahnhof alpha)
-- osm perronformen d60: **Q** Querabstand 7.6 px statt 10.1
 - osm perronformen d60: **PF** 0 statt 2 Perronformen (U/L/T als eine Fläche) (Bahnhof alpha)
-- osm perronformen dm60: **Q** Querabstand 7.6 px statt 10.1
 - osm perronformen dm60: **PF** 0 statt 2 Perronformen (U/L/T als eine Fläche) (Bahnhof alpha)
 - osm perronformen d90: **PF** 0 statt 2 Perronformen (U/L/T als eine Fläche) (Bahnhof alpha)
 - osm perronformen a30: **PF** 0 statt 2 Perronformen (U/L/T als eine Fläche) (Bahnhof alpha)
