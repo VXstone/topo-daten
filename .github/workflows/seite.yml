@@ -43,6 +43,9 @@ jobs:
             k=$(basename $r)
             git show origin/ergebnisse:$r/region.svg > spurplan/werkstatt/olten/feedback/$k.svg 2>/dev/null || rm -f spurplan/werkstatt/olten/feedback/$k.svg
             git show origin/ergebnisse:$r/bericht.json > spurplan/werkstatt/olten/feedback/${k}_bericht.json 2>/dev/null || rm -f spurplan/werkstatt/olten/feedback/${k}_bericht.json   # Kartenlabel (bauen.py)
+            # Bahnhofspläne der Linien-Region als eigene Karten (9.11.2026)
+            rr=${k#region_}; mkdir -p spurplan/werkstatt/olten/feedback/regionen/$rr
+            for f in $(git ls-tree --name-only origin/ergebnisse $r/ | grep '_spurplan.svg$' || true); do git show origin/ergebnisse:$f > spurplan/werkstatt/olten/feedback/regionen/$rr/$(basename $f); done
           done
           # Bahnhöfe aus dem Workflow «plaene» (26.10.2026): Plan + Gesamtbericht für bauen.py
           git show origin/ergebnisse:ergebnisse/bericht.json > spurplan/werkstatt/olten/feedback/repo_bericht.json 2>/dev/null || true

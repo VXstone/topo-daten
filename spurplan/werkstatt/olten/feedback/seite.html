@@ -233,12 +233,12 @@ function renderNav(){
   if(groups.Arbeitsliste)groups.Arbeitsliste.sort((a,b)=>order.indexOf(a.key)-order.indexOf(b.key));
   const keys=Object.keys(groups).sort((a,b)=>(a==="Region"?0:a==="Arbeitsliste"?1:2)-(b==="Region"?0:b==="Arbeitsliste"?1:2));
   const g0=groups;
-  let h="";for(const g of keys){h+=`<h3>${esc(g)}</h3>`;g0[g].forEach((p,i)=>{const n=openCount(p),a=arbeitStatus(p);
+  let h="";const gname=g=>g==="Region"?"Regionalpläne":g;for(const g of keys){h+=`<h3>${esc(gname(g))}</h3>`;g0[g].forEach((p,i)=>{const n=openCount(p),a=arbeitStatus(p);
     h+=`<button data-k="${p.key}" aria-current="${p===cur}">${g==="Arbeitsliste"?`<span class="nr">${i+1}</span>`:""}<span class="dot ${isReg(p)?"region":status(p)}" title="${esc(isReg(p)?"Regionalplan":status(p))}"></span><span class="nm">${esc(p.name)}</span>${a?`<span class="chip ${a[0]}">${a[1]}</span>`:""}<span class="badge ${n?"":"zero"}">${n}</span></button>`})}
   $("#nav").innerHTML=h;
   /* Auswahlliste (schmale Ansicht) mit denselben Gruppen wie die Seitenleiste (20.10.: "Gruppierung wieder weg") */
   const opt=p=>{const n=openCount(p);return `<option value="${p.key}" ${p===cur?"selected":""}>${esc(p.name)}${n?` (${n})`:""}${!isReg(p)?" · "+status(p):""}</option>`};
-  $("#planSel").innerHTML=keys.map(g=>`<optgroup label="${esc(g)}">${g0[g].map(opt).join("")}</optgroup>`).join("");
+  $("#planSel").innerHTML=keys.map(g=>`<optgroup label="${esc(gname(g))}">${g0[g].map(opt).join("")}</optgroup>`).join("");
 }
 $("#nav").addEventListener("click",e=>{const b=e.target.closest("button[data-k]");if(b)show(b.dataset.k)});
 $("#planSel").addEventListener("change",e=>show(e.target.value));

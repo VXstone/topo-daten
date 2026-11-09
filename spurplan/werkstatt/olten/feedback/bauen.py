@@ -111,7 +111,55 @@ def _anker(key_):
 _zus = os.path.join(HERE, "zusatz_plaene.json")   # Pläne aus anderen Sitzungen (z. B. Basel/Bern, Grosse Knoten) übernehmen
 if os.path.exists(_zus):
     _have = {p_["key"] for p_ in plans}
-    plans += [p_ for p_ in json.load(open(_zus)) if p_["key"] not in _have]
+    plans += [dict(p_, _zusatz=True) for p_ in json.load(open(_zus)) if p_["key"] not in _have]
+# Bahnhofspläne der Linien-Regionen (9.11.2026, D. Eckenstein «je Region die Bahnhöfe»): vom Workflow «seite» aus
+# ergebnisse/region_<r>/<b>_spurplan.svg nach feedback/regionen/<r>/ gelegt; Schlüssel <r>__<b>
+_rg = os.path.join(HERE, "regionen")
+for _r in (sorted(os.listdir(_rg)) if os.path.isdir(_rg) else []):
+    _ber = {}
+    try: _ber = json.load(open(os.path.join(HERE, f"region_{_r}_bericht.json")))
+    except Exception: pass
+    for _f in sorted(os.listdir(os.path.join(_rg, _r))):
+        if not _f.endswith("_spurplan.svg"): continue
+        _b = _f[:-len("_spurplan.svg")]; _svg = open(os.path.join(_rg, _r, _f)).read()
+        _tt = re.findall(r'font-weight="700"[^>]*>([^<]+)</text>', _svg)
+        plans.append(dict(key=f"{_r}__{_b}", name=_tt[-1] if _tt else _b, gruppe=f"{_r.upper() if len(_r) <= 3 else _r.capitalize()} · Bahnhöfe",
+                          label=f"Workflow regionen {_ber.get('erzeugt', '')}", svg=strip(_svg), counts={"befunde": 0}, status="offen"))
+# Gruppen der Seitenleiste (9.11.2026, D. Eckenstein): Regionalpläne · Werkzeugkasten · Grosse Knoten · Bahnhöfe ohne
+# Regionalplan · je Region die Bahnhöfe nach Linien. Label beginnt mit der Herkunft: «aus Code» (rechnet jeder Lauf neu,
+# profitiert von Code-Verbesserungen) oder «fest seit …» (eingefrorene Fassung).
+_GRP_OLTEN = {"olten": "Olten 1 · Knoten Olten", "olten_hammer": "Olten 1 · Knoten Olten",
+              "aarburg_oftringen": "Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil", "rothrist": "Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil",
+              "zofingen": "Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil", "safenwil": "Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil",
+              "dulliken": "Olten 3 · Olten – Aarau", "daniken": "Olten 3 · Olten – Aarau", "schonenwerd": "Olten 3 · Olten – Aarau", "aarau": "Olten 3 · Olten – Aarau",
+              "laufelfingen": "Olten 4 · Hauenstein", "tecknau": "Olten 4 · Hauenstein", "wangen_bei_olten": "Olten 5 · Olten – Solothurn"}
+_GRP_NE = {"ins": "NE 1 · Neuchâtel – Ins – Kerzers – Bern", "kerzers": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
+           "murten": "NE 3 · Lyss – Kerzers – Murten – Payerne", "neuchatel_vauseyon": "NE 8 · Neuchâtel – La Chaux-de-Fonds"}
+_OHNE = {"thun", "konolfingen", "solothurn"}
+def _gruppe(p_):
+    k_, g_ = p_["key"], p_.get("gruppe") or ""
+    if g_ == "Region": return "Region"
+    if g_ == "Werkzeugkasten": return g_
+    if k_ in ("basel", "bern"): return "Grosse Knoten"
+    if k_ in _OHNE: return "Bahnhöfe ohne Regionalplan"
+    return _GRP_OLTEN.get(k_) or _GRP_NE.get(k_) or g_
+_FEST = re.compile(r"Stand (\d{1,2}\.\d{1,2}\.\d{4})")
+for p_ in plans:
+    p_["gruppe"] = _gruppe(p_)
+    l_ = p_.get("label") or ""
+    if l_.startswith(("aus Code", "fest seit")): continue
+    m_ = _FEST.search(l_)
+    if p_["key"] in ("basel", "bern") or (p_.get("_zusatz") and m_):
+        p_["label"] = f"fest seit {m_.group(1) if m_ else '?'} · " + l_
+    else:
+        p_["label"] = "aus Code · " + l_
+_ORDER = ["Region", "Werkzeugkasten", "Grosse Knoten", "Bahnhöfe ohne Regionalplan"]
+def _gk(p_):
+    g_ = p_["gruppe"]
+    if g_ in _ORDER: return (_ORDER.index(g_), "", 0)
+    r_ = next((i_ for i_, a_ in enumerate(("Olten", "NE", "MOB", "Vereina")) if g_.startswith(a_)), 9)
+    return (len(_ORDER) + r_, g_, 0)
+plans = sorted(plans, key=_gk)        # stabil: Reihenfolge innerhalb der Gruppe bleibt
 import subprocess; subprocess.run(["python3", os.path.join(HERE, "legende.py")], check=True)
 leg = open(os.path.join(HERE, "legende.json")).read()
 tpl = open(os.path.join(HERE, "seite.html")).read().replace("/*LEGENDE*/[]", leg.replace("</", "<\\/"))
@@ -121,6 +169,7 @@ for p_ in plans:
     if p_.get("gruppe") != "Region" and p_.get("key"):
         a_ = _anker(p_["key"])
         if a_: p_["anker"] = a_
+for p_ in plans: p_.pop("_zusatz", None)
 out = tpl.replace("/*PLANS*/[]", json.dumps(plans, ensure_ascii=False).replace("</", "<\\/")).replace("{{STAND}}", stand)
 open(os.path.join(HERE, "index.html"), "w").write(out)
 if os.environ.get("PLAENE_DIR"):       # je Plan eine SVG-Datei (Workflow «seite»: Ausschnitte an den Hinweisstellen)
