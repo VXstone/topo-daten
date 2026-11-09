@@ -1,4 +1,4 @@
-# Prüfstand – Bausteine × Drehungen (2026-11-09 19:40 UTC)
+# Prüfstand – Bausteine × Drehungen (2026-11-09 20:31 UTC)
 
 Zählung je Fall (Regel Anzahl); leer = ohne Befund. Rangfolge der Regeln: T, PF, X, E, K, Q, P, F, Z, D, G2, G3, G4, G5, G6, G7, G8
 
@@ -39,34 +39,7 @@ T 33 · PF 16 · X 27 · E 110 · K 4 · Q 20 · P 2 · Z 101 · D 3 · G2 11 ·
 
 ## Gegen die Basis
 
-- osm/r5_halt/d60: Q 1 → 0 (besser)
-- osm/r5_halt/dm60: Q 1 → 0 (besser)
-- osm/r7_ueberholung/d60: Q 1 → 0 (besser)
-- osm/r7_ueberholung/dm60: Q 1 → 0 (besser)
-- osm/ab30/d60: Q 1 → 0 (besser)
-- osm/ab30/dm60: Q 1 → 0 (besser)
-- osm/ab60/d60: Q 1 → 0 (besser)
-- osm/ab60/dm60: Q 1 → 0 (besser)
-- osm/sagliains/d0: F 2 → 0 (besser)
-- osm/sagliains/d30: F 2 → 0 (besser)
-- osm/sagliains/dm30: F 2 → 0 (besser)
-- osm/sagliains/d60: Q 1 → 0 (besser)
-- osm/sagliains/d60: F 2 → 0 (besser)
-- osm/sagliains/dm60: Q 1 → 0 (besser)
-- osm/sagliains/dm60: F 2 → 0 (besser)
-- osm/sagliains/d90: F 2 → 0 (besser)
-- osm/sagliains/a30: F 2 → 0 (besser)
-- osm/sagliains/a60: F 2 → 0 (besser)
-- osm/unterwerfung/d60: Q 1 → 0 (besser)
-- osm/unterwerfung/dm60: E 2 → 0 (besser)
-- osm/unterwerfung/dm60: Q 2 → 0 (besser)
-- osm/unterwerfung/dm60: Z 3 → 1 (besser)
-- osm/unterwerfung/a60: Q 1 → 0 (besser)
-- osm/zwischengerade/d60: Q 1 → 0 (besser)
-- osm/zwischengerade/dm60: Q 1 → 0 (besser)
-- osm/gleissprung/d60: Q 2 → 0 (besser)
-- osm/perronformen/d60: Q 1 → 0 (besser)
-- osm/perronformen/dm60: Q 1 → 0 (besser)
+- keine Verschlechterung
 
 ## Befundliste
 
