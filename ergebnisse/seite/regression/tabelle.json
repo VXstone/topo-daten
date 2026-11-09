@@ -1,10 +1,9 @@
 {
- "erzeugt": "2026-11-09 19:00 UTC",
+ "erzeugt": "2026-11-09 19:32 UTC",
  "plaene": 136,
- "geaendert": 10,
+ "geaendert": 4,
  "einordnung": {
-  "Fehler? Topologie": 1,
-  "gleichwertig": 9
+  "gleichwertig": 4
  },
  "zeilen": [
   {
@@ -14,26 +13,7 @@
    "abgenommen": false,
    "basis": "veröffentlicht",
    "basis_commit": "9524db1",
-   "stellen": 6,
-   "letzte_aenderung": "2026-11-09T18:51",
-   "einordnung": "Fehler? Topologie",
-   "delta": "G2 24→26, G6 7→6, G7 5→6",
-   "alt": {
-    "G3": 2,
-    "G2": 24,
-    "G6": 7,
-    "G7": 5,
-    "G5": 4,
-    "T7": 18
-   },
-   "neu": {
-    "G3": 2,
-    "G2": 26,
-    "G6": 6,
-    "G7": 6,
-    "G5": 4,
-    "T7": 18
-   }
+   "stellen": 0
   },
   {
    "key": "region_ne",
@@ -175,22 +155,7 @@
    "abgenommen": false,
    "basis": "bestätigt 2026-11-08",
    "basis_commit": "73d910b",
-   "stellen": 1,
-   "letzte_aenderung": "2026-11-09T18:51",
-   "einordnung": "gleichwertig",
-   "delta": "",
-   "alt": {
-    "G3": 6,
-    "G2": 3,
-    "G7": 2,
-    "T7": 22
-   },
-   "neu": {
-    "G3": 6,
-    "G2": 3,
-    "G7": 2,
-    "T7": 22
-   }
+   "stellen": 0
   },
   {
    "key": "olten_hammer",
@@ -199,16 +164,7 @@
    "abgenommen": true,
    "basis": "bestätigt 2026-11-07",
    "basis_commit": "1fa061d",
-   "stellen": 1,
-   "letzte_aenderung": "2026-11-09T18:51",
-   "einordnung": "gleichwertig",
-   "delta": "",
-   "alt": {
-    "T7": 0
-   },
-   "neu": {
-    "T7": 0
-   }
+   "stellen": 0
   },
   {
    "key": "aarburg_oftringen",
@@ -257,16 +213,7 @@
    "abgenommen": true,
    "basis": "bestätigt 2026-11-07",
    "basis_commit": "1fa061d",
-   "stellen": 1,
-   "letzte_aenderung": "2026-11-09T18:51",
-   "einordnung": "gleichwertig",
-   "delta": "",
-   "alt": {
-    "T7": 0
-   },
-   "neu": {
-    "T7": 0
-   }
+   "stellen": 0
   },
   {
    "key": "dulliken",
@@ -302,20 +249,7 @@
    "abgenommen": false,
    "basis": "veröffentlicht",
    "basis_commit": "9524db1",
-   "stellen": 2,
-   "letzte_aenderung": "2026-11-09T18:51",
-   "einordnung": "gleichwertig",
-   "delta": "",
-   "alt": {
-    "G2": 1,
-    "G7": 1,
-    "T7": 1
-   },
-   "neu": {
-    "G2": 1,
-    "G7": 1,
-    "T7": 1
-   }
+   "stellen": 0
   },
   {
    "key": "tecknau",
@@ -369,20 +303,7 @@
    "abgenommen": true,
    "basis": "bestätigt 2026-11-08",
    "basis_commit": "1fa061d",
-   "stellen": 1,
-   "letzte_aenderung": "2026-11-09T18:51",
-   "einordnung": "gleichwertig",
-   "delta": "",
-   "alt": {
-    "G2": 4,
-    "G6": 1,
-    "T7": 3
-   },
-   "neu": {
-    "G2": 4,
-    "G6": 1,
-    "T7": 3
-   }
+   "stellen": 0
   },
   {
    "key": "saint_blaise_lac",
