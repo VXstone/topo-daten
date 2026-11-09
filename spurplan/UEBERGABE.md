@@ -25,6 +25,18 @@ Wird Abschnitt 6 länger als ~60 Zeilen, die ältesten Nachträge ins Archiv ver
 - **Nie abnehmen, nie «erledigt» setzen** – das macht nur Daniel. Lösungen im Code, Overrides nur, wo keine Regel passt.
 - Jeder Hinweis Daniels, den der Prüfstand nicht erkennt, wird nach Möglichkeit ein neuer Prüfstand-Baustein.
 
+## 0b. Fallstricke (aus den Archiven, nicht vergessen)
+- **«gleichwertig» heisst nur «Zahlen gleich»**: eine neu erfundene Weiche oder ein verschobenes Gleis erkennt die Zählung nicht
+  (Zofingen/Aarburg 6.11.). Darum jedes geänderte Plan-Differenzbild ansehen, auch bei «gleichwertig».
+- Regressionsbasis: Abnahmen jede Runde neu exportieren (`spurplan/abnahmen.json`, ArtifactData `abnahme`) und committen;
+  `spurplan/veroeffentlicht.json` beim Veröffentlichen nachführen; `regression_ok.json` nur auf Daniels Aussage.
+- E9: eine Regeländerung darf abgenommene Pläne nur mit Differenzbild und gleicher Topologie ändern.
+- `merge_live.py` nur bei echten fremden Änderungen an der Live-Seite – sonst übernimmt es alte Regionalpläne.
+- Neue Ordner auf `ergebnisse` in `plaene.yml` eintragen (sonst löscht der Neuaufbau sie, wie den Prüfstand am 9.11.).
+- Neue Regeln zuerst mit cfg-Schalter; was in Werkstatt-Plänen (Olten/NE) greift, vor dem Veröffentlichen einzeln ansehen.
+- Vor einer Änderung an einer Stelle mit Vorgeschichte `grep` im Archiv nach Bahnhof/Override/Regelnummer (z. B. R27b, R33b,
+  Montreux-Westende V1–V6) – dort stehen verworfene Ansätze und warum.
+
 ## 1. Quellen
 - Regeln: Doc «Regelwerk Spurpläne» und `spurplan/REGELN.md`. Ideen/Backlog: `spurplan/IDEEN_REVIEW.md`.
 - Feedback-Seite https://claude.ai/artifact/CKejJqUWnbF6D6EXgA5Nvv – Sammlungen `feedback` (Hinweise) und `abnahme`.
