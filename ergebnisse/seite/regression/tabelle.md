@@ -7,8 +7,8 @@
 | olten_hammer | Olten 1 · Knoten Olten | bestätigt 2026-11-07 | 1 | gleichwertig |  | 2026-11-09T18:51 |
 | safenwil | Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil | bestätigt 2026-11-07 | 1 | gleichwertig |  | 2026-11-09T18:51 |
 | neuchatel | NE 1 · Neuchâtel – Ins – Kerzers – Bern | bestätigt 2026-11-08 | 1 | gleichwertig |  | 2026-11-09T18:51 |
-| region_mob | Region | veröffentlicht | 2 | gleichwertig |  | 2026-11-07T22:49 |
+| region_mob | Region | veröffentlicht | 2 | gleichwertig |  | 2026-11-09T18:54 |
 | aarau | Olten 3 · Olten – Aarau | veröffentlicht | 2 | gleichwertig |  | 2026-11-09T18:51 |
 | region_ne | Region | veröffentlicht | 1 | gleichwertig |  | 2026-11-09T18:51 |
 | olten | Olten 1 · Knoten Olten | bestätigt 2026-11-08 | 1 | gleichwertig |  | 2026-11-09T18:51 |
-| mob__montreux | MOB · Bahnhöfe | veröffentlicht | 1 | gleichwertig |  | 2026-11-09T07:02 |
+| mob__montreux | MOB · Bahnhöfe | veröffentlicht | 1 | gleichwertig |  | 2026-11-09T18:54 |

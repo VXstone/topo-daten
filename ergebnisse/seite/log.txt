@@ -1,6 +1,6 @@
 44 Felder
 18 Einträge
-index.html 1828 KB, 137 Pläne
+index.html 1822 KB, 137 Pläne
 21 Hinweise, 21 Ausschnitte
 /home/runner/work/topo-daten/topo-daten/spurplan/code/alle_plaene_pruefen.py:138: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
   json.dump(dict(erzeugt=datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"), plaene=len(zeilen), geaendert=len(gz),
