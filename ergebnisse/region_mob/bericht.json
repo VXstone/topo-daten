@@ -1,6 +1,6 @@
 {
  "region": "mob",
- "erzeugt": "2026-11-07 22:41 UTC",
+ "erzeugt": "2026-11-09 18:47 UTC",
  "bahnhoefe": {
   "schonried": {
    "name": "Schönried",
@@ -102,8 +102,8 @@
    "befunde": "Befunde: {'B': 1, 'F': 1}",
    "optionen": []
   },
-  "jaman": {
-   "name": "Jaman",
+  "chamby": {
+   "name": "Chamby",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -114,8 +114,8 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "chamby": {
-   "name": "Chamby",
+  "jaman": {
+   "name": "Jaman",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []

@@ -369,9 +369,8 @@
    "drehung": {
     "Montreux": 0
    },
-   "unruhe": 127,
+   "unruhe": 77,
    "kennzahlen": {
-    "topo_T6": 1,
     "lage_L3a": 9,
     "regel_G2": 18,
     "regel_G6": 3,
@@ -429,11 +428,11 @@
    "drehung": {
     "Rochers de Naye": 30
    },
-   "unruhe": 68,
+   "unruhe": 71,
    "kennzahlen": {
     "lage_L3a": 8,
     "regel_G2": 21,
-    "regel_G6": 2,
+    "regel_G6": 3,
     "ruhe_treppen": 2,
     "ruhe_ecken": 1
    }
@@ -578,14 +577,14 @@
    "drehung": {
     "Zweisimmen": -180
    },
-   "unruhe": 164,
+   "unruhe": 167,
    "kennzahlen": {
     "topo_T6": 1,
     "lage_L2": 2,
     "lage_L4": 1,
     "lage_L3a": 9,
     "regel_G2": 17,
-    "regel_G6": 2,
+    "regel_G6": 3,
     "ruhe_ecken": 2,
     "ruhe_treppen": 2
    }
@@ -595,11 +594,11 @@
    "drehung": {
     "Chamby": -30
    },
-   "unruhe": 62,
+   "unruhe": 65,
    "kennzahlen": {
     "lage_L3a": 9,
     "regel_G2": 18,
-    "regel_G6": 2,
+    "regel_G6": 3,
     "ruhe_treppen": 2,
     "ruhe_ecken": 1
    }
@@ -609,11 +608,11 @@
    "drehung": {
     "Chamby": -90
    },
-   "unruhe": 65,
+   "unruhe": 62,
    "kennzahlen": {
     "lage_L3a": 8,
     "regel_G2": 18,
-    "regel_G6": 3,
+    "regel_G6": 2,
     "ruhe_treppen": 2,
     "ruhe_ecken": 1
    }
@@ -742,11 +741,11 @@
    "drehung": {
     "Lenk im Simmental": 150
    },
-   "unruhe": 62,
+   "unruhe": 65,
    "kennzahlen": {
     "lage_L3a": 8,
     "regel_G2": 18,
-    "regel_G6": 2,
+    "regel_G6": 3,
     "ruhe_treppen": 2,
     "ruhe_ecken": 1
    }
@@ -815,12 +814,12 @@
    "drehung": {
     "Montbovon": 0
    },
-   "unruhe": 94,
+   "unruhe": 91,
    "kennzahlen": {
     "lage_L2": 3,
     "lage_L3a": 8,
     "regel_G2": 18,
-    "regel_G6": 4,
+    "regel_G6": 3,
     "ruhe_treppen": 2
    }
   },
@@ -845,13 +844,13 @@
    "drehung": {
     "Montbovon": -30
    },
-   "unruhe": 135,
+   "unruhe": 132,
    "kennzahlen": {
     "lage_L2": 4,
     "lage_L4": 1,
     "lage_L3a": 8,
     "regel_G2": 18,
-    "regel_G6": 3,
+    "regel_G6": 2,
     "ruhe_ecken": 1,
     "ruhe_treppen": 2
    }
@@ -875,9 +874,8 @@
    "drehung": {
     "Montreux": 0
    },
-   "unruhe": 127,
+   "unruhe": 77,
    "kennzahlen": {
-    "topo_T6": 1,
     "lage_L3a": 9,
     "regel_G2": 18,
     "regel_G6": 3,
@@ -965,11 +963,11 @@
    "drehung": {
     "Rochers de Naye": 30
    },
-   "unruhe": 68,
+   "unruhe": 71,
    "kennzahlen": {
     "lage_L3a": 8,
     "regel_G2": 21,
-    "regel_G6": 2,
+    "regel_G6": 3,
     "ruhe_treppen": 2,
     "ruhe_ecken": 1
    }
@@ -1114,14 +1112,14 @@
    "drehung": {
     "Zweisimmen": -180
    },
-   "unruhe": 164,
+   "unruhe": 167,
    "kennzahlen": {
     "topo_T6": 1,
     "lage_L2": 2,
     "lage_L4": 1,
     "lage_L3a": 9,
     "regel_G2": 17,
-    "regel_G6": 2,
+    "regel_G6": 3,
     "ruhe_ecken": 2,
     "ruhe_treppen": 2
    }
