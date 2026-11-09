@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-11-09 07:02 UTC",
+ "erzeugt": "2026-11-09 07:11 UTC",
  "plaene": 136,
  "geaendert": 1,
  "einordnung": {
@@ -763,333 +763,498 @@
   },
   {
    "key": "mob__allieres",
+   "name": "Allières",
    "gruppe": "MOB · Bahnhöfe",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "af2f7aa",
+   "stellen": 0
   },
   {
    "key": "mob__belmont_sur_montreux",
+   "name": "Belmont-sur-Montreux",
    "gruppe": "MOB · Bahnhöfe",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "af2f7aa",
+   "stellen": 0
   },
   {
    "key": "mob__blankenburg",
+   "name": "Blankenburg",
    "gruppe": "MOB · Bahnhöfe",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "af2f7aa",
+   "stellen": 0
   },
   {
    "key": "mob__caux",
+   "name": "Caux",
    "gruppe": "MOB · Bahnhöfe",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "af2f7aa",
+   "stellen": 0
   },
   {
    "key": "mob__chamby",
+   "name": "Chamby",
    "gruppe": "MOB · Bahnhöfe",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "af2f7aa",
+   "stellen": 0
   },
   {
    "key": "mob__chateau_d_oex",
+   "name": "Château-d'Oex",
    "gruppe": "MOB · Bahnhöfe",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "af2f7aa",
+   "stellen": 0
   },
   {
    "key": "mob__chatelard",
+   "name": "Châtelard",
    "gruppe": "MOB · Bahnhöfe",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "af2f7aa",
+   "stellen": 0
   },
   {
    "key": "mob__chernex",
+   "name": "Chernex",
    "gruppe": "MOB · Bahnhöfe",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "af2f7aa",
+   "stellen": 0
   },
   {
    "key": "mob__cret_d_y_bau",
+   "name": "Crêt-d'y-Bau",
    "gruppe": "MOB · Bahnhöfe",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "af2f7aa",
+   "stellen": 0
   },
   {
    "key": "mob__flendruz",
+   "name": "Flendruz",
    "gruppe": "MOB · Bahnhöfe",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "af2f7aa",
+   "stellen": 0
   },
   {
    "key": "mob__fontanivent",
+   "name": "Fontanivent",
    "gruppe": "MOB · Bahnhöfe",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "af2f7aa",
+   "stellen": 0
   },
   {
    "key": "mob__glion_college",
+   "name": "Glion-Collège",
    "gruppe": "MOB · Bahnhöfe",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "af2f7aa",
+   "stellen": 0
   },
   {
    "key": "mob__glion",
+   "name": "Glion",
    "gruppe": "MOB · Bahnhöfe",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "af2f7aa",
+   "stellen": 0
   },
   {
    "key": "mob__gruben",
+   "name": "Gruben",
    "gruppe": "MOB · Bahnhöfe",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "af2f7aa",
+   "stellen": 0
   },
   {
    "key": "mob__gstaad",
+   "name": "Gstaad",
    "gruppe": "MOB · Bahnhöfe",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "af2f7aa",
+   "stellen": 0
   },
   {
    "key": "mob__jaman",
+   "name": "Jaman",
    "gruppe": "MOB · Bahnhöfe",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "af2f7aa",
+   "stellen": 0
   },
   {
    "key": "mob__jor",
+   "name": "Jor",
    "gruppe": "MOB · Bahnhöfe",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "af2f7aa",
+   "stellen": 0
   },
   {
    "key": "mob__la_perche",
+   "name": "La Perche",
    "gruppe": "MOB · Bahnhöfe",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "af2f7aa",
+   "stellen": 0
   },
   {
    "key": "mob__la_tine",
+   "name": "La Tine",
    "gruppe": "MOB · Bahnhöfe",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "af2f7aa",
+   "stellen": 0
   },
   {
    "key": "mob__le_tremblex",
+   "name": "Le Tremblex",
    "gruppe": "MOB · Bahnhöfe",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "af2f7aa",
+   "stellen": 0
   },
   {
    "key": "mob__lenk_im_simmental",
+   "name": "Lenk im Simmental",
    "gruppe": "MOB · Bahnhöfe",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "af2f7aa",
+   "stellen": 0
   },
   {
    "key": "mob__les_avants",
+   "name": "Les Avants",
    "gruppe": "MOB · Bahnhöfe",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "af2f7aa",
+   "stellen": 0
   },
   {
    "key": "mob__les_cases",
+   "name": "Les Cases",
    "gruppe": "MOB · Bahnhöfe",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "af2f7aa",
+   "stellen": 0
   },
   {
    "key": "mob__les_echets",
+   "name": "Les Echets",
    "gruppe": "MOB · Bahnhöfe",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "af2f7aa",
+   "stellen": 0
   },
   {
    "key": "mob__les_sciernes",
+   "name": "Les Sciernes",
    "gruppe": "MOB · Bahnhöfe",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "af2f7aa",
+   "stellen": 0
   },
   {
    "key": "mob__matten",
+   "name": "Matten",
    "gruppe": "MOB · Bahnhöfe",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "af2f7aa",
+   "stellen": 0
   },
   {
    "key": "mob__montbovon",
+   "name": "Montbovon",
    "gruppe": "MOB · Bahnhöfe",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "af2f7aa",
+   "stellen": 0
   },
   {
    "key": "mob__montreux_les_planches",
+   "name": "Montreux-Les Planches",
    "gruppe": "MOB · Bahnhöfe",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "af2f7aa",
+   "stellen": 0
   },
   {
    "key": "mob__montreux",
+   "name": "Montreux",
    "gruppe": "MOB · Bahnhöfe",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "af2f7aa",
+   "stellen": 0
   },
   {
    "key": "mob__oeschseite",
+   "name": "Oeschseite",
    "gruppe": "MOB · Bahnhöfe",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "af2f7aa",
+   "stellen": 0
   },
   {
    "key": "mob__paccot",
+   "name": "Paccot",
    "gruppe": "MOB · Bahnhöfe",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "af2f7aa",
+   "stellen": 0
   },
   {
    "key": "mob__planchamp",
+   "name": "Planchamp",
    "gruppe": "MOB · Bahnhöfe",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "af2f7aa",
+   "stellen": 0
   },
   {
    "key": "mob__rochers_de_naye",
+   "name": "Rochers de Naye",
    "gruppe": "MOB · Bahnhöfe",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "af2f7aa",
+   "stellen": 0
   },
   {
    "key": "mob__rossiniere",
+   "name": "Rossinière",
    "gruppe": "MOB · Bahnhöfe",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "af2f7aa",
+   "stellen": 0
   },
   {
    "key": "mob__rougemont",
+   "name": "Rougemont",
    "gruppe": "MOB · Bahnhöfe",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "af2f7aa",
+   "stellen": 0
   },
   {
    "key": "mob__saanen",
+   "name": "Saanen",
    "gruppe": "MOB · Bahnhöfe",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "af2f7aa",
+   "stellen": 0
   },
   {
    "key": "mob__saanenmoser",
+   "name": "Saanenmöser",
    "gruppe": "MOB · Bahnhöfe",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "af2f7aa",
+   "stellen": 0
   },
   {
    "key": "mob__schonried",
+   "name": "Schönried",
    "gruppe": "MOB · Bahnhöfe",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "af2f7aa",
+   "stellen": 0
   },
   {
    "key": "mob__sendy_sollard",
+   "name": "Sendy-Sollard",
    "gruppe": "MOB · Bahnhöfe",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "af2f7aa",
+   "stellen": 0
   },
   {
    "key": "mob__st_stephan",
+   "name": "St. Stephan",
    "gruppe": "MOB · Bahnhöfe",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "af2f7aa",
+   "stellen": 0
   },
   {
    "key": "mob__toveyre",
+   "name": "Toveyre",
    "gruppe": "MOB · Bahnhöfe",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "af2f7aa",
+   "stellen": 0
   },
   {
    "key": "mob__valmont",
+   "name": "Valmont",
    "gruppe": "MOB · Bahnhöfe",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "af2f7aa",
+   "stellen": 0
   },
   {
    "key": "mob__vernex",
+   "name": "Vernex",
    "gruppe": "MOB · Bahnhöfe",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "af2f7aa",
+   "stellen": 0
   },
   {
    "key": "mob__vuarennes",
+   "name": "Vuarennes",
    "gruppe": "MOB · Bahnhöfe",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "af2f7aa",
+   "stellen": 0
   },
   {
    "key": "mob__zweisimmen",
+   "name": "Zweisimmen",
    "gruppe": "MOB · Bahnhöfe",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "af2f7aa",
+   "stellen": 0
   },
   {
    "key": "vereina__klosters_platz",
+   "name": "Klosters Platz",
    "gruppe": "Vereina · Bahnhöfe",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "af2f7aa",
+   "stellen": 0
   },
   {
    "key": "vereina__klosters_selfranga",
+   "name": "Klosters Selfranga",
    "gruppe": "Vereina · Bahnhöfe",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "af2f7aa",
+   "stellen": 0
   },
   {
    "key": "vereina__sagliains_nord",
+   "name": "Sagliains Nord",
    "gruppe": "Vereina · Bahnhöfe",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "af2f7aa",
+   "stellen": 0
   },
   {
    "key": "vereina__sagliains_sasslatsch",
+   "name": "Sagliains Sasslatsch",
    "gruppe": "Vereina · Bahnhöfe",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "af2f7aa",
+   "stellen": 0
   },
   {
    "key": "vereina__sagliains",
+   "name": "Sagliains · Autoverlad",
    "gruppe": "Vereina · Bahnhöfe",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "af2f7aa",
+   "stellen": 0
   },
   {
    "key": "vereina__sasslatsch",
+   "name": "Sasslatsch",
    "gruppe": "Vereina · Bahnhöfe",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "af2f7aa",
+   "stellen": 0
   },
   {
    "key": "vereina__selfranga_sud",
+   "name": "Selfranga Süd",
    "gruppe": "Vereina · Bahnhöfe",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "af2f7aa",
+   "stellen": 0
   },
   {
    "key": "vereina__susch",
+   "name": "Susch",
    "gruppe": "Vereina · Bahnhöfe",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "af2f7aa",
+   "stellen": 0
   },
   {
    "key": "vereina__vereina_nord",
+   "name": "Vereina Nord",
    "gruppe": "Vereina · Bahnhöfe",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "af2f7aa",
+   "stellen": 0
   },
   {
    "key": "vereina__vereina_sud",
+   "name": "Vereina Süd",
    "gruppe": "Vereina · Bahnhöfe",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "af2f7aa",
+   "stellen": 0
   }
  ]
 }
