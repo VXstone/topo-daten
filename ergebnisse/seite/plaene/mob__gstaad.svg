@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1081 300" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
+<rect width="100%" height="100%" fill="#fff"/>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M492.8,158.0H493.8Q500.8,158.0 504.3,164.1L511.1,175.9Q514.6,182.0 521.6,182.0H522.6 M520.6,182.0H615.9 M520.6,182.0H520.6Q525.6,182.0 528.6,186.0L532.6,191.2Q535.6,195.2 540.6,195.2H540.6M540.6,195.2H616.2 M464.9,134.0H465.9Q472.9,134.0 476.4,140.1L483.3,151.9Q486.8,158.0 493.8,158.0H494.8" stroke="#9a5b1e" stroke-width="1.6"/>
+<path d="M340.4,110.0H360.7 M748.4,110.0H853.1 M360.7,110.0H502.4 M230.0,110.0H230.0Q233.1,110.0 234.6,112.7L245.4,131.3Q246.9,134.0 250.0,134.0H250.0M250.0,134.0H340.2 M680.5,134.0H728.4M728.4,134.0H728.4Q731.4,134.0 733.0,131.3L743.8,112.7Q745.3,110.0 748.4,110.0H748.4 M464.9,134.0H680.5 M492.8,158.0H660.5M660.5,158.0H660.5Q663.6,158.0 665.1,155.3L675.9,136.7Q677.4,134.0 680.5,134.0H680.5 M340.2,134.0H362.2 M502.4,110.0H748.4 M362.2,134.0H464.9 M174.8,110.0H340.4" stroke="#9a5b1e" stroke-width="3.6"/>
+</g>
+<rect x="541.8" y="95.0" width="80.0" height="8" rx="1.5" fill="#9a5b1e"/>
+<rect x="527.2" y="142.0" width="80.0" height="8" rx="1.5" fill="#9a5b1e"/>
+<circle cx="615.9" cy="182.0" r="3.2" fill="#9a5b1e"/>
+<circle cx="616.2" cy="195.2" r="3.2" fill="#9a5b1e"/>
+<rect x="568.8" y="102.0" width="26" height="16" fill="#fff"/>
+<text x="581.8" y="116.5" font-size="19" text-anchor="middle" fill="#9a5b1e">1</text>
+<rect x="554.2" y="126.0" width="26" height="16" fill="#fff"/>
+<text x="567.2" y="140.5" font-size="19" text-anchor="middle" fill="#9a5b1e">2</text>
+<rect x="554.2" y="150.0" width="26" height="16" fill="#fff"/>
+<text x="567.2" y="164.5" font-size="19" text-anchor="middle" fill="#9a5b1e">3</text>
+<path d="M831.1,110.0H853.1" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
+<path d="M196.8,110.0H174.8" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
+<text x="865.1" y="97.0" font-size="22" text-anchor="start" fill="#9a5b1e">Linie 120</text>
+<text x="865.1" y="123.0" font-size="22" text-anchor="start" fill="#9a5b1e">Zweisimmen →</text>
+<text x="162.8" y="97.0" font-size="22" text-anchor="end" fill="#9a5b1e">Linie 120</text>
+<text x="162.8" y="123.0" font-size="22" text-anchor="end" fill="#9a5b1e">← Zweisimmen</text>
+<text x="585.6" y="255.2" font-size="38" font-weight="700" text-anchor="middle" fill="#9a5b1e">Gstaad</text>
+</svg>

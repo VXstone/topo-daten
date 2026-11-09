@@ -1,6 +1,6 @@
 {
- "erzeugt": "2026-11-09 06:46 UTC",
- "plaene": 81,
+ "erzeugt": "2026-11-09 07:02 UTC",
+ "plaene": 136,
  "geaendert": 1,
  "einordnung": {
   "gleichwertig": 1
@@ -61,9 +61,27 @@
    "stellen": 0
   },
   {
+   "key": "basel",
+   "name": "Basel SBB",
+   "gruppe": "Grosse Knoten",
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "09c9132",
+   "stellen": 0
+  },
+  {
+   "key": "bern",
+   "name": "Bern",
+   "gruppe": "Grosse Knoten",
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "09c9132",
+   "stellen": 0
+  },
+  {
    "key": "thun",
    "name": "Thun",
-   "gruppe": "Referenz",
+   "gruppe": "Bahnhöfe ohne Regionalplan",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-15)",
    "basis_commit": "09c9132",
@@ -83,45 +101,45 @@
    }
   },
   {
-   "key": "ins",
-   "name": "Ins",
-   "gruppe": "Referenz",
-   "abgenommen": true,
-   "basis": "Abnahme 2026-10-26",
-   "basis_commit": "75cc38e",
+   "key": "konolfingen",
+   "name": "Konolfingen",
+   "gruppe": "Bahnhöfe ohne Regionalplan",
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "1fa061d",
    "stellen": 0
   },
   {
-   "key": "murten",
-   "name": "Murten",
-   "gruppe": "Referenz",
-   "abgenommen": true,
-   "basis": "bestätigt 2026-11-07",
-   "basis_commit": "75cc38e",
-   "stellen": 0
-  },
-  {
-   "key": "kerzers",
-   "name": "Kerzers",
-   "gruppe": "Referenz",
-   "abgenommen": true,
-   "basis": "bestätigt 2026-11-07",
-   "basis_commit": "ede23ea",
+   "key": "solothurn",
+   "name": "Solothurn",
+   "gruppe": "Bahnhöfe ohne Regionalplan",
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "1fa061d",
    "stellen": 0
   },
   {
    "key": "olten",
    "name": "Olten",
-   "gruppe": "Region Olten",
+   "gruppe": "Olten 1 · Knoten Olten",
    "abgenommen": false,
    "basis": "bestätigt 2026-11-08",
    "basis_commit": "73d910b",
    "stellen": 0
   },
   {
+   "key": "olten_hammer",
+   "name": "Olten Hammer",
+   "gruppe": "Olten 1 · Knoten Olten",
+   "abgenommen": true,
+   "basis": "bestätigt 2026-11-07",
+   "basis_commit": "1fa061d",
+   "stellen": 0
+  },
+  {
    "key": "aarburg_oftringen",
    "name": "Aarburg-Oftringen",
-   "gruppe": "Region Olten",
+   "gruppe": "Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil",
    "abgenommen": true,
    "basis": "bestätigt 2026-11-08",
    "basis_commit": "73d910b",
@@ -130,7 +148,7 @@
   {
    "key": "rothrist",
    "name": "Rothrist",
-   "gruppe": "Region Olten",
+   "gruppe": "Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil",
    "abgenommen": true,
    "basis": "Abnahme 2026-10-29",
    "basis_commit": "eb6aec9",
@@ -152,7 +170,7 @@
   {
    "key": "zofingen",
    "name": "Zofingen",
-   "gruppe": "Region Olten",
+   "gruppe": "Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil",
    "abgenommen": true,
    "basis": "bestätigt 2026-11-08",
    "basis_commit": "73d910b",
@@ -161,16 +179,7 @@
   {
    "key": "safenwil",
    "name": "Safenwil",
-   "gruppe": "Region Olten",
-   "abgenommen": true,
-   "basis": "bestätigt 2026-11-07",
-   "basis_commit": "1fa061d",
-   "stellen": 0
-  },
-  {
-   "key": "wangen_bei_olten",
-   "name": "Wangen b. O.",
-   "gruppe": "Region Olten",
+   "gruppe": "Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil",
    "abgenommen": true,
    "basis": "bestätigt 2026-11-07",
    "basis_commit": "1fa061d",
@@ -179,7 +188,7 @@
   {
    "key": "dulliken",
    "name": "Dulliken",
-   "gruppe": "Region Olten",
+   "gruppe": "Olten 3 · Olten – Aarau",
    "abgenommen": true,
    "basis": "bestätigt 2026-11-07",
    "basis_commit": "a808d4c",
@@ -188,7 +197,7 @@
   {
    "key": "daniken",
    "name": "Däniken",
-   "gruppe": "Region Olten",
+   "gruppe": "Olten 3 · Olten – Aarau",
    "abgenommen": true,
    "basis": "bestätigt 2026-11-07",
    "basis_commit": "1fa061d",
@@ -197,16 +206,25 @@
   {
    "key": "schonenwerd",
    "name": "Schönenwerd",
-   "gruppe": "Region Olten",
+   "gruppe": "Olten 3 · Olten – Aarau",
    "abgenommen": true,
    "basis": "bestätigt 2026-11-08",
    "basis_commit": "a808d4c",
    "stellen": 0
   },
   {
+   "key": "aarau",
+   "name": "Aarau",
+   "gruppe": "Olten 3 · Olten – Aarau",
+   "abgenommen": false,
+   "basis": "veröffentlicht",
+   "basis_commit": "9524db1",
+   "stellen": 0
+  },
+  {
    "key": "tecknau",
    "name": "Tecknau",
-   "gruppe": "Region Olten",
+   "gruppe": "Olten 4 · Hauenstein",
    "abgenommen": true,
    "basis": "bestätigt 2026-11-07",
    "basis_commit": "255d606",
@@ -215,28 +233,37 @@
   {
    "key": "laufelfingen",
    "name": "Läufelfingen",
-   "gruppe": "Region Olten",
+   "gruppe": "Olten 4 · Hauenstein",
    "abgenommen": true,
    "basis": "bestätigt 2026-11-07",
    "basis_commit": "75cc38e",
    "stellen": 0
   },
   {
-   "key": "olten_hammer",
-   "name": "Olten Hammer",
-   "gruppe": "Region Olten",
+   "key": "wangen_bei_olten",
+   "name": "Wangen b. O.",
+   "gruppe": "Olten 5 · Olten – Solothurn",
    "abgenommen": true,
    "basis": "bestätigt 2026-11-07",
    "basis_commit": "1fa061d",
    "stellen": 0
   },
   {
-   "key": "aarau",
-   "name": "Aarau",
-   "gruppe": "Region Olten",
-   "abgenommen": false,
-   "basis": "veröffentlicht",
-   "basis_commit": "9524db1",
+   "key": "ins",
+   "name": "Ins",
+   "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
+   "abgenommen": true,
+   "basis": "Abnahme 2026-10-26",
+   "basis_commit": "75cc38e",
+   "stellen": 0
+  },
+  {
+   "key": "kerzers",
+   "name": "Kerzers",
+   "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
+   "abgenommen": true,
+   "basis": "bestätigt 2026-11-07",
+   "basis_commit": "ede23ea",
    "stellen": 0
   },
   {
@@ -246,51 +273,6 @@
    "abgenommen": true,
    "basis": "bestätigt 2026-11-08",
    "basis_commit": "1fa061d",
-   "stellen": 0
-  },
-  {
-   "key": "konolfingen",
-   "name": "Konolfingen",
-   "gruppe": "Repo-Bahnhöfe (Workflow plaene)",
-   "abgenommen": false,
-   "basis": "veröffentlicht",
-   "basis_commit": "1fa061d",
-   "stellen": 0
-  },
-  {
-   "key": "neuchatel_vauseyon",
-   "name": "Neuchâtel Vauseyon",
-   "gruppe": "Repo-Bahnhöfe (Workflow plaene)",
-   "abgenommen": true,
-   "basis": "Abnahme 2026-10-29",
-   "basis_commit": "b3c7870",
-   "stellen": 0
-  },
-  {
-   "key": "solothurn",
-   "name": "Solothurn",
-   "gruppe": "Repo-Bahnhöfe (Workflow plaene)",
-   "abgenommen": false,
-   "basis": "veröffentlicht",
-   "basis_commit": "1fa061d",
-   "stellen": 0
-  },
-  {
-   "key": "basel",
-   "name": "Basel SBB",
-   "gruppe": "Grosse Knoten (Entwurf 2)",
-   "abgenommen": false,
-   "basis": "veröffentlicht",
-   "basis_commit": "09c9132",
-   "stellen": 0
-  },
-  {
-   "key": "bern",
-   "name": "Bern",
-   "gruppe": "Grosse Knoten (Entwurf 2)",
-   "abgenommen": false,
-   "basis": "veröffentlicht",
-   "basis_commit": "09c9132",
    "stellen": 0
   },
   {
@@ -390,6 +372,15 @@
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-16)",
    "basis_commit": "09c9132",
+   "stellen": 0
+  },
+  {
+   "key": "murten",
+   "name": "Murten",
+   "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
+   "abgenommen": true,
+   "basis": "bestätigt 2026-11-07",
+   "basis_commit": "75cc38e",
    "stellen": 0
   },
   {
@@ -717,6 +708,15 @@
    "stellen": 0
   },
   {
+   "key": "neuchatel_vauseyon",
+   "name": "Neuchâtel Vauseyon",
+   "gruppe": "NE 8 · Neuchâtel – La Chaux-de-Fonds",
+   "abgenommen": true,
+   "basis": "Abnahme 2026-10-29",
+   "basis_commit": "b3c7870",
+   "stellen": 0
+  },
+  {
    "key": "les_deurres",
    "name": "Les Deurres",
    "gruppe": "NE 8 · Neuchâtel – La Chaux-de-Fonds",
@@ -760,6 +760,336 @@
    "basis": "Archivbeginn (Abnahme 2026-10-20)",
    "basis_commit": "09c9132",
    "stellen": 0
+  },
+  {
+   "key": "mob__allieres",
+   "gruppe": "MOB · Bahnhöfe",
+   "basis": "neu",
+   "stellen": null
+  },
+  {
+   "key": "mob__belmont_sur_montreux",
+   "gruppe": "MOB · Bahnhöfe",
+   "basis": "neu",
+   "stellen": null
+  },
+  {
+   "key": "mob__blankenburg",
+   "gruppe": "MOB · Bahnhöfe",
+   "basis": "neu",
+   "stellen": null
+  },
+  {
+   "key": "mob__caux",
+   "gruppe": "MOB · Bahnhöfe",
+   "basis": "neu",
+   "stellen": null
+  },
+  {
+   "key": "mob__chamby",
+   "gruppe": "MOB · Bahnhöfe",
+   "basis": "neu",
+   "stellen": null
+  },
+  {
+   "key": "mob__chateau_d_oex",
+   "gruppe": "MOB · Bahnhöfe",
+   "basis": "neu",
+   "stellen": null
+  },
+  {
+   "key": "mob__chatelard",
+   "gruppe": "MOB · Bahnhöfe",
+   "basis": "neu",
+   "stellen": null
+  },
+  {
+   "key": "mob__chernex",
+   "gruppe": "MOB · Bahnhöfe",
+   "basis": "neu",
+   "stellen": null
+  },
+  {
+   "key": "mob__cret_d_y_bau",
+   "gruppe": "MOB · Bahnhöfe",
+   "basis": "neu",
+   "stellen": null
+  },
+  {
+   "key": "mob__flendruz",
+   "gruppe": "MOB · Bahnhöfe",
+   "basis": "neu",
+   "stellen": null
+  },
+  {
+   "key": "mob__fontanivent",
+   "gruppe": "MOB · Bahnhöfe",
+   "basis": "neu",
+   "stellen": null
+  },
+  {
+   "key": "mob__glion_college",
+   "gruppe": "MOB · Bahnhöfe",
+   "basis": "neu",
+   "stellen": null
+  },
+  {
+   "key": "mob__glion",
+   "gruppe": "MOB · Bahnhöfe",
+   "basis": "neu",
+   "stellen": null
+  },
+  {
+   "key": "mob__gruben",
+   "gruppe": "MOB · Bahnhöfe",
+   "basis": "neu",
+   "stellen": null
+  },
+  {
+   "key": "mob__gstaad",
+   "gruppe": "MOB · Bahnhöfe",
+   "basis": "neu",
+   "stellen": null
+  },
+  {
+   "key": "mob__jaman",
+   "gruppe": "MOB · Bahnhöfe",
+   "basis": "neu",
+   "stellen": null
+  },
+  {
+   "key": "mob__jor",
+   "gruppe": "MOB · Bahnhöfe",
+   "basis": "neu",
+   "stellen": null
+  },
+  {
+   "key": "mob__la_perche",
+   "gruppe": "MOB · Bahnhöfe",
+   "basis": "neu",
+   "stellen": null
+  },
+  {
+   "key": "mob__la_tine",
+   "gruppe": "MOB · Bahnhöfe",
+   "basis": "neu",
+   "stellen": null
+  },
+  {
+   "key": "mob__le_tremblex",
+   "gruppe": "MOB · Bahnhöfe",
+   "basis": "neu",
+   "stellen": null
+  },
+  {
+   "key": "mob__lenk_im_simmental",
+   "gruppe": "MOB · Bahnhöfe",
+   "basis": "neu",
+   "stellen": null
+  },
+  {
+   "key": "mob__les_avants",
+   "gruppe": "MOB · Bahnhöfe",
+   "basis": "neu",
+   "stellen": null
+  },
+  {
+   "key": "mob__les_cases",
+   "gruppe": "MOB · Bahnhöfe",
+   "basis": "neu",
+   "stellen": null
+  },
+  {
+   "key": "mob__les_echets",
+   "gruppe": "MOB · Bahnhöfe",
+   "basis": "neu",
+   "stellen": null
+  },
+  {
+   "key": "mob__les_sciernes",
+   "gruppe": "MOB · Bahnhöfe",
+   "basis": "neu",
+   "stellen": null
+  },
+  {
+   "key": "mob__matten",
+   "gruppe": "MOB · Bahnhöfe",
+   "basis": "neu",
+   "stellen": null
+  },
+  {
+   "key": "mob__montbovon",
+   "gruppe": "MOB · Bahnhöfe",
+   "basis": "neu",
+   "stellen": null
+  },
+  {
+   "key": "mob__montreux_les_planches",
+   "gruppe": "MOB · Bahnhöfe",
+   "basis": "neu",
+   "stellen": null
+  },
+  {
+   "key": "mob__montreux",
+   "gruppe": "MOB · Bahnhöfe",
+   "basis": "neu",
+   "stellen": null
+  },
+  {
+   "key": "mob__oeschseite",
+   "gruppe": "MOB · Bahnhöfe",
+   "basis": "neu",
+   "stellen": null
+  },
+  {
+   "key": "mob__paccot",
+   "gruppe": "MOB · Bahnhöfe",
+   "basis": "neu",
+   "stellen": null
+  },
+  {
+   "key": "mob__planchamp",
+   "gruppe": "MOB · Bahnhöfe",
+   "basis": "neu",
+   "stellen": null
+  },
+  {
+   "key": "mob__rochers_de_naye",
+   "gruppe": "MOB · Bahnhöfe",
+   "basis": "neu",
+   "stellen": null
+  },
+  {
+   "key": "mob__rossiniere",
+   "gruppe": "MOB · Bahnhöfe",
+   "basis": "neu",
+   "stellen": null
+  },
+  {
+   "key": "mob__rougemont",
+   "gruppe": "MOB · Bahnhöfe",
+   "basis": "neu",
+   "stellen": null
+  },
+  {
+   "key": "mob__saanen",
+   "gruppe": "MOB · Bahnhöfe",
+   "basis": "neu",
+   "stellen": null
+  },
+  {
+   "key": "mob__saanenmoser",
+   "gruppe": "MOB · Bahnhöfe",
+   "basis": "neu",
+   "stellen": null
+  },
+  {
+   "key": "mob__schonried",
+   "gruppe": "MOB · Bahnhöfe",
+   "basis": "neu",
+   "stellen": null
+  },
+  {
+   "key": "mob__sendy_sollard",
+   "gruppe": "MOB · Bahnhöfe",
+   "basis": "neu",
+   "stellen": null
+  },
+  {
+   "key": "mob__st_stephan",
+   "gruppe": "MOB · Bahnhöfe",
+   "basis": "neu",
+   "stellen": null
+  },
+  {
+   "key": "mob__toveyre",
+   "gruppe": "MOB · Bahnhöfe",
+   "basis": "neu",
+   "stellen": null
+  },
+  {
+   "key": "mob__valmont",
+   "gruppe": "MOB · Bahnhöfe",
+   "basis": "neu",
+   "stellen": null
+  },
+  {
+   "key": "mob__vernex",
+   "gruppe": "MOB · Bahnhöfe",
+   "basis": "neu",
+   "stellen": null
+  },
+  {
+   "key": "mob__vuarennes",
+   "gruppe": "MOB · Bahnhöfe",
+   "basis": "neu",
+   "stellen": null
+  },
+  {
+   "key": "mob__zweisimmen",
+   "gruppe": "MOB · Bahnhöfe",
+   "basis": "neu",
+   "stellen": null
+  },
+  {
+   "key": "vereina__klosters_platz",
+   "gruppe": "Vereina · Bahnhöfe",
+   "basis": "neu",
+   "stellen": null
+  },
+  {
+   "key": "vereina__klosters_selfranga",
+   "gruppe": "Vereina · Bahnhöfe",
+   "basis": "neu",
+   "stellen": null
+  },
+  {
+   "key": "vereina__sagliains_nord",
+   "gruppe": "Vereina · Bahnhöfe",
+   "basis": "neu",
+   "stellen": null
+  },
+  {
+   "key": "vereina__sagliains_sasslatsch",
+   "gruppe": "Vereina · Bahnhöfe",
+   "basis": "neu",
+   "stellen": null
+  },
+  {
+   "key": "vereina__sagliains",
+   "gruppe": "Vereina · Bahnhöfe",
+   "basis": "neu",
+   "stellen": null
+  },
+  {
+   "key": "vereina__sasslatsch",
+   "gruppe": "Vereina · Bahnhöfe",
+   "basis": "neu",
+   "stellen": null
+  },
+  {
+   "key": "vereina__selfranga_sud",
+   "gruppe": "Vereina · Bahnhöfe",
+   "basis": "neu",
+   "stellen": null
+  },
+  {
+   "key": "vereina__susch",
+   "gruppe": "Vereina · Bahnhöfe",
+   "basis": "neu",
+   "stellen": null
+  },
+  {
+   "key": "vereina__vereina_nord",
+   "gruppe": "Vereina · Bahnhöfe",
+   "basis": "neu",
+   "stellen": null
+  },
+  {
+   "key": "vereina__vereina_sud",
+   "gruppe": "Vereina · Bahnhöfe",
+   "basis": "neu",
+   "stellen": null
   }
  ]
 }
