@@ -275,13 +275,13 @@
    "optionen": [
     "--hauptgleise"
    ],
-   "plan_geaendert": false,
-   "bare_geaendert": false,
+   "plan_geaendert": true,
+   "bare_geaendert": true,
    "netz": {
     "D11": 3,
-    "W2": 2,
+    "W2": 3,
     "F7": 4,
-    "A1": 1
+    "A1": 2
    },
    "topologie": "{}",
    "qualitaet": {
@@ -292,12 +292,12 @@
     "topo_E": 0,
     "topo_F": 0,
     "netz_D11": 3,
-    "netz_W2": 2,
+    "netz_W2": 3,
     "netz_F7": 4,
-    "netz_A1": 1,
+    "netz_A1": 2,
     "boegen_pax": 6,
-    "boegen_alle": 93,
-    "randabstand": 3
+    "boegen_alle": 91,
+    "randabstand": 2
    }
   }
  },
@@ -333,24 +333,18 @@
  },
  "region": {
   "ok": true,
-  "log": "  loses Ende #33 an Strecke ['451'] angeschlossen (Abzweig #43, 100 m)\nKnoten: Counter({'spurplan': 14, 'exit': 8, 'halt': 7, 'junction': 3}) Kanten: 34\nsenkrecht: ['Aarburg-Oftringen', 'Zofingen', 'Olten', 'Läufelfingen', 'Tecknau', 'Olten Ost']\nF11 quer ausgerichtet: {'Däniken': 3.0}\n  Spurfolge Abzweig #31: 450 | 400 | 400 | 450\n  Spurwechsel auf freier Strecke: 11\n  Tunnel auf freier Strecke: 7\n  Spurwechsel ohne Platz weggelassen: Rothrist–Abzweig\n  Spurwechsel gezeichnet: 11\n  Stösse an Abzweigen zusammengeführt: 1\n  Kreuzungen mit Brücke: 1\n  Nebengleise/Spurwechsel freie Strecke gezeichnet: 21\nok 6739 3032\n",
+  "log": "  loses Ende #33 an Strecke ['451'] angeschlossen (Abzweig #43, 100 m)\nKnoten: Counter({'spurplan': 14, 'exit': 8, 'halt': 7, 'junction': 3}) Kanten: 34\nsenkrecht: ['Aarburg-Oftringen', 'Zofingen', 'Olten', 'Läufelfingen', 'Tecknau', 'Olten Ost']\nF11 quer ausgerichtet: {'Däniken': 3.0}\n  Spurfolge Abzweig #31: 450 | 400 | 400 | 450\n  Spurwechsel auf freier Strecke: 11\n  Tunnel auf freier Strecke: 7\n  Spurwechsel ohne Platz weggelassen: Rothrist–Abzweig\n  Spurwechsel gezeichnet: 11\n  Stösse an Abzweigen zusammengeführt: 1\n  Kreuzungen mit Brücke: 1\n  Nebengleise/Spurwechsel freie Strecke gezeichnet: 21\nok 6733 3032\n",
   "geaendert": true,
-  "pruefung": "50\n  Spurwechsel auf freier Strecke: 11\n  Tunnel auf freier Strecke: 7\n  Spurwechsel ohne Platz weggelassen: Rothrist–Abzweig\n  Spurwechsel gezeichnet: 11\n  Stösse an Abzweigen zusammengeführt: 1\n  Kreuzungen mit Brücke: 1\n  Nebengleise/Spurwechsel freie Strecke gezeichnet: 21\nok 6739 3032\n\n== Topologie Region (T1–T6) ==\n  T6 Zofingen – Abgang 500: 4 Haken (Umkehr > 110° auf kurzem Stück)\n\n== Prüfung 1: Gleise entlang der Strecken ==\n  Hinweis Abzweig #43: Gleis der Linie 453 (von Rothrist) wechselt auf Aarburg-Oftringen (451)\n  → 0 Befunde\n\n== Prüfung 2: Lage Nord/Süd und Ost/West gegenüber Geografie ==\n  → 0 Befunde\n\n== Prüfung 3: Achsen und Seiten der Spurpläne gegen die Karte ==\n  Dulliken: Abgang 540 (Aarau) liegt auf der Karte links von 540 (Aarau), im Plan rechts (Blick in Achsrichtung)\n  Olten Ost: Achse zeigt im Plan nach NO, auf der Karte nach SO (94°)\n  Aarau: seitlicher Abgang 540 (Schönenwerd) liegt auf der Karte links der Achse, im Plan auf der anderen Seite\n  → 2 Befunde\n\n== Prüfung 4: freie Strecke gegen OSM ==\n  Planfenster: 13 von 14 Spurplänen\n  Rothrist – Olten: 55–130 m ab Rothrist: OSM 3 Gleise, Plan 2\n  Rothrist – Abzweig: 55–130 m ab Rothrist: OSM 3 Gleise, Plan 2\n  Rothrist – Abzweig: 1755–1880 m ab Rothrist: OSM 3 Gleise, Plan 2\n  Aarburg-Oftringen – Abzweig: 855–955 m ab Aarburg-Oftringen: OSM 3 Gleise, Plan 2\n  Olten – Olten Ost: 280–380 m ab Olten: OSM 4 Gleise, Plan 6\n  Dulliken – Däniken: 655–755 m ab Dulliken: OSM 5 Gleise, Plan 4\n  Däniken – Aarau: 3405–3630 m ab Däniken: OSM 4 Gleise, Plan 2\n  Däniken – Aarau: 3680–3805 m ab Däniken: OSM 4 Gleise, Plan 2\n  Däniken – Aarau: 3855–3980 m ab Däniken: OSM 4 Gleise, Plan 2\n  Däniken – Aarau: 4130–4430 m ab Däniken: OSM 4 Gleise, Plan 2\n  Däniken – Aarau: 4580–4655 m ab Däniken: OSM 4 Gleise, Plan 2\n  Däniken – Aarau: 5630–5780 m ab Däniken: OSM 3 Gleise, Plan 2\n  Schönenwerd – Aarau: 2080–2230 m ab Schönenwerd: OSM 4 Gleise, Plan 2\n  Schönenwerd – Aarau: 2255–2655 m ab Schönenwerd: OSM 3 Gleise, Plan 2\n  Schönenwerd – Aarau: 2780–2855 m ab Schönenwerd: OSM 5 Gleise, Plan 2\n  Schönenwerd – Aarau: 2880–3180 m ab Schönenwerd: OSM 4 Gleise, Plan 2\n  Schönenwerd – Aarau: 3330–3405 m ab Schönenwerd: OSM 4 Gleise, Plan 2\n  Schönenwerd – Aarau: 4380–4530 m ab Schönenwerd: OSM 3 Gleise, Plan 2\n  Schönenwerd – Aarau: 1210 m ab Schönenwerd: Spurwechsel (Way 369861204, crossover) nicht im Plan\n  Aarau – Abgang 650: 855–930 m ab Aarau: OSM 5 Gleise, Plan 4\n  Aarau – Abgang 650: 2280–2355 m ab Aarau: OSM 8 Gleise, Plan 4\n  Aarau – Abgang 650: 222 m ab Aarau: Spurwechsel (Way 34013597, crossover) nicht im Plan\n  Aarau – Abgang 650: 1932 m ab Aarau: Spurwechsel (Way 168744385, crossover) nicht im Plan\n  Aarau – Abgang 650: 716 m ab Aarau: Spurwechsel (Way 168744387, crossover) nicht im Plan\n  Aarau – Abgang 650: 90 m ab Aarau: Spurwechsel (Way 197751777, crossover) nicht im Plan\n  Aarau – Abgang 650: 1443 m ab Aarau: Spurwechsel (Way 197753128, crossover) nicht im Plan\n  → 26 Befunde\n",
+  "pruefung": "50\n  Spurwechsel auf freier Strecke: 11\n  Tunnel auf freier Strecke: 7\n  Spurwechsel ohne Platz weggelassen: Rothrist–Abzweig\n  Spurwechsel gezeichnet: 11\n  Stösse an Abzweigen zusammengeführt: 1\n  Kreuzungen mit Brücke: 1\n  Nebengleise/Spurwechsel freie Strecke gezeichnet: 21\nok 6733 3032\n\n== Topologie Region (T1–T6) ==\n  T6 Zofingen – Abgang 500: 4 Haken (Umkehr > 110° auf kurzem Stück)\n\n== Prüfung 1: Gleise entlang der Strecken ==\n  Hinweis Abzweig #43: Gleis der Linie 453 (von Rothrist) wechselt auf Aarburg-Oftringen (451)\n  → 0 Befunde\n\n== Prüfung 2: Lage Nord/Süd und Ost/West gegenüber Geografie ==\n  → 0 Befunde\n\n== Prüfung 3: Achsen und Seiten der Spurpläne gegen die Karte ==\n  Dulliken: Abgang 540 (Aarau) liegt auf der Karte links von 540 (Aarau), im Plan rechts (Blick in Achsrichtung)\n  Olten Ost: Achse zeigt im Plan nach NO, auf der Karte nach SO (94°)\n  Aarau: seitlicher Abgang 540 (Schönenwerd) liegt auf der Karte links der Achse, im Plan auf der anderen Seite\n  → 2 Befunde\n\n== Prüfung 4: freie Strecke gegen OSM ==\n  Planfenster: 13 von 14 Spurplänen\n  Rothrist – Olten: 55–130 m ab Rothrist: OSM 3 Gleise, Plan 2\n  Rothrist – Abzweig: 55–130 m ab Rothrist: OSM 3 Gleise, Plan 2\n  Rothrist – Abzweig: 1755–1880 m ab Rothrist: OSM 3 Gleise, Plan 2\n  Aarburg-Oftringen – Abzweig: 855–955 m ab Aarburg-Oftringen: OSM 3 Gleise, Plan 2\n  Olten – Olten Ost: 280–380 m ab Olten: OSM 4 Gleise, Plan 6\n  Dulliken – Däniken: 655–755 m ab Dulliken: OSM 5 Gleise, Plan 4\n  Däniken – Aarau: 3405–3630 m ab Däniken: OSM 4 Gleise, Plan 2\n  Däniken – Aarau: 3680–3805 m ab Däniken: OSM 4 Gleise, Plan 2\n  Däniken – Aarau: 3855–3980 m ab Däniken: OSM 4 Gleise, Plan 2\n  Däniken – Aarau: 4130–4430 m ab Däniken: OSM 4 Gleise, Plan 2\n  Däniken – Aarau: 4580–4655 m ab Däniken: OSM 4 Gleise, Plan 2\n  Däniken – Aarau: 5630–5780 m ab Däniken: OSM 3 Gleise, Plan 2\n  Schönenwerd – Aarau: 2080–2230 m ab Schönenwerd: OSM 4 Gleise, Plan 2\n  Schönenwerd – Aarau: 2255–2655 m ab Schönenwerd: OSM 3 Gleise, Plan 2\n  Schönenwerd – Aarau: 2780–2855 m ab Schönenwerd: OSM 5 Gleise, Plan 2\n  Schönenwerd – Aarau: 2880–3180 m ab Schönenwerd: OSM 4 Gleise, Plan 2\n  Schönenwerd – Aarau: 3330–3405 m ab Schönenwerd: OSM 4 Gleise, Plan 2\n  Schönenwerd – Aarau: 4380–4530 m ab Schönenwerd: OSM 3 Gleise, Plan 2\n  Schönenwerd – Aarau: 1210 m ab Schönenwerd: Spurwechsel (Way 369861204, crossover) nicht im Plan\n  Aarau – Abgang 650: 855–930 m ab Aarau: OSM 5 Gleise, Plan 4\n  Aarau – Abgang 650: 2280–2355 m ab Aarau: OSM 8 Gleise, Plan 4\n  Aarau – Abgang 650: 222 m ab Aarau: Spurwechsel (Way 34013597, crossover) nicht im Plan\n  Aarau – Abgang 650: 1932 m ab Aarau: Spurwechsel (Way 168744385, crossover) nicht im Plan\n  Aarau – Abgang 650: 716 m ab Aarau: Spurwechsel (Way 168744387, crossover) nicht im Plan\n  Aarau – Abgang 650: 90 m ab Aarau: Spurwechsel (Way 197751777, crossover) nicht im Plan\n  Aarau – Abgang 650: 1443 m ab Aarau: Spurwechsel (Way 197753128, crossover) nicht im Plan\n  → 26 Befunde\n",
   "geometrie": {
    "plan": "/home/runner/work/topo-daten/topo-daten/spurplan/werkstatt/olten/feedback/region.svg",
-   "achse": 10.048495462335005,
+   "achse": 10.049077784489528,
    "befunde": [
     {
      "regel": "A1",
      "x": 85.6,
      "y": -178.5,
      "text": "zwei Streckengleise 11.8 px auseinander (1.17 Achsen) über 42 px"
-    },
-    {
-     "regel": "A1",
-     "x": 2588.2,
-     "y": -518.5,
-     "text": "zwei Streckengleise 22.9 px auseinander (2.28 Achsen) über 58 px"
     },
     {
      "regel": "F11",
@@ -375,6 +369,18 @@
      "x": -28.7,
      "y": 484.5,
      "text": "kurzes Zwischenstück 10.8 px zwischen zwei Knicken (30°/60°)"
+    },
+    {
+     "regel": "F11",
+     "x": 2340.8,
+     "y": -475.1,
+     "text": "Versatz 5.0 px ohne Grund zwischen zwei parallelen Stücken"
+    },
+    {
+     "regel": "F11",
+     "x": 2340.8,
+     "y": -460.0,
+     "text": "Versatz 5.0 px ohne Grund zwischen zwei parallelen Stücken"
     }
    ]
   }
@@ -580,12 +586,12 @@
    "topo_E": 0,
    "topo_F": 0,
    "netz_D11": 3,
-   "netz_W2": 2,
+   "netz_W2": 3,
    "netz_F7": 4,
-   "netz_A1": 1,
+   "netz_A1": 2,
    "boegen_pax": 6,
-   "boegen_alle": 93,
-   "randabstand": 3
+   "boegen_alle": 91,
+   "randabstand": 2
   }
  },
  "qualitaet": {
