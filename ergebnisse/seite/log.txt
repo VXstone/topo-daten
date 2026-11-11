@@ -4,7 +4,6 @@ index.html 1900 KB, 137 Pläne
 21 Hinweise, 21 Ausschnitte
 /home/runner/work/topo-daten/topo-daten/spurplan/code/alle_plaene_pruefen.py:138: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
   json.dump(dict(erzeugt=datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"), plaene=len(zeilen), geaendert=len(gz),
-region                       veröffentlicht                      1 Stellen  Fehler? Topologie  G2 24→27, G5 4→3, G8 0→1
 thun                         Archivbeginn (Abnahme 2026-10-15)    7 Stellen  gleichwertig  
 rothrist                     Abnahme 2026-10-29                  0 Stellen  gleichwertig  
-Regression: 136 Pläne, 2 geändert {'Fehler? Topologie': 1, 'gleichwertig': 1}
+Regression: 136 Pläne, 1 geändert {'gleichwertig': 1}
