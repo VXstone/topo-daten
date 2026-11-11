@@ -1541,6 +1541,107 @@ if CFG.get("randzone", False):
             if not _done: break
     if RANDZONE: print(f"Randzone: {len(RANDZONE)} Randstück(e) in Standardabstand", [(r['rand'], r['von'], r['nach']) for r in RANDZONE])
 
+# R1c Doppelspur-Abstand im Bündel (11.11.2026, Hinweise Daniel Aarau: «zwei Doppelspuren im je gleichen Abstand und beide
+# zueinander im gleichen oder maximal einem doppelten Abstand»). Je Planrand die Hauptgleise (Personenverkehr, ohne service),
+# die ihn erreichen, von oben nach unten: liegen zwei real im Doppelspurabstand (< «kompakt_paar_m», 5,5 m), gehören sie
+# auf benachbarte Ebenen, sonst bleibt höchstens eine freie Ebene dazwischen. Verschoben wird ein Gleis zur Nachbarin hin,
+# wenn die Ebenen bis zum Ziel frei sind: ganze Kette, wenn über ihre ganze Länge frei (Aarau West: 540 an die 650), sonst
+# das Randstück ab der äussersten Weiche (Aarau Ost: Gl. 5 nach der letzten Weiche an Gl. 4) – ein Ebenenwechsel also nur
+# an einer Weiche (die Weiche liegt auf der Ebene des Randstücks). Ketten mit Override-Ebenen (ebene_wie, ebene_tausch)
+# bleiben. Läuft vor F10, damit kurze Verbindungsstücke der verschobenen Gleise nachgezogen werden. cfg «buendel_kompakt».
+BUENDEL_KOMPAKT = []; KOMPAKT_HOME = {}
+if CFG.get("buendel_kompakt", True) and C:
+    _hpk = lambda c: any(sg["pax"] and not sg["tags"].get("service") for sg in c["segs"])
+    _ovw = {w_ for w_, _ in OVR.get("ebene_wie", [])} | {w_ for p_ in OVR.get("ebene_tausch", []) for w_ in p_}
+    _fest = lambda c: any(sg["way"] in _ovw for sg in c["segs"])
+    _dnk = collections.defaultdict(int)
+    for sg in segs:
+        if not sg["flat"]: _dnk[sg["nodes"][0]] += 1; _dnk[sg["nodes"][-1]] += 1
+    def _frei_k(l_, s0_, s1_, ausser): return all(o is ausser or o["lane"] != l_ or min(o["s1"], s1_) - max(o["s0"], s0_) < 1 for o in C)
+    def _weg_frei(c, ziel, s0_, s1_):
+        st_ = 1 if ziel > c["lane"] else -1
+        return all(_frei_k(l_, s0_, s1_, c) for l_ in range(c["lane"] + st_, ziel + st_, st_))
+    def _randstueck(c, rechts):
+        ss = sorted(c["segs"], key=lambda x: x["s0"])
+        if rechts:
+            for i_ in range(len(ss) - 1, 0, -1):
+                if _dnk[ss[i_]["nodes"][0]]: return ss[i_:], ss[:i_]
+        else:
+            for i_ in range(len(ss) - 1):
+                if _dnk[ss[i_]["nodes"][-1]]: return ss[:i_ + 1], ss[i_ + 1:]
+        return None
+    _pm = CFG.get("kompakt_paar_m", 5.5)
+    # Perrons (s-Bereich, d-Bereich): ein Randstück rückt nie neben einen Perron (die Ebene dort gehört dem Perron)
+    _plk = []
+    for e_ in PLAT:
+        _q = [project(xy(g_)) for g_ in e_.get("geometry", [])]
+        if _q: _plk.append((min(q_[0] for q_ in _q), max(q_[0] for q_ in _q), min(q_[1] for q_ in _q), max(q_[1] for q_ in _q)))
+    def _perron_nah(t0_, t1_, d_):
+        return any(min(p_[1], t1_) - max(p_[0], t0_) > -30 and p_[2] - 15 < d_ < p_[3] + 15 for p_ in _plk)
+    _smin_h = min(c["s0"] for c in C if _hpk(c)) if any(_hpk(c) for c in C) else CFG["s_min"]
+    _smax_h = max(c["s1"] for c in C if _hpk(c)) if any(_hpk(c) for c in C) else CFG["s_max"]
+    for _it in range(12):
+        _H = [c for c in C if _hpk(c)]
+        _done = False
+        for a_ in sorted(_H, key=lambda c: -c["lane"]):
+            # nächstes Hauptgleis darunter mit langer Überlappung (ohne Hauptgleis dazwischen)
+            _cand = [c for c in _H if c["lane"] < a_["lane"] and min(c["s1"], a_["s1"]) - max(c["s0"], a_["s0"]) >= 150]
+            for b_ in sorted(_cand, key=lambda c: -c["lane"]):
+                o0, o1 = max(a_["s0"], b_["s0"]), min(a_["s1"], b_["s1"])
+                if any(c is not a_ and c is not b_ and b_["lane"] < c["lane"] < a_["lane"] and min(c["s1"], o1) - max(c["s0"], o0) > 0 for c in _H):
+                    continue
+                _g = abs(d_at(a_, (o0 + o1) / 2) - d_at(b_, (o0 + o1) / 2))
+                _soll = 1 if _g < _pm else 2                     # Ebenenabstand: benachbart bzw. höchstens doppelt
+                if a_["lane"] - b_["lane"] <= _soll: continue
+                for mv, ziel in ((b_, a_["lane"] - _soll), (a_, b_["lane"] + _soll)):
+                    if _fest(mv): continue
+                    if _weg_frei(mv, ziel, mv["s0"], mv["s1"]):
+                        BUENDEL_KOMPAKT.append(("kette", mv["lane"], ziel, round(mv["s0"]), round(mv["s1"])))
+                        mv["lane"] = ziel; _done = True; break
+                    # Randstück ab der äussersten Weiche, nur an einem Ende, das den Plan verlässt
+                    for rechts in (True, False):
+                        if (rechts and mv["s1"] < _smax_h - 40) or (not rechts and mv["s0"] > _smin_h + 40): continue
+                        rs_ = _randstueck(mv, rechts)
+                        if not rs_ or not rs_[1]: continue
+                        teil, rest = rs_
+                        t0_, t1_ = min(x["s0"] for x in teil), max(x["s1"] for x in teil)
+                        if t1_ - t0_ < 100 or not (o0 - 1 <= t0_ and t1_ <= o1 + 1): continue
+                        if not _weg_frei(mv, ziel, t0_, t1_) or _perron_nah(t0_, t1_, d_at(mv, (t0_ + t1_) / 2)): continue
+                        neu = dict(id=max(c["id"] for c in C) + 1, segs=teil, s0=t0_, s1=t1_, pts=np.vstack([x["p"] for x in teil]), lane=ziel)
+                        neu["pts"] = neu["pts"][neu["pts"][:, 0].argsort()]
+                        mv["segs"] = rest; mv["s0"] = min(x["s0"] for x in rest); mv["s1"] = max(x["s1"] for x in rest)
+                        mv["pts"] = np.vstack([x["p"] for x in rest]); mv["pts"] = mv["pts"][mv["pts"][:, 0].argsort()]
+                        C.append(neu)
+                        KOMPAKT_HOME[teil[0]["nodes"][0] if rechts else teil[-1]["nodes"][-1]] = ziel    # Weiche auf der neuen Ebene
+                        BUENDEL_KOMPAKT.append(("randstueck", mv["lane"], ziel, round(t0_), round(t1_)))
+                        _done = True; break
+                    if _done: break
+                if _done: break
+            if _done: break
+        if not _done: break
+    # kurze Stücke (≤ 200 m, keine Hauptgleise), die über Schrägen oder direkt an einem verschobenen Gleis hängen und deren
+    # Nachbarn alle auf einer Seite liegen, rücken auf die nächste Nachbarebene (sonst Badewanne, Aarau West Way 34012966)
+    if BUENDEL_KOMPAKT:
+        _n2ck = collections.defaultdict(list)
+        for c in C:
+            for sg in c["segs"]:
+                for n_ in (sg["nodes"][0], sg["nodes"][-1]): _n2ck[n_].append(c)
+        _dgk = collections.defaultdict(list)
+        for sg in segs:
+            if not sg["flat"]: _dgk[sg["nodes"][0]].append(sg["nodes"][-1]); _dgk[sg["nodes"][-1]].append(sg["nodes"][0])
+        _bewegt = {k_[2] for k_ in BUENDEL_KOMPAKT}       # neue Ebenen der verschobenen Gleise
+        for c in C:
+            if _hpk(c) or c["s1"] - c["s0"] > 200 or _fest(c): continue
+            en_ = {n_ for sg in c["segs"] for n_ in (sg["nodes"][0], sg["nodes"][-1])}
+            nb_ = {id(o): o for n_ in en_ for o in _n2ck[n_] + [x for m_ in _dgk.get(n_, []) for x in _n2ck[m_]] if o is not c}
+            ls_ = sorted({o["lane"] for o in nb_.values()})
+            if len(nb_) < 2 or not any(_hpk(o) and o["lane"] in _bewegt for o in nb_.values()): continue
+            if not (all(l_ > c["lane"] for l_ in ls_) or all(l_ < c["lane"] for l_ in ls_)): continue
+            ziel = min(ls_, key=lambda l_: abs(l_ - c["lane"]))
+            if all(x is c or x["lane"] != ziel or min(x["s1"], c["s1"]) - max(x["s0"], c["s0"]) < 1 or id(x) in nb_ for x in C):
+                BUENDEL_KOMPAKT.append(("mitzug", c["lane"], ziel, round(c["s0"]), round(c["s1"]))); c["lane"] = ziel
+    if BUENDEL_KOMPAKT: print("R1c Bündel kompakt:", BUENDEL_KOMPAKT)
+
 # F10 Badewanne (Solothurn 26.10.2026): ein kurzes waagrechtes Stück ohne Nummer, das über Schrägen an beiden Enden mit
 # Ketten auf Ebenen derselben Seite verbunden ist (hinunter und gleich wieder hinauf), kommt auf die nähere dieser Ebenen,
 # wenn sie dort frei ist (Berühren und kurze Überlappung mit den verbundenen Ketten erlaubt). cfg «f10»: false = aus.
@@ -1903,6 +2004,7 @@ for sg in segs:
         if sg["cut0"]: home[sg["nodes"][0]] = seglane[sg["id"]]
         if sg["cut1"]: home[sg["nodes"][-1]] = seglane[sg["id"]]
 for n, l_ in EINSPUR_HOME.items(): home[n] = l_      # Punkt 4: Weiche am Randstück liegt auf der durchgehenden Ebene
+for n, l_ in KOMPAKT_HOME.items(): home[n] = l_      # R1c: Weiche am verschobenen Randstück
 
 # Weichen auf einer Weichenstrassen-Diagonale: x so setzen, dass der Punkt
 # exakt auf der gezeichneten Diagonale liegt.
