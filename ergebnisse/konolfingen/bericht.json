@@ -33,9 +33,7 @@
    "text": "Gleisende nicht angebunden, nächstes Gleis 2.8 px"
   }
  ],
- "planrand": [
-  "konolfingen\trechts x804\tLinie 460/460: Abstand 48 px statt 24"
- ],
+ "planrand": [],
  "netz": [
   {
    "regel": "T10",
@@ -71,7 +69,7 @@
   },
   {
    "regel": "A1",
-   "x": 697.6,
+   "x": 729.7,
    "y": 329.0,
    "text": "zwei Gleise nur 6.9 px auseinander über 15 px (Grenze 9.6 px)"
   }
@@ -101,11 +99,11 @@
   "netz_W2": 1,
   "netz_F7": 1,
   "netz_A1": 2,
-  "boegen_pax": 11,
-  "boegen_alle": 51,
+  "boegen_pax": 13,
+  "boegen_alle": 53,
   "ruhe_treppen": 1,
   "ruhe_ecken": 0,
-  "randabstand": 1
+  "randabstand": 0
  },
  "ok": true
 }
