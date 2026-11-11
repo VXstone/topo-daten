@@ -82,8 +82,9 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - [x] A, 0, M, E, P1, 1, R1 Teil 1 – siehe Archiv
 - [x] **R1a Regression R1 Teil 1 abschliessen** (klein) – 9.11. abends, Seite v143
 - [x] **R1b Bündel docken an** (mittel) – 11.11. abends, Seite v144
+- [ ] **R1c Doppelspur-Abstand im Bündel** (klein) – in Arbeit 11.11. abends (Hinweise Aarau 11.11.)
+- [ ] **K Kreuzungen und Werfungen** (mittel; nimmt R2-Teil Unterwerfung auf) – **vor A2** (Wunsch 11.11.: Aarau-Tunnel-Hinweise)
 - [ ] **A2 Abzweigende Doppelspur** (mittel, Topologie)
-- [ ] **K Kreuzungen und Werfungen** (mittel; nimmt R2-Teil Unterwerfung auf)
 - [ ] **R2 Zwischengeraden und Gleissprünge** (mittel)
 - [ ] **R3a Ausfahrt als Ganzes** (mittel)
 - [ ] **R3b Weichenwinkel mitdrehen + Reparaturpass** (mittel)
@@ -107,6 +108,16 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   (netz_lage `route_geom`/`connector`, `STACK`). Zuerst Prüfstand-Baustein «Bündel mit Versatz» (zwei Bahnhöfe, Enden um ½ Ebene
   verschoben). Testfälle: Vierspur östlich Aarau (parallel bis Rupperswil), MOB/Vereina Treppen T7.
 - Fertig, wenn: Baustein ohne Befund, Aarau-Vierspur parallel, T7 MOB/Vereina nicht höher, alle Pläne erklärt.
+
+### R1c – Doppelspur-Abstand im Bündel
+- Einstieg: «Weiter mit UEBERGABE.md – Schritt R1c: Doppelspur-Abstand im Bündel»
+- Regel Daniel 11.11.: zwei Doppelspuren je im gleichen (einfachen) Abstand, zueinander einfach oder höchstens doppelt.
+  `spurplan_schema` nach der Ebenenvergabe, vor F10 (cfg `buendel_kompakt`, `kompakt_paar_m` 5,5 m).
+- Testfall Aarau (Hinweise bei lx 1480 und 3671). Fertig, wenn: Aarau so, alle Pläne erklärt, MOB/Vereina nicht schlechter.
+
+### Aarau-Hinweise 11.11. (Zuordnung)
+- K: Tunnel Aarau West «nur ein Gleis, unter den anderen durch», Eppenbergtunnel Weichen/Stummel. R2: Zwischengerade (2×).
+- N1: Gl. 4/5 Hauptachsen gerade, zwei Stummel (Seite/korrekt), «was ist das für ein Gleis» (lx 830), Meterspur-Perron (P2a).
 
 ### A2 – Abzweigende Doppelspur (Topologie, oberste Regel)
 - Einstieg: «Weiter mit UEBERGABE.md – Schritt A2: Abzweigende Doppelspur»
