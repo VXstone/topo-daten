@@ -45,6 +45,7 @@ ERWARTUNG = {       # je OSM-Baustein: gesamt = freie Gleisenden am Planrand (Ab
     "zwischengerade": dict(gesamt=4, strecken={"900": 2}, perrons={"alpha": 2}),
     "gleissprung": dict(gesamt=4, strecken={"900": 2}, perrons={"alpha": 2}),
     "perronformen": dict(gesamt=4, strecken={"900": 2}, perrons={"alpha": 3}, formen={"alpha": 2}),
+    "buendel_versatz": dict(gesamt=8, strecken={"900": 2, "901": 2}, perrons={"alpha": 2}),
 }
 
 

@@ -369,6 +369,43 @@ if not L0.get("s1_aus"):
                     for k_ in _kette: _S1[k_] = round(_q, 1)
                     break
                 for k_ in _kette: pos[k_] = _alt[k_]
+    # F11b – Bündel docken an (R1b, 11.11.2026, Prüfstand «buendel_versatz»): liegen die Anschlüsse an beiden Enden einer
+    # geraden Strecke verschieden verteilt (Lücke zwischen zwei Doppelspuren nur in einem Bahnhof), schiebt sich ein
+    # Bahnhof quer so, dass das grösste Teilbündel gerade durchläuft und nur der Rest gemeinsam versetzt (statt alle Paare
+    # je um eine halbe Ebene). Höchstens eine Ebene, nur wenn am verschobenen Bahnhof insgesamt weniger Gleise versetzen.
+    def _b_lats(r_):
+        a_, b_ = r_["a"], r_["b"]
+        if _s1_q(r_) is None: return None
+        aa_ = anchor[(id(r_["first"]), a_)]; ab_ = anchor[(id(r_["last"]), b_)]
+        if len(aa_["pts"]) != len(ab_["pts"]) or len(aa_["pts"]) < 2: return None
+        va_ = np.asarray(aa_["v"], float); nrm_ = np.array([-va_[1], va_[0]])
+        qa = sorted(float((pos[a_] + p) @ nrm_) for p in aa_["pts"]); qb = sorted(float((pos[b_] + p) @ nrm_) for p in ab_["pts"])
+        return [y - x for x, y in zip(qa, qb)], nrm_
+    def _b_schlecht(n_):
+        k_ = 0
+        for r_ in routes:
+            if n_ in (r_["a"], r_["b"]):
+                l_ = _b_lats(r_)
+                if l_: k_ += sum(1 for x in l_[0] if abs(x) > 0.3)
+        return k_
+    if L0.get("buendel_ausrichten", True):
+        _B1 = {}
+        for _r in routes:
+            _l = _b_lats(_r)
+            if not _l or max(abs(x) for x in _l[0]) < 0.3: continue
+            _lats, _nrm = _l
+            if max(_lats) - min(_lats) < 0.3: continue           # alle gleich: Sache von F11/ein_versatz
+            _grp = collections.Counter(round(x / 0.5) * 0.5 for x in _lats)
+            _d = max(_grp, key=lambda x: (_grp[x], -abs(x)))
+            if abs(_d) < 0.3 or abs(_d) > TG + 0.5: continue
+            for _m, _sg in ((_r["b"], -1), (_r["a"], 1)):
+                if _m in _S1 or _m in _B1: continue
+                _ns = {_m} | {(r_["b"] if r_["a"] == _m else r_["a"]) for r_ in routes if _m in (r_["a"], r_["b"])}
+                _vor = sum(_b_schlecht(k_) for k_ in _ns); _alt = pos[_m].copy()
+                pos[_m] = pos[_m] + _sg * _d * _nrm
+                if sum(_b_schlecht(k_) for k_ in _ns) < _vor: _B1[_m] = _S1[_m] = round(_sg * _d, 1); break
+                pos[_m] = _alt
+        if _B1: print("F11b Bündel ausgerichtet:", {nodes[k]["name"]: v for k, v in _B1.items()})
     _S1_EXIT.update(n_ for n_ in MAJOR if nodes[n_]["kind"] == "exit" and any(n_ in (r_["a"], r_["b"]) and (r_["a"] in _S1 or r_["b"] in _S1) for r_ in routes))
     if _S1: print("F11 quer ausgerichtet:", {nodes[k]["name"]: v for k, v in _S1.items()})
 # Abgänge mit kleinem Versatz zum Anschluss auf dessen Linie legen (Hinweis Region Olten 15.10.: "S Kurve" Safenwil–Suhr)
@@ -668,8 +705,30 @@ if L0.get("pfeile_verbinden", True):
                     ta = min(A_, key=lambda t: min(np.linalg.norm(t[1] - b[1]) for b in B_))
                     tb = min(B_, key=lambda t: np.linalg.norm(t[1] - ta[1]))
                     A_ = [t for t in A_ if t is not ta]; B_ = [t for t in B_ if t is not tb]; _paare.append((ta, tb))
-            for (qa, pa_, ua), (qb, pb_, ub) in _paare:
+            # R1b (11.11.2026): parallele Pfeilpaare (Spitzen gleich gerichtet an beiden Enden, nebeneinander) sind ein Bündel:
+            # eine gemeinsame Achse aus der Mitte, jedes Gleis hält seine Querlage, ein nötiger Versatz gilt fürs ganze
+            # Bündel (statt je Paar ein eigener connector mit eigenen Knicken). Lage-Option «pfeile_buendel» (Standard an).
+            _bnd = {}
+            if L0.get("pfeile_buendel", True) and L0.get("pfeile_connector", True) and AUTO and len(_paare) >= 2:
+                _gr = [[_paare[0]]]
+                for _pp in _paare[1:]:
+                    (_q0, _a0, _u0), (_r0, _b0, _w0) = _gr[-1][-1]; (_q1, _a1, _u1), (_r1, _b1, _w1) = _pp
+                    if turn(_u0, _u1) < 3 and turn(_w0, _w1) < 3 and math.dist(_a0, _a1) < 2.6 * TG and math.dist(_b0, _b1) < 2.6 * TG:
+                        _gr[-1].append(_pp)
+                    else: _gr.append([_pp])
+                for _g in _gr:
+                    if len(_g) < 2: continue
+                    _A0 = np.mean([t[0][1] for t in _g], axis=0); _B0 = np.mean([t[1][1] for t in _g], axis=0)
+                    _ua = _g[0][0][2]; _ub = _g[0][1][2]
+                    # Mittelpunkte quer auf die Pfeilrichtung: Achse beginnt auf der Front der Spitzen
+                    _cr_ = connector(_A0, _ua, _B0, _ub, pfeil=bool(_LINIEN))
+                    _d0 = _cr_[1] - _cr_[0]; _d0 = _d0 / (np.linalg.norm(_d0) or 1); _n0 = np.array([-_d0[1], _d0[0]])
+                    for t in _g:
+                        _bnd[id(t)] = track_line(_cr_, t[0][1], t[1][1], float((t[0][1] - _cr_[0]) @ _n0), defer_s=False, defer_e=False)
+            for _pp_ in _paare:
+                (qa, pa_, ua), (qb, pb_, ub) = _pp_
                 PF_WEG[a_n].add(qa["id"]); PF_WEG[b_n].add(qb["id"])
+                if id(_pp_) in _bnd: PF_LINIEN.append(((a_n, b_n), _bnd[id(_pp_)])); continue
                 # Verbindung wie ein Parallelgleis zur Strecke (Richtung Plan A -> Plan B): ab der Spitze parallel, in der
                 # Mitte unter 60° auf die Seitenlage der anderen Spitze, dann parallel bis zu ihr (keine Spitze, kein Zickzack)
                 d_ = pos[b_n] - pos[a_n] if math.dist(pos[a_n], pos[b_n]) > 1 else pb_ - pa_
@@ -800,7 +859,29 @@ def route_geom(r):
     if kk: k = max(kk)
     _gs = L0.get("gleise_strecke", {})
     if f'{nodes[na]["name"]}|{nodes[nb]["name"]}' in _gs or f'{nodes[nb]["name"]}|{nodes[na]["name"]}' in _gs: k = rtracks(r)
+    # R1b (11.11.2026, Aarau Ost – Rupperswil, Prüfstand «buendel_versatz»): Bündel docken an. Endet die Strecke an einem
+    # Abgang ohne Plan (kind "exit") und kommt sie aus einem Plan, dessen Anschlüsse nicht im Regel-Gleisabstand liegen
+    # (Lücke zwischen zwei Doppelspuren), übernimmt der Abgang die Querlage des Bahnhofs: das Bündel läuft parallel weiter,
+    # statt dass jedes Gleis einzeln auf TG zusammenrückt (Trichter). Lage-Option «buendel_andocken» (Standard an).
+    _dock = {}
+    if L0.get("buendel_andocken", True):
+        for n_, e_, o_, eo_ in ((na, ea, nb, eb), (nb, eb, na, ea)):
+            a_o = anchor.get((id(eo_), o_))
+            if anchor.get((id(e_), n_)) or not a_o or nodes[n_]["kind"] != "exit": continue
+            if sum(1 for r_ in routes if n_ in (r_["a"], r_["b"])) > 1: continue        # Abgang mehrerer Strecken: JLANE
+            if (id(eo_), o_) in STACK or len(a_o["pts"]) != k or k < 2: continue
+            nv_o = np.array([-a_o["v"][1], a_o["v"][0]]); c_ = sorted(float((p - a_o["off"]) @ nv_o) for p in a_o["pts"])
+            if max(abs((c_[j + 1] - c_[j]) - TG) for j in range(k - 1)) < 0.5: continue      # schon im Regelabstand
+            _dock[n_] = (nv_o, c_)
     def endinfo(n, e, other):
+        if n in _dock:          # Bündel docken an (R1b): Abgang in der Querlage des Bahnhofplans
+            nv_o, c_ = _dock[n]
+            v = pos[other] - pos[n]; u = v / (np.linalg.norm(v) or 1)
+            ov_ = L0.get("richtung", {}).get(f"#{n}", {}).get(f"#{other}")
+            if ov_ is not None and not AUTO: u = uvec(ov_)
+            # gerade weiter, wenn die Strecke in Austrittsrichtung liegt: Querachse = Normale des Bahnhofabgangs
+            pp_ = [pos[n] + nv_o * c for c in c_]
+            return np.mean(pp_, axis=0), u, pp_, True
         a_ = anchor.get((id(e), n))
         if a_:
             pts = [pos[n] + p for p in a_["pts"]]
@@ -828,6 +909,16 @@ def route_geom(r):
         return np.mean(pp_, axis=0), u, pp_ + [pos[n] + nv_ * lanes[-1] * _tg] * max(0, k - len(lanes)), True
     A, va, pa, xa = endinfo(na, ea, nb); B, vb, pb, xb = endinfo(nb, eb, na)
     core = connector(A, va, B, vb, direkt=bool(nodes[na]["inset"] and nodes[nb]["inset"]))   # direkte Gerade nur zwischen zwei Plänen
+    # R1b: ungleich verteiltes Bündel zwischen zwei Plänen gegenüber (nach F11b): laufen einige Gleise ohne Versatz durch,
+    # folgt die Achse ihnen gerade (nicht Kastenmitte zu Kastenmitte, sonst kippt das ganze Bündel leicht schräg); nur die
+    # übrigen Gleise versetzen sich gemeinsam.
+    _bund = False
+    if L0.get("buendel_andocken", True) and anchor.get((id(ea), na)) and anchor.get((id(eb), nb)) and len(pa) == len(pb) >= 2 \
+            and float(va @ vb) < -0.995 and float((B - A) @ va) > 0:
+        _nr = np.array([-va[1], va[0]])
+        _lt = [y - x for x, y in zip(sorted(float(p @ _nr) for p in pa), sorted(float(p @ _nr) for p in pb))]
+        if min(abs(x) for x in _lt) < 0.3 and max(abs(x) for x in _lt) > 0.3:
+            core = [A, A + va * float((B - A) @ va)]; _bund = True
     if os.environ.get("CDBG") and os.environ["CDBG"] in (nodes[na]["name"], nodes[nb]["name"]): print("CORE", nodes[na]["name"], nodes[nb]["name"], A.round(1), va.round(2), B.round(1), vb.round(2), [np.round(c_, 1).tolist() for c_ in core])
     col, w = (G, 2.4) if (xa and xb) else (BK, 1.3)
     offs = [(j - (k - 1) / 2) * TG for j in range(k)]
@@ -841,7 +932,9 @@ def route_geom(r):
         _fr = any({nodes[na]["name"], nodes[nb]["name"]} == set(x.split("|")) for x in L0.get("frueh", []))
         # "spaet_anteil_strecke": {"Rothrist|#43": 0.8} - Anteil je Strecke (Platz für Spurwechsel danach, Rothrist Ost 15.10.)
         _lf = L0.get("spaet_anteil_strecke", {}).get(f'{nodes[na]["name"]}|#{nb}') or L0.get("spaet_anteil_strecke", {}).get(f'{nodes[nb]["name"]}|#{na}')
-        return [track_line(core, pa_[j], pb_[j], o, defer_s=(id(ea), na) not in STACK and not _fr, defer_e=(id(eb), nb) not in STACK and not _fr, late=_late, late_f=_lf) for j, o in enumerate(offs)]
+        # R1b: angedockte Bündel behalten ihre Querlage (Spur = Lage am Anfang quer zur Achse), sonst gleichmässig TG
+        _o = [float((pa_[j] - core[0]) @ n0) for j in range(len(offs))] if (_dock or _bund) else offs
+        return [track_line(core, pa_[j], pb_[j], o, defer_s=(id(ea), na) not in STACK and not _fr, defer_e=(id(eb), nb) not in STACK and not _fr, late=_late, late_f=_lf) for j, o in enumerate(_o)]
     def _cross(ls):
         G_ = [_LSx([tuple(p) for p in l]) for l in ls]
         return sum(1 for i in range(len(G_)) for j in range(i + 1, len(G_)) if G_[i].crosses(G_[j]))

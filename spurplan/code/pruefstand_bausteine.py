@@ -276,6 +276,27 @@ def perronformen(N):
     _perron(N, 0, -A - 1.6, -1, "2")
 
 
+def buendel_versatz(N):
+    """R1b (Aarau Ost – Rupperswil): Vierspur aus zwei Doppelspuren 900/901. In Alpha liegt zwischen den Paaren ein
+    Überholgleis (der Plan zeichnet dort eine Lücke von einer Ebene), Beta hat keins. Die Gleise verlassen Alpha also
+    ungleich verteilt; die Strecken sollen als Bündel andocken: jedes Paar bleibt in sich parallel im Gleisabstand
+    (ein nötiger Versatz gilt fürs ganze Paar), zum Planrand hin bleibt der Querabstand des Bahnhofs (kein Trichter)."""
+    q = [0.0, -A, -3 * A, -4 * A]
+    gs = [Gleis(N, quer=y) for y in q]
+    sch = []
+    for x, nm in ((0, "Alpha"), (3000, "Beta")):
+        sch += _spurwechsel(N, gs[0], gs[1], x - 260) + _spurwechsel(N, gs[1], gs[0], x + 220)
+        sch += _spurwechsel(N, gs[2], gs[3], x - 220) + _spurwechsel(N, gs[3], gs[2], x + 260)
+        sch += [x - 150, x + 150]
+        N.p(x, -2 * A, dict(railway="station", name=nm))
+        _perron(N, x, 1.6, +1, "1"); _perron(N, x, -4 * A - 1.6, -1, "4")
+    # Überholgleis zwischen den Paaren in Alpha (beidseits an Gl. 2)
+    a = gs[1].at(-330, dict(railway="switch")); b = gs[1].at(330, dict(railway="switch")); sch += [-330, 330]
+    N.kette([a, (-290, -2 * A), (290, -2 * A), b], **MS, service="siding")
+    for g_, ref, nr in zip(gs, ("900", "900", "901", "901"), ("1", "2", "3", "4")):
+        g_.ways(-3500, 6500, sch, _tags(ref, nr, [0, 3000]))
+
+
 BAUSTEINE = {
     "r3_kreuzung": (r3_kreuzung, "Einspur, Kreuzungsgleis, zwei Aussenperrons (R3)", dict(perrons=4)),
     "r5_halt": (r5_halt, "Doppelspur, Halt mit Spurwechseln, zwei Aussenperrons (R5, Z1/Z2)", dict(perrons=4)),
@@ -287,6 +308,7 @@ BAUSTEINE = {
     "zwischengerade": (zwischengerade, "geografischer Versatz 40 m zwischen zwei Bahnhöfen (Zwischengerade)", dict()),
     "gleissprung": (gleissprung, "durchgehendes Gleis rückt ohne Weiche nach aussen (Basel)", dict()),
     "perronformen": (perronformen, "Perronformen U und L an Kopfgleisen (Montreux, Thun, Basel)", dict(formen={"Alpha": {"U": 1, "L": 1}})),
+    "buendel_versatz": (buendel_versatz, "Vierspur, Lücke zwischen den Paaren ½ Ebene breiter (Aarau Ost, R1b)", dict(perrons=2)),
 }
 
 
