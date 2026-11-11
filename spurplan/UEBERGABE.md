@@ -58,7 +58,7 @@ Wird Abschnitt 6 länger als ~60 Zeilen, die ältesten Nachträge ins Archiv ver
 | Fest | Blaupause, Blaupause 2, Basel, Bern (dürfen wieder aus dem Code, Schritt P2) | – |
 | Werkzeugkasten | Prüfstand – Bausteine × Drehungen | `pruefstand` |
 
-## 3. Stand (9.11.2026, Commit af9b149, Seite live v143) – Nachtrag R1a in Abschnitt 6 beachten
+## 3. Stand (9.11.2026, Commit af9b149, Seite live v143) – Nachträge R1a/R1b in Abschnitt 6 beachten (live v144)
 - **Prüfstand** 224 Fälle: T 33, PF 16, X 27, E 110, K 4, Q 20, P 2, Z 101, D 3, G2 11, G7 1 – nicht schlechter als Basis
   (R1 Teil 1: Q 40 → 20, F 16 → 0). Basis noch auf dem Stand 8.11. – nach Schritt R1a neu setzen.
 - **Unruhe** MOB 105, Vereina 59; Topologie/Verkettung 0.
@@ -81,7 +81,7 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 
 - [x] A, 0, M, E, P1, 1, R1 Teil 1 – siehe Archiv
 - [x] **R1a Regression R1 Teil 1 abschliessen** (klein) – 9.11. abends, Seite v143
-- [ ] **R1b Bündel docken an** (mittel)
+- [x] **R1b Bündel docken an** (mittel) – 11.11. abends, Seite v144
 - [ ] **A2 Abzweigende Doppelspur** (mittel, Topologie)
 - [ ] **K Kreuzungen und Werfungen** (mittel; nimmt R2-Teil Unterwerfung auf)
 - [ ] **R2 Zwischengeraden und Gleissprünge** (mittel)
@@ -184,3 +184,14 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - Montreux: der zufällig verbesserte Pfeil (zeigte nach innen auf Prellbock) ist wieder wie v142 → Thema für R3b/MOB-Hinweise.
 - Prüfstand 224 Fälle wie R1 Teil 1, Basis neu gesetzt (19:40 UTC). h9o9 → behoben (v143). Vereina unverändert seit v142.
 
+
+### 11.11.2026 ~21:30 – Schritt R1b abgeschlossen, Seite v144 (Commit 3d83eb4)
+- Prüfstand-Baustein `buendel_versatz` (Vierspur, Überholgleis zwischen den Paaren nur in Alpha): vorher E 8/Z 8 je Drehung, jetzt
+  E 2/Z 2 = der eine nötige Paar-Versatz (Lücke geht in Beta zu). Erwartung im Baustein, kein Fehler. 232 Fälle, Rest = Basis.
+- `netz_lage`: (1) `route_geom` – Abgang (exit, eine Strecke) übernimmt die Querlage des Plans, wenn dessen Anschlüsse nicht im
+  Regelabstand liegen (Option `buendel_andocken`); ungleich verteilte Bündel gegenüber: Achse folgt dem geraden Teilbündel, Spuren
+  = echte Querlage. (2) F11b `buendel_ausrichten`: Plan rückt quer ≤ 1 Ebene, damit das grösste Teilbündel gerade läuft.
+  (3) Pfeilpaare gleich gerichtet und nebeneinander → gemeinsame Achse (`pfeile_buendel`); greift in MOB/Vereina heute nirgends.
+- Regression 2/136: Region Olten nur Aarau Ost (Vierspur parallel bis Rupperswil, G5 4→3) – dafür G8 1: drei Anschluss-Komponenten
+  Buchs-Rohr unter Gl. 4 auf t = 0,03 geklemmt, fast deckungsgleich (`_nebengleise`). Versuch «nicht über gezeichnetes Nebengleis»
+  gab Schleifen + G5 → zurückgenommen; gehört zu N1. Thun = alter Stand. MOB 105 / Vereina 59, T7 unverändert, Pläne identisch.
