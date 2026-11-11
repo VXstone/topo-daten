@@ -82,7 +82,7 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - [x] A, 0, M, E, P1, 1, R1 Teil 1 – siehe Archiv
 - [x] **R1a Regression R1 Teil 1 abschliessen** (klein) – 9.11. abends, Seite v143
 - [x] **R1b Bündel docken an** (mittel) – 11.11. abends, Seite v144
-- [ ] **R1c Doppelspur-Abstand im Bündel** (klein) – in Arbeit 11.11. abends (Hinweise Aarau 11.11.)
+- [x] **R1c Doppelspur-Abstand im Bündel** (klein) – 11.11. abends, Seite v145
 - [ ] **K Kreuzungen und Werfungen** (mittel; nimmt R2-Teil Unterwerfung auf) – **vor A2** (Wunsch 11.11.: Aarau-Tunnel-Hinweise)
 - [ ] **A2 Abzweigende Doppelspur** (mittel, Topologie)
 - [ ] **R2 Zwischengeraden und Gleissprünge** (mittel)
@@ -206,3 +206,15 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - Regression 2/136: Region Olten nur Aarau Ost (Vierspur parallel bis Rupperswil, G5 4→3) – dafür G8 1: drei Anschluss-Komponenten
   Buchs-Rohr unter Gl. 4 auf t = 0,03 geklemmt, fast deckungsgleich (`_nebengleise`). Versuch «nicht über gezeichnetes Nebengleis»
   gab Schleifen + G5 → zurückgenommen; gehört zu N1. Thun = alter Stand. MOB 105 / Vereina 59, T7 unverändert, Pläne identisch.
+
+### 11.11.2026 ~22:30 – Schritt R1c abgeschlossen, Seite v145 (Commit a8075cc)
+- `spurplan_schema` vor F10 (cfg `buendel_kompakt`): je Paar Hauptgleise (≥ 150 m Überlappung, kein Hauptgleis dazwischen)
+  Soll-Ebenenabstand 1 (real < 5,5 m) bzw. 2; verschoben wird die ganze Kette, wenn die Ebenen bis zum Ziel über ihre Länge frei
+  sind, sonst das Randstück ab der äussersten Weiche (nie neben einen Perron, Weiche dann auf der neuen Ebene, `KOMPAKT_HOME`);
+  kurze Verbindungsstücke an verschobenen Gleisen rücken mit («mitzug», sonst Badewanne Aarau West).
+- Wirkung nur Aarau (540 an die 650, Gl. 5 nach der letzten Weiche an Gl. 4), Region Olten (gleiche Befundzahlen) und
+  **Konolfingen** Ost (Gl. 3 nach der letzten Weiche an Gl. 2, Doppelspur Luzern benachbart) – Daniel beurteilt Konolfingen.
+  MOB/Vereina/NE identisch, Prüfstand 232 = R1b. Kein eigener Prüfstand-Baustein (Lücke entsteht nur aus Ebenen anderer
+  s-Bereiche; Aarau ist der Testfall) – Kandidat für einen Baustein, wenn die Regel nochmals angefasst wird.
+- GitHub-Runner 21:19–21:50 gestört (queued/startup_failure): hängende Läufe abbrechen, neu starten (`gh workflow run …`).
+- Hinweise: 2 Abstand-Hinweise Aarau behoben (v145), 9 Aarau-Hinweise beantwortet und K/R2/N1 zugeordnet (Abschnitt 5).
