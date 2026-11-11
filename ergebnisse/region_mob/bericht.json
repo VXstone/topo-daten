@@ -1,6 +1,6 @@
 {
  "region": "mob",
- "erzeugt": "2026-11-09 19:30 UTC",
+ "erzeugt": "2026-11-11 19:08 UTC",
  "bahnhoefe": {
   "schonried": {
    "name": "Schönried",
@@ -82,6 +82,12 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
+  "glion": {
+   "name": "Glion",
+   "ok": true,
+   "befunde": "Befunde: {'F': 1}",
+   "optionen": []
+  },
   "montreux": {
    "name": "Montreux",
    "ok": true,
@@ -89,12 +95,6 @@
    "optionen": [
     "--hauptgleise"
    ]
-  },
-  "glion": {
-   "name": "Glion",
-   "ok": true,
-   "befunde": "Befunde: {'F': 1}",
-   "optionen": []
   },
   "chernex": {
    "name": "Chernex",
