@@ -1,4 +1,4 @@
-# Prüfstand – Bausteine × Drehungen (2026-11-09 20:31 UTC)
+# Prüfstand – Bausteine × Drehungen (2026-11-11 19:19 UTC)
 
 Zählung je Fall (Regel Anzahl); leer = ohne Befund. Rangfolge der Regeln: T, PF, X, E, K, Q, P, F, Z, D, G2, G3, G4, G5, G6, G7, G8
 
@@ -14,6 +14,7 @@ Zählung je Fall (Regel Anzahl); leer = ohne Befund. Rangfolge der Regeln: T, PF
 | osm | zwischengerade |  |  |  |  |  | X 3 K 4 D 1 |  |  |
 | osm | gleissprung |  |  |  |  |  |  |  |  |
 | osm | perronformen | PF 2 | PF 2 | PF 2 | PF 2 | PF 2 | PF 2 | PF 2 | PF 2 |
+| osm | buendel_versatz | E 2 Z 2 | E 2 Z 1 | E 2 Z 2 | E 2 Z 2 | E 2 Z 2 | E 2 Z 2 |  |  |
 | vorlage | R1 |  |  |  | E 2 Z 2 | E 2 Z 2 |  |  |  |
 | vorlage | R2 |  |  |  | E 2 Z 2 | E 2 Z 2 |  |  |  |
 | vorlage | R3 |  |  |  | E 2 Z 1 | E 2 Z 1 |  |  |  |
@@ -35,7 +36,7 @@ Zählung je Fall (Regel Anzahl); leer = ohne Befund. Rangfolge der Regeln: T, PF
 
 ## Befunde je Regel (Summe über alle Fälle)
 
-T 33 · PF 16 · X 27 · E 110 · K 4 · Q 20 · P 2 · Z 101 · D 3 · G2 11 · G7 1
+T 33 · PF 16 · X 27 · E 122 · K 4 · Q 20 · P 2 · Z 112 · D 3 · G2 11 · G7 1
 
 ## Gegen die Basis
 
@@ -109,6 +110,29 @@ T 33 · PF 16 · X 27 · E 110 · K 4 · Q 20 · P 2 · Z 101 · D 3 · G2 11 ·
 - osm perronformen d90: **PF** 0 statt 2 Perronformen (U/L/T als eine Fläche) (Bahnhof alpha)
 - osm perronformen a30: **PF** 0 statt 2 Perronformen (U/L/T als eine Fläche) (Bahnhof alpha)
 - osm perronformen a60: **PF** 0 statt 2 Perronformen (U/L/T als eine Fläche) (Bahnhof alpha)
+- osm buendel_versatz d0: **Z** Zwischengerade 20.1 px
+- osm buendel_versatz d0: **E** Ebenenwechsel 10.1 px ohne Weiche
+- osm buendel_versatz d0: **Z** Zwischengerade 20.1 px
+- osm buendel_versatz d0: **E** Ebenenwechsel 10.1 px ohne Weiche
+- osm buendel_versatz d30: **E** Ebenenwechsel 10.1 px ohne Weiche
+- osm buendel_versatz d30: **Z** Zwischengerade 20.1 px
+- osm buendel_versatz d30: **E** Ebenenwechsel 10.1 px ohne Weiche
+- osm buendel_versatz dm30: **Z** Zwischengerade 20.1 px
+- osm buendel_versatz dm30: **E** Ebenenwechsel 10.0 px ohne Weiche
+- osm buendel_versatz dm30: **Z** Zwischengerade 20.1 px
+- osm buendel_versatz dm30: **E** Ebenenwechsel 10.1 px ohne Weiche
+- osm buendel_versatz d60: **Z** Zwischengerade 20.1 px
+- osm buendel_versatz d60: **E** Ebenenwechsel 10.0 px ohne Weiche
+- osm buendel_versatz d60: **Z** Zwischengerade 20.1 px
+- osm buendel_versatz d60: **E** Ebenenwechsel 10.1 px ohne Weiche
+- osm buendel_versatz dm60: **Z** Zwischengerade 20.1 px
+- osm buendel_versatz dm60: **E** Ebenenwechsel 10.0 px ohne Weiche
+- osm buendel_versatz dm60: **Z** Zwischengerade 20.1 px
+- osm buendel_versatz dm60: **E** Ebenenwechsel 10.0 px ohne Weiche
+- osm buendel_versatz d90: **Z** Zwischengerade 20.1 px
+- osm buendel_versatz d90: **E** Ebenenwechsel 10.1 px ohne Weiche
+- osm buendel_versatz d90: **Z** Zwischengerade 20.1 px
+- osm buendel_versatz d90: **E** Ebenenwechsel 10.1 px ohne Weiche
 - vorlage R1 d60: **Z** Zwischengerade 16.5 px
 - vorlage R1 d60: **E** Ebenenwechsel 14.3 px ohne Weiche
 - vorlage R1 d60: **Z** Zwischengerade 16.3 px
