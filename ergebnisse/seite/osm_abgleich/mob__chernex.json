@@ -2,17 +2,10 @@
 "plan": "mob__chernex",
 "befunde": [
 {
-"regel": "VB1",
-"x": 317.9,
-"y": 110.0,
-"text": "OSM-Weiche 1130904162 ohne Abzweig im Plan",
-"osm": 1130904162
-},
-{
 "regel": "VB2",
 "x": 258.1,
 "y": 149.6,
-"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
 "ways": [
 97681150,
 97681152,
@@ -26,7 +19,7 @@
 "regel": "VB2",
 "x": 294.2,
 "y": 162.8,
-"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
 "ways": [
 97681157,
 97681165,
@@ -37,7 +30,7 @@
 "regel": "VB2",
 "x": 297.3,
 "y": 110.0,
-"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
 "ways": [
 97681150,
 97681165,
@@ -48,41 +41,12 @@
 "regel": "VB2",
 "x": 259.1,
 "y": 110.0,
-"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
 "ways": [
 97681150,
 532530101,
 532530107,
 532530108
-]
-},
-{
-"regel": "VB2",
-"x": 261.2,
-"y": 149.6,
-"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
-"ways": [
-97681150,
-97681152,
-532530101,
-532530105,
-532530106,
-532530107
-]
-},
-{
-"regel": "VB2",
-"x": 305.9,
-"y": 112.6,
-"text": "Gleise berühren/kreuzen sich (X), in OSM keine Weiche/Kreuzung",
-"ways": [
-97681150,
-97681152,
-97681165,
-97681170,
-532530101,
-532530106,
-532530107
 ]
 },
 {
@@ -94,7 +58,7 @@
 ],
 "info": {
 "gleise": 27,
-"knoten_plan": 19,
+"knoten_plan": 18,
 "dkw_plan": 0,
 "knoten_osm": 14
 }

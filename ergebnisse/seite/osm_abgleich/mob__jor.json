@@ -1,9 +1,17 @@
 {
 "plan": "mob__jor",
-"befunde": [],
+"befunde": [
+{
+"regel": "VB1",
+"x": 432.4,
+"y": 134.0,
+"text": "OSM-Weiche 2367577768 ohne Abzweig im Plan",
+"osm": 2367577768
+}
+],
 "info": {
 "gleise": 7,
-"knoten_plan": 4,
+"knoten_plan": 3,
 "dkw_plan": 0,
 "knoten_osm": 4
 }

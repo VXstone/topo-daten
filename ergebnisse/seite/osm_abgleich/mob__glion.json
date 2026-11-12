@@ -9,22 +9,16 @@
 "osm": 8914589673
 },
 {
-"regel": "VB2",
-"x": 695.9,
-"y": 182.0,
-"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
-"ways": [
-275095512,
-275096212,
-275096214,
-963886202,
-963886203
-]
+"regel": "VB1",
+"x": 559.0,
+"y": 134.0,
+"text": "OSM-Weiche 2797580838 ohne Abzweig im Plan",
+"osm": 2797580838
 }
 ],
 "info": {
 "gleise": 24,
-"knoten_plan": 7,
+"knoten_plan": 6,
 "dkw_plan": 0,
 "knoten_osm": 8
 }

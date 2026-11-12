@@ -2,18 +2,18 @@
 "plan": "daniken",
 "befunde": [
 {
-"regel": "VB2",
-"x": 248.2,
+"regel": "VB1",
+"x": 1035.2,
 "y": 182.0,
-"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
-"ways": [
-396181911,
-438423759,
-536937111,
-565890920,
-565890926,
-902335234
-]
+"text": "OSM-Weiche 5305294734 ohne Abzweig im Plan",
+"osm": 5305294734
+},
+{
+"regel": "VB1",
+"x": 1045.3,
+"y": 158.0,
+"text": "OSM-Weiche 4361689055 ohne Abzweig im Plan",
+"osm": 4361689055
 },
 {
 "regel": "VD1",
@@ -30,7 +30,7 @@
 ],
 "info": {
 "gleise": 45,
-"knoten_plan": 25,
+"knoten_plan": 23,
 "dkw_plan": 0,
 "knoten_osm": 26
 }

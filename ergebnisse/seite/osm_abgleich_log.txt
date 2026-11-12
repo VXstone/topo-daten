@@ -1,27 +1,27 @@
-aarau                              {'VB1': 1, 'VB2': 4, 'VD1': 8}
-aarburg_oftringen                  {'VB2': 2, 'VD1': 1}
-daniken                            {'VB2': 1, 'VD1': 2}
+aarau                              {'VB1': 8, 'VB2': 4, 'VD1': 8}
+aarburg_oftringen                  {}
+daniken                            {'VB1': 2, 'VD1': 2}
 dulliken                           {}
-ins                                {'VB1': 13, 'VB2': 13, 'VD1': 1}
-konolfingen                        {'VA1': 3, 'VB2': 3, 'VC1': 1, 'VD1': 4}
+ins                                {'VB1': 13, 'VB2': 13}
+konolfingen                        {'VA1': 3, 'VB1': 2, 'VB2': 4, 'VC1': 1, 'VD1': 2}
 laufelfingen                       {}
 mob__allieres                      {}
 mob__belmont_sur_montreux          {}
 mob__blankenburg                   {}
 mob__caux                          {}
-mob__chamby                        {'VB1': 1, 'VB2': 2, 'VD1': 2}
+mob__chamby                        {'VB1': 2, 'VB2': 1, 'VD1': 2}
 mob__chateau_d_oex                 {}
 mob__chatelard                     {}
-mob__chernex                       {'VB1': 1, 'VB2': 6, 'VD1': 1}
+mob__chernex                       {'VB2': 4, 'VD1': 1}
 mob__cret_d_y_bau                  {}
 mob__flendruz                      {}
 mob__fontanivent                   {}
-mob__glion                         {'VB1': 1, 'VB2': 1}
+mob__glion                         {'VB1': 2}
 mob__glion_college                 {}
 mob__gruben                        {'VB2': 1}
 mob__gstaad                        {'VB2': 1}
-mob__jaman                         {'VB2': 1}
-mob__jor                           {}
+mob__jaman                         {}
+mob__jor                           {'VB1': 1}
 mob__la_perche                     {}
 mob__la_tine                       {'VB1': 1, 'VB2': 1}
 mob__le_tremblex                   {}
@@ -31,15 +31,15 @@ mob__les_cases                     {}
 mob__les_echets                    {}
 mob__les_sciernes                  {}
 mob__matten                        {}
-mob__montbovon                     {'VB1': 1, 'VB2': 1, 'VD1': 2}
-mob__montreux                      {'VA2': 3, 'VB2': 5, 'VD1': 2}
+mob__montbovon                     {'VB1': 4, 'VD1': 2}
+mob__montreux                      {'VA2': 3, 'VB2': 6, 'VD1': 2}
 mob__montreux_les_planches         {}
 mob__oeschseite                    {}
 mob__paccot                        {'VB1': 2}
 mob__planchamp                     {}
 mob__rochers_de_naye               {}
 mob__rossiniere                    {}
-mob__rougemont                     {'VB2': 1}
+mob__rougemont                     {}
 mob__saanen                        {'VB2': 1}
 mob__saanenmoser                   {}
 mob__schonried                     {}
@@ -49,16 +49,16 @@ mob__toveyre                       {}
 mob__valmont                       {}
 mob__vernex                        {}
 mob__vuarennes                     {}
-mob__zweisimmen                    {'VA1': 1, 'VB2': 6, 'VD1': 4}
-neuchatel                          {'VA1': 5, 'VB2': 3, 'VC1': 1, 'VD1': 4}
-neuchatel_vauseyon                 {'VB1': 1, 'VB2': 2}
-olten                              {'VB1': 27, 'VB2': 46, 'VC1': 1, 'VD1': 18}
+mob__zweisimmen                    {'VA1': 1, 'VB2': 4, 'VD1': 3}
+neuchatel                          {'VA1': 5, 'VB1': 1, 'VC1': 2, 'VB2': 1, 'VD1': 3}
+neuchatel_vauseyon                 {'VB2': 1}
+olten                              {'VB1': 22, 'VB2': 36, 'VC1': 3, 'VD1': 10}
 olten_hammer                       {'VB1': 2, 'VB2': 1}
-rothrist                           {'VA2': 1, 'VB1': 6, 'VB2': 8, 'VD1': 3}
+rothrist                           {'VA2': 1, 'VB1': 4, 'VB2': 6}
 safenwil                           {}
-schonenwerd                        {'VB2': 2, 'VD1': 2}
-solothurn                          {'VA1': 1, 'VB1': 3, 'VB2': 15, 'VC1': 1, 'VD1': 12, 'VD2': 1}
-tecknau                            {'VB2': 6}
-wangen_bei_olten                   {'VB1': 1, 'VB2': 2}
-zofingen                           {'VA2': 2, 'VB1': 3, 'VB2': 3, 'VD1': 5}
-OSM-Abgleich: 63 Pläne {'VA1': 10, 'VA2': 6, 'VB1': 64, 'VB2': 139, 'VC1': 4, 'VD1': 71, 'VD2': 1}
+schonenwerd                        {'VB1': 1, 'VB2': 2, 'VD1': 2}
+solothurn                          {'VA1': 1, 'VB1': 10, 'VB2': 15, 'VC1': 1, 'VD1': 11, 'VD2': 1}
+tecknau                            {'VB2': 1}
+wangen_bei_olten                   {'VB2': 1}
+zofingen                           {'VA2': 2, 'VB1': 3, 'VB2': 2, 'VD1': 2}
+OSM-Abgleich: 63 Pläne {'VA1': 10, 'VA2': 6, 'VB1': 80, 'VB2': 107, 'VC1': 7, 'VD1': 50, 'VD2': 1}

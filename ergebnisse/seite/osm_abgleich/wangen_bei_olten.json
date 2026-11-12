@@ -2,38 +2,21 @@
 "plan": "wangen_bei_olten",
 "befunde": [
 {
-"regel": "VB1",
-"x": 282.5,
-"y": 149.6,
-"text": "OSM-Weiche 1590106283 ohne Abzweig im Plan",
-"osm": 1590106283
-},
-{
 "regel": "VB2",
-"x": 438.0,
+"x": 457.7,
 "y": 162.8,
-"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
 "ways": [
-145634097,
+145634086,
 145634099,
-263977260
-]
-},
-{
-"regel": "VB2",
-"x": 294.0,
-"y": 149.6,
-"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
-"ways": [
-145634092,
-145634094,
-263977260
+263977260,
+263977263
 ]
 }
 ],
 "info": {
 "gleise": 38,
-"knoten_plan": 20,
+"knoten_plan": 18,
 "dkw_plan": 0,
 "knoten_osm": 18
 }

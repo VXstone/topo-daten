@@ -23,10 +23,24 @@
 "osm": 1689231120
 },
 {
+"regel": "VB1",
+"x": 601.2,
+"y": 317.6,
+"text": "OSM-Weiche 4694402472 ohne Abzweig im Plan",
+"osm": 4694402472
+},
+{
+"regel": "VB1",
+"x": 305.3,
+"y": 123.2,
+"text": "OSM-Weiche 1689230852 ohne Abzweig im Plan",
+"osm": 1689230852
+},
+{
 "regel": "VB2",
 "x": 367.7,
 "y": 317.6,
-"text": "Gleise berühren/kreuzen sich (X), in OSM keine Weiche/Kreuzung",
+"text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
 "ways": [
 33390862,
 156704997,
@@ -41,7 +55,7 @@
 "regel": "VB2",
 "x": 353.9,
 "y": 341.6,
-"text": "Gleise berühren/kreuzen sich (X), in OSM keine Weiche/Kreuzung",
+"text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
 "ways": [
 33390862,
 156704997,
@@ -55,7 +69,7 @@
 "regel": "VB2",
 "x": 584.0,
 "y": 269.7,
-"text": "Gleise berühren/kreuzen sich (X), in OSM keine Weiche/Kreuzung",
+"text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
 "ways": [
 33390862,
 156704985,
@@ -86,6 +100,28 @@
 ]
 },
 {
+"regel": "VB2",
+"x": 647.6,
+"y": 197.6,
+"text": "Gleise berühren sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
+"ways": [
+143221510,
+156704985,
+156705005,
+186788442,
+475716119,
+606745359,
+606748594,
+606748604,
+739586126,
+739586131,
+741945424,
+1290599087,
+1290599088,
+1456530858
+]
+},
+{
 "regel": "VD1",
 "x": 601.2,
 "y": 221.6,
@@ -96,23 +132,11 @@
 "x": 414.7,
 "y": 269.6,
 "text": "zwei Gleise 18 px aufeinander"
-},
-{
-"regel": "VD1",
-"x": 591.1,
-"y": 257.9,
-"text": "zwei Gleise 11 px aufeinander"
-},
-{
-"regel": "VD1",
-"x": 651.3,
-"y": 197.6,
-"text": "zwei Gleise 11 px aufeinander"
 }
 ],
 "info": {
 "gleise": 58,
-"knoten_plan": 34,
+"knoten_plan": 27,
 "dkw_plan": 2,
 "knoten_osm": 29
 }

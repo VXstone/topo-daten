@@ -19,7 +19,7 @@
 "regel": "VB2",
 "x": 230.0,
 "y": 110.0,
-"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
 "ways": [
 52581368,
 141697082,
@@ -30,7 +30,7 @@
 ],
 "info": {
 "gleise": 29,
-"knoten_plan": 11,
+"knoten_plan": 10,
 "dkw_plan": 0,
 "knoten_osm": 14
 }

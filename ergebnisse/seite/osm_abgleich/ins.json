@@ -96,98 +96,92 @@
 "regel": "VB2",
 "x": 796.2,
 "y": 171.2,
-"text": "Gleise berühren/kreuzen sich (E), in OSM keine Weiche/Kreuzung",
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
 "ways": []
 },
 {
 "regel": "VB2",
 "x": 825.1,
 "y": 195.2,
-"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
 "ways": []
 },
 {
 "regel": "VB2",
 "x": 464.1,
 "y": 195.2,
-"text": "Gleise berühren/kreuzen sich (E), in OSM keine Weiche/Kreuzung",
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
 "ways": []
 },
 {
 "regel": "VB2",
 "x": 491.9,
 "y": 171.2,
-"text": "Gleise berühren/kreuzen sich (E), in OSM keine Weiche/Kreuzung",
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
 "ways": []
 },
 {
 "regel": "VB2",
 "x": 322.7,
 "y": 171.2,
-"text": "Gleise berühren/kreuzen sich (E), in OSM keine Weiche/Kreuzung",
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
 "ways": []
 },
 {
 "regel": "VB2",
 "x": 350.6,
 "y": 195.2,
-"text": "Gleise berühren/kreuzen sich (E), in OSM keine Weiche/Kreuzung",
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
 "ways": []
 },
 {
 "regel": "VB2",
 "x": 574.6,
 "y": 147.2,
-"text": "Gleise berühren/kreuzen sich (E), in OSM keine Weiche/Kreuzung",
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
 "ways": []
 },
 {
 "regel": "VB2",
 "x": 780.1,
 "y": 123.2,
-"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
 "ways": []
 },
 {
 "regel": "VB2",
 "x": 543.0,
 "y": 147.2,
-"text": "Gleise berühren/kreuzen sich (E), in OSM keine Weiche/Kreuzung",
-"ways": []
-},
-{
-"regel": "VB2",
-"x": 1071.2,
-"y": 195.2,
-"text": "Gleise berühren/kreuzen sich (E), in OSM keine Weiche/Kreuzung",
-"ways": []
-},
-{
-"regel": "VB2",
-"x": 841.8,
-"y": 171.2,
-"text": "Gleise berühren/kreuzen sich (E), in OSM keine Weiche/Kreuzung",
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
 "ways": []
 },
 {
 "regel": "VB2",
 "x": 515.1,
 "y": 171.2,
-"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+"ways": []
+},
+{
+"regel": "VB2",
+"x": 1071.2,
+"y": 195.2,
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
 "ways": []
 },
 {
 "regel": "VB2",
 "x": 832.2,
 "y": 195.2,
-"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
 "ways": []
 },
 {
-"regel": "VD1",
-"x": 836.5,
+"regel": "VB2",
+"x": 841.8,
 "y": 171.2,
-"text": "zwei Gleise 11 px aufeinander"
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+"ways": []
 }
 ],
 "info": {

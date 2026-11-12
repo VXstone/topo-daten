@@ -17,6 +17,7 @@
     "G6",
     "ME",
     "MX",
+    "VB1",
     "VB2",
     "W1",
     "W2"
@@ -36,10 +37,12 @@
     "ME",
     "MX",
     "VA1",
+    "VB1",
+    "VC1",
     "W2"
    ],
-   "naechster": 18.8,
-   "naechste_regel": "MX",
+   "naechster": 8.0,
+   "naechste_regel": "VB1",
    "plan_da": true
   },
   {
@@ -64,6 +67,7 @@
    "text": "Perron und Gleis verdreht, Mittelperron?",
    "abgedeckt": true,
    "regeln": [
+    "VB1",
     "VD1"
    ],
    "naechster": 23.2,
@@ -80,7 +84,6 @@
    "regeln": [
     "MX",
     "VB2",
-    "VD1",
     "W2"
    ],
    "naechster": 12.0,
@@ -165,12 +168,10 @@
    "x": 413.2,
    "y": 129.6,
    "text": "noch ein Gleis links raus",
-   "abgedeckt": true,
-   "regeln": [
-    "VB2"
-   ],
-   "naechster": 32.7,
-   "naechste_regel": "VB2",
+   "abgedeckt": false,
+   "regeln": [],
+   "naechster": 59.4,
+   "naechste_regel": "ME",
    "plan_da": true
   },
   {
@@ -194,7 +195,6 @@
    "abgedeckt": true,
    "regeln": [
     "VB1",
-    "VB2",
     "VD1"
    ],
    "naechster": 8.5,
@@ -278,7 +278,6 @@
     "ME",
     "MX",
     "VB2",
-    "VC1",
     "W2"
    ],
    "naechster": 5.0,
@@ -495,8 +494,8 @@
    "text": "Versatz?",
    "abgedeckt": false,
    "regeln": [],
-   "naechster": 86.2,
-   "naechste_regel": "MZ",
+   "naechster": 51.1,
+   "naechste_regel": "VB2",
    "plan_da": true
   },
   {
@@ -563,7 +562,8 @@
    "abgedeckt": true,
    "regeln": [
     "MX",
-    "VA2"
+    "VA2",
+    "VB2"
    ],
    "naechster": 13.0,
    "naechste_regel": "MX",
@@ -593,10 +593,12 @@
    "x": 536.7,
    "y": 178.3,
    "text": "Meterspur an 6/7 nicht angebunden",
-   "abgedeckt": false,
-   "regeln": [],
-   "naechster": 96.2,
-   "naechste_regel": "MZ",
+   "abgedeckt": true,
+   "regeln": [
+    "VB2"
+   ],
+   "naechster": 34.0,
+   "naechste_regel": "VB2",
    "plan_da": true
   },
   {
@@ -647,6 +649,8 @@
     "ME",
     "MX",
     "VA1",
+    "VB1",
+    "VB2",
     "VC1",
     "W2"
    ],
@@ -680,10 +684,10 @@
    "abgedeckt": true,
    "regeln": [
     "VA1",
-    "VD1"
+    "VB2"
    ],
-   "naechster": 0.4,
-   "naechste_regel": "VD1",
+   "naechster": 3.3,
+   "naechste_regel": "VB2",
    "plan_da": true
   },
   {
@@ -694,8 +698,8 @@
    "text": "Stumpen Normalspur?",
    "abgedeckt": false,
    "regeln": [],
-   "naechster": 84.0,
-   "naechste_regel": "MZ",
+   "naechster": 54.0,
+   "naechste_regel": "VB2",
    "plan_da": true
   },
   {

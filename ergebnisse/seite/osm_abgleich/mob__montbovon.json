@@ -3,22 +3,31 @@
 "befunde": [
 {
 "regel": "VB1",
+"x": 246.7,
+"y": 182.0,
+"text": "OSM-Weiche 427804058 ohne Abzweig im Plan",
+"osm": 427804058
+},
+{
+"regel": "VB1",
+"x": 349.7,
+"y": 158.0,
+"text": "OSM-Weiche 6734556938 ohne Abzweig im Plan",
+"osm": 6734556938
+},
+{
+"regel": "VB1",
 "x": 371.9,
 "y": 62.9,
 "text": "OSM-Weiche 1800161997 ohne Abzweig im Plan",
 "osm": 1800161997
 },
 {
-"regel": "VB2",
-"x": 242.6,
+"regel": "VB1",
+"x": 254.0,
 "y": 110.0,
-"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
-"ways": [
-231762476,
-716757373,
-717049036,
-1422863755
-]
+"text": "OSM-Weiche 1800157314 ohne Abzweig im Plan",
+"osm": 1800157314
 },
 {
 "regel": "VD1",
@@ -35,7 +44,7 @@
 ],
 "info": {
 "gleise": 10,
-"knoten_plan": 7,
+"knoten_plan": 3,
 "dkw_plan": 0,
 "knoten_osm": 9
 }
