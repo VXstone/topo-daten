@@ -1,0 +1,80 @@
+{
+"plan": "tecknau",
+"befunde": [
+{
+"regel": "VB2",
+"x": 1080.0,
+"y": 158.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+181147015,
+1315701712,
+1332412910,
+1332575188
+]
+},
+{
+"regel": "VB2",
+"x": 1107.9,
+"y": 182.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+181147015,
+1315701713,
+1332575178
+]
+},
+{
+"regel": "VB2",
+"x": 243.0,
+"y": 158.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+181147017,
+181147970,
+233844332,
+1315701704
+]
+},
+{
+"regel": "VB2",
+"x": 242.0,
+"y": 182.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+181147022,
+181147971,
+233844333
+]
+},
+{
+"regel": "VB2",
+"x": 249.1,
+"y": 158.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+181147017,
+181147970,
+233844332,
+1315701704
+]
+},
+{
+"regel": "VB2",
+"x": 249.1,
+"y": 182.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+181147022,
+181147971,
+233844333
+]
+}
+],
+"info": {
+"gleise": 36,
+"knoten_plan": 21,
+"dkw_plan": 0,
+"knoten_osm": 17
+}
+}

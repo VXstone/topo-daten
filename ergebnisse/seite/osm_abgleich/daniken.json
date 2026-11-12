@@ -1,0 +1,37 @@
+{
+"plan": "daniken",
+"befunde": [
+{
+"regel": "VB2",
+"x": 248.2,
+"y": 182.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+396181911,
+438423759,
+536937111,
+565890920,
+565890926,
+902335234
+]
+},
+{
+"regel": "VD1",
+"x": 1048.4,
+"y": 182.0,
+"text": "zwei Gleise 26 px aufeinander"
+},
+{
+"regel": "VD1",
+"x": 1053.0,
+"y": 158.0,
+"text": "zwei Gleise 15 px aufeinander"
+}
+],
+"info": {
+"gleise": 45,
+"knoten_plan": 25,
+"dkw_plan": 0,
+"knoten_osm": 26
+}
+}

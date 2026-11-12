@@ -1,0 +1,47 @@
+{
+"plan": "schonenwerd",
+"befunde": [
+{
+"regel": "VB2",
+"x": 1463.0,
+"y": 110.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+137873569,
+369861202,
+369861203,
+369861204,
+1427690399
+]
+},
+{
+"regel": "VB2",
+"x": 1425.9,
+"y": 134.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+137873566,
+369861203,
+751611806
+]
+},
+{
+"regel": "VD1",
+"x": 1379.8,
+"y": 134.0,
+"text": "zwei Gleise 14 px aufeinander"
+},
+{
+"regel": "VD1",
+"x": 1470.0,
+"y": 110.0,
+"text": "zwei Gleise 14 px aufeinander"
+}
+],
+"info": {
+"gleise": 14,
+"knoten_plan": 9,
+"dkw_plan": 0,
+"knoten_osm": 7
+}
+}

@@ -1,0 +1,199 @@
+{
+"plan": "ins",
+"befunde": [
+{
+"regel": "VB1",
+"x": 543.0,
+"y": 158.0,
+"text": "OSM-Weiche 1242293754 ohne Abzweig im Plan",
+"osm": 1242293754
+},
+{
+"regel": "VB1",
+"x": 583.5,
+"y": 158.0,
+"text": "OSM-Weiche 1242293752 ohne Abzweig im Plan",
+"osm": 1242293752
+},
+{
+"regel": "VB1",
+"x": 851.7,
+"y": 182.0,
+"text": "OSM-Weiche 1242293763 ohne Abzweig im Plan",
+"osm": 1242293763
+},
+{
+"regel": "VB1",
+"x": 491.9,
+"y": 182.0,
+"text": "OSM-Weiche 2867982306 ohne Abzweig im Plan",
+"osm": 2867982306
+},
+{
+"regel": "VB1",
+"x": 515.1,
+"y": 182.0,
+"text": "OSM-Weiche 1242293755 ohne Abzweig im Plan",
+"osm": 1242293755
+},
+{
+"regel": "VB1",
+"x": 806.2,
+"y": 182.0,
+"text": "OSM-Weiche 1688852748 ohne Abzweig im Plan",
+"osm": 1688852748
+},
+{
+"regel": "VB1",
+"x": 851.2,
+"y": 206.0,
+"text": "OSM-Weiche 1688852743 ohne Abzweig im Plan",
+"osm": 1688852743
+},
+{
+"regel": "VB1",
+"x": 1081.2,
+"y": 206.0,
+"text": "OSM-Weiche 1425181998 ohne Abzweig im Plan",
+"osm": 1425181998
+},
+{
+"regel": "VB1",
+"x": 796.0,
+"y": 134.0,
+"text": "OSM-Weiche 1688852775 ohne Abzweig im Plan",
+"osm": 1688852775
+},
+{
+"regel": "VB1",
+"x": 835.1,
+"y": 206.0,
+"text": "OSM-Weiche 1688852745 ohne Abzweig im Plan",
+"osm": 1688852745
+},
+{
+"regel": "VB1",
+"x": 464.1,
+"y": 206.0,
+"text": "OSM-Weiche 2082130851 ohne Abzweig im Plan",
+"osm": 2082130851
+},
+{
+"regel": "VB1",
+"x": 350.6,
+"y": 206.0,
+"text": "OSM-Weiche 2082130789 ohne Abzweig im Plan",
+"osm": 2082130789
+},
+{
+"regel": "VB1",
+"x": 322.7,
+"y": 182.0,
+"text": "OSM-Weiche 2867982314 ohne Abzweig im Plan",
+"osm": 2867982314
+},
+{
+"regel": "VB2",
+"x": 796.2,
+"y": 171.2,
+"text": "Gleise berühren/kreuzen sich (E), in OSM keine Weiche/Kreuzung",
+"ways": []
+},
+{
+"regel": "VB2",
+"x": 825.1,
+"y": 195.2,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": []
+},
+{
+"regel": "VB2",
+"x": 464.1,
+"y": 195.2,
+"text": "Gleise berühren/kreuzen sich (E), in OSM keine Weiche/Kreuzung",
+"ways": []
+},
+{
+"regel": "VB2",
+"x": 491.9,
+"y": 171.2,
+"text": "Gleise berühren/kreuzen sich (E), in OSM keine Weiche/Kreuzung",
+"ways": []
+},
+{
+"regel": "VB2",
+"x": 322.7,
+"y": 171.2,
+"text": "Gleise berühren/kreuzen sich (E), in OSM keine Weiche/Kreuzung",
+"ways": []
+},
+{
+"regel": "VB2",
+"x": 350.6,
+"y": 195.2,
+"text": "Gleise berühren/kreuzen sich (E), in OSM keine Weiche/Kreuzung",
+"ways": []
+},
+{
+"regel": "VB2",
+"x": 574.6,
+"y": 147.2,
+"text": "Gleise berühren/kreuzen sich (E), in OSM keine Weiche/Kreuzung",
+"ways": []
+},
+{
+"regel": "VB2",
+"x": 780.1,
+"y": 123.2,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": []
+},
+{
+"regel": "VB2",
+"x": 543.0,
+"y": 147.2,
+"text": "Gleise berühren/kreuzen sich (E), in OSM keine Weiche/Kreuzung",
+"ways": []
+},
+{
+"regel": "VB2",
+"x": 1071.2,
+"y": 195.2,
+"text": "Gleise berühren/kreuzen sich (E), in OSM keine Weiche/Kreuzung",
+"ways": []
+},
+{
+"regel": "VB2",
+"x": 841.8,
+"y": 171.2,
+"text": "Gleise berühren/kreuzen sich (E), in OSM keine Weiche/Kreuzung",
+"ways": []
+},
+{
+"regel": "VB2",
+"x": 515.1,
+"y": 171.2,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": []
+},
+{
+"regel": "VB2",
+"x": 832.2,
+"y": 195.2,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": []
+},
+{
+"regel": "VD1",
+"x": 836.5,
+"y": 171.2,
+"text": "zwei Gleise 11 px aufeinander"
+}
+],
+"info": {
+"gleise": 26,
+"knoten_plan": 14,
+"dkw_plan": 1,
+"knoten_osm": 14
+}
+}

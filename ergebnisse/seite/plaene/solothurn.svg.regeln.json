@@ -1,0 +1,93 @@
+[
+ {
+  "regel": "G2",
+  "x": 1010.7,
+  "y": 352.4,
+  "bahnhof": null,
+  "text": "Weiche ohne Ausrundung (60°)"
+ },
+ {
+  "regel": "G2",
+  "x": 1152.3,
+  "y": 492.8,
+  "bahnhof": null,
+  "text": "Weiche ohne Ausrundung (60°)"
+ },
+ {
+  "regel": "G2",
+  "x": 849.5,
+  "y": 254.2,
+  "bahnhof": null,
+  "text": "Weiche ohne Ausrundung (60°)"
+ },
+ {
+  "regel": "G6",
+  "x": 1440.8,
+  "y": 389.6,
+  "bahnhof": null,
+  "text": "Linien stossen mit Knick 152° zusammen (Knubbel)"
+ },
+ {
+  "regel": "G6",
+  "x": 1439.8,
+  "y": 389.6,
+  "bahnhof": null,
+  "text": "Linien stossen mit Knick 152° zusammen (Knubbel)"
+ },
+ {
+  "regel": "G6",
+  "x": 1440.8,
+  "y": 376.4,
+  "bahnhof": null,
+  "text": "Linien stossen mit Knick 28° zusammen (Knubbel)"
+ },
+ {
+  "regel": "G6",
+  "x": 1127.2,
+  "y": 416.0,
+  "bahnhof": null,
+  "text": "Linien stossen mit Knick 84° zusammen (Knubbel)"
+ },
+ {
+  "regel": "G6",
+  "x": 1373.3,
+  "y": 442.4,
+  "bahnhof": null,
+  "text": "Linien stossen mit Knick 90° zusammen (Knubbel)"
+ },
+ {
+  "regel": "G6",
+  "x": 1128.2,
+  "y": 416.0,
+  "bahnhof": null,
+  "text": "Linien stossen mit Knick 84° zusammen (Knubbel)"
+ },
+ {
+  "regel": "G6",
+  "x": 1166.2,
+  "y": 516.8,
+  "bahnhof": null,
+  "text": "Linien stossen mit Knick 60° zusammen (Knubbel)"
+ },
+ {
+  "regel": "G7",
+  "x": 826.7,
+  "y": 280.4,
+  "bahnhof": null,
+  "text": "Gleisende nicht angebunden, nächstes Gleis 6.6 px"
+ },
+ {
+  "regel": "G7",
+  "x": 840.7,
+  "y": 280.4,
+  "bahnhof": null,
+  "text": "Gleisende nicht angebunden, nächstes Gleis 5.5 px"
+ },
+ {
+  "regel": "G7",
+  "x": 863.1,
+  "y": 280.4,
+  "bahnhof": null,
+  "text": "Gleisende nicht angebunden, nächstes Gleis 4.0 px"
+ }
+]

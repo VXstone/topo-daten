@@ -1,0 +1,1043 @@
+{
+"plan": "olten",
+"befunde": [
+{
+"regel": "VB1",
+"x": 430.8,
+"y": 350.0,
+"text": "OSM-Weiche 635800896 ohne Abzweig im Plan",
+"osm": 635800896
+},
+{
+"regel": "VB1",
+"x": 929.5,
+"y": 326.0,
+"text": "OSM-Weiche 635802175 ohne Abzweig im Plan",
+"osm": 635802175
+},
+{
+"regel": "VB1",
+"x": 799.6,
+"y": 326.0,
+"text": "OSM-Weiche 635801245 ohne Abzweig im Plan",
+"osm": 635801245
+},
+{
+"regel": "VB1",
+"x": 1084.3,
+"y": 182.0,
+"text": "OSM-Weiche 635802407 ohne Abzweig im Plan",
+"osm": 635802407
+},
+{
+"regel": "VB1",
+"x": 260.0,
+"y": 278.0,
+"text": "OSM-Weiche 9233845854 ohne Abzweig im Plan",
+"osm": 9233845854
+},
+{
+"regel": "VB1",
+"x": 383.9,
+"y": 350.0,
+"text": "OSM-Weiche 635800864 ohne Abzweig im Plan",
+"osm": 635800864
+},
+{
+"regel": "VB1",
+"x": 370.0,
+"y": 182.0,
+"text": "OSM-Weiche 635800808 ohne Abzweig im Plan",
+"osm": 635800808
+},
+{
+"regel": "VB1",
+"x": 280.0,
+"y": 230.0,
+"text": "OSM-Weiche 1502127297 ohne Abzweig im Plan",
+"osm": 1502127297
+},
+{
+"regel": "VB1",
+"x": 408.8,
+"y": 278.0,
+"text": "OSM-Weiche 1505191403 ohne Abzweig im Plan",
+"osm": 1505191403
+},
+{
+"regel": "VB1",
+"x": 382.3,
+"y": 278.0,
+"text": "OSM-Weiche 34554368 ohne Abzweig im Plan",
+"osm": 34554368
+},
+{
+"regel": "VB1",
+"x": 800.1,
+"y": 158.0,
+"text": "OSM-Weiche 635801196 ohne Abzweig im Plan",
+"osm": 635801196
+},
+{
+"regel": "VB1",
+"x": 908.5,
+"y": 158.0,
+"text": "OSM-Weiche 635801600 ohne Abzweig im Plan",
+"osm": 635801600
+},
+{
+"regel": "VB1",
+"x": 883.6,
+"y": 206.0,
+"text": "OSM-Weiche 2068970968 ohne Abzweig im Plan",
+"osm": 2068970968
+},
+{
+"regel": "VB1",
+"x": 887.7,
+"y": 206.0,
+"text": "OSM-Weiche 635801508 ohne Abzweig im Plan",
+"osm": 635801508
+},
+{
+"regel": "VB1",
+"x": 964.1,
+"y": 230.0,
+"text": "OSM-Weiche 2077484615 ohne Abzweig im Plan",
+"osm": 2077484615
+},
+{
+"regel": "VB1",
+"x": 996.2,
+"y": 254.0,
+"text": "OSM-Weiche 2077484616 ohne Abzweig im Plan",
+"osm": 2077484616
+},
+{
+"regel": "VB1",
+"x": 996.8,
+"y": 254.0,
+"text": "OSM-Weiche 2077484619 ohne Abzweig im Plan",
+"osm": 2077484619
+},
+{
+"regel": "VB1",
+"x": 1089.3,
+"y": 230.0,
+"text": "OSM-Weiche 635802397 ohne Abzweig im Plan",
+"osm": 635802397
+},
+{
+"regel": "VB1",
+"x": 771.2,
+"y": 134.0,
+"text": "OSM-Weiche 635801148 ohne Abzweig im Plan",
+"osm": 635801148
+},
+{
+"regel": "VB1",
+"x": 1118.9,
+"y": 254.0,
+"text": "OSM-Weiche 6360515787 ohne Abzweig im Plan",
+"osm": 6360515787
+},
+{
+"regel": "VB1",
+"x": 1263.7,
+"y": 230.0,
+"text": "OSM-Weiche 635802715 ohne Abzweig im Plan",
+"osm": 635802715
+},
+{
+"regel": "VB1",
+"x": 1117.1,
+"y": 206.0,
+"text": "OSM-Weiche 2696673789 ohne Abzweig im Plan",
+"osm": 2696673789
+},
+{
+"regel": "VB1",
+"x": 1003.3,
+"y": 302.0,
+"text": "OSM-Weiche 6360515785 ohne Abzweig im Plan",
+"osm": 6360515785
+},
+{
+"regel": "VB1",
+"x": 1277.6,
+"y": 206.0,
+"text": "OSM-Weiche 635802712 ohne Abzweig im Plan",
+"osm": 635802712
+},
+{
+"regel": "VB1",
+"x": 1571.6,
+"y": 182.0,
+"text": "OSM-Weiche 635803999 ohne Abzweig im Plan",
+"osm": 635803999
+},
+{
+"regel": "VB1",
+"x": 1686.8,
+"y": 182.0,
+"text": "OSM-Weiche 635804015 ohne Abzweig im Plan",
+"osm": 635804015
+},
+{
+"regel": "VB1",
+"x": 1655.3,
+"y": 350.0,
+"text": "OSM-Weiche 635804037 ohne Abzweig im Plan",
+"osm": 635804037
+},
+{
+"regel": "VB2",
+"x": 277.2,
+"y": 206.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": []
+},
+{
+"regel": "VB2",
+"x": 1186.0,
+"y": 158.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+136910732,
+692444511
+]
+},
+{
+"regel": "VB2",
+"x": 1225.7,
+"y": 206.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+195008189,
+196578224,
+230265800,
+378517710,
+679251549,
+679251561,
+679258585,
+702696959,
+1003002464,
+1332412914,
+1332417468,
+1461527813
+]
+},
+{
+"regel": "VB2",
+"x": 821.9,
+"y": 168.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+195008189,
+195008190,
+196578217,
+196578224,
+230265798,
+230265800,
+378517710,
+679251549,
+679251561,
+679258585,
+702696957,
+702696959,
+904059591,
+1003002464,
+1332412914,
+1332417468,
+1461527813
+]
+},
+{
+"regel": "VB2",
+"x": 850.0,
+"y": 182.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+195008189,
+196578224,
+230265800,
+378517710,
+679251549,
+679251561,
+679258585,
+702696959,
+1003002464,
+1332412914,
+1332417468,
+1461527813
+]
+},
+{
+"regel": "VB2",
+"x": 863.9,
+"y": 302.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+50062884,
+50062938,
+50063009,
+50063026,
+50063027,
+136910717,
+173173290,
+230265754,
+378516511,
+1331904821,
+1331908789
+]
+},
+{
+"regel": "VB2",
+"x": 944.0,
+"y": 326.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+50062884,
+50062938,
+50063009,
+50063026,
+50063027,
+136910717,
+173173290,
+230265754,
+378516511,
+378517711,
+380867859,
+1331904821,
+1331908789
+]
+},
+{
+"regel": "VB2",
+"x": 956.9,
+"y": 314.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+378517711,
+380867859
+]
+},
+{
+"regel": "VB2",
+"x": 1068.0,
+"y": 278.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+230265770,
+378517711,
+380867859,
+679251564,
+884583191
+]
+},
+{
+"regel": "VB2",
+"x": 1093.9,
+"y": 254.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+176323319,
+195008185,
+196578227,
+197523816,
+197528374,
+441319477,
+679251541,
+679251566,
+1264378757,
+1332417467,
+1332421867
+]
+},
+{
+"regel": "VB2",
+"x": 951.0,
+"y": 158.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+136910732,
+692444511
+]
+},
+{
+"regel": "VB2",
+"x": 968.0,
+"y": 326.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+9976749,
+50062884,
+50062938,
+50063009,
+50063026,
+50063027,
+136910717,
+173173290,
+230265754,
+378516511,
+396181907,
+1331904821,
+1331908789
+]
+},
+{
+"regel": "VB2",
+"x": 243.3,
+"y": 182.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+57016117,
+57016126,
+495230189,
+977851900
+]
+},
+{
+"regel": "VB2",
+"x": 1267.6,
+"y": 206.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+195008189,
+196578224,
+230265800,
+378517710,
+679251549,
+679251561,
+679258585,
+702696959,
+1003002464,
+1332412914,
+1332417468,
+1461527813
+]
+},
+{
+"regel": "VB2",
+"x": 2105.9,
+"y": 182.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+48647118,
+48647120,
+181147972,
+679020355,
+1332412906
+]
+},
+{
+"regel": "VB2",
+"x": 2138.8,
+"y": 206.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+10057037,
+48647165,
+48647246,
+50062969,
+1332412902,
+1332412905,
+1525494919
+]
+},
+{
+"regel": "VB2",
+"x": 1719.0,
+"y": 182.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+48647120,
+48647165,
+181147972,
+378516509
+]
+},
+{
+"regel": "VB2",
+"x": 1733.0,
+"y": 206.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+10057037,
+48647165,
+48647246,
+50062969,
+1332412902,
+1332412905,
+1525494919
+]
+},
+{
+"regel": "VB2",
+"x": 362.4,
+"y": 254.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+137713643,
+230265767,
+396181909,
+396181910,
+977851899
+]
+},
+{
+"regel": "VB2",
+"x": 402.5,
+"y": 254.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+137216811,
+173173291,
+195005895,
+230265767,
+396181909
+]
+},
+{
+"regel": "VB2",
+"x": 266.0,
+"y": 254.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+57016111,
+137216806,
+207922003,
+230265767,
+396181909
+]
+},
+{
+"regel": "VB2",
+"x": 1076.0,
+"y": 206.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+195008189,
+196578224,
+197523818,
+230265800,
+378517710,
+380867858,
+679251549,
+679251561,
+679251568,
+679258585,
+702696959,
+1003002464,
+1332412914,
+1332417468,
+1461527813
+]
+},
+{
+"regel": "VB2",
+"x": 808.1,
+"y": 144.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+195008189,
+196578224,
+230265783,
+230265800,
+378517710,
+679251549,
+679251561,
+679258585,
+702696959,
+904059591,
+1003002464,
+1332412914,
+1332417468,
+1461527813
+]
+},
+{
+"regel": "VB2",
+"x": 1032.0,
+"y": 206.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+195008189,
+196578221,
+196578224,
+196578227,
+230265773,
+230265798,
+230265800,
+378309424,
+378517710,
+378517711,
+441319477,
+679251549,
+679251561,
+679258585,
+702696956,
+702696959,
+1003002464,
+1332412914,
+1332417468,
+1461527813
+]
+},
+{
+"regel": "VB2",
+"x": 1054.0,
+"y": 254.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+176323319,
+195008185,
+196578221,
+196578227,
+197523816,
+197523818,
+197528372,
+197528374,
+230265777,
+378517710,
+441319477,
+679251541,
+679251553,
+679251566,
+702696958,
+1264378757,
+1332417467,
+1332421867
+]
+},
+{
+"regel": "VB2",
+"x": 867.7,
+"y": 230.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+176323319,
+195008185,
+196578221,
+196578227,
+197523816,
+197528374,
+230265777,
+441319477,
+679251541,
+679251566,
+1264378757,
+1332417467,
+1332421867
+]
+},
+{
+"regel": "VB2",
+"x": 940.0,
+"y": 230.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+176323319,
+195008185,
+196578227,
+197523816,
+197528374,
+441319477,
+679251541,
+679251566,
+1264378757,
+1331904823,
+1332417467,
+1332421867
+]
+},
+{
+"regel": "VB2",
+"x": 965.9,
+"y": 206.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+195008189,
+196578221,
+196578224,
+196578227,
+230265773,
+230265798,
+378309424,
+378517711,
+441319477,
+702696956,
+1331904823,
+1332421867
+]
+},
+{
+"regel": "VB2",
+"x": 1010.0,
+"y": 254.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+196578221,
+197523816,
+197523818,
+197528372,
+230265777,
+378517710,
+679251553,
+702696958
+]
+},
+{
+"regel": "VB2",
+"x": 1035.9,
+"y": 278.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+230265770,
+378517711,
+380867859,
+679251564,
+884583191
+]
+},
+{
+"regel": "VB2",
+"x": 1178.0,
+"y": 254.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+679251541,
+679251566,
+1264378757
+]
+},
+{
+"regel": "VB2",
+"x": 1203.9,
+"y": 230.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+197523818,
+380867858,
+679251568
+]
+},
+{
+"regel": "VC1",
+"x": 907.0,
+"y": 182.0,
+"text": "Gleis (Way 136910732) im Plan an Knoten 635801598 angebunden, in OSM nicht",
+"osm": 635801598,
+"ways": [
+136910732,
+692444511
+]
+},
+{
+"regel": "VB2",
+"x": 394.8,
+"y": 326.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+50062881,
+50062914,
+57016127,
+115967219,
+207922000,
+230265813,
+545852534
+]
+},
+{
+"regel": "VB2",
+"x": 354.3,
+"y": 326.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+50062881,
+50062914,
+137216807,
+207922000,
+207922003,
+545852535
+]
+},
+{
+"regel": "VB2",
+"x": 1030.0,
+"y": 230.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+176323319,
+195008185,
+196578227,
+197523816,
+197528374,
+441319477,
+679251541,
+679251549,
+679251553,
+679251566,
+1264378757,
+1332417467,
+1332421867
+]
+},
+{
+"regel": "VB2",
+"x": 132.0,
+"y": 326.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+50062881,
+50062914,
+207922000
+]
+},
+{
+"regel": "VB2",
+"x": 157.9,
+"y": 302.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+57016111,
+137216806,
+207922003
+]
+},
+{
+"regel": "VB2",
+"x": 166.0,
+"y": 302.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+57016111,
+137216806,
+207922003
+]
+},
+{
+"regel": "VB2",
+"x": 205.7,
+"y": 254.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+230265767,
+396181909
+]
+},
+{
+"regel": "VB2",
+"x": 212.0,
+"y": 254.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+230265767,
+396181909
+]
+},
+{
+"regel": "VB2",
+"x": 237.9,
+"y": 230.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+137216810,
+195008192,
+783711750
+]
+},
+{
+"regel": "VB2",
+"x": 351.7,
+"y": 182.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+57016126,
+137216808,
+378309423,
+495230189,
+977851900
+]
+},
+{
+"regel": "VB2",
+"x": 453.7,
+"y": 134.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+50062908,
+50062909,
+50062913,
+195008184,
+230265758,
+230265783,
+976727148
+]
+},
+{
+"regel": "VB2",
+"x": 1562.6,
+"y": 182.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+26848404,
+136910725,
+181147974,
+692444534,
+1331908787
+]
+},
+{
+"regel": "VB2",
+"x": 1697.1,
+"y": 206.0,
+"text": "Gleise berühren/kreuzen sich (X), in OSM keine Weiche/Kreuzung",
+"ways": [
+10057037,
+48647165,
+48647246,
+50062969,
+1332412902,
+1332412905,
+1525494919
+]
+},
+{
+"regel": "VB2",
+"x": 804.9,
+"y": 138.5,
+"text": "Gleise berühren/kreuzen sich (X), in OSM keine Weiche/Kreuzung",
+"ways": [
+195008189,
+196578224,
+230265783,
+230265800,
+378517710,
+679251549,
+679251561,
+679258585,
+702696959,
+904059591,
+1003002464,
+1332412914,
+1332417468,
+1461527813
+]
+},
+{
+"regel": "VD1",
+"x": 751.6,
+"y": 326.0,
+"text": "zwei Gleise 16 px aufeinander"
+},
+{
+"regel": "VD1",
+"x": 715.5,
+"y": 350.0,
+"text": "zwei Gleise 16 px aufeinander"
+},
+{
+"regel": "VD1",
+"x": 819.6,
+"y": 164.1,
+"text": "zwei Gleise 9 px aufeinander"
+},
+{
+"regel": "VD1",
+"x": 268.7,
+"y": 158.0,
+"text": "zwei Gleise 13 px aufeinander"
+},
+{
+"regel": "VD1",
+"x": 467.4,
+"y": 326.0,
+"text": "zwei Gleise 26 px aufeinander"
+},
+{
+"regel": "VD1",
+"x": 775.0,
+"y": 278.0,
+"text": "zwei Gleise 16 px aufeinander"
+},
+{
+"regel": "VD1",
+"x": 809.7,
+"y": 301.9,
+"text": "zwei Gleise 13 px aufeinander"
+},
+{
+"regel": "VD1",
+"x": 313.0,
+"y": 182.0,
+"text": "zwei Gleise 35 px aufeinander"
+},
+{
+"regel": "VD1",
+"x": 251.4,
+"y": 182.0,
+"text": "zwei Gleise 17 px aufeinander"
+},
+{
+"regel": "VD1",
+"x": 939.3,
+"y": 350.0,
+"text": "zwei Gleise 35 px aufeinander"
+},
+{
+"regel": "VD1",
+"x": 397.7,
+"y": 302.0,
+"text": "zwei Gleise 31 px aufeinander"
+},
+{
+"regel": "VD1",
+"x": 297.2,
+"y": 230.0,
+"text": "zwei Gleise 9 px aufeinander"
+},
+{
+"regel": "VD1",
+"x": 1654.8,
+"y": 182.0,
+"text": "zwei Gleise 8 px aufeinander"
+},
+{
+"regel": "VD1",
+"x": 305.8,
+"y": 302.0,
+"text": "zwei Gleise 8 px aufeinander"
+},
+{
+"regel": "VD1",
+"x": 1271.7,
+"y": 206.1,
+"text": "zwei Gleise 8 px aufeinander"
+},
+{
+"regel": "VD1",
+"x": 2110.1,
+"y": 182.0,
+"text": "zwei Gleise 9 px aufeinander"
+},
+{
+"regel": "VD1",
+"x": 805.9,
+"y": 140.2,
+"text": "zwei Gleise 10 px aufeinander"
+},
+{
+"regel": "VD1",
+"x": 1026.9,
+"y": 205.9,
+"text": "zwei Gleise 11 px aufeinander"
+}
+],
+"info": {
+"gleise": 131,
+"knoten_plan": 95,
+"dkw_plan": 2,
+"knoten_osm": 86
+}
+}

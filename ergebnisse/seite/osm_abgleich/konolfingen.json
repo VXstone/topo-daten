@@ -1,0 +1,119 @@
+{
+"plan": "konolfingen",
+"befunde": [
+{
+"regel": "VA1",
+"x": 656.6,
+"y": 197.6,
+"text": "OSM-DKW 254420784 im Plan nicht als DKW gezeichnet",
+"osm": 254420784
+},
+{
+"regel": "VA1",
+"x": 552.5,
+"y": 197.6,
+"text": "OSM-DKW 1689231106 im Plan nicht als DKW gezeichnet",
+"osm": 1689231106
+},
+{
+"regel": "VA1",
+"x": 703.5,
+"y": 317.6,
+"text": "OSM-DKW 1689231120 im Plan nicht als DKW gezeichnet",
+"osm": 1689231120
+},
+{
+"regel": "VB2",
+"x": 367.7,
+"y": 317.6,
+"text": "Gleise berühren/kreuzen sich (X), in OSM keine Weiche/Kreuzung",
+"ways": [
+33390862,
+156704997,
+156705020,
+176136318,
+176184228,
+606745360,
+739598378
+]
+},
+{
+"regel": "VB2",
+"x": 353.9,
+"y": 341.6,
+"text": "Gleise berühren/kreuzen sich (X), in OSM keine Weiche/Kreuzung",
+"ways": [
+33390862,
+156704997,
+156705020,
+176184228,
+606745360,
+739598378
+]
+},
+{
+"regel": "VB2",
+"x": 584.0,
+"y": 269.7,
+"text": "Gleise berühren/kreuzen sich (X), in OSM keine Weiche/Kreuzung",
+"ways": [
+33390862,
+156704985,
+156705029,
+176184228,
+606745359,
+606745360,
+606748594,
+739586129,
+1290401041,
+1290599087,
+1290599088
+]
+},
+{
+"regel": "VC1",
+"x": 402.8,
+"y": 293.6,
+"text": "Gleis (Way 156704997) im Plan an Knoten 4694358196 angebunden, in OSM nicht",
+"osm": 4694358196,
+"ways": [
+156704997,
+156705020,
+176184228,
+739598378,
+739598379,
+1290597221
+]
+},
+{
+"regel": "VD1",
+"x": 601.2,
+"y": 221.6,
+"text": "zwei Gleise 49 px aufeinander"
+},
+{
+"regel": "VD1",
+"x": 414.7,
+"y": 269.6,
+"text": "zwei Gleise 18 px aufeinander"
+},
+{
+"regel": "VD1",
+"x": 591.1,
+"y": 257.9,
+"text": "zwei Gleise 11 px aufeinander"
+},
+{
+"regel": "VD1",
+"x": 651.3,
+"y": 197.6,
+"text": "zwei Gleise 11 px aufeinander"
+}
+],
+"info": {
+"gleise": 58,
+"knoten_plan": 34,
+"dkw_plan": 2,
+"knoten_osm": 29
+}
+}

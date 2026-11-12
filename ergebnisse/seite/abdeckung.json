@@ -1,0 +1,802 @@
+{
+ "abgedeckt": 30,
+ "offen": 57,
+ "radius": 40.0,
+ "ohne": [
+  "G2"
+ ],
+ "hinweise": [
+  {
+   "id": "0bw9nnym5m5luilotwzk",
+   "plan": "solothurn",
+   "x": 1400.7,
+   "y": 439.9,
+   "text": "Gleis nach unten, Knick, über anderen Gleisen nach oben",
+   "abgedeckt": true,
+   "regeln": [
+    "G6",
+    "ME",
+    "MX",
+    "VB2",
+    "W1",
+    "W2"
+   ],
+   "naechster": 19.3,
+   "naechste_regel": "MX",
+   "plan_da": true
+  },
+  {
+   "id": "0fpodu3uvthbowtib2di",
+   "plan": "solothurn",
+   "x": 1479.7,
+   "y": 351.8,
+   "text": "sauberes Gleis ins Nichts",
+   "abgedeckt": true,
+   "regeln": [
+    "ME",
+    "MX",
+    "VA1",
+    "W2"
+   ],
+   "naechster": 18.8,
+   "naechste_regel": "MX",
+   "plan_da": true
+  },
+  {
+   "id": "0k4jinypa0yqoixbgsqa",
+   "plan": "region",
+   "x": 2140,
+   "y": -436.5,
+   "text": "Eppenbergtunnel Weichen/Stummel",
+   "abgedeckt": true,
+   "regeln": [
+    "G5"
+   ],
+   "naechster": 27.3,
+   "naechste_regel": "G5",
+   "plan_da": true
+  },
+  {
+   "id": "2vxh52qp9dvt8ftf9x4u",
+   "plan": "mob__chamby",
+   "x": 402.6,
+   "y": 122.4,
+   "text": "Perron und Gleis verdreht, Mittelperron?",
+   "abgedeckt": false,
+   "regeln": [],
+   "naechster": null,
+   "naechste_regel": null,
+   "plan_da": true
+  },
+  {
+   "id": "33fs1o9c5jw7adqa8kbo",
+   "plan": "konolfingen",
+   "x": 581.9,
+   "y": 281.5,
+   "text": "Gleis unter Gleis, sehr steil",
+   "abgedeckt": true,
+   "regeln": [
+    "MX",
+    "VB2",
+    "VD1",
+    "W2"
+   ],
+   "naechster": 12.0,
+   "naechste_regel": "VB2",
+   "plan_da": true
+  },
+  {
+   "id": "3ctbr5ui9sy7up8oldd4",
+   "plan": "mob__montreux",
+   "x": 768.8,
+   "y": 57.2,
+   "text": "Knubbel, keine Gegen-S-Kurve",
+   "abgedeckt": false,
+   "regeln": [],
+   "naechster": 260.5,
+   "naechste_regel": "MQ",
+   "plan_da": true
+  },
+  {
+   "id": "3d6h8ove5to3gkvyapj0",
+   "plan": "konolfingen",
+   "x": 390.2,
+   "y": 307.2,
+   "text": "Abstellgleise über Streckengleise",
+   "abgedeckt": true,
+   "regeln": [
+    "G7",
+    "MX",
+    "VB2",
+    "VC1"
+   ],
+   "naechster": 18.0,
+   "naechste_regel": "G7",
+   "plan_da": true
+  },
+  {
+   "id": "3za5possrk2xb0k94bb1",
+   "plan": "region",
+   "x": -54,
+   "y": 763.7,
+   "text": "90 Grad, statt 2 Weichen nur eine",
+   "abgedeckt": true,
+   "regeln": [
+    "G6",
+    "MZ"
+   ],
+   "naechster": 4.9,
+   "naechste_regel": "G6",
+   "plan_da": true
+  },
+  {
+   "id": "4xdm1q0bw47yeso6zkbv",
+   "plan": "region",
+   "x": 34.7,
+   "y": 924.7,
+   "text": "Gleisanschluss dazwischen, Verbindungen prüfen",
+   "abgedeckt": true,
+   "regeln": [
+    "G7"
+   ],
+   "naechster": 0.9,
+   "naechste_regel": "G7",
+   "plan_da": true
+  },
+  {
+   "id": "5yz7wx21homjzvjtmvyq",
+   "plan": "mob__montreux",
+   "x": 592.4,
+   "y": 280.5,
+   "text": "Perron zwischen 4 und 3",
+   "abgedeckt": true,
+   "regeln": [
+    "MQ"
+   ],
+   "naechster": 27.1,
+   "naechste_regel": "MQ",
+   "plan_da": true
+  },
+  {
+   "id": "6gk4wv90y3k15001yh4l",
+   "plan": "mob__zweisimmen",
+   "x": 413.2,
+   "y": 129.6,
+   "text": "noch ein Gleis links raus",
+   "abgedeckt": false,
+   "regeln": [],
+   "naechster": 59.4,
+   "naechste_regel": "ME",
+   "plan_da": true
+  },
+  {
+   "id": "6rwynvciruw8szug0pe2",
+   "plan": "mob__montreux",
+   "x": 597.6,
+   "y": 341.9,
+   "text": "keine Mittelperrons Normalspur",
+   "abgedeckt": false,
+   "regeln": [],
+   "naechster": 87.9,
+   "naechste_regel": "MQ",
+   "plan_da": true
+  },
+  {
+   "id": "7ma7j244xvt4xey2r2hg",
+   "plan": "solothurn",
+   "x": 1642.9,
+   "y": 192.8,
+   "text": "Fenster bis Abzweig",
+   "abgedeckt": true,
+   "regeln": [
+    "VB1",
+    "VB2",
+    "VD1"
+   ],
+   "naechster": 8.5,
+   "naechste_regel": "VB1",
+   "plan_da": true
+  },
+  {
+   "id": "8bce2usmmz5hf4zrkuyo",
+   "plan": "konolfingen",
+   "x": 702.4,
+   "y": 316.1,
+   "text": "Gleise hin und her, Pfeile retour",
+   "abgedeckt": true,
+   "regeln": [
+    "A1",
+    "VA1"
+   ],
+   "naechster": 1.9,
+   "naechste_regel": "VA1",
+   "plan_da": true
+  },
+  {
+   "id": "8gyimaw4jzto45gfh0bn",
+   "plan": "mob__montreux",
+   "x": 642,
+   "y": 133.4,
+   "text": "Knick vor Tunnelportal",
+   "abgedeckt": false,
+   "regeln": [],
+   "naechster": 123.3,
+   "naechste_regel": "G6",
+   "plan_da": true
+  },
+  {
+   "id": "afktn50f0mufp2165915",
+   "plan": "mob__montreux",
+   "x": 648,
+   "y": 297.3,
+   "text": "Mindestabstand",
+   "abgedeckt": false,
+   "regeln": [],
+   "naechster": 66.1,
+   "naechste_regel": "MQ",
+   "plan_da": true
+  },
+  {
+   "id": "b3j5iaapufv3ki8xrzqx",
+   "plan": "mob__zweisimmen",
+   "x": 340.5,
+   "y": 233.8,
+   "text": "DKW?",
+   "abgedeckt": false,
+   "regeln": [],
+   "naechster": 45.9,
+   "naechste_regel": "MX",
+   "plan_da": true
+  },
+  {
+   "id": "bhlvd3vjzxa9iyxg9rhe",
+   "plan": "aarau",
+   "x": 2126.7,
+   "y": 310.4,
+   "text": "4/5 Hauptachsen gerade",
+   "abgedeckt": false,
+   "regeln": [],
+   "naechster": 66.9,
+   "naechste_regel": "MZ",
+   "plan_da": true
+  },
+  {
+   "id": "ce8rilwzf07i0nr6qe0x",
+   "plan": "solothurn",
+   "x": 1434.8,
+   "y": 390.1,
+   "text": "90 Grad",
+   "abgedeckt": true,
+   "regeln": [
+    "G6",
+    "ME",
+    "MX",
+    "VB2",
+    "VC1",
+    "W2"
+   ],
+   "naechster": 5.0,
+   "naechste_regel": "G6",
+   "plan_da": true
+  },
+  {
+   "id": "cw2juyevx8z26ipfyp3o",
+   "plan": "aarau",
+   "x": 692,
+   "y": 102.9,
+   "text": "Tunnel nur ein Gleis unter den anderen durch",
+   "abgedeckt": false,
+   "regeln": [],
+   "naechster": 195.6,
+   "naechste_regel": "VB2",
+   "plan_da": true
+  },
+  {
+   "id": "dmr7iutmnhu3tb3dp0nr",
+   "plan": "region",
+   "x": 195.1,
+   "y": -295.1,
+   "text": "Weichen sehen wie DKW aus",
+   "abgedeckt": false,
+   "regeln": [],
+   "naechster": 45.3,
+   "naechste_regel": "MQ",
+   "plan_da": true
+  },
+  {
+   "id": "es9y6uzudlyfzg4bzeru",
+   "plan": "mob__montreux",
+   "x": 473.6,
+   "y": 158.6,
+   "text": "Perronnummern braun Meterspur",
+   "abgedeckt": true,
+   "regeln": [
+    "MX"
+   ],
+   "naechster": 18.5,
+   "naechste_regel": "MX",
+   "plan_da": true
+  },
+  {
+   "id": "ezxju35sv6pzpjgvpfud",
+   "plan": "konolfingen",
+   "x": 529.7,
+   "y": 171.0,
+   "text": "grünes Perron?",
+   "abgedeckt": true,
+   "regeln": [
+    "VA1",
+    "Z1"
+   ],
+   "naechster": 15.8,
+   "naechste_regel": "Z1",
+   "plan_da": true
+  },
+  {
+   "id": "f3mpjp2t1fhl7bkq6mth",
+   "plan": "olten",
+   "x": 1628,
+   "y": 374.9,
+   "text": "nicht ausgerundeter Knick",
+   "abgedeckt": true,
+   "regeln": [
+    "VB1"
+   ],
+   "naechster": 36.9,
+   "naechste_regel": "VB1",
+   "plan_da": true
+  },
+  {
+   "id": "fmlk3ybhicj80yggwifb",
+   "plan": "aarau",
+   "x": 2482,
+   "y": 262.8,
+   "text": "Zwischengeraden",
+   "abgedeckt": true,
+   "regeln": [
+    "ME",
+    "MZ"
+   ],
+   "naechster": 18.4,
+   "naechste_regel": "MZ",
+   "plan_da": true
+  },
+  {
+   "id": "foiync5mm6ftfi9uy4j3",
+   "plan": "solothurn",
+   "x": 1706.2,
+   "y": 278.5,
+   "text": "Gleis nicht mehr lang (Pfeil)",
+   "abgedeckt": false,
+   "regeln": [],
+   "naechster": 114.2,
+   "naechste_regel": "VB1",
+   "plan_da": true
+  },
+  {
+   "id": "fuyqocrigqz00qtkcehx",
+   "plan": "vereina__sagliains_sasslatsch",
+   "x": 291.7,
+   "y": 131.2,
+   "text": "fettes Gleis endet an Perron/Autoverlad",
+   "abgedeckt": false,
+   "regeln": [],
+   "naechster": null,
+   "naechste_regel": null,
+   "plan_da": true
+  },
+  {
+   "id": "i06se1f40mrchsbf0g8p",
+   "plan": "mob__glion",
+   "x": 698.6,
+   "y": 264.3,
+   "text": "Symbol Schiebebühne",
+   "abgedeckt": false,
+   "regeln": [],
+   "naechster": 42.6,
+   "naechste_regel": "MQ",
+   "plan_da": true
+  },
+  {
+   "id": "j57vc7k78xhb5qgqsbpp",
+   "plan": "region",
+   "x": 184.1,
+   "y": -296.1,
+   "text": "Knubbel vom geraden Strang",
+   "abgedeckt": false,
+   "regeln": [],
+   "naechster": 52.7,
+   "naechste_regel": "MQ",
+   "plan_da": true
+  },
+  {
+   "id": "jbs12ofny2vyq8mel03r",
+   "plan": "region",
+   "x": -77.4,
+   "y": 762,
+   "text": "fehlen Weichen",
+   "abgedeckt": true,
+   "regeln": [
+    "G6",
+    "ME",
+    "MZ"
+   ],
+   "naechster": 25.7,
+   "naechste_regel": "G6",
+   "plan_da": true
+  },
+  {
+   "id": "jxpf1k85qn2fh3prrfzg",
+   "plan": "region_vereina",
+   "x": -194.7,
+   "y": -161.3,
+   "text": "S-Kurve Klosters",
+   "abgedeckt": true,
+   "regeln": [
+    "ME",
+    "MZ"
+   ],
+   "naechster": 28.6,
+   "naechste_regel": "MZ",
+   "plan_da": true
+  },
+  {
+   "id": "jy8ro0t1s42ghqu25tyk",
+   "plan": "mob__zweisimmen",
+   "x": 321.8,
+   "y": 182.9,
+   "text": "Zwischengerade?",
+   "abgedeckt": true,
+   "regeln": [
+    "ME",
+    "MZ"
+   ],
+   "naechster": 26.8,
+   "naechste_regel": "MZ",
+   "plan_da": true
+  },
+  {
+   "id": "k4qi1w5enz2zcmznepym",
+   "plan": "mob__rossiniere",
+   "x": 354.3,
+   "y": 121.4,
+   "text": "Stumpen?",
+   "abgedeckt": false,
+   "regeln": [],
+   "naechster": null,
+   "naechste_regel": null,
+   "plan_da": true
+  },
+  {
+   "id": "ldork0s4anwq6igtf5f9",
+   "plan": "aarau",
+   "x": 830.1,
+   "y": 419.6,
+   "text": "was ist das für ein Gleis",
+   "abgedeckt": false,
+   "regeln": [],
+   "naechster": 122.6,
+   "naechste_regel": "G7",
+   "plan_da": true
+  },
+  {
+   "id": "ldwowucfnh2qif6yluty",
+   "plan": "mob__zweisimmen",
+   "x": 529.4,
+   "y": 249.3,
+   "text": "Versatz?",
+   "abgedeckt": false,
+   "regeln": [],
+   "naechster": 86.2,
+   "naechste_regel": "MZ",
+   "plan_da": true
+  },
+  {
+   "id": "lhm4v13k2f7vl5lbeq5n",
+   "plan": "aarau",
+   "x": 2140.4,
+   "y": 377.5,
+   "text": "Stummel richtige Seite?",
+   "abgedeckt": true,
+   "regeln": [
+    "VB1"
+   ],
+   "naechster": 4.8,
+   "naechste_regel": "VB1",
+   "plan_da": true
+  },
+  {
+   "id": "lld9ys5a6ksdz6xxwrcy",
+   "plan": "olten",
+   "x": 79.3,
+   "y": 211.6,
+   "text": "Anschlussgleise südlich Olten",
+   "abgedeckt": false,
+   "regeln": [],
+   "naechster": 119.8,
+   "naechste_regel": "VB2",
+   "plan_da": true
+  },
+  {
+   "id": "lotw7vnqxq7t51c29rj2",
+   "plan": "mob__chamby",
+   "x": 508.9,
+   "y": 94.9,
+   "text": "Pfeil andere Seite, Stumpen am Perron",
+   "abgedeckt": false,
+   "regeln": [],
+   "naechster": null,
+   "naechste_regel": null,
+   "plan_da": true
+  },
+  {
+   "id": "mkadt5lcknnodig435gz",
+   "plan": "aarau",
+   "x": 2923.4,
+   "y": 391.8,
+   "text": "Meterspur-Perron?",
+   "abgedeckt": true,
+   "regeln": [
+    "MF"
+   ],
+   "naechster": 38.2,
+   "naechste_regel": "MF",
+   "plan_da": true
+  },
+  {
+   "id": "mp8hdojmwhdmhlb36ou3",
+   "plan": "mob__montreux",
+   "x": 446,
+   "y": 219.1,
+   "text": "90 Grad?",
+   "abgedeckt": true,
+   "regeln": [
+    "MX"
+   ],
+   "naechster": 13.0,
+   "naechste_regel": "MX",
+   "plan_da": true
+  },
+  {
+   "id": "obvpbw7iesse9tor1zun",
+   "plan": "solothurn",
+   "x": 1127.7,
+   "y": 415.5,
+   "text": "90 Grad Knick?",
+   "abgedeckt": true,
+   "regeln": [
+    "G6",
+    "VB1",
+    "VD1",
+    "W1",
+    "W2"
+   ],
+   "naechster": 0.7,
+   "naechste_regel": "VB1",
+   "plan_da": true
+  },
+  {
+   "id": "q31m0fj39c6p1jm54tpc",
+   "plan": "mob__zweisimmen",
+   "x": 536.7,
+   "y": 178.3,
+   "text": "Meterspur an 6/7 nicht angebunden",
+   "abgedeckt": false,
+   "regeln": [],
+   "naechster": 96.2,
+   "naechste_regel": "MZ",
+   "plan_da": true
+  },
+  {
+   "id": "qotw266rjaowjqktoj8c",
+   "plan": "vereina__klosters_platz",
+   "x": 489.2,
+   "y": 167.3,
+   "text": "Mittelperron zwischen 2 und 3",
+   "abgedeckt": false,
+   "regeln": [],
+   "naechster": 179.8,
+   "naechste_regel": "G8",
+   "plan_da": true
+  },
+  {
+   "id": "r9xva9h38qq0t8tavmi0",
+   "plan": "aarau",
+   "x": 2570,
+   "y": 256.9,
+   "text": "Stummel korrekt?",
+   "abgedeckt": false,
+   "regeln": [],
+   "naechster": 47.9,
+   "naechste_regel": "VD1",
+   "plan_da": true
+  },
+  {
+   "id": "rap4p8fy16nt5unujzwl",
+   "plan": "mob__le_tremblex",
+   "x": 415.2,
+   "y": 117.7,
+   "text": "Nebengleis nicht fett",
+   "abgedeckt": false,
+   "regeln": [],
+   "naechster": null,
+   "naechste_regel": null,
+   "plan_da": true
+  },
+  {
+   "id": "t6x02b9nuadgwrwfht9z",
+   "plan": "solothurn",
+   "x": 1465.8,
+   "y": 359.2,
+   "text": "Kreuzung in OSM?",
+   "abgedeckt": true,
+   "regeln": [
+    "G6",
+    "ME",
+    "MX",
+    "VA1",
+    "VC1",
+    "W2"
+   ],
+   "naechster": 5.3,
+   "naechste_regel": "MX",
+   "plan_da": true
+  },
+  {
+   "id": "tnvp35kihgn0yhzk5wmn",
+   "plan": "konolfingen",
+   "x": 375.7,
+   "y": 294.2,
+   "text": "Knubbel kurz gerade",
+   "abgedeckt": true,
+   "regeln": [
+    "G7",
+    "MX",
+    "VB2",
+    "VC1"
+   ],
+   "naechster": 2.8,
+   "naechste_regel": "G7",
+   "plan_da": true
+  },
+  {
+   "id": "ttv8jrr9c8gqpc23h0sj",
+   "plan": "konolfingen",
+   "x": 650.9,
+   "y": 197.4,
+   "text": "DKW?",
+   "abgedeckt": true,
+   "regeln": [
+    "VA1",
+    "VD1"
+   ],
+   "naechster": 0.4,
+   "naechste_regel": "VD1",
+   "plan_da": true
+  },
+  {
+   "id": "u13hvm3y403lpjp18hvb",
+   "plan": "mob__zweisimmen",
+   "x": 517.3,
+   "y": 168.9,
+   "text": "Stumpen Normalspur?",
+   "abgedeckt": false,
+   "regeln": [],
+   "naechster": 84.0,
+   "naechste_regel": "MZ",
+   "plan_da": true
+  },
+  {
+   "id": "uyuegakpencttc2e6isq",
+   "plan": "solothurn",
+   "x": 1161.5,
+   "y": 504.9,
+   "text": "Perron auf Gleis, gerader Knubbel",
+   "abgedeckt": true,
+   "regeln": [
+    "G6",
+    "VB2",
+    "VD2"
+   ],
+   "naechster": 2.3,
+   "naechste_regel": "VD2",
+   "plan_da": true
+  },
+  {
+   "id": "v2w8ngtlrv27cgm80m85",
+   "plan": "mob__glion",
+   "x": 441.3,
+   "y": 231,
+   "text": "Riesenabstand Schiebebühne",
+   "abgedeckt": false,
+   "regeln": [],
+   "naechster": 195.0,
+   "naechste_regel": "MZ",
+   "plan_da": true
+  },
+  {
+   "id": "vnyq1jtx6sv6gc2scn80",
+   "plan": "aarau",
+   "x": 2600.6,
+   "y": 313.4,
+   "text": "Zwischengerade",
+   "abgedeckt": true,
+   "regeln": [
+    "ME",
+    "MZ"
+   ],
+   "naechster": 21.8,
+   "naechste_regel": "MZ",
+   "plan_da": true
+  },
+  {
+   "id": "wvrp8v21eugz9uefje0v",
+   "plan": "mob__zweisimmen",
+   "x": 407.8,
+   "y": 186.6,
+   "text": "kreuzt das andere oder biegt von DKW falsch ab",
+   "abgedeckt": false,
+   "regeln": [],
+   "naechster": 48.5,
+   "naechste_regel": "MX",
+   "plan_da": true
+  },
+  {
+   "id": "wyu2ste46nymc9u2xskt",
+   "plan": "mob__glion",
+   "x": 484,
+   "y": 306.5,
+   "text": "dieser Perron?",
+   "abgedeckt": false,
+   "regeln": [],
+   "naechster": 208.3,
+   "naechste_regel": "MZ",
+   "plan_da": true
+  },
+  {
+   "id": "xke0q8que3hufliwbag9",
+   "plan": "solothurn",
+   "x": 1308.1,
+   "y": 235.1,
+   "text": "Zwischengerade, doppelter Abstand",
+   "abgedeckt": true,
+   "regeln": [
+    "MZ"
+   ],
+   "naechster": 26.0,
+   "naechste_regel": "MZ",
+   "plan_da": true
+  },
+  {
+   "id": "z6f23710rz65dpwpq6ky",
+   "plan": "konolfingen",
+   "x": 687.2,
+   "y": 304.3,
+   "text": "DKW?",
+   "abgedeckt": true,
+   "regeln": [
+    "A1",
+    "VA1"
+   ],
+   "naechster": 1.3,
+   "naechste_regel": "A1",
+   "plan_da": true
+  },
+  {
+   "id": "zcz3v5yhncmbd21obybz",
+   "plan": "solothurn",
+   "x": 848.0,
+   "y": 263.9,
+   "text": "nicht verbunden",
+   "abgedeckt": true,
+   "regeln": [
+    "G7",
+    "MX",
+    "VB2"
+   ],
+   "naechster": 18.0,
+   "naechste_regel": "G7",
+   "plan_da": true
+  }
+ ]
+}

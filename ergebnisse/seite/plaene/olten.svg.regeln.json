@@ -1,0 +1,79 @@
+[
+ {
+  "regel": "G3",
+  "x": 1862.1,
+  "y": 175.0,
+  "bahnhof": null,
+  "text": "Knick 59° ohne Ausrundung"
+ },
+ {
+  "regel": "G3",
+  "x": 1862.1,
+  "y": 213.0,
+  "bahnhof": null,
+  "text": "Knick 59° ohne Ausrundung"
+ },
+ {
+  "regel": "G3",
+  "x": 1252.1,
+  "y": 319.5,
+  "bahnhof": null,
+  "text": "Knick 45° ohne Ausrundung"
+ },
+ {
+  "regel": "G3",
+  "x": 1277.0,
+  "y": 362.5,
+  "bahnhof": null,
+  "text": "Knick 45° ohne Ausrundung"
+ },
+ {
+  "regel": "G3",
+  "x": 1346.5,
+  "y": 313.5,
+  "bahnhof": null,
+  "text": "Knick 45° ohne Ausrundung"
+ },
+ {
+  "regel": "G3",
+  "x": 1371.4,
+  "y": 356.5,
+  "bahnhof": null,
+  "text": "Knick 45° ohne Ausrundung"
+ },
+ {
+  "regel": "G2",
+  "x": 277.2,
+  "y": 206.0,
+  "bahnhof": null,
+  "text": "Weiche ohne Ausrundung (60°)"
+ },
+ {
+  "regel": "G2",
+  "x": 956.9,
+  "y": 314.0,
+  "bahnhof": null,
+  "text": "Weiche ohne Ausrundung (60°)"
+ },
+ {
+  "regel": "G2",
+  "x": 1054.0,
+  "y": 254.0,
+  "bahnhof": null,
+  "text": "Weiche ohne Ausrundung (19°)"
+ },
+ {
+  "regel": "G7",
+  "x": 1030.0,
+  "y": 230.0,
+  "bahnhof": null,
+  "text": "Gleisende nicht angebunden, nächstes Gleis 1.5 px"
+ },
+ {
+  "regel": "G7",
+  "x": 1100.0,
+  "y": 230.0,
+  "bahnhof": null,
+  "text": "Gleisende nicht angebunden, nächstes Gleis 1.5 px"
+ }
+]

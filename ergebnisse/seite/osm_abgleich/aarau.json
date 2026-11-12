@@ -1,0 +1,114 @@
+{
+"plan": "aarau",
+"befunde": [
+{
+"regel": "VB1",
+"x": 2145.0,
+"y": 378.8,
+"text": "OSM-Weiche 382373821 ohne Abzweig im Plan",
+"osm": 382373821
+},
+{
+"regel": "VB2",
+"x": 887.1,
+"y": 306.8,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+302923818,
+313264477,
+313264481,
+1419225678
+]
+},
+{
+"regel": "VB2",
+"x": 3147.2,
+"y": 330.8,
+"text": "Gleise berühren/kreuzen sich (X), in OSM keine Weiche/Kreuzung",
+"ways": [
+109103548,
+168744383,
+197753128,
+289118753,
+377106652,
+377871836
+]
+},
+{
+"regel": "VB2",
+"x": 836.5,
+"y": 234.8,
+"text": "Gleise berühren/kreuzen sich (X), in OSM keine Weiche/Kreuzung",
+"ways": [
+302923821,
+313264480,
+1419225676
+]
+},
+{
+"regel": "VB2",
+"x": 864.2,
+"y": 282.8,
+"text": "Gleise berühren/kreuzen sich (X), in OSM keine Weiche/Kreuzung",
+"ways": [
+302923820,
+538685736,
+1419225677
+]
+},
+{
+"regel": "VD1",
+"x": 3125.9,
+"y": 210.8,
+"text": "zwei Gleise 30 px aufeinander"
+},
+{
+"regel": "VD1",
+"x": 3167.7,
+"y": 234.7,
+"text": "zwei Gleise 12 px aufeinander"
+},
+{
+"regel": "VD1",
+"x": 2012.7,
+"y": 282.8,
+"text": "zwei Gleise 14 px aufeinander"
+},
+{
+"regel": "VD1",
+"x": 2979.5,
+"y": 282.8,
+"text": "zwei Gleise 20 px aufeinander"
+},
+{
+"regel": "VD1",
+"x": 1310.7,
+"y": 234.8,
+"text": "zwei Gleise 15 px aufeinander"
+},
+{
+"regel": "VD1",
+"x": 2583.1,
+"y": 210.8,
+"text": "zwei Gleise 83 px aufeinander"
+},
+{
+"regel": "VD1",
+"x": 2661.5,
+"y": 234.8,
+"text": "zwei Gleise 32 px aufeinander"
+},
+{
+"regel": "VD1",
+"x": 1335.5,
+"y": 306.8,
+"text": "zwei Gleise 14 px aufeinander"
+}
+],
+"info": {
+"gleise": 172,
+"knoten_plan": 69,
+"dkw_plan": 0,
+"knoten_osm": 71
+}
+}

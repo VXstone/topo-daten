@@ -1,0 +1,120 @@
+{
+"plan": "neuchatel",
+"befunde": [
+{
+"regel": "VA1",
+"x": 1382.1,
+"y": 254.0,
+"text": "OSM-DKW 11343288453 im Plan nicht als DKW gezeichnet",
+"osm": 11343288453
+},
+{
+"regel": "VA1",
+"x": 764.6,
+"y": 254.0,
+"text": "OSM-DKW 11296350712 im Plan nicht als DKW gezeichnet",
+"osm": 11296350712
+},
+{
+"regel": "VA1",
+"x": 861.7,
+"y": 182.0,
+"text": "OSM-DKW 11343328181 im Plan nicht als DKW gezeichnet",
+"osm": 11343328181
+},
+{
+"regel": "VA1",
+"x": 861.7,
+"y": 134.0,
+"text": "OSM-DKW 11343328182 im Plan nicht als DKW gezeichnet",
+"osm": 11343328182
+},
+{
+"regel": "VA1",
+"x": 764.6,
+"y": 230.0,
+"text": "OSM-DKW 11296350717 im Plan nicht als DKW gezeichnet",
+"osm": 11296350717
+},
+{
+"regel": "VB2",
+"x": 446.0,
+"y": 182.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+35434218,
+35545993,
+35567923,
+1071302088,
+1071302089
+]
+},
+{
+"regel": "VB2",
+"x": 928.9,
+"y": 206.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+35567581,
+184331539,
+579953620,
+1315365883
+]
+},
+{
+"regel": "VB2",
+"x": 1032.0,
+"y": 206.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+49695773,
+579953620,
+579953621,
+580046575,
+1222936425,
+1222936426
+]
+},
+{
+"regel": "VC1",
+"x": 512.0,
+"y": 206.0,
+"text": "Gleis (Way 35545993) im Plan an Knoten 11296350764 angebunden, in OSM nicht",
+"osm": 11296350764,
+"ways": [
+35545993,
+1271585757
+]
+},
+{
+"regel": "VD1",
+"x": 1438.3,
+"y": 206.0,
+"text": "zwei Gleise 20 px aufeinander"
+},
+{
+"regel": "VD1",
+"x": 1383.4,
+"y": 254.0,
+"text": "zwei Gleise 20 px aufeinander"
+},
+{
+"regel": "VD1",
+"x": 899.0,
+"y": 206.0,
+"text": "zwei Gleise 21 px aufeinander"
+},
+{
+"regel": "VD1",
+"x": 760.5,
+"y": 230.0,
+"text": "zwei Gleise 8 px aufeinander"
+}
+],
+"info": {
+"gleise": 84,
+"knoten_plan": 38,
+"dkw_plan": 4,
+"knoten_osm": 45
+}
+}

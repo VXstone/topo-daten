@@ -1,0 +1,41 @@
+{
+"plan": "aarburg_oftringen",
+"befunde": [
+{
+"regel": "VB2",
+"x": 686.1,
+"y": 158.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+195005888,
+545534777,
+1553423181,
+1553423182
+]
+},
+{
+"regel": "VB2",
+"x": 690.5,
+"y": 158.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+195005888,
+545534777,
+1553423181,
+1553423182
+]
+},
+{
+"regel": "VD1",
+"x": 633.3,
+"y": 134.0,
+"text": "zwei Gleise 12 px aufeinander"
+}
+],
+"info": {
+"gleise": 21,
+"knoten_plan": 9,
+"dkw_plan": 1,
+"knoten_osm": 7
+}
+}

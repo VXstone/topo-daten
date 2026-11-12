@@ -1,0 +1,40 @@
+{
+"plan": "neuchatel_vauseyon",
+"befunde": [
+{
+"regel": "VB1",
+"x": 728.6,
+"y": 158.0,
+"text": "OSM-Weiche 266382887 ohne Abzweig im Plan",
+"osm": 266382887
+},
+{
+"regel": "VB2",
+"x": 739.1,
+"y": 164.1,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+37214725,
+37214727,
+184485811,
+507891442,
+580054988,
+580054999,
+1218245296
+]
+},
+{
+"regel": "VB2",
+"x": 678.5,
+"y": 59.3,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": []
+}
+],
+"info": {
+"gleise": 25,
+"knoten_plan": 7,
+"dkw_plan": 0,
+"knoten_osm": 6
+}
+}

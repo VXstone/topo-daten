@@ -1,0 +1,155 @@
+{
+ "aarau": {
+  "VB1": 1,
+  "VB2": 4,
+  "VD1": 8,
+  "gleise": 172,
+  "knoten_plan": 69,
+  "dkw_plan": 0,
+  "knoten_osm": 71
+ },
+ "aarburg_oftringen": {
+  "VB2": 2,
+  "VD1": 1,
+  "gleise": 21,
+  "knoten_plan": 9,
+  "dkw_plan": 1,
+  "knoten_osm": 7
+ },
+ "daniken": {
+  "VB2": 1,
+  "VD1": 2,
+  "gleise": 45,
+  "knoten_plan": 25,
+  "dkw_plan": 0,
+  "knoten_osm": 26
+ },
+ "dulliken": {
+  "gleise": 17,
+  "knoten_plan": 6,
+  "dkw_plan": 0,
+  "knoten_osm": 6
+ },
+ "ins": {
+  "VB1": 13,
+  "VB2": 13,
+  "VD1": 1,
+  "gleise": 26,
+  "knoten_plan": 14,
+  "dkw_plan": 1,
+  "knoten_osm": 14
+ },
+ "konolfingen": {
+  "VA1": 3,
+  "VB2": 3,
+  "VC1": 1,
+  "VD1": 4,
+  "gleise": 58,
+  "knoten_plan": 34,
+  "dkw_plan": 2,
+  "knoten_osm": 29
+ },
+ "laufelfingen": {
+  "gleise": 4,
+  "knoten_plan": 2,
+  "dkw_plan": 0,
+  "knoten_osm": 2
+ },
+ "neuchatel": {
+  "VA1": 5,
+  "VB2": 3,
+  "VC1": 1,
+  "VD1": 4,
+  "gleise": 84,
+  "knoten_plan": 38,
+  "dkw_plan": 4,
+  "knoten_osm": 45
+ },
+ "neuchatel_vauseyon": {
+  "VB1": 1,
+  "VB2": 2,
+  "gleise": 25,
+  "knoten_plan": 7,
+  "dkw_plan": 0,
+  "knoten_osm": 6
+ },
+ "olten": {
+  "VB1": 27,
+  "VB2": 46,
+  "VC1": 1,
+  "VD1": 18,
+  "gleise": 131,
+  "knoten_plan": 95,
+  "dkw_plan": 2,
+  "knoten_osm": 86
+ },
+ "olten_hammer": {
+  "VB1": 2,
+  "VB2": 1,
+  "gleise": 29,
+  "knoten_plan": 11,
+  "dkw_plan": 0,
+  "knoten_osm": 14
+ },
+ "rothrist": {
+  "VA2": 1,
+  "VB1": 6,
+  "VB2": 8,
+  "VD1": 3,
+  "gleise": 84,
+  "knoten_plan": 46,
+  "dkw_plan": 4,
+  "knoten_osm": 44
+ },
+ "safenwil": {
+  "gleise": 11,
+  "knoten_plan": 7,
+  "dkw_plan": 0,
+  "knoten_osm": 5
+ },
+ "schonenwerd": {
+  "VB2": 2,
+  "VD1": 2,
+  "gleise": 14,
+  "knoten_plan": 9,
+  "dkw_plan": 0,
+  "knoten_osm": 7
+ },
+ "solothurn": {
+  "VA1": 1,
+  "VB1": 3,
+  "VB2": 15,
+  "VC1": 1,
+  "VD1": 12,
+  "VD2": 1,
+  "gleise": 115,
+  "knoten_plan": 68,
+  "dkw_plan": 2,
+  "knoten_osm": 61
+ },
+ "tecknau": {
+  "VB2": 6,
+  "gleise": 36,
+  "knoten_plan": 21,
+  "dkw_plan": 0,
+  "knoten_osm": 17
+ },
+ "wangen_bei_olten": {
+  "VB1": 1,
+  "VB2": 2,
+  "gleise": 38,
+  "knoten_plan": 20,
+  "dkw_plan": 0,
+  "knoten_osm": 18
+ },
+ "zofingen": {
+  "VA2": 2,
+  "VB1": 3,
+  "VB2": 3,
+  "VD1": 5,
+  "gleise": 46,
+  "knoten_plan": 27,
+  "dkw_plan": 3,
+  "knoten_osm": 28
+ }
+}
