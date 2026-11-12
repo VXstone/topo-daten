@@ -1,0 +1,124 @@
+{
+"plan": "mob__zweisimmen",
+"befunde": [
+{
+"regel": "VA1",
+"x": 337.5,
+"y": 230.0,
+"text": "OSM-DKW 1135425225 im Plan nicht als DKW gezeichnet",
+"osm": 1135425225
+},
+{
+"regel": "VB2",
+"x": 270.9,
+"y": 230.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+24289106,
+200986826,
+548732851,
+548732852,
+548740275,
+674288586,
+959792635,
+959792639
+]
+},
+{
+"regel": "VB2",
+"x": 380.8,
+"y": 134.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+23908942,
+154217570,
+400546215,
+400546218,
+959792641
+]
+},
+{
+"regel": "VB2",
+"x": 238.3,
+"y": 254.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+154217596,
+200986825,
+548732852,
+959792638
+]
+},
+{
+"regel": "VB2",
+"x": 248.7,
+"y": 254.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+154217596,
+200986825,
+548732852,
+959792638
+]
+},
+{
+"regel": "VB2",
+"x": 386.2,
+"y": 230.0,
+"text": "Gleise berühren/kreuzen sich (X), in OSM keine Weiche/Kreuzung",
+"ways": [
+154217570,
+154217577,
+400546210,
+400546215,
+400546218,
+548740275,
+959792639,
+1026495423
+]
+},
+{
+"regel": "VB2",
+"x": 448.4,
+"y": 219.2,
+"text": "Gleise berühren/kreuzen sich (X), in OSM keine Weiche/Kreuzung",
+"ways": [
+154217577,
+200987563,
+400546210,
+959792639,
+1026495423
+]
+},
+{
+"regel": "VD1",
+"x": 663.8,
+"y": 158.0,
+"text": "zwei Gleise 232 px aufeinander"
+},
+{
+"regel": "VD1",
+"x": 665.2,
+"y": 182.0,
+"text": "zwei Gleise 234 px aufeinander"
+},
+{
+"regel": "VD1",
+"x": 243.8,
+"y": 254.0,
+"text": "zwei Gleise 11 px aufeinander"
+},
+{
+"regel": "VD1",
+"x": 241.5,
+"y": 206.0,
+"text": "zwei Gleise 15 px aufeinander"
+}
+],
+"info": {
+"gleise": 51,
+"knoten_plan": 33,
+"dkw_plan": 0,
+"knoten_osm": 22
+}
+}

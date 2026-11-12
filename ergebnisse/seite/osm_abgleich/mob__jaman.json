@@ -1,0 +1,22 @@
+{
+"plan": "mob__jaman",
+"befunde": [
+{
+"regel": "VB2",
+"x": 243.9,
+"y": 134.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+39847663,
+228122326,
+1307327982
+]
+}
+],
+"info": {
+"gleise": 7,
+"knoten_plan": 3,
+"dkw_plan": 0,
+"knoten_osm": 2
+}
+}

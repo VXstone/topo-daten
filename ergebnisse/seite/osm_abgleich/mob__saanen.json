@@ -1,0 +1,25 @@
+{
+"plan": "mob__saanen",
+"befunde": [
+{
+"regel": "VB2",
+"x": 581.0,
+"y": 147.2,
+"text": "Gleise berühren/kreuzen sich (E), in OSM keine Weiche/Kreuzung",
+"ways": [
+230346926,
+230346927,
+230346928,
+675509466,
+675509487,
+675509488
+]
+}
+],
+"info": {
+"gleise": 13,
+"knoten_plan": 7,
+"dkw_plan": 0,
+"knoten_osm": 7
+}
+}

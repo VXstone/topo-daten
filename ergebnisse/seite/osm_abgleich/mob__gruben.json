@@ -1,0 +1,22 @@
+{
+"plan": "mob__gruben",
+"befunde": [
+{
+"regel": "VB2",
+"x": 230.0,
+"y": 134.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+230499115,
+674285032,
+674285041
+]
+}
+],
+"info": {
+"gleise": 2,
+"knoten_plan": 2,
+"dkw_plan": 0,
+"knoten_osm": 2
+}
+}

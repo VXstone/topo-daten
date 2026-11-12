@@ -1,0 +1,42 @@
+{
+"plan": "mob__montbovon",
+"befunde": [
+{
+"regel": "VB1",
+"x": 371.9,
+"y": 62.9,
+"text": "OSM-Weiche 1800161997 ohne Abzweig im Plan",
+"osm": 1800161997
+},
+{
+"regel": "VB2",
+"x": 242.6,
+"y": 110.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+231762476,
+716757373,
+717049036,
+1422863755
+]
+},
+{
+"regel": "VD1",
+"x": 274.1,
+"y": 110.0,
+"text": "zwei Gleise 40 px aufeinander"
+},
+{
+"regel": "VD1",
+"x": 339.2,
+"y": 158.0,
+"text": "zwei Gleise 21 px aufeinander"
+}
+],
+"info": {
+"gleise": 10,
+"knoten_plan": 7,
+"dkw_plan": 0,
+"knoten_osm": 9
+}
+}

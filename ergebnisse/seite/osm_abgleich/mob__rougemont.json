@@ -1,0 +1,23 @@
+{
+"plan": "mob__rougemont",
+"befunde": [
+{
+"regel": "VB2",
+"x": 287.1,
+"y": 110.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+479774969,
+479774970,
+479774972,
+479774973
+]
+}
+],
+"info": {
+"gleise": 6,
+"knoten_plan": 4,
+"dkw_plan": 0,
+"knoten_osm": 3
+}
+}

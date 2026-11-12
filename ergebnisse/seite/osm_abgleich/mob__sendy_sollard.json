@@ -1,0 +1,23 @@
+{
+"plan": "mob__sendy_sollard",
+"befunde": [
+{
+"regel": "VB2",
+"x": 230.0,
+"y": 134.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+35401979,
+275116228,
+275116230,
+677497303
+]
+}
+],
+"info": {
+"gleise": 6,
+"knoten_plan": 2,
+"dkw_plan": 0,
+"knoten_osm": 2
+}
+}

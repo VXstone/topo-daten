@@ -1,0 +1,50 @@
+{
+"plan": "mob__chamby",
+"befunde": [
+{
+"regel": "VB1",
+"x": 358.1,
+"y": 134.0,
+"text": "OSM-Weiche 1130904085 ohne Abzweig im Plan",
+"osm": 1130904085
+},
+{
+"regel": "VB2",
+"x": 495.6,
+"y": 110.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+275120411,
+532550009
+]
+},
+{
+"regel": "VB2",
+"x": 479.6,
+"y": 110.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+275120411,
+532550009
+]
+},
+{
+"regel": "VD1",
+"x": 382.5,
+"y": 134.0,
+"text": "zwei Gleise 22 px aufeinander"
+},
+{
+"regel": "VD1",
+"x": 487.4,
+"y": 110.0,
+"text": "zwei Gleise 16 px aufeinander"
+}
+],
+"info": {
+"gleise": 9,
+"knoten_plan": 6,
+"dkw_plan": 0,
+"knoten_osm": 5
+}
+}

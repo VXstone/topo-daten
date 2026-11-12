@@ -1,0 +1,95 @@
+{
+"plan": "mob__montreux",
+"befunde": [
+{
+"regel": "VA2",
+"x": 451.7,
+"y": 181.4,
+"text": "im Plan als DKW gezeichnet, in OSM keine DKW/EKW in der Nähe"
+},
+{
+"regel": "VA2",
+"x": 465.6,
+"y": 182.6,
+"text": "im Plan als DKW gezeichnet, in OSM keine DKW/EKW in der Nähe"
+},
+{
+"regel": "VA2",
+"x": 451.7,
+"y": 206.6,
+"text": "im Plan als DKW gezeichnet, in OSM keine DKW/EKW in der Nähe"
+},
+{
+"regel": "VB2",
+"x": 531.1,
+"y": 267.2,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+97211346,
+97211363,
+97211377
+]
+},
+{
+"regel": "VB2",
+"x": 525.6,
+"y": 259.9,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+97211363
+]
+},
+{
+"regel": "VB2",
+"x": 508.5,
+"y": 144.8,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+39846364,
+274706715,
+532556697,
+963691446
+]
+},
+{
+"regel": "VB2",
+"x": 389.0,
+"y": 134.0,
+"text": "Gleise berühren/kreuzen sich (T), in OSM keine Weiche/Kreuzung",
+"ways": [
+39846364,
+274706711,
+274706715,
+963691446
+]
+},
+{
+"regel": "VB2",
+"x": 518.8,
+"y": 259.9,
+"text": "Gleise berühren/kreuzen sich (X), in OSM keine Weiche/Kreuzung",
+"ways": [
+97211346,
+97211363
+]
+},
+{
+"regel": "VD1",
+"x": 497.2,
+"y": 258.4,
+"text": "zwei Gleise 13 px aufeinander"
+},
+{
+"regel": "VD1",
+"x": 512.0,
+"y": 259.4,
+"text": "zwei Gleise 27 px aufeinander"
+}
+],
+"info": {
+"gleise": 38,
+"knoten_plan": 32,
+"dkw_plan": 3,
+"knoten_osm": 22
+}
+}

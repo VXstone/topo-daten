@@ -55,6 +55,302 @@
   "dkw_plan": 0,
   "knoten_osm": 2
  },
+ "mob__allieres": {
+  "gleise": 5,
+  "knoten_plan": 3,
+  "dkw_plan": 0,
+  "knoten_osm": 3
+ },
+ "mob__belmont_sur_montreux": {
+  "gleise": 2,
+  "knoten_plan": 2,
+  "dkw_plan": 0,
+  "knoten_osm": 2
+ },
+ "mob__blankenburg": {
+  "gleise": 4,
+  "knoten_plan": 2,
+  "dkw_plan": 0,
+  "knoten_osm": 2
+ },
+ "mob__caux": {
+  "gleise": 10,
+  "knoten_plan": 4,
+  "dkw_plan": 0,
+  "knoten_osm": 4
+ },
+ "mob__chamby": {
+  "VB1": 1,
+  "VB2": 2,
+  "VD1": 2,
+  "gleise": 9,
+  "knoten_plan": 6,
+  "dkw_plan": 0,
+  "knoten_osm": 5
+ },
+ "mob__chateau_d_oex": {
+  "gleise": 13,
+  "knoten_plan": 7,
+  "dkw_plan": 0,
+  "knoten_osm": 7
+ },
+ "mob__chatelard": {
+  "gleise": 2,
+  "knoten_plan": 0,
+  "dkw_plan": 0,
+  "knoten_osm": 0
+ },
+ "mob__chernex": {
+  "VB1": 1,
+  "VB2": 6,
+  "VD1": 1,
+  "gleise": 27,
+  "knoten_plan": 19,
+  "dkw_plan": 0,
+  "knoten_osm": 14
+ },
+ "mob__cret_d_y_bau": {
+  "gleise": 1,
+  "knoten_plan": 0,
+  "dkw_plan": 0,
+  "knoten_osm": 0
+ },
+ "mob__flendruz": {
+  "gleise": 6,
+  "knoten_plan": 3,
+  "dkw_plan": 0,
+  "knoten_osm": 3
+ },
+ "mob__fontanivent": {
+  "gleise": 5,
+  "knoten_plan": 2,
+  "dkw_plan": 0,
+  "knoten_osm": 3
+ },
+ "mob__glion": {
+  "VB1": 1,
+  "VB2": 1,
+  "gleise": 24,
+  "knoten_plan": 7,
+  "dkw_plan": 0,
+  "knoten_osm": 8
+ },
+ "mob__glion_college": {
+  "gleise": 1,
+  "knoten_plan": 0,
+  "dkw_plan": 0,
+  "knoten_osm": 0
+ },
+ "mob__gruben": {
+  "VB2": 1,
+  "gleise": 2,
+  "knoten_plan": 2,
+  "dkw_plan": 0,
+  "knoten_osm": 2
+ },
+ "mob__gstaad": {
+  "VB2": 1,
+  "gleise": 15,
+  "knoten_plan": 6,
+  "dkw_plan": 0,
+  "knoten_osm": 6
+ },
+ "mob__jaman": {
+  "VB2": 1,
+  "gleise": 7,
+  "knoten_plan": 3,
+  "dkw_plan": 0,
+  "knoten_osm": 2
+ },
+ "mob__jor": {
+  "gleise": 7,
+  "knoten_plan": 4,
+  "dkw_plan": 0,
+  "knoten_osm": 4
+ },
+ "mob__la_perche": {
+  "gleise": 2,
+  "knoten_plan": 0,
+  "dkw_plan": 0,
+  "knoten_osm": 0
+ },
+ "mob__la_tine": {
+  "VB1": 1,
+  "VB2": 1,
+  "gleise": 4,
+  "knoten_plan": 3,
+  "dkw_plan": 0,
+  "knoten_osm": 3
+ },
+ "mob__le_tremblex": {
+  "gleise": 5,
+  "knoten_plan": 1,
+  "dkw_plan": 0,
+  "knoten_osm": 1
+ },
+ "mob__lenk_im_simmental": {
+  "gleise": 11,
+  "knoten_plan": 6,
+  "dkw_plan": 0,
+  "knoten_osm": 8
+ },
+ "mob__les_avants": {
+  "gleise": 12,
+  "knoten_plan": 5,
+  "dkw_plan": 0,
+  "knoten_osm": 5
+ },
+ "mob__les_cases": {
+  "gleise": 6,
+  "knoten_plan": 3,
+  "dkw_plan": 0,
+  "knoten_osm": 3
+ },
+ "mob__les_echets": {
+  "gleise": 1,
+  "knoten_plan": 0,
+  "dkw_plan": 0,
+  "knoten_osm": 0
+ },
+ "mob__les_sciernes": {
+  "gleise": 4,
+  "knoten_plan": 2,
+  "dkw_plan": 0,
+  "knoten_osm": 2
+ },
+ "mob__matten": {
+  "gleise": 5,
+  "knoten_plan": 1,
+  "dkw_plan": 0,
+  "knoten_osm": 2
+ },
+ "mob__montbovon": {
+  "VB1": 1,
+  "VB2": 1,
+  "VD1": 2,
+  "gleise": 10,
+  "knoten_plan": 7,
+  "dkw_plan": 0,
+  "knoten_osm": 9
+ },
+ "mob__montreux": {
+  "VA2": 3,
+  "VB2": 5,
+  "VD1": 2,
+  "gleise": 38,
+  "knoten_plan": 32,
+  "dkw_plan": 3,
+  "knoten_osm": 22
+ },
+ "mob__montreux_les_planches": {
+  "gleise": 4,
+  "knoten_plan": 0,
+  "dkw_plan": 0,
+  "knoten_osm": 0
+ },
+ "mob__oeschseite": {
+  "gleise": 5,
+  "knoten_plan": 3,
+  "dkw_plan": 0,
+  "knoten_osm": 3
+ },
+ "mob__paccot": {
+  "VB1": 2,
+  "gleise": 1,
+  "knoten_plan": 0,
+  "dkw_plan": 0,
+  "knoten_osm": 2
+ },
+ "mob__planchamp": {
+  "gleise": 2,
+  "knoten_plan": 0,
+  "dkw_plan": 0,
+  "knoten_osm": 0
+ },
+ "mob__rochers_de_naye": {
+  "gleise": 3,
+  "knoten_plan": 1,
+  "dkw_plan": 0,
+  "knoten_osm": 1
+ },
+ "mob__rossiniere": {
+  "gleise": 10,
+  "knoten_plan": 5,
+  "dkw_plan": 0,
+  "knoten_osm": 5
+ },
+ "mob__rougemont": {
+  "VB2": 1,
+  "gleise": 6,
+  "knoten_plan": 4,
+  "dkw_plan": 0,
+  "knoten_osm": 3
+ },
+ "mob__saanen": {
+  "VB2": 1,
+  "gleise": 13,
+  "knoten_plan": 7,
+  "dkw_plan": 0,
+  "knoten_osm": 7
+ },
+ "mob__saanenmoser": {
+  "gleise": 8,
+  "knoten_plan": 5,
+  "dkw_plan": 0,
+  "knoten_osm": 5
+ },
+ "mob__schonried": {
+  "gleise": 4,
+  "knoten_plan": 1,
+  "dkw_plan": 0,
+  "knoten_osm": 2
+ },
+ "mob__sendy_sollard": {
+  "VB2": 1,
+  "gleise": 6,
+  "knoten_plan": 2,
+  "dkw_plan": 0,
+  "knoten_osm": 2
+ },
+ "mob__st_stephan": {
+  "gleise": 9,
+  "knoten_plan": 7,
+  "dkw_plan": 0,
+  "knoten_osm": 7
+ },
+ "mob__toveyre": {
+  "gleise": 6,
+  "knoten_plan": 0,
+  "dkw_plan": 0,
+  "knoten_osm": 0
+ },
+ "mob__valmont": {
+  "gleise": 1,
+  "knoten_plan": 0,
+  "dkw_plan": 0,
+  "knoten_osm": 0
+ },
+ "mob__vernex": {
+  "gleise": 6,
+  "knoten_plan": 4,
+  "dkw_plan": 0,
+  "knoten_osm": 4
+ },
+ "mob__vuarennes": {
+  "gleise": 3,
+  "knoten_plan": 0,
+  "dkw_plan": 0,
+  "knoten_osm": 0
+ },
+ "mob__zweisimmen": {
+  "VA1": 1,
+  "VB2": 6,
+  "VD1": 4,
+  "gleise": 51,
+  "knoten_plan": 33,
+  "dkw_plan": 0,
+  "knoten_osm": 22
+ },
  "neuchatel": {
   "VA1": 5,
   "VB2": 3,

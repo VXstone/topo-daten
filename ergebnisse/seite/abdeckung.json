@@ -1,5 +1,5 @@
 {
- "abgedeckt": 30,
+ "abgedeckt": 34,
  "offen": 57,
  "radius": 40.0,
  "ohne": [
@@ -62,10 +62,12 @@
    "x": 402.6,
    "y": 122.4,
    "text": "Perron und Gleis verdreht, Mittelperron?",
-   "abgedeckt": false,
-   "regeln": [],
-   "naechster": null,
-   "naechste_regel": null,
+   "abgedeckt": true,
+   "regeln": [
+    "VD1"
+   ],
+   "naechster": 23.2,
+   "naechste_regel": "VD1",
    "plan_da": true
   },
   {
@@ -163,10 +165,12 @@
    "x": 413.2,
    "y": 129.6,
    "text": "noch ein Gleis links raus",
-   "abgedeckt": false,
-   "regeln": [],
-   "naechster": 59.4,
-   "naechste_regel": "ME",
+   "abgedeckt": true,
+   "regeln": [
+    "VB2"
+   ],
+   "naechster": 32.7,
+   "naechste_regel": "VB2",
    "plan_da": true
   },
   {
@@ -242,10 +246,12 @@
    "x": 340.5,
    "y": 233.8,
    "text": "DKW?",
-   "abgedeckt": false,
-   "regeln": [],
-   "naechster": 45.9,
-   "naechste_regel": "MX",
+   "abgedeckt": true,
+   "regeln": [
+    "VA1"
+   ],
+   "naechster": 4.8,
+   "naechste_regel": "VA1",
    "plan_da": true
   },
   {
@@ -311,7 +317,9 @@
    "text": "Perronnummern braun Meterspur",
    "abgedeckt": true,
    "regeln": [
-    "MX"
+    "MX",
+    "VA2",
+    "VB2"
    ],
    "naechster": 18.5,
    "naechste_regel": "MX",
@@ -523,10 +531,13 @@
    "x": 508.9,
    "y": 94.9,
    "text": "Pfeil andere Seite, Stumpen am Perron",
-   "abgedeckt": false,
-   "regeln": [],
-   "naechster": null,
-   "naechste_regel": null,
+   "abgedeckt": true,
+   "regeln": [
+    "VB2",
+    "VD1"
+   ],
+   "naechster": 20.1,
+   "naechste_regel": "VB2",
    "plan_da": true
   },
   {
@@ -551,7 +562,8 @@
    "text": "90 Grad?",
    "abgedeckt": true,
    "regeln": [
-    "MX"
+    "MX",
+    "VA2"
    ],
    "naechster": 13.0,
    "naechste_regel": "MX",
@@ -710,8 +722,8 @@
    "text": "Riesenabstand Schiebebühne",
    "abgedeckt": false,
    "regeln": [],
-   "naechster": 195.0,
-   "naechste_regel": "MZ",
+   "naechster": 97.0,
+   "naechste_regel": "VB1",
    "plan_da": true
   },
   {
@@ -738,7 +750,7 @@
    "abgedeckt": false,
    "regeln": [],
    "naechster": 48.5,
-   "naechste_regel": "MX",
+   "naechste_regel": "VB2",
    "plan_da": true
   },
   {
@@ -749,8 +761,8 @@
    "text": "dieser Perron?",
    "abgedeckt": false,
    "regeln": [],
-   "naechster": 208.3,
-   "naechste_regel": "MZ",
+   "naechster": 177.7,
+   "naechste_regel": "VB1",
    "plan_da": true
   },
   {

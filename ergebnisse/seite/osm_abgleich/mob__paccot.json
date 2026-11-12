@@ -1,0 +1,25 @@
+{
+"plan": "mob__paccot",
+"befunde": [
+{
+"regel": "VB1",
+"x": 271.4,
+"y": 110.0,
+"text": "OSM-Weiche 2367600218 ohne Abzweig im Plan",
+"osm": 2367600218
+},
+{
+"regel": "VB1",
+"x": 390.0,
+"y": 110.0,
+"text": "OSM-Weiche 2367600209 ohne Abzweig im Plan",
+"osm": 2367600209
+}
+],
+"info": {
+"gleise": 1,
+"knoten_plan": 0,
+"dkw_plan": 0,
+"knoten_osm": 2
+}
+}
