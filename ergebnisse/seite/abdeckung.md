@@ -10,7 +10,7 @@ Befund < 40 px im selben Plan, ohne G2.
 | ✓ | 2vxh | mob__chamby | VB1, VD1 | 23.2 | Perron und Gleis verdreht, Mittelperron? |
 | ✓ | 33fs | konolfingen | MX, VB2, W2 | 12.0 | Gleis unter Gleis, sehr steil |
 | · | 3ctb | mob__montreux |  | 260.5 | Knubbel, keine Gegen-S-Kurve |
-| ✓ | 3d6h | konolfingen | G7, MX, VB2, VC1 | 18.0 | Abstellgleise über Streckengleise |
+| ✓ | 3d6h | konolfingen | G7, MQK, MX, VB2, VC1 | 12.0 | Abstellgleise über Streckengleise |
 | ✓ | 3za5 | region | G6, MZ | 4.9 | 90 Grad, statt 2 Weichen nur eine |
 | ✓ | 4xdm | region | G7 | 0.9 | Gleisanschluss dazwischen, Verbindungen prüfen |
 | ✓ | 5yz7 | mob__montreux | MQ | 27.1 | Perron zwischen 4 und 3 |
@@ -25,7 +25,7 @@ Befund < 40 px im selben Plan, ohne G2.
 | ✓ | ce8r | solothurn | G6, ME, MX, VB2, W2 | 5.0 | 90 Grad |
 | · | cw2j | aarau |  | 195.6 | Tunnel nur ein Gleis unter den anderen durch |
 | · | dmr7 | region |  | 45.3 | Weichen sehen wie DKW aus |
-| ✓ | es9y | mob__montreux | MX, VA2, VB2 | 18.5 | Perronnummern braun Meterspur |
+| ✓ | es9y | mob__montreux | MQK, MX, VA2, VB2 | 12.7 | Perronnummern braun Meterspur |
 | ✓ | ezxj | konolfingen | VA1, Z1 | 15.8 | grünes Perron? |
 | ✓ | f3mp | olten | VB1 | 36.9 | nicht ausgerundeter Knick |
 | ✓ | fmlk | aarau | ME, MZ | 18.4 | Zwischengeraden |
@@ -50,7 +50,7 @@ Befund < 40 px im selben Plan, ohne G2.
 | · | r9xv | aarau |  | 47.9 | Stummel korrekt? |
 | · | rap4 | mob__le_tremblex |  |  | Nebengleis nicht fett |
 | ✓ | t6x0 | solothurn | G6, ME, MX, VA1, VB2, VC1, W2 | 5.3 | Kreuzung in OSM? |
-| ✓ | tnvp | konolfingen | G7, MX, VB2, VC1 | 2.8 | Knubbel kurz gerade |
+| ✓ | tnvp | konolfingen | G7, MQK, MX, VB2, VC1 | 2.8 | Knubbel kurz gerade |
 | ✓ | ttv8 | konolfingen | VA1, VB2 | 3.3 | DKW? |
 | · | u13h | mob__zweisimmen |  | 54.0 | Stumpen Normalspur? |
 | ✓ | uyue | solothurn | G6, VB2, VD2 | 2.3 | Perron auf Gleis, gerader Knubbel |

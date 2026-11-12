@@ -110,12 +110,13 @@
    "abgedeckt": true,
    "regeln": [
     "G7",
+    "MQK",
     "MX",
     "VB2",
     "VC1"
    ],
-   "naechster": 18.0,
-   "naechste_regel": "G7",
+   "naechster": 12.0,
+   "naechste_regel": "MQK",
    "plan_da": true
   },
   {
@@ -315,12 +316,13 @@
    "text": "Perronnummern braun Meterspur",
    "abgedeckt": true,
    "regeln": [
+    "MQK",
     "MX",
     "VA2",
     "VB2"
    ],
-   "naechster": 18.5,
-   "naechste_regel": "MX",
+   "naechster": 12.7,
+   "naechste_regel": "MQK",
    "plan_da": true
   },
   {
@@ -665,6 +667,7 @@
    "abgedeckt": true,
    "regeln": [
     "G7",
+    "MQK",
     "MX",
     "VB2",
     "VC1"
