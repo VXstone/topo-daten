@@ -1,6 +1,6 @@
-# Prüfstand – Bausteine × Drehungen (2026-11-12 21:14 UTC)
+# Prüfstand – Bausteine × Drehungen (2026-11-12 23:09 UTC)
 
-Zählung je Fall (Regel Anzahl); leer = ohne Befund. Rangfolge der Regeln: T, PF, X, E, K, Q, P, F, Z, D, G2, G3, G4, G5, G6, G7, G8
+Zählung je Fall (Regel Anzahl); leer = ohne Befund. Rangfolge der Regeln: T, PF, X, E, K, Q, P, QK, F, Z, D, G2, G3, G4, G5, G6, G7, G8
 
 | Stufe | Baustein | d0 | d30 | dm30 | d60 | dm60 | d90 | a30 | a60 |
 |---|---|---|---|---|---|---|---|---|---|
@@ -14,6 +14,8 @@ Zählung je Fall (Regel Anzahl); leer = ohne Befund. Rangfolge der Regeln: T, PF
 | osm | zwischengerade |  |  |  |  |  | X 3 K 4 D 1 |  |  |
 | osm | gleissprung |  |  |  |  |  |  |  |  |
 | osm | perronformen | PF 2 | PF 2 | PF 2 | PF 2 | PF 2 | PF 2 | PF 2 | PF 2 |
+| osm | buendel_knick | Q 4 | Q 4 | Q 4 | Q 4 | Q 4 | Q 4 | Q 4 | Q 4 |
+| osm | buendel_knick_eng | Q 4 | Q 4 | Q 4 | Q 4 | Q 4 | Q 4 | Q 4 | Q 4 |
 | osm | buendel_versatz | E 2 Z 2 | E 2 Z 1 | E 2 Z 2 | E 2 Z 2 | E 2 Z 2 | E 2 Z 2 |  |  |
 | vorlage | R1 |  |  |  | E 2 Z 2 | E 2 Z 2 |  |  |  |
 | vorlage | R2 |  |  |  | E 2 Z 2 | E 2 Z 2 |  |  |  |
@@ -36,7 +38,7 @@ Zählung je Fall (Regel Anzahl); leer = ohne Befund. Rangfolge der Regeln: T, PF
 
 ## Befunde je Regel (Summe über alle Fälle)
 
-T 33 · PF 16 · X 27 · E 122 · K 4 · Q 20 · P 2 · Z 112 · D 3 · G2 11 · G7 1
+T 33 · PF 16 · X 27 · E 122 · K 4 · Q 84 · P 2 · Z 112 · D 3 · G2 11 · G7 1
 
 ## Gegen die Basis
 
@@ -110,6 +112,70 @@ T 33 · PF 16 · X 27 · E 122 · K 4 · Q 20 · P 2 · Z 112 · D 3 · G2 11 ·
 - osm perronformen d90: **PF** 0 statt 2 Perronformen (U/L/T als eine Fläche) (Bahnhof alpha)
 - osm perronformen a30: **PF** 0 statt 2 Perronformen (U/L/T als eine Fläche) (Bahnhof alpha)
 - osm perronformen a60: **PF** 0 statt 2 Perronformen (U/L/T als eine Fläche) (Bahnhof alpha)
+- osm buendel_knick d0: **Q** Querabstand 5.5 px statt 10.1
+- osm buendel_knick d0: **Q** Querabstand 15.6 px statt 10.1
+- osm buendel_knick d0: **Q** Querabstand 13.2 px statt 24.0 (Bahnhof alpha)
+- osm buendel_knick d0: **Q** Querabstand 37.2 px statt 24.0 (Bahnhof alpha)
+- osm buendel_knick d30: **Q** Querabstand 5.5 px statt 10.1
+- osm buendel_knick d30: **Q** Querabstand 15.6 px statt 10.1
+- osm buendel_knick d30: **Q** Querabstand 13.2 px statt 24.0 (Bahnhof alpha)
+- osm buendel_knick d30: **Q** Querabstand 37.2 px statt 24.0 (Bahnhof alpha)
+- osm buendel_knick dm30: **Q** Querabstand 5.5 px statt 10.1
+- osm buendel_knick dm30: **Q** Querabstand 15.6 px statt 10.1
+- osm buendel_knick dm30: **Q** Querabstand 13.2 px statt 24.0 (Bahnhof alpha)
+- osm buendel_knick dm30: **Q** Querabstand 37.2 px statt 24.0 (Bahnhof alpha)
+- osm buendel_knick d60: **Q** Querabstand 5.5 px statt 10.1
+- osm buendel_knick d60: **Q** Querabstand 15.6 px statt 10.1
+- osm buendel_knick d60: **Q** Querabstand 13.2 px statt 24.0 (Bahnhof alpha)
+- osm buendel_knick d60: **Q** Querabstand 37.2 px statt 24.0 (Bahnhof alpha)
+- osm buendel_knick dm60: **Q** Querabstand 5.5 px statt 10.1
+- osm buendel_knick dm60: **Q** Querabstand 15.6 px statt 10.1
+- osm buendel_knick dm60: **Q** Querabstand 13.2 px statt 24.0 (Bahnhof alpha)
+- osm buendel_knick dm60: **Q** Querabstand 37.2 px statt 24.0 (Bahnhof alpha)
+- osm buendel_knick d90: **Q** Querabstand 5.5 px statt 10.1
+- osm buendel_knick d90: **Q** Querabstand 15.6 px statt 10.1
+- osm buendel_knick d90: **Q** Querabstand 13.2 px statt 24.0 (Bahnhof alpha)
+- osm buendel_knick d90: **Q** Querabstand 37.2 px statt 24.0 (Bahnhof alpha)
+- osm buendel_knick a30: **Q** Querabstand 5.5 px statt 10.1
+- osm buendel_knick a30: **Q** Querabstand 15.6 px statt 10.1
+- osm buendel_knick a30: **Q** Querabstand 13.2 px statt 24.0 (Bahnhof alpha)
+- osm buendel_knick a30: **Q** Querabstand 37.2 px statt 24.0 (Bahnhof alpha)
+- osm buendel_knick a60: **Q** Querabstand 5.5 px statt 10.1
+- osm buendel_knick a60: **Q** Querabstand 15.6 px statt 10.1
+- osm buendel_knick a60: **Q** Querabstand 13.2 px statt 24.0 (Bahnhof alpha)
+- osm buendel_knick a60: **Q** Querabstand 37.2 px statt 24.0 (Bahnhof alpha)
+- osm buendel_knick_eng d0: **Q** Querabstand 5.5 px statt 10.1
+- osm buendel_knick_eng d0: **Q** Querabstand 15.6 px statt 10.1
+- osm buendel_knick_eng d0: **Q** Querabstand 13.2 px statt 24.0 (Bahnhof alpha)
+- osm buendel_knick_eng d0: **Q** Querabstand 37.2 px statt 24.0 (Bahnhof alpha)
+- osm buendel_knick_eng d30: **Q** Querabstand 5.5 px statt 10.1
+- osm buendel_knick_eng d30: **Q** Querabstand 15.6 px statt 10.1
+- osm buendel_knick_eng d30: **Q** Querabstand 13.2 px statt 24.0 (Bahnhof alpha)
+- osm buendel_knick_eng d30: **Q** Querabstand 37.2 px statt 24.0 (Bahnhof alpha)
+- osm buendel_knick_eng dm30: **Q** Querabstand 5.5 px statt 10.1
+- osm buendel_knick_eng dm30: **Q** Querabstand 15.6 px statt 10.1
+- osm buendel_knick_eng dm30: **Q** Querabstand 13.2 px statt 24.0 (Bahnhof alpha)
+- osm buendel_knick_eng dm30: **Q** Querabstand 37.2 px statt 24.0 (Bahnhof alpha)
+- osm buendel_knick_eng d60: **Q** Querabstand 5.5 px statt 10.1
+- osm buendel_knick_eng d60: **Q** Querabstand 15.6 px statt 10.1
+- osm buendel_knick_eng d60: **Q** Querabstand 13.2 px statt 24.0 (Bahnhof alpha)
+- osm buendel_knick_eng d60: **Q** Querabstand 37.2 px statt 24.0 (Bahnhof alpha)
+- osm buendel_knick_eng dm60: **Q** Querabstand 5.5 px statt 10.1
+- osm buendel_knick_eng dm60: **Q** Querabstand 15.6 px statt 10.1
+- osm buendel_knick_eng dm60: **Q** Querabstand 13.2 px statt 24.0 (Bahnhof alpha)
+- osm buendel_knick_eng dm60: **Q** Querabstand 37.2 px statt 24.0 (Bahnhof alpha)
+- osm buendel_knick_eng d90: **Q** Querabstand 5.5 px statt 10.1
+- osm buendel_knick_eng d90: **Q** Querabstand 15.6 px statt 10.1
+- osm buendel_knick_eng d90: **Q** Querabstand 13.2 px statt 24.0 (Bahnhof alpha)
+- osm buendel_knick_eng d90: **Q** Querabstand 37.2 px statt 24.0 (Bahnhof alpha)
+- osm buendel_knick_eng a30: **Q** Querabstand 5.5 px statt 10.1
+- osm buendel_knick_eng a30: **Q** Querabstand 15.6 px statt 10.1
+- osm buendel_knick_eng a30: **Q** Querabstand 13.2 px statt 24.0 (Bahnhof alpha)
+- osm buendel_knick_eng a30: **Q** Querabstand 37.2 px statt 24.0 (Bahnhof alpha)
+- osm buendel_knick_eng a60: **Q** Querabstand 5.5 px statt 10.1
+- osm buendel_knick_eng a60: **Q** Querabstand 15.6 px statt 10.1
+- osm buendel_knick_eng a60: **Q** Querabstand 13.2 px statt 24.0 (Bahnhof alpha)
+- osm buendel_knick_eng a60: **Q** Querabstand 37.2 px statt 24.0 (Bahnhof alpha)
 - osm buendel_versatz d0: **Z** Zwischengerade 20.1 px
 - osm buendel_versatz d0: **E** Ebenenwechsel 10.1 px ohne Weiche
 - osm buendel_versatz d0: **Z** Zwischengerade 20.1 px

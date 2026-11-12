@@ -1,6 +1,6 @@
 {
- "stand": "2026-11-12 21:14 UTC",
- "sekunden": 708,
+ "stand": "2026-11-12 23:09 UTC",
+ "sekunden": 613,
  "varianten": [
   "d0",
   "d30",
@@ -19,6 +19,7 @@
   "K",
   "Q",
   "P",
+  "QK",
   "F",
   "Z",
   "D",
@@ -195,6 +196,54 @@
   },
   "osm/perronformen/a60": {
    "PF": 2
+  },
+  "osm/buendel_knick/d0": {
+   "Q": 4
+  },
+  "osm/buendel_knick/d30": {
+   "Q": 4
+  },
+  "osm/buendel_knick/dm30": {
+   "Q": 4
+  },
+  "osm/buendel_knick/d60": {
+   "Q": 4
+  },
+  "osm/buendel_knick/dm60": {
+   "Q": 4
+  },
+  "osm/buendel_knick/d90": {
+   "Q": 4
+  },
+  "osm/buendel_knick/a30": {
+   "Q": 4
+  },
+  "osm/buendel_knick/a60": {
+   "Q": 4
+  },
+  "osm/buendel_knick_eng/d0": {
+   "Q": 4
+  },
+  "osm/buendel_knick_eng/d30": {
+   "Q": 4
+  },
+  "osm/buendel_knick_eng/dm30": {
+   "Q": 4
+  },
+  "osm/buendel_knick_eng/d60": {
+   "Q": 4
+  },
+  "osm/buendel_knick_eng/dm60": {
+   "Q": 4
+  },
+  "osm/buendel_knick_eng/d90": {
+   "Q": 4
+  },
+  "osm/buendel_knick_eng/a30": {
+   "Q": 4
+  },
+  "osm/buendel_knick_eng/a60": {
+   "Q": 4
   },
   "osm/buendel_versatz/d0": {
    "E": 2,
@@ -507,7 +556,7 @@
  "summe": {
   "T": 33,
   "X": 27,
-  "Q": 20,
+  "Q": 84,
   "Z": 112,
   "D": 3,
   "P": 2,
@@ -524,7 +573,7 @@
    "stufe": "osm",
    "baustein": "r3_kreuzung",
    "variante": "d0",
-   "sekunden": 28,
+   "sekunden": 22,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -559,7 +608,7 @@
    "stufe": "osm",
    "baustein": "r3_kreuzung",
    "variante": "d30",
-   "sekunden": 28,
+   "sekunden": 21,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -594,7 +643,7 @@
    "stufe": "osm",
    "baustein": "r3_kreuzung",
    "variante": "dm30",
-   "sekunden": 28,
+   "sekunden": 21,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -629,7 +678,7 @@
    "stufe": "osm",
    "baustein": "r3_kreuzung",
    "variante": "d60",
-   "sekunden": 28,
+   "sekunden": 22,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -664,7 +713,7 @@
    "stufe": "osm",
    "baustein": "r3_kreuzung",
    "variante": "dm60",
-   "sekunden": 28,
+   "sekunden": 21,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -699,7 +748,7 @@
    "stufe": "osm",
    "baustein": "r3_kreuzung",
    "variante": "d90",
-   "sekunden": 28,
+   "sekunden": 22,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -734,7 +783,7 @@
    "stufe": "osm",
    "baustein": "r3_kreuzung",
    "variante": "a30",
-   "sekunden": 28,
+   "sekunden": 21,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -769,7 +818,7 @@
    "stufe": "osm",
    "baustein": "r3_kreuzung",
    "variante": "a60",
-   "sekunden": 28,
+   "sekunden": 21,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -804,7 +853,7 @@
    "stufe": "osm",
    "baustein": "r5_halt",
    "variante": "d0",
-   "sekunden": 29,
+   "sekunden": 22,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -839,7 +888,7 @@
    "stufe": "osm",
    "baustein": "r5_halt",
    "variante": "d30",
-   "sekunden": 29,
+   "sekunden": 22,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -874,7 +923,7 @@
    "stufe": "osm",
    "baustein": "r5_halt",
    "variante": "dm30",
-   "sekunden": 29,
+   "sekunden": 21,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -909,7 +958,7 @@
    "stufe": "osm",
    "baustein": "r5_halt",
    "variante": "d60",
-   "sekunden": 30,
+   "sekunden": 22,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -944,7 +993,7 @@
    "stufe": "osm",
    "baustein": "r5_halt",
    "variante": "dm60",
-   "sekunden": 29,
+   "sekunden": 21,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -979,7 +1028,7 @@
    "stufe": "osm",
    "baustein": "r5_halt",
    "variante": "d90",
-   "sekunden": 29,
+   "sekunden": 22,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -1014,7 +1063,7 @@
    "stufe": "osm",
    "baustein": "r5_halt",
    "variante": "a30",
-   "sekunden": 29,
+   "sekunden": 22,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -1049,7 +1098,7 @@
    "stufe": "osm",
    "baustein": "r5_halt",
    "variante": "a60",
-   "sekunden": 28,
+   "sekunden": 22,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -1084,7 +1133,7 @@
    "stufe": "osm",
    "baustein": "r7_ueberholung",
    "variante": "d0",
-   "sekunden": 29,
+   "sekunden": 21,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -1119,7 +1168,7 @@
    "stufe": "osm",
    "baustein": "r7_ueberholung",
    "variante": "d30",
-   "sekunden": 29,
+   "sekunden": 22,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -1154,7 +1203,7 @@
    "stufe": "osm",
    "baustein": "r7_ueberholung",
    "variante": "dm30",
-   "sekunden": 30,
+   "sekunden": 22,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -1189,7 +1238,7 @@
    "stufe": "osm",
    "baustein": "r7_ueberholung",
    "variante": "d60",
-   "sekunden": 30,
+   "sekunden": 21,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -1224,7 +1273,7 @@
    "stufe": "osm",
    "baustein": "r7_ueberholung",
    "variante": "dm60",
-   "sekunden": 28,
+   "sekunden": 21,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -1259,7 +1308,7 @@
    "stufe": "osm",
    "baustein": "r7_ueberholung",
    "variante": "d90",
-   "sekunden": 29,
+   "sekunden": 22,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -1294,7 +1343,7 @@
    "stufe": "osm",
    "baustein": "r7_ueberholung",
    "variante": "a30",
-   "sekunden": 29,
+   "sekunden": 21,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -1329,7 +1378,7 @@
    "stufe": "osm",
    "baustein": "r7_ueberholung",
    "variante": "a60",
-   "sekunden": 29,
+   "sekunden": 21,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -1364,7 +1413,7 @@
    "stufe": "osm",
    "baustein": "ab30",
    "variante": "d0",
-   "sekunden": 28,
+   "sekunden": 21,
    "zaehl": {
     "T": 2
    },
@@ -1408,7 +1457,7 @@
    "stufe": "osm",
    "baustein": "ab30",
    "variante": "d30",
-   "sekunden": 28,
+   "sekunden": 21,
    "zaehl": {
     "T": 2
    },
@@ -1452,7 +1501,7 @@
    "stufe": "osm",
    "baustein": "ab30",
    "variante": "dm30",
-   "sekunden": 29,
+   "sekunden": 21,
    "zaehl": {
     "T": 2
    },
@@ -1496,7 +1545,7 @@
    "stufe": "osm",
    "baustein": "ab30",
    "variante": "d60",
-   "sekunden": 30,
+   "sekunden": 21,
    "zaehl": {
     "T": 2
    },
@@ -1540,7 +1589,7 @@
    "stufe": "osm",
    "baustein": "ab30",
    "variante": "dm60",
-   "sekunden": 29,
+   "sekunden": 22,
    "zaehl": {
     "T": 2
    },
@@ -1584,7 +1633,7 @@
    "stufe": "osm",
    "baustein": "ab30",
    "variante": "d90",
-   "sekunden": 28,
+   "sekunden": 23,
    "zaehl": {
     "T": 2
    },
@@ -1628,7 +1677,7 @@
    "stufe": "osm",
    "baustein": "ab30",
    "variante": "a30",
-   "sekunden": 29,
+   "sekunden": 21,
    "zaehl": {
     "T": 2
    },
@@ -1672,7 +1721,7 @@
    "stufe": "osm",
    "baustein": "ab30",
    "variante": "a60",
-   "sekunden": 28,
+   "sekunden": 21,
    "zaehl": {
     "T": 2
    },
@@ -1706,8 +1755,8 @@
    },
    "strecken": {
     "900": [
-     0,
-     0
+     2,
+     2
     ]
    },
    "ordner": "osm_ab30_a60"
@@ -1716,7 +1765,7 @@
    "stufe": "osm",
    "baustein": "ab60",
    "variante": "d0",
-   "sekunden": 28,
+   "sekunden": 22,
    "zaehl": {
     "T": 3,
     "X": 1,
@@ -1796,7 +1845,7 @@
    "stufe": "osm",
    "baustein": "ab60",
    "variante": "d30",
-   "sekunden": 28,
+   "sekunden": 22,
    "zaehl": {
     "T": 3,
     "X": 1,
@@ -1876,7 +1925,7 @@
    "stufe": "osm",
    "baustein": "ab60",
    "variante": "dm30",
-   "sekunden": 29,
+   "sekunden": 21,
    "zaehl": {
     "T": 1,
     "D": 1
@@ -1928,7 +1977,7 @@
    "stufe": "osm",
    "baustein": "ab60",
    "variante": "d60",
-   "sekunden": 29,
+   "sekunden": 21,
    "zaehl": {
     "X": 1
    },
@@ -1982,7 +2031,7 @@
    "stufe": "osm",
    "baustein": "ab60",
    "variante": "dm60",
-   "sekunden": 28,
+   "sekunden": 22,
    "zaehl": {
     "T": 4,
     "P": 2,
@@ -2054,7 +2103,7 @@
    "stufe": "osm",
    "baustein": "ab60",
    "variante": "d90",
-   "sekunden": 30,
+   "sekunden": 21,
    "zaehl": {
     "T": 3,
     "X": 1,
@@ -2126,7 +2175,7 @@
    "stufe": "osm",
    "baustein": "ab60",
    "variante": "a30",
-   "sekunden": 29,
+   "sekunden": 21,
    "zaehl": {
     "T": 3,
     "X": 3,
@@ -2197,11 +2246,8 @@
    },
    "strecken": {
     "900": [
-     2,
-     2
-    ],
-    "901": [
-     1
+     0,
+     0
     ]
    },
    "ordner": "osm_ab60_a30"
@@ -2210,7 +2256,7 @@
    "stufe": "osm",
    "baustein": "ab60",
    "variante": "a60",
-   "sekunden": 27,
+   "sekunden": 22,
    "zaehl": {
     "X": 1
    },
@@ -2264,7 +2310,7 @@
    "stufe": "osm",
    "baustein": "sagliains",
    "variante": "d0",
-   "sekunden": 29,
+   "sekunden": 21,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -2299,7 +2345,7 @@
    "stufe": "osm",
    "baustein": "sagliains",
    "variante": "d30",
-   "sekunden": 28,
+   "sekunden": 21,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -2334,7 +2380,7 @@
    "stufe": "osm",
    "baustein": "sagliains",
    "variante": "dm30",
-   "sekunden": 29,
+   "sekunden": 22,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -2369,7 +2415,7 @@
    "stufe": "osm",
    "baustein": "sagliains",
    "variante": "d60",
-   "sekunden": 26,
+   "sekunden": 22,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -2404,7 +2450,7 @@
    "stufe": "osm",
    "baustein": "sagliains",
    "variante": "dm60",
-   "sekunden": 29,
+   "sekunden": 22,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -2439,7 +2485,7 @@
    "stufe": "osm",
    "baustein": "sagliains",
    "variante": "d90",
-   "sekunden": 28,
+   "sekunden": 22,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -2474,7 +2520,7 @@
    "stufe": "osm",
    "baustein": "sagliains",
    "variante": "a30",
-   "sekunden": 29,
+   "sekunden": 22,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -2509,7 +2555,7 @@
    "stufe": "osm",
    "baustein": "sagliains",
    "variante": "a60",
-   "sekunden": 29,
+   "sekunden": 21,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -2544,7 +2590,7 @@
    "stufe": "osm",
    "baustein": "unterwerfung",
    "variante": "d0",
-   "sekunden": 29,
+   "sekunden": 22,
    "zaehl": {
     "X": 2
    },
@@ -2598,7 +2644,7 @@
    "stufe": "osm",
    "baustein": "unterwerfung",
    "variante": "d30",
-   "sekunden": 29,
+   "sekunden": 22,
    "zaehl": {
     "X": 2
    },
@@ -2652,7 +2698,7 @@
    "stufe": "osm",
    "baustein": "unterwerfung",
    "variante": "dm30",
-   "sekunden": 28,
+   "sekunden": 21,
    "zaehl": {
     "X": 2,
     "Z": 1
@@ -2714,7 +2760,7 @@
    "stufe": "osm",
    "baustein": "unterwerfung",
    "variante": "d60",
-   "sekunden": 30,
+   "sekunden": 22,
    "zaehl": {
     "X": 2
    },
@@ -2768,7 +2814,7 @@
    "stufe": "osm",
    "baustein": "unterwerfung",
    "variante": "dm60",
-   "sekunden": 29,
+   "sekunden": 21,
    "zaehl": {
     "X": 2,
     "Z": 1
@@ -2830,7 +2876,7 @@
    "stufe": "osm",
    "baustein": "unterwerfung",
    "variante": "d90",
-   "sekunden": 30,
+   "sekunden": 21,
    "zaehl": {
     "X": 2
    },
@@ -2884,7 +2930,7 @@
    "stufe": "osm",
    "baustein": "unterwerfung",
    "variante": "a30",
-   "sekunden": 29,
+   "sekunden": 21,
    "zaehl": {
     "X": 2
    },
@@ -2938,7 +2984,7 @@
    "stufe": "osm",
    "baustein": "unterwerfung",
    "variante": "a60",
-   "sekunden": 30,
+   "sekunden": 22,
    "zaehl": {
     "X": 2
    },
@@ -2992,7 +3038,7 @@
    "stufe": "osm",
    "baustein": "zwischengerade",
    "variante": "d0",
-   "sekunden": 28,
+   "sekunden": 20,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -3027,7 +3073,7 @@
    "stufe": "osm",
    "baustein": "zwischengerade",
    "variante": "d30",
-   "sekunden": 29,
+   "sekunden": 21,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -3062,7 +3108,7 @@
    "stufe": "osm",
    "baustein": "zwischengerade",
    "variante": "dm30",
-   "sekunden": 28,
+   "sekunden": 21,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -3097,7 +3143,7 @@
    "stufe": "osm",
    "baustein": "zwischengerade",
    "variante": "d60",
-   "sekunden": 30,
+   "sekunden": 22,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -3132,7 +3178,7 @@
    "stufe": "osm",
    "baustein": "zwischengerade",
    "variante": "dm60",
-   "sekunden": 28,
+   "sekunden": 21,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -3167,7 +3213,7 @@
    "stufe": "osm",
    "baustein": "zwischengerade",
    "variante": "d90",
-   "sekunden": 30,
+   "sekunden": 21,
    "zaehl": {
     "X": 3,
     "K": 4,
@@ -3260,7 +3306,7 @@
    "stufe": "osm",
    "baustein": "zwischengerade",
    "variante": "a30",
-   "sekunden": 30,
+   "sekunden": 20,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -3295,7 +3341,7 @@
    "stufe": "osm",
    "baustein": "zwischengerade",
    "variante": "a60",
-   "sekunden": 27,
+   "sekunden": 20,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -3330,7 +3376,7 @@
    "stufe": "osm",
    "baustein": "gleissprung",
    "variante": "d0",
-   "sekunden": 27,
+   "sekunden": 21,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -3365,7 +3411,7 @@
    "stufe": "osm",
    "baustein": "gleissprung",
    "variante": "d30",
-   "sekunden": 29,
+   "sekunden": 22,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -3400,7 +3446,7 @@
    "stufe": "osm",
    "baustein": "gleissprung",
    "variante": "dm30",
-   "sekunden": 31,
+   "sekunden": 21,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -3435,7 +3481,7 @@
    "stufe": "osm",
    "baustein": "gleissprung",
    "variante": "d60",
-   "sekunden": 28,
+   "sekunden": 20,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -3470,7 +3516,7 @@
    "stufe": "osm",
    "baustein": "gleissprung",
    "variante": "dm60",
-   "sekunden": 30,
+   "sekunden": 22,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -3505,7 +3551,7 @@
    "stufe": "osm",
    "baustein": "gleissprung",
    "variante": "d90",
-   "sekunden": 29,
+   "sekunden": 21,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -3540,7 +3586,7 @@
    "stufe": "osm",
    "baustein": "gleissprung",
    "variante": "a30",
-   "sekunden": 30,
+   "sekunden": 21,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -3575,7 +3621,7 @@
    "stufe": "osm",
    "baustein": "gleissprung",
    "variante": "a60",
-   "sekunden": 27,
+   "sekunden": 22,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -3610,7 +3656,7 @@
    "stufe": "osm",
    "baustein": "perronformen",
    "variante": "d0",
-   "sekunden": 29,
+   "sekunden": 22,
    "zaehl": {
     "PF": 2
    },
@@ -3653,7 +3699,7 @@
    "stufe": "osm",
    "baustein": "perronformen",
    "variante": "d30",
-   "sekunden": 30,
+   "sekunden": 22,
    "zaehl": {
     "PF": 2
    },
@@ -3696,7 +3742,7 @@
    "stufe": "osm",
    "baustein": "perronformen",
    "variante": "dm30",
-   "sekunden": 28,
+   "sekunden": 22,
    "zaehl": {
     "PF": 2
    },
@@ -3739,7 +3785,7 @@
    "stufe": "osm",
    "baustein": "perronformen",
    "variante": "d60",
-   "sekunden": 30,
+   "sekunden": 21,
    "zaehl": {
     "PF": 2
    },
@@ -3782,7 +3828,7 @@
    "stufe": "osm",
    "baustein": "perronformen",
    "variante": "dm60",
-   "sekunden": 30,
+   "sekunden": 21,
    "zaehl": {
     "PF": 2
    },
@@ -3825,7 +3871,7 @@
    "stufe": "osm",
    "baustein": "perronformen",
    "variante": "d90",
-   "sekunden": 28,
+   "sekunden": 22,
    "zaehl": {
     "PF": 2
    },
@@ -3868,7 +3914,7 @@
    "stufe": "osm",
    "baustein": "perronformen",
    "variante": "a30",
-   "sekunden": 29,
+   "sekunden": 22,
    "zaehl": {
     "PF": 2
    },
@@ -3911,7 +3957,7 @@
    "stufe": "osm",
    "baustein": "perronformen",
    "variante": "a60",
-   "sekunden": 29,
+   "sekunden": 21,
    "zaehl": {
     "PF": 2
    },
@@ -3952,9 +3998,1369 @@
   },
   {
    "stufe": "osm",
+   "baustein": "buendel_knick",
+   "variante": "d0",
+   "sekunden": 22,
+   "zaehl": {
+    "Q": 4
+   },
+   "befunde": [
+    {
+     "regel": "Q",
+     "x": -239.8,
+     "y": 21.1,
+     "text": "Querabstand 5.5 px statt 10.1",
+     "wert": 5.54
+    },
+    {
+     "regel": "Q",
+     "x": -239.8,
+     "y": 15.6,
+     "text": "Querabstand 15.6 px statt 10.1",
+     "wert": 15.62
+    },
+    {
+     "regel": "Q",
+     "x": 404.5,
+     "y": 123.2,
+     "text": "Querabstand 13.2 px statt 24.0",
+     "wert": 13.2,
+     "bahnhof": "alpha"
+    },
+    {
+     "regel": "Q",
+     "x": 404.5,
+     "y": 110.0,
+     "text": "Querabstand 37.2 px statt 24.0",
+     "wert": 37.2,
+     "bahnhof": "alpha"
+    }
+   ],
+   "bahnhof": {
+    "alpha": {
+     "zaehl": {
+      "Q": 2
+     },
+     "linien": 13,
+     "perron_flaechen": [
+      1,
+      1
+     ],
+     "befunde": [
+      {
+       "regel": "Q",
+       "x": 404.5,
+       "y": 123.2,
+       "text": "Querabstand 13.2 px statt 24.0",
+       "wert": 13.2
+      },
+      {
+       "regel": "Q",
+       "x": 404.5,
+       "y": 110.0,
+       "text": "Querabstand 37.2 px statt 24.0",
+       "wert": 37.2
+      }
+     ]
+    },
+    "beta": {
+     "zaehl": {},
+     "linien": 8,
+     "perron_flaechen": [
+      1,
+      1
+     ],
+     "befunde": []
+    }
+   },
+   "strecken": {
+    "900": [
+     2,
+     2
+    ]
+   },
+   "ordner": "osm_buendel_knick_d0"
+  },
+  {
+   "stufe": "osm",
+   "baustein": "buendel_knick",
+   "variante": "d30",
+   "sekunden": 22,
+   "zaehl": {
+    "Q": 4
+   },
+   "befunde": [
+    {
+     "regel": "Q",
+     "x": -213.2,
+     "y": 110.2,
+     "text": "Querabstand 5.5 px statt 10.1",
+     "wert": 5.54
+    },
+    {
+     "regel": "Q",
+     "x": -215.9,
+     "y": 105.4,
+     "text": "Querabstand 15.6 px statt 10.1",
+     "wert": 15.62
+    },
+    {
+     "regel": "Q",
+     "x": 404.5,
+     "y": 123.2,
+     "text": "Querabstand 13.2 px statt 24.0",
+     "wert": 13.2,
+     "bahnhof": "alpha"
+    },
+    {
+     "regel": "Q",
+     "x": 404.5,
+     "y": 110.0,
+     "text": "Querabstand 37.2 px statt 24.0",
+     "wert": 37.2,
+     "bahnhof": "alpha"
+    }
+   ],
+   "bahnhof": {
+    "alpha": {
+     "zaehl": {
+      "Q": 2
+     },
+     "linien": 13,
+     "perron_flaechen": [
+      1,
+      1
+     ],
+     "befunde": [
+      {
+       "regel": "Q",
+       "x": 404.5,
+       "y": 123.2,
+       "text": "Querabstand 13.2 px statt 24.0",
+       "wert": 13.2
+      },
+      {
+       "regel": "Q",
+       "x": 404.5,
+       "y": 110.0,
+       "text": "Querabstand 37.2 px statt 24.0",
+       "wert": 37.2
+      }
+     ]
+    },
+    "beta": {
+     "zaehl": {},
+     "linien": 8,
+     "perron_flaechen": [
+      1,
+      1
+     ],
+     "befunde": []
+    }
+   },
+   "strecken": {
+    "900": [
+     2,
+     2
+    ]
+   },
+   "ordner": "osm_buendel_knick_d30"
+  },
+  {
+   "stufe": "osm",
+   "baustein": "buendel_knick",
+   "variante": "dm30",
+   "sekunden": 21,
+   "zaehl": {
+    "Q": 4
+   },
+   "befunde": [
+    {
+     "regel": "Q",
+     "x": -202.1,
+     "y": -129.5,
+     "text": "Querabstand 5.5 px statt 10.1",
+     "wert": 5.54
+    },
+    {
+     "regel": "Q",
+     "x": -199.3,
+     "y": -134.3,
+     "text": "Querabstand 15.6 px statt 10.1",
+     "wert": 15.62
+    },
+    {
+     "regel": "Q",
+     "x": 404.5,
+     "y": 123.2,
+     "text": "Querabstand 13.2 px statt 24.0",
+     "wert": 13.2,
+     "bahnhof": "alpha"
+    },
+    {
+     "regel": "Q",
+     "x": 404.5,
+     "y": 110.0,
+     "text": "Querabstand 37.2 px statt 24.0",
+     "wert": 37.2,
+     "bahnhof": "alpha"
+    }
+   ],
+   "bahnhof": {
+    "alpha": {
+     "zaehl": {
+      "Q": 2
+     },
+     "linien": 13,
+     "perron_flaechen": [
+      1,
+      1
+     ],
+     "befunde": [
+      {
+       "regel": "Q",
+       "x": 404.5,
+       "y": 123.2,
+       "text": "Querabstand 13.2 px statt 24.0",
+       "wert": 13.2
+      },
+      {
+       "regel": "Q",
+       "x": 404.5,
+       "y": 110.0,
+       "text": "Querabstand 37.2 px statt 24.0",
+       "wert": 37.2
+      }
+     ]
+    },
+    "beta": {
+     "zaehl": {},
+     "linien": 8,
+     "perron_flaechen": [
+      1,
+      1
+     ],
+     "befunde": []
+    }
+   },
+   "strecken": {
+    "900": [
+     2,
+     2
+    ]
+   },
+   "ordner": "osm_buendel_knick_dm30"
+  },
+  {
+   "stufe": "osm",
+   "baustein": "buendel_knick",
+   "variante": "d60",
+   "sekunden": 22,
+   "zaehl": {
+    "Q": 4
+   },
+   "befunde": [
+    {
+     "regel": "Q",
+     "x": -129.5,
+     "y": 202.1,
+     "text": "Querabstand 5.5 px statt 10.1",
+     "wert": 5.54
+    },
+    {
+     "regel": "Q",
+     "x": -134.3,
+     "y": 199.3,
+     "text": "Querabstand 15.6 px statt 10.1",
+     "wert": 15.62
+    },
+    {
+     "regel": "Q",
+     "x": 404.5,
+     "y": 123.2,
+     "text": "Querabstand 13.2 px statt 24.0",
+     "wert": 13.2,
+     "bahnhof": "alpha"
+    },
+    {
+     "regel": "Q",
+     "x": 404.5,
+     "y": 110.0,
+     "text": "Querabstand 37.2 px statt 24.0",
+     "wert": 37.2,
+     "bahnhof": "alpha"
+    }
+   ],
+   "bahnhof": {
+    "alpha": {
+     "zaehl": {
+      "Q": 2
+     },
+     "linien": 13,
+     "perron_flaechen": [
+      1,
+      1
+     ],
+     "befunde": [
+      {
+       "regel": "Q",
+       "x": 404.5,
+       "y": 123.2,
+       "text": "Querabstand 13.2 px statt 24.0",
+       "wert": 13.2
+      },
+      {
+       "regel": "Q",
+       "x": 404.5,
+       "y": 110.0,
+       "text": "Querabstand 37.2 px statt 24.0",
+       "wert": 37.2
+      }
+     ]
+    },
+    "beta": {
+     "zaehl": {},
+     "linien": 8,
+     "perron_flaechen": [
+      1,
+      1
+     ],
+     "befunde": []
+    }
+   },
+   "strecken": {
+    "900": [
+     2,
+     2
+    ]
+   },
+   "ordner": "osm_buendel_knick_d60"
+  },
+  {
+   "stufe": "osm",
+   "baustein": "buendel_knick",
+   "variante": "dm60",
+   "sekunden": 22,
+   "zaehl": {
+    "Q": 4
+   },
+   "befunde": [
+    {
+     "regel": "Q",
+     "x": -110.3,
+     "y": -213.2,
+     "text": "Querabstand 5.5 px statt 10.1",
+     "wert": 5.54
+    },
+    {
+     "regel": "Q",
+     "x": -105.5,
+     "y": -215.9,
+     "text": "Querabstand 15.6 px statt 10.1",
+     "wert": 15.62
+    },
+    {
+     "regel": "Q",
+     "x": 404.5,
+     "y": 123.2,
+     "text": "Querabstand 13.2 px statt 24.0",
+     "wert": 13.2,
+     "bahnhof": "alpha"
+    },
+    {
+     "regel": "Q",
+     "x": 404.5,
+     "y": 110.0,
+     "text": "Querabstand 37.2 px statt 24.0",
+     "wert": 37.2,
+     "bahnhof": "alpha"
+    }
+   ],
+   "bahnhof": {
+    "alpha": {
+     "zaehl": {
+      "Q": 2
+     },
+     "linien": 13,
+     "perron_flaechen": [
+      1,
+      1
+     ],
+     "befunde": [
+      {
+       "regel": "Q",
+       "x": 404.5,
+       "y": 123.2,
+       "text": "Querabstand 13.2 px statt 24.0",
+       "wert": 13.2
+      },
+      {
+       "regel": "Q",
+       "x": 404.5,
+       "y": 110.0,
+       "text": "Querabstand 37.2 px statt 24.0",
+       "wert": 37.2
+      }
+     ]
+    },
+    "beta": {
+     "zaehl": {},
+     "linien": 8,
+     "perron_flaechen": [
+      1,
+      1
+     ],
+     "befunde": []
+    }
+   },
+   "strecken": {
+    "900": [
+     2,
+     2
+    ]
+   },
+   "ordner": "osm_buendel_knick_dm60"
+  },
+  {
+   "stufe": "osm",
+   "baustein": "buendel_knick",
+   "variante": "d90",
+   "sekunden": 22,
+   "zaehl": {
+    "Q": 4
+   },
+   "befunde": [
+    {
+     "regel": "Q",
+     "x": 21.1,
+     "y": 239.8,
+     "text": "Querabstand 5.5 px statt 10.1",
+     "wert": 5.54
+    },
+    {
+     "regel": "Q",
+     "x": 15.6,
+     "y": 239.8,
+     "text": "Querabstand 15.6 px statt 10.1",
+     "wert": 15.62
+    },
+    {
+     "regel": "Q",
+     "x": 404.5,
+     "y": 123.2,
+     "text": "Querabstand 13.2 px statt 24.0",
+     "wert": 13.2,
+     "bahnhof": "alpha"
+    },
+    {
+     "regel": "Q",
+     "x": 404.5,
+     "y": 110.0,
+     "text": "Querabstand 37.2 px statt 24.0",
+     "wert": 37.2,
+     "bahnhof": "alpha"
+    }
+   ],
+   "bahnhof": {
+    "alpha": {
+     "zaehl": {
+      "Q": 2
+     },
+     "linien": 13,
+     "perron_flaechen": [
+      1,
+      1
+     ],
+     "befunde": [
+      {
+       "regel": "Q",
+       "x": 404.5,
+       "y": 123.2,
+       "text": "Querabstand 13.2 px statt 24.0",
+       "wert": 13.2
+      },
+      {
+       "regel": "Q",
+       "x": 404.5,
+       "y": 110.0,
+       "text": "Querabstand 37.2 px statt 24.0",
+       "wert": 37.2
+      }
+     ]
+    },
+    "beta": {
+     "zaehl": {},
+     "linien": 8,
+     "perron_flaechen": [
+      1,
+      1
+     ],
+     "befunde": []
+    }
+   },
+   "strecken": {
+    "900": [
+     2,
+     2
+    ]
+   },
+   "ordner": "osm_buendel_knick_d90"
+  },
+  {
+   "stufe": "osm",
+   "baustein": "buendel_knick",
+   "variante": "a30",
+   "sekunden": 22,
+   "zaehl": {
+    "Q": 4
+   },
+   "befunde": [
+    {
+     "regel": "Q",
+     "x": -228.9,
+     "y": 29.3,
+     "text": "Querabstand 5.5 px statt 10.1",
+     "wert": 5.54
+    },
+    {
+     "regel": "Q",
+     "x": -228.9,
+     "y": 23.8,
+     "text": "Querabstand 15.6 px statt 10.1",
+     "wert": 15.62
+    },
+    {
+     "regel": "Q",
+     "x": 404.5,
+     "y": 123.2,
+     "text": "Querabstand 13.2 px statt 24.0",
+     "wert": 13.2,
+     "bahnhof": "alpha"
+    },
+    {
+     "regel": "Q",
+     "x": 404.5,
+     "y": 110.0,
+     "text": "Querabstand 37.2 px statt 24.0",
+     "wert": 37.2,
+     "bahnhof": "alpha"
+    }
+   ],
+   "bahnhof": {
+    "alpha": {
+     "zaehl": {
+      "Q": 2
+     },
+     "linien": 13,
+     "perron_flaechen": [
+      1,
+      1
+     ],
+     "befunde": [
+      {
+       "regel": "Q",
+       "x": 404.5,
+       "y": 123.2,
+       "text": "Querabstand 13.2 px statt 24.0",
+       "wert": 13.2
+      },
+      {
+       "regel": "Q",
+       "x": 404.5,
+       "y": 110.0,
+       "text": "Querabstand 37.2 px statt 24.0",
+       "wert": 37.2
+      }
+     ]
+    },
+    "beta": {
+     "zaehl": {},
+     "linien": 8,
+     "perron_flaechen": [
+      1,
+      1
+     ],
+     "befunde": []
+    }
+   },
+   "strecken": {
+    "900": [
+     2,
+     2
+    ]
+   },
+   "ordner": "osm_buendel_knick_a30"
+  },
+  {
+   "stufe": "osm",
+   "baustein": "buendel_knick",
+   "variante": "a60",
+   "sekunden": 22,
+   "zaehl": {
+    "Q": 4
+   },
+   "befunde": [
+    {
+     "regel": "Q",
+     "x": -199.3,
+     "y": 59.0,
+     "text": "Querabstand 5.5 px statt 10.1",
+     "wert": 5.54
+    },
+    {
+     "regel": "Q",
+     "x": -199.3,
+     "y": 53.5,
+     "text": "Querabstand 15.6 px statt 10.1",
+     "wert": 15.62
+    },
+    {
+     "regel": "Q",
+     "x": 404.5,
+     "y": 123.2,
+     "text": "Querabstand 13.2 px statt 24.0",
+     "wert": 13.2,
+     "bahnhof": "alpha"
+    },
+    {
+     "regel": "Q",
+     "x": 404.5,
+     "y": 110.0,
+     "text": "Querabstand 37.2 px statt 24.0",
+     "wert": 37.2,
+     "bahnhof": "alpha"
+    }
+   ],
+   "bahnhof": {
+    "alpha": {
+     "zaehl": {
+      "Q": 2
+     },
+     "linien": 13,
+     "perron_flaechen": [
+      1,
+      1
+     ],
+     "befunde": [
+      {
+       "regel": "Q",
+       "x": 404.5,
+       "y": 123.2,
+       "text": "Querabstand 13.2 px statt 24.0",
+       "wert": 13.2
+      },
+      {
+       "regel": "Q",
+       "x": 404.5,
+       "y": 110.0,
+       "text": "Querabstand 37.2 px statt 24.0",
+       "wert": 37.2
+      }
+     ]
+    },
+    "beta": {
+     "zaehl": {},
+     "linien": 8,
+     "perron_flaechen": [
+      1,
+      1
+     ],
+     "befunde": []
+    }
+   },
+   "strecken": {
+    "900": [
+     0,
+     0
+    ]
+   },
+   "ordner": "osm_buendel_knick_a60"
+  },
+  {
+   "stufe": "osm",
+   "baustein": "buendel_knick_eng",
+   "variante": "d0",
+   "sekunden": 21,
+   "zaehl": {
+    "Q": 4
+   },
+   "befunde": [
+    {
+     "regel": "Q",
+     "x": -239.8,
+     "y": 7.5,
+     "text": "Querabstand 5.5 px statt 10.1",
+     "wert": 5.54
+    },
+    {
+     "regel": "Q",
+     "x": -239.8,
+     "y": 2.0,
+     "text": "Querabstand 15.6 px statt 10.1",
+     "wert": 15.62
+    },
+    {
+     "regel": "Q",
+     "x": 404.5,
+     "y": 123.2,
+     "text": "Querabstand 13.2 px statt 24.0",
+     "wert": 13.2,
+     "bahnhof": "alpha"
+    },
+    {
+     "regel": "Q",
+     "x": 404.5,
+     "y": 110.0,
+     "text": "Querabstand 37.2 px statt 24.0",
+     "wert": 37.2,
+     "bahnhof": "alpha"
+    }
+   ],
+   "bahnhof": {
+    "alpha": {
+     "zaehl": {
+      "Q": 2
+     },
+     "linien": 13,
+     "perron_flaechen": [
+      1,
+      1
+     ],
+     "befunde": [
+      {
+       "regel": "Q",
+       "x": 404.5,
+       "y": 123.2,
+       "text": "Querabstand 13.2 px statt 24.0",
+       "wert": 13.2
+      },
+      {
+       "regel": "Q",
+       "x": 404.5,
+       "y": 110.0,
+       "text": "Querabstand 37.2 px statt 24.0",
+       "wert": 37.2
+      }
+     ]
+    },
+    "beta": {
+     "zaehl": {},
+     "linien": 8,
+     "perron_flaechen": [
+      1,
+      1
+     ],
+     "befunde": []
+    }
+   },
+   "strecken": {
+    "900": [
+     2,
+     2
+    ]
+   },
+   "ordner": "osm_buendel_knick_eng_d0"
+  },
+  {
+   "stufe": "osm",
+   "baustein": "buendel_knick_eng",
+   "variante": "d30",
+   "sekunden": 21,
+   "zaehl": {
+    "Q": 4
+   },
+   "befunde": [
+    {
+     "regel": "Q",
+     "x": -213.2,
+     "y": 110.2,
+     "text": "Querabstand 5.5 px statt 10.1",
+     "wert": 5.54
+    },
+    {
+     "regel": "Q",
+     "x": -215.9,
+     "y": 105.4,
+     "text": "Querabstand 15.6 px statt 10.1",
+     "wert": 15.62
+    },
+    {
+     "regel": "Q",
+     "x": 404.5,
+     "y": 123.2,
+     "text": "Querabstand 13.2 px statt 24.0",
+     "wert": 13.2,
+     "bahnhof": "alpha"
+    },
+    {
+     "regel": "Q",
+     "x": 404.5,
+     "y": 110.0,
+     "text": "Querabstand 37.2 px statt 24.0",
+     "wert": 37.2,
+     "bahnhof": "alpha"
+    }
+   ],
+   "bahnhof": {
+    "alpha": {
+     "zaehl": {
+      "Q": 2
+     },
+     "linien": 13,
+     "perron_flaechen": [
+      1,
+      1
+     ],
+     "befunde": [
+      {
+       "regel": "Q",
+       "x": 404.5,
+       "y": 123.2,
+       "text": "Querabstand 13.2 px statt 24.0",
+       "wert": 13.2
+      },
+      {
+       "regel": "Q",
+       "x": 404.5,
+       "y": 110.0,
+       "text": "Querabstand 37.2 px statt 24.0",
+       "wert": 37.2
+      }
+     ]
+    },
+    "beta": {
+     "zaehl": {},
+     "linien": 8,
+     "perron_flaechen": [
+      1,
+      1
+     ],
+     "befunde": []
+    }
+   },
+   "strecken": {
+    "900": [
+     2,
+     2
+    ]
+   },
+   "ordner": "osm_buendel_knick_eng_d30"
+  },
+  {
+   "stufe": "osm",
+   "baustein": "buendel_knick_eng",
+   "variante": "dm30",
+   "sekunden": 21,
+   "zaehl": {
+    "Q": 4
+   },
+   "befunde": [
+    {
+     "regel": "Q",
+     "x": -202.1,
+     "y": -129.5,
+     "text": "Querabstand 5.5 px statt 10.1",
+     "wert": 5.54
+    },
+    {
+     "regel": "Q",
+     "x": -199.3,
+     "y": -134.3,
+     "text": "Querabstand 15.6 px statt 10.1",
+     "wert": 15.62
+    },
+    {
+     "regel": "Q",
+     "x": 404.5,
+     "y": 123.2,
+     "text": "Querabstand 13.2 px statt 24.0",
+     "wert": 13.2,
+     "bahnhof": "alpha"
+    },
+    {
+     "regel": "Q",
+     "x": 404.5,
+     "y": 110.0,
+     "text": "Querabstand 37.2 px statt 24.0",
+     "wert": 37.2,
+     "bahnhof": "alpha"
+    }
+   ],
+   "bahnhof": {
+    "alpha": {
+     "zaehl": {
+      "Q": 2
+     },
+     "linien": 13,
+     "perron_flaechen": [
+      1,
+      1
+     ],
+     "befunde": [
+      {
+       "regel": "Q",
+       "x": 404.5,
+       "y": 123.2,
+       "text": "Querabstand 13.2 px statt 24.0",
+       "wert": 13.2
+      },
+      {
+       "regel": "Q",
+       "x": 404.5,
+       "y": 110.0,
+       "text": "Querabstand 37.2 px statt 24.0",
+       "wert": 37.2
+      }
+     ]
+    },
+    "beta": {
+     "zaehl": {},
+     "linien": 8,
+     "perron_flaechen": [
+      1,
+      1
+     ],
+     "befunde": []
+    }
+   },
+   "strecken": {
+    "900": [
+     2,
+     2
+    ]
+   },
+   "ordner": "osm_buendel_knick_eng_dm30"
+  },
+  {
+   "stufe": "osm",
+   "baustein": "buendel_knick_eng",
+   "variante": "d60",
+   "sekunden": 21,
+   "zaehl": {
+    "Q": 4
+   },
+   "befunde": [
+    {
+     "regel": "Q",
+     "x": -129.5,
+     "y": 202.1,
+     "text": "Querabstand 5.5 px statt 10.1",
+     "wert": 5.54
+    },
+    {
+     "regel": "Q",
+     "x": -134.3,
+     "y": 199.3,
+     "text": "Querabstand 15.6 px statt 10.1",
+     "wert": 15.62
+    },
+    {
+     "regel": "Q",
+     "x": 404.5,
+     "y": 123.2,
+     "text": "Querabstand 13.2 px statt 24.0",
+     "wert": 13.2,
+     "bahnhof": "alpha"
+    },
+    {
+     "regel": "Q",
+     "x": 404.5,
+     "y": 110.0,
+     "text": "Querabstand 37.2 px statt 24.0",
+     "wert": 37.2,
+     "bahnhof": "alpha"
+    }
+   ],
+   "bahnhof": {
+    "alpha": {
+     "zaehl": {
+      "Q": 2
+     },
+     "linien": 13,
+     "perron_flaechen": [
+      1,
+      1
+     ],
+     "befunde": [
+      {
+       "regel": "Q",
+       "x": 404.5,
+       "y": 123.2,
+       "text": "Querabstand 13.2 px statt 24.0",
+       "wert": 13.2
+      },
+      {
+       "regel": "Q",
+       "x": 404.5,
+       "y": 110.0,
+       "text": "Querabstand 37.2 px statt 24.0",
+       "wert": 37.2
+      }
+     ]
+    },
+    "beta": {
+     "zaehl": {},
+     "linien": 8,
+     "perron_flaechen": [
+      1,
+      1
+     ],
+     "befunde": []
+    }
+   },
+   "strecken": {
+    "900": [
+     2,
+     2
+    ]
+   },
+   "ordner": "osm_buendel_knick_eng_d60"
+  },
+  {
+   "stufe": "osm",
+   "baustein": "buendel_knick_eng",
+   "variante": "dm60",
+   "sekunden": 22,
+   "zaehl": {
+    "Q": 4
+   },
+   "befunde": [
+    {
+     "regel": "Q",
+     "x": -110.3,
+     "y": -213.2,
+     "text": "Querabstand 5.5 px statt 10.1",
+     "wert": 5.54
+    },
+    {
+     "regel": "Q",
+     "x": -105.5,
+     "y": -215.9,
+     "text": "Querabstand 15.6 px statt 10.1",
+     "wert": 15.62
+    },
+    {
+     "regel": "Q",
+     "x": 404.5,
+     "y": 123.2,
+     "text": "Querabstand 13.2 px statt 24.0",
+     "wert": 13.2,
+     "bahnhof": "alpha"
+    },
+    {
+     "regel": "Q",
+     "x": 404.5,
+     "y": 110.0,
+     "text": "Querabstand 37.2 px statt 24.0",
+     "wert": 37.2,
+     "bahnhof": "alpha"
+    }
+   ],
+   "bahnhof": {
+    "alpha": {
+     "zaehl": {
+      "Q": 2
+     },
+     "linien": 13,
+     "perron_flaechen": [
+      1,
+      1
+     ],
+     "befunde": [
+      {
+       "regel": "Q",
+       "x": 404.5,
+       "y": 123.2,
+       "text": "Querabstand 13.2 px statt 24.0",
+       "wert": 13.2
+      },
+      {
+       "regel": "Q",
+       "x": 404.5,
+       "y": 110.0,
+       "text": "Querabstand 37.2 px statt 24.0",
+       "wert": 37.2
+      }
+     ]
+    },
+    "beta": {
+     "zaehl": {},
+     "linien": 8,
+     "perron_flaechen": [
+      1,
+      1
+     ],
+     "befunde": []
+    }
+   },
+   "strecken": {
+    "900": [
+     2,
+     2
+    ]
+   },
+   "ordner": "osm_buendel_knick_eng_dm60"
+  },
+  {
+   "stufe": "osm",
+   "baustein": "buendel_knick_eng",
+   "variante": "d90",
+   "sekunden": 22,
+   "zaehl": {
+    "Q": 4
+   },
+   "befunde": [
+    {
+     "regel": "Q",
+     "x": 7.5,
+     "y": 239.8,
+     "text": "Querabstand 5.5 px statt 10.1",
+     "wert": 5.54
+    },
+    {
+     "regel": "Q",
+     "x": 2.0,
+     "y": 239.8,
+     "text": "Querabstand 15.6 px statt 10.1",
+     "wert": 15.62
+    },
+    {
+     "regel": "Q",
+     "x": 404.5,
+     "y": 123.2,
+     "text": "Querabstand 13.2 px statt 24.0",
+     "wert": 13.2,
+     "bahnhof": "alpha"
+    },
+    {
+     "regel": "Q",
+     "x": 404.5,
+     "y": 110.0,
+     "text": "Querabstand 37.2 px statt 24.0",
+     "wert": 37.2,
+     "bahnhof": "alpha"
+    }
+   ],
+   "bahnhof": {
+    "alpha": {
+     "zaehl": {
+      "Q": 2
+     },
+     "linien": 13,
+     "perron_flaechen": [
+      1,
+      1
+     ],
+     "befunde": [
+      {
+       "regel": "Q",
+       "x": 404.5,
+       "y": 123.2,
+       "text": "Querabstand 13.2 px statt 24.0",
+       "wert": 13.2
+      },
+      {
+       "regel": "Q",
+       "x": 404.5,
+       "y": 110.0,
+       "text": "Querabstand 37.2 px statt 24.0",
+       "wert": 37.2
+      }
+     ]
+    },
+    "beta": {
+     "zaehl": {},
+     "linien": 8,
+     "perron_flaechen": [
+      1,
+      1
+     ],
+     "befunde": []
+    }
+   },
+   "strecken": {
+    "900": [
+     2,
+     2
+    ]
+   },
+   "ordner": "osm_buendel_knick_eng_d90"
+  },
+  {
+   "stufe": "osm",
+   "baustein": "buendel_knick_eng",
+   "variante": "a30",
+   "sekunden": 22,
+   "zaehl": {
+    "Q": 4
+   },
+   "befunde": [
+    {
+     "regel": "Q",
+     "x": -228.9,
+     "y": 29.3,
+     "text": "Querabstand 5.5 px statt 10.1",
+     "wert": 5.54
+    },
+    {
+     "regel": "Q",
+     "x": -228.9,
+     "y": 23.8,
+     "text": "Querabstand 15.6 px statt 10.1",
+     "wert": 15.62
+    },
+    {
+     "regel": "Q",
+     "x": 404.5,
+     "y": 123.2,
+     "text": "Querabstand 13.2 px statt 24.0",
+     "wert": 13.2,
+     "bahnhof": "alpha"
+    },
+    {
+     "regel": "Q",
+     "x": 404.5,
+     "y": 110.0,
+     "text": "Querabstand 37.2 px statt 24.0",
+     "wert": 37.2,
+     "bahnhof": "alpha"
+    }
+   ],
+   "bahnhof": {
+    "alpha": {
+     "zaehl": {
+      "Q": 2
+     },
+     "linien": 13,
+     "perron_flaechen": [
+      1,
+      1
+     ],
+     "befunde": [
+      {
+       "regel": "Q",
+       "x": 404.5,
+       "y": 123.2,
+       "text": "Querabstand 13.2 px statt 24.0",
+       "wert": 13.2
+      },
+      {
+       "regel": "Q",
+       "x": 404.5,
+       "y": 110.0,
+       "text": "Querabstand 37.2 px statt 24.0",
+       "wert": 37.2
+      }
+     ]
+    },
+    "beta": {
+     "zaehl": {},
+     "linien": 8,
+     "perron_flaechen": [
+      1,
+      1
+     ],
+     "befunde": []
+    }
+   },
+   "strecken": {
+    "900": [
+     0,
+     0
+    ]
+   },
+   "ordner": "osm_buendel_knick_eng_a30"
+  },
+  {
+   "stufe": "osm",
+   "baustein": "buendel_knick_eng",
+   "variante": "a60",
+   "sekunden": 21,
+   "zaehl": {
+    "Q": 4
+   },
+   "befunde": [
+    {
+     "regel": "Q",
+     "x": -199.3,
+     "y": 59.0,
+     "text": "Querabstand 5.5 px statt 10.1",
+     "wert": 5.54
+    },
+    {
+     "regel": "Q",
+     "x": -199.3,
+     "y": 53.5,
+     "text": "Querabstand 15.6 px statt 10.1",
+     "wert": 15.62
+    },
+    {
+     "regel": "Q",
+     "x": 404.5,
+     "y": 123.2,
+     "text": "Querabstand 13.2 px statt 24.0",
+     "wert": 13.2,
+     "bahnhof": "alpha"
+    },
+    {
+     "regel": "Q",
+     "x": 404.5,
+     "y": 110.0,
+     "text": "Querabstand 37.2 px statt 24.0",
+     "wert": 37.2,
+     "bahnhof": "alpha"
+    }
+   ],
+   "bahnhof": {
+    "alpha": {
+     "zaehl": {
+      "Q": 2
+     },
+     "linien": 13,
+     "perron_flaechen": [
+      1,
+      1
+     ],
+     "befunde": [
+      {
+       "regel": "Q",
+       "x": 404.5,
+       "y": 123.2,
+       "text": "Querabstand 13.2 px statt 24.0",
+       "wert": 13.2
+      },
+      {
+       "regel": "Q",
+       "x": 404.5,
+       "y": 110.0,
+       "text": "Querabstand 37.2 px statt 24.0",
+       "wert": 37.2
+      }
+     ]
+    },
+    "beta": {
+     "zaehl": {},
+     "linien": 8,
+     "perron_flaechen": [
+      1,
+      1
+     ],
+     "befunde": []
+    }
+   },
+   "strecken": {
+    "900": [
+     2,
+     2
+    ]
+   },
+   "ordner": "osm_buendel_knick_eng_a60"
+  },
+  {
+   "stufe": "osm",
    "baustein": "buendel_versatz",
    "variante": "d0",
-   "sekunden": 31,
+   "sekunden": 23,
    "zaehl": {
     "E": 2,
     "Z": 2
@@ -4025,7 +5431,7 @@
    "stufe": "osm",
    "baustein": "buendel_versatz",
    "variante": "d30",
-   "sekunden": 30,
+   "sekunden": 23,
    "zaehl": {
     "E": 2,
     "Z": 1
@@ -4089,7 +5495,7 @@
    "stufe": "osm",
    "baustein": "buendel_versatz",
    "variante": "dm30",
-   "sekunden": 30,
+   "sekunden": 23,
    "zaehl": {
     "E": 2,
     "Z": 2
@@ -4160,7 +5566,7 @@
    "stufe": "osm",
    "baustein": "buendel_versatz",
    "variante": "d60",
-   "sekunden": 31,
+   "sekunden": 23,
    "zaehl": {
     "E": 2,
     "Z": 2
@@ -4231,7 +5637,7 @@
    "stufe": "osm",
    "baustein": "buendel_versatz",
    "variante": "dm60",
-   "sekunden": 31,
+   "sekunden": 23,
    "zaehl": {
     "E": 2,
     "Z": 2
@@ -4302,7 +5708,7 @@
    "stufe": "osm",
    "baustein": "buendel_versatz",
    "variante": "d90",
-   "sekunden": 31,
+   "sekunden": 23,
    "zaehl": {
     "E": 2,
     "Z": 2
@@ -4373,7 +5779,7 @@
    "stufe": "osm",
    "baustein": "buendel_versatz",
    "variante": "a30",
-   "sekunden": 29,
+   "sekunden": 23,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -4412,7 +5818,7 @@
    "stufe": "osm",
    "baustein": "buendel_versatz",
    "variante": "a60",
-   "sekunden": 27,
+   "sekunden": 22,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -4437,12 +5843,12 @@
    },
    "strecken": {
     "900": [
-     4,
-     4
+     0,
+     0
     ],
     "901": [
-     4,
-     4
+     0,
+     0
     ]
    },
    "ordner": "osm_buendel_versatz_a60"
@@ -5092,8 +6498,8 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     1,
-     1
+     0,
+     0
     ]
    },
    "ordner": "vorlage_R4_d60"
@@ -5181,8 +6587,8 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     1,
-     1
+     0,
+     0
     ]
    },
    "ordner": "vorlage_R4_a60"
@@ -5305,8 +6711,8 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     2,
-     2
+     0,
+     0
     ]
    },
    "ordner": "vorlage_R5_d60"
@@ -5553,8 +6959,8 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     2,
-     2
+     0,
+     0
     ]
    },
    "ordner": "vorlage_R6_d60"
@@ -6035,8 +7441,8 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     2,
-     2
+     0,
+     0
     ]
    },
    "ordner": "vorlage_R8_d60"
@@ -6145,8 +7551,8 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     2,
-     2
+     0,
+     0
     ]
    },
    "ordner": "vorlage_R8_a60"
@@ -6305,8 +7711,8 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     1,
-     1
+     0,
+     0
     ]
    },
    "ordner": "vorlage_L1_d90"
@@ -6353,8 +7759,8 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     1,
-     1
+     0,
+     0
     ]
    },
    "ordner": "vorlage_L2_d0"
@@ -7283,8 +8689,8 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     1,
-     1
+     0,
+     0
     ]
    },
    "ordner": "vorlage_Z4_d0"
@@ -7684,8 +9090,8 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     1,
-     1
+     0,
+     0
     ]
    },
    "ordner": "vorlage_Z5_dm60"
@@ -7815,8 +9221,8 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     2,
-     2
+     0,
+     0
     ]
    },
    "ordner": "vorlage_Z6_d30"
@@ -8307,8 +9713,8 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     1,
-     2
+     0,
+     0
     ]
    },
    "ordner": "vorlage_Z8_d30"
@@ -8447,8 +9853,8 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     1,
-     2
+     0,
+     0
     ]
    },
    "ordner": "vorlage_Z8_dm60"
