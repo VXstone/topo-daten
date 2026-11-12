@@ -169,10 +169,45 @@ def abgleich(svg_text, N, TAGS, WAYN):
         for a in WAYN.get(w, []): way_von_knoten[a].add(w)
     typ = lambda n: TAGS.get(n, {}).get("railway")
     swt = lambda n: TAGS.get(n, {}).get("railway:switch", "")
-    osm_kn = {n: v for n, v in KN.items() if typ(n) in ("switch", "railway_crossing") or len(nachbarn[n]) >= 3}
-    # Plan-Gleis -> Ways (Knoten mit Plankoordinate auf dem Gleis)
     G = [g["geo"] for g in gleise]
     tree = STRtree(G) if G else None
+    # Versatz Netzmodell -> gezeichneter Plan (Ins 12.11.: ganzer Plan 10,8 px tiefer gezeichnet als im Netzmodell):
+    # je Weiche die senkrechten Abstände zu den Gleisen an ihrem x; der häufigste Wert gewinnt, wenn er klar vor 0 liegt
+    stimmen = collections.Counter()
+    for n, v in KN.items():
+        if typ(n) != "switch" or tree is None: continue
+        sonde = LineString([(v["x"], v["y"] - 60), (v["x"], v["y"] + 60)])
+        for j in tree.query(sonde):
+            q = G[int(j)].intersection(sonde)
+            for t in getattr(q, "geoms", [q]):
+                if not t.is_empty and t.geom_type == "Point": stimmen[round((t.y - v["y"]) * 2) / 2] += 1
+    versatz = 0.0
+    if stimmen:
+        dy, c = stimmen.most_common(1)[0]
+        if dy != 0 and c >= 3 and c > 1.5 * stimmen.get(0.0, 0): versatz = dy
+    if versatz:
+        KN = {n: dict(v, y=v["y"] + versatz) for n, v in KN.items()}
+    # mögliche Lagen eines Knotens quer: eigene Ebene und die Ebenen aller Gleisstücke, zu denen er gehört (eine Weiche
+    # hat ihre «Heimat» oft auf dem abzweigenden Gleis, gezeichnet wird sie am durchgehenden)
+    lagen = collections.defaultdict(set)
+    for gl in N["gleise"]:
+        if gl.get("y") is None: continue
+        for n in gl["knoten"]:
+            if n in KN: lagen[n].add(gl["y"] + versatz)
+    for n, v in KN.items(): lagen[n].add(v["y"])
+    # Knoten, die nicht auf einem gezeichneten Gleis liegen (Olten 12.11.: 18 % der Knoten um 1 Ebene daneben – das
+    # Netzmodell folgt einer späteren Ebenenverschiebung nicht): zusätzlich die nächste gezeichnete Lage an ihrem x
+    neben = set()
+    for n, v in KN.items():
+        p = Point(v["x"], v["y"])
+        if tree is None or any(G[int(j)].distance(p) < 1.5 for j in tree.query(p.buffer(1.5))): continue
+        neben.add(n)
+        sonde = LineString([(v["x"], v["y"] - 30), (v["x"], v["y"] + 30)])
+        ys = [t.y for j in tree.query(sonde) for q in [G[int(j)].intersection(sonde)] for t in getattr(q, "geoms", [q])
+              if not t.is_empty and t.geom_type == "Point"]
+        if ys: lagen[n].add(min(ys, key=lambda y: abs(y - v["y"])))
+    osm_kn = {n: v for n, v in KN.items() if typ(n) in ("switch", "railway_crossing") or len(nachbarn[n]) >= 3}
+    # Plan-Gleis -> Ways (Knoten mit Plankoordinate auf dem Gleis)
     g_ways = collections.defaultdict(set)
     for gl in N["gleise"]:
         for n in gl["knoten"]:
@@ -213,21 +248,38 @@ def abgleich(svg_text, N, TAGS, WAYN):
             bef("VA2", c[0], c[1], "im Plan als DKW gezeichnet, in OSM keine DKW/EKW in der Nähe")
     # Zuordnung OSM-Knoten <-> Plan-Abzweig eins zu eins (nächste zuerst). Längs des Gleises darf der Plan den Abzweig
     # verschieben (Spurwechsel in Standardlänge, Entzerrung): Abstand quer zählt vierfach, Grenze 40 px längs.
-    def kosten(v, p):
-        dx, dy = abs(v["x"] - p[0]), abs(v["y"] - p[1])
+    def kosten(n, p):
+        v = KN[n]; dx = abs(v["x"] - p[0])
+        dy = min(abs(y - p[1]) for y in lagen[n])
         return math.hypot(dx, 4 * dy) if dy < 10 else 1e9
-    paare = sorted((kosten(v, p), n, i) for n, v in osm_kn.items() for i, p in enumerate(PK))
+    paare = sorted((kosten(n, p), n, i) for n in osm_kn for i, p in enumerate(PK))
     zu_osm, zu_plan = {}, {}
     for c, n, i in paare:
         if c > 40: break
         if n in zu_osm or i in zu_plan: continue
         zu_osm[n] = i; zu_plan[i] = n
+    # zweiter Durchgang über die Topologie (Olten 12.11.: Weichenstrassen im Plan stark gestaucht, Abzweig > 40 px längs
+    # neben der OSM-Weiche): gleiche Lage quer, bis 150 px längs, und mindestens zwei Äste des Abzweigs gehören zu Ways
+    # dieser Weiche
+    def aeste(i):
+        return sum(1 for j in PK[i][3] if g_ways.get(j) and g_ways[j] & way_von_knoten.get(n_, set()))
+    paare2 = []
+    for n_ in osm_kn:
+        if n_ in zu_osm: continue
+        v = KN[n_]
+        for i, p in enumerate(PK):
+            if i in zu_plan: continue
+            dy = min(abs(y - p[1]) for y in lagen[n_]); dx = abs(v["x"] - p[0])
+            if dy < 4 and dx < 150 and aeste(i) >= 2: paare2.append((dx, n_, i))
+    for c, n_, i in sorted(paare2):
+        if n_ in zu_osm or i in zu_plan: continue
+        zu_osm[n_] = i; zu_plan[i] = n_
     # zwei OSM-Weichen dicht beieinander (< 12 m) zeichnet der Plan oft als einen Abzweig: zweite gilt als gezeichnet
     for n, v in osm_kn.items():
         if n in zu_osm: continue
         for m, i in list(zu_osm.items()):
             w = osm_kn[m]
-            if m in nachbarn[n] and kosten(v, PK[i]) < 40: zu_osm[n] = i; break
+            if m in nachbarn[n] and kosten(n, PK[i]) < 40: zu_osm[n] = i; break
     # VB1: OSM-Weiche ohne Abzweig im Plan (DKW zählt über VA1)
     for n, v in KN.items():
         if typ(n) != "switch" or "slip" in swt(n) or n in zu_osm: continue
@@ -265,7 +317,8 @@ def abgleich(svg_text, N, TAGS, WAYN):
             if L > 4:
                 c = G[int(j)].intersection(pb).centroid
                 bef("VD2", c.x, c.y, f"Gleis läuft {L:.0f} px durch ein Perron")
-    return BEF, dict(gleise=len(G), knoten_plan=len(PK), dkw_plan=len(dkw_plan), knoten_osm=len(osm_kn))
+    return BEF, dict(gleise=len(G), knoten_plan=len(PK), dkw_plan=len(dkw_plan), knoten_osm=len(osm_kn), versatz_y=versatz,
+                    netz_auf_plan=round(1 - len(neben) / max(1, len(KN)), 2))
 
 
 def main():

@@ -250,3 +250,14 @@ Baustein im Prüfstand (Schritt 1).
 **Backlog (Idee D. Eckenstein):** Topologie in zwei Durchgängen – einfache Lösung, Plausibilitätsprüfung («ach nee»),
 dann nur die auffällige Stelle mit feinerem Suchradius und Mustern (Schere, DKW, EKW, Durchschneidung). Siehe
 `IDEEN_REVIEW.md`.
+
+## Abgleich Plan gegen OSM (V1, 12.11.2026, D. Eckenstein «wir übersehen was»)
+Gemessen auf der gezeichneten Geometrie gegen OSM über das Netzmodell (`code/osm_abgleich.py`, Workflow «seite», je Plan
+`ergebnisse/seite/osm_abgleich/<key>.json`; Zähler messen die Topologie nicht). Alle V-Regeln zählen in der Regression zur Topologie.
+- VA1 OSM-DKW/EKW ist im Plan als DKW gezeichnet · VA2 keine DKW-Bögen ohne OSM-DKW/EKW
+- VB1 jede OSM-Weiche auf gezeichneten Gleisen hat einen Abzweig im Plan · VB2 jeder Abzweig im Plan (≥ 3 Richtungen) hat in OSM
+  eine Weiche, DKW oder Kreuzung (auch «Gleis über Gleis»; Niveautrennung = weisse Lücke, zählt nicht)
+- VC1 die am Abzweig angeschlossenen Gleise gehören in OSM zu dieser Weiche (z. B. Gleisfeld an Gl. 5 statt Gl. 4)
+- VD1 Gleis auf Gleis (> 12 px deckungsgleich) · VD2 Perron auf Gleis
+- Zuordnung eins zu eins: längs bis 40 px frei (gestauchte Weichenstrassen über die Ways bis 150 px), quer gleiche Ebene.
+- Kennzahl Hinweis-Abdeckung (`code/hinweis_abdeckung.py`, `ergebnisse/seite/abdeckung.md`): offene Hinweise mit Befund < 40 px.
