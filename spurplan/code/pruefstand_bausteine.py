@@ -208,6 +208,34 @@ def sagliains(N):
               railway="platform", ref="1")
 
 
+
+def _buendel_knick(N, knick, abstand):
+    """S1 (Sagliains-Portal, 12.11.2026): zwei Nebengleise laufen nördlich von Gl. 1 parallel (Querabstand «abstand» m) nach
+    Westen und knicken gemeinsam um «knick» Grad nach Norden zum Verlad «Delta». Geografisch bleiben sie parallel: der Knick
+    des äusseren (nördlichen) Gleises liegt um abstand·tan(knick/2) weiter östlich. Im Plan muss der Querabstand nach dem
+    Knick gleich sein wie davor (Messung QK)."""
+    g1, g2 = _doppelspur(N, [(0, "Alpha"), (3000, "Beta")], extra_schnitte=(200,))
+    phi = math.radians(180 - knick); u = (math.cos(phi), math.sin(phi)); L = 1300
+    w = g1.at(200, dict(railway="switch")); y1 = A; x_k1 = -540                 # inneres Gleis: Knick bei x_k1
+    ns1 = N.kette([w, (160, y1), (x_k1, y1), (x_k1 + u[0] * L, y1 + u[1] * L)], **MS, service="siding")
+    N.tag(ns1[-1], dict(railway="buffer_stop"))
+    # äusseres Gleis zweigt vom inneren ab (Weiche bei x = 60), Knick geografisch parallel
+    w2 = [n for n in ns1 if abs(N.xy(n)[0] - 120) < 25 and abs(N.xy(n)[1] - y1) < 0.5]
+    w2 = w2[0] if w2 else N.p(120, y1)
+    N.tag(w2, dict(railway="switch"))
+    y2 = y1 + abstand; x_k2 = x_k1 + abstand * math.tan(math.radians(knick) / 2)
+    ns2 = N.kette([w2, (90, y2), (x_k2, y2), (x_k2 + u[0] * L, y2 + u[1] * L)], **MS, service="siding")
+    N.tag(ns2[-1], dict(railway="buffer_stop"))
+    c = (x_k1 + u[0] * (L - 120), y1 + abstand / 2 + u[1] * (L - 120)); n = (-u[1], u[0])
+    N.p(c[0], c[1], dict(railway="station", name="Delta"))
+    N.flaeche([(c[0] + u[0] * 60 - n[0] * 4, c[1] + u[1] * 60 - n[1] * 4), (c[0] - u[0] * 60 - n[0] * 4, c[1] - u[1] * 60 - n[1] * 4),
+               (c[0] - u[0] * 60 - n[0] * 7, c[1] - u[1] * 60 - n[1] * 7), (c[0] + u[0] * 60 - n[0] * 7, c[1] + u[1] * 60 - n[1] * 7)],
+              railway="platform", ref="1")
+
+
+def buendel_knick(N): _buendel_knick(N, 60, A)
+def buendel_knick_eng(N): _buendel_knick(N, 30, 0.55 * A)
+
 # ------------------------------------------------------------------ Ebenen
 def unterwerfung(N):
     """Aarau West: Einspur 901 läuft nördlich neben der Doppelspur 900, taucht östlich Alpha darunter durch (Tunnel,
@@ -308,6 +336,8 @@ BAUSTEINE = {
     "zwischengerade": (zwischengerade, "geografischer Versatz 40 m zwischen zwei Bahnhöfen (Zwischengerade)", dict()),
     "gleissprung": (gleissprung, "durchgehendes Gleis rückt ohne Weiche nach aussen (Basel)", dict()),
     "perronformen": (perronformen, "Perronformen U und L an Kopfgleisen (Montreux, Thun, Basel)", dict(formen={"Alpha": {"U": 1, "L": 1}})),
+    "buendel_knick": (buendel_knick, "zwei Nebengleise knicken gemeinsam um 60°, Abstand 1 Ebene (Sagliains, S1)", dict()),
+    "buendel_knick_eng": (buendel_knick_eng, "zwei Nebengleise knicken gemeinsam um 30°, Abstand 0,55 Ebene (Sagliains, S1)", dict()),
     "buendel_versatz": (buendel_versatz, "Vierspur, Lücke zwischen den Paaren ½ Ebene breiter (Aarau Ost, R1b)", dict(perrons=2)),
 }
 

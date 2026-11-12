@@ -32,7 +32,7 @@ LANE_R = 24 * 0.42          # Ebenenabstand im Regionalplan (S = 0,42)
 LANE_B = 24.0               # Ebenenabstand im Bahnhofplan
 VARIANTEN = [("d0", 0, 0), ("d30", 30, 30), ("dm30", -30, -30), ("d60", 60, 60), ("dm60", -60, -60), ("d90", 90, 90),
              ("a30", 30, 0), ("a60", 60, 0)]          # (Name, Drehung der Geografie, Drehung der Bahnhöfe im Plan)
-REGELN = ["T", "PF", "X", "E", "K", "Q", "P", "F", "Z", "D", "G2", "G3", "G4", "G5", "G6", "G7", "G8"]   # Rangfolge: Topologie zuerst
+REGELN = ["T", "PF", "X", "E", "K", "Q", "P", "QK", "F", "Z", "D", "G2", "G3", "G4", "G5", "G6", "G7", "G8"]   # Rangfolge: Topologie zuerst
 ERWARTUNG = {       # je OSM-Baustein: gesamt = freie Gleisenden am Planrand (Abgänge; zu wenig = Strecke/Gleis fehlt, zu viel = lose
                     # Stücke), strecken {ref: Gleise} nur zur Auskunft, Perronflächen je Bahnhof, Formen (Flächen mit >1 Balken)
     "r3_kreuzung": dict(gesamt=2, strecken={"900": 1}, perrons={"alpha": 2}),
@@ -45,6 +45,8 @@ ERWARTUNG = {       # je OSM-Baustein: gesamt = freie Gleisenden am Planrand (Ab
     "zwischengerade": dict(gesamt=4, strecken={"900": 2}, perrons={"alpha": 2}),
     "gleissprung": dict(gesamt=4, strecken={"900": 2}, perrons={"alpha": 2}),
     "perronformen": dict(gesamt=4, strecken={"900": 2}, perrons={"alpha": 3}, formen={"alpha": 2}),
+    "buendel_knick": dict(gesamt=4, strecken={"900": 2}, perrons={"alpha": 2}),
+    "buendel_knick_eng": dict(gesamt=4, strecken={"900": 2}, perrons={"alpha": 2}),
     "buendel_versatz": dict(gesamt=8, strecken={"900": 2, "901": 2}, perrons={"alpha": 2}),
 }
 
@@ -135,7 +137,7 @@ def _auswerten(res, d, erw):
         b = f[:-len("_spurplan.svg")]; mb = PM.messen(open(os.path.join(d, f)).read(), LANE_B)
         bahnhof[b] = dict(zaehl=mb["zaehl"], linien=mb["linien"], perron_flaechen=mb["perron_flaechen"], befunde=mb["befunde"])
         for k, v in mb["zaehl"].items():
-            if k in ("Q", "P", "F", "K", "E", "X"): z[k] += v; bef += [dict(b_, bahnhof=b) for b_ in mb["befunde"] if b_["regel"] == k]
+            if k in ("Q", "P", "QK", "F", "K", "E", "X"): z[k] += v; bef += [dict(b_, bahnhof=b) for b_ in mb["befunde"] if b_["regel"] == k]
         n_erw = erw.get("perrons", {}).get(b)
         if n_erw and len(mb["perron_flaechen"]) < n_erw:
             z["PF"] += n_erw - len(mb["perron_flaechen"]); bef.append(dict(regel="PF", x=None, y=None, bahnhof=b, text=f"{len(mb['perron_flaechen'])} statt {n_erw} Perronflächen"))

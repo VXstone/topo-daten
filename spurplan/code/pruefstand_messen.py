@@ -8,9 +8,11 @@ wie der Plan gedreht ist und unter welchem Winkel ein Gleis ihn verlässt. Gemes
 
   Q   Querabstand: zwei parallele Gleisstücke (< 2°), > 2 Ebenen lang nebeneinander, Abstand 0,3–1,6 Ebenen, aber nicht
       eine Ebene (Toleranz 12 %)                                   -> «zu eng» / «zu weit»
+  QK  parallel durch den Knick: zwei Gleise knicken gemeinsam, Querabstand danach = davor (S1, 12.11.2026)
   P   parallel bleibt parallel: zwei Gleisstücke nebeneinander (< 1,6 Ebenen), > 2 Ebenen lang, mit 1,5–20° Winkel
       (eines läuft schräg weg)
   F   Pfeile im Gleisabstand: zwei gleichgerichtete Pfeile (< 5°) näher als 2,5 Ebenen, quer nicht ein Vielfaches der Ebene
+      (ausser das Bündel läuft parallel durch den Knick und behält seinen Abstand von davor, QK)
   K   nichts unter 90°: Ecke einer Linie, die um mehr als 90° umkehrt (Spitzkehre)
   Z   Zwischengerade: gerades Stück zwischen zwei Ecken (> 8°) kürzer als 2 Ebenen, ohne dass dort ein anderes Gleis
       anschliesst
@@ -157,12 +159,60 @@ def messen(svg_text, lane):
             elif w >= 1.5 and (key, "P") not in gesehen:
                 gesehen.add((key, "P")); bef("P", pm, f"Gleise nebeneinander nicht parallel ({w:.1f}°)", wert=round(w, 1))
 
+    # QK: parallel durch den Knick (S1, D. Eckenstein 12.11.2026, Sagliains): zwei Gleise, die nebeneinander gemeinsam knicken
+    # (Richtung davor und danach je parallel), haben danach denselben Querabstand wie davor. Gemessen an den Ecken der Linien
+    # (Ausrundung = Kontrollpunkt = Knickpunkt): Abstand der Geraden davor und der Geraden danach.
+    def _vorlauf(c, ui):
+        """wie weit ist die Gerade durch c in Richtung -ui lückenlos gezeichnet (alle Linien, kollinear)"""
+        n_ = np.array([-ui[1], ui[0]]); iv = []
+        for a, b, u, L, lj in segs:
+            if abs(float((a - c) @ n_)) > 0.6 or abs(float((b - c) @ n_)) > 0.6: continue
+            t0, t1 = sorted((-float((a - c) @ ui), -float((b - c) @ ui))); iv.append((t0, t1))
+        r = 0.0
+        for t0, t1 in sorted(iv):
+            if t0 > r + 1.0: break
+            r = max(r, t1)
+        return r
+    ecken_qk = []; qk_ok = []
+    for li, (p, w) in enumerate(polys):
+        for k in range(1, len(p) - 1):
+            u, v = p[k] - p[k - 1], p[k + 1] - p[k]
+            if np.linalg.norm(u) < 0.5 or np.linalg.norm(v) < 0.5: continue
+            if 8 < _winkel(u, v) < 90.5: ecken_qk.append((li, p[k], u / np.linalg.norm(u), v / np.linalg.norm(v), p[k + 1], p[k - 1]))
+    for i in range(len(ecken_qk)):
+        for j in range(i + 1, len(ecken_qk)):
+            l1, c1, ui1, uo1, e1, s1 = ecken_qk[i]; l2, c2, ui2, uo2, e2, s2 = ecken_qk[j]
+            if l1 == l2 or np.linalg.norm(c2 - c1) > 3 * lane: continue
+            if _winkel(ui1, ui2) > 2 or _winkel(uo1, uo2) > 2: continue
+            # Bündel: die Geraden danach laufen längs nebeneinander, die davor zeigen von derselben Seite her (nicht zwei
+            # Spurwechsel-Diagonalen verschiedener Weichen)
+            o2 = sorted((float((c2 - c1) @ uo1), float((e2 - c1) @ uo1))); L1 = float((e1 - c1) @ uo1)
+            if min(L1, o2[1]) - max(0.0, o2[0]) < 0.5 * lane: continue
+            if float((s1 - c1) @ uo1) > 0 or float((s2 - c2) @ uo2) > 0: continue
+            # beide liefen vor dem Knick wirklich nebeneinander: Gerade davor je ≥ 1 Ebene lückenlos gezeichnet (Gleis + Stummel)
+            r1_, r2_ = _vorlauf(c1, ui1), _vorlauf(c2, ui2)
+            if r1_ < lane or r2_ < lane: continue
+            p1_, p2_ = float(c1 @ ui1), float(c2 @ ui1)          # davor längs nebeneinander (nicht Fächer aus einer Weichenstrasse)
+            if min(p1_, p2_) - max(p1_ - r1_, p2_ - r2_) < lane: continue
+            # Spurwechsel-Treppe: die Schräge des einen endet auf der Geraden des anderen (davor oder danach) -> kein Bündel
+            def _auf(p_, c_, u_): return abs(float((p_ - c_) @ np.array([-u_[1], u_[0]]))) < 0.6
+            if _auf(e1, c2, ui2) or _auf(e2, c1, ui1) or _auf(s1, c2, uo2) or _auf(s2, c1, uo1): continue
+            if _auf(e1, e2, ui1) or _auf(s1, s2, uo1): continue      # beide Schrägen münden ins selbe Gleis (Zusammenführung)
+            d_in = abs(float((c2 - c1) @ np.array([-ui1[1], ui1[0]]))); d_out = abs(float((c2 - c1) @ np.array([-uo1[1], uo1[0]])))
+            if d_in < 0.2 * lane or d_in > 1.6 * lane: continue
+            if abs(d_out - d_in) <= max(1.5, 0.1 * d_in): qk_ok.append(((c1 + c2) / 2, d_in))
+            if abs(d_out - d_in) > max(1.5, 0.1 * d_in):
+                bef("QK", (c1 + c2) / 2, f"Querabstand nach dem Knick {d_out:.1f} px statt {d_in:.1f} px wie davor",
+                    wert=round(d_out - d_in, 1))
+
     # F: Pfeile
     for i in range(len(pfeile)):
         for j in range(i + 1, len(pfeile)):
             (p1, d1), (p2, d2) = pfeile[i], pfeile[j]
             if _winkel(d1, d2) > 5 or np.linalg.norm(p2 - p1) > 2.5 * lane: continue
             n = np.array([-d1[1], d1[0]]); q = abs(float((p2 - p1) @ n)); k = round(q / lane)
+            # S1: Bündel, das parallel durch den Knick läuft, behält seinen Abstand von davor (QK) – auch wenn das keine Ebene ist
+            if any(abs(q - d_) <= max(1.5, 0.1 * d_) and np.linalg.norm(m_ - (p1 + p2) / 2) < 4 * lane for m_, d_ in qk_ok): continue
             if k < 1 or abs(q - k * lane) > 0.15 * lane:
                 bef("F", (p1 + p2) / 2, f"Pfeile quer {q:.1f} px auseinander (Ebene {lane:.1f})", wert=round(q, 2))
 

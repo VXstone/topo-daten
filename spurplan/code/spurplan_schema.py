@@ -3683,8 +3683,13 @@ def _stub_buendel():
             c_, s_ = math.cos(A["a"]), math.sin(A["a"]); nx_, ny_ = -s_, c_
             if abs(nx_) < 0.2 or math.hypot(B["x1"] - A["x1"], B["y1"] - A["y1"]) > 3 * lane_: continue
             q_ = (B["x1"] - A["x1"]) * nx_ + (B["y1"] - A["y1"]) * ny_       # Querabstand (vorzeichenbehaftet)
-            if abs(q_) < 0.15 * lane_ or abs(q_) > 2.5 * lane_ or abs(abs(q_) - lane_) <= 0.1 * lane_: continue
-            shB = (math.copysign(lane_, q_) - q_) / nx_; shA = -shB          # B oder A waagrecht verschieben
+            # S1 (12.11.2026, Daniel: «parallel bleibt parallel auch beim Knicken»): Soll-Querabstand der Schrägen = Abstand der
+            # beiden Gleise vor dem Knick (Wurzeln auf waagrechten Gleisen: |Δy|), nicht fest eine Ebene. Knickversatz des
+            # äusseren Gleises ergibt sich daraus zu d·tan(θ/2) (Sagliains: 13,2 px, 60° -> 7,6 px statt 20 px).
+            soll_ = abs(B["y0"] - A["y0"]) if CFG.get("stub_buendel_davor", True) else lane_
+            if soll_ < 0.15 * lane_: soll_ = lane_                           # Wurzeln auf demselben Gleis: Ebenenabstand
+            if abs(q_) < 0.15 * lane_ or abs(q_) > 2.5 * lane_ or abs(abs(q_) - soll_) <= min(1.0, 0.1 * soll_): continue
+            shB = (math.copysign(soll_, q_) - q_) / nx_; shA = -shB          # B oder A waagrecht verschieben
             # welcher Stummel rückt: der, der dabei quer von den Hauptgleisen weg geht (sonst landet er im Regionalplan
             # auf dem Streckengleis, Sagliains gedreht); ohne Hauptgleise der Knick nach aussen
             def _weg(S_, sh_):
