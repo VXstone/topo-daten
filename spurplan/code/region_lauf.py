@@ -107,6 +107,7 @@ def _bahnhof(n):
     ok = os.path.exists(os.path.join(WORK, f"{b}_ports.json")) and r.returncode == 0
     bericht["bahnhoefe"][b] = dict(name=n["name"], ok=ok, befunde=befund, optionen=opt)
     if os.path.exists(os.path.join(WORK, f"{b}_spurplan.svg")): shutil.copy(os.path.join(WORK, f"{b}_spurplan.svg"), OUT)
+    if os.path.exists(os.path.join(WORK, f"{b}_netz.json")): shutil.copy(os.path.join(WORK, f"{b}_netz.json"), OUT)   # V1 OSM-Abgleich (12.11.)
 from concurrent.futures import ThreadPoolExecutor
 with ThreadPoolExecutor(max_workers=os.cpu_count() or 2) as ex:
     list(ex.map(_bahnhof, [n for n in T["nodes"] if n["kind"] == "station" and n["name"] in key_of]))

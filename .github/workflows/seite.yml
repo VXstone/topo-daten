@@ -9,7 +9,7 @@ on:
       label: { description: "Label des Regionalplans Olten", required: false, default: "Region Olten" }
   push:
     branches: [main]
-    paths: ["spurplan/werkstatt/**", "spurplan/hinweise.json", "spurplan/code/ausschnitte.py", "spurplan/code/alle_plaene_pruefen.py", "spurplan/abnahmen.json"]
+    paths: ["spurplan/werkstatt/**", "spurplan/hinweise.json", "spurplan/hinweise_offen.json", "spurplan/code/osm_abgleich.py", "spurplan/code/hinweis_abdeckung.py", "spurplan/code/ausschnitte.py", "spurplan/code/alle_plaene_pruefen.py", "spurplan/abnahmen.json"]
   workflow_run:
     workflows: ["regionen", "plaene", "pruefstand"]
     types: [completed]
@@ -52,6 +52,7 @@ jobs:
           for b in $(python3 -c "import json;print(' '.join(k for k in json.load(open('spurplan/bahnhoefe.json')) if not k.startswith('_')))"); do
             git show origin/ergebnisse:ergebnisse/$b/spurplan.svg > spurplan/werkstatt/olten/feedback/repo_$b.svg 2>/dev/null || rm -f spurplan/werkstatt/olten/feedback/repo_$b.svg
             git show origin/ergebnisse:ergebnisse/$b/netz.json > spurplan/werkstatt/olten/feedback/repo_${b}_netz.json 2>/dev/null || rm -f spurplan/werkstatt/olten/feedback/repo_${b}_netz.json
+            git show origin/ergebnisse:ergebnisse/$b/netz_befunde.json > /tmp/netzbef_$b.json 2>/dev/null || rm -f /tmp/netzbef_$b.json   # V1 Hinweis-Abdeckung
           done
           # Blaupausen-Prüfstand (8.11.2026): Kontaktbogen + Kartenlabel für den Plan «Prüfstand» (Werkzeugkasten)
           git show origin/ergebnisse:ergebnisse/pruefstand/pruefstand.svg > spurplan/werkstatt/olten/feedback/pruefstand.svg 2>/dev/null || rm -f spurplan/werkstatt/olten/feedback/pruefstand.svg
@@ -74,12 +75,26 @@ jobs:
           python3 feedback/bauen.py "${{ github.event.inputs.label || 'Region Olten' }}" feedback/region.svg 2>&1 | tee /tmp/seite/log.txt
           cp feedback/index.html /tmp/seite/
           python3 ../../code/ausschnitte.py /tmp/seite/plaene ../../hinweise.json /tmp/seite/ausschnitte 2>&1 | tee -a /tmp/seite/log.txt
+      - name: Abgleich Plan gegen OSM und Hinweis-Abdeckung (V1, 12.11.2026, D. Eckenstein «wir übersehen was»)
+        run: |
+          # Netzmodelle (<key>.json) aller Pläne, die aus Code kommen: Repo-Bahnhöfe, Werkstatt Olten/NE, Linien-Regionen
+          mkdir -p /tmp/seite/netz /tmp/seite/netzbefunde
+          for f in spurplan/werkstatt/olten/feedback/repo_*_netz.json; do [ -f "$f" ] || continue; b=$(basename $f _netz.json); cp $f /tmp/seite/netz/${b#repo_}.json; done
+          for d in spurplan/werkstatt/olten spurplan/werkstatt/ne; do for f in $d/*_netz.json; do [ -f "$f" ] || continue; cp $f /tmp/seite/netz/$(basename $f _netz.json).json; done; done
+          for r in $(git ls-tree --name-only origin/ergebnisse ergebnisse/ | grep '/region_' || true); do rr=$(basename $r); rr=${rr#region_}
+            for f in $(git ls-tree --name-only origin/ergebnisse $r/ | grep '_netz.json$' || true); do git show origin/ergebnisse:$f > /tmp/seite/netz/${rr}__$(basename $f _netz.json).json; done; done
+          for f in /tmp/netzbef_*.json; do [ -f "$f" ] || continue; b=$(basename $f .json); cp $f /tmp/seite/netzbefunde/${b#netzbef_}.json; done
+          ls /tmp/seite/netz | wc -l
+          python3 spurplan/code/osm_abgleich.py --alle /tmp/seite/plaene /tmp/seite/netz --osm /tmp/schweiz_bahn.json.gz --out /tmp/seite/osm_abgleich 2>&1 | tee /tmp/seite/osm_abgleich_log.txt | tail -3
+          python3 spurplan/code/hinweis_abdeckung.py spurplan/hinweise_offen.json /tmp/seite/plaene /tmp/seite/osm_abgleich,/tmp/seite/netzbefunde \
+            --regel --messen --netz /tmp/seite/netz --json /tmp/seite/abdeckung.json --md /tmp/seite/abdeckung.md 2>&1 | tee -a /tmp/seite/log.txt | head -1
+          rm -rf /tmp/seite/netz /tmp/seite/netzbefunde      # nicht auf den Branch (je Lauf ~3 MB)
       - name: Regression über alle Pläne (6.11.2026, Befund Olten) – Tabelle, Differenzbilder, Einordnung, Kartenlabel
         run: |
           git fetch -q --depth 400 origin ergebnisse:refs/remotes/origin/ergebnisse -f || true
           SEIT=$(python3 -c "import json;print(json.load(open('spurplan/veroeffentlicht.json'))['ergebnisse'])" 2>/dev/null || true)
           python3 spurplan/code/alle_plaene_pruefen.py spurplan/abnahmen.json /tmp/seite/regression \
-            --neu /tmp/seite/plaene --seite /tmp/seite/index.html ${SEIT:+--seit $SEIT} 2>&1 | tee -a /tmp/seite/log.txt || true
+            --neu /tmp/seite/plaene --osm-abgleich /tmp/seite/osm_abgleich --seite /tmp/seite/index.html ${SEIT:+--seit $SEIT} 2>&1 | tee -a /tmp/seite/log.txt || true
       - name: Ergebnisse auf Branch «ergebnisse» (nur ergebnisse/seite ersetzen)
         if: always()
         run: |

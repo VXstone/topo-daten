@@ -11,6 +11,8 @@ Vergleich je Plan (ergebnisse/seite/plaene/<key>.svg auf dem Branch «ergebnisse
   - nicht abgenommen: zuletzt veröffentlichte Fassung (--seit <commit auf ergebnisse>) bzw. erste Fassung gegen heute
 «heute» = --neu <ordner> (Workflow seite: frisch gerechnete Pläne vor dem Commit), sonst der Stand von --ref.
 --seite <index.html>: Kartenlabel der geänderten Pläne und Untertitel um die Einordnung ergänzen (Workflow seite).
+--osm-abgleich <ordner>: Befunde von osm_abgleich.py (V1, 12.11.2026) je Plan; die OSM-Regeln VA/VB/VC/VD zählen zur
+Topologie. Alt-Stand aus ergebnisse/seite/osm_abgleich/<key>.json der Basis-Fassung (fehlt er, nur der heutige Stand).
 
 Einordnung je geändertem Plan (Wunsch D. Eckenstein 6.11.: «vorschlagen, wo ein Plan verändert, aber vielleicht
 verbessert wurde – ich schaue rasch drauf»). Gemessen wird nur auf den SVGs, alt gegen neu:
@@ -30,9 +32,18 @@ ABN, OUT = sys.argv[1], sys.argv[2]
 opt = lambda n: sys.argv[sys.argv.index(n) + 1] if n in sys.argv else None
 REF = opt("--ref") or "origin/ergebnisse"
 SEIT, NEU, SEITE = opt("--seit"), opt("--neu"), opt("--seite")
+OSA = opt("--osm-abgleich")
 HERE = os.path.dirname(os.path.abspath(__file__))
 os.makedirs(OUT, exist_ok=True)
-TOPO = ("G5", "G6", "G7", "G8")
+TOPO = ("G5", "G6", "G7", "G8", "VA1", "VA2", "VB1", "VB2", "VC1", "VD1", "VD2")   # V*: OSM-Abgleich (V1, 12.11.)
+
+
+def osa_zahlen(raw):
+    try:
+        d = json.loads(raw)
+        return dict(collections.Counter(b["regel"] for b in d.get("befunde", [])))
+    except Exception:
+        return None
 
 
 def git(*a):
@@ -127,7 +138,11 @@ for p in PLANS:
                         "--px", "1600"], capture_output=True, text=True)
     m = re.search(r"Differenzbild: (\d+)", r.stdout + r.stderr)
     ma, mn = messen(alt, k), messen(neu, k)
+    v_neu = osa_zahlen(open(os.path.join(OSA, f"{k}.json")).read()) if OSA and os.path.exists(os.path.join(OSA, f"{k}.json")) else None
+    v_alt = osa_zahlen(git("show", f"{base[0]}:ergebnisse/seite/osm_abgleich/{k}.json") or b"") if v_neu is not None else None
+    if v_neu is not None and v_alt is not None: ma.update(v_alt); mn.update(v_neu)
     e, delta = einordnen(ma, mn)
+    if v_neu is not None and v_alt is None: delta += (" · " if delta else "") + "OSM " + (", ".join(f"{r} {c}" for r, c in sorted(v_neu.items())) or "ok") + " (kein Alt-Stand)"
     zeilen.append(dict(z, stellen=int(m.group(1)) if m else -1, letzte_aenderung=log[0][1][:16],
                        einordnung=e, delta=delta, alt=ma, neu=mn))
     print(f"{k:28s} {art:32s} {zeilen[-1]['stellen']:>4} Stellen  {e}  {delta}")

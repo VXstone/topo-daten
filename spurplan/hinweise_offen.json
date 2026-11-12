@@ -1,0 +1,652 @@
+[
+{
+"id": "0bw9nnym5m5luilotwzk",
+"plan": "solothurn",
+"bahnhof": "solothurn",
+"lx": 1429.3,
+"ly": 439.9,
+"x": 1429.3,
+"y": 439.9,
+"text": "Gleis nach unten, Knick, über anderen Gleisen nach oben",
+"anker": {
+"id": 630418223,
+"dx": 26.4,
+"dy": -2.5
+}
+},
+{
+"id": "0fpodu3uvthbowtib2di",
+"plan": "solothurn",
+"bahnhof": "solothurn",
+"lx": 1494.7,
+"ly": 375.8,
+"x": 1494.7,
+"y": 375.8,
+"text": "sauberes Gleis ins Nichts",
+"anker": {
+"id": 630418278,
+"dx": 8,
+"dy": -0.6
+}
+},
+{
+"id": "0k4jinypa0yqoixbgsqa",
+"plan": "region",
+"bahnhof": null,
+"lx": null,
+"ly": null,
+"x": 2140,
+"y": -436.5,
+"text": "Eppenbergtunnel Weichen/Stummel"
+},
+{
+"id": "2vxh52qp9dvt8ftf9x4u",
+"plan": "region_mob",
+"bahnhof": "chamby",
+"lx": 402.6,
+"ly": 122.4,
+"x": -4014.1,
+"y": 631.7,
+"text": "Perron und Gleis verdreht, Mittelperron?"
+},
+{
+"id": "33fs1o9c5jw7adqa8kbo",
+"plan": "konolfingen",
+"bahnhof": "konolfingen",
+"lx": 581.9,
+"ly": 305.5,
+"x": 581.9,
+"y": 305.5,
+"text": "Gleis unter Gleis, sehr steil",
+"anker": {
+"id": 223385037,
+"dx": -18,
+"dy": 35.9
+}
+},
+{
+"id": "3ctbr5ui9sy7up8oldd4",
+"plan": "region_mob",
+"bahnhof": "montreux",
+"lx": 768.8,
+"ly": 57.2,
+"x": -4292.5,
+"y": 2346.7,
+"text": "Knubbel, keine Gegen-S-Kurve"
+},
+{
+"id": "3d6h8ove5to3gkvyapj0",
+"plan": "konolfingen",
+"bahnhof": "konolfingen",
+"lx": 390.2,
+"ly": 331.2,
+"x": 390.2,
+"y": 331.2,
+"text": "Abstellgleise über Streckengleise",
+"anker": {
+"id": 1689230883,
+"dx": 8.3,
+"dy": -10.4
+}
+},
+{
+"id": "3za5possrk2xb0k94bb1",
+"plan": "region",
+"bahnhof": null,
+"lx": null,
+"ly": null,
+"x": -54,
+"y": 763.7,
+"text": "90 Grad, statt 2 Weichen nur eine"
+},
+{
+"id": "4xdm1q0bw47yeso6zkbv",
+"plan": "region",
+"bahnhof": null,
+"lx": null,
+"ly": null,
+"x": 34.7,
+"y": 924.7,
+"text": "Gleisanschluss dazwischen, Verbindungen prüfen"
+},
+{
+"id": "5yz7wx21homjzvjtmvyq",
+"plan": "region_mob",
+"bahnhof": "montreux",
+"lx": 592.4,
+"ly": 280.5,
+"x": -4438.1,
+"y": 2582.9,
+"text": "Perron zwischen 4 und 3"
+},
+{
+"id": "6gk4wv90y3k15001yh4l",
+"plan": "region_mob",
+"bahnhof": "zweisimmen",
+"lx": 413.2,
+"ly": 129.6,
+"x": 746.3,
+"y": -946.3,
+"text": "noch ein Gleis links raus"
+},
+{
+"id": "6rwynvciruw8szug0pe2",
+"plan": "region_mob",
+"bahnhof": "montreux",
+"lx": 597.6,
+"ly": 341.9,
+"x": -4476.2,
+"y": 2229.9,
+"text": "keine Mittelperrons Normalspur"
+},
+{
+"id": "7ma7j244xvt4xey2r2hg",
+"plan": "solothurn",
+"bahnhof": "solothurn",
+"lx": 1702.5,
+"ly": 192.8,
+"x": 1702.5,
+"y": 192.8,
+"text": "Fenster bis Abzweig",
+"anker": {
+"id": 630418379,
+"dx": 1.4,
+"dy": 8.4
+}
+},
+{
+"id": "8bce2usmmz5hf4zrkuyo",
+"plan": "konolfingen",
+"bahnhof": "konolfingen",
+"lx": 711.7,
+"ly": 340.1,
+"x": 711.7,
+"y": 340.1,
+"text": "Gleise hin und her, Pfeile retour",
+"anker": {
+"id": 1689231120,
+"dx": -1.1,
+"dy": -1.5
+}
+},
+{
+"id": "8gyimaw4jzto45gfh0bn",
+"plan": "region_mob",
+"bahnhof": "montreux",
+"lx": 642,
+"ly": 133.4,
+"x": -4416.3,
+"y": 2163.5,
+"text": "Knick vor Tunnelportal"
+},
+{
+"id": "afktn50f0mufp2165915",
+"plan": "region_mob",
+"bahnhof": "montreux",
+"lx": 648,
+"ly": 297.3,
+"x": -4448.5,
+"y": 2224.3,
+"text": "Mindestabstand"
+},
+{
+"id": "b3j5iaapufv3ki8xrzqx",
+"plan": "region_mob",
+"bahnhof": "zweisimmen",
+"lx": 340.5,
+"ly": 233.8,
+"x": 790.1,
+"y": -915.7,
+"text": "DKW?"
+},
+{
+"id": "bhlvd3vjzxa9iyxg9rhe",
+"plan": "region",
+"bahnhof": "aarau",
+"lx": 2126.7,
+"ly": 310.4,
+"x": 3155.1,
+"y": -448.1,
+"text": "4/5 Hauptachsen gerade"
+},
+{
+"id": "ce8rilwzf07i0nr6qe0x",
+"plan": "solothurn",
+"bahnhof": "solothurn",
+"lx": 1464.4,
+"ly": 390.1,
+"x": 1464.4,
+"y": 390.1,
+"text": "90 Grad",
+"anker": {
+"id": 630418283,
+"dx": 1,
+"dy": -12.7
+}
+},
+{
+"id": "cw2juyevx8z26ipfyp3o",
+"plan": "region",
+"bahnhof": "aarau",
+"lx": 692,
+"ly": 102.9,
+"x": 2552.6,
+"y": -535.3,
+"text": "Tunnel nur ein Gleis unter den anderen durch"
+},
+{
+"id": "dmr7iutmnhu3tb3dp0nr",
+"plan": "region",
+"bahnhof": "olten_ost",
+"lx": 332.5,
+"ly": 135.7,
+"x": 195.1,
+"y": -295.1,
+"text": "Weichen sehen wie DKW aus"
+},
+{
+"id": "es9y6uzudlyfzg4bzeru",
+"plan": "region_mob",
+"bahnhof": "montreux",
+"lx": 473.6,
+"ly": 158.6,
+"x": -4482.8,
+"y": 2137.2,
+"text": "Perronnummern braun Meterspur"
+},
+{
+"id": "ezxju35sv6pzpjgvpfud",
+"plan": "konolfingen",
+"bahnhof": "konolfingen",
+"lx": 529.7,
+"ly": 171,
+"x": 529.7,
+"y": 171,
+"text": "grünes Perron?",
+"anker": {
+"id": 1866974722,
+"dx": 2,
+"dy": -2.6
+}
+},
+{
+"id": "f3mpjp2t1fhl7bkq6mth",
+"plan": "region",
+"bahnhof": "olten",
+"lx": 1628,
+"ly": 374.9,
+"x": 65.1,
+"y": -178.5,
+"text": "nicht ausgerundeter Knick"
+},
+{
+"id": "fmlk3ybhicj80yggwifb",
+"plan": "region",
+"bahnhof": "aarau",
+"lx": 2482,
+"ly": 262.8,
+"x": 3304.3,
+"y": -468.1,
+"text": "Zwischengeraden"
+},
+{
+"id": "foiync5mm6ftfi9uy4j3",
+"plan": "solothurn",
+"bahnhof": "solothurn",
+"lx": 1706.2,
+"ly": 278.5,
+"x": 1706.2,
+"y": 278.5,
+"text": "Gleis nicht mehr lang (Pfeil)"
+},
+{
+"id": "fuyqocrigqz00qtkcehx",
+"plan": "region_vereina",
+"bahnhof": "sagliains_sasslatsch",
+"lx": 291.7,
+"ly": 131.2,
+"x": 587,
+"y": 417.7,
+"text": "fettes Gleis endet an Perron/Autoverlad"
+},
+{
+"id": "i06se1f40mrchsbf0g8p",
+"plan": "region_mob",
+"bahnhof": "glion",
+"lx": 698.6,
+"ly": 264.3,
+"x": -3528.4,
+"y": 2609.7,
+"text": "Symbol Schiebebühne"
+},
+{
+"id": "j57vc7k78xhb5qgqsbpp",
+"plan": "region",
+"bahnhof": "olten_ost",
+"lx": 321.4,
+"ly": 111.7,
+"x": 184.1,
+"y": -296.1,
+"text": "Knubbel vom geraden Strang"
+},
+{
+"id": "jbs12ofny2vyq8mel03r",
+"plan": "region",
+"bahnhof": null,
+"lx": null,
+"ly": null,
+"x": -77.4,
+"y": 762,
+"text": "fehlen Weichen"
+},
+{
+"id": "jxpf1k85qn2fh3prrfzg",
+"plan": "region_vereina",
+"bahnhof": null,
+"lx": null,
+"ly": null,
+"x": -194.7,
+"y": -161.3,
+"text": "S-Kurve Klosters"
+},
+{
+"id": "jy8ro0t1s42ghqu25tyk",
+"plan": "region_mob",
+"bahnhof": "zweisimmen",
+"lx": 321.8,
+"ly": 182.9,
+"x": 768.7,
+"y": -907.9,
+"text": "Zwischengerade?"
+},
+{
+"id": "k4qi1w5enz2zcmznepym",
+"plan": "region_mob",
+"bahnhof": "rossiniere",
+"lx": 354.3,
+"ly": 121.4,
+"x": -1946.2,
+"y": -8.5,
+"text": "Stumpen?"
+},
+{
+"id": "ldork0s4anwq6igtf5f9",
+"plan": "region",
+"bahnhof": "aarau",
+"lx": 830.1,
+"ly": 419.6,
+"x": 2610.5,
+"y": -402.3,
+"text": "was ist das für ein Gleis"
+},
+{
+"id": "ldwowucfnh2qif6yluty",
+"plan": "region_mob",
+"bahnhof": "zweisimmen",
+"lx": 529.4,
+"ly": 249.3,
+"x": 796.6,
+"y": -995.1,
+"text": "Versatz?"
+},
+{
+"id": "lhm4v13k2f7vl5lbeq5n",
+"plan": "region",
+"bahnhof": "aarau",
+"lx": 2140.4,
+"ly": 377.5,
+"x": 3160.9,
+"y": -419.9,
+"text": "Stummel richtige Seite?"
+},
+{
+"id": "lld9ys5a6ksdz6xxwrcy",
+"plan": "region",
+"bahnhof": "olten",
+"lx": 79.3,
+"ly": 211.6,
+"x": -3.5,
+"y": 472,
+"text": "Anschlussgleise südlich Olten"
+},
+{
+"id": "lotw7vnqxq7t51c29rj2",
+"plan": "region_mob",
+"bahnhof": "chamby",
+"lx": 508.9,
+"ly": 94.9,
+"x": -4001.7,
+"y": 587.3,
+"text": "Pfeil andere Seite, Stumpen am Perron"
+},
+{
+"id": "mkadt5lcknnodig435gz",
+"plan": "region",
+"bahnhof": "aarau",
+"lx": 2923.4,
+"ly": 391.8,
+"x": 3489.7,
+"y": -413.9,
+"text": "Meterspur-Perron?"
+},
+{
+"id": "mp8hdojmwhdmhlb36ou3",
+"plan": "region_mob",
+"bahnhof": "montreux",
+"lx": 446,
+"ly": 219.1,
+"x": -4478.5,
+"y": 2529.8,
+"text": "90 Grad?"
+},
+{
+"id": "obvpbw7iesse9tor1zun",
+"plan": "solothurn",
+"bahnhof": "solothurn",
+"lx": 1147.4,
+"ly": 439.5,
+"x": 1147.4,
+"y": 439.5,
+"text": "90 Grad Knick?",
+"anker": {
+"id": 630417578,
+"dx": -0.5,
+"dy": -0.5
+}
+},
+{
+"id": "q31m0fj39c6p1jm54tpc",
+"plan": "region_mob",
+"bahnhof": "zweisimmen",
+"lx": 536.7,
+"ly": 178.3,
+"x": 766.8,
+"y": -998.1,
+"text": "Meterspur an 6/7 nicht angebunden"
+},
+{
+"id": "qotw266rjaowjqktoj8c",
+"plan": "vereina__klosters_platz",
+"bahnhof": "vereina__klosters_platz",
+"lx": 489.2,
+"ly": 167.3,
+"x": 489.2,
+"y": 167.3,
+"text": "Mittelperron zwischen 2 und 3"
+},
+{
+"id": "r9xva9h38qq0t8tavmi0",
+"plan": "region",
+"bahnhof": "aarau",
+"lx": 2570,
+"ly": 256.9,
+"x": 3341.3,
+"y": -470.6,
+"text": "Stummel korrekt?"
+},
+{
+"id": "rap4p8fy16nt5unujzwl",
+"plan": "region_mob",
+"bahnhof": "le_tremblex",
+"lx": 415.2,
+"ly": 117.7,
+"x": -3103.4,
+"y": 2260.9,
+"text": "Nebengleis nicht fett"
+},
+{
+"id": "t6x02b9nuadgwrwfht9z",
+"plan": "solothurn",
+"bahnhof": "solothurn",
+"lx": 1480.8,
+"ly": 383.2,
+"x": 1480.8,
+"y": 383.2,
+"text": "Kreuzung in OSM?",
+"anker": {
+"id": 630418278,
+"dx": -5.9,
+"dy": 6.8
+}
+},
+{
+"id": "tnvp35kihgn0yhzk5wmn",
+"plan": "konolfingen",
+"bahnhof": "konolfingen",
+"lx": 375.7,
+"ly": 318.2,
+"x": 375.7,
+"y": 318.2,
+"text": "Knubbel kurz gerade",
+"anker": {
+"id": 1689230957,
+"dx": -5.9,
+"dy": 0.6
+}
+},
+{
+"id": "ttv8jrr9c8gqpc23h0sj",
+"plan": "konolfingen",
+"bahnhof": "konolfingen",
+"lx": 664.8,
+"ly": 197.4,
+"x": 664.8,
+"y": 197.4,
+"text": "DKW?",
+"anker": {
+"id": 254420784,
+"dx": -5.7,
+"dy": -0.2
+}
+},
+{
+"id": "u13hvm3y403lpjp18hvb",
+"plan": "region_mob",
+"bahnhof": "zweisimmen",
+"lx": 517.3,
+"ly": 168.9,
+"x": 762.8,
+"y": -990,
+"text": "Stumpen Normalspur?"
+},
+{
+"id": "uyuegakpencttc2e6isq",
+"plan": "solothurn",
+"bahnhof": "solothurn",
+"lx": 1175.4,
+"ly": 504.9,
+"x": 1175.4,
+"y": 504.9,
+"text": "Perron auf Gleis, gerader Knubbel",
+"anker": {
+"id": 630417903,
+"dx": -7,
+"dy": 62.5
+}
+},
+{
+"id": "v2w8ngtlrv27cgm80m85",
+"plan": "region_mob",
+"bahnhof": "glion",
+"lx": 441.3,
+"ly": 231,
+"x": -3635,
+"y": 2587.4,
+"text": "Riesenabstand Schiebebühne"
+},
+{
+"id": "vnyq1jtx6sv6gc2scn80",
+"plan": "region",
+"bahnhof": "aarau",
+"lx": 2600.6,
+"ly": 313.4,
+"x": 3354.1,
+"y": -446.9,
+"text": "Zwischengerade"
+},
+{
+"id": "wvrp8v21eugz9uefje0v",
+"plan": "region_mob",
+"bahnhof": "zweisimmen",
+"lx": 407.8,
+"ly": 186.6,
+"x": 770.3,
+"y": -944,
+"text": "kreuzt das andere oder biegt von DKW falsch ab"
+},
+{
+"id": "wyu2ste46nymc9u2xskt",
+"plan": "region_mob",
+"bahnhof": "glion",
+"lx": 484,
+"ly": 306.5,
+"x": -3619.6,
+"y": 2620.4,
+"text": "dieser Perron?"
+},
+{
+"id": "xke0q8que3hufliwbag9",
+"plan": "solothurn",
+"bahnhof": "solothurn",
+"lx": 1322,
+"ly": 235.1,
+"x": 1322,
+"y": 235.1,
+"text": "Zwischengerade, doppelter Abstand",
+"anker": {
+"id": 630418171,
+"dx": 0.2,
+"dy": 2.7
+}
+},
+{
+"id": "z6f23710rz65dpwpq6ky",
+"plan": "konolfingen",
+"bahnhof": "konolfingen",
+"lx": 696.5,
+"ly": 328.3,
+"x": 696.5,
+"y": 328.3,
+"text": "DKW?",
+"anker": {
+"id": 1689231120,
+"dx": -16.3,
+"dy": -13.3
+}
+},
+{
+"id": "zcz3v5yhncmbd21obybz",
+"plan": "solothurn",
+"bahnhof": "solothurn",
+"lx": 890.4,
+"ly": 294.4,
+"x": 890.4,
+"y": 294.4,
+"text": "nicht verbunden",
+"anker": {
+"id": 630417304,
+"dx": -1.5,
+"dy": 9.7
+}
+}
+]
