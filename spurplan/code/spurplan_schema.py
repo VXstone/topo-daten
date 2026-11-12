@@ -1552,6 +1552,47 @@ if CFG.get("randzone", False):
 BUENDEL_KOMPAKT = []; KOMPAKT_HOME = {}
 if CFG.get("buendel_kompakt", True) and C:
     _hpk = lambda c: any(sg["pax"] and not sg["tags"].get("service") for sg in c["segs"])
+    # Verbindung als Schräge (12.11.2026, Hinweis Daniel Konolfingen: «da ist eine Zwischengerade und die verhindert, dass
+    # 2 und 3 im ein-Gleis-Abstand zueinander sind»): eine Kette aus genau einem Verbindungsgleis ohne Nummer (service
+    # siding/crossover oder ohne, ≤ 150 m, 3–7 m quer), die zwei Hauptgleise verbindet und allein auf einer Ebene zwischen
+    # deren Ebenen liegt, ist ein Gleiswechsel: Schräge statt eigener Ebene (Konolfingen Way 156705005, Gl. 2 → 3).
+    # cfg «verbindung_schraeg».
+    if CFG.get("verbindung_schraeg", True):
+        _n2h = collections.defaultdict(list)
+        for c in C:
+            if _hpk(c):
+                for sg in c["segs"]:
+                    for n_ in (sg["nodes"][0], sg["nodes"][-1]): _n2h[n_].append(c)
+        for c in list(C):
+            if len(c["segs"]) != 1 or _hpk(c): continue
+            sg = c["segs"][0]
+            if sg["pax"] or sg["ref"] or sg["tags"].get("railway:track_ref") or sg["tags"].get("service") not in (None, "siding", "crossover"): continue
+            if sg["s1"] - sg["s0"] > CFG.get("verbindung_schraeg_m", 150): continue
+            if not 3.0 <= abs(float(sg["p"][-1, 1] - sg["p"][0, 1])) <= 7.0: continue
+            ha = list({id(o): o for o in _n2h.get(sg["nodes"][0], []) if o is not c}.values())
+            hb = list({id(o): o for o in _n2h.get(sg["nodes"][-1], []) if o is not c}.values())
+            if len(ha) != 1 or len(hb) != 1 or ha[0] is hb[0]: continue
+            la, lb = ha[0]["lane"], hb[0]["lane"]
+            if not min(la, lb) < c["lane"] < max(la, lb): continue
+            # liegt ein Perron zwischen den beiden Gleisen, gehört die Ebene ihm (Montbovon: Mittelperron 2/3)
+            _pz = False
+            for e_ in PLAT:
+                _q = [project(xy(g_)) for g_ in e_.get("geometry", [])]
+                if not _q: continue
+                ps_ = float(np.mean([q_[0] for q_ in _q])); pd_ = float(np.mean([q_[1] for q_ in _q]))
+                if not (max(ha[0]["s0"], hb[0]["s0"]) <= ps_ <= min(ha[0]["s1"], hb[0]["s1"])): continue
+                da_, db_ = d_at(ha[0], ps_), d_at(hb[0], ps_)
+                if min(da_, db_) + 0.5 < pd_ < max(da_, db_) - 0.5: _pz = True; break
+            if _pz: continue
+            if any(o is not c and o["lane"] == c["lane"] and min(o["s1"], c["s1"] + 30) - max(o["s0"], c["s0"] - 30) > 0 for o in C): continue
+            sg["flat"] = False; C.remove(c)
+            BUENDEL_KOMPAKT.append(("verbindung_schraeg", sg["way"], c["lane"], round(sg["s0"]), round(sg["s1"])))
+            # ist die Ebene jetzt leer, fällt sie weg: alles darüber rückt eine Ebene herunter (Gruppen bleiben beisammen,
+            # Konolfingen: 2/3 und 3/4 je einfacher Abstand, Mittelperron 3/4 bleibt zwischen seinen Gleisen)
+            if not any(o["lane"] == c["lane"] for o in C):
+                for o in C:
+                    if o["lane"] > c["lane"]: o["lane"] -= 1
+                BUENDEL_KOMPAKT.append(("ebene_leer", c["lane"]))
     _ovw = {w_ for w_, _ in OVR.get("ebene_wie", [])} | {w_ for p_ in OVR.get("ebene_tausch", []) for w_ in p_}
     _fest = lambda c: any(sg["way"] in _ovw for sg in c["segs"])
     _dnk = collections.defaultdict(int)
@@ -1629,7 +1670,7 @@ if CFG.get("buendel_kompakt", True) and C:
         _dgk = collections.defaultdict(list)
         for sg in segs:
             if not sg["flat"]: _dgk[sg["nodes"][0]].append(sg["nodes"][-1]); _dgk[sg["nodes"][-1]].append(sg["nodes"][0])
-        _bewegt = {k_[2] for k_ in BUENDEL_KOMPAKT}       # neue Ebenen der verschobenen Gleise
+        _bewegt = {k_[2] for k_ in BUENDEL_KOMPAKT if k_[0] in ("kette", "randstueck")}       # neue Ebenen der verschobenen Gleise
         for c in C:
             if _hpk(c) or c["s1"] - c["s0"] > 200 or _fest(c): continue
             en_ = {n_ for sg in c["segs"] for n_ in (sg["nodes"][0], sg["nodes"][-1])}
