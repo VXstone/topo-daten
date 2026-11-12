@@ -88,7 +88,8 @@ jobs:
           python3 spurplan/code/osm_abgleich.py --alle /tmp/seite/plaene /tmp/seite/netz --osm /tmp/schweiz_bahn.json.gz --out /tmp/seite/osm_abgleich 2>&1 | tee /tmp/seite/osm_abgleich_log.txt | tail -3
           python3 spurplan/code/hinweis_abdeckung.py spurplan/hinweise_offen.json /tmp/seite/plaene /tmp/seite/osm_abgleich,/tmp/seite/netzbefunde \
             --regel --messen --netz /tmp/seite/netz --json /tmp/seite/abdeckung.json --md /tmp/seite/abdeckung.md 2>&1 | tee -a /tmp/seite/log.txt | head -1
-          rm -rf /tmp/seite/netz /tmp/seite/netzbefunde      # nicht auf den Branch (je Lauf ~3 MB)
+          tar czf /tmp/seite/netz.tgz -C /tmp/seite netz     # Netzmodelle gepackt behalten (für lokale Prüfungen), offen ~3 MB
+          rm -rf /tmp/seite/netz /tmp/seite/netzbefunde
       - name: Regression über alle Pläne (6.11.2026, Befund Olten) – Tabelle, Differenzbilder, Einordnung, Kartenlabel
         run: |
           git fetch -q --depth 400 origin ergebnisse:refs/remotes/origin/ergebnisse -f || true

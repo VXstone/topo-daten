@@ -9,10 +9,10 @@ spurplan_schema: OSM-Knoten mit Plankoordinaten). Befunde (Regel, x, y, Text, OS
   VA1  OSM-DKW/EKW (railway:switch=double_slip/single_slip) im Plan nicht als DKW gezeichnet (keine DKW-Bögen)
   VA2  im Plan als DKW gezeichnet, in OSM keine DKW/EKW
   VB1  OSM-Weiche im Plan (Knoten auf gezeichnetem Gleis) ohne Abzweig im Plan
-  VB2  zwei Gleise berühren/kreuzen sich im Plan, in OSM dort keine Weiche, DKW oder Kreuzung (auch «Gleis über Gleis»)
+  VB2  Abzweig im Plan (>= 3 Richtungen), in OSM dort keine Weiche, DKW oder Kreuzung (auch «Gleis über Gleis»)
   VC1  Abzweig im Plan an einer OSM-Weiche, aber ein angeschlossenes Gleis gehört in OSM nicht zu dieser Weiche
        (falsch angebunden, z. B. Gleisfeld an Gl. 5 statt an Gl. 4)
-  VD1  Gleis auf Gleis: zwei Gleise laufen über mehr als 8 px aufeinander (0,5 px Toleranz)
+  VD1  Gleis auf Gleis: zwei Gleise laufen über mehr als 12 px aufeinander (0,5 px Toleranz)
   VD2  Perron auf Gleis: ein Gleis läuft durch ein gezeichnetes Perron
 Niveaugetrennte Kreuzungen (weisse Lücke im Plan) zählen nicht als Berührung. Exit-Stummel ohne Netzbezug werden nur für
 VB2/VD geprüft. Toleranzen in Plan-px (Gleisabstand 24 px): Knoten 9 px, DKW 16 px.
@@ -89,45 +89,59 @@ def _teilpfade(d):
     return out
 
 
+def _richtung(g, p, weg=15.0):
+    """Richtungen (Grad) der Äste eines Gleises am Punkt p: Ende -> eine, Inneres -> zwei"""
+    L = g.length; t = g.project(p); out = []
+    for s_ in (-1, 1):
+        u = t + s_ * min(weg, L)
+        u = min(max(u, 0.0), L)
+        if abs(u - t) < 1.0: continue
+        q = g.interpolate(u)
+        out.append(math.degrees(math.atan2(q.y - p.y, q.x - p.x)) % 360)
+    return out
+
+
+def _verschieden(R, tol=8.0):
+    V = []
+    for r in R:
+        if all(min(abs(r - v), 360 - abs(r - v)) > tol for v in V): V.append(r)
+    return V
+
+
 def plan_knoten(gleise, luecken):
-    """Berührungspunkte: Ende an Ende (>= 3 Enden), Ende auf Gleis (T), Gleis über Gleis (X). [(x, y, art, {gleis-idx})]"""
+    """Abzweige im Plan: Punkte, an denen sich Gleise berühren und mindestens drei verschiedene Richtungen abgehen
+    (Weiche, Kreuzung, DKW). Zwei Enden in einer Flucht (Stummel über Streckengleis, Teilpfade) zählen nicht.
+    [(x, y, art, {gleis-idx}, n_richtungen)]"""
     G = [g["geo"] for g in gleise]
     tree = STRtree(G)
-    pk = []
     gap = lambda p: any(l.contains(p) for l in luecken)
-    enden = []
+    kand = []
     for i, g in enumerate(G):
-        enden += [(i, Point(g.coords[0])), (i, Point(g.coords[-1]))]
-    # Enden clustern (1 px)
-    cl = []
-    for i, p in enden:
-        for c in cl:
-            if c["p"].distance(p) < 1.2: c["e"].append(i); break
-        else: cl.append(dict(p=p, e=[i]))
-    for c in cl:
-        p = c["p"]
-        auf = {int(j) for j in tree.query(p.buffer(1.2)) if int(j) not in c["e"] and G[int(j)].distance(p) < 1.2}
-        n = len(c["e"]) + 2 * len(auf)
-        if n >= 3 and not gap(p):
-            pk.append((p.x, p.y, "T" if auf else "E", set(c["e"]) | auf))
-    # Kreuzungen im Inneren
-    for i, g in enumerate(G):
+        kand += [Point(g.coords[0]), Point(g.coords[-1])]
         for j in tree.query(g):
             j = int(j)
             if j <= i: continue
             x = g.intersection(G[j])
             for q in getattr(x, "geoms", [x]):
-                if q.is_empty or q.geom_type != "Point": continue
-                if min(q.distance(Point(g.coords[0])), q.distance(Point(g.coords[-1])),
-                       q.distance(Point(G[j].coords[0])), q.distance(Point(G[j].coords[-1]))) < 1.5: continue
-                if not gap(q): pk.append((q.x, q.y, "X", {i, j}))
-    # zusammenfassen (3 px)
-    out = []
-    for p in pk:
-        for o in out:
-            if math.hypot(o[0] - p[0], o[1] - p[1]) < 3: o[3].update(p[3]); break
-        else: out.append([p[0], p[1], p[2], set(p[3])])
-    return out
+                if not q.is_empty and q.geom_type == "Point": kand.append(q)
+    seen, out = [], []
+    for p in kand:
+        if any(p.distance(s_) < 3 for s_ in seen): continue
+        seen.append(p)
+        if gap(p): continue
+        idx = [int(j) for j in tree.query(p.buffer(1.2)) if G[int(j)].distance(p) < 1.2]
+        if len(idx) < 2: continue
+        R = _verschieden([r for j in idx for r in _richtung(G[j], p)])
+        if len(R) >= 3:
+            art = "X" if len(R) >= 4 and all(G[j].project(p) > 1.5 and G[j].project(p) < G[j].length - 1.5 for j in idx) else "W"
+            out.append([p.x, p.y, art, set(idx), len(R)])
+    # ein Abzweig im Plan liefert oft zwei Punkte (Teilpfad endet an der Weiche, Ast beginnt 2–5 px daneben): 6 px zusammen
+    zus = []
+    for o in out:
+        for z in zus:
+            if math.hypot(z[0] - o[0], z[1] - o[1]) < 6: z[3] |= o[3]; z[4] = max(z[4], o[4]); break
+        else: zus.append(o)
+    return [tuple(z) for z in zus]
 
 
 def osm_tags(pfad):
@@ -197,39 +211,49 @@ def abgleich(svg_text, N, TAGS, WAYN):
     for c in dkw_plan:
         if not any(("slip" in swt(n)) and math.hypot(c[0] - v["x"], c[1] - v["y"]) < R_DKW for n, v in KN.items()):
             bef("VA2", c[0], c[1], "im Plan als DKW gezeichnet, in OSM keine DKW/EKW in der Nähe")
+    # Zuordnung OSM-Knoten <-> Plan-Abzweig eins zu eins (nächste zuerst). Längs des Gleises darf der Plan den Abzweig
+    # verschieben (Spurwechsel in Standardlänge, Entzerrung): Abstand quer zählt vierfach, Grenze 40 px längs.
+    def kosten(v, p):
+        dx, dy = abs(v["x"] - p[0]), abs(v["y"] - p[1])
+        return math.hypot(dx, 4 * dy) if dy < 10 else 1e9
+    paare = sorted((kosten(v, p), n, i) for n, v in osm_kn.items() for i, p in enumerate(PK))
+    zu_osm, zu_plan = {}, {}
+    for c, n, i in paare:
+        if c > 40: break
+        if n in zu_osm or i in zu_plan: continue
+        zu_osm[n] = i; zu_plan[i] = n
+    # zwei OSM-Weichen dicht beieinander (< 12 m) zeichnet der Plan oft als einen Abzweig: zweite gilt als gezeichnet
+    for n, v in osm_kn.items():
+        if n in zu_osm: continue
+        for m, i in list(zu_osm.items()):
+            w = osm_kn[m]
+            if m in nachbarn[n] and kosten(v, PK[i]) < 40: zu_osm[n] = i; break
     # VB1: OSM-Weiche ohne Abzweig im Plan (DKW zählt über VA1)
     for n, v in KN.items():
-        if typ(n) != "switch" or "slip" in swt(n): continue
-        if len(nachbarn[n]) < 3: continue           # Weiche auf nicht gezeichnetem Ast: Ast fehlt -> nur, wenn Ast gezeichnet
-        if not any(math.hypot(p[0] - v["x"], p[1] - v["y"]) < R_KNOTEN for p in PK):
-            bef("VB1", v["x"], v["y"], f"OSM-Weiche {n} ohne Abzweig im Plan", osm=n)
+        if typ(n) != "switch" or "slip" in swt(n) or n in zu_osm: continue
+        if len(nachbarn[n]) < 3: continue           # Ast nicht gezeichnet (stillgelegt, ausserhalb): kein Befund hier
+        bef("VB1", v["x"], v["y"], f"OSM-Weiche {n} ohne Abzweig im Plan", osm=n)
     # VB2 / VC1
-    for x, y, art, idx in PK:
-        nah = [(math.hypot(v["x"] - x, v["y"] - y), n) for n, v in osm_kn.items()]
-        nah = sorted(d for d in nah if d[0] < (R_DKW if "slip" in swt(d[1]) else R_KNOTEN))
-        if not nah:
+    for i, (x, y, art, idx, nr) in enumerate(PK):
+        n0 = zu_plan.get(i)
+        if n0 is None:
             if any(math.hypot(c[0] - x, c[1] - y) < R_DKW for c in dkw_plan): continue
-            bef("VB2", x, y, f"Gleise berühren/kreuzen sich ({art}), in OSM keine Weiche/Kreuzung",
-                ways=sorted({w for i in idx for w in g_ways.get(i, ())}))
+            bef("VB2", x, y, f"Gleise {'kreuzen' if art == 'X' else 'berühren'} sich ({nr} Richtungen), in OSM keine Weiche/Kreuzung",
+                ways=sorted({w for j in idx for w in g_ways.get(j, ())}))
             continue
-        kandid = {n for _, n in nah}
-        for i in idx:
-            ws = g_ways.get(i)
-            if not ws: continue
-            if not any(any(k in WAYN.get(w, ()) for k in kandid) for w in ws):
-                # verbunden über ein kurzes Stück ohne eigene Planknoten? zwei OSM-Kanten weit zulassen
-                umg = set(kandid)
-                for _ in range(3): umg |= {m for k in umg for m in nachbarn[k]}
-                if not any(any(k in WAYN.get(w, ()) for k in umg) for w in ws):
-                    bef("VC1", x, y, f"Gleis (Way {sorted(ws)[0]}) im Plan an Knoten {sorted(kandid)[0]} angebunden, in OSM nicht",
-                        osm=sorted(kandid)[0], ways=sorted(ws))
+        umg = {n0}
+        for _ in range(3): umg |= {m for k in umg for m in nachbarn[k]}
+        for j in idx:
+            ws = g_ways.get(j)
+            if ws and not any(any(k in WAYN.get(w, ()) for k in umg) for w in ws):
+                bef("VC1", x, y, f"Gleis (Way {sorted(ws)[0]}) im Plan an Knoten {n0} angebunden, in OSM nicht", osm=n0, ways=sorted(ws))
     # VD1 Gleis auf Gleis
     for i, g in enumerate(G):
         for j in tree.query(g.buffer(0.5)) if tree else []:
             j = int(j)
             if j <= i: continue
             ov = g.intersection(G[j].buffer(0.5))      # 0,5 px: Abzweig mit Ausrundung liegt nur wenige px tangential an
-            if ov.length > 8 and G[j].intersection(g.buffer(0.5)).length > 8:
+            if ov.length > 12 and G[j].intersection(g.buffer(0.5)).length > 12:
                 c = ov.centroid
                 if not any(l.contains(c) for l in luecken):
                     bef("VD1", c.x, c.y, f"zwei Gleise {ov.length:.0f} px aufeinander")
