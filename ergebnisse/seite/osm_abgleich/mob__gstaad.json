@@ -1,23 +1,12 @@
 {
 "plan": "mob__gstaad",
-"befunde": [
-{
-"regel": "VB2",
-"x": 230.0,
-"y": 110.0,
-"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
-"ways": [
-27922700,
-230345919,
-230345923,
-1305560396
-]
-}
-],
+"befunde": [],
 "info": {
 "gleise": 15,
 "knoten_plan": 6,
 "dkw_plan": 0,
-"knoten_osm": 6
+"knoten_osm": 6,
+"versatz_y": 0.0,
+"netz_auf_plan": 1.0
 }
 }

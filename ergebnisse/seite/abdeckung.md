@@ -5,7 +5,7 @@ Befund < 40 px im selben Plan, ohne G2.
 | | Hinweis | Plan | Regeln | nächster px | Text |
 |---|---|---|---|---|---|
 | ✓ | 0bw9 | solothurn | G6, ME, MX, VB1, VB2, W1, W2 | 19.3 | Gleis nach unten, Knick, über anderen Gleisen nach oben |
-| ✓ | 0fpo | solothurn | ME, MX, VA1, VB1, VC1, W2 | 8.0 | sauberes Gleis ins Nichts |
+| ✓ | 0fpo | solothurn | ME, MX, VA1, VC1, W2 | 18.8 | sauberes Gleis ins Nichts |
 | ✓ | 0k4j | region | G5 | 27.3 | Eppenbergtunnel Weichen/Stummel |
 | ✓ | 2vxh | mob__chamby | VB1, VD1 | 23.2 | Perron und Gleis verdreht, Mittelperron? |
 | ✓ | 33fs | konolfingen | MX, VB2, W2 | 12.0 | Gleis unter Gleis, sehr steil |
@@ -49,7 +49,7 @@ Befund < 40 px im selben Plan, ohne G2.
 | · | qotw | vereina__klosters_platz |  | 179.8 | Mittelperron zwischen 2 und 3 |
 | · | r9xv | aarau |  | 47.9 | Stummel korrekt? |
 | · | rap4 | mob__le_tremblex |  |  | Nebengleis nicht fett |
-| ✓ | t6x0 | solothurn | G6, ME, MX, VA1, VB1, VB2, VC1, W2 | 5.3 | Kreuzung in OSM? |
+| ✓ | t6x0 | solothurn | G6, ME, MX, VA1, VB2, VC1, W2 | 5.3 | Kreuzung in OSM? |
 | ✓ | tnvp | konolfingen | G7, MX, VB2, VC1 | 2.8 | Knubbel kurz gerade |
 | ✓ | ttv8 | konolfingen | VA1, VB2 | 3.3 | DKW? |
 | · | u13h | mob__zweisimmen |  | 54.0 | Stumpen Normalspur? |

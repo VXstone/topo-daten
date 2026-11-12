@@ -6,13 +6,17 @@
   "gleise": 172,
   "knoten_plan": 58,
   "dkw_plan": 0,
-  "knoten_osm": 71
+  "knoten_osm": 71,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 0.99
  },
  "aarburg_oftringen": {
   "gleise": 21,
   "knoten_plan": 8,
   "dkw_plan": 1,
-  "knoten_osm": 7
+  "knoten_osm": 7,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 0.83
  },
  "daniken": {
   "VB1": 2,
@@ -20,21 +24,25 @@
   "gleise": 45,
   "knoten_plan": 23,
   "dkw_plan": 0,
-  "knoten_osm": 26
+  "knoten_osm": 26,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 0.97
  },
  "dulliken": {
   "gleise": 17,
   "knoten_plan": 6,
   "dkw_plan": 0,
-  "knoten_osm": 6
+  "knoten_osm": 6,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
  },
  "ins": {
-  "VB1": 13,
-  "VB2": 13,
   "gleise": 26,
   "knoten_plan": 14,
   "dkw_plan": 1,
-  "knoten_osm": 14
+  "knoten_osm": 14,
+  "versatz_y": -11.0,
+  "netz_auf_plan": 0.86
  },
  "konolfingen": {
   "VA1": 3,
@@ -45,37 +53,49 @@
   "gleise": 58,
   "knoten_plan": 27,
   "dkw_plan": 2,
-  "knoten_osm": 29
+  "knoten_osm": 29,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
  },
  "laufelfingen": {
   "gleise": 4,
   "knoten_plan": 2,
   "dkw_plan": 0,
-  "knoten_osm": 2
+  "knoten_osm": 2,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
  },
  "mob__allieres": {
   "gleise": 5,
   "knoten_plan": 3,
   "dkw_plan": 0,
-  "knoten_osm": 3
+  "knoten_osm": 3,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
  },
  "mob__belmont_sur_montreux": {
   "gleise": 2,
   "knoten_plan": 2,
   "dkw_plan": 0,
-  "knoten_osm": 2
+  "knoten_osm": 2,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
  },
  "mob__blankenburg": {
   "gleise": 4,
   "knoten_plan": 2,
   "dkw_plan": 0,
-  "knoten_osm": 2
+  "knoten_osm": 2,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
  },
  "mob__caux": {
   "gleise": 10,
   "knoten_plan": 4,
   "dkw_plan": 0,
-  "knoten_osm": 4
+  "knoten_osm": 4,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
  },
  "mob__chamby": {
   "VB1": 2,
@@ -84,19 +104,25 @@
   "gleise": 9,
   "knoten_plan": 4,
   "dkw_plan": 0,
-  "knoten_osm": 5
+  "knoten_osm": 5,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
  },
  "mob__chateau_d_oex": {
   "gleise": 13,
   "knoten_plan": 7,
   "dkw_plan": 0,
-  "knoten_osm": 7
+  "knoten_osm": 7,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
  },
  "mob__chatelard": {
   "gleise": 2,
   "knoten_plan": 0,
   "dkw_plan": 0,
-  "knoten_osm": 0
+  "knoten_osm": 0,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
  },
  "mob__chernex": {
   "VB2": 4,
@@ -104,121 +130,155 @@
   "gleise": 27,
   "knoten_plan": 18,
   "dkw_plan": 0,
-  "knoten_osm": 14
+  "knoten_osm": 14,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
  },
  "mob__cret_d_y_bau": {
   "gleise": 1,
   "knoten_plan": 0,
   "dkw_plan": 0,
-  "knoten_osm": 0
+  "knoten_osm": 0,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
  },
  "mob__flendruz": {
   "gleise": 6,
   "knoten_plan": 3,
   "dkw_plan": 0,
-  "knoten_osm": 3
+  "knoten_osm": 3,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
  },
  "mob__fontanivent": {
   "gleise": 5,
   "knoten_plan": 2,
   "dkw_plan": 0,
-  "knoten_osm": 3
+  "knoten_osm": 3,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
  },
  "mob__glion": {
   "VB1": 2,
   "gleise": 24,
   "knoten_plan": 6,
   "dkw_plan": 0,
-  "knoten_osm": 8
+  "knoten_osm": 8,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
  },
  "mob__glion_college": {
   "gleise": 1,
   "knoten_plan": 0,
   "dkw_plan": 0,
-  "knoten_osm": 0
+  "knoten_osm": 0,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
  },
  "mob__gruben": {
-  "VB2": 1,
   "gleise": 2,
   "knoten_plan": 2,
   "dkw_plan": 0,
-  "knoten_osm": 2
+  "knoten_osm": 2,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
  },
  "mob__gstaad": {
-  "VB2": 1,
   "gleise": 15,
   "knoten_plan": 6,
   "dkw_plan": 0,
-  "knoten_osm": 6
+  "knoten_osm": 6,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
  },
  "mob__jaman": {
   "gleise": 7,
   "knoten_plan": 2,
   "dkw_plan": 0,
-  "knoten_osm": 2
+  "knoten_osm": 2,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
  },
  "mob__jor": {
   "VB1": 1,
   "gleise": 7,
   "knoten_plan": 3,
   "dkw_plan": 0,
-  "knoten_osm": 4
+  "knoten_osm": 4,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
  },
  "mob__la_perche": {
   "gleise": 2,
   "knoten_plan": 0,
   "dkw_plan": 0,
-  "knoten_osm": 0
+  "knoten_osm": 0,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
  },
  "mob__la_tine": {
-  "VB1": 1,
-  "VB2": 1,
   "gleise": 4,
   "knoten_plan": 3,
   "dkw_plan": 0,
-  "knoten_osm": 3
+  "knoten_osm": 3,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
  },
  "mob__le_tremblex": {
   "gleise": 5,
   "knoten_plan": 1,
   "dkw_plan": 0,
-  "knoten_osm": 1
+  "knoten_osm": 1,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
  },
  "mob__lenk_im_simmental": {
   "gleise": 11,
   "knoten_plan": 6,
   "dkw_plan": 0,
-  "knoten_osm": 8
+  "knoten_osm": 8,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
  },
  "mob__les_avants": {
   "gleise": 12,
   "knoten_plan": 5,
   "dkw_plan": 0,
-  "knoten_osm": 5
+  "knoten_osm": 5,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
  },
  "mob__les_cases": {
   "gleise": 6,
   "knoten_plan": 3,
   "dkw_plan": 0,
-  "knoten_osm": 3
+  "knoten_osm": 3,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
  },
  "mob__les_echets": {
   "gleise": 1,
   "knoten_plan": 0,
   "dkw_plan": 0,
-  "knoten_osm": 0
+  "knoten_osm": 0,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
  },
  "mob__les_sciernes": {
   "gleise": 4,
   "knoten_plan": 2,
   "dkw_plan": 0,
-  "knoten_osm": 2
+  "knoten_osm": 2,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
  },
  "mob__matten": {
   "gleise": 5,
   "knoten_plan": 1,
   "dkw_plan": 0,
-  "knoten_osm": 2
+  "knoten_osm": 2,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
  },
  "mob__montbovon": {
   "VB1": 4,
@@ -226,7 +286,9 @@
   "gleise": 10,
   "knoten_plan": 3,
   "dkw_plan": 0,
-  "knoten_osm": 9
+  "knoten_osm": 9,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 0.86
  },
  "mob__montreux": {
   "VA2": 3,
@@ -235,106 +297,139 @@
   "gleise": 38,
   "knoten_plan": 26,
   "dkw_plan": 3,
-  "knoten_osm": 22
+  "knoten_osm": 22,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 0.98
  },
  "mob__montreux_les_planches": {
   "gleise": 4,
   "knoten_plan": 0,
   "dkw_plan": 0,
-  "knoten_osm": 0
+  "knoten_osm": 0,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
  },
  "mob__oeschseite": {
   "gleise": 5,
   "knoten_plan": 3,
   "dkw_plan": 0,
-  "knoten_osm": 3
+  "knoten_osm": 3,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
  },
  "mob__paccot": {
   "VB1": 2,
   "gleise": 1,
   "knoten_plan": 0,
   "dkw_plan": 0,
-  "knoten_osm": 2
+  "knoten_osm": 2,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
  },
  "mob__planchamp": {
   "gleise": 2,
   "knoten_plan": 0,
   "dkw_plan": 0,
-  "knoten_osm": 0
+  "knoten_osm": 0,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
  },
  "mob__rochers_de_naye": {
   "gleise": 3,
   "knoten_plan": 1,
   "dkw_plan": 0,
-  "knoten_osm": 1
+  "knoten_osm": 1,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
  },
  "mob__rossiniere": {
   "gleise": 10,
   "knoten_plan": 5,
   "dkw_plan": 0,
-  "knoten_osm": 5
+  "knoten_osm": 5,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
  },
  "mob__rougemont": {
   "gleise": 6,
   "knoten_plan": 3,
   "dkw_plan": 0,
-  "knoten_osm": 3
+  "knoten_osm": 3,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
  },
  "mob__saanen": {
   "VB2": 1,
   "gleise": 13,
   "knoten_plan": 7,
   "dkw_plan": 0,
-  "knoten_osm": 7
+  "knoten_osm": 7,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
  },
  "mob__saanenmoser": {
   "gleise": 8,
   "knoten_plan": 5,
   "dkw_plan": 0,
-  "knoten_osm": 5
+  "knoten_osm": 5,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
  },
  "mob__schonried": {
   "gleise": 4,
   "knoten_plan": 1,
   "dkw_plan": 0,
-  "knoten_osm": 2
+  "knoten_osm": 2,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
  },
  "mob__sendy_sollard": {
-  "VB2": 1,
   "gleise": 6,
   "knoten_plan": 2,
   "dkw_plan": 0,
-  "knoten_osm": 2
+  "knoten_osm": 2,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
  },
  "mob__st_stephan": {
   "gleise": 9,
   "knoten_plan": 7,
   "dkw_plan": 0,
-  "knoten_osm": 7
+  "knoten_osm": 7,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
  },
  "mob__toveyre": {
   "gleise": 6,
   "knoten_plan": 0,
   "dkw_plan": 0,
-  "knoten_osm": 0
+  "knoten_osm": 0,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
  },
  "mob__valmont": {
   "gleise": 1,
   "knoten_plan": 0,
   "dkw_plan": 0,
-  "knoten_osm": 0
+  "knoten_osm": 0,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
  },
  "mob__vernex": {
   "gleise": 6,
   "knoten_plan": 4,
   "dkw_plan": 0,
-  "knoten_osm": 4
+  "knoten_osm": 4,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
  },
  "mob__vuarennes": {
   "gleise": 3,
   "knoten_plan": 0,
   "dkw_plan": 0,
-  "knoten_osm": 0
+  "knoten_osm": 0,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
  },
  "mob__zweisimmen": {
   "VA1": 1,
@@ -343,43 +438,50 @@
   "gleise": 51,
   "knoten_plan": 22,
   "dkw_plan": 0,
-  "knoten_osm": 22
+  "knoten_osm": 22,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
  },
  "neuchatel": {
   "VA1": 5,
-  "VB1": 1,
   "VC1": 2,
-  "VB2": 1,
   "VD1": 3,
   "gleise": 84,
   "knoten_plan": 32,
   "dkw_plan": 4,
-  "knoten_osm": 45
+  "knoten_osm": 45,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 0.93
  },
  "neuchatel_vauseyon": {
   "VB2": 1,
   "gleise": 25,
   "knoten_plan": 7,
   "dkw_plan": 0,
-  "knoten_osm": 6
+  "knoten_osm": 6,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 0.93
  },
  "olten": {
-  "VB1": 22,
-  "VB2": 36,
-  "VC1": 3,
+  "VB1": 14,
+  "VB2": 27,
+  "VC1": 7,
   "VD1": 10,
   "gleise": 131,
   "knoten_plan": 81,
   "dkw_plan": 2,
-  "knoten_osm": 86
+  "knoten_osm": 86,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 0.82
  },
  "olten_hammer": {
-  "VB1": 2,
-  "VB2": 1,
+  "VB1": 1,
   "gleise": 29,
   "knoten_plan": 10,
   "dkw_plan": 0,
-  "knoten_osm": 14
+  "knoten_osm": 14,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
  },
  "rothrist": {
   "VA2": 1,
@@ -388,13 +490,17 @@
   "gleise": 84,
   "knoten_plan": 44,
   "dkw_plan": 4,
-  "knoten_osm": 44
+  "knoten_osm": 44,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 0.95
  },
  "safenwil": {
   "gleise": 11,
   "knoten_plan": 5,
   "dkw_plan": 0,
-  "knoten_osm": 5
+  "knoten_osm": 5,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 0.82
  },
  "schonenwerd": {
   "VB1": 1,
@@ -403,42 +509,51 @@
   "gleise": 14,
   "knoten_plan": 7,
   "dkw_plan": 0,
-  "knoten_osm": 7
+  "knoten_osm": 7,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
  },
  "solothurn": {
   "VA1": 1,
-  "VB1": 10,
-  "VB2": 15,
+  "VB1": 9,
+  "VB2": 14,
   "VC1": 1,
   "VD1": 11,
   "VD2": 1,
   "gleise": 115,
   "knoten_plan": 56,
   "dkw_plan": 2,
-  "knoten_osm": 61
+  "knoten_osm": 61,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
  },
  "tecknau": {
   "VB2": 1,
   "gleise": 36,
   "knoten_plan": 17,
   "dkw_plan": 0,
-  "knoten_osm": 17
+  "knoten_osm": 17,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
  },
  "wangen_bei_olten": {
   "VB2": 1,
   "gleise": 38,
   "knoten_plan": 18,
   "dkw_plan": 0,
-  "knoten_osm": 18
+  "knoten_osm": 18,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 0.94
  },
  "zofingen": {
   "VA2": 2,
-  "VB1": 3,
-  "VB2": 2,
+  "VB1": 2,
   "VD1": 2,
   "gleise": 46,
   "knoten_plan": 25,
   "dkw_plan": 3,
-  "knoten_osm": 28
+  "knoten_osm": 28,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
  }
 }

@@ -2,7 +2,7 @@ aarau                              {'VB1': 8, 'VB2': 4, 'VD1': 8}
 aarburg_oftringen                  {}
 daniken                            {'VB1': 2, 'VD1': 2}
 dulliken                           {}
-ins                                {'VB1': 13, 'VB2': 13}
+ins                                {}
 konolfingen                        {'VA1': 3, 'VB1': 2, 'VB2': 4, 'VC1': 1, 'VD1': 2}
 laufelfingen                       {}
 mob__allieres                      {}
@@ -18,12 +18,12 @@ mob__flendruz                      {}
 mob__fontanivent                   {}
 mob__glion                         {'VB1': 2}
 mob__glion_college                 {}
-mob__gruben                        {'VB2': 1}
-mob__gstaad                        {'VB2': 1}
+mob__gruben                        {}
+mob__gstaad                        {}
 mob__jaman                         {}
 mob__jor                           {'VB1': 1}
 mob__la_perche                     {}
-mob__la_tine                       {'VB1': 1, 'VB2': 1}
+mob__la_tine                       {}
 mob__le_tremblex                   {}
 mob__lenk_im_simmental             {}
 mob__les_avants                    {}
@@ -43,22 +43,22 @@ mob__rougemont                     {}
 mob__saanen                        {'VB2': 1}
 mob__saanenmoser                   {}
 mob__schonried                     {}
-mob__sendy_sollard                 {'VB2': 1}
+mob__sendy_sollard                 {}
 mob__st_stephan                    {}
 mob__toveyre                       {}
 mob__valmont                       {}
 mob__vernex                        {}
 mob__vuarennes                     {}
 mob__zweisimmen                    {'VA1': 1, 'VB2': 4, 'VD1': 3}
-neuchatel                          {'VA1': 5, 'VB1': 1, 'VC1': 2, 'VB2': 1, 'VD1': 3}
+neuchatel                          {'VA1': 5, 'VC1': 2, 'VD1': 3}
 neuchatel_vauseyon                 {'VB2': 1}
-olten                              {'VB1': 22, 'VB2': 36, 'VC1': 3, 'VD1': 10}
-olten_hammer                       {'VB1': 2, 'VB2': 1}
+olten                              {'VB1': 14, 'VB2': 27, 'VC1': 7, 'VD1': 10}
+olten_hammer                       {'VB1': 1}
 rothrist                           {'VA2': 1, 'VB1': 4, 'VB2': 6}
 safenwil                           {}
 schonenwerd                        {'VB1': 1, 'VB2': 2, 'VD1': 2}
-solothurn                          {'VA1': 1, 'VB1': 10, 'VB2': 15, 'VC1': 1, 'VD1': 11, 'VD2': 1}
+solothurn                          {'VA1': 1, 'VB1': 9, 'VB2': 14, 'VC1': 1, 'VD1': 11, 'VD2': 1}
 tecknau                            {'VB2': 1}
 wangen_bei_olten                   {'VB2': 1}
-zofingen                           {'VA2': 2, 'VB1': 3, 'VB2': 2, 'VD1': 2}
-OSM-Abgleich: 63 Pläne {'VA1': 10, 'VA2': 6, 'VB1': 80, 'VB2': 107, 'VC1': 7, 'VD1': 50, 'VD2': 1}
+zofingen                           {'VA2': 2, 'VB1': 2, 'VD1': 2}
+OSM-Abgleich: 63 Pläne {'VA1': 10, 'VA2': 6, 'VB1': 54, 'VB2': 76, 'VC1': 11, 'VD1': 50, 'VD2': 1}

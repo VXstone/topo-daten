@@ -1,29 +1,12 @@
 {
 "plan": "mob__la_tine",
-"befunde": [
-{
-"regel": "VB1",
-"x": 174.8,
-"y": 147.2,
-"text": "OSM-Weiche 2390967125 ohne Abzweig im Plan",
-"osm": 2390967125
-},
-{
-"regel": "VB2",
-"x": 230.0,
-"y": 147.2,
-"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
-"ways": [
-32342282,
-230609542,
-230609543
-]
-}
-],
+"befunde": [],
 "info": {
 "gleise": 4,
 "knoten_plan": 3,
 "dkw_plan": 0,
-"knoten_osm": 3
+"knoten_osm": 3,
+"versatz_y": 0.0,
+"netz_auf_plan": 1.0
 }
 }
