@@ -83,7 +83,7 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - [x] **R1a Regression R1 Teil 1 abschliessen** (klein) – 9.11. abends, Seite v143
 - [x] **R1b Bündel docken an** (mittel) – 11.11. abends, Seite v144
 - [x] **R1c Doppelspur-Abstand im Bündel** (klein) – 11.11. abends, Seite v145
-- [ ] **V1 Abgleich Plan gegen OSM** (mittel) – **zuerst** (Wunsch Daniel 12.11.: «wir übersehen was»)
+- [x] **V1 Abgleich Plan gegen OSM** (mittel) – 12.11. abends, Commit d5f52c5 (Seite nicht neu veröffentlicht: kein Plan geändert)
 - [ ] **V2 Ein Regelwerk für alle** (mittel, nach V1)
 - [ ] **K Kreuzungen und Werfungen** (mittel; nimmt R2-Teil Unterwerfung auf) – **vor A2** (Wunsch 11.11.: Aarau-Tunnel-Hinweise)
 - [ ] **A2 Abzweigende Doppelspur** (mittel, Topologie)
@@ -253,3 +253,18 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 ### 12.11.2026 ~21:20 – Diagnose «wir übersehen was», neue Schritte V1/V2
 - Befund: 15 Regeln nur in MOB/Vereina an; Prüfung deckt 26/61 offene Hinweise ab. Versuch Konolfingen mit Regionsregeln
   verworfen (Daniel: DKW links oben fehlt, Gleisfeld West von Gl. 5 erreichbar – OSM bestätigt beides). Reihenfolge: V1, V2, K, A2 …
+
+### 12.11.2026 ~22:20 – Schritt V1 abgeschlossen (Commit d5f52c5, Seite-Lauf 21:17 UTC)
+- Neu `code/osm_abgleich.py` (Regeln VA1/VA2 DKW, VB1/VB2 Weiche↔Abzweig, VC1 falsch angebunden, VD1/VD2 Gleis/Perron auf Gleis,
+  REGELN.md) im Workflow `seite` auf allen 63 Plänen mit Netzmodell → `ergebnisse/seite/osm_abgleich/`; Netzmodelle gepackt in
+  `ergebnisse/seite/netz.tgz` (MOB/Vereina exportiert jetzt `region_lauf`). V-Regeln zählen in der Regression zur Topologie.
+- Stand: VA1 10, VA2 6, VB1 54, VB2 76, VC1 11, VD1 50, VD2 1. Konolfingen trifft genau Daniels Stellen (DKW 254420784/1689231120/
+  1689231106 fehlen, Abstellgleise über 430, Gleis unter Gleis). Linke Weichenstrasse Olten: VB2 = flache Kreuzungen → Schritt K.
+- **Hinweis-Abdeckung 34/57** (vorher 17/57 gleiche Messung nur Regelprüfung; 26/61 alte Zählung): `code/hinweis_abdeckung.py`,
+  Ergebnis `ergebnisse/seite/abdeckung.md`. Eingabe `spurplan/hinweise_offen.json` = offene Hinweise mit Anker – **jede Runde aus
+  der Sammlung `feedback` neu schreiben**. Ungedeckt sind v. a. Perron-/Darstellungsfragen (P2a) und Zweisimmen/Montreux-Feinheiten.
+- Lücken: Vereina (regionen nur mit `-f region=vereina`, nachgestartet), NE-Werkstatt (fest seit 21.10.) und Referenzen ohne
+  Netzmodell → kein Abgleich bis N2. **Olten: 18 % der Netzmodell-Knoten liegen 1 Ebene neben dem gezeichneten Gleis** (Export in
+  `spurplan_schema` folgt einer späteren Ebenenverschiebung nicht; betrifft auch Pin-Anker) → in V2 klären; Abgleich fängt es ab.
+- Für V2: jede Regel an `osm_abgleich` (Summe je Plan) und Abdeckung messen, nicht an G-Zählern. Antworten: ttv8, z6f2, 33fs, 3d6h, b3j5.
+
