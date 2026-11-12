@@ -218,3 +218,12 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   s-Bereiche; Aarau ist der Testfall) – Kandidat für einen Baustein, wenn die Regel nochmals angefasst wird.
 - GitHub-Runner 21:19–21:50 gestört (queued/startup_failure): hängende Läufe abbrechen, neu starten (`gh workflow run …`).
 - Hinweise: 2 Abstand-Hinweise Aarau behoben (v145), 9 Aarau-Hinweise beantwortet und K/R2/N1 zugeordnet (Abschnitt 5).
+
+### 12.11.2026 ~06:30 – R1c Nachtrag Konolfingen, Seite v146 (Commit 7783c31)
+- Hinweis Daniel: Zwischengerade verhindert einfachen Abstand 2/3. Ursache: Way 156705005 (siding, 80 m, 4,7 m quer, Gl. 2 → 3)
+  galt als flach und bekam eigene Ebene. Neu im R1c-Block (cfg `verbindung_schraeg`): Kette aus genau einem Verbindungsgleis
+  ohne Nummer, allein auf einer Ebene zwischen den Ebenen der zwei verbundenen Hauptgleise → Schräge; leere Ebene fällt weg
+  (alles darüber eine Ebene tiefer). Nicht, wenn ein Perron zwischen den beiden Gleisen liegt (Montbovon Mittelperron 2/3).
+- Verworfen: Regel auf Segment-Ebene (vor der Ketten-Bildung) – traf Olten (2 Ways) und Solothurn (3), G7 +5 im Regionalplan.
+- Wirkung nur Konolfingen (2/3/4 einfacher Abstand, kein Versatz Luzern); MOB/Vereina/Olten/NE/Repo-Bahnhöfe identisch,
+  Prüfstand = Basis. nreb und 2ch8 (Konolfingen) → behoben.
