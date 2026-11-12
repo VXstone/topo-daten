@@ -22,6 +22,10 @@ Wird Abschnitt 6 länger als ~60 Zeilen, die ältesten Nachträge ins Archiv ver
   `gh workflow run regionen.yml --ref main`) → Prüfstand «nicht schlechter als Basis» → Tabelle `ergebnisse/seite/regression/`
   lesen, **jede geänderte Zeile erklären** (Regel nach E9 oder Fehler) → Differenzbilder an Daniel → Seite veröffentlichen
   (Live-Fassung vorher mit letztem Build vergleichen, `veroeffentlicht.json` nachführen) → Hinweise beantworten → Nachtrag.
+- **Sichtbar zuerst (12.11. spät, Daniel: «das Sichtbare hat sich wenig verändert»):** jeder Schritt hat einen **Zielplan** mit
+  benannter Stelle. Zu Beginn Vorher-Ausschnitt + «so soll es aussehen» an Daniel; am Ende Differenzbild, Seite veröffentlichen,
+  Daniel nickt ab/widerspricht. **Ohne sichtbare Wirkung am Zielplan ist der Schritt nicht fertig.** Prüfstand, OSM-Abgleich,
+  Regression sind Leitplanke, nicht Ziel. Die übrigen Schritte im Fahrplan beim Start ebenso mit Zielplan versehen.
 - **Nie abnehmen, nie «erledigt» setzen** – das macht nur Daniel. Lösungen im Code, Overrides nur, wo keine Regel passt.
 - Jeder Hinweis Daniels, den der Prüfstand nicht erkennt, wird nach Möglichkeit ein neuer Prüfstand-Baustein.
 
@@ -84,7 +88,10 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - [x] **R1b Bündel docken an** (mittel) – 11.11. abends, Seite v144
 - [x] **R1c Doppelspur-Abstand im Bündel** (klein) – 11.11. abends, Seite v145
 - [x] **V1 Abgleich Plan gegen OSM** (mittel) – 12.11. abends, Commit d5f52c5 (Seite nicht neu veröffentlicht: kein Plan geändert)
-- [ ] **V2 Ein Regelwerk für alle** (mittel, nach V1)
+- [ ] **S1 Sagliains parallel durch den Knick** (klein) – **als Nächstes** (Wunsch Daniel 12.11. spät: «sichtbare Fortschritte»)
+- [ ] **S2 Konolfingen Topologie richtig** (mittel; erster Teil von V2)
+- [ ] **S3 Aarau Zwischengeraden** (mittel; Kern von R2)
+- [ ] **V2 Ein Regelwerk für alle** (mittel, Rest nach S2)
 - [ ] **K Kreuzungen und Werfungen** (mittel; nimmt R2-Teil Unterwerfung auf) – **vor A2** (Wunsch 11.11.: Aarau-Tunnel-Hinweise)
 - [ ] **A2 Abzweigende Doppelspur** (mittel, Topologie)
 - [ ] **R2 Zwischengeraden und Gleissprünge** (mittel)
@@ -122,6 +129,34 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   nicht; (d) «Gleis unter Gleis» (flache Kreuzung/Überdeckung) und «Perron auf Gleis»; dazu `pruefstand_messen` auf allen Plänen.
 - Kennzahl «Hinweis-Abdeckung»: Anteil offener Hinweise mit Befund < 40 px (Basis 26/61 ohne G2). Testfälle: Konolfingen
   (DKW links oben, Gleisfeld West, 33fs, 3d6h), Montreux, Solothurn. Fertig, wenn: Abdeckung deutlich höher, Prüfungen im Workflow.
+
+### S1 – Sagliains parallel durch den Knick
+- Einstieg: «Weiter mit UEBERGABE.md – Schritt S1: Sagliains parallel durch den Knick»
+- Zielplan **vereina__sagliains**, Portal links oben: zwei Nebengleise (y 110 / 123,2, Abstand 13,2 px = 0,55 Ebene) knicken
+  60° zum Pfeil; Knick des oberen 20 px versetzt → Treppe, schräg 24 px Querabstand. Ursache: `_stub_buendel` (R1a) zielt fest auf
+  `lane_px` 24.
+- Regel Daniel 12.11.: **parallel bleibt parallel auch beim Knicken** – Querabstand nach dem Knick = Abstand davor; Knickversatz
+  des äusseren Gleises d·tan(θ/2) (60°: 0,58·d = 7,6 px). Gilt für jedes Bündel, das gemeinsam knickt (Ausfahrten, Spurwechsel-
+  paare, Abgänge), nicht nur Stummel; `_stub_buendel` darauf umstellen. Offene Frage 0,55 Ebenen (Abschnitt 4) davon getrennt.
+- Zuerst Prüfstand-Baustein «Bündel knickt» (Abstand 0,55 und 1 Ebene, Knick 30°/60°; Messung P/Q muss anschlagen).
+- Fertig, wenn: Sagliains-Portal als Bündel mit 13,2 px durch den Knick, Baustein ohne Befund, alle geänderten Pläne erklärt,
+  Seite veröffentlicht (nimmt die Vereina-Änderung aus V1 mit).
+
+### S2 – Konolfingen Topologie richtig
+- Einstieg: «Weiter mit UEBERGABE.md – Schritt S2: Konolfingen Topologie»
+- Zielplan **konolfingen**: DKW 254420784, 1689231120, 1689231106 gezeichnet; Abstellgleise West nicht mehr über Strecke 430
+  (VB2 bei 367/317 und 353/341), kein Gleis unter Gleis (VB2 584/270), Gleisfeld West richtig angebunden (VC1 402/293);
+  DKW 1689230829 bleibt (am 12.11. mit Regionsregeln verloren).
+- Weg: Regeln aus `region_lauf.py` (dkw_auto, kreuzung_schnitt, haupt_fortsetzung, …) auch für Repo-Bahnhöfe einschalten,
+  einzeln, jede am OSM-Abgleich gemessen (V-Summe Konolfingen 12 → 0 Ziel), nicht an G-Zählern. Hinweise ttv8, z6f2, 33fs,
+  3d6h, 8bce danach beantworten.
+- Fertig, wenn: Konolfingen ohne VA1/VB2/VC1, keine neuen V-Befunde in anderen Plänen, Seite veröffentlicht.
+
+### S3 – Aarau Zwischengeraden
+- Einstieg: «Weiter mit UEBERGABE.md – Schritt S3: Aarau Zwischengeraden»
+- Zielplan **aarau** (Hinweise fmlk, vnyq; Messung MZ), mitprüfen Solothurn (xke0) und Zweisimmen (jy8r). W8 wirkt heute nur im
+  Regionalplan zwischen den Plänen – in den Löser des Bahnhofplans bringen (Knicke mit kurzer Gerade zusammenlegen).
+- Fertig, wenn: die Zwischengeraden in Aarau weg, Solothurn/Zweisimmen nicht schlechter, Seite veröffentlicht.
 
 ### V2 – Ein Regelwerk für alle
 - Einstieg: «Weiter mit UEBERGABE.md – Schritt V2: Ein Regelwerk für alle»
@@ -269,4 +304,9 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - Regression nach Vereina-Lauf 2/136 gleichwertig: region_vereina + vereina__sagliains = R1a-Stummel am Planrand (Vereina lief
   seit 7.11. nicht). Seite **nicht** veröffentlicht (live v146 zeigt sonst dasselbe) – beim nächsten Veröffentlichen mitnehmen.
 - Für V2: jede Regel an `osm_abgleich` (Summe je Plan) und Abdeckung messen, nicht an G-Zählern. Antworten: ttv8, z6f2, 33fs, 3d6h, b3j5.
+
+### 12.11.2026 ~23:35 – Fahrplan umgestellt auf «sichtbar zuerst»
+- Daniel: in R1a–V1 hat sich sichtbar wenig verändert; Konolfingen-Überschneidungen, Sagliains-Unparallelität, Aarau-Zwischen-
+  geraden «haben schon funktioniert». Grund: Regeln nur im Weg MOB/Vereina, W8 nur im Regionalplan, R1a-Stummel zielt auf 24 px.
+- Neu S1 (Sagliains), S2 (Konolfingen), S3 (Aarau) vor V2/K; jeder Schritt mit Zielplan und Vorher/Nachher (Abschnitt 0).
 
