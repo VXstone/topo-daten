@@ -1,6 +1,6 @@
 {
  "region": "mob",
- "erzeugt": "2026-11-12 20:30 UTC",
+ "erzeugt": "2026-11-12 23:01 UTC",
  "bahnhoefe": {
   "schonried": {
    "name": "Schönried",
@@ -26,14 +26,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "flendruz": {
-   "name": "Flendruz",
+  "rougemont": {
+   "name": "Rougemont",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "rougemont": {
-   "name": "Rougemont",
+  "flendruz": {
+   "name": "Flendruz",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -102,6 +102,12 @@
    "befunde": "Befunde: {'B': 1, 'F': 1}",
    "optionen": []
   },
+  "allieres": {
+   "name": "Allières",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
   "jaman": {
    "name": "Jaman",
    "ok": true,
@@ -114,26 +120,20 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "allieres": {
-   "name": "Allières",
-   "ok": true,
-   "befunde": "Befunde: {}",
-   "optionen": []
-  },
   "saanen": {
    "name": "Saanen",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "oeschseite": {
-   "name": "Oeschseite",
+  "saanenmoser": {
+   "name": "Saanenmöser",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "saanenmoser": {
-   "name": "Saanenmöser",
+  "oeschseite": {
+   "name": "Oeschseite",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
