@@ -1,6 +1,6 @@
 {
  "region": "mob",
- "erzeugt": "2026-11-12 05:05 UTC",
+ "erzeugt": "2026-11-12 20:30 UTC",
  "bahnhoefe": {
   "schonried": {
    "name": "Schönried",
@@ -102,8 +102,8 @@
    "befunde": "Befunde: {'B': 1, 'F': 1}",
    "optionen": []
   },
-  "allieres": {
-   "name": "Allières",
+  "jaman": {
+   "name": "Jaman",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -114,8 +114,8 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "jaman": {
-   "name": "Jaman",
+  "allieres": {
+   "name": "Allières",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -126,14 +126,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "saanenmoser": {
-   "name": "Saanenmöser",
+  "oeschseite": {
+   "name": "Oeschseite",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "oeschseite": {
-   "name": "Oeschseite",
+  "saanenmoser": {
+   "name": "Saanenmöser",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
