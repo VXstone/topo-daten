@@ -266,5 +266,7 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - Lücken: Vereina (regionen nur mit `-f region=vereina`, nachgestartet), NE-Werkstatt (fest seit 21.10.) und Referenzen ohne
   Netzmodell → kein Abgleich bis N2. **Olten: 18 % der Netzmodell-Knoten liegen 1 Ebene neben dem gezeichneten Gleis** (Export in
   `spurplan_schema` folgt einer späteren Ebenenverschiebung nicht; betrifft auch Pin-Anker) → in V2 klären; Abgleich fängt es ab.
+- Regression nach Vereina-Lauf 2/136 gleichwertig: region_vereina + vereina__sagliains = R1a-Stummel am Planrand (Vereina lief
+  seit 7.11. nicht). Seite **nicht** veröffentlicht (live v146 zeigt sonst dasselbe) – beim nächsten Veröffentlichen mitnehmen.
 - Für V2: jede Regel an `osm_abgleich` (Summe je Plan) und Abdeckung messen, nicht an G-Zählern. Antworten: ttv8, z6f2, 33fs, 3d6h, b3j5.
 
