@@ -83,6 +83,8 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - [x] **R1a Regression R1 Teil 1 abschliessen** (klein) – 9.11. abends, Seite v143
 - [x] **R1b Bündel docken an** (mittel) – 11.11. abends, Seite v144
 - [x] **R1c Doppelspur-Abstand im Bündel** (klein) – 11.11. abends, Seite v145
+- [ ] **V1 Abgleich Plan gegen OSM** (mittel) – **zuerst** (Wunsch Daniel 12.11.: «wir übersehen was»)
+- [ ] **V2 Ein Regelwerk für alle** (mittel, nach V1)
 - [ ] **K Kreuzungen und Werfungen** (mittel; nimmt R2-Teil Unterwerfung auf) – **vor A2** (Wunsch 11.11.: Aarau-Tunnel-Hinweise)
 - [ ] **A2 Abzweigende Doppelspur** (mittel, Topologie)
 - [ ] **R2 Zwischengeraden und Gleissprünge** (mittel)
@@ -108,6 +110,26 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   (netz_lage `route_geom`/`connector`, `STACK`). Zuerst Prüfstand-Baustein «Bündel mit Versatz» (zwei Bahnhöfe, Enden um ½ Ebene
   verschoben). Testfälle: Vierspur östlich Aarau (parallel bis Rupperswil), MOB/Vereina Treppen T7.
 - Fertig, wenn: Baustein ohne Befund, Aarau-Vierspur parallel, T7 MOB/Vereina nicht höher, alle Pläne erklärt.
+
+### V1 – Abgleich Plan gegen OSM (zuerst prüfen, dann Regeln)
+- Einstieg: «Weiter mit UEBERGABE.md – Schritt V1: Abgleich Plan gegen OSM»
+- Anlass 12.11.: Prüfung sieht nur 26 von 61 offenen Hinweisen (ohne G2); Prüfstand-Messung läuft nur auf Bausteinen.
+  Versuch Konolfingen mit Regionsregeln sah nach Zählern besser aus, war aber falsch (DKW 1689230829 weg, Gleisfeld West an
+  Gl. 5 statt an 430/Gl. 4) – Zähler messen die Topologie nicht.
+- Neue Prüfungen (Baustein `osm_abgleich.py`, auf allen 136 Plänen im Workflow `seite`, im Regressionsvergleich):
+  (a) jede OSM-DKW (railway:switch=double_slip/single_slip) im Plan als DKW; (b) jede Berührung zweier Gleise im Plan ist in OSM
+  eine Weiche/DKW/Kreuzung, und umgekehrt jede OSM-Weiche im Fenster ist gezeichnet; (c) Gleise ohne OSM-Verbindung berühren sich
+  nicht; (d) «Gleis unter Gleis» (flache Kreuzung/Überdeckung) und «Perron auf Gleis»; dazu `pruefstand_messen` auf allen Plänen.
+- Kennzahl «Hinweis-Abdeckung»: Anteil offener Hinweise mit Befund < 40 px (Basis 26/61 ohne G2). Testfälle: Konolfingen
+  (DKW links oben, Gleisfeld West, 33fs, 3d6h), Montreux, Solothurn. Fertig, wenn: Abdeckung deutlich höher, Prüfungen im Workflow.
+
+### V2 – Ein Regelwerk für alle
+- Einstieg: «Weiter mit UEBERGABE.md – Schritt V2: Ein Regelwerk für alle»
+- 15 Regeln nur in `region_lauf.py` an (hauptgleis_funktion, perron_frei, gleis_mindestlaenge, perron_abschnitt, perron_teile,
+  pfeil_aussen, fenster_streckenende, spurgruppe_seite, kreuzung_schnitt, dkw_auto, randzone, haupt_fortsetzung, r28e/r28f/r36b/r49).
+  Eine nach der anderen zum Standard für alle Wege machen, jede an V1 gemessen (nicht an G-Zählern); schadet eine Regel, die Regel
+  verbessern statt abschalten. Fertig, wenn: alle Wege gleiche Standards, V1 nicht schlechter, Abdeckung nicht schlechter.
+- Pfeile rechts unten Konolfingen (Hinweis 8bce) → Testfall R3b.
 
 ### R1c – Doppelspur-Abstand im Bündel
 - Einstieg: «Weiter mit UEBERGABE.md – Schritt R1c: Doppelspur-Abstand im Bündel»
@@ -227,3 +249,7 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - Verworfen: Regel auf Segment-Ebene (vor der Ketten-Bildung) – traf Olten (2 Ways) und Solothurn (3), G7 +5 im Regionalplan.
 - Wirkung nur Konolfingen (2/3/4 einfacher Abstand, kein Versatz Luzern); MOB/Vereina/Olten/NE/Repo-Bahnhöfe identisch,
   Prüfstand = Basis. nreb und 2ch8 (Konolfingen) → behoben.
+
+### 12.11.2026 ~21:20 – Diagnose «wir übersehen was», neue Schritte V1/V2
+- Befund: 15 Regeln nur in MOB/Vereina an; Prüfung deckt 26/61 offene Hinweise ab. Versuch Konolfingen mit Regionsregeln
+  verworfen (Daniel: DKW links oben fehlt, Gleisfeld West von Gl. 5 erreichbar – OSM bestätigt beides). Reihenfolge: V1, V2, K, A2 …
