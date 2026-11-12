@@ -536,6 +536,94 @@
   "versatz_y": 0.0,
   "netz_auf_plan": 1.0
  },
+ "vereina__klosters_platz": {
+  "VB1": 3,
+  "VD1": 4,
+  "gleise": 30,
+  "knoten_plan": 10,
+  "dkw_plan": 0,
+  "knoten_osm": 13,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
+ },
+ "vereina__klosters_selfranga": {
+  "VB1": 2,
+  "VB2": 1,
+  "VD1": 1,
+  "gleise": 21,
+  "knoten_plan": 8,
+  "dkw_plan": 0,
+  "knoten_osm": 12,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
+ },
+ "vereina__sagliains": {
+  "VB1": 1,
+  "VB2": 2,
+  "VD1": 3,
+  "gleise": 25,
+  "knoten_plan": 9,
+  "dkw_plan": 0,
+  "knoten_osm": 9,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 0.96
+ },
+ "vereina__sagliains_nord": {
+  "gleise": 2,
+  "knoten_plan": 1,
+  "dkw_plan": 0,
+  "knoten_osm": 1,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
+ },
+ "vereina__sagliains_sasslatsch": {
+  "gleise": 13,
+  "knoten_plan": 5,
+  "dkw_plan": 0,
+  "knoten_osm": 6,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
+ },
+ "vereina__sasslatsch": {
+  "gleise": 5,
+  "knoten_plan": 1,
+  "dkw_plan": 0,
+  "knoten_osm": 1,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
+ },
+ "vereina__selfranga_sud": {
+  "gleise": 2,
+  "knoten_plan": 1,
+  "dkw_plan": 0,
+  "knoten_osm": 1,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
+ },
+ "vereina__susch": {
+  "gleise": 7,
+  "knoten_plan": 4,
+  "dkw_plan": 0,
+  "knoten_osm": 4,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
+ },
+ "vereina__vereina_nord": {
+  "gleise": 5,
+  "knoten_plan": 2,
+  "dkw_plan": 0,
+  "knoten_osm": 2,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
+ },
+ "vereina__vereina_sud": {
+  "gleise": 2,
+  "knoten_plan": 1,
+  "dkw_plan": 0,
+  "knoten_osm": 1,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
+ },
  "wangen_bei_olten": {
   "VB2": 1,
   "gleise": 38,

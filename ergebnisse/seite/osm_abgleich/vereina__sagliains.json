@@ -1,0 +1,60 @@
+{
+"plan": "vereina__sagliains",
+"befunde": [
+{
+"regel": "VB1",
+"x": 346.9,
+"y": 160.4,
+"text": "OSM-Weiche 8863709857 ohne Abzweig im Plan",
+"osm": 8863709857
+},
+{
+"regel": "VB2",
+"x": 244.7,
+"y": 110.0,
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+"ways": [
+211549228
+]
+},
+{
+"regel": "VB2",
+"x": 766.7,
+"y": 160.4,
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+"ways": [
+211549218,
+211549224,
+957932438,
+1350666078,
+1545501210
+]
+},
+{
+"regel": "VD1",
+"x": 264.2,
+"y": 123.2,
+"text": "zwei Gleise 14 px aufeinander"
+},
+{
+"regel": "VD1",
+"x": 296.8,
+"y": 184.4,
+"text": "zwei Gleise 43 px aufeinander"
+},
+{
+"regel": "VD1",
+"x": 323.0,
+"y": 160.4,
+"text": "zwei Gleise 48 px aufeinander"
+}
+],
+"info": {
+"gleise": 25,
+"knoten_plan": 9,
+"dkw_plan": 0,
+"knoten_osm": 9,
+"versatz_y": 0.0,
+"netz_auf_plan": 0.96
+}
+}

@@ -45,7 +45,7 @@ Hinweis-Abdeckung: 34/57 (Befund < 40 px, ohne G2)
 ✓ mp8h mob__montreux                MX,VA2,VB2                13.0  90 Grad?
 ✓ obvp solothurn                    G6,VB1,VD1,W1,W2           0.7  90 Grad Knick?
 ✓ q31m mob__zweisimmen              VB2                       34.0  Meterspur an 6/7 nicht angebunden
-· qotw vereina__klosters_platz      -                        179.8  Mittelperron zwischen 2 und 3
+· qotw vereina__klosters_platz      -                         83.3  Mittelperron zwischen 2 und 3
 · r9xv aarau                        -                         47.9  Stummel korrekt?
 · rap4 mob__le_tremblex             -                            -  Nebengleis nicht fett
 ✓ t6x0 solothurn                    G6,ME,MX,VA1,VB2,VC1,W2     5.3  Kreuzung in OSM?
@@ -62,5 +62,7 @@ Hinweis-Abdeckung: 34/57 (Befund < 40 px, ohne G2)
 ✓ zcz3 solothurn                    G7,MX,VB2                 18.0  nicht verbunden
 /home/runner/work/topo-daten/topo-daten/spurplan/code/alle_plaene_pruefen.py:153: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
   json.dump(dict(erzeugt=datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"), plaene=len(zeilen), geaendert=len(gz),
+region_vereina               veröffentlicht                      1 Stellen  gleichwertig  
 rothrist                     Abnahme 2026-10-29                  0 Stellen  gleichwertig  OSM VA2 1, VB1 4, VB2 6 (kein Alt-Stand)
-Regression: 136 Pläne, 0 geändert {}
+vereina__sagliains           veröffentlicht                      1 Stellen  gleichwertig  OSM VB1 1, VB2 2, VD1 3 (kein Alt-Stand)
+Regression: 136 Pläne, 2 geändert {'gleichwertig': 2}

@@ -1,0 +1,58 @@
+{
+"plan": "vereina__klosters_platz",
+"befunde": [
+{
+"regel": "VB1",
+"x": 339.1,
+"y": 158.0,
+"text": "OSM-Weiche 1231713219 ohne Abzweig im Plan",
+"osm": 1231713219
+},
+{
+"regel": "VB1",
+"x": 412.9,
+"y": 134.0,
+"text": "OSM-Weiche 2731398811 ohne Abzweig im Plan",
+"osm": 2731398811
+},
+{
+"regel": "VB1",
+"x": 270.5,
+"y": 158.0,
+"text": "OSM-Weiche 5370737688 ohne Abzweig im Plan",
+"osm": 5370737688
+},
+{
+"regel": "VD1",
+"x": 387.8,
+"y": 134.0,
+"text": "zwei Gleise 50 px aufeinander"
+},
+{
+"regel": "VD1",
+"x": 310.2,
+"y": 158.0,
+"text": "zwei Gleise 43 px aufeinander"
+},
+{
+"regel": "VD1",
+"x": 314.0,
+"y": 158.0,
+"text": "zwei Gleise 50 px aufeinander"
+},
+{
+"regel": "VD1",
+"x": 301.1,
+"y": 158.0,
+"text": "zwei Gleise 61 px aufeinander"
+}
+],
+"info": {
+"gleise": 30,
+"knoten_plan": 10,
+"dkw_plan": 0,
+"knoten_osm": 13,
+"versatz_y": 0.0,
+"netz_auf_plan": 1.0
+}
+}

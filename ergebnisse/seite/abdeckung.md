@@ -46,7 +46,7 @@ Befund < 40 px im selben Plan, ohne G2.
 | ✓ | mp8h | mob__montreux | MX, VA2, VB2 | 13.0 | 90 Grad? |
 | ✓ | obvp | solothurn | G6, VB1, VD1, W1, W2 | 0.7 | 90 Grad Knick? |
 | ✓ | q31m | mob__zweisimmen | VB2 | 34.0 | Meterspur an 6/7 nicht angebunden |
-| · | qotw | vereina__klosters_platz |  | 179.8 | Mittelperron zwischen 2 und 3 |
+| · | qotw | vereina__klosters_platz |  | 83.3 | Mittelperron zwischen 2 und 3 |
 | · | r9xv | aarau |  | 47.9 | Stummel korrekt? |
 | · | rap4 | mob__le_tremblex |  |  | Nebengleis nicht fett |
 | ✓ | t6x0 | solothurn | G6, ME, MX, VA1, VB2, VC1, W2 | 5.3 | Kreuzung in OSM? |
