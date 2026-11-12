@@ -21,14 +21,14 @@
   {
    "regel": "G2",
    "x": 381.6,
-   "y": 317.6,
+   "y": 293.6,
    "bahnhof": null,
    "text": "Weiche ohne Ausrundung (60°)"
   },
   {
    "regel": "G7",
    "x": 378.4,
-   "y": 317.6,
+   "y": 293.6,
    "bahnhof": null,
    "text": "Gleisende nicht angebunden, nächstes Gleis 2.8 px"
   }
@@ -38,7 +38,7 @@
   {
    "regel": "T10",
    "x": 378.6,
-   "y": 233.6,
+   "y": 221.6,
    "text": "Durchfahrgleis (beidseitig ans Streckengleis angeschlossen, 489 m Nebengleis, service=siding) schwarz gezeichnet",
    "way": 23493308,
    "gleis": "44"
@@ -52,25 +52,13 @@
   {
    "regel": "W2",
    "x": 578.0,
-   "y": 317.6,
+   "y": 293.6,
    "text": "S-Kurve in der Mitte unter 103° (steiler oder flacher als 60°)"
   },
   {
-   "regel": "F7",
-   "x": 589.1,
-   "y": 221.6,
-   "text": "Zwischengerade 33 px im Spurwechsel ohne Perron und Nummer (eine Diagonale)"
-  },
-  {
    "regel": "A1",
-   "x": 320.6,
-   "y": 225.0,
-   "text": "zwei Gleise nur 6.8 px auseinander über 49 px (Grenze 9.6 px)"
-  },
-  {
-   "regel": "A1",
-   "x": 729.7,
-   "y": 329.0,
+   "x": 688.3,
+   "y": 305.0,
    "text": "zwei Gleise nur 6.9 px auseinander über 15 px (Grenze 9.6 px)"
   }
  ],
@@ -78,11 +66,11 @@
   {
    "regel": "T7",
    "art": "Treppe",
-   "x": 635.7,
-   "y": 233.6,
-   "versatz": 75.7,
+   "x": 628.8,
+   "y": 221.6,
+   "versatz": 48.0,
    "plan": "konolfingen",
-   "text": "konolfingen: Treppe bei x=635.7, y=233.6"
+   "text": "konolfingen: Treppe bei x=628.8, y=221.6"
   }
  ],
  "qualitaet": {
@@ -97,10 +85,9 @@
   "netz_T10": 1,
   "netz_Z1": 1,
   "netz_W2": 1,
-  "netz_F7": 1,
-  "netz_A1": 2,
-  "boegen_pax": 13,
-  "boegen_alle": 53,
+  "netz_A1": 1,
+  "boegen_pax": 11,
+  "boegen_alle": 49,
   "ruhe_treppen": 1,
   "ruhe_ecken": 0,
   "randabstand": 0

@@ -4,7 +4,7 @@
   {
    "regel": "T10",
    "x": 378.6,
-   "y": 233.6,
+   "y": 221.6,
    "text": "Durchfahrgleis (beidseitig ans Streckengleis angeschlossen, 489 m Nebengleis, service=siding) schwarz gezeichnet",
    "way": 23493308,
    "gleis": "44"
@@ -18,25 +18,13 @@
   {
    "regel": "W2",
    "x": 578.0,
-   "y": 317.6,
+   "y": 293.6,
    "text": "S-Kurve in der Mitte unter 103° (steiler oder flacher als 60°)"
   },
   {
-   "regel": "F7",
-   "x": 589.1,
-   "y": 221.6,
-   "text": "Zwischengerade 33 px im Spurwechsel ohne Perron und Nummer (eine Diagonale)"
-  },
-  {
    "regel": "A1",
-   "x": 320.6,
-   "y": 225.0,
-   "text": "zwei Gleise nur 6.8 px auseinander über 49 px (Grenze 9.6 px)"
-  },
-  {
-   "regel": "A1",
-   "x": 729.7,
-   "y": 329.0,
+   "x": 688.3,
+   "y": 305.0,
    "text": "zwei Gleise nur 6.9 px auseinander über 15 px (Grenze 9.6 px)"
   }
  ],

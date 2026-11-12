@@ -6,62 +6,60 @@ geschrieben konolfingen_override.json
 
 $ spurplan_schema.py --src konolfingen.json --nowarp
 Bahnhof Konolfingen: Achse 3695 m, Ausschnitt s=1206…2230, 29 Weichen, 3 Perrons
-R1c Bündel kompakt: [('randstueck', 5, 6, 2018, 2129)]
+R1c Bündel kompakt: [('verbindung_schraeg', 156705005, 6, 1884, 1964), ('ebene_leer', 6)]
 G6: 2 Überstand(e) vor Ausrundung gekürzt
-chains 19 lanes 13 segs 62 W 1256 H 553
+chains 17 lanes 12 segs 62 W 1256 H 529
 
 $ spurplan_warp.py konolfingen
 Optimization terminated successfully. (HiGHS Status 7: Optimal)
-Breite linear 942 px -> entzerrt 659 px
+Breite linear 942 px -> entzerrt 618 px
 
 $ spurplan_schema.py --src konolfingen.json
 Bahnhof Konolfingen: Achse 3695 m, Ausschnitt s=1206…2230, 29 Weichen, 3 Perrons
-R1c Bündel kompakt: [('randstueck', 5, 6, 2018, 2129)]
-G6: 4 Überstand(e) vor Ausrundung gekürzt
-chains 19 lanes 13 segs 62 W 977 H 553
+R1c Bündel kompakt: [('verbindung_schraeg', 156705005, 6, 1884, 1964), ('ebene_leer', 6)]
+G6: 3 Überstand(e) vor Ausrundung gekürzt
+chains 17 lanes 12 segs 62 W 935 H 529
 
 $ spurplan_warp.py konolfingen
 Optimization terminated successfully. (HiGHS Status 7: Optimal)
-Breite linear 942 px -> entzerrt 659 px
+Breite linear 942 px -> entzerrt 618 px
 
 $ spurplan_schema.py --src konolfingen.json
 Bahnhof Konolfingen: Achse 3695 m, Ausschnitt s=1206…2230, 29 Weichen, 3 Perrons
-R1c Bündel kompakt: [('randstueck', 5, 6, 2018, 2129)]
-G6: 4 Überstand(e) vor Ausrundung gekürzt
-chains 19 lanes 13 segs 62 W 977 H 553
+R1c Bündel kompakt: [('verbindung_schraeg', 156705005, 6, 1884, 1964), ('ebene_leer', 6)]
+G6: 3 Überstand(e) vor Ausrundung gekürzt
+chains 17 lanes 12 segs 62 W 935 H 529
 
 $ spurplan_check.py --src konolfingen.json --out /tmp/spurplan_lauf/_check_konolfingen.svg
 Bahnhof Konolfingen: Achse 3695 m, Ausschnitt s=1206…2230, 29 Weichen, 3 Perrons
-R1c Bündel kompakt: [('randstueck', 5, 6, 2018, 2129)]
-G6: 4 Überstand(e) vor Ausrundung gekürzt
-chains 19 lanes 13 segs 62 W 977 H 553
+R1c Bündel kompakt: [('verbindung_schraeg', 156705005, 6, 1884, 1964), ('ebene_leer', 6)]
+G6: 3 Überstand(e) vor Ausrundung gekürzt
+chains 17 lanes 12 segs 62 W 935 H 529
 Befunde: {'A': 1, 'B': 2}
 eindeutig: {'A': 1, 'B': 2}
-A x=   601 y=  342  Verbindung nicht geschlossen (118px): yard (way 156705006)
-B x=   403 y=  318  Überlagerung 22px: 11 (way 33390862) / yard (way 739598378)
-B x=   403 y=  318  Überlagerung 22px: Gleis (way 606745360) / yard (way 739598378)
+A x=   601 y=  318  Verbindung nicht geschlossen (82px): yard (way 156705006)
+B x=   403 y=  294  Überlagerung 22px: 11 (way 33390862) / yard (way 739598378)
+B x=   403 y=  294  Überlagerung 22px: Gleis (way 606745360) / yard (way 739598378)
 
 $ spurplan_schema.py --src konolfingen.json --bare --out konolfingen_bare.svg
 Bahnhof Konolfingen: Achse 3695 m, Ausschnitt s=1206…2230, 29 Weichen, 3 Perrons
-R1c Bündel kompakt: [('randstueck', 5, 6, 2018, 2129)]
-G6: 4 Überstand(e) vor Ausrundung gekürzt
-chains 19 lanes 13 segs 62 W 977 H 471
+R1c Bündel kompakt: [('verbindung_schraeg', 156705005, 6, 1884, 1964), ('ebene_leer', 6)]
+G6: 3 Überstand(e) vor Ausrundung gekürzt
+chains 17 lanes 12 segs 62 W 935 H 447
 
 Verbindungsprüfung konolfingen: 0 Perrongleise, 5 Abgänge (Personenverkehr)
   Abgang 460 Bern (edge y198 x177): ok (3 Ziele)
-  Abgang 460 Luzern (edge y198 x836): ok (2 Ziele)
-  Abgang 460 Luzern (edge y222 x836): ok (2 Ziele)
-  Abgang 430 Steffisburg (side y318 x382): ok (3 Ziele)
-  Abgang 430 Hasle-Rüegsau (side y190 x675): ok (2 Ziele)
+  Abgang 460 Luzern (edge y198 x794): ok (2 Ziele)
+  Abgang 460 Luzern (edge y222 x794): ok (2 Ziele)
+  Abgang 430 Steffisburg (side y294 x382): ok (3 Ziele)
+  Abgang 430 Hasle-Rüegsau (side y190 x661): ok (2 Ziele)
 → 0 Abweichungen
 Weichen ohne Ausrundung (Linienende unter >35° auf Gleis): 2
-   x382 y318  60°
-   x629 y246  36°
+   x382 y294  60°
+   x629 y222  36°
 
-Netzprüfung konolfingen: {'A1': 2, 'F7': 1, 'T10': 1, 'W2': 1, 'Z1': 1}; Durchfahrgleise 3
-  T10  x=378.6 y=233.6  Durchfahrgleis (beidseitig ans Streckengleis angeschlossen, 489 m Nebengleis, service=siding) schwarz gezeichnet  (way 23493308)
+Netzprüfung konolfingen: {'A1': 1, 'T10': 1, 'W2': 1, 'Z1': 1}; Durchfahrgleise 3
+  T10  x=378.6 y=221.6  Durchfahrgleis (beidseitig ans Streckengleis angeschlossen, 489 m Nebengleis, service=siding) schwarz gezeichnet  (way 23493308)
   Z1   x=514.1 y=173.6  Gleisnummer 1 53 px neben der Perronmitte
-  W2   x=578.0 y=317.6  S-Kurve in der Mitte unter 103° (steiler oder flacher als 60°)
-  F7   x=589.1 y=221.6  Zwischengerade 33 px im Spurwechsel ohne Perron und Nummer (eine Diagonale)
-  A1   x=320.6 y=225.0  zwei Gleise nur 6.8 px auseinander über 49 px (Grenze 9.6 px)
-  A1   x=729.7 y=329.0  zwei Gleise nur 6.9 px auseinander über 15 px (Grenze 9.6 px)
+  W2   x=578.0 y=293.6  S-Kurve in der Mitte unter 103° (steiler oder flacher als 60°)
+  A1   x=688.3 y=305.0  zwei Gleise nur 6.9 px auseinander über 15 px (Grenze 9.6 px)
