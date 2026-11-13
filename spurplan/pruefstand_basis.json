@@ -63,6 +63,80 @@
    "P": 2,
    "T": 4
   },
+  "osm/buendel_knick/a30": {
+   "Q": 4
+  },
+  "osm/buendel_knick/a60": {
+   "Q": 4
+  },
+  "osm/buendel_knick/d0": {
+   "Q": 4
+  },
+  "osm/buendel_knick/d30": {
+   "Q": 4
+  },
+  "osm/buendel_knick/d60": {
+   "Q": 4
+  },
+  "osm/buendel_knick/d90": {
+   "Q": 4
+  },
+  "osm/buendel_knick/dm30": {
+   "Q": 4
+  },
+  "osm/buendel_knick/dm60": {
+   "Q": 4
+  },
+  "osm/buendel_knick_eng/a30": {
+   "Q": 4
+  },
+  "osm/buendel_knick_eng/a60": {
+   "Q": 4
+  },
+  "osm/buendel_knick_eng/d0": {
+   "Q": 4
+  },
+  "osm/buendel_knick_eng/d30": {
+   "Q": 4
+  },
+  "osm/buendel_knick_eng/d60": {
+   "Q": 4
+  },
+  "osm/buendel_knick_eng/d90": {
+   "Q": 4
+  },
+  "osm/buendel_knick_eng/dm30": {
+   "Q": 4
+  },
+  "osm/buendel_knick_eng/dm60": {
+   "Q": 4
+  },
+  "osm/buendel_versatz/a30": {},
+  "osm/buendel_versatz/a60": {},
+  "osm/buendel_versatz/d0": {
+   "E": 2,
+   "Z": 2
+  },
+  "osm/buendel_versatz/d30": {
+   "E": 2,
+   "Z": 1
+  },
+  "osm/buendel_versatz/d60": {
+   "E": 2,
+   "Z": 2
+  },
+  "osm/buendel_versatz/d90": {
+   "E": 2,
+   "Z": 2
+  },
+  "osm/buendel_versatz/dm30": {
+   "E": 2,
+   "Z": 2
+  },
+  "osm/buendel_versatz/dm60": {
+   "E": 2,
+   "Z": 2
+  },
   "osm/gleissprung/a30": {},
   "osm/gleissprung/a60": {},
   "osm/gleissprung/d0": {},
@@ -447,6 +521,6 @@
   }
  },
  "fehler": [],
- "gesetzt": "2026-11-09 19:40 UTC",
- "quelle": "tabelle.json"
+ "gesetzt": "2026-11-12 23:09 UTC",
+ "quelle": "ps_tabelle.json"
 }

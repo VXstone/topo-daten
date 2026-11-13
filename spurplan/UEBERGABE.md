@@ -88,8 +88,8 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - [x] **R1b Bündel docken an** (mittel) – 11.11. abends, Seite v144
 - [x] **R1c Doppelspur-Abstand im Bündel** (klein) – 11.11. abends, Seite v145
 - [x] **V1 Abgleich Plan gegen OSM** (mittel) – 12.11. abends, Commit d5f52c5 (Seite nicht neu veröffentlicht: kein Plan geändert)
-- [ ] **S1 Sagliains parallel durch den Knick** (klein) – **als Nächstes** (Wunsch Daniel 12.11. spät: «sichtbare Fortschritte»)
-- [ ] **S2 Konolfingen Topologie richtig** (mittel; erster Teil von V2)
+- [x] **S1 Sagliains parallel durch den Knick** (klein) – 13.11. früh, Commit 08022dd, Seite v147
+- [ ] **S2 Konolfingen Topologie richtig** (mittel; erster Teil von V2) – **als Nächstes**
 - [ ] **S3 Aarau Zwischengeraden** (mittel; Kern von R2)
 - [ ] **V2 Ein Regelwerk für alle** (mittel, Rest nach S2)
 - [ ] **K Kreuzungen und Werfungen** (mittel; nimmt R2-Teil Unterwerfung auf) – **vor A2** (Wunsch 11.11.: Aarau-Tunnel-Hinweise)
@@ -310,3 +310,15 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   geraden «haben schon funktioniert». Grund: Regeln nur im Weg MOB/Vereina, W8 nur im Regionalplan, R1a-Stummel zielt auf 24 px.
 - Neu S1 (Sagliains), S2 (Konolfingen), S3 (Aarau) vor V2/K; jeder Schritt mit Zielplan und Vorher/Nachher (Abschnitt 0).
 
+### 13.11.2026 ~00:20 – Schritt S1 abgeschlossen, Seite v147 (Commit 08022dd, ergebnisse a473f9c)
+- `_stub_buendel`: Soll-Querabstand der Schrägen = Abstand der Gleise vor dem Knick (|Δy| der Wurzeln, cfg `stub_buendel_davor`)
+  statt fest `lane_px`. Sagliains-Portal: oberer Knick 7,6 px (= 13,2·tan 30°) statt 20 px versetzt, parallel 13,2 px.
+- Neue Messung **QK** (`pruefstand_messen`): zwei Gleise knicken gemeinsam → Querabstand danach = davor; schliesst Spurwechsel-
+  Treppen, Fächer und Zusammenführungen aus. F akzeptiert Pfeilpaare eines QK-Bündels. Auf allen MOB/Vereina-Plänen vorher nur
+  Sagliains (Ziel), Klosters Selfranga (S-Kurve jxpf → R3a) und Montreux (Pfeilstelle → R3b).
+- Bausteine `buendel_knick` (60°, 1 Ebene) / `buendel_knick_eng` (30°, 0,55 Ebene): vorher QK 2, jetzt nur Q 4 je Fall (= der
+  0,55-Abstand selbst, offene Frage Abschnitt 4 – der Code zeichnet auch 4,5 m real so eng). Basis neu gesetzt (248 Fälle).
+- Regression 2/136, beide gewollt: vereina__sagliains, region_vereina (Bündel Sasslatsch–Autoverlad parallel statt Trichter;
+  dafür kleiner Bündel-Versatz am Tunnelportal = R1b-Verhalten → Kandidat für R3a). Nicht gemacht: Bündel-Knick im Löser/
+  Regionalplan allgemein (gilt laut Daniel für jedes Bündel) – QK misst es überall, Code nur für Stummel.
+- Lokal gerechnet zeigt Klosters Platz rechts «Landquart» statt «Davos» – auch ohne Änderung, im Workflow korrekt (lokales Artefakt).
