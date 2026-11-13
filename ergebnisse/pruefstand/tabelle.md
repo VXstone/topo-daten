@@ -1,4 +1,4 @@
-# Prüfstand – Bausteine × Drehungen (2026-11-13 08:15 UTC)
+# Prüfstand – Bausteine × Drehungen (2026-11-13 21:39 UTC)
 
 Zählung je Fall (Regel Anzahl); leer = ohne Befund. Rangfolge der Regeln: T, PF, X, E, K, Q, P, QK, F, Z, D, G2, G3, G4, G5, G6, G7, G8
 
