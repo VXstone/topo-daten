@@ -57,6 +57,12 @@ if os.path.exists(_vp):
     _sp.run(["python3", _vp, "--blaupause2", os.path.join(HERE, "blaupause2.svg")], check=True, cwd=os.path.dirname(_vp), capture_output=True)
     plans.append(dict(key="blaupause2", name="Blaupause 2 – Bahnhofstypen", gruppe="Werkzeugkasten", label=f"Reinform + Zusätze · Stand {stand}",
                       svg=strip(open(os.path.join(HERE, "blaupause2.svg")).read()), counts=None, status=None))
+# Fragen an Dani (13.11.2026): offene Entscheide mit Planausschnitt, Antwort per Pin (spurplan/fragen, code/fragen_bauen.py)
+_fq = os.path.join(HERE, "..", "..", "..", "fragen", "fragen.svg")
+if os.path.exists(_fq):
+    plans.append(dict(key="fragen", name="Fragen an Dani", gruppe="Werkzeugkasten",
+                      label="Offene Entscheide · Antwort per Pin «A»/«B» · danach in REGELN.md",
+                      svg=strip(open(_fq).read()), counts=None, status=None))
 # Prüfstand (Schritt 1, 8.11.2026): Kontaktbogen Bausteine × Drehungen vom Workflow «pruefstand» (Branch «ergebnisse»)
 if os.path.exists(os.path.join(HERE, "pruefstand.svg")):
     _pl = os.path.join(HERE, "pruefstand_label.txt")

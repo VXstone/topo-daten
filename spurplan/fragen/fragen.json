@@ -1,0 +1,26 @@
+{
+ "_zweck": "Karte «Fragen an Dani» (Werkzeugkasten der Feedback-Seite, 13.11.2026). Je Frage ein Ausschnitt aus dem echten Plan, Varianten A/B, Verweis auf REGELN.md. Beantwortete Fragen hier löschen und den Entscheid in REGELN.md eintragen. Neu bauen: python3 spurplan/code/fragen_bauen.py <ordner mit den Plan-SVG, z. B. ergebnisse/seite/plaene>",
+ "fragen": [
+  {"nr": "F1", "regel": "REGELN 7.2", "titel": "Nebengleise am Planrand", "plan": "vereina__sagliains", "fenster": [185, 72, 190, 110],
+   "frage": "Zwei Nebengleise verlassen den Plan. Behalten sie ihren Nebengleis-Abstand (0,55 Ebene, wie hier) oder rücken sie am Planrand auf eine ganze Ebene (Randzone 1.10)?",
+   "a": "Nebengleise behalten ihren Abstand; Randzone gilt nur für Streckengleise (Vorschlag – folgt aus deinem Entscheid «Nebengleise zueinander näher»)",
+   "b": "Auch Nebengleise am Rand im Abstand 1 Ebene",
+   "notiz": "Sagliains selbst: Autoverladgleis, OSM eher unscharf – die Frage gilt allgemein."},
+  {"nr": "F2", "regel": "REGELN 7.3", "titel": "Ebenenwechsel vor dem Planrand", "plan": "vereina__klosters_selfranga", "fenster": [600, 70, 424, 130],
+   "frage": "Das obere Gleis rückt kurz vor dem Rand ohne Weiche eine Ebene nach unten, damit die Strecke im Standardabstand austritt (Randzone). Regel 1.8 verbietet Ebenenwechsel ohne Weiche.",
+   "a": "Erlaubt: Randzone ist ausdrückliche Ausnahme zu 1.8 (Vorschlag)",
+   "b": "Nicht erlaubt: Gleis läuft auf seiner Ebene aus dem Plan, Abstand am Rand wie im Bahnhof"},
+  {"nr": "F3", "regel": "REGELN 7.4", "titel": "Versatz auf der Strecke", "plan": "region_vereina", "fenster": [-282, -215, 120, 90],
+   "frage": "Die Doppelspur macht zwischen zwei Bahnhöfen einen seitlichen Versatz (S). Regel 4.5 / R10: Knicke nur am Bahnhof.",
+   "a": "Versatz nur, wenn sonst Gleise kreuzen; sonst Bahnhof leicht kippen, Strecke gerade (Vorschlag)",
+   "b": "Ein kleiner Versatz auf der Strecke ist in Ordnung"},
+  {"nr": "F4", "regel": "REGELN 7.5", "titel": "Schräge Strecken und gekippte Bahnhöfe", "plan": "region_vereina", "fenster": [697, 326, 280, 154],
+   "frage": "Im Regionalplan laufen Strecken leicht schräg (hier ~2°), Bahnhöfe dürfen bis 8° gekippt sein. Im Bahnhofplan gilt einheitlich 0°/60°.",
+   "a": "Bahnhofplan strikt 0°/60°; Kippen und leichte Schrägen nur im Regionalplan (Vorschlag)",
+   "b": "Auch im Regionalplan nur 0°/60° – lieber ein Knick als eine leichte Schräge"},
+  {"nr": "F5", "regel": "REGELN 1.4", "titel": "Konolfingen Ost", "plan": "konolfingen", "fenster": [520, 150, 415, 110],
+   "frage": "Seit 11.11. (R1c) liegt Gl. 3 nach der letzten Weiche direkt neben Gl. 2: Doppelspur Richtung Luzern im einfachen Abstand.",
+   "a": "So richtig",
+   "b": "Nicht richtig (bitte Pin an die Stelle)"}
+ ]
+}

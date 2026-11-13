@@ -55,7 +55,7 @@ NE-Bahnhöfe (fest seit 21.10., Schritt N2), Basel/Bern (P2b), Thun/Ins/Murten/K
 | 1.2 | Ausrundung überall: Weichen, Pfeilstummel, Einmündungen, Gleisenden (7 px, DKW-Ketten 10 %). | | R5, W3, B8 | spurplan_schema `_rund_stub` | G2, G3 | alle |
 | 1.3 | Einheitlicher Winkel: alle Diagonalen einer Anlage gleich (60°), nicht variieren, um Platz zu gewinnen. | | V1 | dkw_auto | fehlt | LR |
 | 1.4 | Gleisabstand: Hauptgleise 1 Ebene; Gleise zweier Doppelspuren je 1 Ebene, zueinander 1 oder höchstens 2 Ebenen. | | B2, A1, R1c | `buendel_kompakt` | Q | alle |
-| 1.5 | Nebengleise 55 %, voller Abstand sobald ein Hauptgleis über eine Weiche berührt; bei Platzmangel enger statt länger, nie unter 40 %. | Nebengleis neben Nebengleis | B2, A2 | spurplan_schema | **Widerspruch 7.1** | alle |
+| 1.5 | **Ausnahme zu 0.5:** Nebengleise zueinander enger (55 %, bei Platzmangel bis 40 %); voller Abstand, sobald ein Hauptgleis über eine Weiche berührt. Grund: Pfeile in Anlagen werden später durch die richtigen Anlagen ersetzt (bestätigt 13.11.). Lange parallele Nebengleise wie Sagliains (Autoverladgleis) sind selten, dort eher OSM-Unschärfe. | Nebengleis neben Nebengleis | B2, A2, 7.1 | spurplan_schema | Q – **anpassen**: gegen die erlaubte Ebene prüfen | alle |
 | 1.6 | Stoss oder Gleisende > 1 px neben dem Nachbargleis ist ein Fehler; kein Knubbel (gerades Stück über den Anfang einer Ausrundung hinaus). | | E7, A3, W9 | | G6, G7 | alle |
 | 1.7 | Kein Gleis deckt ein anderes (> 12 px deckungsgleich); kein Perron auf einem Gleis. | | E4, A5 | | VD1, VD2, G8 | alle |
 | 1.8 | Kein Gleis wechselt die Ebene ohne Weiche oder Werfung; keine Badewanne (Mulde ohne Weiche bleibt oben, wenn frei). | | F11, F10 | `f10` | E, PS «E» | alle |
@@ -76,7 +76,7 @@ NE-Bahnhöfe (fest seit 21.10., Schritt N2), Basel/Bern (P2b), Thun/Ins/Murten/K
 | Nr | Regel | Auslöser | alt | Code | Prüfung | heute aktiv in |
 |---|---|---|---|---|---|---|
 | 1.17 | Jeder Perron aus OSM/SBB wird gezeichnet (≥ 3 m), mindestens 40 px, nie über Gleise oder Weichenbögen; Lage dort, wo seine Gleise liegen; an mehreren Gleispaaren je Paar ein Balken; beidseitige Perrons bleiben. | | B13, P1, 4./5./6.11. | `perron_frei`, `perron_abschnitt`, `perron_teile`, `perron_beidseitig` | P1, PF | **LR** (ausser beidseitig) |
-| 1.18 | Perronlänge: Standard **80 px** (Linien-Regionen) bzw. **110 px** mit Nummer in der Mitte (B14, alle Pläne) – siehe 7.6. | | B14, Z1, 5.11. | `perron_standard_px` | fehlt | LR 80 / sonst 110 |
+| 1.18 | Perronlänge **80 px** für alle Pläne, Gleisnummer in der Perronmitte (13.11.: 110 px aufgehoben). | | B14, Z1, 5.11., 7.6 | `perron_standard_px` | fehlt | LR 80 / sonst noch 110 (V2) |
 | 1.19 | Perronformen: Querperron an Kopfgleisen als U oder L um die Gleisenden. | Kopfgleise mit Querperron | 8.11. | – (P2a) | PF | fehlt |
 | 1.20 | Gleisnummern: SBB-Perronkanten > SBB-Perronflächen > OSM; nur Gleise mit Perron; Halt mit einem Gleis ohne Nummer; fehlt sie überall «?». `ref` in Gleisnummernform ist ein Gleis, keine Linie. | | R6, E10, D11, 6.11. | gleisnummern_sbb, `gleisnummer_aus_ref` | G1 | alle (MOB: aus_ref aus) |
 
@@ -102,14 +102,14 @@ welche Muster erkannt wurden (V0).
 | 2.2 | Spurwechsel | eine 60°-Diagonale; auf freier Strecke nur im geraden parallelen Stück, einzeln, nicht ineinander; Nebengleise zweigen nie im Spurwechsel ab; crossover zwischen zwei Streckengleisen ist immer Schräge | R11, R12, N7, F6, T7, Randzone | `verbindung_schraeg` | G5, r5_halt | alle |
 | 2.3 | Weichenstrasse | Diagonale läuft zum entferntesten Gleis durch, die näheren zweigen ab | B6, F5 | spurplan_schema | fehlt | alle |
 | 2.4 | DKW / EKW / Schere | OSM-Elemente < 20 m, die ein Gleis kreuzen = DKW mit Symbol an Ort, liegend, Klammern in den stumpfen Winkeln; Kette durch DKW eine gerade 60°-Linie; Durchschneidung mittig zwischen zwei Diagonalen | E3, B8, V2–V4, T5, W4 | `dkw_auto` | VA1, VA2, Montreux-Westende | **LR** |
-| 2.5 | Kreuzung ohne Verbindung | Lücke im unteren Gleis nur bei Niveautrennung (bridge/tunnel/layer), Brücke mit Flügeln; gleiche Ebene beide durchgezogen; Werfung = Ebenenwechsel unter/über der Kreuzung | B19, T4, 6.11. | `kreuzung_schnitt`, netz_lage `_kreuzungen` | X, unterwerfung (Schritt K) | LR (Bahnhof), Reg |
+| 2.5 | Kreuzung ohne Verbindung | Lücke im unteren Gleis nur bei Niveautrennung (bridge/tunnel/layer), Brücke mit Flügeln, Tunnel nur Lücke; gleiche Ebene beide durchgezogen; Werfung = Ebenenwechsel unter/über der Kreuzung (bestätigt 13.11.) | B19, T4, 6.11. | `kreuzung_schnitt`, netz_lage `_kreuzungen` | X, unterwerfung (Schritt K) | LR (Bahnhof), Reg |
 | 2.6 | Abzweig / seitlicher Abgang | ausgerundet unter 60°; ein Abzweig läuft höchstens eine Achse parallel und geht dann weg; parallele Abgänge bleiben parallel | B11, W5 | spurplan_schema | ab30, ab60 (Schritt A2) | alle |
 | 2.7 | Bündel knickt | parallele Gleise knicken gemeinsam, Querabstand danach = davor (Ausfahrten, Spurwechselpaare, Abgänge, Stummel) | 12.11., IDEEN «Bündel als Einheit» | nur Stummel: `stub_buendel_davor` | buendel_knick, QK | alle (nur Stummel) |
 | 2.8 | Gleisdreieck | kein fester Standard: Darstellung mit der meisten Ruhe nahe der Geografie (eine Achse, Zulaufstrecke teilt sich auf zwei Schenkel ≤ 90°, ausgerundet) | 3.11. | knoten.json | Sicht | alle |
 | 2.9 | Kreuzungsbahnhof zweier Linien | im Regionalplan X: je Linie eine gerade Achse, Kreuzung unter 60° in der Mitte | N2, W7 | Override «seitlich» | W1 | O (Kerzers) |
 | 2.10 | Anschluss-/Abstellgleise | jede Weiche nach OSM, zusammengedrängt, ohne Längenmassstab | E6, D2, (B16 widerspricht – entschieden: E6) | | fehlt | alle |
 | 2.11 | Kopfgleise / Stumpfgleise | endet daneben (< 30 m) ein weiteres Gleis: Kopfbahnhof, keine fehlende Weiche; nie bei Gleis mit Nummer oder auf anderer Ebene | R27b | spurplan_schema | – | alle |
-| 2.12 | Meterspur neben Normalspur | bis ~40 m daneben mitnehmen (Stummel mit Ziel), sonst eigener Plan | E8, D9 | `meterspur_cfg.d_max` | – | alle |
+| 2.12 | Meterspur neben Normalspur | Meterspur wird gezeichnet wie Normalspur (eigene Pläne, Regionen); bis ~40 m neben Normalspur in deren Plan mitgenommen. «Im Regionalplan nur als Stummel mit Ziel» aufgehoben 13.11. | E8, D9 | `meterspur_cfg.d_max` | – | alle |
 | 2.13 | Schiebebühne | Depotgleise mit gemeinsamem Anfang ≥ 40 px, Bühne gestrichelt | 4.11. | `schiebebuehne` | – | **LR** |
 | 2.14 | Tunnelportal | Klammer nur, wo alle Gleise gerade und parallel (±18 px); ausnahmsweise 90° | 4.11., R4 | netz_lage | – | alle |
 
@@ -122,7 +122,7 @@ welche Muster erkannt wurden (V0).
 | 3.1 | Grosser Knoten: nur Hauptgleise + jede Weiche in die Anlage einzeln als Abgang | grosse Nebengleisanlage (Olten, Bern, Basel, Däniken RB, RB Limmattal, Buchs SG, Weyermannshaus; nicht Olten Hammer) – **Schwelle aus OSM fehlt** | B17, D1 | `--hauptgleise` (von Hand) | Sicht | O, Basel/Bern fest |
 | 3.2 | Planfenster: jede Weiche, an der ein Strang des Betriebspunkts beginnt, liegt im Plan; Fenster bis zum Abzweig, wenn Gleise sich ≤ 1 km hinter dem Rand trennen; endet, wo das Fenster des Nachbarn beginnt | | T11, T13, 3.11. | straenge `anker_m`, `fenster_streckenende` | V1–V3, S1–S3 | LR (vollständig), sonst `s_min_fix`/`s_max_fix` von Hand |
 | 3.3 | Knotenpläne: Pläne nur an ruhigen Stellen schneiden (≥ 500 m ohne Weiche); nahe Betriebspunkte teilen einen Plan (≤ 2500 m); Halte ohne Weiche schneiden nie | | 3.11., T9 | straenge `--knoten` | – | **LR** |
-| 3.4 | Jeder SBB-Betriebspunkt hat einen Plan oder ist in einen integriert; ein Abzweig mit Weichen ist nie nur ein Knick | | R8, R14, T8 | | O2 | alle |
+| 3.4 | Jeder SBB-Betriebspunkt ist in einem Plan enthalten (eigener oder gemeinsamer Knotenplan, 13.11.: «eigener Plan je Betriebspunkt» aufgehoben); ein Abzweig mit Weichen ist nie nur ein Knick | | R8, R14, T8 | | O2 | alle |
 | 3.5 | Kreuzungsgleis (beide Enden auf demselben Streckengleis, ≤ 600 m) gehört samt Weichen zum näheren Betriebspunkt | | 5.11. | `kreuzungsgleis_m` | V1/V2 | **LR** |
 
 ---
@@ -167,13 +167,13 @@ Pläne verändern, um diese Zahlen zu senken – auch abgenommene –, und der V
 - **gleichwertig**, wenn Regeln und Wünsche gleich bleiben → Differenzbild ansehen (Fallstrick: neu erfundene Weiche);
 - **schlechter**, wenn die Wunsch-Summe steigt → nur mit Begründung im Nachtrag.
 
-E9 (abgenommene Pläne dürfen sich nur ohne Topologieänderung ändern) bleibt und ist hier enthalten.
+E9 (abgenommene Pläne dürfen sich nur ohne Topologieänderung ändern) bleibt und ist hier enthalten. **Abnahme = Vergleichsbasis, kein Einfrieren** (13.11.): auch abgenommene und bisher feste Pläne (NE, Basel, Bern, Referenzen) werden aus dem Code erzeugt; der Vergleich zeigt «besser» oder «Fehler».
 
 ---
 
 ## 6. Ausnahmen je Ort
 
-Ausnahmen sind Daten, keine Regeln: `spurplan/bahnhoefe/*_override.json`, `regionen/*/region.json` (Optionen je Bahnhof),
+**Entscheid 13.11.:** Overrides nur für Ortswissen, das nicht in OSM/SBB-Daten steht (z. B. Perronlage Galmiz) – nie für Geometrie oder Topologie; keine Handzeichnung (alt P3 «zuerst Override je Bahnhof», B18 «Handzeichnung, wo die Automatik scheitert» aufgehoben). Ausnahmen sind Daten, keine Regeln: `spurplan/bahnhoefe/*_override.json`, `regionen/*/region.json` (Optionen je Bahnhof),
 Werkstatt-Overrides Olten/NE. Jede Ausnahme nennt Regel und Grund; Ziel ist, dass die Liste schrumpft (Hauptgleisweichen,
 Topologie und Perronlage nie per Override, Vorgabe Daniel). Bekannte Einzelentscheide: Olten Ost 60° gedreht (E12),
 Galmiz Perron südlich / Kreuzungsgleis grün, Rothrist Detailvariante (E11), Kerzers X.
@@ -183,14 +183,14 @@ Galmiz Perron südlich / Kreuzungsgleis grün, Rothrist Detailvariante (E11), Ke
 
 ## 7. Offene Widersprüche – Entscheid Daniel
 
+Entschieden 13.11. abends: 7.1 (→ 1.5) und 7.6 (→ 1.18). Offene Fragen stehen mit Bild auf der Karte «Fragen an Dani» (`spurplan/fragen/fragen.json`).
+
 | Nr | Widerspruch | Vorschlag Claude | Entscheid |
 |---|---|---|---|
-| 7.1 | 0.5 «nie näher als ein Gleisabstand» gegen 1.5 Nebengleise 55 % (bis 40 %); Prüfung Q verlangt genau 1 Ebene (~280 Befunde, fast alle Nebengleise) | 1.5 gilt als Ausnahme zu 0.5 nur für Nebengleis neben Nebengleis; Q prüft gegen die erlaubte Ebene (1 bzw. 0,55) | offen |
-| 7.2 | 1.10 Randzone (Gleis ohne Liniennummer am Rand 1 Ebene) gegen 1.15/S1 (Sagliains-Stummel verlassen den Plan mit 0,55 Ebene) | 1.10 gilt nur für Streckengleise; Nebengleis-Bündel behalten ihren Abstand | offen |
-| 7.3 | 1.10 Randzone erzeugt vor dem Rand absichtlich einen Ebenenwechsel ohne Weiche – 1.8 verbietet das (Prüfung E) | Randzone als ausdrückliche Ausnahme zu 1.8; E zählt sie nicht | offen |
-| 7.4 | 4.5/R10 «Knicke nur am Bahnhof» gegen Versatz auf der Strecke (R1b-Bündelversatz, «ein Versatz ≤ 30° in der Mitte», `schraeg_max` 8°) | Versatz auf der Strecke nur, wenn sonst Gleise kreuzen; sonst Bahnhof kippen (≤ 8°) | offen |
-| 7.5 | 1.3 einheitlicher 60°-Winkel gegen r49 «zu eng für 60°: volle Schräge», `kipp_max` und leicht schräge Strecken (P meldet sie) | 1.3 gilt im Bahnhofplan; Kippen und Schrägen nur im Regionalplan, P dort mit Toleranz | offen |
-| 7.6 | Perronlänge 110 px (B14, alle Pläne) gegen 80 px (Linien-Regionen, 5.11.) | eine Länge für alle (80 px) | offen |
+| 7.2 | 1.10 Randzone (Gleis ohne Liniennummer am Rand 1 Ebene) gegen 1.15/S1 (Sagliains-Stummel verlassen den Plan mit 0,55 Ebene) | 1.10 gilt nur für Streckengleise; Nebengleis-Bündel behalten ihren Abstand | offen – Frage F1 auf der Karte «Fragen an Dani» |
+| 7.3 | 1.10 Randzone erzeugt vor dem Rand absichtlich einen Ebenenwechsel ohne Weiche – 1.8 verbietet das (Prüfung E) | Randzone als ausdrückliche Ausnahme zu 1.8; E zählt sie nicht | offen – Frage F2 auf der Karte «Fragen an Dani» |
+| 7.4 | 4.5/R10 «Knicke nur am Bahnhof» gegen Versatz auf der Strecke (R1b-Bündelversatz, «ein Versatz ≤ 30° in der Mitte», `schraeg_max` 8°) | Versatz auf der Strecke nur, wenn sonst Gleise kreuzen; sonst Bahnhof kippen (≤ 8°) | offen – Frage F3 auf der Karte «Fragen an Dani» |
+| 7.5 | 1.3 einheitlicher 60°-Winkel gegen r49 «zu eng für 60°: volle Schräge», `kipp_max` und leicht schräge Strecken (P meldet sie) | 1.3 gilt im Bahnhofplan; Kippen und Schrägen nur im Regionalplan, P dort mit Toleranz | offen – Frage F4 auf der Karte «Fragen an Dani» |
 
 ---
 

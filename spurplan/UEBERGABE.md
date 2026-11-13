@@ -76,10 +76,11 @@ Wird Abschnitt 6 länger als ~60 Zeilen, die ältesten Nachträge ins Archiv ver
 - Offene Hinweise (50): Solothurn 10, Konolfingen 9, Region Olten 7, MOB 20, Vereina 3 (h9o9 = behoben-Kandidat, jxpf, fuyq).
 
 ## 4. Offen bei Daniel
-- Kreuzungen ohne Verbindung: Vorschlag Claude vom 8.11. (Lücke im unteren Gleis nach layer/bridge/tunnel, Brücke mit Flügeln,
-  Tunnel nur Lücke, gleiche Ebene durchgezogen) – **Schritt K startet damit, wenn Daniel nicht widerspricht.**
+- Kreuzungen ohne Verbindung: **entschieden 13.11.** (REGELN 2.5) – Schritt K setzt es um.
+- Offene Entscheide stehen nur noch auf der Karte «Fragen an Dani» (`spurplan/fragen/fragen.json`, REGELN 7). Beantwortete Fragen
+  dort löschen und in REGELN.md eintragen.
 - Prüfstand-Befund «abzweigende Doppelspur» (ab30/ab60, Topologie): eigener Schritt (so im Fahrplan unten, A2).
-- Z5-Stumpenabstand 0,55 Ebenen in `vorlage.py` gewollt? Thun (Hinweis auf der Seite). Chamby/Rossinière/Zweisimmen (Kommentare).
+- Chamby/Rossinière/Zweisimmen: Daniels Hinweise auf der Seite (an Claude, kein offener Entscheid). Z5-Abstand: REGELN 1.5 (13.11.).
 
 ## 5. Fahrplan
 Grösse: ein Schritt = **ein Thema, ein Codebereich, ein Chat** (Richtwert: 1–3 Code-Änderungen, ein Workflow-Durchgang, eine
@@ -350,3 +351,7 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - Unruhigster Plan Region Olten (E+Z+QK+K 53, X 21, G 45) – in keinem Schritt Zielplan → bei K/R2 als Zielplan nehmen.
 - Selbstkritik S1: Stummel mit 0,55 Ebene am Planrand widerspricht E5 (Randzone) – in V0 entscheiden lassen.
 - Daniel: Regeln überall, alle Bahnhöfe gleich erstellen → neuer Schritt V0 vor S2; V2/N2/P2b danach in dieser Reihenfolge.
+
+### 13.11.2026 ~22:40 – Entscheide Daniel, Karte «Fragen an Dani»
+- Aufgehoben: P3/B18, Einfrieren, R8, E8-Stummel, Perron 110 px → REGELN 6, 5, 3.4, 2.12, 1.18. Bestätigt: 1.5 (Nebengleise enger), 2.5.
+- Neu: Karte «Fragen an Dani» im Werkzeugkasten (`code/fragen_bauen.py`, `spurplan/fragen/`), Fragen F1–F4 = REGELN 7.2–7.5, F5 Konolfingen Ost.
