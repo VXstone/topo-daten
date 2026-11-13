@@ -152,6 +152,12 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   Rang, Code-Ort/cfg, Prüfung; Doc nur noch Verweis. (2) Liste der Widersprüche (Review 13.11.: Abstand 0,55 vs. Grundsatz 5/Q;
   Randzone E5 vs. S1; Randzone vs. F11/E; Versatz auf Strecke vs. R10; 60° vs. r49/Kippen) mit Daniels Entscheid.
   (3) Je Plan auf der Seite sichtbar, woher er kommt: «aus Code <Commit/Datum>» oder «fest seit <Datum>».
+- **13.11. ~08:30 erledigt:** REGELN.md hierarchisch neu (Ebenen 0 Grundsätze, 1 Grundform, 2 Muster, 3 Knoten, 4 Region,
+  5 Wünsche, 6 Ausnahmen, 7 Widersprüche; Regel vs. Wunsch; Spalte «heute aktiv in»). Alte Fassung → REGELN_ARCHIV_bis_2026-11-13.md.
+  Daniel 13.11.: der Code darf Pläne verbessern (weniger S-Kurven, gleichmässiger Bahnhofsabstand, kürzere Bahnhöfe –
+  Onnens-Bonvillars, Rothrist, Tecknau) → Vergleich neu mit Einordnung «besser» (REGELN 5).
+- Offen in V0: Entscheide 7.1–7.6 holen; Messungen 5.3 (S-Kurve über Pläne), 5.5 (Bahnhofsabstand), 5.6 (Bahnhofslänge) bauen
+  und in die Regression (alle_plaene_pruefen) mit Einordnung «besser»; Liste der Overrides (6); Herkunft je Plan auf der Seite.
 - Fertig, wenn: REGELN.md vollständig, Widersprüche entschieden, Herkunft je Plan auf der Seite. Danach V2 (alle 15 Regeln
   Standard in allen Wegen, Konolfingen = S2 als erster Fall), dann N2 (NE aus dem Code), P2b (Bern/Basel), Referenzen.
 
