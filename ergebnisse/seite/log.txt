@@ -62,7 +62,5 @@ Hinweis-Abdeckung: 34/57 (Befund < 40 px, ohne G2)
 ✓ zcz3 solothurn                    G7,MX,VB2                 18.0  nicht verbunden
 /home/runner/work/topo-daten/topo-daten/spurplan/code/alle_plaene_pruefen.py:153: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
   json.dump(dict(erzeugt=datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"), plaene=len(zeilen), geaendert=len(gz),
-region_vereina               veröffentlicht                      1 Stellen  gleichwertig  
 rothrist                     Abnahme 2026-10-29                  0 Stellen  gleichwertig  OSM VA2 1, VB1 4, VB2 6 (kein Alt-Stand)
-vereina__sagliains           veröffentlicht                      1 Stellen  gleichwertig  OSM VB1 1, VB2 2, VD1 3 (kein Alt-Stand)
-Regression: 136 Pläne, 2 geändert {'gleichwertig': 2}
+Regression: 136 Pläne, 0 geändert {}
