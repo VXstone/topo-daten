@@ -89,7 +89,8 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - [x] **R1c Doppelspur-Abstand im Bündel** (klein) – 11.11. abends, Seite v145
 - [x] **V1 Abgleich Plan gegen OSM** (mittel) – 12.11. abends, Commit d5f52c5 (Seite nicht neu veröffentlicht: kein Plan geändert)
 - [x] **S1 Sagliains parallel durch den Knick** (klein) – 13.11. früh, Commit 08022dd, Seite v147
-- [ ] **S2 Konolfingen Topologie richtig** (mittel; erster Teil von V2) – **als Nächstes**
+- [ ] **V0 Ein Regelwerk auf GitHub** (mittel) – **als Nächstes** (Entscheid Daniel 13.11.: Regeln überall, alle Bahnhöfe gleich)
+- [ ] **S2 Konolfingen Topologie richtig** (mittel; erster Teil von V2)
 - [ ] **S3 Aarau Zwischengeraden** (mittel; Kern von R2)
 - [ ] **V2 Ein Regelwerk für alle** (mittel, Rest nach S2)
 - [ ] **K Kreuzungen und Werfungen** (mittel; nimmt R2-Teil Unterwerfung auf) – **vor A2** (Wunsch 11.11.: Aarau-Tunnel-Hinweise)
@@ -141,6 +142,18 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - Zuerst Prüfstand-Baustein «Bündel knickt» (Abstand 0,55 und 1 Ebene, Knick 30°/60°; Messung P/Q muss anschlagen).
 - Fertig, wenn: Sagliains-Portal als Bündel mit 13,2 px durch den Knick, Baustein ohne Befund, alle geänderten Pläne erklärt,
   Seite veröffentlicht (nimmt die Vereina-Änderung aus V1 mit).
+
+### V0 – Ein Regelwerk auf GitHub (Entscheid Daniel 13.11.2026)
+- Einstieg: «Weiter mit UEBERGABE.md – Schritt V0: Ein Regelwerk auf GitHub»
+- Daniel: «Regeln sollen überall gelten, alle Bahnhöfe gleich erstellen – sonst weiss ich beim Prüfen nicht, ob ein Ort erfasst
+  wurde.» Heute: Master-Text im Doc «Regelwerk Spurpläne» (Stand ~25.10.), neuere Regeln in REGELN.md/Archiven/Daniels
+  Vorgaben; 15 Regeln nur in `region_lauf.py`; NE-Bahnhöfe (53), Referenzen, Basel/Bern fest.
+- Arbeiten: (1) `REGELN.md` = einzige Quelle: Doc-Inhalt + Entscheide aus Archiven/Vorgaben übernehmen, je Regel Nr., Text,
+  Rang, Code-Ort/cfg, Prüfung; Doc nur noch Verweis. (2) Liste der Widersprüche (Review 13.11.: Abstand 0,55 vs. Grundsatz 5/Q;
+  Randzone E5 vs. S1; Randzone vs. F11/E; Versatz auf Strecke vs. R10; 60° vs. r49/Kippen) mit Daniels Entscheid.
+  (3) Je Plan auf der Seite sichtbar, woher er kommt: «aus Code <Commit/Datum>» oder «fest seit <Datum>».
+- Fertig, wenn: REGELN.md vollständig, Widersprüche entschieden, Herkunft je Plan auf der Seite. Danach V2 (alle 15 Regeln
+  Standard in allen Wegen, Konolfingen = S2 als erster Fall), dann N2 (NE aus dem Code), P2b (Bern/Basel), Referenzen.
 
 ### S2 – Konolfingen Topologie richtig
 - Einstieg: «Weiter mit UEBERGABE.md – Schritt S2: Konolfingen Topologie»
@@ -322,3 +335,10 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   dafür kleiner Bündel-Versatz am Tunnelportal = R1b-Verhalten → Kandidat für R3a). Nicht gemacht: Bündel-Knick im Löser/
   Regionalplan allgemein (gilt laut Daniel für jedes Bündel) – QK misst es überall, Code nur für Stummel.
 - Lokal gerechnet zeigt Klosters Platz rechts «Landquart» statt «Davos» – auch ohne Änderung, im Workflow korrekt (lokales Artefakt).
+
+### 13.11.2026 ~08:10 – Review nach S1, Entscheid «alle Bahnhöfe gleich»
+- Prüfungen über alle 137 Pläne (v147): neu gezeichnet werden nur MOB/Vereina 57, Olten 14, Repo 4; NE 53 + Referenzen/fest 8
+  ohne Code-Lauf und ohne V/G-Prüfung. QK echt: Olten, Region Olten 2, Vereina 2, Selfranga, Konolfingen, Montreux.
+- Unruhigster Plan Region Olten (E+Z+QK+K 53, X 21, G 45) – in keinem Schritt Zielplan → bei K/R2 als Zielplan nehmen.
+- Selbstkritik S1: Stummel mit 0,55 Ebene am Planrand widerspricht E5 (Randzone) – in V0 entscheiden lassen.
+- Daniel: Regeln überall, alle Bahnhöfe gleich erstellen → neuer Schritt V0 vor S2; V2/N2/P2b danach in dieser Reihenfolge.
