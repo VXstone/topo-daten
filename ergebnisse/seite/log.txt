@@ -1,6 +1,6 @@
 44 Felder
 18 Einträge
-index.html 1999 KB, 137 Pläne
+index.html 2064 KB, 138 Pläne
 21 Hinweise, 21 Ausschnitte
 Hinweis-Abdeckung: 34/57 (Befund < 40 px, ohne G2)
 ✓ 0bw9 solothurn                    G6,ME,MX,VB1,VB2,W1,W2    19.3  Gleis nach unten, Knick, über anderen Gleisen nach oben
@@ -63,4 +63,4 @@ Hinweis-Abdeckung: 34/57 (Befund < 40 px, ohne G2)
 /home/runner/work/topo-daten/topo-daten/spurplan/code/alle_plaene_pruefen.py:153: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
   json.dump(dict(erzeugt=datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"), plaene=len(zeilen), geaendert=len(gz),
 rothrist                     Abnahme 2026-10-29                  0 Stellen  gleichwertig  OSM VA2 1, VB1 4, VB2 6 (kein Alt-Stand)
-Regression: 136 Pläne, 0 geändert {}
+Regression: 137 Pläne, 0 geändert {}
