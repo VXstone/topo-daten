@@ -355,3 +355,4 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 ### 13.11.2026 ~22:40 – Entscheide Daniel, Karte «Fragen an Dani»
 - Aufgehoben: P3/B18, Einfrieren, R8, E8-Stummel, Perron 110 px → REGELN 6, 5, 3.4, 2.12, 1.18. Bestätigt: 1.5 (Nebengleise enger), 2.5.
 - Neu: Karte «Fragen an Dani» im Werkzeugkasten (`code/fragen_bauen.py`, `spurplan/fragen/`), Fragen F1–F4 = REGELN 7.2–7.5, F5 Konolfingen Ost.
+- Seite v148 (ergebnisse 4eb30e2): Regression 0/137 geändert, Prüfstand = Basis.
