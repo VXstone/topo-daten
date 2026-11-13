@@ -1,0 +1,17 @@
+# Regel-Lint (13.11.2026): REGELN.md bleibt die einzige, hierarchische Regelquelle.
+# Rot, wenn ein Abschnitt ausserhalb der Gliederung angehängt wird, eine Überschrift ein Datum trägt, eine Regelnummer doppelt
+# ist oder eine neue Regel-md-Datei entsteht. Hinweise (Schalter ohne Regel, Entscheid ohne Verweis) stehen in der Zusammenfassung.
+name: regeln
+on:
+  push:
+    paths: ["spurplan/**.md", "spurplan/code/**.py", ".github/workflows/regeln.yml"]
+  workflow_dispatch:
+jobs:
+  lint:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: Regel-Lint
+        run: python3 spurplan/code/regeln_lint.py --md lint.md; s=$?; cat lint.md >> "$GITHUB_STEP_SUMMARY"; exit $s

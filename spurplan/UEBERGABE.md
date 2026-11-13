@@ -26,6 +26,8 @@ Wird Abschnitt 6 länger als ~60 Zeilen, die ältesten Nachträge ins Archiv ver
   benannter Stelle. Zu Beginn Vorher-Ausschnitt + «so soll es aussehen» an Daniel; am Ende Differenzbild, Seite veröffentlichen,
   Daniel nickt ab/widerspricht. **Ohne sichtbare Wirkung am Zielplan ist der Schritt nicht fertig.** Prüfstand, OSM-Abgleich,
   Regression sind Leitplanke, nicht Ziel. Die übrigen Schritte im Fahrplan beim Start ebenso mit Zielplan versehen.
+- **Regeln nur in `REGELN.md`** an ihrer Stelle der Hierarchie (13.11., Daniel: «keine Ergänzungs-md-Sachen mehr»); Nachträge
+  hier verweisen auf «REGELN x.y». `regeln_lint.py` / Workflow `regeln` muss grün sein; Hinweise H1 (Schalter ohne Regel) abbauen.
 - **Nie abnehmen, nie «erledigt» setzen** – das macht nur Daniel. Lösungen im Code, Overrides nur, wo keine Regel passt.
 - Jeder Hinweis Daniels, den der Prüfstand nicht erkennt, wird nach Möglichkeit ein neuer Prüfstand-Baustein.
 
