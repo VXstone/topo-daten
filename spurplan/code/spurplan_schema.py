@@ -1801,6 +1801,7 @@ if CFG.get("spurgruppe_seite", False) and C:
 def build_ly():
     global LY_L, LY_Y
     pax_l = {c["lane"] for c in C if any(sg["pax"] for sg in c["segs"])}
+    pax_c = {id(c) for c in C if any(sg["pax"] for sg in c["segs"])}; beruehrt_c = set()   # R31: über Weiche berührt
     # Regel 31: Ebenen, die ein Personen-/Hauptgleis über eine Weichenverbindung berührt, bekommen vollen Abstand -
     # sonst klebt ein Nebengleis an der Fahrstrasse und die Weiche ist nicht erkennbar
     if RU.get("r31", True):
@@ -1809,11 +1810,28 @@ def build_ly():
             for n in (sg["nodes"][0], sg["nodes"][-1]):
                 s_, d_ = SD[n]
                 cc = [(abs(d_at(c, s_) - d_), c["lane"]) for c in C if c["s0"] - 1 <= s_ <= c["s1"] + 1]
-                if cc and min(cc)[0] < 2.0: pax_l.add(min(cc)[1])
+                if cc and min(cc)[0] < 2.0:
+                    pax_l.add(min(cc)[1])
+                    _cn = min((abs(d_at(c, s_) - d_), i_) for i_, c in enumerate(C) if c["s0"] - 1 <= s_ <= c["s1"] + 1)
+                    beruehrt_c.add(id(C[_cn[1]]))
     top = max(c["lane"] for c in C)
     LY_L, LY_Y = [top], [0.0]
     for l in range(top - 1, min(c["lane"] for c in C) - 1, -1):
-        g_ = CFG["lane_px"] if ((l in pax_l or l + 1 in pax_l) and l not in OVR.get("enge_ebenen", [])) else CFG["lane_px"] * CFG["side_lane_factor"]
+        _voll = (l in pax_l or l + 1 in pax_l)
+        # S1b (16.11.2026, Daniel F1/F2, REGELN 1.5): voller Abstand nur, wo ein Personen-/Weichengleis tatsächlich neben
+        # einem Gleis der Nachbarebene liegt. Liegen auf beiden Ebenen Gleise, aber nie ein Personengleis neben einem
+        # Gleis der anderen Ebene (Sagliains Sasslatsch: Personengleis links auf Ebene 1 endet 280 m vor dem Abstellgleis
+        # auf Ebene 2), sind die Ebenen zueinander Nebengleise: enger Abstand wie im Nachbarbahnhof. Ein über eine Weiche
+        # berührtes Nebengleis (R31) hält vollen Abstand zum Personengleis, zu einem anderen Nebengleis nur, wenn auch
+        # dieses berührt ist. cfg «ebene_eng_laengs».
+        if _voll and CFG.get("ebene_eng_laengs", True):
+            _a = [c for c in C if c["lane"] == l]; _b = [c for c in C if c["lane"] == l + 1]
+            _tol = CFG.get("lane_gap_m", 15)
+            if _a and _b and not any(min(x["s1"], y["s1"]) - max(x["s0"], y["s0"]) > -_tol and (id(x) in pax_c or id(y) in pax_c
+                                     or (id(x) in beruehrt_c and id(y) in beruehrt_c))
+                                     for x in _a for y in _b):
+                _voll = False
+        g_ = CFG["lane_px"] if (_voll and l not in OVR.get("enge_ebenen", [])) else CFG["lane_px"] * CFG["side_lane_factor"]
         g_ += OVR.get("ebenen_luecke", {}).get(str(l), 0)    # Override: zusätzlicher Abstand über Ebene l (Kerzers: 3 und 4 gespreizt)
         LY_L.append(l); LY_Y.append(LY_Y[-1] + g_)
     LY_L, LY_Y = LY_L[::-1], LY_Y[::-1]
@@ -3749,8 +3767,12 @@ if RU.get("r48", False):
 # Teilpfade der Länge 0 ("M x,y H x") zeichnen mit runden Enden einen Punkt: weglassen
 _z0 = re.compile(r"M(-?[\d.]+),(-?[\d.]+)H\1(?=\s*M|\s*$)")
 svg_paths = {k_: [z_ for z_ in (_z0.sub("", d_).strip() for d_ in v_) if z_] for k_, v_ in svg_paths.items()}
+# S1b (16.11.2026, Daniel F1: «Ausrundung und ein Stummel je Gleis»): waagrechte Teilpfade «Mx,yLx2,y» (z. B. von
+# _stub_buendel nachgezogen) als «Mx,yHx2» schreiben, sonst finden Kürzen am Knick und G6 den Überstand nicht (Sagliains: 6 px)
+_hl = re.compile(r"(?:^|(?<=\s))M(-?[\d.]+),(-?[\d.]+)L(-?[\d.]+),\2(?=\s|M|$)")
+svg_paths = {k_: [_hl.sub(lambda m: m[0] if m[1] == m[3] else f"M{m[1]},{m[2]}H{m[3]}", d_) for d_ in v_] for k_, v_ in svg_paths.items()}
 # Gerades Gleis, das genau am Knick eines ausgerundeten Pfeils endet: bis zum Beginn der Ausrundung kürzen (kein Überstand)
-_all_d = " ".join(svg_paths[True] + svg_paths[False])
+_all_d =" ".join(svg_paths[True] + svg_paths[False])
 for xs_, xk_, ys_ in _RS:
     if re.search(r"M%s,%s[HQL]" % (re.escape(f"{xk_:.1f}"), re.escape(ys_)), _all_d) and not re.search(r"M%s,%sQ" % (re.escape(f"{xs_:.1f}"), re.escape(ys_)), "M" + _all_d.split("M%s,%s" % (f"{xk_:.1f}", ys_))[1][:0]):
         continue      # am Knick beginnt ein weiteres Gleis (Thun Ost: Lücke vor dem Abzweig): Gleis nicht kürzen
