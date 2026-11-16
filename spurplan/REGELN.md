@@ -53,18 +53,18 @@ NE-Bahnhöfe (fest seit 21.10., Schritt N2), Basel/Bern (P2b), Thun/Ins/Murten/K
 |---|---|---|---|---|---|---|
 | 1.1 | Gleise waagrecht auf Ebenen (24 px); Verbindungen 60°, eine Figur bleibt zwischen ihren Weichenpunkten. | | B1, W2 | spurplan_schema | PS «D» (Drehung) | alle |
 | 1.2 | Ausrundung überall: Weichen, Pfeilstummel, Einmündungen, Gleisenden (7 px, DKW-Ketten 10 %). | | R5, W3, B8 | spurplan_schema `_rund_stub` | G2, G3 | alle |
-| 1.3 | Einheitlicher Winkel: alle Diagonalen einer Anlage gleich (60°), nicht variieren, um Platz zu gewinnen. | | V1 | dkw_auto | fehlt | LR |
+| 1.3 | Einheitlicher Winkel: alle Diagonalen einer Anlage gleich (60°), nicht variieren, um Platz zu gewinnen. Gilt strikt im Bahnhofplan; Kippen und leichte Schrägen nur im Regionalplan (16.11., F4). | | V1, 7.5 | dkw_auto | fehlt | LR |
 | 1.4 | Gleisabstand: Hauptgleise 1 Ebene; Gleise zweier Doppelspuren je 1 Ebene, zueinander 1 oder höchstens 2 Ebenen. | | B2, A1, R1c | `buendel_kompakt` | Q | alle |
 | 1.5 | **Ausnahme zu 0.5:** Nebengleise zueinander enger (55 %, bei Platzmangel bis 40 %); voller Abstand, sobald ein Hauptgleis über eine Weiche berührt. Grund: Pfeile in Anlagen werden später durch die richtigen Anlagen ersetzt (bestätigt 13.11.). Lange parallele Nebengleise wie Sagliains (Autoverladgleis) sind selten, dort eher OSM-Unschärfe. | Nebengleis neben Nebengleis | B2, A2, 7.1 | spurplan_schema | Q – **anpassen**: gegen die erlaubte Ebene prüfen | alle |
 | 1.6 | Stoss oder Gleisende > 1 px neben dem Nachbargleis ist ein Fehler; kein Knubbel (gerades Stück über den Anfang einer Ausrundung hinaus). | | E7, A3, W9 | | G6, G7 | alle |
 | 1.7 | Kein Gleis deckt ein anderes (> 12 px deckungsgleich); kein Perron auf einem Gleis. | | E4, A5 | | VD1, VD2, G8 | alle |
-| 1.8 | Kein Gleis wechselt die Ebene ohne Weiche oder Werfung; keine Badewanne (Mulde ohne Weiche bleibt oben, wenn frei). | | F11, F10 | `f10` | E, PS «E» | alle |
+| 1.8 | Kein Gleis wechselt die Ebene ohne Weiche oder Werfung; keine Badewanne (Mulde ohne Weiche bleibt oben, wenn frei). **Ausnahme:** Randzone (1.10) darf vor dem Planrand ohne Weiche die Ebene wechseln; derselbe Abstand gilt dann im Regionalplan und im Nachbarbahnhof weiter (16.11., F2). | | F11, F10, 7.3 | `f10` | E, PS «E» | alle |
 | 1.9 | Zwischengeraden zwischen zwei Spurwechseln entfallen (Gleise rücken zusammen), ausser dazwischen liegt ein Gleis mit Perron oder Nummer. | | B7, F7 | spurplan_schema | Z, F7 | alle |
 
 ### 1.B Planrand und Abgänge
 | Nr | Regel | Auslöser | alt | Code | Prüfung | heute aktiv in |
 |---|---|---|---|---|---|---|
-| 1.10 | Streckengleise verlassen den Plan im Standardabstand: gleiche Linie oder Gleis ohne Liniennummer 1 Ebene, verschiedene Linien 2 Ebenen. | Streckengleis am Rand | E5, A4, Randzone | `randzone`, a4_rand | planrand_pruefung | **LR** (Randzone), alle (a4) – Widerspruch 7.2/7.3 |
+| 1.10 | Streckengleise verlassen den Plan im Standardabstand: gleiche Linie oder Gleis ohne Liniennummer 1 Ebene, verschiedene Linien 2 Ebenen. Gilt nur für **Streckengleise**; Nebengleis-Bündel behalten ihren Abstand (1.5) bis an den Rand. Der Abstand am Rand wird im Regionalplan und im Nachbarbahnhof gleich übernommen (16.11., F1/F2). | Streckengleis am Rand | E5, A4, Randzone, 7.2 | `randzone`, a4_rand | planrand_pruefung | **LR** (Randzone), alle (a4) – Widerspruch 7.2/7.3 |
 | 1.11 | Streckengleis nach der letzten Weiche läuft auf seiner Ebene gerade aus dem Plan; nicht im parallelen Bündel, wenn ein Nachbar schräg bleibt. | | R33b, F4 | spurplan_schema | E | alle |
 | 1.12 | Abgang mit Liniennummer und Richtungsort (näherer Ort; hat ein anderer Abgang schon den Ort, der andere Ort der Linie). | | B10, Z2 | exit_town, linienenden.json | T | alle |
 | 1.13 | Abgang mit Pfeil nur, wenn das Gleis ≥ 300 m weitergeht oder zu Bahnhof/Anschluss führt; echtes Gleisende → Stumpen mit Prellbock. | | T12, «echte Gleisenden» | `gleisenden` | T5 | LR (Gleisenden), alle (T12) |
@@ -134,8 +134,8 @@ welche Muster erkannt wurden (V0).
 | 4.1 | Verkettung: Pfeile/Abgänge kommen beim Nachbarplan an; Gleise zwischen zwei Plänen nach Strang verbunden, nie oberstes mit oberstem | Regel | 29./30.10., 3.11. | verkettung.py, netz_lage | V1–V3, S1–S3, T2–T4 | alle Regionen |
 | 4.2 | Ein- und Zweispurwechsel erkennt der Code selbst; überzählige Gleise münden unter 60° ein | Regel | N5, W6, 29.10. | | V1 | alle Regionen |
 | 4.3 | Reihenfolge wie die Karte (0.2): Paare ≥ 1,5 km auf der Karte, Umkehr ab 60 px ist Fehler; gleiche Höhe erlaubt; grob parallele Linien nur Seite quer zur gemeinsamen Richtung; Achse > 60° neben der Karte nur Hinweis | Regel | L2, L3a, 5.11. | lage_pruefung | L2, L3 | alle Regionen |
-| 4.4 | Bahnhof liegt so, dass die Strecken am geradesten anschliessen, dann nach Kartenachse; Drehung frei (je Planseite eine Stimme), leicht gekippter Bahnhof ok | Wunsch | N2, L3, 3./4.11. | lage_auto, lage_suche | Unruhe | LR (Suche) |
-| 4.5 | Zwischen zwei Bahnhöfen eine gerade Strecke ohne Treppen; durchgehende Gleise einer Reihe auf Gleishöhe | Wunsch | N3, N4, F2, F3 | `gerade_kette`, `kipp_max` | T7 | alle Regionen – Widerspruch 7.4 |
+| 4.4 | Bahnhof liegt so, dass die Strecken am geradesten anschliessen, dann nach Kartenachse; Drehung frei (je Planseite eine Stimme), leicht gekippter Bahnhof ok; Kippen (≤ 8°) und leichte Schrägen nur im Regionalplan (16.11., F4) | Wunsch | N2, L3, 3./4.11. | lage_auto, lage_suche | Unruhe | LR (Suche) |
+| 4.5 | Zwischen zwei Bahnhöfen eine gerade Strecke ohne Treppen; durchgehende Gleise einer Reihe auf Gleishöhe. Versatz auf der Strecke nur, wenn sonst Gleise kreuzen; sonst den Bahnhof leicht kippen (16.11., F3) | Wunsch | N3, N4, F2, F3, 7.4, R1b | `gerade_kette`, `kipp_max` | T7 | alle Regionen – Widerspruch 7.4 |
 | 4.6 | Bündel zwischen zwei Plänen: parallele Pfeilpaare als Bündel verbunden, ein nötiger Versatz gilt fürs ganze Bündel | Regel | R1b | `buendel_andocken`, `pfeile_buendel` | QK, T7 | alle Regionen |
 | 4.7 | Nebengleise und Spurwechsel auf freier Strecke bleiben im Regionalplan | Regel | R9, D7 | | Prüfung 4 | alle Regionen |
 | 4.8 | Bündel so legen, dass möglichst wenige Gleise kreuzen; echte Über-/Unterwerfung darf kreuzen | Wunsch | N6, F8 | | X | alle Regionen |
@@ -183,14 +183,9 @@ Galmiz Perron südlich / Kreuzungsgleis grün, Rothrist Detailvariante (E11), Ke
 
 ## 7. Offene Widersprüche – Entscheid Daniel
 
-Entschieden 13.11. abends: 7.1 (→ 1.5) und 7.6 (→ 1.18). Offene Fragen stehen mit Bild auf der Karte «Fragen an Dani» (`spurplan/fragen/fragen.json`).
-
-| Nr | Widerspruch | Vorschlag Claude | Entscheid |
-|---|---|---|---|
-| 7.2 | 1.10 Randzone (Gleis ohne Liniennummer am Rand 1 Ebene) gegen 1.15/S1 (Sagliains-Stummel verlassen den Plan mit 0,55 Ebene) | 1.10 gilt nur für Streckengleise; Nebengleis-Bündel behalten ihren Abstand | offen – Frage F1 auf der Karte «Fragen an Dani» |
-| 7.3 | 1.10 Randzone erzeugt vor dem Rand absichtlich einen Ebenenwechsel ohne Weiche – 1.8 verbietet das (Prüfung E) | Randzone als ausdrückliche Ausnahme zu 1.8; E zählt sie nicht | offen – Frage F2 auf der Karte «Fragen an Dani» |
-| 7.4 | 4.5/R10 «Knicke nur am Bahnhof» gegen Versatz auf der Strecke (R1b-Bündelversatz, «ein Versatz ≤ 30° in der Mitte», `schraeg_max` 8°) | Versatz auf der Strecke nur, wenn sonst Gleise kreuzen; sonst Bahnhof kippen (≤ 8°) | offen – Frage F3 auf der Karte «Fragen an Dani» |
-| 7.5 | 1.3 einheitlicher 60°-Winkel gegen r49 «zu eng für 60°: volle Schräge», `kipp_max` und leicht schräge Strecken (P meldet sie) | 1.3 gilt im Bahnhofplan; Kippen und Schrägen nur im Regionalplan, P dort mit Toleranz | offen – Frage F4 auf der Karte «Fragen an Dani» |
+Keine offenen. Entschieden 13.11. abends: 7.1 (→ 1.5), 7.6 (→ 1.18); 16.11. (Karte «Fragen an Dani», je A): 7.2 (→ 1.10),
+7.3 (→ 1.8), 7.4 (→ 4.5), 7.5 (→ 1.3, 4.4). Neue Widersprüche hier als Zeile 7.x eintragen und als Frage auf die Karte
+(`spurplan/fragen/fragen.json`).
 
 ---
 

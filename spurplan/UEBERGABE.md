@@ -93,6 +93,7 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - [x] **V1 Abgleich Plan gegen OSM** (mittel) – 12.11. abends, Commit d5f52c5 (Seite nicht neu veröffentlicht: kein Plan geändert)
 - [x] **S1 Sagliains parallel durch den Knick** (klein) – 13.11. früh, Commit 08022dd, Seite v147
 - [ ] **V0 Ein Regelwerk auf GitHub** (mittel) – **als Nächstes** (Entscheid Daniel 13.11.: Regeln überall, alle Bahnhöfe gleich)
+- [ ] **S1b Sagliains-Bündel durchgehend** (klein; Daniel 16.11. auf der Fragen-Karte) – siehe unten
 - [ ] **S2 Konolfingen Topologie richtig** (mittel; erster Teil von V2)
 - [ ] **S3 Aarau Zwischengeraden** (mittel; Kern von R2)
 - [ ] **V2 Ein Regelwerk für alle** (mittel, Rest nach S2)
@@ -163,6 +164,15 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   und in die Regression (alle_plaene_pruefen) mit Einordnung «besser»; Liste der Overrides (6); Herkunft je Plan auf der Seite.
 - Fertig, wenn: REGELN.md vollständig, Widersprüche entschieden, Herkunft je Plan auf der Seite. Danach V2 (alle 15 Regeln
   Standard in allen Wegen, Konolfingen = S2 als erster Fall), dann N2 (NE aus dem Code), P2b (Bern/Basel), Referenzen.
+
+### S1b – Sagliains-Bündel durchgehend (Daniel 16.11., REGELN 1.10/1.8)
+- Einstieg: «Weiter mit UEBERGABE.md – Schritt S1b: Sagliains-Bündel durchgehend»
+- Zielplan **vereina__sagliains** + **region_vereina**: (1) Darstellungsfehler am Portal: Ausrundung und **ein Stummel je Gleis**
+  (heute doppelt/falsch); (2) der Nebengleis-Abstand (0,55 Ebene) wird im Regionalplan und im Nachbarbahnhof (Sagliains
+  Sasslatsch) gleich übernommen – kein Trichter, kein Versatz am Tunnelportal.
+- Idee Daniel (prüfen, nicht sofort bauen): Sasslatsch–Sagliains als **ein grösserer Plan ohne Bahnhofstrennung** optimieren.
+  Vorgeschichte: Knotenplan über Nebengleis am 3.11. getestet (`knoten_nebengleis`), verlor Tunneleinmündung und Schenkel
+  (6 Topologie-Befunde) → Archiv «3.11.» lesen, Variante mit grösserem Plan als Vorher/Nachher an Daniel.
 
 ### S2 – Konolfingen Topologie richtig
 - Einstieg: «Weiter mit UEBERGABE.md – Schritt S2: Konolfingen Topologie»
@@ -358,3 +368,6 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - Seite v148 (ergebnisse 4eb30e2): Regression 0/137 geändert, Prüfstand = Basis.
 - 16.11. v149: Karte «Fragen an Dani» war unlesbar (bauen.py `strip()` traf das erste eingebettete `<svg>`); Ausschnitte jetzt
   als Gruppe mit Beschnitt, `strip()` nur am äusseren `<svg>`. Regression: nur `fragen` geändert.
+
+### 16.11.2026 ~06:00 – Fragen an Dani beantwortet
+- F1–F5 je A → REGELN 1.3, 1.8, 1.10, 4.4, 4.5; Abschnitt 7 leer. F5: Konolfingen Ost richtig. Zusätze Daniel → Schritt S1b.

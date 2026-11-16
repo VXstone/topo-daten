@@ -25,11 +25,14 @@ def innen(svg):
 def zeilen(t, n): return textwrap.wrap(t, n)
 
 
-out = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {110 + FH * len(F)}" font-family="{FONT}">',
-       f'<rect width="{W}" height="{110 + FH * len(F)}" fill="#fff"/>',
+H_ = 110 + FH * len(F) if F else 2000                # leer: Fläche behalten, damit alte Antwort-Pins sichtbar bleiben
+out = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H_}" font-family="{FONT}">',
+       f'<rect width="{W}" height="{H_}" fill="#fff"/>',
        '<text x="30" y="52" font-size="34" font-weight="600" fill="#16201a">Fragen an Dani</text>',
        '<text x="30" y="84" font-size="17" fill="#5a665e">Antwort: Pin ins Feld mit «A», «B» oder eigenem Text. Vorschlag Claude jeweils A. '
        'Entscheide kommen danach in REGELN.md.</text>']
+if not F:
+    out.append('<text x="30" y="140" font-size="22" fill="#00862f">Keine offenen Fragen. Beantwortete Entscheide stehen in REGELN.md (Abschnitt 7 nennt, wohin).</text>')
 for i, q in enumerate(F):
     y0 = 110 + FH * i
     out.append(f'<rect x="20" y="{y0 + 10}" width="{W - 40}" height="{FH - 20}" rx="10" fill="#f4f7f5" stroke="#d2dad4"/>')
