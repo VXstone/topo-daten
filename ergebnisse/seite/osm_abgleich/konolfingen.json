@@ -3,29 +3,29 @@
 "befunde": [
 {
 "regel": "VA1",
-"x": 656.6,
-"y": 197.6,
+"x": 650.4,
+"y": 186.8,
 "text": "OSM-DKW 254420784 im Plan nicht als DKW gezeichnet",
 "osm": 254420784
 },
 {
 "regel": "VA1",
-"x": 552.5,
-"y": 197.6,
+"x": 546.2,
+"y": 186.8,
 "text": "OSM-DKW 1689231106 im Plan nicht als DKW gezeichnet",
 "osm": 1689231106
 },
 {
 "regel": "VA1",
-"x": 703.5,
-"y": 317.6,
+"x": 697.3,
+"y": 306.8,
 "text": "OSM-DKW 1689231120 im Plan nicht als DKW gezeichnet",
 "osm": 1689231120
 },
 {
 "regel": "VB1",
-"x": 601.2,
-"y": 317.6,
+"x": 594.9,
+"y": 306.8,
 "text": "OSM-Weiche 4694402472 ohne Abzweig im Plan",
 "osm": 4694402472
 },
@@ -38,8 +38,8 @@
 },
 {
 "regel": "VB2",
-"x": 367.7,
-"y": 317.6,
+"x": 361.5,
+"y": 306.8,
 "text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
 "ways": [
 33390862,
@@ -53,8 +53,8 @@
 },
 {
 "regel": "VB2",
-"x": 353.9,
-"y": 341.6,
+"x": 347.7,
+"y": 330.8,
 "text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
 "ways": [
 33390862,
@@ -67,8 +67,8 @@
 },
 {
 "regel": "VB2",
-"x": 584.0,
-"y": 269.7,
+"x": 577.8,
+"y": 258.9,
 "text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
 "ways": [
 33390862,
@@ -86,8 +86,8 @@
 },
 {
 "regel": "VC1",
-"x": 402.8,
-"y": 293.6,
+"x": 396.5,
+"y": 282.8,
 "text": "Gleis (Way 156704997) im Plan an Knoten 4694358196 angebunden, in OSM nicht",
 "osm": 4694358196,
 "ways": [
@@ -101,8 +101,8 @@
 },
 {
 "regel": "VB2",
-"x": 647.6,
-"y": 197.6,
+"x": 641.4,
+"y": 186.8,
 "text": "Gleise berühren sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
 "ways": [
 143221510,
@@ -123,19 +123,19 @@
 },
 {
 "regel": "VD1",
-"x": 601.2,
-"y": 221.6,
+"x": 595.0,
+"y": 210.8,
 "text": "zwei Gleise 49 px aufeinander"
 },
 {
 "regel": "VD1",
-"x": 414.7,
-"y": 269.6,
+"x": 408.5,
+"y": 258.8,
 "text": "zwei Gleise 18 px aufeinander"
 }
 ],
 "info": {
-"gleise": 58,
+"gleise": 57,
 "knoten_plan": 27,
 "dkw_plan": 2,
 "knoten_osm": 29,

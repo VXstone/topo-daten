@@ -9,32 +9,30 @@
   {
    "id": "0bw9nnym5m5luilotwzk",
    "plan": "solothurn",
-   "x": 1400.7,
-   "y": 439.9,
+   "x": 1388.2,
+   "y": 429.1,
    "text": "Gleis nach unten, Knick, über anderen Gleisen nach oben",
    "abgedeckt": true,
    "regeln": [
     "G6",
-    "ME",
     "MX",
     "VB1",
     "VB2",
     "W1",
     "W2"
    ],
-   "naechster": 19.3,
+   "naechster": 19.2,
    "naechste_regel": "MX",
    "plan_da": true
   },
   {
    "id": "0fpodu3uvthbowtib2di",
    "plan": "solothurn",
-   "x": 1479.7,
-   "y": 351.8,
+   "x": 1467.2,
+   "y": 341.0,
    "text": "sauberes Gleis ins Nichts",
    "abgedeckt": true,
    "regeln": [
-    "ME",
     "MX",
     "VA1",
     "VC1",
@@ -76,8 +74,8 @@
   {
    "id": "33fs1o9c5jw7adqa8kbo",
    "plan": "konolfingen",
-   "x": 581.9,
-   "y": 281.5,
+   "x": 575.7,
+   "y": 270.7,
    "text": "Gleis unter Gleis, sehr steil",
    "abgedeckt": true,
    "regeln": [
@@ -104,19 +102,18 @@
   {
    "id": "3d6h8ove5to3gkvyapj0",
    "plan": "konolfingen",
-   "x": 390.2,
-   "y": 307.2,
+   "x": 384.0,
+   "y": 296.4,
    "text": "Abstellgleise über Streckengleise",
    "abgedeckt": true,
    "regeln": [
     "G7",
-    "MQK",
     "MX",
     "VB2",
     "VC1"
    ],
-   "naechster": 12.0,
-   "naechste_regel": "MQK",
+   "naechster": 18.1,
+   "naechste_regel": "G7",
    "plan_da": true
   },
   {
@@ -189,7 +186,7 @@
   {
    "id": "7ma7j244xvt4xey2r2hg",
    "plan": "solothurn",
-   "x": 1642.9,
+   "x": 1624.2,
    "y": 192.8,
    "text": "Fenster bis Abzweig",
    "abgedeckt": true,
@@ -204,8 +201,8 @@
   {
    "id": "8bce2usmmz5hf4zrkuyo",
    "plan": "konolfingen",
-   "x": 702.4,
-   "y": 316.1,
+   "x": 696.2,
+   "y": 305.3,
    "text": "Gleise hin und her, Pfeile retour",
    "abgedeckt": true,
    "regeln": [
@@ -269,13 +266,13 @@
   {
    "id": "ce8rilwzf07i0nr6qe0x",
    "plan": "solothurn",
-   "x": 1434.8,
-   "y": 390.1,
+   "x": 1422.3,
+   "y": 379.3,
    "text": "90 Grad",
    "abgedeckt": true,
    "regeln": [
     "G6",
-    "ME",
+    "MP",
     "MX",
     "VB2",
     "W2"
@@ -328,8 +325,8 @@
   {
    "id": "ezxju35sv6pzpjgvpfud",
    "plan": "konolfingen",
-   "x": 529.7,
-   "y": 171.0,
+   "x": 523.4,
+   "y": 160.2,
    "text": "grünes Perron?",
    "abgedeckt": true,
    "regeln": [
@@ -377,7 +374,7 @@
    "text": "Gleis nicht mehr lang (Pfeil)",
    "abgedeckt": false,
    "regeln": [],
-   "naechster": 114.2,
+   "naechster": 125.7,
    "naechste_regel": "VB1",
    "plan_da": true
   },
@@ -573,8 +570,8 @@
   {
    "id": "obvpbw7iesse9tor1zun",
    "plan": "solothurn",
-   "x": 1127.7,
-   "y": 415.5,
+   "x": 1121.5,
+   "y": 404.7,
    "text": "90 Grad Knick?",
    "abgedeckt": true,
    "regeln": [
@@ -641,13 +638,13 @@
   {
    "id": "t6x02b9nuadgwrwfht9z",
    "plan": "solothurn",
-   "x": 1465.8,
-   "y": 359.2,
+   "x": 1453.3,
+   "y": 348.4,
    "text": "Kreuzung in OSM?",
    "abgedeckt": true,
    "regeln": [
     "G6",
-    "ME",
+    "MP",
     "MX",
     "VA1",
     "VB2",
@@ -661,26 +658,25 @@
   {
    "id": "tnvp35kihgn0yhzk5wmn",
    "plan": "konolfingen",
-   "x": 375.7,
-   "y": 294.2,
+   "x": 369.5,
+   "y": 283.4,
    "text": "Knubbel kurz gerade",
    "abgedeckt": true,
    "regeln": [
     "G7",
-    "MQK",
     "MX",
     "VB2",
     "VC1"
    ],
-   "naechster": 2.8,
+   "naechster": 2.7,
    "naechste_regel": "G7",
    "plan_da": true
   },
   {
    "id": "ttv8jrr9c8gqpc23h0sj",
    "plan": "konolfingen",
-   "x": 650.9,
-   "y": 197.4,
+   "x": 644.7,
+   "y": 186.6,
    "text": "DKW?",
    "abgedeckt": true,
    "regeln": [
@@ -706,8 +702,8 @@
   {
    "id": "uyuegakpencttc2e6isq",
    "plan": "solothurn",
-   "x": 1161.5,
-   "y": 504.9,
+   "x": 1155.3,
+   "y": 494.1,
    "text": "Perron auf Gleis, gerader Knubbel",
    "abgedeckt": true,
    "regeln": [
@@ -773,22 +769,24 @@
   {
    "id": "xke0q8que3hufliwbag9",
    "plan": "solothurn",
-   "x": 1308.1,
-   "y": 235.1,
+   "x": 1301.9,
+   "y": 224.3,
    "text": "Zwischengerade, doppelter Abstand",
    "abgedeckt": true,
    "regeln": [
-    "MZ"
+    "ME",
+    "MZ",
+    "W2"
    ],
-   "naechster": 26.0,
+   "naechster": 22.5,
    "naechste_regel": "MZ",
    "plan_da": true
   },
   {
    "id": "z6f23710rz65dpwpq6ky",
    "plan": "konolfingen",
-   "x": 687.2,
-   "y": 304.3,
+   "x": 681.0,
+   "y": 293.5,
    "text": "DKW?",
    "abgedeckt": true,
    "regeln": [
@@ -803,7 +801,7 @@
    "id": "zcz3v5yhncmbd21obybz",
    "plan": "solothurn",
    "x": 848.0,
-   "y": 263.9,
+   "y": 253.1,
    "text": "nicht verbunden",
    "abgedeckt": true,
    "regeln": [

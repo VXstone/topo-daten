@@ -50,7 +50,7 @@
   "VB2": 4,
   "VC1": 1,
   "VD1": 2,
-  "gleise": 58,
+  "gleise": 57,
   "knoten_plan": 27,
   "dkw_plan": 2,
   "knoten_osm": 29,
@@ -460,7 +460,7 @@
   "dkw_plan": 0,
   "knoten_osm": 6,
   "versatz_y": 0.0,
-  "netz_auf_plan": 0.93
+  "netz_auf_plan": 0.89
  },
  "olten": {
   "VB1": 14,
@@ -515,13 +515,13 @@
  },
  "solothurn": {
   "VA1": 1,
-  "VB1": 9,
+  "VB1": 7,
   "VB2": 14,
   "VC1": 1,
-  "VD1": 11,
+  "VD1": 9,
   "VD2": 1,
   "gleise": 115,
-  "knoten_plan": 56,
+  "knoten_plan": 57,
   "dkw_plan": 2,
   "knoten_osm": 61,
   "versatz_y": 0.0,
