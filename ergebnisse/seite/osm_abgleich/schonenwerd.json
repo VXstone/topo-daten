@@ -2,13 +2,6 @@
 "plan": "schonenwerd",
 "befunde": [
 {
-"regel": "VB1",
-"x": 1372.6,
-"y": 134.0,
-"text": "OSM-Weiche 3736070795 ohne Abzweig im Plan",
-"osm": 3736070795
-},
-{
 "regel": "VB2",
 "x": 1412.0,
 "y": 110.0,
@@ -34,12 +27,6 @@
 },
 {
 "regel": "VD1",
-"x": 1379.8,
-"y": 134.0,
-"text": "zwei Gleise 14 px aufeinander"
-},
-{
-"regel": "VD1",
 "x": 1470.0,
 "y": 110.0,
 "text": "zwei Gleise 14 px aufeinander"
@@ -47,7 +34,7 @@
 ],
 "info": {
 "gleise": 14,
-"knoten_plan": 7,
+"knoten_plan": 8,
 "dkw_plan": 0,
 "knoten_osm": 7,
 "versatz_y": 0.0,

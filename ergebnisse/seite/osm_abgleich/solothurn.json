@@ -17,13 +17,6 @@
 },
 {
 "regel": "VB1",
-"x": 451.9,
-"y": 184.4,
-"text": "OSM-Weiche 631898919 ohne Abzweig im Plan",
-"osm": 631898919
-},
-{
-"regel": "VB1",
 "x": 1420.7,
 "y": 160.4,
 "text": "OSM-Weiche 1599161049 ohne Abzweig im Plan",
@@ -244,12 +237,6 @@
 },
 {
 "regel": "VD1",
-"x": 1352.7,
-"y": 184.4,
-"text": "zwei Gleise 14 px aufeinander"
-},
-{
-"regel": "VD1",
 "x": 855.1,
 "y": 184.4,
 "text": "zwei Gleise 17 px aufeinander"
@@ -259,12 +246,6 @@
 "x": 1611.0,
 "y": 184.4,
 "text": "zwei Gleise 24 px aufeinander"
-},
-{
-"regel": "VD1",
-"x": 459.0,
-"y": 184.4,
-"text": "zwei Gleise 14 px aufeinander"
 },
 {
 "regel": "VD1",
@@ -293,7 +274,7 @@
 ],
 "info": {
 "gleise": 115,
-"knoten_plan": 57,
+"knoten_plan": 59,
 "dkw_plan": 2,
 "knoten_osm": 61,
 "versatz_y": 0.0,
