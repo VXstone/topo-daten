@@ -19,7 +19,12 @@ stand = f"{datetime.date.today():%d.%m.%Y}"
 
 def strip(svg):
     svg = re.sub(r"<\?xml[^>]*>", "", svg)
-    return re.sub(r'(<svg[^>]*?)\s(width|height)="[^"]*"', r"\1", re.sub(r'(<svg[^>]*?)\s(width|height)="[^"]*"', r"\1", svg))
+    # nur das äussere <svg>-Tag (16.11.2026: vorher traf die Ersetzung ein eingebettetes <svg>, wenn das äussere kein
+    # width/height hatte – Karte «Fragen an Dani» war unlesbar)
+    m = re.search(r"<svg\b[^>]*>", svg)
+    if not m: return svg
+    tag = re.sub(r'\s(width|height)="[^"]*"', "", m.group(0))
+    return svg[:m.start()] + tag + svg[m.end():]
 
 _ARB = json.load(open(os.path.join(HERE, "arbeit.json"))) if os.path.exists(os.path.join(HERE, "arbeit.json")) else {}
 plans = []

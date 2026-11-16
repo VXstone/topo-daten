@@ -50,8 +50,11 @@ for i, q in enumerate(F):
     p = os.path.join(PL, q["plan"] + ".svg")
     out.append(f'<rect x="{bx:.1f}" y="{by:.1f}" width="{bw:.1f}" height="{bh:.1f}" fill="#fff" stroke="#d2dad4"/>')
     if os.path.exists(p):
-        out.append(f'<svg x="{bx:.1f}" y="{by:.1f}" width="{bw:.1f}" height="{bh:.1f}" viewBox="{x} {yy} {b} {h}" font-family="{FONT}">'
-                   + innen(open(p).read()) + '</svg>')
+        # kein verschachteltes <svg>: die Seite (bauen.py strip) entfernt width/height am ersten <svg>-Tag, das sie findet
+        # (16.11.2026, Daniel: «Zoomproblem») – darum Gruppe mit Verschiebung/Skalierung und Beschnitt
+        out.append(f'<clipPath id="fq-clip-{i}"><rect x="{bx:.1f}" y="{by:.1f}" width="{bw:.1f}" height="{bh:.1f}"/></clipPath>')
+        out.append(f'<g clip-path="url(#fq-clip-{i})"><g font-family="{FONT}" transform="translate({bx:.2f},{by:.2f}) scale({s:.5f}) '
+                   f'translate({-x},{-yy})">' + innen(open(p).read()) + '</g></g>')
     else:
         out.append(f'<text x="{bx + 20:.1f}" y="{by + 40:.1f}" font-size="16" fill="#d4351c">Plan {escape(q["plan"])} fehlt</text>')
 out.append("</svg>")
