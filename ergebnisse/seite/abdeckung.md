@@ -31,10 +31,10 @@ Befund < 40 px im selben Plan, ohne G2.
 | ✓ | fmlk | aarau | ME, MZ | 18.4 | Zwischengeraden |
 | · | foiy | solothurn |  | 125.7 | Gleis nicht mehr lang (Pfeil) |
 | · | fuyq | vereina__sagliains_sasslatsch |  |  | fettes Gleis endet an Perron/Autoverlad |
-| · | i06s | mob__glion |  | 42.6 | Symbol Schiebebühne |
+| · | i06s | mob__glion |  | 51.7 | Symbol Schiebebühne |
 | · | j57v | region |  | 52.7 | Knubbel vom geraden Strang |
 | ✓ | jbs1 | region | G6, ME, MZ | 25.7 | fehlen Weichen |
-| ✓ | jxpf | region_vereina | ME, MZ | 28.6 | S-Kurve Klosters |
+| ✓ | jxpf | region_vereina | ME, MZ | 31.3 | S-Kurve Klosters |
 | ✓ | jy8r | mob__zweisimmen | ME, MZ | 26.8 | Zwischengerade? |
 | · | k4qi | mob__rossiniere |  |  | Stumpen? |
 | · | ldor | aarau |  | 122.6 | was ist das für ein Gleis |
@@ -54,10 +54,10 @@ Befund < 40 px im selben Plan, ohne G2.
 | ✓ | ttv8 | konolfingen | VA1, VB2 | 3.3 | DKW? |
 | · | u13h | mob__zweisimmen |  | 54.0 | Stumpen Normalspur? |
 | ✓ | uyue | solothurn | G6, VB2, VD2 | 2.3 | Perron auf Gleis, gerader Knubbel |
-| · | v2w8 | mob__glion |  | 97.0 | Riesenabstand Schiebebühne |
+| · | v2w8 | mob__glion |  | 107.8 | Riesenabstand Schiebebühne |
 | ✓ | vnyq | aarau | ME, MZ | 21.8 | Zwischengerade |
 | · | wvrp | mob__zweisimmen |  | 48.5 | kreuzt das andere oder biegt von DKW falsch ab |
-| · | wyu2 | mob__glion |  | 177.7 | dieser Perron? |
+| · | wyu2 | mob__glion |  | 188.2 | dieser Perron? |
 | ✓ | xke0 | solothurn | ME, MZ, W2 | 22.5 | Zwischengerade, doppelter Abstand |
 | ✓ | z6f2 | konolfingen | A1, VA1 | 1.3 | DKW? |
 | ✓ | zcz3 | solothurn | G7, MX, VB2 | 18.0 | nicht verbunden |

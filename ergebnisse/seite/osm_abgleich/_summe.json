@@ -548,25 +548,24 @@
  },
  "vereina__klosters_selfranga": {
   "VB1": 2,
-  "VB2": 1,
   "VD1": 1,
   "gleise": 21,
-  "knoten_plan": 8,
+  "knoten_plan": 7,
   "dkw_plan": 0,
   "knoten_osm": 12,
   "versatz_y": 0.0,
   "netz_auf_plan": 1.0
  },
  "vereina__sagliains": {
-  "VB1": 1,
-  "VB2": 2,
+  "VB1": 2,
+  "VB2": 1,
   "VD1": 3,
   "gleise": 25,
-  "knoten_plan": 9,
+  "knoten_plan": 7,
   "dkw_plan": 0,
   "knoten_osm": 9,
   "versatz_y": 0.0,
-  "netz_auf_plan": 0.96
+  "netz_auf_plan": 0.92
  },
  "vereina__sagliains_nord": {
   "gleise": 2,
