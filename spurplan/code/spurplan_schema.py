@@ -3804,9 +3804,18 @@ def _knubbel(svg_paths):
                     anz_ = sum(1 for (a_, b_) in starts + ends if abs(a_ - frei_) < 0.6 and abs(b_ - y_) < 0.6)
                     if anz_ <= 1:
                         neu_ = f"M{x0_:.1f},{y_:.1f}H{qx_:.1f}" if frei_ == x1_ else f"M{qx_:.1f},{y_:.1f}H{x1_:.1f}"
+                        # S1b (16.11.2026, Prüfstand sagliains K): liegt der Rest ganz auf einem anderen geraden Gleis
+                        # derselben Höhe (gleich dick oder dicker), ist er überzählig – weglassen statt als Spitzkehre stehen lassen
+                        lo_, hi_ = sorted((anf_, qx_))
+                        for (k2_, i2_, sp2_) in alle:
+                            m2_ = re.fullmatch(r"M(-?[\d.]+),(-?[\d.]+)H(-?[\d.]+)", sp2_.strip())
+                            if not m2_ or sp2_ is sp_ or abs(float(m2_[2]) - y_) > 0.05 or not (k2_ == k_ or k2_ is True): continue
+                            a2_, b2_ = sorted((float(m2_[1]), float(m2_[3])))
+                            if a2_ <= lo_ + 0.05 and b2_ >= hi_ - 0.05 and (a2_, b2_) != (min(x0_, x1_), max(x0_, x1_)): neu_ = ""; break
                         ersatz[(k_, i_, sp_)] = neu_
     for (k_, i_, sp_), neu_ in ersatz.items():
-        svg_paths[k_][i_] = svg_paths[k_][i_].replace(sp_.strip(), neu_, 1)
+        svg_paths[k_][i_] = re.sub(r"\s{2,}", " ", svg_paths[k_][i_].replace(sp_.strip(), neu_, 1)).strip()
+    for k_ in svg_paths: svg_paths[k_] = [d_ for d_ in svg_paths[k_] if d_]
     return len(ersatz)
 if RU.get("g6_knubbel", True):
     _nk = _knubbel(svg_paths)
