@@ -1,4 +1,4 @@
-# Prüfstand – Bausteine × Drehungen (2026-11-16 05:00 UTC)
+# Prüfstand – Bausteine × Drehungen (2026-11-16 05:18 UTC)
 
 Zählung je Fall (Regel Anzahl); leer = ohne Befund. Rangfolge der Regeln: T, PF, X, E, K, Q, P, QK, F, Z, D, G2, G3, G4, G5, G6, G7, G8
 
@@ -9,7 +9,7 @@ Zählung je Fall (Regel Anzahl); leer = ohne Befund. Rangfolge der Regeln: T, PF
 | osm | r7_ueberholung |  |  |  |  |  |  |  |  |
 | osm | ab30 | T 2 | T 2 | T 2 | T 2 | T 2 | T 2 | T 2 | T 2 |
 | osm | ab60 | T 3 X 1 Q 1 Z 1 | T 3 X 1 Q 1 Z 1 | T 1 D 1 | X 1 | T 4 P 2 G2 1 G7 1 D 1 | T 3 X 1 Q 1 | T 3 X 3 Q 1 | X 1 |
-| osm | sagliains |  |  |  |  |  |  |  |  |
+| osm | sagliains | K 2 | K 2 | K 2 | K 2 | K 2 | K 2 | K 2 | K 2 |
 | osm | unterwerfung | X 2 | X 2 | X 2 Z 1 | X 2 | X 2 Z 1 | X 2 | X 2 | X 2 |
 | osm | zwischengerade |  |  |  |  |  | X 3 K 4 D 1 |  |  |
 | osm | gleissprung |  |  |  |  |  |  |  |  |
@@ -38,11 +38,18 @@ Zählung je Fall (Regel Anzahl); leer = ohne Befund. Rangfolge der Regeln: T, PF
 
 ## Befunde je Regel (Summe über alle Fälle)
 
-T 33 · PF 16 · X 27 · E 122 · K 4 · Q 84 · P 2 · Z 112 · D 3 · G2 11 · G7 1
+T 33 · PF 16 · X 27 · E 122 · K 20 · Q 84 · P 2 · Z 112 · D 3 · G2 11 · G7 1
 
 ## Gegen die Basis
 
-- keine Verschlechterung
+- SCHLECHTER osm/sagliains/d0: K 0 → 2
+- SCHLECHTER osm/sagliains/d30: K 0 → 2
+- SCHLECHTER osm/sagliains/dm30: K 0 → 2
+- SCHLECHTER osm/sagliains/d60: K 0 → 2
+- SCHLECHTER osm/sagliains/dm60: K 0 → 2
+- SCHLECHTER osm/sagliains/d90: K 0 → 2
+- SCHLECHTER osm/sagliains/a30: K 0 → 2
+- SCHLECHTER osm/sagliains/a60: K 0 → 2
 
 ## Befundliste
 
@@ -78,6 +85,22 @@ T 33 · PF 16 · X 27 · E 122 · K 4 · Q 84 · P 2 · Z 112 · D 3 · G2 11 ·
 - osm ab60 a30: **T** 9 statt 6 freie Gleisenden am Planrand (lose Gleisstücke)
 - osm ab60 a30: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (60°) (Bahnhof alpha)
 - osm ab60 a60: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (60°) (Bahnhof alpha)
+- osm sagliains d0: **K** Spitzkehre 180°
+- osm sagliains d0: **K** Spitzkehre 180° (Bahnhof alpha)
+- osm sagliains d30: **K** Spitzkehre 180°
+- osm sagliains d30: **K** Spitzkehre 180° (Bahnhof alpha)
+- osm sagliains dm30: **K** Spitzkehre 180°
+- osm sagliains dm30: **K** Spitzkehre 180° (Bahnhof alpha)
+- osm sagliains d60: **K** Spitzkehre 180°
+- osm sagliains d60: **K** Spitzkehre 180° (Bahnhof alpha)
+- osm sagliains dm60: **K** Spitzkehre 180°
+- osm sagliains dm60: **K** Spitzkehre 180° (Bahnhof alpha)
+- osm sagliains d90: **K** Spitzkehre 180°
+- osm sagliains d90: **K** Spitzkehre 180° (Bahnhof alpha)
+- osm sagliains a30: **K** Spitzkehre 180°
+- osm sagliains a30: **K** Spitzkehre 180° (Bahnhof alpha)
+- osm sagliains a60: **K** Spitzkehre 180°
+- osm sagliains a60: **K** Spitzkehre 180° (Bahnhof alpha)
 - osm unterwerfung d0: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (60°)
 - osm unterwerfung d0: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (60°)
 - osm unterwerfung d30: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (30°)
