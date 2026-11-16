@@ -93,7 +93,7 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - [x] **V1 Abgleich Plan gegen OSM** (mittel) – 12.11. abends, Commit d5f52c5 (Seite nicht neu veröffentlicht: kein Plan geändert)
 - [x] **S1 Sagliains parallel durch den Knick** (klein) – 13.11. früh, Commit 08022dd, Seite v147
 - [ ] **V0 Ein Regelwerk auf GitHub** (mittel) – **als Nächstes** (Entscheid Daniel 13.11.: Regeln überall, alle Bahnhöfe gleich)
-- [ ] **S1b Sagliains-Bündel durchgehend** (klein; Daniel 16.11. auf der Fragen-Karte) – siehe unten
+- [x] **S1b Sagliains-Bündel durchgehend** (klein) – 16.11. früh, Commits af2a110/21556d3, Seite v150
 - [ ] **S2 Konolfingen Topologie richtig** (mittel; erster Teil von V2)
 - [ ] **S3 Aarau Zwischengeraden** (mittel; Kern von R2)
 - [ ] **V2 Ein Regelwerk für alle** (mittel, Rest nach S2)
@@ -371,3 +371,16 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 
 ### 16.11.2026 ~06:00 – Fragen an Dani beantwortet
 - F1–F5 je A → REGELN 1.3, 1.8, 1.10, 4.4, 4.5; Abschnitt 7 leer. F5: Konolfingen Ost richtig. Zusätze Daniel → Schritt S1b.
+
+### 16.11.2026 ~06:50 – Schritt S1b abgeschlossen, Seite v150 (ergebnisse 453a3a6)
+- Knubbel an Pfeil-Stummeln (REGELN 1.6): waagrechte «M…L…»-Stücke vor dem Kürzen als «M…H…» schreiben, sonst fand G6 sie nicht;
+  G6 lässt einen Rest, der ganz auf einem anderen geraden Gleis liegt, weg (sonst Spitzkehre, Prüfstand sagliains K 0→2).
+- Nebengleis-Abstand (REGELN 1.5, cfg `ebene_eng_laengs`, `build_ly`): voller Abstand nur, wo ein Personen-/berührtes Gleis längs
+  neben der Nachbarebene liegt. Sasslatsch jetzt 0,55 wie Sagliains → Regionalplan gerade durchs Portal, kein Trichter.
+- Regression 11/137, alle erklärt: Ziel vereina__sagliains (VB2 Portal weg; VB1 257/123 war vorher falsch dem Knubbel zugeordnet,
+  Ast läuft 10 px auf dem Nebengleis = VD1, Kandidat R3a), sasslatsch, region_vereina; Nebengleise enger: Selfranga, Vauseyon
+  (abgenommen, E9: gleiche Zählung), Konolfingen, Solothurn, Glion; region_ne G2 +4 = Prüfartefakt (Maske am Planrand Bôle–Auvernier,
+  Bogen 16°→26° nach Verschiebung, optisch ausgerundet); region_mob T7 +1 = bestehende Glion-Treppe jetzt mitgezählt; fragen (vorher).
+- Offen: kurze Verbindungen zwischen 0,55-Ebenen werden flacher (Selfranga ~52° statt 60°, REGELN 1.3) → zu R3b. Variante «ein Plan
+  Sasslatsch–Sagliains» lokal: falscher Knoten, 6 T + 6 Verkettung → mit N1 (Fenster automatisch) neu prüfen.
+- Lokal ≠ Workflow im Prüfstand: `/tmp/pruefstand_repo/spurplan/code` ist ein Symlink des ersten Laufs – vor Vergleichen löschen.
