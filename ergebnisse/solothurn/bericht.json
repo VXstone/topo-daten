@@ -13,92 +13,92 @@
  "regeln": [
   {
    "regel": "G2",
-   "x": 1010.7,
-   "y": 352.4,
+   "x": 1004.5,
+   "y": 341.6,
    "bahnhof": null,
    "text": "Weiche ohne Ausrundung (60°)"
   },
   {
    "regel": "G2",
-   "x": 1152.3,
-   "y": 492.8,
+   "x": 1146.1,
+   "y": 482.0,
    "bahnhof": null,
    "text": "Weiche ohne Ausrundung (60°)"
   },
   {
    "regel": "G2",
    "x": 849.5,
-   "y": 254.2,
+   "y": 243.4,
    "bahnhof": null,
    "text": "Weiche ohne Ausrundung (60°)"
   },
   {
    "regel": "G6",
-   "x": 1440.8,
-   "y": 389.6,
+   "x": 1428.3,
+   "y": 378.8,
    "bahnhof": null,
    "text": "Linien stossen mit Knick 152° zusammen (Knubbel)"
   },
   {
    "regel": "G6",
-   "x": 1439.8,
-   "y": 389.6,
+   "x": 1427.3,
+   "y": 378.8,
    "bahnhof": null,
    "text": "Linien stossen mit Knick 152° zusammen (Knubbel)"
   },
   {
    "regel": "G6",
-   "x": 1440.8,
-   "y": 376.4,
+   "x": 1428.3,
+   "y": 365.6,
    "bahnhof": null,
    "text": "Linien stossen mit Knick 28° zusammen (Knubbel)"
   },
   {
    "regel": "G6",
-   "x": 1127.2,
-   "y": 416.0,
+   "x": 1121.0,
+   "y": 405.2,
    "bahnhof": null,
    "text": "Linien stossen mit Knick 84° zusammen (Knubbel)"
   },
   {
    "regel": "G6",
-   "x": 1373.3,
-   "y": 442.4,
+   "x": 1360.8,
+   "y": 431.6,
    "bahnhof": null,
    "text": "Linien stossen mit Knick 90° zusammen (Knubbel)"
   },
   {
    "regel": "G6",
-   "x": 1128.2,
-   "y": 416.0,
+   "x": 1122.0,
+   "y": 405.2,
    "bahnhof": null,
    "text": "Linien stossen mit Knick 84° zusammen (Knubbel)"
   },
   {
    "regel": "G6",
-   "x": 1166.2,
-   "y": 516.8,
+   "x": 1160.0,
+   "y": 506.0,
    "bahnhof": null,
    "text": "Linien stossen mit Knick 60° zusammen (Knubbel)"
   },
   {
    "regel": "G7",
    "x": 826.7,
-   "y": 280.4,
+   "y": 269.6,
    "bahnhof": null,
    "text": "Gleisende nicht angebunden, nächstes Gleis 6.6 px"
   },
   {
    "regel": "G7",
    "x": 840.7,
-   "y": 280.4,
+   "y": 269.6,
    "bahnhof": null,
    "text": "Gleisende nicht angebunden, nächstes Gleis 5.5 px"
   },
   {
    "regel": "G7",
    "x": 863.1,
-   "y": 280.4,
+   "y": 269.6,
    "bahnhof": null,
    "text": "Gleisende nicht angebunden, nächstes Gleis 4.0 px"
   }
@@ -107,62 +107,62 @@
  "netz": [
   {
    "regel": "D11",
-   "x": 1165.6,
+   "x": 1159.4,
    "y": 184.4,
    "text": "Gleisnummer 2 ohne Perron daneben (Perron fehlt oder Nummer zu viel)"
   },
   {
    "regel": "D11",
-   "x": 1069.7,
-   "y": 280.4,
+   "x": 1063.4,
+   "y": 269.6,
    "text": "Gleisnummer 3 ohne Perron daneben (Perron fehlt oder Nummer zu viel)"
   },
   {
    "regel": "W2",
-   "x": 1422.8,
-   "y": 410.6,
+   "x": 1410.3,
+   "y": 399.8,
    "text": "S-Kurve in der Mitte unter 103° (steiler oder flacher als 60°)"
   },
   {
    "regel": "W2",
-   "x": 1392.8,
-   "y": 397.4,
+   "x": 1380.4,
+   "y": 386.6,
    "text": "S-Kurve in der Mitte unter 102° (steiler oder flacher als 60°)"
   },
   {
    "regel": "W2",
-   "x": 1475.1,
-   "y": 390.8,
+   "x": 1462.6,
+   "y": 380.0,
    "text": "S-Kurve in der Mitte unter 77° (steiler oder flacher als 60°)"
   },
   {
    "regel": "W2",
-   "x": 1342.2,
-   "y": 208.4,
-   "text": "S-Kurve in der Mitte unter 103° (steiler oder flacher als 60°)"
+   "x": 1331.3,
+   "y": 203.0,
+   "text": "S-Kurve in der Mitte unter 105° (steiler oder flacher als 60°)"
   },
   {
    "regel": "W2",
-   "x": 1374.5,
-   "y": 455.6,
+   "x": 1362.0,
+   "y": 444.8,
    "text": "Gleisstück unter 85° (nur 0° und 60° erlaubt)"
   },
   {
    "regel": "W2",
-   "x": 1127.5,
-   "y": 409.4,
+   "x": 1121.3,
+   "y": 398.6,
    "text": "Gleisstück unter 84° (nur 0° und 60° erlaubt)"
   },
   {
    "regel": "W1",
-   "x": 1374.5,
-   "y": 455.6,
+   "x": 1362.0,
+   "y": 444.8,
    "text": "Gleisstück unter 85° (steiler als 60°), 27 px"
   },
   {
    "regel": "W1",
-   "x": 1127.5,
-   "y": 409.4,
+   "x": 1121.3,
+   "y": 398.6,
    "text": "Gleisstück unter 84° (steiler als 60°), 13 px"
   }
  ],
@@ -170,29 +170,29 @@
   {
    "regel": "T7",
    "art": "Treppe",
-   "x": 1470.8,
+   "x": 1458.3,
    "y": 173.0,
    "versatz": 28.8,
    "plan": "solothurn",
-   "text": "solothurn: Treppe bei x=1470.8, y=173.0"
+   "text": "solothurn: Treppe bei x=1458.3, y=173.0"
   },
   {
    "regel": "T7",
    "art": "Treppe",
-   "x": 1342.2,
-   "y": 208.4,
-   "versatz": 34.3,
+   "x": 1331.3,
+   "y": 203.0,
+   "versatz": 26.8,
    "plan": "solothurn",
-   "text": "solothurn: Treppe bei x=1342.2, y=208.4"
+   "text": "solothurn: Treppe bei x=1331.3, y=203.0"
   },
   {
    "regel": "T7",
    "art": "Treppe",
-   "x": 1243.3,
-   "y": 304.4,
+   "x": 1237.1,
+   "y": 293.6,
    "versatz": 48.0,
    "plan": "solothurn",
-   "text": "solothurn: Treppe bei x=1243.3, y=304.4"
+   "text": "solothurn: Treppe bei x=1237.1, y=293.6"
   }
  ],
  "qualitaet": {

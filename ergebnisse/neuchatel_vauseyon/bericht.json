@@ -10,14 +10,22 @@
  "regeln": [
   {
    "regel": "G2",
-   "x": 991.5,
-   "y": 230.0,
+   "x": 1008.4,
+   "y": 208.4,
    "bahnhof": null,
    "text": "Weiche ohne Ausrundung (15°)"
   }
  ],
  "planrand": [],
- "netz": [],
+ "netz": [
+  {
+   "regel": "Z2",
+   "x": 679.8,
+   "y": -29.7,
+   "text": "Pfeil «La Chaux-de-Fonds →» zeigt rechts, der Abgang verlässt den Plan nach links",
+   "way": 507891443
+  }
+ ],
  "ruhe": [],
  "qualitaet": {
   "topo_A": 0,
@@ -27,6 +35,7 @@
   "topo_E": 0,
   "topo_F": 0,
   "regel_G2": 1,
+  "netz_Z2": 1,
   "boegen_pax": 3,
   "boegen_alle": 9,
   "ruhe_treppen": 0,
