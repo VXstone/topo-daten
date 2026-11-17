@@ -513,17 +513,17 @@
  },
  "solothurn": {
   "VA1": 1,
-  "VB1": 3,
-  "VB2": 18,
+  "VB1": 6,
+  "VB2": 14,
   "VC1": 1,
-  "VD1": 9,
+  "VD1": 7,
   "VD2": 1,
-  "gleise": 113,
-  "knoten_plan": 65,
+  "gleise": 115,
+  "knoten_plan": 59,
   "dkw_plan": 2,
   "knoten_osm": 61,
   "versatz_y": 0.0,
-  "netz_auf_plan": 0.99
+  "netz_auf_plan": 1.0
  },
  "tecknau": {
   "VB2": 1,
