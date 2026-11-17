@@ -164,6 +164,28 @@ for p_ in plans:
         p_["label"] = f"fest seit {m_.group(1) if m_ else '?'} · " + l_
     else:
         p_["label"] = "aus Code · " + l_
+# Herkunft je Plan sichtbar (REGELN 6/V0, B1 17.11.2026): «aus Code <Commit> <Datum>» = Code-Stand, der den Plan gerechnet
+# hat – Werkstatt/Referenzen in diesem Lauf (GITHUB_SHA), Linien-Regionen/Repo-Bahnhöfe aus dem Commit-Text ihres letzten
+# Laufs auf «ergebnisse» («Regionen …/Pläne … (<sha>)»); «fest seit <Datum>» bleibt wie es ist.
+def _sha_ergebnisse(pfad):
+    try:
+        t = _sp.run(["git", "log", "-1", "--format=%s", "origin/ergebnisse", "--", pfad], capture_output=True, text=True).stdout
+        m = re.search(r"\(([0-9a-f]{7,40})\)", t); return m.group(1)[:7] if m else None
+    except Exception: return None
+_SHA = (os.environ.get("GITHUB_SHA") or "")[:7]
+_HEUTE = datetime.datetime.utcnow().strftime("%d.%m.%Y")
+for p_ in plans:
+    l_ = p_.get("label") or ""
+    if not l_.startswith("aus Code ·"): continue
+    m_ = re.search(r"Workflow (regionen|plaene) (\d{4})-(\d\d)-(\d\d)", l_)
+    if m_:
+        k_ = p_["key"]
+        pf_ = f"ergebnisse/region_{k_.split('__')[0]}/bericht.json" if "__" in k_ or k_.startswith("region_") else f"ergebnisse/{k_}"
+        if k_.startswith("region_"): pf_ = f"ergebnisse/{k_}/bericht.json"
+        sh_ = _sha_ergebnisse(pf_)
+        if sh_: p_["label"] = f"aus Code {sh_} {m_.group(4)}.{m_.group(3)}.{m_.group(2)}" + l_[len("aus Code"):]
+    elif _SHA:
+        p_["label"] = f"aus Code {_SHA} {_HEUTE}" + l_[len("aus Code"):]
 _ORDER = ["Region", "Werkzeugkasten", "Grosse Knoten", "Bahnhöfe ohne Regionalplan"]
 def _gk(p_):
     g_ = p_["gruppe"]

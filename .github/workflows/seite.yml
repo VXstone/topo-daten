@@ -96,6 +96,7 @@ jobs:
           SEIT=$(python3 -c "import json;print(json.load(open('spurplan/veroeffentlicht.json'))['ergebnisse'])" 2>/dev/null || true)
           python3 spurplan/code/alle_plaene_pruefen.py spurplan/abnahmen.json /tmp/seite/regression \
             --neu /tmp/seite/plaene --osm-abgleich /tmp/seite/osm_abgleich --seite /tmp/seite/index.html ${SEIT:+--seit $SEIT} 2>&1 | tee -a /tmp/seite/log.txt || true
+          python3 spurplan/code/overrides_liste.py --out /tmp/seite 2>&1 | tee -a /tmp/seite/log.txt || true     # REGELN 6 (B1, 17.11.2026)
       - name: Ergebnisse auf Branch «ergebnisse» (nur ergebnisse/seite ersetzen)
         if: always()
         run: |

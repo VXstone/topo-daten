@@ -153,10 +153,10 @@ Pläne verändern, um diese Zahlen zu senken – auch abgenommene –, und der V
 |---|---|---|---|---|
 | 5.1 | Keine Treppen (hin und zurück ohne Anschluss dazwischen) | T7 Treppe (ruhe.py) | 8 | gemessen: Bahnhofspläne + Regionen |
 | 5.2 | Keine unmotivierten Ecken (Knick > 8° mit kurzen Schenkeln, ohne Weiche/Gleiszahländerung) | T7 Ecke, Z | 4 | gemessen |
-| 5.3 | **Weniger S-Kurven** (zwei Gegenknicke auf einem durchgehenden Gleis, auch über Planränder) | E, F3, neu: S-Kurve über Pläne | 6 | E gemessen; Regionalplan **fehlt** |
+| 5.3 | **Weniger S-Kurven** (zwei Gegenknicke auf einem durchgehenden Gleis, auch über Planränder) | W53 (`wuensche.py`; Gleise über Planränder verkettet), E, F3 | 6 | gemessen alle Pläne (17.11.) |
 | 5.4 | Parallele Bündel durch Knicke (QK) | QK | 6 | gemessen (alle Pläne) |
-| 5.5 | **Gleichmässiger Bahnhofsabstand** im Regionalplan: Abstand je Strecke proportional zur gestauchten Distanz, Streuung klein | neu: Varianz px/gestauchte km je Region | 3 | **fehlt** |
-| 5.6 | **Kurze Bahnhöfe:** Planlänge je Inhalt (Weichenachsen, Perrons) nahe am Median vergleichbarer Pläne; Anlass Onnens-Bonvillars, Rothrist, Tecknau | neu: px je Weichenachse, Abweichung zum Median | 3 | **fehlt** |
+| 5.5 | **Gleichmässiger Bahnhofsabstand** im Regionalplan: Abstand je Strecke proportional zur gestauchten Distanz, Streuung klein | W55 (`wuensche.py`): Variationskoeffizient px / km^0,75 benachbarter Bahnhöfe, /10 | 3 | gemessen Regionalpläne (17.11.) |
+| 5.6 | **Kurze Bahnhöfe:** Planlänge je Inhalt (Weichenachsen, Perrons) nahe am Median vergleichbarer Pläne; Anlass Onnens-Bonvillars, Rothrist, Tecknau | W56 (`wuensche.py`): Leerlänge (ohne Weiche/Perron/Gleisende ± 40 px, Ausfahrt 2 × 120 px frei) / 100 px | 3 | gemessen Bahnhofspläne (17.11.; Onnens 5, Rothrist 4, Tecknau 1) |
 | 5.7 | Wenige Kreuzungen ohne Bauwerk | X | 2 | gemessen |
 | 5.8 | Lage nahe an der Karte (Drehung, Achse) | L3a | 0 (Hinweis) | gemessen |
 
@@ -177,7 +177,10 @@ E9 (abgenommene Pläne dürfen sich nur ohne Topologieänderung ändern) bleibt 
 Werkstatt-Overrides Olten/NE. Jede Ausnahme nennt Regel und Grund; Ziel ist, dass die Liste schrumpft (Hauptgleisweichen,
 Topologie und Perronlage nie per Override, Vorgabe Daniel). Bekannte Einzelentscheide: Olten Ost 60° gedreht (E12),
 Galmiz Perron südlich / Kreuzungsgleis grün, Rothrist Detailvariante (E11), Kerzers X.
-**Fehlt (V0):** Liste aller Overrides mit Regel und Grund.
+**Liste (17.11.):** `spurplan/code/overrides_liste.py` → `ergebnisse/seite/overrides.md` (jeder Lauf `seite`), je Eintrag Art
+(Ortswissen / Schalter / Typvorlage / Geometrie) und Grund. Stand 17.11.: 910 Einträge an 125 Orten – 245 Ortswissen,
+351 Schalter, 126 Typvorlage (NE, fällt mit N2), 188 Geometrie (abbauen in V2/N1/N2). Herkunft je Plan steht im Kartenlabel
+(«aus Code <Commit> <Datum>» / «fest seit <Datum>»).
 
 ---
 
