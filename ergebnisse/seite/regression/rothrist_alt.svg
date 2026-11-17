@@ -29,9 +29,9 @@
 <circle cx="1157.8" cy="282.8" r="3.2" fill="#111"/>
 <circle cx="1274.8" cy="282.8" r="3.2" fill="#111"/>
 <circle cx="1700.0" cy="110.0" r="3.2" fill="#111"/>
-<path d="M1749.4,92.9L1757.4,98.7L1750.4,102.7Z" fill="#111"/>
-<path d="M1439.7,106.1L1438.6,115.9L1431.7,111.9Z" fill="#111"/>
-<path d="M1635.6,91.2L1643.6,97.0L1636.6,101.0Z" fill="#111"/>
+<path d="M1749.4,92.9L1757.4,98.7L1750.4,102.7Z" fill="#111" data-pfeil="0"/>
+<path d="M1439.7,106.1L1438.6,115.9L1431.7,111.9Z" fill="#111" data-pfeil="1"/>
+<path d="M1635.6,91.2L1643.6,97.0L1636.6,101.0Z" fill="#111" data-pfeil="2"/>
 <rect x="1663.8" y="200.4" width="26" height="16" fill="#fff"/>
 <text x="1676.8" y="214.9" font-size="19" text-anchor="middle" fill="#00862f">2</text>
 <rect x="1727.3" y="224.4" width="26" height="16" fill="#fff"/>
