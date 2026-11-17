@@ -34,7 +34,7 @@ Befund < 40 px im selben Plan, ohne G2.
 | · | i06s | mob__glion |  | 51.7 | Symbol Schiebebühne |
 | · | j57v | region |  | 52.7 | Knubbel vom geraden Strang |
 | ✓ | jbs1 | region | G6, ME, MZ | 25.7 | fehlen Weichen |
-| ✓ | jxpf | region_vereina | ME, MZ | 31.3 | S-Kurve Klosters |
+| ✓ | jxpf | region_vereina | ME, MZ | 30.3 | S-Kurve Klosters |
 | ✓ | jy8r | mob__zweisimmen | ME, MZ | 26.8 | Zwischengerade? |
 | · | k4qi | mob__rossiniere |  |  | Stumpen? |
 | · | ldor | aarau |  | 122.6 | was ist das für ein Gleis |

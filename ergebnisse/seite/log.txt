@@ -33,7 +33,7 @@ Hinweis-Abdeckung: 34/57 (Befund < 40 px, ohne G2)
 · i06s mob__glion                   -                         51.7  Symbol Schiebebühne
 · j57v region                       -                         52.7  Knubbel vom geraden Strang
 ✓ jbs1 region                       G6,ME,MZ                  25.7  fehlen Weichen
-✓ jxpf region_vereina               ME,MZ                     31.3  S-Kurve Klosters
+✓ jxpf region_vereina               ME,MZ                     30.3  S-Kurve Klosters
 ✓ jy8r mob__zweisimmen              ME,MZ                     26.8  Zwischengerade?
 · k4qi mob__rossiniere              -                            -  Stumpen?
 · ldor aarau                        -                        122.6  was ist das für ein Gleis
@@ -63,8 +63,10 @@ Hinweis-Abdeckung: 34/57 (Befund < 40 px, ohne G2)
 /home/runner/work/topo-daten/topo-daten/spurplan/code/alle_plaene_pruefen.py:153: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
   json.dump(dict(erzeugt=datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"), plaene=len(zeilen), geaendert=len(gz),
 region_ne                    veröffentlicht                     50 Stellen  vermutlich besser  G2 39→35
+region_vereina               veröffentlicht                     23 Stellen  gleichwertig  
 olten                        bestätigt 2026-11-08                0 Stellen  gleichwertig  OSM VB1 14, VB2 27, VC1 7, VD1 10 (kein Alt-Stand)
 rothrist                     Archivbeginn (Abnahme 2026-10-29)    0 Stellen  gleichwertig  OSM VA2 1, VB1 4, VB2 6 (kein Alt-Stand)
 schonenwerd                  bestätigt 2026-11-08                0 Stellen  gleichwertig  OSM VB2 2, VD1 1 (kein Alt-Stand)
 neuchatel                    bestätigt 2026-11-08                0 Stellen  gleichwertig  OSM VA1 5, VC1 2, VD1 3 (kein Alt-Stand)
-Regression: 137 Pläne, 1 geändert {'vermutlich besser': 1}
+vereina__klosters_selfranga  veröffentlicht                      6 Stellen  gleichwertig  
+Regression: 137 Pläne, 3 geändert {'vermutlich besser': 1, 'gleichwertig': 2}

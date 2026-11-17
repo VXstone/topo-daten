@@ -1,19 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 999 266" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1005 277" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
 <rect width="100%" height="100%" fill="#fff"/>
 <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-<path d="M282.1,123.2H282.1Q287.1,123.2 290.1,127.2L294.1,132.4Q297.1,136.4 302.1,136.4H302.1M302.1,136.4H343.7 M325.3,110.0H344.0 M323.3,110.0H323.3Q330.1,110.0 334.2,115.4L336.0,117.8Q340.1,123.2 346.9,123.2H346.9 M315.1,110.0H325.3 M344.0,110.0H344.0Q351.0,110.0 354.5,116.1L362.7,130.3Q366.2,136.4 373.2,136.4H388.9 M346.9,123.2H347.9Q354.9,123.2 358.4,129.3L372.9,154.3Q376.4,160.4 383.4,160.4H384.4 M355.5,110.0H389.0 M244.6,123.2H277.9 M282.1,123.2H346.9 M281.0,123.2H282.1 M277.9,123.2H281.0 M268.9,110.0H299.4M299.4,110.0L313.4,110.0M313.4,110.0H344.0 M350.0,110.0Q344.0,110.0 341.0,104.8L331.0,87.5 M389.0,110.0H693.2 M693.2,110.0H694.2Q701.2,110.0 704.7,116.1L726.8,154.3Q730.3,160.4 737.3,160.4H738.3 M388.9,136.4H674.4M674.4,136.4H674.4Q677.5,136.4 679.0,139.1L689.8,157.7Q691.3,160.4 694.4,160.4H694.4 M740.6,160.4H741.6Q748.6,160.4 752.1,154.3L758.9,142.5Q762.4,136.4 769.4,136.4H770.4" stroke="#9a5b1e" stroke-width="1.6"/>
-<path d="M382.4,160.4H388.8 M275.4,160.4H382.4 M218.1,160.4H275.4 M693.2,110.0H694.2Q701.2,110.0 704.7,116.1L713.0,130.3Q716.5,136.4 723.5,136.4H724.5M724.5,136.4H768.4 M768.4,136.4H823.6 M740.6,160.4H823.6 M736.3,160.4H740.6 M694.4,160.4H736.3 M388.8,160.4H694.4" stroke="#9a5b1e" stroke-width="3.6"/>
+<path d="M282.1,134.0H282.1Q287.1,134.0 290.1,138.0L294.1,143.2Q297.1,147.2 302.1,147.2H302.1M302.1,147.2H343.7 M319.1,110.0H344.0 M317.1,110.0H318.1Q325.1,110.0 328.6,116.1L335.4,127.9Q338.9,134.0 345.9,134.0H346.9 M310.3,110.0H319.1 M344.0,110.0H344.0Q351.0,110.0 354.5,116.1L369.0,141.1Q372.5,147.2 379.5,147.2H388.9 M346.9,134.0H347.9Q354.9,134.0 358.4,140.1L372.9,165.1Q376.4,171.2 383.4,171.2H384.4 M355.5,110.0H389.0 M244.6,134.0H277.9 M282.1,134.0H346.9 M281.0,134.0H282.1 M277.9,134.0H281.0 M268.9,110.0H299.4M299.4,110.0L313.4,110.0M313.4,110.0H344.0 M350.0,110.0Q344.0,110.0 341.0,104.8L331.0,87.5 M389.0,110.0H693.2 M693.2,110.0H694.2Q701.2,110.0 704.7,116.1L733.0,165.1Q736.5,171.2 743.5,171.2H744.5 M388.9,147.2H674.4M674.4,147.2H674.4Q677.5,147.2 679.0,149.9L689.8,168.5Q691.3,171.2 694.4,171.2H694.4 M746.8,171.2H747.8Q754.8,171.2 758.3,165.1L765.2,153.3Q768.7,147.2 775.7,147.2H776.7" stroke="#9a5b1e" stroke-width="1.6"/>
+<path d="M382.4,171.2H388.8 M275.4,171.2H382.4 M218.1,171.2H275.4 M693.2,110.0H694.2Q701.2,110.0 704.7,116.1L719.2,141.1Q722.7,147.2 729.7,147.2H730.7M730.7,147.2H774.7 M774.7,147.2H829.9 M746.8,171.2H829.9 M742.5,171.2H746.8 M694.4,171.2H742.5 M388.8,171.2H694.4" stroke="#9a5b1e" stroke-width="3.6"/>
 </g>
-<circle cx="343.7" cy="136.4" r="3.2" fill="#9a5b1e"/>
+<circle cx="343.7" cy="147.2" r="3.2" fill="#9a5b1e"/>
 <circle cx="355.5" cy="110.0" r="3.2" fill="#9a5b1e"/>
-<circle cx="244.6" cy="123.2" r="3.2" fill="#9a5b1e"/>
+<circle cx="244.6" cy="134.0" r="3.2" fill="#9a5b1e"/>
 <path d="M326.5,79.7L334.5,85.5L327.5,89.5Z" fill="#9a5b1e" data-pfeil="0"/>
-<path d="M240.1,160.4H218.1" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
-<path d="M801.6,136.4H823.6" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
-<path d="M801.6,160.4H823.6" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
-<text x="206.1" y="147.4" font-size="22" text-anchor="end" fill="#9a5b1e">Linie 910</text>
-<text x="206.1" y="173.4" font-size="22" text-anchor="end" fill="#9a5b1e">← Klosters Platz</text>
-<text x="835.6" y="135.4" font-size="22" text-anchor="start" fill="#9a5b1e">Linie 910</text>
-<text x="835.6" y="161.4" font-size="22" text-anchor="start" fill="#9a5b1e">Sagliains →</text>
-<text x="495.3" y="236.4" font-size="38" font-weight="700" text-anchor="middle" fill="#9a5b1e">Klosters Selfranga</text>
+<path d="M240.1,171.2H218.1" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
+<path d="M807.9,147.2H829.9" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
+<path d="M807.9,171.2H829.9" stroke="#9a5b1e" stroke-width="3.6" fill="none"/>
+<text x="206.1" y="158.2" font-size="22" text-anchor="end" fill="#9a5b1e">Linie 910</text>
+<text x="206.1" y="184.2" font-size="22" text-anchor="end" fill="#9a5b1e">← Klosters Platz</text>
+<text x="841.9" y="146.2" font-size="22" text-anchor="start" fill="#9a5b1e">Linie 910</text>
+<text x="841.9" y="172.2" font-size="22" text-anchor="start" fill="#9a5b1e">Sagliains →</text>
+<text x="495.3" y="247.2" font-size="38" font-weight="700" text-anchor="middle" fill="#9a5b1e">Klosters Selfranga</text>
 </svg>
