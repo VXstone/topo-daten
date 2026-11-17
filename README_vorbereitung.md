@@ -33,6 +33,21 @@ Der Workflow «Bahndaten Schweiz» lässt diesen Schlüssel beim Überschreiben 
 `betriebspunkte.json`, `gleisnummern.json`, `perronkanten.json`, `sbb_perronoberflache.geojson.gz`, `sbb_betriebspunkte.geojson.gz`, `region_<key>.json.gz`, `bahnhoefe_<key>.zip/.json`, `aenderungen.json`,
 `schweiz_bahn_vorher.json.gz` (Vergleichsbasis für den nächsten Monat).
 
+## Dienststellen (atlas/DIDOK, alle Verkehrsmittel, seit 17.11.2026)
+Eigener Workflow `dienststellen` (monatlich am 2., auf Knopfdruck und bei Änderung des Skripts) mit
+`skripte/vorbereitung/dienststellen.py`. Quelle: atlas «service-point», Ressource `actual-date-swiss-service-point`
+(opentransportdata.swiss, über CKAN gesucht); Ersatz: data.sbb.ch `dienststellen-gemass-opentransportdataswiss`.
+Alle Dienststellen, nicht nur SBB: Bahn aller Unternehmen, Tram, Bus, Schiff, Seilbahn sowie Betriebspunkte ohne Publikumsverkehr.
+Ins Release `vorbereitung`:
+
+| Datei | Inhalt |
+|---|---|
+| `dienststellen.csv.gz` | eine Zeile je Dienststelle (heute gültige Version), `;`-getrennt: `nummer, sloid, abk, name, lat, lon, verkehrsmittel` (z. B. `TRAIN\|BUS`, `TRAM`), `haltestelle, betriebspunkt, betreiber_abk, betreiber, gemeinde, kanton, gueltig_von, gueltig_bis` u. a. |
+| `dienststellen_roh.csv.gz` | Quelldatei unverändert (alle atlas-Felder) |
+| `dienststellen_stand.json` | Quelle, Anzahl, Zahlen je Verkehrsmittel, Spaltenzuordnung, Stichprobe (auch in `stand.json`, Schlüssel `dienststellen`) |
+
+Download: `https://github.com/VXstone/topo-daten/releases/download/vorbereitung/dienststellen.csv.gz`
+
 ## Getestet (Sandbox, OSM-Stand 12.10., SBB perronoberflache)
 - Betriebspunkte: 1087 (713 SBB+OSM, 90 nur SBB-Perron, 284 nur OSM). Ohne OSM-Stationsknoten u. a. Onnens-Bonvillars,
   Ligerz, Neuchâtel-Vauseyon, Vaumarcus, Montmollin-Montezillon, Boveresse.

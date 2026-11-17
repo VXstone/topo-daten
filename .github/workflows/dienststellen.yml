@@ -1,0 +1,62 @@
+# Alle atlas-Dienststellen (Nachfolger DIDOK): Bahn aller Unternehmen, Tram, Bus, Schiff, Seilbahn, Betriebspunkte.
+# Ergebnis im Release "vorbereitung": dienststellen.csv.gz, dienststellen_roh.csv.gz, dienststellen_stand.json;
+# Zusammenfassung in stand.json (Schlüssel "dienststellen"), weil die Lauf-Logs ausserhalb von GitHub nicht lesbar sind.
+name: dienststellen
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "41 4 2 * *"           # monatlich am 2.
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/dienststellen.yml"
+      - "skripte/vorbereitung/dienststellen.py"
+permissions:
+  contents: write
+concurrency:
+  group: dienststellen
+  cancel-in-progress: false
+jobs:
+  laden:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with: { python-version: "3.12" }
+
+      - name: atlas-Dienststellen laden und vereinheitlichen
+        id: laden
+        continue-on-error: true
+        run: python3 skripte/vorbereitung/dienststellen.py eingang aus
+
+      - name: Release "vorbereitung" ergänzen
+        if: steps.laden.outcome == 'success'
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: |
+          gh release view vorbereitung >/dev/null 2>&1 || gh release create vorbereitung -t "Vorbereitung Spurpläne" -n "automatisch"
+          gh release upload vorbereitung aus/dienststellen.csv.gz aus/dienststellen_roh.csv.gz aus/dienststellen_stand.json --clobber
+          ls -la aus
+
+      - name: Stand festhalten (stand.json, Schlüssel "dienststellen")
+        if: always()
+        env:
+          LAUF: "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+        run: |
+          git pull --rebase origin main || true
+          python3 - <<'EOF'
+          import json, os
+          try: st = json.load(open("stand.json"))
+          except Exception: st = {}
+          try: d = json.load(open("aus/dienststellen_stand.json"))
+          except Exception: d = {"status": "fehlt", "hinweis": "Skript ohne Ergebnis"}
+          d["lauf"] = os.environ.get("LAUF", "")
+          st["dienststellen"] = d
+          json.dump(st, open("stand.json", "w"), ensure_ascii=False, indent=1)
+          print(json.dumps({k: d.get(k) for k in ("status", "quelle", "datei", "anzahl", "je_verkehrsmittel")}, ensure_ascii=False, indent=1))
+          EOF
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add stand.json
+          git commit -m "Dienststellen: Stand $(date -u +%Y-%m-%dT%H:%MZ)" || echo "keine Änderung"
+          git pull --rebase origin main && git push
