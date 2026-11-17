@@ -1004,5 +1004,379 @@
  "groesse_mb": {
   "schweiz_bahn.json.gz": 11.1,
   "bahn_schweiz.osm.pbf": 7.8
+ },
+ "dienststellen": {
+  "erzeugt": "2026-11-17 04:29 UTC",
+  "versucht": [
+   "https://data.opentransportdata.swiss/api/3/action/package_show?id=service-point-v2: HTTPError HTTP Error 403: Forbidden",
+   "https://data.opentransportdata.swiss/dataset/39e5f264-257a-4f3f-bccc-5322c37058c5/resource/540e0331-37cd-4bd2-bf4d-9b925b8c976e/download/actual-date-swiss-service-point.csv: HTTPError HTTP Error 404: ",
+   "https://data.opentransportdata.swiss/dataset/39e5f264-257a-4f3f-bccc-5322c37058c5/resource/551049fd-77fc-46c0-8b8c-13023d4bdd4b/download/timetable-years-swiss-service-point.csv: HTTPError HTTP Error 4",
+   "https://ckan.opendata.swiss/api/3/action/package_show?id=service-point-v2: 3 Ressourcen, keine passt",
+   "https://data.opentransportdata.swiss/dataset/39e5f264-257a-4f3f-bccc-5322c37058c5/resource/540e0331-37cd-4bd2-bf4d-9b925b8c976e/download/actual-date-swiss-service-point.csv: HTTPError HTTP Error 404: ",
+   "https://data.opentransportdata.swiss/dataset/39e5f264-257a-4f3f-bccc-5322c37058c5/resource/551049fd-77fc-46c0-8b8c-13023d4bdd4b/download/timetable-years-swiss-service-point.csv: HTTPError HTTP Error 4",
+   "https://opendata.swiss/api/3/action/package_show?id=service-point-v2: 3 Ressourcen, keine passt",
+   "https://data.opentransportdata.swiss/api/3/action/package_show?id=service-points-actual-date: HTTPError HTTP Error 403: Forbidden",
+   "https://ckan.opendata.swiss/api/3/action/package_show?id=service-points-actual-date: HTTPError HTTP Error 404: NOT FOUND",
+   "https://opendata.swiss/api/3/action/package_show?id=service-points-actual-date: HTTPError HTTP Error 404: NOT FOUND",
+   "https://data.opentransportdata.swiss/api/3/action/package_show?id=service-points-full: HTTPError HTTP Error 403: Forbidden",
+   "https://ckan.opendata.swiss/api/3/action/package_show?id=service-points-full: HTTPError HTTP Error 404: NOT FOUND",
+   "https://opendata.swiss/api/3/action/package_show?id=service-points-full: HTTPError HTTP Error 404: NOT FOUND",
+   "https://data.opentransportdata.swiss/api/3/action/package_show?id=service-point: HTTPError HTTP Error 403: Forbidden",
+   "https://ckan.opendata.swiss/api/3/action/package_show?id=service-point: HTTPError HTTP Error 404: NOT FOUND",
+   "https://opendata.swiss/api/3/action/package_show?id=service-point: HTTPError HTTP Error 404: NOT FOUND",
+   "https://data.sbb.ch/api/explore/v2.1/catalog/datasets/dienststellen-gemass-opentransportdataswiss/exports/csv?delimiter=%3B: OK"
+  ],
+  "quelle": "data.sbb.ch (Ersatz)",
+  "datensatz": "dienststellen-gemass-opentransportdataswiss",
+  "datei": "dienststellen-gemass-opentransportdataswiss.csv",
+  "url": "https://data.sbb.ch/api/explore/v2.1/catalog/datasets/dienststellen-gemass-opentransportdataswiss/exports/csv?delimiter=%3B",
+  "quellspalten": [
+   "lod",
+   "geopos",
+   "numbershort",
+   "uiccountrycode",
+   "sloid",
+   "number",
+   "globalid",
+   "validfrom",
+   "validto",
+   "designationofficial",
+   "designationlong",
+   "abbreviation",
+   "operatingpoint",
+   "operatingpointwithtimetable",
+   "stoppoint",
+   "stoppointtype",
+   "freightservicepoint",
+   "trafficpoint",
+   "borderpoint",
+   "hasgeolocation",
+   "isocountrycode",
+   "cantonname",
+   "cantonfsonumber",
+   "cantonabbreviation",
+   "districtname",
+   "districtfsonumber",
+   "municipalityname",
+   "fsonumber",
+   "localityname",
+   "operatingpointtype",
+   "operatingpointtechnicaltimetabletype",
+   "meansoftransport",
+   "categories",
+   "operatingpointtrafficpointtype",
+   "operatingpointroutenetwork",
+   "operatingpointkilometer",
+   "operatingpointkilometermasternumber",
+   "sortcodeofdestinationstation",
+   "businessorganisation",
+   "businessorganisationnumber",
+   "businessorganisationabbreviationde",
+   "businessorganisationabbreviationfr",
+   "businessorganisationdescriptionde",
+   "businessorganisationdescriptionfr",
+   "fotcomment",
+   "height",
+   "creationdate",
+   "editiondate"
+  ],
+  "zuordnung": {
+   "nummer": "number",
+   "nummer_kurz": "numbershort",
+   "land": "uiccountrycode",
+   "sloid": "sloid",
+   "abk": "abbreviation",
+   "name": "designationofficial",
+   "name_lang": "designationlong",
+   "geopos": "geopos",
+   "hoehe": "height",
+   "verkehrsmittel": "meansoftransport",
+   "haltestelle": "stoppoint",
+   "haltestellentyp": "stoppointtype",
+   "betriebspunkt": "operatingpoint",
+   "betriebspunkt_fahrplan": "operatingpointwithtimetable",
+   "betriebspunkt_typ": "operatingpointtype",
+   "gueterverkehr": "freightservicepoint",
+   "grenzpunkt": "borderpoint",
+   "betreiber_abk": "businessorganisationabbreviationde",
+   "betreiber": "businessorganisationdescriptionde",
+   "betreiber_sboid": "businessorganisation",
+   "gemeinde": "localityname",
+   "kanton": "cantonabbreviation",
+   "gueltig_von": "validfrom",
+   "gueltig_bis": "validto"
+  },
+  "nicht_gefunden": [
+   "lat",
+   "lon",
+   "lv95e",
+   "lv95n",
+   "status"
+  ],
+  "status": "OK",
+  "anzahl": 60539,
+  "mit_abkuerzung": 5813,
+  "mit_koordinaten": 58590,
+  "schweiz": 33039,
+  "je_verkehrsmittel": {
+   "BUS": 44979,
+   "UNKNOWN": 6054,
+   "ohne (Betriebspunkt)": 5694,
+   "TRAIN": 1743,
+   "TRAM": 1171,
+   "CHAIRLIFT": 598,
+   "CABLE_CAR": 541,
+   "BOAT": 382,
+   "CABLE_RAILWAY": 143,
+   "METRO": 113,
+   "RACK_RAILWAY": 71,
+   "ELEVATOR": 4
+  },
+  "stichprobe": {
+   "Neuchâtel": [
+    {
+     "nummer": 8504220,
+     "abk": "NESE",
+     "name": "Neuchâtel-Serrières",
+     "verkehrsmittel": "TRAIN",
+     "betreiber_abk": "SBB",
+     "lat": 46.983962,
+     "lon": 6.903363
+    },
+    {
+     "nummer": 8504221,
+     "abk": "NE",
+     "name": "Neuchâtel",
+     "verkehrsmittel": "TRAIN",
+     "betreiber_abk": "SBB",
+     "lat": 46.996727,
+     "lon": 6.935702
+    },
+    {
+     "nummer": 8504230,
+     "abk": "NEVS",
+     "name": "Neuchâtel-Vauseyon",
+     "verkehrsmittel": "",
+     "betreiber_abk": "SBB",
+     "lat": 46.9909,
+     "lon": 6.916382
+    }
+   ],
+   "Fleurier": [
+    {
+     "nummer": 8504287,
+     "abk": "FLE",
+     "name": "Fleurier",
+     "verkehrsmittel": "TRAIN",
+     "betreiber_abk": "TRN-rvt",
+     "lat": 46.904762,
+     "lon": 6.581317
+    },
+    {
+     "nummer": 8506932,
+     "abk": "",
+     "name": "Fleurier, Grands Clos",
+     "verkehrsmittel": "BUS",
+     "betreiber_abk": "TRN/tc",
+     "lat": 46.904487,
+     "lon": 6.592006
+    },
+    {
+     "nummer": 8506934,
+     "abk": "",
+     "name": "Fleurier, Hôtel de ville",
+     "verkehrsmittel": "BUS",
+     "betreiber_abk": "TRN/tc",
+     "lat": 46.901931,
+     "lon": 6.584565
+    }
+   ],
+   "Köniz": [
+    {
+     "nummer": 8507083,
+     "abk": "KOE",
+     "name": "Köniz",
+     "verkehrsmittel": "TRAIN",
+     "betreiber_abk": "BLS-gbs",
+     "lat": 46.924607,
+     "lon": 7.414912
+    },
+    {
+     "nummer": 8516995,
+     "abk": "KOEW",
+     "name": "Köniz Waldegg (Agl)",
+     "verkehrsmittel": "",
+     "betreiber_abk": "BLS-gbs",
+     "lat": 46.936109,
+     "lon": 7.416187
+    },
+    {
+     "nummer": 8571413,
+     "abk": "",
+     "name": "Köniz, Brühlplatz",
+     "verkehrsmittel": "BUS",
+     "betreiber_abk": "SVB Auto",
+     "lat": 46.9262,
+     "lon": 7.417021
+    }
+   ],
+   "Bern, Bümpliz": [
+    {
+     "nummer": 8519409,
+     "abk": "",
+     "name": "Bern, Bümpliz (Wds)",
+     "verkehrsmittel": "",
+     "betreiber_abk": "SVB Auto",
+     "lat": 46.937827,
+     "lon": 7.381189
+    },
+    {
+     "nummer": 8579898,
+     "abk": "",
+     "name": "Bern, Bümpliz Unterführung",
+     "verkehrsmittel": "BUS|TRAM",
+     "betreiber_abk": "SVB Auto",
+     "lat": 46.942189,
+     "lon": 7.400702
+    },
+    {
+     "nummer": 8579899,
+     "abk": "",
+     "name": "Bern, Bümpliz Höhe",
+     "verkehrsmittel": "BUS|TRAM",
+     "betreiber_abk": "SVB Auto",
+     "lat": 46.942278,
+     "lon": 7.39705
+    }
+   ],
+   "Zürich, Paradeplatz": [
+    {
+     "nummer": 8519521,
+     "abk": "",
+     "name": "Zürich, Paradeplatz (Vzw Nord)",
+     "verkehrsmittel": "",
+     "betreiber_abk": "VBZ",
+     "lat": 47.370498,
+     "lon": 8.538987
+    },
+    {
+     "nummer": 8519522,
+     "abk": "",
+     "name": "Zürich, Paradeplatz (Vzw Süd)",
+     "verkehrsmittel": "",
+     "betreiber_abk": "VBZ",
+     "lat": 47.369333,
+     "lon": 8.539426
+    },
+    {
+     "nummer": 8591299,
+     "abk": "",
+     "name": "Zürich, Paradeplatz",
+     "verkehrsmittel": "BUS|TRAM",
+     "betreiber_abk": "VBZ",
+     "lat": 47.369732,
+     "lon": 8.538917
+    }
+   ],
+   "Olten Ost": [
+    {
+     "nummer": 8500244,
+     "abk": "OLO",
+     "name": "Olten Ost (Abzw)",
+     "verkehrsmittel": "",
+     "betreiber_abk": "SBB",
+     "lat": 47.358634,
+     "lon": 7.92563
+    }
+   ],
+   "Genève, Bel-Air": [
+    {
+     "nummer": 8519456,
+     "abk": "",
+     "name": "Genève, Bel-Air (bif)",
+     "verkehrsmittel": "",
+     "betreiber_abk": "TPG",
+     "lat": 46.204208,
+     "lon": 6.142997
+    },
+    {
+     "nummer": 8519457,
+     "abk": "",
+     "name": "Genève, Bel-Air Cité (bif)",
+     "verkehrsmittel": "",
+     "betreiber_abk": "TPG",
+     "lat": 46.203793,
+     "lon": 6.142916
+    },
+    {
+     "nummer": 8587387,
+     "abk": "",
+     "name": "Genève, Bel-Air",
+     "verkehrsmittel": "BUS|TRAM",
+     "betreiber_abk": "TPG",
+     "lat": 46.204731,
+     "lon": 6.143049
+    }
+   ],
+   "Interlaken Ost": [
+    {
+     "nummer": 8507360,
+     "abk": "",
+     "name": "Interlaken Ost JB",
+     "verkehrsmittel": "",
+     "betreiber_abk": "JB",
+     "lat": "",
+     "lon": ""
+    },
+    {
+     "nummer": 8507492,
+     "abk": "IO",
+     "name": "Interlaken Ost",
+     "verkehrsmittel": "TRAIN",
+     "betreiber_abk": "BOB",
+     "lat": 46.691122,
+     "lon": 7.870262
+    },
+    {
+     "nummer": 8507510,
+     "abk": "",
+     "name": "Interlaken Ost ZPG BLS",
+     "verkehrsmittel": "",
+     "betreiber_abk": "BLS-bls",
+     "lat": "",
+     "lon": ""
+    }
+   ],
+   "Zermatt": [
+    {
+     "nummer": 8500333,
+     "abk": "",
+     "name": "Zermatt Schweigmatten",
+     "verkehrsmittel": "CABLE_CAR",
+     "betreiber_abk": "ZBAG",
+     "lat": 46.000283,
+     "lon": 7.735252
+    },
+    {
+     "nummer": 8500334,
+     "abk": "",
+     "name": "Zermatt Joscht",
+     "verkehrsmittel": "CHAIRLIFT",
+     "betreiber_abk": "ZBAG",
+     "lat": 46.007158,
+     "lon": 7.697439
+    },
+    {
+     "nummer": 8500727,
+     "abk": "",
+     "name": "Zermatt Matterhorn (Talst. 2)",
+     "verkehrsmittel": "",
+     "betreiber_abk": "ZBAG",
+     "lat": 46.014781,
+     "lon": 7.742961
+    }
+   ]
+  },
+  "lauf": "https://github.com/VXstone/topo-daten/actions/runs/44017536842"
  }
 }
