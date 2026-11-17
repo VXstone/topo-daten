@@ -93,7 +93,8 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - [x] **V1 Abgleich Plan gegen OSM** (mittel) – 12.11. abends, Commit d5f52c5 (Seite nicht neu veröffentlicht: kein Plan geändert)
 - [x] **S1 Sagliains parallel durch den Knick** (klein) – 13.11. früh, Commit 08022dd, Seite v147
 - [x] **B1 Basis-Paket** – 17.11. nachmittags: V0-Rest und G1 fertig; S2/S3 abgespalten (Befund in Abschnitt 6, B1)
-- [ ] **S2 Konolfingen DKW** und **S3 Aarau Zwischengeraden mit Weiche** – **als Nächstes**, je eigener Chat (Abschnitte S2/S3 + Nachtrag B1)
+- [x] **S2 Konolfingen DKW / Ostkopf** – 17.11. abends (Nachtrag S2); Gleisfeld West abgespalten → S2b
+- [ ] **S2b Konolfingen Gleisfeld West** und **S3 Aarau Zwischengeraden mit Weiche** – **als Nächstes**, je eigener Chat
 - [x] **S1b Sagliains-Bündel durchgehend** (klein) – 16.11. früh, Commits af2a110/21556d3, Seite v150
 - [ ] **V2 Ein Regelwerk für alle** (mittel, Rest nach S2)
 - [ ] **K Kreuzungen und Werfungen** (mittel; nimmt R2-Teil Unterwerfung auf) – **vor A2** (Wunsch 11.11.: Aarau-Tunnel-Hinweise)
@@ -203,6 +204,19 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   einzeln, jede am OSM-Abgleich gemessen (V-Summe Konolfingen 12 → 0 Ziel), nicht an G-Zählern. Hinweise ttv8, z6f2, 33fs,
   3d6h, 8bce danach beantworten.
 - Fertig, wenn: Konolfingen ohne VA1/VB2/VC1, keine neuen V-Befunde in anderen Plänen, Seite veröffentlicht.
+
+### S2b – Konolfingen Gleisfeld West (Ebenen-Löser)
+- Einstieg: «Weiter mit UEBERGABE.md – Schritt S2b: Konolfingen Gleisfeld West»
+- Zielplan **konolfingen**, Westkopf: Abstellgleise 53/54 + Stumpen 1689230917 liegen in OSM *über* der 430 von Steffisburg
+  (d −24…−36 gegen −37…−55) und hängen über 1689230955 → Weiche 223385024 am Gleis zu Gl. 4 (nicht an 4694358196 Gl. 5/6).
+  Heute VB2 bei 361/307 und 348/331, VC1 397/283, VD1 409/259 (Hinweis 3d6h; tnvp «Knubbel kurz gerade» gleiche Stelle).
+- Befund S2: Die Weichenstrasse 33390862 + 606745360 (Gruppe, `home[n] = la + (lb-la)·f`) zieht den Trennknoten 1689230957
+  (lane_guess −2,8) auf Ebene 2 (Gl. 5); die Abstellgleise bekommen lane_guess 0/1 → darunter, der Abgang Steffisburg kreuzt
+  sie. Ansatz: Seitenabgang-Knoten nicht über Nebengleise legen, die nach d darüber liegen (Reihenfolge REGELN 0/Geografie),
+  bzw. Ebene < 0 für den Trennknoten zulassen; 223385024 rechts von 1689230955 halten.
+- Mitnehmen: VD1 auf Gl. 3 bei 595/211 (Verbindung 156705005 läuft 49 px auf Gl. 3 bis Weiche 254421673 – Weiche an den Fuss
+  der Schräge legen); VB1 1689230852 (Gruppe oben links). Hinweise 3d6h, tnvp, gojth (Gl. 1 keine Nummer, nicht grün), ezxj.
+- Fertig, wenn: Konolfingen OSM-Abgleich ohne VB2/VC1, keine neuen V-Befunde anderswo, Seite veröffentlicht.
 
 ### S3 – Aarau Zwischengeraden
 - Einstieg: «Weiter mit UEBERGABE.md – Schritt S3: Aarau Zwischengeraden»
@@ -424,4 +438,16 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - S3 Aarau: die Zwischengeraden (fmlk, vnyq) tragen in OSM eine Weiche (1799639073 auf Gl. 3 / Stumpen ab der Verbindung;
   390523657, 1799626775). r49 für alle (cfg-Versuch `zwischengerade_schraeg`) löscht diese Weichen (VB1 +3, VD1 +4) – verworfen.
   Ziel: eine durchgehende 60°-Schräge mit Abzweig aus der Schräge (wie Solothurn xke0), nicht Weiche weglassen.
+
+### 17.11.2026 ~23:30 – Schritt S2 Konolfingen Ostkopf, Seite v153 (Commits a29a470, 8e0439c, 5750a22)
+- OSM-Abgleich Konolfingen 12 → 6 (VA1 3→0, VB1 2→1, VB2 4→2); Prüfstand = Basis; Regression nur Konolfingen/Region besser.
+- REGELN 2.4: R45-Kette endet an DKW mit Streckenabgang → Abgang setzt die Gerade fort (`r45_ende_abgang`, W8 lässt ihn aus);
+  OSM-DKW mit < 4 Armen = Weiche (Daniel: 1689231106 «einfache Weiche»; Schema + osm_abgleich `dkw_osm_unvollstaendig`).
+- REGELN 1.28 neu (`rand_flucht`): Nebengleis läuft an Verzweigung ohne Personengleis längs hinaus → nur Flucht-Gleis mit
+  Pfeil, Knoten bleibt an Ort, r15 läuft nicht über DKW zurück, kein Fächer an der DKW (DKW 1689231120, Hinweise z6f2/8bce).
+- REGELN 1.3 `r49_eng`: echter S-Bogen → volle 60°-Schräge, nicht an DKW (Hinweis 33fs). Erste Fassung (+2 px Toleranz)
+  verschob Werkstatt-Pläne um 1–2 px, zweite ohne Personengleis-Bedingung änderte Rothrist/Zofingen – beides korrigiert.
+- Regression (Seite ergebnisse a5284a5): nur Konolfingen besser und Region Olten (Rothrist-Regionalvariante West: Pfeile
+  zurück → nach aussen, REGELN 1.28); Zofingen/Rothrist standen schon vor S2 in der Tabelle. Hinweise ttv8, z6f2, 8bce, 33fs
+  behoben-Kandidaten; 3d6h beantwortet (→ S2b). Offen → S2b (Befund im Abschnitt S2b).
 
