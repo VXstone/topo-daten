@@ -92,11 +92,8 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - [x] **R1c Doppelspur-Abstand im Bündel** (klein) – 11.11. abends, Seite v145
 - [x] **V1 Abgleich Plan gegen OSM** (mittel) – 12.11. abends, Commit d5f52c5 (Seite nicht neu veröffentlicht: kein Plan geändert)
 - [x] **S1 Sagliains parallel durch den Knick** (klein) – 13.11. früh, Commit 08022dd, Seite v147
-- [ ] **V0 Ein Regelwerk auf GitHub** (mittel) – **als Nächstes** (Entscheid Daniel 13.11.: Regeln überall, alle Bahnhöfe gleich)
+- [ ] **B1 Basis-Paket = V0-Rest → G1 → S2 → S3** (gross; Wunsch Daniel 17.11.: ein Schritt) – **als Nächstes**, siehe unten
 - [x] **S1b Sagliains-Bündel durchgehend** (klein) – 16.11. früh, Commits af2a110/21556d3, Seite v150
-- [ ] **G1 Glion Gleise und Perrons** (mittel; Hinweis Daniel 17.11.) – siehe unten
-- [ ] **S2 Konolfingen Topologie richtig** (mittel; erster Teil von V2)
-- [ ] **S3 Aarau Zwischengeraden** (mittel; Kern von R2)
 - [ ] **V2 Ein Regelwerk für alle** (mittel, Rest nach S2)
 - [ ] **K Kreuzungen und Werfungen** (mittel; nimmt R2-Teil Unterwerfung auf) – **vor A2** (Wunsch 11.11.: Aarau-Tunnel-Hinweise)
 - [ ] **A2 Abzweigende Doppelspur** (mittel, Topologie)
@@ -147,6 +144,17 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - Zuerst Prüfstand-Baustein «Bündel knickt» (Abstand 0,55 und 1 Ebene, Knick 30°/60°; Messung P/Q muss anschlagen).
 - Fertig, wenn: Sagliains-Portal als Bündel mit 13,2 px durch den Knick, Baustein ohne Befund, alle geänderten Pläne erklärt,
   Seite veröffentlicht (nimmt die Vereina-Änderung aus V1 mit).
+
+### B1 – Basis-Paket (Wunsch Daniel 17.11.: V0-Rest, G1, S2, S3 als ein Schritt)
+- Einstieg: «Weiter mit UEBERGABE.md – Schritt B1: Basis-Paket»
+- Vier Teile **in dieser Reihenfolge, im selben Chat**, Beschreibung je Teil in den Abschnitten V0, G1, S2, S3 unten:
+  (1) V0-Rest: Messungen 5.3 S-Kurve / 5.5 Bahnhofsabstand / 5.6 Bahnhofslänge mit Einordnung «besser» in alle_plaene_pruefen,
+      Liste der Overrides (REGELN 6), Herkunft je Plan auf der Seite («aus Code <Commit/Datum>» / «fest seit <Datum>»);
+  (2) G1 Glion; (3) S2 Konolfingen; (4) S3 Aarau.
+- Je Teil: Zielplan-Vorher an Daniel → Code → eigener Commit/Push + Workflows → Regression erklärt → Vorher/Nachher an Daniel.
+  **Einmal veröffentlichen am Schluss** (oder früher, wenn Daniel es will). Ein Teil, der hängt, wird als Folgeschritt
+  abgespalten statt die anderen aufzuhalten. Nutzung: nur die Abschnitte des laufenden Teils lesen.
+- Fertig, wenn: alle vier Teile nach ihren eigenen «Fertig, wenn» erfüllt oder sauber abgespalten, Seite veröffentlicht.
 
 ### V0 – Ein Regelwerk auf GitHub (Entscheid Daniel 13.11.2026)
 - Einstieg: «Weiter mit UEBERGABE.md – Schritt V0: Ein Regelwerk auf GitHub»
