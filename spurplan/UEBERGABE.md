@@ -92,7 +92,8 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - [x] **R1c Doppelspur-Abstand im Bündel** (klein) – 11.11. abends, Seite v145
 - [x] **V1 Abgleich Plan gegen OSM** (mittel) – 12.11. abends, Commit d5f52c5 (Seite nicht neu veröffentlicht: kein Plan geändert)
 - [x] **S1 Sagliains parallel durch den Knick** (klein) – 13.11. früh, Commit 08022dd, Seite v147
-- [ ] **B1 Basis-Paket = V0-Rest → G1 → S2 → S3** (gross; Wunsch Daniel 17.11.: ein Schritt) – **als Nächstes**, siehe unten
+- [x] **B1 Basis-Paket** – 17.11. nachmittags: V0-Rest und G1 fertig; S2/S3 abgespalten (Befund in Abschnitt 6, B1)
+- [ ] **S2 Konolfingen DKW** und **S3 Aarau Zwischengeraden mit Weiche** – **als Nächstes**, je eigener Chat (Abschnitte S2/S3 + Nachtrag B1)
 - [x] **S1b Sagliains-Bündel durchgehend** (klein) – 16.11. früh, Commits af2a110/21556d3, Seite v150
 - [ ] **V2 Ein Regelwerk für alle** (mittel, Rest nach S2)
 - [ ] **K Kreuzungen und Werfungen** (mittel; nimmt R2-Teil Unterwerfung auf) – **vor A2** (Wunsch 11.11.: Aarau-Tunnel-Hinweise)
@@ -409,3 +410,18 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   berührtes Nebengleis zählt wieder wie Personengleis (REGELN 1.5) – Vauseyon wieder = Abnahme, region_ne G2 39→35, Selfranga
   oben wieder voller Abstand; Sasslatsch/Sagliains/Portal bleiben wie S1b. Konolfingen-Überlappungen = S2 (seit v149),
   Glion = neuer Schritt G1 (seit v149; keine Spitzkehre, Korrektur Daniel).
+
+### 17.11.2026 ~15:30 – Schritt B1: V0-Rest + G1 fertig, S2/S3 abgespalten (Commits 83c613b, 118f171, ab0586e, 9182f24)
+- V0-Rest: `wuensche.py` W53/W55/W56 (REGELN 5) in `alle_plaene_pruefen` (Wunsch-Summe entscheidet «besser/schlechter»,
+  Übersicht `regression/wuensche.md`); `overrides_liste.py` → `seite/overrides.md` (REGELN 6); Label «aus Code <Commit> <Datum>».
+- G1 Glion: REGELN 1.27 (`topologie_linien` Achse läuft über Linienende ohne Umkehr weiter) + 1.26 (`ebenen_zum_stamm`:
+  Nebengleis mit Weichenanschluss nur nach oben rückt unter das nächste überlappende Gleis). Erste Fassung ohne die zwei
+  Bedingungen verschlechterte Solothurn (VB2/VD1) und Rothrist (G6) – Fallstrick: Ketten ohne Schräg-Anschluss nie bewegen.
+- S2 Konolfingen: keine der LR-Regeln (dkw_auto, kreuzung_schnitt, haupt_fortsetzung, hauptgleis_funktion, spurgruppe_seite,
+  randzone, r28e/f, r36b) ändert den Plan; r49 kostet DKW 1689230829 (VA1 +1). Ursache der drei fehlenden DKW: am Knoten zeichnet
+  der Plan nur 2–3 Arme (`--dbg`: «DKW? 254420784 3», «DKW? 1689231120 2») – Arme der Diagonale 143221510/475716119 liegen an
+  LATCUT/xs_over-Positionen statt am DKW-Knoten. Ansatz: Diagonalkette durch die DKW (R45) auch für OSM-getaggte DKW erzwingen.
+- S3 Aarau: die Zwischengeraden (fmlk, vnyq) tragen in OSM eine Weiche (1799639073 auf Gl. 3 / Stumpen ab der Verbindung;
+  390523657, 1799626775). r49 für alle (cfg-Versuch `zwischengerade_schraeg`) löscht diese Weichen (VB1 +3, VD1 +4) – verworfen.
+  Ziel: eine durchgehende 60°-Schräge mit Abzweig aus der Schräge (wie Solothurn xke0), nicht Weiche weglassen.
+
