@@ -169,7 +169,7 @@ for p_ in plans:
 # Laufs auf «ergebnisse» («Regionen …/Pläne … (<sha>)»); «fest seit <Datum>» bleibt wie es ist.
 def _sha_ergebnisse(pfad):
     try:
-        t = _sp.run(["git", "log", "-1", "--format=%s", "origin/ergebnisse", "--", pfad], capture_output=True, text=True).stdout
+        t = _sp.run(["git", "log", "-1", "--format=%s", "origin/ergebnisse", "--", ":(top)" + pfad], capture_output=True, text=True).stdout
         m = re.search(r"\(([0-9a-f]{7,40})\)", t); return m.group(1)[:7] if m else None
     except Exception: return None
 _SHA = (os.environ.get("GITHUB_SHA") or "")[:7]
