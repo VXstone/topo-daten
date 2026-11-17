@@ -1261,6 +1261,25 @@ if RU.get("r33", True):
     _used = sorted({c["lane"] for c in C}); _rk = {l: i for i, l in enumerate(_used)}
     for c in C: c["lane"] = _rk[c["lane"]]
 
+# Nebengleise zum Stammgleis hin (REGELN 1.26, B1/G1 17.11.2026, Glion: das Gleis ohne Perron lag sieben Ebenen unter den
+# Perrongleisen, weil die Schichtung von unten zählt und das Depot weiter hinten dieselben Ebenen braucht). Nebengleis-Ketten unter
+# dem Stammgleis (längste Kette mit Personenverkehr) rücken nach oben bis direkt unter die nächste Kette, die sie in s
+# überlappt – Reihenfolge quer zur Achse bleibt, nichts überlappt auf einer Ebene. Oberhalb zählt die Schichtung schon
+# vom Stammgleis aus. cfg «ebenen_zum_stamm» (alle Wege, Standard an).
+if CFG.get("ebenen_zum_stamm", True):
+    _gap = CFG["lane_gap_m"]
+    _ov = lambda a, b: min(a["s1"], b["s1"]) - max(a["s0"], b["s0"]) > -_gap
+    _pax = [c for c in C if any(x["pax"] for x in c["segs"])]
+    if _pax:
+        _stamm = max(_pax, key=lambda c: c["s1"] - c["s0"])["lane"]
+        for c in sorted([c for c in C if c["lane"] < _stamm and not any(x["pax"] for x in c["segs"])], key=lambda c: -c["lane"]):
+            _ab = [x["lane"] for x in C if x is not c and x["lane"] > c["lane"] and _ov(x, c)]
+            if _ab and min(_ab) - 1 > c["lane"]:
+                if ARGS.dbg: print("ZUM_STAMM", c["lane"], "->", min(_ab) - 1, [x["way"] for x in c["segs"]])
+                c["lane"] = min(_ab) - 1
+        _used = sorted({c["lane"] for c in C}); _rk = {l: i for i, l in enumerate(_used)}
+        for c in C: c["lane"] = _rk[c["lane"]]
+
 # Regel 40 (Schritt 2): Ebenen aller Ketten gemeinsam optimieren (MILP) statt Kette für Kette.
 #   hart: überlappende Ketten auf verschiedenen Ebenen, Reihenfolge quer zur Achse wie in der Wirklichkeit
 #         (wo sie wechselt - Kreuzung/Überwerfung - entscheidet der Löser); Weichenverbindungen behalten ihre Richtung

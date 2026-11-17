@@ -60,6 +60,7 @@ NE-Bahnhöfe (fest seit 21.10., Schritt N2), Basel/Bern (P2b), Thun/Ins/Murten/K
 | 1.7 | Kein Gleis deckt ein anderes (> 12 px deckungsgleich); kein Perron auf einem Gleis. | | E4, A5 | | VD1, VD2, G8 | alle |
 | 1.8 | Kein Gleis wechselt die Ebene ohne Weiche oder Werfung; keine Badewanne (Mulde ohne Weiche bleibt oben, wenn frei). **Ausnahme:** Randzone (1.10) darf vor dem Planrand ohne Weiche die Ebene wechseln; derselbe Abstand gilt dann im Regionalplan und im Nachbarbahnhof weiter (16.11., F2). | | F11, F10, 7.3 | `f10` | E, PS «E» | alle |
 | 1.9 | Zwischengeraden zwischen zwei Spurwechseln entfallen (Gleise rücken zusammen), ausser dazwischen liegt ein Gleis mit Perron oder Nummer. | | B7, F7 | spurplan_schema | Z, F7 | alle |
+| 1.26 | Nebengleise liegen so nah am Stammgleis wie möglich: eine Nebengleis-Kette unter dem Stammgleis rückt hoch bis direkt unter die nächste Kette, die sie längs überlappt; Querreihenfolge bleibt (17.11., G1 Glion: Gleis ohne Perron lag sieben Ebenen tiefer, weil das Depot dahinter dieselben Ebenen brauchte). Perrongleise bleiben, wo die Schichtung sie hinlegt. | Nebengleis unter dem Stammgleis | – | spurplan_schema `ebenen_zum_stamm` | W56/Sicht | alle |
 
 ### 1.B Planrand und Abgänge
 | Nr | Regel | Auslöser | alt | Code | Prüfung | heute aktiv in |
@@ -71,6 +72,7 @@ NE-Bahnhöfe (fest seit 21.10., Schritt N2), Basel/Bern (P2b), Thun/Ins/Murten/K
 | 1.14 | Pfeile zeigen nur nach aussen, nie auf ein Nachbargleis (< 1,5 Ebenen); sonst kurzer Stumpen richtig gezeichnet, nie ersatzlos löschen. Pfeilspitze ≥ ½ Ebene neben jedem Gleis. | | 4.11., A6 | `pfeil_aussen` | fehlt | **LR** |
 | 1.15 | Schräg den Plan verlassende Gleise, die nebeneinander knicken, behalten quer den Abstand von davor (Knickversatz d·tan(θ/2)). | Bündel knickt | 12.11. (S1) | `stub_buendel_davor` (nur Stummel am Rand) | QK | alle (nur Stummel) |
 | 1.16 | Weichen bis 150 m hinter einem seitlichen Abgang als kurzer Stummel auf der Abgangsschräge. | | T15, R39b | spurplan_schema | – | alle |
+| 1.27 | Bahnhofsachse läuft durch: liegt ein Bahnhof < 3 km vor dem Ende seiner Linie und setzt dort eine andere Linie ohne Richtungsumkehr fort (≤ 75°), läuft die Achse auf ihr weiter; mit Umkehr (Spitzkehre, z. B. Zweisimmen 120/321) endet sie (17.11., G1 Glion: 121/122, «keine Spitzkehre»). | Linienwechsel im Bahnhof | – | topologie_linien `achse_durchgehend` | Sicht | LR |
 
 ### 1.C Perrons und Nummern
 | Nr | Regel | Auslöser | alt | Code | Prüfung | heute aktiv in |

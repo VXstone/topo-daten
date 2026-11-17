@@ -164,11 +164,49 @@ if fehlt: print("ohne Strecke:", fehlt)
 def slug(s_):
     s_ = unicodedata.normalize("NFKD", s_).encode("ascii", "ignore").decode().lower()
     return re.sub(r"[^a-z0-9]+", "_", s_).strip("_")
+def _durchgehend(ln, r, s_, pt):
+    """Achse durchgehend (REGELN 1.27, B1/G1 17.11.2026, Glion: «keine Spitzkehre – die Strecke läuft durch den Bahnhof»):
+    liegt der Bahnhof näher als 3 km am Ende seiner Linie und beginnt/endet dort eine andere Linie (Enden ≤ 120 m) ohne
+    Richtungsumkehr (Winkel zwischen ankommender und weiterführender Richtung ≤ 75°), wird die Achse über das Ende hinaus
+    auf dieser Linie fortgesetzt. Sonst endet die Achse am Linienende und alles dahinter fiele auf den letzten Achspunkt.
+    Konfig «achse_durchgehend»: false schaltet ab."""
+    if not K.get("achse_durchgehend", True): return ln, s_
+    def richtung(l_, am_ende):          # Richtung, mit der l_ an diesem Ende ankommt (vom Inneren zum Ende)
+        e = l_.interpolate(l_.length if am_ende else 0.0); i = l_.interpolate(max(0.0, l_.length - 300) if am_ende else min(300.0, l_.length))
+        v = np.array([e.x - i.x, e.y - i.y]); return v / (np.linalg.norm(v) or 1)
+    for am_ende in (False, True):
+        if (ln.length - s_ if am_ende else s_) >= 3000: continue
+        e = ln.interpolate(ln.length if am_ende else 0.0)
+        kand = []
+        for r2, l2 in SP.items():
+            if r2 == r: continue
+            for e2_ende in (False, True):
+                q = l2.interpolate(l2.length if e2_ende else 0.0)
+                if math.dist((q.x, q.y), (e.x, e.y)) > 120: continue
+                # Fahrt über den Treffpunkt: am Ende von ln ankommen und auf l2 weg – bzw. auf l2 ankommen und auf ln weg
+                if am_ende: v_in, v_out = richtung(ln, True), -richtung(l2, e2_ende)
+                else: v_in, v_out = richtung(l2, e2_ende), -richtung(ln, False)
+                w = math.degrees(math.acos(max(-1.0, min(1.0, float(v_in @ v_out)))))
+                if w <= 75: kand.append((w, r2, e2_ende, l2))
+        if not kand: continue
+        w, r2, e2_ende, l2 = min(kand, key=lambda t: t[0])
+        c2 = list(l2.coords)
+        if am_ende:
+            c2 = c2 if not e2_ende else c2[::-1]               # l2 ab dem Treffpunkt weg
+            ln = LineString(list(ln.coords) + c2[1:])
+        else:
+            c2 = c2 if e2_ende else c2[::-1]                   # l2 zum Treffpunkt hin
+            ln = LineString(c2[:-1] + list(ln.coords)); s_ = ln.project(pt)
+        print(f"Achse durchgehend: {n['name']} {r} {'→' if am_ende else '←'} {r2} ({w:.0f}°)")
+    return ln, s_
+
+
 for n in nodes:
     if n["kind"] != "station" or n["id"] not in used: continue
     pt = Point(n["x"], n["y"])
     r = K.get("achse_linie", {}).get(n["name"]) or min(SP, key=lambda r_: SP[r_].distance(pt))
     ln = SP[r]; s_ = ln.project(pt)
+    ln, s_ = _durchgehend(ln, r, s_, pt)
     sub = substring(ln, max(s_ - 3000, 0), min(s_ + 3000, ln.length))
     json.dump(dict(ref=r, coords=[to_ll(x, y) for x, y in sub.coords]), open(slug(n["name"]) + "_axis.json", "w"))
 
