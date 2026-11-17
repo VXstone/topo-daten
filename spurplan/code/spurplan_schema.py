@@ -682,6 +682,11 @@ def _edge_flucht(sg, i_, j_):
         best_ = max(_am, key=lambda o_: _cos(o_, m_))
         if best_ is sg and float(v_in @ v_out) > 0.8: return True
     return False
+_NUR_NEBEN = {}
+def _rand_nn(n_):           # S2: am Knoten enden nur Nebengleise (Regeln 1.28 nur dort)
+    if n_ not in _NUR_NEBEN:
+        _NUR_NEBEN[n_] = not any(passenger(o["tags"]) for o in segs if n_ in ways.get(o["way"], {}).get("nodes", ()))
+    return _NUR_NEBEN[n_]
 for sg in segs:
     ins = [inside(n) for n in sg["nodes"]]
     if not any(ins): continue
@@ -2058,7 +2063,7 @@ LAT_OWN = {}
 EDGE_LONG = set()   # Regel 28c
 PAX_SIDE = set()    # Regel 15b: Hauptgleis läuft seitlich aus -> Abgang am Gleisende        # Regel 28: nur das auslaufende Gleis wird an den Rand gezogen, nicht andere Gleise am selben Knoten
 def _rand_frei(sg, n_):      # S2: Randknoten an einer Nebengleis-Verzweigung behält seine Lage quer (Schräge durch die DKW)
-    return RU.get("rand_flucht", True) and not sg["pax"] and n_ in EDGE_NODES and use[n_] >= 3
+    return RU.get("rand_flucht", True) and not sg["pax"] and n_ in EDGE_NODES and use[n_] >= 3 and _rand_nn(n_)
 for sg in segs:
     if sg["cut0"] and not _rand_frei(sg, sg["nodes"][0]): home[sg["nodes"][0]] = home[sg["nodes"][-1]]
     if sg["cut1"] and not _rand_frei(sg, sg["nodes"][-1]): home[sg["nodes"][-1]] = home[sg["nodes"][0]]
@@ -2068,7 +2073,7 @@ for sg in segs:
         nc = sg["nodes"][-1 if end else 0]; ni = sg["nodes"][0 if end else -1]
         # S2 (Konolfingen DKW 1689231120): Nebengleis endet an einem inneren Knoten, an dem ein anderes Gleis längs aus dem
         # Ausschnitt läuft (Flucht, _edge_flucht) – der Knoten bleibt, wo er ist; Pfeil in der Flucht beim Zeichnen
-        if RU.get("rand_flucht", True) and not sg["pax"] and nc in EDGE_NODES and use[nc] >= 3: continue
+        if RU.get("rand_flucht", True) and not sg["pax"] and nc in EDGE_NODES and use[nc] >= 3 and _rand_nn(nc): continue
         # Regel 28: läuft das Gleis längs aus dem Ausschnitt (nächster Punkt jenseits s_min/s_max),
         # wird es bis an den Planrand gezogen statt als seitlicher Abgang behandelt
         _w = ways[sg["way"]]["nodes"]; _i = _w.index(nc) if nc in _w else -1
@@ -2142,7 +2147,7 @@ def far_lane(sg, n):
 for n in list(home):
     if n in thru_fixed: continue
     # an einer DKW laufen beide Gleise durch – kein Fächer (S2 Konolfingen 1689231120 landete auf der Ebene von Gl. 77)
-    if RU.get("rand_flucht", True) and ntag.get(n, {}).get("railway:switch") == "double_slip" and n in EDGE_NODES: continue
+    if RU.get("rand_flucht", True) and ntag.get(n, {}).get("railway:switch") == "double_slip" and n in EDGE_NODES and _rand_nn(n): continue
     for one, many in ((ends_L[n], ends_R[n]), (ends_R[n], ends_L[n])):
         if len(one) == 1 and not one[0]["flat"] and len(many) >= 2:
             y_in = far_lane(one[0], n)
@@ -2805,7 +2810,7 @@ for sg in segs:
         if (SD[n_out][0] <= CFG["s_min"] + 15 and not end) or (SD[n_out][0] >= CFG["s_max"] - 15 and end) or n_out in EDGE_LONG:
             arrows.append((xe, ye, dr))                       # läuft am Planrand weiter
             PFEIL_ZIEL.append((xe, ye, 0.0 if dr > 0 else math.pi, _z_))
-        elif RU.get("rand_flucht", True) and not sg["pax"] and n_out in EDGE_NODES and use[n_out] >= 3 and n_out not in LAT_CUT:
+        elif RU.get("rand_flucht", True) and not sg["pax"] and n_out in EDGE_NODES and use[n_out] >= 3 and n_out not in LAT_CUT and _rand_nn(n_out):
             # Nebengleis läuft an einem inneren Knoten längs aus dem Ausschnitt (S2 Konolfingen Gl. 76/86 hinter der DKW):
             # kurzes Stück in der Flucht mit Pfeil nach aussen, nicht ein 60°-Stummel
             _xe2 = xe + dr * 22
