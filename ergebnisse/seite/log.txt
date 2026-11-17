@@ -27,7 +27,7 @@ Hinweis-Abdeckung: 34/57 (Befund < 40 px, ohne G2)
 · cw2j aarau                        -                        195.6  Tunnel nur ein Gleis unter den anderen durch
 · dmr7 region                       -                         45.3  Weichen sehen wie DKW aus
 ✓ es9y mob__montreux                MQK,MX,VA2,VB2            12.7  Perronnummern braun Meterspur
-✓ ezxj konolfingen                  VA1,Z1                    15.8  grünes Perron?
+✓ ezxj konolfingen                  Z1                        15.8  grünes Perron?
 ✓ f3mp olten                        VB1                       36.9  nicht ausgerundeter Knick
 ✓ fmlk aarau                        ME,MZ                     18.4  Zwischengeraden
 · foiy solothurn                    -                        125.7  Gleis nicht mehr lang (Pfeil)
@@ -64,10 +64,19 @@ Hinweis-Abdeckung: 34/57 (Befund < 40 px, ohne G2)
 ✓ zcz3 solothurn                    G7,MX,VB2                 18.0  nicht verbunden
 /home/runner/work/topo-daten/topo-daten/spurplan/code/alle_plaene_pruefen.py:197: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
   json.dump(dict(erzeugt=datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"), plaene=len(zeilen), geaendert=len(gz),
+region                       veröffentlicht                      1 Stellen  vermutlich besser  T7 17→16, W53 19→18 (Wunsch-Summe -14)
+region_ne                    veröffentlicht                      6 Stellen  vermutlich besser  W53 8→7 (Wunsch-Summe -6)
 olten                        bestätigt 2026-11-08                0 Stellen  gleichwertig  OSM VB1 14, VB2 27, VC1 7, VD1 10 (kein Alt-Stand)
-rothrist                     Archivbeginn (Abnahme 2026-10-29)    2 Stellen  gleichwertig  OSM VA2 1, VB1 4, VB2 6 (kein Alt-Stand)
-zofingen                     bestätigt 2026-11-08               26 Stellen  gleichwertig  OSM VA2 2, VB1 3, VD1 1 (kein Alt-Stand)
-schonenwerd                  bestätigt 2026-11-08                0 Stellen  gleichwertig  OSM VB2 2, VD1 1 (kein Alt-Stand)
-neuchatel                    bestätigt 2026-11-08                0 Stellen  gleichwertig  OSM VA1 5, VC1 2, VD1 3 (kein Alt-Stand)
-Regression: 137 Pläne, 2 geändert {'gleichwertig': 2}
+olten_hammer                 bestätigt 2026-11-07                1 Stellen  gleichwertig  OSM VB1 1 (kein Alt-Stand)
+aarburg_oftringen            bestätigt 2026-11-08                2 Stellen  schlechter?  G2 0→1 · OSM VB2 1 (kein Alt-Stand)
+rothrist                     Archivbeginn (Abnahme 2026-10-29)    9 Stellen  schlechter?  G2 0→2 · OSM VA2 1, VB1 4, VB2 6 (kein Alt-Stand)
+zofingen                     bestätigt 2026-11-08               27 Stellen  schlechter?  G2 0→3 · OSM VA2 2, VB1 3, VD1 1 (kein Alt-Stand)
+dulliken                     bestätigt 2026-11-07                2 Stellen  gleichwertig  OSM ok (kein Alt-Stand)
+daniken                      bestätigt 2026-11-07                9 Stellen  gleichwertig  OSM VB1 3, VD1 2 (kein Alt-Stand)
+schonenwerd                  bestätigt 2026-11-08                2 Stellen  gleichwertig  OSM VB2 2, VD1 1 (kein Alt-Stand)
+aarau                        veröffentlicht                     14 Stellen  Fehler? Topologie  G2 1→6, VB2 4→5
+tecknau                      bestätigt 2026-11-07                8 Stellen  vermutlich besser  G2 2→0 · OSM VB2 1 (kein Alt-Stand)
+wangen_bei_olten             bestätigt 2026-11-07                4 Stellen  gleichwertig  OSM VB2 1 (kein Alt-Stand)
+neuchatel                    bestätigt 2026-11-08                0 Stellen  gleichwertig  OSM VA2 4, VC1 2, VD1 3 (kein Alt-Stand)
+Regression: 137 Pläne, 12 geändert {'vermutlich besser': 3, 'gleichwertig': 5, 'schlechter?': 3, 'Fehler? Topologie': 1}
 Ausnahmen: 910 Einträge, 125 Orte: {'Schalter': 351, 'Ortswissen': 245, 'Geometrie': 188, 'Typvorlage': 126} | ohne Grund: 0

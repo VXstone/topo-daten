@@ -22,13 +22,6 @@
  },
  {
   "regel": "G2",
-  "x": -943.6,
-  "y": 741.6,
-  "bahnhof": "Rothrist",
-  "text": "Weiche ohne Ausrundung (60°)"
- },
- {
-  "regel": "G2",
   "x": -5.9,
   "y": 388.9,
   "bahnhof": "Olten",
@@ -88,14 +81,21 @@
   "x": 4.2,
   "y": -945.4,
   "bahnhof": "Tecknau",
-  "text": "Weiche ohne Ausrundung (15°)"
+  "text": "Weiche ohne Ausrundung (13°)"
  },
  {
   "regel": "G2",
   "x": -26.0,
   "y": -1114.3,
   "bahnhof": "Tecknau",
-  "text": "Weiche ohne Ausrundung (15°)"
+  "text": "Weiche ohne Ausrundung (13°)"
+ },
+ {
+  "regel": "G2",
+  "x": -15.9,
+  "y": -779.4,
+  "bahnhof": "Tecknau",
+  "text": "Weiche ohne Ausrundung (28°)"
  },
  {
   "regel": "G2",

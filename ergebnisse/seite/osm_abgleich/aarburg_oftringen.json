@@ -1,9 +1,25 @@
 {
 "plan": "aarburg_oftringen",
-"befunde": [],
+"befunde": [
+{
+"regel": "VB2",
+"x": 421.1,
+"y": 110.0,
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+"ways": [
+51732628,
+497993072,
+497993073,
+497993074,
+497993076,
+497993077
+]
+}
+],
 "info": {
+"dkw_osm_unvollstaendig": [],
 "gleise": 21,
-"knoten_plan": 8,
+"knoten_plan": 9,
 "dkw_plan": 1,
 "knoten_osm": 7,
 "versatz_y": 0.0,

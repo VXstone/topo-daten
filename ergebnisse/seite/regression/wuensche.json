@@ -2,8 +2,8 @@
  {
   "key": "region",
   "gruppe": "Region",
-  "summe": 129,
-  "W53": 19,
+  "summe": 123,
+  "W53": 18,
   "W55": 5
  },
  {
@@ -12,13 +12,6 @@
   "summe": 111,
   "W53": 15,
   "W56": 7
- },
- {
-  "key": "region_ne",
-  "gruppe": "Region",
-  "summe": 63,
-  "W53": 8,
-  "W55": 5
  },
  {
   "key": "region_mob",
@@ -33,6 +26,13 @@
   "summe": 60,
   "W53": 0,
   "W56": 20
+ },
+ {
+  "key": "region_ne",
+  "gruppe": "Region",
+  "summe": 57,
+  "W53": 7,
+  "W55": 5
  },
  {
   "key": "region_vereina",

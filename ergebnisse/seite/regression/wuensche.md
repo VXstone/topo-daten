@@ -2,11 +2,11 @@ Wünsche je Plan (REGELN 5: W53 S-Kurven ×6, W55 Bahnhofsabstand ×3, W56 Leerl
 
 | Plan | Gruppe | W53 | W55 | W56 | Summe |
 |---|---|---|---|---|---|
-| region | Region | 19 | 5 |  | 129 |
+| region | Region | 18 | 5 |  | 123 |
 | bern | Grosse Knoten | 15 |  | 7 | 111 |
-| region_ne | Region | 8 | 5 |  | 63 |
 | region_mob | Region | 7 | 7 |  | 63 |
 | aarau | Olten 3 · Olten – Aarau | 0 |  | 20 | 60 |
+| region_ne | Region | 7 | 5 |  | 57 |
 | region_vereina | Region | 5 | 9 |  | 57 |
 | basel | Grosse Knoten | 7 |  | 2 | 48 |
 | olten | Olten 1 · Knoten Olten | 3 |  | 3 | 27 |

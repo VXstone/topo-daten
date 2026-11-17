@@ -3,7 +3,7 @@
 "befunde": [
 {
 "regel": "VB2",
-"x": 1080.0,
+"x": 1078.0,
 "y": 158.0,
 "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
 "ways": [
@@ -15,8 +15,9 @@
 }
 ],
 "info": {
+"dkw_osm_unvollstaendig": [],
 "gleise": 36,
-"knoten_plan": 17,
+"knoten_plan": 16,
 "dkw_plan": 0,
 "knoten_osm": 17,
 "versatz_y": 0.0,

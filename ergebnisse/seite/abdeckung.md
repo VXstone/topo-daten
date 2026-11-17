@@ -26,7 +26,7 @@ Befund < 40 px im selben Plan, ohne G2.
 | · | cw2j | aarau |  | 195.6 | Tunnel nur ein Gleis unter den anderen durch |
 | · | dmr7 | region |  | 45.3 | Weichen sehen wie DKW aus |
 | ✓ | es9y | mob__montreux | MQK, MX, VA2, VB2 | 12.7 | Perronnummern braun Meterspur |
-| ✓ | ezxj | konolfingen | VA1, Z1 | 15.8 | grünes Perron? |
+| ✓ | ezxj | konolfingen | Z1 | 15.8 | grünes Perron? |
 | ✓ | f3mp | olten | VB1 | 36.9 | nicht ausgerundeter Knick |
 | ✓ | fmlk | aarau | ME, MZ | 18.4 | Zwischengeraden |
 | · | foiy | solothurn |  | 125.7 | Gleis nicht mehr lang (Pfeil) |

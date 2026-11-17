@@ -10,13 +10,6 @@
 },
 {
 "regel": "VA1",
-"x": 546.2,
-"y": 186.8,
-"text": "OSM-DKW 1689231106 im Plan nicht als DKW gezeichnet",
-"osm": 1689231106
-},
-{
-"regel": "VA1",
 "x": 697.3,
 "y": 306.8,
 "text": "OSM-DKW 1689231120 im Plan nicht als DKW gezeichnet",
@@ -135,6 +128,9 @@
 }
 ],
 "info": {
+"dkw_osm_unvollstaendig": [
+1689231106
+],
 "gleise": 57,
 "knoten_plan": 27,
 "dkw_plan": 2,

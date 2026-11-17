@@ -2,39 +2,28 @@
 "plan": "neuchatel",
 "befunde": [
 {
-"regel": "VA1",
-"x": 1382.1,
-"y": 254.0,
-"text": "OSM-DKW 11343288453 im Plan nicht als DKW gezeichnet",
-"osm": 11343288453
+"regel": "VA2",
+"x": 907.4,
+"y": 181.4,
+"text": "im Plan als DKW gezeichnet, in OSM keine DKW/EKW in der Nähe"
 },
 {
-"regel": "VA1",
-"x": 764.6,
-"y": 254.0,
-"text": "OSM-DKW 11296350712 im Plan nicht als DKW gezeichnet",
-"osm": 11296350712
+"regel": "VA2",
+"x": 1053.5,
+"y": 181.4,
+"text": "im Plan als DKW gezeichnet, in OSM keine DKW/EKW in der Nähe"
 },
 {
-"regel": "VA1",
-"x": 861.7,
-"y": 182.0,
-"text": "OSM-DKW 11343328181 im Plan nicht als DKW gezeichnet",
-"osm": 11343328181
+"regel": "VA2",
+"x": 511.6,
+"y": 205.4,
+"text": "im Plan als DKW gezeichnet, in OSM keine DKW/EKW in der Nähe"
 },
 {
-"regel": "VA1",
-"x": 861.7,
-"y": 134.0,
-"text": "OSM-DKW 11343328182 im Plan nicht als DKW gezeichnet",
-"osm": 11343328182
-},
-{
-"regel": "VA1",
-"x": 764.6,
-"y": 230.0,
-"text": "OSM-DKW 11296350717 im Plan nicht als DKW gezeichnet",
-"osm": 11296350717
+"regel": "VA2",
+"x": 783.3,
+"y": 253.4,
+"text": "im Plan als DKW gezeichnet, in OSM keine DKW/EKW in der Nähe"
 },
 {
 "regel": "VC1",
@@ -78,6 +67,19 @@
 }
 ],
 "info": {
+"dkw_osm_unvollstaendig": [
+11296350712,
+11296350715,
+11296350717,
+11296350764,
+11296350767,
+11343288453,
+11343288465,
+11343288468,
+11343328180,
+11343328181,
+11343328182
+],
 "gleise": 84,
 "knoten_plan": 32,
 "dkw_plan": 4,

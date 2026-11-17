@@ -52,7 +52,21 @@
 },
 {
 "regel": "VB2",
-"x": 3147.2,
+"x": 2079.2,
+"y": 186.8,
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+"ways": [
+33789963,
+33789966,
+34012962,
+34012963,
+34013599,
+384362242
+]
+},
+{
+"regel": "VB2",
+"x": 3148.2,
 "y": 330.8,
 "text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
 "ways": [
@@ -142,8 +156,9 @@
 }
 ],
 "info": {
-"gleise": 172,
-"knoten_plan": 59,
+"dkw_osm_unvollstaendig": [],
+"gleise": 173,
+"knoten_plan": 58,
 "dkw_plan": 0,
 "knoten_osm": 71,
 "versatz_y": 0.0,
