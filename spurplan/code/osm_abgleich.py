@@ -144,6 +144,19 @@ def plan_knoten(gleise, luecken):
     return [tuple(z) for z in zus]
 
 
+_ARME = {}
+def osm_arme(TAGS, WAYN):
+    """Arme (Nachbarknoten über alle Ways) je OSM-DKW/EKW, einmal für alle Pläne"""
+    if not _ARME:
+        slip = {n for n, t in TAGS.items() if "slip" in t.get("railway:switch", "")}
+        nb = collections.defaultdict(set)
+        for nd in WAYN.values():
+            for i, a in enumerate(nd):
+                if a in slip: nb[a].update(nd[j] for j in (i - 1, i + 1) if 0 <= j < len(nd))
+        _ARME.update({n: len(nb[n]) for n in slip}); _ARME[None] = 0
+    return _ARME
+
+
 def osm_tags(pfad):
     T, W = {}, {}
     D = json.load(gzip.open(pfad) if pfad.endswith(".gz") else open(pfad))
@@ -238,6 +251,12 @@ def abgleich(svg_text, N, TAGS, WAYN):
         for c in dkw_plan:
             if math.hypot(c[0] - b.x, c[1] - b.y) < 12: c[2] += 1; break
         else: dkw_plan.append([b.x, b.y, 1])
+    # REGELN 2.4 (S2, 17.11.2026): OSM-DKW/EKW mit weniger als vier Armen in OSM (alle Ways) gilt als einfache Weiche
+    # (Tag unvollständig, Konolfingen 1689231106) – kein VA1, sondern Prüfung wie eine Weiche (VB1)
+    arme = osm_arme(TAGS, WAYN)
+    unvollst = sorted(n for n in KN if "slip" in swt(n) and arme.get(n, 0) < 4)
+    swt0 = swt
+    swt = lambda n: "default" if n in unvollst else swt0(n)
     # VA1 / VA2
     for n, v in KN.items():
         if typ(n) == "switch" and ("double_slip" in swt(n) or "single_slip" in swt(n)):
@@ -317,7 +336,7 @@ def abgleich(svg_text, N, TAGS, WAYN):
             if L > 4:
                 c = G[int(j)].intersection(pb).centroid
                 bef("VD2", c.x, c.y, f"Gleis läuft {L:.0f} px durch ein Perron")
-    return BEF, dict(gleise=len(G), knoten_plan=len(PK), dkw_plan=len(dkw_plan), knoten_osm=len(osm_kn), versatz_y=versatz,
+    return BEF, dict(dkw_osm_unvollstaendig=unvollst, gleise=len(G), knoten_plan=len(PK), dkw_plan=len(dkw_plan), knoten_osm=len(osm_kn), versatz_y=versatz,
                     netz_auf_plan=round(1 - len(neben) / max(1, len(KN)), 2))
 
 

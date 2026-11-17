@@ -95,6 +95,16 @@ ways = {e["id"]: e for e in D if e["type"] == "way" and e["tags"].get("railway")
         and e["tags"].get("gauge", "1435") == "1435" and (e["tags"].get("service") not in _DROP
             or e["tags"].get("railway:track_ref") in OVR.get("pax", []) or e["id"] in OVR.get("behalten", []))}   # Personengleise bleiben (Neuchâtel 19.10.)
 ntag = {e["id"]: e["tags"] for e in D if e["type"] == "node"}
+# REGELN 2.4 (S2, 17.11.2026, Daniel Konolfingen 1689231106 «A ist eine einfache Weiche»): eine OSM-DKW/EKW mit weniger
+# als vier Armen in den Daten (alle Ways, auch nicht gezeichnete) ist eine einfache Weiche – der Tag ist unvollständig.
+_slip_nb = {e["id"]: set() for e in D if e["type"] == "node" and "slip" in e.get("tags", {}).get("railway:switch", "")}
+for e in D:
+    if e["type"] != "way" or not _slip_nb: continue
+    _nd = e.get("nodes", [])
+    for i_, n_ in enumerate(_nd):
+        if n_ in _slip_nb: _slip_nb[n_].update(_nd[j_] for j_ in (i_ - 1, i_ + 1) if 0 <= j_ < len(_nd))
+DKW_3ARME = sorted(n_ for n_, s_ in _slip_nb.items() if len(s_) < 4)
+for n_ in DKW_3ARME: ntag[n_] = {**ntag[n_], "railway:switch": "default", "dkw_osm_unvollstaendig": "yes"}
 # Regel E3 automatisch (Schritt E, 7.11.2026; Ansatz nach Daniels Aufbau Montreux Westende, REGELN «Verschachtelte
 # Weichenanlagen» V4): OSM bildet eine DKW oft als Kreuzung (railway=railway_crossing) mit vier Weichen und zwei kurzen
 # Bogen-Ways ab. Am Kreuzungsknoten laufen zwei Linien durch – je ein Way, der durchläuft, oder zwei Way-Enden, die sich
@@ -644,6 +654,34 @@ for sg in segs:
             n_in, n_out = (sg["nodes"][k_], sg["nodes"][k_ + 1]) if ins[k_] else (sg["nodes"][k_ + 1], sg["nodes"][k_])
             if not (CFG["s_min"] <= SD[n_out][0] <= CFG["s_max"]):
                 EDGE_NODES.add(n_in); EDGE_OUT.setdefault(n_in, n_out); EDGE_OUTS[n_in].add(n_out)   # nur am Längsende
+# REGELN 3.x Rand (S2 Konolfingen 17.11.2026, Hinweis 8bce «Pfeile retour»): verlässt ein Nebengleis den Ausschnitt an
+# einem inneren Knoten, an dem nur Nebengleise enden (DKW 1689231120: Gl. 86 geht direkt nach der DKW hinaus), läuft nur
+# das Gleis in seiner Flucht als Abgang weiter; die anderen Gleise enden dort nicht (kein Pfeil zurück in den Plan).
+def _edge_flucht(sg, i_, j_):
+    n_ = sg["nodes"][i_]
+    if not RU.get("rand_flucht", True) or j_ < 0 or j_ >= len(sg["nodes"]) or n_ not in P: return True
+    if sg["way"] in {w_["id"] for w_ in ways.values() if n_ in w_["nodes"] and any(m_ in EDGE_OUTS[n_] for m_ in w_["nodes"])}:
+        return True                                   # eigener Way läuft hier hinaus
+    _am = [o for o in segs if n_ in (o["nodes"][0], o["nodes"][-1])]
+    if any(passenger(o["tags"]) for o in _am): return True      # Personengleise: wie bisher (Regel 36)
+    _innen = [o for o in _am if len(o["nodes"]) > 1 and not any(m_ in ways[o["way"]]["nodes"] for m_ in EDGE_OUTS[n_])]
+    if len(_innen) == 1 and _innen[0] is sg: return True        # einziges Gleis, das hier ankommt: läuft weiter hinaus
+    q_ = sg["nodes"][j_]
+    if q_ not in P: return True
+    v_in = np.subtract(P[n_], P[q_]); v_in = v_in / (np.linalg.norm(v_in) or 1)
+    def _cos(o_, m_):
+        k_ = o_["nodes"].index(n_) if n_ in o_["nodes"] else -1
+        r_ = [o_["nodes"][k2] for k2 in (k_ - 1, k_ + 1) if 0 <= k2 < len(o_["nodes"])]
+        if not r_ or r_[0] not in P: return -1
+        a_ = np.subtract(P[n_], P[r_[0]]); a_ = a_ / (np.linalg.norm(a_) or 1)
+        b_ = np.subtract(P[m_], P[n_]); b_ = b_ / (np.linalg.norm(b_) or 1)
+        return float(a_ @ b_)
+    for m_ in EDGE_OUTS[n_]:
+        if m_ not in P: continue
+        v_out = np.subtract(P[m_], P[n_]); v_out = v_out / (np.linalg.norm(v_out) or 1)
+        best_ = max(_am, key=lambda o_: _cos(o_, m_))
+        if best_ is sg and float(v_in @ v_out) > 0.8: return True
+    return False
 for sg in segs:
     ins = [inside(n) for n in sg["nodes"]]
     if not any(ins): continue
@@ -665,8 +703,8 @@ for sg in segs:
     # Regel 42: eine Weichenverbindung (crossover), die an einem Randknoten auf das Streckengleis trifft, läuft nicht
     # aus dem Plan - sie endet dort an der Weiche (Olten Hammer West: zweiter Spurwechsel fehlte)
     _xo42 = RU.get("r42", True) and sg["tags"].get("service") == "crossover"
-    if sg["nodes"][i0] in EDGE_NODES and not (_xo42 and i0 == 0): sg["cut0"] = True
-    if sg["nodes"][i1] in EDGE_NODES and not (_xo42 and i1 == len(ins) - 1): sg["cut1"] = True
+    if sg["nodes"][i0] in EDGE_NODES and not (_xo42 and i0 == 0) and _edge_flucht(sg, i0, i0 + 1): sg["cut0"] = True
+    if sg["nodes"][i1] in EDGE_NODES and not (_xo42 and i1 == len(ins) - 1) and _edge_flucht(sg, i1, i1 - 1): sg["cut1"] = True
     sg["nodes"] = sg["nodes"][i0:i1 + 1]
     if len(sg["nodes"]) < 2:
         # Gleis verlässt den Ausschnitt seitlich direkt am Knoten (Olten Ost, Linie 531): Nachbarsegment dort als Abgang
@@ -2019,13 +2057,18 @@ LAT_CUR = {}
 LAT_OWN = {}
 EDGE_LONG = set()   # Regel 28c
 PAX_SIDE = set()    # Regel 15b: Hauptgleis läuft seitlich aus -> Abgang am Gleisende        # Regel 28: nur das auslaufende Gleis wird an den Rand gezogen, nicht andere Gleise am selben Knoten
+def _rand_frei(sg, n_):      # S2: Randknoten an einer Nebengleis-Verzweigung behält seine Lage quer (Schräge durch die DKW)
+    return RU.get("rand_flucht", True) and not sg["pax"] and n_ in EDGE_NODES and use[n_] >= 3
 for sg in segs:
-    if sg["cut0"]: home[sg["nodes"][0]] = home[sg["nodes"][-1]]
-    if sg["cut1"]: home[sg["nodes"][-1]] = home[sg["nodes"][0]]
+    if sg["cut0"] and not _rand_frei(sg, sg["nodes"][0]): home[sg["nodes"][0]] = home[sg["nodes"][-1]]
+    if sg["cut1"] and not _rand_frei(sg, sg["nodes"][-1]): home[sg["nodes"][-1]] = home[sg["nodes"][0]]
     # seitlich aus dem Plan laufend: Abgang direkt am inneren Ende, nicht entlang eines fremden Gleises
     for end in (0, 1):
         if not sg["cut%d" % end]: continue
         nc = sg["nodes"][-1 if end else 0]; ni = sg["nodes"][0 if end else -1]
+        # S2 (Konolfingen DKW 1689231120): Nebengleis endet an einem inneren Knoten, an dem ein anderes Gleis längs aus dem
+        # Ausschnitt läuft (Flucht, _edge_flucht) – der Knoten bleibt, wo er ist; Pfeil in der Flucht beim Zeichnen
+        if RU.get("rand_flucht", True) and not sg["pax"] and nc in EDGE_NODES and use[nc] >= 3: continue
         # Regel 28: läuft das Gleis längs aus dem Ausschnitt (nächster Punkt jenseits s_min/s_max),
         # wird es bis an den Planrand gezogen statt als seitlicher Abgang behandelt
         _w = ways[sg["way"]]["nodes"]; _i = _w.index(nc) if nc in _w else -1
@@ -2076,7 +2119,9 @@ for sg in segs:
         if RU["r15"] and CFG["s_min"] + 15 < SD[nc][0] < CFG["s_max"] - 15:
             # nach innen laufen, bis ein Gleis (Kette) erreicht ist: dort beginnt der Abgang
             chainnodes, cur, seg_ = [nc], ni, sg
-            while cur not in cand:
+            # nicht durch eine DKW hindurch weiterlaufen (S2 Konolfingen 1689231120: der Abgang hinter der DKW wanderte
+            # über das kreuzende Gleis bis zur nächsten Weiche zurück) – der Abgang beginnt an der DKW
+            while cur not in cand and not (RU.get("rand_flucht", True) and "slip" in ntag.get(cur, {}).get("railway:switch", "")):
                 nxt = [x for x in segs if x is not seg_ and cur in (x["nodes"][0], x["nodes"][-1]) and not x["flat"]]
                 if len(nxt) != 1: break
                 chainnodes.append(cur); seg_ = nxt[0]
@@ -2096,6 +2141,8 @@ def far_lane(sg, n):
     return seglane[sg["id"]] if sg["flat"] else home[m]
 for n in list(home):
     if n in thru_fixed: continue
+    # an einer DKW laufen beide Gleise durch – kein Fächer (S2 Konolfingen 1689231120 landete auf der Ebene von Gl. 77)
+    if RU.get("rand_flucht", True) and ntag.get(n, {}).get("railway:switch") == "double_slip" and n in EDGE_NODES: continue
     for one, many in ((ends_L[n], ends_R[n]), (ends_R[n], ends_L[n])):
         if len(one) == 1 and not one[0]["flat"] and len(many) >= 2:
             y_in = far_lane(one[0], n)
@@ -2702,7 +2749,10 @@ for sg in segs:
                 if sg.get("rz_knoten"): _xs = x0 if sg["rz_hi"] else x1 - _need
                 _xs = min(max(_xs, x0), x1 - _need)
                 d = f"M{x0:.1f},{y0:.1f}H{_xs:.1f}" + scurve(_xs, y0, _xs + _need, y1) + f"M{_xs + _need:.1f},{y1:.1f}H{x1:.1f}"
-            elif RU.get("r49", False) and abs(y1 - y0) > 0.5 and x1 - x0 < _need:
+            elif (RU.get("r49", False) or (RU.get("r49_eng", True) and not any("slip" in ntag.get(q_, {}).get("railway:switch", "") for q_ in (n0, n1)))) \
+                    and abs(y1 - y0) > 0.5 and x1 - x0 < _need:
+                # REGELN 1.3 (S2 Konolfingen 17.11.2026, Hinweis 33fs «sehr steil»): auch ausserhalb der Linien-Regionen keine
+                # S-Bögen mehr, sondern die volle 60°-Schräge (cfg «r49_eng»); nicht an einer DKW (Schräge muss durch den Knoten)
                 # zu eng für 60° (sonst Bogen/90°, Neuchâtel 19.10.): Schräge in voller Länge, läuft auf dem anschliessenden Gleis aus
                 if any(o["flat"] and o["nodes"][0] == n1 for o in segs): d = scurve(x0, y0, x0 + _need, y1)
                 elif any(o["flat"] and o["nodes"][-1] == n0 for o in segs): d = scurve(x1 - _need, y0, x1, y1)
@@ -2753,6 +2803,12 @@ for sg in segs:
         if (SD[n_out][0] <= CFG["s_min"] + 15 and not end) or (SD[n_out][0] >= CFG["s_max"] - 15 and end) or n_out in EDGE_LONG:
             arrows.append((xe, ye, dr))                       # läuft am Planrand weiter
             PFEIL_ZIEL.append((xe, ye, 0.0 if dr > 0 else math.pi, _z_))
+        elif RU.get("rand_flucht", True) and not sg["pax"] and n_out in EDGE_NODES and use[n_out] >= 3 and n_out not in LAT_CUT:
+            # Nebengleis läuft an einem inneren Knoten längs aus dem Ausschnitt (S2 Konolfingen Gl. 76/86 hinter der DKW):
+            # kurzes Stück in der Flucht mit Pfeil nach aussen, nicht ein 60°-Stummel
+            _xe2 = xe + dr * 22
+            svg_paths[False].append(f"M{xe:.1f},{ye:.1f}H{_xe2:.1f}"); DBG.append((sg["id"], f"M{xe:.1f},{ye:.1f}H{_xe2:.1f}"))
+            arrows.append((_xe2, ye, dr)); PFEIL_ZIEL.append((_xe2, ye, 0.0 if dr > 0 else math.pi, _z_))
         else:                                                 # läuft seitlich aus dem Plan
             # Stück ohne Länge (Abgang direkt an der Weiche, Regel 28): Pfeil an der Weiche selbst ansetzen, nicht eine
             # Ebene daneben in der Luft (Vauseyon 28.10., Hinweis gjx6: «Weiche in die andere Richtung?», Topologie A)
@@ -3245,6 +3301,7 @@ if RU.get("r44", False):
 # Ebenen durch eine oder mehrere DKW, wird die ganze Kette eine gerade 60°-Linie durch die mittlere DKW. Die DKW-Symbole
 # sitzen dort, wo die Linie die Ebene der DKW schneidet. Keine kurzen Geraden mehr auf den gekreuzten Gleisen.
 R45_DKW = {}
+R45_ENDE = {}       # DKW am Kettenende mit Streckenabgang dahinter -> (x, y, sx, sy): Abgang läuft auf der Geraden weiter (S2)
 _GABEL = []
 ALS_DKW = {int(n) for n in OVR.get("als_dkw", [])}   # Override: Knoten wie DKW zeichnen (Rothrist: zwei Weichen = DKW nach Ortskenntnis)
 if RU.get("r45", True):
@@ -3281,13 +3338,21 @@ if RU.get("r45", True):
         chain = [g[0]["nodes"][0]] + [x["nodes"][-1] for x in g]
         if os.environ.get("R45DBG"): print("K45", [x["way"] for x in g], chain, [_isdkw(n) for n in chain])
         dk = [n for n in chain[1:-1] if _isdkw(n) or n in _r45w]
-        if not dk: continue
         A_, B_ = chain[0], chain[-1]
         if A_ not in SD or B_ not in SD: continue
+        # REGELN 2.4 (S2 Konolfingen 17.11.2026, DKW 254420784): endet die Kette an einer DKW und läuft dahinter ein
+        # Streckenabgang (seitlich, Personenverkehr) weiter, liegt die DKW auf der Geraden und der Abgang setzt sie fort
+        _gw = {x["way"] for x in g}
+        _ende_ab = {E_ for E_ in (A_, B_) if RU.get("r45_ende_abgang", True) and _isdkw(E_) and any(
+            o["pax"] and not o["flat"] and o["way"] not in _gw and ((o["nodes"][0] == E_ and o["cut1"]) or (o["nodes"][-1] == E_ and o["cut0"]))
+            for o in segs)}
+        if not dk and not _ende_ab: continue
         xa, ya, xb, yb = xpos(A_, SD[A_][0]), ypos(A_), xpos(B_, SD[B_][0]), ypos(B_)
-        if xa > xb: xa, ya, xb, yb = xb, yb, xa, ya
+        _links = A_
+        if xa > xb: xa, ya, xb, yb = xb, yb, xa, ya; _links = B_
         if abs(yb - ya) < 3 or not all(min(ya, yb) + 2 < ypos(n) < max(ya, yb) - 2 for n in dk): continue
-        K = min(dk, key=lambda n: (n not in _R45X, abs(ypos(n) - (ya + yb) / 2))); xk, yk = _R45X.get(K, xpos(K, SD[K][0])), ypos(K)
+        K = min(dk, key=lambda n: (n not in _R45X, abs(ypos(n) - (ya + yb) / 2))) if dk else next(iter(_ende_ab))
+        xk, yk = _R45X.get(K, xpos(K, SD[K][0])), ypos(K)
         xline = lambda y_: xk + (y_ - yk) / (yb - ya) * abs(yb - ya) / _t60_
         xa2, xb2 = xline(ya), xline(yb)
         _ids = {x["id"] for x in g}
@@ -3307,8 +3372,8 @@ if RU.get("r45", True):
         _newd = []
         for k_, (px_, pts_) in enumerate(_parts):
             pts_ = sorted(pts_); pts_ = [pts_[0], pts_[-1]]     # Zwischenknoten liegen auf der Geraden: nicht runden
-            if k_ == _first: pts_ = [(min(xa, xa2 - 7), ya)] + pts_
-            if k_ == _last: pts_ = pts_ + [(max(xb, xb2 + 7), yb)]
+            if k_ == _first and _links not in _ende_ab: pts_ = [(min(xa, xa2 - 7), ya)] + pts_
+            if k_ == _last and ({A_, B_} - {_links}).isdisjoint(_ende_ab): pts_ = pts_ + [(max(xb, xb2 + 7), yb)]
             dd_ = _rund(pts_); svg_paths[px_].append(dd_); _newd.append(dd_)
         d_ = " ".join(_newd)
         DBG[:] = [(i_, q) for i_, q in DBG if i_ not in _ids] + [(i_, d_) for i_ in _ids]
@@ -3386,6 +3451,11 @@ if RU.get("r45", True):
                     for k_ in (True, False): svg_paths[k_] = [nd if q == d0 else q for q in svg_paths[k_]]
                     DBG[i2] = (j_, nd)
         for n in chain: _R45X.setdefault(n, xline(ypos(n)))
+        for E_ in _ende_ab:
+            yE_ = ypos(E_); _sy = np.sign(yb - ya) if E_ != _links else np.sign(ya - yb)
+            R45_ENDE[E_] = (xline(yE_), yE_, 1 if E_ != _links else -1, int(_sy))
+            _hp = any(o["pax"] for o in segs if E_ in (o["nodes"][0], o["nodes"][-1]))
+            R45_DKW[E_] = (xline(yE_), yE_, -_sy if E_ != _links else _sy, _sy if E_ != _links else -_sy, _hp)
         for n in dk:
             if not _isdkw(n): continue          # Kreuzung (r45_weiter): kein DKW-Symbol
             yn = ypos(n)
@@ -4652,6 +4722,10 @@ for x, y, end, dy, sg, n in SIDE:
     _fil = False
     if sg["way"] in ZEICHNEN_PORT:
         x, y = ZEICHNEN_PORT[sg["way"]]; _fil = True
+    _n_in = sg["nodes"][0 if end else -1]; _r45f = False
+    if _n_in in R45_ENDE and not _fil:       # Abgang setzt die R45-Gerade durch die DKW fort (S2 Konolfingen)
+        _xr, _yr, _sx, _sy = R45_ENDE[_n_in]
+        if _sx == -(1 - 2 * end) and _sy == dy: x, y = _xr, _yr; _fil = True; _r45f = True
     # Regel 39: seitlicher Streckenabgang mit Ausrundung (kein harter Knick, Aarburg 451)
     if RU.get("r39", True) and not _fil:
         dx_ = -(1 - 2 * end); r_ = 9.0
@@ -4697,7 +4771,7 @@ for x, y, end, dy, sg, n in SIDE:
         x0_ = x if _fil else xpos(n, sg["s1"] if end else sg["s0"])
         out.append(f'<path d="M{x0_:.1f},{y:.1f}L{x:.1f},{y:.1f}L{x2:.1f},{y2:.1f}" stroke="{green}" stroke-width="3.6" stroke-linecap="round" fill="none"/>')
     EXITS.append((x2, y2 + (-40 if dy < 0 else 44), exit_ref(sg), "middle", exit_town(sg, n)))
-    SIDE_INFO.append(dict(port=len(PORTS) - 1, exit=len(EXITS) - 1, x=x, y=y, x2=x2, y2=y2, ex=(len(out) - 1) if not ARGS.bare else None, sg=sg, n=n))
+    SIDE_INFO.append(dict(port=len(PORTS) - 1, exit=len(EXITS) - 1, x=x, y=y, x2=x2, y2=y2, ex=(len(out) - 1) if not ARGS.bare else None, sg=sg, n=n, r45=_r45f))
 
 def _treppe_abgang():
     """Regel W8 im Bahnhofplan (28.10.2026, Vauseyon Hinweis 8jv1: «hier braucht es doch keinen Knick / Treppenstufe»):
@@ -4721,6 +4795,7 @@ def _treppe_abgang():
         return P_
     near = lambda p_, q_: abs(p_[0] - q_[0]) < 0.6 and abs(p_[1] - q_[1]) < 0.6
     for si in SIDE_INFO:
+        if si.get("r45"): continue          # Abgang ist schon die Fortsetzung der R45-Geraden (S2)
         po = PORTS[si["port"]]; e = (po["dx"] * 0.5, po["dy"] * 0.866)
         items = []                                   # (out-Index, Teilpfad-Index, Teilpfad, Farbe)
         for oi, o_ in enumerate(out):
