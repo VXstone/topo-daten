@@ -77,13 +77,6 @@
   "W56": 6
  },
  {
-  "key": "solothurn",
-  "gruppe": "Bahnhöfe ohne Regionalplan",
-  "summe": 15,
-  "W53": 2,
-  "W56": 1
- },
- {
   "key": "neuchatel",
   "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
   "summe": 15,
@@ -131,6 +124,13 @@
   "summe": 12,
   "W53": 2,
   "W56": 0
+ },
+ {
+  "key": "solothurn",
+  "gruppe": "Bahnhöfe ohne Regionalplan",
+  "summe": 9,
+  "W53": 1,
+  "W56": 1
  },
  {
   "key": "laufelfingen",

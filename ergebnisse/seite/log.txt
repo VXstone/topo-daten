@@ -4,9 +4,9 @@
 18 Einträge
 index.html 1999 KB, 138 Pläne
 21 Hinweise, 21 Ausschnitte
-Hinweis-Abdeckung: 34/57 (Befund < 40 px, ohne G2)
-✓ 0bw9 solothurn                    G6,MX,VB1,VB2,W1,W2       19.2  Gleis nach unten, Knick, über anderen Gleisen nach oben
-✓ 0fpo solothurn                    MX,VA1,VC1,W2             18.8  sauberes Gleis ins Nichts
+Hinweis-Abdeckung: 33/57 (Befund < 40 px, ohne G2)
+✓ 0bw9 solothurn                    G6,MX,VB1,VB2,W1,W2       16.8  Gleis nach unten, Knick, über anderen Gleisen nach oben
+✓ 0fpo solothurn                    MX,VA1,VB2,VC1            25.6  sauberes Gleis ins Nichts
 ✓ 0k4j region                       G5                        27.3  Eppenbergtunnel Weichen/Stummel
 ✓ 2vxh mob__chamby                  VB1,VD1                   23.2  Perron und Gleis verdreht, Mittelperron?
 ✓ 33fs konolfingen                  MX,VB2,W2                 12.0  Gleis unter Gleis, sehr steil
@@ -23,14 +23,14 @@ Hinweis-Abdeckung: 34/57 (Befund < 40 px, ohne G2)
 · afkt mob__montreux                -                         66.1  Mindestabstand
 ✓ b3j5 mob__zweisimmen              VA1                        4.8  DKW?
 · bhlv aarau                        -                         66.9  4/5 Hauptachsen gerade
-✓ ce8r solothurn                    G6,MP,MX,VB2,W2            5.0  90 Grad
+✓ ce8r solothurn                    G6,G8,ME,MX,VB2,W2         1.0  90 Grad
 · cw2j aarau                        -                        195.6  Tunnel nur ein Gleis unter den anderen durch
 · dmr7 region                       -                         45.3  Weichen sehen wie DKW aus
 ✓ es9y mob__montreux                MQK,MX,VA2,VB2            12.7  Perronnummern braun Meterspur
 ✓ ezxj konolfingen                  VA1,Z1                    15.8  grünes Perron?
 ✓ f3mp olten                        VB1                       36.9  nicht ausgerundeter Knick
 ✓ fmlk aarau                        ME,MZ                     18.4  Zwischengeraden
-· foiy solothurn                    -                        125.7  Gleis nicht mehr lang (Pfeil)
+· foiy solothurn                    -                        140.8  Gleis nicht mehr lang (Pfeil)
 · fuyq vereina__sagliains_sasslatsch -                            -  fettes Gleis endet an Perron/Autoverlad
 · i06s mob__glion                   -                         51.7  Symbol Schiebebühne
 · j57v region                       -                         52.7  Knubbel vom geraden Strang
@@ -45,12 +45,12 @@ Hinweis-Abdeckung: 34/57 (Befund < 40 px, ohne G2)
 ✓ lotw mob__chamby                  VB2,VD1                   20.1  Pfeil andere Seite, Stumpen am Perron
 ✓ mkad aarau                        MF                        38.2  Meterspur-Perron?
 ✓ mp8h mob__montreux                MX,VA2,VB2                13.0  90 Grad?
-✓ obvp solothurn                    G6,VB1,VD1,W1,W2           0.7  90 Grad Knick?
+· obvp solothurn                    -                         46.4  90 Grad Knick?
 ✓ q31m mob__zweisimmen              VB2                       34.0  Meterspur an 6/7 nicht angebunden
 · qotw vereina__klosters_platz      -                         83.3  Mittelperron zwischen 2 und 3
 · r9xv aarau                        -                         47.9  Stummel korrekt?
 · rap4 mob__le_tremblex             -                            -  Nebengleis nicht fett
-✓ t6x0 solothurn                    G6,MP,MX,VA1,VB2,VC1,W2     5.3  Kreuzung in OSM?
+✓ t6x0 solothurn                    G8,MX,VA1,VB2,VC1,W2      10.0  Kreuzung in OSM?
 ✓ tnvp konolfingen                  G7,MX,VB2,VC1              2.7  Knubbel kurz gerade
 ✓ ttv8 konolfingen                  VA1,VB2                    3.3  DKW?
 · u13h mob__zweisimmen              -                         54.0  Stumpen Normalspur?
@@ -59,16 +59,17 @@ Hinweis-Abdeckung: 34/57 (Befund < 40 px, ohne G2)
 ✓ vnyq aarau                        ME,MZ                     21.8  Zwischengerade
 · wvrp mob__zweisimmen              -                         48.5  kreuzt das andere oder biegt von DKW falsch ab
 · wyu2 mob__glion                   -                        188.2  dieser Perron?
-✓ xke0 solothurn                    ME,MZ,W2                  22.5  Zwischengerade, doppelter Abstand
+✓ xke0 solothurn                    MZ                        26.0  Zwischengerade, doppelter Abstand
 ✓ z6f2 konolfingen                  A1,VA1                     1.3  DKW?
 ✓ zcz3 solothurn                    G7,MX,VB2                 18.0  nicht verbunden
 /home/runner/work/topo-daten/topo-daten/spurplan/code/alle_plaene_pruefen.py:197: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
   json.dump(dict(erzeugt=datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"), plaene=len(zeilen), geaendert=len(gz),
 region                       veröffentlicht                      5 Stellen  vermutlich besser  T7 18→17 (Wunsch-Summe -8)
+solothurn                    veröffentlicht                     15 Stellen  Fehler? Topologie  G2 3→2, G6 7→5, G8 0→1, VB1 6→3, VB2 14→18, VD1 7→9, W53 2→1 (Wunsch-Summe -6)
 olten                        bestätigt 2026-11-08                0 Stellen  gleichwertig  OSM VB1 14, VB2 27, VC1 7, VD1 10 (kein Alt-Stand)
 rothrist                     Archivbeginn (Abnahme 2026-10-29)    0 Stellen  gleichwertig  OSM VA2 1, VB1 4, VB2 6 (kein Alt-Stand)
 zofingen                     bestätigt 2026-11-08               26 Stellen  gleichwertig  OSM VA2 2, VB1 3, VD1 1 (kein Alt-Stand)
 schonenwerd                  bestätigt 2026-11-08                0 Stellen  gleichwertig  OSM VB2 2, VD1 1 (kein Alt-Stand)
 neuchatel                    bestätigt 2026-11-08                0 Stellen  gleichwertig  OSM VA1 5, VC1 2, VD1 3 (kein Alt-Stand)
-Regression: 137 Pläne, 2 geändert {'vermutlich besser': 1, 'gleichwertig': 1}
+Regression: 137 Pläne, 3 geändert {'vermutlich besser': 1, 'Fehler? Topologie': 1, 'gleichwertig': 1}
 Ausnahmen: 910 Einträge, 125 Orte: {'Schalter': 351, 'Ortswissen': 245, 'Geometrie': 188, 'Typvorlage': 126} | ohne Grund: 0
