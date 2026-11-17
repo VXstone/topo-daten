@@ -1,6 +1,6 @@
 {
- "erzeugt": "2026-11-17 21:34 UTC",
- "lauf": "https://github.com/VXstone/topo-daten/actions/runs/44181036187",
+ "erzeugt": "2026-11-17 21:53 UTC",
+ "lauf": "https://github.com/VXstone/topo-daten/actions/runs/44184141914",
  "bahnhoefe": {
   "neuchatel": {
    "ok": true,
@@ -78,7 +78,9 @@
    "topologie": "{}",
    "verbindungen_abweichungen": 0,
    "gleich_wie_vergleich": null,
-   "regeln": {},
+   "regeln": {
+    "G2": 1
+   },
    "netz": {},
    "differenz_stellen": null,
    "qualitaet": {
@@ -97,11 +99,12 @@
     },
     "topologie_offen": {},
     "neu": {
-     "ruhe_treppen": 1,
+     "regel_G2": 1,
+     "ruhe_treppen": 0,
      "ruhe_ecken": 0
     },
-    "unruhe": 8,
-    "unruhe_basis": 98
+    "unruhe": 2,
+    "unruhe_basis": 92
    }
   },
   "solothurn": {
@@ -111,7 +114,7 @@
    "verbindungen_abweichungen": 0,
    "gleich_wie_vergleich": null,
    "regeln": {
-    "G2": 7,
+    "G2": 3,
     "G6": 7,
     "G7": 3
    },
@@ -124,10 +127,10 @@
    "qualitaet": {
     "status": "schlechter",
     "schlechter": {
-     "regel_G2": 2,
      "topo_F": 2
     },
     "besser": {
+     "regel_G2": -2,
      "regel_G8": -7
     },
     "topologie_offen": {
@@ -136,11 +139,11 @@
      "topo_F": 2
     },
     "neu": {
-     "ruhe_treppen": 2,
+     "ruhe_treppen": 3,
      "ruhe_ecken": 0
     },
     "unruhe": 1501,
-    "unruhe_basis": 1418
+    "unruhe_basis": 1426
    }
   }
  }
