@@ -1,5 +1,5 @@
 {
- "abgedeckt": 34,
+ "abgedeckt": 33,
  "offen": 57,
  "radius": 40.0,
  "ohne": [
@@ -79,12 +79,11 @@
    "text": "Gleis unter Gleis, sehr steil",
    "abgedeckt": true,
    "regeln": [
-    "MX",
-    "VB2",
-    "W2"
+    "A1",
+    "MX"
    ],
-   "naechster": 12.0,
-   "naechste_regel": "VB2",
+   "naechster": 12.1,
+   "naechste_regel": "A1",
    "plan_da": true
   },
   {
@@ -201,16 +200,15 @@
   {
    "id": "8bce2usmmz5hf4zrkuyo",
    "plan": "konolfingen",
-   "x": 696.2,
-   "y": 305.3,
+   "x": 665.5,
+   "y": 266.0,
    "text": "Gleise hin und her, Pfeile retour",
    "abgedeckt": true,
    "regeln": [
-    "A1",
-    "VA1"
+    "MX"
    ],
    "naechster": 1.9,
-   "naechste_regel": "VA1",
+   "naechste_regel": "MX",
    "plan_da": true
   },
   {
@@ -677,13 +675,10 @@
    "x": 644.7,
    "y": 186.6,
    "text": "DKW?",
-   "abgedeckt": true,
-   "regeln": [
-    "VA1",
-    "VB2"
-   ],
-   "naechster": 3.3,
-   "naechste_regel": "VB2",
+   "abgedeckt": false,
+   "regeln": [],
+   "naechster": 55.3,
+   "naechste_regel": "VD1",
    "plan_da": true
   },
   {
@@ -784,16 +779,15 @@
   {
    "id": "z6f23710rz65dpwpq6ky",
    "plan": "konolfingen",
-   "x": 681.0,
-   "y": 293.5,
+   "x": 650.3,
+   "y": 254.2,
    "text": "DKW?",
    "abgedeckt": true,
    "regeln": [
-    "A1",
-    "VA1"
+    "MX"
    ],
-   "naechster": 1.3,
-   "naechste_regel": "A1",
+   "naechster": 21.0,
+   "naechste_regel": "MX",
    "plan_da": true
   },
   {

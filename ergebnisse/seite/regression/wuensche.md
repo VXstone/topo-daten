@@ -4,16 +4,16 @@ Wünsche je Plan (REGELN 5: W53 S-Kurven ×6, W55 Bahnhofsabstand ×3, W56 Leerl
 |---|---|---|---|---|---|
 | region | Region | 18 | 5 |  | 123 |
 | bern | Grosse Knoten | 15 |  | 7 | 111 |
+| region_ne | Region | 10 | 5 |  | 75 |
 | region_mob | Region | 7 | 7 |  | 63 |
 | aarau | Olten 3 · Olten – Aarau | 0 |  | 20 | 60 |
-| region_ne | Region | 7 | 5 |  | 57 |
 | region_vereina | Region | 5 | 9 |  | 57 |
 | basel | Grosse Knoten | 7 |  | 2 | 48 |
+| solothurn | Bahnhöfe ohne Regionalplan | 4 |  | 1 | 27 |
 | olten | Olten 1 · Knoten Olten | 3 |  | 3 | 27 |
 | schonenwerd | Olten 3 · Olten – Aarau | 0 |  | 7 | 21 |
 | colombier | NE 6 · Neuchâtel – Yverdon | 0 |  | 6 | 18 |
 | bole | NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier | 0 |  | 6 | 18 |
-| solothurn | Bahnhöfe ohne Regionalplan | 2 |  | 1 | 15 |
 | neuchatel | NE 1 · Neuchâtel – Ins – Kerzers – Bern | 2 |  | 1 | 15 |
 | murten | NE 3 · Lyss – Kerzers – Murten – Payerne | 1 |  | 3 | 15 |
 | auvernier | NE 6 · Neuchâtel – Yverdon | 1 |  | 3 | 15 |
@@ -28,7 +28,6 @@ Wünsche je Plan (REGELN 5: W53 S-Kurven ×6, W55 Bahnhofsabstand ×3, W56 Leerl
 | neuchatel_vauseyon | NE 8 · Neuchâtel – La Chaux-de-Fonds | 0 |  | 3 | 9 |
 | vereina__selfranga_sud | Vereina · Bahnhöfe | 1 |  | 1 | 9 |
 | thun | Bahnhöfe ohne Regionalplan | 1 |  | 0 | 6 |
-| konolfingen | Bahnhöfe ohne Regionalplan | 1 |  | 0 | 6 |
 | dulliken | Olten 3 · Olten – Aarau | 0 |  | 2 | 6 |
 | corcelles_peseux | NE 8 · Neuchâtel – La Chaux-de-Fonds | 0 |  | 2 | 6 |
 | chambrelien | NE 8 · Neuchâtel – La Chaux-de-Fonds | 1 |  | 0 | 6 |
@@ -54,6 +53,7 @@ Wünsche je Plan (REGELN 5: W53 S-Kurven ×6, W55 Bahnhofsabstand ×3, W56 Leerl
 | vereina__sagliains_nord | Vereina · Bahnhöfe | 0 |  | 1 | 3 |
 | vereina__sagliains_sasslatsch | Vereina · Bahnhöfe | 0 |  | 1 | 3 |
 | vereina__vereina_sud | Vereina · Bahnhöfe | 0 |  | 1 | 3 |
+| konolfingen | Bahnhöfe ohne Regionalplan | 0 |  | 0 | 0 |
 | aarburg_oftringen | Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil | 0 |  | 0 | 0 |
 | zofingen | Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil | 0 |  | 0 | 0 |
 | saint_blaise_lac | NE 1 · Neuchâtel – Ins – Kerzers – Bern | 0 |  | 0 | 0 |

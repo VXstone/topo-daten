@@ -2,27 +2,6 @@
 "plan": "konolfingen",
 "befunde": [
 {
-"regel": "VA1",
-"x": 650.4,
-"y": 186.8,
-"text": "OSM-DKW 254420784 im Plan nicht als DKW gezeichnet",
-"osm": 254420784
-},
-{
-"regel": "VA1",
-"x": 697.3,
-"y": 306.8,
-"text": "OSM-DKW 1689231120 im Plan nicht als DKW gezeichnet",
-"osm": 1689231120
-},
-{
-"regel": "VB1",
-"x": 594.9,
-"y": 306.8,
-"text": "OSM-Weiche 4694402472 ohne Abzweig im Plan",
-"osm": 4694402472
-},
-{
 "regel": "VB1",
 "x": 305.3,
 "y": 123.2,
@@ -59,25 +38,6 @@
 ]
 },
 {
-"regel": "VB2",
-"x": 577.8,
-"y": 258.9,
-"text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
-"ways": [
-33390862,
-156704985,
-156705029,
-176184228,
-606745359,
-606745360,
-606748594,
-739586129,
-1290401041,
-1290599087,
-1290599088
-]
-},
-{
 "regel": "VC1",
 "x": 396.5,
 "y": 282.8,
@@ -90,28 +50,6 @@
 739598378,
 739598379,
 1290597221
-]
-},
-{
-"regel": "VB2",
-"x": 641.4,
-"y": 186.8,
-"text": "Gleise berühren sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
-"ways": [
-143221510,
-156704985,
-156705005,
-186788442,
-475716119,
-606745359,
-606748594,
-606748604,
-739586126,
-739586131,
-741945424,
-1290599087,
-1290599088,
-1456530858
 ]
 },
 {
@@ -131,9 +69,9 @@
 "dkw_osm_unvollstaendig": [
 1689231106
 ],
-"gleise": 57,
+"gleise": 55,
 "knoten_plan": 27,
-"dkw_plan": 2,
+"dkw_plan": 4,
 "knoten_osm": 29,
 "versatz_y": 0.0,
 "netz_auf_plan": 1.0

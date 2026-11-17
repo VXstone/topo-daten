@@ -51,17 +51,16 @@
   "netz_auf_plan": 0.86
  },
  "konolfingen": {
-  "VA1": 2,
-  "VB1": 2,
-  "VB2": 4,
+  "VB1": 1,
+  "VB2": 2,
   "VC1": 1,
   "VD1": 2,
   "dkw_osm_unvollstaendig": [
    1689231106
   ],
-  "gleise": 57,
+  "gleise": 55,
   "knoten_plan": 27,
-  "dkw_plan": 2,
+  "dkw_plan": 4,
   "knoten_osm": 29,
   "versatz_y": 0.0,
   "netz_auf_plan": 1.0
@@ -523,7 +522,7 @@
  "neuchatel_vauseyon": {
   "VB2": 1,
   "dkw_osm_unvollstaendig": [],
-  "gleise": 25,
+  "gleise": 26,
   "knoten_plan": 7,
   "dkw_plan": 0,
   "knoten_osm": 6,
@@ -593,7 +592,7 @@
   "VD1": 7,
   "VD2": 1,
   "dkw_osm_unvollstaendig": [],
-  "gleise": 115,
+  "gleise": 116,
   "knoten_plan": 59,
   "dkw_plan": 2,
   "knoten_osm": 61,

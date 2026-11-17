@@ -14,6 +14,13 @@
   "W56": 7
  },
  {
+  "key": "region_ne",
+  "gruppe": "Region",
+  "summe": 75,
+  "W53": 10,
+  "W55": 5
+ },
+ {
   "key": "region_mob",
   "gruppe": "Region",
   "summe": 63,
@@ -28,13 +35,6 @@
   "W56": 20
  },
  {
-  "key": "region_ne",
-  "gruppe": "Region",
-  "summe": 57,
-  "W53": 7,
-  "W55": 5
- },
- {
   "key": "region_vereina",
   "gruppe": "Region",
   "summe": 57,
@@ -47,6 +47,13 @@
   "summe": 48,
   "W53": 7,
   "W56": 2
+ },
+ {
+  "key": "solothurn",
+  "gruppe": "Bahnhöfe ohne Regionalplan",
+  "summe": 27,
+  "W53": 4,
+  "W56": 1
  },
  {
   "key": "olten",
@@ -75,13 +82,6 @@
   "summe": 18,
   "W53": 0,
   "W56": 6
- },
- {
-  "key": "solothurn",
-  "gruppe": "Bahnhöfe ohne Regionalplan",
-  "summe": 15,
-  "W53": 2,
-  "W56": 1
  },
  {
   "key": "neuchatel",
@@ -176,13 +176,6 @@
  },
  {
   "key": "thun",
-  "gruppe": "Bahnhöfe ohne Regionalplan",
-  "summe": 6,
-  "W53": 1,
-  "W56": 0
- },
- {
-  "key": "konolfingen",
   "gruppe": "Bahnhöfe ohne Regionalplan",
   "summe": 6,
   "W53": 1,
@@ -362,6 +355,13 @@
   "summe": 3,
   "W53": 0,
   "W56": 1
+ },
+ {
+  "key": "konolfingen",
+  "gruppe": "Bahnhöfe ohne Regionalplan",
+  "summe": 0,
+  "W53": 0,
+  "W56": 0
  },
  {
   "key": "aarburg_oftringen",
