@@ -1272,11 +1272,37 @@ if CFG.get("ebenen_zum_stamm", True):
     _pax = [c for c in C if any(x["pax"] for x in c["segs"])]
     if _pax:
         _stamm = max(_pax, key=lambda c: c["s1"] - c["s0"])["lane"]
+        # Anschlüsse je Kette: Ketten, die über ein Schrägstück (Weichenverbindung) an einem ihrer Knoten hängen
+        _kn = collections.defaultdict(set)
+        for i_, c_ in enumerate(C):
+            for sg_ in c_["segs"]: _kn[sg_["nodes"][0]].add(i_); _kn[sg_["nodes"][-1]].add(i_)
+        _an = collections.defaultdict(set); _an_s = collections.defaultdict(list)     # Partner und s-Bereich der Schräge
+        for sg_ in segs:
+            if sg_["flat"]: continue
+            for a_ in _kn.get(sg_["nodes"][0], ()):
+                for b_ in _kn.get(sg_["nodes"][-1], ()):
+                    if a_ != b_:
+                        _an[a_].add(b_); _an[b_].add(a_)
+                        _kk = _kn.get(sg_["nodes"][0], set()) | _kn.get(sg_["nodes"][-1], set())   # am selben Knoten: kein Hindernis
+                        _an_s[a_].append((b_, sg_["s0"], sg_["s1"], _kk)); _an_s[b_].append((a_, sg_["s0"], sg_["s1"], _kk))
         for c in sorted([c for c in C if c["lane"] < _stamm and not any(x["pax"] for x in c["segs"])], key=lambda c: -c["lane"]):
             _ab = [x["lane"] for x in C if x is not c and x["lane"] > c["lane"] and _ov(x, c)]
-            if _ab and min(_ab) - 1 > c["lane"]:
-                if ARGS.dbg: print("ZUM_STAMM", c["lane"], "->", min(_ab) - 1, [x["way"] for x in c["segs"]])
-                c["lane"] = min(_ab) - 1
+            if not _ab: continue
+            _ziel = min(min(_ab) - 1, _stamm - 1)
+            _i = C.index(c)
+            # nur, wenn die Kette ausschliesslich nach oben anschliesst – sonst kreuzen ihre Schrägen die Gleise dazwischen
+            # (Solothurn, Rothrist 17.11.: Abstellgleise mit Anschluss nach unten) – und keine ihrer Schrägen dann über
+            # einem Gleis zwischen neuer Ebene und Partner läuft (Solothurn 155781195: 115 px Gleis auf Gleis)
+            if not _an[_i] or any(C[j_]["lane"] < _ziel for j_ in _an[_i]): continue     # ohne Weichenanschluss: bleibt (Solothurn)
+            _frei = True
+            for j_, a0_, a1_, kk_ in _an_s[_i]:
+                lo_, hi_ = sorted((_ziel, C[j_]["lane"]))
+                if any(k_ not in kk_ and C[k_] is not c and lo_ < C[k_]["lane"] < hi_ and min(C[k_]["s1"], a1_) - max(C[k_]["s0"], a0_) > -_gap for k_ in range(len(C))):
+                    _frei = False; break
+            if not _frei: continue
+            if _ziel > c["lane"]:
+                if ARGS.dbg: print("ZUM_STAMM", c["lane"], "->", _ziel, [x["way"] for x in c["segs"]], "Partner", [(C[j_]["lane"], any(x["pax"] for x in C[j_]["segs"]), round(C[j_]["s0"]), round(C[j_]["s1"])) for j_ in _an[_i]], "Stamm", _stamm, round(c["s0"]), round(c["s1"]))
+                c["lane"] = _ziel
         _used = sorted({c["lane"] for c in C}); _rk = {l: i for i, l in enumerate(_used)}
         for c in C: c["lane"] = _rk[c["lane"]]
 
