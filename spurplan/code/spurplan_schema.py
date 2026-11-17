@@ -2749,10 +2749,12 @@ for sg in segs:
                 if sg.get("rz_knoten"): _xs = x0 if sg["rz_hi"] else x1 - _need
                 _xs = min(max(_xs, x0), x1 - _need)
                 d = f"M{x0:.1f},{y0:.1f}H{_xs:.1f}" + scurve(_xs, y0, _xs + _need, y1) + f"M{_xs + _need:.1f},{y1:.1f}H{x1:.1f}"
-            elif (RU.get("r49", False) or (RU.get("r49_eng", True) and not any("slip" in ntag.get(q_, {}).get("railway:switch", "") for q_ in (n0, n1)))) \
+            elif (RU.get("r49", False) or (RU.get("r49_eng", True) and not any("slip" in ntag.get(q_, {}).get("railway:switch", "") for q_ in (n0, n1))
+                                             and x1 - x0 < max(abs(y1 - y0) / math.tan(math.radians(CFG["sw_angle"])), CFG["sw_min_run"]))) \
                     and abs(y1 - y0) > 0.5 and x1 - x0 < _need:
                 # REGELN 1.3 (S2 Konolfingen 17.11.2026, Hinweis 33fs «sehr steil»): auch ausserhalb der Linien-Regionen keine
-                # S-Bögen mehr, sondern die volle 60°-Schräge (cfg «r49_eng»); nicht an einer DKW (Schräge muss durch den Knoten)
+                # S-Bögen mehr, sondern die volle 60°-Schräge (cfg «r49_eng»); nur wo sonst ein S-Bogen entstünde (Platz kleiner
+                # als die Diagonale selbst – knappe Ausrundung bleibt wie bisher), nicht an einer DKW
                 # zu eng für 60° (sonst Bogen/90°, Neuchâtel 19.10.): Schräge in voller Länge, läuft auf dem anschliessenden Gleis aus
                 if any(o["flat"] and o["nodes"][0] == n1 for o in segs): d = scurve(x0, y0, x0 + _need, y1)
                 elif any(o["flat"] and o["nodes"][-1] == n0 for o in segs): d = scurve(x1 - _need, y0, x1, y1)
