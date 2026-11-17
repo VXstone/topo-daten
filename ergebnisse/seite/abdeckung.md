@@ -12,7 +12,7 @@ Befund < 40 px im selben Plan, ohne G2.
 | · | 3ctb | mob__montreux |  | 260.5 | Knubbel, keine Gegen-S-Kurve |
 | ✓ | 3d6h | konolfingen | G7, MX, VB2, VC1 | 18.1 | Abstellgleise über Streckengleise |
 | ✓ | 3za5 | region | G6, MZ | 4.9 | 90 Grad, statt 2 Weichen nur eine |
-| ✓ | 4xdm | region | G7 | 0.9 | Gleisanschluss dazwischen, Verbindungen prüfen |
+| ✓ | 4xdm | region | G7 | 0.5 | Gleisanschluss dazwischen, Verbindungen prüfen |
 | ✓ | 5yz7 | mob__montreux | MQ | 27.1 | Perron zwischen 4 und 3 |
 | · | 6gk4 | mob__zweisimmen |  | 59.4 | noch ein Gleis links raus |
 | · | 6rwy | mob__montreux |  | 87.9 | keine Mittelperrons Normalspur |
