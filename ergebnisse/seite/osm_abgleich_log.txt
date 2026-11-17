@@ -16,7 +16,7 @@ mob__chernex                       {'VB2': 4, 'VD1': 1}
 mob__cret_d_y_bau                  {}
 mob__flendruz                      {}
 mob__fontanivent                   {}
-mob__glion                         {'VB1': 2}
+mob__glion                         {}
 mob__glion_college                 {}
 mob__gruben                        {}
 mob__gstaad                        {}
@@ -71,4 +71,4 @@ vereina__vereina_nord              {}
 vereina__vereina_sud               {}
 wangen_bei_olten                   {'VB2': 1}
 zofingen                           {'VA2': 2, 'VB1': 3, 'VD1': 1}
-OSM-Abgleich: 73 Pläne {'VA1': 10, 'VA2': 6, 'VB1': 54, 'VB2': 81, 'VC1': 11, 'VD1': 53, 'VD2': 1}
+OSM-Abgleich: 73 Pläne {'VA1': 10, 'VA2': 6, 'VB1': 52, 'VB2': 81, 'VC1': 11, 'VD1': 53, 'VD2': 1}

@@ -1,24 +1,9 @@
 {
 "plan": "mob__glion",
-"befunde": [
-{
-"regel": "VB1",
-"x": 441.4,
-"y": 123.2,
-"text": "OSM-Weiche 8914589673 ohne Abzweig im Plan",
-"osm": 8914589673
-},
-{
-"regel": "VB1",
-"x": 559.0,
-"y": 123.2,
-"text": "OSM-Weiche 2797580838 ohne Abzweig im Plan",
-"osm": 2797580838
-}
-],
+"befunde": [],
 "info": {
-"gleise": 24,
-"knoten_plan": 6,
+"gleise": 27,
+"knoten_plan": 8,
 "dkw_plan": 0,
 "knoten_osm": 8,
 "versatz_y": 0.0,
