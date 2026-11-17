@@ -7,18 +7,20 @@
  "topologie": "{}",
  "verbindungen_abweichungen": 0,
  "verbindungen": [],
- "regeln": [
-  {
-   "regel": "G2",
-   "x": 991.5,
-   "y": 230.0,
-   "bahnhof": null,
-   "text": "Weiche ohne Ausrundung (15°)"
-  }
- ],
+ "regeln": [],
  "planrand": [],
  "netz": [],
- "ruhe": [],
+ "ruhe": [
+  {
+   "regel": "T7",
+   "art": "Treppe",
+   "x": 978.6,
+   "y": 218.0,
+   "versatz": 20.2,
+   "plan": "neuchatel_vauseyon",
+   "text": "neuchatel_vauseyon: Treppe bei x=978.6, y=218.0"
+  }
+ ],
  "qualitaet": {
   "topo_A": 0,
   "topo_B": 0,
@@ -26,10 +28,9 @@
   "topo_D": 0,
   "topo_E": 0,
   "topo_F": 0,
-  "regel_G2": 1,
   "boegen_pax": 3,
   "boegen_alle": 9,
-  "ruhe_treppen": 0,
+  "ruhe_treppen": 1,
   "ruhe_ecken": 0,
   "randabstand": 0
  },

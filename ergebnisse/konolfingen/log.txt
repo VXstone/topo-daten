@@ -7,7 +7,7 @@ geschrieben konolfingen_override.json
 $ spurplan_schema.py --src konolfingen.json --nowarp
 Bahnhof Konolfingen: Achse 3695 m, Ausschnitt s=1206…2230, 29 Weichen, 3 Perrons
 R1c Bündel kompakt: [('verbindung_schraeg', 156705005, 6, 1884, 1964), ('ebene_leer', 6)]
-G6: 2 Überstand(e) vor Ausrundung gekürzt
+G6: 1 Überstand(e) vor Ausrundung gekürzt
 chains 17 lanes 12 segs 62 W 1256 H 518
 
 $ spurplan_warp.py konolfingen
@@ -37,7 +37,7 @@ G6: 3 Überstand(e) vor Ausrundung gekürzt
 chains 17 lanes 12 segs 62 W 929 H 518
 Befunde: {'A': 1, 'B': 2}
 eindeutig: {'A': 1, 'B': 2}
-A x=   595 y=  307  Verbindung nicht geschlossen (82px): yard (way 156705006)
+A x=   541 y=  331  Verbindung nicht geschlossen (10px): siding (way 606745359), yard (way 739586129)
 B x=   397 y=  283  Überlagerung 22px: 11 (way 33390862) / yard (way 739598378)
 B x=   397 y=  283  Überlagerung 22px: Gleis (way 606745360) / yard (way 739598378)
 
@@ -49,17 +49,19 @@ chains 17 lanes 12 segs 62 W 929 H 436
 
 Verbindungsprüfung konolfingen: 0 Perrongleise, 5 Abgänge (Personenverkehr)
   Abgang 460 Bern (edge y187 x177): ok (3 Ziele)
-  Abgang 460 Luzern (edge y187 x788): ok (2 Ziele)
+  Abgang 460 Luzern (edge y187 x788): ABWEICHUNG
+        zu viel im Plan: 430 Hasle-Rüegsau (side y187 x636)
   Abgang 460 Luzern (edge y211 x788): ok (2 Ziele)
   Abgang 430 Steffisburg (side y283 x375): ok (3 Ziele)
-  Abgang 430 Hasle-Rüegsau (side y179 x655): ok (2 Ziele)
-→ 0 Abweichungen
-Weichen ohne Ausrundung (Linienende unter >35° auf Gleis): 2
+  Abgang 430 Hasle-Rüegsau (side y187 x636): ABWEICHUNG
+        zu viel im Plan: 460 Luzern (edge y187 x788)
+→ 2 Abweichungen
+Weichen ohne Ausrundung (Linienende unter >35° auf Gleis): 3
    x375 y283  60°
    x622 y211  36°
+   x636 y187  37°
 
-Netzprüfung konolfingen: {'A1': 1, 'T10': 1, 'W2': 1, 'Z1': 1}; Durchfahrgleise 3
+Netzprüfung konolfingen: {'A1': 1, 'T10': 1, 'Z1': 1}; Durchfahrgleise 3
   T10  x=375.5 y=210.8  Durchfahrgleis (beidseitig ans Streckengleis angeschlossen, 489 m Nebengleis, service=siding) schwarz gezeichnet  (way 23493308)
   Z1   x=507.8 y=162.8  Gleisnummer 1 53 px neben der Perronmitte
-  W2   x=571.8 y=282.8  S-Kurve in der Mitte unter 103° (steiler oder flacher als 60°)
-  A1   x=682.1 y=294.2  zwei Gleise nur 6.9 px auseinander über 15 px (Grenze 9.6 px)
+  A1   x=571.6 y=259.3  zwei Gleise nur 5.2 px auseinander über 42 px (Grenze 9.6 px)

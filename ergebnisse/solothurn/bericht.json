@@ -13,10 +13,38 @@
  "regeln": [
   {
    "regel": "G2",
+   "x": 1399.7,
+   "y": 405.2,
+   "bahnhof": null,
+   "text": "Weiche ohne Ausrundung (26°)"
+  },
+  {
+   "regel": "G2",
    "x": 1004.5,
    "y": 341.6,
    "bahnhof": null,
    "text": "Weiche ohne Ausrundung (60°)"
+  },
+  {
+   "regel": "G2",
+   "x": 983.6,
+   "y": 317.6,
+   "bahnhof": null,
+   "text": "Weiche ohne Ausrundung (24°)"
+  },
+  {
+   "regel": "G2",
+   "x": 1582.1,
+   "y": 392.0,
+   "bahnhof": null,
+   "text": "Weiche ohne Ausrundung (26°)"
+  },
+  {
+   "regel": "G2",
+   "x": 1301.7,
+   "y": 221.6,
+   "bahnhof": null,
+   "text": "Weiche ohne Ausrundung (24°)"
   },
   {
    "regel": "G2",
@@ -179,20 +207,11 @@
   {
    "regel": "T7",
    "art": "Treppe",
-   "x": 1331.3,
-   "y": 203.0,
-   "versatz": 26.8,
-   "plan": "solothurn",
-   "text": "solothurn: Treppe bei x=1331.3, y=203.0"
-  },
-  {
-   "regel": "T7",
-   "art": "Treppe",
-   "x": 1237.1,
+   "x": 1238.1,
    "y": 293.6,
    "versatz": 48.0,
    "plan": "solothurn",
-   "text": "solothurn: Treppe bei x=1237.1, y=293.6"
+   "text": "solothurn: Treppe bei x=1238.1, y=293.6"
   }
  ],
  "qualitaet": {
@@ -202,7 +221,7 @@
   "topo_D": 0,
   "topo_E": 0,
   "topo_F": 2,
-  "regel_G2": 3,
+  "regel_G2": 7,
   "regel_G6": 7,
   "regel_G7": 3,
   "netz_D11": 2,
@@ -210,7 +229,7 @@
   "netz_W1": 2,
   "boegen_pax": 11,
   "boegen_alle": 77,
-  "ruhe_treppen": 3,
+  "ruhe_treppen": 2,
   "ruhe_ecken": 0,
   "randabstand": 0
  },

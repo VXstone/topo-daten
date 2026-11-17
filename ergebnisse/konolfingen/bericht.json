@@ -8,8 +8,11 @@
   "geschrieben konolfingen_override.json"
  ],
  "topologie": "{'A': 1, 'B': 2}",
- "verbindungen_abweichungen": 0,
- "verbindungen": [],
+ "verbindungen_abweichungen": 2,
+ "verbindungen": [
+  "Abgang 460 Luzern (edge y187 x788): ABWEICHUNG",
+  "Abgang 430 Hasle-Rüegsau (side y187 x636): ABWEICHUNG"
+ ],
  "regeln": [
   {
    "regel": "G2",
@@ -50,29 +53,13 @@
    "text": "Gleisnummer 1 53 px neben der Perronmitte"
   },
   {
-   "regel": "W2",
-   "x": 571.8,
-   "y": 282.8,
-   "text": "S-Kurve in der Mitte unter 103° (steiler oder flacher als 60°)"
-  },
-  {
    "regel": "A1",
-   "x": 682.1,
-   "y": 294.2,
-   "text": "zwei Gleise nur 6.9 px auseinander über 15 px (Grenze 9.6 px)"
+   "x": 571.6,
+   "y": 259.3,
+   "text": "zwei Gleise nur 5.2 px auseinander über 42 px (Grenze 9.6 px)"
   }
  ],
- "ruhe": [
-  {
-   "regel": "T7",
-   "art": "Treppe",
-   "x": 622.5,
-   "y": 210.8,
-   "versatz": 48.0,
-   "plan": "konolfingen",
-   "text": "konolfingen: Treppe bei x=622.5, y=210.8"
-  }
- ],
+ "ruhe": [],
  "qualitaet": {
   "topo_A": 1,
   "topo_B": 2,
@@ -84,11 +71,10 @@
   "regel_G7": 1,
   "netz_T10": 1,
   "netz_Z1": 1,
-  "netz_W2": 1,
   "netz_A1": 1,
   "boegen_pax": 11,
-  "boegen_alle": 49,
-  "ruhe_treppen": 1,
+  "boegen_alle": 50,
+  "ruhe_treppen": 0,
   "ruhe_ecken": 0,
   "randabstand": 0
  },
