@@ -1822,13 +1822,13 @@ def build_ly():
         # einem Gleis der Nachbarebene liegt. Liegen auf beiden Ebenen Gleise, aber nie ein Personengleis neben einem
         # Gleis der anderen Ebene (Sagliains Sasslatsch: Personengleis links auf Ebene 1 endet 280 m vor dem Abstellgleis
         # auf Ebene 2), sind die Ebenen zueinander Nebengleise: enger Abstand wie im Nachbarbahnhof. Ein über eine Weiche
-        # berührtes Nebengleis (R31) hält vollen Abstand zum Personengleis, zu einem anderen Nebengleis nur, wenn auch
-        # dieses berührt ist. cfg «ebene_eng_laengs».
+        # berührtes Nebengleis (R31) zählt wie ein Personengleis (17.11., Daniel: Vauseyon-Fächer sonst gestaucht, ein
+        # Abstellgleis kam nicht mehr bis zum Prellbock). cfg «ebene_eng_laengs».
         if _voll and CFG.get("ebene_eng_laengs", True):
             _a = [c for c in C if c["lane"] == l]; _b = [c for c in C if c["lane"] == l + 1]
             _tol = CFG.get("lane_gap_m", 15)
             if _a and _b and not any(min(x["s1"], y["s1"]) - max(x["s0"], y["s0"]) > -_tol and (id(x) in pax_c or id(y) in pax_c
-                                     or (id(x) in beruehrt_c and id(y) in beruehrt_c))
+                                     or id(x) in beruehrt_c or id(y) in beruehrt_c)
                                      for x in _a for y in _b):
                 _voll = False
         g_ = CFG["lane_px"] if (_voll and l not in OVR.get("enge_ebenen", [])) else CFG["lane_px"] * CFG["side_lane_factor"]
