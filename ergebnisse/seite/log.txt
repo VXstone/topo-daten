@@ -64,22 +64,12 @@ Hinweis-Abdeckung: 33/57 (Befund < 40 px, ohne G2)
 ✓ zcz3 solothurn                    G7,MX,VB2                 18.0  nicht verbunden
 /home/runner/work/topo-daten/topo-daten/spurplan/code/alle_plaene_pruefen.py:197: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
   json.dump(dict(erzeugt=datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"), plaene=len(zeilen), geaendert=len(gz),
-region                       veröffentlicht                      1 Stellen  vermutlich besser  T7 17→16, W53 19→18 (Wunsch-Summe -14)
-region_ne                    veröffentlicht                     11 Stellen  schlechter?  G2 35→38, T7 6→7, W53 8→10 (Wunsch-Summe +20)
-konolfingen                  veröffentlicht                     12 Stellen  vermutlich besser  T7 1→0, VA1 3→0, VB1 2→1, VB2 4→2, W53 1→0 (Wunsch-Summe -14)
-solothurn                    veröffentlicht                      6 Stellen  schlechter?  G2 3→7, T7 3→2, W53 2→4 (Wunsch-Summe +4)
+region                       veröffentlicht                      1 Stellen  vermutlich besser  G2 27→26
+konolfingen                  veröffentlicht                     11 Stellen  vermutlich besser  T7 1→0, VA1 3→0, VB1 2→1, VB2 4→2, W53 1→0 (Wunsch-Summe -14)
 olten                        bestätigt 2026-11-08                0 Stellen  gleichwertig  OSM VB1 14, VB2 27, VC1 7, VD1 10 (kein Alt-Stand)
-olten_hammer                 bestätigt 2026-11-07                1 Stellen  gleichwertig  OSM VB1 1 (kein Alt-Stand)
-aarburg_oftringen            bestätigt 2026-11-08                2 Stellen  schlechter?  G2 0→1 · OSM VB2 1 (kein Alt-Stand)
-rothrist                     Archivbeginn (Abnahme 2026-10-29)    9 Stellen  schlechter?  G2 0→2 · OSM VA2 1, VB1 4, VB2 6 (kein Alt-Stand)
-zofingen                     bestätigt 2026-11-08               27 Stellen  schlechter?  G2 0→3 · OSM VA2 2, VB1 3, VD1 1 (kein Alt-Stand)
-dulliken                     bestätigt 2026-11-07                2 Stellen  gleichwertig  OSM ok (kein Alt-Stand)
-daniken                      bestätigt 2026-11-07                9 Stellen  gleichwertig  OSM VB1 3, VD1 2 (kein Alt-Stand)
-schonenwerd                  bestätigt 2026-11-08                2 Stellen  gleichwertig  OSM VB2 2, VD1 1 (kein Alt-Stand)
-aarau                        veröffentlicht                     14 Stellen  Fehler? Topologie  G2 1→6, VB2 4→5
-tecknau                      bestätigt 2026-11-07                8 Stellen  vermutlich besser  G2 2→0 · OSM VB2 1 (kein Alt-Stand)
-wangen_bei_olten             bestätigt 2026-11-07                4 Stellen  gleichwertig  OSM VB2 1 (kein Alt-Stand)
+rothrist                     Archivbeginn (Abnahme 2026-10-29)    2 Stellen  gleichwertig  OSM VA2 1, VB1 4, VB2 6 (kein Alt-Stand)
+zofingen                     bestätigt 2026-11-08               26 Stellen  gleichwertig  OSM VA2 2, VB1 3, VD1 1 (kein Alt-Stand)
+schonenwerd                  bestätigt 2026-11-08                0 Stellen  gleichwertig  OSM VB2 2, VD1 1 (kein Alt-Stand)
 neuchatel                    bestätigt 2026-11-08                0 Stellen  gleichwertig  OSM VA2 4, VC1 2, VD1 3 (kein Alt-Stand)
-neuchatel_vauseyon           Archivbeginn (Abnahme 2026-10-29)    5 Stellen  schlechter?  G2 1→0, T7 0→1 (Wunsch-Summe +8) · OSM VB2 1 (kein Alt-Stand)
-Regression: 137 Pläne, 15 geändert {'vermutlich besser': 3, 'schlechter?': 6, 'gleichwertig': 5, 'Fehler? Topologie': 1}
+Regression: 137 Pläne, 4 geändert {'vermutlich besser': 2, 'gleichwertig': 2}
 Ausnahmen: 910 Einträge, 125 Orte: {'Schalter': 351, 'Ortswissen': 245, 'Geometrie': 188, 'Typvorlage': 126} | ohne Grund: 0

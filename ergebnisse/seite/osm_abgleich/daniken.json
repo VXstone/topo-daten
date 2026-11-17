@@ -16,13 +16,6 @@
 "osm": 4361689055
 },
 {
-"regel": "VB1",
-"x": 1039.1,
-"y": 134.0,
-"text": "OSM-Weiche 1550888764 ohne Abzweig im Plan",
-"osm": 1550888764
-},
-{
 "regel": "VD1",
 "x": 1048.4,
 "y": 182.0,
@@ -38,7 +31,7 @@
 "info": {
 "dkw_osm_unvollstaendig": [],
 "gleise": 45,
-"knoten_plan": 22,
+"knoten_plan": 23,
 "dkw_plan": 0,
 "knoten_osm": 26,
 "versatz_y": 0.0,

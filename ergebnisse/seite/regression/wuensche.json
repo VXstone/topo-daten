@@ -2,8 +2,8 @@
  {
   "key": "region",
   "gruppe": "Region",
-  "summe": 123,
-  "W53": 18,
+  "summe": 129,
+  "W53": 19,
   "W55": 5
  },
  {
@@ -16,8 +16,8 @@
  {
   "key": "region_ne",
   "gruppe": "Region",
-  "summe": 75,
-  "W53": 10,
+  "summe": 63,
+  "W53": 8,
   "W55": 5
  },
  {
@@ -49,13 +49,6 @@
   "W56": 2
  },
  {
-  "key": "solothurn",
-  "gruppe": "Bahnhöfe ohne Regionalplan",
-  "summe": 27,
-  "W53": 4,
-  "W56": 1
- },
- {
   "key": "olten",
   "gruppe": "Olten 1 · Knoten Olten",
   "summe": 27,
@@ -82,6 +75,13 @@
   "summe": 18,
   "W53": 0,
   "W56": 6
+ },
+ {
+  "key": "solothurn",
+  "gruppe": "Bahnhöfe ohne Regionalplan",
+  "summe": 15,
+  "W53": 2,
+  "W56": 1
  },
  {
   "key": "neuchatel",

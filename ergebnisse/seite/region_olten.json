@@ -3,8 +3,8 @@
   "aarburg_oftringen": {
    "ok": true,
    "optionen": [],
-   "plan_geaendert": true,
-   "bare_geaendert": true,
+   "plan_geaendert": false,
+   "bare_geaendert": false,
    "netz": {
     "T10": 1
    },
@@ -25,8 +25,8 @@
   "dulliken": {
    "ok": true,
    "optionen": [],
-   "plan_geaendert": true,
-   "bare_geaendert": true,
+   "plan_geaendert": false,
+   "bare_geaendert": false,
    "netz": {},
    "topologie": "{}",
    "qualitaet": {
