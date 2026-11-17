@@ -94,7 +94,7 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - [x] **S1 Sagliains parallel durch den Knick** (klein) – 13.11. früh, Commit 08022dd, Seite v147
 - [ ] **V0 Ein Regelwerk auf GitHub** (mittel) – **als Nächstes** (Entscheid Daniel 13.11.: Regeln überall, alle Bahnhöfe gleich)
 - [x] **S1b Sagliains-Bündel durchgehend** (klein) – 16.11. früh, Commits af2a110/21556d3, Seite v150
-- [ ] **G1 Glion Spitzkehre** (mittel; Hinweis Daniel 17.11.) – siehe unten
+- [ ] **G1 Glion Gleise und Perrons** (mittel; Hinweis Daniel 17.11.) – siehe unten
 - [ ] **S2 Konolfingen Topologie richtig** (mittel; erster Teil von V2)
 - [ ] **S3 Aarau Zwischengeraden** (mittel; Kern von R2)
 - [ ] **V2 Ein Regelwerk für alle** (mittel, Rest nach S2)
@@ -175,12 +175,15 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   Vorgeschichte: Knotenplan über Nebengleis am 3.11. getestet (`knoten_nebengleis`), verlor Tunneleinmündung und Schenkel
   (6 Topologie-Befunde) → Archiv «3.11.» lesen, Variante mit grösserem Plan als Vorher/Nachher an Daniel.
 
-### G1 – Glion Spitzkehre (Daniel 17.11.: «ein Gleis im Bahnhofsteil zu wenig, ein Perron nicht neben dem Gleis»)
-- Einstieg: «Weiter mit UEBERGABE.md – Schritt G1: Glion Spitzkehre»
-- Zielplan **mob__glion** (+ region_mob). OSM: Glion ist Spitzkehre – von Montreux (121) laufen zwei Streckengleise 1307327980,
-  1353493683 und Abstellgleis 275095514 bis zum Wendepunkt, dort weiter 122 nach Norden. Plan zeichnet im Bahnhofsteil nur zwei
-  Gleise, der untere Perron liegt neben dem bereits abbiegenden Gleis (seit v149, nicht S1b). Offene Hinweise wyu2, i06se, v2w8.
-- Fertig, wenn: drei Gleise im Bahnhofsteil, jeder Perron entlang seines Gleises, Topologie/OSM-Abgleich ohne neue Befunde.
+### G1 – Glion Gleise und Perrons (Daniel 17.11.: «ein Gleis im Bahnhofsteil zu wenig, ein Perron nicht neben dem Gleis»)
+- Einstieg: «Weiter mit UEBERGABE.md – Schritt G1: Glion Gleise und Perrons»
+- Zielplan **mob__glion** (+ region_mob). Ortskenntnis Daniel 17.11.: **keine Spitzkehre** – die Strecke läuft durch den Bahnhof;
+  zwei Perrongleise, ein Gleis ohne Perron und ein Stumpen, der nur von oben (Seite Rochers-de-Naye) erreichbar ist. Plan zeichnet
+  heute im Bahnhofsteil ein Gleis zu wenig, der untere Perron liegt nicht entlang seines Gleises (seit v149, nicht S1b).
+  Achtung: `ergebnisse/region_mob/roh.json.gz` ist um Glion lückenhaft (Ways mit 1–5 Knoten) – Geometrie aus vollständigen
+  OSM-Daten (Release «daten») prüfen, nicht aus roh. Offene Hinweise wyu2, i06se, v2w8.
+- Fertig, wenn: vier Gleise wie oben, jeder Perron entlang seines Gleises, Stumpen nur von oben angebunden, OSM-Abgleich ohne
+  neue Befunde.
 
 ### S2 – Konolfingen Topologie richtig
 - Einstieg: «Weiter mit UEBERGABE.md – Schritt S2: Konolfingen Topologie»
@@ -397,4 +400,4 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - Daniel: Vauseyon-Abstellgleis kam nicht mehr bis zum Prellbock (Fächer gestaucht). `ebene_eng_laengs` enger gefasst: über Weiche
   berührtes Nebengleis zählt wieder wie Personengleis (REGELN 1.5) – Vauseyon wieder = Abnahme, region_ne G2 39→35, Selfranga
   oben wieder voller Abstand; Sasslatsch/Sagliains/Portal bleiben wie S1b. Konolfingen-Überlappungen = S2 (seit v149),
-  Glion = neuer Schritt G1 (seit v149).
+  Glion = neuer Schritt G1 (seit v149; keine Spitzkehre, Korrektur Daniel).
