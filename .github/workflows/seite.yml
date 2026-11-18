@@ -9,7 +9,7 @@ on:
       label: { description: "Label des Regionalplans Olten", required: false, default: "Region Olten" }
   push:
     branches: [main]
-    paths: ["spurplan/werkstatt/**", "spurplan/hinweise.json", "spurplan/hinweise_offen.json", "spurplan/code/osm_abgleich.py", "spurplan/code/hinweis_abdeckung.py", "spurplan/code/ausschnitte.py", "spurplan/code/alle_plaene_pruefen.py", "spurplan/abnahmen.json"]
+    paths: ["spurplan/werkstatt/**", "spurplan/hinweise.json", "spurplan/hinweise_offen.json", "spurplan/code/osm_abgleich.py", "spurplan/code/hinweis_abdeckung.py", "spurplan/code/ausschnitte.py", "spurplan/code/alle_plaene_pruefen.py", "spurplan/abnahmen.json", "spurplan/code/grundpruefung.py", "spurplan/grundpruefung_basis.json", "spurplan/grundpruefung_faelle/**"]
   workflow_run:
     workflows: ["regionen", "plaene", "pruefstand"]
     types: [completed]
@@ -90,12 +90,25 @@ jobs:
             --regel --messen --netz /tmp/seite/netz --json /tmp/seite/abdeckung.json --md /tmp/seite/abdeckung.md 2>&1 | tee -a /tmp/seite/log.txt | head -1
           tar czf /tmp/seite/netz.tgz -C /tmp/seite netz     # Netzmodelle gepackt behalten (für lokale Prüfungen), offen ~3 MB
           rm -rf /tmp/seite/netz /tmp/seite/netzbefunde
+      - name: Grundprüfung G0 als Sperre (18.11.2026, REGELN «Grundprüfung als Sperre») – nur gezeichnete Geometrie
+        id: grund
+        run: |
+          set +e
+          mkdir -p /tmp/g0netz && tar xzf /tmp/seite/netz.tgz -C /tmp/g0netz
+          python3 spurplan/code/grundpruefung.py --selbsttest spurplan/grundpruefung_faelle 2>&1 | tee /tmp/seite/grundpruefung_selbsttest.txt
+          st=${PIPESTATUS[0]}
+          python3 spurplan/code/grundpruefung.py --alle /tmp/seite/plaene --netz-dir /tmp/g0netz/netz --out /tmp/seite/grundpruefung \
+            --basis spurplan/grundpruefung_basis.json 2>&1 | tee /tmp/seite/grundpruefung_log.txt
+          rc=${PIPESTATUS[0]}
+          echo "rc=$rc" >> "$GITHUB_OUTPUT"; echo "st=$st" >> "$GITHUB_OUTPUT"
+          rm -rf /tmp/g0netz
       - name: Regression über alle Pläne (6.11.2026, Befund Olten) – Tabelle, Differenzbilder, Einordnung, Kartenlabel
         run: |
           git fetch -q --depth 400 origin ergebnisse:refs/remotes/origin/ergebnisse -f || true
           SEIT=$(python3 -c "import json;print(json.load(open('spurplan/veroeffentlicht.json'))['ergebnisse'])" 2>/dev/null || true)
           python3 spurplan/code/alle_plaene_pruefen.py spurplan/abnahmen.json /tmp/seite/regression \
-            --neu /tmp/seite/plaene --osm-abgleich /tmp/seite/osm_abgleich --seite /tmp/seite/index.html ${SEIT:+--seit $SEIT} 2>&1 | tee -a /tmp/seite/log.txt || true
+            --neu /tmp/seite/plaene --osm-abgleich /tmp/seite/osm_abgleich --grund /tmp/seite/grundpruefung --grund-basis spurplan/grundpruefung_basis.json \
+            --seite /tmp/seite/index.html ${SEIT:+--seit $SEIT} 2>&1 | tee -a /tmp/seite/log.txt || true
           python3 spurplan/code/overrides_liste.py --out /tmp/seite 2>&1 | tee -a /tmp/seite/log.txt || true     # REGELN 6 (B1, 17.11.2026)
       - name: Ergebnisse auf Branch «ergebnisse» (nur ergebnisse/seite ersetzen)
         if: always()
@@ -108,3 +121,7 @@ jobs:
           git add -A ergebnisse/seite
           git commit -qm "Seite $(date -u +%Y-%m-%dT%H:%MZ) (${{ github.sha }})" || echo "keine Änderung"
           git push -q origin ergebnisse || { sleep 20; git fetch -q origin ergebnisse && git rebase -q origin/ergebnisse && git push -q origin ergebnisse; }   # paralleler Lauf hat gerade gepusht
+      - name: Sperre G0 – neuer Grundbefund in einem Plan? (Ergebnisse sind schon auf «ergebnisse»)
+        run: |
+          if [ "${{ steps.grund.outputs.st }}" != "0" ]; then echo "Grundprüfung: Selbsttest (Prüffälle) nicht bestanden"; cat /tmp/seite/grundpruefung_selbsttest.txt; exit 1; fi
+          if [ "${{ steps.grund.outputs.rc }}" != "0" ]; then grep -E "^NEU|^FEHLER" /tmp/seite/grundpruefung_log.txt || true; echo "Grundprüfung: neuer Befund gegen spurplan/grundpruefung_basis.json"; exit 1; fi

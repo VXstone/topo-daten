@@ -13,6 +13,9 @@ Vergleich je Plan (ergebnisse/seite/plaene/<key>.svg auf dem Branch «ergebnisse
 --seite <index.html>: Kartenlabel der geänderten Pläne und Untertitel um die Einordnung ergänzen (Workflow seite).
 --osm-abgleich <ordner>: Befunde von osm_abgleich.py (V1, 12.11.2026) je Plan; die OSM-Regeln VA/VB/VC/VD zählen zur
 Topologie. Alt-Stand aus ergebnisse/seite/osm_abgleich/<key>.json der Basis-Fassung (fehlt er, nur der heutige Stand).
+--grund <ordner> [--grund-basis <json>]: Grundprüfung G0 (grundpruefung.py, REGELN «Grundprüfung als Sperre», 18.11.2026). Alt gegen neu wird
+G0 auf beiden SVGs gerechnet (GS/GG zählen zur Topologie, GQ/GP/GW zu den Regeln, GT ist T7); Spalte «G0» = Stand gegen
+die Sperr-Basis (fett = neuer Befund, macht den Workflow seite rot).
 
 Einordnung je geändertem Plan (Wunsch D. Eckenstein 6.11.: «vorschlagen, wo ein Plan verändert, aber vielleicht
 verbessert wurde – ich schaue rasch drauf»). Gemessen wird nur auf den SVGs, alt gegen neu:
@@ -31,18 +34,20 @@ Jede geänderte Zeile muss erklärt sein (gewollte Regel E9 oder Fehler) – son
 import collections, datetime, glob, json, os, re, shutil, subprocess, sys, tempfile
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import wuensche
+import grundpruefung as GPR
 
 ABN, OUT = sys.argv[1], sys.argv[2]
 opt = lambda n: sys.argv[sys.argv.index(n) + 1] if n in sys.argv else None
 REF = opt("--ref") or "origin/ergebnisse"
 SEIT, NEU, SEITE = opt("--seit"), opt("--neu"), opt("--seite")
 OSA = opt("--osm-abgleich")
+GRUND, GRUND_BASIS = opt("--grund"), opt("--grund-basis")
 HERE = os.path.dirname(os.path.abspath(__file__))
 os.makedirs(OUT, exist_ok=True)
 WUNSCH = tuple(wuensche.GEWICHT)        # T7, W53, W55, W56 (REGELN 5)
 _RT = {"region": "spurplan/werkstatt/olten/olten_region_topologie.json", "region_ne": "spurplan/werkstatt/ne/ne_region_topologie.json",
        "region_mob": "ergebnisse/region_mob/mob_region_topologie.json", "region_vereina": "ergebnisse/region_vereina/vereina_region_topologie.json"}
-TOPO = ("G5", "G6", "G7", "G8", "VA1", "VA2", "VB1", "VB2", "VC1", "VD1", "VD2")   # V*: OSM-Abgleich (V1, 12.11.)
+TOPO = ("G5", "G6", "G7", "G8", "VA1", "VA2", "VB1", "VB2", "VC1", "VD1", "VD2", "GS", "GG")   # V*: OSM-Abgleich (V1, 12.11.), GS/GG: G0
 
 
 def osa_zahlen(raw):
@@ -95,7 +100,23 @@ def messen(svg_bytes, key):
         z.update(wuensche.messen(svg_bytes.decode("utf-8", "replace"), key, topo))
     except Exception as e:
         print("Wünsche", key, e, file=sys.stderr)
+    try:                                       # Grundprüfung G0 (REGELN «Grundprüfung als Sperre»); GT = T7, nicht doppelt zählen
+        g = GPR.pruefen(svg_bytes.decode("utf-8", "replace"), None,
+                        lane=GPR.LANE_R if key.startswith("region") else GPR.LANE_B)["zaehl"]
+        z.update({r: n for r, n in g.items() if r != "GT" and n})
+    except Exception as e:
+        print("Grundprüfung", key, e, file=sys.stderr)
     return dict(z)
+
+
+def g0_spalte(k):
+    """Stand G0 gegen die Sperr-Basis: «GS 3 · GG 1», neue Befunde fett mit Basis"""
+    if not GRUND or not os.path.exists(os.path.join(GRUND, "zaehlung.json")): return ""
+    z = json.load(open(os.path.join(GRUND, "zaehlung.json"))).get(k)
+    if not z: return ""
+    b = (json.load(open(GRUND_BASIS)).get("plaene", {}) if GRUND_BASIS and os.path.exists(GRUND_BASIS) else {}).get(k, {})
+    t = [(f"**{r} {z[r]} (Basis {b.get(r, 0)})**" if z[r] > b.get(r, 0) else f"{r} {z[r]}") for r in GPR.REGELN if z.get(r)]
+    return " · ".join(t) or "0"
 
 
 def einordnen(alt, neu):
@@ -198,10 +219,12 @@ json.dump(dict(erzeugt=datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")
                einordnung=dict(zus), zeilen=zeilen), open(os.path.join(OUT, "tabelle.json"), "w"), ensure_ascii=False, indent=1)
 with open(os.path.join(OUT, "tabelle.md"), "w") as f:
     f.write(f"{len(zeilen)} Pläne, {len(gz)} geändert: " + ", ".join(f"{v} {k}" for k, v in zus.items()) + "\n\n")
-    f.write("| Plan | Gruppe | Basis | Stellen | Einordnung | Kennzahlen alt→neu | letzte Änderung |\n|---|---|---|---|---|---|---|\n")
+    f.write("| Plan | Gruppe | Basis | Stellen | Einordnung | Kennzahlen alt→neu | G0 | letzte Änderung |\n|---|---|---|---|---|---|---|---|\n")
     for z in sorted(gz, key=lambda z: (RANG.get(z["einordnung"], 9), not z["abgenommen"], -z["stellen"])):
         f.write(f"| {z['key']} | {z['gruppe']} | {z['basis']} | {z['stellen']} | {z['einordnung']} | {z['delta']} | "
-                f"{z.get('letzte_aenderung', '')} |\n")
+                f"{g0_spalte(z['key'])} | {z.get('letzte_aenderung', '')} |\n")
+    if GRUND and os.path.exists(os.path.join(GRUND, "grundpruefung.md")):
+        f.write("\nGrundprüfung G0 aller Pläne: `ergebnisse/seite/grundpruefung/grundpruefung.md`\n")
 print(f"Regression: {len(zeilen)} Pläne, {len(gz)} geändert", dict(zus))
 
 if SEITE:   # Kartenlabel und Untertitel ergänzen

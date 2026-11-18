@@ -1,0 +1,11 @@
+{
+ "_quelle": "Seite v153 (ergebnisse a5284a5, 17.11.2026), Konolfingen nach S2 – Bericht «Gl.-6-Schräge kreuzt nichts» war falsch (Hinweis yz3m)",
+ "erwartet": [
+  {"regel": "GS", "x": 558.0, "y": 282.8, "anlass": "Gl.-6-Schräge kreuzt die Schräge von Gl. 5 (yz3m); OSM-Abgleich ordnete sie einer Weiche < 40 px zu"},
+  {"regel": "GS", "x": 361.5, "y": 306.8, "anlass": "Abstellgleise West über 430 (VB2 S2b)"},
+  {"regel": "GG", "x": 595.0, "y": 210.8, "anlass": "Verbindung 156705005 läuft 49 px auf Gl. 3 (VD1 S2b)"}
+ ],
+ "nicht": [
+  {"regel": "GS", "x": 666.6, "y": 267.5, "anlass": "DKW mit Symbol (Klammern) ist kein Schnitt"}
+ ]
+}

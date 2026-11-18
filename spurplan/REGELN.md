@@ -19,6 +19,14 @@ eigenen Regeln** und **keine Regeln je Workflow**: jeder Plan wird mit demselben
   verbessern – auch abgenommene –, solange keine Regel verletzt wird (siehe «Vergleich», Ebene 5).
 - **Ohne Prüfung** steht «Sicht» (nur Sichtkontrolle durch Daniel) oder «fehlt» (Prüfung noch zu bauen).
 
+**Grundprüfung als Sperre (G0, seit 18.11., Entscheid D. Eckenstein «nicht überschneiden, paralleler Abstand etc. sollten
+funktionieren»).** `code/grundpruefung.py` prüft jeden Plan der Seite und den Prüfstand **nur auf dem gezeichneten SVG**
+(ohne OSM-Zuordnung): **GS** Schnitt ohne DKW-Symbol, OSM-Kreuzungsknoten oder Niveautrennung (2.4/2.5) · **GG** Gleis auf
+Gleis, das ein Gleis verdeckt (0.1) · **GQ** Querabstand nach gemeinsamem Knick ≠ davor (1.15/2.7) · **GP** Pfeil nach innen
+oder auf ein Nachbargleis (1.14) · **GW** Knick oder Abgang ≥ 80°/75° (0.4/1.2) · **GT** Treppe (5.1). Stand der Pläne in
+`grundpruefung_basis.json`; bekommt ein Plan einen **neuen** Befund (Zahl je Regel steigt), wird der Workflow `seite` rot.
+«Sauber / kreuzt nichts» wird nur mit dieser Prüfung gemeldet, nie nach Augenschein.
+
 **Rangfolge bei Konflikten:** Grundsätze 0.1 → 0.8; innerhalb einer Ebene gilt die speziellere Regel nur, wo sie ausdrücklich
 «Ausnahme zu …» sagt. Widersprüche, die noch nicht entschieden sind, stehen in Abschnitt 7 – bis zum Entscheid gilt der
 höhere Grundsatz.
@@ -35,12 +43,12 @@ NE-Bahnhöfe (fest seit 21.10., Schritt N2), Basel/Bern (P2b), Thun/Ins/Murten/K
 
 | Nr | Grundsatz | Art | alt | Prüfung |
 |---|---|---|---|---|
-| 0.1 | **Topologie stimmt:** jedes Gleis hängt dort an, wo es real anhängt; keine Schein- oder fehlenden Verbindungen, keine Gleissprünge, kein Gleis endet im Leeren. Farbe gehört dazu (grün = im Personenverkehr befahrbar). | Regel | G1, T1, E1 | T1–T8, V/S, VA–VD, G7, PS «T» |
+| 0.1 | **Topologie stimmt:** jedes Gleis hängt dort an, wo es real anhängt; keine Schein- oder fehlenden Verbindungen, keine Gleissprünge, kein Gleis endet im Leeren. Farbe gehört dazu (grün = im Personenverkehr befahrbar). | Regel | G1, T1, E1 | T1–T8, V/S, VA–VD, G7, PS «T», GS, GG |
 | 0.2 | **Reihenfolge wie die Karte:** was klar nördlich (östlich) liegt, liegt im Plan nicht südlich (westlich); Querreihenfolge der Gleise wie real. Abstand, Winkel und Drehung sind frei. | Regel | G2, N1, L1 | L2, L3 |
 | 0.3 | **Jede Weiche ab Hauptgleis sichtbar**, mindestens als Pfeil – auch in grossen Knoten, einzeln. | Regel | G3, B9, S1 | VB1, W |
-| 0.4 | **Keine 90°:** Verbindungen 60° mit Ausrundung; Ausnahme Tunnelportal, Brückenflügel. | Regel | G4, R4, R5 | G2, G3, G4 |
-| 0.5 | **Abstand:** parallele Gleise im Ebenenabstand; parallel bleibt parallel im gleichen Querabstand, in jeder Drehung, jedem Abgangswinkel und durch jeden gemeinsamen Knick. | Regel | G5, B2, 6.11., 12.11. | Q, P, QK, E, F (siehe 7.1) |
-| 0.6 | **Ruhe:** gerade so lange wie möglich; keine Treppen, keine unmotivierten Ecken, keine S-Kurven. | Wunsch (Ebene 5) | G6, R10, 4.11. | T7, Z, E, QK, Ebene 5 |
+| 0.4 | **Keine 90°:** Verbindungen 60° mit Ausrundung; Ausnahme Tunnelportal, Brückenflügel. | Regel | G4, R4, R5 | G2, G3, G4, GW |
+| 0.5 | **Abstand:** parallele Gleise im Ebenenabstand; parallel bleibt parallel im gleichen Querabstand, in jeder Drehung, jedem Abgangswinkel und durch jeden gemeinsamen Knick. | Regel | G5, B2, 6.11., 12.11. | Q, P, QK, E, F (siehe 7.1), GQ |
+| 0.6 | **Ruhe:** gerade so lange wie möglich; keine Treppen, keine unmotivierten Ecken, keine S-Kurven. | Wunsch (Ebene 5) | G6, R10, 4.11. | T7, Z, E, QK, Ebene 5, GT |
 | 0.7 | **Detailgrad:** kleine Bahnhöfe ganze Anlage, grosse Knoten Hauptgleise + jede Weiche als Abgang. | Regel | G7, B16, B17 | Sicht |
 | 0.8 | **Darstellung:** Symbole, Beschriftung, Kompaktheit. | Regel/Wunsch | G8 | Ebene 1.F, 5 |
 
@@ -52,7 +60,7 @@ NE-Bahnhöfe (fest seit 21.10., Schritt N2), Basel/Bern (P2b), Thun/Ins/Murten/K
 | Nr | Regel | Auslöser | alt | Code | Prüfung | heute aktiv in |
 |---|---|---|---|---|---|---|
 | 1.1 | Gleise waagrecht auf Ebenen (24 px); Verbindungen 60°, eine Figur bleibt zwischen ihren Weichenpunkten. | | B1, W2 | spurplan_schema | PS «D» (Drehung) | alle |
-| 1.2 | Ausrundung überall: Weichen, Pfeilstummel, Einmündungen, Gleisenden (7 px, DKW-Ketten 10 %). | | R5, W3, B8 | spurplan_schema `_rund_stub` | G2, G3 | alle |
+| 1.2 | Ausrundung überall: Weichen, Pfeilstummel, Einmündungen, Gleisenden (7 px, DKW-Ketten 10 %). | | R5, W3, B8 | spurplan_schema `_rund_stub` | G2, G3, GW | alle |
 | 1.3 | Einheitlicher Winkel: alle Diagonalen einer Anlage gleich (60°), nicht variieren, um Platz zu gewinnen. Gilt strikt im Bahnhofplan; Kippen und leichte Schrägen nur im Regionalplan (16.11., F4). Reicht der Platz für eine einzelne Verbindung nicht: volle 60°-Schräge, die auf dem anschliessenden Gleis ausläuft, kein S-Bogen – auch im Bahnhofplan (seit 17.11., S2 Konolfingen 33fs «sehr steil»); nicht an einer DKW. | | V1, 7.5 | dkw_auto, `r49_eng` | fehlt | LR (Gitter), alle (`r49_eng`) |
 | 1.4 | Gleisabstand: Hauptgleise 1 Ebene; Gleise zweier Doppelspuren je 1 Ebene, zueinander 1 oder höchstens 2 Ebenen. | | B2, A1, R1c | `buendel_kompakt` | Q | alle |
 | 1.5 | **Ausnahme zu 0.5:** Nebengleise zueinander enger (55 %, bei Platzmangel bis 40 %); voller Abstand, sobald ein Hauptgleis über eine Weiche berührt – und nur dort, wo das Personen-/berührte Gleis längs tatsächlich neben dem Gleis der Nachbarebene liegt (16.11., S1b: Sasslatsch wie Sagliains). Grund: Pfeile in Anlagen werden später durch die richtigen Anlagen ersetzt (bestätigt 13.11.). Lange parallele Nebengleise wie Sagliains (Autoverladgleis) sind selten, dort eher OSM-Unschärfe. | Nebengleis neben Nebengleis | B2, A2, 7.1 | spurplan_schema `build_ly`, `ebene_eng_laengs` | Q – **anpassen**: gegen die erlaubte Ebene prüfen | alle |
@@ -69,8 +77,8 @@ NE-Bahnhöfe (fest seit 21.10., Schritt N2), Basel/Bern (P2b), Thun/Ins/Murten/K
 | 1.11 | Streckengleis nach der letzten Weiche läuft auf seiner Ebene gerade aus dem Plan; nicht im parallelen Bündel, wenn ein Nachbar schräg bleibt. | | R33b, F4 | spurplan_schema | E | alle |
 | 1.12 | Abgang mit Liniennummer und Richtungsort (näherer Ort; hat ein anderer Abgang schon den Ort, der andere Ort der Linie). | | B10, Z2 | exit_town, linienenden.json | T | alle |
 | 1.13 | Abgang mit Pfeil nur, wenn das Gleis ≥ 300 m weitergeht oder zu Bahnhof/Anschluss führt; echtes Gleisende → Stumpen mit Prellbock. | | T12, «echte Gleisenden» | `gleisenden` | T5 | LR (Gleisenden), alle (T12) |
-| 1.14 | Pfeile zeigen nur nach aussen, nie auf ein Nachbargleis (< 1,5 Ebenen); sonst kurzer Stumpen richtig gezeichnet, nie ersatzlos löschen. Pfeilspitze ≥ ½ Ebene neben jedem Gleis. | | 4.11., A6 | `pfeil_aussen` | fehlt | **LR** |
-| 1.15 | Schräg den Plan verlassende Gleise, die nebeneinander knicken, behalten quer den Abstand von davor (Knickversatz d·tan(θ/2)). | Bündel knickt | 12.11. (S1) | `stub_buendel_davor` (nur Stummel am Rand) | QK | alle (nur Stummel) |
+| 1.14 | Pfeile zeigen nur nach aussen, nie auf ein Nachbargleis (< 1,5 Ebenen); sonst kurzer Stumpen richtig gezeichnet, nie ersatzlos löschen. Pfeilspitze ≥ ½ Ebene neben jedem Gleis. | | 4.11., A6 | `pfeil_aussen` | GP | **LR** |
+| 1.15 | Schräg den Plan verlassende Gleise, die nebeneinander knicken, behalten quer den Abstand von davor (Knickversatz d·tan(θ/2)). | Bündel knickt | 12.11. (S1) | `stub_buendel_davor` (nur Stummel am Rand) | QK, GQ | alle (nur Stummel) |
 | 1.16 | Weichen bis 150 m hinter einem seitlichen Abgang als kurzer Stummel auf der Abgangsschräge. | | T15, R39b | spurplan_schema | – | alle |
 | 1.28 | Nebengleis läuft an einem inneren Knoten längs aus dem Plan, an dem weitere Nebengleise enden (z. B. direkt hinter einer DKW): nur das Gleis in seiner Flucht läuft weiter (kurzes Stück in der Flucht, Pfeil nach aussen); die anderen enden dort nicht, der Knoten bleibt an Ort und behält seine Ebene; ein Abgang wandert nie über eine DKW zurück (seit 17.11., S2 Konolfingen 8bce «Pfeile retour»). | Gleis verlässt den Plan an einer Verzweigung | – | `rand_flucht` | VA1, Sicht | alle |
 | 1.27 | Bahnhofsachse läuft durch: liegt ein Bahnhof < 3 km vor dem Ende seiner Linie und setzt dort eine andere Linie ohne Richtungsumkehr fort (≤ 75°), läuft die Achse auf ihr weiter; mit Umkehr (Spitzkehre, z. B. Zweisimmen 120/321) endet sie (17.11., G1 Glion: 121/122, «keine Spitzkehre»). | Linienwechsel im Bahnhof | – | topologie_linien `achse_durchgehend` | Sicht | LR |
@@ -105,9 +113,9 @@ welche Muster erkannt wurden (V0).
 | 2.2 | Spurwechsel | eine 60°-Diagonale; auf freier Strecke nur im geraden parallelen Stück, einzeln, nicht ineinander; Nebengleise zweigen nie im Spurwechsel ab; crossover zwischen zwei Streckengleisen ist immer Schräge | R11, R12, N7, F6, T7, Randzone | `verbindung_schraeg` | G5, r5_halt | alle |
 | 2.3 | Weichenstrasse | Diagonale läuft zum entferntesten Gleis durch, die näheren zweigen ab. Mündet ein schräger Anschluss von der anderen Seite in einen Zwischenknoten einer geraden 60°-Kette, läuft er als deren Verlängerung ein; Gleise vom selben Fuss auf nähere Ebenen zweigen aus ihm ab (seit 18.11., S2 Konolfingen yz3m «Gleis von 6 und von 5 kreuzen») | B6, F5 | spurplan_schema, `r45_anschluss_gerade` | osm_abgleich 3. Zuordnung (Abzweig bis 60 px schräg neben der Weiche) | alle |
 | 2.4 | DKW / EKW / Schere | OSM-Elemente < 20 m, die ein Gleis kreuzen = DKW mit Symbol an Ort, liegend, Klammern in den stumpfen Winkeln; Kette durch DKW eine gerade 60°-Linie; Durchschneidung mittig zwischen zwei Diagonalen. Endet die Kette an einer DKW und läuft dahinter ein Streckenabgang weiter, liegt die DKW auf der Geraden und der Abgang setzt sie fort (seit 17.11., S2 Konolfingen 430 nach Hasle). Eine OSM-DKW/EKW mit weniger als 4 Armen in OSM ist eine einfache Weiche (Tag unvollständig; Entscheid Daniel 17.11., Konolfingen 1689231106) | E3, B8, V2–V4, T5, W4 | `dkw_auto`, `r45_ende_abgang`, DKW_3ARME / osm_abgleich `dkw_osm_unvollstaendig` | VA1, VA2, Montreux-Westende | **LR** (dkw_auto), alle (Rest) |
-| 2.5 | Kreuzung ohne Verbindung | Lücke im unteren Gleis nur bei Niveautrennung (bridge/tunnel/layer), Brücke mit Flügeln, Tunnel nur Lücke; gleiche Ebene beide durchgezogen; Werfung = Ebenenwechsel unter/über der Kreuzung (bestätigt 13.11.) | B19, T4, 6.11. | `kreuzung_schnitt`, netz_lage `_kreuzungen` | X, unterwerfung (Schritt K) | LR (Bahnhof), Reg |
+| 2.5 | Kreuzung ohne Verbindung | Lücke im unteren Gleis nur bei Niveautrennung (bridge/tunnel/layer), Brücke mit Flügeln, Tunnel nur Lücke; gleiche Ebene beide durchgezogen; Werfung = Ebenenwechsel unter/über der Kreuzung (bestätigt 13.11.) | B19, T4, 6.11. | `kreuzung_schnitt`, netz_lage `_kreuzungen` | X, unterwerfung (Schritt K), GS | LR (Bahnhof), Reg |
 | 2.6 | Abzweig / seitlicher Abgang | ausgerundet unter 60°; ein Abzweig läuft höchstens eine Achse parallel und geht dann weg; parallele Abgänge bleiben parallel | B11, W5 | spurplan_schema | ab30, ab60 (Schritt A2) | alle |
-| 2.7 | Bündel knickt | parallele Gleise knicken gemeinsam, Querabstand danach = davor (Ausfahrten, Spurwechselpaare, Abgänge, Stummel) | 12.11., IDEEN «Bündel als Einheit» | nur Stummel: `stub_buendel_davor` | buendel_knick, QK | alle (nur Stummel) |
+| 2.7 | Bündel knickt | parallele Gleise knicken gemeinsam, Querabstand danach = davor (Ausfahrten, Spurwechselpaare, Abgänge, Stummel) | 12.11., IDEEN «Bündel als Einheit» | nur Stummel: `stub_buendel_davor` | buendel_knick, QK, GQ | alle (nur Stummel) |
 | 2.8 | Gleisdreieck | kein fester Standard: Darstellung mit der meisten Ruhe nahe der Geografie (eine Achse, Zulaufstrecke teilt sich auf zwei Schenkel ≤ 90°, ausgerundet) | 3.11. | knoten.json | Sicht | alle |
 | 2.9 | Kreuzungsbahnhof zweier Linien | im Regionalplan X: je Linie eine gerade Achse, Kreuzung unter 60° in der Mitte | N2, W7 | Override «seitlich» | W1 | O (Kerzers) |
 | 2.10 | Anschluss-/Abstellgleise | jede Weiche nach OSM, zusammengedrängt, ohne Längenmassstab | E6, D2, (B16 widerspricht – entschieden: E6) | | fehlt | alle |

@@ -1,0 +1,11 @@
+{
+ "_quelle": "Seite v154 (ergebnisse aa7f1b6, 18.11.2026), Konolfingen nach S2-Nachbesserung (REGELN 2.3 r45_anschluss_gerade)",
+ "erwartet": [
+  {"regel": "GS", "x": 396.5, "y": 282.8, "anlass": "Gleisfeld West falsch angebunden (VC1 S2b) – noch offen"}
+ ],
+ "nicht": [
+  {"regel": "GS", "x": 558.0, "y": 282.8, "anlass": "yz3m behoben"},
+  {"regel": "GS", "x": 567.1, "y": 306.8, "anlass": "Ausrundung einer Weiche an der Diagonale ist kein Schnitt (echte Kurve statt Ecke)"},
+  {"regel": "GG", "x": 187.8, "y": 186.8, "anlass": "gerader Abgangsstummel am Planrand liegt auf dem Gleis (wie G8)"}
+ ]
+}
