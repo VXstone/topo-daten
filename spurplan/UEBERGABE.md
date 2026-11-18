@@ -94,8 +94,10 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - [x] **S1 Sagliains parallel durch den Knick** (klein) – 13.11. früh, Commit 08022dd, Seite v147
 - [x] **B1 Basis-Paket** – 17.11. nachmittags: V0-Rest und G1 fertig; S2/S3 abgespalten (Befund in Abschnitt 6, B1)
 - [x] **S2 Konolfingen DKW / Ostkopf** – 17.11. abends (Nachtrag S2); Gleisfeld West abgespalten → S2b
+- [ ] **G0 Grundprüfung als Sperre** (mittel) – **als Nächstes** (Entscheid Daniel 18.11.)
+- [ ] **T-SZU Testregion SZU** (Zürich HB 21/22 – Selnau – Giesshübel – Saalsporthalle / Uetliberg) – direkt nach G0
 - [ ] **S2b Konolfingen Gleisfeld West** (Zielbild Daniel 18.11.), **R4 Rothrist im Regionalplan** und **S3 Aarau
-  Zwischengeraden mit Weiche** – **als Nächstes**, je eigener Chat
+  Zwischengeraden mit Weiche** – nach T-SZU, je eigener Chat, alle gegen die G0-Sperre geprüft
 - [x] **S1b Sagliains-Bündel durchgehend** (klein) – 16.11. früh, Commits af2a110/21556d3, Seite v150
 - [ ] **V2 Ein Regelwerk für alle** (mittel, Rest nach S2)
 - [ ] **K Kreuzungen und Werfungen** (mittel; nimmt R2-Teil Unterwerfung auf) – **vor A2** (Wunsch 11.11.: Aarau-Tunnel-Hinweise)
@@ -205,6 +207,32 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   einzeln, jede am OSM-Abgleich gemessen (V-Summe Konolfingen 12 → 0 Ziel), nicht an G-Zählern. Hinweise ttv8, z6f2, 33fs,
   3d6h, 8bce danach beantworten.
 - Fertig, wenn: Konolfingen ohne VA1/VB2/VC1, keine neuen V-Befunde in anderen Plänen, Seite veröffentlicht.
+
+### G0 – Grundprüfung als Sperre (Entscheid Daniel 18.11.: «so Dinge wie nicht überschneiden, paralleler Abstand etc. sollten funktionieren»)
+- Einstieg: «Weiter mit UEBERGABE.md – Schritt G0: Grundprüfung als Sperre»
+- Anlass: S2 meldete «Gl.-6-Schräge kreuzt nichts», tatsächlich Schnitt bei 558/283 (v153). Der OSM-Abgleich zählt eine
+  Kreuzung nur, wenn er sie keiner OSM-Weiche zuordnen kann – eine nahe Weiche (< 40 px) «erklärte» sie. Eine reine
+  Geometrieprüfung (zwei gezeichnete Linien schneiden sich ausserhalb ihrer Endpunkte) fand sie sofort.
+- Bauen: Prüfung nur auf das gezeichnete SVG, ohne OSM-Zuordnung, je Plan mit Ort: (1) Schnitt ohne DKW-Symbol, Kreuzungs-
+  knoten oder Niveautrennung (REGELN 2.4/2.5); (2) Gleis auf Gleis (VD1 übernehmen); (3) Querabstand paralleler Gleise vor/nach
+  einem gemeinsamen Knick ungleich (REGELN 1.15/2.7); (4) Pfeil zeigt nach innen / auf Nachbargleis (1.14); (5) Abgang
+  oder Knick mit 90° (1.2); (6) Treppe (Wunsch 5). Alle 137 Pläne + Prüfstand; Ausgangsstand als Basis committen
+  (`spurplan/grundpruefung_basis.json`), Workflow `seite` rot, wenn ein Plan einen **neuen** Befund bekommt; Spalte in
+  `regression/tabelle.md`.
+- Arbeitsweise ab G0: «sauber/kreuzt nichts» nur mit dieser Prüfung melden, nie nach Augenschein.
+- Fertig, wenn: Prüfung läuft im Workflow, Basis gesetzt, der Fall 558/283 (Konolfingen v153) wird als Prüfstand-Baustein
+  erkannt.
+
+### T-SZU – Testregion SZU (Wunsch Daniel 18.11.)
+- Einstieg: «Weiter mit UEBERGABE.md – Schritt T-SZU: Testregion SZU»
+- Perimeter: Zürich HB Gl. 21/22 (SZU), Selnau, Giesshübel, dann Sihltalast bis Saalsporthalle(-Sihlcity) und Uetlibergast
+  Binz – Friesenberg – Schweighof – Triemli – Uitikon Waldegg – Ringlikon – Uetliberg. Daniel: ab Binz bis Uetliberg sollte
+  erwartungsgemäss sehr einfach sein (Prüfstein: dort darf nichts von Hand nötig sein).
+- Aufbau wie `regionen/vereina/`: `regionen/szu/region.json` (bbox, Linien-Refs aus OSM im ersten Lauf bestimmen, Betreiber
+  SZU / Sihltal Zürich Uetliberg Bahn), `orte.json` (Richtungsorte z. B. Sihlwald/Langnau für S4), `region_lines.json`;
+  Workflow `regionen` um «szu» ergänzen. Keine Overrides im ersten Lauf – was nicht stimmt, wird Regel oder Befund.
+- Messen: G0-Sperre, OSM-Abgleich, Verkettung; Ergebnis als Liste «was die Grundregeln nicht halten» → Arbeitsliste.
+- Fertig, wenn: Region SZU auf der Seite, G0 ohne Befund ab Binz–Uetliberg, übrige Befunde benannt.
 
 ### S2b – Konolfingen Gleisfeld West (Ebenen-Löser)
 - Einstieg: «Weiter mit UEBERGABE.md – Schritt S2b: Konolfingen Gleisfeld West»
