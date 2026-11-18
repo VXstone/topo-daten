@@ -100,7 +100,11 @@ def kreis(w, name, R):
 
 keep = []
 LIN, BET = set(K["linien"]), set(K.get("betreiber", []))
-haupt = [w for w in ways if w["tags"].get("railway") in SCHMAL and w["tags"].get("ref") in LIN]
+# Spurweite der Linien aus den Linien selbst (18.11.2026, Testregion SZU: Normalspur-Linien 712/713/727 fielen weg, weil
+# nur narrow_gauge als Linie galt). Schmalspur bleibt immer Linientyp; Normalspur nur, wenn eine Linie der Region als
+# railway=rail getaggt ist (MOB/Vereina unverändert: dort ist keine Linie Normalspur).
+LINIE_RW = SCHMAL | {w["tags"].get("railway") for w in ways if w["tags"].get("railway") == "rail" and w["tags"].get("ref") in LIN}
+haupt = [w for w in ways if w["tags"].get("railway") in LINIE_RW and w["tags"].get("ref") in LIN]
 H = [LineString([xy(g) for g in w["geometry"]]) for w in haupt]
 def nah(w, m):
     L = LineString([xy(g) for g in w["geometry"]]) if len(w["geometry"]) > 1 else Point(xy(w["geometry"][0]))
@@ -108,14 +112,16 @@ def nah(w, m):
 # Gleise anderer Linien, die mit einem Ende in ein Streckengleis der Region münden, ganz übernehmen (3.11.2026, Montbovon:
 # Südende von Gleis 3 gehört der TPF, wurde am 300-m-Kreis des Astes abgeschnitten und erschien als Abgang «247 Bulle»,
 # obwohl es in die MOB nach La Tine mündet). Konfig «aeste_muendung»: false = nur Kreis.
-_HN = {n for w in ways if w["tags"].get("railway") in SCHMAL and w["tags"].get("ref") in LIN for n in w["nodes"]}
+_HN = {n for w in ways if w["tags"].get("railway") in LINIE_RW and w["tags"].get("ref") in LIN for n in w["nodes"]}
 def _muendet(w): return K.get("aeste_muendung", True) and not w["tags"].get("ref") and (w["nodes"][0] in _HN or w["nodes"][-1] in _HN)
 for w in ways:
     t = w["tags"]; rw = t.get("railway")
-    if rw in SCHMAL:
+    if rw in LINIE_RW:
         if t.get("ref") in LIN or (t.get("operator") in BET and not t.get("ref")) or (not t.get("operator") and not t.get("ref") and nah(w, 60)) or _muendet(w):
             keep.append(w); continue
         for st_, R in K.get("aeste", {}).items(): keep += kreis(w, st_, R)
+        if rw == "rail":
+            for st_, R in K.get("normalspur", {}).items(): keep += kreis(w, st_, R)
     elif rw == "rail":
         for st_, R in K.get("normalspur", {}).items(): keep += kreis(w, st_, R)
     elif rw == "platform" or t.get("public_transport") == "platform":
@@ -242,6 +248,31 @@ for w in out_w:
     if a_ not in _ZU or b_ not in _ZU or _ZU[a_][1] == _ZU[b_][1] or not (_mw[a_] and _mw[b_]): continue
     if sum(math.dist(_npos[x], _npos[y]) for x, y in zip(w["nodes"], w["nodes"][1:]) if x in _npos and y in _npos) > K.get("kreuzungsgleis_m", 600): continue
     z_ = min(_ZU[a_], _ZU[b_]); _ZU[a_] = (_ZU[a_][0], z_[1]); _ZU[b_] = (_ZU[b_][0], z_[1])
+# Kreuzungsstelle aus Streckengleisen (18.11.2026, Testregion SZU Borrweg: beide Gleise der Kreuzungsstelle sind 713,
+# kein service – die Ostweiche ging an Binz (247 gegen 251 m), die Westweiche an Friesenberg; Borrweg blieb eine Doppelspur
+# ohne Weichen, Binz hatte die Weiche am Planrand mit zwei aufeinanderliegenden Stumpen, G0 GG). REGELN 3.5: zwei getrennte
+# Wege zwischen denselben zwei Verzweigungen, beide ≤ «kreuzungsgleis_m», bilden eine Kreuzungsstelle; ihre Verzweigungen
+# gehören zum Betriebspunkt, der der Mitte am nächsten liegt (nur wo die Regel oben sie noch getrennt lässt).
+_kg = collections.defaultdict(set)
+for w in out_w:
+    if w["tags"].get("railway") != "rail": continue
+    for a_, b_ in zip(w["nodes"], w["nodes"][1:]):
+        if a_ in _npos and b_ in _npos: _kg[a_].add(b_); _kg[b_].add(a_)
+_kz = {n for n in _kg if len(_kg[n]) >= 3}
+_kst = collections.defaultdict(list)               # (Verzweigung, Verzweigung) -> Längen der Wege dazwischen
+for a_ in _kz:
+    for n1 in _kg[a_]:
+        prev, cur, L_ = a_, n1, math.dist(_npos[a_], _npos[n1])
+        while cur not in _kz and len(_kg[cur]) == 2 and L_ <= K.get("kreuzungsgleis_m", 600):
+            nx_ = [m for m in _kg[cur] if m != prev][0]; L_ += math.dist(_npos[cur], _npos[nx_]); prev, cur = cur, nx_
+        if cur in _kz and cur != a_ and a_ < cur and L_ <= K.get("kreuzungsgleis_m", 600): _kst[(a_, cur)].append(L_)
+for (a_, b_), Ls in _kst.items():
+    if len(Ls) < 2 or a_ not in _ZU or b_ not in _ZU or _ZU[a_][1] == _ZU[b_][1]: continue
+    m_ = ((_npos[a_][0] + _npos[b_][0]) / 2, (_npos[a_][1] + _npos[b_][1]) / 2)
+    kand_ = [(math.dist(m_, c_), i_) for i_, c_, R_ in _KR if math.dist(_npos[a_], c_) <= R_ and math.dist(_npos[b_], c_) <= R_]
+    if not kand_: continue
+    i_ = min(kand_)[1]; _ZU[a_] = (_ZU[a_][0], i_); _ZU[b_] = (_ZU[b_][0], i_)
+    print(f"  Kreuzungsstelle {a_}–{b_} ({', '.join(f'{x:.0f}' for x in Ls)} m) -> Betriebspunkt {i_}")
 for n, (d_, i_) in _ZU.items(): _KERN[i_].append(_npos[n])
 _KERN = {i_: _np.array(v_, float) for i_, v_ in _KERN.items()}
 def _dk(p_, i_): return float(_np.min(_np.hypot(*(_KERN[i_] - _np.array(p_, float)).T)))

@@ -82,6 +82,22 @@ for w in RAIL:
     if sum(math.dist(P[x], P[y]) for x, y in zip(w["nodes"], w["nodes"][1:])) > K.get("kreuzungsgleis_m", 600): continue
     k_ = min(((math.dist(P[n], BPX[ANKER[n]]), ANKER[n]) for n in (a_, b_)))[1]
     print("Kreuzungsgleis", w["id"], "ganz zu", BP[k_]["name"]); ANKER[a_] = ANKER[b_] = k_
+# Kreuzungsstelle aus Streckengleisen (18.11.2026, Testregion SZU Borrweg, REGELN 3.5; gleich wie region_vorbereiten.py):
+# zwei getrennte Wege zwischen denselben zwei Verzweigungen, beide ≤ «kreuzungsgleis_m» – beide Verzweigungen zum
+# Betriebspunkt, der der Mitte am nächsten liegt (nur wo die Regel oben sie noch getrennt lässt)
+_KGM = K.get("kreuzungsgleis_m", 600); _kst = collections.defaultdict(list)
+for a_ in [n for n in GA if GA.degree(n) >= 3]:
+    for n1 in GA[a_]:
+        prev, cur, L_ = a_, n1, math.dist(P[a_], P[n1])
+        while GA.degree(cur) == 2 and L_ <= _KGM:
+            nx_ = [m for m in GA[cur] if m != prev][0]; L_ += math.dist(P[cur], P[nx_]); prev, cur = cur, nx_
+        if GA.degree(cur) >= 3 and cur != a_ and a_ < cur and L_ <= _KGM: _kst[(a_, cur)].append(L_)
+for (a_, b_), Ls in _kst.items():
+    if len(Ls) < 2 or a_ not in ANKER or b_ not in ANKER or ANKER[a_] == ANKER[b_] or str(ANKER[a_]).startswith("_") or str(ANKER[b_]).startswith("_"): continue
+    m_ = ((P[a_][0] + P[b_][0]) / 2, (P[a_][1] + P[b_][1]) / 2)
+    kand_ = [(math.dist(m_, c), k) for k, c in BPX.items() if all(math.dist(P[n], c) <= BP[k].get("radius", 700) for n in (a_, b_))]
+    if not kand_: continue
+    k_ = min(kand_)[1]; print("Kreuzungsstelle", a_, b_, "ganz zu", BP[k_]["name"]); ANKER[a_] = ANKER[b_] = k_
 # Perrongleis ohne Weiche im Bahnhof (Sagliains: die 960 läuft am Perron 4 vorbei, ihre Weichen liegen im Autoverlad):
 # ein Streckengleis, das bis 15 m an einem Perron des Betriebspunkts liegt, berührt ihn dort
 from shapely.geometry import LineString as _LS, Point as _Pt
@@ -110,9 +126,13 @@ for k, v in BP.items():                                              # Halte und
         if n not in ANKER and GM.degree(n) == 2: ANKER[n] = k
 ENDE = {}                                                            # offene Enden mit Fortsetzung -> Abgang
 _bb = K.get("bbox")
+_GLEISENDEN = {g_ for v in BP.values() for g_ in v.get("gleisenden", [])}
 def _am_rand(n):
     """Datenende: Fortsetzung in den vollständigen Daten bekannt, künstlicher Randpunkt oder Ausschnittrand (bbox)."""
     if str(n) in FERN_E or -2 * 10 ** 15 < n < -10 ** 14: return True
+    # Echtes Gleisende (18.11.2026, Testregion SZU: Uetliberg liegt 133 m vom bbox-Rand, seine Stumpengleise galten als
+    # Datenende und ergaben im Regionalplan einen Abgang «Linie 713 ↑»): auch in den vollständigen Daten nur an einem Gleis
+    if n in _GLEISENDEN: return False
     if not _bb: return False
     la, lo = LAT0 + P[n][1] / KY, LON0 + P[n][0] / KX
     return min(la - _bb[0], _bb[2] - la) * KY < 300 or min(lo - _bb[1], _bb[3] - lo) * KX < 300 or not (_bb[0] <= la <= _bb[2] and _bb[1] <= lo <= _bb[3])
