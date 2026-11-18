@@ -1,4 +1,4 @@
-146 Pläne, 2 geändert: 2 gleichwertig
+147 Pläne, 2 geändert: 2 gleichwertig
 
 | Plan | Gruppe | Basis | Stellen | Einordnung | Kennzahlen alt→neu | G0 | letzte Änderung |
 |---|---|---|---|---|---|---|---|

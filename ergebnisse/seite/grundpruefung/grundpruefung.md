@@ -1,6 +1,6 @@
 # Grundprüfung G0 (REGELN «Grundprüfung als Sperre») – nur gezeichnete Geometrie
 
-145 Pläne; Basis: spurplan/grundpruefung_basis.json [plaene]. Neue Befunde (Zunahme gegen Basis) machen den Workflow rot.
+146 Pläne; Basis: spurplan/grundpruefung_basis.json [plaene]. Neue Befunde (Zunahme gegen Basis) machen den Workflow rot.
 
 | Plan | GS | GG | GQ | GP | GW | GT | Ebene |
 |---|---|---|---|---|---|---|---|
@@ -111,6 +111,7 @@
 | region | 8 | 23 | 2 | 3 | 4 | 10 | 10.08 |
 | region_mob | 3 | 3 | 1 | 3 | · | 1 | 10.08 |
 | region_ne | 1 | 2 | · | · | · | 4 | 10.08 |
+| region_szu | 18 | 28 | 5 | · | · | 1 | 10.08 |
 | region_vereina | 1 | 5 | 2 | · | · | 2 | 10.08 |
 | riedbach | · | · | · | · | · | · | 24.0 |
 | rosshausern | · | · | · | · | · | · | 24.0 |
@@ -128,9 +129,9 @@
 | szu__uetliberg | · | · | · | · | · | · | 24.0 |
 | szu__zurich_binz | · | · | · | · | · | · | 24.0 |
 | szu__zurich_friesenberg | · | · | · | · | · | · | 24.0 |
-| szu__zurich_giesshubel | **11** (Basis 0) | **33** (Basis 0) | **5** (Basis 0) | · | · | · | 24.0 |
+| szu__zurich_giesshubel | 11 | 33 | 5 | · | · | · | 24.0 |
 | szu__zurich_schweighof | · | · | · | · | · | · | 24.0 |
-| szu__zurich_selnau | · | · | **1** (Basis 0) | · | · | · | 24.0 |
+| szu__zurich_selnau | · | · | 1 | · | · | · | 24.0 |
 | tecknau | · | · | · | · | · | · | 24.0 |
 | thun | · | 2 | · | · | · | 1 | 24.0 |
 | travers | · | · | · | · | · | · | 24.0 |
@@ -151,60 +152,3 @@
 | zofingen | · | 1 | · | · | · | · | 24.0 |
 
 Regeln: GS = Schnitt ohne DKW/Kreuzung/Niveautrennung; GG = Gleis auf Gleis; GQ = Querabstand nach Knick ≠ davor; GP = Pfeil nach innen / auf Nachbargleis; GW = Knick oder Abgang 90°; GT = Treppe
-
-## NEUE Befunde
-
-- **szu__zurich_giesshubel** GS: 0 → 11
-  - 1329.0/160.4: Gleise kreuzen sich (60°) ohne DKW, Kreuzung oder Niveautrennung
-  - 1251.3/177.2: Gleise kreuzen sich (18°) ohne DKW, Kreuzung oder Niveautrennung
-  - 1328.2/184.4: Gleise kreuzen sich (60°) ohne DKW, Kreuzung oder Niveautrennung
-  - 1341.0/139.8: Gleise kreuzen sich (56°) ohne DKW, Kreuzung oder Niveautrennung
-  - 1315.2/184.4: Gleise kreuzen sich (60°) ohne DKW, Kreuzung oder Niveautrennung
-  - 1441.2/160.4: Gleise kreuzen sich (60°) ohne DKW, Kreuzung oder Niveautrennung
-  - 1448.9/147.2: Gleise kreuzen sich (60°) ohne DKW, Kreuzung oder Niveautrennung
-  - 1427.4/184.4: Gleise kreuzen sich (60°) ohne DKW, Kreuzung oder Niveautrennung
-  - 1395.9/232.0: Gleise kreuzen sich (28°) ohne DKW, Kreuzung oder Niveautrennung
-  - 1491.8/146.6: Gleise kreuzen sich (31°) ohne DKW, Kreuzung oder Niveautrennung
-  - 1249.8/184.4: Gleise kreuzen sich (76°) ohne DKW, Kreuzung oder Niveautrennung
-- **szu__zurich_giesshubel** GG: 0 → 33
-  - 1351.6/160.4: zwei Gleise 84 px aufeinander
-  - 1336.4/160.4: zwei Gleise 144 px aufeinander
-  - 1351.9/160.4: zwei Gleise 84 px aufeinander
-  - 1421.3/147.7: zwei Gleise 32 px aufeinander
-  - 1369.5/160.4: zwei Gleise 48 px aufeinander
-  - 1377.6/160.4: zwei Gleise 64 px aufeinander
-  - 1309.1/194.1: zwei Gleise 102 px aufeinander
-  - 1337.5/232.4: zwei Gleise 118 px aufeinander
-  - 1289.3/232.4: zwei Gleise 21 px aufeinander
-  - 1337.5/232.4: zwei Gleise 118 px aufeinander
-  - 1252.7/232.4: zwei Gleise 94 px aufeinander
-  - 1252.7/232.4: zwei Gleise 94 px aufeinander
-  - 1190.0/232.4: zwei Gleise 32 px aufeinander
-  - 1262.8/184.4: zwei Gleise 35 px aufeinander
-  - 1124.8/232.4: zwei Gleise 99 px aufeinander
-  - 1124.8/232.4: zwei Gleise 99 px aufeinander
-  - 1139.9/184.4: zwei Gleise 128 px aufeinander
-  - 650.6/232.4: zwei Gleise 79 px aufeinander
-  - 1992.8/232.4: zwei Gleise 55 px aufeinander
-  - 1443.8/232.4: zwei Gleise 69 px aufeinander
-  - 1321.1/184.4: zwei Gleise 80 px aufeinander
-  - 1321.1/184.4: zwei Gleise 80 px aufeinander
-  - 1402.4/232.4: zwei Gleise 14 px aufeinander
-  - 1241.4/232.4: zwei Gleise 336 px aufeinander
-  - 1345.1/184.4: zwei Gleise 128 px aufeinander
-  - 1294.5/110.0: zwei Gleise 16 px aufeinander
-  - 1239.1/184.4: zwei Gleise 84 px aufeinander
-  - 310.6/232.4: zwei Gleise 75 px aufeinander
-  - 249.4/232.4: zwei Gleise 48 px aufeinander
-  - 551.8/232.4: zwei Gleise 119 px aufeinander
-  - 895.7/232.4: zwei Gleise 100 px aufeinander
-  - 1003.0/232.4: zwei Gleise 115 px aufeinander
-  - 1831.1/232.4: zwei Gleise 269 px aufeinander
-- **szu__zurich_giesshubel** GQ: 0 → 5
-  - 1287.0/244.4: Querabstand nach dem Knick 11.3 px statt 24.0 px wie davor
-  - 1287.1/244.4: Querabstand nach dem Knick 11.1 px statt 24.0 px wie davor
-  - 1343.2/147.2: Querabstand nach dem Knick 26.4 px statt 11.2 px wie davor
-  - 1334.2/160.4: Querabstand nach dem Knick 0.0 px statt 13.5 px wie davor
-  - 1339.4/153.8: Querabstand nach dem Knick 13.2 px statt 11.1 px wie davor
-- **szu__zurich_selnau** GQ: 0 → 1
-  - 776.9/122.0: Querabstand nach dem Knick 41.6 px statt 24.0 px wie davor

@@ -2,7 +2,7 @@
 /home/runner/work/topo-daten/topo-daten/spurplan/werkstatt/olten/feedback/bauen.py:176: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
   _HEUTE = datetime.datetime.utcnow().strftime("%d.%m.%Y")
 18 Einträge
-index.html 2025 KB, 147 Pläne
+index.html 2047 KB, 148 Pläne
 21 Hinweise, 21 Ausschnitte
 Hinweis-Abdeckung: 33/57 (Befund < 40 px, ohne G2)
 ✓ 0bw9 solothurn                    G6,MX,VB1,VB2,W1,W2       19.2  Gleis nach unten, Knick, über anderen Gleisen nach oben
@@ -69,5 +69,5 @@ rothrist                     Archivbeginn (Abnahme 2026-10-29)    2 Stellen  gle
 zofingen                     bestätigt 2026-11-08               26 Stellen  gleichwertig  OSM VA2 2, VB1 3, VD1 1 (kein Alt-Stand)
 schonenwerd                  bestätigt 2026-11-08                0 Stellen  vermutlich besser  GG 1→0 · OSM VB2 2, VD1 1 (kein Alt-Stand)
 neuchatel                    bestätigt 2026-11-08                0 Stellen  gleichwertig  OSM VA2 4, VC1 2, VD1 3 (kein Alt-Stand)
-Regression: 146 Pläne, 2 geändert {'gleichwertig': 2}
+Regression: 147 Pläne, 2 geändert {'gleichwertig': 2}
 Ausnahmen: 910 Einträge, 125 Orte: {'Schalter': 351, 'Ortswissen': 245, 'Geometrie': 188, 'Typvorlage': 126} | ohne Grund: 0
