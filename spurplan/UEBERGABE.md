@@ -94,7 +94,8 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - [x] **S1 Sagliains parallel durch den Knick** (klein) – 13.11. früh, Commit 08022dd, Seite v147
 - [x] **B1 Basis-Paket** – 17.11. nachmittags: V0-Rest und G1 fertig; S2/S3 abgespalten (Befund in Abschnitt 6, B1)
 - [x] **S2 Konolfingen DKW / Ostkopf** – 17.11. abends (Nachtrag S2); Gleisfeld West abgespalten → S2b
-- [ ] **S2b Konolfingen Gleisfeld West** und **S3 Aarau Zwischengeraden mit Weiche** – **als Nächstes**, je eigener Chat
+- [ ] **S2b Konolfingen Gleisfeld West** (Zielbild Daniel 18.11.), **R4 Rothrist im Regionalplan** und **S3 Aarau
+  Zwischengeraden mit Weiche** – **als Nächstes**, je eigener Chat
 - [x] **S1b Sagliains-Bündel durchgehend** (klein) – 16.11. früh, Commits af2a110/21556d3, Seite v150
 - [ ] **V2 Ein Regelwerk für alle** (mittel, Rest nach S2)
 - [ ] **K Kreuzungen und Werfungen** (mittel; nimmt R2-Teil Unterwerfung auf) – **vor A2** (Wunsch 11.11.: Aarau-Tunnel-Hinweise)
@@ -214,9 +215,27 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   (lane_guess −2,8) auf Ebene 2 (Gl. 5); die Abstellgleise bekommen lane_guess 0/1 → darunter, der Abgang Steffisburg kreuzt
   sie. Ansatz: Seitenabgang-Knoten nicht über Nebengleise legen, die nach d darüber liegen (Reihenfolge REGELN 0/Geografie),
   bzw. Ebene < 0 für den Trennknoten zulassen; 223385024 rechts von 1689230955 halten.
+- **Zielbild Daniel 18.11. (Hinweis gnmh):** eine Diagonale 4→5, aus ihr geht waagrecht etwas weg, dann trennen sich 2×2
+  Abstellgleise ab; die Diagonale liegt so, dass 4/5 nur eine Ebene auseinander sind und die Abstellgleise links ausserhalb
+  des Gleises nach Steffisburg liegen. Dazu 2nht «alles weiter nach vorne Richtung Bern, 4/5 nur noch ein Gleisabstand»,
+  8tp8 «Gleis von 4 und von 3 zu nah beieinander» (West bei 1689230812), 0fzp «Zwischengerade» bei 4694402472 (Gl. 6 → 76
+  steigt zweimal), wvq1 «Prellböcke auch im Abstellbereich Ost (77/86/87) – Konsistenz über den ganzen Bahnhof» (Fenster
+  Ost so weit, dass die Gleise mit Prellbock enden, REGELN 3.2).
 - Mitnehmen: VD1 auf Gl. 3 bei 595/211 (Verbindung 156705005 läuft 49 px auf Gl. 3 bis Weiche 254421673 – Weiche an den Fuss
   der Schräge legen); VB1 1689230852 (Gruppe oben links). Hinweise 3d6h, tnvp, gojth (Gl. 1 keine Nummer, nicht grün), ezxj.
 - Fertig, wenn: Konolfingen OSM-Abgleich ohne VB2/VC1, keine neuen V-Befunde anderswo, Seite veröffentlicht.
+
+### R4 – Rothrist im Regionalplan aus dem Bahnhofplan (Wunsch Daniel 18.11.)
+- Einstieg: «Weiter mit UEBERGABE.md – Schritt R4: Rothrist im Regionalplan»
+- Daniel: «Bahnhofplan Rothrist ist sauber, wieso ist der Regionalplan anders (90 Grad, nicht angeschlossene Gleise, weniger
+  gezeichnet) – wenn schon so detailliert Nebengleise drin sind, dann lass doch grad alle, so wie im Bahnhofplan» (Hinweis 1u2n).
+- Befund 18.11.: Der Regionalplan nimmt `rothrist_regional_*` aus `werkstatt/olten/regional_rothrist/` (Variante 15.10., eigenes
+  Fenster sw_search_m 1600, ohne Detail-Overrides, alle 8 Abgänge am Rand). Versuch Variante weg (region_olten.json
+  «varianten» ohne regional_rothrist): Bahnhofplan erscheint mit allen Nebengleisen, aber die Linie 400 (Bern) verlässt ihn
+  seitlich bei x≈510 – netz_lage schliesst diese seitlichen Ports nicht an, im Westen beginnen 2 Gleise lose. Darum
+  zurückgenommen. Weg: seitliche Ports in netz_lage anschliessen (Lage «Abzweig #31 / Abgang 400 #40 / 450 #41» anpassen)
+  oder im Bahnhofplan die 400 bis an den Rand führen; danach Variante löschen (eine Fassung je Bahnhof, REGELN 4).
+- Fertig, wenn: Regionalplan zeigt Rothrist wie den Bahnhofplan, alle Gleise angeschlossen, Verkettung 0.
 
 ### S3 – Aarau Zwischengeraden
 - Einstieg: «Weiter mit UEBERGABE.md – Schritt S3: Aarau Zwischengeraden»
@@ -450,4 +469,9 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - Regression (Seite ergebnisse a5284a5): nur Konolfingen besser und Region Olten (Rothrist-Regionalvariante West: Pfeile
   zurück → nach aussen, REGELN 1.28); Zofingen/Rothrist standen schon vor S2 in der Tabelle. Hinweise ttv8, z6f2, 8bce, 33fs
   behoben-Kandidaten; 3d6h beantwortet (→ S2b). Offen → S2b (Befund im Abschnitt S2b).
+
+### 18.11.2026 ~07:30 – S2 Nachbesserung, Seite v154 (Commit e3f66cb, ergebnisse aa7f1b6)
+- Daniel: Gl.-6-Schräge kreuzte die Schräge von Gl. 5 noch (yz3m) – mein Bericht «kreuzt nichts» war falsch (Pfad endete an
+  223385037 links vom Knick). Neu REGELN 2.3 `r45_anschluss_gerade`; osm_abgleich 3. Zuordnung (Weichenstrasse). V-Summe 6.
+- Rothrist-Regionalvariante → eigener Schritt R4 (Befund dort); neue Konolfingen-Hinweise → S2b.
 
