@@ -95,7 +95,8 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - [x] **B1 Basis-Paket** – 17.11. nachmittags: V0-Rest und G1 fertig; S2/S3 abgespalten (Befund in Abschnitt 6, B1)
 - [x] **S2 Konolfingen DKW / Ostkopf** – 17.11. abends (Nachtrag S2); Gleisfeld West abgespalten → S2b
 - [x] **G0 Grundprüfung als Sperre** – 18.11. vormittags, Commits 404ca61 + Basis Prüfstand (Seite nicht neu veröffentlicht: kein Plan geändert)
-- [ ] **T-SZU Testregion SZU** (Zürich HB 21/22 – Selnau – Giesshübel – Saalsporthalle / Uetliberg) – **als Nächstes**
+- [x] **T-SZU Testregion SZU** – 18.11. mittags, Commits 114156c/1d587e8, Seite v155 (Befundliste in Abschnitt 6)
+- [ ] **T-SZU2 Knoten Giesshübel · Saalsporthalle** (Arbeitsliste aus T-SZU, Abschnitt 6) – nach S2b/R4/S3 oder wenn Daniel es vorzieht
 - [ ] **S2b Konolfingen Gleisfeld West** (Zielbild Daniel 18.11.), **R4 Rothrist im Regionalplan** und **S3 Aarau
   Zwischengeraden mit Weiche** – nach T-SZU, je eigener Chat, alle gegen die G0-Sperre geprüft
 - [x] **S1b Sagliains-Bündel durchgehend** (klein) – 16.11. früh, Commits af2a110/21556d3, Seite v150
@@ -513,3 +514,14 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   = bekannte R2/R3-Befunde). Prüffälle `spurplan/grundpruefung_faelle/`: Konolfingen v153 GS 558/283 erkannt, v154 nicht.
 - Fallstrick: Ausrundung als Ecke gibt Schein-Schnitte (Konolfingen 567/307) – Schnitt/Auflage auf der echten Kurve rechnen.
   Basel/Bern (fest) haben kaputtes Markup `</text<circle` – wird beim Einlesen repariert. Basis neu nur mit `--basis-aus`/`--basis-setzen`.
+
+### 18.11.2026 ~12:20 – Schritt T-SZU abgeschlossen, Seite v155 (Commits 114156c, 1d587e8; ergebnisse 644a346)
+- Neu `regionen/szu/` (Linien 727/712/713/717, keine Overrides). Code: Normalspur-Linien in `region_vorbereiten` (Spur aus den Linien,
+  MOB/Vereina byte-gleich); Kreuzungsstelle aus zwei Streckengleisen → BP in der Mitte (REGELN 3.5, Borrweg); echtes Gleisende am
+  bbox-Rand kein Abgang (REGELN 1.13, Uetliberg «Linie 713 ↑»). Abgangsziel Richtung Stadt = Zürich HB (Giesshübel < 0,004° von Binz).
+- **Binz–Uetliberg: G0 0, Verkettung 0, nichts von Hand.** G0-Basis um szu__*/region_szu ergänzt (Ausgangsstand).
+- Arbeitsliste T-SZU2 (alles im Knoten Giesshübel·Saalsporthalle bzw. HB–Selnau): (1) Depot-/Abstellgleise Giesshübel kreuzen
+  das Bündel – Plan GS 11, GG 33, GQ 5; (2) 3 Gleise Giesshübel→Selnau gegen 2 in Selnau (V1, S1, T1/T3/T4); (3) Fahrbeziehung
+  Adliswil↔Selnau nicht durchgehend (S3); (4) Verbindungsgleis nach unten ohne Pfeil (T5); (5) Lage: Sihltal-Abgang Adliswil
+  liegt im Regionalplan nördlich des Uetlibergasts (Drehung Giesshübel 0°, REGELN 0.2/4.3), Uetliberg 90° gedreht (Stumpen
+  senkrecht), Label Binz im Bündel; (6) Selnau·HB SZU Süd GQ 1, Plantitel «HB SZU Süd» aus Haltepunktname.
