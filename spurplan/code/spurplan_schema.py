@@ -3457,6 +3457,50 @@ if RU.get("r45", True):
                               f"L{lx:.1f},{ly:.1f}" + d0[m_.end(9):])
                     for k_ in (True, False): svg_paths[k_] = [nd if q == d0 else q for q in svg_paths[k_]]
                     DBG[i2] = (j_, nd)
+        # REGELN 2.3/2.4 (S2 Konolfingen 18.11.2026, Hinweis yz3m «Gleis von 6 und von 5 kreuzen»): ein schräger Anschluss
+        # an einem Zwischenknoten der Kette, der von der anderen Seite der Kette herkommt, läuft als Verlängerung der Geraden
+        # ein (auf seiner Ebene waagrecht bis zur Geraden, dann darauf) – sonst kreuzt er die Schräge daneben
+        if RU.get("r45_anschluss_gerade", True):
+            for n in chain[1:-1]:
+                if _isdkw(n) or n not in SD: continue
+                y_n = ypos(n)
+                for o in segs:
+                    if o["id"] in _ids or o["flat"] or n not in (o["nodes"][0], o["nodes"][-1]): continue
+                    m_ = o["nodes"][0] if o["nodes"][-1] == n else o["nodes"][-1]
+                    if m_ not in SD: continue
+                    y_m = ypos(m_); x_m = xpos(m_, SD[m_][0])
+                    if min(ya, yb) - 0.5 <= y_m <= max(ya, yb) + 0.5 or abs(y_m - y_n) < 3: continue   # nur von ausserhalb der Kette
+                    x_e = xline(y_m)
+                    if abs(xline(y_n) - x_e) < 1: continue
+                    # Seite: die Gerade verlängert sich zu y_m hin auf die Seite von x_e; der Anschluss muss von dort kommen
+                    if (x_e - x_m) * (xline(y_n) - x_e) < -0.5: continue
+                    r_ = max(0.5, min(7.0, abs(x_e - x_m) - 0.5))
+                    nd = _rund([(x_m, y_m), (x_e, y_m), (xline(y_n), y_n)], r_) if abs(x_e - x_m) > 1 else _rund([(x_e, y_m), (xline(y_n), y_n)], r_)
+                    _old = [q for i_, q in DBG if i_ == o["id"]]
+                    for k_ in (True, False): svg_paths[k_] = [q for q in svg_paths[k_] if q not in _old]
+                    svg_paths[o["pax"]].append(nd)
+                    DBG[:] = [(i_, q) for i_, q in DBG if i_ != o["id"]] + [(o["id"], nd)]
+                    KX_WAYS = set(KX_WAYS) | {o["way"]}
+                    # REGELN 2.3: weitere Gleise vom selben Fuss, die auf eine nähere Ebene steigen, zweigen aus dieser
+                    # Schräge waagrecht ab (sonst kreuzt die durchgehende Schräge sie)
+                    _su = 1 if xline(y_n) > x_e else -1
+                    for p_ in segs:
+                        if p_ is o or p_["id"] in _ids or m_ not in (p_["nodes"][0], p_["nodes"][-1]): continue
+                        q_ = p_["nodes"][0] if p_["nodes"][-1] == m_ else p_["nodes"][-1]
+                        if q_ not in SD or q_ == n: continue
+                        y_q = ypos(q_); x_q = xpos(q_, SD[q_][0])
+                        if not (min(y_m, y_n) + 0.5 < y_q < max(y_m, y_n) - 0.5): continue
+                        x_l = xline(y_q)
+                        if (x_q - x_l) * _su < 7.5: continue
+                        # nur ab der Abzweigstelle zeichnen (das Stück davor ist die durchgehende Schräge)
+                        _ux, _uy = (x_l - x_e), (y_q - y_m); _ul = math.hypot(_ux, _uy) or 1
+                        _a = (x_l - _ux / _ul * 7.0, y_q - _uy / _ul * 7.0)
+                        nd2 = f"M{_a[0]:.1f},{_a[1]:.1f}Q{x_l:.1f},{y_q:.1f} {x_l + _su * 7.0:.1f},{y_q:.1f}H{x_q:.1f}"
+                        _old2 = [q for i_, q in DBG if i_ == p_["id"]]
+                        for k_ in (True, False): svg_paths[k_] = [q for q in svg_paths[k_] if q not in _old2]
+                        svg_paths[p_["pax"]].append(nd2)
+                        DBG[:] = [(i_, q) for i_, q in DBG if i_ != p_["id"]] + [(p_["id"], nd2)]
+                        KX_WAYS = set(KX_WAYS) | {p_["way"]}
         for n in chain: _R45X.setdefault(n, xline(ypos(n)))
         for E_ in _ende_ab:
             yE_ = ypos(E_); _sy = np.sign(yb - ya) if E_ != _links else np.sign(ya - yb)

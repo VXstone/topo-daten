@@ -293,6 +293,19 @@ def abgleich(svg_text, N, TAGS, WAYN):
     for c, n_, i in sorted(paare2):
         if n_ in zu_osm or i in zu_plan: continue
         zu_osm[n_] = i; zu_plan[i] = n_
+    # dritter Durchgang (REGELN 2.3 Weichenstrasse, S2 18.11.2026): der Plan zeichnet den näheren Ast aus der Schrägen heraus,
+    # die an der OSM-Weiche beginnt – Abzweig liegt schräg daneben (bis 60 px), mindestens zwei Äste gehören zu dieser Weiche
+    paare3 = []
+    for n_ in osm_kn:
+        if n_ in zu_osm: continue
+        v = KN[n_]
+        for i, p in enumerate(PK):
+            if i in zu_plan: continue
+            dd = math.hypot(v["x"] - p[0], v["y"] - p[1])
+            if dd < 60 and aeste(i) >= 2: paare3.append((dd, n_, i))
+    for c, n_, i in sorted(paare3):
+        if n_ in zu_osm or i in zu_plan: continue
+        zu_osm[n_] = i; zu_plan[i] = n_
     # zwei OSM-Weichen dicht beieinander (< 12 m) zeichnet der Plan oft als einen Abzweig: zweite gilt als gezeichnet
     for n, v in osm_kn.items():
         if n in zu_osm: continue
