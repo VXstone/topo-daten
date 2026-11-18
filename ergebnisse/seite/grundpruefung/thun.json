@@ -1,0 +1,31 @@
+{
+ "ebene": 24.0,
+ "zaehl": {
+  "GS": 0,
+  "GG": 2,
+  "GQ": 0,
+  "GP": 0,
+  "GW": 0,
+  "GT": 1
+ },
+ "befunde": [
+  {
+   "regel": "GG",
+   "x": 570.9,
+   "y": 206.0,
+   "text": "zwei Gleise 28 px aufeinander"
+  },
+  {
+   "regel": "GG",
+   "x": 321.5,
+   "y": 206.0,
+   "text": "zwei Gleise 19 px aufeinander"
+  },
+  {
+   "regel": "GT",
+   "x": 1021.6,
+   "y": 330.8,
+   "text": "Treppe, Versatz 30.5 px"
+  }
+ ]
+}

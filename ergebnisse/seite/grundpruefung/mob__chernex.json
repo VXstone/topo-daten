@@ -1,0 +1,25 @@
+{
+ "ebene": 24.0,
+ "zaehl": {
+  "GS": 1,
+  "GG": 1,
+  "GQ": 0,
+  "GP": 0,
+  "GW": 0,
+  "GT": 0
+ },
+ "befunde": [
+  {
+   "regel": "GS",
+   "x": 305.9,
+   "y": 112.6,
+   "text": "Gleise kreuzen sich (76°) ohne DKW, Kreuzung oder Niveautrennung"
+  },
+  {
+   "regel": "GG",
+   "x": 282.1,
+   "y": 126.0,
+   "text": "zwei Gleise 17 px aufeinander"
+  }
+ ]
+}

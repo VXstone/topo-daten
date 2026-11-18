@@ -1,0 +1,43 @@
+{
+ "ebene": 24.0,
+ "zaehl": {
+  "GS": 1,
+  "GG": 2,
+  "GQ": 1,
+  "GP": 1,
+  "GW": 0,
+  "GT": 0
+ },
+ "befunde": [
+  {
+   "regel": "GS",
+   "x": 518.8,
+   "y": 259.9,
+   "text": "Gleise kreuzen sich (51°) ohne DKW, Kreuzung oder Niveautrennung"
+  },
+  {
+   "regel": "GG",
+   "x": 497.2,
+   "y": 258.4,
+   "text": "zwei Gleise 13 px aufeinander"
+  },
+  {
+   "regel": "GG",
+   "x": 511.9,
+   "y": 259.4,
+   "text": "zwei Gleise 27 px aufeinander"
+  },
+  {
+   "regel": "GQ",
+   "x": 475.4,
+   "y": 146.0,
+   "text": "Querabstand nach dem Knick 52.3 px statt 24.0 px wie davor"
+  },
+  {
+   "regel": "GP",
+   "x": 524.6,
+   "y": 139.7,
+   "text": "Pfeil zeigt innert 36 px auf ein Gleis"
+  }
+ ]
+}

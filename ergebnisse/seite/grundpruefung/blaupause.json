@@ -1,0 +1,67 @@
+{
+ "ebene": 24.0,
+ "zaehl": {
+  "GS": 4,
+  "GG": 1,
+  "GQ": 0,
+  "GP": 0,
+  "GW": 0,
+  "GT": 4
+ },
+ "befunde": [
+  {
+   "regel": "GS",
+   "x": 950.0,
+   "y": 1186.0,
+   "text": "Gleise kreuzen sich (60°) ohne DKW, Kreuzung oder Niveautrennung"
+  },
+  {
+   "regel": "GS",
+   "x": 575.0,
+   "y": 1526.0,
+   "text": "Gleise kreuzen sich (60°) ohne DKW, Kreuzung oder Niveautrennung"
+  },
+  {
+   "regel": "GS",
+   "x": 1310.0,
+   "y": 1526.0,
+   "text": "Gleise kreuzen sich (90°) ohne DKW, Kreuzung oder Niveautrennung"
+  },
+  {
+   "regel": "GS",
+   "x": 1410.0,
+   "y": 1526.0,
+   "text": "Gleise kreuzen sich (90°) ohne DKW, Kreuzung oder Niveautrennung"
+  },
+  {
+   "regel": "GG",
+   "x": 461.9,
+   "y": 1926.0,
+   "text": "zwei Gleise 144 px aufeinander"
+  },
+  {
+   "regel": "GT",
+   "x": 940.8,
+   "y": 166.0,
+   "text": "Treppe, Versatz 83.2 px"
+  },
+  {
+   "regel": "GT",
+   "x": 1330.8,
+   "y": 166.0,
+   "text": "Treppe, Versatz 83.2 px"
+  },
+  {
+   "regel": "GT",
+   "x": 530.8,
+   "y": 1016.0,
+   "text": "Treppe, Versatz 83.2 px"
+  },
+  {
+   "regel": "GT",
+   "x": 917.3,
+   "y": 1016.0,
+   "text": "Treppe, Versatz 69.3 px"
+  }
+ ]
+}

@@ -62,12 +62,12 @@ Hinweis-Abdeckung: 33/57 (Befund < 40 px, ohne G2)
 ✓ xke0 solothurn                    ME,MZ,W2                  22.5  Zwischengerade, doppelter Abstand
 ✓ z6f2 konolfingen                  MX                        21.0  DKW?
 ✓ zcz3 solothurn                    G7,MX,VB2                 18.0  nicht verbunden
-/home/runner/work/topo-daten/topo-daten/spurplan/code/alle_plaene_pruefen.py:197: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+/home/runner/work/topo-daten/topo-daten/spurplan/code/alle_plaene_pruefen.py:218: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
   json.dump(dict(erzeugt=datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"), plaene=len(zeilen), geaendert=len(gz),
 olten                        bestätigt 2026-11-08                0 Stellen  gleichwertig  OSM VB1 13, VB2 25, VC1 7, VD1 10 (kein Alt-Stand)
 rothrist                     Archivbeginn (Abnahme 2026-10-29)    2 Stellen  gleichwertig  OSM VA2 1, VB1 4, VB2 6 (kein Alt-Stand)
 zofingen                     bestätigt 2026-11-08               26 Stellen  gleichwertig  OSM VA2 2, VB1 3, VD1 1 (kein Alt-Stand)
-schonenwerd                  bestätigt 2026-11-08                0 Stellen  gleichwertig  OSM VB2 2, VD1 1 (kein Alt-Stand)
+schonenwerd                  bestätigt 2026-11-08                0 Stellen  vermutlich besser  GG 1→0 · OSM VB2 2, VD1 1 (kein Alt-Stand)
 neuchatel                    bestätigt 2026-11-08                0 Stellen  gleichwertig  OSM VA2 4, VC1 2, VD1 3 (kein Alt-Stand)
 Regression: 137 Pläne, 2 geändert {'gleichwertig': 2}
 Ausnahmen: 910 Einträge, 125 Orte: {'Schalter': 351, 'Ortswissen': 245, 'Geometrie': 188, 'Typvorlage': 126} | ohne Grund: 0

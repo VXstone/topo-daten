@@ -1,0 +1,43 @@
+{
+ "ebene": 24.0,
+ "zaehl": {
+  "GS": 1,
+  "GG": 4,
+  "GQ": 0,
+  "GP": 0,
+  "GW": 0,
+  "GT": 0
+ },
+ "befunde": [
+  {
+   "regel": "GS",
+   "x": 641.9,
+   "y": 261.2,
+   "text": "Gleise kreuzen sich (25°) ohne DKW, Kreuzung oder Niveautrennung"
+  },
+  {
+   "regel": "GG",
+   "x": 503.6,
+   "y": 274.4,
+   "text": "zwei Gleise 15 px aufeinander"
+  },
+  {
+   "regel": "GG",
+   "x": 411.9,
+   "y": 171.2,
+   "text": "zwei Gleise 13 px aufeinander"
+  },
+  {
+   "regel": "GG",
+   "x": 461.8,
+   "y": 221.6,
+   "text": "zwei Gleise 15 px aufeinander"
+  },
+  {
+   "regel": "GG",
+   "x": 835.2,
+   "y": 171.2,
+   "text": "zwei Gleise 35 px aufeinander"
+  }
+ ]
+}

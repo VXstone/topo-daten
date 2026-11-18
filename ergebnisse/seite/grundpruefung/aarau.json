@@ -1,0 +1,109 @@
+{
+ "ebene": 24.0,
+ "zaehl": {
+  "GS": 3,
+  "GG": 6,
+  "GQ": 0,
+  "GP": 2,
+  "GW": 0,
+  "GT": 5
+ },
+ "befunde": [
+  {
+   "regel": "GS",
+   "x": 3147.2,
+   "y": 330.8,
+   "text": "Gleise kreuzen sich (56°) ohne DKW, Kreuzung oder Niveautrennung"
+  },
+  {
+   "regel": "GS",
+   "x": 836.5,
+   "y": 234.8,
+   "text": "Gleise kreuzen sich (60°) ohne DKW, Kreuzung oder Niveautrennung"
+  },
+  {
+   "regel": "GS",
+   "x": 864.2,
+   "y": 282.8,
+   "text": "Gleise kreuzen sich (60°) ohne DKW, Kreuzung oder Niveautrennung"
+  },
+  {
+   "regel": "GG",
+   "x": 2129.1,
+   "y": 378.8,
+   "text": "zwei Gleise 32 px aufeinander"
+  },
+  {
+   "regel": "GG",
+   "x": 3125.9,
+   "y": 210.8,
+   "text": "zwei Gleise 30 px aufeinander"
+  },
+  {
+   "regel": "GG",
+   "x": 3167.6,
+   "y": 234.7,
+   "text": "zwei Gleise 12 px aufeinander"
+  },
+  {
+   "regel": "GG",
+   "x": 2979.5,
+   "y": 282.8,
+   "text": "zwei Gleise 20 px aufeinander"
+  },
+  {
+   "regel": "GG",
+   "x": 2583.1,
+   "y": 210.8,
+   "text": "zwei Gleise 83 px aufeinander"
+  },
+  {
+   "regel": "GG",
+   "x": 1335.5,
+   "y": 306.8,
+   "text": "zwei Gleise 14 px aufeinander"
+  },
+  {
+   "regel": "GP",
+   "x": 2733.9,
+   "y": 136.0,
+   "text": "Pfeilspitze 10.4 px neben einem Gleis (< ½ Ebene)"
+  },
+  {
+   "regel": "GP",
+   "x": 2871.2,
+   "y": 128.3,
+   "text": "Pfeil zeigt innert 36 px auf ein Gleis"
+  },
+  {
+   "regel": "GT",
+   "x": 2579.8,
+   "y": 306.8,
+   "text": "Treppe, Versatz 25.9 px"
+  },
+  {
+   "regel": "GT",
+   "x": 2687.1,
+   "y": 354.8,
+   "text": "Treppe, Versatz 25.9 px"
+  },
+  {
+   "regel": "GT",
+   "x": 3067.4,
+   "y": 186.8,
+   "text": "Treppe, Versatz 25.9 px"
+  },
+  {
+   "regel": "GT",
+   "x": 2464.0,
+   "y": 258.8,
+   "text": "Treppe, Versatz 25.8 px"
+  },
+  {
+   "regel": "GT",
+   "x": 2051.3,
+   "y": 318.8,
+   "text": "Treppe, Versatz 27.7 px"
+  }
+ ]
+}

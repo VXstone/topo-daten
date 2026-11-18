@@ -1,0 +1,49 @@
+{
+ "ebene": 24.0,
+ "zaehl": {
+  "GS": 2,
+  "GG": 1,
+  "GQ": 1,
+  "GP": 0,
+  "GW": 0,
+  "GT": 2
+ },
+ "befunde": [
+  {
+   "regel": "GS",
+   "x": 1918.1,
+   "y": 160.4,
+   "text": "Gleise kreuzen sich (60°) ohne DKW, Kreuzung oder Niveautrennung"
+  },
+  {
+   "regel": "GS",
+   "x": 1878.0,
+   "y": 160.4,
+   "text": "Gleise kreuzen sich (60°) ohne DKW, Kreuzung oder Niveautrennung"
+  },
+  {
+   "regel": "GG",
+   "x": 1678.0,
+   "y": 136.4,
+   "text": "zwei Gleise 86 px aufeinander"
+  },
+  {
+   "regel": "GQ",
+   "x": 1862.3,
+   "y": 196.4,
+   "text": "Querabstand nach dem Knick 60.7 px statt 24.0 px wie davor"
+  },
+  {
+   "regel": "GT",
+   "x": 1960.3,
+   "y": 184.4,
+   "text": "Treppe, Versatz 55.4 px"
+  },
+  {
+   "regel": "GT",
+   "x": 484.1,
+   "y": 184.4,
+   "text": "Treppe, Versatz 55.4 px"
+  }
+ ]
+}

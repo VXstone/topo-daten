@@ -1,0 +1,517 @@
+{
+ "ebene": 24.0,
+ "zaehl": {
+  "GS": 15,
+  "GG": 25,
+  "GQ": 9,
+  "GP": 22,
+  "GW": 1,
+  "GT": 12
+ },
+ "befunde": [
+  {
+   "regel": "GS",
+   "x": 1184.9,
+   "y": 590.0,
+   "text": "Gleise kreuzen sich (60°) ohne DKW, Kreuzung oder Niveautrennung"
+  },
+  {
+   "regel": "GS",
+   "x": 1171.5,
+   "y": 566.8,
+   "text": "Gleise kreuzen sich (82°) ohne DKW, Kreuzung oder Niveautrennung"
+  },
+  {
+   "regel": "GS",
+   "x": 1837.8,
+   "y": 350.0,
+   "text": "Gleise kreuzen sich (60°) ohne DKW, Kreuzung oder Niveautrennung"
+  },
+  {
+   "regel": "GS",
+   "x": 1225.1,
+   "y": 86.0,
+   "text": "Gleise kreuzen sich (60°) ohne DKW, Kreuzung oder Niveautrennung"
+  },
+  {
+   "regel": "GS",
+   "x": 1287.8,
+   "y": 86.0,
+   "text": "Gleise kreuzen sich (60°) ohne DKW, Kreuzung oder Niveautrennung"
+  },
+  {
+   "regel": "GS",
+   "x": 1315.5,
+   "y": 134.0,
+   "text": "Gleise kreuzen sich (60°) ohne DKW, Kreuzung oder Niveautrennung"
+  },
+  {
+   "regel": "GS",
+   "x": 885.5,
+   "y": 254.0,
+   "text": "Gleise kreuzen sich (60°) ohne DKW, Kreuzung oder Niveautrennung"
+  },
+  {
+   "regel": "GS",
+   "x": 969.6,
+   "y": 230.0,
+   "text": "Gleise kreuzen sich (60°) ohne DKW, Kreuzung oder Niveautrennung"
+  },
+  {
+   "regel": "GS",
+   "x": 1149.9,
+   "y": 542.0,
+   "text": "Gleise kreuzen sich (57°) ohne DKW, Kreuzung oder Niveautrennung"
+  },
+  {
+   "regel": "GS",
+   "x": 1329.3,
+   "y": 158.0,
+   "text": "Gleise kreuzen sich (60°) ohne DKW, Kreuzung oder Niveautrennung"
+  },
+  {
+   "regel": "GS",
+   "x": 1979.8,
+   "y": 374.0,
+   "text": "Gleise kreuzen sich (57°) ohne DKW, Kreuzung oder Niveautrennung"
+  },
+  {
+   "regel": "GS",
+   "x": 1723.2,
+   "y": 113.7,
+   "text": "Gleise kreuzen sich (22°) ohne DKW, Kreuzung oder Niveautrennung"
+  },
+  {
+   "regel": "GS",
+   "x": 2010.5,
+   "y": 422.1,
+   "text": "Gleise kreuzen sich (60°) ohne DKW, Kreuzung oder Niveautrennung"
+  },
+  {
+   "regel": "GS",
+   "x": 1775.0,
+   "y": 267.5,
+   "text": "Gleise kreuzen sich (14°) ohne DKW, Kreuzung oder Niveautrennung"
+  },
+  {
+   "regel": "GS",
+   "x": 1173.9,
+   "y": 14.0,
+   "text": "Gleise kreuzen sich (60°) ohne DKW, Kreuzung oder Niveautrennung"
+  },
+  {
+   "regel": "GG",
+   "x": 1500.0,
+   "y": 110.0,
+   "text": "zwei Gleise 38 px aufeinander"
+  },
+  {
+   "regel": "GG",
+   "x": 1136.1,
+   "y": 590.0,
+   "text": "zwei Gleise 128 px aufeinander"
+  },
+  {
+   "regel": "GG",
+   "x": 1112.0,
+   "y": 590.0,
+   "text": "zwei Gleise 80 px aufeinander"
+  },
+  {
+   "regel": "GG",
+   "x": 1232.4,
+   "y": 613.0,
+   "text": "zwei Gleise 28 px aufeinander"
+  },
+  {
+   "regel": "GG",
+   "x": 1112.0,
+   "y": 590.0,
+   "text": "zwei Gleise 80 px aufeinander"
+  },
+  {
+   "regel": "GG",
+   "x": 1879.9,
+   "y": 398.0,
+   "text": "zwei Gleise 15 px aufeinander"
+  },
+  {
+   "regel": "GG",
+   "x": 1779.4,
+   "y": 326.0,
+   "text": "zwei Gleise 83 px aufeinander"
+  },
+  {
+   "regel": "GG",
+   "x": 1883.5,
+   "y": 470.0,
+   "text": "zwei Gleise 27 px aufeinander"
+  },
+  {
+   "regel": "GG",
+   "x": 1745.7,
+   "y": 326.0,
+   "text": "zwei Gleise 15 px aufeinander"
+  },
+  {
+   "regel": "GG",
+   "x": 1287.3,
+   "y": 134.0,
+   "text": "zwei Gleise 69 px aufeinander"
+  },
+  {
+   "regel": "GG",
+   "x": 1670.5,
+   "y": 517.6,
+   "text": "zwei Gleise 48 px aufeinander"
+  },
+  {
+   "regel": "GG",
+   "x": 1724.8,
+   "y": 518.0,
+   "text": "zwei Gleise 16 px aufeinander"
+  },
+  {
+   "regel": "GG",
+   "x": 1658.1,
+   "y": 422.0,
+   "text": "zwei Gleise 25 px aufeinander"
+  },
+  {
+   "regel": "GG",
+   "x": 1650.2,
+   "y": 590.0,
+   "text": "zwei Gleise 35 px aufeinander"
+  },
+  {
+   "regel": "GG",
+   "x": 1009.7,
+   "y": 182.0,
+   "text": "zwei Gleise 18 px aufeinander"
+  },
+  {
+   "regel": "GG",
+   "x": 904.8,
+   "y": 254.0,
+   "text": "zwei Gleise 54 px aufeinander"
+  },
+  {
+   "regel": "GG",
+   "x": 3030.6,
+   "y": 398.0,
+   "text": "zwei Gleise 59 px aufeinander"
+  },
+  {
+   "regel": "GG",
+   "x": 2125.4,
+   "y": 614.0,
+   "text": "zwei Gleise 58 px aufeinander"
+  },
+  {
+   "regel": "GG",
+   "x": 1790.8,
+   "y": 398.0,
+   "text": "zwei Gleise 58 px aufeinander"
+  },
+  {
+   "regel": "GG",
+   "x": 1759.6,
+   "y": 419.0,
+   "text": "zwei Gleise 143 px aufeinander"
+  },
+  {
+   "regel": "GG",
+   "x": 1790.8,
+   "y": 398.0,
+   "text": "zwei Gleise 58 px aufeinander"
+  },
+  {
+   "regel": "GG",
+   "x": 1844.9,
+   "y": 470.0,
+   "text": "zwei Gleise 50 px aufeinander"
+  },
+  {
+   "regel": "GG",
+   "x": 1793.5,
+   "y": 470.0,
+   "text": "zwei Gleise 53 px aufeinander"
+  },
+  {
+   "regel": "GG",
+   "x": 1659.0,
+   "y": 542.0,
+   "text": "zwei Gleise 26 px aufeinander"
+  },
+  {
+   "regel": "GG",
+   "x": 1704.0,
+   "y": 492.6,
+   "text": "zwei Gleise 52 px aufeinander"
+  },
+  {
+   "regel": "GQ",
+   "x": 1146.7,
+   "y": 530.0,
+   "text": "Querabstand nach dem Knick 6.3 px statt 24.0 px wie davor"
+  },
+  {
+   "regel": "GQ",
+   "x": 1183.7,
+   "y": 2.0,
+   "text": "Querabstand nach dem Knick 12.1 px statt 24.0 px wie davor"
+  },
+  {
+   "regel": "GQ",
+   "x": 704.1,
+   "y": 518.0,
+   "text": "Querabstand nach dem Knick 48.0 px statt 20.0 px wie davor"
+  },
+  {
+   "regel": "GQ",
+   "x": 1960.5,
+   "y": 458.0,
+   "text": "Querabstand nach dem Knick 50.6 px statt 24.0 px wie davor"
+  },
+  {
+   "regel": "GQ",
+   "x": 1696.7,
+   "y": 554.0,
+   "text": "Querabstand nach dem Knick 31.7 px statt 24.0 px wie davor"
+  },
+  {
+   "regel": "GQ",
+   "x": 857.5,
+   "y": 290.0,
+   "text": "Querabstand nach dem Knick 12.6 px statt 24.0 px wie davor"
+  },
+  {
+   "regel": "GQ",
+   "x": 1023.8,
+   "y": 2.0,
+   "text": "Querabstand nach dem Knick 24.0 px statt 12.6 px wie davor"
+  },
+  {
+   "regel": "GQ",
+   "x": 1171.8,
+   "y": 2.0,
+   "text": "Querabstand nach dem Knick 8.3 px statt 24.0 px wie davor"
+  },
+  {
+   "regel": "GQ",
+   "x": 1255.0,
+   "y": 146.0,
+   "text": "Querabstand nach dem Knick 24.0 px statt 8.3 px wie davor"
+  },
+  {
+   "regel": "GP",
+   "x": 1158.4,
+   "y": 323.2,
+   "text": "Pfeilspitze 1.7 px neben einem Gleis (< ½ Ebene)"
+  },
+  {
+   "regel": "GP",
+   "x": 933.2,
+   "y": 283.7,
+   "text": "Pfeil zeigt innert 36 px auf ein Gleis"
+  },
+  {
+   "regel": "GP",
+   "x": 881.5,
+   "y": 275.2,
+   "text": "Pfeil zeigt innert 36 px auf ein Gleis"
+  },
+  {
+   "regel": "GP",
+   "x": 977.3,
+   "y": 235.7,
+   "text": "Pfeil zeigt innert 36 px auf ein Gleis"
+  },
+  {
+   "regel": "GP",
+   "x": 1798.5,
+   "y": 328.8,
+   "text": "Pfeil zeigt innert 36 px auf ein Gleis"
+  },
+  {
+   "regel": "GP",
+   "x": 1021.9,
+   "y": 224.3,
+   "text": "Pfeil zeigt innert 36 px auf ein Gleis"
+  },
+  {
+   "regel": "GP",
+   "x": 1089.0,
+   "y": 200.3,
+   "text": "Pfeil zeigt innert 36 px auf ein Gleis"
+  },
+  {
+   "regel": "GP",
+   "x": 1146.3,
+   "y": 395.2,
+   "text": "Pfeil zeigt innert 36 px auf ein Gleis"
+  },
+  {
+   "regel": "GP",
+   "x": 1167.1,
+   "y": 427.7,
+   "text": "Pfeil zeigt innert 36 px auf ein Gleis"
+  },
+  {
+   "regel": "GP",
+   "x": 1142.8,
+   "y": 355.7,
+   "text": "Pfeil zeigt innert 36 px auf ein Gleis"
+  },
+  {
+   "regel": "GP",
+   "x": 889.3,
+   "y": 331.7,
+   "text": "Pfeil zeigt innert 36 px auf ein Gleis"
+  },
+  {
+   "regel": "GP",
+   "x": 959.8,
+   "y": 235.7,
+   "text": "Pfeil zeigt innert 36 px auf ein Gleis"
+  },
+  {
+   "regel": "GP",
+   "x": 1304.3,
+   "y": 163.7,
+   "text": "Pfeil zeigt innert 36 px auf ein Gleis"
+  },
+  {
+   "regel": "GP",
+   "x": 1114.2,
+   "y": 331.7,
+   "text": "Pfeil zeigt innert 36 px auf ein Gleis"
+  },
+  {
+   "regel": "GP",
+   "x": 916.0,
+   "y": 280.8,
+   "text": "Pfeil zeigt innert 36 px auf ein Gleis"
+  },
+  {
+   "regel": "GP",
+   "x": 1249.4,
+   "y": 107.2,
+   "text": "Pfeil zeigt innert 36 px auf ein Gleis"
+  },
+  {
+   "regel": "GP",
+   "x": 981.2,
+   "y": 200.3,
+   "text": "Pfeil zeigt innert 36 px auf ein Gleis"
+  },
+  {
+   "regel": "GP",
+   "x": 866.9,
+   "y": 272.3,
+   "text": "Pfeil zeigt innert 36 px auf ein Gleis"
+  },
+  {
+   "regel": "GP",
+   "x": 1731.7,
+   "y": 128.3,
+   "text": "Pfeil zeigt innert 36 px auf ein Gleis"
+  },
+  {
+   "regel": "GP",
+   "x": 1296.7,
+   "y": 80.7,
+   "text": "Pfeilspitze 5.3 px neben einem Gleis (< ½ Ebene)"
+  },
+  {
+   "regel": "GP",
+   "x": 1339.7,
+   "y": 155.2,
+   "text": "Pfeil zeigt innert 36 px auf ein Gleis"
+  },
+  {
+   "regel": "GP",
+   "x": 1841.7,
+   "y": 326.0,
+   "text": "Pfeil zeigt innert 36 px auf ein Gleis"
+  },
+  {
+   "regel": "GW",
+   "x": 1036.2,
+   "y": 542.0,
+   "text": "Gleis stösst unter 81° auf ein anderes Gleis"
+  },
+  {
+   "regel": "GT",
+   "x": 273.2,
+   "y": 590.0,
+   "text": "Treppe, Versatz 25.8 px"
+  },
+  {
+   "regel": "GT",
+   "x": 1200.9,
+   "y": 276.0,
+   "text": "Treppe, Versatz 60.0 px"
+  },
+  {
+   "regel": "GT",
+   "x": 1230.2,
+   "y": 44.7,
+   "text": "Treppe, Versatz 39.9 px"
+  },
+  {
+   "regel": "GT",
+   "x": 1589.4,
+   "y": 254.0,
+   "text": "Treppe, Versatz 26.0 px"
+  },
+  {
+   "regel": "GT",
+   "x": 1178.0,
+   "y": 578.0,
+   "text": "Treppe, Versatz 83.2 px"
+  },
+  {
+   "regel": "GT",
+   "x": 688.0,
+   "y": 554.0,
+   "text": "Treppe, Versatz 27.7 px"
+  },
+  {
+   "regel": "GT",
+   "x": 359.4,
+   "y": 554.0,
+   "text": "Treppe, Versatz 27.7 px"
+  },
+  {
+   "regel": "GT",
+   "x": 375.2,
+   "y": 590.0,
+   "text": "Treppe, Versatz 55.4 px"
+  },
+  {
+   "regel": "GT",
+   "x": 1756.6,
+   "y": 326.0,
+   "text": "Treppe, Versatz 55.4 px"
+  },
+  {
+   "regel": "GT",
+   "x": 1094.2,
+   "y": 362.0,
+   "text": "Treppe, Versatz 27.7 px"
+  },
+  {
+   "regel": "GT",
+   "x": 1033.0,
+   "y": 490.9,
+   "text": "Treppe, Versatz 58.6 px"
+  },
+  {
+   "regel": "GT",
+   "x": 1718.1,
+   "y": 596.0,
+   "text": "Treppe, Versatz 15.6 px"
+  }
+ ]
+}
