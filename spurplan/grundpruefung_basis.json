@@ -1,7 +1,7 @@
 {
  "_quelle": "grundpruefung.py (Schritt G0, REGELN «Grundprüfung als Sperre»); je Abschnitt Zählung je Plan und Regel",
  "_stand": {
-  "plaene": "Seite ergebnisse 7e06848 (Commit 78494e5, live v154), lokal gerechnet 18.11.2026",
+  "plaene": "Seite ergebnisse 7e06848 (Commit 78494e5, live v154), lokal gerechnet 18.11.2026 · 18.11. T-SZU: Ausgangsstand Testregion SZU ergänzt (szu__* aus Seite 219ac67, region_szu aus Regionen 5218b8c)",
   "pruefstand": "Workflow pruefstand 44281336491 (Commit 404ca61, ergebnisse/pruefstand/grundpruefung/zaehlung.json, 18.11.2026)"
  },
  "plaene": {
@@ -1091,6 +1091,86 @@
    "GQ": 0,
    "GS": 0,
    "GT": 0,
+   "GW": 0
+  },
+  "szu__berghof": {
+   "GG": 0,
+   "GP": 0,
+   "GQ": 0,
+   "GS": 0,
+   "GT": 0,
+   "GW": 0
+  },
+  "szu__borrweg": {
+   "GG": 0,
+   "GP": 0,
+   "GQ": 0,
+   "GS": 0,
+   "GT": 0,
+   "GW": 0
+  },
+  "szu__ringlikon": {
+   "GG": 0,
+   "GP": 0,
+   "GQ": 0,
+   "GS": 0,
+   "GT": 0,
+   "GW": 0
+  },
+  "szu__uetliberg": {
+   "GG": 0,
+   "GP": 0,
+   "GQ": 0,
+   "GS": 0,
+   "GT": 0,
+   "GW": 0
+  },
+  "szu__zurich_binz": {
+   "GG": 0,
+   "GP": 0,
+   "GQ": 0,
+   "GS": 0,
+   "GT": 0,
+   "GW": 0
+  },
+  "szu__zurich_friesenberg": {
+   "GG": 0,
+   "GP": 0,
+   "GQ": 0,
+   "GS": 0,
+   "GT": 0,
+   "GW": 0
+  },
+  "szu__zurich_giesshubel": {
+   "GG": 33,
+   "GP": 0,
+   "GQ": 5,
+   "GS": 11,
+   "GT": 0,
+   "GW": 0
+  },
+  "szu__zurich_schweighof": {
+   "GG": 0,
+   "GP": 0,
+   "GQ": 0,
+   "GS": 0,
+   "GT": 0,
+   "GW": 0
+  },
+  "szu__zurich_selnau": {
+   "GG": 0,
+   "GP": 0,
+   "GQ": 1,
+   "GS": 0,
+   "GT": 0,
+   "GW": 0
+  },
+  "region_szu": {
+   "GG": 28,
+   "GP": 0,
+   "GQ": 5,
+   "GS": 18,
+   "GT": 1,
    "GW": 0
   }
  },
