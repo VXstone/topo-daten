@@ -96,7 +96,8 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - [x] **S2 Konolfingen DKW / Ostkopf** – 17.11. abends (Nachtrag S2); Gleisfeld West abgespalten → S2b
 - [x] **G0 Grundprüfung als Sperre** – 18.11. vormittags, Commits 404ca61 + Basis Prüfstand (Seite nicht neu veröffentlicht: kein Plan geändert)
 - [x] **T-SZU Testregion SZU** – 18.11. mittags, Commits 114156c/1d587e8, Seite v155 (Befundliste in Abschnitt 6)
-- [ ] **T-SZU1 DKW aus 4-Arm-Weiche (REGELN 2.4) und Güterverkehr schwarz (REGELN 1.21)** (klein, Entscheid Daniel 18.11.) – **als Nächstes**, vor T-SZU2
+- [ ] **HT Hauptgleis-Topologie als Sperre (REGELN 0.1, Kopf «HT»)** (mittel, Entscheid Daniel 18.11.) – **als Nächstes**
+- [ ] **T-SZU1 DKW aus 4-Arm-Weiche (REGELN 2.4) und Güterverkehr schwarz (REGELN 1.21)** (klein, Entscheid Daniel 18.11.) – nach HT, vor T-SZU2
 - [ ] **T-SZU2 Achse knickt im Fenster (REGELN 2.15), Zielplan Giesshübel · Saalsporthalle** (Entscheid Daniel 18.11.: Variante C) – nach S2b/R4/S3 oder wenn Daniel es vorzieht
 - [ ] **S2b Konolfingen Gleisfeld West** (Zielbild Daniel 18.11.), **R4 Rothrist im Regionalplan** und **S3 Aarau
   Zwischengeraden mit Weiche** – nach T-SZU, je eigener Chat, alle gegen die G0-Sperre geprüft
@@ -235,6 +236,20 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   Workflow `regionen` um «szu» ergänzen. Keine Overrides im ersten Lauf – was nicht stimmt, wird Regel oder Befund.
 - Messen: G0-Sperre, OSM-Abgleich, Verkettung; Ergebnis als Liste «was die Grundregeln nicht halten» → Arbeitsliste.
 - Fertig, wenn: Region SZU auf der Seite, G0 ohne Befund ab Binz–Uetliberg, übrige Befunde benannt.
+
+### HT – Hauptgleis-Topologie als Sperre (Entscheid Daniel 18.11. 15:51, REGELN 0.1 und Kopf «HT»)
+- Einstieg: «Weiter mit UEBERGABE.md – Schritt HT: Hauptgleis-Topologie als Sperre»
+- Anlass: Giesshübel (T-SZU) – der OSM-Abgleich meldete am Code-Plan 52 Befunde, gesperrt hat nur G0 (Geometrie); in der Skizze
+  fielen Schere statt zweier Spurwechsel, fehlende Depot-Anschlüsse und Gl. 43 auf der falschen Seite niemandem ausser Daniel auf.
+- Bauen: in `osm_abgleich.py` (Netzmodell <key>_netz.json + OSM) die Befunde mit Hauptgleis-Beteiligung als HT1–HT3 ausweisen
+  (VB1/VB2/VC1); neu HT4 Seite (Abzweig im Plan links/rechts des Hauptgleises in dessen Fahrrichtung = OSM, Grundlage `r38_seite`)
+  und HT5 Fahrwege (Graph aus dem gezeichneten Plan über das Netzmodell gegen OSM-Graph: Enden der Hauptgleise paarweise, Weg
+  ohne Richtungswechsel an einer Weiche; Mengen vergleichen). Hauptgleis = grün nach 1.21/1.24. Ausgangsstand als Basis
+  (`spurplan/hauptgleis_basis.json`), Workflow `seite` rot bei neuem Befund, Spalte HT in `regression/tabelle.md`; Prüfstand ebenso.
+- Prüffälle (Selbsttest wie G0): Giesshübel aus Code (heute, HT > 0), ein Plan mit Schere statt zweier Spurwechsel, Abzweig zur
+  falschen Seite, fehlender Spurwechsel (Fahrweg fehlt) – je in mindestens zwei Drehungen.
+- Danach: Liste aller Pläne mit HT > 0 an Daniel (Ziel 0; die Liste bestimmt die Reihenfolge der Folgeschritte).
+- Fertig, wenn: HT läuft im Workflow, Basis gesetzt, die Prüffälle werden erkannt, Bericht nennt G0 und HT je Plan.
 
 ### T-SZU1 – DKW aus 4-Arm-Weiche und Güterverkehr schwarz (Entscheid Daniel 18.11. 14:43, REGELN 2.4/1.21)
 - Einstieg: «Weiter mit UEBERGABE.md – Schritt T-SZU1: DKW aus 4-Arm-Weiche und Güterverkehr schwarz»
@@ -574,5 +589,5 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 ### 18.11.2026 ~14:45 – Entscheide Daniel: 4-Arm-Weiche = DKW, Güterverkehr schwarz (REGELN 2.4, 1.21)
 - Anlass Skizze Giesshübel: Hauptgleisfehler (Schere statt zwei Spurwechsel, Depot-Anschlüsse, Gl. 43 falsche Seite) – Skizze war
   ungeprüft; der OSM-Abgleich hatte am Code-Plan 52 Befunde, berichtet wurde nur G0. Neu Schritt T-SZU1 vor T-SZU2.
-- Offen bei Daniel: OSM-Abgleich an Hauptgleisen (VB1/VB2/VC1) als Sperre wie G0?
+- 15:51 entschieden: Hauptgleis-Topologie immer korrekt (Seite, Fahrwege) → REGELN 0.1 + Kopf «HT», Schritt HT vor T-SZU1.
 

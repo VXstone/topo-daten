@@ -27,6 +27,16 @@ oder auf ein Nachbargleis (1.14) · **GW** Knick oder Abgang ≥ 80°/75° (0.4/
 `grundpruefung_basis.json`; bekommt ein Plan einen **neuen** Befund (Zahl je Regel steigt), wird der Workflow `seite` rot.
 «Sauber / kreuzt nichts» wird nur mit dieser Prüfung gemeldet, nie nach Augenschein.
 
+**Hauptgleis-Topologie als Sperre (HT, seit 18.11., Entscheid D. Eckenstein «Hauptgleise Weichen die weg gehen, Hauptgleise
+Topologie immer korrekt, sprich korrekte Seite weg und korrekte Fahrwege»).** Prüft jeden Plan aus Code über sein Netzmodell
+gegen OSM, nur wo ein Hauptgleis (grün, 1.21/1.24) beteiligt ist: **HT1** OSM-Weiche am Hauptgleis ohne Abzweig im Plan (= VB1)
+· **HT2** Abzweig am Hauptgleis im Plan ohne OSM-Weiche, z. B. Schere statt zweier Spurwechsel (= VB2) · **HT3** Gleis an
+der falschen Weiche angebunden (= VC1) · **HT4** Abzweig zur falschen Seite (links/rechts in Fahrrichtung des Hauptgleises,
+2.1) · **HT5** Fahrweg falsch: die Menge der Fahrwege zwischen den Enden der Hauptgleise (Abgänge, Perrongleise, Gleisenden;
+ohne Richtungswechsel an einer Weiche) im Plan ≠ OSM. Ziel ist **0** in jedem Plan; bis dahin Ausgangsstand als Basis, jeder
+**neue** Befund macht `seite` rot (wie G0). Berichte nennen G0 **und** HT. Zielbilder von Hand (ohne Netzmodell) nur aus der
+Weichenfolge je Hauptgleis aus OSM, die Liste wird mitgegeben.
+
 **Rangfolge bei Konflikten:** Grundsätze 0.1 → 0.8; innerhalb einer Ebene gilt die speziellere Regel nur, wo sie ausdrücklich
 «Ausnahme zu …» sagt. Widersprüche, die noch nicht entschieden sind, stehen in Abschnitt 7 – bis zum Entscheid gilt der
 höhere Grundsatz.
@@ -43,7 +53,7 @@ NE-Bahnhöfe (fest seit 21.10., Schritt N2), Basel/Bern (P2b), Thun/Ins/Murten/K
 
 | Nr | Grundsatz | Art | alt | Prüfung |
 |---|---|---|---|---|
-| 0.1 | **Topologie stimmt:** jedes Gleis hängt dort an, wo es real anhängt; keine Schein- oder fehlenden Verbindungen, keine Gleissprünge, kein Gleis endet im Leeren. Farbe gehört dazu (grün = im Personenverkehr befahrbar). | Regel | G1, T1, E1 | T1–T8, V/S, VA–VD, G7, PS «T», GS, GG |
+| 0.1 | **Topologie stimmt:** jedes Gleis hängt dort an, wo es real anhängt; keine Schein- oder fehlenden Verbindungen, keine Gleissprünge, kein Gleis endet im Leeren. Farbe gehört dazu (grün = im Personenverkehr befahrbar). **An Hauptgleisen immer und ohne Ausnahme** (seit 18.11., Entscheid Daniel nach Giesshübel): jede Weiche, die von einem Hauptgleis weggeht, ist da; sie zweigt zur **richtigen Seite** ab (wie real, in Fahrrichtung); die **Fahrwege** stimmen (welches Gleis über welche Weiche in welcher Richtung mit welchem verbunden ist, keine zusätzlichen, keine fehlenden). Gesperrt mit HT (siehe Kopf). | Regel | G1, T1, E1 | T1–T8, V/S, VA–VD, G7, PS «T», GS, GG, **HT** (fehlt, Schritt HT) |
 | 0.2 | **Reihenfolge wie die Karte:** was klar nördlich (östlich) liegt, liegt im Plan nicht südlich (westlich); Querreihenfolge der Gleise wie real. Abstand, Winkel und Drehung sind frei. | Regel | G2, N1, L1 | L2, L3 |
 | 0.3 | **Jede Weiche ab Hauptgleis sichtbar**, mindestens als Pfeil – auch in grossen Knoten, einzeln. | Regel | G3, B9, S1 | VB1, W |
 | 0.4 | **Keine 90°:** Verbindungen 60° mit Ausrundung; Ausnahme Tunnelportal, Brückenflügel. | Regel | G4, R4, R5 | G2, G3, G4, GW |
