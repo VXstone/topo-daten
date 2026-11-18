@@ -1,0 +1,76 @@
+{
+ "auto": {
+  "c0": 30,
+  "c1": 32,
+  "p": 0.6,
+  "gap": 58,
+  "wg": 0.01,
+  "linien_region": true
+ },
+ "osm": "region.json",
+ "cfg": {
+  "cover_m": 200,
+  "merge_station_m": 300,
+  "merge_junction_m": 200
+ },
+ "Zürich Selnau": [
+  1153,
+  -660
+ ],
+ "Ringlikon": [
+  -960,
+  800
+ ],
+ "Uetliberg": [
+  -1267,
+  1001
+ ],
+ "Zürich Giesshübel": [
+  624,
+  -13
+ ],
+ "Zürich Binz": [
+  522,
+  46
+ ],
+ "Zürich Friesenberg": [
+  37,
+  292
+ ],
+ "Zürich Schweighof": [
+  -167,
+  395
+ ],
+ "Berghof": [
+  -515,
+  571
+ ],
+ "Borrweg": [
+  279,
+  169
+ ],
+ "Abgang 712 #11": [
+  47,
+  0
+ ],
+ "drehung_auto": {
+  "Zürich Selnau": -60,
+  "Ringlikon": 153.1,
+  "Uetliberg": 90,
+  "Zürich Binz": -26.9,
+  "Zürich Friesenberg": -26.9,
+  "Zürich Schweighof": -26.9,
+  "Berghof": -23.4,
+  "Borrweg": -24.5
+ },
+ "drehung": {
+  "Uetliberg": 90,
+  "Zürich Giesshübel": 0
+ },
+ "suche": {
+  "drehung": {
+   "Uetliberg": 90,
+   "Zürich Giesshübel": 0
+  }
+ }
+}

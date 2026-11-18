@@ -1,0 +1,139 @@
+{
+ "paare": {
+  "zurich_giesshubel|zurich_selnau": {
+   "zurich_selnau": [
+    [
+     "ports",
+     true,
+     "712"
+    ],
+    [
+     "ports",
+     true,
+     "712"
+    ]
+   ],
+   "zurich_giesshubel": [
+    [
+     "ports",
+     true,
+     "712"
+    ],
+    [
+     "ports",
+     true,
+     "712"
+    ],
+    [
+     "ports",
+     true,
+     "717"
+    ]
+   ]
+  },
+  "ringlikon|uetliberg": {
+   "ringlikon": [
+    [
+     "ports",
+     true,
+     "713"
+    ]
+   ],
+   "uetliberg": [
+    [
+     "ports",
+     true,
+     "713"
+    ]
+   ]
+  },
+  "zurich_binz|zurich_giesshubel": {
+   "zurich_giesshubel": [
+    [
+     "ports",
+     true,
+     "713"
+    ]
+   ],
+   "zurich_binz": [
+    [
+     "ports",
+     true,
+     "713"
+    ]
+   ]
+  },
+  "borrweg|zurich_binz": {
+   "zurich_binz": [
+    [
+     "ports",
+     true,
+     "713"
+    ]
+   ],
+   "borrweg": [
+    [
+     "ports",
+     true,
+     "713"
+    ]
+   ]
+  },
+  "zurich_friesenberg|zurich_schweighof": {
+   "zurich_friesenberg": [
+    [
+     "ports",
+     true,
+     "713"
+    ]
+   ],
+   "zurich_schweighof": [
+    [
+     "ports",
+     true,
+     "713"
+    ]
+   ]
+  },
+  "borrweg|zurich_friesenberg": {
+   "zurich_friesenberg": [
+    [
+     "ports",
+     true,
+     "713"
+    ]
+   ],
+   "borrweg": [
+    [
+     "ports",
+     true,
+     "713"
+    ]
+   ]
+  }
+ },
+ "befunde": [
+  {
+   "regel": "V1",
+   "a": "zurich_giesshubel",
+   "b": "zurich_selnau",
+   "text": "Zürich Giesshübel: 3 Gleise nach Zürich Selnau, Zürich Selnau: 2 Gleise nach Zürich Giesshübel"
+  },
+  {
+   "regel": "S1",
+   "a": "zurich_selnau",
+   "b": "zurich_giesshubel",
+   "text": "Zürich Selnau: 2 Streckengleis(e) nach Zürich Giesshübel, Strangbild 3"
+  },
+  {
+   "regel": "S3",
+   "a": "zurich_giesshubel",
+   "text": "Zürich Giesshübel: Fahrbeziehung Abgang Adliswil → Zürich Selnau im Plan nicht durchgehend gezeichnet"
+  },
+  {
+   "regel": "S3",
+   "a": "zurich_giesshubel",
+   "text": "Zürich Giesshübel: Fahrbeziehung Zürich Selnau → Abgang Adliswil im Plan nicht durchgehend gezeichnet"
+  }
+ ]
+}

@@ -1,0 +1,38 @@
+[
+ {
+  "regel": "T7",
+  "art": "Treppe",
+  "x": 681.5,
+  "y": 122.0,
+  "versatz": 20.3,
+  "plan": "ringlikon",
+  "text": "ringlikon: Treppe bei x=681.5, y=122.0"
+ },
+ {
+  "regel": "T7",
+  "art": "Treppe",
+  "x": 296.9,
+  "y": 122.0,
+  "versatz": 20.3,
+  "plan": "uetliberg",
+  "text": "uetliberg: Treppe bei x=296.9, y=122.0"
+ },
+ {
+  "regel": "T7",
+  "art": "Treppe",
+  "x": 1185.1,
+  "y": 196.6,
+  "versatz": 34.1,
+  "plan": "zurich_giesshubel",
+  "text": "zurich_giesshubel: Treppe bei x=1185.1, y=196.6"
+ },
+ {
+  "regel": "T7",
+  "art": "Treppe",
+  "x": 770.5,
+  "y": 152.6,
+  "versatz": 35.5,
+  "plan": "zurich_selnau",
+  "text": "zurich_selnau: Treppe bei x=770.5, y=152.6"
+ }
+]

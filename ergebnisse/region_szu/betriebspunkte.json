@@ -1,0 +1,199 @@
+{
+ "zurich_selnau": {
+  "name": "Zürich Selnau",
+  "id": 1261444104,
+  "lat": 47.3724695,
+  "lon": 8.5318556,
+  "radius": 994.6711538357151,
+  "spuren": [
+   "1435"
+  ],
+  "gleisenden": [
+   140399151,
+   1234955548,
+   1269511665
+  ],
+  "weichen": 7,
+  "normalspur": false,
+  "dienst": false,
+  "mitglieder": [
+   "Zürich Selnau",
+   "Zürich HB SZU Süd"
+  ],
+  "titel": "Zürich Selnau · Zürich HB SZU Süd"
+ },
+ "ringlikon": {
+  "name": "Ringlikon",
+  "id": 1262073820,
+  "lat": 47.360255,
+  "lon": 8.4773761,
+  "radius": 500.0,
+  "spuren": [
+   "1435"
+  ],
+  "gleisenden": [],
+  "weichen": 2,
+  "normalspur": false,
+  "dienst": false
+ },
+ "uetliberg": {
+  "name": "Uetliberg",
+  "id": 1262086033,
+  "lat": 47.3518692,
+  "lon": 8.4874187,
+  "radius": 500.0,
+  "spuren": [
+   "1435"
+  ],
+  "gleisenden": [
+   11463289142,
+   11463289143
+  ],
+  "weichen": 1,
+  "normalspur": false,
+  "dienst": false
+ },
+ "zurich_giesshubel": {
+  "name": "Zürich Giesshübel",
+  "id": 1264771132,
+  "lat": 47.3626083,
+  "lon": 8.5220149,
+  "radius": 1008.8439089811269,
+  "spuren": [
+   "1435"
+  ],
+  "gleisenden": [
+   1262541534,
+   1262541552,
+   1263316854,
+   1263316908,
+   1263316914,
+   1263316920,
+   1263316931,
+   1263316940,
+   1263316946,
+   1263316948,
+   1263316949,
+   1263316968,
+   1263316969,
+   1263316991,
+   1263316993,
+   1263338233
+  ],
+  "weichen": 37,
+  "normalspur": false,
+  "dienst": false,
+  "mitglieder": [
+   "Zürich Giesshübel",
+   "Zürich Saalsporthalle"
+  ],
+  "titel": "Zürich Giesshübel · Zürich Saalsporthalle"
+ },
+ "zurich_binz": {
+  "name": "Zürich Binz",
+  "id": 1261444152,
+  "lat": 47.3628473,
+  "lon": 8.5180854,
+  "radius": 500.0,
+  "spuren": [
+   "1435"
+  ],
+  "gleisenden": [
+   1263316932,
+   4856357913,
+   7699736299,
+   7699736300,
+   7699736301,
+   7699736302,
+   7699736303,
+   7699736304
+  ],
+  "weichen": 37,
+  "normalspur": false,
+  "dienst": false
+ },
+ "zurich_friesenberg": {
+  "name": "Zürich Friesenberg",
+  "id": 1261958523,
+  "lat": 47.3648164,
+  "lon": 8.5075769,
+  "radius": 500.0,
+  "spuren": [
+   "1435"
+  ],
+  "gleisenden": [],
+  "weichen": 1,
+  "normalspur": false,
+  "dienst": false
+ },
+ "zurich_triemli": {
+  "name": "Zürich Triemli",
+  "id": 1261981415,
+  "lat": 47.3649741,
+  "lon": 8.4953498,
+  "radius": 500.0,
+  "spuren": [
+   "1435"
+  ],
+  "gleisenden": [],
+  "weichen": 0,
+  "normalspur": false,
+  "dienst": false
+ },
+ "uitikon_waldegg": {
+  "name": "Uitikon Waldegg",
+  "id": 3313765161,
+  "lat": 47.366016,
+  "lon": 8.4658341,
+  "radius": 500.0,
+  "spuren": [
+   "1435"
+  ],
+  "gleisenden": [],
+  "weichen": 0,
+  "normalspur": false,
+  "dienst": false
+ },
+ "zurich_schweighof": {
+  "name": "Zürich Schweighof",
+  "id": 3313770935,
+  "lat": 47.3649655,
+  "lon": 8.5035323,
+  "radius": 500.0,
+  "spuren": [
+   "1435"
+  ],
+  "gleisenden": [],
+  "weichen": 1,
+  "normalspur": false,
+  "dienst": false
+ },
+ "berghof": {
+  "name": "Berghof",
+  "id": 3628701632,
+  "lat": 47.3685683,
+  "lon": 8.4809729,
+  "radius": 400.0,
+  "spuren": [
+   "1435"
+  ],
+  "gleisenden": [],
+  "weichen": 2,
+  "normalspur": false,
+  "dienst": true
+ },
+ "borrweg": {
+  "name": "Borrweg",
+  "id": 12671124241,
+  "lat": 47.3642016,
+  "lon": 8.5118049,
+  "radius": 400.0,
+  "spuren": [
+   "1435"
+  ],
+  "gleisenden": [],
+  "weichen": 2,
+  "normalspur": false,
+  "dienst": true
+ }
+}
