@@ -7,7 +7,7 @@
   "5/6 Mittelperron 150.0 [1782] → 1694 1858 OSM-Perron",
   "geschrieben konolfingen_override.json"
  ],
- "topologie": "{'A': 1, 'B': 2}",
+ "topologie": "{'B': 2}",
  "verbindungen_abweichungen": 2,
  "verbindungen": [
   "Abgang 460 Luzern (edge y187 x788): ABWEICHUNG",
@@ -51,17 +51,11 @@
    "x": 507.8,
    "y": 162.8,
    "text": "Gleisnummer 1 53 px neben der Perronmitte"
-  },
-  {
-   "regel": "A1",
-   "x": 571.6,
-   "y": 259.3,
-   "text": "zwei Gleise nur 5.2 px auseinander über 42 px (Grenze 9.6 px)"
   }
  ],
  "ruhe": [],
  "qualitaet": {
-  "topo_A": 1,
+  "topo_A": 0,
   "topo_B": 2,
   "topo_C": 0,
   "topo_D": 0,
@@ -71,9 +65,8 @@
   "regel_G7": 1,
   "netz_T10": 1,
   "netz_Z1": 1,
-  "netz_A1": 1,
   "boegen_pax": 11,
-  "boegen_alle": 50,
+  "boegen_alle": 48,
   "ruhe_treppen": 0,
   "ruhe_ecken": 0,
   "randabstand": 0

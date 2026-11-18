@@ -15,7 +15,7 @@
   "randabstand": 0
  },
  "konolfingen": {
-  "topo_A": 1,
+  "topo_A": 0,
   "topo_B": 2,
   "topo_C": 0,
   "topo_D": 0,
@@ -25,9 +25,8 @@
   "regel_G7": 1,
   "netz_T10": 1,
   "netz_Z1": 1,
-  "netz_A1": 1,
   "boegen_pax": 11,
-  "boegen_alle": 50,
+  "boegen_alle": 48,
   "ruhe_treppen": 0,
   "ruhe_ecken": 0,
   "randabstand": 0

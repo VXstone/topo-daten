@@ -35,9 +35,8 @@ Bahnhof Konolfingen: Achse 3695 m, Ausschnitt s=1206…2230, 29 Weichen, 3 Perro
 R1c Bündel kompakt: [('verbindung_schraeg', 156705005, 6, 1884, 1964), ('ebene_leer', 6)]
 G6: 3 Überstand(e) vor Ausrundung gekürzt
 chains 17 lanes 12 segs 62 W 929 H 518
-Befunde: {'A': 1, 'B': 2}
-eindeutig: {'A': 1, 'B': 2}
-A x=   541 y=  331  Verbindung nicht geschlossen (10px): siding (way 606745359), yard (way 739586129)
+Befunde: {'B': 2}
+eindeutig: {'B': 2}
 B x=   397 y=  283  Überlagerung 22px: 11 (way 33390862) / yard (way 739598378)
 B x=   397 y=  283  Überlagerung 22px: Gleis (way 606745360) / yard (way 739598378)
 
@@ -61,7 +60,6 @@ Weichen ohne Ausrundung (Linienende unter >35° auf Gleis): 3
    x622 y211  36°
    x636 y187  37°
 
-Netzprüfung konolfingen: {'A1': 1, 'T10': 1, 'Z1': 1}; Durchfahrgleise 3
+Netzprüfung konolfingen: {'T10': 1, 'Z1': 1}; Durchfahrgleise 3
   T10  x=375.5 y=210.8  Durchfahrgleis (beidseitig ans Streckengleis angeschlossen, 489 m Nebengleis, service=siding) schwarz gezeichnet  (way 23493308)
   Z1   x=507.8 y=162.8  Gleisnummer 1 53 px neben der Perronmitte
-  A1   x=571.6 y=259.3  zwei Gleise nur 5.2 px auseinander über 42 px (Grenze 9.6 px)
