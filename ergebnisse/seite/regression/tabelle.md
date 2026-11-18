@@ -4,4 +4,4 @@
 |---|---|---|---|---|---|---|
 | zofingen | Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil | bestätigt 2026-11-08 | 26 | gleichwertig | OSM VA2 2, VB1 3, VD1 1 (kein Alt-Stand) | 2026-11-17T21:57 |
 | rothrist | Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil | Archivbeginn (Abnahme 2026-10-29) | 2 | gleichwertig | OSM VA2 1, VB1 4, VB2 6 (kein Alt-Stand) | 2026-11-17T21:57 |
-| konolfingen | Bahnhöfe ohne Regionalplan | veröffentlicht | 2 | gleichwertig |  | 2026-11-17T21:57 |
+| konolfingen | Bahnhöfe ohne Regionalplan | veröffentlicht | 2 | gleichwertig |  | 2026-11-18T05:41 |
