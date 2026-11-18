@@ -123,6 +123,7 @@ welche Muster erkannt wurden (V0).
 | 2.12 | Meterspur neben Normalspur | Meterspur wird gezeichnet wie Normalspur (eigene Pläne, Regionen); bis ~40 m neben Normalspur in deren Plan mitgenommen. «Im Regionalplan nur als Stummel mit Ziel» aufgehoben 13.11. | E8, D9 | `meterspur_cfg.d_max` | – | alle |
 | 2.13 | Schiebebühne | Depotgleise mit gemeinsamem Anfang ≥ 40 px, Bühne gestrichelt | 4.11. | `schiebebuehne` | – | **LR** |
 | 2.14 | Tunnelportal | Klammer nur, wo alle Gleise gerade und parallel (±18 px); ausnahmsweise 90° | 4.11., R4 | netz_lage | – | alle |
+| 2.15 | Achse knickt im Planfenster | Knickt das Gleis, dem die Bahnhofsachse folgt, innerhalb des Planfensters um mehr als 30° (Kurs über je 100 m gemittelt), folgt die Achse dem Bündel mit der grössten parallelen Gleislänge im Fenster (Strecken- und Nebengleise, Kurs ±15°). Das abbiegende Gleis verlässt den Plan als Abzweig nach 2.6 (ausgerundet, unter 60°), auch wenn es die Linie mit der Liniennummer ist. Gilt für alle Pläne (auch Knotenpläne); Lage und Drehung im Regionalplan folgen der neuen Achse. Abgrenzung: 1.27 (Achse läuft am Linienende auf einer anderen Linie weiter) bleibt; 2.15 entscheidet nur, wenn im Fenster ein Knick > 30° liegt (Entscheid Daniel 18.11., T-SZU Giesshübel: 712 knickt 250–350 m südlich des Bahnhofs von Kurs 215° auf 150°, das Depot läuft mit 220–250° geradeaus weiter und wurde als Schrägen über das Bündel gezogen, G0 GS 11 / GG 33) | 18.11. | – (T-SZU2) | GS, GG, GQ; Baustein «achse_knick» (T-SZU2) | fehlt |
 
 ---
 

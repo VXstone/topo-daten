@@ -96,7 +96,7 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - [x] **S2 Konolfingen DKW / Ostkopf** – 17.11. abends (Nachtrag S2); Gleisfeld West abgespalten → S2b
 - [x] **G0 Grundprüfung als Sperre** – 18.11. vormittags, Commits 404ca61 + Basis Prüfstand (Seite nicht neu veröffentlicht: kein Plan geändert)
 - [x] **T-SZU Testregion SZU** – 18.11. mittags, Commits 114156c/1d587e8, Seite v155 (Befundliste in Abschnitt 6)
-- [ ] **T-SZU2 Knoten Giesshübel · Saalsporthalle** (Arbeitsliste aus T-SZU, Abschnitt 6) – nach S2b/R4/S3 oder wenn Daniel es vorzieht
+- [ ] **T-SZU2 Achse knickt im Fenster (REGELN 2.15), Zielplan Giesshübel · Saalsporthalle** (Entscheid Daniel 18.11.: Variante C) – nach S2b/R4/S3 oder wenn Daniel es vorzieht
 - [ ] **S2b Konolfingen Gleisfeld West** (Zielbild Daniel 18.11.), **R4 Rothrist im Regionalplan** und **S3 Aarau
   Zwischengeraden mit Weiche** – nach T-SZU, je eigener Chat, alle gegen die G0-Sperre geprüft
 - [x] **S1b Sagliains-Bündel durchgehend** (klein) – 16.11. früh, Commits af2a110/21556d3, Seite v150
@@ -234,6 +234,27 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   Workflow `regionen` um «szu» ergänzen. Keine Overrides im ersten Lauf – was nicht stimmt, wird Regel oder Befund.
 - Messen: G0-Sperre, OSM-Abgleich, Verkettung; Ergebnis als Liste «was die Grundregeln nicht halten» → Arbeitsliste.
 - Fertig, wenn: Region SZU auf der Seite, G0 ohne Befund ab Binz–Uetliberg, übrige Befunde benannt.
+
+### T-SZU2 – Achse knickt im Fenster (Entscheid Daniel 18.11. 14:06: «C», REGELN 2.15)
+- Einstieg: «Weiter mit UEBERGABE.md – Schritt T-SZU2: Achse knickt im Fenster»
+- Anlass (gemessen 18.11., OSM): Achse Giesshübel = Linie 712. Sie kommt aus Selnau mit Kurs ~215° und knickt 250–350 m südlich des
+  Bahnhofs auf ~150° (Saalsporthalle). Depot/Abstellgleise (~1,7 km, 60–300 m SW des Bahnhofs) laufen mit 220–250° geradeaus weiter,
+  713 geht nach W, 717 mit ~190°. Der Knotenplan mit Saalsporthalle hat ±1 km Fenster (`sw_search_m` 1009), der Knick liegt ganz drin.
+  Gerade gezogen entlang der 712 schwenkt das Depot weg und läuft als Schrägen übers Bündel: Plan GS 11, GG 33, GQ 5; im Regionalplan
+  zeigt der Sihltal-Abgang nach W und liegt nördlich des Uetlibergasts (REGELN 0.2/4.3).
+- Zielplan: **szu__zurich_giesshubel** – Achse = Einfahrt Selnau + Depot (gerade, ruhig), Sihltal 712 als Abzweig nach REGELN 2.6 Richtung
+  Saalsporthalle, 713 als Abzweig nach Uetliberg; im Regionalplan Sihltal südlich, Uetliberg westlich. Zu Beginn Vorher-Ausschnitt +
+  Skizze «so soll es aussehen» an Daniel.
+- Bauen (für alle Pläne, kein Override, kein Regionen-Schalter): (1) Kursprofil der Achse im Fenster (je 100 m gemittelt), Knick > 30°
+  erkennen; (2) Bündel = Gleise mit Kurs ±15° zueinander, Gesamtlänge im Fenster, längstes Bündel wird Achse; (3) abbiegende Linie als
+  Abzweig/Abgang; (4) Lage/Drehung im Regionalplan aus der neuen Achse. Ort im Code zuerst suchen: Achswahl `topologie_linien.py`
+  (`_axis.json`, «achse_durchgehend» 1.27), Spurplan `spurplan_schema.py`/`spurplan_warp.py`, Knotenpläne `straenge.py --knoten`.
+- Prüfen: Prüfstand-Baustein «achse_knick» (Gerade mit Knick 30/45/60/75°, Bündel geradeaus) in allen Drehungen; G0-Sperre; alle
+  136 Pläne: wo greift 2.15 sonst noch (Liste an Daniel, jede Änderung mit Differenzbild – E9); Unruhe SZU/MOB/Vereina nicht schlechter.
+- Danach aus der T-SZU-Arbeitsliste (Abschnitt 6) nur, was 2.15 nicht schon löst: 3 gegen 2 Gleise Selnau (V1/S1), S3 Adliswil↔Selnau,
+  T5 Verbindungsgleis ohne Pfeil, Uetliberg 90° gedreht, Label Binz.
+- Fertig, wenn: Giesshübel ohne Depot-Schrägen über dem Bündel (GS/GG im Plan deutlich unter 11/33, Ziel 0), Sihltal im Regionalplan
+  südlich, 2.15 in REGELN «heute aktiv in» nachgeführt, Seite veröffentlicht.
 
 ### S2b – Konolfingen Gleisfeld West (Ebenen-Löser)
 - Einstieg: «Weiter mit UEBERGABE.md – Schritt S2b: Konolfingen Gleisfeld West»
@@ -525,3 +546,8 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   Adliswil↔Selnau nicht durchgehend (S3); (4) Verbindungsgleis nach unten ohne Pfeil (T5); (5) Lage: Sihltal-Abgang Adliswil
   liegt im Regionalplan nördlich des Uetlibergasts (Drehung Giesshübel 0°, REGELN 0.2/4.3), Uetliberg 90° gedreht (Stumpen
   senkrecht), Label Binz im Bündel; (6) Selnau·HB SZU Süd GQ 1, Plantitel «HB SZU Süd» aus Haltepunktname.
+
+### 18.11.2026 ~14:10 – Entscheid Daniel zu Giesshübel: Variante C
+- «Giesshübel ganz schief»: Ursache Achsknick 65° im Fenster, Depot geradeaus (Messung im Schritt T-SZU2). Daniel wählt C = allgemeine
+  Regel statt Schnitt/Override → neu REGELN 2.15; Schritt T-SZU2 ausgeschrieben (Abschnitt 5). Noch kein Code.
+
