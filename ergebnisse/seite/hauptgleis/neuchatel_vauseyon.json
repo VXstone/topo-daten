@@ -1,0 +1,75 @@
+{
+ "zaehl": {
+  "HT1": 0,
+  "HT2": 1,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 5
+ },
+ "befunde": [
+  {
+   "regel": "HT2",
+   "x": 678.5,
+   "y": 59.3,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": []
+  },
+  {
+   "regel": "HT5",
+   "x": 600.4,
+   "y": 218.0,
+   "text": "Fahrweg Abgang 210 Yverdon (416419147) ↔ Gl. 231 im Plan, nicht in OSM",
+   "von": "Abgang 210 Yverdon (416419147)",
+   "nach": "Gl. 231",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 736.8,
+   "y": 154.1,
+   "text": "Fahrweg Abgang 223 La Chaux-de-Fonds (266382886) ↔ Gl. 131 im Plan, nicht in OSM",
+   "von": "Abgang 223 La Chaux-de-Fonds (266382886)",
+   "nach": "Gl. 131",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 847.4,
+   "y": 166.1,
+   "text": "Fahrweg Abgang 223 La Chaux-de-Fonds (266382886) ↔ Gl. 231 im Plan, nicht in OSM",
+   "von": "Abgang 223 La Chaux-de-Fonds (266382886)",
+   "nach": "Gl. 231",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 489.8,
+   "y": 206.0,
+   "text": "Fahrweg Abgang 210 Yverdon (416419147) ↔ Gl. 131 in OSM, fehlt im Plan",
+   "von": "Abgang 210 Yverdon (416419147)",
+   "nach": "Gl. 131",
+   "art": "fehlt"
+  },
+  {
+   "regel": "HT5",
+   "x": 600.4,
+   "y": 230.0,
+   "text": "Fahrweg Abgang 210 Yverdon (433343742) ↔ Gl. 231 in OSM, fehlt im Plan",
+   "von": "Abgang 210 Yverdon (433343742)",
+   "nach": "Gl. 231",
+   "art": "fehlt"
+  },
+  {
+   "regel": "_info",
+   "x": 0,
+   "y": 0,
+   "text": "Fahrwege: 12/13 Ziele im Plan gefunden, OSM 26, Plan 27",
+   "ohne_lage": [
+    "Gl. 3"
+   ]
+  }
+ ],
+ "osm_abgleich": {
+  "VB2": 1
+ }
+}

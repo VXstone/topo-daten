@@ -1,0 +1,51 @@
+{
+ "zaehl": {
+  "HT1": 0,
+  "HT2": 1,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 2
+ },
+ "befunde": [
+  {
+   "regel": "HT2",
+   "x": 1080.0,
+   "y": 158.0,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    181147015,
+    1315701712,
+    1332412910,
+    1332575188
+   ]
+  },
+  {
+   "regel": "HT5",
+   "x": 942.6,
+   "y": 170.0,
+   "text": "Fahrweg Abgang 500 Luzern (12328327452) ↔ Gl. 3 im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (12328327452)",
+   "nach": "Gl. 3",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 1071.4,
+   "y": 170.0,
+   "text": "Fahrweg Abgang 500 Luzern (12328327452) ↔ Gl. 63 im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (12328327452)",
+   "nach": "Gl. 63",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "_info",
+   "x": 0,
+   "y": 0,
+   "text": "Fahrwege: 8/8 Ziele im Plan gefunden, OSM 18, Plan 20",
+   "ohne_lage": []
+  }
+ ],
+ "osm_abgleich": {
+  "VB2": 1
+ }
+}

@@ -1,0 +1,122 @@
+{
+ "zaehl": {
+  "HT1": 0,
+  "HT2": 4,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 3
+ },
+ "befunde": [
+  {
+   "regel": "HT2",
+   "x": 386.2,
+   "y": 230.0,
+   "text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    154217570,
+    154217577,
+    400546210,
+    400546215,
+    400546218,
+    548740275,
+    959792639,
+    1026495423
+   ]
+  },
+  {
+   "regel": "HT2",
+   "x": 556.5,
+   "y": 206.0,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    548732850,
+    959792642
+   ]
+  },
+  {
+   "regel": "HT2",
+   "x": 448.4,
+   "y": 219.2,
+   "text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    154217577,
+    200987563,
+    400546210,
+    959792639,
+    1026495423
+   ]
+  },
+  {
+   "regel": "HT2",
+   "x": 270.9,
+   "y": 230.0,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    24289106,
+    200986826,
+    548732851,
+    548732852,
+    548740275,
+    674288586,
+    959792635,
+    959792639
+   ]
+  },
+  {
+   "regel": "HT5",
+   "x": 769.1,
+   "y": 170.0,
+   "text": "Fahrweg Gl. 37 ↔ Gleisende 4030958947 im Plan, nicht in OSM",
+   "von": "Gl. 37",
+   "nach": "Gleisende 4030958947",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 769.2,
+   "y": 182.0,
+   "text": "Fahrweg Gl. 37 ↔ Gleisende 263008102 in OSM, fehlt im Plan",
+   "von": "Gl. 37",
+   "nach": "Gleisende 263008102",
+   "art": "fehlt"
+  },
+  {
+   "regel": "HT5",
+   "x": 740.4,
+   "y": 206.0,
+   "text": "Fahrweg Gl. 37 ↔ Gleisende 5300983598 in OSM, fehlt im Plan",
+   "von": "Gl. 37",
+   "nach": "Gleisende 5300983598",
+   "art": "fehlt"
+  },
+  {
+   "regel": "_info",
+   "x": 0,
+   "y": 0,
+   "text": "Fahrwege: 10/26 Ziele im Plan gefunden, OSM 18, Plan 17",
+   "ohne_lage": [
+    "Abgang 120 Gstaad (13135626536)",
+    "Abgang 321 Lenk (13135626539)",
+    "Gl. 3",
+    "Gl. 4",
+    "Gl. 5",
+    "Gl. 77",
+    "Gl. 8",
+    "Gl. 805",
+    "Gl. 86",
+    "Gl. 87",
+    "Gl. 97",
+    "Gleisende 1667842210",
+    "Gleisende 1667842212",
+    "Gleisende 242729811",
+    "Gleisende 8880374759",
+    "Gleisende 9464160433"
+   ]
+  }
+ ],
+ "osm_abgleich": {
+  "VA1": 1,
+  "VB2": 4,
+  "VD1": 3
+ }
+}

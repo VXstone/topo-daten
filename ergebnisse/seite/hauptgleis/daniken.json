@@ -1,0 +1,90 @@
+{
+ "zaehl": {
+  "HT1": 2,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 6
+ },
+ "befunde": [
+  {
+   "regel": "HT1",
+   "x": 1035.2,
+   "y": 182.0,
+   "text": "OSM-Weiche 5305294734 ohne Abzweig im Plan",
+   "osm": 5305294734
+  },
+  {
+   "regel": "HT1",
+   "x": 1045.3,
+   "y": 158.0,
+   "text": "OSM-Weiche 4361689055 ohne Abzweig im Plan",
+   "osm": 4361689055
+  },
+  {
+   "regel": "HT5",
+   "x": 326.5,
+   "y": 146.0,
+   "text": "Fahrweg Abgang 540 Olten (1511832721) ↔ Gl. 34 im Plan, nicht in OSM",
+   "von": "Abgang 540 Olten (1511832721)",
+   "nach": "Gl. 34",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 326.5,
+   "y": 158.0,
+   "text": "Fahrweg Abgang 540 Olten (1511885718) ↔ Gl. 34 im Plan, nicht in OSM",
+   "von": "Abgang 540 Olten (1511885718)",
+   "nach": "Gl. 34",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 385.7,
+   "y": 182.0,
+   "text": "Fahrweg Abgang 540 Olten (5448805169) ↔ Gl. 53 im Plan, nicht in OSM",
+   "von": "Abgang 540 Olten (5448805169)",
+   "nach": "Gl. 53",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 951.2,
+   "y": 182.0,
+   "text": "Fahrweg Abgang 540 Aarau (13124924147) ↔ Gl. 81 in OSM, fehlt im Plan",
+   "von": "Abgang 540 Aarau (13124924147)",
+   "nach": "Gl. 81",
+   "art": "fehlt"
+  },
+  {
+   "regel": "HT5",
+   "x": 951.2,
+   "y": 170.0,
+   "text": "Fahrweg Abgang 540 Aarau (13124924148) ↔ Gl. 81 in OSM, fehlt im Plan",
+   "von": "Abgang 540 Aarau (13124924148)",
+   "nach": "Gl. 81",
+   "art": "fehlt"
+  },
+  {
+   "regel": "HT5",
+   "x": 951.2,
+   "y": 194.0,
+   "text": "Fahrweg Abgang 650 Aarau (13124924149) ↔ Gl. 81 in OSM, fehlt im Plan",
+   "von": "Abgang 650 Aarau (13124924149)",
+   "nach": "Gl. 81",
+   "art": "fehlt"
+  },
+  {
+   "regel": "_info",
+   "x": 0,
+   "y": 0,
+   "text": "Fahrwege: 22/22 Ziele im Plan gefunden, OSM 73, Plan 73",
+   "ohne_lage": []
+  }
+ ],
+ "osm_abgleich": {
+  "VB1": 2,
+  "VD1": 2
+ }
+}

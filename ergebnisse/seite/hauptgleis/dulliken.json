@@ -1,0 +1,28 @@
+{
+ "zaehl": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 1
+ },
+ "befunde": [
+  {
+   "regel": "HT5",
+   "x": 247.2,
+   "y": 122.0,
+   "text": "Fahrweg Abgang 540 Olten (1502109901) ↔ Gl. 12 in OSM, fehlt im Plan",
+   "von": "Abgang 540 Olten (1502109901)",
+   "nach": "Gl. 12",
+   "art": "fehlt"
+  },
+  {
+   "regel": "_info",
+   "x": 0,
+   "y": 0,
+   "text": "Fahrwege: 19/19 Ziele im Plan gefunden, OSM 51, Plan 50",
+   "ohne_lage": []
+  }
+ ],
+ "osm_abgleich": {}
+}

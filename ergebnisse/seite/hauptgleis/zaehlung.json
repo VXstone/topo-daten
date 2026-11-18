@@ -1,0 +1,576 @@
+{
+ "aarau": {
+  "HT1": 7,
+  "HT2": 4,
+  "HT3": 0,
+  "HT4": 1,
+  "HT5": 10
+ },
+ "aarburg_oftringen": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "daniken": {
+  "HT1": 2,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 6
+ },
+ "dulliken": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 1
+ },
+ "ins": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "konolfingen": {
+  "HT1": 0,
+  "HT2": 2,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 7
+ },
+ "laufelfingen": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "mob__allieres": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "mob__belmont_sur_montreux": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "mob__blankenburg": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "mob__caux": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "mob__chamby": {
+  "HT1": 2,
+  "HT2": 1,
+  "HT3": 0,
+  "HT4": 1,
+  "HT5": 1
+ },
+ "mob__chateau_d_oex": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "mob__chatelard": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "mob__chernex": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "mob__cret_d_y_bau": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "mob__flendruz": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "mob__fontanivent": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "mob__glion": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 1
+ },
+ "mob__glion_college": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "mob__gruben": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "mob__gstaad": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "mob__jaman": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "mob__jor": {
+  "HT1": 1,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "mob__la_perche": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "mob__la_tine": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "mob__le_tremblex": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "mob__lenk_im_simmental": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "mob__les_avants": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "mob__les_cases": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "mob__les_echets": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "mob__les_sciernes": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "mob__matten": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "mob__montbovon": {
+  "HT1": 3,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 1
+ },
+ "mob__montreux": {
+  "HT1": 0,
+  "HT2": 5,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "mob__montreux_les_planches": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "mob__oeschseite": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "mob__paccot": {
+  "HT1": 2,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "mob__planchamp": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "mob__rochers_de_naye": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "mob__rossiniere": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 1
+ },
+ "mob__rougemont": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "mob__saanen": {
+  "HT1": 0,
+  "HT2": 1,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 1
+ },
+ "mob__saanenmoser": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "mob__schonried": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "mob__sendy_sollard": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "mob__st_stephan": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "mob__toveyre": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "mob__valmont": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "mob__vernex": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 2
+ },
+ "mob__vuarennes": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "mob__zweisimmen": {
+  "HT1": 0,
+  "HT2": 4,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 3
+ },
+ "neuchatel": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 2,
+  "HT4": 0,
+  "HT5": 17
+ },
+ "neuchatel_vauseyon": {
+  "HT1": 0,
+  "HT2": 1,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 5
+ },
+ "olten": {
+  "HT1": 13,
+  "HT2": 25,
+  "HT3": 7,
+  "HT4": 2,
+  "HT5": 176
+ },
+ "olten_hammer": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "rothrist": {
+  "HT1": 2,
+  "HT2": 5,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 6
+ },
+ "safenwil": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "schonenwerd": {
+  "HT1": 0,
+  "HT2": 2,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 1
+ },
+ "solothurn": {
+  "HT1": 4,
+  "HT2": 1,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 17
+ },
+ "szu__berghof": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "szu__borrweg": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "szu__ringlikon": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "szu__uetliberg": {
+  "HT1": 0,
+  "HT2": 1,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "szu__zurich_binz": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "szu__zurich_friesenberg": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "szu__zurich_giesshubel": {
+  "HT1": 1,
+  "HT2": 8,
+  "HT3": 1,
+  "HT4": 1,
+  "HT5": 5
+ },
+ "szu__zurich_schweighof": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "szu__zurich_selnau": {
+  "HT1": 0,
+  "HT2": 2,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "tecknau": {
+  "HT1": 0,
+  "HT2": 1,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 2
+ },
+ "vereina__klosters_platz": {
+  "HT1": 3,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 1
+ },
+ "vereina__klosters_selfranga": {
+  "HT1": 1,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 2
+ },
+ "vereina__sagliains": {
+  "HT1": 1,
+  "HT2": 1,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 1
+ },
+ "vereina__sagliains_nord": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "vereina__sagliains_sasslatsch": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "vereina__sasslatsch": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "vereina__selfranga_sud": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "vereina__susch": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "vereina__vereina_nord": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "vereina__vereina_sud": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "wangen_bei_olten": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "zofingen": {
+  "HT1": 2,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ }
+}

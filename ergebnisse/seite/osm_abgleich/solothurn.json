@@ -63,6 +63,9 @@
 251195478,
 251195480,
 251195488
+],
+"farben": [
+"schwarz"
 ]
 },
 {
@@ -75,6 +78,9 @@
 49565842,
 136053985,
 251195472
+],
+"farben": [
+"schwarz"
 ]
 },
 {
@@ -87,6 +93,9 @@
 251195478,
 251195480,
 251195488
+],
+"farben": [
+"schwarz"
 ]
 },
 {
@@ -96,6 +105,9 @@
 "text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
 "ways": [
 136053985
+],
+"farben": [
+"schwarz"
 ]
 },
 {
@@ -115,6 +127,9 @@
 251195478,
 251195480,
 251195488
+],
+"farben": [
+"schwarz"
 ]
 },
 {
@@ -131,6 +146,9 @@
 251195480,
 251195488,
 1529724775
+],
+"farben": [
+"schwarz"
 ]
 },
 {
@@ -146,6 +164,9 @@
 251195478,
 251195480,
 251195488
+],
+"farben": [
+"schwarz"
 ]
 },
 {
@@ -158,6 +179,9 @@
 49565846,
 136053985,
 251195474
+],
+"farben": [
+"schwarz"
 ]
 },
 {
@@ -181,6 +205,9 @@
 49565844,
 136053985,
 251195472
+],
+"farben": [
+"schwarz"
 ]
 },
 {
@@ -193,6 +220,9 @@
 49715372,
 49715373,
 1273524863
+],
+"farben": [
+"gruen"
 ]
 },
 {
@@ -200,28 +230,40 @@
 "x": 1146.1,
 "y": 482.0,
 "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
-"ways": []
+"ways": [],
+"farben": [
+"braun"
+]
 },
 {
 "regel": "VB2",
 "x": 1160.0,
 "y": 506.0,
 "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
-"ways": []
+"ways": [],
+"farben": [
+"braun"
+]
 },
 {
 "regel": "VB2",
 "x": 1152.0,
 "y": 506.0,
 "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
-"ways": []
+"ways": [],
+"farben": [
+"braun"
+]
 },
 {
 "regel": "VB2",
 "x": 1119.6,
 "y": 86.0,
 "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
-"ways": []
+"ways": [],
+"farben": [
+"braun"
+]
 },
 {
 "regel": "VD1",

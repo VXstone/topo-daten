@@ -1,0 +1,33 @@
+OK   giesshuebel_0.svg HT2 1328.2/184.4  – Gleise kreuzen sich im Depot, in OSM keine Kreuzung (T-SZU)
+OK   giesshuebel_0.svg HT5 2020.4/232.4 künstlicher Schnitt – Achsknick 65°: Gleis endet am Planrand statt durchzulaufen (REGELN 2.15)
+OK   giesshuebel_0.svg HT5 225.5/208.4 künstlicher Schnitt – dito, Mittelgleis
+OK   giesshuebel_0.svg HT1 1697.4/-178.0  – Weiche 1262541542 an 717 ohne Abzweig
+OK   giesshuebel_90.svg HT2 -184.4/1328.2  – Gleise kreuzen sich im Depot, in OSM keine Kreuzung (T-SZU)
+OK   giesshuebel_90.svg HT5 -232.4/2020.4 künstlicher Schnitt – Achsknick 65°: Gleis endet am Planrand statt durchzulaufen (REGELN 2.15)
+OK   giesshuebel_90.svg HT5 -208.4/225.5 künstlicher Schnitt – dito, Mittelgleis
+OK   giesshuebel_90.svg HT1 178.0/1697.4  – Weiche 1262541542 an 717 ohne Abzweig
+OK   wangen_0.svg kein HT1 /  – unverändert: kein Befund
+OK   wangen_0.svg kein HT2 /  – unverändert: kein Befund
+OK   wangen_0.svg kein HT3 /  – unverändert: kein Befund
+OK   wangen_0.svg kein HT4 /  – unverändert: kein Befund
+OK   wangen_0.svg kein HT5 /  – unverändert: kein Befund
+OK   wangen_90.svg kein HT1 /  – unverändert: kein Befund
+OK   wangen_90.svg kein HT2 /  – unverändert: kein Befund
+OK   wangen_90.svg kein HT3 /  – unverändert: kein Befund
+OK   wangen_90.svg kein HT4 /  – unverändert: kein Befund
+OK   wangen_90.svg kein HT5 /  – unverändert: kein Befund
+OK   wangen_fehlt_0.svg HT1 291.0/237.2  – Weiche Spurwechsel West ohne Abzweig
+OK   wangen_fehlt_0.svg HT5 / fehlt im Plan – Fahrweg Solothurn Gl. 4-Seite -> Gl. 3 fehlt
+OK   wangen_fehlt_0.svg kein HT4 /  – 
+OK   wangen_fehlt_90.svg HT1 -237.2/291.0  – Weiche Spurwechsel West ohne Abzweig
+OK   wangen_fehlt_90.svg HT5 / fehlt im Plan – Fahrweg Solothurn Gl. 4-Seite -> Gl. 3 fehlt
+OK   wangen_fehlt_90.svg kein HT4 /  – 
+OK   wangen_schere_0.svg HT2 854.7/225.2  – Kreuzung der Scherendiagonalen ohne OSM-Kreuzung
+OK   wangen_schere_0.svg HT5 / im Plan, nicht in OSM – zusätzlicher Fahrweg über die Gegendiagonale
+OK   wangen_schere_0.svg kein HT4 /  – 
+OK   wangen_schere_90.svg HT2 -225.2/854.7  – Kreuzung der Scherendiagonalen ohne OSM-Kreuzung
+OK   wangen_schere_90.svg HT5 / im Plan, nicht in OSM – zusätzlicher Fahrweg über die Gegendiagonale
+OK   wangen_schere_90.svg kein HT4 /  – 
+OK   wangen_seite_0.svg HT4 840.8/213.2  – Spurwechsel Ost zweigt im Netzmodell zur falschen Seite ab
+OK   wangen_seite_90.svg HT4 -213.2/840.8  – Spurwechsel Ost zweigt im Netzmodell zur falschen Seite ab
+Selbsttest HT: bestanden

@@ -1,0 +1,198 @@
+{
+ "zaehl": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 2,
+  "HT4": 0,
+  "HT5": 17
+ },
+ "befunde": [
+  {
+   "regel": "HT3",
+   "x": 512.0,
+   "y": 206.0,
+   "text": "Gleis (Way 35545993) im Plan an Knoten 11296350764 angebunden, in OSM nicht",
+   "osm": 11296350764,
+   "ways": [
+    35545993,
+    1271585757
+   ]
+  },
+  {
+   "regel": "HT3",
+   "x": 1032.0,
+   "y": 206.0,
+   "text": "Gleis (Way 579953621) im Plan an Knoten 416783517 angebunden, in OSM nicht",
+   "osm": 416783517,
+   "ways": [
+    579953621,
+    1222936426
+   ]
+  },
+  {
+   "regel": "HT5",
+   "x": 1120.0,
+   "y": 182.0,
+   "text": "Fahrweg Abgang 210 Biel (249162197) ↔ Gl. 5 im Plan, nicht in OSM",
+   "von": "Abgang 210 Biel (249162197)",
+   "nach": "Gl. 5",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 1120.0,
+   "y": 170.0,
+   "text": "Fahrweg Abgang 210 Biel (249162197) ↔ Gl. 6 im Plan, nicht in OSM",
+   "von": "Abgang 210 Biel (249162197)",
+   "nach": "Gl. 6",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 1116.5,
+   "y": 158.0,
+   "text": "Fahrweg Abgang 210 Biel (249162197) ↔ Gl. 7 im Plan, nicht in OSM",
+   "von": "Abgang 210 Biel (249162197)",
+   "nach": "Gl. 7",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 1246.9,
+   "y": 230.0,
+   "text": "Fahrweg Abgang 210 Biel (249162197) ↔ Gl. A42 im Plan, nicht in OSM",
+   "von": "Abgang 210 Biel (249162197)",
+   "nach": "Gl. A42",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 1327.9,
+   "y": 230.0,
+   "text": "Fahrweg Abgang 210 Biel (249162197) ↔ Gl. A52 im Plan, nicht in OSM",
+   "von": "Abgang 210 Biel (249162197)",
+   "nach": "Gl. A52",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 1466.6,
+   "y": 230.0,
+   "text": "Fahrweg Abgang 210 Biel (249162197) ↔ Gl. A62 im Plan, nicht in OSM",
+   "von": "Abgang 210 Biel (249162197)",
+   "nach": "Gl. A62",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 1471.1,
+   "y": 230.0,
+   "text": "Fahrweg Abgang 210 Biel (249162197) ↔ Gl. A72 im Plan, nicht in OSM",
+   "von": "Abgang 210 Biel (249162197)",
+   "nach": "Gl. A72",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 1246.9,
+   "y": 218.0,
+   "text": "Fahrweg Abgang 210 Biel (9608269774) ↔ Gl. A42 im Plan, nicht in OSM",
+   "von": "Abgang 210 Biel (9608269774)",
+   "nach": "Gl. A42",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 1327.9,
+   "y": 218.0,
+   "text": "Fahrweg Abgang 210 Biel (9608269774) ↔ Gl. A52 im Plan, nicht in OSM",
+   "von": "Abgang 210 Biel (9608269774)",
+   "nach": "Gl. A52",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 1466.6,
+   "y": 218.0,
+   "text": "Fahrweg Abgang 210 Biel (9608269774) ↔ Gl. A62 im Plan, nicht in OSM",
+   "von": "Abgang 210 Biel (9608269774)",
+   "nach": "Gl. A62",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 1471.1,
+   "y": 218.0,
+   "text": "Fahrweg Abgang 210 Biel (9608269774) ↔ Gl. A72 im Plan, nicht in OSM",
+   "von": "Abgang 210 Biel (9608269774)",
+   "nach": "Gl. A72",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 503.5,
+   "y": 170.0,
+   "text": "Fahrweg Abgang 210 Yverdon (415649794) ↔ Gl. 5 im Plan, nicht in OSM",
+   "von": "Abgang 210 Yverdon (415649794)",
+   "nach": "Gl. 5",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 503.5,
+   "y": 158.0,
+   "text": "Fahrweg Abgang 210 Yverdon (415649794) ↔ Gl. 6 im Plan, nicht in OSM",
+   "von": "Abgang 210 Yverdon (415649794)",
+   "nach": "Gl. 6",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 499.9,
+   "y": 146.0,
+   "text": "Fahrweg Abgang 210 Yverdon (415649794) ↔ Gl. 7 im Plan, nicht in OSM",
+   "von": "Abgang 210 Yverdon (415649794)",
+   "nach": "Gl. 7",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 1120.0,
+   "y": 206.0,
+   "text": "Fahrweg Abgang 220 Ins (416783525) ↔ Gl. 5 im Plan, nicht in OSM",
+   "von": "Abgang 220 Ins (416783525)",
+   "nach": "Gl. 5",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 1120.0,
+   "y": 194.0,
+   "text": "Fahrweg Abgang 220 Ins (416783525) ↔ Gl. 6 im Plan, nicht in OSM",
+   "von": "Abgang 220 Ins (416783525)",
+   "nach": "Gl. 6",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 1116.5,
+   "y": 182.0,
+   "text": "Fahrweg Abgang 220 Ins (416783525) ↔ Gl. 7 im Plan, nicht in OSM",
+   "von": "Abgang 220 Ins (416783525)",
+   "nach": "Gl. 7",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "_info",
+   "x": 0,
+   "y": 0,
+   "text": "Fahrwege: 25/25 Ziele im Plan gefunden, OSM 80, Plan 97",
+   "ohne_lage": []
+  }
+ ],
+ "osm_abgleich": {
+  "VA2": 4,
+  "VC1": 2,
+  "VD1": 3
+ }
+}

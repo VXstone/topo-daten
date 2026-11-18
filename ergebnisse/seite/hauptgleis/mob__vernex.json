@@ -1,0 +1,37 @@
+{
+ "zaehl": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 2
+ },
+ "befunde": [
+  {
+   "regel": "HT5",
+   "x": 301.3,
+   "y": 122.0,
+   "text": "Fahrweg Abgang 100 Lausanne (11498454999) ↔ Gl. 311 in OSM, fehlt im Plan",
+   "von": "Abgang 100 Lausanne (11498454999)",
+   "nach": "Gl. 311",
+   "art": "fehlt"
+  },
+  {
+   "regel": "HT5",
+   "x": 415.0,
+   "y": 122.0,
+   "text": "Fahrweg Abgang 100 Villeneuve (11498419632) ↔ Gl. 311 in OSM, fehlt im Plan",
+   "von": "Abgang 100 Villeneuve (11498419632)",
+   "nach": "Gl. 311",
+   "art": "fehlt"
+  },
+  {
+   "regel": "_info",
+   "x": 0,
+   "y": 0,
+   "text": "Fahrwege: 6/6 Ziele im Plan gefunden, OSM 12, Plan 10",
+   "ohne_lage": []
+  }
+ ],
+ "osm_abgleich": {}
+}

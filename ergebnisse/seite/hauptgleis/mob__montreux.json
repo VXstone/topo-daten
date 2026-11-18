@@ -1,0 +1,107 @@
+{
+ "zaehl": {
+  "HT1": 0,
+  "HT2": 5,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "befunde": [
+  {
+   "regel": "HT2",
+   "x": 508.5,
+   "y": 144.8,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    39846364,
+    274706715,
+    532556697,
+    963691446
+   ]
+  },
+  {
+   "regel": "HT2",
+   "x": 431.2,
+   "y": 206.0,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    97211358,
+    97211375,
+    274706713,
+    1112528289,
+    1112528290,
+    1112528291
+   ]
+  },
+  {
+   "regel": "HT2",
+   "x": 431.2,
+   "y": 182.0,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    97211358,
+    97211363,
+    97211369,
+    97211375,
+    97211377,
+    274706710,
+    1112528290,
+    1112528291
+   ]
+  },
+  {
+   "regel": "HT2",
+   "x": 472.9,
+   "y": 206.0,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    28566932,
+    97211377,
+    274706710,
+    1112528289,
+    1112528291
+   ]
+  },
+  {
+   "regel": "HT2",
+   "x": 486.8,
+   "y": 206.0,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    28566931,
+    28566932,
+    97211358,
+    97211362,
+    97211375,
+    274706710,
+    274706713,
+    1112528289,
+    1112528291
+   ]
+  },
+  {
+   "regel": "_info",
+   "x": 0,
+   "y": 0,
+   "text": "Fahrwege: 8/19 Ziele im Plan gefunden, OSM 8, Plan 8",
+   "ohne_lage": [
+    "Gl. 4",
+    "Gl. 5",
+    "Gl. 6",
+    "Gl. 7",
+    "Gl. 8",
+    "Gl. 9",
+    "Gleisende 1126121513",
+    "Gleisende 12155297127",
+    "Gleisende 12155297128",
+    "Gleisende 2793859969",
+    "Gleisende 2793859982"
+   ]
+  }
+ ],
+ "osm_abgleich": {
+  "VA2": 3,
+  "VB2": 6,
+  "VD1": 2
+ }
+}

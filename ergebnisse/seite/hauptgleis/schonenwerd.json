@@ -1,0 +1,55 @@
+{
+ "zaehl": {
+  "HT1": 0,
+  "HT2": 2,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 1
+ },
+ "befunde": [
+  {
+   "regel": "HT2",
+   "x": 1412.0,
+   "y": 110.0,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    137873569,
+    369861202,
+    369861203,
+    369861204,
+    1427690399
+   ]
+  },
+  {
+   "regel": "HT2",
+   "x": 1425.9,
+   "y": 134.0,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    137873566,
+    369861203,
+    751611806
+   ]
+  },
+  {
+   "regel": "HT5",
+   "x": 1042.3,
+   "y": 122.0,
+   "text": "Fahrweg Abgang 540 Aarau (13124924497) ↔ Gl. 2 im Plan, nicht in OSM",
+   "von": "Abgang 540 Aarau (13124924497)",
+   "nach": "Gl. 2",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "_info",
+   "x": 0,
+   "y": 0,
+   "text": "Fahrwege: 7/7 Ziele im Plan gefunden, OSM 14, Plan 15",
+   "ohne_lage": []
+  }
+ ],
+ "osm_abgleich": {
+  "VB2": 2,
+  "VD1": 1
+ }
+}

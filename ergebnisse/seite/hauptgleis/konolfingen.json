@@ -1,0 +1,116 @@
+{
+ "zaehl": {
+  "HT1": 0,
+  "HT2": 2,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 7
+ },
+ "befunde": [
+  {
+   "regel": "HT2",
+   "x": 361.5,
+   "y": 306.8,
+   "text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    33390862,
+    156704997,
+    156705020,
+    176136318,
+    176184228,
+    606745360,
+    739598378
+   ]
+  },
+  {
+   "regel": "HT2",
+   "x": 347.7,
+   "y": 330.8,
+   "text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    33390862,
+    156704997,
+    156705020,
+    176184228,
+    606745360,
+    739598378
+   ]
+  },
+  {
+   "regel": "HT5",
+   "x": 719.3,
+   "y": 186.8,
+   "text": "Fahrweg Abgang 460 Luzern (4694402432) ↔ Gl. 81 im Plan, nicht in OSM",
+   "von": "Abgang 460 Luzern (4694402432)",
+   "nach": "Gl. 81",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 568.7,
+   "y": 258.8,
+   "text": "Fahrweg Abgang 430 Hasle-Rüegsau (4694402331) ↔ Gl. 6 in OSM, fehlt im Plan",
+   "von": "Abgang 430 Hasle-Rüegsau (4694402331)",
+   "nach": "Gl. 6",
+   "art": "fehlt"
+  },
+  {
+   "regel": "HT5",
+   "x": 643.4,
+   "y": 186.8,
+   "text": "Fahrweg Abgang 430 Hasle-Rüegsau (4694402331) ↔ Gl. 81 in OSM, fehlt im Plan",
+   "von": "Abgang 430 Hasle-Rüegsau (4694402331)",
+   "nach": "Gl. 81",
+   "art": "fehlt"
+  },
+  {
+   "regel": "HT5",
+   "x": 438.2,
+   "y": 306.8,
+   "text": "Fahrweg Abgang 430 Steffisburg (4694358207) ↔ Gl. 6 in OSM, fehlt im Plan",
+   "von": "Abgang 430 Steffisburg (4694358207)",
+   "nach": "Gl. 6",
+   "art": "fehlt"
+  },
+  {
+   "regel": "HT5",
+   "x": 644.6,
+   "y": 270.8,
+   "text": "Fahrweg Abgang 460 Luzern (4694402431) ↔ Gl. 6 in OSM, fehlt im Plan",
+   "von": "Abgang 460 Luzern (4694402431)",
+   "nach": "Gl. 6",
+   "art": "fehlt"
+  },
+  {
+   "regel": "HT5",
+   "x": 644.6,
+   "y": 258.8,
+   "text": "Fahrweg Abgang 460 Luzern (4694402432) ↔ Gl. 6 in OSM, fehlt im Plan",
+   "von": "Abgang 460 Luzern (4694402432)",
+   "nach": "Gl. 6",
+   "art": "fehlt"
+  },
+  {
+   "regel": "HT5",
+   "x": 570.8,
+   "y": 174.8,
+   "text": "Fahrweg Gl. 72 ↔ Gleisende 1866974722 in OSM, fehlt im Plan",
+   "von": "Gl. 72",
+   "nach": "Gleisende 1866974722",
+   "art": "fehlt"
+  },
+  {
+   "regel": "_info",
+   "x": 0,
+   "y": 0,
+   "text": "Fahrwege: 18/18 Ziele im Plan gefunden, OSM 55, Plan 50",
+   "ohne_lage": []
+  }
+ ],
+ "osm_abgleich": {
+  "VB1": 1,
+  "VB2": 2,
+  "VC1": 1,
+  "VD1": 2
+ }
+}

@@ -1,0 +1,170 @@
+{
+ "zaehl": {
+  "HT1": 2,
+  "HT2": 5,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 6
+ },
+ "befunde": [
+  {
+   "regel": "HT1",
+   "x": 2093.3,
+   "y": 232.4,
+   "text": "OSM-Weiche 7223639881 ohne Abzweig im Plan",
+   "osm": 7223639881
+  },
+  {
+   "regel": "HT1",
+   "x": 463.9,
+   "y": 160.4,
+   "text": "OSM-Weiche 1699843135 ohne Abzweig im Plan",
+   "osm": 1699843135
+  },
+  {
+   "regel": "HT2",
+   "x": 664.2,
+   "y": 160.4,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    87369574,
+    139107104,
+    139107105,
+    139107106,
+    157733586,
+    157743968,
+    157743970,
+    157743971,
+    773830208,
+    773830214,
+    780534820,
+    780534821
+   ]
+  },
+  {
+   "regel": "HT2",
+   "x": 1918.1,
+   "y": 160.4,
+   "text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    45838705,
+    45838707,
+    87373494,
+    139103033,
+    207931222,
+    545534776
+   ]
+  },
+  {
+   "regel": "HT2",
+   "x": 1878.0,
+   "y": 160.4,
+   "text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    45838707,
+    87373494,
+    139097762,
+    545700258,
+    773841116,
+    1371331840
+   ]
+  },
+  {
+   "regel": "HT2",
+   "x": 2036.3,
+   "y": 232.4,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    30120158,
+    137215787,
+    137215791,
+    773887965
+   ]
+  },
+  {
+   "regel": "HT2",
+   "x": 426.2,
+   "y": 208.4,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    87369574,
+    87369578,
+    139107106,
+    157733586,
+    773830214,
+    773830215,
+    780534819,
+    780534820,
+    780534821
+   ]
+  },
+  {
+   "regel": "HT5",
+   "x": 263.6,
+   "y": 220.4,
+   "text": "Fahrweg Abgang 450 Bern (1699887364) ↔ Gl. 350 im Plan, nicht in OSM",
+   "von": "Abgang 450 Bern (1699887364)",
+   "nach": "Gl. 350",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 1916.8,
+   "y": 220.4,
+   "text": "Fahrweg Abgang 453 Zofingen (7223639880) ↔ Gl. 1 im Plan, nicht in OSM",
+   "von": "Abgang 453 Zofingen (7223639880)",
+   "nach": "Gl. 1",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 1885.1,
+   "y": 208.4,
+   "text": "Fahrweg Abgang 453 Zofingen (7223639880) ↔ Gl. 2 im Plan, nicht in OSM",
+   "von": "Abgang 453 Zofingen (7223639880)",
+   "nach": "Gl. 2",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 2059.7,
+   "y": 220.4,
+   "text": "Fahrweg Abgang 453 Zofingen (7223639880) ↔ Gl. 454 im Plan, nicht in OSM",
+   "von": "Abgang 453 Zofingen (7223639880)",
+   "nach": "Gl. 454",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 2044.5,
+   "y": 220.4,
+   "text": "Fahrweg Abgang 453 Zofingen (7223639880) ↔ Gl. 511 im Plan, nicht in OSM",
+   "von": "Abgang 453 Zofingen (7223639880)",
+   "nach": "Gl. 511",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 1606.2,
+   "y": 220.4,
+   "text": "Fahrweg Abgang 453 Zofingen (7223639880) ↔ Gl. 671 im Plan, nicht in OSM",
+   "von": "Abgang 453 Zofingen (7223639880)",
+   "nach": "Gl. 671",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "_info",
+   "x": 0,
+   "y": 0,
+   "text": "Fahrwege: 27/28 Ziele im Plan gefunden, OSM 108, Plan 114",
+   "ohne_lage": [
+    "Gl. 450"
+   ]
+  }
+ ],
+ "osm_abgleich": {
+  "VA2": 1,
+  "VB1": 4,
+  "VB2": 6
+ }
+}
