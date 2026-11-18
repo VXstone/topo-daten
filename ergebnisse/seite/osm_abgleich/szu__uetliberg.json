@@ -1,0 +1,27 @@
+{
+"plan": "szu__uetliberg",
+"befunde": [
+{
+"regel": "VB2",
+"x": 311.9,
+"y": 134.0,
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+"ways": [
+23837984,
+110403404,
+296418819,
+296418858,
+351864788
+]
+}
+],
+"info": {
+"dkw_osm_unvollstaendig": [],
+"gleise": 9,
+"knoten_plan": 2,
+"dkw_plan": 0,
+"knoten_osm": 1,
+"versatz_y": 0.0,
+"netz_auf_plan": 1.0
+}
+}

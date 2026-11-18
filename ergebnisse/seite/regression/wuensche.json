@@ -56,6 +56,13 @@
   "W56": 3
  },
  {
+  "key": "szu__zurich_selnau",
+  "gruppe": "SZU · Bahnhöfe",
+  "summe": 24,
+  "W53": 2,
+  "W56": 4
+ },
+ {
   "key": "schonenwerd",
   "gruppe": "Olten 3 · Olten – Aarau",
   "summe": 21,
@@ -112,6 +119,13 @@
   "W56": 5
  },
  {
+  "key": "szu__zurich_giesshubel",
+  "gruppe": "SZU · Bahnhöfe",
+  "summe": 15,
+  "W53": 2,
+  "W56": 1
+ },
+ {
   "key": "olten_hammer",
   "gruppe": "Olten 1 · Knoten Olten",
   "summe": 12,
@@ -131,6 +145,13 @@
   "summe": 12,
   "W53": 2,
   "W56": 0
+ },
+ {
+  "key": "szu__borrweg",
+  "gruppe": "SZU · Bahnhöfe",
+  "summe": 12,
+  "W53": 1,
+  "W56": 2
  },
  {
   "key": "laufelfingen",
@@ -352,6 +373,13 @@
  {
   "key": "vereina__vereina_sud",
   "gruppe": "Vereina · Bahnhöfe",
+  "summe": 3,
+  "W53": 0,
+  "W56": 1
+ },
+ {
+  "key": "szu__ringlikon",
+  "gruppe": "SZU · Bahnhöfe",
   "summe": 3,
   "W53": 0,
   "W56": 1
@@ -933,6 +961,41 @@
  {
   "key": "vereina__vereina_nord",
   "gruppe": "Vereina · Bahnhöfe",
+  "summe": 0,
+  "W53": 0,
+  "W56": 0
+ },
+ {
+  "key": "szu__berghof",
+  "gruppe": "SZU · Bahnhöfe",
+  "summe": 0,
+  "W53": 0,
+  "W56": 0
+ },
+ {
+  "key": "szu__uetliberg",
+  "gruppe": "SZU · Bahnhöfe",
+  "summe": 0,
+  "W53": 0,
+  "W56": 0
+ },
+ {
+  "key": "szu__zurich_binz",
+  "gruppe": "SZU · Bahnhöfe",
+  "summe": 0,
+  "W53": 0,
+  "W56": 0
+ },
+ {
+  "key": "szu__zurich_friesenberg",
+  "gruppe": "SZU · Bahnhöfe",
+  "summe": 0,
+  "W53": 0,
+  "W56": 0
+ },
+ {
+  "key": "szu__zurich_schweighof",
+  "gruppe": "SZU · Bahnhöfe",
   "summe": 0,
   "W53": 0,
   "W56": 0

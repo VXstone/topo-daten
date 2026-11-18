@@ -10,6 +10,7 @@ Wünsche je Plan (REGELN 5: W53 S-Kurven ×6, W55 Bahnhofsabstand ×3, W56 Leerl
 | region_vereina | Region | 5 | 9 |  | 57 |
 | basel | Grosse Knoten | 7 |  | 2 | 48 |
 | olten | Olten 1 · Knoten Olten | 3 |  | 3 | 27 |
+| szu__zurich_selnau | SZU · Bahnhöfe | 2 |  | 4 | 24 |
 | schonenwerd | Olten 3 · Olten – Aarau | 0 |  | 7 | 21 |
 | colombier | NE 6 · Neuchâtel – Yverdon | 0 |  | 6 | 18 |
 | bole | NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier | 0 |  | 6 | 18 |
@@ -18,9 +19,11 @@ Wünsche je Plan (REGELN 5: W53 S-Kurven ×6, W55 Bahnhofsabstand ×3, W56 Leerl
 | murten | NE 3 · Lyss – Kerzers – Murten – Payerne | 1 |  | 3 | 15 |
 | auvernier | NE 6 · Neuchâtel – Yverdon | 1 |  | 3 | 15 |
 | onnens_bonvillars | NE 6 · Neuchâtel – Yverdon | 0 |  | 5 | 15 |
+| szu__zurich_giesshubel | SZU · Bahnhöfe | 2 |  | 1 | 15 |
 | olten_hammer | Olten 1 · Knoten Olten | 0 |  | 4 | 12 |
 | rothrist | Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil | 0 |  | 4 | 12 |
 | mob__zweisimmen | MOB · Bahnhöfe | 2 |  | 0 | 12 |
+| szu__borrweg | SZU · Bahnhöfe | 1 |  | 2 | 12 |
 | laufelfingen | Olten 4 · Hauenstein | 0 |  | 3 | 9 |
 | kerzers | NE 1 · Neuchâtel – Ins – Kerzers – Bern | 1 |  | 1 | 9 |
 | ligerz | NE 5 · Neuchâtel – Biel | 0 |  | 3 | 9 |
@@ -53,6 +56,7 @@ Wünsche je Plan (REGELN 5: W53 S-Kurven ×6, W55 Bahnhofsabstand ×3, W56 Leerl
 | vereina__sagliains_nord | Vereina · Bahnhöfe | 0 |  | 1 | 3 |
 | vereina__sagliains_sasslatsch | Vereina · Bahnhöfe | 0 |  | 1 | 3 |
 | vereina__vereina_sud | Vereina · Bahnhöfe | 0 |  | 1 | 3 |
+| szu__ringlikon | SZU · Bahnhöfe | 0 |  | 1 | 3 |
 | konolfingen | Bahnhöfe ohne Regionalplan | 0 |  | 0 | 0 |
 | aarburg_oftringen | Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil | 0 |  | 0 | 0 |
 | zofingen | Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil | 0 |  | 0 | 0 |
@@ -136,3 +140,8 @@ Wünsche je Plan (REGELN 5: W53 S-Kurven ×6, W55 Bahnhofsabstand ×3, W56 Leerl
 | vereina__sasslatsch | Vereina · Bahnhöfe | 0 |  | 0 | 0 |
 | vereina__susch | Vereina · Bahnhöfe | 0 |  | 0 | 0 |
 | vereina__vereina_nord | Vereina · Bahnhöfe | 0 |  | 0 | 0 |
+| szu__berghof | SZU · Bahnhöfe | 0 |  | 0 | 0 |
+| szu__uetliberg | SZU · Bahnhöfe | 0 |  | 0 | 0 |
+| szu__zurich_binz | SZU · Bahnhöfe | 0 |  | 0 | 0 |
+| szu__zurich_friesenberg | SZU · Bahnhöfe | 0 |  | 0 | 0 |
+| szu__zurich_schweighof | SZU · Bahnhöfe | 0 |  | 0 | 0 |
