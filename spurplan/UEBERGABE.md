@@ -547,7 +547,7 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   liegt im Regionalplan nördlich des Uetlibergasts (Drehung Giesshübel 0°, REGELN 0.2/4.3), Uetliberg 90° gedreht (Stumpen
   senkrecht), Label Binz im Bündel; (6) Selnau·HB SZU Süd GQ 1, Plantitel «HB SZU Süd» aus Haltepunktname.
 
-### 18.11.2026 ~14:10 – Entscheid Daniel zu Giesshübel: Variante C
+### 18.11.2026 ~14:10 – Entscheid Daniel zu Giesshübel: Variante C (REGELN 2.15)
 - «Giesshübel ganz schief»: Ursache Achsknick 65° im Fenster, Depot geradeaus (Messung im Schritt T-SZU2). Daniel wählt C = allgemeine
   Regel statt Schnitt/Override → neu REGELN 2.15; Schritt T-SZU2 ausgeschrieben (Abschnitt 5). Noch kein Code.
 
