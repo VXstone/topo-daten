@@ -20,7 +20,7 @@ Wird Abschnitt 6 länger als ~60 Zeilen, die ältesten Nachträge ins Archiv ver
 - **Feste Runde:** offene Hinweise des Schritts holen → zuerst ein Prüfstand-Fall, der den Fehler zeigt → Code, bis der Fall
   besteht → push (Workflows `pruefstand`, `plaene`, `seite`; `regionen` nach Code-Änderung **von Hand** starten:
   `gh workflow run regionen.yml --ref main`) → Prüfstand «nicht schlechter als Basis» → Tabelle `ergebnisse/seite/regression/`
-  lesen, **jede geänderte Zeile erklären** (Regel nach E9 oder Fehler) → Differenzbilder an Daniel → Seite veröffentlichen
+  lesen, **jede geänderte Zeile erklären** (Regel nach E9 oder Fehler), **Sperre G0 grün** (Spalte G0) → Differenzbilder an Daniel → Seite veröffentlichen
   (Live-Fassung vorher mit letztem Build vergleichen, `veroeffentlicht.json` nachführen) → Hinweise beantworten → Nachtrag.
 - **Sichtbar zuerst (12.11. spät, Daniel: «das Sichtbare hat sich wenig verändert»):** jeder Schritt hat einen **Zielplan** mit
   benannter Stelle. Zu Beginn Vorher-Ausschnitt + «so soll es aussehen» an Daniel; am Ende Differenzbild, Seite veröffentlichen,
@@ -94,8 +94,8 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - [x] **S1 Sagliains parallel durch den Knick** (klein) – 13.11. früh, Commit 08022dd, Seite v147
 - [x] **B1 Basis-Paket** – 17.11. nachmittags: V0-Rest und G1 fertig; S2/S3 abgespalten (Befund in Abschnitt 6, B1)
 - [x] **S2 Konolfingen DKW / Ostkopf** – 17.11. abends (Nachtrag S2); Gleisfeld West abgespalten → S2b
-- [ ] **G0 Grundprüfung als Sperre** (mittel) – **als Nächstes** (Entscheid Daniel 18.11.)
-- [ ] **T-SZU Testregion SZU** (Zürich HB 21/22 – Selnau – Giesshübel – Saalsporthalle / Uetliberg) – direkt nach G0
+- [x] **G0 Grundprüfung als Sperre** – 18.11. vormittags, Commits 404ca61 + Basis Prüfstand (Seite nicht neu veröffentlicht: kein Plan geändert)
+- [ ] **T-SZU Testregion SZU** (Zürich HB 21/22 – Selnau – Giesshübel – Saalsporthalle / Uetliberg) – **als Nächstes**
 - [ ] **S2b Konolfingen Gleisfeld West** (Zielbild Daniel 18.11.), **R4 Rothrist im Regionalplan** und **S3 Aarau
   Zwischengeraden mit Weiche** – nach T-SZU, je eigener Chat, alle gegen die G0-Sperre geprüft
 - [x] **S1b Sagliains-Bündel durchgehend** (klein) – 16.11. früh, Commits af2a110/21556d3, Seite v150
@@ -503,3 +503,13 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   223385037 links vom Knick). Neu REGELN 2.3 `r45_anschluss_gerade`; osm_abgleich 3. Zuordnung (Weichenstrasse). V-Summe 6.
 - Rothrist-Regionalvariante → eigener Schritt R4 (Befund dort); neue Konolfingen-Hinweise → S2b.
 
+### 18.11.2026 ~11:20 – Schritt G0 abgeschlossen (Commit 404ca61, ergebnisse 95b263b; Seite nicht neu veröffentlicht)
+- Neu `code/grundpruefung.py` (REGELN «Grundprüfung als Sperre» im Kopf; Codes GS/GG/GQ/GP/GW/GT bei 0.1–0.6, 1.2, 1.14, 1.15,
+  2.5, 2.7) – nur SVG; X/QK aus `pruefstand_messen`, T7-Treppe aus `ruhe`. Ausnahmen: DKW-Bögen, `railway_crossing` aus dem Netzmodell
+  (≤ 9 px), weisse Lücke/Flügel, Gleis unter Gleisnummer-Schild, Einmündung mit Überstand, Einlauf ≤ 3 Ebenen (bleibt VD1).
+- Workflow `seite`: Selbsttest + alle 136 Pläne → `ergebnisse/seite/grundpruefung/`, Spalte G0 in `regression/tabelle.md`, Schluss-
+  schritt «Sperre G0» rot bei Zunahme gegen `spurplan/grundpruefung_basis.json` [plaene]. Workflow `pruefstand`: 456 Pläne [pruefstand].
+- Basis: Pläne GS 124, GG 136, GQ 36, GP 52, GW 5, GT 54; Prüfstand GS 26, GG 2, GW 60, GT 149 (zwischengerade d90, Vorlage ±60°/a60
+  = bekannte R2/R3-Befunde). Prüffälle `spurplan/grundpruefung_faelle/`: Konolfingen v153 GS 558/283 erkannt, v154 nicht.
+- Fallstrick: Ausrundung als Ecke gibt Schein-Schnitte (Konolfingen 567/307) – Schnitt/Auflage auf der echten Kurve rechnen.
+  Basel/Bern (fest) haben kaputtes Markup `</text<circle` – wird beim Einlesen repariert. Basis neu nur mit `--basis-aus`/`--basis-setzen`.
