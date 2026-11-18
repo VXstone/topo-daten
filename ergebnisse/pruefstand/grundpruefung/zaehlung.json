@@ -1,0 +1,4106 @@
+{
+ "osm_ab30_a30/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_ab30_a30/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_ab30_a30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 2,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_ab30_a60/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_ab30_a60/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_ab30_a60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_ab30_d0/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_ab30_d0/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_ab30_d0/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_ab30_d30/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_ab30_d30/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_ab30_d30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_ab30_d60/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_ab30_d60/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_ab30_d60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_ab30_d90/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_ab30_d90/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_ab30_d90/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_ab30_dm30/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_ab30_dm30/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_ab30_dm30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_ab30_dm60/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_ab30_dm60/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_ab30_dm60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_ab60_a30/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 1,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_ab60_a30/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_ab60_a30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 2,
+  "GT": 2,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_ab60_a60/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 1,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_ab60_a60/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_ab60_a60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_ab60_d0/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 1,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_ab60_d0/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_ab60_d0/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_ab60_d30/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 1,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_ab60_d30/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_ab60_d30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_ab60_d60/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 1,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_ab60_d60/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_ab60_d60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_ab60_d90/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 1,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_ab60_d90/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_ab60_d90/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_ab60_dm30/alpha_spurplan": {
+  "GG": 1,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_ab60_dm30/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_ab60_dm30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_ab60_dm60/alpha_spurplan": {
+  "GG": 1,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_ab60_dm60/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_ab60_dm60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_buendel_knick_a30/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_buendel_knick_a30/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_buendel_knick_a30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 2,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_buendel_knick_a60/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_buendel_knick_a60/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_buendel_knick_a60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_buendel_knick_d0/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_buendel_knick_d0/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_buendel_knick_d0/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_buendel_knick_d30/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_buendel_knick_d30/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_buendel_knick_d30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_buendel_knick_d60/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_buendel_knick_d60/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_buendel_knick_d60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_buendel_knick_d90/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_buendel_knick_d90/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_buendel_knick_d90/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_buendel_knick_dm30/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_buendel_knick_dm30/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_buendel_knick_dm30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_buendel_knick_dm60/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_buendel_knick_dm60/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_buendel_knick_dm60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_buendel_knick_eng_a30/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_buendel_knick_eng_a30/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_buendel_knick_eng_a30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 2,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_buendel_knick_eng_a60/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_buendel_knick_eng_a60/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_buendel_knick_eng_a60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_buendel_knick_eng_d0/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_buendel_knick_eng_d0/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_buendel_knick_eng_d0/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_buendel_knick_eng_d30/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_buendel_knick_eng_d30/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_buendel_knick_eng_d30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_buendel_knick_eng_d60/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_buendel_knick_eng_d60/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_buendel_knick_eng_d60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_buendel_knick_eng_d90/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_buendel_knick_eng_d90/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_buendel_knick_eng_d90/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_buendel_knick_eng_dm30/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_buendel_knick_eng_dm30/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_buendel_knick_eng_dm30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_buendel_knick_eng_dm60/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_buendel_knick_eng_dm60/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_buendel_knick_eng_dm60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_buendel_versatz_a30/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_buendel_versatz_a30/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_buendel_versatz_a30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 4,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_buendel_versatz_a60/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_buendel_versatz_a60/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_buendel_versatz_a60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_buendel_versatz_d0/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_buendel_versatz_d0/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_buendel_versatz_d0/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 2,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_buendel_versatz_d30/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_buendel_versatz_d30/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_buendel_versatz_d30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 2,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_buendel_versatz_d60/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_buendel_versatz_d60/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_buendel_versatz_d60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 2,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_buendel_versatz_d90/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_buendel_versatz_d90/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_buendel_versatz_d90/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 2,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_buendel_versatz_dm30/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_buendel_versatz_dm30/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_buendel_versatz_dm30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 2,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_buendel_versatz_dm60/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_buendel_versatz_dm60/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_buendel_versatz_dm60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 2,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_gleissprung_a30/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_gleissprung_a30/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_gleissprung_a30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 2,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_gleissprung_a60/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_gleissprung_a60/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_gleissprung_a60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_gleissprung_d0/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_gleissprung_d0/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_gleissprung_d0/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_gleissprung_d30/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_gleissprung_d30/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_gleissprung_d30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_gleissprung_d60/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_gleissprung_d60/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_gleissprung_d60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_gleissprung_d90/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_gleissprung_d90/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_gleissprung_d90/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_gleissprung_dm30/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_gleissprung_dm30/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_gleissprung_dm30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_gleissprung_dm60/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_gleissprung_dm60/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_gleissprung_dm60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_perronformen_a30/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_perronformen_a30/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_perronformen_a30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 2,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_perronformen_a60/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_perronformen_a60/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_perronformen_a60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_perronformen_d0/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_perronformen_d0/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_perronformen_d0/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_perronformen_d30/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_perronformen_d30/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_perronformen_d30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_perronformen_d60/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_perronformen_d60/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_perronformen_d60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_perronformen_d90/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_perronformen_d90/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_perronformen_d90/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_perronformen_dm30/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_perronformen_dm30/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_perronformen_dm30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_perronformen_dm60/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_perronformen_dm60/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_perronformen_dm60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_r3_kreuzung_a30/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_r3_kreuzung_a30/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_r3_kreuzung_a30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 1,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_r3_kreuzung_a60/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_r3_kreuzung_a60/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_r3_kreuzung_a60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_r3_kreuzung_d0/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_r3_kreuzung_d0/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_r3_kreuzung_d0/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_r3_kreuzung_d30/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_r3_kreuzung_d30/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_r3_kreuzung_d30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_r3_kreuzung_d60/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_r3_kreuzung_d60/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_r3_kreuzung_d60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_r3_kreuzung_d90/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_r3_kreuzung_d90/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_r3_kreuzung_d90/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_r3_kreuzung_dm30/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_r3_kreuzung_dm30/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_r3_kreuzung_dm30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_r3_kreuzung_dm60/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_r3_kreuzung_dm60/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_r3_kreuzung_dm60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_r5_halt_a30/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_r5_halt_a30/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_r5_halt_a30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 2,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_r5_halt_a60/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_r5_halt_a60/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_r5_halt_a60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_r5_halt_d0/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_r5_halt_d0/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_r5_halt_d0/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_r5_halt_d30/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_r5_halt_d30/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_r5_halt_d30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_r5_halt_d60/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_r5_halt_d60/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_r5_halt_d60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_r5_halt_d90/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_r5_halt_d90/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_r5_halt_d90/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_r5_halt_dm30/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_r5_halt_dm30/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_r5_halt_dm30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_r5_halt_dm60/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_r5_halt_dm60/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_r5_halt_dm60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_r7_ueberholung_a30/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_r7_ueberholung_a30/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_r7_ueberholung_a30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 2,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_r7_ueberholung_a60/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_r7_ueberholung_a60/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_r7_ueberholung_a60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_r7_ueberholung_d0/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_r7_ueberholung_d0/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_r7_ueberholung_d0/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_r7_ueberholung_d30/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_r7_ueberholung_d30/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_r7_ueberholung_d30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_r7_ueberholung_d60/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_r7_ueberholung_d60/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_r7_ueberholung_d60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_r7_ueberholung_d90/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_r7_ueberholung_d90/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_r7_ueberholung_d90/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_r7_ueberholung_dm30/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_r7_ueberholung_dm30/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_r7_ueberholung_dm30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_r7_ueberholung_dm60/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_r7_ueberholung_dm60/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_r7_ueberholung_dm60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_sagliains_a30/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_sagliains_a30/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_sagliains_a30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 2,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_sagliains_a60/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_sagliains_a60/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_sagliains_a60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_sagliains_d0/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_sagliains_d0/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_sagliains_d0/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_sagliains_d30/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_sagliains_d30/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_sagliains_d30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_sagliains_d60/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_sagliains_d60/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_sagliains_d60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_sagliains_d90/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_sagliains_d90/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_sagliains_d90/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_sagliains_dm30/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_sagliains_dm30/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_sagliains_dm30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_sagliains_dm60/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_sagliains_dm60/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_sagliains_dm60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_unterwerfung_a30/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_unterwerfung_a30/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_unterwerfung_a30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 2,
+  "GT": 2,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_unterwerfung_a60/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_unterwerfung_a60/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_unterwerfung_a60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 2,
+  "GT": 0,
+  "GW": 2,
+  "ebene": 10.08
+ },
+ "osm_unterwerfung_d0/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_unterwerfung_d0/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_unterwerfung_d0/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 2,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_unterwerfung_d30/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_unterwerfung_d30/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_unterwerfung_d30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 2,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_unterwerfung_d60/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_unterwerfung_d60/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_unterwerfung_d60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 2,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_unterwerfung_d90/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_unterwerfung_d90/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_unterwerfung_d90/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 2,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_unterwerfung_dm30/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_unterwerfung_dm30/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_unterwerfung_dm30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 2,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_unterwerfung_dm60/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_unterwerfung_dm60/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_unterwerfung_dm60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 2,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_zwischengerade_a30/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_zwischengerade_a30/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_zwischengerade_a30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 2,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_zwischengerade_a60/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_zwischengerade_a60/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_zwischengerade_a60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_zwischengerade_d0/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_zwischengerade_d0/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_zwischengerade_d0/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_zwischengerade_d30/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_zwischengerade_d30/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_zwischengerade_d30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_zwischengerade_d60/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_zwischengerade_d60/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_zwischengerade_d60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_zwischengerade_d90/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_zwischengerade_d90/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_zwischengerade_d90/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 2,
+  "GT": 0,
+  "GW": 5,
+  "ebene": 10.08
+ },
+ "osm_zwischengerade_dm30/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_zwischengerade_dm30/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_zwischengerade_dm30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "osm_zwischengerade_dm60/alpha_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_zwischengerade_dm60/beta_spurplan": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "osm_zwischengerade_dm60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_L1_a30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_L1_a60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 2,
+  "ebene": 10.08
+ },
+ "vorlage_L1_d0/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_L1_d30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_L1_d60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 2,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_L1_d90/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_L1_dm30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_L1_dm60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 2,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_L2_a30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_L2_a60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 2,
+  "ebene": 10.08
+ },
+ "vorlage_L2_d0/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_L2_d30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_L2_d60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 2,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_L2_d90/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_L2_dm30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_L2_dm60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 2,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_R1_a30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_R1_a60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 2,
+  "ebene": 10.08
+ },
+ "vorlage_R1_d0/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_R1_d30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_R1_d60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 2,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_R1_d90/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_R1_dm30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_R1_dm60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 2,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_R2_a30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_R2_a60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 2,
+  "ebene": 10.08
+ },
+ "vorlage_R2_d0/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_R2_d30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_R2_d60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 2,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_R2_d90/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_R2_dm30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_R2_dm60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 2,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_R3_a30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_R3_a60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 2,
+  "ebene": 10.08
+ },
+ "vorlage_R3_d0/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_R3_d30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_R3_d60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 2,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_R3_d90/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_R3_dm30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_R3_dm60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 2,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_R4_a30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_R4_a60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 2,
+  "ebene": 10.08
+ },
+ "vorlage_R4_d0/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_R4_d30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_R4_d60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 2,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_R4_d90/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_R4_dm30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_R4_dm60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 2,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_R5_a30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_R5_a60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 4,
+  "ebene": 10.08
+ },
+ "vorlage_R5_d0/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_R5_d30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_R5_d60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 4,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_R5_d90/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_R5_dm30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_R5_dm60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 4,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_R6_a30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_R6_a60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 4,
+  "ebene": 10.08
+ },
+ "vorlage_R6_d0/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_R6_d30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_R6_d60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 4,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_R6_d90/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_R6_dm30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_R6_dm60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 4,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_R7_a30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_R7_a60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 4,
+  "ebene": 10.08
+ },
+ "vorlage_R7_d0/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_R7_d30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_R7_d60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 4,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_R7_d90/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_R7_dm30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_R7_dm60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 4,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_R8_a30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_R8_a60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 4,
+  "ebene": 10.08
+ },
+ "vorlage_R8_d0/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_R8_d30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_R8_d60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 4,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_R8_d90/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_R8_dm30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_R8_dm60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 4,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_Z1_a30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_Z1_a60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 4,
+  "ebene": 10.08
+ },
+ "vorlage_Z1_d0/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_Z1_d30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_Z1_d60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 4,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_Z1_d90/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_Z1_dm30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_Z1_dm60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 4,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_Z2_a30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_Z2_a60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 4,
+  "ebene": 10.08
+ },
+ "vorlage_Z2_d0/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_Z2_d30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_Z2_d60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 4,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_Z2_d90/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_Z2_dm30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_Z2_dm60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 4,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_Z3_a30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_Z3_a60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 4,
+  "ebene": 10.08
+ },
+ "vorlage_Z3_d0/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_Z3_d30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_Z3_d60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 4,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_Z3_d90/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_Z3_dm30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_Z3_dm60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 4,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_Z4_a30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_Z4_a60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 2,
+  "ebene": 10.08
+ },
+ "vorlage_Z4_d0/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_Z4_d30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_Z4_d60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 2,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_Z4_d90/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_Z4_dm30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_Z4_dm60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 2,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_Z5_a30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_Z5_a60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 2,
+  "ebene": 10.08
+ },
+ "vorlage_Z5_d0/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_Z5_d30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_Z5_d60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 2,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_Z5_d90/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_Z5_dm30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_Z5_dm60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 2,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_Z6_a30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_Z6_a60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 4,
+  "ebene": 10.08
+ },
+ "vorlage_Z6_d0/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_Z6_d30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_Z6_d60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 4,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_Z6_d90/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_Z6_dm30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_Z6_dm60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 4,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_Z7_a30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 1,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_Z7_a60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 1,
+  "GW": 2,
+  "ebene": 10.08
+ },
+ "vorlage_Z7_d0/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 1,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_Z7_d30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_Z7_d60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 3,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_Z7_d90/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_Z7_dm30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_Z7_dm60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 2,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_Z8_a30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_Z8_a60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 3,
+  "ebene": 10.08
+ },
+ "vorlage_Z8_d0/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_Z8_d30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_Z8_d60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 3,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_Z8_d90/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_Z8_dm30/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 10.08
+ },
+ "vorlage_Z8_dm60/region": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
+  "GT": 3,
+  "GW": 0,
+  "ebene": 10.08
+ }
+}
