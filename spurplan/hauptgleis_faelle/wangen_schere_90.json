@@ -1,0 +1,22 @@
+{
+ "_quelle": "Wangen b. O. mit Schere statt Spurwechsel Ost (künstlicher Fehler), gedreht 90°",
+ "erwartet": [
+  {
+   "regel": "HT2",
+   "x": -225.2,
+   "y": 854.7,
+   "r": 8,
+   "anlass": "Kreuzung der Scherendiagonalen ohne OSM-Kreuzung"
+  },
+  {
+   "regel": "HT5",
+   "text": "im Plan, nicht in OSM",
+   "anlass": "zusätzlicher Fahrweg über die Gegendiagonale"
+  }
+ ],
+ "nicht": [
+  {
+   "regel": "HT4"
+  }
+ ]
+}

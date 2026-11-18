@@ -16,6 +16,8 @@ Topologie. Alt-Stand aus ergebnisse/seite/osm_abgleich/<key>.json der Basis-Fass
 --grund <ordner> [--grund-basis <json>]: Grundprüfung G0 (grundpruefung.py, REGELN «Grundprüfung als Sperre», 18.11.2026). Alt gegen neu wird
 G0 auf beiden SVGs gerechnet (GS/GG zählen zur Topologie, GQ/GP/GW zu den Regeln, GT ist T7); Spalte «G0» = Stand gegen
 die Sperr-Basis (fett = neuer Befund, macht den Workflow seite rot).
+--ht <ordner> [--ht-basis <json>]: Hauptgleis-Topologie HT (hauptgleis.py, REGELN 0.1 / Kopf «HT», 18.11.2026); Spalte «HT» =
+Stand gegen die Sperr-Basis wie G0 (nur Pläne mit Netzmodell).
 
 Einordnung je geändertem Plan (Wunsch D. Eckenstein 6.11.: «vorschlagen, wo ein Plan verändert, aber vielleicht
 verbessert wurde – ich schaue rasch drauf»). Gemessen wird nur auf den SVGs, alt gegen neu:
@@ -42,6 +44,7 @@ REF = opt("--ref") or "origin/ergebnisse"
 SEIT, NEU, SEITE = opt("--seit"), opt("--neu"), opt("--seite")
 OSA = opt("--osm-abgleich")
 GRUND, GRUND_BASIS = opt("--grund"), opt("--grund-basis")
+HTD, HT_BASIS = opt("--ht"), opt("--ht-basis")
 HERE = os.path.dirname(os.path.abspath(__file__))
 os.makedirs(OUT, exist_ok=True)
 WUNSCH = tuple(wuensche.GEWICHT)        # T7, W53, W55, W56 (REGELN 5)
@@ -116,6 +119,16 @@ def g0_spalte(k):
     if not z: return ""
     b = (json.load(open(GRUND_BASIS)).get("plaene", {}) if GRUND_BASIS and os.path.exists(GRUND_BASIS) else {}).get(k, {})
     t = [(f"**{r} {z[r]} (Basis {b.get(r, 0)})**" if z[r] > b.get(r, 0) else f"{r} {z[r]}") for r in GPR.REGELN if z.get(r)]
+    return " · ".join(t) or "0"
+
+
+def ht_spalte(k):
+    """Stand HT gegen die Sperr-Basis: «HT2 3 · HT5 1», neue Befunde fett mit Basis; «–» ohne Netzmodell"""
+    if not HTD or not os.path.exists(os.path.join(HTD, "zaehlung.json")): return ""
+    z = json.load(open(os.path.join(HTD, "zaehlung.json"))).get(k)
+    if not z: return "–"
+    b = (json.load(open(HT_BASIS)).get("plaene", {}) if HT_BASIS and os.path.exists(HT_BASIS) else {}).get(k, {})
+    t = [(f"**{r} {z[r]} (Basis {b.get(r, 0)})**" if z[r] > b.get(r, 0) else f"{r} {z[r]}") for r in ("HT1", "HT2", "HT3", "HT4", "HT5") if z.get(r)]
     return " · ".join(t) or "0"
 
 
@@ -219,12 +232,14 @@ json.dump(dict(erzeugt=datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")
                einordnung=dict(zus), zeilen=zeilen), open(os.path.join(OUT, "tabelle.json"), "w"), ensure_ascii=False, indent=1)
 with open(os.path.join(OUT, "tabelle.md"), "w") as f:
     f.write(f"{len(zeilen)} Pläne, {len(gz)} geändert: " + ", ".join(f"{v} {k}" for k, v in zus.items()) + "\n\n")
-    f.write("| Plan | Gruppe | Basis | Stellen | Einordnung | Kennzahlen alt→neu | G0 | letzte Änderung |\n|---|---|---|---|---|---|---|---|\n")
+    f.write("| Plan | Gruppe | Basis | Stellen | Einordnung | Kennzahlen alt→neu | G0 | HT | letzte Änderung |\n|---|---|---|---|---|---|---|---|---|\n")
     for z in sorted(gz, key=lambda z: (RANG.get(z["einordnung"], 9), not z["abgenommen"], -z["stellen"])):
         f.write(f"| {z['key']} | {z['gruppe']} | {z['basis']} | {z['stellen']} | {z['einordnung']} | {z['delta']} | "
-                f"{g0_spalte(z['key'])} | {z.get('letzte_aenderung', '')} |\n")
+                f"{g0_spalte(z['key'])} | {ht_spalte(z['key'])} | {z.get('letzte_aenderung', '')} |\n")
     if GRUND and os.path.exists(os.path.join(GRUND, "grundpruefung.md")):
         f.write("\nGrundprüfung G0 aller Pläne: `ergebnisse/seite/grundpruefung/grundpruefung.md`\n")
+    if HTD and os.path.exists(os.path.join(HTD, "hauptgleis.md")):
+        f.write("Hauptgleis-Topologie HT aller Pläne mit Netzmodell: `ergebnisse/seite/hauptgleis/hauptgleis.md`\n")
 print(f"Regression: {len(zeilen)} Pläne, {len(gz)} geändert", dict(zus))
 
 if SEITE:   # Kartenlabel und Untertitel ergänzen

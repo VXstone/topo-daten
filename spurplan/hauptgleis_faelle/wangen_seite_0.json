@@ -1,0 +1,12 @@
+{
+ "_quelle": "Wangen b. O., Netzmodell mit Abzweig zur falschen Seite (künstlicher Fehler), gedreht 0°",
+ "erwartet": [
+  {
+   "regel": "HT4",
+   "x": 840.8,
+   "y": 213.2,
+   "anlass": "Spurwechsel Ost zweigt im Netzmodell zur falschen Seite ab"
+  }
+ ],
+ "nicht": []
+}

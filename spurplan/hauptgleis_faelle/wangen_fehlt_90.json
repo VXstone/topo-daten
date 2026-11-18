@@ -1,0 +1,22 @@
+{
+ "_quelle": "Wangen b. O. ohne Spurwechsel West (künstlicher Fehler), gedreht 90°",
+ "erwartet": [
+  {
+   "regel": "HT1",
+   "x": -237.2,
+   "y": 291.0,
+   "r": 20,
+   "anlass": "Weiche Spurwechsel West ohne Abzweig"
+  },
+  {
+   "regel": "HT5",
+   "text": "fehlt im Plan",
+   "anlass": "Fahrweg Solothurn Gl. 4-Seite -> Gl. 3 fehlt"
+  }
+ ],
+ "nicht": [
+  {
+   "regel": "HT4"
+  }
+ ]
+}

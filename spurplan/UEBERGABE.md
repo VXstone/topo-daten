@@ -96,8 +96,8 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - [x] **S2 Konolfingen DKW / Ostkopf** – 17.11. abends (Nachtrag S2); Gleisfeld West abgespalten → S2b
 - [x] **G0 Grundprüfung als Sperre** – 18.11. vormittags, Commits 404ca61 + Basis Prüfstand (Seite nicht neu veröffentlicht: kein Plan geändert)
 - [x] **T-SZU Testregion SZU** – 18.11. mittags, Commits 114156c/1d587e8, Seite v155 (Befundliste in Abschnitt 6)
-- [ ] **HT Hauptgleis-Topologie als Sperre (REGELN 0.1, Kopf «HT»)** (mittel, Entscheid Daniel 18.11.) – **als Nächstes**
-- [ ] **T-SZU1 DKW aus 4-Arm-Weiche (REGELN 2.4) und Güterverkehr schwarz (REGELN 1.21)** (klein, Entscheid Daniel 18.11.) – nach HT, vor T-SZU2
+- [x] **HT Hauptgleis-Topologie als Sperre (REGELN 0.1, Kopf «HT»)** – 18.11. spät, `code/hauptgleis.py`, Basis gesetzt (Nachtrag HT); Seite nicht neu veröffentlicht (kein Plan geändert)
+- [ ] **T-SZU1 DKW aus 4-Arm-Weiche (REGELN 2.4) und Güterverkehr schwarz (REGELN 1.21)** (klein, Entscheid Daniel 18.11.) – **als Nächstes** (oder nach Daniels Reihenfolge aus der HT-Liste)
 - [ ] **T-SZU2 Achse knickt im Fenster (REGELN 2.15), Zielplan Giesshübel · Saalsporthalle** (Entscheid Daniel 18.11.: Variante C) – nach S2b/R4/S3 oder wenn Daniel es vorzieht
 - [ ] **S2b Konolfingen Gleisfeld West** (Zielbild Daniel 18.11.), **R4 Rothrist im Regionalplan** und **S3 Aarau
   Zwischengeraden mit Weiche** – nach T-SZU, je eigener Chat, alle gegen die G0-Sperre geprüft
@@ -590,4 +590,15 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - Anlass Skizze Giesshübel: Hauptgleisfehler (Schere statt zwei Spurwechsel, Depot-Anschlüsse, Gl. 43 falsche Seite) – Skizze war
   ungeprüft; der OSM-Abgleich hatte am Code-Plan 52 Befunde, berichtet wurde nur G0. Neu Schritt T-SZU1 vor T-SZU2.
 - 15:51 entschieden: Hauptgleis-Topologie immer korrekt (Seite, Fahrwege) → REGELN 0.1 + Kopf «HT», Schritt HT vor T-SZU1.
+
+### 18.11.2026 ~23:55 – Schritt HT abgeschlossen (REGELN 0.1 / Kopf «HT»; Seite nicht neu veröffentlicht)
+- Neu `code/hauptgleis.py`: HT1–HT3 = VB1/VB2/VC1 mit Hauptgleis (osm_abgleich gibt bei VB2 jetzt `farben` mit); HT4 Seite an
+  OSM-Weichen (Äste auf ~35 m in OSM vs. Netzmodell-Lage); HT5 Fahrwege im gezeichneten Plan vs. OSM (Enden ↔ Linienenden im Plan
+  per Zuordnung, Perrongleise über Nummernschild) + künstliche Schnitte am Planrand. OSM-Graph = ganze Ways zwischen den gezeichneten
+  Knoten (Netzmodell-Stücke lassen Anschlussknoten aus), geteilte Ways (ID+2 Ziffern) auf den OSM-Way zurückgeführt, Stück zwischen
+  zwei Abgängen = ausserhalb (Tecknau). Fallstrick: DKW-Klammern unterbrechen im SVG das durchgehende Gleis (Aarburg Gl. 2 647–657).
+- Prüffälle `hauptgleis_faelle/` (Builder `code/hauptgleis_faelle.py`): Giesshübel aus Code, Wangen unverändert/ohne Spurwechsel/
+  mit Schere/falsche Seite, je 0°/90° – Selbsttest bestanden; läuft in `seite` (Sperre) und `pruefstand`. Spalte HT in der Regression.
+- Basis `hauptgleis_basis.json` (82 Pläne mit Netzmodell): HT1 44, HT2 64, HT3 10, HT4 5, HT5 267; 28 Pläne mit HT > 0 – Liste
+  `ergebnisse/seite/hauptgleis/hauptgleis.md`, an Daniel zur Reihenfolge der Folgeschritte. Olten (HT5 176) nur stichprobenweise geprüft.
 

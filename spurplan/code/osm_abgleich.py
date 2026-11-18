@@ -323,7 +323,7 @@ def abgleich(svg_text, N, TAGS, WAYN):
         if n0 is None:
             if any(math.hypot(c[0] - x, c[1] - y) < R_DKW for c in dkw_plan): continue
             bef("VB2", x, y, f"Gleise {'kreuzen' if art == 'X' else 'berühren'} sich ({nr} Richtungen), in OSM keine Weiche/Kreuzung",
-                ways=sorted({w for j in idx for w in g_ways.get(j, ())}))
+                ways=sorted({w for j in idx for w in g_ways.get(j, ())}), farben=sorted({gleise[j]["farbe"] for j in idx}))
             continue
         umg = {n0}
         for _ in range(3): umg |= {m for k in umg for m in nachbarn[k]}

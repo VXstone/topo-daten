@@ -1,0 +1,32 @@
+{
+ "_quelle": "Seite v155 (ergebnisse 644a346), Giesshübel aus Code – Anlass Schritt HT, gedreht 90°",
+ "erwartet": [
+  {
+   "regel": "HT2",
+   "x": -184.4,
+   "y": 1328.2,
+   "anlass": "Gleise kreuzen sich im Depot, in OSM keine Kreuzung (T-SZU)"
+  },
+  {
+   "regel": "HT5",
+   "x": -232.4,
+   "y": 2020.4,
+   "text": "künstlicher Schnitt",
+   "anlass": "Achsknick 65°: Gleis endet am Planrand statt durchzulaufen (REGELN 2.15)"
+  },
+  {
+   "regel": "HT5",
+   "x": -208.4,
+   "y": 225.5,
+   "text": "künstlicher Schnitt",
+   "anlass": "dito, Mittelgleis"
+  },
+  {
+   "regel": "HT1",
+   "x": 178.0,
+   "y": 1697.4,
+   "anlass": "Weiche 1262541542 an 717 ohne Abzweig"
+  }
+ ],
+ "nicht": []
+}

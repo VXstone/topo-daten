@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ["spurplan/code/**", "spurplan/pruefstand_basis.json", "spurplan/grundpruefung_basis.json", "spurplan/grundpruefung_faelle/**", ".github/workflows/pruefstand.yml"]
+    paths: ["spurplan/code/**", "spurplan/pruefstand_basis.json", "spurplan/grundpruefung_basis.json", "spurplan/grundpruefung_faelle/**", "spurplan/hauptgleis_faelle/**", ".github/workflows/pruefstand.yml"]
 permissions:
   contents: write
 concurrency: { group: pruefstand, cancel-in-progress: false }
@@ -46,12 +46,21 @@ jobs:
             --basis spurplan/grundpruefung_basis.json 2>&1 | tee /tmp/grund_log.txt
           rc=${PIPESTATUS[0]}
           echo "rc=$rc" >> "$GITHUB_OUTPUT"; echo "st=$st" >> "$GITHUB_OUTPUT"
+      - name: Hauptgleis-Topologie HT – Prüffälle (18.11.2026, Schritt HT; Prüfstand-Pläne haben kein OSM-Netzmodell)
+        id: ht
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: |
+          set +e
+          gh release download daten -p schweiz_bahn.json.gz -D /tmp --clobber
+          python3 spurplan/code/hauptgleis.py --selbsttest spurplan/hauptgleis_faelle --osm /tmp/schweiz_bahn.json.gz 2>&1 | tee /tmp/ht_selbsttest.txt
+          echo "st=${PIPESTATUS[0]}" >> "$GITHUB_OUTPUT"
       - name: Ergebnisse auf Branch «ergebnisse» (nur ergebnisse/pruefstand ersetzen)
         if: always()
         run: |
           mkdir -p /tmp/erg/pruefstand
           cp /tmp/pruefstand/tabelle.md /tmp/pruefstand/tabelle.json /tmp/pruefstand/pruefstand.svg /tmp/pruefstand/label.txt /tmp/pruefstand_log.txt /tmp/erg/pruefstand/ 2>/dev/null || true
           mkdir -p /tmp/erg/pruefstand/grundpruefung && cp /tmp/pruefstand_g0/zaehlung.json /tmp/pruefstand_g0/grundpruefung.md /tmp/grund_selbsttest.txt /tmp/grund_log.txt /tmp/erg/pruefstand/grundpruefung/ 2>/dev/null || true
+          cp /tmp/ht_selbsttest.txt /tmp/erg/pruefstand/ 2>/dev/null || true
           python3 -c "import cairosvg; cairosvg.svg2png(url='/tmp/erg/pruefstand/pruefstand.svg', write_to='/tmp/erg/pruefstand/pruefstand.png', output_width=4000)" || true
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -67,3 +76,4 @@ jobs:
           if [ "${{ steps.lauf.outputs.rc }}" != "0" ]; then grep -E "^SCHLECHTER|^FEHLER" /tmp/pruefstand_log.txt || true; echo "Prüfstand schlechter als Basis"; exit 1; fi
           if [ "${{ steps.grund.outputs.st }}" != "0" ]; then cat /tmp/grund_selbsttest.txt; echo "Grundprüfung: Prüffälle nicht bestanden"; exit 1; fi
           if [ "${{ steps.grund.outputs.rc }}" != "0" ]; then grep -E "^NEU|^FEHLER" /tmp/grund_log.txt || true; echo "Grundprüfung: neuer Befund im Prüfstand"; exit 1; fi
+          if [ "${{ steps.ht.outputs.st }}" != "0" ]; then cat /tmp/ht_selbsttest.txt; echo "HT: Prüffälle nicht bestanden"; exit 1; fi
