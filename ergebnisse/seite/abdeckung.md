@@ -8,7 +8,7 @@ Befund < 40 px im selben Plan, ohne G2.
 | ✓ | 0fpo | solothurn | MX, VA1, VC1, W2 | 18.8 | sauberes Gleis ins Nichts |
 | ✓ | 0k4j | region | G5 | 27.3 | Eppenbergtunnel Weichen/Stummel |
 | ✓ | 2vxh | mob__chamby | VB1, VD1 | 23.2 | Perron und Gleis verdreht, Mittelperron? |
-| ✓ | 33fs | konolfingen | A1, MX | 12.1 | Gleis unter Gleis, sehr steil |
+| ✓ | 33fs | konolfingen | MQ | 15.6 | Gleis unter Gleis, sehr steil |
 | · | 3ctb | mob__montreux |  | 260.5 | Knubbel, keine Gegen-S-Kurve |
 | ✓ | 3d6h | konolfingen | G7, MX, VB2, VC1 | 18.1 | Abstellgleise über Streckengleise |
 | ✓ | 3za5 | region | G6, MZ | 4.9 | 90 Grad, statt 2 Weichen nur eine |

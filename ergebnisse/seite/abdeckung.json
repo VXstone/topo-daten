@@ -79,11 +79,10 @@
    "text": "Gleis unter Gleis, sehr steil",
    "abgedeckt": true,
    "regeln": [
-    "A1",
-    "MX"
+    "MQ"
    ],
-   "naechster": 12.1,
-   "naechste_regel": "A1",
+   "naechster": 15.6,
+   "naechste_regel": "MQ",
    "plan_da": true
   },
   {
