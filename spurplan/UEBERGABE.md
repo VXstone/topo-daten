@@ -96,6 +96,7 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - [x] **S2 Konolfingen DKW / Ostkopf** – 17.11. abends (Nachtrag S2); Gleisfeld West abgespalten → S2b
 - [x] **G0 Grundprüfung als Sperre** – 18.11. vormittags, Commits 404ca61 + Basis Prüfstand (Seite nicht neu veröffentlicht: kein Plan geändert)
 - [x] **T-SZU Testregion SZU** – 18.11. mittags, Commits 114156c/1d587e8, Seite v155 (Befundliste in Abschnitt 6)
+- [ ] **T-SZU1 DKW aus 4-Arm-Weiche (REGELN 2.4) und Güterverkehr schwarz (REGELN 1.21)** (klein, Entscheid Daniel 18.11.) – **als Nächstes**, vor T-SZU2
 - [ ] **T-SZU2 Achse knickt im Fenster (REGELN 2.15), Zielplan Giesshübel · Saalsporthalle** (Entscheid Daniel 18.11.: Variante C) – nach S2b/R4/S3 oder wenn Daniel es vorzieht
 - [ ] **S2b Konolfingen Gleisfeld West** (Zielbild Daniel 18.11.), **R4 Rothrist im Regionalplan** und **S3 Aarau
   Zwischengeraden mit Weiche** – nach T-SZU, je eigener Chat, alle gegen die G0-Sperre geprüft
@@ -235,6 +236,19 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - Messen: G0-Sperre, OSM-Abgleich, Verkettung; Ergebnis als Liste «was die Grundregeln nicht halten» → Arbeitsliste.
 - Fertig, wenn: Region SZU auf der Seite, G0 ohne Befund ab Binz–Uetliberg, übrige Befunde benannt.
 
+### T-SZU1 – DKW aus 4-Arm-Weiche und Güterverkehr schwarz (Entscheid Daniel 18.11. 14:43, REGELN 2.4/1.21)
+- Einstieg: «Weiter mit UEBERGABE.md – Schritt T-SZU1: DKW aus 4-Arm-Weiche und Güterverkehr schwarz»
+- Anlass: Depot Giesshübel – Weichen 1263316996 (Arme 47°/57° ↔ 227°/237°) und 1263338286 (34°/41° ↔ 213°/221°) sind DKW-Form in
+  einem Knoten, ohne `railway:switch`; der Code zeichnet sie als Weiche (Teil der OSM-Abgleich-Befunde Giesshübel: VD1 37, VB2 8,
+  VC1 5, VB1 2). 717 Giesshübel–Wiedikon hat `railway:traffic_mode=freight`, ist aber grün (Code schaut nur auf service).
+- Zielplan: **szu__zurich_giesshubel** – zwei DKW-Symbole im Depot, 717 schwarz mit schwarzem Pfeil «717 Zürich Wiedikon»
+  (Ziel in `regionen/szu/region_lines.json` von «Zürich HB» auf «Zürich Wiedikon» korrigieren, Ort in orte.json ergänzen).
+- Bauen (alle Pläne, kein Override): 4-Arm-Erkennung dort, wo DKW_3ARME/`dkw_auto` die OSM-DKW lesen (`spurplan_schema.py`);
+  Güterverkehr in der Grün/Schwarz-Zuordnung (pax/Fahrwege, `verbindungen_pruefen` / `spurplan_schema`), auch netz_lage-Pfeilfarbe.
+- Prüfen: Prüfstand-Baustein «dkw_4arme» (X-Knoten in allen Drehungen); alle Pläne: wo greifen die zwei Regeln sonst noch (Liste +
+  Differenzbilder an Daniel, E9); G0-Sperre; OSM-Abgleich Giesshübel vorher/nachher nennen (nicht nur G0, Nachtrag 18.11. 14:35).
+- Fertig, wenn: beide DKW im Plan, 717 schwarz, Seite veröffentlicht.
+
 ### T-SZU2 – Achse knickt im Fenster (Entscheid Daniel 18.11. 14:06: «C», REGELN 2.15)
 - Einstieg: «Weiter mit UEBERGABE.md – Schritt T-SZU2: Achse knickt im Fenster»
 - Anlass (gemessen 18.11., OSM): Achse Giesshübel = Linie 712. Sie kommt aus Selnau mit Kurs ~215° und knickt 250–350 m südlich des
@@ -242,6 +256,7 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   713 geht nach W, 717 mit ~190°. Der Knotenplan mit Saalsporthalle hat ±1 km Fenster (`sw_search_m` 1009), der Knick liegt ganz drin.
   Gerade gezogen entlang der 712 schwenkt das Depot weg und läuft als Schrägen übers Bündel: Plan GS 11, GG 33, GQ 5; im Regionalplan
   zeigt der Sihltal-Abgang nach W und liegt nördlich des Uetlibergasts (REGELN 0.2/4.3).
+- Zielbild: `spurplan/vergleich/szu/zielbild_giesshuebel.svg` (Skizze 18.11., von Daniel durchgesehen; Depot vereinfacht, DKW fehlen).
 - Zielplan: **szu__zurich_giesshubel** – Achse = Einfahrt Selnau + Depot (gerade, ruhig), Sihltal 712 als Abzweig nach REGELN 2.6 Richtung
   Saalsporthalle, 713 als Abzweig nach Uetliberg; im Regionalplan Sihltal südlich, Uetliberg westlich. Zu Beginn Vorher-Ausschnitt +
   Skizze «so soll es aussehen» an Daniel.
@@ -251,6 +266,11 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   (`_axis.json`, «achse_durchgehend» 1.27), Spurplan `spurplan_schema.py`/`spurplan_warp.py`, Knotenpläne `straenge.py --knoten`.
 - Prüfen: Prüfstand-Baustein «achse_knick» (Gerade mit Knick 30/45/60/75°, Bündel geradeaus) in allen Drehungen; G0-Sperre; alle
   136 Pläne: wo greift 2.15 sonst noch (Liste an Daniel, jede Änderung mit Differenzbild – E9); Unruhe SZU/MOB/Vereina nicht schlechter.
+- Weichenfolge aus OSM (18.11., je Hauptgleis von Selnau Richtung SW; oben = NW-Gleis Y, unten = Perrongleis X): Spurwechsel X→Y
+  (s 418–487), Spurwechsel Y→X (668–735, keine Schere), 717 mündet in Y Richtung NE (845), 713 ab Y nach SW (863), Depot ab Y (899),
+  Spurwechsel X→Y (887–963), Depot ab Y (970), Depot zusätzlich ab 713; Saalsporthalle: Spurwechsel Y→X davor (1259–1326) und
+  dahinter (1613–1725), Abstellgleis ab X (1733). Anschlussgleise an der 717: 41 westlich, 43 östlich (zwischen 717 und Hauptgleisen).
+  Zielbilder nur aus dieser Liste zeichnen und die Liste mitgeben (Fehler der ersten Skizze 18.11.: Schere, Depot-Anschlüsse, Gl. 43).
 - Danach aus der T-SZU-Arbeitsliste (Abschnitt 6) nur, was 2.15 nicht schon löst: 3 gegen 2 Gleise Selnau (V1/S1), S3 Adliswil↔Selnau,
   T5 Verbindungsgleis ohne Pfeil, Uetliberg 90° gedreht, Label Binz.
 - Fertig, wenn: Giesshübel ohne Depot-Schrägen über dem Bündel (GS/GG im Plan deutlich unter 11/33, Ziel 0), Sihltal im Regionalplan
@@ -550,4 +570,9 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 ### 18.11.2026 ~14:10 – Entscheid Daniel zu Giesshübel: Variante C (REGELN 2.15)
 - «Giesshübel ganz schief»: Ursache Achsknick 65° im Fenster, Depot geradeaus (Messung im Schritt T-SZU2). Daniel wählt C = allgemeine
   Regel statt Schnitt/Override → neu REGELN 2.15; Schritt T-SZU2 ausgeschrieben (Abschnitt 5). Noch kein Code.
+
+### 18.11.2026 ~14:45 – Entscheide Daniel: 4-Arm-Weiche = DKW, Güterverkehr schwarz (REGELN 2.4, 1.21)
+- Anlass Skizze Giesshübel: Hauptgleisfehler (Schere statt zwei Spurwechsel, Depot-Anschlüsse, Gl. 43 falsche Seite) – Skizze war
+  ungeprüft; der OSM-Abgleich hatte am Code-Plan 52 Befunde, berichtet wurde nur G0. Neu Schritt T-SZU1 vor T-SZU2.
+- Offen bei Daniel: OSM-Abgleich an Hauptgleisen (VB1/VB2/VC1) als Sperre wie G0?
 
