@@ -627,6 +627,6 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   `ergebnisse/seite/hauptgleis/hauptgleis.md`, an Daniel zur Reihenfolge der Folgeschritte. Olten (HT5 176) nur stichprobenweise geprüft.
 
 ### 19.11.2026 ~14:35 – Neuer Schritt K0 (sichtbar) vor T-SZU1
-- Daniel 19.11.: zu lange nichts Sichtbares (seit v155 nur G0/T-SZU/HT). K0 = Ins im Regionalplan (Hinweis 1470, bisher
+- Daniel 19.11. (REGELN 1.9): zu lange nichts Sichtbares (seit v155 nur G0/T-SZU/HT). K0 = Ins im Regionalplan (Hinweis 1470, bisher
   unbeantwortet und in keinem Schritt) + Zwischengeraden im Bahnhofplan (REGELN 1.9; S3 und R2-Zwischengeraden gehen in K0 auf).
 
