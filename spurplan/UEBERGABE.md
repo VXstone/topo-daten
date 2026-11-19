@@ -97,7 +97,8 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - [x] **G0 Grundprüfung als Sperre** – 18.11. vormittags, Commits 404ca61 + Basis Prüfstand (Seite nicht neu veröffentlicht: kein Plan geändert)
 - [x] **T-SZU Testregion SZU** – 18.11. mittags, Commits 114156c/1d587e8, Seite v155 (Befundliste in Abschnitt 6)
 - [x] **HT Hauptgleis-Topologie als Sperre (REGELN 0.1, Kopf «HT»)** – 18.11. spät, `code/hauptgleis.py`, Basis gesetzt (Nachtrag HT); Seite nicht neu veröffentlicht (kein Plan geändert)
-- [ ] **K0 Sichtbar: Ins im Regionalplan + Zwischengeraden im Bahnhofplan** (klein–mittel, Wunsch Daniel 19.11.) – **als Nächstes**
+- [x] **K0 Sichtbar: Ins im Regionalplan + Zwischengeraden im Bahnhofplan** – 19.11. nachmittags, Commits 83a0dc2/64a3fa4, Seite v156 (Nachtrag K0)
+- [ ] **K0b Zwischengeraden Rest (REGELN 1.9)** (klein) – Zweisimmen (dünn→dick am Knick), Solothurn (Weiche am Knick, doppelter Abstand), Selnau (ZL ~4 Ebenen, nur auf Daniels Antwort); Liste `ergebnisse/seite/zwischengeraden.md` – vor oder nach T-SZU1, wie Daniel will
 - [ ] **T-SZU1 DKW aus 4-Arm-Weiche (REGELN 2.4) und Güterverkehr schwarz (REGELN 1.21)** (klein, Entscheid Daniel 18.11.) – nach K0
 - [ ] **T-SZU2 Achse knickt im Fenster (REGELN 2.15), Zielplan Giesshübel · Saalsporthalle** (Entscheid Daniel 18.11.: Variante C) – nach S2b/R4/S3 oder wenn Daniel es vorzieht
 - [ ] **S2b Konolfingen Gleisfeld West** (Zielbild Daniel 18.11.), **R4 Rothrist im Regionalplan** und **S3 Aarau
@@ -274,6 +275,14 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - Ablauf wie Abschnitt 0 (Vorher-Ausschnitte + Zielbild an Daniel zu Beginn, Regression jede Zeile erklären, Differenzbilder,
   veröffentlichen, Hinweise beantworten). Wird Teil 2 zu gross: Teil 1 + Aarau veröffentlichen, Rest als K0b abspalten.
 - Schritte S3 (Aarau Zwischengeraden) und R2 (Zwischengeraden-Teil) gehen in K0 auf; R2 behält nur die Gleissprünge.
+
+### K0b – Zwischengeraden Rest (aus K0, 19.11.)
+- Einstieg: «Weiter mit UEBERGABE.md – Schritt K0b: Zwischengeraden Rest»
+- Code: `_zg_zusammenlegen` in `spurplan_schema.py` (vor `_BRAUN`), Zählung `code/zwischengeraden.py` (ZG < 2 Ebenen, ZL länger, HK Höcker).
+- (1) Zweisimmen `jy8r` (mob__zweisimmen 326/182): Kette bricht am Wechsel dünn→dick (Verkettung nur innerhalb einer Klasse) – Klassengrenze
+  auf die neue Schräge legen. (2) Solothurn `xke0`: Weiche am Knick → doppelter Abstand Gl. 2/3, Anschluss direkt aus der Schräge.
+  (3) Selnau `j9ou` (ZL 866/147): nur wenn Daniel es will (Antwort auf der Seite). Konolfingen `0fzp` bleibt in S2b.
+- Fertig: Zielpläne ohne ZG, G0/HT-Sperre grün, Seite veröffentlicht.
 
 ### T-SZU1 – DKW aus 4-Arm-Weiche und Güterverkehr schwarz (Entscheid Daniel 18.11. 14:43, REGELN 2.4/1.21)
 - Einstieg: «Weiter mit UEBERGABE.md – Schritt T-SZU1: DKW aus 4-Arm-Weiche und Güterverkehr schwarz»
@@ -630,3 +639,13 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - Daniel 19.11. (REGELN 1.9): zu lange nichts Sichtbares (seit v155 nur G0/T-SZU/HT). K0 = Ins im Regionalplan (Hinweis 1470, bisher
   unbeantwortet und in keinem Schritt) + Zwischengeraden im Bahnhofplan (REGELN 1.9; S3 und R2-Zwischengeraden gehen in K0 auf).
 
+### 19.11.2026 ~15:55 – Schritt K0 abgeschlossen, Seite v156 (Commits 83a0dc2, 64a3fa4; ergebnisse 148d254)
+- Ins (Hinweis 1470): Meterspur setzte am gemeinsamen Knoten (override knoten_x 559,9) 2,5 px neben dem Ende der Rollbock-Schräge an;
+  neu fängt der Code das Ende der gezeichneten Normalspur (REGELN 2.12, cfg `ms_anschluss_fang`). G0-Basis region_ne GQ 0→1 bewusst
+  (Schräge jetzt durchgehend → derselbe GQ wie im Bahnhofplan ins; GQ in Ins selbst offen).
+- Zwischengeraden (REGELN 1.9): `_zg_zusammenlegen` verkettet Teilpfade zu Gleisen, legt Schräge–Gerade(< 2 Ebenen)–Schräge gleicher
+  Richtung ohne Weiche/Gleisende/Nummer zu einer mittigen 60°-Schräge zusammen; Enden auf dem Durchgangsgleis nur bis zur Ausrundung
+  (sonst G0 GG). Neu `code/zwischengeraden.py`, Bericht `ergebnisse/seite/zwischengeraden.md` im Workflow seite. ZG 14 → 10
+  (Aarau 4 → 0; Rest: Bern/Basel fest, Prüfstand 4, Zweisimmen 1 → K0b). Aarau G0 GT 5→1, Region Olten GT 10→6.
+- Regression v156: 4 Pläne geändert – aarau/region (gewollt, nur Aarau-Stellen im Differenzbild); zofingen/rothrist unverändert
+  seit 17.11. (Abstand zur Abnahme, nicht K0). Lokal geprüft: in Region Olten ändert die Regel ausser Aarau keinen Plan.
