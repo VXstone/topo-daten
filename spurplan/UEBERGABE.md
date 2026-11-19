@@ -97,7 +97,8 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - [x] **G0 Grundprüfung als Sperre** – 18.11. vormittags, Commits 404ca61 + Basis Prüfstand (Seite nicht neu veröffentlicht: kein Plan geändert)
 - [x] **T-SZU Testregion SZU** – 18.11. mittags, Commits 114156c/1d587e8, Seite v155 (Befundliste in Abschnitt 6)
 - [x] **HT Hauptgleis-Topologie als Sperre (REGELN 0.1, Kopf «HT»)** – 18.11. spät, `code/hauptgleis.py`, Basis gesetzt (Nachtrag HT); Seite nicht neu veröffentlicht (kein Plan geändert)
-- [ ] **T-SZU1 DKW aus 4-Arm-Weiche (REGELN 2.4) und Güterverkehr schwarz (REGELN 1.21)** (klein, Entscheid Daniel 18.11.) – **als Nächstes** (oder nach Daniels Reihenfolge aus der HT-Liste)
+- [ ] **K0 Sichtbar: Ins im Regionalplan + Zwischengeraden im Bahnhofplan** (klein–mittel, Wunsch Daniel 19.11.) – **als Nächstes**
+- [ ] **T-SZU1 DKW aus 4-Arm-Weiche (REGELN 2.4) und Güterverkehr schwarz (REGELN 1.21)** (klein, Entscheid Daniel 18.11.) – nach K0
 - [ ] **T-SZU2 Achse knickt im Fenster (REGELN 2.15), Zielplan Giesshübel · Saalsporthalle** (Entscheid Daniel 18.11.: Variante C) – nach S2b/R4/S3 oder wenn Daniel es vorzieht
 - [ ] **S2b Konolfingen Gleisfeld West** (Zielbild Daniel 18.11.), **R4 Rothrist im Regionalplan** und **S3 Aarau
   Zwischengeraden mit Weiche** – nach T-SZU, je eigener Chat, alle gegen die G0-Sperre geprüft
@@ -250,6 +251,29 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   falschen Seite, fehlender Spurwechsel (Fahrweg fehlt) – je in mindestens zwei Drehungen.
 - Danach: Liste aller Pläne mit HT > 0 an Daniel (Ziel 0; die Liste bestimmt die Reihenfolge der Folgeschritte).
 - Fertig, wenn: HT läuft im Workflow, Basis gesetzt, die Prüffälle werden erkannt, Bericht nennt G0 und HT je Plan.
+
+### K0 – Sichtbar: Ins im Regionalplan und Zwischengeraden im Bahnhofplan (Wunsch Daniel 19.11.)
+- Einstieg: «Weiter mit UEBERGABE.md – Schritt K0: Ins und Zwischengeraden»
+- Anlass (19.11., Daniel: «wann passieren mal wieder sichtbare Fortschritte … Zwischengeraden oder das nicht Aufeinandertreffen
+  von Gleisen in Ins»): seit v155 nur Prüfungen gebaut (G0, T-SZU, HT), nichts Sichtbares. **Dieser Schritt muss auf der Seite
+  sichtbar sein und am selben Tag veröffentlicht werden.** Keine neuen Prüfungen bauen; G0/HT nur als Leitplanke (Sperre grün).
+- **Teil 1 – Ins im Regionalplan NE** (Hinweis `1470h7mj983zrabw11m1`, region_ne x 1498/y −874, im Plan Ins lx 551/ly 121):
+  «Im Bahnhofplan scheinen die Gleise verbunden, im Regionalplan nicht». REGELN 4.x / Entscheid 18.11. (Rothrist): der Regionalplan
+  zeigt den Bahnhof wie dessen Bahnhofplan. Vorgehen: Ausschnitt Ins aus `ergebnisse/seite/plaene/region_ne.svg` und `ins.svg`
+  rendern (nur Ausschnitt), Stelle mit G0 (GS/GG/GP) und Verkettung (`verkettung.py`) benennen, Ursache in der Einbettung
+  (`region_olten_lauf.py --konfig spurplan/werkstatt/ne/region_ne.json`, `region_geometrie.py`) suchen, im Code beheben (kein
+  Override). Fertig: im Regionalplan treffen die Gleise wie im Bahnhofplan aufeinander, Differenzbild Ins.
+- **Teil 2 – Zwischengeraden im Bahnhofplan** (REGELN 1.9; W8 wirkt heute nur im Regionalplan `region_geometrie.py` und im
+  Bahnhofplan nur am Abgang `spurplan_schema.py` ~Z. 4828): Zielplan **aarau** (Hinweise `fmlk3ybhicj80yggwifb`,
+  `vnyq1jtx6sv6gc2scn80`), mitprüfen Solothurn `xke0q8que3hufliwbag9`, Zweisimmen `jy8ro0t1s42ghqu25tyk`, Selnau
+  `j9ouxkqumkzu5bwvwyqp`, Konolfingen `0fzpdkb9gtvz8ectd8iz` (sonst S2b). Zu Beginn: Zwischengeraden in allen Plänen zählen
+  (W8-Messung aus `region_geometrie.py` auf die Bahnhofpläne anwenden) → Liste an Daniel; dann im Löser des Bahnhofplans: zwei
+  Knicke mit kurzer Gerade (< 1,5 Ebenen) ohne Weiche/Perron/Nummer dazwischen zu einer 60°-Schräge zusammenlegen (eine Regel,
+  alle Pläne, cfg-Schalter mit REGELN 1.9 in Spalte «Code»). Fertig: Zwischengeraden in Aarau weg, Zählung über alle Pläne
+  gesunken, kein Plan mit neuem G0/HT-Befund.
+- Ablauf wie Abschnitt 0 (Vorher-Ausschnitte + Zielbild an Daniel zu Beginn, Regression jede Zeile erklären, Differenzbilder,
+  veröffentlichen, Hinweise beantworten). Wird Teil 2 zu gross: Teil 1 + Aarau veröffentlichen, Rest als K0b abspalten.
+- Schritte S3 (Aarau Zwischengeraden) und R2 (Zwischengeraden-Teil) gehen in K0 auf; R2 behält nur die Gleissprünge.
 
 ### T-SZU1 – DKW aus 4-Arm-Weiche und Güterverkehr schwarz (Entscheid Daniel 18.11. 14:43, REGELN 2.4/1.21)
 - Einstieg: «Weiter mit UEBERGABE.md – Schritt T-SZU1: DKW aus 4-Arm-Weiche und Güterverkehr schwarz»
@@ -601,4 +625,8 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   mit Schere/falsche Seite, je 0°/90° – Selbsttest bestanden; läuft in `seite` (Sperre) und `pruefstand`. Spalte HT in der Regression.
 - Basis `hauptgleis_basis.json` (82 Pläne mit Netzmodell): HT1 44, HT2 64, HT3 10, HT4 5, HT5 267; 28 Pläne mit HT > 0 – Liste
   `ergebnisse/seite/hauptgleis/hauptgleis.md`, an Daniel zur Reihenfolge der Folgeschritte. Olten (HT5 176) nur stichprobenweise geprüft.
+
+### 19.11.2026 ~14:35 – Neuer Schritt K0 (sichtbar) vor T-SZU1
+- Daniel 19.11.: zu lange nichts Sichtbares (seit v155 nur G0/T-SZU/HT). K0 = Ins im Regionalplan (Hinweis 1470, bisher
+  unbeantwortet und in keinem Schritt) + Zwischengeraden im Bahnhofplan (REGELN 1.9; S3 und R2-Zwischengeraden gehen in K0 auf).
 
