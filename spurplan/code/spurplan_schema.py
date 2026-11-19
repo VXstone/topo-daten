@@ -4084,7 +4084,17 @@ def _zg_zusammenlegen(svg_paths):
                     if ARGS.dbg: print("ZG zusammengelegt", [(round(x, 1), round(y, 1)) for x, y in (a1, a2)])
                     continue
             i += 1
-        if geaendert: ersatz.append((ids, neu))
+        if geaendert:
+            # Ende, das jetzt länger auf einem anderen Gleis liegt (Weiche auf dem Durchgangsgleis): nur bis zur Ausrundung
+            # zeichnen, sonst Gleis auf Gleis (G0 «GG», Aarau 19.11.)
+            r_ = CFG["sw_radius"]
+            for a_i, b_i in ((0, 1), (-1, -2)):
+                if len(neu) < 3: break
+                pa, pb = neu[a_i], neu[b_i]
+                if abs(pa[1] - pb[1]) <= 0.3 and abs(pb[0] - pa[0]) > r_ + 0.5 \
+                        and _knoten(((pa[0] + pb[0]) / 2, pa[1]), set(ids)) and _knoten(pa, set(ids)):
+                    neu[a_i] = (pb[0] - math.copysign(r_, pb[0] - pa[0]), pa[1])
+            ersatz.append((ids, neu))
     if not ersatz: return 0
     weg = collections.defaultdict(set)
     for ids, neu in ersatz:
