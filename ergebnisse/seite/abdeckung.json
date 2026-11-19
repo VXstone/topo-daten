@@ -1,5 +1,5 @@
 {
- "abgedeckt": 33,
+ "abgedeckt": 34,
  "offen": 57,
  "radius": 40.0,
  "ohne": [
@@ -355,11 +355,11 @@
    "text": "Zwischengeraden",
    "abgedeckt": true,
    "regeln": [
-    "ME",
-    "MZ"
+    "VB1",
+    "VD1"
    ],
-   "naechster": 18.4,
-   "naechste_regel": "MZ",
+   "naechster": 20.6,
+   "naechste_regel": "VD1",
    "plan_da": true
   },
   {
@@ -613,9 +613,12 @@
    "x": 2570,
    "y": 256.9,
    "text": "Stummel korrekt?",
-   "abgedeckt": false,
-   "regeln": [],
-   "naechster": 47.9,
+   "abgedeckt": true,
+   "regeln": [
+    "VB1",
+    "VD1"
+   ],
+   "naechster": 29.4,
    "naechste_regel": "VD1",
    "plan_da": true
   },
@@ -728,11 +731,10 @@
    "text": "Zwischengerade",
    "abgedeckt": true,
    "regeln": [
-    "ME",
-    "MZ"
+    "VD1"
    ],
-   "naechster": 21.8,
-   "naechste_regel": "MZ",
+   "naechster": 17.5,
+   "naechste_regel": "VD1",
    "plan_da": true
   },
   {

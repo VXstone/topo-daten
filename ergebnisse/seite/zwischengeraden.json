@@ -1,0 +1,1191 @@
+{
+ "ZG": 10,
+ "ZL": 7,
+ "HK": 5,
+ "plaene": {
+  "aarau": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "aarburg_oftringen": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "auvernier": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "avenches": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "basel": {
+   "ZG": 1,
+   "ZL": 1,
+   "HK": 1,
+   "befunde": [
+    {
+     "art": "HK",
+     "x": 1306.4,
+     "y": 374.0,
+     "laenge": 43.6,
+     "farbe": "#111",
+     "von": [
+      1284.6,
+      374.0
+     ],
+     "bis": [
+      1328.2,
+      374.0
+     ]
+    },
+    {
+     "art": "ZL",
+     "x": 1617.6,
+     "y": 330.8,
+     "laenge": 70.4,
+     "farbe": "#111",
+     "von": [
+      1582.4,
+      330.8
+     ],
+     "bis": [
+      1652.8,
+      330.8
+     ]
+    },
+    {
+     "art": "ZG",
+     "x": 1384.9,
+     "y": 374.0,
+     "laenge": 14.8,
+     "farbe": "#00862f",
+     "von": [
+      1377.5,
+      374.0
+     ],
+     "bis": [
+      1392.3,
+      374.0
+     ]
+    }
+   ]
+  },
+  "bern": {
+   "ZG": 4,
+   "ZL": 1,
+   "HK": 1,
+   "befunde": [
+    {
+     "art": "ZG",
+     "x": 273.2,
+     "y": 590.0,
+     "laenge": 25.8,
+     "farbe": "#111",
+     "von": [
+      260.3,
+      590.0
+     ],
+     "bis": [
+      286.1,
+      590.0
+     ]
+    },
+    {
+     "art": "ZG",
+     "x": 1589.4,
+     "y": 254.0,
+     "laenge": 26.0,
+     "farbe": "#111",
+     "von": [
+      1576.4,
+      254.0
+     ],
+     "bis": [
+      1602.4,
+      254.0
+     ]
+    },
+    {
+     "art": "HK",
+     "x": 1067.0,
+     "y": 134.0,
+     "laenge": 22.9,
+     "farbe": "#111",
+     "von": [
+      1055.5,
+      134.0
+     ],
+     "bis": [
+      1078.4,
+      134.0
+     ]
+    },
+    {
+     "art": "ZL",
+     "x": 2975.9,
+     "y": 590.0,
+     "laenge": 67.7,
+     "farbe": "#111",
+     "von": [
+      2942.1,
+      590.0
+     ],
+     "bis": [
+      3009.8,
+      590.0
+     ]
+    },
+    {
+     "art": "ZG",
+     "x": 2962.2,
+     "y": 422.0,
+     "laenge": 43.5,
+     "farbe": "#111",
+     "von": [
+      2940.4,
+      422.0
+     ],
+     "bis": [
+      2983.9,
+      422.0
+     ]
+    },
+    {
+     "art": "ZG",
+     "x": 1038.3,
+     "y": 494.0,
+     "laenge": 47.6,
+     "farbe": "#00862f",
+     "von": [
+      1014.5,
+      494.0
+     ],
+     "bis": [
+      1062.1,
+      494.0
+     ]
+    }
+   ]
+  },
+  "bern_brunnen_westside": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "bevaix": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "bole": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "boudry": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "chambrelien": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "champ_du_moulin": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "colombier": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "concise": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "corcelles_peseux": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "cornaux": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "courtepin": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "couvet": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "cressier": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "cressier_fr": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "daniken": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "domdidier": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "dompierre": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "dulliken": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "faoug": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "fragen": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "fraschels": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "galmiz": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "gampelen": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "gorgier_saint_aubin": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "grandson": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "gummenen": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "ins": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "kallnach": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "kerzers": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "kerzers_papiliorama": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "konolfingen": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "la_neuveville": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "la_presta_mines_d_asphalte": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "laufelfingen": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "le_landeron": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "les_deurres": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "les_geneveys_sur_coffrane": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "les_hauts_geneveys": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "ligerz": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "marin_epagnier": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "mob__allieres": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "mob__belmont_sur_montreux": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "mob__blankenburg": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "mob__caux": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "mob__chamby": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "mob__chateau_d_oex": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "mob__chatelard": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "mob__chernex": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "mob__cret_d_y_bau": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "mob__flendruz": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "mob__fontanivent": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "mob__glion": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "mob__glion_college": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "mob__gruben": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "mob__gstaad": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "mob__jaman": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "mob__jor": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "mob__la_perche": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "mob__la_tine": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "mob__le_tremblex": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "mob__lenk_im_simmental": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "mob__les_avants": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "mob__les_cases": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "mob__les_echets": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "mob__les_sciernes": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "mob__matten": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "mob__montbovon": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "mob__montreux": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "mob__montreux_les_planches": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "mob__oeschseite": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "mob__paccot": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "mob__planchamp": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "mob__rochers_de_naye": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "mob__rossiniere": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "mob__rougemont": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "mob__saanen": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "mob__saanenmoser": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "mob__schonried": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "mob__sendy_sollard": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "mob__st_stephan": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "mob__toveyre": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "mob__valmont": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "mob__vernex": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "mob__vuarennes": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "mob__zweisimmen": {
+   "ZG": 1,
+   "ZL": 0,
+   "HK": 1,
+   "befunde": [
+    {
+     "art": "ZG",
+     "x": 325.8,
+     "y": 182.0,
+     "laenge": 42.7,
+     "farbe": "#9a5b1e",
+     "von": [
+      304.4,
+      182.0
+     ],
+     "bis": [
+      347.1,
+      182.0
+     ]
+    },
+    {
+     "art": "HK",
+     "x": 364.9,
+     "y": 254.0,
+     "laenge": 15.0,
+     "farbe": "#9a5b1e",
+     "von": [
+      357.4,
+      254.0
+     ],
+     "bis": [
+      372.4,
+      254.0
+     ]
+    }
+   ]
+  },
+  "motiers": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "munchenwiler_courgevaux": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "muntelier_lowenberg": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "muntschemier": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "murten": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "neuchatel": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "neuchatel_vauseyon": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "noiraigue": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "olten": {
+   "ZG": 0,
+   "ZL": 1,
+   "HK": 0,
+   "befunde": [
+    {
+     "art": "ZL",
+     "x": 917.0,
+     "y": 182.0,
+     "laenge": 174.0,
+     "farbe": "#00862f",
+     "von": [
+      830.0,
+      182.0
+     ],
+     "bis": [
+      1004.0,
+      182.0
+     ]
+    }
+   ]
+  },
+  "olten_hammer": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "onnens_bonvillars": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "pensier": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "pruefstand": {
+   "ZG": 4,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": [
+    {
+     "art": "ZG",
+     "x": -68.8,
+     "y": 113.2,
+     "laenge": 16.5,
+     "farbe": "#00862f",
+     "von": [
+      -77.0,
+      113.2
+     ],
+     "bis": [
+      -60.5,
+      113.2
+     ]
+    },
+    {
+     "art": "ZG",
+     "x": -68.8,
+     "y": 113.2,
+     "laenge": 16.5,
+     "farbe": "#00862f",
+     "von": [
+      -60.5,
+      113.2
+     ],
+     "bis": [
+      -77.0,
+      113.2
+     ]
+    },
+    {
+     "art": "ZG",
+     "x": -63.2,
+     "y": 119.6,
+     "laenge": 16.1,
+     "farbe": "#00862f",
+     "von": [
+      -55.2,
+      119.6
+     ],
+     "bis": [
+      -71.3,
+      119.6
+     ]
+    },
+    {
+     "art": "ZG",
+     "x": 54.4,
+     "y": 104.0,
+     "laenge": 16.3,
+     "farbe": "#00862f",
+     "von": [
+      46.2,
+      104.0
+     ],
+     "bis": [
+      62.5,
+      104.0
+     ]
+    }
+   ]
+  },
+  "riedbach": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "rosshausern": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "rothrist": {
+   "ZG": 0,
+   "ZL": 1,
+   "HK": 2,
+   "befunde": [
+    {
+     "art": "ZL",
+     "x": 1683.8,
+     "y": 123.0,
+     "laenge": 59.5,
+     "farbe": "#111",
+     "von": [
+      1713.5,
+      123.0
+     ],
+     "bis": [
+      1654.0,
+      123.0
+     ]
+    },
+    {
+     "art": "HK",
+     "x": 494.5,
+     "y": 227.1,
+     "laenge": 45.6,
+     "farbe": "#111",
+     "von": [
+      471.7,
+      227.1
+     ],
+     "bis": [
+      517.3,
+      227.1
+     ]
+    },
+    {
+     "art": "HK",
+     "x": 494.5,
+     "y": 237.7,
+     "laenge": 45.6,
+     "farbe": "#111",
+     "von": [
+      471.7,
+      237.7
+     ],
+     "bis": [
+      517.3,
+      237.7
+     ]
+    }
+   ]
+  },
+  "safenwil": {
+   "ZG": 0,
+   "ZL": 1,
+   "HK": 0,
+   "befunde": [
+    {
+     "art": "ZL",
+     "x": 432.0,
+     "y": 110.0,
+     "laenge": 70.0,
+     "farbe": "#111",
+     "von": [
+      397.0,
+      110.0
+     ],
+     "bis": [
+      467.0,
+      110.0
+     ]
+    }
+   ]
+  },
+  "saint_blaise_cff": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "saint_blaise_lac": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "schonenwerd": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "serrieres": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "solothurn": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "sugiez": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "szu__berghof": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "szu__borrweg": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "szu__ringlikon": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "szu__uetliberg": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "szu__zurich_binz": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "szu__zurich_friesenberg": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "szu__zurich_giesshubel": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "szu__zurich_schweighof": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "szu__zurich_selnau": {
+   "ZG": 0,
+   "ZL": 2,
+   "HK": 0,
+   "befunde": [
+    {
+     "art": "ZL",
+     "x": 866.5,
+     "y": 147.2,
+     "laenge": 101.9,
+     "farbe": "#111",
+     "von": [
+      815.5,
+      147.2
+     ],
+     "bis": [
+      917.4,
+      147.2
+     ]
+    },
+    {
+     "art": "ZL",
+     "x": 1252.5,
+     "y": 134.0,
+     "laenge": 59.0,
+     "farbe": "#111",
+     "von": [
+      1223.0,
+      134.0
+     ],
+     "bis": [
+      1282.0,
+      134.0
+     ]
+    }
+   ]
+  },
+  "tecknau": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "thun": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "travers": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "tuscherz": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "twann": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "vereina__klosters_platz": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "vereina__klosters_selfranga": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "vereina__sagliains": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "vereina__sagliains_nord": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "vereina__sagliains_sasslatsch": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "vereina__sasslatsch": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "vereina__selfranga_sud": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "vereina__susch": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "vereina__vereina_nord": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "vereina__vereina_sud": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "wangen_bei_olten": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "zihlbruecke": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  },
+  "zofingen": {
+   "ZG": 0,
+   "ZL": 0,
+   "HK": 0,
+   "befunde": []
+  }
+ }
+}

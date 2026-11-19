@@ -24,10 +24,66 @@
 },
 {
 "regel": "VB1",
+"x": 2549.9,
+"y": 282.8,
+"text": "OSM-Weiche 389711790 ohne Abzweig im Plan",
+"osm": 389711790
+},
+{
+"regel": "VB1",
+"x": 2657.2,
+"y": 330.8,
+"text": "OSM-Weiche 390523655 ohne Abzweig im Plan",
+"osm": 390523655
+},
+{
+"regel": "VB1",
+"x": 2716.9,
+"y": 378.8,
+"text": "OSM-Weiche 390523657 ohne Abzweig im Plan",
+"osm": 390523657
+},
+{
+"regel": "VB1",
 "x": 2989.7,
 "y": 282.8,
 "text": "OSM-Weiche 1799626709 ohne Abzweig im Plan",
 "osm": 1799626709
+},
+{
+"regel": "VB1",
+"x": 3097.2,
+"y": 210.8,
+"text": "OSM-Weiche 1799626782 ohne Abzweig im Plan",
+"osm": 1799626782
+},
+{
+"regel": "VB1",
+"x": 3110.9,
+"y": 210.8,
+"text": "OSM-Weiche 1799626803 ohne Abzweig im Plan",
+"osm": 1799626803
+},
+{
+"regel": "VB1",
+"x": 3037.5,
+"y": 162.8,
+"text": "OSM-Weiche 1799626775 ohne Abzweig im Plan",
+"osm": 1799626775
+},
+{
+"regel": "VB1",
+"x": 2434.1,
+"y": 234.8,
+"text": "OSM-Weiche 1799639073 ohne Abzweig im Plan",
+"osm": 1799639073
+},
+{
+"regel": "VB1",
+"x": 2493.8,
+"y": 282.8,
+"text": "OSM-Weiche 2079515478 ohne Abzweig im Plan",
+"osm": 2079515478
 },
 {
 "regel": "VB1",
@@ -131,6 +187,12 @@
 },
 {
 "regel": "VD1",
+"x": 2710.6,
+"y": 378.8,
+"text": "zwei Gleise 13 px aufeinander"
+},
+{
+"regel": "VD1",
 "x": 1310.7,
 "y": 234.8,
 "text": "zwei Gleise 15 px aufeinander"
@@ -149,15 +211,57 @@
 },
 {
 "regel": "VD1",
+"x": 3043.8,
+"y": 162.8,
+"text": "zwei Gleise 13 px aufeinander"
+},
+{
+"regel": "VD1",
 "x": 1335.5,
 "y": 306.8,
 "text": "zwei Gleise 14 px aufeinander"
+},
+{
+"regel": "VD1",
+"x": 2556.2,
+"y": 282.9,
+"text": "zwei Gleise 13 px aufeinander"
+},
+{
+"regel": "VD1",
+"x": 2603.3,
+"y": 330.7,
+"text": "zwei Gleise 13 px aufeinander"
+},
+{
+"regel": "VD1",
+"x": 2663.5,
+"y": 330.9,
+"text": "zwei Gleise 13 px aufeinander"
+},
+{
+"regel": "VD1",
+"x": 3090.9,
+"y": 210.7,
+"text": "zwei Gleise 13 px aufeinander"
+},
+{
+"regel": "VD1",
+"x": 2440.4,
+"y": 234.9,
+"text": "zwei Gleise 13 px aufeinander"
+},
+{
+"regel": "VD1",
+"x": 2487.5,
+"y": 282.7,
+"text": "zwei Gleise 13 px aufeinander"
 }
 ],
 "info": {
 "dkw_osm_unvollstaendig": [],
 "gleise": 172,
-"knoten_plan": 59,
+"knoten_plan": 51,
 "dkw_plan": 0,
 "knoten_osm": 71,
 "versatz_y": 0.0,

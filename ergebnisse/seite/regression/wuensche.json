@@ -1,17 +1,17 @@
 [
  {
-  "key": "region",
-  "gruppe": "Region",
-  "summe": 129,
-  "W53": 19,
-  "W55": 5
- },
- {
   "key": "bern",
   "gruppe": "Grosse Knoten",
   "summe": 111,
   "W53": 15,
   "W56": 7
+ },
+ {
+  "key": "region",
+  "gruppe": "Region",
+  "summe": 105,
+  "W53": 15,
+  "W55": 5
  },
  {
   "key": "region_ne",

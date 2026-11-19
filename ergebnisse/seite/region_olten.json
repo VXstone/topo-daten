@@ -278,7 +278,6 @@
    "netz": {
     "D11": 3,
     "W2": 3,
-    "F7": 4,
     "A1": 2
    },
    "topologie": "{}",
@@ -291,10 +290,9 @@
     "topo_F": 0,
     "netz_D11": 3,
     "netz_W2": 3,
-    "netz_F7": 4,
     "netz_A1": 2,
     "boegen_pax": 6,
-    "boegen_alle": 91,
+    "boegen_alle": 83,
     "randabstand": 2
    }
   }
@@ -578,10 +576,9 @@
    "topo_F": 0,
    "netz_D11": 3,
    "netz_W2": 3,
-   "netz_F7": 4,
    "netz_A1": 2,
    "boegen_pax": 6,
-   "boegen_alle": 91,
+   "boegen_alle": 83,
    "randabstand": 2
   }
  },
