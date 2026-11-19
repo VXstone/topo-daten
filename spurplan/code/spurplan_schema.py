@@ -3986,6 +3986,119 @@ def _knubbel(svg_paths):
 if RU.get("g6_knubbel", True):
     _nk = _knubbel(svg_paths)
     if _nk: print(f"G6: {_nk} Überstand(e) vor Ausrundung gekürzt")
+
+
+def _zg_zusammenlegen(svg_paths):
+    """REGELN 1.9 (Schritt K0, 19.11.2026; Hinweise Aarau fmlk/vnyq, Zweisimmen jy8r): Zwischengerade im Bahnhofplan –
+    ein Gleis wechselt zweimal in dieselbe Richtung die Ebene (Schräge – kurzes waagrechtes Stück – Schräge), an den beiden
+    Knicken liegt weder Weiche noch Gleisende, auf dem Stück keine Gleisnummer: die beiden Schrägen werden zu einer
+    60°-Schräge in der Mitte des Stücks zusammengelegt (vorher/nachher waagrecht auf den beiden Ebenen weiter).
+    Teilpfade werden dazu an Stellen mit genau zwei Enden zu durchgehenden Gleisen verkettet (wie code/zwischengeraden.py).
+    cfg «zg_zusammen» (Standard an), «zg_max_ebenen» (Länge des waagrechten Stücks, Standard 2 Ebenen)."""
+    lp = CFG["lane_px"]; t60 = math.tan(math.radians(CFG["sw_angle"])); lmax = CFG.get("zg_max_ebenen", 2.0) * lp
+    def _ecken_(p):
+        q = [p[0]]
+        for i in range(1, len(p) - 1):
+            a, b, c = q[-1], p[i], p[i + 1]; u = (b[0] - a[0], b[1] - a[1]); w = (c[0] - b[0], c[1] - b[1])
+            if abs(u[0] * w[1] - u[1] * w[0]) < 0.02 * (math.hypot(*u) * math.hypot(*w) + 1e-9) and u[0] * w[0] + u[1] * w[1] > 0: continue
+            q.append(b)
+        q.append(p[-1]); return q
+    def _pts_(sp):
+        pts = []; cur = None
+        for c, a in re.findall(r"([MHLQCV])([^MHLQCV]*)", sp):
+            v = [float(x) for x in re.findall(r"-?\d+(?:\.\d+)?", a)]
+            if c == "C": return None
+            if c == "M": cur = (v[0], v[1]); pts.append(cur)
+            elif c == "H":
+                for x in v: cur = (x, cur[1]); pts.append(cur)
+            elif c == "V":
+                for y in v: cur = (cur[0], y); pts.append(cur)
+            elif c == "L":
+                for i in range(0, len(v) - 1, 2): cur = (v[i], v[i + 1]); pts.append(cur)
+            elif c == "Q":
+                for i in range(0, len(v) - 3, 4): pts.append((v[i], v[i + 1])); cur = (v[i + 2], v[i + 3]); pts.append(cur)
+        p2 = []
+        for p in pts:
+            if not p2 or math.dist(p, p2[-1]) >= 0.15: p2.append(p)
+        return _ecken_(p2) if len(p2) >= 2 else None
+    teile = []                 # [klasse, d-Index, Teilpfad-Text, Ecken]
+    for k_ in (True, False):
+        for j_, d_ in enumerate(svg_paths[k_]):
+            for sp_ in re.split(r"(?=M)", d_):
+                if sp_.strip():
+                    p_ = _pts_(sp_.strip())
+                    if p_: teile.append([k_, j_, sp_.strip(), p_])
+    def _abst(p, a, b):
+        dx, dy = b[0] - a[0], b[1] - a[1]; L2 = dx * dx + dy * dy
+        t = 0 if L2 == 0 else max(0, min(1, ((p[0] - a[0]) * dx + (p[1] - a[1]) * dy) / L2))
+        return math.hypot(p[0] - a[0] - t * dx, p[1] - a[1] - t * dy)
+    def _knoten(p, ausser, tol=1.0):
+        if any(math.hypot(p[0] - dx_, p[1] - dy_) < 2.5 for dx_, dy_, *_r in dots): return True
+        for k, T in enumerate(teile):
+            if k in ausser: continue
+            P = T[3]
+            if min(q[0] for q in P) - tol > p[0] or max(q[0] for q in P) + tol < p[0]: continue
+            if any(_abst(p, a, b) <= tol for a, b in zip(P, P[1:])): return True
+        return False
+    key = lambda p: (round(p[0] * 2) / 2, round(p[1] * 2) / 2)
+    enden = collections.defaultdict(list)
+    for k, T in enumerate(teile): enden[key(T[3][0])].append((k, 0)); enden[key(T[3][-1])].append((k, 1))
+    nb = {}
+    for kp, l in enden.items():
+        if len(l) == 2 and l[0][0] != l[1][0] and teile[l[0][0]][0] == teile[l[1][0]][0] and not _knoten(kp, {l[0][0], l[1][0]}):
+            nb[l[0]] = l[1]; nb[l[1]] = l[0]
+    seen = set(); ketten = []
+    for k in range(len(teile)):
+        if k in seen: continue
+        cur, e = k, 0; g = 0
+        while (cur, e) in nb and g < 500:
+            j, f = nb[(cur, e)]
+            if j == k: break
+            cur, e = j, 1 - f; g += 1
+        pts = []; ids = []; c = cur
+        while c not in seen:
+            seen.add(c); ids.append(c); P = teile[c][3] if e == 0 else teile[c][3][::-1]
+            pts += P if not pts else P[1:]
+            if (c, 1 - e) not in nb: break
+            c, f = nb[(c, 1 - e)]; e = f
+        ketten.append((ids, _ecken_(pts)))
+    # Gleisnummern: Stücke mit Nummer sind echte Gleise (REGELN 1.9 «ausser … Gleis mit Perron oder Nummer»)
+    _nr = [(X(float(np.median([q_[0] for q_ in sg_["p"]]))), Y(seglane[sg_["id"]])) for sg_ in segs if sg_.get("ref") and sg_["id"] in seglane] if "seglane" in globals() else []
+    ersatz = []; n_ = 0
+    for ids, p in ketten:
+        neu = list(p); geaendert = False; i = 1; _g = 0
+        while i < len(neu) - 2 and _g < 200:
+            _g += 1
+            a0, a1, a2, a3 = neu[i - 1], neu[i], neu[i + 1], neu[i + 2]
+            L = abs(a2[0] - a1[0]); dy1 = a1[1] - a0[1]; dy3 = a3[1] - a2[1]
+            ok = abs(a2[1] - a1[1]) <= 0.3 and 0.3 < L < lmax and abs(dy1) >= 0.5 and abs(dy3) >= 0.5 and (dy1 > 0) == (dy3 > 0) \
+                and abs(a0[1] - (neu[i - 2][1] if i >= 2 else a0[1])) <= 0.3 and abs(a3[1] - (neu[i + 3][1] if i + 3 < len(neu) else a3[1])) <= 0.3 \
+                and (a3[0] - a0[0]) * (a2[0] - a1[0]) > 0
+            if ok and not _knoten(a1, set(ids)) and not _knoten(a2, set(ids)) \
+                    and not any(min(a1[0], a2[0]) - 2 <= x <= max(a1[0], a2[0]) + 2 and abs(y - a1[1]) < 1.0 for x, y in _nr):
+                sx = 1 if a3[0] > a0[0] else -1; run = abs(a3[1] - a0[1]) / t60
+                if abs(a3[0] - a0[0]) + 0.5 >= run:
+                    xs = (a0[0] + a3[0]) / 2 - sx * run / 2
+                    neu[i - 1:i + 3] = [a0, (xs, a0[1]), (xs + sx * run, a3[1]), a3]
+                    neu = _ecken_(neu); geaendert = True; n_ += 1
+                    if ARGS.dbg: print("ZG zusammengelegt", [(round(x, 1), round(y, 1)) for x, y in (a1, a2)])
+                    continue
+            i += 1
+        if geaendert: ersatz.append((ids, neu))
+    if not ersatz: return 0
+    weg = collections.defaultdict(set)
+    for ids, neu in ersatz:
+        k_ = teile[ids[0]][0]
+        for t in ids: weg[(teile[t][0], teile[t][1])].add(teile[t][2])
+        svg_paths[k_].append(_rund(neu, CFG["sw_radius"]))
+    for (k_, j_), subs in weg.items():
+        rest = [sp_.strip() for sp_ in re.split(r"(?=M)", svg_paths[k_][j_]) if sp_.strip() and sp_.strip() not in subs]
+        svg_paths[k_][j_] = " ".join(rest)
+    for k_ in svg_paths: svg_paths[k_] = [d_ for d_ in svg_paths[k_] if d_]
+    return n_
+if CFG.get("zg_zusammen", True):
+    _nzg = _zg_zusammenlegen(svg_paths)
+    if _nzg: print(f"REGELN 1.9: {_nzg} Zwischengerade(n) zu einer Schräge zusammengelegt")
 _BRAUN = {True: [], False: []}
 _ks = _kn = None
 if SCHMAL_GEMISCHT:
@@ -4223,11 +4336,26 @@ if OVR.get("meterspur") and os.path.exists(OVR["meterspur"]) and (not ARGS.bare 
             i = int(np.argmax(dd)) + 1
             return _dp(pts[:i + 1], eps)[:-1] + _dp(pts[i:], eps) if dd[i - 1] > eps else [pts[0], pts[-1]]
         _mp = {True: [], False: []}; _aus = _ms_cfg.get("ausfahrt_lanes", 0.8); MS_TXT = []
+        # REGELN 0.1 / K0 (19.11.2026, Hinweis Ins 1470): am gemeinsamen Knoten mit der Normalspur setzt die Meterspur genau am
+        # Ende des gezeichneten Normalspurgleises an (Ins: Rollbock-Schräge endete 2,5 px neben dem Meterspuranfang, im
+        # Regionalplan sichtbar unverbunden). Fang: Endpunkt einer gezeichneten Linie auf gleicher Höhe, ≤ halbe Ebene entfernt.
+        _ms_enden = [p_ for pts_ in ZEICHNEN_LINIEN for p_ in (pts_[0], pts_[-1])]
+        for k_ in (True, False):
+            for d_ in svg_paths[k_]:
+                for m_ in re.finditer(r"M(-?[\d.]+),(-?[\d.]+)((?:[LHQ ]\s*-?[\d.]+(?:,-?[\d.]+)?)*)", d_):
+                    _ms_enden.append((float(m_[1]), float(m_[2])))
+                    _nz = re.findall(r"(-?[\d.]+),(-?[\d.]+)", m_[3])
+                    if _nz and m_[3].strip()[:1] in "LQ ": _ms_enden.append((float(_nz[-1][0]), float(_nz[-1][1])))
+        def _ms_fang(p_):
+            if not CFG.get("ms_anschluss_fang", True) or not _ms_enden: return p_
+            c_ = [(math.hypot(e_[0] - p_[0], e_[1] - p_[1]), e_) for e_ in _ms_enden if abs(e_[1] - p_[1]) < 1.0]
+            c_ = [c for c in c_ if c[0] <= 0.5 * CFG["lane_px"]]
+            return min(c_)[1] if c_ else p_
         for i_, t_, sd_, nn_ in _msd:
             q_ = []; raus = None
             for (s_, d_), mn_ in zip(sd_, nn_):
                 if mn_ in home and mn_ in SD:      # gemeinsamer Knoten mit der Normalspur (Rollbockanlage Ins): dort anschliessen
-                    q_.append((xpos(mn_, SD[mn_][0]), ypos(mn_))); continue
+                    q_.append(_ms_fang((xpos(mn_, SD[mn_][0]), ypos(mn_)))); continue
                 if not (CFG["s_min"] - 1 <= s_ <= CFG["s_max"] + 1) or not _ms_ok(s_, d_):
                     if q_: break
                     continue

@@ -114,6 +114,9 @@ jobs:
           rc=${PIPESTATUS[0]}
           echo "rc=$rc" >> "$GITHUB_OUTPUT"; echo "st=$st" >> "$GITHUB_OUTPUT"
           rm -rf /tmp/htnetz
+      - name: Zwischengeraden zählen (19.11.2026, K0, REGELN 1.9) – nur Bericht, keine Sperre
+        run: |
+          python3 spurplan/code/zwischengeraden.py /tmp/seite/plaene --json /tmp/seite/zwischengeraden.json --md /tmp/seite/zwischengeraden.md || true
       - name: Regression über alle Pläne (6.11.2026, Befund Olten) – Tabelle, Differenzbilder, Einordnung, Kartenlabel
         run: |
           git fetch -q --depth 400 origin ergebnisse:refs/remotes/origin/ergebnisse -f || true
