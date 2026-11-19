@@ -1,4 +1,4 @@
-# Hinweis-Abdeckung 34/57
+# Hinweis-Abdeckung 31/57
 
 Befund < 40 px im selben Plan, ohne G2.
 
@@ -28,7 +28,7 @@ Befund < 40 px im selben Plan, ohne G2.
 | ✓ | es9y | mob__montreux | MQK, MX, VA2, VB2 | 12.7 | Perronnummern braun Meterspur |
 | ✓ | ezxj | konolfingen | Z1 | 15.8 | grünes Perron? |
 | ✓ | f3mp | olten | VB1 | 36.9 | nicht ausgerundeter Knick |
-| ✓ | fmlk | aarau | VB1, VD1 | 20.6 | Zwischengeraden |
+| · | fmlk | aarau |  | 79.0 | Zwischengeraden |
 | · | foiy | solothurn |  | 125.7 | Gleis nicht mehr lang (Pfeil) |
 | · | fuyq | vereina__sagliains_sasslatsch |  |  | fettes Gleis endet an Perron/Autoverlad |
 | · | i06s | mob__glion |  | 87.6 | Symbol Schiebebühne |
@@ -47,7 +47,7 @@ Befund < 40 px im selben Plan, ohne G2.
 | ✓ | obvp | solothurn | G6, VB1, VD1, W1, W2 | 0.7 | 90 Grad Knick? |
 | ✓ | q31m | mob__zweisimmen | VB2 | 34.0 | Meterspur an 6/7 nicht angebunden |
 | · | qotw | vereina__klosters_platz |  | 83.3 | Mittelperron zwischen 2 und 3 |
-| ✓ | r9xv | aarau | VB1, VD1 | 29.4 | Stummel korrekt? |
+| · | r9xv | aarau |  | 47.9 | Stummel korrekt? |
 | · | rap4 | mob__le_tremblex |  |  | Nebengleis nicht fett |
 | ✓ | t6x0 | solothurn | G6, MP, MX, VA1, VB2, VC1, W2 | 5.3 | Kreuzung in OSM? |
 | ✓ | tnvp | konolfingen | G7, MX, VB2, VC1 | 2.7 | Knubbel kurz gerade |
@@ -55,7 +55,7 @@ Befund < 40 px im selben Plan, ohne G2.
 | · | u13h | mob__zweisimmen |  | 54.0 | Stumpen Normalspur? |
 | ✓ | uyue | solothurn | G6, VB2, VD2 | 2.3 | Perron auf Gleis, gerader Knubbel |
 | · | v2w8 | mob__glion |  | 109.8 | Riesenabstand Schiebebühne |
-| ✓ | vnyq | aarau | VD1 | 17.5 | Zwischengerade |
+| · | vnyq | aarau |  | 99.4 | Zwischengerade |
 | · | wvrp | mob__zweisimmen |  | 48.5 | kreuzt das andere oder biegt von DKW falsch ab |
 | · | wyu2 | mob__glion |  | 154.0 | dieser Perron? |
 | ✓ | xke0 | solothurn | ME, MZ, W2 | 22.5 | Zwischengerade, doppelter Abstand |

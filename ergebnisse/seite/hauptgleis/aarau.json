@@ -1,10 +1,10 @@
 {
  "zaehl": {
-  "HT1": 13,
+  "HT1": 7,
   "HT2": 4,
   "HT3": 0,
   "HT4": 1,
-  "HT5": 10
+  "HT5": 9
  },
  "befunde": [
   {
@@ -30,52 +30,10 @@
   },
   {
    "regel": "HT1",
-   "x": 2549.9,
-   "y": 282.8,
-   "text": "OSM-Weiche 389711790 ohne Abzweig im Plan",
-   "osm": 389711790
-  },
-  {
-   "regel": "HT1",
-   "x": 2657.2,
-   "y": 330.8,
-   "text": "OSM-Weiche 390523655 ohne Abzweig im Plan",
-   "osm": 390523655
-  },
-  {
-   "regel": "HT1",
    "x": 2989.7,
    "y": 282.8,
    "text": "OSM-Weiche 1799626709 ohne Abzweig im Plan",
    "osm": 1799626709
-  },
-  {
-   "regel": "HT1",
-   "x": 3097.2,
-   "y": 210.8,
-   "text": "OSM-Weiche 1799626782 ohne Abzweig im Plan",
-   "osm": 1799626782
-  },
-  {
-   "regel": "HT1",
-   "x": 3110.9,
-   "y": 210.8,
-   "text": "OSM-Weiche 1799626803 ohne Abzweig im Plan",
-   "osm": 1799626803
-  },
-  {
-   "regel": "HT1",
-   "x": 2434.1,
-   "y": 234.8,
-   "text": "OSM-Weiche 1799639073 ohne Abzweig im Plan",
-   "osm": 1799639073
-  },
-  {
-   "regel": "HT1",
-   "x": 2493.8,
-   "y": 282.8,
-   "text": "OSM-Weiche 2079515478 ohne Abzweig im Plan",
-   "osm": 2079515478
   },
   {
    "regel": "HT1",
@@ -239,25 +197,16 @@
    "art": "fehlt"
   },
   {
-   "regel": "HT5",
-   "x": 3708.5,
-   "y": 294.8,
-   "text": "Fahrweg Abgang 650 Lenzburg (13046508676) ↔ Gl. 14 in OSM, fehlt im Plan",
-   "von": "Abgang 650 Lenzburg (13046508676)",
-   "nach": "Gl. 14",
-   "art": "fehlt"
-  },
-  {
    "regel": "_info",
    "x": 0,
    "y": 0,
-   "text": "Fahrwege: 18/18 Ziele im Plan gefunden, OSM 74, Plan 70",
+   "text": "Fahrwege: 18/18 Ziele im Plan gefunden, OSM 74, Plan 71",
    "ohne_lage": []
   }
  ],
  "osm_abgleich": {
-  "VB1": 15,
+  "VB1": 7,
   "VB2": 4,
-  "VD1": 15
+  "VD1": 7
  }
 }

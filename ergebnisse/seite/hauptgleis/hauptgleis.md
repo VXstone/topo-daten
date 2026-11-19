@@ -5,8 +5,8 @@
 | Plan | HT1 | HT2 | HT3 | HT4 | HT5 | Summe |
 |---|---|---|---|---|---|---|
 | olten | 13 | 25 | 7 | 2 | 176 | 223 |
-| aarau | **13** (Basis 7) | 4 | · | 1 | 10 | 28 |
 | solothurn | 4 | 1 | · | · | 17 | 22 |
+| aarau | 7 | 4 | · | 1 | 9 ↓10 | 21 |
 | neuchatel | · | · | 2 | · | 17 | 19 |
 | szu__zurich_giesshubel | 1 | 8 | 1 | 1 | 5 | 16 |
 | rothrist | 2 | 5 | · | · | 6 | 13 |
@@ -88,20 +88,3 @@
 | wangen_bei_olten | · | · | · | · | · | 0 |
 
 Regeln: HT1 = OSM-Weiche am Hauptgleis ohne Abzweig im Plan; HT2 = Abzweig am Hauptgleis im Plan ohne OSM-Weiche; HT3 = Gleis an der falschen Weiche (Hauptgleis); HT4 = Abzweig zur falschen Seite; HT5 = Fahrweg im Plan ≠ OSM
-
-## NEUE Befunde
-
-- **aarau** HT1: 7 → 13
-  - 2541.5/210.8: OSM-Weiche 382373779 ohne Abzweig im Plan
-  - 3173.8/234.8: OSM-Weiche 1799626827 ohne Abzweig im Plan
-  - 2145.0/378.8: OSM-Weiche 382373821 ohne Abzweig im Plan
-  - 2549.9/282.8: OSM-Weiche 389711790 ohne Abzweig im Plan
-  - 2657.2/330.8: OSM-Weiche 390523655 ohne Abzweig im Plan
-  - 2989.7/282.8: OSM-Weiche 1799626709 ohne Abzweig im Plan
-  - 3097.2/210.8: OSM-Weiche 1799626782 ohne Abzweig im Plan
-  - 3110.9/210.8: OSM-Weiche 1799626803 ohne Abzweig im Plan
-  - 2434.1/234.8: OSM-Weiche 1799639073 ohne Abzweig im Plan
-  - 2493.8/282.8: OSM-Weiche 2079515478 ohne Abzweig im Plan
-  - 1303.1/234.8: OSM-Weiche 3736070802 ohne Abzweig im Plan
-  - 1342.4/306.8: OSM-Weiche 12196972116 ohne Abzweig im Plan
-  - 2677.7/234.8: OSM-Weiche 10605866262 ohne Abzweig im Plan
