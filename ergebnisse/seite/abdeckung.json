@@ -74,8 +74,8 @@
   {
    "id": "33fs1o9c5jw7adqa8kbo",
    "plan": "konolfingen",
-   "x": 569.8,
-   "y": 257.5,
+   "x": 575.7,
+   "y": 270.7,
    "text": "Gleis unter Gleis, sehr steil",
    "abgedeckt": true,
    "regeln": [
@@ -100,19 +100,18 @@
   {
    "id": "3d6h8ove5to3gkvyapj0",
    "plan": "konolfingen",
-   "x": 378.1,
-   "y": 283.2,
+   "x": 384.0,
+   "y": 296.4,
    "text": "Abstellgleise über Streckengleise",
    "abgedeckt": true,
    "regeln": [
     "G7",
-    "MQK",
     "MX",
     "VB2",
     "VC1"
    ],
-   "naechster": 12.0,
-   "naechste_regel": "MQK",
+   "naechster": 18.1,
+   "naechste_regel": "G7",
    "plan_da": true
   },
   {
@@ -200,8 +199,8 @@
   {
    "id": "8bce2usmmz5hf4zrkuyo",
    "plan": "konolfingen",
-   "x": 659.6,
-   "y": 252.8,
+   "x": 665.5,
+   "y": 266.0,
    "text": "Gleise hin und her, Pfeile retour",
    "abgedeckt": true,
    "regeln": [
@@ -323,8 +322,8 @@
   {
    "id": "ezxju35sv6pzpjgvpfud",
    "plan": "konolfingen",
-   "x": 517.6,
-   "y": 147.0,
+   "x": 523.4,
+   "y": 160.2,
    "text": "grünes Perron?",
    "abgedeckt": true,
    "regeln": [
@@ -649,26 +648,25 @@
   {
    "id": "tnvp35kihgn0yhzk5wmn",
    "plan": "konolfingen",
-   "x": 363.6,
-   "y": 270.2,
+   "x": 369.5,
+   "y": 283.4,
    "text": "Knubbel kurz gerade",
    "abgedeckt": true,
    "regeln": [
     "G7",
-    "MQK",
     "MX",
     "VB2",
     "VC1"
    ],
-   "naechster": 2.8,
+   "naechster": 2.7,
    "naechste_regel": "G7",
    "plan_da": true
   },
   {
    "id": "ttv8jrr9c8gqpc23h0sj",
    "plan": "konolfingen",
-   "x": 638.8,
-   "y": 173.4,
+   "x": 644.7,
+   "y": 186.6,
    "text": "DKW?",
    "abgedeckt": false,
    "regeln": [],
@@ -769,8 +767,8 @@
   {
    "id": "z6f23710rz65dpwpq6ky",
    "plan": "konolfingen",
-   "x": 644.4,
-   "y": 241.0,
+   "x": 650.3,
+   "y": 254.2,
    "text": "DKW?",
    "abgedeckt": true,
    "regeln": [

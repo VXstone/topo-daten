@@ -11,7 +11,7 @@ Hinweis-Abdeckung: 30/57 (Befund < 40 px, ohne G2)
 ✓ 2vxh mob__chamby                  VB1,VD1                   23.2  Perron und Gleis verdreht, Mittelperron?
 ✓ 33fs konolfingen                  MQ                        15.6  Gleis unter Gleis, sehr steil
 · 3ctb mob__montreux                -                        260.5  Knubbel, keine Gegen-S-Kurve
-✓ 3d6h konolfingen                  G7,MQK,MX,VB2,VC1         12.0  Abstellgleise über Streckengleise
+✓ 3d6h konolfingen                  G7,MX,VB2,VC1             18.1  Abstellgleise über Streckengleise
 ✓ 3za5 region                       G6,MZ                      4.9  90 Grad, statt 2 Weichen nur eine
 ✓ 4xdm region                       G7                         0.5  Gleisanschluss dazwischen, Verbindungen prüfen
 ✓ 5yz7 mob__montreux                MQ                        27.1  Perron zwischen 4 und 3
@@ -51,7 +51,7 @@ Hinweis-Abdeckung: 30/57 (Befund < 40 px, ohne G2)
 · r9xv aarau                        -                         47.9  Stummel korrekt?
 · rap4 mob__le_tremblex             -                            -  Nebengleis nicht fett
 ✓ t6x0 solothurn                    G6,MP,MX,VA1,VB2,VC1,W2     5.3  Kreuzung in OSM?
-✓ tnvp konolfingen                  G7,MQK,MX,VB2,VC1          2.8  Knubbel kurz gerade
+✓ tnvp konolfingen                  G7,MX,VB2,VC1              2.7  Knubbel kurz gerade
 · ttv8 konolfingen                  -                         55.3  DKW?
 · u13h mob__zweisimmen              -                         54.0  Stumpen Normalspur?
 ✓ uyue solothurn                    G6,VB2,VD2                 2.3  Perron auf Gleis, gerader Knubbel
@@ -64,11 +64,10 @@ Hinweis-Abdeckung: 30/57 (Befund < 40 px, ohne G2)
 ✓ zcz3 solothurn                    G7,MX,VB2                 18.0  nicht verbunden
 /home/runner/work/topo-daten/topo-daten/spurplan/code/alle_plaene_pruefen.py:231: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
   json.dump(dict(erzeugt=datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"), plaene=len(zeilen), geaendert=len(gz),
-konolfingen                  veröffentlicht                     10 Stellen  Fehler? Topologie  GQ 0→1, VA1 0→1, VB1 1→0
 olten                        bestätigt 2026-11-08                0 Stellen  gleichwertig  OSM VB1 13, VB2 25, VC1 7, VD1 10 (kein Alt-Stand)
 rothrist                     Archivbeginn (Abnahme 2026-10-29)    2 Stellen  gleichwertig  OSM VA2 1, VB1 4, VB2 6 (kein Alt-Stand)
 zofingen                     bestätigt 2026-11-08               26 Stellen  gleichwertig  OSM VA2 2, VB1 3, VD1 1 (kein Alt-Stand)
 schonenwerd                  bestätigt 2026-11-08                0 Stellen  vermutlich besser  GG 1→0 · OSM VB2 2, VD1 1 (kein Alt-Stand)
 neuchatel                    bestätigt 2026-11-08                0 Stellen  gleichwertig  OSM VA2 4, VC1 2, VD1 3 (kein Alt-Stand)
-Regression: 147 Pläne, 3 geändert {'Fehler? Topologie': 1, 'gleichwertig': 2}
+Regression: 147 Pläne, 2 geändert {'gleichwertig': 2}
 Ausnahmen: 910 Einträge, 125 Orte: {'Schalter': 351, 'Ortswissen': 245, 'Geometrie': 188, 'Typvorlage': 126} | ohne Grund: 0

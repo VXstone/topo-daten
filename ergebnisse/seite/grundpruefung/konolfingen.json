@@ -3,7 +3,7 @@
  "zaehl": {
   "GS": 3,
   "GG": 2,
-  "GQ": 1,
+  "GQ": 0,
   "GP": 0,
   "GW": 0,
   "GT": 0
@@ -11,39 +11,33 @@
  "befunde": [
   {
    "regel": "GS",
-   "x": 355.6,
-   "y": 293.6,
+   "x": 361.5,
+   "y": 306.8,
    "text": "Gleise kreuzen sich (60°) ohne DKW, Kreuzung oder Niveautrennung"
   },
   {
    "regel": "GS",
-   "x": 341.8,
-   "y": 317.6,
+   "x": 347.7,
+   "y": 330.8,
    "text": "Gleise kreuzen sich (60°) ohne DKW, Kreuzung oder Niveautrennung"
   },
   {
    "regel": "GS",
-   "x": 390.6,
-   "y": 269.6,
+   "x": 396.5,
+   "y": 282.8,
    "text": "Gleise kreuzen sich (60°) ohne DKW, Kreuzung oder Niveautrennung"
   },
   {
    "regel": "GG",
-   "x": 589.1,
-   "y": 197.6,
+   "x": 595.0,
+   "y": 210.8,
    "text": "zwei Gleise 49 px aufeinander"
   },
   {
    "regel": "GG",
-   "x": 402.6,
-   "y": 245.6,
+   "x": 408.5,
+   "y": 258.8,
    "text": "zwei Gleise 18 px aufeinander"
-  },
-  {
-   "regel": "GQ",
-   "x": 366.2,
-   "y": 281.6,
-   "text": "Querabstand nach dem Knick 30.4 px statt 24.0 px wie davor"
   }
  ]
 }
