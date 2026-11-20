@@ -99,7 +99,10 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - [x] **HT Hauptgleis-Topologie als Sperre (REGELN 0.1, Kopf «HT»)** – 18.11. spät, `code/hauptgleis.py`, Basis gesetzt (Nachtrag HT); Seite nicht neu veröffentlicht (kein Plan geändert)
 - [x] **K0 Sichtbar: Ins im Regionalplan + Zwischengeraden im Bahnhofplan** – 19.11. nachmittags, Commits 83a0dc2/64a3fa4, Seite v156 (Nachtrag K0)
 - [x] **K0b Zwischengeraden Rest (REGELN 1.9)** (v157, 20.11.)
-- [ ] **K0c Selnau parallel (REGELN 2.2, `r34_kette`)** (klein) – siehe Nachtrag 20.11. ~19:15; vor T-SZU1 – Zweisimmen (dünn→dick am Knick), Solothurn (Weiche am Knick, doppelter Abstand), Selnau (ZL ~4 Ebenen, nur auf Daniels Antwort); Liste `ergebnisse/seite/zwischengeraden.md` – vor oder nach T-SZU1, wie Daniel will
+- [ ] **V3 Bahnhofregister + OSM-Verdacht + Sperre «veraltet»** (Entscheid Daniel 20.11.) – Abschnitt V3 unten
+- [ ] **V4 NE in den gemeinsamen Bauweg** (Entscheid Daniel 20.11.; REGELN 0.9) – Abschnitt V4 unten
+- [ ] **K0c Selnau parallel (REGELN 2.2, `r34_kette`)** (klein) – siehe Nachtrag 20.11. ~19:15; nach V3/V4, vor T-SZU1
+- [ ] **V5 ein Lauf für alle Regionen** / **V6 Netz West (Neuchâtel–Biel–Solothurn–Olten)** – danach – Zweisimmen (dünn→dick am Knick), Solothurn (Weiche am Knick, doppelter Abstand), Selnau (ZL ~4 Ebenen, nur auf Daniels Antwort); Liste `ergebnisse/seite/zwischengeraden.md` – vor oder nach T-SZU1, wie Daniel will
 - [ ] **T-SZU1 DKW aus 4-Arm-Weiche (REGELN 2.4) und Güterverkehr schwarz (REGELN 1.21)** (klein, Entscheid Daniel 18.11.) – nach K0
 - [ ] **T-SZU2 Achse knickt im Fenster (REGELN 2.15), Zielplan Giesshübel · Saalsporthalle** (Entscheid Daniel 18.11.: Variante C) – nach S2b/R4/S3 oder wenn Daniel es vorzieht
 - [ ] **S2b Konolfingen Gleisfeld West** (Zielbild Daniel 18.11.), **R4 Rothrist im Regionalplan** und **S3 Aarau
@@ -276,6 +279,30 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - Ablauf wie Abschnitt 0 (Vorher-Ausschnitte + Zielbild an Daniel zu Beginn, Regression jede Zeile erklären, Differenzbilder,
   veröffentlichen, Hinweise beantworten). Wird Teil 2 zu gross: Teil 1 + Aarau veröffentlichen, Rest als K0b abspalten.
 - Schritte S3 (Aarau Zwischengeraden) und R2 (Zwischengeraden-Teil) gehen in K0 auf; R2 behält nur die Gleissprünge.
+
+### V3 – Bahnhofregister, OSM-Verdacht, Sperre «veraltet» (Entscheid Daniel 20.11.)
+- Einstieg: «Weiter mit UEBERGABE.md – Schritt V3: Bahnhofregister»
+- Anlass (20.11.): Zugehörigkeit Bahnhof → Plan/Region steht an 4 Orten (bahnhoefe.json, werkstatt/olten/region_olten.json,
+  werkstatt/ne/region_ne.json, regionen/*/region.json – dort erst zur Laufzeit aus OSM); `regionen` ohne Eingabe rechnet nur mob;
+  Neuchâtel/Onnens-Bonvillars doppelt (Werkstatt Olten + NE). Veraltete Pläne sehen in der Regression «unverändert» aus.
+- Bauen: `spurplan/netz/bahnhoefe.json` (jeder Bahnhof einmal; Schlüssel **SBB-Abkürzung**, dazu **BPUIC**, atlas-Koordinaten,
+  OSM-Station, Linien, Regionen, Quelle/Workflow, Code-Commit und Fingerabdruck des letzten Baus) – vom Workflow `seite` geschrieben.
+  Daten: Release «vorbereitung» (`dienststellen`, `betriebspunkte` – liegen schon vor).
+- Prüfung «OSM-Verdacht» (neue Karte auf der Seite, nur Befund, keine Sperre): atlas ↔ OSM > ~150 m, Name/Abkürzung abweichend,
+  Linie/km der Betriebspunkte ≠ OSM-Linie, Gleise mit Perron SBB ≠ OSM, Betriebspunkt im Perimeter ohne Plan. Daniel entscheidet:
+  OSM korrigieren oder Ausnahme (REGELN Ebene 6).
+- Sperre «veraltet»: Plan mit älterem Code-Commit als `spurplan/code/` auf main → `seite` rot. `regionen`: bei Push auf
+  `spurplan/code/**` alle Regionen nacheinander (mob, szu, vereina).
+- Fertig: Register vollständig (alle ~150 Pläne), Karte OSM-Verdacht auf der Seite, Sperre greift im Test (alter Plan → rot).
+
+### V4 – Neuchâtel in den gemeinsamen Bauweg (Entscheid Daniel 20.11., REGELN 0.9)
+- Einstieg: «Weiter mit UEBERGABE.md – Schritt V4: NE aus dem Code»
+- Anlass: `region_ne.json` baut nur Ins (+ Vauseyon) neu, ~55 NE-Bahnhöfe sind Werkstatt-Stand Oktober – Regeln seit Mitte
+  Oktober (K0, K0b, G0, Perron-Modell …) kommen dort nicht an. Widerspricht REGELN Abschnitt 5 («Abnahme = Basis, kein Einfrieren»).
+- Vorgehen: in Teilen (je Linie) aus dem Code bauen, Regression je Teil; abgenommene Pläne, die nach Ebene 5 besser werden →
+  Liste «Vorschlag: einfacher als abgenommen» mit Differenzbild (REGELN 0.9: kürzere Nebengleise, gleichmässigere Abstände
+  erwünscht; Topologie und Hauptfahrwege dürfen sich nicht ändern). Dabei Messung W59 «kurze Nebengleise» (REGELN 5.9) bauen.
+- Fertig: alle NE-Pläne aus dem Code, G0/HT grün, Seite veröffentlicht, Liste «einfacher» an Daniel.
 
 ### K0b – Zwischengeraden Rest (aus K0, 19.11.)
 - Einstieg: «Weiter mit UEBERGABE.md – Schritt K0b: Zwischengeraden Rest»
@@ -673,4 +700,8 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   des Nummerngleises, oder Schild rechts der Wechsel; (2) Giesshübel GS 11→12 (R34k-Kette 110676791/302538635 im Depotknoten) –
   prüfen, ggf. Kette dort ausnehmen. Dann Schalter an, `regionen` für **szu und vereina** von Hand (Standard nur mob!).
 - Hinweis: `regionen` ohne Eingabe rechnet nur **mob** – nach Code-Änderung szu/vereina einzeln starten (`-f inputs[region]=szu`).
+
+### 20.11.2026 ~20:15 – Entscheide Daniel: Register, OSM-Prüfung, kartographische Freiheit
+- Neue Schritte V3 (Register mit SBB-Abkürzung/BPUIC/Koordinaten, OSM-Verdacht, Sperre «veraltet») und V4 (NE aus dem Code) vor
+  K0c; V5/V6 (ein Lauf, Netz West) danach. «Einfacher darf Ziel sein» → REGELN 0.9 und 5.9.
 

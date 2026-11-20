@@ -65,6 +65,7 @@ NE-Bahnhöfe (fest seit 21.10., Schritt N2), Basel/Bern (P2b), Thun/Ins/Murten/K
 | 0.6 | **Ruhe:** gerade so lange wie möglich; keine Treppen, keine unmotivierten Ecken, keine S-Kurven. | Wunsch (Ebene 5) | G6, R10, 4.11. | T7, Z, E, QK, Ebene 5, GT |
 | 0.7 | **Detailgrad:** kleine Bahnhöfe ganze Anlage, grosse Knoten Hauptgleise + jede Weiche als Abgang. | Regel | G7, B16, B17 | Sicht |
 | 0.8 | **Darstellung:** Symbole, Beschriftung, Kompaktheit. | Regel/Wunsch | G8 | Ebene 1.F, 5 |
+| 0.9 | **Kartographische Freiheit** (seit 20.11., Daniel): alles, was die Karte lesbarer und nicht falscher macht, ist erwünscht – einfacher darf Ziel sein (kürzere Nebengleise, gleichmässigere Bahnhofsabstände, weniger Knicke), auch an abgenommenen Plänen. Grenze: 0.1 Topologie stimmt, und die **Hauptfahrwege sind intuitiv erkennbar** (durchgehende Hauptgleise gerade und dick, Abzweige als Abzweige). | Grundsatz | 20.11. | Ebene 5, Regression «Vorschlag: einfacher» |
 
 ---
 
@@ -185,6 +186,7 @@ Pläne verändern, um diese Zahlen zu senken – auch abgenommene –, und der V
 | 5.6 | **Kurze Bahnhöfe:** Planlänge je Inhalt (Weichenachsen, Perrons) nahe am Median vergleichbarer Pläne; Anlass Onnens-Bonvillars, Rothrist, Tecknau | W56 (`wuensche.py`): Leerlänge (ohne Weiche/Perron/Gleisende ± 40 px, Ausfahrt 2 × 120 px frei) / 100 px | 3 | gemessen Bahnhofspläne (17.11.; Onnens 5, Rothrist 4, Tecknau 1) |
 | 5.7 | Wenige Kreuzungen ohne Bauwerk | X | 2 | gemessen |
 | 5.8 | Lage nahe an der Karte (Drehung, Achse) | L3a | 0 (Hinweis) | gemessen |
+| 5.9 | **Kurze Nebengleise** (20.11.): Neben-, Abstell- und Anschlussgleise ohne Perron/Nummer so kurz wie nötig, Reihenfolge der Weichen bleibt | noch keine Messung (V4: Länge Nebengleis je Weiche) | – | offen |
 
 **Vergleich (Regression) – neue Einordnung:** ein geänderter Plan ist
 - **Fehler**, wenn eine Regel neu verletzt ist (Topologie, V-, T-, G-Befunde) – egal was sonst besser wird;
