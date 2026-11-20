@@ -10,7 +10,7 @@ Befund < 40 px im selben Plan, ohne G2.
 | ✓ | 2vxh | mob__chamby | VB1, VD1 | 23.2 | Perron und Gleis verdreht, Mittelperron? |
 | ✓ | 33fs | konolfingen | MQ | 15.6 | Gleis unter Gleis, sehr steil |
 | · | 3ctb | mob__montreux |  | 260.5 | Knubbel, keine Gegen-S-Kurve |
-| ✓ | 3d6h | konolfingen | G7, MX, VB2, VC1 | 18.1 | Abstellgleise über Streckengleise |
+| ✓ | 3d6h | konolfingen | G7, MQK, MX, VB2, VC1 | 12.0 | Abstellgleise über Streckengleise |
 | ✓ | 3za5 | region | G6, MZ | 4.9 | 90 Grad, statt 2 Weichen nur eine |
 | ✓ | 4xdm | region | G7 | 0.5 | Gleisanschluss dazwischen, Verbindungen prüfen |
 | ✓ | 5yz7 | mob__montreux | MQ | 27.1 | Perron zwischen 4 und 3 |
@@ -50,7 +50,7 @@ Befund < 40 px im selben Plan, ohne G2.
 | · | r9xv | aarau |  | 47.9 | Stummel korrekt? |
 | · | rap4 | mob__le_tremblex |  |  | Nebengleis nicht fett |
 | ✓ | t6x0 | solothurn | G6, MP, MX, VA1, VB2, VC1, W2 | 5.3 | Kreuzung in OSM? |
-| ✓ | tnvp | konolfingen | G7, MX, VB2, VC1 | 2.7 | Knubbel kurz gerade |
+| ✓ | tnvp | konolfingen | G7, MQK, MX, VB2, VC1 | 2.8 | Knubbel kurz gerade |
 | · | ttv8 | konolfingen |  | 55.3 | DKW? |
 | · | u13h | mob__zweisimmen |  | 54.0 | Stumpen Normalspur? |
 | ✓ | uyue | solothurn | G6, VB2, VD2 | 2.3 | Perron auf Gleis, gerader Knubbel |

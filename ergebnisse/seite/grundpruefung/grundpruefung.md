@@ -41,7 +41,7 @@
 | kallnach | · | · | · | · | · | · | 24.0 |
 | kerzers | · | 2 | · | · | · | · | 24.0 |
 | kerzers_papiliorama | · | · | · | · | · | · | 24.0 |
-| konolfingen | 3 | 2 | · | · | · | · | 24.0 |
+| konolfingen | 3 | 2 | **1** (Basis 0) | · | · | · | 24.0 |
 | la_neuveville | · | · | · | · | · | · | 24.0 |
 | la_presta_mines_d_asphalte | · | · | · | · | · | · | 24.0 |
 | laufelfingen | · | · | · | · | · | · | 24.0 |
@@ -152,3 +152,8 @@
 | zofingen | · | 1 | · | · | · | · | 24.0 |
 
 Regeln: GS = Schnitt ohne DKW/Kreuzung/Niveautrennung; GG = Gleis auf Gleis; GQ = Querabstand nach Knick ≠ davor; GP = Pfeil nach innen / auf Nachbargleis; GW = Knick oder Abgang 90°; GT = Treppe
+
+## NEUE Befunde
+
+- **konolfingen** GQ: 0 → 1
+  - 366.2/281.6: Querabstand nach dem Knick 30.4 px statt 24.0 px wie davor
