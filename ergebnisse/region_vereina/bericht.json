@@ -1,7 +1,7 @@
 {
  "region": "vereina",
- "erzeugt": "2026-11-20 21:20 UTC",
- "code_commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
+ "erzeugt": "2026-11-20 21:49 UTC",
+ "code_commit": "0c47dd1af10130c6e28834abfc250d473ad946cb",
  "bahnhoefe": {
   "susch": {
    "name": "Susch",
@@ -33,14 +33,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "sagliains_sasslatsch": {
-   "name": "Sagliains Sasslatsch",
+  "selfranga_sud": {
+   "name": "Selfranga Süd",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "selfranga_sud": {
-   "name": "Selfranga Süd",
+  "sagliains_sasslatsch": {
+   "name": "Sagliains Sasslatsch",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []

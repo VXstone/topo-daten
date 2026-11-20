@@ -1,10 +1,16 @@
 {
  "region": "szu",
- "erzeugt": "2026-11-20 21:19 UTC",
- "code_commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
+ "erzeugt": "2026-11-20 21:48 UTC",
+ "code_commit": "0c47dd1af10130c6e28834abfc250d473ad946cb",
  "bahnhoefe": {
   "uetliberg": {
    "name": "Uetliberg",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "ringlikon": {
+   "name": "Ringlikon",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -13,12 +19,6 @@
    "name": "Zürich Selnau",
    "ok": true,
    "befunde": "Befunde: {'B': 4}",
-   "optionen": []
-  },
-  "ringlikon": {
-   "name": "Ringlikon",
-   "ok": true,
-   "befunde": "Befunde: {}",
    "optionen": []
   },
   "zurich_binz": {
@@ -39,16 +39,16 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "zurich_giesshubel": {
-   "name": "Zürich Giesshübel",
-   "ok": true,
-   "befunde": "Befunde: {'A': 2, 'B': 311, 'C': 1, 'F': 4}",
-   "optionen": []
-  },
   "berghof": {
    "name": "Berghof",
    "ok": true,
    "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "zurich_giesshubel": {
+   "name": "Zürich Giesshübel",
+   "ok": true,
+   "befunde": "Befunde: {'A': 2, 'B': 311, 'C': 1, 'F': 4}",
    "optionen": []
   },
   "borrweg": {
