@@ -1,16 +1,13 @@
 # Veraltet gegen Code-Stand 5e32a01
 
-- region_mob: Linien-Region mob, Commit 8f29290 (Lauf läuft noch)
-- region_vereina: Linien-Region vereina, Commit 8f29290 (Lauf läuft noch)
-- region_szu: Linien-Region szu, Commit 8f29290 (Lauf läuft noch)
+- NEU region_mob: Linien-Region mob, Commit 8f29290
+- NEU region_vereina: Linien-Region vereina, Commit 8f29290
+- NEU region_szu: Linien-Region szu, Commit 8f29290
 - basel: fest (zusatz_plaene.json), Commit -
 - bern: fest (zusatz_plaene.json), Commit -
 - thun: Referenz (Werkstatt-Datei olten/reg), Commit c401dc7
-- NEU konolfingen: Repo-Bahnhof, Commit 8f29290
-- NEU solothurn: Repo-Bahnhof, Commit 8f29290
 - ins: Referenz (Werkstatt-Datei olten/reg), Commit c401dc7
 - kerzers: Referenz (Werkstatt-Datei olten/reg), Commit ed545b6
-- NEU neuchatel: Repo-Bahnhof, Commit 8f29290
 - saint_blaise_lac: fest (zusatz_plaene.json), Commit -
 - marin_epagnier: fest (zusatz_plaene.json), Commit -
 - zihlbruecke: fest (zusatz_plaene.json), Commit -
@@ -59,73 +56,72 @@
 - la_presta_mines_d_asphalte: fest (zusatz_plaene.json), Commit -
 - couvet: fest (zusatz_plaene.json), Commit -
 - motiers: fest (zusatz_plaene.json), Commit -
-- NEU neuchatel_vauseyon: Repo-Bahnhof, Commit 8f29290
 - les_deurres: fest (zusatz_plaene.json), Commit -
 - corcelles_peseux: fest (zusatz_plaene.json), Commit -
 - chambrelien: fest (zusatz_plaene.json), Commit -
 - les_geneveys_sur_coffrane: fest (zusatz_plaene.json), Commit -
 - les_hauts_geneveys: fest (zusatz_plaene.json), Commit -
-- mob__allieres: Linien-Region mob, Commit 8f29290 (Lauf läuft noch)
-- mob__belmont_sur_montreux: Linien-Region mob, Commit 8f29290 (Lauf läuft noch)
-- mob__blankenburg: Linien-Region mob, Commit 8f29290 (Lauf läuft noch)
-- mob__caux: Linien-Region mob, Commit 8f29290 (Lauf läuft noch)
-- mob__chamby: Linien-Region mob, Commit 8f29290 (Lauf läuft noch)
-- mob__chateau_d_oex: Linien-Region mob, Commit 8f29290 (Lauf läuft noch)
-- mob__chatelard: Linien-Region mob, Commit 8f29290 (Lauf läuft noch)
-- mob__chernex: Linien-Region mob, Commit 8f29290 (Lauf läuft noch)
-- mob__cret_d_y_bau: Linien-Region mob, Commit 8f29290 (Lauf läuft noch)
-- mob__flendruz: Linien-Region mob, Commit 8f29290 (Lauf läuft noch)
-- mob__fontanivent: Linien-Region mob, Commit 8f29290 (Lauf läuft noch)
-- mob__glion_college: Linien-Region mob, Commit 8f29290 (Lauf läuft noch)
-- mob__glion: Linien-Region mob, Commit 8f29290 (Lauf läuft noch)
-- mob__gruben: Linien-Region mob, Commit 8f29290 (Lauf läuft noch)
-- mob__gstaad: Linien-Region mob, Commit 8f29290 (Lauf läuft noch)
-- mob__jaman: Linien-Region mob, Commit 8f29290 (Lauf läuft noch)
-- mob__jor: Linien-Region mob, Commit 8f29290 (Lauf läuft noch)
-- mob__la_perche: Linien-Region mob, Commit 8f29290 (Lauf läuft noch)
-- mob__la_tine: Linien-Region mob, Commit 8f29290 (Lauf läuft noch)
-- mob__le_tremblex: Linien-Region mob, Commit 8f29290 (Lauf läuft noch)
-- mob__lenk_im_simmental: Linien-Region mob, Commit 8f29290 (Lauf läuft noch)
-- mob__les_avants: Linien-Region mob, Commit 8f29290 (Lauf läuft noch)
-- mob__les_cases: Linien-Region mob, Commit 8f29290 (Lauf läuft noch)
-- mob__les_echets: Linien-Region mob, Commit 8f29290 (Lauf läuft noch)
-- mob__les_sciernes: Linien-Region mob, Commit 8f29290 (Lauf läuft noch)
-- mob__matten: Linien-Region mob, Commit 8f29290 (Lauf läuft noch)
-- mob__montbovon: Linien-Region mob, Commit 8f29290 (Lauf läuft noch)
-- mob__montreux_les_planches: Linien-Region mob, Commit 8f29290 (Lauf läuft noch)
-- mob__montreux: Linien-Region mob, Commit 8f29290 (Lauf läuft noch)
-- mob__oeschseite: Linien-Region mob, Commit 8f29290 (Lauf läuft noch)
-- mob__paccot: Linien-Region mob, Commit 8f29290 (Lauf läuft noch)
-- mob__planchamp: Linien-Region mob, Commit 8f29290 (Lauf läuft noch)
-- mob__rochers_de_naye: Linien-Region mob, Commit 8f29290 (Lauf läuft noch)
-- mob__rossiniere: Linien-Region mob, Commit 8f29290 (Lauf läuft noch)
-- mob__rougemont: Linien-Region mob, Commit 8f29290 (Lauf läuft noch)
-- mob__saanen: Linien-Region mob, Commit 8f29290 (Lauf läuft noch)
-- mob__saanenmoser: Linien-Region mob, Commit 8f29290 (Lauf läuft noch)
-- mob__schonried: Linien-Region mob, Commit 8f29290 (Lauf läuft noch)
-- mob__sendy_sollard: Linien-Region mob, Commit 8f29290 (Lauf läuft noch)
-- mob__st_stephan: Linien-Region mob, Commit 8f29290 (Lauf läuft noch)
-- mob__toveyre: Linien-Region mob, Commit 8f29290 (Lauf läuft noch)
-- mob__valmont: Linien-Region mob, Commit 8f29290 (Lauf läuft noch)
-- mob__vernex: Linien-Region mob, Commit 8f29290 (Lauf läuft noch)
-- mob__vuarennes: Linien-Region mob, Commit 8f29290 (Lauf läuft noch)
-- mob__zweisimmen: Linien-Region mob, Commit 8f29290 (Lauf läuft noch)
-- vereina__klosters_platz: Linien-Region vereina, Commit 8f29290 (Lauf läuft noch)
-- vereina__klosters_selfranga: Linien-Region vereina, Commit 8f29290 (Lauf läuft noch)
-- vereina__sagliains_nord: Linien-Region vereina, Commit 8f29290 (Lauf läuft noch)
-- vereina__sagliains_sasslatsch: Linien-Region vereina, Commit 8f29290 (Lauf läuft noch)
-- vereina__sagliains: Linien-Region vereina, Commit 8f29290 (Lauf läuft noch)
-- vereina__sasslatsch: Linien-Region vereina, Commit 8f29290 (Lauf läuft noch)
-- vereina__selfranga_sud: Linien-Region vereina, Commit 8f29290 (Lauf läuft noch)
-- vereina__susch: Linien-Region vereina, Commit 8f29290 (Lauf läuft noch)
-- vereina__vereina_nord: Linien-Region vereina, Commit 8f29290 (Lauf läuft noch)
-- vereina__vereina_sud: Linien-Region vereina, Commit 8f29290 (Lauf läuft noch)
-- szu__berghof: Linien-Region szu, Commit 8f29290 (Lauf läuft noch)
-- szu__borrweg: Linien-Region szu, Commit 8f29290 (Lauf läuft noch)
-- szu__ringlikon: Linien-Region szu, Commit 8f29290 (Lauf läuft noch)
-- szu__uetliberg: Linien-Region szu, Commit 8f29290 (Lauf läuft noch)
-- szu__zurich_binz: Linien-Region szu, Commit 8f29290 (Lauf läuft noch)
-- szu__zurich_friesenberg: Linien-Region szu, Commit 8f29290 (Lauf läuft noch)
-- szu__zurich_giesshubel: Linien-Region szu, Commit 8f29290 (Lauf läuft noch)
-- szu__zurich_schweighof: Linien-Region szu, Commit 8f29290 (Lauf läuft noch)
-- szu__zurich_selnau: Linien-Region szu, Commit 8f29290 (Lauf läuft noch)
+- NEU mob__allieres: Linien-Region mob, Commit 8f29290
+- NEU mob__belmont_sur_montreux: Linien-Region mob, Commit 8f29290
+- NEU mob__blankenburg: Linien-Region mob, Commit 8f29290
+- NEU mob__caux: Linien-Region mob, Commit 8f29290
+- NEU mob__chamby: Linien-Region mob, Commit 8f29290
+- NEU mob__chateau_d_oex: Linien-Region mob, Commit 8f29290
+- NEU mob__chatelard: Linien-Region mob, Commit 8f29290
+- NEU mob__chernex: Linien-Region mob, Commit 8f29290
+- NEU mob__cret_d_y_bau: Linien-Region mob, Commit 8f29290
+- NEU mob__flendruz: Linien-Region mob, Commit 8f29290
+- NEU mob__fontanivent: Linien-Region mob, Commit 8f29290
+- NEU mob__glion_college: Linien-Region mob, Commit 8f29290
+- NEU mob__glion: Linien-Region mob, Commit 8f29290
+- NEU mob__gruben: Linien-Region mob, Commit 8f29290
+- NEU mob__gstaad: Linien-Region mob, Commit 8f29290
+- NEU mob__jaman: Linien-Region mob, Commit 8f29290
+- NEU mob__jor: Linien-Region mob, Commit 8f29290
+- NEU mob__la_perche: Linien-Region mob, Commit 8f29290
+- NEU mob__la_tine: Linien-Region mob, Commit 8f29290
+- NEU mob__le_tremblex: Linien-Region mob, Commit 8f29290
+- NEU mob__lenk_im_simmental: Linien-Region mob, Commit 8f29290
+- NEU mob__les_avants: Linien-Region mob, Commit 8f29290
+- NEU mob__les_cases: Linien-Region mob, Commit 8f29290
+- NEU mob__les_echets: Linien-Region mob, Commit 8f29290
+- NEU mob__les_sciernes: Linien-Region mob, Commit 8f29290
+- NEU mob__matten: Linien-Region mob, Commit 8f29290
+- NEU mob__montbovon: Linien-Region mob, Commit 8f29290
+- NEU mob__montreux_les_planches: Linien-Region mob, Commit 8f29290
+- NEU mob__montreux: Linien-Region mob, Commit 8f29290
+- NEU mob__oeschseite: Linien-Region mob, Commit 8f29290
+- NEU mob__paccot: Linien-Region mob, Commit 8f29290
+- NEU mob__planchamp: Linien-Region mob, Commit 8f29290
+- NEU mob__rochers_de_naye: Linien-Region mob, Commit 8f29290
+- NEU mob__rossiniere: Linien-Region mob, Commit 8f29290
+- NEU mob__rougemont: Linien-Region mob, Commit 8f29290
+- NEU mob__saanen: Linien-Region mob, Commit 8f29290
+- NEU mob__saanenmoser: Linien-Region mob, Commit 8f29290
+- NEU mob__schonried: Linien-Region mob, Commit 8f29290
+- NEU mob__sendy_sollard: Linien-Region mob, Commit 8f29290
+- NEU mob__st_stephan: Linien-Region mob, Commit 8f29290
+- NEU mob__toveyre: Linien-Region mob, Commit 8f29290
+- NEU mob__valmont: Linien-Region mob, Commit 8f29290
+- NEU mob__vernex: Linien-Region mob, Commit 8f29290
+- NEU mob__vuarennes: Linien-Region mob, Commit 8f29290
+- NEU mob__zweisimmen: Linien-Region mob, Commit 8f29290
+- NEU vereina__klosters_platz: Linien-Region vereina, Commit 8f29290
+- NEU vereina__klosters_selfranga: Linien-Region vereina, Commit 8f29290
+- NEU vereina__sagliains_nord: Linien-Region vereina, Commit 8f29290
+- NEU vereina__sagliains_sasslatsch: Linien-Region vereina, Commit 8f29290
+- NEU vereina__sagliains: Linien-Region vereina, Commit 8f29290
+- NEU vereina__sasslatsch: Linien-Region vereina, Commit 8f29290
+- NEU vereina__selfranga_sud: Linien-Region vereina, Commit 8f29290
+- NEU vereina__susch: Linien-Region vereina, Commit 8f29290
+- NEU vereina__vereina_nord: Linien-Region vereina, Commit 8f29290
+- NEU vereina__vereina_sud: Linien-Region vereina, Commit 8f29290
+- NEU szu__berghof: Linien-Region szu, Commit 8f29290
+- NEU szu__borrweg: Linien-Region szu, Commit 8f29290
+- NEU szu__ringlikon: Linien-Region szu, Commit 8f29290
+- NEU szu__uetliberg: Linien-Region szu, Commit 8f29290
+- NEU szu__zurich_binz: Linien-Region szu, Commit 8f29290
+- NEU szu__zurich_friesenberg: Linien-Region szu, Commit 8f29290
+- NEU szu__zurich_giesshubel: Linien-Region szu, Commit 8f29290
+- NEU szu__zurich_schweighof: Linien-Region szu, Commit 8f29290
+- NEU szu__zurich_selnau: Linien-Region szu, Commit 8f29290
