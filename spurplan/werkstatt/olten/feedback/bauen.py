@@ -132,6 +132,16 @@ _zus = os.path.join(HERE, "zusatz_plaene.json")   # Pläne aus anderen Sitzungen
 if os.path.exists(_zus):
     _have = {p_["key"] for p_ in plans}
     plans += [dict(p_, _zusatz=True) for p_ in json.load(open(_zus)) if p_["key"] not in _have]
+# V4 (20.11.2026, REGELN 0.9/4.11): NE-Bahnhöfe kommen aus dem gemeinsamen Bauweg (code/region_olten_lauf.py mit
+# werkstatt/ne/region_ne.json, im selben Lauf vor bauen.py). Gruppe, Abnahme-Zählung und Status bleiben aus zusatz_plaene.json,
+# Plan und Label kommen aus dem Bau («aus Code <Commit> <Datum>» statt «fest seit 21.10.»).
+_NE = os.path.join(OL, "..", "ne"); _NEK = os.path.join(_NE, "region_ne.json")
+_ne_bau = set(json.load(open(_NEK)).get("bahnhoefe", {})) if os.path.exists(_NEK) else set()
+for p_ in plans:
+    _f = os.path.join(_NE, f"{p_['key']}_spurplan.svg")
+    if p_.get("_zusatz") and p_.get("region") == "ne" and p_["key"] in _ne_bau and os.path.exists(_f):
+        _rest = re.sub(r"^(fest seit \S+ · )?Stand [^·]*(· )?", "", p_.get("label") or "").strip()
+        p_.update(svg=strip(open(_f).read()), label="aus Code · NE-Bauweg" + (f" · {_rest}" if _rest else ""), _zusatz=False)
 # Bahnhofspläne der Linien-Regionen (9.11.2026, D. Eckenstein «je Region die Bahnhöfe»): vom Workflow «seite» aus
 # ergebnisse/region_<r>/<b>_spurplan.svg nach feedback/regionen/<r>/ gelegt; Schlüssel <r>__<b>
 _rg = os.path.join(HERE, "regionen")

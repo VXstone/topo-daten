@@ -2273,6 +2273,22 @@ H = CFG["margin_y"] + LY(min(c["lane"] for c in C)) + 105
 X = lambda s: CFG["margin_x"] + Xm(s) - Xm(s_lo)
 Y = lambda l: CFG["margin_y"] + LY(l)
 
+# Pixelwerte der Ausnahmen mitführen (Schritt V4, 20.11.2026, REGELN 4.11): Werkstatt-Overrides (NE, Oktober) enthalten
+# Längspositionen in Plan-px («x:» in zeichnen, perrons_px, nummern_px, dkw_px). Sie gelten für den Warp ihres Baus. Ändert
+# der Code den Warp (neue Regeln strecken/stauchen den Plan), lagen die Stücke daneben (Auvernier: Linie 219 endete 82 px
+# vor Gl. 3). <key>_warp_bezug.json = Warp, für den die px-Werte gesetzt wurden: px -> Streckenposition s (alter Warp)
+# -> px (heutiger Warp). Ausserhalb des Warp-Bereichs (Planrand, Abgänge) gleicher Versatz wie am Rand.
+_PXB = None
+if CFG.get("px_mitfuehren", True) and os.path.exists(f"{key}_warp_bezug.json"):
+    _PXB = json.load(open(f"{key}_warp_bezug.json"))
+    _PXB_X = [CFG["margin_x"] + v - float(np.interp(s_lo, _PXB["s"], _PXB["x"])) for v in _PXB["x"]]
+def PXW(x):
+    if _PXB is None: return float(x)
+    x = float(x)
+    if x <= _PXB_X[0]: return x + X(_PXB["s"][0]) - _PXB_X[0]
+    if x >= _PXB_X[-1]: return x + X(_PXB["s"][-1]) - _PXB_X[-1]
+    return X(float(np.interp(x, _PXB_X, _PXB["s"])))
+
 # U-Abgang (Schritt M, 7.11.2026, Vorschlag D. Eckenstein, Montreux Linie 120): kehrt eine Strecke vor dem Planrand um
 # (Wendeschleife, die Achse läuft zuerst weiter und dann zurück) und verlässt den Plan seitlich nach hinten, entstand
 # bisher ein Knick über 90°: das Gleis tauchte über mehrere Ebenen ab und die Schräge lief zurück quer über den Bahnhof.
@@ -3738,7 +3754,7 @@ if _zn:
                 pts.append((xpos(n_, SD[n_][0]) + sg_ * (y_ - ypos(n_)) / math.tan(math.radians(60)) + float(m_[2] or 0), y_))
             elif a_ == "d60":
                 x0_, y0_ = pts[-1]; pts.append((x0_ + abs(y_ - y0_) / math.tan(math.radians(60)), y_))
-            elif isinstance(a_, str) and a_.startswith("x:"): pts.append((float(a_[2:]), y_))
+            elif isinstance(a_, str) and a_.startswith("x:"): pts.append((PXW(a_[2:]), y_))
             elif isinstance(a_, str) and a_[:1] in "+-" and pts: pts.append((pts[-1][0] + float(a_), y_))   # relativ in px
             else: pts.append((X(float(a_)), y_))
         svg_paths[bool(li.get("pax", True))].append(_rund(pts, li.get("rund", 7.0)))
@@ -4627,10 +4643,12 @@ for a_, b_, yb in _PER:
     out.append(f'<rect x="{x0_:.1f}" y="{yb - 4:.1f}" width="{x1_ - x0_:.1f}" height="8" rx="1.5" fill="{green}"/>')
 # Override "perrons_px" [[x0, x1, y], ...]: Perrons in Pixeln, für von Hand gezeichnete Pläne (Chambrelien 15.10.)
 for x0_, x1_, y_ in OVR.get("perrons_px", []):
+    x0_, x1_ = PXW(x0_), PXW(x1_)        # REGELN 4.11 (V4)
     PERRON_PX.append((x0_, x1_, y_))
     out.append(f'<rect x="{x0_:.1f}" y="{y_ - 4:.1f}" width="{x1_ - x0_:.1f}" height="8" rx="1.5" fill="{green}"/>')
 # Override "nummern_px" [[text, x, y], ...]: Gleisnummern in Pixeln (Chambrelien 15.10.)
 for t_, x_, y_ in OVR.get("nummern_px", []):
+    x_ = PXW(x_)                         # REGELN 4.11 (V4)
     out.append(f'<rect x="{x_ - 13:.1f}" y="{y_ - 8:.1f}" width="26" height="16" fill="#fff" stroke="none"/>'
                f'<text x="{x_:.1f}" y="{y_ + 6.5:.1f}" font-size="19" text-anchor="middle" fill="{green}">{t_}</text>')
 # Perrons aus OSM: Balken zwischen den beiden Gleisen, an denen der Perron real liegt
@@ -4889,7 +4907,7 @@ for _n, _sg_ in OVR.get("dkw_symbol", []):
 # Override "dkw_px": [{"x", "y", "pax", "arme": [[[ax, ay], [bx, by]], ...]}] - DKW-Symbol an einer Pixelstelle mit frei
 # gewählten Armpaaren (stumpfe Winkel), für von Hand gezeichnete Kreuzungen zweier Schrägen (Onnens-Bonvillars 20.10.)
 for _dp in OVR.get("dkw_px", []):
-    c0 = np.array([float(_dp["x"]), float(_dp["y"])])
+    c0 = np.array([PXW(_dp["x"]), float(_dp["y"])])
     for a_, b_ in _dp["arme"]:
         DKW_EXTRA.append(_dkw_klammer(c0, a_, b_, bool(_dp.get("pax")), bool(_dp.get("rund_pax", _dp.get("pax")))))
 out.extend(DKW_EXTRA)

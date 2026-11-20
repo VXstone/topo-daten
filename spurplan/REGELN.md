@@ -183,6 +183,7 @@ welche Muster erkannt wurden (V0).
 | 4.8 | Bündel so legen, dass möglichst wenige Gleise kreuzen; echte Über-/Unterwerfung darf kreuzen | Wunsch | N6, F8 | | X | alle Regionen |
 | 4.9 | Streckenlänge gestaucht (c0 + c1·km^p), Halte ≥ 60 px und gleichmässig über die Strecke verteilt | Wunsch | N10, F9, 4.11. | lage_auto | T8 | alle (gleichmässig: LR) |
 | 4.10 | Perimeter = Vieleck; alles darin wird gezeichnet | Regel | N11, D10 | | fehlt | alle Regionen |
+| 4.11 | **Ein Bauweg für alle Bahnhofspläne** (V4, 20.11., Folge von 0.9 und «alle Bahnhöfe gleich»): auch die NE-Bahnhöfe werden jeden Lauf aus dem Code gebaut (Kette wie run.sh inkl. Typvorlage, danach Beschriftungsrand); Pixelwerte in Ausnahmen (`x:`, `perrons_px`, `nummern_px`, `dkw_px`) gelten für den Warp ihres Baus (`<b>_warp_bezug.json`) und wandern mit der Streckenposition mit, wenn der Code den Plan streckt oder staucht | Regel | V4 | region_olten_lauf `kette`, spurplan_schema `PXW`, `px_mitfuehren` | Regression, G0, VR | alle Bahnhofspläne |
 
 ---
 
@@ -201,7 +202,7 @@ Pläne verändern, um diese Zahlen zu senken – auch abgenommene –, und der V
 | 5.6 | **Kurze Bahnhöfe:** Planlänge je Inhalt (Weichenachsen, Perrons) nahe am Median vergleichbarer Pläne; Anlass Onnens-Bonvillars, Rothrist, Tecknau | W56 (`wuensche.py`): Leerlänge (ohne Weiche/Perron/Gleisende ± 40 px, Ausfahrt 2 × 120 px frei) / 100 px | 3 | gemessen Bahnhofspläne (17.11.; Onnens 5, Rothrist 4, Tecknau 1) |
 | 5.7 | Wenige Kreuzungen ohne Bauwerk | X | 2 | gemessen |
 | 5.8 | Lage nahe an der Karte (Drehung, Achse) | L3a | 0 (Hinweis) | gemessen |
-| 5.9 | **Kurze Nebengleise** (20.11.): Neben-, Abstell- und Anschlussgleise ohne Perron/Nummer so kurz wie nötig, Reihenfolge der Weichen bleibt | noch keine Messung (V4: Länge Nebengleis je Weiche) | – | offen |
+| 5.9 | **Kurze Nebengleise** (20.11.): Neben-, Abstell- und Anschlussgleise ohne Perron/Nummer so kurz wie nötig, Reihenfolge der Weichen bleibt | W59 (`wuensche.py`): je dünnes Gleis die Länge über 80 px, Summe / 100 px | 0 (nur Messung, Gewicht entscheidet Daniel) | gemessen Bahnhofspläne (V4, 20.11.) |
 
 **Vergleich (Regression) – neue Einordnung:** ein geänderter Plan ist
 - **Fehler**, wenn eine Regel neu verletzt ist (Topologie, V-, T-, G-Befunde) – egal was sonst besser wird;

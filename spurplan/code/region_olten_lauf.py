@@ -70,6 +70,13 @@ def kette(b, opt, cwd=None):
               ["spurplan_schema.py", "--src", f"{b}.json", "--bare", "--out", f"{b}_bare.svg"] + opt):
         rc, o = sh(a, cwd=cwd)
         if rc: return rc, o[-800:]
+    # V4 (20.11.2026, REGELN 0.9/4.11): wie werkstatt/ne/run.sh – Typvorlage («vorlage» im Override) zeichnet den Plan
+    # nach Bahnhofstyp neu; danach viewBox so weit, dass Abgangstexte ganz sichtbar sind (Travers «Neuchâtel →»)
+    ov = os.path.join(cwd or TMP, f"{b}_override.json")
+    if os.path.exists(ov) and "vorlage" in json.load(open(ov)):
+        rc, o = sh(["vorlage.py", b], cwd=cwd)
+        if rc: return rc, o[-800:]
+    sh(["viewbox_text.py", f"{b}_spurplan.svg"], cwd=cwd)
     return 0, ""
 
 # Varianten in Unterordnern (26.10.2026, «Olten zügeln» Teil 2): Olten Ost, Regionalvarianten Olten Ost und Rothrist.
@@ -77,15 +84,17 @@ def kette(b, opt, cwd=None):
 # netz_lage.py sie liest (z. B. olten_ost_bare.svg -> olten_ost_regional_bare.svg). Der Ordner ist die Quelle.
 for v in K.get("varianten", []):
     d_ = os.path.join(TMP, v["ordner"]); b = v["bahnhof"]
-    for f in ("spurplan_schema.py", "spurplan_warp.py", "spurplan_check.py"):
+    for f in ("spurplan_schema.py", "spurplan_warp.py", "spurplan_check.py", "vorlage.py", "viewbox_text.py"):
         shutil.copy(os.path.join(HERE, f), d_)
     alt = {f: lesen(os.path.join(d_, f)) for f in v["nach_oben"]}
     rc, o = kette(b, v.get("optionen", []), cwd=d_)
     _topo = None
+    _fertig = None if rc else lesen(os.path.join(d_, f"{b}_spurplan.svg"))
     if not rc:          # Grundregeln auch für Varianten prüfen (27.10., Kerzers: alle Weichen ab Hauptgleis gezeichnet?)
         import re as _re
         _o3 = sh(["spurplan_check.py", "--src", f"{b}.json"] + v.get("optionen", []), cwd=d_)[1]
         _m = _re.search(r"Befunde: (\{.*\})", _o3); _topo = _m.group(1) if _m else _o3[-300:]
+        if _fertig: open(os.path.join(d_, f"{b}_spurplan.svg"), "wb").write(_fertig)
     for n_ in v.get("nachlauf", []):          # z. B. kreuzungsbahnhof.py (Kerzers 27.10.): Plan für den Regionalplan umzeichnen
         if rc: break
         shutil.copy(os.path.join(HERE, n_), d_); rc, o = sh([n_, b], cwd=d_); print(o.strip()[-300:])
@@ -109,6 +118,9 @@ for b, opt in K["bahnhoefe"].items():
     else:
         e["plan_geaendert"] = lesen(os.path.join(TMP, f"{b}_spurplan.svg")) != alt["spurplan.svg"]
         e["bare_geaendert"] = lesen(os.path.join(TMP, f"{b}_bare.svg")) != alt["bare.svg"]
+        # spurplan_check rechnet spurplan_schema neu und überschreibt <b>_spurplan.svg (V4 20.11.: Typvorlage und
+        # Beschriftungsrand gingen so verloren) – Ergebnis der Kette sichern und nach den Prüfungen zurückschreiben
+        _fertig = lesen(os.path.join(TMP, f"{b}_spurplan.svg"))
         rc2, o2 = sh(["netz_pruefung.py", b])
         nb = os.path.join(TMP, f"{b}_netz_befunde.json")
         e["netz"] = dict(collections.Counter(x["regel"] for x in json.load(open(nb))["befunde"])) if os.path.exists(nb) else o2[-300:]
@@ -118,6 +130,7 @@ for b, opt in K["bahnhoefe"].items():
         sh(["qualitaet.py", "messen", b, "--check", e["topologie"] or "{}"])
         _qj = os.path.join(TMP, f"{b}_qualitaet.json")
         if os.path.exists(_qj): e["qualitaet"] = json.load(open(_qj))
+        if _fertig: open(os.path.join(TMP, f"{b}_spurplan.svg"), "wb").write(_fertig)
         for k in ("spurplan.svg", "bare.svg", "ports.json", "warp.json", "netz.json", "netz_befunde.json"):
             src = os.path.join(TMP, f"{b}_{k}")
             if os.path.exists(src): shutil.copy(src, os.path.join(WS, f"{b}_{k}"))

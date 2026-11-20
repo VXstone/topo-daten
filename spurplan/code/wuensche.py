@@ -10,14 +10,17 @@ S-Kurven, gleichmässigerer Bahnhofsabstand, kürzere Bahnhöfe). Messung nur au
   W56  Bahnhofslänge (nur Bahnhofspläne): Leerlänge längs der Hauptachse – Stücke ohne Weiche, Perron oder Gleisende
        (je ± 40 px), abzüglich 120 px Ausfahrt an beiden Planenden; Zahl = Leerlänge / 100 px, gerundet.
        Stand 17.11.: Onnens-Bonvillars 5, Rothrist 4, Tecknau 1 (Anlass Daniel), Konolfingen/Montreux 0.
-Gewichte (REGELN 5): W53 6, W55 3, W56 3, T7 8 – Summe in alle_plaene_pruefen «Wunsch-Summe».
+  W59  Kurze Nebengleise (nur Bahnhofspläne, REGELN 5.9, V4 20.11.2026): je dünnes Gleis (Neben-/Abstell-/Anschlussgleis,
+       Strichbreite < 2,5) die Länge über 80 px hinaus; Zahl = Summe / 100 px, gerundet. Nur Messung (Gewicht 0), bis
+       Daniel die Gewichtung festlegt – Grundlage der Liste «Vorschlag: einfacher als abgenommen».
+Gewichte (REGELN 5): W53 6, W55 3, W56 3, T7 8, W59 0 – Summe in alle_plaene_pruefen «Wunsch-Summe».
 """
 import collections, json, math, os, re, sys
 import numpy as np
 import xml.etree.ElementTree as ET
 from svgpathtools import parse_path, Line
 
-GEWICHT = {"T7": 8, "W53": 6, "W55": 3, "W56": 3}
+GEWICHT = {"T7": 8, "W53": 6, "W55": 3, "W56": 3, "W59": 0}
 HERE = os.path.dirname(os.path.abspath(__file__))
 NS = "{http://www.w3.org/2000/svg}"
 
@@ -245,7 +248,18 @@ def messen(svg_text, key="", topo=None):
     if not region:
         leer, _, _ = laenge(linien, _rects(svg_text))
         if leer is not None: out["W56"] = int(round(leer / 100.0))
+        out["W59"] = int(round(nebengleis_ueberlaenge(linien) / 100.0))
     return out
+
+
+def nebengleis_ueberlaenge(linien, frei=80.0):
+    """W59 (REGELN 5.9): Summe der Längen dünner Gleise über `frei` px hinaus (je zusammenhängender Linie)."""
+    tot = 0.0
+    for w, pts, _ in linien:
+        if w >= 2.5: continue
+        L = float(np.sum(np.hypot(*np.diff(pts, axis=0).T)))
+        tot += max(0.0, L - frei)
+    return tot
 
 
 def summe(z):
