@@ -6,7 +6,7 @@
   "GQ": 1,
   "GP": 3,
   "GW": 0,
-  "GT": 1
+  "GT": 0
  },
  "befunde": [
   {
@@ -68,12 +68,6 @@
    "x": -4001.0,
    "y": 580.7,
    "text": "Pfeilspitze 4.9 px neben einem Gleis (< ½ Ebene)"
-  },
-  {
-   "regel": "GT",
-   "x": 777.5,
-   "y": -897.2,
-   "text": "Treppe, Versatz 11.6 px"
   }
  ]
 }

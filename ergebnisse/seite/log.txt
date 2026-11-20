@@ -4,7 +4,7 @@
 18 Einträge
 index.html 2047 KB, 148 Pläne
 21 Hinweise, 21 Ausschnitte
-Hinweis-Abdeckung: 31/57 (Befund < 40 px, ohne G2)
+Hinweis-Abdeckung: 30/57 (Befund < 40 px, ohne G2)
 ✓ 0bw9 solothurn                    G6,MX,VB1,VB2,W1,W2       19.2  Gleis nach unten, Knick, über anderen Gleisen nach oben
 ✓ 0fpo solothurn                    MX,VA1,VC1,W2             18.8  sauberes Gleis ins Nichts
 ✓ 0k4j region                       G5                        27.3  Eppenbergtunnel Weichen/Stummel
@@ -15,7 +15,7 @@ Hinweis-Abdeckung: 31/57 (Befund < 40 px, ohne G2)
 ✓ 3za5 region                       G6,MZ                      4.9  90 Grad, statt 2 Weichen nur eine
 ✓ 4xdm region                       G7                         0.5  Gleisanschluss dazwischen, Verbindungen prüfen
 ✓ 5yz7 mob__montreux                MQ                        27.1  Perron zwischen 4 und 3
-· 6gk4 mob__zweisimmen              -                         59.4  noch ein Gleis links raus
+· 6gk4 mob__zweisimmen              -                         95.4  noch ein Gleis links raus
 · 6rwy mob__montreux                -                         87.9  keine Mittelperrons Normalspur
 ✓ 7ma7 solothurn                    VB1,VD1                    8.5  Fenster bis Abzweig
 ✓ 8bce konolfingen                  MX                         1.9  Gleise hin und her, Pfeile retour
@@ -36,7 +36,7 @@ Hinweis-Abdeckung: 31/57 (Befund < 40 px, ohne G2)
 · j57v region                       -                         52.7  Knubbel vom geraden Strang
 ✓ jbs1 region                       G6,ME,MZ                  25.7  fehlen Weichen
 ✓ jxpf region_vereina               ME,MZ                     30.3  S-Kurve Klosters
-✓ jy8r mob__zweisimmen              ME,MZ                     26.8  Zwischengerade?
+· jy8r mob__zweisimmen              -                         49.6  Zwischengerade?
 · k4qi mob__rossiniere              -                            -  Stumpen?
 · ldor aarau                        -                        122.6  was ist das für ein Gleis
 · ldwo mob__zweisimmen              -                         51.1  Versatz?
@@ -65,6 +65,7 @@ Hinweis-Abdeckung: 31/57 (Befund < 40 px, ohne G2)
 /home/runner/work/topo-daten/topo-daten/spurplan/code/alle_plaene_pruefen.py:231: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
   json.dump(dict(erzeugt=datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"), plaene=len(zeilen), geaendert=len(gz),
 region                       veröffentlicht                      0 Stellen  gleichwertig  
+region_mob                   veröffentlicht                      1 Stellen  vermutlich besser  W53 7→6 (Wunsch-Summe -6)
 solothurn                    veröffentlicht                      1 Stellen  Fehler? Topologie  GG 4→5, T7 3→2, VD1 7→8 (Wunsch-Summe -8)
 olten                        bestätigt 2026-11-08                0 Stellen  gleichwertig  OSM VB1 13, VB2 25, VC1 7, VD1 10 (kein Alt-Stand)
 rothrist                     Archivbeginn (Abnahme 2026-10-29)    2 Stellen  gleichwertig  OSM VA2 1, VB1 4, VB2 6 (kein Alt-Stand)
@@ -72,5 +73,6 @@ zofingen                     bestätigt 2026-11-08               26 Stellen  gle
 schonenwerd                  bestätigt 2026-11-08                0 Stellen  vermutlich besser  GG 1→0 · OSM VB2 2, VD1 1 (kein Alt-Stand)
 aarau                        veröffentlicht                      0 Stellen  Fehler? Topologie  GG 6→8, VB1 7→9, VD1 7→9
 neuchatel                    bestätigt 2026-11-08                0 Stellen  gleichwertig  OSM VA2 4, VC1 2, VD1 3 (kein Alt-Stand)
-Regression: 147 Pläne, 3 geändert {'Fehler? Topologie': 1, 'gleichwertig': 2}
+mob__zweisimmen              veröffentlicht                      1 Stellen  vermutlich besser  G2 3→2, T7 2→1, W53 2→1 (Wunsch-Summe -14)
+Regression: 147 Pläne, 5 geändert {'vermutlich besser': 2, 'Fehler? Topologie': 1, 'gleichwertig': 2}
 Ausnahmen: 910 Einträge, 125 Orte: {'Schalter': 351, 'Ortswissen': 245, 'Geometrie': 188, 'Typvorlage': 126} | ohne Grund: 0

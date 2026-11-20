@@ -21,18 +21,18 @@
   "W55": 5
  },
  {
-  "key": "region_mob",
-  "gruppe": "Region",
-  "summe": 63,
-  "W53": 7,
-  "W55": 7
- },
- {
   "key": "aarau",
   "gruppe": "Olten 3 · Olten – Aarau",
   "summe": 60,
   "W53": 0,
   "W56": 20
+ },
+ {
+  "key": "region_mob",
+  "gruppe": "Region",
+  "summe": 57,
+  "W53": 6,
+  "W55": 7
  },
  {
   "key": "region_vereina",
@@ -146,13 +146,6 @@
   "W56": 4
  },
  {
-  "key": "mob__zweisimmen",
-  "gruppe": "MOB · Bahnhöfe",
-  "summe": 12,
-  "W53": 2,
-  "W56": 0
- },
- {
   "key": "szu__borrweg",
   "gruppe": "SZU · Bahnhöfe",
   "summe": 12,
@@ -245,6 +238,13 @@
  },
  {
   "key": "mob__rochers_de_naye",
+  "gruppe": "MOB · Bahnhöfe",
+  "summe": 6,
+  "W53": 1,
+  "W56": 0
+ },
+ {
+  "key": "mob__zweisimmen",
   "gruppe": "MOB · Bahnhöfe",
   "summe": 6,
   "W53": 1,

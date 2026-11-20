@@ -95,7 +95,7 @@
 | mob__valmont | · | · | · | · | · | · | 24.0 |
 | mob__vernex | · | · | · | · | · | · | 24.0 |
 | mob__vuarennes | · | · | · | · | · | · | 24.0 |
-| mob__zweisimmen | 2 | 1 | · | · | · | 1 | 24.0 |
+| mob__zweisimmen | 2 | 1 | · | · | · | 0 ↓1 | 24.0 |
 | motiers | · | · | · | · | · | · | 24.0 |
 | munchenwiler_courgevaux | · | · | · | · | · | · | 24.0 |
 | muntelier_lowenberg | · | · | · | · | · | · | 24.0 |
@@ -109,7 +109,7 @@
 | onnens_bonvillars | · | 1 | · | · | · | 1 | 24.0 |
 | pensier | · | · | · | · | · | · | 24.0 |
 | region | 8 | 23 | 2 | 3 | 4 | 6 ↓10 | 10.08 |
-| region_mob | 3 | 3 | 1 | 3 | · | 1 | 10.08 |
+| region_mob | 3 | 3 | 1 | 3 | · | 0 ↓1 | 10.08 |
 | region_ne | 1 | 2 | 1 | · | · | 4 | 10.08 |
 | region_szu | 18 | 28 | 5 | · | · | 1 | 10.08 |
 | region_vereina | 1 | 5 | 2 | · | · | 2 | 10.08 |

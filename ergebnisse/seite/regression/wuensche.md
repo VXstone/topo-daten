@@ -5,8 +5,8 @@ Wünsche je Plan (REGELN 5: W53 S-Kurven ×6, W55 Bahnhofsabstand ×3, W56 Leerl
 | bern | Grosse Knoten | 15 |  | 7 | 111 |
 | region | Region | 15 | 5 |  | 105 |
 | region_ne | Region | 8 | 5 |  | 63 |
-| region_mob | Region | 7 | 7 |  | 63 |
 | aarau | Olten 3 · Olten – Aarau | 0 |  | 20 | 60 |
+| region_mob | Region | 6 | 7 |  | 57 |
 | region_vereina | Region | 5 | 9 |  | 57 |
 | region_szu | Region | 9 |  |  | 54 |
 | basel | Grosse Knoten | 7 |  | 2 | 48 |
@@ -23,7 +23,6 @@ Wünsche je Plan (REGELN 5: W53 S-Kurven ×6, W55 Bahnhofsabstand ×3, W56 Leerl
 | szu__zurich_giesshubel | SZU · Bahnhöfe | 2 |  | 1 | 15 |
 | olten_hammer | Olten 1 · Knoten Olten | 0 |  | 4 | 12 |
 | rothrist | Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil | 0 |  | 4 | 12 |
-| mob__zweisimmen | MOB · Bahnhöfe | 2 |  | 0 | 12 |
 | szu__borrweg | SZU · Bahnhöfe | 1 |  | 2 | 12 |
 | laufelfingen | Olten 4 · Hauenstein | 0 |  | 3 | 9 |
 | kerzers | NE 1 · Neuchâtel – Ins – Kerzers – Bern | 1 |  | 1 | 9 |
@@ -38,6 +37,7 @@ Wünsche je Plan (REGELN 5: W53 S-Kurven ×6, W55 Bahnhofsabstand ×3, W56 Leerl
 | mob__chamby | MOB · Bahnhöfe | 1 |  | 0 | 6 |
 | mob__lenk_im_simmental | MOB · Bahnhöfe | 1 |  | 0 | 6 |
 | mob__rochers_de_naye | MOB · Bahnhöfe | 1 |  | 0 | 6 |
+| mob__zweisimmen | MOB · Bahnhöfe | 1 |  | 0 | 6 |
 | vereina__klosters_selfranga | Vereina · Bahnhöfe | 0 |  | 2 | 6 |
 | vereina__sagliains | Vereina · Bahnhöfe | 0 |  | 2 | 6 |
 | safenwil | Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil | 0 |  | 1 | 3 |

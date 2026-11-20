@@ -1,5 +1,5 @@
 {
- "abgedeckt": 31,
+ "abgedeckt": 30,
  "offen": 57,
  "radius": 40.0,
  "ohne": [
@@ -165,8 +165,8 @@
    "text": "noch ein Gleis links raus",
    "abgedeckt": false,
    "regeln": [],
-   "naechster": 59.4,
-   "naechste_regel": "ME",
+   "naechster": 95.4,
+   "naechste_regel": "MZ",
    "plan_da": true
   },
   {
@@ -444,13 +444,10 @@
    "x": 321.8,
    "y": 182.9,
    "text": "Zwischengerade?",
-   "abgedeckt": true,
-   "regeln": [
-    "ME",
-    "MZ"
-   ],
-   "naechster": 26.8,
-   "naechste_regel": "MZ",
+   "abgedeckt": false,
+   "regeln": [],
+   "naechster": 49.6,
+   "naechste_regel": "VA1",
    "plan_da": true
   },
   {

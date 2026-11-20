@@ -6,7 +6,7 @@
   "GQ": 0,
   "GP": 0,
   "GW": 0,
-  "GT": 1
+  "GT": 0
  },
  "befunde": [
   {
@@ -23,15 +23,9 @@
   },
   {
    "regel": "GG",
-   "x": 241.5,
+   "x": 241.6,
    "y": 206.0,
    "text": "zwei Gleise 15 px aufeinander"
-  },
-  {
-   "regel": "GT",
-   "x": 297.4,
-   "y": 194.0,
-   "text": "Treppe, Versatz 27.7 px"
   }
  ]
 }
