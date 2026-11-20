@@ -1,0 +1,27 @@
+{
+"plan": "auvernier",
+"befunde": [
+{
+"regel": "VB1",
+"x": 637.7,
+"y": 206.0,
+"text": "OSM-Weiche 432502738 ohne Abzweig im Plan",
+"osm": 432502738
+},
+{
+"regel": "VD1",
+"x": 439.9,
+"y": 134.0,
+"text": "zwei Gleise 28 px aufeinander"
+}
+],
+"info": {
+"dkw_osm_unvollstaendig": [],
+"gleise": 28,
+"knoten_plan": 13,
+"dkw_plan": 0,
+"knoten_osm": 14,
+"versatz_y": 0.0,
+"netz_auf_plan": 0.96
+}
+}

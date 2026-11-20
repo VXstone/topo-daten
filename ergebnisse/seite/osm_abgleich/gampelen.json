@@ -1,0 +1,42 @@
+{
+"plan": "gampelen",
+"befunde": [
+{
+"regel": "VB2",
+"x": 436.3,
+"y": 134.0,
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+"ways": [
+108258346,
+108258347
+],
+"farben": [
+"gruen",
+"schwarz"
+]
+},
+{
+"regel": "VB2",
+"x": 470.1,
+"y": 110.0,
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+"ways": [
+27821630,
+41821121
+],
+"farben": [
+"gruen",
+"schwarz"
+]
+}
+],
+"info": {
+"dkw_osm_unvollstaendig": [],
+"gleise": 3,
+"knoten_plan": 2,
+"dkw_plan": 0,
+"knoten_osm": 0,
+"versatz_y": 0.0,
+"netz_auf_plan": 0.5
+}
+}

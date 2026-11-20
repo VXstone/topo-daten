@@ -1,0 +1,41 @@
+{
+"plan": "galmiz",
+"befunde": [
+{
+"regel": "VB1",
+"x": 890.3,
+"y": 134.0,
+"text": "OSM-Weiche 1976391970 ohne Abzweig im Plan",
+"osm": 1976391970
+},
+{
+"regel": "VB2",
+"x": 637.7,
+"y": 134.0,
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+"ways": [
+128969343,
+186891759
+],
+"farben": [
+"gruen",
+"schwarz"
+]
+},
+{
+"regel": "VD1",
+"x": 513.8,
+"y": 133.9,
+"text": "zwei Gleise 16 px aufeinander"
+}
+],
+"info": {
+"dkw_osm_unvollstaendig": [],
+"gleise": 2,
+"knoten_plan": 2,
+"dkw_plan": 0,
+"knoten_osm": 2,
+"versatz_y": 0.0,
+"netz_auf_plan": 0.33
+}
+}

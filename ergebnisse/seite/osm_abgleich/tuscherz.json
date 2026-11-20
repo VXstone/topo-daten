@@ -1,0 +1,98 @@
+{
+"plan": "tuscherz",
+"befunde": [
+{
+"regel": "VB1",
+"x": 790.5,
+"y": 158.0,
+"text": "OSM-Weiche 1946460604 ohne Abzweig im Plan",
+"osm": 1946460604
+},
+{
+"regel": "VB1",
+"x": 822.4,
+"y": 134.0,
+"text": "OSM-Weiche 1946460608 ohne Abzweig im Plan",
+"osm": 1946460608
+},
+{
+"regel": "VB1",
+"x": 850.2,
+"y": 110.0,
+"text": "OSM-Weiche 1946460636 ohne Abzweig im Plan",
+"osm": 1946460636
+},
+{
+"regel": "VB1",
+"x": 744.7,
+"y": 158.0,
+"text": "OSM-Weiche 1946460601 ohne Abzweig im Plan",
+"osm": 1946460601
+},
+{
+"regel": "VB2",
+"x": 651.7,
+"y": 110.0,
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+"ways": [
+184190241,
+255557409
+],
+"farben": [
+"gruen",
+"schwarz"
+]
+},
+{
+"regel": "VB2",
+"x": 685.6,
+"y": 134.0,
+"text": "Gleise berühren sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
+"ways": [
+184190242,
+255557403
+],
+"farben": [
+"gruen",
+"schwarz"
+]
+},
+{
+"regel": "VB2",
+"x": 677.6,
+"y": 134.0,
+"text": "Gleise berühren sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
+"ways": [
+184190242,
+255557403
+],
+"farben": [
+"gruen",
+"schwarz"
+]
+},
+{
+"regel": "VB2",
+"x": 617.7,
+"y": 134.0,
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+"ways": [
+184190242,
+255557403
+],
+"farben": [
+"gruen",
+"schwarz"
+]
+}
+],
+"info": {
+"dkw_osm_unvollstaendig": [],
+"gleise": 5,
+"knoten_plan": 5,
+"dkw_plan": 0,
+"knoten_osm": 5,
+"versatz_y": 0.0,
+"netz_auf_plan": 0.3
+}
+}

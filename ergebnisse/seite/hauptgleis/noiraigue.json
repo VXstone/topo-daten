@@ -1,0 +1,64 @@
+{
+ "zaehl": {
+  "HT1": 2,
+  "HT2": 2,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "befunde": [
+  {
+   "regel": "HT1",
+   "x": 563.9,
+   "y": 134.0,
+   "text": "OSM-Weiche 430900028 ohne Abzweig im Plan",
+   "osm": 430900028
+  },
+  {
+   "regel": "HT1",
+   "x": 970.6,
+   "y": 134.0,
+   "text": "OSM-Weiche 430900016 ohne Abzweig im Plan",
+   "osm": 430900016
+  },
+  {
+   "regel": "HT2",
+   "x": 390.0,
+   "y": 134.0,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    27995033,
+    37050294,
+    507897177
+   ]
+  },
+  {
+   "regel": "HT2",
+   "x": 637.7,
+   "y": 134.0,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    27995033,
+    37050294,
+    507897177
+   ]
+  },
+  {
+   "regel": "_info",
+   "x": 0,
+   "y": 0,
+   "text": "Fahrwege: 2/6 Ziele im Plan gefunden, OSM 1, Plan 1",
+   "ohne_lage": [
+    "Abgang 219 Neuchâtel (430913643)",
+    "Gl. 2",
+    "Gl. 3",
+    "Gl. 310"
+   ]
+  }
+ ],
+ "osm_abgleich": {
+  "VB1": 2,
+  "VB2": 2,
+  "VD1": 1
+ }
+}

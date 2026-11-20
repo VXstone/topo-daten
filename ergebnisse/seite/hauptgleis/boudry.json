@@ -1,0 +1,54 @@
+{
+ "zaehl": {
+  "HT1": 2,
+  "HT2": 1,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "befunde": [
+  {
+   "regel": "HT1",
+   "x": 1129.7,
+   "y": 110.0,
+   "text": "OSM-Weiche 628087095 ohne Abzweig im Plan",
+   "osm": 628087095
+  },
+  {
+   "regel": "HT1",
+   "x": 1157.6,
+   "y": 134.0,
+   "text": "OSM-Weiche 628087097 ohne Abzweig im Plan",
+   "osm": 628087097
+  },
+  {
+   "regel": "HT2",
+   "x": 651.7,
+   "y": 110.0,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    184648385,
+    683973529,
+    1104398039
+   ]
+  },
+  {
+   "regel": "_info",
+   "x": 0,
+   "y": 0,
+   "text": "Fahrwege: 7/13 Ziele im Plan gefunden, OSM 5, Plan 5",
+   "ohne_lage": [
+    "Abgang 210 Neuchâtel (240238524)",
+    "Abgang 210 Neuchâtel (628087102)",
+    "Gl. 632",
+    "Gl. 633",
+    "Gl. 722",
+    "Gl. 723"
+   ]
+  }
+ ],
+ "osm_abgleich": {
+  "VB1": 2,
+  "VB2": 1
+ }
+}

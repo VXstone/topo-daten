@@ -1,7 +1,7 @@
 {
  "_zweck": "Bahnhofregister (V3, 20.11.2026): jeder Bahnhof einmal, Schlüssel SBB-Abkürzung. Erzeugt von code/bahnhofregister.py im Workflow seite.",
- "code_stand": "5e32a01ec41b4bad4c69fbfafb7611ec3da483e2",
- "seite_commit": "b437895bb0f9023c074eeb23c04ee13bd2745746",
+ "code_stand": "d979b783964430b623c7cb89043068b7a2a4cfdd",
+ "seite_commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
  "bahnhoefe": {
   "AA": {
    "abk": "AA",
@@ -231,7 +231,10 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "210",
+    "219"
+   ],
    "linie_sbb": "210",
    "km": 70.34416,
    "osm": {
@@ -251,6 +254,9 @@
     "1",
     "2",
     "3"
+   ],
+   "gleise_perron_osm": [
+    "1"
    ]
   },
   "AV": {
@@ -269,7 +275,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "251"
+   ],
    "linie_sbb": "251",
    "km": 69.11816,
    "osm": {
@@ -288,6 +296,10 @@
    "gleise_perron_sbb": [
     "1",
     "2"
+   ],
+   "gleise_perron_osm": [
+    "Quai 1",
+    "Quai 2"
    ]
   },
   "AVA": {
@@ -371,7 +383,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "210"
+   ],
    "linie_sbb": "210",
    "km": 66.25347,
    "osm": {
@@ -390,6 +404,9 @@
    "gleise_perron_sbb": [
     "2",
     "3"
+   ],
+   "gleise_perron_osm": [
+    "1"
    ]
   },
   "BEMM": {
@@ -542,7 +559,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "220"
+   ],
    "osm": {
     "node": 1870421883,
     "name": "Bern Brünnen Westside",
@@ -559,6 +578,12 @@
    "gleise_perron_sbb": [
     "1",
     "2"
+   ],
+   "gleise_perron_osm": [
+    "1",
+    "2",
+    "4",
+    "5"
    ]
   },
   "BNHB": {
@@ -649,7 +674,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "219"
+   ],
    "linie_sbb": "219",
    "km": 8.3,
    "osm": {
@@ -666,6 +693,9 @@
     "wie": "uic_ref"
    },
    "gleise_perron_sbb": [
+    "1"
+   ],
+   "gleise_perron_osm": [
     "1"
    ]
   },
@@ -1023,7 +1053,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "210"
+   ],
    "linie_sbb": "210",
    "km": 62.27922,
    "osm": {
@@ -1040,6 +1072,10 @@
     "wie": "uic_ref"
    },
    "gleise_perron_sbb": [
+    "1",
+    "2"
+   ],
+   "gleise_perron_osm": [
     "1",
     "2"
    ]
@@ -1197,7 +1233,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "210"
+   ],
    "linie_sbb": "210",
    "km": 50.752,
    "osm": {
@@ -1214,6 +1252,10 @@
     "wie": "uic_ref"
    },
    "gleise_perron_sbb": [
+    "1",
+    "2"
+   ],
+   "gleise_perron_osm": [
     "1",
     "2"
    ]
@@ -1234,7 +1276,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "219"
+   ],
    "linie_sbb": "219",
    "km": 13.64584,
    "osm": {
@@ -1369,7 +1413,10 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "223",
+    "224"
+   ],
    "linie_sbb": "223",
    "km": 10.3982,
    "osm": {
@@ -1515,7 +1562,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "210"
+   ],
    "linie_sbb": "210",
    "km": 67.66967,
    "osm": {
@@ -1535,6 +1584,10 @@
     "1",
     "2",
     "3"
+   ],
+   "gleise_perron_osm": [
+    "1",
+    "2"
    ]
   },
   "CORN": {
@@ -1553,7 +1606,10 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "210",
+    "216"
+   ],
    "linie_sbb": "216",
    "km": 0.0,
    "osm": {
@@ -1570,6 +1626,11 @@
     "wie": "uic_ref"
    },
    "gleise_perron_sbb": [
+    "1",
+    "2",
+    "3"
+   ],
+   "gleise_perron_osm": [
     "1",
     "2",
     "3"
@@ -1591,7 +1652,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "255"
+   ],
    "osm": {
     "node": 3664792744,
     "name": "Courtepin",
@@ -1606,6 +1669,10 @@
     "wie": "uic_ref"
    },
    "gleise_perron_sbb": [
+    "1",
+    "2"
+   ],
+   "gleise_perron_osm": [
     "1",
     "2"
    ]
@@ -1626,7 +1693,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "223"
+   ],
    "linie_sbb": "223",
    "km": 4.32248,
    "osm": {
@@ -1644,6 +1713,10 @@
    },
    "gleise_perron_sbb": [
     "1"
+   ],
+   "gleise_perron_osm": [
+    "1",
+    "2"
    ]
   },
   "CRDB": {
@@ -1695,7 +1768,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "255"
+   ],
    "osm": {
     "node": 3664792745,
     "name": "Cressier FR",
@@ -1710,6 +1785,9 @@
     "wie": "uic_ref"
    },
    "gleise_perron_sbb": [
+    "1"
+   ],
+   "gleise_perron_osm": [
     "1"
    ]
   },
@@ -1729,7 +1807,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "210"
+   ],
    "linie_sbb": "210",
    "km": 85.55013,
    "osm": {
@@ -1746,6 +1826,10 @@
     "wie": "uic_ref"
    },
    "gleise_perron_sbb": [
+    "1",
+    "2"
+   ],
+   "gleise_perron_osm": [
     "1",
     "2"
    ]
@@ -1791,7 +1875,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "221"
+   ],
    "osm": {
     "node": 307412768,
     "name": "Couvet",
@@ -1825,7 +1911,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "223"
+   ],
    "linie_sbb": "223",
    "km": 3.102,
    "osm": {
@@ -1843,6 +1931,10 @@
    },
    "gleise_perron_sbb": [
     "1"
+   ],
+   "gleise_perron_osm": [
+    "1",
+    "2"
    ]
   },
   "DK": {
@@ -1961,7 +2053,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "251"
+   ],
    "linie_sbb": "251",
    "km": 66.18946,
    "osm": {
@@ -1978,6 +2072,9 @@
     "wie": "uic_ref"
    },
    "gleise_perron_sbb": [
+    "1"
+   ],
+   "gleise_perron_osm": [
     "1"
    ]
   },
@@ -1997,7 +2094,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "251"
+   ],
    "linie_sbb": "251",
    "km": 63.65763,
    "osm": {
@@ -2014,6 +2113,9 @@
     "wie": "uic_ref"
    },
    "gleise_perron_sbb": [
+    "2"
+   ],
+   "gleise_perron_osm": [
     "2"
    ]
   },
@@ -2113,7 +2215,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "251"
+   ],
    "linie_sbb": "251",
    "km": 72.80486,
    "osm": {
@@ -2130,6 +2234,9 @@
     "wie": "uic_ref"
    },
    "gleise_perron_sbb": [
+    "1"
+   ],
+   "gleise_perron_osm": [
     "1"
    ]
   },
@@ -2215,7 +2322,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "251"
+   ],
    "linie_sbb": "251",
    "km": 87.67316,
    "osm": {
@@ -2290,7 +2399,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "224"
+   ],
    "linie_sbb": "224",
    "km": 16.8975,
    "osm": {
@@ -2307,6 +2418,10 @@
     "wie": "uic_ref"
    },
    "gleise_perron_sbb": [
+    "1",
+    "2"
+   ],
+   "gleise_perron_osm": [
     "1",
     "2"
    ]
@@ -2426,7 +2541,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "220"
+   ],
    "osm": {
     "node": 3081154382,
     "name": "Gümmenen",
@@ -2441,6 +2558,10 @@
     "wie": "uic_ref"
    },
    "gleise_perron_sbb": [
+    "1",
+    "2"
+   ],
+   "gleise_perron_osm": [
     "1",
     "2"
    ]
@@ -2461,7 +2582,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "210"
+   ],
    "linie_sbb": "210",
    "km": 58.097,
    "osm": {
@@ -2481,6 +2604,9 @@
     "1",
     "2",
     "3"
+   ],
+   "gleise_perron_osm": [
+    "1"
    ]
   },
   "GP": {
@@ -2499,7 +2625,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "220"
+   ],
    "osm": {
     "node": 3092219560,
     "name": "Gampelen",
@@ -2514,6 +2642,10 @@
     "wie": "uic_ref"
    },
    "gleise_perron_sbb": [
+    "1",
+    "2"
+   ],
+   "gleise_perron_osm": [
     "1",
     "2"
    ]
@@ -2534,7 +2666,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "210"
+   ],
    "linie_sbb": "210",
    "km": 42.71125,
    "osm": {
@@ -2643,7 +2777,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "251"
+   ],
    "linie_sbb": "251",
    "km": 80.674,
    "osm": {
@@ -2711,7 +2847,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "224"
+   ],
    "linie_sbb": "224",
    "km": 20.98843,
    "osm": {
@@ -2730,6 +2868,9 @@
    "gleise_perron_sbb": [
     "1",
     "2"
+   ],
+   "gleise_perron_osm": [
+    "1"
    ]
   },
   "INS": {
@@ -2923,7 +3064,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "251"
+   ],
    "linie_sbb": "251",
    "km": 91.37025,
    "osm": {
@@ -2940,6 +3083,9 @@
     "wie": "uic_ref"
    },
    "gleise_perron_sbb": [
+    "1"
+   ],
+   "gleise_perron_osm": [
     "1"
    ]
   },
@@ -3083,7 +3229,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "251"
+   ],
    "linie_sbb": "251",
    "km": 86.517,
    "osm": {
@@ -3195,7 +3343,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "210"
+   ],
    "linie_sbb": "210",
    "km": 87.71714,
    "osm": {
@@ -3215,6 +3365,9 @@
     "1",
     "2",
     "3"
+   ],
+   "gleise_perron_osm": [
+    "1"
    ]
   },
   "LENK": {
@@ -3309,7 +3462,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "210"
+   ],
    "linie_sbb": "210",
    "km": 94.00279,
    "osm": {
@@ -3345,7 +3500,10 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "251",
+    "256"
+   ],
    "linie_sbb": "251",
    "km": 78.5725,
    "osm": {
@@ -3414,7 +3572,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "220"
+   ],
    "osm": {
     "node": 3081154407,
     "name": "Marin-Epagnier",
@@ -3449,7 +3609,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "220"
+   ],
    "osm": {
     "node": 3836116267,
     "name": "Müntschemier",
@@ -3483,7 +3645,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "221"
+   ],
    "osm": {
     "node": 307412745,
     "name": "Môtiers",
@@ -3514,7 +3678,10 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "251",
+    "255"
+   ],
    "zuordnung": "name_teil",
    "linie_sbb": "255",
    "km": 22.1623,
@@ -3532,6 +3699,12 @@
     "wie": "uic_ref"
    },
    "gleise_perron_sbb": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "gleise_perron_osm": [
     "1",
     "2",
     "3",
@@ -3588,7 +3761,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "255"
+   ],
    "osm": {
     "node": 3664792746,
     "name": "Münchenwiler-Courgevaux",
@@ -3603,6 +3778,10 @@
     "wie": "uic_ref"
    },
    "gleise_perron_sbb": [
+    "1",
+    "2"
+   ],
+   "gleise_perron_osm": [
     "1",
     "2"
    ]
@@ -3830,7 +4009,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "210"
+   ],
    "zuordnung": "name_teil",
    "linie_sbb": "210",
    "km": 72.39006,
@@ -3848,6 +4029,10 @@
     "wie": "uic_ref"
    },
    "gleise_perron_sbb": [
+    "1",
+    "2"
+   ],
+   "gleise_perron_osm": [
     "1",
     "2"
    ]
@@ -3938,7 +4123,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "219"
+   ],
    "linie_sbb": "219",
    "km": 18.10913,
    "osm": {
@@ -3955,6 +4142,10 @@
     "wie": "uic_ref"
    },
    "gleise_perron_sbb": [
+    "2",
+    "3"
+   ],
+   "gleise_perron_osm": [
     "2",
     "3"
    ]
@@ -4039,7 +4230,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "210"
+   ],
    "linie_sbb": "210",
    "km": 90.04861,
    "osm": {
@@ -4056,6 +4249,10 @@
     "wie": "uic_ref"
    },
    "gleise_perron_sbb": [
+    "1",
+    "2"
+   ],
+   "gleise_perron_osm": [
     "1",
     "2"
    ]
@@ -4254,7 +4451,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "210"
+   ],
    "linie_sbb": "210",
    "km": 47.482,
    "osm": null
@@ -4340,7 +4539,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "255"
+   ],
    "osm": {
     "node": 3664792747,
     "name": "Pensier",
@@ -4355,6 +4556,10 @@
     "wie": "uic_ref"
    },
    "gleise_perron_sbb": [
+    "1",
+    "2"
+   ],
+   "gleise_perron_osm": [
     "1",
     "2"
    ]
@@ -4474,7 +4679,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "221"
+   ],
    "osm": {
     "node": 307412779,
     "name": "La Presta - Mines d'Asphalte",
@@ -4487,7 +4694,10 @@
     ],
     "abstand_m": 2,
     "wie": "uic_ref"
-   }
+   },
+   "gleise_perron_osm": [
+    "1"
+   ]
   },
   "RCH": {
    "abk": "RCH",
@@ -4505,7 +4715,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "220"
+   ],
    "zuordnung": "name_teil",
    "osm": {
     "node": 1870460759,
@@ -4519,7 +4731,11 @@
     ],
     "abstand_m": 11,
     "wie": "uic_ref"
-   }
+   },
+   "gleise_perron_osm": [
+    "1",
+    "2"
+   ]
   },
   "RILI": {
    "abk": "RILI",
@@ -4644,7 +4860,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "220"
+   ],
    "osm": {
     "node": 3081154425,
     "name": "Rosshäusern",
@@ -4659,6 +4877,10 @@
     "wie": "uic_ref"
    },
    "gleise_perron_sbb": [
+    "2",
+    "3"
+   ],
+   "gleise_perron_osm": [
     "2",
     "3"
    ]
@@ -4984,7 +5206,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "210"
+   ],
    "linie_sbb": "210",
    "km": 79.36773,
    "osm": {
@@ -5001,6 +5225,10 @@
     "wie": "uic_ref"
    },
    "gleise_perron_sbb": [
+    "1",
+    "2"
+   ],
+   "gleise_perron_osm": [
     "1",
     "2"
    ]
@@ -5021,7 +5249,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "220"
+   ],
    "osm": {
     "node": 3081154428,
     "name": "Saint Blaise-Lac",
@@ -5034,7 +5264,11 @@
     ],
     "abstand_m": 2,
     "wie": "uic_ref"
-   }
+   },
+   "gleise_perron_osm": [
+    "1",
+    "2"
+   ]
   },
   "SCI": {
    "abk": "SCI",
@@ -5480,7 +5714,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "256"
+   ],
    "osm": {
     "node": 3838637244,
     "name": "Sugiez",
@@ -5495,6 +5731,10 @@
     "wie": "uic_ref"
    },
    "gleise_perron_sbb": [
+    "1",
+    "2"
+   ],
+   "gleise_perron_osm": [
     "1",
     "2"
    ]
@@ -5731,7 +5971,10 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "219",
+    "221"
+   ],
    "linie_sbb": "219",
    "km": 22.44673,
    "osm": {
@@ -5827,7 +6070,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "210"
+   ],
    "linie_sbb": "210",
    "km": 99.953,
    "osm": {
@@ -5844,6 +6089,10 @@
     "wie": "uic_ref"
    },
    "gleise_perron_sbb": [
+    "1",
+    "2"
+   ],
+   "gleise_perron_osm": [
     "1",
     "2"
    ]
@@ -5864,7 +6113,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "210"
+   ],
    "linie_sbb": "9210",
    "km": 95.9766,
    "osm": {
@@ -5881,6 +6132,10 @@
     "wie": "uic_ref"
    },
    "gleise_perron_sbb": [
+    "2",
+    "3"
+   ],
+   "gleise_perron_osm": [
     "2",
     "3"
    ]
@@ -6129,7 +6384,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "220"
+   ],
    "osm": {
     "node": 11808339007,
     "name": "Zihlbrücke",
@@ -6491,7 +6748,7 @@
    "fingerabdruck": "96cbc6cbf790",
    "quelle": "Werkstatt Olten",
    "workflow": "seite",
-   "commit": "b437895bb0f9023c074eeb23c04ee13bd2745746",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
    "art": "code",
    "regionalplan": true,
    "veraltet": false
@@ -6501,10 +6758,10 @@
    "name": "Region Neuchâtel",
    "gruppe": "Region",
    "region": "ne",
-   "fingerabdruck": "b9709d10c24d",
+   "fingerabdruck": "7a80b36ff9df",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "b437895bb0f9023c074eeb23c04ee13bd2745746",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
    "art": "code",
    "regionalplan": true,
    "veraltet": false
@@ -6520,7 +6777,7 @@
    "commit": "5e32a01ec41b4bad4c69fbfafb7611ec3da483e2",
    "art": "code",
    "regionalplan": true,
-   "veraltet": false
+   "veraltet": true
   },
   "region_vereina": {
    "key": "region_vereina",
@@ -6533,7 +6790,7 @@
    "commit": "5e32a01ec41b4bad4c69fbfafb7611ec3da483e2",
    "art": "code",
    "regionalplan": true,
-   "veraltet": false
+   "veraltet": true
   },
   "region_szu": {
    "key": "region_szu",
@@ -6546,7 +6803,7 @@
    "commit": "5e32a01ec41b4bad4c69fbfafb7611ec3da483e2",
    "art": "code",
    "regionalplan": true,
-   "veraltet": false
+   "veraltet": true
   },
   "basel": {
    "key": "basel",
@@ -6625,7 +6882,7 @@
     46.880065,
     7.619758
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "solothurn": {
    "key": "solothurn",
@@ -6648,17 +6905,17 @@
     47.204473,
     7.546117
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "olten": {
    "key": "olten",
    "name": "Olten",
    "gruppe": "Olten 1 · Knoten Olten",
    "region": "olten",
-   "fingerabdruck": "63a183070fd8",
+   "fingerabdruck": "a7d7b3785fb4",
    "quelle": "Werkstatt Olten",
    "workflow": "seite",
-   "commit": "b437895bb0f9023c074eeb23c04ee13bd2745746",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
    "art": "code",
    "abk": [
     "OL",
@@ -6675,10 +6932,10 @@
    "name": "Olten Hammer",
    "gruppe": "Olten 1 · Knoten Olten",
    "region": "olten",
-   "fingerabdruck": "b60811cdcc15",
+   "fingerabdruck": "c37933715dbc",
    "quelle": "Werkstatt Olten",
    "workflow": "seite",
-   "commit": "b437895bb0f9023c074eeb23c04ee13bd2745746",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
    "art": "code",
    "abk": [
     "OLH"
@@ -6697,7 +6954,7 @@
    "fingerabdruck": "8e28ff9dd913",
    "quelle": "Werkstatt Olten",
    "workflow": "seite",
-   "commit": "b437895bb0f9023c074eeb23c04ee13bd2745746",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
    "art": "code",
    "abk": [
     "ABO",
@@ -6718,7 +6975,7 @@
    "fingerabdruck": "f3b3b690291d",
    "quelle": "Werkstatt Olten",
    "workflow": "seite",
-   "commit": "b437895bb0f9023c074eeb23c04ee13bd2745746",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
    "art": "code",
    "abk": [
     "RTR"
@@ -6734,10 +6991,10 @@
    "name": "Zofingen",
    "gruppe": "Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil",
    "region": "olten",
-   "fingerabdruck": "10ae3279d0ea",
+   "fingerabdruck": "13872647f75a",
    "quelle": "Werkstatt Olten",
    "workflow": "seite",
-   "commit": "b437895bb0f9023c074eeb23c04ee13bd2745746",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
    "art": "code",
    "abk": [
     "ZF",
@@ -6757,7 +7014,7 @@
    "fingerabdruck": "edba1ce8b230",
    "quelle": "Werkstatt Olten",
    "workflow": "seite",
-   "commit": "b437895bb0f9023c074eeb23c04ee13bd2745746",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
    "art": "code",
    "abk": [
     "SAF"
@@ -6776,7 +7033,7 @@
    "fingerabdruck": "1157b5c7a75f",
    "quelle": "Werkstatt Olten",
    "workflow": "seite",
-   "commit": "b437895bb0f9023c074eeb23c04ee13bd2745746",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
    "art": "code",
    "abk": [
     "DU"
@@ -6795,7 +7052,7 @@
    "fingerabdruck": "926cee699edd",
    "quelle": "Werkstatt Olten",
    "workflow": "seite",
-   "commit": "b437895bb0f9023c074eeb23c04ee13bd2745746",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
    "art": "code",
    "abk": [
     "DK",
@@ -6816,7 +7073,7 @@
    "fingerabdruck": "48e815acacdf",
    "quelle": "Werkstatt Olten",
    "workflow": "seite",
-   "commit": "b437895bb0f9023c074eeb23c04ee13bd2745746",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
    "art": "code",
    "abk": [
     "SCOE"
@@ -6832,10 +7089,10 @@
    "name": "Aarau",
    "gruppe": "Olten 3 · Olten – Aarau",
    "region": "olten",
-   "fingerabdruck": "e5f86ea0cd25",
+   "fingerabdruck": "db9c0d30a222",
    "quelle": "Werkstatt Olten",
    "workflow": "seite",
-   "commit": "b437895bb0f9023c074eeb23c04ee13bd2745746",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
    "art": "code",
    "abk": [
     "AA",
@@ -6855,7 +7112,7 @@
    "fingerabdruck": "a42c988c04bc",
    "quelle": "Werkstatt Olten",
    "workflow": "seite",
-   "commit": "b437895bb0f9023c074eeb23c04ee13bd2745746",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
    "art": "code",
    "abk": [
     "TK"
@@ -6871,10 +7128,10 @@
    "name": "Läufelfingen",
    "gruppe": "Olten 4 · Hauenstein",
    "region": "olten",
-   "fingerabdruck": "f6ef742731cc",
+   "fingerabdruck": "e09f604e1e1d",
    "quelle": "Werkstatt Olten",
    "workflow": "seite",
-   "commit": "b437895bb0f9023c074eeb23c04ee13bd2745746",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
    "art": "code",
    "abk": [
     "LF"
@@ -6893,7 +7150,7 @@
    "fingerabdruck": "6e780447e0b5",
    "quelle": "Werkstatt Olten",
    "workflow": "seite",
-   "commit": "b437895bb0f9023c074eeb23c04ee13bd2745746",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
    "art": "code",
    "abk": [
     "WBOL"
@@ -6967,227 +7224,216 @@
     46.997922,
     6.93822
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "saint_blaise_lac": {
    "key": "saint_blaise_lac",
    "name": "Saint-Blaise Lac",
    "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
    "region": "ne",
-   "fingerabdruck": "e4d0f9aa313b",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "commit": null,
-   "datum": "21.10.2026",
-   "art": "fest",
+   "fingerabdruck": "e4fc53fd20d3",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
+   "art": "code",
    "abk": [
     "SBLB"
    ],
    "ort": [
-    47.012167,
-    6.985239
+    47.01199,
+    6.983871
    ],
-   "veraltet": "fest"
+   "veraltet": false
   },
   "marin_epagnier": {
    "key": "marin_epagnier",
    "name": "Marin-Epagnier",
    "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
    "region": "ne",
-   "fingerabdruck": "44ee6fa83be0",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "commit": null,
-   "datum": "21.10.2026",
-   "art": "fest",
+   "fingerabdruck": "976ea5d6388e",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
+   "art": "code",
    "abk": [
     "MEP"
    ],
    "ort": [
-    47.009151,
-    7.010668
+    47.009308,
+    7.010607
    ],
-   "veraltet": "fest"
+   "veraltet": false
   },
   "zihlbruecke": {
    "key": "zihlbruecke",
    "name": "Zihlbrücke",
    "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
    "region": "ne",
-   "fingerabdruck": "0245a61912f8",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "commit": null,
-   "datum": "21.10.2026",
-   "art": "fest",
+   "fingerabdruck": "48dccf3ed1b1",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
+   "art": "code",
    "abk": [
     "ZBR"
    ],
    "ort": [
-    47.009238,
-    7.030564
+    47.009224,
+    7.033037
    ],
-   "veraltet": "fest"
+   "veraltet": false
   },
   "gampelen": {
    "key": "gampelen",
    "name": "Gampelen",
    "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
    "region": "ne",
-   "fingerabdruck": "6a8899b73d27",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "commit": null,
-   "datum": "21.10.2026",
-   "art": "fest",
+   "fingerabdruck": "6d3c41a1065e",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
+   "art": "code",
    "abk": [
     "GP"
    ],
    "ort": [
-    47.009084,
-    7.058215
+    47.008909,
+    7.058308
    ],
-   "veraltet": "fest"
+   "veraltet": false
   },
   "muntschemier": {
    "key": "muntschemier",
    "name": "Müntschemier",
    "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
    "region": "ne",
-   "fingerabdruck": "711cf7ae75c4",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "commit": null,
-   "datum": "21.10.2026",
-   "art": "fest",
+   "fingerabdruck": "552a74d8437a",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
+   "art": "code",
    "abk": [
     "MM"
    ],
    "ort": [
-    46.992821,
-    7.144019
+    46.993097,
+    7.142376
    ],
-   "veraltet": "fest"
+   "veraltet": false
   },
   "gummenen": {
    "key": "gummenen",
    "name": "Gümmenen",
    "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
    "region": "ne",
-   "fingerabdruck": "8b12322361e1",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "commit": null,
-   "datum": "21.10.2026",
-   "art": "fest",
+   "fingerabdruck": "0e47fff20159",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
+   "art": "code",
    "abk": [
     "GMM"
    ],
    "ort": [
-    46.943702,
-    7.234782
+    46.941978,
+    7.234842
    ],
-   "veraltet": "fest"
+   "veraltet": false
   },
   "rosshausern": {
    "key": "rosshausern",
    "name": "Rosshäusern",
    "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
    "region": "ne",
-   "fingerabdruck": "184ef9119777",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "commit": null,
-   "datum": "21.10.2026",
-   "art": "fest",
+   "fingerabdruck": "5cd7d38ae68a",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
+   "art": "code",
    "abk": [
     "ROSS"
    ],
    "ort": [
-    46.934336,
-    7.29682
+    46.934842,
+    7.297952
    ],
-   "veraltet": "fest"
+   "veraltet": false
   },
   "riedbach": {
    "key": "riedbach",
    "name": "Riedbach",
    "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
    "region": "ne",
-   "fingerabdruck": "2402607d1dce",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "commit": null,
-   "datum": "21.10.2026",
-   "art": "fest",
+   "fingerabdruck": "da1fc6b3da20",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
+   "art": "code",
    "abk": [
     "RCH"
    ],
    "ort": [
-    46.941133,
-    7.333752
+    46.941251,
+    7.334252
    ],
-   "veraltet": "fest"
+   "veraltet": false
   },
   "bern_brunnen_westside": {
    "key": "bern_brunnen_westside",
    "name": "Bern Brünnen Westside",
    "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
    "region": "ne",
-   "fingerabdruck": "443dd4229d7e",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "commit": null,
-   "datum": "21.10.2026",
-   "art": "fest",
+   "fingerabdruck": "2f3ca207d216",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
+   "art": "code",
    "abk": [
     "BNB"
    ],
    "ort": [
-    46.943415,
-    7.375437
+    46.943832,
+    7.375034
    ],
-   "veraltet": "fest"
+   "veraltet": false
   },
   "sugiez": {
    "key": "sugiez",
    "name": "Sugiez",
    "gruppe": "NE 2 · Ins – Sugiez – Murten",
    "region": "ne",
-   "fingerabdruck": "f6008ddb9f45",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "commit": null,
-   "datum": "21.10.2026",
-   "art": "fest",
+   "fingerabdruck": "1348eb6e6a12",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
+   "art": "code",
    "abk": [
     "SUGI"
    ],
    "ort": [
-    46.963096,
-    7.120475
+    46.964234,
+    7.119625
    ],
-   "veraltet": "fest"
+   "veraltet": false
   },
   "muntelier_lowenberg": {
    "key": "muntelier_lowenberg",
    "name": "Muntelier-Löwenberg",
    "gruppe": "NE 2 · Ins – Sugiez – Murten",
    "region": "ne",
-   "fingerabdruck": "c30d8a4bf575",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "commit": null,
-   "datum": "21.10.2026",
-   "art": "fest",
+   "fingerabdruck": "1084ecb13328",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
+   "art": "code",
    "abk": [
     "LOEW"
    ],
    "ort": [
-    46.941826,
-    7.139434
+    46.940939,
+    7.137907
    ],
-   "veraltet": "fest"
+   "veraltet": false
   },
   "murten": {
    "key": "murten",
@@ -7204,8 +7450,8 @@
     "MRT"
    ],
    "ort": [
-    46.924827,
-    7.114599
+    46.925033,
+    7.114916
    ],
    "veraltet": "fest"
   },
@@ -7214,380 +7460,361 @@
    "name": "Kallnach",
    "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
    "region": "ne",
-   "fingerabdruck": "1c967c26f6d2",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "commit": null,
-   "datum": "21.10.2026",
-   "art": "fest",
+   "fingerabdruck": "a21695515b60",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
+   "art": "code",
    "abk": [
     "KAL"
    ],
    "ort": [
-    47.025507,
-    7.235205
+    47.02604,
+    7.235922
    ],
-   "veraltet": "fest"
+   "veraltet": false
   },
   "fraschels": {
    "key": "fraschels",
    "name": "Fräschels",
    "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
    "region": "ne",
-   "fingerabdruck": "180ff51cb80d",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "commit": null,
-   "datum": "21.10.2026",
-   "art": "fest",
+   "fingerabdruck": "33e6bcaf7687",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
+   "art": "code",
    "abk": [
     "FRAE"
    ],
    "ort": [
-    46.999084,
-    7.206027
+    46.999023,
+    7.205844
    ],
-   "veraltet": "fest"
+   "veraltet": false
   },
   "kerzers_papiliorama": {
    "key": "kerzers_papiliorama",
    "name": "Kerzers Papiliorama",
    "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
    "region": "ne",
-   "fingerabdruck": "d0288813d692",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "commit": null,
-   "datum": "21.10.2026",
-   "art": "fest",
+   "fingerabdruck": "33de528d695f",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
+   "art": "code",
    "abk": [
     "KZPP"
    ],
    "ort": [
-    46.989653,
-    7.199245
+    46.991978,
+    7.200243
    ],
-   "veraltet": "fest"
+   "veraltet": false
   },
   "galmiz": {
    "key": "galmiz",
    "name": "Galmiz",
    "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
    "region": "ne",
-   "fingerabdruck": "95c445489cf1",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "commit": null,
-   "datum": "21.10.2026",
-   "art": "fest",
+   "fingerabdruck": "56250a8292da",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
+   "art": "code",
    "abk": [
     "GZ"
    ],
    "ort": [
-    46.950811,
-    7.153134
+    46.951405,
+    7.153722
    ],
-   "veraltet": "fest"
+   "veraltet": false
   },
   "faoug": {
    "key": "faoug",
    "name": "Faoug",
    "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
    "region": "ne",
-   "fingerabdruck": "0b51f39f23fd",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "commit": null,
-   "datum": "21.10.2026",
-   "art": "fest",
+   "fingerabdruck": "20b37940ea8a",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
+   "art": "code",
    "abk": [
     "FG"
    ],
    "ort": [
-    46.908272,
-    7.074605
+    46.907911,
+    7.073747
    ],
-   "veraltet": "fest"
+   "veraltet": false
   },
   "avenches": {
    "key": "avenches",
    "name": "Avenches",
    "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
    "region": "ne",
-   "fingerabdruck": "694944d742cb",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "commit": null,
-   "datum": "21.10.2026",
-   "art": "fest",
+   "fingerabdruck": "c933e7fc71c3",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
+   "art": "code",
    "abk": [
     "AV"
    ],
    "ort": [
-    46.889434,
-    7.048835
+    46.887067,
+    7.044689
    ],
-   "veraltet": "fest"
+   "veraltet": false
   },
   "domdidier": {
    "key": "domdidier",
    "name": "Domdidier",
    "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
    "region": "ne",
-   "fingerabdruck": "7296c4677a0d",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "commit": null,
-   "datum": "21.10.2026",
-   "art": "fest",
+   "fingerabdruck": "521686b50794",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
+   "art": "code",
    "abk": [
     "DOM"
    ],
    "ort": [
-    46.870554,
-    7.01439
+    46.871265,
+    7.015095
    ],
-   "veraltet": "fest"
+   "veraltet": false
   },
   "dompierre": {
    "key": "dompierre",
    "name": "Dompierre",
    "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
    "region": "ne",
-   "fingerabdruck": "4f0a97297f6f",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "commit": null,
-   "datum": "21.10.2026",
-   "art": "fest",
+   "fingerabdruck": "a23cbd847302",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
+   "art": "code",
    "abk": [
     "DOP"
    ],
    "ort": [
-    46.85468,
-    6.985716
+    46.854797,
+    6.985828
    ],
-   "veraltet": "fest"
+   "veraltet": false
   },
   "munchenwiler_courgevaux": {
    "key": "munchenwiler_courgevaux",
    "name": "Münchenwiler-Courgevaux",
    "gruppe": "NE 4 · Murten – Fribourg",
    "region": "ne",
-   "fingerabdruck": "5a096ab16f3c",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "commit": null,
-   "datum": "21.10.2026",
-   "art": "fest",
+   "fingerabdruck": "6cc8ab449832",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
+   "art": "code",
    "abk": [
     "MUCO"
    ],
    "ort": [
-    46.911244,
-    7.1154
+    46.912122,
+    7.115032
    ],
-   "veraltet": "fest"
+   "veraltet": false
   },
   "cressier_fr": {
    "key": "cressier_fr",
    "name": "Cressier FR",
    "gruppe": "NE 4 · Murten – Fribourg",
    "region": "ne",
-   "fingerabdruck": "323b8821426a",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "commit": null,
-   "datum": "21.10.2026",
-   "art": "fest",
+   "fingerabdruck": "3b36d288de7a",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
+   "art": "code",
    "abk": [
     "CRFR"
    ],
    "ort": [
-    46.899691,
-    7.149137
+    46.901539,
+    7.150437
    ],
-   "veraltet": "fest"
+   "veraltet": false
   },
   "courtepin": {
    "key": "courtepin",
    "name": "Courtepin",
    "gruppe": "NE 4 · Murten – Fribourg",
    "region": "ne",
-   "fingerabdruck": "b79eefa5545c",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "commit": null,
-   "datum": "21.10.2026",
-   "art": "fest",
+   "fingerabdruck": "6b01dece45c1",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
+   "art": "code",
    "abk": [
     "COUR"
    ],
    "ort": [
-    46.868989,
-    7.123697
+    46.867128,
+    7.122963
    ],
-   "veraltet": "fest"
+   "veraltet": false
   },
   "pensier": {
    "key": "pensier",
    "name": "Pensier",
    "gruppe": "NE 4 · Murten – Fribourg",
    "region": "ne",
-   "fingerabdruck": "3f54681aefc8",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "commit": null,
-   "datum": "21.10.2026",
-   "art": "fest",
+   "fingerabdruck": "9fb314178879",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
+   "art": "code",
    "abk": [
     "PEN"
    ],
    "ort": [
-    46.841676,
-    7.13531
+    46.841925,
+    7.135512
    ],
-   "veraltet": "fest"
+   "veraltet": false
   },
   "saint_blaise_cff": {
    "key": "saint_blaise_cff",
    "name": "Saint-Blaise CFF",
    "gruppe": "NE 5 · Neuchâtel – Biel",
    "region": "ne",
-   "fingerabdruck": "33a8b32924cb",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "commit": null,
-   "datum": "21.10.2026",
-   "art": "fest",
+   "fingerabdruck": "77990d640b9f",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
+   "art": "code",
    "abk": [
     "SBL"
    ],
    "ort": [
-    47.01453,
-    6.985239
+    47.014444,
+    6.981708
    ],
-   "veraltet": "fest"
+   "veraltet": false
   },
   "cornaux": {
    "key": "cornaux",
    "name": "Cornaux",
    "gruppe": "NE 5 · Neuchâtel – Biel",
    "region": "ne",
-   "fingerabdruck": "7555c155fd49",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "commit": null,
-   "datum": "21.10.2026",
-   "art": "fest",
+   "fingerabdruck": "e2e1afc61706",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
+   "art": "code",
    "abk": [
     "CORN"
    ],
    "ort": [
-    47.036671,
-    7.030848
+    47.038654,
+    7.023314
    ],
-   "veraltet": "fest"
+   "veraltet": false
   },
   "cressier": {
    "key": "cressier",
    "name": "Cressier NE",
    "gruppe": "NE 5 · Neuchâtel – Biel",
    "region": "ne",
-   "fingerabdruck": "fdb5850ad419",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "commit": null,
-   "datum": "21.10.2026",
-   "art": "fest",
+   "fingerabdruck": "6d0c76c417a9",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
+   "art": "code",
    "abk": [
     "CRNE"
    ],
    "ort": [
-    47.04067,
-    7.032467
+    47.051875,
+    7.039938
    ],
-   "veraltet": "fest"
+   "veraltet": false
   },
   "le_landeron": {
    "key": "le_landeron",
    "name": "Le Landeron",
    "gruppe": "NE 5 · Neuchâtel – Biel",
    "region": "ne",
-   "fingerabdruck": "df02fa7e11af",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "commit": null,
-   "datum": "21.10.2026",
-   "art": "fest",
+   "fingerabdruck": "868b4fe047e6",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
+   "art": "code",
    "abk": [
     "LD"
    ],
    "ort": [
-    47.056936,
-    7.066307
+    47.0569,
+    7.064699
    ],
-   "veraltet": "fest"
+   "veraltet": false
   },
   "la_neuveville": {
    "key": "la_neuveville",
    "name": "La Neuveville",
    "gruppe": "NE 5 · Neuchâtel – Biel",
    "region": "ne",
-   "fingerabdruck": "abec60f96346",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "commit": null,
-   "datum": "21.10.2026",
-   "art": "fest",
+   "fingerabdruck": "6ab64518e653",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
+   "art": "code",
    "abk": [
     "NV"
    ],
    "ort": [
-    47.062777,
-    7.095358
+    47.062778,
+    7.095148
    ],
-   "veraltet": "fest"
+   "veraltet": false
   },
   "ligerz": {
    "key": "ligerz",
    "name": "Ligerz",
    "gruppe": "NE 5 · Neuchâtel – Biel",
    "region": "ne",
-   "fingerabdruck": "f6e13f38d4bc",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "commit": null,
-   "datum": "21.10.2026",
-   "art": "fest",
+   "fingerabdruck": "0b3318665824",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
+   "art": "code",
    "abk": [
     "LIG"
    ],
    "ort": [
-    47.08232,
-    7.130921
+    47.08312,
+    7.133328
    ],
-   "veraltet": "fest"
+   "veraltet": false
   },
   "twann": {
    "key": "twann",
    "name": "Twann",
    "gruppe": "NE 5 · Neuchâtel – Biel",
    "region": "ne",
-   "fingerabdruck": "01869952fbea",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "commit": null,
-   "datum": "21.10.2026",
-   "art": "fest",
+   "fingerabdruck": "7e55019dc56c",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
+   "art": "code",
    "abk": [
     "TWN"
    ],
    "ort": [
-    47.093838,
-    7.157008
+    47.094085,
+    7.158294
    ],
-   "veraltet": "fest"
+   "veraltet": false
   },
   "tuscherz": {
    "key": "tuscherz",
@@ -7595,344 +7822,327 @@
    "gruppe": "NE 5 · Neuchâtel – Biel",
    "region": "ne",
    "fingerabdruck": "73bbb2af2c09",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "commit": null,
-   "datum": "25.10.2026",
-   "art": "fest",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
+   "art": "code",
    "abk": [
     "TUE"
    ],
    "ort": [
-    47.115708,
-    7.198379
+    47.114623,
+    7.196683
    ],
-   "veraltet": "fest"
+   "veraltet": false
   },
   "serrieres": {
    "key": "serrieres",
    "name": "Serrières",
    "gruppe": "NE 6 · Neuchâtel – Yverdon",
    "region": "ne",
-   "fingerabdruck": "2ab3a05912b0",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "commit": null,
-   "datum": "21.10.2026",
-   "art": "fest",
+   "fingerabdruck": "2dd1ef8eb39d",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
+   "art": "code",
    "abk": [
     "NESE",
     "NEPS",
     "NSRL"
    ],
    "ort": [
-    46.985278,
-    6.907165
+    46.983817,
+    6.902678
    ],
-   "veraltet": "fest"
+   "veraltet": false
   },
   "auvernier": {
    "key": "auvernier",
    "name": "Auvernier",
    "gruppe": "NE 6 · Neuchâtel – Yverdon",
    "region": "ne",
-   "fingerabdruck": "fae55c71318c",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "commit": null,
-   "datum": "21.10.2026",
-   "art": "fest",
+   "fingerabdruck": "1d39f1aa61e6",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
+   "art": "code",
    "abk": [
     "AUV",
     "AVLI"
    ],
    "ort": [
     46.979376,
-    6.877085
+    6.876977
    ],
-   "veraltet": "fest"
+   "veraltet": false
   },
   "colombier": {
    "key": "colombier",
    "name": "Colombier",
    "gruppe": "NE 6 · Neuchâtel – Yverdon",
    "region": "ne",
-   "fingerabdruck": "28e24f1b19d2",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "commit": null,
-   "datum": "21.10.2026",
-   "art": "fest",
+   "fingerabdruck": "380fe02144e8",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
+   "art": "code",
    "abk": [
     "CLB"
    ],
    "ort": [
-    46.966398,
-    6.84716
+    46.9669,
+    6.84866
    ],
-   "veraltet": "fest"
+   "veraltet": false
   },
   "boudry": {
    "key": "boudry",
    "name": "Boudry",
    "gruppe": "NE 6 · Neuchâtel – Yverdon",
    "region": "ne",
-   "fingerabdruck": "0651b51739b5",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "commit": null,
-   "datum": "21.10.2026",
-   "art": "fest",
+   "fingerabdruck": "1ee3ec9f6eff",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
+   "art": "code",
    "abk": [
     "BDR"
    ],
    "ort": [
-    46.958741,
-    6.840293
+    46.960837,
+    6.837336
    ],
-   "veraltet": "fest"
+   "veraltet": false
   },
   "bevaix": {
    "key": "bevaix",
    "name": "Bevaix",
    "gruppe": "NE 6 · Neuchâtel – Yverdon",
    "region": "ne",
-   "fingerabdruck": "e569bb42b5dd",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "commit": null,
-   "datum": "21.10.2026",
-   "art": "fest",
+   "fingerabdruck": "4974250a7c86",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
+   "art": "code",
    "abk": [
     "BV"
    ],
    "ort": [
-    46.929671,
-    6.811724
+    46.929669,
+    6.811545
    ],
-   "veraltet": "fest"
+   "veraltet": false
   },
   "gorgier_saint_aubin": {
    "key": "gorgier_saint_aubin",
    "name": "Gorgier-Saint-Aubin",
    "gruppe": "NE 6 · Neuchâtel – Yverdon",
    "region": "ne",
-   "fingerabdruck": "a0d4aa3ef353",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "commit": null,
-   "datum": "21.10.2026",
-   "art": "fest",
+   "fingerabdruck": "49deab9e177e",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
+   "art": "code",
    "abk": [
     "GOR"
    ],
    "ort": [
-    46.898656,
-    6.780344
+    46.898729,
+    6.780292
    ],
-   "veraltet": "fest"
+   "veraltet": false
   },
   "onnens_bonvillars": {
    "key": "onnens_bonvillars",
    "name": "Onnens-Bonvillars",
    "gruppe": "NE 6 · Neuchâtel – Yverdon",
    "region": "ne",
-   "fingerabdruck": "55498cfb0fbb",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "commit": null,
-   "datum": "26.10.2026",
-   "art": "fest",
+   "fingerabdruck": "11877970d286",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
+   "art": "code",
    "abk": [
     "ONB"
    ],
    "ort": [
-    46.832033,
-    6.687893
+    46.832231,
+    6.689122
    ],
-   "veraltet": "fest"
+   "veraltet": false
   },
   "concise": {
    "key": "concise",
    "name": "Concise",
    "gruppe": "NE 6 · Neuchâtel – Yverdon",
    "region": "ne",
-   "fingerabdruck": "da91687facf7",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "commit": null,
-   "datum": "21.10.2026",
-   "art": "fest",
+   "fingerabdruck": "4df00d31a952",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
+   "art": "code",
    "abk": [
     "CC"
    ],
    "ort": [
-    46.850876,
-    6.723166
+    46.85089,
+    6.723232
    ],
-   "veraltet": "fest"
+   "veraltet": false
   },
   "grandson": {
    "key": "grandson",
    "name": "Grandson",
    "gruppe": "NE 6 · Neuchâtel – Yverdon",
    "region": "ne",
-   "fingerabdruck": "3eee8ebca127",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "commit": null,
-   "datum": "21.10.2026",
-   "art": "fest",
+   "fingerabdruck": "702ef085bbee",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
+   "art": "code",
    "abk": [
     "GRS"
    ],
    "ort": [
-    46.804552,
-    6.637141
+    46.805559,
+    6.639974
    ],
-   "veraltet": "fest"
+   "veraltet": false
   },
   "bole": {
    "key": "bole",
    "name": "Bôle",
    "gruppe": "NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier",
    "region": "ne",
-   "fingerabdruck": "9165900b49e8",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "commit": null,
-   "datum": "21.10.2026",
-   "art": "fest",
+   "fingerabdruck": "d2d8f4dfec66",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
+   "art": "code",
    "abk": [
     "BOLE"
    ],
    "ort": [
-    46.967351,
-    6.845889
+    46.971077,
+    6.844805
    ],
-   "veraltet": "fest"
+   "veraltet": false
   },
   "champ_du_moulin": {
    "key": "champ_du_moulin",
    "name": "Champ-du-Moulin",
    "gruppe": "NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier",
    "region": "ne",
-   "fingerabdruck": "bc0f0e330d20",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "commit": null,
-   "datum": "21.10.2026",
-   "art": "fest",
+   "fingerabdruck": "db9eec1f9ebf",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
+   "art": "code",
    "abk": [
     "CDM"
    ],
    "ort": [
-    46.959917,
-    6.774971
+    46.960041,
+    6.77453
    ],
-   "veraltet": "fest"
+   "veraltet": false
   },
   "noiraigue": {
    "key": "noiraigue",
    "name": "Noiraigue",
    "gruppe": "NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier",
    "region": "ne",
-   "fingerabdruck": "fdac4b1cecc7",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "commit": null,
-   "datum": "21.10.2026",
-   "art": "fest",
+   "fingerabdruck": "fdd2c2a51fc9",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
+   "art": "code",
    "abk": [
     "NOI"
    ],
    "ort": [
-    46.95486,
-    6.72398
+    46.954455,
+    6.722706
    ],
-   "veraltet": "fest"
+   "veraltet": false
   },
   "travers": {
    "key": "travers",
    "name": "Travers",
    "gruppe": "NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier",
    "region": "ne",
-   "fingerabdruck": "3f143fbdeb09",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "commit": null,
-   "datum": "21.10.2026",
-   "art": "fest",
+   "fingerabdruck": "2543e1e53840",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
+   "art": "code",
    "abk": [
     "TR",
     "TROU"
    ],
    "ort": [
-    46.942101,
-    6.676173
+    46.941431,
+    6.674839
    ],
-   "veraltet": "fest"
+   "veraltet": false
   },
   "la_presta_mines_d_asphalte": {
    "key": "la_presta_mines_d_asphalte",
    "name": "La Presta - Mines d'Asphalte",
    "gruppe": "NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier",
    "region": "ne",
-   "fingerabdruck": "961b2dbd5ba0",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "commit": null,
-   "datum": "21.10.2026",
-   "art": "fest",
+   "fingerabdruck": "e351bdb312bc",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
+   "art": "code",
    "abk": [
     "PRST"
    ],
    "ort": [
-    46.931085,
-    6.654373
+    46.931215,
+    6.654414
    ],
-   "veraltet": "fest"
+   "veraltet": false
   },
   "couvet": {
    "key": "couvet",
    "name": "Couvet",
    "gruppe": "NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier",
    "region": "ne",
-   "fingerabdruck": "889231e1dfed",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "commit": null,
-   "datum": "21.10.2026",
-   "art": "fest",
+   "fingerabdruck": "1ed7c1647506",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
+   "art": "code",
    "abk": [
     "CVTR",
     "CVT"
    ],
    "ort": [
-    46.923902,
-    6.636035
+    46.923899,
+    6.635961
    ],
-   "veraltet": "fest"
+   "veraltet": false
   },
   "motiers": {
    "key": "motiers",
    "name": "Môtiers",
    "gruppe": "NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier",
    "region": "ne",
-   "fingerabdruck": "a2615a47dc5a",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "commit": null,
-   "datum": "21.10.2026",
-   "art": "fest",
+   "fingerabdruck": "01058f77a1f8",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
+   "art": "code",
    "abk": [
     "MOT"
    ],
    "ort": [
-    46.911791,
-    6.610315
+    46.911709,
+    6.61025
    ],
-   "veraltet": "fest"
+   "veraltet": false
   },
   "neuchatel_vauseyon": {
    "key": "neuchatel_vauseyon",
@@ -7952,109 +8162,104 @@
     46.990629,
     6.917526
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "les_deurres": {
    "key": "les_deurres",
    "name": "Les Deurres",
    "gruppe": "NE 8 · Neuchâtel – La Chaux-de-Fonds",
    "region": "ne",
-   "fingerabdruck": "5f52571c0202",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "commit": null,
-   "datum": "21.10.2026",
-   "art": "fest",
+   "fingerabdruck": "137519671b4a",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
+   "art": "code",
    "abk": [
     "DEU"
    ],
    "ort": [
-    46.985024,
-    6.906539
+    46.984699,
+    6.897055
    ],
-   "veraltet": "fest"
+   "veraltet": false
   },
   "corcelles_peseux": {
    "key": "corcelles_peseux",
    "name": "Corcelles-Peseux",
    "gruppe": "NE 8 · Neuchâtel – La Chaux-de-Fonds",
    "region": "ne",
-   "fingerabdruck": "222c0762676b",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "commit": null,
-   "datum": "21.10.2026",
-   "art": "fest",
+   "fingerabdruck": "895ca13da82f",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
+   "art": "code",
    "abk": [
     "CP"
    ],
    "ort": [
-    46.979376,
-    6.877085
+    46.983062,
+    6.883616
    ],
-   "veraltet": "fest"
+   "veraltet": false
   },
   "chambrelien": {
    "key": "chambrelien",
    "name": "Chambrelien",
    "gruppe": "NE 8 · Neuchâtel – La Chaux-de-Fonds",
    "region": "ne",
-   "fingerabdruck": "f021848acbf3",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "commit": null,
-   "datum": "21.10.2026",
-   "art": "fest",
+   "fingerabdruck": "10ff750f37e9",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
+   "art": "code",
    "abk": [
     "CHN",
     "CHNF",
     "CHNN"
    ],
    "ort": [
-    46.967252,
-    6.812511
+    46.96699,
+    6.811642
    ],
-   "veraltet": "fest"
+   "veraltet": false
   },
   "les_geneveys_sur_coffrane": {
    "key": "les_geneveys_sur_coffrane",
    "name": "Les Geneveys-sur-Coffrane",
    "gruppe": "NE 8 · Neuchâtel – La Chaux-de-Fonds",
    "region": "ne",
-   "fingerabdruck": "575d007ff3d0",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "commit": null,
-   "datum": "21.10.2026",
-   "art": "fest",
+   "fingerabdruck": "692c3ff7f832",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
+   "art": "code",
    "abk": [
     "GEC"
    ],
    "ort": [
-    47.015122,
-    6.853163
+    47.01486,
+    6.853214
    ],
-   "veraltet": "fest"
+   "veraltet": false
   },
   "les_hauts_geneveys": {
    "key": "les_hauts_geneveys",
    "name": "Les Hauts-Geneveys",
    "gruppe": "NE 8 · Neuchâtel – La Chaux-de-Fonds",
    "region": "ne",
-   "fingerabdruck": "a929445a26a2",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "commit": null,
-   "datum": "21.10.2026",
-   "art": "fest",
+   "fingerabdruck": "048798aad871",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "commit": "d979b783964430b623c7cb89043068b7a2a4cfdd",
+   "art": "code",
    "abk": [
     "HGV"
    ],
    "ort": [
-    47.048601,
-    6.875496
+    47.047344,
+    6.874513
    ],
-   "veraltet": "fest"
+   "veraltet": false
   },
   "mob__allieres": {
    "key": "mob__allieres",
@@ -8073,7 +8278,7 @@
     46.469371,
     7.007809
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__belmont_sur_montreux": {
    "key": "mob__belmont_sur_montreux",
@@ -8092,7 +8297,7 @@
     46.443379,
     6.904428
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__blankenburg": {
    "key": "mob__blankenburg",
@@ -8111,7 +8316,7 @@
     46.540863,
     7.385579
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__caux": {
    "key": "mob__caux",
@@ -8131,7 +8336,7 @@
     46.431193,
     6.938492
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__chamby": {
    "key": "mob__chamby",
@@ -8151,7 +8356,7 @@
     46.449657,
     6.913466
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__chateau_d_oex": {
    "key": "mob__chateau_d_oex",
@@ -8171,7 +8376,7 @@
     46.47499,
     7.132143
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__chatelard": {
    "key": "mob__chatelard",
@@ -8190,7 +8395,7 @@
     46.447038,
     6.901337
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__chernex": {
    "key": "mob__chernex",
@@ -8209,7 +8414,7 @@
     46.446556,
     6.909359
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__cret_d_y_bau": {
    "key": "mob__cret_d_y_bau",
@@ -8228,7 +8433,7 @@
     46.435303,
     6.955606
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__flendruz": {
    "key": "mob__flendruz",
@@ -8247,7 +8452,7 @@
     46.482388,
     7.187024
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__fontanivent": {
    "key": "mob__fontanivent",
@@ -8266,7 +8471,7 @@
     46.453066,
     6.902233
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__glion_college": {
    "key": "mob__glion_college",
@@ -8285,7 +8490,7 @@
     46.434776,
     6.928651
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__glion": {
    "key": "mob__glion",
@@ -8305,7 +8510,7 @@
     46.432292,
     6.92463
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__gruben": {
    "key": "mob__gruben",
@@ -8324,7 +8529,7 @@
     46.490531,
     7.280508
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__gstaad": {
    "key": "mob__gstaad",
@@ -8343,7 +8548,7 @@
     46.475452,
     7.283289
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__jaman": {
    "key": "mob__jaman",
@@ -8362,7 +8567,7 @@
     46.441771,
     6.976878
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__jor": {
    "key": "mob__jor",
@@ -8381,7 +8586,7 @@
     46.454563,
     6.964711
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__la_perche": {
    "key": "mob__la_perche",
@@ -8400,7 +8605,7 @@
     46.43651,
     6.975341
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__la_tine": {
    "key": "mob__la_tine",
@@ -8419,7 +8624,7 @@
     46.467381,
     7.04615
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__le_tremblex": {
    "key": "mob__le_tremblex",
@@ -8438,7 +8643,7 @@
     46.436224,
     6.933091
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__lenk_im_simmental": {
    "key": "mob__lenk_im_simmental",
@@ -8457,7 +8662,7 @@
     46.458518,
     7.443651
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__les_avants": {
    "key": "mob__les_avants",
@@ -8476,7 +8681,7 @@
     46.45326,
     6.943047
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__les_cases": {
    "key": "mob__les_cases",
@@ -8495,7 +8700,7 @@
     46.455971,
     6.99786
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__les_echets": {
    "key": "mob__les_echets",
@@ -8514,7 +8719,7 @@
     46.432001,
     6.943982
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__les_sciernes": {
    "key": "mob__les_sciernes",
@@ -8533,7 +8738,7 @@
     46.491411,
     7.03409
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__matten": {
    "key": "mob__matten",
@@ -8552,7 +8757,7 @@
     46.493945,
     7.421087
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__montbovon": {
    "key": "mob__montbovon",
@@ -8571,7 +8776,7 @@
     46.485351,
     7.042027
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__montreux_les_planches": {
    "key": "mob__montreux_les_planches",
@@ -8590,7 +8795,7 @@
     46.433648,
     6.916986
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__montreux": {
    "key": "mob__montreux",
@@ -8610,7 +8815,7 @@
     46.435555,
     6.911483
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__oeschseite": {
    "key": "mob__oeschseite",
@@ -8629,7 +8834,7 @@
     46.53125,
     7.3522
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__paccot": {
    "key": "mob__paccot",
@@ -8648,7 +8853,7 @@
     46.43799,
     6.963425
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__planchamp": {
    "key": "mob__planchamp",
@@ -8667,7 +8872,7 @@
     46.450659,
     6.901162
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__rochers_de_naye": {
    "key": "mob__rochers_de_naye",
@@ -8686,7 +8891,7 @@
     46.431516,
     6.979528
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__rossiniere": {
    "key": "mob__rossiniere",
@@ -8705,7 +8910,7 @@
     46.464731,
     7.082755
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__rougemont": {
    "key": "mob__rougemont",
@@ -8724,7 +8929,7 @@
     46.488422,
     7.209251
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__saanen": {
    "key": "mob__saanen",
@@ -8743,7 +8948,7 @@
     46.488393,
     7.261029
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__saanenmoser": {
    "key": "mob__saanenmoser",
@@ -8762,7 +8967,7 @@
     46.517454,
     7.311681
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__schonried": {
    "key": "mob__schonried",
@@ -8781,7 +8986,7 @@
     46.504221,
     7.290911
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__sendy_sollard": {
    "key": "mob__sendy_sollard",
@@ -8800,7 +9005,7 @@
     46.447334,
     6.929868
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__st_stephan": {
    "key": "mob__st_stephan",
@@ -8819,7 +9024,7 @@
     46.505289,
     7.400573
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__toveyre": {
    "key": "mob__toveyre",
@@ -8838,7 +9043,7 @@
     46.427687,
     6.92859
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__valmont": {
    "key": "mob__valmont",
@@ -8857,7 +9062,7 @@
     46.428323,
     6.929981
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__vernex": {
    "key": "mob__vernex",
@@ -8876,7 +9081,7 @@
     46.440374,
     6.904918
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__vuarennes": {
    "key": "mob__vuarennes",
@@ -8895,7 +9100,7 @@
     46.439311,
     6.91057
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__zweisimmen": {
    "key": "mob__zweisimmen",
@@ -8914,7 +9119,7 @@
     46.552509,
     7.375311
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "vereina__klosters_platz": {
    "key": "vereina__klosters_platz",
@@ -8933,7 +9138,7 @@
     46.86942,
     9.880358
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "vereina__klosters_selfranga": {
    "key": "vereina__klosters_selfranga",
@@ -8952,7 +9157,7 @@
     46.855521,
     9.884537
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "vereina__sagliains_nord": {
    "key": "vereina__sagliains_nord",
@@ -8971,7 +9176,7 @@
     46.76914,
     10.071012
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "vereina__sagliains_sasslatsch": {
    "key": "vereina__sagliains_sasslatsch",
@@ -8990,7 +9195,7 @@
     46.761904,
     10.08772
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "vereina__sagliains": {
    "key": "vereina__sagliains",
@@ -9010,7 +9215,7 @@
     46.764204,
     10.099995
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "vereina__sasslatsch": {
    "key": "vereina__sasslatsch",
@@ -9029,7 +9234,7 @@
     46.759113,
     10.087334
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "vereina__selfranga_sud": {
    "key": "vereina__selfranga_sud",
@@ -9048,7 +9253,7 @@
     46.844877,
     9.906263
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "vereina__susch": {
    "key": "vereina__susch",
@@ -9067,7 +9272,7 @@
     46.751877,
     10.079411
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "vereina__vereina_nord": {
    "key": "vereina__vereina_nord",
@@ -9086,7 +9291,7 @@
     46.812657,
     9.976468
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "vereina__vereina_sud": {
    "key": "vereina__vereina_sud",
@@ -9105,7 +9310,7 @@
     46.802752,
     9.998027
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "szu__berghof": {
    "key": "szu__berghof",
@@ -9124,7 +9329,7 @@
     47.368559,
     8.480968
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "szu__borrweg": {
    "key": "szu__borrweg",
@@ -9143,7 +9348,7 @@
     47.36422,
     8.511666
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "szu__ringlikon": {
    "key": "szu__ringlikon",
@@ -9162,7 +9367,7 @@
     47.360708,
     8.47686
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "szu__uetliberg": {
    "key": "szu__uetliberg",
@@ -9181,7 +9386,7 @@
     47.352868,
     8.487528
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "szu__zurich_binz": {
    "key": "szu__zurich_binz",
@@ -9200,7 +9405,7 @@
     47.362906,
     8.517819
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "szu__zurich_friesenberg": {
    "key": "szu__zurich_friesenberg",
@@ -9219,7 +9424,7 @@
     47.364897,
     8.506753
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "szu__zurich_giesshubel": {
    "key": "szu__zurich_giesshubel",
@@ -9239,7 +9444,7 @@
     47.36147,
     8.521751
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "szu__zurich_schweighof": {
    "key": "szu__zurich_schweighof",
@@ -9258,7 +9463,7 @@
     47.364978,
     8.50402
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "szu__zurich_selnau": {
    "key": "szu__zurich_selnau",
@@ -9278,7 +9483,7 @@
     47.373804,
     8.534004
    ],
-   "veraltet": false
+   "veraltet": true
   }
  },
  "ohne_dienststelle": [],

@@ -1,0 +1,61 @@
+{
+"plan": "travers",
+"befunde": [
+{
+"regel": "VB2",
+"x": 933.3,
+"y": 134.0,
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+"ways": [
+27994981,
+40109671,
+40266403,
+48024573,
+507897178,
+507897179
+],
+"farben": [
+"gruen"
+]
+},
+{
+"regel": "VB2",
+"x": 408.0,
+"y": 158.0,
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+"ways": [
+184057390,
+507897181
+],
+"farben": [
+"gruen"
+]
+},
+{
+"regel": "VB2",
+"x": 435.8,
+"y": 134.0,
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+"ways": [
+184057390,
+184188755,
+184188757,
+431913937,
+507897181,
+1071302090
+],
+"farben": [
+"gruen"
+]
+}
+],
+"info": {
+"dkw_osm_unvollstaendig": [],
+"gleise": 13,
+"knoten_plan": 9,
+"dkw_plan": 0,
+"knoten_osm": 8,
+"versatz_y": 0.0,
+"netz_auf_plan": 0.89
+}
+}

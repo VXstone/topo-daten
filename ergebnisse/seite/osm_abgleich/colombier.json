@@ -1,0 +1,53 @@
+{
+"plan": "colombier",
+"befunde": [
+{
+"regel": "VC1",
+"x": 816.4,
+"y": 158.0,
+"text": "Gleis (Way 49447813) im Plan an Knoten 628087130 angebunden, in OSM nicht",
+"osm": 628087130,
+"ways": [
+49447813,
+49447815,
+49447825,
+1104398030
+]
+},
+{
+"regel": "VC1",
+"x": 833.6,
+"y": 158.0,
+"text": "Gleis (Way 49447813) im Plan an Knoten 433556101 angebunden, in OSM nicht",
+"osm": 433556101,
+"ways": [
+49447813,
+49447815,
+49447825,
+1104398030
+]
+},
+{
+"regel": "VC1",
+"x": 734.6,
+"y": 134.0,
+"text": "Gleis (Way 49447813) im Plan an Knoten 628087128 angebunden, in OSM nicht",
+"osm": 628087128,
+"ways": [
+49447813,
+49447815,
+49447825,
+1104398030
+]
+}
+],
+"info": {
+"dkw_osm_unvollstaendig": [],
+"gleise": 21,
+"knoten_plan": 7,
+"dkw_plan": 0,
+"knoten_osm": 8,
+"versatz_y": 0.0,
+"netz_auf_plan": 0.8
+}
+}

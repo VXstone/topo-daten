@@ -1,0 +1,25 @@
+{
+ "zaehl": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "befunde": [
+  {
+   "regel": "_info",
+   "x": 0,
+   "y": 0,
+   "text": "Fahrwege: 3/5 Ziele im Plan gefunden, OSM 3, Plan 3",
+   "ohne_lage": [
+    "Gl. 1",
+    "Gl. 416"
+   ]
+  }
+ ],
+ "osm_abgleich": {
+  "VB2": 1,
+  "VD1": 1
+ }
+}

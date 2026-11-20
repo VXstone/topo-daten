@@ -1,0 +1,90 @@
+{
+ "zaehl": {
+  "HT1": 0,
+  "HT2": 1,
+  "HT3": 1,
+  "HT4": 0,
+  "HT5": 5
+ },
+ "befunde": [
+  {
+   "regel": "HT2",
+   "x": 341.1,
+   "y": 147.2,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    1047225769,
+    1230148584
+   ]
+  },
+  {
+   "regel": "HT3",
+   "x": 369.0,
+   "y": 171.2,
+   "text": "Gleis (Way 1047225769) im Plan an Knoten 632441560 angebunden, in OSM nicht",
+   "osm": 632441560,
+   "ways": [
+    1047225769,
+    1230148584
+   ]
+  },
+  {
+   "regel": "HT5",
+   "x": 659.7,
+   "y": 159.2,
+   "text": "Fahrweg Abgang 210 Biel (632441756) ↔ Abgang 210 Neuchâtel (468155360) im Plan, nicht in OSM",
+   "von": "Abgang 210 Biel (632441756)",
+   "nach": "Abgang 210 Neuchâtel (468155360)",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 470.9,
+   "y": 159.1,
+   "text": "Fahrweg Abgang 210 Neuchâtel (468155360) ↔ Gl. 2 im Plan, nicht in OSM",
+   "von": "Abgang 210 Neuchâtel (468155360)",
+   "nach": "Gl. 2",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 518.9,
+   "y": 159.2,
+   "text": "Fahrweg Abgang 210 Neuchâtel (468155360) ↔ Gl. A2 im Plan, nicht in OSM",
+   "von": "Abgang 210 Neuchâtel (468155360)",
+   "nach": "Gl. A2",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 591.2,
+   "y": 159.2,
+   "text": "Fahrweg Abgang 210 Neuchâtel (468155360) ↔ Gl. A72 im Plan, nicht in OSM",
+   "von": "Abgang 210 Neuchâtel (468155360)",
+   "nach": "Gl. A72",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 659.7,
+   "y": 159.2,
+   "text": "Fahrweg Abgang 210 Neuchâtel (468155360) ↔ Gl. A92 im Plan, nicht in OSM",
+   "von": "Abgang 210 Neuchâtel (468155360)",
+   "nach": "Gl. A92",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "_info",
+   "x": 0,
+   "y": 0,
+   "text": "Fahrwege: 13/13 Ziele im Plan gefunden, OSM 25, Plan 30",
+   "ohne_lage": []
+  }
+ ],
+ "osm_abgleich": {
+  "VB1": 1,
+  "VB2": 2,
+  "VC1": 1,
+  "VD1": 4
+ }
+}

@@ -1,0 +1,137 @@
+{
+ "zaehl": {
+  "HT1": 7,
+  "HT2": 4,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "befunde": [
+  {
+   "regel": "HT1",
+   "x": 698.2,
+   "y": 133.9,
+   "text": "OSM-Weiche 1873375812 ohne Abzweig im Plan",
+   "osm": 1873375812
+  },
+  {
+   "regel": "HT1",
+   "x": 726.1,
+   "y": 157.9,
+   "text": "OSM-Weiche 1873375841 ohne Abzweig im Plan",
+   "osm": 1873375841
+  },
+  {
+   "regel": "HT1",
+   "x": 1160.8,
+   "y": 157.9,
+   "text": "OSM-Weiche 5198964014 ohne Abzweig im Plan",
+   "osm": 5198964014
+  },
+  {
+   "regel": "HT1",
+   "x": 1571.1,
+   "y": 157.9,
+   "text": "OSM-Weiche 1244528391 ohne Abzweig im Plan",
+   "osm": 1244528391
+  },
+  {
+   "regel": "HT1",
+   "x": 1192.7,
+   "y": 133.9,
+   "text": "OSM-Weiche 5198964015 ohne Abzweig im Plan",
+   "osm": 5198964015
+  },
+  {
+   "regel": "HT1",
+   "x": 1194.4,
+   "y": 133.9,
+   "text": "OSM-Weiche 5198964017 ohne Abzweig im Plan",
+   "osm": 5198964017
+  },
+  {
+   "regel": "HT1",
+   "x": 1222.3,
+   "y": 157.9,
+   "text": "OSM-Weiche 5198964016 ohne Abzweig im Plan",
+   "osm": 5198964016
+  },
+  {
+   "regel": "HT2",
+   "x": 771.7,
+   "y": 134.0,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    28056861,
+    28056862,
+    28056912,
+    28056913,
+    47070260,
+    176851202,
+    176854505,
+    689627376,
+    1203263458
+   ]
+  },
+  {
+   "regel": "HT2",
+   "x": 805.6,
+   "y": 110.0,
+   "text": "Gleise berühren sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    176851202,
+    1074869833
+   ]
+  },
+  {
+   "regel": "HT2",
+   "x": 797.6,
+   "y": 110.0,
+   "text": "Gleise berühren sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    176851202,
+    1074869833
+   ]
+  },
+  {
+   "regel": "HT2",
+   "x": 831.4,
+   "y": 134.0,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    28056861,
+    28056862,
+    28056912,
+    28056913,
+    47070260,
+    176851202,
+    176854505,
+    689627376,
+    1203263458
+   ]
+  },
+  {
+   "regel": "_info",
+   "x": 0,
+   "y": 0,
+   "text": "Fahrwege: 2/13 Ziele im Plan gefunden, OSM 0, Plan 0",
+   "ohne_lage": [
+    "Abgang 220 Bern (1870478745)",
+    "Abgang 220 Bern (9589810063)",
+    "Gl. 4",
+    "Gl. 5",
+    "Gl. 55",
+    "Gl. 651",
+    "Gl. 652",
+    "Gl. 672",
+    "Gl. 682",
+    "Gl. 75",
+    "Gl. 95"
+   ]
+  }
+ ],
+ "osm_abgleich": {
+  "VB1": 10,
+  "VB2": 4
+ }
+}

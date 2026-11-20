@@ -1,0 +1,82 @@
+{
+"plan": "grandson",
+"befunde": [
+{
+"regel": "VB1",
+"x": 496.8,
+"y": 110.0,
+"text": "OSM-Weiche 1662292733 ohne Abzweig im Plan",
+"osm": 1662292733
+},
+{
+"regel": "VB1",
+"x": 1047.3,
+"y": 134.0,
+"text": "OSM-Weiche 1681788069 ohne Abzweig im Plan",
+"osm": 1681788069
+},
+{
+"regel": "VB1",
+"x": 1075.2,
+"y": 158.0,
+"text": "OSM-Weiche 240238898 ohne Abzweig im Plan",
+"osm": 240238898
+},
+{
+"regel": "VB1",
+"x": 430.1,
+"y": 158.0,
+"text": "OSM-Weiche 1662292711 ohne Abzweig im Plan",
+"osm": 1662292711
+},
+{
+"regel": "VB1",
+"x": 458.0,
+"y": 134.0,
+"text": "OSM-Weiche 1662292718 ohne Abzweig im Plan",
+"osm": 1662292718
+},
+{
+"regel": "VB2",
+"x": 651.7,
+"y": 134.0,
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+"ways": [
+153576913,
+155142024,
+184785953,
+530787093,
+530787094,
+530787095
+],
+"farben": [
+"gruen",
+"schwarz"
+]
+},
+{
+"regel": "VB2",
+"x": 685.6,
+"y": 158.0,
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+"ways": [
+184785966,
+313153840,
+530787094
+],
+"farben": [
+"gruen",
+"schwarz"
+]
+}
+],
+"info": {
+"dkw_osm_unvollstaendig": [],
+"gleise": 5,
+"knoten_plan": 3,
+"dkw_plan": 0,
+"knoten_osm": 6,
+"versatz_y": 0.0,
+"netz_auf_plan": 0.57
+}
+}

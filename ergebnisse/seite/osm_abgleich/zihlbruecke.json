@@ -1,0 +1,36 @@
+{
+"plan": "zihlbruecke",
+"befunde": [
+{
+"regel": "VB1",
+"x": 658.3,
+"y": 110.0,
+"text": "OSM-Weiche 632385979 ohne Abzweig im Plan",
+"osm": 632385979
+},
+{
+"regel": "VB2",
+"x": 747.7,
+"y": 110.0,
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+"ways": [
+27821631,
+27821632,
+108258345,
+180601994
+],
+"farben": [
+"gruen"
+]
+}
+],
+"info": {
+"dkw_osm_unvollstaendig": [],
+"gleise": 2,
+"knoten_plan": 1,
+"dkw_plan": 0,
+"knoten_osm": 1,
+"versatz_y": 0.0,
+"netz_auf_plan": 0.8
+}
+}

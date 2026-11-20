@@ -1,0 +1,61 @@
+{
+"plan": "sugiez",
+"befunde": [
+{
+"regel": "VB1",
+"x": 866.0,
+"y": 134.0,
+"text": "OSM-Weiche 9560732155 ohne Abzweig im Plan",
+"osm": 9560732155
+},
+{
+"regel": "VB1",
+"x": 909.7,
+"y": 110.0,
+"text": "OSM-Weiche 7365097834 ohne Abzweig im Plan",
+"osm": 7365097834
+},
+{
+"regel": "VB2",
+"x": 617.7,
+"y": 134.0,
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+"ways": [
+193514016,
+787764948
+],
+"farben": [
+"gruen",
+"schwarz"
+]
+},
+{
+"regel": "VB2",
+"x": 390.0,
+"y": 134.0,
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+"ways": [
+193514016,
+787764948
+],
+"farben": [
+"gruen"
+]
+},
+{
+"regel": "VD1",
+"x": 513.8,
+"y": 134.0,
+"text": "zwei Gleise 17 px aufeinander"
+}
+],
+"info": {
+"dkw_osm_unvollstaendig": [],
+"gleise": 3,
+"knoten_plan": 3,
+"dkw_plan": 0,
+"knoten_osm": 3,
+"versatz_y": 0.0,
+"netz_auf_plan": 0.4
+}
+}

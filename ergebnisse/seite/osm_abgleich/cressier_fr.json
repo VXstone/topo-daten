@@ -1,0 +1,27 @@
+{
+"plan": "cressier_fr",
+"befunde": [
+{
+"regel": "VB2",
+"x": 410.0,
+"y": 110.0,
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+"ways": [
+362102336
+],
+"farben": [
+"gruen",
+"schwarz"
+]
+}
+],
+"info": {
+"dkw_osm_unvollstaendig": [],
+"gleise": 2,
+"knoten_plan": 1,
+"dkw_plan": 0,
+"knoten_osm": 1,
+"versatz_y": 0.0,
+"netz_auf_plan": 0.25
+}
+}

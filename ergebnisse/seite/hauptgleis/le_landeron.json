@@ -1,0 +1,165 @@
+{
+ "zaehl": {
+  "HT1": 2,
+  "HT2": 6,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 5
+ },
+ "befunde": [
+  {
+   "regel": "HT1",
+   "x": 1309.6,
+   "y": 134.0,
+   "text": "OSM-Weiche 632541285 ohne Abzweig im Plan",
+   "osm": 632541285
+  },
+  {
+   "regel": "HT1",
+   "x": 1348.5,
+   "y": 158.0,
+   "text": "OSM-Weiche 468396891 ohne Abzweig im Plan",
+   "osm": 468396891
+  },
+  {
+   "regel": "HT2",
+   "x": 436.3,
+   "y": 158.0,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    39832534,
+    39832535,
+    528742560,
+    528742569,
+    886128194,
+    886128195,
+    1052385716
+   ]
+  },
+  {
+   "regel": "HT2",
+   "x": 470.1,
+   "y": 134.0,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    39136487,
+    39832532,
+    39832533,
+    39832535,
+    886128195
+   ]
+  },
+  {
+   "regel": "HT2",
+   "x": 771.7,
+   "y": 134.0,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    39136487,
+    39832532,
+    39832533
+   ]
+  },
+  {
+   "regel": "HT2",
+   "x": 805.6,
+   "y": 158.0,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    39832534,
+    39832535,
+    528742560,
+    528742569,
+    886128194,
+    886128195,
+    1052385716
+   ]
+  },
+  {
+   "regel": "HT2",
+   "x": 510.0,
+   "y": 134.0,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    39136487,
+    39832532,
+    39832533
+   ]
+  },
+  {
+   "regel": "HT2",
+   "x": 757.7,
+   "y": 134.0,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    39136487,
+    39832532,
+    39832533
+   ]
+  },
+  {
+   "regel": "HT5",
+   "x": 581.1,
+   "y": 170.0,
+   "text": "Fahrweg Abgang 210 Neuchâtel (249162305) ↔ Gl. 2 im Plan, nicht in OSM",
+   "von": "Abgang 210 Neuchâtel (249162305)",
+   "nach": "Gl. 2",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 581.1,
+   "y": 158.0,
+   "text": "Fahrweg Abgang 210 Neuchâtel (249162305) ↔ Gl. 3 im Plan, nicht in OSM",
+   "von": "Abgang 210 Neuchâtel (249162305)",
+   "nach": "Gl. 3",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 370.7,
+   "y": 170.0,
+   "text": "Fahrweg Abgang 210 Neuchâtel (249162305) ↔ Gl. 709 im Plan, nicht in OSM",
+   "von": "Abgang 210 Neuchâtel (249162305)",
+   "nach": "Gl. 709",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 581.1,
+   "y": 146.0,
+   "text": "Fahrweg Abgang 210 Neuchâtel (5137617913) ↔ Gl. 3 im Plan, nicht in OSM",
+   "von": "Abgang 210 Neuchâtel (5137617913)",
+   "nach": "Gl. 3",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 370.7,
+   "y": 158.0,
+   "text": "Fahrweg Abgang 210 Neuchâtel (5137617913) ↔ Gl. 709 in OSM, fehlt im Plan",
+   "von": "Abgang 210 Neuchâtel (5137617913)",
+   "nach": "Gl. 709",
+   "art": "fehlt"
+  },
+  {
+   "regel": "_info",
+   "x": 0,
+   "y": 0,
+   "text": "Fahrwege: 5/11 Ziele im Plan gefunden, OSM 2, Plan 5",
+   "ohne_lage": [
+    "Abgang 210 Biel (471169184)",
+    "Abgang 210 Biel (632541287)",
+    "Gl. 1",
+    "Gl. 21",
+    "Gl. 52",
+    "Gl. 809"
+   ]
+  }
+ ],
+ "osm_abgleich": {
+  "VB1": 2,
+  "VB2": 6,
+  "VD1": 1
+ }
+}

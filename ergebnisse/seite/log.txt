@@ -1,8 +1,8 @@
 44 Felder
-/home/runner/work/topo-daten/topo-daten/spurplan/werkstatt/olten/feedback/bauen.py:185: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+/home/runner/work/topo-daten/topo-daten/spurplan/werkstatt/olten/feedback/bauen.py:195: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
   _HEUTE = datetime.datetime.utcnow().strftime("%d.%m.%Y")
 18 Einträge
-index.html 2046 KB, 148 Pläne
+index.html 2041 KB, 148 Pläne
 21 Hinweise, 21 Ausschnitte
 Hinweis-Abdeckung: 30/57 (Befund < 40 px, ohne G2)
 ✓ 0bw9 solothurn                    G6,MX,VB1,VB2,W1,W2       19.2  Gleis nach unten, Knick, über anderen Gleisen nach oben
@@ -62,13 +62,68 @@ Hinweis-Abdeckung: 30/57 (Befund < 40 px, ohne G2)
 ✓ xke0 solothurn                    MZ                        25.3  Zwischengerade, doppelter Abstand
 ✓ z6f2 konolfingen                  MX                        21.0  DKW?
 ✓ zcz3 solothurn                    G7,MX,VB2                 18.0  nicht verbunden
-index.html 2053 KB, 149 Pläne
+index.html 2056 KB, 149 Pläne
 /home/runner/work/topo-daten/topo-daten/spurplan/code/alle_plaene_pruefen.py:231: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
   json.dump(dict(erzeugt=datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"), plaene=len(zeilen), geaendert=len(gz),
+region_ne                    veröffentlicht                     35 Stellen  Fehler? Topologie  G2 35→32, G5 1→2, G7 0→13, GG 2→17, GS 1→3, T7 6→5, W53 8→9, W55 5→4 (Wunsch-Summe -5)
 olten                        bestätigt 2026-11-08                0 Stellen  gleichwertig  OSM VB1 13, VB2 25, VC1 7, VD1 10 (kein Alt-Stand)
+olten_hammer                 bestätigt 2026-11-07                0 Stellen  gleichwertig  OSM VB1 1 (kein Alt-Stand)
 rothrist                     Archivbeginn (Abnahme 2026-10-29)    2 Stellen  gleichwertig  OSM VA2 1, VB1 4, VB2 6 (kein Alt-Stand)
-zofingen                     bestätigt 2026-11-08               26 Stellen  gleichwertig  OSM VA2 2, VB1 3, VD1 1 (kein Alt-Stand)
+zofingen                     bestätigt 2026-11-08               26 Stellen  vermutlich besser  W59 11→10 · OSM VA2 2, VB1 3, VD1 1 (kein Alt-Stand)
 schonenwerd                  bestätigt 2026-11-08                0 Stellen  vermutlich besser  GG 1→0 · OSM VB2 2, VD1 1 (kein Alt-Stand)
+aarau                        veröffentlicht                      0 Stellen  gleichwertig  
+laufelfingen                 bestätigt 2026-11-07                0 Stellen  gleichwertig  OSM ok (kein Alt-Stand)
 neuchatel                    bestätigt 2026-11-08                0 Stellen  gleichwertig  OSM VA2 4, VC1 2, VD1 3 (kein Alt-Stand)
-Regression: 147 Pläne, 2 geändert {'gleichwertig': 2}
+saint_blaise_lac             Archivbeginn (Abnahme 2026-10-15)    1 Stellen  schlechter?  T7 2→4 (Wunsch-Summe +16) · OSM VB1 3, VB2 2, VD1 1 (kein Alt-Stand)
+marin_epagnier               Archivbeginn (Abnahme 2026-10-15)    1 Stellen  gleichwertig  OSM ok (kein Alt-Stand)
+zihlbruecke                  Archivbeginn (Abnahme 2026-10-15)    1 Stellen  schlechter?  T7 0→1 (Wunsch-Summe +8) · OSM VB1 1, VB2 1 (kein Alt-Stand)
+gampelen                     Archivbeginn (Abnahme 2026-10-15)    0 Stellen  gleichwertig  OSM VB2 2 (kein Alt-Stand)
+muntschemier                 Archivbeginn (Abnahme 2026-10-16)    1 Stellen  schlechter?  T7 2→4 (Wunsch-Summe +16) · OSM VB1 3, VB2 2, VD1 1 (kein Alt-Stand)
+gummenen                     Archivbeginn (Abnahme 2026-10-17)    1 Stellen  schlechter?  T7 0→2 (Wunsch-Summe +16) · OSM VB1 1, VB2 1 (kein Alt-Stand)
+rosshausern                  Archivbeginn (Abnahme 2026-10-20)    0 Stellen  gleichwertig  OSM VB1 4, VB2 2 (kein Alt-Stand)
+riedbach                     Archivbeginn (Abnahme 2026-10-20)    1 Stellen  gleichwertig  OSM VB1 4, VB2 7 (kein Alt-Stand)
+bern_brunnen_westside        Archivbeginn (Abnahme 2026-10-20)    0 Stellen  gleichwertig  OSM VB1 10, VB2 4 (kein Alt-Stand)
+sugiez                       Archivbeginn (Abnahme 2026-10-16)    1 Stellen  schlechter?  T7 2→4 (Wunsch-Summe +16) · OSM VB1 2, VB2 2, VD1 1 (kein Alt-Stand)
+muntelier_lowenberg          Archivbeginn (Abnahme 2026-10-16)    2 Stellen  gleichwertig  OSM VA1 1, VB1 6, VB2 3 (kein Alt-Stand)
+kallnach                     Archivbeginn (Abnahme 2026-10-20)    1 Stellen  schlechter?  T7 2→4 (Wunsch-Summe +16) · OSM VD1 1 (kein Alt-Stand)
+fraschels                    Archivbeginn (Abnahme 2026-10-19)    0 Stellen  gleichwertig  OSM ok (kein Alt-Stand)
+kerzers_papiliorama          Archivbeginn (Abnahme 2026-10-19)    0 Stellen  gleichwertig  OSM ok (kein Alt-Stand)
+galmiz                       Archivbeginn (Abnahme 2026-10-16)    0 Stellen  gleichwertig  OSM VB1 1, VB2 1, VD1 1 (kein Alt-Stand)
+faoug                        Archivbeginn (Abnahme 2026-10-16)    0 Stellen  gleichwertig  OSM ok (kein Alt-Stand)
+avenches                     Archivbeginn (Abnahme 2026-10-19)    1 Stellen  gleichwertig  OSM VB1 6, VB2 2, VD1 1 (kein Alt-Stand)
+domdidier                    Archivbeginn (Abnahme 2026-10-19)    1 Stellen  gleichwertig  OSM VB1 5, VB2 3 (kein Alt-Stand)
+dompierre                    Archivbeginn (Abnahme 2026-10-19)    0 Stellen  gleichwertig  OSM ok (kein Alt-Stand)
+munchenwiler_courgevaux      Archivbeginn (Abnahme 2026-10-20)    1 Stellen  schlechter?  T7 2→4 (Wunsch-Summe +16) · OSM VB1 2, VB2 2, VD1 1 (kein Alt-Stand)
+cressier_fr                  Archivbeginn (Abnahme 2026-10-20)    0 Stellen  gleichwertig  OSM VB2 1 (kein Alt-Stand)
+courtepin                    Archivbeginn (Abnahme 2026-10-20)    1 Stellen  schlechter?  T7 2→4 (Wunsch-Summe +16) · OSM VB1 1, VB2 2, VD1 1 (kein Alt-Stand)
+pensier                      Archivbeginn (Abnahme 2026-10-20)    1 Stellen  schlechter?  T7 2→4 (Wunsch-Summe +16) · OSM VB1 1, VB2 2, VD1 1 (kein Alt-Stand)
+saint_blaise_cff             Archivbeginn (Abnahme 2026-10-15)    0 Stellen  gleichwertig  OSM VB2 4 (kein Alt-Stand)
+cornaux                      Archivbeginn (Abnahme 2026-10-15)    4 Stellen  gleichwertig  OSM VB1 1, VB2 2, VC1 1, VD1 4 (kein Alt-Stand)
+cressier                     Archivbeginn (Abnahme 2026-10-15)    0 Stellen  gleichwertig  OSM ok (kein Alt-Stand)
+le_landeron                  Archivbeginn (Abnahme 2026-10-20)    1 Stellen  gleichwertig  OSM VB1 2, VB2 6, VD1 1 (kein Alt-Stand)
+la_neuveville                Archivbeginn (Abnahme 2026-10-15)    0 Stellen  gleichwertig  OSM ok (kein Alt-Stand)
+ligerz                       Archivbeginn (Abnahme 2026-10-17)    1 Stellen  schlechter?  T7 0→1 (Wunsch-Summe +8) · OSM VB1 2, VB2 1 (kein Alt-Stand)
+twann                        Archivbeginn (Abnahme 2026-10-15)    5 Stellen  gleichwertig  OSM ok (kein Alt-Stand)
+serrieres                    Archivbeginn (Abnahme 2026-10-15)    0 Stellen  gleichwertig  OSM VA1 3, VB1 6, VB2 4 (kein Alt-Stand)
+auvernier                    Archivbeginn (Abnahme 2026-10-20)   14 Stellen  gleichwertig  OSM VB1 1, VD1 1 (kein Alt-Stand)
+colombier                    Archivbeginn (Abnahme 2026-10-16)    7 Stellen  gleichwertig  OSM VC1 3 (kein Alt-Stand)
+boudry                       Archivbeginn (Abnahme 2026-10-15)    0 Stellen  gleichwertig  OSM VB1 2, VB2 1 (kein Alt-Stand)
+bevaix                       Archivbeginn (Abnahme 2026-10-20)    2 Stellen  gleichwertig  OSM VB1 4, VB2 4 (kein Alt-Stand)
+gorgier_saint_aubin          Archivbeginn (Abnahme 2026-10-20)    2 Stellen  gleichwertig  OSM VB1 5, VB2 4, VD1 2 (kein Alt-Stand)
+onnens_bonvillars            Archivbeginn (Abnahme 2026-10-26)    0 Stellen  schlechter?  G2 1→2 · OSM VA1 1, VA2 1, VB1 2, VD1 1 (kein Alt-Stand)
+concise                      Archivbeginn (Abnahme 2026-10-20)    0 Stellen  gleichwertig  OSM ok (kein Alt-Stand)
+grandson                     Archivbeginn (Abnahme 2026-10-20)    1 Stellen  gleichwertig  OSM VB1 5, VB2 2 (kein Alt-Stand)
+bole                         Archivbeginn (Abnahme 2026-10-20)    3 Stellen  schlechter?  W56 6→7 (Wunsch-Summe +3) · OSM VB1 1, VB2 2, VC1 1 (kein Alt-Stand)
+champ_du_moulin              Archivbeginn (Abnahme 2026-10-15)    1 Stellen  schlechter?  T7 2→4 (Wunsch-Summe +16) · OSM VB1 1, VB2 1, VD1 1 (kein Alt-Stand)
+noiraigue                    Archivbeginn (Abnahme 2026-10-15)    1 Stellen  schlechter?  T7 2→4 (Wunsch-Summe +16) · OSM VB1 2, VB2 2, VD1 1 (kein Alt-Stand)
+travers                      Archivbeginn (Abnahme 2026-10-15)    3 Stellen  gleichwertig  OSM VB2 3 (kein Alt-Stand)
+la_presta_mines_d_asphalte   Archivbeginn (Abnahme 2026-10-19)    0 Stellen  gleichwertig  OSM ok (kein Alt-Stand)
+couvet                       Archivbeginn (Abnahme 2026-10-20)    1 Stellen  schlechter?  T7 2→4 (Wunsch-Summe +16) · OSM VD1 1 (kein Alt-Stand)
+motiers                      Archivbeginn (Abnahme 2026-10-20)    1 Stellen  schlechter?  T7 2→4 (Wunsch-Summe +16) · OSM VB1 1, VB2 1, VD1 1 (kein Alt-Stand)
+les_deurres                  Archivbeginn (Abnahme 2026-10-20)    0 Stellen  gleichwertig  OSM ok (kein Alt-Stand)
+corcelles_peseux             Archivbeginn (Abnahme 2026-10-15)    0 Stellen  gleichwertig  OSM ok (kein Alt-Stand)
+chambrelien                  Archivbeginn (Abnahme 2026-10-20)    2 Stellen  gleichwertig  OSM VA1 1, VB1 1 (kein Alt-Stand)
+les_geneveys_sur_coffrane    Archivbeginn (Abnahme 2026-10-19)    1 Stellen  schlechter?  T7 2→4 (Wunsch-Summe +16) · OSM VB1 2, VB2 2, VD1 1 (kein Alt-Stand)
+les_hauts_geneveys           Archivbeginn (Abnahme 2026-10-20)    2 Stellen  schlechter?  T7 2→4 (Wunsch-Summe +16) · OSM VB2 1, VD1 1 (kein Alt-Stand)
+Regression: 147 Pläne, 35 geändert {'Fehler? Topologie': 1, 'gleichwertig': 16, 'vermutlich besser': 1, 'schlechter?': 17}
 Ausnahmen: 910 Einträge, 125 Orte: {'Schalter': 351, 'Ortswissen': 245, 'Geometrie': 188, 'Typvorlage': 126} | ohne Grund: 0

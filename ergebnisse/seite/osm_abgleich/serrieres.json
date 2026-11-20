@@ -1,0 +1,132 @@
+{
+"plan": "serrieres",
+"befunde": [
+{
+"regel": "VA1",
+"x": 1190.3,
+"y": 171.2,
+"text": "OSM-DKW 631505820 im Plan nicht als DKW gezeichnet",
+"osm": 631505820
+},
+{
+"regel": "VA1",
+"x": 1211.9,
+"y": 158.0,
+"text": "OSM-DKW 631505830 im Plan nicht als DKW gezeichnet",
+"osm": 631505830
+},
+{
+"regel": "VA1",
+"x": 1168.6,
+"y": 184.4,
+"text": "OSM-DKW 631505821 im Plan nicht als DKW gezeichnet",
+"osm": 631505821
+},
+{
+"regel": "VB1",
+"x": 1147.0,
+"y": 197.6,
+"text": "OSM-Weiche 631505824 ohne Abzweig im Plan",
+"osm": 631505824
+},
+{
+"regel": "VB1",
+"x": 1278.6,
+"y": 184.4,
+"text": "OSM-Weiche 631505841 ohne Abzweig im Plan",
+"osm": 631505841
+},
+{
+"regel": "VB1",
+"x": 1257.0,
+"y": 171.2,
+"text": "OSM-Weiche 631505838 ohne Abzweig im Plan",
+"osm": 631505838
+},
+{
+"regel": "VB1",
+"x": 1249.7,
+"y": 134.0,
+"text": "OSM-Weiche 1694785513 ohne Abzweig im Plan",
+"osm": 1694785513
+},
+{
+"regel": "VB1",
+"x": 1284.7,
+"y": 110.0,
+"text": "OSM-Weiche 631505851 ohne Abzweig im Plan",
+"osm": 631505851
+},
+{
+"regel": "VB1",
+"x": 1239.7,
+"y": 134.0,
+"text": "OSM-Weiche 631505831 ohne Abzweig im Plan",
+"osm": 631505831
+},
+{
+"regel": "VB2",
+"x": 436.3,
+"y": 134.0,
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+"ways": [
+37136448,
+37214731,
+1104398009
+],
+"farben": [
+"gruen",
+"schwarz"
+]
+},
+{
+"regel": "VB2",
+"x": 470.1,
+"y": 110.0,
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+"ways": [
+32030607,
+1104398010,
+1104398011
+],
+"farben": [
+"gruen",
+"schwarz"
+]
+},
+{
+"regel": "VB2",
+"x": 737.7,
+"y": 134.0,
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+"ways": [
+37136448,
+37214731,
+1104398009
+],
+"farben": [
+"gruen",
+"schwarz"
+]
+},
+{
+"regel": "VB2",
+"x": 697.7,
+"y": 158.0,
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+"ways": [],
+"farben": [
+"schwarz"
+]
+}
+],
+"info": {
+"dkw_osm_unvollstaendig": [],
+"gleise": 5,
+"knoten_plan": 4,
+"dkw_plan": 0,
+"knoten_osm": 9,
+"versatz_y": 0.0,
+"netz_auf_plan": 0.18
+}
+}

@@ -1,0 +1,64 @@
+{
+ "zaehl": {
+  "HT1": 2,
+  "HT2": 2,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "befunde": [
+  {
+   "regel": "HT1",
+   "x": 528.3,
+   "y": 110.0,
+   "text": "OSM-Weiche 662607448 ohne Abzweig im Plan",
+   "osm": 662607448
+  },
+  {
+   "regel": "HT1",
+   "x": 967.4,
+   "y": 110.0,
+   "text": "OSM-Weiche 471596482 ohne Abzweig im Plan",
+   "osm": 471596482
+  },
+  {
+   "regel": "HT2",
+   "x": 390.0,
+   "y": 110.0,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    51951505,
+    184955016,
+    507891447
+   ]
+  },
+  {
+   "regel": "HT2",
+   "x": 637.7,
+   "y": 110.0,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    51951505,
+    184955016,
+    507891447
+   ]
+  },
+  {
+   "regel": "_info",
+   "x": 0,
+   "y": 0,
+   "text": "Fahrwege: 2/6 Ziele im Plan gefunden, OSM 1, Plan 1",
+   "ohne_lage": [
+    "Abgang 224 La Chaux-de-Fonds (471596473)",
+    "Gl. 1",
+    "Gl. 2",
+    "Gl. 414"
+   ]
+  }
+ ],
+ "osm_abgleich": {
+  "VB1": 2,
+  "VB2": 2,
+  "VD1": 1
+ }
+}

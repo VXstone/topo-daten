@@ -1,0 +1,79 @@
+{
+ "zaehl": {
+  "HT1": 4,
+  "HT2": 2,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "befunde": [
+  {
+   "regel": "HT1",
+   "x": 1057.4,
+   "y": 110.0,
+   "text": "OSM-Weiche 1822839647 ohne Abzweig im Plan",
+   "osm": 1822839647
+  },
+  {
+   "regel": "HT1",
+   "x": 375.2,
+   "y": 134.0,
+   "text": "OSM-Weiche 1360518538 ohne Abzweig im Plan",
+   "osm": 1360518538
+  },
+  {
+   "regel": "HT1",
+   "x": 347.3,
+   "y": 110.0,
+   "text": "OSM-Weiche 1244528397 ohne Abzweig im Plan",
+   "osm": 1244528397
+  },
+  {
+   "regel": "HT1",
+   "x": 997.7,
+   "y": 158.0,
+   "text": "OSM-Weiche 1822839640 ohne Abzweig im Plan",
+   "osm": 1822839640
+  },
+  {
+   "regel": "HT2",
+   "x": 651.7,
+   "y": 134.0,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    56651940,
+    171215661,
+    621502355
+   ]
+  },
+  {
+   "regel": "HT2",
+   "x": 685.6,
+   "y": 110.0,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    572529485,
+    586385835,
+    621502355,
+    624407792
+   ]
+  },
+  {
+   "regel": "_info",
+   "x": 0,
+   "y": 0,
+   "text": "Fahrwege: 5/10 Ziele im Plan gefunden, OSM 3, Plan 3",
+   "ohne_lage": [
+    "Abgang 220 Bern (1244528388)",
+    "Abgang 220 Bern (529418032)",
+    "Gl. 2",
+    "Gl. 42",
+    "Gl. 43"
+   ]
+  }
+ ],
+ "osm_abgleich": {
+  "VB1": 4,
+  "VB2": 2
+ }
+}

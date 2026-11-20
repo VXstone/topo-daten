@@ -1,23 +1,31 @@
-# OSM-Verdacht (26) – Register 180 Bahnhöfe, 144 Pläne
+# OSM-Verdacht (34) – Register 180 Bahnhöfe, 144 Pläne
 
 - OB Betriebspunkt im Perimeter ohne Plan: 16
-- OG Gleise mit Perron SBB ≠ OSM: 5
+- OG Gleise mit Perron SBB ≠ OSM: 12
 - OK Keine OSM-Station gefunden: 2
+- OL Linie SBB nicht unter den OSM-Linien im Plan: 2
 - OR Abkürzung atlas ≠ OSM railway:ref: 1
 - OU BPUIC atlas ≠ OSM uic_ref: 1
-- OL Linie SBB nicht unter den OSM-Linien im Plan: 1
 
 | Code | Abk | Befund |
 |---|---|---|
 | OG | AA | Aarau: Gleis mit Perron laut SBB 10 ohne Perron-ref in OSM (SBB 1/2/3/4/5/6/10 · OSM 0/1/12/13/2/3/4/5/6) |
 | OR | ATOR | Aarau Torfeld: Abkürzung atlas ATOR ≠ OSM railway:ref AATO |
+| OG | AUV | Auvernier: Gleis mit Perron laut SBB 2/3 ohne Perron-ref in OSM (SBB 1/2/3 · OSM 1) |
+| OG | AV | Avenches: Gleis mit Perron laut SBB 1/2 ohne Perron-ref in OSM (SBB 1/2 · OSM Quai 1/Quai 2) |
+| OG | BDR | Boudry: Gleis mit Perron laut SBB 2/3 ohne Perron-ref in OSM (SBB 2/3 · OSM 1) |
+| OG | CLB | Colombier NE: Gleis mit Perron laut SBB 3 ohne Perron-ref in OSM (SBB 1/2/3 · OSM 1/2) |
+| OG | GOR | Gorgier-St-Aubin: Gleis mit Perron laut SBB 2/3 ohne Perron-ref in OSM (SBB 1/2/3 · OSM 1) |
+| OG | HGV | Les Hauts-Geneveys: Gleis mit Perron laut SBB 2 ohne Perron-ref in OSM (SBB 1/2 · OSM 1) |
 | OG | INS | Ins: Gleis mit Perron laut SBB 3/4 ohne Perron-ref in OSM (SBB 3/4 · OSM 1) |
 | OG | KF | Konolfingen: Gleis mit Perron laut SBB 2 ohne Perron-ref in OSM (SBB 2/3/4/5/6 · OSM 1/3/4/5/6) |
+| OG | LD | Le Landeron: Gleis mit Perron laut SBB 2/3 ohne Perron-ref in OSM (SBB 1/2/3 · OSM 1) |
 | OU | LIG | Ligerz: BPUIC atlas 8504227 ≠ OSM uic_ref 8504356 |
 | OG | NE | Neuchâtel: Gleis mit Perron laut SBB 3/4/5/6/7 ohne Perron-ref in OSM (SBB 1/2/3/4/5/6/7 · OSM 1/2) |
 | OK | SAAV | Sagliains Autoverlad: keine OSM-Station mit diesem Namen, dieser Abkürzung oder BPUIC |
 | OK | SELF | Klosters Selfranga: keine OSM-Station mit diesem Namen, dieser Abkürzung oder BPUIC |
 | OL | SO | Solothurn: Linie SBB 292 (km 0.0) nicht unter den OSM-Linien im Plan (410, 415, 421) |
+| OL | TWN | Twann: Linie SBB 9210 (km 95.9766) nicht unter den OSM-Linien im Plan (210) |
 | OG | ZBZ | Zürich Binz: Gleis mit Perron laut SBB 2 ohne Perron-ref in OSM (SBB 1/2 · OSM 1) |
 | OB | BODE | Region mob: Betriebspunkt Boden (BODE) im Perimeter ohne Plan |
 | OB | CHAU | Region mob: Betriebspunkt La Chaudanne-Les Moulins (CHAU) im Perimeter ohne Plan |

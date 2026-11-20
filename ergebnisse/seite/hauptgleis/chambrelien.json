@@ -1,0 +1,41 @@
+{
+ "zaehl": {
+  "HT1": 1,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 1
+ },
+ "befunde": [
+  {
+   "regel": "HT1",
+   "x": 607.9,
+   "y": 158.0,
+   "text": "OSM-Weiche 393419063 ohne Abzweig im Plan",
+   "osm": 393419063
+  },
+  {
+   "regel": "HT5",
+   "x": 577.5,
+   "y": 122.0,
+   "text": "Fahrweg Abgang 224 La Chaux-de-Fonds (266382833) ↔ Gl. 2 in OSM, fehlt im Plan",
+   "von": "Abgang 224 La Chaux-de-Fonds (266382833)",
+   "nach": "Gl. 2",
+   "art": "fehlt"
+  },
+  {
+   "regel": "_info",
+   "x": 0,
+   "y": 0,
+   "text": "Fahrwege: 4/6 Ziele im Plan gefunden, OSM 4, Plan 3",
+   "ohne_lage": [
+    "Gl. 12",
+    "Gl. 13"
+   ]
+  }
+ ],
+ "osm_abgleich": {
+  "VA1": 1,
+  "VB1": 1
+ }
+}

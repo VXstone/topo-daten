@@ -1,0 +1,61 @@
+{
+ "zaehl": {
+  "HT1": 0,
+  "HT2": 2,
+  "HT3": 1,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "befunde": [
+  {
+   "regel": "HT3",
+   "x": 1111.0,
+   "y": 174.0,
+   "text": "Gleis (Way 49448901) im Plan an Knoten 575097059 angebunden, in OSM nicht",
+   "osm": 575097059,
+   "ways": [
+    49448901,
+    49448904
+   ]
+  },
+  {
+   "regel": "HT2",
+   "x": 1128.2,
+   "y": 156.4,
+   "text": "Gleise berühren sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    45279438,
+    49448901,
+    49448902,
+    49448904,
+    157259847
+   ]
+  },
+  {
+   "regel": "HT2",
+   "x": 1150.4,
+   "y": 118.0,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    45279438,
+    49448901,
+    49448902,
+    49448904,
+    157259846,
+    157259847
+   ]
+  },
+  {
+   "regel": "_info",
+   "x": 0,
+   "y": 0,
+   "text": "Fahrwege: 3/3 Ziele im Plan gefunden, OSM 3, Plan 3",
+   "ohne_lage": []
+  }
+ ],
+ "osm_abgleich": {
+  "VB1": 1,
+  "VB2": 2,
+  "VC1": 1
+ }
+}

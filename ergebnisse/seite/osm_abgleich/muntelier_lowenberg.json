@@ -1,0 +1,94 @@
+{
+"plan": "muntelier_lowenberg",
+"befunde": [
+{
+"regel": "VA1",
+"x": 1173.8,
+"y": 147.2,
+"text": "OSM-DKW 12505668493 im Plan nicht als DKW gezeichnet",
+"osm": 12505668493
+},
+{
+"regel": "VB1",
+"x": 1000.6,
+"y": 110.0,
+"text": "OSM-Weiche 1423831253 ohne Abzweig im Plan",
+"osm": 1423831253
+},
+{
+"regel": "VB1",
+"x": 1005.7,
+"y": 110.0,
+"text": "OSM-Weiche 1976379436 ohne Abzweig im Plan",
+"osm": 1976379436
+},
+{
+"regel": "VB1",
+"x": 1042.4,
+"y": 147.2,
+"text": "OSM-Weiche 1976379453 ohne Abzweig im Plan",
+"osm": 1976379453
+},
+{
+"regel": "VB1",
+"x": 1064.0,
+"y": 160.4,
+"text": "OSM-Weiche 1976379463 ohne Abzweig im Plan",
+"osm": 1976379463
+},
+{
+"regel": "VB1",
+"x": 1041.2,
+"y": 147.2,
+"text": "OSM-Weiche 1976379451 ohne Abzweig im Plan",
+"osm": 1976379451
+},
+{
+"regel": "VB1",
+"x": 1124.8,
+"y": 160.4,
+"text": "OSM-Weiche 1976379469 ohne Abzweig im Plan",
+"osm": 1976379469
+},
+{
+"regel": "VB2",
+"x": 647.7,
+"y": 110.0,
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+"ways": [],
+"farben": [
+"gruen",
+"schwarz"
+]
+},
+{
+"regel": "VB2",
+"x": 687.7,
+"y": 134.0,
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+"ways": [],
+"farben": [
+"schwarz"
+]
+},
+{
+"regel": "VB2",
+"x": 657.7,
+"y": 110.0,
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+"ways": [],
+"farben": [
+"gruen"
+]
+}
+],
+"info": {
+"dkw_osm_unvollstaendig": [],
+"gleise": 4,
+"knoten_plan": 3,
+"dkw_plan": 0,
+"knoten_osm": 8,
+"versatz_y": 0.0,
+"netz_auf_plan": 0.0
+}
+}

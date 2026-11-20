@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1160 272" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
+<rect width="100%" height="100%" fill="#fff"/>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M651.7,110.0L656.7,110.0Q661.7,110.0 664.2,114.3L673.1,129.7Q675.6,134.0 680.6,134.0L685.6,134.0 M410.0,134.0L415.0,134.0Q420.0,134.0 422.5,138.3L430.4,151.9Q433.9,158.0 440.9,158.0L469.9,158.0 M450.0,158.0L455.0,158.0Q460.0,158.0 462.5,162.3L464.1,165.1Q467.6,171.2 474.6,171.2L495.6,171.2" stroke="#111" stroke-width="1.6"/>
+<path d="M275.0,110.0L829.7,110.0 M275.0,134.0L829.7,134.0" stroke="#00862f" stroke-width="3.6"/>
+</g>
+<rect x="458.9" y="118.0" width="110.0" height="8" rx="1.5" fill="#00862f"/>
+<rect x="500.9" y="102.0" width="26" height="16" fill="#fff" stroke="none"/><text x="513.9" y="116.5" font-size="19" text-anchor="middle" fill="#00862f">3</text>
+<rect x="500.9" y="126.0" width="26" height="16" fill="#fff" stroke="none"/><text x="513.9" y="140.5" font-size="19" text-anchor="middle" fill="#00862f">2</text>
+<circle cx="469.9" cy="158.0" r="3.2" fill="#111"/>
+<circle cx="495.6" cy="171.2" r="3.2" fill="#111"/>
+<text x="263.0" y="109.0" font-size="22" text-anchor="end" fill="#00862f">Linie 210</text>
+<text x="263.0" y="135.0" font-size="22" text-anchor="end" fill="#00862f">← Yverdon</text>
+<text x="841.7" y="109.0" font-size="22" text-anchor="start" fill="#00862f">Linie 210</text>
+<text x="841.7" y="135.0" font-size="22" text-anchor="start" fill="#00862f">Neuchâtel →</text>
+<text x="513.9" y="227.2" font-size="38" font-weight="700" text-anchor="middle" fill="#00862f">Boudry</text>
+<g class="befund"></g></svg>

@@ -4,7 +4,8 @@
   "gruppe": "Grosse Knoten",
   "summe": 111,
   "W53": 15,
-  "W56": 7
+  "W56": 7,
+  "W59": 30
  },
  {
   "key": "region",
@@ -16,16 +17,17 @@
  {
   "key": "region_ne",
   "gruppe": "Region",
-  "summe": 63,
-  "W53": 8,
-  "W55": 5
+  "summe": 66,
+  "W53": 9,
+  "W55": 4
  },
  {
   "key": "aarau",
   "gruppe": "Olten 3 · Olten – Aarau",
   "summe": 60,
   "W53": 0,
-  "W56": 20
+  "W56": 20,
+  "W59": 11
  },
  {
   "key": "region_mob",
@@ -52,958 +54,1095 @@
   "gruppe": "Grosse Knoten",
   "summe": 48,
   "W53": 7,
-  "W56": 2
+  "W56": 2,
+  "W59": 61
  },
  {
   "key": "olten",
   "gruppe": "Olten 1 · Knoten Olten",
   "summe": 27,
   "W53": 3,
-  "W56": 3
+  "W56": 3,
+  "W59": 0
  },
  {
   "key": "szu__zurich_selnau",
   "gruppe": "SZU · Bahnhöfe",
   "summe": 24,
   "W53": 2,
-  "W56": 4
+  "W56": 4,
+  "W59": 1
  },
  {
   "key": "schonenwerd",
   "gruppe": "Olten 3 · Olten – Aarau",
   "summe": 21,
   "W53": 0,
-  "W56": 7
+  "W56": 7,
+  "W59": 0
+ },
+ {
+  "key": "bole",
+  "gruppe": "NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier",
+  "summe": 21,
+  "W53": 0,
+  "W56": 7,
+  "W59": 1
  },
  {
   "key": "colombier",
   "gruppe": "NE 6 · Neuchâtel – Yverdon",
   "summe": 18,
   "W53": 0,
-  "W56": 6
- },
- {
-  "key": "bole",
-  "gruppe": "NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier",
-  "summe": 18,
-  "W53": 0,
-  "W56": 6
+  "W56": 6,
+  "W59": 3
  },
  {
   "key": "solothurn",
   "gruppe": "Bahnhöfe ohne Regionalplan",
   "summe": 15,
   "W53": 2,
-  "W56": 1
+  "W56": 1,
+  "W59": 29
  },
  {
   "key": "neuchatel",
   "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
   "summe": 15,
   "W53": 2,
-  "W56": 1
+  "W56": 1,
+  "W59": 1
  },
  {
   "key": "murten",
   "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
   "summe": 15,
   "W53": 1,
-  "W56": 3
+  "W56": 3,
+  "W59": 0
  },
  {
   "key": "auvernier",
   "gruppe": "NE 6 · Neuchâtel – Yverdon",
   "summe": 15,
   "W53": 1,
-  "W56": 3
+  "W56": 3,
+  "W59": 0
  },
  {
   "key": "onnens_bonvillars",
   "gruppe": "NE 6 · Neuchâtel – Yverdon",
   "summe": 15,
   "W53": 0,
-  "W56": 5
+  "W56": 5,
+  "W59": 12
  },
  {
   "key": "szu__zurich_giesshubel",
   "gruppe": "SZU · Bahnhöfe",
   "summe": 15,
   "W53": 2,
-  "W56": 1
+  "W56": 1,
+  "W59": 14
  },
  {
   "key": "olten_hammer",
   "gruppe": "Olten 1 · Knoten Olten",
   "summe": 12,
   "W53": 0,
-  "W56": 4
+  "W56": 4,
+  "W59": 6
  },
  {
   "key": "rothrist",
   "gruppe": "Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil",
   "summe": 12,
   "W53": 0,
-  "W56": 4
+  "W56": 4,
+  "W59": 21
  },
  {
   "key": "szu__borrweg",
   "gruppe": "SZU · Bahnhöfe",
   "summe": 12,
   "W53": 1,
-  "W56": 2
+  "W56": 2,
+  "W59": 0
  },
  {
   "key": "laufelfingen",
   "gruppe": "Olten 4 · Hauenstein",
   "summe": 9,
   "W53": 0,
-  "W56": 3
+  "W56": 3,
+  "W59": 0
  },
  {
   "key": "kerzers",
   "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
   "summe": 9,
   "W53": 1,
-  "W56": 1
+  "W56": 1,
+  "W59": 0
  },
  {
   "key": "ligerz",
   "gruppe": "NE 5 · Neuchâtel – Biel",
   "summe": 9,
   "W53": 0,
-  "W56": 3
+  "W56": 3,
+  "W59": 0
  },
  {
   "key": "travers",
   "gruppe": "NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier",
   "summe": 9,
   "W53": 1,
-  "W56": 1
+  "W56": 1,
+  "W59": 5
  },
  {
   "key": "neuchatel_vauseyon",
   "gruppe": "NE 8 · Neuchâtel – La Chaux-de-Fonds",
   "summe": 9,
   "W53": 0,
-  "W56": 3
+  "W56": 3,
+  "W59": 0
  },
  {
   "key": "vereina__selfranga_sud",
   "gruppe": "Vereina · Bahnhöfe",
   "summe": 9,
   "W53": 1,
-  "W56": 1
+  "W56": 1,
+  "W59": 0
  },
  {
   "key": "thun",
   "gruppe": "Bahnhöfe ohne Regionalplan",
   "summe": 6,
   "W53": 1,
-  "W56": 0
+  "W56": 0,
+  "W59": 16
  },
  {
   "key": "dulliken",
   "gruppe": "Olten 3 · Olten – Aarau",
   "summe": 6,
   "W53": 0,
-  "W56": 2
+  "W56": 2,
+  "W59": 0
  },
  {
   "key": "corcelles_peseux",
   "gruppe": "NE 8 · Neuchâtel – La Chaux-de-Fonds",
   "summe": 6,
   "W53": 0,
-  "W56": 2
+  "W56": 2,
+  "W59": 0
  },
  {
   "key": "chambrelien",
   "gruppe": "NE 8 · Neuchâtel – La Chaux-de-Fonds",
   "summe": 6,
   "W53": 1,
-  "W56": 0
+  "W56": 0,
+  "W59": 2
  },
  {
   "key": "mob__chamby",
   "gruppe": "MOB · Bahnhöfe",
   "summe": 6,
   "W53": 1,
-  "W56": 0
+  "W56": 0,
+  "W59": 1
  },
  {
   "key": "mob__lenk_im_simmental",
   "gruppe": "MOB · Bahnhöfe",
   "summe": 6,
   "W53": 1,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "mob__rochers_de_naye",
   "gruppe": "MOB · Bahnhöfe",
   "summe": 6,
   "W53": 1,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "mob__zweisimmen",
   "gruppe": "MOB · Bahnhöfe",
   "summe": 6,
   "W53": 1,
-  "W56": 0
+  "W56": 0,
+  "W59": 2
  },
  {
   "key": "vereina__klosters_selfranga",
   "gruppe": "Vereina · Bahnhöfe",
   "summe": 6,
   "W53": 0,
-  "W56": 2
+  "W56": 2,
+  "W59": 5
  },
  {
   "key": "vereina__sagliains",
   "gruppe": "Vereina · Bahnhöfe",
   "summe": 6,
   "W53": 0,
-  "W56": 2
+  "W56": 2,
+  "W59": 3
  },
  {
   "key": "safenwil",
   "gruppe": "Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil",
   "summe": 3,
   "W53": 0,
-  "W56": 1
+  "W56": 1,
+  "W59": 0
  },
  {
   "key": "daniken",
   "gruppe": "Olten 3 · Olten – Aarau",
   "summe": 3,
   "W53": 0,
-  "W56": 1
+  "W56": 1,
+  "W59": 0
  },
  {
   "key": "tecknau",
   "gruppe": "Olten 4 · Hauenstein",
   "summe": 3,
   "W53": 0,
-  "W56": 1
+  "W56": 1,
+  "W59": 6
  },
  {
   "key": "wangen_bei_olten",
   "gruppe": "Olten 5 · Olten – Solothurn",
   "summe": 3,
   "W53": 0,
-  "W56": 1
+  "W56": 1,
+  "W59": 3
  },
  {
   "key": "ins",
   "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
   "summe": 3,
   "W53": 0,
-  "W56": 1
+  "W56": 1,
+  "W59": 2
  },
  {
   "key": "marin_epagnier",
   "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
   "summe": 3,
   "W53": 0,
-  "W56": 1
+  "W56": 1,
+  "W59": 0
  },
  {
   "key": "zihlbruecke",
   "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
   "summe": 3,
   "W53": 0,
-  "W56": 1
+  "W56": 1,
+  "W59": 0
  },
  {
   "key": "gummenen",
   "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
   "summe": 3,
   "W53": 0,
-  "W56": 1
+  "W56": 1,
+  "W59": 0
  },
  {
   "key": "twann",
   "gruppe": "NE 5 · Neuchâtel – Biel",
   "summe": 3,
   "W53": 0,
-  "W56": 1
+  "W56": 1,
+  "W59": 0
  },
  {
   "key": "mob__allieres",
   "gruppe": "MOB · Bahnhöfe",
   "summe": 3,
   "W53": 0,
-  "W56": 1
+  "W56": 1,
+  "W59": 2
  },
  {
   "key": "mob__belmont_sur_montreux",
   "gruppe": "MOB · Bahnhöfe",
   "summe": 3,
   "W53": 0,
-  "W56": 1
+  "W56": 1,
+  "W59": 2
  },
  {
   "key": "mob__glion_college",
   "gruppe": "MOB · Bahnhöfe",
   "summe": 3,
   "W53": 0,
-  "W56": 1
+  "W56": 1,
+  "W59": 0
  },
  {
   "key": "mob__les_sciernes",
   "gruppe": "MOB · Bahnhöfe",
   "summe": 3,
   "W53": 0,
-  "W56": 1
+  "W56": 1,
+  "W59": 3
  },
  {
   "key": "mob__sendy_sollard",
   "gruppe": "MOB · Bahnhöfe",
   "summe": 3,
   "W53": 0,
-  "W56": 1
+  "W56": 1,
+  "W59": 1
  },
  {
   "key": "vereina__sagliains_nord",
   "gruppe": "Vereina · Bahnhöfe",
   "summe": 3,
   "W53": 0,
-  "W56": 1
+  "W56": 1,
+  "W59": 0
  },
  {
   "key": "vereina__sagliains_sasslatsch",
   "gruppe": "Vereina · Bahnhöfe",
   "summe": 3,
   "W53": 0,
-  "W56": 1
+  "W56": 1,
+  "W59": 2
  },
  {
   "key": "vereina__vereina_sud",
   "gruppe": "Vereina · Bahnhöfe",
   "summe": 3,
   "W53": 0,
-  "W56": 1
+  "W56": 1,
+  "W59": 0
  },
  {
   "key": "szu__ringlikon",
   "gruppe": "SZU · Bahnhöfe",
   "summe": 3,
   "W53": 0,
-  "W56": 1
+  "W56": 1,
+  "W59": 0
  },
  {
   "key": "konolfingen",
   "gruppe": "Bahnhöfe ohne Regionalplan",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 3
  },
  {
   "key": "aarburg_oftringen",
   "gruppe": "Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 1
  },
  {
   "key": "zofingen",
   "gruppe": "Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 10
  },
  {
   "key": "saint_blaise_lac",
   "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "gampelen",
   "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "muntschemier",
   "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "rosshausern",
   "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "riedbach",
   "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "bern_brunnen_westside",
   "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "sugiez",
   "gruppe": "NE 2 · Ins – Sugiez – Murten",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "muntelier_lowenberg",
   "gruppe": "NE 2 · Ins – Sugiez – Murten",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 1
  },
  {
   "key": "kallnach",
   "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "fraschels",
   "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "kerzers_papiliorama",
   "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "galmiz",
   "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 2
  },
  {
   "key": "faoug",
   "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "avenches",
   "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 2
  },
  {
   "key": "domdidier",
   "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 1
  },
  {
   "key": "dompierre",
   "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "munchenwiler_courgevaux",
   "gruppe": "NE 4 · Murten – Fribourg",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "cressier_fr",
   "gruppe": "NE 4 · Murten – Fribourg",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "courtepin",
   "gruppe": "NE 4 · Murten – Fribourg",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "pensier",
   "gruppe": "NE 4 · Murten – Fribourg",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "saint_blaise_cff",
   "gruppe": "NE 5 · Neuchâtel – Biel",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "cornaux",
   "gruppe": "NE 5 · Neuchâtel – Biel",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 12
  },
  {
   "key": "cressier",
   "gruppe": "NE 5 · Neuchâtel – Biel",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "le_landeron",
   "gruppe": "NE 5 · Neuchâtel – Biel",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "la_neuveville",
   "gruppe": "NE 5 · Neuchâtel – Biel",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "tuscherz",
   "gruppe": "NE 5 · Neuchâtel – Biel",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "serrieres",
   "gruppe": "NE 6 · Neuchâtel – Yverdon",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "boudry",
   "gruppe": "NE 6 · Neuchâtel – Yverdon",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "bevaix",
   "gruppe": "NE 6 · Neuchâtel – Yverdon",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "gorgier_saint_aubin",
   "gruppe": "NE 6 · Neuchâtel – Yverdon",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 1
  },
  {
   "key": "concise",
   "gruppe": "NE 6 · Neuchâtel – Yverdon",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "grandson",
   "gruppe": "NE 6 · Neuchâtel – Yverdon",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "champ_du_moulin",
   "gruppe": "NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "noiraigue",
   "gruppe": "NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "la_presta_mines_d_asphalte",
   "gruppe": "NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "couvet",
   "gruppe": "NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "motiers",
   "gruppe": "NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "les_deurres",
   "gruppe": "NE 8 · Neuchâtel – La Chaux-de-Fonds",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "les_geneveys_sur_coffrane",
   "gruppe": "NE 8 · Neuchâtel – La Chaux-de-Fonds",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "les_hauts_geneveys",
   "gruppe": "NE 8 · Neuchâtel – La Chaux-de-Fonds",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "mob__blankenburg",
   "gruppe": "MOB · Bahnhöfe",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 1
  },
  {
   "key": "mob__caux",
   "gruppe": "MOB · Bahnhöfe",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "mob__chateau_d_oex",
   "gruppe": "MOB · Bahnhöfe",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 2
  },
  {
   "key": "mob__chatelard",
   "gruppe": "MOB · Bahnhöfe",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "mob__chernex",
   "gruppe": "MOB · Bahnhöfe",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 2
  },
  {
   "key": "mob__cret_d_y_bau",
   "gruppe": "MOB · Bahnhöfe",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "mob__flendruz",
   "gruppe": "MOB · Bahnhöfe",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 2
  },
  {
   "key": "mob__fontanivent",
   "gruppe": "MOB · Bahnhöfe",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "mob__glion",
   "gruppe": "MOB · Bahnhöfe",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 1
  },
  {
   "key": "mob__gruben",
   "gruppe": "MOB · Bahnhöfe",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 2
  },
  {
   "key": "mob__gstaad",
   "gruppe": "MOB · Bahnhöfe",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "mob__jaman",
   "gruppe": "MOB · Bahnhöfe",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "mob__jor",
   "gruppe": "MOB · Bahnhöfe",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 1
  },
  {
   "key": "mob__la_perche",
   "gruppe": "MOB · Bahnhöfe",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "mob__la_tine",
   "gruppe": "MOB · Bahnhöfe",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 3
  },
  {
   "key": "mob__le_tremblex",
   "gruppe": "MOB · Bahnhöfe",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "mob__les_avants",
   "gruppe": "MOB · Bahnhöfe",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 2
  },
  {
   "key": "mob__les_cases",
   "gruppe": "MOB · Bahnhöfe",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 1
  },
  {
   "key": "mob__les_echets",
   "gruppe": "MOB · Bahnhöfe",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "mob__matten",
   "gruppe": "MOB · Bahnhöfe",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "mob__montbovon",
   "gruppe": "MOB · Bahnhöfe",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 1
  },
  {
   "key": "mob__montreux_les_planches",
   "gruppe": "MOB · Bahnhöfe",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "mob__montreux",
   "gruppe": "MOB · Bahnhöfe",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 2
  },
  {
   "key": "mob__oeschseite",
   "gruppe": "MOB · Bahnhöfe",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 2
  },
  {
   "key": "mob__paccot",
   "gruppe": "MOB · Bahnhöfe",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "mob__planchamp",
   "gruppe": "MOB · Bahnhöfe",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "mob__rossiniere",
   "gruppe": "MOB · Bahnhöfe",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 2
  },
  {
   "key": "mob__rougemont",
   "gruppe": "MOB · Bahnhöfe",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 2
  },
  {
   "key": "mob__saanen",
   "gruppe": "MOB · Bahnhöfe",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 2
  },
  {
   "key": "mob__saanenmoser",
   "gruppe": "MOB · Bahnhöfe",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 1
  },
  {
   "key": "mob__schonried",
   "gruppe": "MOB · Bahnhöfe",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 1
  },
  {
   "key": "mob__st_stephan",
   "gruppe": "MOB · Bahnhöfe",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 2
  },
  {
   "key": "mob__toveyre",
   "gruppe": "MOB · Bahnhöfe",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "mob__valmont",
   "gruppe": "MOB · Bahnhöfe",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "mob__vernex",
   "gruppe": "MOB · Bahnhöfe",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "mob__vuarennes",
   "gruppe": "MOB · Bahnhöfe",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "vereina__klosters_platz",
   "gruppe": "Vereina · Bahnhöfe",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 1
  },
  {
   "key": "vereina__sasslatsch",
   "gruppe": "Vereina · Bahnhöfe",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "vereina__susch",
   "gruppe": "Vereina · Bahnhöfe",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "vereina__vereina_nord",
   "gruppe": "Vereina · Bahnhöfe",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "szu__berghof",
   "gruppe": "SZU · Bahnhöfe",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "szu__uetliberg",
   "gruppe": "SZU · Bahnhöfe",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "szu__zurich_binz",
   "gruppe": "SZU · Bahnhöfe",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "szu__zurich_friesenberg",
   "gruppe": "SZU · Bahnhöfe",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  },
  {
   "key": "szu__zurich_schweighof",
   "gruppe": "SZU · Bahnhöfe",
   "summe": 0,
   "W53": 0,
-  "W56": 0
+  "W56": 0,
+  "W59": 0
  }
 ]

@@ -1,0 +1,28 @@
+{
+"plan": "chambrelien",
+"befunde": [
+{
+"regel": "VA1",
+"x": 576.1,
+"y": 182.0,
+"text": "OSM-DKW 393419061 im Plan nicht als DKW gezeichnet",
+"osm": 393419061
+},
+{
+"regel": "VB1",
+"x": 607.9,
+"y": 158.0,
+"text": "OSM-Weiche 393419063 ohne Abzweig im Plan",
+"osm": 393419063
+}
+],
+"info": {
+"dkw_osm_unvollstaendig": [],
+"gleise": 8,
+"knoten_plan": 3,
+"dkw_plan": 0,
+"knoten_osm": 4,
+"versatz_y": 24.0,
+"netz_auf_plan": 0.6
+}
+}

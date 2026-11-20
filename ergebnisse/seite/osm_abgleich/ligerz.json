@@ -1,0 +1,40 @@
+{
+"plan": "ligerz",
+"befunde": [
+{
+"regel": "VB1",
+"x": 228.8,
+"y": 110.0,
+"text": "OSM-Weiche 1676192637 ohne Abzweig im Plan",
+"osm": 1676192637
+},
+{
+"regel": "VB1",
+"x": 389.7,
+"y": 158.0,
+"text": "OSM-Weiche 1676192646 ohne Abzweig im Plan",
+"osm": 1676192646
+},
+{
+"regel": "VB2",
+"x": 400.0,
+"y": 110.0,
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+"ways": [
+184197820
+],
+"farben": [
+"gruen"
+]
+}
+],
+"info": {
+"dkw_osm_unvollstaendig": [],
+"gleise": 2,
+"knoten_plan": 1,
+"dkw_plan": 0,
+"knoten_osm": 2,
+"versatz_y": 0.0,
+"netz_auf_plan": 0.14
+}
+}

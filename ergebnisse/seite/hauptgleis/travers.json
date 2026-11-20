@@ -1,0 +1,77 @@
+{
+ "zaehl": {
+  "HT1": 0,
+  "HT2": 3,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 2
+ },
+ "befunde": [
+  {
+   "regel": "HT2",
+   "x": 933.3,
+   "y": 134.0,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    27994981,
+    40109671,
+    40266403,
+    48024573,
+    507897178,
+    507897179
+   ]
+  },
+  {
+   "regel": "HT2",
+   "x": 408.0,
+   "y": 158.0,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    184057390,
+    507897181
+   ]
+  },
+  {
+   "regel": "HT2",
+   "x": 435.8,
+   "y": 134.0,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    184057390,
+    184188755,
+    184188757,
+    431913937,
+    507897181,
+    1071302090
+   ]
+  },
+  {
+   "regel": "HT5",
+   "x": 528.2,
+   "y": 158.0,
+   "text": "Fahrweg Abgang 221 Fleurier (610650614) ↔ Gl. 2 im Plan, nicht in OSM",
+   "von": "Abgang 221 Fleurier (610650614)",
+   "nach": "Gl. 2",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 384.9,
+   "y": 158.0,
+   "text": "Fahrweg Abgang 221 Fleurier (610650614) ↔ Gl. 314 im Plan, nicht in OSM",
+   "von": "Abgang 221 Fleurier (610650614)",
+   "nach": "Gl. 314",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "_info",
+   "x": 0,
+   "y": 0,
+   "text": "Fahrwege: 7/7 Ziele im Plan gefunden, OSM 10, Plan 12",
+   "ohne_lage": []
+  }
+ ],
+ "osm_abgleich": {
+  "VB2": 3
+ }
+}

@@ -1,0 +1,109 @@
+{
+ "zaehl": {
+  "HT1": 4,
+  "HT2": 4,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 2
+ },
+ "befunde": [
+  {
+   "regel": "HT1",
+   "x": 790.5,
+   "y": 158.0,
+   "text": "OSM-Weiche 1946460604 ohne Abzweig im Plan",
+   "osm": 1946460604
+  },
+  {
+   "regel": "HT1",
+   "x": 822.4,
+   "y": 134.0,
+   "text": "OSM-Weiche 1946460608 ohne Abzweig im Plan",
+   "osm": 1946460608
+  },
+  {
+   "regel": "HT1",
+   "x": 850.2,
+   "y": 110.0,
+   "text": "OSM-Weiche 1946460636 ohne Abzweig im Plan",
+   "osm": 1946460636
+  },
+  {
+   "regel": "HT1",
+   "x": 744.7,
+   "y": 158.0,
+   "text": "OSM-Weiche 1946460601 ohne Abzweig im Plan",
+   "osm": 1946460601
+  },
+  {
+   "regel": "HT2",
+   "x": 651.7,
+   "y": 110.0,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    184190241,
+    255557409
+   ]
+  },
+  {
+   "regel": "HT2",
+   "x": 685.6,
+   "y": 134.0,
+   "text": "Gleise berühren sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    184190242,
+    255557403
+   ]
+  },
+  {
+   "regel": "HT2",
+   "x": 677.6,
+   "y": 134.0,
+   "text": "Gleise berühren sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    184190242,
+    255557403
+   ]
+  },
+  {
+   "regel": "HT2",
+   "x": 617.7,
+   "y": 134.0,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    184190242,
+    255557403
+   ]
+  },
+  {
+   "regel": "HT5",
+   "x": 685.0,
+   "y": 158.0,
+   "art": "kuenstlich",
+   "osm": -1089,
+   "text": "Gleisende -1089 am Planrand: in OSM läuft das Gleis im Plan weiter (künstlicher Schnitt, Gleis fehlt dazwischen)"
+  },
+  {
+   "regel": "HT5",
+   "x": 803.5,
+   "y": 122.0,
+   "text": "Fahrweg Abgang 210 Biel (249162547) ↔ Gl. 1 in OSM, fehlt im Plan",
+   "von": "Abgang 210 Biel (249162547)",
+   "nach": "Gl. 1",
+   "art": "fehlt"
+  },
+  {
+   "regel": "_info",
+   "x": 0,
+   "y": 0,
+   "text": "Fahrwege: 5/6 Ziele im Plan gefunden, OSM 7, Plan 6",
+   "ohne_lage": [
+    "Gl. 2"
+   ]
+  }
+ ],
+ "osm_abgleich": {
+  "VB1": 4,
+  "VB2": 4
+ }
+}

@@ -1,0 +1,144 @@
+{
+"plan": "gorgier_saint_aubin",
+"befunde": [
+{
+"regel": "VB1",
+"x": 712.3,
+"y": 134.0,
+"text": "OSM-Weiche 443249143 ohne Abzweig im Plan",
+"osm": 443249143
+},
+{
+"regel": "VB1",
+"x": 740.2,
+"y": 110.0,
+"text": "OSM-Weiche 443249140 ohne Abzweig im Plan",
+"osm": 443249140
+},
+{
+"regel": "VB1",
+"x": 501.3,
+"y": 195.2,
+"text": "OSM-Weiche 443249179 ohne Abzweig im Plan",
+"osm": 443249179
+},
+{
+"regel": "VB1",
+"x": 516.2,
+"y": 195.2,
+"text": "OSM-Weiche 443249186 ohne Abzweig im Plan",
+"osm": 443249186
+},
+{
+"regel": "VB1",
+"x": 621.8,
+"y": 158.0,
+"text": "OSM-Weiche 534709416 ohne Abzweig im Plan",
+"osm": 534709416
+},
+{
+"regel": "VB2",
+"x": 436.3,
+"y": 110.0,
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+"ways": [
+37277979,
+37787882,
+42761845,
+42761846,
+42761855,
+42761856,
+684645116,
+1104188827,
+1271585759
+],
+"farben": [
+"gruen",
+"schwarz"
+]
+},
+{
+"regel": "VB2",
+"x": 771.7,
+"y": 134.0,
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+"ways": [
+37277980,
+37787882,
+42761847,
+42761848,
+42761850,
+42761853,
+42761854,
+184653998,
+684645117,
+684645118,
+1104188826,
+1271585760,
+1271683846
+],
+"farben": [
+"gruen",
+"schwarz"
+]
+},
+{
+"regel": "VB2",
+"x": 805.6,
+"y": 110.0,
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+"ways": [
+37277979,
+37277980,
+37787882,
+42761845,
+42761846,
+42761847,
+42761855,
+42761856,
+684645116,
+1104188827,
+1271585759
+],
+"farben": [
+"gruen",
+"schwarz"
+]
+},
+{
+"regel": "VB2",
+"x": 543.9,
+"y": 182.0,
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+"ways": [
+37787886,
+37787887,
+684645119
+],
+"farben": [
+"schwarz"
+]
+},
+{
+"regel": "VD1",
+"x": 516.2,
+"y": 195.2,
+"text": "zwei Gleise 13 px aufeinander"
+},
+{
+"regel": "VD1",
+"x": 633.9,
+"y": 134.0,
+"text": "zwei Gleise 17 px aufeinander"
+}
+],
+"info": {
+"dkw_osm_unvollstaendig": [],
+"gleise": 10,
+"knoten_plan": 9,
+"dkw_plan": 0,
+"knoten_osm": 12,
+"versatz_y": 0.0,
+"netz_auf_plan": 0.76
+}
+}

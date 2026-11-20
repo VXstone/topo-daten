@@ -1,0 +1,146 @@
+{
+ "zaehl": {
+  "HT1": 3,
+  "HT2": 3,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 5
+ },
+ "befunde": [
+  {
+   "regel": "HT1",
+   "x": 712.3,
+   "y": 134.0,
+   "text": "OSM-Weiche 443249143 ohne Abzweig im Plan",
+   "osm": 443249143
+  },
+  {
+   "regel": "HT1",
+   "x": 740.2,
+   "y": 110.0,
+   "text": "OSM-Weiche 443249140 ohne Abzweig im Plan",
+   "osm": 443249140
+  },
+  {
+   "regel": "HT1",
+   "x": 621.8,
+   "y": 158.0,
+   "text": "OSM-Weiche 534709416 ohne Abzweig im Plan",
+   "osm": 534709416
+  },
+  {
+   "regel": "HT2",
+   "x": 436.3,
+   "y": 110.0,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    37277979,
+    37787882,
+    42761845,
+    42761846,
+    42761855,
+    42761856,
+    684645116,
+    1104188827,
+    1271585759
+   ]
+  },
+  {
+   "regel": "HT2",
+   "x": 771.7,
+   "y": 134.0,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    37277980,
+    37787882,
+    42761847,
+    42761848,
+    42761850,
+    42761853,
+    42761854,
+    184653998,
+    684645117,
+    684645118,
+    1104188826,
+    1271585760,
+    1271683846
+   ]
+  },
+  {
+   "regel": "HT2",
+   "x": 805.6,
+   "y": 110.0,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    37277979,
+    37277980,
+    37787882,
+    42761845,
+    42761846,
+    42761847,
+    42761855,
+    42761856,
+    684645116,
+    1104188827,
+    1271585759
+   ]
+  },
+  {
+   "regel": "HT5",
+   "x": 535.1,
+   "y": 122.0,
+   "text": "Fahrweg Abgang 210 Neuchâtel (623764576) ↔ Abgang 210 Yverdon (1951569814) im Plan, nicht in OSM",
+   "von": "Abgang 210 Neuchâtel (623764576)",
+   "nach": "Abgang 210 Yverdon (1951569814)",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 423.2,
+   "y": 134.0,
+   "text": "Fahrweg Abgang 210 Yverdon (1951569814) ↔ Gl. 501 im Plan, nicht in OSM",
+   "von": "Abgang 210 Yverdon (1951569814)",
+   "nach": "Gl. 501",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 423.1,
+   "y": 122.0,
+   "text": "Fahrweg Abgang 210 Yverdon (1951569814) ↔ Gl. 502 im Plan, nicht in OSM",
+   "von": "Abgang 210 Yverdon (1951569814)",
+   "nach": "Gl. 502",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 535.1,
+   "y": 122.0,
+   "text": "Fahrweg Abgang 210 Yverdon (1951569814) ↔ Gl. 541 im Plan, nicht in OSM",
+   "von": "Abgang 210 Yverdon (1951569814)",
+   "nach": "Gl. 541",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 423.0,
+   "y": 122.0,
+   "text": "Fahrweg Abgang 210 Yverdon (1951569819) ↔ Gl. 503 in OSM, fehlt im Plan",
+   "von": "Abgang 210 Yverdon (1951569819)",
+   "nach": "Gl. 503",
+   "art": "fehlt"
+  },
+  {
+   "regel": "_info",
+   "x": 0,
+   "y": 0,
+   "text": "Fahrwege: 11/11 Ziele im Plan gefunden, OSM 23, Plan 26",
+   "ohne_lage": []
+  }
+ ],
+ "osm_abgleich": {
+  "VB1": 5,
+  "VB2": 4,
+  "VD1": 2
+ }
+}

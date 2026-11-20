@@ -13,12 +13,138 @@
   "HT4": 0,
   "HT5": 0
  },
+ "auvernier": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 4
+ },
+ "avenches": {
+  "HT1": 3,
+  "HT2": 2,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "bern_brunnen_westside": {
+  "HT1": 7,
+  "HT2": 4,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "bevaix": {
+  "HT1": 4,
+  "HT2": 3,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 5
+ },
+ "bole": {
+  "HT1": 0,
+  "HT2": 2,
+  "HT3": 1,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "boudry": {
+  "HT1": 2,
+  "HT2": 1,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "chambrelien": {
+  "HT1": 1,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 1
+ },
+ "champ_du_moulin": {
+  "HT1": 1,
+  "HT2": 1,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "colombier": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 3,
+  "HT4": 0,
+  "HT5": 1
+ },
+ "concise": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "corcelles_peseux": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "cornaux": {
+  "HT1": 0,
+  "HT2": 1,
+  "HT3": 1,
+  "HT4": 0,
+  "HT5": 5
+ },
+ "courtepin": {
+  "HT1": 1,
+  "HT2": 2,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "couvet": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "cressier": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "cressier_fr": {
+  "HT1": 0,
+  "HT2": 1,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
  "daniken": {
   "HT1": 2,
   "HT2": 0,
   "HT3": 0,
   "HT4": 0,
   "HT5": 6
+ },
+ "domdidier": {
+  "HT1": 2,
+  "HT2": 2,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "dompierre": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
  },
  "dulliken": {
   "HT1": 0,
@@ -27,7 +153,70 @@
   "HT4": 0,
   "HT5": 1
  },
+ "faoug": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "fraschels": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "galmiz": {
+  "HT1": 1,
+  "HT2": 1,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "gampelen": {
+  "HT1": 0,
+  "HT2": 2,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "gorgier_saint_aubin": {
+  "HT1": 3,
+  "HT2": 3,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 5
+ },
+ "grandson": {
+  "HT1": 5,
+  "HT2": 2,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 1
+ },
+ "gummenen": {
+  "HT1": 1,
+  "HT2": 1,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
  "ins": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "kallnach": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "kerzers_papiliorama": {
   "HT1": 0,
   "HT2": 0,
   "HT3": 0,
@@ -41,7 +230,63 @@
   "HT4": 0,
   "HT5": 7
  },
+ "la_neuveville": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "la_presta_mines_d_asphalte": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
  "laufelfingen": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "le_landeron": {
+  "HT1": 2,
+  "HT2": 6,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 5
+ },
+ "les_deurres": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "les_geneveys_sur_coffrane": {
+  "HT1": 2,
+  "HT2": 2,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "les_hauts_geneveys": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "ligerz": {
+  "HT1": 2,
+  "HT2": 1,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "marin_epagnier": {
   "HT1": 0,
   "HT2": 0,
   "HT3": 0,
@@ -363,6 +608,41 @@
   "HT4": 0,
   "HT5": 3
  },
+ "motiers": {
+  "HT1": 1,
+  "HT2": 1,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "munchenwiler_courgevaux": {
+  "HT1": 2,
+  "HT2": 2,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "muntelier_lowenberg": {
+  "HT1": 2,
+  "HT2": 2,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "muntschemier": {
+  "HT1": 1,
+  "HT2": 1,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "murten": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 2
+ },
  "neuchatel": {
   "HT1": 0,
   "HT2": 0,
@@ -377,6 +657,13 @@
   "HT4": 0,
   "HT5": 5
  },
+ "noiraigue": {
+  "HT1": 2,
+  "HT2": 2,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
  "olten": {
   "HT1": 13,
   "HT2": 25,
@@ -387,6 +674,34 @@
  "olten_hammer": {
   "HT1": 0,
   "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "onnens_bonvillars": {
+  "HT1": 1,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "pensier": {
+  "HT1": 1,
+  "HT2": 2,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "riedbach": {
+  "HT1": 4,
+  "HT2": 7,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 2
+ },
+ "rosshausern": {
+  "HT1": 4,
+  "HT2": 2,
   "HT3": 0,
   "HT4": 0,
   "HT5": 0
@@ -405,9 +720,30 @@
   "HT4": 0,
   "HT5": 0
  },
+ "saint_blaise_cff": {
+  "HT1": 0,
+  "HT2": 4,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 1
+ },
+ "saint_blaise_lac": {
+  "HT1": 3,
+  "HT2": 2,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
  "schonenwerd": {
   "HT1": 0,
   "HT2": 2,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 1
+ },
+ "serrieres": {
+  "HT1": 3,
+  "HT2": 3,
   "HT3": 0,
   "HT4": 0,
   "HT5": 1
@@ -418,6 +754,13 @@
   "HT3": 0,
   "HT4": 0,
   "HT5": 17
+ },
+ "sugiez": {
+  "HT1": 2,
+  "HT2": 2,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
  },
  "szu__berghof": {
   "HT1": 0,
@@ -488,6 +831,27 @@
   "HT3": 0,
   "HT4": 0,
   "HT5": 2
+ },
+ "travers": {
+  "HT1": 0,
+  "HT2": 3,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 2
+ },
+ "tuscherz": {
+  "HT1": 4,
+  "HT2": 4,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 2
+ },
+ "twann": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
  },
  "vereina__klosters_platz": {
   "HT1": 3,
@@ -565,6 +929,13 @@
   "HT3": 0,
   "HT4": 0,
   "HT5": 0
+ },
+ "zihlbruecke": {
+  "HT1": 1,
+  "HT2": 1,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 2
  },
  "zofingen": {
   "HT1": 2,

@@ -1,0 +1,71 @@
+{
+"plan": "saint_blaise_lac",
+"befunde": [
+{
+"regel": "VB1",
+"x": 475.4,
+"y": 134.0,
+"text": "OSM-Weiche 29385653 ohne Abzweig im Plan",
+"osm": 29385653
+},
+{
+"regel": "VB1",
+"x": 873.3,
+"y": 134.0,
+"text": "OSM-Weiche 29385652 ohne Abzweig im Plan",
+"osm": 29385652
+},
+{
+"regel": "VB1",
+"x": 845.4,
+"y": 110.0,
+"text": "OSM-Weiche 632380557 ohne Abzweig im Plan",
+"osm": 632380557
+},
+{
+"regel": "VB2",
+"x": 390.0,
+"y": 134.0,
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+"ways": [
+36739886,
+109460902,
+380141993,
+1043513365
+],
+"farben": [
+"gruen"
+]
+},
+{
+"regel": "VB2",
+"x": 637.7,
+"y": 134.0,
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+"ways": [
+36739886,
+109460902,
+380141993,
+1043513365
+],
+"farben": [
+"gruen"
+]
+},
+{
+"regel": "VD1",
+"x": 513.8,
+"y": 134.0,
+"text": "zwei Gleise 17 px aufeinander"
+}
+],
+"info": {
+"dkw_osm_unvollstaendig": [],
+"gleise": 2,
+"knoten_plan": 2,
+"dkw_plan": 0,
+"knoten_osm": 3,
+"versatz_y": 0.0,
+"netz_auf_plan": 0.3
+}
+}

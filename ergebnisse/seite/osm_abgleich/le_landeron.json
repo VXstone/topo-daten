@@ -1,0 +1,132 @@
+{
+"plan": "le_landeron",
+"befunde": [
+{
+"regel": "VB1",
+"x": 1309.6,
+"y": 134.0,
+"text": "OSM-Weiche 632541285 ohne Abzweig im Plan",
+"osm": 632541285
+},
+{
+"regel": "VB1",
+"x": 1348.5,
+"y": 158.0,
+"text": "OSM-Weiche 468396891 ohne Abzweig im Plan",
+"osm": 468396891
+},
+{
+"regel": "VB2",
+"x": 436.3,
+"y": 158.0,
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+"ways": [
+39832534,
+39832535,
+528742560,
+528742569,
+886128194,
+886128195,
+1052385716
+],
+"farben": [
+"gruen",
+"schwarz"
+]
+},
+{
+"regel": "VB2",
+"x": 470.1,
+"y": 134.0,
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+"ways": [
+39136487,
+39832532,
+39832533,
+39832535,
+886128195
+],
+"farben": [
+"gruen",
+"schwarz"
+]
+},
+{
+"regel": "VB2",
+"x": 771.7,
+"y": 134.0,
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+"ways": [
+39136487,
+39832532,
+39832533
+],
+"farben": [
+"gruen",
+"schwarz"
+]
+},
+{
+"regel": "VB2",
+"x": 805.6,
+"y": 158.0,
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+"ways": [
+39832534,
+39832535,
+528742560,
+528742569,
+886128194,
+886128195,
+1052385716
+],
+"farben": [
+"gruen",
+"schwarz"
+]
+},
+{
+"regel": "VB2",
+"x": 510.0,
+"y": 134.0,
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+"ways": [
+39136487,
+39832532,
+39832533
+],
+"farben": [
+"gruen"
+]
+},
+{
+"regel": "VB2",
+"x": 757.7,
+"y": 134.0,
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+"ways": [
+39136487,
+39832532,
+39832533
+],
+"farben": [
+"gruen"
+]
+},
+{
+"regel": "VD1",
+"x": 633.9,
+"y": 134.0,
+"text": "zwei Gleise 17 px aufeinander"
+}
+],
+"info": {
+"dkw_osm_unvollstaendig": [],
+"gleise": 6,
+"knoten_plan": 6,
+"dkw_plan": 0,
+"knoten_osm": 8,
+"versatz_y": 0.0,
+"netz_auf_plan": 0.48
+}
+}

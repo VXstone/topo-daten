@@ -1,0 +1,24 @@
+{
+ "zaehl": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "befunde": [
+  {
+   "regel": "_info",
+   "x": 0,
+   "y": 0,
+   "text": "Fahrwege: 2/6 Ziele im Plan gefunden, OSM 0, Plan 0",
+   "ohne_lage": [
+    "Abgang 210 Biel (632541225)",
+    "Abgang 210 Biel (632541226)",
+    "Gl. 709",
+    "Gl. 809"
+   ]
+  }
+ ],
+ "osm_abgleich": {}
+}

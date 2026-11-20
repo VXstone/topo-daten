@@ -1,0 +1,46 @@
+{
+ "zaehl": {
+  "HT1": 0,
+  "HT2": 2,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "befunde": [
+  {
+   "regel": "HT2",
+   "x": 436.3,
+   "y": 134.0,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    108258346,
+    108258347
+   ]
+  },
+  {
+   "regel": "HT2",
+   "x": 470.1,
+   "y": 110.0,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    27821630,
+    41821121
+   ]
+  },
+  {
+   "regel": "_info",
+   "x": 0,
+   "y": 0,
+   "text": "Fahrwege: 4/8 Ziele im Plan gefunden, OSM 2, Plan 2",
+   "ohne_lage": [
+    "Abgang 220 Ins (9598269749)",
+    "Abgang 220 Ins (9598269750)",
+    "Gl. 132",
+    "Gl. 232"
+   ]
+  }
+ ],
+ "osm_abgleich": {
+  "VB2": 2
+ }
+}

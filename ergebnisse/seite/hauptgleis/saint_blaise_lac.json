@@ -1,0 +1,71 @@
+{
+ "zaehl": {
+  "HT1": 3,
+  "HT2": 2,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "befunde": [
+  {
+   "regel": "HT1",
+   "x": 475.4,
+   "y": 134.0,
+   "text": "OSM-Weiche 29385653 ohne Abzweig im Plan",
+   "osm": 29385653
+  },
+  {
+   "regel": "HT1",
+   "x": 873.3,
+   "y": 134.0,
+   "text": "OSM-Weiche 29385652 ohne Abzweig im Plan",
+   "osm": 29385652
+  },
+  {
+   "regel": "HT1",
+   "x": 845.4,
+   "y": 110.0,
+   "text": "OSM-Weiche 632380557 ohne Abzweig im Plan",
+   "osm": 632380557
+  },
+  {
+   "regel": "HT2",
+   "x": 390.0,
+   "y": 134.0,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    36739886,
+    109460902,
+    380141993,
+    1043513365
+   ]
+  },
+  {
+   "regel": "HT2",
+   "x": 637.7,
+   "y": 134.0,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    36739886,
+    109460902,
+    380141993,
+    1043513365
+   ]
+  },
+  {
+   "regel": "_info",
+   "x": 0,
+   "y": 0,
+   "text": "Fahrwege: 2/4 Ziele im Plan gefunden, OSM 1, Plan 1",
+   "ohne_lage": [
+    "Abgang 220 Ins (421816137)",
+    "Gl. 1"
+   ]
+  }
+ ],
+ "osm_abgleich": {
+  "VB1": 3,
+  "VB2": 2,
+  "VD1": 1
+ }
+}

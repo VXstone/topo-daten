@@ -1,0 +1,47 @@
+{
+"plan": "onnens_bonvillars",
+"befunde": [
+{
+"regel": "VA1",
+"x": 667.3,
+"y": 123.2,
+"text": "OSM-DKW 1953027582 im Plan nicht als DKW gezeichnet",
+"osm": 1953027582
+},
+{
+"regel": "VA2",
+"x": 655.3,
+"y": 109.4,
+"text": "im Plan als DKW gezeichnet, in OSM keine DKW/EKW in der Nähe"
+},
+{
+"regel": "VB1",
+"x": 634.2,
+"y": 171.2,
+"text": "OSM-Weiche 1952965095 ohne Abzweig im Plan",
+"osm": 1952965095
+},
+{
+"regel": "VB1",
+"x": 704.2,
+"y": 123.2,
+"text": "OSM-Weiche 1953027687 ohne Abzweig im Plan",
+"osm": 1953027687
+},
+{
+"regel": "VD1",
+"x": 641.4,
+"y": 171.2,
+"text": "zwei Gleise 14 px aufeinander"
+}
+],
+"info": {
+"dkw_osm_unvollstaendig": [],
+"gleise": 16,
+"knoten_plan": 11,
+"dkw_plan": 1,
+"knoten_osm": 14,
+"versatz_y": 0.0,
+"netz_auf_plan": 0.89
+}
+}

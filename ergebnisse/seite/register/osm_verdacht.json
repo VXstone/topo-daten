@@ -11,6 +11,36 @@
  },
  {
   "code": "OG",
+  "abk": "AUV",
+  "text": "Auvernier: Gleis mit Perron laut SBB 2/3 ohne Perron-ref in OSM (SBB 1/2/3 · OSM 1)"
+ },
+ {
+  "code": "OG",
+  "abk": "AV",
+  "text": "Avenches: Gleis mit Perron laut SBB 1/2 ohne Perron-ref in OSM (SBB 1/2 · OSM Quai 1/Quai 2)"
+ },
+ {
+  "code": "OG",
+  "abk": "BDR",
+  "text": "Boudry: Gleis mit Perron laut SBB 2/3 ohne Perron-ref in OSM (SBB 2/3 · OSM 1)"
+ },
+ {
+  "code": "OG",
+  "abk": "CLB",
+  "text": "Colombier NE: Gleis mit Perron laut SBB 3 ohne Perron-ref in OSM (SBB 1/2/3 · OSM 1/2)"
+ },
+ {
+  "code": "OG",
+  "abk": "GOR",
+  "text": "Gorgier-St-Aubin: Gleis mit Perron laut SBB 2/3 ohne Perron-ref in OSM (SBB 1/2/3 · OSM 1)"
+ },
+ {
+  "code": "OG",
+  "abk": "HGV",
+  "text": "Les Hauts-Geneveys: Gleis mit Perron laut SBB 2 ohne Perron-ref in OSM (SBB 1/2 · OSM 1)"
+ },
+ {
+  "code": "OG",
   "abk": "INS",
   "text": "Ins: Gleis mit Perron laut SBB 3/4 ohne Perron-ref in OSM (SBB 3/4 · OSM 1)"
  },
@@ -18,6 +48,11 @@
   "code": "OG",
   "abk": "KF",
   "text": "Konolfingen: Gleis mit Perron laut SBB 2 ohne Perron-ref in OSM (SBB 2/3/4/5/6 · OSM 1/3/4/5/6)"
+ },
+ {
+  "code": "OG",
+  "abk": "LD",
+  "text": "Le Landeron: Gleis mit Perron laut SBB 2/3 ohne Perron-ref in OSM (SBB 1/2/3 · OSM 1)"
  },
  {
   "code": "OU",
@@ -43,6 +78,11 @@
   "code": "OL",
   "abk": "SO",
   "text": "Solothurn: Linie SBB 292 (km 0.0) nicht unter den OSM-Linien im Plan (410, 415, 421)"
+ },
+ {
+  "code": "OL",
+  "abk": "TWN",
+  "text": "Twann: Linie SBB 9210 (km 95.9766) nicht unter den OSM-Linien im Plan (210)"
  },
  {
   "code": "OG",

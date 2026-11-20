@@ -1,0 +1,147 @@
+{
+ "zaehl": {
+  "HT1": 4,
+  "HT2": 7,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 2
+ },
+ "befunde": [
+  {
+   "regel": "HT1",
+   "x": 570.8,
+   "y": 134.0,
+   "text": "OSM-Weiche 1873340863 ohne Abzweig im Plan",
+   "osm": 1873340863
+  },
+  {
+   "regel": "HT1",
+   "x": 999.9,
+   "y": 110.0,
+   "text": "OSM-Weiche 29383735 ohne Abzweig im Plan",
+   "osm": 29383735
+  },
+  {
+   "regel": "HT1",
+   "x": 965.9,
+   "y": 134.0,
+   "text": "OSM-Weiche 5602754263 ohne Abzweig im Plan",
+   "osm": 5602754263
+  },
+  {
+   "regel": "HT1",
+   "x": 997.8,
+   "y": 110.0,
+   "text": "OSM-Weiche 5602754264 ohne Abzweig im Plan",
+   "osm": 5602754264
+  },
+  {
+   "regel": "HT2",
+   "x": 436.3,
+   "y": 134.0,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    176851504,
+    176851505,
+    176855586,
+    586391657
+   ]
+  },
+  {
+   "regel": "HT2",
+   "x": 470.1,
+   "y": 110.0,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    176855586,
+    586391656
+   ]
+  },
+  {
+   "regel": "HT2",
+   "x": 771.7,
+   "y": 110.0,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    176855586,
+    586391656
+   ]
+  },
+  {
+   "regel": "HT2",
+   "x": 805.6,
+   "y": 134.0,
+   "text": "Gleise berühren sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    176851504,
+    176851505,
+    176855586,
+    586391657
+   ]
+  },
+  {
+   "regel": "HT2",
+   "x": 797.6,
+   "y": 134.0,
+   "text": "Gleise berühren sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    176851504,
+    176851505,
+    176855586,
+    586391657
+   ]
+  },
+  {
+   "regel": "HT2",
+   "x": 831.4,
+   "y": 110.0,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    176855586,
+    586391656
+   ]
+  },
+  {
+   "regel": "HT2",
+   "x": 530.0,
+   "y": 134.0,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    176851504,
+    176851505,
+    176855586,
+    586391657
+   ]
+  },
+  {
+   "regel": "HT5",
+   "x": 665.8,
+   "y": 134.0,
+   "art": "kuenstlich",
+   "osm": -1061,
+   "text": "Gleisende -1061 am Planrand: in OSM läuft das Gleis im Plan weiter (künstlicher Schnitt, Gleis fehlt dazwischen)"
+  },
+  {
+   "regel": "HT5",
+   "x": 518.0,
+   "y": 122.0,
+   "text": "Fahrweg Abgang 220 Kerzers (1873393558) ↔ Gl. 2 im Plan, nicht in OSM",
+   "von": "Abgang 220 Kerzers (1873393558)",
+   "nach": "Gl. 2",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "_info",
+   "x": 0,
+   "y": 0,
+   "text": "Fahrwege: 6/7 Ziele im Plan gefunden, OSM 10, Plan 11",
+   "ohne_lage": [
+    "Gl. 208"
+   ]
+  }
+ ],
+ "osm_abgleich": {
+  "VB1": 4,
+  "VB2": 7
+ }
+}

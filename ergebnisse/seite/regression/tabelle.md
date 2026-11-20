@@ -1,9 +1,42 @@
-147 Pläne, 2 geändert: 2 gleichwertig
+147 Pläne, 35 geändert: 1 Fehler? Topologie, 16 gleichwertig, 1 vermutlich besser, 17 schlechter?
 
 | Plan | Gruppe | Basis | Stellen | Einordnung | Kennzahlen alt→neu | G0 | HT | letzte Änderung |
 |---|---|---|---|---|---|---|---|---|
-| zofingen | Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil | bestätigt 2026-11-08 | 26 | gleichwertig | OSM VA2 2, VB1 3, VD1 1 (kein Alt-Stand) | GG 1 | HT1 2 | 2026-11-17T21:57 |
+| region_ne | Region | veröffentlicht | 35 | Fehler? Topologie | G2 35→32, G5 1→2, G7 0→13, GG 2→17, GS 1→3, T7 6→5, W53 8→9, W55 5→4 (Wunsch-Summe -5) | **GS 3 (Basis 1)** · **GG 17 (Basis 2)** · GQ 1 · **GT 6 (Basis 4)** | – | 2026-11-19T14:25 |
+| bole | NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier | Archivbeginn (Abnahme 2026-10-20) | 3 | schlechter? | W56 6→7 (Wunsch-Summe +3) · OSM VB1 1, VB2 2, VC1 1 (kein Alt-Stand) | 0 | **HT2 2 (Basis 0)** · **HT3 1 (Basis 0)** | 2026-11-05T20:29 |
+| les_hauts_geneveys | NE 8 · Neuchâtel – La Chaux-de-Fonds | Archivbeginn (Abnahme 2026-10-20) | 2 | schlechter? | T7 2→4 (Wunsch-Summe +16) · OSM VB2 1, VD1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-05T20:29 |
+| saint_blaise_lac | NE 1 · Neuchâtel – Ins – Kerzers – Bern | Archivbeginn (Abnahme 2026-10-15) | 1 | schlechter? | T7 2→4 (Wunsch-Summe +16) · OSM VB1 3, VB2 2, VD1 1 (kein Alt-Stand) | 0 | **HT1 3 (Basis 0)** · **HT2 2 (Basis 0)** | 2026-11-05T20:29 |
+| zihlbruecke | NE 1 · Neuchâtel – Ins – Kerzers – Bern | Archivbeginn (Abnahme 2026-10-15) | 1 | schlechter? | T7 0→1 (Wunsch-Summe +8) · OSM VB1 1, VB2 1 (kein Alt-Stand) | 0 | **HT1 1 (Basis 0)** · **HT2 1 (Basis 0)** · **HT5 2 (Basis 0)** | 2026-11-05T20:29 |
+| muntschemier | NE 1 · Neuchâtel – Ins – Kerzers – Bern | Archivbeginn (Abnahme 2026-10-16) | 1 | schlechter? | T7 2→4 (Wunsch-Summe +16) · OSM VB1 3, VB2 2, VD1 1 (kein Alt-Stand) | 0 | **HT1 1 (Basis 0)** · **HT2 1 (Basis 0)** | 2026-11-05T20:29 |
+| gummenen | NE 1 · Neuchâtel – Ins – Kerzers – Bern | Archivbeginn (Abnahme 2026-10-17) | 1 | schlechter? | T7 0→2 (Wunsch-Summe +16) · OSM VB1 1, VB2 1 (kein Alt-Stand) | 0 | **HT1 1 (Basis 0)** · **HT2 1 (Basis 0)** | 2026-11-05T20:29 |
+| sugiez | NE 2 · Ins – Sugiez – Murten | Archivbeginn (Abnahme 2026-10-16) | 1 | schlechter? | T7 2→4 (Wunsch-Summe +16) · OSM VB1 2, VB2 2, VD1 1 (kein Alt-Stand) | 0 | **HT1 2 (Basis 0)** · **HT2 2 (Basis 0)** | 2026-11-05T20:29 |
+| kallnach | NE 3 · Lyss – Kerzers – Murten – Payerne | Archivbeginn (Abnahme 2026-10-20) | 1 | schlechter? | T7 2→4 (Wunsch-Summe +16) · OSM VD1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-05T20:29 |
+| munchenwiler_courgevaux | NE 4 · Murten – Fribourg | Archivbeginn (Abnahme 2026-10-20) | 1 | schlechter? | T7 2→4 (Wunsch-Summe +16) · OSM VB1 2, VB2 2, VD1 1 (kein Alt-Stand) | 0 | **HT1 2 (Basis 0)** · **HT2 2 (Basis 0)** | 2026-11-05T20:29 |
+| courtepin | NE 4 · Murten – Fribourg | Archivbeginn (Abnahme 2026-10-20) | 1 | schlechter? | T7 2→4 (Wunsch-Summe +16) · OSM VB1 1, VB2 2, VD1 1 (kein Alt-Stand) | 0 | **HT1 1 (Basis 0)** · **HT2 2 (Basis 0)** | 2026-11-05T20:29 |
+| pensier | NE 4 · Murten – Fribourg | Archivbeginn (Abnahme 2026-10-20) | 1 | schlechter? | T7 2→4 (Wunsch-Summe +16) · OSM VB1 1, VB2 2, VD1 1 (kein Alt-Stand) | 0 | **HT1 1 (Basis 0)** · **HT2 2 (Basis 0)** | 2026-11-05T20:29 |
+| ligerz | NE 5 · Neuchâtel – Biel | Archivbeginn (Abnahme 2026-10-17) | 1 | schlechter? | T7 0→1 (Wunsch-Summe +8) · OSM VB1 2, VB2 1 (kein Alt-Stand) | 0 | **HT1 2 (Basis 0)** · **HT2 1 (Basis 0)** | 2026-11-05T20:29 |
+| champ_du_moulin | NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier | Archivbeginn (Abnahme 2026-10-15) | 1 | schlechter? | T7 2→4 (Wunsch-Summe +16) · OSM VB1 1, VB2 1, VD1 1 (kein Alt-Stand) | 0 | **HT1 1 (Basis 0)** · **HT2 1 (Basis 0)** | 2026-11-05T20:29 |
+| noiraigue | NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier | Archivbeginn (Abnahme 2026-10-15) | 1 | schlechter? | T7 2→4 (Wunsch-Summe +16) · OSM VB1 2, VB2 2, VD1 1 (kein Alt-Stand) | 0 | **HT1 2 (Basis 0)** · **HT2 2 (Basis 0)** | 2026-11-05T20:29 |
+| couvet | NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier | Archivbeginn (Abnahme 2026-10-20) | 1 | schlechter? | T7 2→4 (Wunsch-Summe +16) · OSM VD1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-05T20:29 |
+| motiers | NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier | Archivbeginn (Abnahme 2026-10-20) | 1 | schlechter? | T7 2→4 (Wunsch-Summe +16) · OSM VB1 1, VB2 1, VD1 1 (kein Alt-Stand) | 0 | **HT1 1 (Basis 0)** · **HT2 1 (Basis 0)** | 2026-11-05T20:29 |
+| les_geneveys_sur_coffrane | NE 8 · Neuchâtel – La Chaux-de-Fonds | Archivbeginn (Abnahme 2026-10-19) | 1 | schlechter? | T7 2→4 (Wunsch-Summe +16) · OSM VB1 2, VB2 2, VD1 1 (kein Alt-Stand) | 0 | **HT1 2 (Basis 0)** · **HT2 2 (Basis 0)** | 2026-11-05T20:29 |
+| auvernier | NE 6 · Neuchâtel – Yverdon | Archivbeginn (Abnahme 2026-10-20) | 14 | gleichwertig | OSM VB1 1, VD1 1 (kein Alt-Stand) | GG 1 · GT 1 | **HT5 4 (Basis 0)** | 2026-11-05T20:29 |
+| colombier | NE 6 · Neuchâtel – Yverdon | Archivbeginn (Abnahme 2026-10-16) | 7 | gleichwertig | OSM VC1 3 (kein Alt-Stand) | 0 | **HT3 3 (Basis 0)** · **HT5 1 (Basis 0)** | 2026-11-05T20:29 |
+| twann | NE 5 · Neuchâtel – Biel | Archivbeginn (Abnahme 2026-10-15) | 5 | gleichwertig | OSM ok (kein Alt-Stand) | 0 | 0 | 2026-11-05T20:29 |
+| cornaux | NE 5 · Neuchâtel – Biel | Archivbeginn (Abnahme 2026-10-15) | 4 | gleichwertig | OSM VB1 1, VB2 2, VC1 1, VD1 4 (kein Alt-Stand) | GS 1 · GG 4 | **HT2 1 (Basis 0)** · **HT3 1 (Basis 0)** · **HT5 5 (Basis 0)** | 2026-11-05T20:29 |
+| travers | NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier | Archivbeginn (Abnahme 2026-10-15) | 3 | gleichwertig | OSM VB2 3 (kein Alt-Stand) | 0 | **HT2 3 (Basis 0)** · **HT5 2 (Basis 0)** | 2026-11-05T20:29 |
 | rothrist | Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil | Archivbeginn (Abnahme 2026-10-29) | 2 | gleichwertig | OSM VA2 1, VB1 4, VB2 6 (kein Alt-Stand) | GS 2 · GG 1 · GQ 1 · GT 2 | HT1 2 · HT2 5 · HT5 6 | 2026-11-17T21:57 |
+| muntelier_lowenberg | NE 2 · Ins – Sugiez – Murten | Archivbeginn (Abnahme 2026-10-16) | 2 | gleichwertig | OSM VA1 1, VB1 6, VB2 3 (kein Alt-Stand) | 0 | **HT1 2 (Basis 0)** · **HT2 2 (Basis 0)** | 2026-11-05T20:29 |
+| bevaix | NE 6 · Neuchâtel – Yverdon | Archivbeginn (Abnahme 2026-10-20) | 2 | gleichwertig | OSM VB1 4, VB2 4 (kein Alt-Stand) | 0 | **HT1 4 (Basis 0)** · **HT2 3 (Basis 0)** · **HT5 5 (Basis 0)** | 2026-11-05T20:29 |
+| gorgier_saint_aubin | NE 6 · Neuchâtel – Yverdon | Archivbeginn (Abnahme 2026-10-20) | 2 | gleichwertig | OSM VB1 5, VB2 4, VD1 2 (kein Alt-Stand) | 0 | **HT1 3 (Basis 0)** · **HT2 3 (Basis 0)** · **HT5 5 (Basis 0)** | 2026-11-05T20:29 |
+| chambrelien | NE 8 · Neuchâtel – La Chaux-de-Fonds | Archivbeginn (Abnahme 2026-10-20) | 2 | gleichwertig | OSM VA1 1, VB1 1 (kein Alt-Stand) | 0 | **HT1 1 (Basis 0)** · **HT5 1 (Basis 0)** | 2026-11-05T20:29 |
+| marin_epagnier | NE 1 · Neuchâtel – Ins – Kerzers – Bern | Archivbeginn (Abnahme 2026-10-15) | 1 | gleichwertig | OSM ok (kein Alt-Stand) | 0 | 0 | 2026-11-05T20:29 |
+| riedbach | NE 1 · Neuchâtel – Ins – Kerzers – Bern | Archivbeginn (Abnahme 2026-10-20) | 1 | gleichwertig | OSM VB1 4, VB2 7 (kein Alt-Stand) | 0 | **HT1 4 (Basis 0)** · **HT2 7 (Basis 0)** · **HT5 2 (Basis 0)** | 2026-11-05T20:29 |
+| avenches | NE 3 · Lyss – Kerzers – Murten – Payerne | Archivbeginn (Abnahme 2026-10-19) | 1 | gleichwertig | OSM VB1 6, VB2 2, VD1 1 (kein Alt-Stand) | 0 | **HT1 3 (Basis 0)** · **HT2 2 (Basis 0)** | 2026-11-05T20:29 |
+| domdidier | NE 3 · Lyss – Kerzers – Murten – Payerne | Archivbeginn (Abnahme 2026-10-19) | 1 | gleichwertig | OSM VB1 5, VB2 3 (kein Alt-Stand) | 0 | **HT1 2 (Basis 0)** · **HT2 2 (Basis 0)** | 2026-11-05T20:29 |
+| le_landeron | NE 5 · Neuchâtel – Biel | Archivbeginn (Abnahme 2026-10-20) | 1 | gleichwertig | OSM VB1 2, VB2 6, VD1 1 (kein Alt-Stand) | 0 | **HT1 2 (Basis 0)** · **HT2 6 (Basis 0)** · **HT5 5 (Basis 0)** | 2026-11-05T20:29 |
+| grandson | NE 6 · Neuchâtel – Yverdon | Archivbeginn (Abnahme 2026-10-20) | 1 | gleichwertig | OSM VB1 5, VB2 2 (kein Alt-Stand) | 0 | **HT1 5 (Basis 0)** · **HT2 2 (Basis 0)** · **HT5 1 (Basis 0)** | 2026-11-05T20:29 |
+| zofingen | Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil | bestätigt 2026-11-08 | 26 | vermutlich besser | W59 11→10 · OSM VA2 2, VB1 3, VD1 1 (kein Alt-Stand) | GG 1 | HT1 2 | 2026-11-17T21:57 |
 
 Grundprüfung G0 aller Pläne: `ergebnisse/seite/grundpruefung/grundpruefung.md`
 Hauptgleis-Topologie HT aller Pläne mit Netzmodell: `ergebnisse/seite/hauptgleis/hauptgleis.md`

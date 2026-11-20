@@ -1,0 +1,82 @@
+{
+"plan": "saint_blaise_cff",
+"befunde": [
+{
+"regel": "VB2",
+"x": 436.3,
+"y": 134.0,
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+"ways": [
+32241546,
+32737060,
+32737076,
+32737077,
+580083440
+],
+"farben": [
+"gruen",
+"schwarz"
+]
+},
+{
+"regel": "VB2",
+"x": 470.1,
+"y": 110.0,
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+"ways": [
+37136791,
+37136792,
+39127419,
+39127420,
+580083435
+],
+"farben": [
+"gruen",
+"schwarz"
+]
+},
+{
+"regel": "VB2",
+"x": 771.7,
+"y": 110.0,
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+"ways": [
+37136791,
+37136792,
+39127419,
+39127420,
+580083435
+],
+"farben": [
+"gruen",
+"schwarz"
+]
+},
+{
+"regel": "VB2",
+"x": 805.6,
+"y": 134.0,
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+"ways": [
+32241546,
+32737060,
+32737076,
+32737077,
+580083440
+],
+"farben": [
+"gruen",
+"schwarz"
+]
+}
+],
+"info": {
+"dkw_osm_unvollstaendig": [],
+"gleise": 4,
+"knoten_plan": 4,
+"dkw_plan": 0,
+"knoten_osm": 4,
+"versatz_y": 0.0,
+"netz_auf_plan": 0.69
+}
+}
