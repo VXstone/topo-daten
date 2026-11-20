@@ -98,7 +98,7 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - [x] **T-SZU Testregion SZU** – 18.11. mittags, Commits 114156c/1d587e8, Seite v155 (Befundliste in Abschnitt 6)
 - [x] **HT Hauptgleis-Topologie als Sperre (REGELN 0.1, Kopf «HT»)** – 18.11. spät, `code/hauptgleis.py`, Basis gesetzt (Nachtrag HT); Seite nicht neu veröffentlicht (kein Plan geändert)
 - [x] **K0 Sichtbar: Ins im Regionalplan + Zwischengeraden im Bahnhofplan** – 19.11. nachmittags, Commits 83a0dc2/64a3fa4, Seite v156 (Nachtrag K0)
-- [ ] **K0b Zwischengeraden Rest (REGELN 1.9)** (klein) – Zweisimmen (dünn→dick am Knick), Solothurn (Weiche am Knick, doppelter Abstand), Selnau (ZL ~4 Ebenen, nur auf Daniels Antwort); Liste `ergebnisse/seite/zwischengeraden.md` – vor oder nach T-SZU1, wie Daniel will
+- [x] **K0b Zwischengeraden Rest (REGELN 1.9)** (gerechnet 20.11., Veröffentlichen wartet auf Daniel; Selnau offen) – Zweisimmen (dünn→dick am Knick), Solothurn (Weiche am Knick, doppelter Abstand), Selnau (ZL ~4 Ebenen, nur auf Daniels Antwort); Liste `ergebnisse/seite/zwischengeraden.md` – vor oder nach T-SZU1, wie Daniel will
 - [ ] **T-SZU1 DKW aus 4-Arm-Weiche (REGELN 2.4) und Güterverkehr schwarz (REGELN 1.21)** (klein, Entscheid Daniel 18.11.) – nach K0
 - [ ] **T-SZU2 Achse knickt im Fenster (REGELN 2.15), Zielplan Giesshübel · Saalsporthalle** (Entscheid Daniel 18.11.: Variante C) – nach S2b/R4/S3 oder wenn Daniel es vorzieht
 - [ ] **S2b Konolfingen Gleisfeld West** (Zielbild Daniel 18.11.), **R4 Rothrist im Regionalplan** und **S3 Aarau
@@ -649,3 +649,14 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   (Aarau 4 → 0; Rest: Bern/Basel fest, Prüfstand 4, Zweisimmen 1 → K0b). Aarau G0 GT 5→1, Region Olten GT 10→6.
 - Regression v156: 4 Pläne geändert – aarau/region (gewollt, nur Aarau-Stellen im Differenzbild); zofingen/rothrist unverändert
   seit 17.11. (Abstand zur Abnahme, nicht K0). Lokal geprüft: in Region Olten ändert die Regel ausser Aarau keinen Plan.
+
+### 20.11.2026 ~17:35 – Schritt K0b gerechnet (Commits 5fe545e, f5763a3, 0d1deb2; Seite noch nicht veröffentlicht)
+- REGELN 1.9 erweitert (cfg `zg_klassen`, `zg_cbogen`, `zg_abzweig`): Verkettung über dünn↔dick (Grenze in die Mitte der neuen Schräge,
+  Zweisimmen jy8r), steiler S-Bogen (C) zählt als Schräge, Weiche am Knick → Abzweig direkt aus der Schräge (Solothurn xke0).
+- Kettenende, wo der dicke Fahrweg über ein dünnes Gleis weiterläuft: nicht kürzen und Schräge an dieses Ende rücken (sonst Lücke
+  bzw. G0 GG Solothurn); nur dann, sonst mittig (erste Fassung verschob Aarau – behoben).
+- Regression 0d1deb2: 5 geändert – solothurn (gewollt; G2 3→4 = Abzweig ohne Ausrundung aus der Schräge, so gewünscht),
+  mob__zweisimmen/region_mob besser (W53 −1, Wunsch −14), zofingen/rothrist alt (17.11.). G0-Sperre grün. ZG 10 → 9.
+- Offen: Veröffentlichen (Daniel fragen), Hinweise jy8r/xke0 danach beantworten. Selnau j9ou (ZL ~4 Ebenen): Frage an Daniel
+  mit Skizze im Chat 20.11. – bei «Ja» `zg_max_ebenen` nur für Gleiswechsel ohne Perron/Nummer auf 4,5 anheben (beide ZL Selnau).
+
