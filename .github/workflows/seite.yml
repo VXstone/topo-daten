@@ -102,7 +102,9 @@ jobs:
           set +e
           mkdir -p /tmp/vrnetz && tar xzf /tmp/seite/netz.tgz -C /tmp/vrnetz
           # laufende Bau-Läufe: deren Pläne sind nur «wartet», nicht rot (Code-Push startet plaene und regionen gleichzeitig)
-          L=$(for s in in_progress queued; do gh api "repos/${{ github.repository }}/actions/runs?status=$s&per_page=50" -q '.workflow_runs[].name' 2>/dev/null; done | grep -xE "plaene|regionen" | sort -u | paste -sd, -)
+          L=$(for s in in_progress queued pending waiting requested; do gh api "repos/${{ github.repository }}/actions/runs?status=$s&per_page=50" -q '.workflow_runs[]|select(.id != ${{ github.run_id }})|.name' 2>/dev/null; done | sort -u)
+          # ein weiterer seite-Lauf wartet schon (z. B. nach plaene): der prüft mit frischen Plänen – hier nur «wartet»
+          if echo "$L" | grep -qx seite; then L="plaene,regionen"; else L=$(echo "$L" | grep -xE "plaene|regionen" | paste -sd, -); fi
           echo "laufend: $L"
           python3 spurplan/code/bahnhofregister.py --selbsttest 2>&1 | tee /tmp/seite/register_selbsttest.txt
           st=${PIPESTATUS[0]}
