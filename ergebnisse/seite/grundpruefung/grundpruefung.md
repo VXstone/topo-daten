@@ -110,7 +110,7 @@
 | pensier | · | · | · | · | · | · | 24.0 |
 | region | 8 | 23 | 2 | 3 | 4 | 6 ↓10 | 10.08 |
 | region_mob | 3 | 3 | 1 | 3 | · | 0 ↓1 | 10.08 |
-| region_ne | **3** (Basis 1) | **17** (Basis 2) | 1 | · | · | **6** (Basis 4) | 10.08 |
+| region_ne | 1 | 2 | 1 | · | · | **5** (Basis 4) | 10.08 |
 | region_szu | 18 | 28 | 5 | · | · | 1 | 10.08 |
 | region_vereina | 1 | 5 | 2 | · | · | 2 | 10.08 |
 | riedbach | · | · | · | · | · | · | 24.0 |
@@ -155,32 +155,9 @@ Regeln: GS = Schnitt ohne DKW/Kreuzung/Niveautrennung; GG = Gleis auf Gleis; GQ 
 
 ## NEUE Befunde
 
-- **region_ne** GS: 1 → 3
-  - 887.1/1067.6: Gleise kreuzen sich (54°) ohne DKW, Kreuzung oder Niveautrennung
-  - -3211.3/1553.3: Gleise kreuzen sich (27°) ohne DKW, Kreuzung oder Niveautrennung
-  - 1856.7/-2439.3: Gleise kreuzen sich (60°) ohne DKW, Kreuzung oder Niveautrennung
-- **region_ne** GG: 2 → 17
-  - -3261.6/442.0: zwei Gleise 22 px aufeinander
-  - -3477.6/1851.2: zwei Gleise 19 px aufeinander
-  - -2875.0/338.3: zwei Gleise 18 px aufeinander
-  - 3098.5/617.6: zwei Gleise 24 px aufeinander
-  - 3089.8/622.6: zwei Gleise 24 px aufeinander
-  - -1314.2/-236.0: zwei Gleise 19 px aufeinander
-  - -1308.4/-227.7: zwei Gleise 19 px aufeinander
-  - -1980.0/-780.1: zwei Gleise 20 px aufeinander
-  - 2223.7/17.3: zwei Gleise 61 px aufeinander
-  - -1773.7/30.5: zwei Gleise 12 px aufeinander
-  - 628.0/-1491.9: zwei Gleise 15 px aufeinander
-  - 102.7/-978.6: zwei Gleise 21 px aufeinander
-  - 1456.9/787.8: zwei Gleise 18 px aufeinander
-  - 2161.4/-985.4: zwei Gleise 20 px aufeinander
-  - 2904.6/-1162.3: zwei Gleise 44 px aufeinander
-  - 2644.9/-712.4: zwei Gleise 18 px aufeinander
-  - -3494.2/1868.8: zwei Gleise 14 px aufeinander
-- **region_ne** GT: 4 → 6
-  - 3271.1/946.7: Treppe, Versatz 20.2 px
-  - 3281.1/944.0: Treppe, Versatz 20.2 px
-  - 3063.0/586.4: Treppe, Versatz 20.3 px
-  - 2613.3/-2994.9: Treppe, Versatz 20.4 px
-  - 696.0/-1550.3: Treppe, Versatz 20.1 px
-  - 700.0/-1540.7: Treppe, Versatz 20.2 px
+- **region_ne** GT: 4 → 5
+  - -2917.2/1671.1: Treppe, Versatz 20.2 px
+  - -2923.1/1662.5: Treppe, Versatz 20.2 px
+  - 655.3/-1344.4: Treppe, Versatz 20.2 px
+  - 659.3/-1334.8: Treppe, Versatz 20.2 px
+  - -752.7/-557.8: Treppe, Versatz 28.0 px

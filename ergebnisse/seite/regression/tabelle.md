@@ -1,8 +1,7 @@
-147 Pläne, 35 geändert: 1 Fehler? Topologie, 16 gleichwertig, 1 vermutlich besser, 17 schlechter?
+147 Pläne, 35 geändert: 18 schlechter?, 16 gleichwertig, 1 vermutlich besser
 
 | Plan | Gruppe | Basis | Stellen | Einordnung | Kennzahlen alt→neu | G0 | HT | letzte Änderung |
 |---|---|---|---|---|---|---|---|---|
-| region_ne | Region | veröffentlicht | 35 | Fehler? Topologie | G2 35→32, G5 1→2, G7 0→13, GG 2→17, GS 1→3, T7 6→5, W53 8→9, W55 5→4 (Wunsch-Summe -5) | **GS 3 (Basis 1)** · **GG 17 (Basis 2)** · GQ 1 · **GT 6 (Basis 4)** | – | 2026-11-20T21:23 |
 | bole | NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier | Archivbeginn (Abnahme 2026-10-20) | 3 | schlechter? | W56 6→7 (Wunsch-Summe +3) · OSM VB1 1, VB2 2, VC1 1 (kein Alt-Stand) | 0 | **HT2 2 (Basis 0)** · **HT3 1 (Basis 0)** | 2026-11-20T21:23 |
 | les_hauts_geneveys | NE 8 · Neuchâtel – La Chaux-de-Fonds | Archivbeginn (Abnahme 2026-10-20) | 2 | schlechter? | T7 2→4 (Wunsch-Summe +16) · OSM VB2 1, VD1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-20T21:23 |
 | saint_blaise_lac | NE 1 · Neuchâtel – Ins – Kerzers – Bern | Archivbeginn (Abnahme 2026-10-15) | 1 | schlechter? | T7 2→4 (Wunsch-Summe +16) · OSM VB1 3, VB2 2, VD1 1 (kein Alt-Stand) | 0 | **HT1 3 (Basis 0)** · **HT2 2 (Basis 0)** | 2026-11-20T21:23 |
@@ -20,6 +19,7 @@
 | couvet | NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier | Archivbeginn (Abnahme 2026-10-20) | 1 | schlechter? | T7 2→4 (Wunsch-Summe +16) · OSM VD1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-20T21:23 |
 | motiers | NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier | Archivbeginn (Abnahme 2026-10-20) | 1 | schlechter? | T7 2→4 (Wunsch-Summe +16) · OSM VB1 1, VB2 1, VD1 1 (kein Alt-Stand) | 0 | **HT1 1 (Basis 0)** · **HT2 1 (Basis 0)** | 2026-11-20T21:23 |
 | les_geneveys_sur_coffrane | NE 8 · Neuchâtel – La Chaux-de-Fonds | Archivbeginn (Abnahme 2026-10-19) | 1 | schlechter? | T7 2→4 (Wunsch-Summe +16) · OSM VB1 2, VB2 2, VD1 1 (kein Alt-Stand) | 0 | **HT1 2 (Basis 0)** · **HT2 2 (Basis 0)** | 2026-11-20T21:23 |
+| region_ne | Region | veröffentlicht | 41 | schlechter? | G2 35→32, T7 6→5, W53 8→10 (Wunsch-Summe +4) | GS 1 · GG 2 · GQ 1 · **GT 5 (Basis 4)** | – | 2026-11-20T21:23 |
 | auvernier | NE 6 · Neuchâtel – Yverdon | Archivbeginn (Abnahme 2026-10-20) | 14 | gleichwertig | OSM VB1 1, VD1 1 (kein Alt-Stand) | GG 1 · GT 1 | **HT5 4 (Basis 0)** | 2026-11-20T21:23 |
 | colombier | NE 6 · Neuchâtel – Yverdon | Archivbeginn (Abnahme 2026-10-16) | 7 | gleichwertig | OSM VC1 3 (kein Alt-Stand) | 0 | **HT3 3 (Basis 0)** · **HT5 1 (Basis 0)** | 2026-11-20T21:23 |
 | twann | NE 5 · Neuchâtel – Biel | Archivbeginn (Abnahme 2026-10-15) | 5 | gleichwertig | OSM ok (kein Alt-Stand) | 0 | 0 | 2026-11-20T21:23 |
