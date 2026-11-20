@@ -44,8 +44,8 @@
  {
   "key": "region_szu",
   "gruppe": "Region",
-  "summe": 54,
-  "W53": 9
+  "summe": 48,
+  "W53": 8
  },
  {
   "key": "basel",
@@ -60,13 +60,6 @@
   "summe": 27,
   "W53": 3,
   "W56": 3
- },
- {
-  "key": "szu__zurich_selnau",
-  "gruppe": "SZU · Bahnhöfe",
-  "summe": 24,
-  "W53": 2,
-  "W56": 4
  },
  {
   "key": "schonenwerd",
@@ -88,6 +81,13 @@
   "summe": 18,
   "W53": 0,
   "W56": 6
+ },
+ {
+  "key": "szu__zurich_selnau",
+  "gruppe": "SZU · Bahnhöfe",
+  "summe": 18,
+  "W53": 1,
+  "W56": 4
  },
  {
   "key": "solothurn",
