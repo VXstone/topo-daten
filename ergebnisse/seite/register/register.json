@@ -1,7 +1,7 @@
 {
  "_zweck": "Bahnhofregister (V3, 20.11.2026): jeder Bahnhof einmal, Schlüssel SBB-Abkürzung. Erzeugt von code/bahnhofregister.py im Workflow seite.",
  "code_stand": "5e32a01ec41b4bad4c69fbfafb7611ec3da483e2",
- "seite_commit": "edf65e1b8efa1e23284c8d0099513650abafa449",
+ "seite_commit": "b437895bb0f9023c074eeb23c04ee13bd2745746",
  "bahnhoefe": {
   "AA": {
    "abk": "AA",
@@ -6491,7 +6491,7 @@
    "fingerabdruck": "96cbc6cbf790",
    "quelle": "Werkstatt Olten",
    "workflow": "seite",
-   "commit": "edf65e1b8efa1e23284c8d0099513650abafa449",
+   "commit": "b437895bb0f9023c074eeb23c04ee13bd2745746",
    "art": "code",
    "regionalplan": true,
    "veraltet": false
@@ -6504,7 +6504,7 @@
    "fingerabdruck": "b9709d10c24d",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "edf65e1b8efa1e23284c8d0099513650abafa449",
+   "commit": "b437895bb0f9023c074eeb23c04ee13bd2745746",
    "art": "code",
    "regionalplan": true,
    "veraltet": false
@@ -6616,7 +6616,7 @@
    "fingerabdruck": "f4c0c95c3771",
    "quelle": "Repo-Bahnhof",
    "workflow": "plaene",
-   "commit": "5e32a01ec41b4bad4c69fbfafb7611ec3da483e2",
+   "commit": "b437895bb0f9023c074eeb23c04ee13bd2745746",
    "art": "code",
    "abk": [
     "KF"
@@ -6635,7 +6635,7 @@
    "fingerabdruck": "7aa471088ee2",
    "quelle": "Repo-Bahnhof",
    "workflow": "plaene",
-   "commit": "5e32a01ec41b4bad4c69fbfafb7611ec3da483e2",
+   "commit": "b437895bb0f9023c074eeb23c04ee13bd2745746",
    "art": "code",
    "abk": [
     "SO",
@@ -6658,7 +6658,7 @@
    "fingerabdruck": "63a183070fd8",
    "quelle": "Werkstatt Olten",
    "workflow": "seite",
-   "commit": "edf65e1b8efa1e23284c8d0099513650abafa449",
+   "commit": "b437895bb0f9023c074eeb23c04ee13bd2745746",
    "art": "code",
    "abk": [
     "OL",
@@ -6678,7 +6678,7 @@
    "fingerabdruck": "b60811cdcc15",
    "quelle": "Werkstatt Olten",
    "workflow": "seite",
-   "commit": "edf65e1b8efa1e23284c8d0099513650abafa449",
+   "commit": "b437895bb0f9023c074eeb23c04ee13bd2745746",
    "art": "code",
    "abk": [
     "OLH"
@@ -6697,7 +6697,7 @@
    "fingerabdruck": "8e28ff9dd913",
    "quelle": "Werkstatt Olten",
    "workflow": "seite",
-   "commit": "edf65e1b8efa1e23284c8d0099513650abafa449",
+   "commit": "b437895bb0f9023c074eeb23c04ee13bd2745746",
    "art": "code",
    "abk": [
     "ABO",
@@ -6718,7 +6718,7 @@
    "fingerabdruck": "f3b3b690291d",
    "quelle": "Werkstatt Olten",
    "workflow": "seite",
-   "commit": "edf65e1b8efa1e23284c8d0099513650abafa449",
+   "commit": "b437895bb0f9023c074eeb23c04ee13bd2745746",
    "art": "code",
    "abk": [
     "RTR"
@@ -6737,7 +6737,7 @@
    "fingerabdruck": "10ae3279d0ea",
    "quelle": "Werkstatt Olten",
    "workflow": "seite",
-   "commit": "edf65e1b8efa1e23284c8d0099513650abafa449",
+   "commit": "b437895bb0f9023c074eeb23c04ee13bd2745746",
    "art": "code",
    "abk": [
     "ZF",
@@ -6757,7 +6757,7 @@
    "fingerabdruck": "edba1ce8b230",
    "quelle": "Werkstatt Olten",
    "workflow": "seite",
-   "commit": "edf65e1b8efa1e23284c8d0099513650abafa449",
+   "commit": "b437895bb0f9023c074eeb23c04ee13bd2745746",
    "art": "code",
    "abk": [
     "SAF"
@@ -6776,7 +6776,7 @@
    "fingerabdruck": "1157b5c7a75f",
    "quelle": "Werkstatt Olten",
    "workflow": "seite",
-   "commit": "edf65e1b8efa1e23284c8d0099513650abafa449",
+   "commit": "b437895bb0f9023c074eeb23c04ee13bd2745746",
    "art": "code",
    "abk": [
     "DU"
@@ -6795,7 +6795,7 @@
    "fingerabdruck": "926cee699edd",
    "quelle": "Werkstatt Olten",
    "workflow": "seite",
-   "commit": "edf65e1b8efa1e23284c8d0099513650abafa449",
+   "commit": "b437895bb0f9023c074eeb23c04ee13bd2745746",
    "art": "code",
    "abk": [
     "DK",
@@ -6816,7 +6816,7 @@
    "fingerabdruck": "48e815acacdf",
    "quelle": "Werkstatt Olten",
    "workflow": "seite",
-   "commit": "edf65e1b8efa1e23284c8d0099513650abafa449",
+   "commit": "b437895bb0f9023c074eeb23c04ee13bd2745746",
    "art": "code",
    "abk": [
     "SCOE"
@@ -6835,7 +6835,7 @@
    "fingerabdruck": "e5f86ea0cd25",
    "quelle": "Werkstatt Olten",
    "workflow": "seite",
-   "commit": "edf65e1b8efa1e23284c8d0099513650abafa449",
+   "commit": "b437895bb0f9023c074eeb23c04ee13bd2745746",
    "art": "code",
    "abk": [
     "AA",
@@ -6855,7 +6855,7 @@
    "fingerabdruck": "a42c988c04bc",
    "quelle": "Werkstatt Olten",
    "workflow": "seite",
-   "commit": "edf65e1b8efa1e23284c8d0099513650abafa449",
+   "commit": "b437895bb0f9023c074eeb23c04ee13bd2745746",
    "art": "code",
    "abk": [
     "TK"
@@ -6874,7 +6874,7 @@
    "fingerabdruck": "f6ef742731cc",
    "quelle": "Werkstatt Olten",
    "workflow": "seite",
-   "commit": "edf65e1b8efa1e23284c8d0099513650abafa449",
+   "commit": "b437895bb0f9023c074eeb23c04ee13bd2745746",
    "art": "code",
    "abk": [
     "LF"
@@ -6893,7 +6893,7 @@
    "fingerabdruck": "6e780447e0b5",
    "quelle": "Werkstatt Olten",
    "workflow": "seite",
-   "commit": "edf65e1b8efa1e23284c8d0099513650abafa449",
+   "commit": "b437895bb0f9023c074eeb23c04ee13bd2745746",
    "art": "code",
    "abk": [
     "WBOL"
@@ -6955,7 +6955,7 @@
    "fingerabdruck": "c1e076701c0d",
    "quelle": "Repo-Bahnhof",
    "workflow": "plaene",
-   "commit": "5e32a01ec41b4bad4c69fbfafb7611ec3da483e2",
+   "commit": "b437895bb0f9023c074eeb23c04ee13bd2745746",
    "art": "code",
    "abk": [
     "NE",
@@ -7942,7 +7942,7 @@
    "fingerabdruck": "f3a899ea9b44",
    "quelle": "Repo-Bahnhof",
    "workflow": "plaene",
-   "commit": "5e32a01ec41b4bad4c69fbfafb7611ec3da483e2",
+   "commit": "b437895bb0f9023c074eeb23c04ee13bd2745746",
    "art": "code",
    "abk": [
     "NEVS",
