@@ -963,7 +963,7 @@ for sg in segs:
 # in mehrere Ways ohne Weiche dazwischen teilt (Selnau: zwei Ways zu je ~1,4 m Seitenwechsel), ist als Ganzes eine Verbindung,
 # kein eigenes Gleis – sonst bekommt das Mittelstück eine eigene Ebene und drückt die beiden Streckengleise auseinander.
 # Bedingung: Kette aus ≥ 2 Stücken über Knoten ohne Abzweig, beide Enden an Weichen, ohne Personenverkehr/Gleisnummer,
-# zusammen < cfg «r34k_max_m» (150 m) lang, Seitenwechsel 1,5–6,5 m, kein langes paralleles Stück. cfg «r34_kette» (Standard an).
+# beide Weichen an Streckengleisen mit Personenverkehr, zusammen < cfg «r34k_max_m» (150 m) lang, Seitenwechsel 1,5–6,5 m, kein langes paralleles Stück. cfg «r34_kette» (Standard an).
 if CFG.get("r34_kette", True):
     _deg34 = collections.Counter(n for sg in segs for n in (sg["nodes"][0], sg["nodes"][-1]))
     _an34 = collections.defaultdict(list)
@@ -979,6 +979,8 @@ if CFG.get("r34_kette", True):
                 if not nxt or nxt[0] in kette: break
                 cur = nxt[0]; kette.append(cur); n_ = cur["nodes"][0] if cur["nodes"][-1] == n_ else cur["nodes"][-1]
             if _deg34[n_] < 3: offen = False                 # Ende ohne Weiche (Gleisende, Planrand)
+            # nur zwischen zwei Streckengleisen (REGELN 2.2): an der Weiche läuft ein Gleis mit Personenverkehr durch
+            elif not any(x["pax"] for x in _an34[n_] if x is not cur): offen = False
         for x in kette: _ges34.add(id(x))
         if not offen or len(kette) < 2 or not any(x["flat"] for x in kette): continue
         if any(x["pax"] or x["ref"] or x["tags"].get("railway:track_ref") or x.get("cut0") or x.get("cut1") for x in kette): continue
