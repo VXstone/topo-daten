@@ -98,7 +98,8 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - [x] **T-SZU Testregion SZU** – 18.11. mittags, Commits 114156c/1d587e8, Seite v155 (Befundliste in Abschnitt 6)
 - [x] **HT Hauptgleis-Topologie als Sperre (REGELN 0.1, Kopf «HT»)** – 18.11. spät, `code/hauptgleis.py`, Basis gesetzt (Nachtrag HT); Seite nicht neu veröffentlicht (kein Plan geändert)
 - [x] **K0 Sichtbar: Ins im Regionalplan + Zwischengeraden im Bahnhofplan** – 19.11. nachmittags, Commits 83a0dc2/64a3fa4, Seite v156 (Nachtrag K0)
-- [x] **K0b Zwischengeraden Rest (REGELN 1.9)** (gerechnet 20.11., Veröffentlichen wartet auf Daniel; Selnau offen) – Zweisimmen (dünn→dick am Knick), Solothurn (Weiche am Knick, doppelter Abstand), Selnau (ZL ~4 Ebenen, nur auf Daniels Antwort); Liste `ergebnisse/seite/zwischengeraden.md` – vor oder nach T-SZU1, wie Daniel will
+- [x] **K0b Zwischengeraden Rest (REGELN 1.9)** (v157, 20.11.)
+- [ ] **K0c Selnau parallel (REGELN 2.2, `r34_kette`)** (klein) – siehe Nachtrag 20.11. ~19:15; vor T-SZU1 – Zweisimmen (dünn→dick am Knick), Solothurn (Weiche am Knick, doppelter Abstand), Selnau (ZL ~4 Ebenen, nur auf Daniels Antwort); Liste `ergebnisse/seite/zwischengeraden.md` – vor oder nach T-SZU1, wie Daniel will
 - [ ] **T-SZU1 DKW aus 4-Arm-Weiche (REGELN 2.4) und Güterverkehr schwarz (REGELN 1.21)** (klein, Entscheid Daniel 18.11.) – nach K0
 - [ ] **T-SZU2 Achse knickt im Fenster (REGELN 2.15), Zielplan Giesshübel · Saalsporthalle** (Entscheid Daniel 18.11.: Variante C) – nach S2b/R4/S3 oder wenn Daniel es vorzieht
 - [ ] **S2b Konolfingen Gleisfeld West** (Zielbild Daniel 18.11.), **R4 Rothrist im Regionalplan** und **S3 Aarau
@@ -659,4 +660,17 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   mob__zweisimmen/region_mob besser (W53 −1, Wunsch −14), zofingen/rothrist alt (17.11.). G0-Sperre grün. ZG 10 → 9.
 - Offen: Veröffentlichen (Daniel fragen), Hinweise jy8r/xke0 danach beantworten. Selnau j9ou (ZL ~4 Ebenen): Frage an Daniel
   mit Skizze im Chat 20.11. – bei «Ja» `zg_max_ebenen` nur für Gleiswechsel ohne Perron/Nummer auf 4,5 anheben (beide ZL Selnau).
+
+### 20.11.2026 ~19:15 – Seite v157 veröffentlicht (ergebnisse be95332); Selnau → neuer Schritt K0c
+- v157 = K0b (Live war = v156). Hinweise jy8r/xke0 beantwortet. Die drei roten seite-Mails 16:43–17:00 = G0-Sperre auf 5fe545e (behoben).
+- Daniel 20.11. zu Selnau j9ou: «ja – der Fehler ist aber, die zwei Gleise dort sollten parallel sein». Ursache: OSM teilt beide
+  Gleiswechsel in zwei Ways ohne Weiche dazwischen; die Mittelstücke wurden ein eigenes Gleis (eigene Ebene) und drückten Gl. 1/2
+  auseinander. Neu REGELN 2.2 / cfg `r34_kette` (nur zwischen Streckengleisen mit Personenverkehr; Konolfingen sonst GQ +1).
+  Lokal: Selnau parallel, direkte Schrägen, G0 GQ 1→0, ZL Selnau 2→0.
+- **K0c (offen, Schalter vorerst aus):** seite-Sperre rot mit `r34_kette` an (Lauf 17:54 UTC): (1) Selnau HT5 0→1 «Abgang 712
+  Adliswil ↔ Gl. 1 fehlt» – vermutlich Messfehler: Nummernschild «1» rückt neben den Perron links der Gleiswechsel, HT sucht den
+  Plan-Weg nur zur Kante am Schild (OSM: alle Kanten des Gl.-1-Stücks) → in `hauptgleis._fahrwege` Plan-Ziel = alle grünen Kanten
+  des Nummerngleises, oder Schild rechts der Wechsel; (2) Giesshübel GS 11→12 (R34k-Kette 110676791/302538635 im Depotknoten) –
+  prüfen, ggf. Kette dort ausnehmen. Dann Schalter an, `regionen` für **szu und vereina** von Hand (Standard nur mob!).
+- Hinweis: `regionen` ohne Eingabe rechnet nur **mob** – nach Code-Änderung szu/vereina einzeln starten (`-f inputs[region]=szu`).
 
