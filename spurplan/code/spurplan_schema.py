@@ -4094,6 +4094,12 @@ def _zg_zusammenlegen(svg_paths):
     # Gleisnummern: Stücke mit Nummer sind echte Gleise (REGELN 1.9 «ausser … Gleis mit Perron oder Nummer»)
     _nr = [(X(float(np.median([q_[0] for q_ in sg_["p"]]))), Y(seglane[sg_["id"]])) for sg_ in segs if sg_.get("ref") and sg_["id"] in seglane] if "seglane" in globals() else []
     ersatz = []; n_ = 0
+    def _weiter(pa, pb, ids, kl_):
+        """Kettenende pa auf einem Gleis der anderen Klasse, dort setzt ein gleichklassiger Fahrweg fort (Solothurn Gl. 3:
+        dicker Weg kreuzt das dünne Gl. 3): das Ende nicht kürzen, sonst Lücke im Fahrweg."""
+        mid_ = ((pa[0] + pb[0]) / 2, pa[1]); _d, deck_ = _nahe(mid_, set(ids))
+        return bool(deck_) and all(teile[k][0] != kl_ for k in deck_) and any(
+            T_[0] == kl_ and min(math.dist(pa, T_[3][0]), math.dist(pa, T_[3][-1])) <= 3.0 for k, T_ in enumerate(teile) if k not in ids)
     kette_von = {t: n for n, (ids_, _p, _gr) in enumerate(ketten) for t in ids_}
     abz_neu = {}               # Ketten-Nr. → neue Punkte (Abzweig aus der Schräge)
     def _knick_frei(a1, a2, ids, y_lo, y_hi, sx):
@@ -4136,10 +4142,11 @@ def _zg_zusammenlegen(svg_paths):
                     # ansetzen statt mittig, sonst liegt das waagrechte Stück länger auf dem anderen Gleis (G0 «GG»)
                     r_z = CFG["sw_radius"]
                     e0, e3 = neu[0], neu[-1]
-                    if all(abs(q[1] - a0[1]) <= 0.3 for q in neu[:i]) and _knoten(e0, set(ids)) \
-                            and abs(a3[0] - e0[0]) >= run + 2 * r_z: xs = e0[0] + sx * r_z
-                    elif all(abs(q[1] - a3[1]) <= 0.3 for q in neu[i + 2:]) and _knoten(e3, set(ids)) \
-                            and abs(e3[0] - a0[0]) >= run + 2 * r_z: xs = e3[0] - sx * (r_z + run)
+                    k_a, k_e = teile[ids[0]][0], teile[ids[-1]][0]
+                    if all(abs(q[1] - a0[1]) <= 0.3 for q in neu[:i]) and abs(a3[0] - e0[0]) >= run + 2 * r_z \
+                            and _weiter(e0, (e0[0] + sx * (r_z + 2), e0[1]), ids, k_a): xs = e0[0] + sx * r_z
+                    elif all(abs(q[1] - a3[1]) <= 0.3 for q in neu[i + 2:]) and abs(e3[0] - a0[0]) >= run + 2 * r_z \
+                            and _weiter(e3, (e3[0] - sx * (r_z + 2), e3[1]), ids, k_e): xs = e3[0] - sx * (r_z + run)
                     if f1 or f2: abz = [(k_, a_, ((xs, a0[1]), (xs + sx * run, a3[1]))) for k_, a_ in f1 + f2]
                     slope = ((xs, a0[1]), (xs + sx * run, a3[1]))
                     zonen.append((min(a0[0], a3[0]), max(a0[0], a3[0]), slope))
@@ -4155,13 +4162,7 @@ def _zg_zusammenlegen(svg_paths):
             for a_i, b_i in ((0, 1), (-1, -2)):
                 if len(neu) < 3: break
                 pa, pb = neu[a_i], neu[b_i]
-                kl_ = teile[ids[0 if a_i == 0 else -1]][0]
-                # dicker Fahrweg setzt dort fort und das Stück liegt nur auf einem Gleis der anderen Klasse: nicht kürzen,
-                # sonst Lücke im Fahrweg (Solothurn Gl. 3); liegt es auf einem gleichklassigen Gleis, kürzen wie bisher
-                mid_ = ((pa[0] + pb[0]) / 2, pa[1]); _d, deck_ = _nahe(mid_, set(ids))
-                weiter_ = deck_ and all(teile[k][0] != kl_ for k in deck_) and any(
-                    T_[0] == kl_ and min(math.dist(pa, T_[3][0]), math.dist(pa, T_[3][-1])) <= 3.0
-                    for k, T_ in enumerate(teile) if k not in ids)
+                weiter_ = _weiter(pa, pb, ids, teile[ids[0 if a_i == 0 else -1]][0])
                 if abs(pa[1] - pb[1]) <= 0.3 and abs(pb[0] - pa[0]) > r_ + 0.5 and not weiter_ \
                         and _knoten(((pa[0] + pb[0]) / 2, pa[1]), set(ids)) and _knoten(pa, set(ids)):
                     neu[a_i] = (pb[0] - math.copysign(r_, pb[0] - pa[0]), pa[1])
