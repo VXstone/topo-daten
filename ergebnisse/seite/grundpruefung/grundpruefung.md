@@ -111,7 +111,7 @@
 | region | 8 | 23 | 2 | 3 | 4 | 6 ↓10 | 10.08 |
 | region_mob | 3 | 3 | 1 | 3 | · | 0 ↓1 | 10.08 |
 | region_ne | 1 | 2 | 1 | · | · | 4 | 10.08 |
-| region_szu | 16 ↓18 | 27 ↓28 | 4 ↓5 | · | · | 1 | 10.08 |
+| region_szu | 18 | 28 | 5 | · | · | 1 | 10.08 |
 | region_vereina | 1 | 5 | 2 | · | · | 2 | 10.08 |
 | riedbach | · | · | · | · | · | · | 24.0 |
 | rosshausern | · | · | · | · | · | · | 24.0 |
@@ -129,9 +129,9 @@
 | szu__uetliberg | · | · | · | · | · | · | 24.0 |
 | szu__zurich_binz | · | · | · | · | · | · | 24.0 |
 | szu__zurich_friesenberg | · | · | · | · | · | · | 24.0 |
-| szu__zurich_giesshubel | **12** (Basis 11) | 32 ↓33 | 5 | · | · | · | 24.0 |
+| szu__zurich_giesshubel | 11 | 33 | 5 | · | · | · | 24.0 |
 | szu__zurich_schweighof | · | · | · | · | · | · | 24.0 |
-| szu__zurich_selnau | · | · | 0 ↓1 | · | · | · | 24.0 |
+| szu__zurich_selnau | · | · | 1 | · | · | · | 24.0 |
 | tecknau | · | · | · | · | · | · | 24.0 |
 | thun | · | 2 | · | · | · | 1 | 24.0 |
 | travers | · | · | · | · | · | · | 24.0 |
@@ -152,19 +152,3 @@
 | zofingen | · | 1 | · | · | · | · | 24.0 |
 
 Regeln: GS = Schnitt ohne DKW/Kreuzung/Niveautrennung; GG = Gleis auf Gleis; GQ = Querabstand nach Knick ≠ davor; GP = Pfeil nach innen / auf Nachbargleis; GW = Knick oder Abgang 90°; GT = Treppe
-
-## NEUE Befunde
-
-- **szu__zurich_giesshubel** GS: 11 → 12
-  - 1275.0/160.4: Gleise kreuzen sich (60°) ohne DKW, Kreuzung oder Niveautrennung
-  - 1197.3/177.2: Gleise kreuzen sich (18°) ohne DKW, Kreuzung oder Niveautrennung
-  - 839.8/208.4: Gleise kreuzen sich (60°) ohne DKW, Kreuzung oder Niveautrennung
-  - 1274.2/184.4: Gleise kreuzen sich (60°) ohne DKW, Kreuzung oder Niveautrennung
-  - 1287.0/139.8: Gleise kreuzen sich (56°) ohne DKW, Kreuzung oder Niveautrennung
-  - 1261.2/184.4: Gleise kreuzen sich (60°) ohne DKW, Kreuzung oder Niveautrennung
-  - 1387.2/160.4: Gleise kreuzen sich (60°) ohne DKW, Kreuzung oder Niveautrennung
-  - 1394.9/147.2: Gleise kreuzen sich (60°) ohne DKW, Kreuzung oder Niveautrennung
-  - 1373.4/184.4: Gleise kreuzen sich (60°) ohne DKW, Kreuzung oder Niveautrennung
-  - 1341.9/232.0: Gleise kreuzen sich (28°) ohne DKW, Kreuzung oder Niveautrennung
-  - 1437.8/146.6: Gleise kreuzen sich (31°) ohne DKW, Kreuzung oder Niveautrennung
-  - 1195.8/184.4: Gleise kreuzen sich (76°) ohne DKW, Kreuzung oder Niveautrennung

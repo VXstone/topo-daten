@@ -3,21 +3,21 @@
 "befunde": [
 {
 "regel": "VB1",
-"x": 1643.4,
+"x": 1697.4,
 "y": -178.0,
 "text": "OSM-Weiche 1262541542 ohne Abzweig im Plan",
 "osm": 1262541542
 },
 {
 "regel": "VB1",
-"x": 1403.5,
+"x": 1457.5,
 "y": 134.0,
 "text": "OSM-Weiche 1263316986 ohne Abzweig im Plan",
 "osm": 1263316986
 },
 {
 "regel": "VC1",
-"x": 1149.9,
+"x": 1203.9,
 "y": 184.4,
 "text": "Gleis (Way 110676783) im Plan an Knoten 1263316902 angebunden, in OSM nicht",
 "osm": 1263316902,
@@ -45,7 +45,7 @@
 },
 {
 "regel": "VC1",
-"x": 1275.0,
+"x": 1329.0,
 "y": 160.4,
 "text": "Gleis (Way 110676795) im Plan an Knoten 1263316870 angebunden, in OSM nicht",
 "osm": 1263316870,
@@ -60,7 +60,7 @@
 },
 {
 "regel": "VC1",
-"x": 1275.0,
+"x": 1329.0,
 "y": 160.4,
 "text": "Gleis (Way 110676782) im Plan an Knoten 1263316870 angebunden, in OSM nicht",
 "osm": 1263316870,
@@ -78,9 +78,9 @@
 },
 {
 "regel": "VB2",
-"x": 839.8,
+"x": 848.8,
 "y": 208.4,
-"text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
 "ways": [
 110676791,
 110676815,
@@ -102,7 +102,7 @@
 },
 {
 "regel": "VB2",
-"x": 1274.2,
+"x": 1328.2,
 "y": 184.4,
 "text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
 "ways": [
@@ -144,7 +144,7 @@
 },
 {
 "regel": "VB2",
-"x": 1225.1,
+"x": 1279.1,
 "y": 232.4,
 "text": "Gleise berühren sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
 "ways": [
@@ -208,7 +208,7 @@
 },
 {
 "regel": "VB2",
-"x": 1261.2,
+"x": 1315.2,
 "y": 184.4,
 "text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
 "ways": [
@@ -248,7 +248,7 @@
 },
 {
 "regel": "VB2",
-"x": 1387.2,
+"x": 1441.2,
 "y": 160.4,
 "text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
 "ways": [
@@ -276,7 +276,7 @@
 },
 {
 "regel": "VB2",
-"x": 1373.4,
+"x": 1427.4,
 "y": 184.4,
 "text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
 "ways": [
@@ -317,7 +317,7 @@
 },
 {
 "regel": "VC1",
-"x": 1341.9,
+"x": 1395.9,
 "y": 232.0,
 "text": "Gleis (Way 110676789) im Plan an Knoten 1263316982 angebunden, in OSM nicht",
 "osm": 1263316982,
@@ -338,7 +338,7 @@
 },
 {
 "regel": "VB2",
-"x": 1151.8,
+"x": 1205.8,
 "y": 232.4,
 "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
 "ways": [
@@ -386,7 +386,7 @@
 },
 {
 "regel": "VB2",
-"x": 1232.2,
+"x": 1286.2,
 "y": 110.0,
 "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
 "ways": [
@@ -400,7 +400,7 @@
 },
 {
 "regel": "VC1",
-"x": 1195.8,
+"x": 1249.8,
 "y": 184.4,
 "text": "Gleis (Way 110676800) im Plan an Knoten 1263316956 angebunden, in OSM nicht",
 "osm": 1263316956,
@@ -413,127 +413,127 @@
 },
 {
 "regel": "VD1",
-"x": 1244.2,
+"x": 1298.2,
 "y": 160.4,
 "text": "zwei Gleise 37 px aufeinander"
 },
 {
 "regel": "VD1",
-"x": 1297.6,
+"x": 1351.6,
 "y": 160.4,
 "text": "zwei Gleise 84 px aufeinander"
 },
 {
 "regel": "VD1",
-"x": 1218.2,
+"x": 1272.2,
 "y": 160.4,
 "text": "zwei Gleise 16 px aufeinander"
 },
 {
 "regel": "VD1",
-"x": 1169.9,
+"x": 1223.9,
 "y": 184.4,
 "text": "zwei Gleise 40 px aufeinander"
 },
 {
 "regel": "VD1",
-"x": 1282.4,
+"x": 1336.4,
 "y": 160.4,
 "text": "zwei Gleise 144 px aufeinander"
 },
 {
 "regel": "VD1",
-"x": 1305.5,
+"x": 1359.5,
 "y": 160.4,
 "text": "zwei Gleise 60 px aufeinander"
 },
 {
 "regel": "VD1",
-"x": 1169.9,
+"x": 1223.9,
 "y": 184.4,
 "text": "zwei Gleise 40 px aufeinander"
 },
 {
 "regel": "VD1",
-"x": 1322.8,
+"x": 1376.8,
 "y": 160.4,
 "text": "zwei Gleise 63 px aufeinander"
 },
 {
 "regel": "VD1",
-"x": 1297.9,
+"x": 1351.9,
 "y": 160.4,
 "text": "zwei Gleise 84 px aufeinander"
 },
 {
 "regel": "VD1",
-"x": 1367.3,
+"x": 1421.3,
 "y": 147.7,
 "text": "zwei Gleise 32 px aufeinander"
 },
 {
 "regel": "VD1",
-"x": 1305.5,
+"x": 1359.5,
 "y": 160.4,
 "text": "zwei Gleise 60 px aufeinander"
 },
 {
 "regel": "VD1",
-"x": 1315.5,
+"x": 1369.5,
 "y": 160.4,
 "text": "zwei Gleise 48 px aufeinander"
 },
 {
 "regel": "VD1",
-"x": 1323.6,
+"x": 1377.6,
 "y": 160.4,
 "text": "zwei Gleise 64 px aufeinander"
 },
 {
 "regel": "VD1",
-"x": 1313.3,
+"x": 1367.3,
 "y": 160.4,
 "text": "zwei Gleise 44 px aufeinander"
 },
 {
 "regel": "VD1",
-"x": 1255.1,
+"x": 1309.1,
 "y": 194.2,
 "text": "zwei Gleise 102 px aufeinander"
 },
 {
 "regel": "VD1",
-"x": 1305.3,
+"x": 1359.3,
 "y": 160.4,
 "text": "zwei Gleise 59 px aufeinander"
 },
 {
 "regel": "VD1",
-"x": 1244.2,
+"x": 1298.2,
 "y": 160.4,
 "text": "zwei Gleise 37 px aufeinander"
 },
 {
 "regel": "VD1",
-"x": 1215.3,
+"x": 1269.3,
 "y": 160.4,
 "text": "zwei Gleise 21 px aufeinander"
 },
 {
 "regel": "VD1",
-"x": 1235.3,
+"x": 1289.3,
 "y": 232.4,
 "text": "zwei Gleise 21 px aufeinander"
 },
 {
 "regel": "VD1",
-"x": 1283.5,
+"x": 1337.5,
 "y": 232.4,
 "text": "zwei Gleise 118 px aufeinander"
 },
 {
 "regel": "VD1",
-"x": 1198.7,
+"x": 1252.7,
 "y": 232.4,
 "text": "zwei Gleise 94 px aufeinander"
 },
@@ -551,25 +551,31 @@
 },
 {
 "regel": "VD1",
-"x": 1208.8,
+"x": 871.9,
+"y": 208.4,
+"text": "zwei Gleise 50 px aufeinander"
+},
+{
+"regel": "VD1",
+"x": 1262.8,
 "y": 184.4,
 "text": "zwei Gleise 35 px aufeinander"
 },
 {
 "regel": "VD1",
-"x": 1208.8,
+"x": 1262.8,
 "y": 184.4,
 "text": "zwei Gleise 35 px aufeinander"
 },
 {
 "regel": "VD1",
-"x": 1138.7,
+"x": 1192.7,
 "y": 232.4,
 "text": "zwei Gleise 37 px aufeinander"
 },
 {
 "regel": "VD1",
-"x": 1070.7,
+"x": 1124.8,
 "y": 232.4,
 "text": "zwei Gleise 99 px aufeinander"
 },
@@ -587,50 +593,50 @@
 },
 {
 "regel": "VD1",
-"x": 1085.9,
+"x": 1139.9,
 "y": 184.4,
 "text": "zwei Gleise 128 px aufeinander"
 },
 {
 "regel": "VD1",
-"x": 1380.0,
+"x": 1434.0,
 "y": 184.4,
 "text": "zwei Gleise 50 px aufeinander"
 },
 {
 "regel": "VD1",
-"x": 1267.1,
+"x": 1321.1,
 "y": 184.4,
 "text": "zwei Gleise 80 px aufeinander"
 },
 {
 "regel": "VD1",
-"x": 1348.4,
+"x": 1402.4,
 "y": 232.4,
 "text": "zwei Gleise 14 px aufeinander"
 },
 {
 "regel": "VD1",
-"x": 1240.5,
+"x": 1294.5,
 "y": 110.0,
 "text": "zwei Gleise 16 px aufeinander"
 },
 {
 "regel": "VD1",
-"x": 1185.1,
+"x": 1239.1,
 "y": 184.4,
 "text": "zwei Gleise 84 px aufeinander"
 },
 {
 "regel": "VD1",
-"x": 949.0,
+"x": 1003.0,
 "y": 232.4,
 "text": "zwei Gleise 115 px aufeinander"
 }
 ],
 "info": {
 "dkw_osm_unvollstaendig": [],
-"gleise": 71,
+"gleise": 72,
 "knoten_plan": 36,
 "dkw_plan": 0,
 "knoten_osm": 36,

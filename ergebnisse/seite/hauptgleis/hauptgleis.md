@@ -19,13 +19,13 @@
 | mob__montbovon | 3 | · | · | · | 1 | 4 |
 | vereina__klosters_platz | 3 | · | · | · | 1 | 4 |
 | schonenwerd | · | 2 | · | · | 1 | 3 |
-| szu__zurich_selnau | · | 2 | · | · | **1** (Basis 0) | 3 |
 | tecknau | · | 1 | · | · | 2 | 3 |
 | vereina__klosters_selfranga | 1 | · | · | · | 2 | 3 |
 | vereina__sagliains | 1 | 1 | · | · | 1 | 3 |
 | mob__paccot | 2 | · | · | · | · | 2 |
 | mob__saanen | · | 1 | · | · | 1 | 2 |
 | mob__vernex | · | · | · | · | 2 | 2 |
+| szu__zurich_selnau | · | 2 | · | · | · | 2 |
 | zofingen | 2 | · | · | · | · | 2 |
 | dulliken | · | · | · | · | 1 | 1 |
 | mob__glion | · | · | · | · | 1 | 1 |
@@ -88,8 +88,3 @@
 | wangen_bei_olten | · | · | · | · | · | 0 |
 
 Regeln: HT1 = OSM-Weiche am Hauptgleis ohne Abzweig im Plan; HT2 = Abzweig am Hauptgleis im Plan ohne OSM-Weiche; HT3 = Gleis an der falschen Weiche (Hauptgleis); HT4 = Abzweig zur falschen Seite; HT5 = Fahrweg im Plan ≠ OSM
-
-## NEUE Befunde
-
-- **szu__zurich_selnau** HT5: 0 → 1
-  - 326.8/122.0: Fahrweg Abgang 712 Adliswil (12010139807) ↔ Gl. 1 in OSM, fehlt im Plan
