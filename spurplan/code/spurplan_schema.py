@@ -959,6 +959,36 @@ for sg in segs:
     if len(nb) == 2 and all(not x["flat"] for x in nb) and all(len(_inc[n]) == 2 for n in (sg["nodes"][0], sg["nodes"][-1])):
         sg["flat"] = False
 
+# REGELN 2.2 (20.11.2026, Hinweis Selnau j9ou, Daniel: «die zwei Gleise dort sollten parallel sein»): ein Gleiswechsel, den OSM
+# in mehrere Ways ohne Weiche dazwischen teilt (Selnau: zwei Ways zu je ~1,4 m Seitenwechsel), ist als Ganzes eine Verbindung,
+# kein eigenes Gleis – sonst bekommt das Mittelstück eine eigene Ebene und drückt die beiden Streckengleise auseinander.
+# Bedingung: Kette aus ≥ 2 Stücken über Knoten ohne Abzweig, beide Enden an Weichen, ohne Personenverkehr/Gleisnummer,
+# zusammen < cfg «r34k_max_m» (150 m) lang, Seitenwechsel 1,5–6,5 m, kein langes paralleles Stück. cfg «r34_kette» (Standard an).
+if CFG.get("r34_kette", True):
+    _deg34 = collections.Counter(n for sg in segs for n in (sg["nodes"][0], sg["nodes"][-1]))
+    _an34 = collections.defaultdict(list)
+    for sg in segs: _an34[sg["nodes"][0]].append(sg); _an34[sg["nodes"][-1]].append(sg)
+    _ges34 = set()
+    for sg in segs:
+        if id(sg) in _ges34 or sg["pax"] or sg["ref"] or sg["tags"].get("railway:track_ref"): continue
+        kette = [sg]; offen = True
+        for e_ in (0, -1):                                   # in beide Richtungen über Knoten ohne Abzweig verlängern
+            cur, n_ = sg, sg["nodes"][e_]
+            while _deg34[n_] == 2 and len(kette) < 6:
+                nxt = [x for x in _an34[n_] if x is not cur]
+                if not nxt or nxt[0] in kette: break
+                cur = nxt[0]; kette.append(cur); n_ = cur["nodes"][0] if cur["nodes"][-1] == n_ else cur["nodes"][-1]
+            if _deg34[n_] < 3: offen = False                 # Ende ohne Weiche (Gleisende, Planrand)
+        for x in kette: _ges34.add(id(x))
+        if not offen or len(kette) < 2 or not any(x["flat"] for x in kette): continue
+        if any(x["pax"] or x["ref"] or x["tags"].get("railway:track_ref") or x.get("cut0") or x.get("cut1") for x in kette): continue
+        P_ = np.concatenate([x["p"] for x in sorted(kette, key=lambda x: x["s0"])])
+        P_ = P_[np.argsort(P_[:, 0], kind="stable")]
+        L_ = P_[-1, 0] - P_[0, 0]; dd_ = abs(P_[-1, 1] - P_[0, 1])
+        if L_ < CFG.get("r34k_max_m", 150) and 1.5 < dd_ < 6.5 and _par_run(P_) < 0.35 * L_:
+            for x in kette: x["flat"] = False
+            if ARGS.dbg: print("R34k", [x["way"] for x in kette], round(L_), round(dd_, 1))
+
 # Regel 33b (3.11.2026, Hinweis Klosters Platz → Selfranga: «kurze Zwischengerade beim Tunnelportal»): ein
 # Streckengleis, das nach der letzten Weiche ohne weitere Abzweigung aus dem Plan läuft, bleibt auf seiner Ebene, auch
 # wenn es real schon in der Kurve liegt (sonst Schräge und kurzes Gerades am Planrand). Nicht bei seitlichem Abgang
