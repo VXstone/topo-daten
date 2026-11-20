@@ -137,12 +137,6 @@
   },
   {
    "regel": "W2",
-   "x": 1331.3,
-   "y": 203.0,
-   "text": "S-Kurve in der Mitte unter 105° (steiler oder flacher als 60°)"
-  },
-  {
-   "regel": "W2",
    "x": 1362.0,
    "y": 444.8,
    "text": "Gleisstück unter 85° (nur 0° und 60° erlaubt)"
@@ -179,15 +173,6 @@
   {
    "regel": "T7",
    "art": "Treppe",
-   "x": 1331.3,
-   "y": 203.0,
-   "versatz": 26.8,
-   "plan": "solothurn",
-   "text": "solothurn: Treppe bei x=1331.3, y=203.0"
-  },
-  {
-   "regel": "T7",
-   "art": "Treppe",
    "x": 1237.1,
    "y": 293.6,
    "versatz": 48.0,
@@ -206,11 +191,11 @@
   "regel_G6": 7,
   "regel_G7": 3,
   "netz_D11": 2,
-  "netz_W2": 6,
+  "netz_W2": 5,
   "netz_W1": 2,
   "boegen_pax": 11,
-  "boegen_alle": 77,
-  "ruhe_treppen": 3,
+  "boegen_alle": 79,
+  "ruhe_treppen": 2,
   "ruhe_ecken": 0,
   "randabstand": 0
  },
