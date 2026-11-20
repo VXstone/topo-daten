@@ -229,7 +229,10 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "210",
+    "219"
+   ],
    "linie_sbb": "210",
    "km": 70.34416,
    "osm": {
@@ -249,6 +252,9 @@
     "1",
     "2",
     "3"
+   ],
+   "gleise_perron_osm": [
+    "1"
    ]
   },
   "AV": {
@@ -267,7 +273,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "251"
+   ],
    "linie_sbb": "251",
    "km": 69.11816,
    "osm": {
@@ -286,6 +294,10 @@
    "gleise_perron_sbb": [
     "1",
     "2"
+   ],
+   "gleise_perron_osm": [
+    "Quai 1",
+    "Quai 2"
    ]
   },
   "AVA": {
@@ -369,7 +381,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "210"
+   ],
    "linie_sbb": "210",
    "km": 66.25347,
    "osm": {
@@ -388,6 +402,9 @@
    "gleise_perron_sbb": [
     "2",
     "3"
+   ],
+   "gleise_perron_osm": [
+    "1"
    ]
   },
   "BEMM": {
@@ -540,7 +557,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "220"
+   ],
    "osm": {
     "node": 1870421883,
     "name": "Bern Brünnen Westside",
@@ -557,6 +576,12 @@
    "gleise_perron_sbb": [
     "1",
     "2"
+   ],
+   "gleise_perron_osm": [
+    "1",
+    "2",
+    "4",
+    "5"
    ]
   },
   "BNHB": {
@@ -647,7 +672,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "219"
+   ],
    "linie_sbb": "219",
    "km": 8.3,
    "osm": {
@@ -664,6 +691,9 @@
     "wie": "uic_ref"
    },
    "gleise_perron_sbb": [
+    "1"
+   ],
+   "gleise_perron_osm": [
     "1"
    ]
   },
@@ -1021,7 +1051,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "210"
+   ],
    "linie_sbb": "210",
    "km": 62.27922,
    "osm": {
@@ -1038,6 +1070,10 @@
     "wie": "uic_ref"
    },
    "gleise_perron_sbb": [
+    "1",
+    "2"
+   ],
+   "gleise_perron_osm": [
     "1",
     "2"
    ]
@@ -1195,7 +1231,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "210"
+   ],
    "linie_sbb": "210",
    "km": 50.752,
    "osm": {
@@ -1212,6 +1250,10 @@
     "wie": "uic_ref"
    },
    "gleise_perron_sbb": [
+    "1",
+    "2"
+   ],
+   "gleise_perron_osm": [
     "1",
     "2"
    ]
@@ -1232,7 +1274,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "219"
+   ],
    "linie_sbb": "219",
    "km": 13.64584,
    "osm": {
@@ -1367,7 +1411,10 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "223",
+    "224"
+   ],
    "linie_sbb": "223",
    "km": 10.3982,
    "osm": {
@@ -1513,7 +1560,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "210"
+   ],
    "linie_sbb": "210",
    "km": 67.66967,
    "osm": {
@@ -1533,6 +1582,10 @@
     "1",
     "2",
     "3"
+   ],
+   "gleise_perron_osm": [
+    "1",
+    "2"
    ]
   },
   "CORN": {
@@ -1551,7 +1604,10 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "210",
+    "216"
+   ],
    "linie_sbb": "216",
    "km": 0.0,
    "osm": {
@@ -1568,6 +1624,11 @@
     "wie": "uic_ref"
    },
    "gleise_perron_sbb": [
+    "1",
+    "2",
+    "3"
+   ],
+   "gleise_perron_osm": [
     "1",
     "2",
     "3"
@@ -1589,7 +1650,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "255"
+   ],
    "osm": {
     "node": 3664792744,
     "name": "Courtepin",
@@ -1604,6 +1667,10 @@
     "wie": "uic_ref"
    },
    "gleise_perron_sbb": [
+    "1",
+    "2"
+   ],
+   "gleise_perron_osm": [
     "1",
     "2"
    ]
@@ -1624,7 +1691,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "223"
+   ],
    "linie_sbb": "223",
    "km": 4.32248,
    "osm": {
@@ -1642,6 +1711,10 @@
    },
    "gleise_perron_sbb": [
     "1"
+   ],
+   "gleise_perron_osm": [
+    "1",
+    "2"
    ]
   },
   "CRDB": {
@@ -1693,7 +1766,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "255"
+   ],
    "osm": {
     "node": 3664792745,
     "name": "Cressier FR",
@@ -1708,6 +1783,9 @@
     "wie": "uic_ref"
    },
    "gleise_perron_sbb": [
+    "1"
+   ],
+   "gleise_perron_osm": [
     "1"
    ]
   },
@@ -1727,7 +1805,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "210"
+   ],
    "linie_sbb": "210",
    "km": 85.55013,
    "osm": {
@@ -1744,6 +1824,10 @@
     "wie": "uic_ref"
    },
    "gleise_perron_sbb": [
+    "1",
+    "2"
+   ],
+   "gleise_perron_osm": [
     "1",
     "2"
    ]
@@ -1789,7 +1873,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "221"
+   ],
    "osm": {
     "node": 307412768,
     "name": "Couvet",
@@ -1823,7 +1909,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "223"
+   ],
    "linie_sbb": "223",
    "km": 3.102,
    "osm": {
@@ -1841,6 +1929,10 @@
    },
    "gleise_perron_sbb": [
     "1"
+   ],
+   "gleise_perron_osm": [
+    "1",
+    "2"
    ]
   },
   "DK": {
@@ -1959,7 +2051,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "251"
+   ],
    "linie_sbb": "251",
    "km": 66.18946,
    "osm": {
@@ -1976,6 +2070,9 @@
     "wie": "uic_ref"
    },
    "gleise_perron_sbb": [
+    "1"
+   ],
+   "gleise_perron_osm": [
     "1"
    ]
   },
@@ -1995,7 +2092,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "251"
+   ],
    "linie_sbb": "251",
    "km": 63.65763,
    "osm": {
@@ -2012,6 +2111,9 @@
     "wie": "uic_ref"
    },
    "gleise_perron_sbb": [
+    "2"
+   ],
+   "gleise_perron_osm": [
     "2"
    ]
   },
@@ -2111,7 +2213,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "251"
+   ],
    "linie_sbb": "251",
    "km": 72.80486,
    "osm": {
@@ -2128,6 +2232,9 @@
     "wie": "uic_ref"
    },
    "gleise_perron_sbb": [
+    "1"
+   ],
+   "gleise_perron_osm": [
     "1"
    ]
   },
@@ -2213,7 +2320,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "251"
+   ],
    "linie_sbb": "251",
    "km": 87.67316,
    "osm": {
@@ -2288,7 +2397,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "224"
+   ],
    "linie_sbb": "224",
    "km": 16.8975,
    "osm": {
@@ -2305,6 +2416,10 @@
     "wie": "uic_ref"
    },
    "gleise_perron_sbb": [
+    "1",
+    "2"
+   ],
+   "gleise_perron_osm": [
     "1",
     "2"
    ]
@@ -2424,7 +2539,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "220"
+   ],
    "osm": {
     "node": 3081154382,
     "name": "Gümmenen",
@@ -2439,6 +2556,10 @@
     "wie": "uic_ref"
    },
    "gleise_perron_sbb": [
+    "1",
+    "2"
+   ],
+   "gleise_perron_osm": [
     "1",
     "2"
    ]
@@ -2459,7 +2580,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "210"
+   ],
    "linie_sbb": "210",
    "km": 58.097,
    "osm": {
@@ -2479,6 +2602,9 @@
     "1",
     "2",
     "3"
+   ],
+   "gleise_perron_osm": [
+    "1"
    ]
   },
   "GP": {
@@ -2497,7 +2623,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "220"
+   ],
    "osm": {
     "node": 3092219560,
     "name": "Gampelen",
@@ -2512,6 +2640,10 @@
     "wie": "uic_ref"
    },
    "gleise_perron_sbb": [
+    "1",
+    "2"
+   ],
+   "gleise_perron_osm": [
     "1",
     "2"
    ]
@@ -2532,7 +2664,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "210"
+   ],
    "linie_sbb": "210",
    "km": 42.71125,
    "osm": {
@@ -2641,7 +2775,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "251"
+   ],
    "linie_sbb": "251",
    "km": 80.674,
    "osm": {
@@ -2709,7 +2845,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "224"
+   ],
    "linie_sbb": "224",
    "km": 20.98843,
    "osm": {
@@ -2728,6 +2866,9 @@
    "gleise_perron_sbb": [
     "1",
     "2"
+   ],
+   "gleise_perron_osm": [
+    "1"
    ]
   },
   "INS": {
@@ -2921,7 +3062,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "251"
+   ],
    "linie_sbb": "251",
    "km": 91.37025,
    "osm": {
@@ -2938,6 +3081,9 @@
     "wie": "uic_ref"
    },
    "gleise_perron_sbb": [
+    "1"
+   ],
+   "gleise_perron_osm": [
     "1"
    ]
   },
@@ -3081,7 +3227,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "251"
+   ],
    "linie_sbb": "251",
    "km": 86.517,
    "osm": {
@@ -3193,7 +3341,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "210"
+   ],
    "linie_sbb": "210",
    "km": 87.71714,
    "osm": {
@@ -3213,6 +3363,9 @@
     "1",
     "2",
     "3"
+   ],
+   "gleise_perron_osm": [
+    "1"
    ]
   },
   "LENK": {
@@ -3307,7 +3460,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "210"
+   ],
    "linie_sbb": "210",
    "km": 94.00279,
    "osm": {
@@ -3343,7 +3498,10 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "251",
+    "256"
+   ],
    "linie_sbb": "251",
    "km": 78.5725,
    "osm": {
@@ -3412,7 +3570,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "220"
+   ],
    "osm": {
     "node": 3081154407,
     "name": "Marin-Epagnier",
@@ -3447,7 +3607,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "220"
+   ],
    "osm": {
     "node": 3836116267,
     "name": "Müntschemier",
@@ -3481,7 +3643,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "221"
+   ],
    "osm": {
     "node": 307412745,
     "name": "Môtiers",
@@ -3512,7 +3676,10 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "251",
+    "255"
+   ],
    "zuordnung": "name_teil",
    "linie_sbb": "255",
    "km": 22.1623,
@@ -3530,6 +3697,12 @@
     "wie": "uic_ref"
    },
    "gleise_perron_sbb": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "gleise_perron_osm": [
     "1",
     "2",
     "3",
@@ -3586,7 +3759,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "255"
+   ],
    "osm": {
     "node": 3664792746,
     "name": "Münchenwiler-Courgevaux",
@@ -3601,6 +3776,10 @@
     "wie": "uic_ref"
    },
    "gleise_perron_sbb": [
+    "1",
+    "2"
+   ],
+   "gleise_perron_osm": [
     "1",
     "2"
    ]
@@ -3828,7 +4007,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "210"
+   ],
    "zuordnung": "name_teil",
    "linie_sbb": "210",
    "km": 72.39006,
@@ -3846,6 +4027,10 @@
     "wie": "uic_ref"
    },
    "gleise_perron_sbb": [
+    "1",
+    "2"
+   ],
+   "gleise_perron_osm": [
     "1",
     "2"
    ]
@@ -3936,7 +4121,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "219"
+   ],
    "linie_sbb": "219",
    "km": 18.10913,
    "osm": {
@@ -3953,6 +4140,10 @@
     "wie": "uic_ref"
    },
    "gleise_perron_sbb": [
+    "2",
+    "3"
+   ],
+   "gleise_perron_osm": [
     "2",
     "3"
    ]
@@ -4037,7 +4228,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "210"
+   ],
    "linie_sbb": "210",
    "km": 90.04861,
    "osm": {
@@ -4054,6 +4247,10 @@
     "wie": "uic_ref"
    },
    "gleise_perron_sbb": [
+    "1",
+    "2"
+   ],
+   "gleise_perron_osm": [
     "1",
     "2"
    ]
@@ -4252,7 +4449,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "210"
+   ],
    "linie_sbb": "210",
    "km": 47.482,
    "osm": null
@@ -4338,7 +4537,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "255"
+   ],
    "osm": {
     "node": 3664792747,
     "name": "Pensier",
@@ -4353,6 +4554,10 @@
     "wie": "uic_ref"
    },
    "gleise_perron_sbb": [
+    "1",
+    "2"
+   ],
+   "gleise_perron_osm": [
     "1",
     "2"
    ]
@@ -4472,7 +4677,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "221"
+   ],
    "osm": {
     "node": 307412779,
     "name": "La Presta - Mines d'Asphalte",
@@ -4485,7 +4692,10 @@
     ],
     "abstand_m": 2,
     "wie": "uic_ref"
-   }
+   },
+   "gleise_perron_osm": [
+    "1"
+   ]
   },
   "RCH": {
    "abk": "RCH",
@@ -4503,7 +4713,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "220"
+   ],
    "zuordnung": "name_teil",
    "osm": {
     "node": 1870460759,
@@ -4517,7 +4729,11 @@
     ],
     "abstand_m": 11,
     "wie": "uic_ref"
-   }
+   },
+   "gleise_perron_osm": [
+    "1",
+    "2"
+   ]
   },
   "RILI": {
    "abk": "RILI",
@@ -4642,7 +4858,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "220"
+   ],
    "osm": {
     "node": 3081154425,
     "name": "Rosshäusern",
@@ -4657,6 +4875,10 @@
     "wie": "uic_ref"
    },
    "gleise_perron_sbb": [
+    "2",
+    "3"
+   ],
+   "gleise_perron_osm": [
     "2",
     "3"
    ]
@@ -4982,7 +5204,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "210"
+   ],
    "linie_sbb": "210",
    "km": 79.36773,
    "osm": {
@@ -4999,6 +5223,10 @@
     "wie": "uic_ref"
    },
    "gleise_perron_sbb": [
+    "1",
+    "2"
+   ],
+   "gleise_perron_osm": [
     "1",
     "2"
    ]
@@ -5019,7 +5247,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "220"
+   ],
    "osm": {
     "node": 3081154428,
     "name": "Saint Blaise-Lac",
@@ -5032,7 +5262,11 @@
     ],
     "abstand_m": 2,
     "wie": "uic_ref"
-   }
+   },
+   "gleise_perron_osm": [
+    "1",
+    "2"
+   ]
   },
   "SCI": {
    "abk": "SCI",
@@ -5478,7 +5712,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "256"
+   ],
    "osm": {
     "node": 3838637244,
     "name": "Sugiez",
@@ -5493,6 +5729,10 @@
     "wie": "uic_ref"
    },
    "gleise_perron_sbb": [
+    "1",
+    "2"
+   ],
+   "gleise_perron_osm": [
     "1",
     "2"
    ]
@@ -5729,7 +5969,10 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "219",
+    "221"
+   ],
    "linie_sbb": "219",
    "km": 22.44673,
    "osm": {
@@ -5825,7 +6068,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "210"
+   ],
    "linie_sbb": "210",
    "km": 99.953,
    "osm": {
@@ -5842,6 +6087,10 @@
     "wie": "uic_ref"
    },
    "gleise_perron_sbb": [
+    "1",
+    "2"
+   ],
+   "gleise_perron_osm": [
     "1",
     "2"
    ]
@@ -5862,7 +6111,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "210"
+   ],
    "linie_sbb": "9210",
    "km": 95.9766,
    "osm": {
@@ -5879,6 +6130,10 @@
     "wie": "uic_ref"
    },
    "gleise_perron_sbb": [
+    "2",
+    "3"
+   ],
+   "gleise_perron_osm": [
     "2",
     "3"
    ]
@@ -6127,7 +6382,9 @@
    "regionen": [
     "ne"
    ],
-   "linien": [],
+   "linien": [
+    "220"
+   ],
    "osm": {
     "node": 11808339007,
     "name": "Zihlbrücke",
@@ -6889,15 +7146,15 @@
    "name": "Saint-Blaise Lac",
    "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
    "region": "ne",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "art": "fest",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "art": "code",
    "abk": [
     "SBLB"
    ],
    "ort": [
-    47.012167,
-    6.985239
+    47.01199,
+    6.983871
    ]
   },
   "marin_epagnier": {
@@ -6905,15 +7162,15 @@
    "name": "Marin-Epagnier",
    "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
    "region": "ne",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "art": "fest",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "art": "code",
    "abk": [
     "MEP"
    ],
    "ort": [
-    47.009151,
-    7.010668
+    47.009308,
+    7.010607
    ]
   },
   "zihlbruecke": {
@@ -6921,15 +7178,15 @@
    "name": "Zihlbrücke",
    "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
    "region": "ne",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "art": "fest",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "art": "code",
    "abk": [
     "ZBR"
    ],
    "ort": [
-    47.009238,
-    7.030564
+    47.009224,
+    7.033037
    ]
   },
   "gampelen": {
@@ -6937,15 +7194,15 @@
    "name": "Gampelen",
    "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
    "region": "ne",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "art": "fest",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "art": "code",
    "abk": [
     "GP"
    ],
    "ort": [
-    47.009084,
-    7.058215
+    47.008909,
+    7.058308
    ]
   },
   "muntschemier": {
@@ -6953,15 +7210,15 @@
    "name": "Müntschemier",
    "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
    "region": "ne",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "art": "fest",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "art": "code",
    "abk": [
     "MM"
    ],
    "ort": [
-    46.992821,
-    7.144019
+    46.993097,
+    7.142376
    ]
   },
   "gummenen": {
@@ -6969,15 +7226,15 @@
    "name": "Gümmenen",
    "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
    "region": "ne",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "art": "fest",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "art": "code",
    "abk": [
     "GMM"
    ],
    "ort": [
-    46.943702,
-    7.234782
+    46.941978,
+    7.234842
    ]
   },
   "rosshausern": {
@@ -6985,15 +7242,15 @@
    "name": "Rosshäusern",
    "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
    "region": "ne",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "art": "fest",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "art": "code",
    "abk": [
     "ROSS"
    ],
    "ort": [
-    46.934336,
-    7.29682
+    46.934842,
+    7.297952
    ]
   },
   "riedbach": {
@@ -7001,15 +7258,15 @@
    "name": "Riedbach",
    "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
    "region": "ne",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "art": "fest",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "art": "code",
    "abk": [
     "RCH"
    ],
    "ort": [
-    46.941133,
-    7.333752
+    46.941251,
+    7.334252
    ]
   },
   "bern_brunnen_westside": {
@@ -7017,15 +7274,15 @@
    "name": "Bern Brünnen Westside",
    "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
    "region": "ne",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "art": "fest",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "art": "code",
    "abk": [
     "BNB"
    ],
    "ort": [
-    46.943415,
-    7.375437
+    46.943832,
+    7.375034
    ]
   },
   "sugiez": {
@@ -7033,15 +7290,15 @@
    "name": "Sugiez",
    "gruppe": "NE 2 · Ins – Sugiez – Murten",
    "region": "ne",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "art": "fest",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "art": "code",
    "abk": [
     "SUGI"
    ],
    "ort": [
-    46.963096,
-    7.120475
+    46.964234,
+    7.119625
    ]
   },
   "muntelier_lowenberg": {
@@ -7049,15 +7306,15 @@
    "name": "Muntelier-Löwenberg",
    "gruppe": "NE 2 · Ins – Sugiez – Murten",
    "region": "ne",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "art": "fest",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "art": "code",
    "abk": [
     "LOEW"
    ],
    "ort": [
-    46.941826,
-    7.139434
+    46.940939,
+    7.137907
    ]
   },
   "murten": {
@@ -7072,8 +7329,8 @@
     "MRT"
    ],
    "ort": [
-    46.924827,
-    7.114599
+    46.925033,
+    7.114916
    ]
   },
   "kallnach": {
@@ -7081,15 +7338,15 @@
    "name": "Kallnach",
    "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
    "region": "ne",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "art": "fest",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "art": "code",
    "abk": [
     "KAL"
    ],
    "ort": [
-    47.025507,
-    7.235205
+    47.02604,
+    7.235922
    ]
   },
   "fraschels": {
@@ -7097,15 +7354,15 @@
    "name": "Fräschels",
    "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
    "region": "ne",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "art": "fest",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "art": "code",
    "abk": [
     "FRAE"
    ],
    "ort": [
-    46.999084,
-    7.206027
+    46.999023,
+    7.205844
    ]
   },
   "kerzers_papiliorama": {
@@ -7113,15 +7370,15 @@
    "name": "Kerzers Papiliorama",
    "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
    "region": "ne",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "art": "fest",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "art": "code",
    "abk": [
     "KZPP"
    ],
    "ort": [
-    46.989653,
-    7.199245
+    46.991978,
+    7.200243
    ]
   },
   "galmiz": {
@@ -7129,15 +7386,15 @@
    "name": "Galmiz",
    "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
    "region": "ne",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "art": "fest",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "art": "code",
    "abk": [
     "GZ"
    ],
    "ort": [
-    46.950811,
-    7.153134
+    46.951405,
+    7.153722
    ]
   },
   "faoug": {
@@ -7145,15 +7402,15 @@
    "name": "Faoug",
    "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
    "region": "ne",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "art": "fest",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "art": "code",
    "abk": [
     "FG"
    ],
    "ort": [
-    46.908272,
-    7.074605
+    46.907911,
+    7.073747
    ]
   },
   "avenches": {
@@ -7161,15 +7418,15 @@
    "name": "Avenches",
    "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
    "region": "ne",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "art": "fest",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "art": "code",
    "abk": [
     "AV"
    ],
    "ort": [
-    46.889434,
-    7.048835
+    46.887067,
+    7.044689
    ]
   },
   "domdidier": {
@@ -7177,15 +7434,15 @@
    "name": "Domdidier",
    "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
    "region": "ne",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "art": "fest",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "art": "code",
    "abk": [
     "DOM"
    ],
    "ort": [
-    46.870554,
-    7.01439
+    46.871265,
+    7.015095
    ]
   },
   "dompierre": {
@@ -7193,15 +7450,15 @@
    "name": "Dompierre",
    "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
    "region": "ne",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "art": "fest",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "art": "code",
    "abk": [
     "DOP"
    ],
    "ort": [
-    46.85468,
-    6.985716
+    46.854797,
+    6.985828
    ]
   },
   "munchenwiler_courgevaux": {
@@ -7209,15 +7466,15 @@
    "name": "Münchenwiler-Courgevaux",
    "gruppe": "NE 4 · Murten – Fribourg",
    "region": "ne",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "art": "fest",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "art": "code",
    "abk": [
     "MUCO"
    ],
    "ort": [
-    46.911244,
-    7.1154
+    46.912122,
+    7.115032
    ]
   },
   "cressier_fr": {
@@ -7225,15 +7482,15 @@
    "name": "Cressier FR",
    "gruppe": "NE 4 · Murten – Fribourg",
    "region": "ne",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "art": "fest",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "art": "code",
    "abk": [
     "CRFR"
    ],
    "ort": [
-    46.899691,
-    7.149137
+    46.901539,
+    7.150437
    ]
   },
   "courtepin": {
@@ -7241,15 +7498,15 @@
    "name": "Courtepin",
    "gruppe": "NE 4 · Murten – Fribourg",
    "region": "ne",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "art": "fest",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "art": "code",
    "abk": [
     "COUR"
    ],
    "ort": [
-    46.868989,
-    7.123697
+    46.867128,
+    7.122963
    ]
   },
   "pensier": {
@@ -7257,15 +7514,15 @@
    "name": "Pensier",
    "gruppe": "NE 4 · Murten – Fribourg",
    "region": "ne",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "art": "fest",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "art": "code",
    "abk": [
     "PEN"
    ],
    "ort": [
-    46.841676,
-    7.13531
+    46.841925,
+    7.135512
    ]
   },
   "saint_blaise_cff": {
@@ -7273,15 +7530,15 @@
    "name": "Saint-Blaise CFF",
    "gruppe": "NE 5 · Neuchâtel – Biel",
    "region": "ne",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "art": "fest",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "art": "code",
    "abk": [
     "SBL"
    ],
    "ort": [
-    47.01453,
-    6.985239
+    47.014444,
+    6.981708
    ]
   },
   "cornaux": {
@@ -7289,15 +7546,15 @@
    "name": "Cornaux",
    "gruppe": "NE 5 · Neuchâtel – Biel",
    "region": "ne",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "art": "fest",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "art": "code",
    "abk": [
     "CORN"
    ],
    "ort": [
-    47.036671,
-    7.030848
+    47.038654,
+    7.023314
    ]
   },
   "cressier": {
@@ -7305,15 +7562,15 @@
    "name": "Cressier NE",
    "gruppe": "NE 5 · Neuchâtel – Biel",
    "region": "ne",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "art": "fest",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "art": "code",
    "abk": [
     "CRNE"
    ],
    "ort": [
-    47.04067,
-    7.032467
+    47.051875,
+    7.039938
    ]
   },
   "le_landeron": {
@@ -7321,15 +7578,15 @@
    "name": "Le Landeron",
    "gruppe": "NE 5 · Neuchâtel – Biel",
    "region": "ne",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "art": "fest",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "art": "code",
    "abk": [
     "LD"
    ],
    "ort": [
-    47.056936,
-    7.066307
+    47.0569,
+    7.064699
    ]
   },
   "la_neuveville": {
@@ -7337,15 +7594,15 @@
    "name": "La Neuveville",
    "gruppe": "NE 5 · Neuchâtel – Biel",
    "region": "ne",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "art": "fest",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "art": "code",
    "abk": [
     "NV"
    ],
    "ort": [
-    47.062777,
-    7.095358
+    47.062778,
+    7.095148
    ]
   },
   "ligerz": {
@@ -7353,15 +7610,15 @@
    "name": "Ligerz",
    "gruppe": "NE 5 · Neuchâtel – Biel",
    "region": "ne",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "art": "fest",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "art": "code",
    "abk": [
     "LIG"
    ],
    "ort": [
-    47.08232,
-    7.130921
+    47.08312,
+    7.133328
    ]
   },
   "twann": {
@@ -7369,15 +7626,15 @@
    "name": "Twann",
    "gruppe": "NE 5 · Neuchâtel – Biel",
    "region": "ne",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "art": "fest",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "art": "code",
    "abk": [
     "TWN"
    ],
    "ort": [
-    47.093838,
-    7.157008
+    47.094085,
+    7.158294
    ]
   },
   "tuscherz": {
@@ -7385,15 +7642,15 @@
    "name": "Tüscherz",
    "gruppe": "NE 5 · Neuchâtel – Biel",
    "region": "ne",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "art": "fest",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "art": "code",
    "abk": [
     "TUE"
    ],
    "ort": [
-    47.115708,
-    7.198379
+    47.114623,
+    7.196683
    ]
   },
   "serrieres": {
@@ -7401,17 +7658,17 @@
    "name": "Serrières",
    "gruppe": "NE 6 · Neuchâtel – Yverdon",
    "region": "ne",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "art": "fest",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "art": "code",
    "abk": [
     "NESE",
     "NEPS",
     "NSRL"
    ],
    "ort": [
-    46.985278,
-    6.907165
+    46.983817,
+    6.902678
    ]
   },
   "auvernier": {
@@ -7419,16 +7676,16 @@
    "name": "Auvernier",
    "gruppe": "NE 6 · Neuchâtel – Yverdon",
    "region": "ne",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "art": "fest",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "art": "code",
    "abk": [
     "AUV",
     "AVLI"
    ],
    "ort": [
     46.979376,
-    6.877085
+    6.876977
    ]
   },
   "colombier": {
@@ -7436,15 +7693,15 @@
    "name": "Colombier",
    "gruppe": "NE 6 · Neuchâtel – Yverdon",
    "region": "ne",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "art": "fest",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "art": "code",
    "abk": [
     "CLB"
    ],
    "ort": [
-    46.966398,
-    6.84716
+    46.9669,
+    6.84866
    ]
   },
   "boudry": {
@@ -7452,15 +7709,15 @@
    "name": "Boudry",
    "gruppe": "NE 6 · Neuchâtel – Yverdon",
    "region": "ne",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "art": "fest",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "art": "code",
    "abk": [
     "BDR"
    ],
    "ort": [
-    46.958741,
-    6.840293
+    46.960837,
+    6.837336
    ]
   },
   "bevaix": {
@@ -7468,15 +7725,15 @@
    "name": "Bevaix",
    "gruppe": "NE 6 · Neuchâtel – Yverdon",
    "region": "ne",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "art": "fest",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "art": "code",
    "abk": [
     "BV"
    ],
    "ort": [
-    46.929671,
-    6.811724
+    46.929669,
+    6.811545
    ]
   },
   "gorgier_saint_aubin": {
@@ -7484,15 +7741,15 @@
    "name": "Gorgier-Saint-Aubin",
    "gruppe": "NE 6 · Neuchâtel – Yverdon",
    "region": "ne",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "art": "fest",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "art": "code",
    "abk": [
     "GOR"
    ],
    "ort": [
-    46.898656,
-    6.780344
+    46.898729,
+    6.780292
    ]
   },
   "onnens_bonvillars": {
@@ -7500,15 +7757,15 @@
    "name": "Onnens-Bonvillars",
    "gruppe": "NE 6 · Neuchâtel – Yverdon",
    "region": "ne",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "art": "fest",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "art": "code",
    "abk": [
     "ONB"
    ],
    "ort": [
-    46.832033,
-    6.687893
+    46.832231,
+    6.689122
    ]
   },
   "concise": {
@@ -7516,15 +7773,15 @@
    "name": "Concise",
    "gruppe": "NE 6 · Neuchâtel – Yverdon",
    "region": "ne",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "art": "fest",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "art": "code",
    "abk": [
     "CC"
    ],
    "ort": [
-    46.850876,
-    6.723166
+    46.85089,
+    6.723232
    ]
   },
   "grandson": {
@@ -7532,15 +7789,15 @@
    "name": "Grandson",
    "gruppe": "NE 6 · Neuchâtel – Yverdon",
    "region": "ne",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "art": "fest",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "art": "code",
    "abk": [
     "GRS"
    ],
    "ort": [
-    46.804552,
-    6.637141
+    46.805559,
+    6.639974
    ]
   },
   "bole": {
@@ -7548,15 +7805,15 @@
    "name": "Bôle",
    "gruppe": "NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier",
    "region": "ne",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "art": "fest",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "art": "code",
    "abk": [
     "BOLE"
    ],
    "ort": [
-    46.967351,
-    6.845889
+    46.971077,
+    6.844805
    ]
   },
   "champ_du_moulin": {
@@ -7564,15 +7821,15 @@
    "name": "Champ-du-Moulin",
    "gruppe": "NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier",
    "region": "ne",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "art": "fest",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "art": "code",
    "abk": [
     "CDM"
    ],
    "ort": [
-    46.959917,
-    6.774971
+    46.960041,
+    6.77453
    ]
   },
   "noiraigue": {
@@ -7580,15 +7837,15 @@
    "name": "Noiraigue",
    "gruppe": "NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier",
    "region": "ne",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "art": "fest",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "art": "code",
    "abk": [
     "NOI"
    ],
    "ort": [
-    46.95486,
-    6.72398
+    46.954455,
+    6.722706
    ]
   },
   "travers": {
@@ -7596,16 +7853,16 @@
    "name": "Travers",
    "gruppe": "NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier",
    "region": "ne",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "art": "fest",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "art": "code",
    "abk": [
     "TR",
     "TROU"
    ],
    "ort": [
-    46.942101,
-    6.676173
+    46.941431,
+    6.674839
    ]
   },
   "la_presta_mines_d_asphalte": {
@@ -7613,15 +7870,15 @@
    "name": "La Presta - Mines d'Asphalte",
    "gruppe": "NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier",
    "region": "ne",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "art": "fest",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "art": "code",
    "abk": [
     "PRST"
    ],
    "ort": [
-    46.931085,
-    6.654373
+    46.931215,
+    6.654414
    ]
   },
   "couvet": {
@@ -7629,16 +7886,16 @@
    "name": "Couvet",
    "gruppe": "NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier",
    "region": "ne",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "art": "fest",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "art": "code",
    "abk": [
     "CVTR",
     "CVT"
    ],
    "ort": [
-    46.923902,
-    6.636035
+    46.923899,
+    6.635961
    ]
   },
   "motiers": {
@@ -7646,15 +7903,15 @@
    "name": "Môtiers",
    "gruppe": "NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier",
    "region": "ne",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "art": "fest",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "art": "code",
    "abk": [
     "MOT"
    ],
    "ort": [
-    46.911791,
-    6.610315
+    46.911709,
+    6.61025
    ]
   },
   "neuchatel_vauseyon": {
@@ -7679,15 +7936,15 @@
    "name": "Les Deurres",
    "gruppe": "NE 8 · Neuchâtel – La Chaux-de-Fonds",
    "region": "ne",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "art": "fest",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "art": "code",
    "abk": [
     "DEU"
    ],
    "ort": [
-    46.985024,
-    6.906539
+    46.984699,
+    6.897055
    ]
   },
   "corcelles_peseux": {
@@ -7695,15 +7952,15 @@
    "name": "Corcelles-Peseux",
    "gruppe": "NE 8 · Neuchâtel – La Chaux-de-Fonds",
    "region": "ne",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "art": "fest",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "art": "code",
    "abk": [
     "CP"
    ],
    "ort": [
-    46.979376,
-    6.877085
+    46.983062,
+    6.883616
    ]
   },
   "chambrelien": {
@@ -7711,17 +7968,17 @@
    "name": "Chambrelien",
    "gruppe": "NE 8 · Neuchâtel – La Chaux-de-Fonds",
    "region": "ne",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "art": "fest",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "art": "code",
    "abk": [
     "CHN",
     "CHNF",
     "CHNN"
    ],
    "ort": [
-    46.967252,
-    6.812511
+    46.96699,
+    6.811642
    ]
   },
   "les_geneveys_sur_coffrane": {
@@ -7729,15 +7986,15 @@
    "name": "Les Geneveys-sur-Coffrane",
    "gruppe": "NE 8 · Neuchâtel – La Chaux-de-Fonds",
    "region": "ne",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "art": "fest",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "art": "code",
    "abk": [
     "GEC"
    ],
    "ort": [
-    47.015122,
-    6.853163
+    47.01486,
+    6.853214
    ]
   },
   "les_hauts_geneveys": {
@@ -7745,15 +8002,15 @@
    "name": "Les Hauts-Geneveys",
    "gruppe": "NE 8 · Neuchâtel – La Chaux-de-Fonds",
    "region": "ne",
-   "quelle": "fest (zusatz_plaene.json)",
-   "workflow": "-",
-   "art": "fest",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "art": "code",
    "abk": [
     "HGV"
    ],
    "ort": [
-    47.048601,
-    6.875496
+    47.047344,
+    6.874513
    ]
   },
   "mob__allieres": {
