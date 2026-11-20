@@ -99,7 +99,7 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - [x] **HT Hauptgleis-Topologie als Sperre (REGELN 0.1, Kopf «HT»)** – 18.11. spät, `code/hauptgleis.py`, Basis gesetzt (Nachtrag HT); Seite nicht neu veröffentlicht (kein Plan geändert)
 - [x] **K0 Sichtbar: Ins im Regionalplan + Zwischengeraden im Bahnhofplan** – 19.11. nachmittags, Commits 83a0dc2/64a3fa4, Seite v156 (Nachtrag K0)
 - [x] **K0b Zwischengeraden Rest (REGELN 1.9)** (v157, 20.11.)
-- [ ] **V3 Bahnhofregister + OSM-Verdacht + Sperre «veraltet»** (Entscheid Daniel 20.11.) – Abschnitt V3 unten
+- [x] **V3 Bahnhofregister + OSM-Verdacht + Sperre «veraltet»** – 20.11. abends, Commits 5e32a01/ce5b16c, Seite v158 (Nachtrag V3)
 - [ ] **V4 NE in den gemeinsamen Bauweg** (Entscheid Daniel 20.11.; REGELN 0.9) – Abschnitt V4 unten
 - [ ] **K0c Selnau parallel (REGELN 2.2, `r34_kette`)** (klein) – siehe Nachtrag 20.11. ~19:15; nach V3/V4, vor T-SZU1
 - [ ] **V5 ein Lauf für alle Regionen** / **V6 Netz West (Neuchâtel–Biel–Solothurn–Olten)** – danach – Zweisimmen (dünn→dick am Knick), Solothurn (Weiche am Knick, doppelter Abstand), Selnau (ZL ~4 Ebenen, nur auf Daniels Antwort); Liste `ergebnisse/seite/zwischengeraden.md` – vor oder nach T-SZU1, wie Daniel will
@@ -704,4 +704,15 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 ### 20.11.2026 ~20:15 – Entscheide Daniel: Register, OSM-Prüfung, kartographische Freiheit
 - Neue Schritte V3 (Register mit SBB-Abkürzung/BPUIC/Koordinaten, OSM-Verdacht, Sperre «veraltet») und V4 (NE aus dem Code) vor
   K0c; V5/V6 (ein Lauf, Netz West) danach. «Einfacher darf Ziel sein» → REGELN 0.9 und 5.9.
+
+### 20.11.2026 ~20:50 – Schritt V3 abgeschlossen, Seite v158 (Commits 5e32a01, ce5b16c; ergebnisse bb5df3c)
+- Neu `code/bahnhofregister.py` (REGELN Kopf «VR», 6): Register `netz/bahnhoefe.json` (180 Abk., 144 Pläne; Commit/Fingerabdruck in
+  `ergebnisse/seite/register/register.json`), vom Lauf `seite` nur bei Änderung auf main geschrieben. Daten: Release «vorbereitung».
+- Karte «OSM-Verdacht und Herkunft» (Werkzeugkasten): 26 Befunde – OG 5 (Neuchâtel 3–7, Ins 3/4, Aarau 10, Konolfingen 2, Binz 2),
+  OU Ligerz, OR Aarau Torfeld, OL Solothurn, OK 2 (RhB-Autoverlad), OB 16 (u. a. Trimbach, Triemli, HB SZU); MF 4 (Neuchâtel,
+  Onnens, Kerzers, Vauseyon mehrfach). Daniel: je Befund A/B → `netz/osm_ausnahmen.json`.
+- Sperre VR: `seite` rot, wenn Plan aus Code älter als `spurplan/code/`; `netz/veraltet_basis.json` = 58 feste Pläne (fällt mit V4/N2/P2b).
+  Live bewiesen: zwei Läufe auf 5e32a01 rot, weil sie Repo-/Regionspläne vor dem Push von plaene/regionen sahen → «wartet», solange
+  ein weiterer seite-Lauf ansteht (ce5b16c). `regionen` rechnet bei Push auf `spurplan/code/**` alle Regionen (Standard jetzt alle).
+- Befund: Thun/Ins/Murten/Kerzers sind Dateien vom 26./27.10. (`werkstatt/olten/reg`), standen als «aus Code» → Label «fest seit».
 
