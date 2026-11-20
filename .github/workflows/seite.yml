@@ -9,12 +9,13 @@ on:
       label: { description: "Label des Regionalplans Olten", required: false, default: "Region Olten" }
   push:
     branches: [main]
-    paths: ["spurplan/werkstatt/**", "spurplan/hinweise.json", "spurplan/hinweise_offen.json", "spurplan/code/osm_abgleich.py", "spurplan/code/hinweis_abdeckung.py", "spurplan/code/ausschnitte.py", "spurplan/code/alle_plaene_pruefen.py", "spurplan/abnahmen.json", "spurplan/code/grundpruefung.py", "spurplan/grundpruefung_basis.json", "spurplan/grundpruefung_faelle/**", "spurplan/code/hauptgleis.py", "spurplan/hauptgleis_basis.json", "spurplan/hauptgleis_faelle/**"]
+    paths: ["spurplan/code/bahnhofregister.py", "spurplan/netz/veraltet_basis.json", "spurplan/netz/osm_ausnahmen.json", "spurplan/werkstatt/**", "spurplan/hinweise.json", "spurplan/hinweise_offen.json", "spurplan/code/osm_abgleich.py", "spurplan/code/hinweis_abdeckung.py", "spurplan/code/ausschnitte.py", "spurplan/code/alle_plaene_pruefen.py", "spurplan/abnahmen.json", "spurplan/code/grundpruefung.py", "spurplan/grundpruefung_basis.json", "spurplan/grundpruefung_faelle/**", "spurplan/code/hauptgleis.py", "spurplan/hauptgleis_basis.json", "spurplan/hauptgleis_faelle/**"]
   workflow_run:
     workflows: ["regionen", "plaene", "pruefstand"]
     types: [completed]
 permissions:
   contents: write
+  actions: read      # V3: laufende Läufe plaene/regionen erkennen (Sperre «veraltet» wartet auf sie)
 concurrency: { group: seite, cancel-in-progress: false }   # eigene Gruppe: in einer gemeinsamen Gruppe ersetzt ein wartender Lauf den anderen
 # Gleiche Rechnung auf jedem Runner (5.11.2026: zwei seite-Läufe je Commit ergaben abwechselnd zwei Fassungen von Olten und
 # Neuchâtel; lokal immer gleich – vermutlich unterschiedliche Runner-CPUs mit anderen OpenBLAS-Kerneln)
@@ -36,6 +37,8 @@ jobs:
       - run: |
           sudo apt-get install -y -q libcairo2 >/dev/null
           pip install -q numpy scipy shapely svgpathtools cairosvg pillow
+      - name: "Geschichte von main (V3 – Sperre «veraltet» vergleicht Commits, Referenzen «fest seit» aus git log)"
+        run: git fetch -q --depth 1000 origin main || true
       - name: Regionalpläne vom Branch «ergebnisse» übernehmen
         run: |
           git fetch -q --depth 400 origin ergebnisse:refs/remotes/origin/ergebnisse -f || git fetch -q origin ergebnisse || true   # Tiefe: Herkunft je Plan aus dem Commit-Text (B1)
@@ -60,7 +63,9 @@ jobs:
           ls spurplan/werkstatt/olten/feedback/*.svg
       - name: Daten (Release «daten») für die OSM-Ausschnitte der Region Olten
         env: { GH_TOKEN: "${{ github.token }}" }
-        run: gh release download daten -p schweiz_bahn.json.gz -D /tmp --clobber
+        run: |
+          gh release download daten -p schweiz_bahn.json.gz -D /tmp --clobber
+          mkdir -p /tmp/vb && gh release download vorbereitung -p dienststellen.csv.gz -p betriebspunkte.json -p gleisnummern.json -D /tmp/vb --clobber   # V3 Bahnhofregister
       - name: Regionen Olten und Neuchâtel bauen (Bahnhofspläne + Regionalplan aus der Werkstatt, 26.10.2026)
         run: |
           mkdir -p /tmp/seite
@@ -90,6 +95,28 @@ jobs:
             --regel --messen --netz /tmp/seite/netz --json /tmp/seite/abdeckung.json --md /tmp/seite/abdeckung.md 2>&1 | tee -a /tmp/seite/log.txt | head -1
           tar czf /tmp/seite/netz.tgz -C /tmp/seite netz     # Netzmodelle gepackt behalten (für lokale Prüfungen), offen ~3 MB
           rm -rf /tmp/seite/netz /tmp/seite/netzbefunde
+      - name: Bahnhofregister, OSM-Verdacht, veraltet (V3, 20.11.2026, REGELN Kopf «VR») – danach Seite mit Karte «OSM-Verdacht»
+        id: vr
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: |
+          set +e
+          mkdir -p /tmp/vrnetz && tar xzf /tmp/seite/netz.tgz -C /tmp/vrnetz
+          # laufende Bau-Läufe: deren Pläne sind nur «wartet», nicht rot (Code-Push startet plaene und regionen gleichzeitig)
+          L=$(for s in in_progress queued; do gh api "repos/${{ github.repository }}/actions/runs?status=$s&per_page=50" -q '.workflow_runs[].name' 2>/dev/null; done | grep -xE "plaene|regionen" | sort -u | paste -sd, -)
+          echo "laufend: $L"
+          python3 spurplan/code/bahnhofregister.py --selbsttest 2>&1 | tee /tmp/seite/register_selbsttest.txt
+          st=${PIPESTATUS[0]}
+          python3 spurplan/code/bahnhofregister.py --seite /tmp/seite/index.html --plaene /tmp/seite/plaene --netz-dir /tmp/vrnetz/netz \
+            --daten /tmp/vb --osm /tmp/schweiz_bahn.json.gz --out /tmp/seite/register --stabil /tmp/bahnhoefe_register.json \
+            --sha ${{ github.sha }} --basis spurplan/netz/veraltet_basis.json --laufend "$L" 2>&1 | tee /tmp/seite/register_log.txt
+          rc=${PIPESTATUS[0]}
+          echo "rc=$rc" >> "$GITHUB_OUTPUT"; echo "st=$st" >> "$GITHUB_OUTPUT"
+          rm -rf /tmp/vrnetz
+          # Karte «OSM-Verdacht» auf die Seite: zweiter Durchgang bauen.py (liest feedback/osm_verdacht.svg)
+          cp /tmp/seite/register/osm_verdacht.svg spurplan/werkstatt/olten/feedback/osm_verdacht.svg
+          cd spurplan/werkstatt/olten && PLAENE_DIR=/tmp/seite/plaene python3 feedback/bauen.py "${{ github.event.inputs.label || 'Region Olten' }}" feedback/region.svg 2>&1 | tail -1 | tee -a /tmp/seite/log.txt
+          cp feedback/index.html /tmp/seite/
+          exit 0
       - name: Grundprüfung G0 als Sperre (18.11.2026, REGELN «Grundprüfung als Sperre») – nur gezeichnete Geometrie
         id: grund
         run: |
@@ -137,6 +164,20 @@ jobs:
           git add -A ergebnisse/seite
           git commit -qm "Seite $(date -u +%Y-%m-%dT%H:%MZ) (${{ github.sha }})" || echo "keine Änderung"
           git push -q origin ergebnisse || { sleep 20; git fetch -q origin ergebnisse && git rebase -q origin/ergebnisse && git push -q origin ergebnisse; }   # paralleler Lauf hat gerade gepusht
+      - name: Register auf main (spurplan/netz/bahnhoefe.json, nur der stabile Teil; nur bei Änderung)
+        if: always()
+        run: |
+          [ -f /tmp/bahnhoefe_register.json ] || exit 0
+          git fetch -q origin main && git checkout -q -f -B register-upd origin/main
+          mkdir -p spurplan/netz && cp /tmp/bahnhoefe_register.json spurplan/netz/bahnhoefe.json
+          git add spurplan/netz/bahnhoefe.json
+          git diff --cached --quiet && { echo "Register unverändert"; exit 0; }
+          git commit -qm "Bahnhofregister (Workflow seite, ${{ github.sha }})"
+          git push -q origin register-upd:main || { sleep 15; git fetch -q origin main && git rebase -q origin/main && git push -q origin register-upd:main; } || echo "Register nicht gepusht (main bewegt) – nächster Lauf"
+      - name: Sperre VR – Plan aus Code älter als spurplan/code/? (V3, REGELN Kopf «VR»)
+        run: |
+          if [ "${{ steps.vr.outputs.st }}" != "0" ]; then echo "VR: Selbsttest nicht bestanden"; cat /tmp/seite/register_selbsttest.txt; exit 1; fi
+          if [ "${{ steps.vr.outputs.rc }}" != "0" ]; then grep -E "^NEU|Traceback|Error" /tmp/seite/register_log.txt || true; echo "VR: veralteter Plan (nicht in spurplan/netz/veraltet_basis.json) – Workflow plaene/regionen neu starten"; exit 1; fi
       - name: Sperre G0 – neuer Grundbefund in einem Plan? (Ergebnisse sind schon auf «ergebnisse»)
         run: |
           if [ "${{ steps.grund.outputs.st }}" != "0" ]; then echo "Grundprüfung: Selbsttest (Prüffälle) nicht bestanden"; cat /tmp/seite/grundpruefung_selbsttest.txt; exit 1; fi

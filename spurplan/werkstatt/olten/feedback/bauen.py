@@ -68,6 +68,11 @@ if os.path.exists(_fq):
     plans.append(dict(key="fragen", name="Fragen an Dani", gruppe="Werkzeugkasten",
                       label="Offene Entscheide · Antwort per Pin «A»/«B» · danach in REGELN.md",
                       svg=strip(open(_fq).read()), counts=None, status=None))
+# OSM-Verdacht und Herkunft (V3, 20.11.2026): Befundliste aus code/bahnhofregister.py (Workflow seite, zweiter Durchgang)
+if os.path.exists(os.path.join(HERE, "osm_verdacht.svg")):
+    plans.append(dict(key="osm_verdacht", name="OSM-Verdacht und Herkunft", gruppe="Werkzeugkasten",
+                      label="Bahnhofregister · Befund je Bahnhof, keine Sperre · Pin «A» = OSM korrigieren, «B» = Ausnahme (REGELN 6)",
+                      svg=strip(open(os.path.join(HERE, "osm_verdacht.svg")).read()), counts=None, status=None))
 # Prüfstand (Schritt 1, 8.11.2026): Kontaktbogen Bausteine × Drehungen vom Workflow «pruefstand» (Branch «ergebnisse»)
 if os.path.exists(os.path.join(HERE, "pruefstand.svg")):
     _pl = os.path.join(HERE, "pruefstand_label.txt")
@@ -87,7 +92,11 @@ for key, d, extra, name in ps.STATIONS:
     tot = sum(cnt.values())
     _wieder = key in _ARB.get("reihenfolge", [])          # Referenz wieder geöffnet (Arbeitsliste)
     st = "abgenommen" if (key in basis and not _wieder) else ("sauber" if tot == 0 else "offen")
-    plans.append(dict(key=key, name=name, gruppe="Referenz" if d == ps.REG else "Region Olten", label=f"Stand {stand}",
+    _lab = f"Stand {stand}"
+    if d == ps.REG:   # Referenz = Datei in werkstatt/olten/reg, nicht neu gerechnet (V3, 20.11.2026: stand fälschlich «aus Code»)
+        _cs = _sp.run(["git", "log", "-1", "--format=%cs", "--", os.path.join(d, f"{key}_spurplan.svg")], capture_output=True, text=True).stdout.strip()
+        if _cs: _lab = f"fest seit {_cs[8:10]}.{_cs[5:7]}.{_cs[:4]} · Referenz (Datei, nicht aus Code)"
+    plans.append(dict(key=key, name=name, gruppe="Referenz" if d == ps.REG else "Region Olten", label=_lab,
                       svg=strip(svg), counts=cnt, status=st))
 # Bahnhöfe aus dem Workflow «plaene» (spurplan/bahnhoefe.json, 26.10.2026): Plan aus ergebnisse/<b>/spurplan.svg,
 # vom Workflow «seite» nach feedback/repo_<b>.svg gelegt; Gruppe/Name aus zusatz_plaene.json, sonst Gruppe «Repo-Bahnhöfe»

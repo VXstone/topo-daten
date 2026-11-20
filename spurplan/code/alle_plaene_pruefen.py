@@ -161,7 +161,7 @@ OK = {k: v for k, v in (json.load(open(_OKF)).items() if os.path.exists(_OKF) el
 zeilen = []
 for p in PLANS:
     k = p["key"]; path = f"ergebnisse/seite/plaene/{k}.svg"
-    if k == "pruefstand": continue     # Prüfstand (8.11.2026): eigener Vergleich gegen spurplan/pruefstand_basis.json im Workflow «pruefstand»
+    if k in ("pruefstand", "osm_verdacht"): continue     # osm_verdacht = Befundliste (V3), keine Gleise; Prüfstand (8.11.2026): eigener Vergleich gegen spurplan/pruefstand_basis.json im Workflow «pruefstand»
     log = [l.split() for l in git("log", REF, "--format=%h %cI", "--", path).decode().splitlines() if l.strip()]
     if not log: zeilen.append(dict(key=k, gruppe=p.get("gruppe"), basis="neu", stellen=None)); continue
     if k in OK and (k not in A or OK[k] > A[k]):
@@ -204,7 +204,7 @@ for p in PLANS:
 wl = []
 for p in PLANS:
     k = p["key"]
-    if k in ("pruefstand", "fragen") or k.startswith("blaupause"): continue
+    if k in ("pruefstand", "fragen", "osm_verdacht") or k.startswith("blaupause"): continue
     fn_ = os.path.join(NEU, f"{k}.svg") if NEU else None
     raw = open(fn_, "rb").read() if fn_ and os.path.exists(fn_) else git("show", f"{REF}:ergebnisse/seite/plaene/{k}.svg")
     if not raw: continue

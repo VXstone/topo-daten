@@ -45,7 +45,7 @@ REGELN = ["GS", "GG", "GQ", "GP", "GW", "GT"]
 TEXT = {"GS": "Schnitt ohne DKW/Kreuzung/Niveautrennung", "GG": "Gleis auf Gleis", "GQ": "Querabstand nach Knick ≠ davor",
         "GP": "Pfeil nach innen / auf Nachbargleis", "GW": "Knick oder Abgang 90°", "GT": "Treppe"}
 LANE_B, LANE_R = 24.0, 24 * 0.42          # Ebenenabstand Bahnhofplan / Regionalplan (S = 0,42)
-NICHT_PLAENE = {"fragen", "pruefstand"}          # Werkzeugkasten-Karten ohne Gleise im Plansinn
+NICHT_PLAENE = {"fragen", "pruefstand", "osm_verdacht"}          # Werkzeugkasten-Karten ohne Gleise im Plansinn
 
 
 def _mat(tr):

@@ -50,7 +50,7 @@ T = json.load(open(os.path.join(WORK, f"{NAME}_topologie.json")))
 BP = json.load(open(os.path.join(WORK, "betriebspunkte.json"))); key_of = {v["name"]: k for k, v in BP.items()}
 STD = K.get("override_standard", {})
 _SB_ANKER = json.load(open(os.path.join(WORK, f"{NAME}_straenge.json"))).get("anker_m", {}) if os.path.exists(os.path.join(WORK, f"{NAME}_straenge.json")) else {}
-bericht = dict(region=REG, erzeugt=time.strftime("%Y-%m-%d %H:%M UTC", time.gmtime()), bahnhoefe={})
+bericht = dict(region=REG, erzeugt=time.strftime("%Y-%m-%d %H:%M UTC", time.gmtime()), code_commit=os.environ.get("GITHUB_SHA", ""), bahnhoefe={})   # V3: Code-Stand fürs Register
 def _bahnhof(n):
     b = key_of[n["name"]]; ov = os.path.join(WORK, f"{b}_override.json")
     o = json.load(open(ov)) if os.path.exists(ov) else {}

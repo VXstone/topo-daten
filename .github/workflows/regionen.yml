@@ -5,10 +5,10 @@ name: regionen
 on:
   workflow_dispatch:
     inputs:
-      region: { description: "Region (Ordner unter spurplan/regionen)", required: true, default: "mob" }
+      region: { description: "Region (Ordner unter spurplan/regionen), leer = alle nacheinander", required: false, default: "" }
   push:
     branches: [main]
-    paths: ["spurplan/regionen/**"]
+    paths: ["spurplan/regionen/**", "spurplan/code/**"]   # V3 (20.11.2026): Code-Änderung rechnet alle Regionen neu (mob, szu, vereina), sonst Sperre «veraltet»
 permissions:
   contents: write
 concurrency: { group: regionen, cancel-in-progress: false }   # eigene Gruppe: in einer gemeinsamen Gruppe ersetzt ein wartender Lauf den anderen

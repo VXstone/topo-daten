@@ -41,6 +41,21 @@ Seite; je 0°/90°), Selbsttest in `seite` und `pruefstand`. Ziel ist **0** in j
 (`hauptgleis_basis.json`), jeder **neue** Befund macht `seite` rot (wie G0). Berichte nennen G0 **und** HT. Zielbilder von Hand (ohne Netzmodell) nur aus der
 Weichenfolge je Hauptgleis aus OSM, die Liste wird mitgegeben.
 
+**Bahnhofregister und Sperre «veraltet» (VR, seit 20.11., Entscheid D. Eckenstein «Regionen harmonisieren, OSM-Fehler
+erkennen»).** Jeder Bahnhof steht **einmal** im Register `spurplan/netz/bahnhoefe.json` (Schlüssel **SBB-Abkürzung**, dazu
+BPUIC, atlas-Koordinaten, OSM-Station, Linien, Regionen, Pläne mit Quelle/Workflow); Code-Commit und Fingerabdruck je Plan
+stehen in `ergebnisse/seite/register/register.json`. Erzeugt `code/bahnhofregister.py` in jedem Lauf `seite` aus der Seite,
+den Dienststellen (atlas) und den Betriebspunkten (Release «vorbereitung»). Teile desselben Orts (Abzweig, cul-de-sac, ≤ 1 km)
+zählen zum Plan. **Sperre VR:** ein Plan aus Code, dessen Bau-Commit den letzten Commit unter `spurplan/code/` nicht
+enthält, macht `seite` rot (Linien-Regionen: `regionen` rechnet bei Code-Push alle Regionen; solange `plaene`/`regionen`
+noch laufen, nur «wartet»). Bewusst feste Pläne (NE fest seit 21.10., Basel/Bern, Referenzen) stehen in
+`netz/veraltet_basis.json` und fallen mit V4/N2/P2b weg. Selbsttest (alter Commit → rot) im selben Schritt. **OSM-Verdacht**
+(nur Befund, Karte «OSM-Verdacht und Herkunft» im Werkzeugkasten): **OA** OSM-Station > 150 m vom atlas-Punkt · **ON** Name
+weicht ab (ohne Kantonskürzel/St./Ortsvorsatz) · **OR** Abkürzung ≠ `railway:ref` · **OU** BPUIC ≠ `uic_ref` · **OL** Linie
+der SBB-Betriebspunkte nicht unter den OSM-Linien im Plan · **OG** SBB-Gleis mit Perron ohne Perron-`ref` in OSM (SBB gilt,
+1.C) · **OK** keine OSM-Station · **OB** Betriebspunkt im Perimeter (Vieleck, 4.10) ohne Plan · **MF** Bahnhof an mehreren
+Orten geführt. Daniel entscheidet je Befund: OSM korrigieren oder Ausnahme (Ebene 6, `netz/osm_ausnahmen.json`).
+
 **Rangfolge bei Konflikten:** Grundsätze 0.1 → 0.8; innerhalb einer Ebene gilt die speziellere Regel nur, wo sie ausdrücklich
 «Ausnahme zu …» sagt. Widersprüche, die noch nicht entschieden sind, stehen in Abschnitt 7 – bis zum Entscheid gilt der
 höhere Grundsatz.
@@ -208,7 +223,10 @@ Galmiz Perron südlich / Kreuzungsgleis grün, Rothrist Detailvariante (E11), Ke
 **Liste (17.11.):** `spurplan/code/overrides_liste.py` → `ergebnisse/seite/overrides.md` (jeder Lauf `seite`), je Eintrag Art
 (Ortswissen / Schalter / Typvorlage / Geometrie) und Grund. Stand 17.11.: 910 Einträge an 125 Orten – 245 Ortswissen,
 351 Schalter, 126 Typvorlage (NE, fällt mit N2), 188 Geometrie (abbauen in V2/N1/N2). Herkunft je Plan steht im Kartenlabel
-(«aus Code <Commit> <Datum>» / «fest seit <Datum>»).
+(«aus Code <Commit> <Datum>» / «fest seit <Datum>»; Referenzen Thun/Ins/Murten/Kerzers seit 20.11. ehrlich «fest seit», sie sind
+Dateien). **OSM-Ausnahmen** (seit 20.11., VR): ein Befund der Karte «OSM-Verdacht», den Daniel als richtig bestätigt
+(«B Ausnahme»), steht als `"<Code>:<Abk>": "<Entscheid, Datum>"` in `spurplan/netz/osm_ausnahmen.json` und wird nicht mehr
+gemeldet; «A OSM korrigieren» heisst: in OSM beheben, nicht im Code umgehen.
 
 ---
 

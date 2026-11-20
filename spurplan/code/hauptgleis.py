@@ -36,7 +36,7 @@ REGELN = ["HT1", "HT2", "HT3", "HT4", "HT5"]
 TEXT = {"HT1": "OSM-Weiche am Hauptgleis ohne Abzweig im Plan", "HT2": "Abzweig am Hauptgleis im Plan ohne OSM-Weiche",
         "HT3": "Gleis an der falschen Weiche (Hauptgleis)", "HT4": "Abzweig zur falschen Seite",
         "HT5": "Fahrweg im Plan ≠ OSM"}
-NICHT_PLAENE = {"fragen", "pruefstand"}
+NICHT_PLAENE = {"fragen", "pruefstand", "osm_verdacht"}
 
 # ---------------------------------------------------------------- OSM
 _OSM = {}

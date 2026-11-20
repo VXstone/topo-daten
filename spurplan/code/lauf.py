@@ -112,4 +112,4 @@ for b in liste:                # Lauf abgebrochen: keine Kennzahlen – nicht al
     if b not in _mess: print(f"  {b:22} FEHLER (keine Kennzahlen: {gesamt.get(b, {}).get('fehler')})"); _verg[b] = dict(status="fehler")
 for b in gesamt: gesamt[b]["qualitaet"] = _verg.get(b)
 json.dump(dict(erzeugt=datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d %H:%M UTC"), lauf=os.environ.get("LAUF", ""),
-               bahnhoefe=gesamt), open(os.path.join(OUT, "bericht.json"), "w"), ensure_ascii=False, indent=1)
+               code_commit=os.environ.get("GITHUB_SHA", ""), bahnhoefe=gesamt), open(os.path.join(OUT, "bericht.json"), "w"), ensure_ascii=False, indent=1)
