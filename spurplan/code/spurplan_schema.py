@@ -4132,6 +4132,14 @@ def _zg_zusammenlegen(svg_paths):
                 run = abs(a3[1] - a0[1]) / t60
                 if abs(a3[0] - a0[0]) + 0.5 >= run:
                     xs = (a0[0] + a3[0]) / 2 - sx * run / 2
+                    # Kettenende an einer Weiche (Gleis läuft dort über ein anderes, Solothurn Gl. 3): Schräge an diesem Ende
+                    # ansetzen statt mittig, sonst liegt das waagrechte Stück länger auf dem anderen Gleis (G0 «GG»)
+                    r_z = CFG["sw_radius"]
+                    e0, e3 = neu[0], neu[-1]
+                    if all(abs(q[1] - a0[1]) <= 0.3 for q in neu[:i]) and _knoten(e0, set(ids)) \
+                            and abs(a3[0] - e0[0]) >= run + 2 * r_z: xs = e0[0] + sx * r_z
+                    elif all(abs(q[1] - a3[1]) <= 0.3 for q in neu[i + 2:]) and _knoten(e3, set(ids)) \
+                            and abs(e3[0] - a0[0]) >= run + 2 * r_z: xs = e3[0] - sx * (r_z + run)
                     if f1 or f2: abz = [(k_, a_, ((xs, a0[1]), (xs + sx * run, a3[1]))) for k_, a_ in f1 + f2]
                     slope = ((xs, a0[1]), (xs + sx * run, a3[1]))
                     zonen.append((min(a0[0], a3[0]), max(a0[0], a3[0]), slope))
@@ -4148,8 +4156,12 @@ def _zg_zusammenlegen(svg_paths):
                 if len(neu) < 3: break
                 pa, pb = neu[a_i], neu[b_i]
                 kl_ = teile[ids[0 if a_i == 0 else -1]][0]
-                weiter_ = any(T_[0] == kl_ and min(math.dist(pa, T_[3][0]), math.dist(pa, T_[3][-1])) <= 3.0
-                              for k, T_ in enumerate(teile) if k not in ids)   # dicker Fahrweg setzt dort fort (Solothurn)
+                # dicker Fahrweg setzt dort fort und das Stück liegt nur auf einem Gleis der anderen Klasse: nicht kürzen,
+                # sonst Lücke im Fahrweg (Solothurn Gl. 3); liegt es auf einem gleichklassigen Gleis, kürzen wie bisher
+                mid_ = ((pa[0] + pb[0]) / 2, pa[1]); _d, deck_ = _nahe(mid_, set(ids))
+                weiter_ = deck_ and all(teile[k][0] != kl_ for k in deck_) and any(
+                    T_[0] == kl_ and min(math.dist(pa, T_[3][0]), math.dist(pa, T_[3][-1])) <= 3.0
+                    for k, T_ in enumerate(teile) if k not in ids)
                 if abs(pa[1] - pb[1]) <= 0.3 and abs(pb[0] - pa[0]) > r_ + 0.5 and not weiter_ \
                         and _knoten(((pa[0] + pb[0]) / 2, pa[1]), set(ids)) and _knoten(pa, set(ids)):
                     neu[a_i] = (pb[0] - math.copysign(r_, pb[0] - pa[0]), pa[1])
@@ -4163,11 +4175,8 @@ def _zg_zusammenlegen(svg_paths):
                 if j_ is None: continue
                 t_ = (yb_ - s0_[1]) / (s1_[1] - s0_[1]); xw = s0_[0] + t_ * (s1_[0] - s0_[0])
                 if (Q[-1][0] - xw) * sxb_ <= r_ + 1: continue
-                ux_, uy_ = s1_[0] - s0_[0], s1_[1] - s0_[1]; L_ = math.hypot(ux_, uy_)
-                # von der Schräge her: Punkt um r vor der Weiche auf der Schräge (Seite, von der der Abzweig kommt)
-                sg_ = -1 if (yb_ - s0_[1]) * (s1_[1] - s0_[1]) > 0 and abs(yb_ - s0_[1]) > 1e-6 else 1
-                vor = (xw - ux_ / L_ * r_ * 1.0, yb_ - uy_ / L_ * r_ * 1.0)
-                abz_neu[n_k] = [vor, (xw, yb_), (xw + sxb_ * max(r_, 0.5), yb_)] + [q for q in Q[j_:] if (q[0] - xw) * sxb_ > r_]
+                # Weichenpunkt auf der Schräge, Abzweig von dort waagrecht (kein Stück auf der Schräge: sonst G0 «GG»)
+                abz_neu[n_k] = [(xw, yb_)] + [q for q in Q[j_:] if (q[0] - xw) * sxb_ > r_]
             ersatz.append((ids, neu, grenzen, zonen))
     if not ersatz: return 0
     weg = collections.defaultdict(set)
