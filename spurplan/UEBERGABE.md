@@ -100,7 +100,8 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - [x] **K0 Sichtbar: Ins im Regionalplan + Zwischengeraden im Bahnhofplan** – 19.11. nachmittags, Commits 83a0dc2/64a3fa4, Seite v156 (Nachtrag K0)
 - [x] **K0b Zwischengeraden Rest (REGELN 1.9)** (v157, 20.11.)
 - [x] **V3 Bahnhofregister + OSM-Verdacht + Sperre «veraltet»** – 20.11. abends, Commits 5e32a01/ce5b16c, Seite v158 (Nachtrag V3)
-- [ ] **V4 NE in den gemeinsamen Bauweg** (Entscheid Daniel 20.11.; REGELN 0.9) – Abschnitt V4 unten
+- [~] **V4 NE in den gemeinsamen Bauweg** (REGELN 0.9/4.11) – 20.11. spät: Bauweg steht (d979b78, 0c47dd1), Seite **nicht** veröffentlicht – G0 rot (Nachtrag V4)
+- [ ] **V4b G0 grün + veröffentlichen** (klein): Treppe Les Deurres–Vauseyon im Regionalplan NE, T7-Artefakt Prüfkreis, Liste «einfacher» – **vor** K0c
 - [ ] **K0c Selnau parallel (REGELN 2.2, `r34_kette`)** (klein) – siehe Nachtrag 20.11. ~19:15; nach V3/V4, vor T-SZU1
 - [ ] **V5 ein Lauf für alle Regionen** / **V6 Netz West (Neuchâtel–Biel–Solothurn–Olten)** – danach – Zweisimmen (dünn→dick am Knick), Solothurn (Weiche am Knick, doppelter Abstand), Selnau (ZL ~4 Ebenen, nur auf Daniels Antwort); Liste `ergebnisse/seite/zwischengeraden.md` – vor oder nach T-SZU1, wie Daniel will
 - [ ] **T-SZU1 DKW aus 4-Arm-Weiche (REGELN 2.4) und Güterverkehr schwarz (REGELN 1.21)** (klein, Entscheid Daniel 18.11.) – nach K0
@@ -303,6 +304,18 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   Liste «Vorschlag: einfacher als abgenommen» mit Differenzbild (REGELN 0.9: kürzere Nebengleise, gleichmässigere Abstände
   erwünscht; Topologie und Hauptfahrwege dürfen sich nicht ändern). Dabei Messung W59 «kurze Nebengleise» (REGELN 5.9) bauen.
 - Fertig: alle NE-Pläne aus dem Code, G0/HT grün, Seite veröffentlicht, Liste «einfacher» an Daniel.
+
+### V4b – NE: Sperre G0 grün und veröffentlichen (aus V4, 20.11.)
+- Einstieg: «Weiter mit UEBERGABE.md – Schritt V4b: NE veröffentlichen»
+- (1) seite-Lauf 0c47dd1: G0 rot nur `region_ne GT 4→5` – neue Treppe Neuchâtel-Vauseyon ← Les Deurres (Regionalplan ~ -752/-557;
+  v158 lief die Linie leicht schräg gerade ein). Lokal nicht nachstellbar (lokal GT 0, auch die alten zwei Concise/Cressier fehlen –
+  Numerik der Lage-Ausgleichung). Verdacht: Typvorlage-ports.json tragen jetzt `knoten/aus/ll` (verkettung.py nutzt sie) → andere
+  Verkettung. Prüfen im Workflow (Log `region_ne_log.txt`), REGELN 4.5 (Versatz nur wenn sonst Kreuzung, sonst kippen).
+- (2) Regression: 19 × «schlechter?». 17 Typvorlagen = Messartefakt: veröffentlichte alte Fassung hat den orangen Prüfkreis «W» an der
+  Weiche, T7 zählt ihn als Anschluss (Gümmenen, Ligerz: Geometrie gleich) → T7 soll Prüfkreise ignorieren. region_ne G2 35→32, W53 8→10 erklären.
+- (3) Liste «einfacher als abgenommen» (REGELN 0.9): W59 (5.9) misst, kürzt noch nichts. Höchste Werte: Cornaux 12, Onnens 12, Travers 5,
+  Colombier 3 – Kürzung als eigener Code-Schritt, Daniel zuerst die Liste zeigen.
+- Fertig: seite grün, Seite veröffentlicht (NE-Karten «aus Code»), offene NE-Hinweise pjyb/vpkw/zlwn angesehen.
 
 ### K0b – Zwischengeraden Rest (aus K0, 19.11.)
 - Einstieg: «Weiter mit UEBERGABE.md – Schritt K0b: Zwischengeraden Rest»
@@ -716,3 +729,10 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   ein weiterer seite-Lauf ansteht (ce5b16c). `regionen` rechnet bei Push auf `spurplan/code/**` alle Regionen (Standard jetzt alle).
 - Befund: Thun/Ins/Murten/Kerzers sind Dateien vom 26./27.10. (`werkstatt/olten/reg`), standen als «aus Code» → Label «fest seit».
 
+### 20.11.2026 ~23:15 – Schritt V4 Teil 1: NE-Bauweg (Commits d979b78, 0c47dd1; Seite nicht veröffentlicht, G0 rot)
+- `region_ne.json` baut alle 54 NE-Bahnhöfe (vorher nur Ins); Kette = run.sh inkl. Typvorlage und `viewbox_text` (Travers-Text war abgeschnitten).
+- REGELN 4.11: px-Ausnahmen wandern mit dem Warp (`PXW`, `<b>_warp_bezug.json` = Oktober-Warp, 19 Orte; nicht Ins/Kerzers, die seit Okt. gebaut
+  werden). Anlass Auvernier: Linie 219 endete 82 px vor Gl. 3. Fallstrick: `spurplan_check` überschreibt Plan **und ports.json** → Kette sichert sie.
+- bauen.py: NE-Karten aus dem Bau («aus Code · NE-Bauweg»), Gruppe/Status aus zusatz_plaene.json. `veraltet_basis` ohne NE (bleiben Basel, Bern, Referenzen).
+- 13 Pläne geändert (Auvernier, Bevaix, Bôle, Chambrelien, Colombier, Cornaux, Marin, Onnens, Riedbach, Travers, Twann, Murten, Ins) – alle Topologie
+  gleich, Differenzbilder angesehen; Typvorlagen byte-gleich. W59 (REGELN 5.9) gemessen, Gewicht 0. Rest → V4b.
