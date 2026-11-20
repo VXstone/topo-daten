@@ -2,9 +2,9 @@
 /home/runner/work/topo-daten/topo-daten/spurplan/werkstatt/olten/feedback/bauen.py:176: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
   _HEUTE = datetime.datetime.utcnow().strftime("%d.%m.%Y")
 18 Einträge
-index.html 2046 KB, 148 Pläne
+index.html 2047 KB, 148 Pläne
 21 Hinweise, 21 Ausschnitte
-Hinweis-Abdeckung: 30/57 (Befund < 40 px, ohne G2)
+Hinweis-Abdeckung: 31/57 (Befund < 40 px, ohne G2)
 ✓ 0bw9 solothurn                    G6,MX,VB1,VB2,W1,W2       19.2  Gleis nach unten, Knick, über anderen Gleisen nach oben
 ✓ 0fpo solothurn                    MX,VA1,VC1,W2             18.8  sauberes Gleis ins Nichts
 ✓ 0k4j region                       G5                        27.3  Eppenbergtunnel Weichen/Stummel
@@ -15,7 +15,7 @@ Hinweis-Abdeckung: 30/57 (Befund < 40 px, ohne G2)
 ✓ 3za5 region                       G6,MZ                      4.9  90 Grad, statt 2 Weichen nur eine
 ✓ 4xdm region                       G7                         0.5  Gleisanschluss dazwischen, Verbindungen prüfen
 ✓ 5yz7 mob__montreux                MQ                        27.1  Perron zwischen 4 und 3
-· 6gk4 mob__zweisimmen              -                         95.4  noch ein Gleis links raus
+✓ 6gk4 mob__zweisimmen              MK,MZ                     37.7  noch ein Gleis links raus
 · 6rwy mob__montreux                -                         87.9  keine Mittelperrons Normalspur
 ✓ 7ma7 solothurn                    VB1,VD1                    8.5  Fenster bis Abzweig
 ✓ 8bce konolfingen                  MX                         1.9  Gleise hin und her, Pfeile retour

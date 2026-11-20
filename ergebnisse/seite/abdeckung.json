@@ -1,5 +1,5 @@
 {
- "abgedeckt": 30,
+ "abgedeckt": 31,
  "offen": 57,
  "radius": 40.0,
  "ohne": [
@@ -163,10 +163,13 @@
    "x": 413.2,
    "y": 129.6,
    "text": "noch ein Gleis links raus",
-   "abgedeckt": false,
-   "regeln": [],
-   "naechster": 95.4,
-   "naechste_regel": "MZ",
+   "abgedeckt": true,
+   "regeln": [
+    "MK",
+    "MZ"
+   ],
+   "naechster": 37.7,
+   "naechste_regel": "MK",
    "plan_da": true
   },
   {
