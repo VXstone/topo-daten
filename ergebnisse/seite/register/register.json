@@ -1,0 +1,9304 @@
+{
+ "_zweck": "Bahnhofregister (V3, 20.11.2026): jeder Bahnhof einmal, Schlüssel SBB-Abkürzung. Erzeugt von code/bahnhofregister.py im Workflow seite.",
+ "code_stand": "5e32a01ec41b4bad4c69fbfafb7611ec3da483e2",
+ "seite_commit": "5e32a01ec41b4bad4c69fbfafb7611ec3da483e2",
+ "bahnhoefe": {
+  "AA": {
+   "abk": "AA",
+   "name": "Aarau",
+   "bpuic": 8502113,
+   "atlas": [
+    47.39136,
+    8.051274
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "aarau"
+   ],
+   "regionen": [
+    "olten"
+   ],
+   "linien": [
+    "540",
+    "649",
+    "650"
+   ],
+   "linie_sbb": "649",
+   "km": 41.50577,
+   "osm": {
+    "node": 3080746008,
+    "name": "Aarau",
+    "ref": "AA",
+    "uic_ref": "8502113",
+    "railway": "station",
+    "ll": [
+     47.3914562,
+     8.0513072
+    ],
+    "abstand_m": 11,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "10"
+   ],
+   "gleise_perron_osm": [
+    "0",
+    "1",
+    "12",
+    "13",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6"
+   ]
+  },
+  "ABO": {
+   "abk": "ABO",
+   "name": "Aarburg-Oftringen",
+   "bpuic": 8502000,
+   "atlas": [
+    47.320268,
+    7.908223
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "aarburg_oftringen"
+   ],
+   "regionen": [
+    "olten"
+   ],
+   "linien": [
+    "451",
+    "500"
+   ],
+   "linie_sbb": "451",
+   "km": 43.00505,
+   "osm": {
+    "node": 3081128586,
+    "name": "Aarburg-Oftringen",
+    "ref": "ABO",
+    "uic_ref": "8502000",
+    "railway": "station",
+    "ll": [
+     47.3202264,
+     7.908153
+    ],
+    "abstand_m": 7,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "2",
+    "3"
+   ],
+   "gleise_perron_osm": [
+    "1",
+    "2",
+    "3"
+   ]
+  },
+  "ABOS": {
+   "abk": "ABOS",
+   "name": "Aarburg-Oftringen Süd (Abzw)",
+   "bpuic": 8502013,
+   "atlas": [
+    47.313551,
+    7.916919
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "",
+   "plaene": [
+    "aarburg_oftringen"
+   ],
+   "regionen": [
+    "olten"
+   ],
+   "linien": [],
+   "zuordnung": "teil",
+   "linie_sbb": "452",
+   "km": 0.83337,
+   "osm": null
+  },
+  "ABOW": {
+   "abk": "ABOW",
+   "name": "Aarburg-Oftringen West (Abzw)",
+   "bpuic": 8508141,
+   "atlas": [
+    47.313647,
+    7.906872
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "",
+   "plaene": [
+    "aarburg_oftringen"
+   ],
+   "regionen": [
+    "olten"
+   ],
+   "linien": [],
+   "zuordnung": "teil",
+   "linie_sbb": "451",
+   "km": 43.97183,
+   "osm": null
+  },
+  "ALLI": {
+   "abk": "ALLI",
+   "name": "Allières",
+   "bpuic": 8501378,
+   "atlas": [
+    46.46982,
+    7.00789
+   ],
+   "betreiber": "MOB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "mob__allieres"
+   ],
+   "regionen": [
+    "mob"
+   ],
+   "linien": [
+    "120"
+   ],
+   "osm": {
+    "node": 2827316047,
+    "name": "Allières",
+    "ref": "ALLI",
+    "uic_ref": "8501378",
+    "railway": "station",
+    "ll": [
+     46.4697112,
+     7.0080463
+    ],
+    "abstand_m": 17,
+    "wie": "uic_ref"
+   }
+  },
+  "ATOR": {
+   "abk": "ATOR",
+   "name": "Aarau Torfeld",
+   "bpuic": 8519685,
+   "atlas": [
+    47.393563,
+    8.06264
+   ],
+   "betreiber": "AVA-wsb",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "aarau"
+   ],
+   "regionen": [
+    "olten"
+   ],
+   "linien": [],
+   "zuordnung": "teil",
+   "osm": {
+    "node": 1799626609,
+    "name": "Aarau Torfeld",
+    "ref": "AATO",
+    "uic_ref": "8519685",
+    "railway": "halt",
+    "ll": [
+     47.3935111,
+     8.0625569
+    ],
+    "abstand_m": 9,
+    "wie": "uic_ref"
+   }
+  },
+  "AUV": {
+   "abk": "AUV",
+   "name": "Auvernier",
+   "bpuic": 8504219,
+   "atlas": [
+    46.979642,
+    6.877708
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "auvernier"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "linie_sbb": "210",
+   "km": 70.34416,
+   "osm": {
+    "node": 3081154344,
+    "name": "Auvernier",
+    "ref": "AUV",
+    "uic_ref": "8504219",
+    "railway": "station",
+    "ll": [
+     46.9796031,
+     6.8776965
+    ],
+    "abstand_m": 4,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "2",
+    "3"
+   ]
+  },
+  "AV": {
+   "abk": "AV",
+   "name": "Avenches",
+   "bpuic": 8504126,
+   "atlas": [
+    46.884602,
+    7.040925
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "avenches"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "linie_sbb": "251",
+   "km": 69.11816,
+   "osm": {
+    "node": 1425180890,
+    "name": "Avenches",
+    "ref": "AV",
+    "uic_ref": "8504126",
+    "railway": "station",
+    "ll": [
+     46.8844247,
+     7.0406902
+    ],
+    "abstand_m": 27,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "2"
+   ]
+  },
+  "AVA": {
+   "abk": "AVA",
+   "name": "Les Avants",
+   "bpuic": 8501377,
+   "atlas": [
+    46.453626,
+    6.943475
+   ],
+   "betreiber": "MOB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "mob__les_avants"
+   ],
+   "regionen": [
+    "mob"
+   ],
+   "linien": [
+    "120"
+   ],
+   "osm": {
+    "node": 264552651,
+    "name": "Les Avants",
+    "ref": "AVA",
+    "uic_ref": "8501377",
+    "railway": "station",
+    "ll": [
+     46.4536346,
+     6.9434565
+    ],
+    "abstand_m": 2,
+    "wie": "uic_ref"
+   }
+  },
+  "AVLI": {
+   "abk": "AVLI",
+   "name": "Auvernier Littorail",
+   "bpuic": 8504510,
+   "atlas": [
+    46.97424,
+    6.878892
+   ],
+   "betreiber": "TRN-tn",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "auvernier"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "zuordnung": "teil",
+   "osm": {
+    "node": 357390768,
+    "name": "Auvernier Littorail",
+    "ref": "AVLI",
+    "uic_ref": "8504510",
+    "railway": "station",
+    "ll": [
+     46.9742826,
+     6.8788473
+    ],
+    "abstand_m": 6,
+    "wie": "uic_ref"
+   }
+  },
+  "BDR": {
+   "abk": "BDR",
+   "name": "Boudry",
+   "bpuic": 8504208,
+   "atlas": [
+    46.959457,
+    6.835048
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "boudry"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "linie_sbb": "210",
+   "km": 66.25347,
+   "osm": {
+    "node": 1951472692,
+    "name": "Boudry",
+    "ref": "BDR",
+    "uic_ref": "8504208",
+    "railway": "station",
+    "ll": [
+     46.9595099,
+     6.8352308
+    ],
+    "abstand_m": 15,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "2",
+    "3"
+   ]
+  },
+  "BEMM": {
+   "abk": "BEMM",
+   "name": "Belmont-sur-Montreux",
+   "bpuic": 8501390,
+   "atlas": [
+    46.44204,
+    6.90612
+   ],
+   "betreiber": "MOB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "mob__belmont_sur_montreux"
+   ],
+   "regionen": [
+    "mob"
+   ],
+   "linien": [
+    "120"
+   ],
+   "osm": {
+    "node": 207308604,
+    "name": "Belmont-sur-Montreux",
+    "ref": "BEMM",
+    "uic_ref": "8501390",
+    "railway": "halt",
+    "ll": [
+     46.4420987,
+     6.9059653
+    ],
+    "abstand_m": 14,
+    "wie": "uic_ref"
+   }
+  },
+  "BGF": {
+   "abk": "BGF",
+   "name": "Berghof",
+   "bpuic": 8503058,
+   "atlas": [
+    47.368638,
+    8.480833
+   ],
+   "betreiber": "SZU",
+   "verkehrsmittel": "",
+   "plaene": [
+    "szu__berghof"
+   ],
+   "regionen": [
+    "szu"
+   ],
+   "linien": [
+    "713"
+   ],
+   "osm": null
+  },
+  "BLB": {
+   "abk": "BLB",
+   "name": "Blankenburg",
+   "bpuic": 8507274,
+   "atlas": [
+    46.5411,
+    7.38532
+   ],
+   "betreiber": "MOB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "mob__blankenburg"
+   ],
+   "regionen": [
+    "mob"
+   ],
+   "linien": [
+    "321"
+   ],
+   "osm": {
+    "node": 2663516100,
+    "name": "Blankenburg",
+    "ref": null,
+    "uic_ref": "8507274",
+    "railway": "station",
+    "ll": [
+     46.5413208,
+     7.385312
+    ],
+    "abstand_m": 25,
+    "wie": "uic_ref"
+   }
+  },
+  "BN": {
+   "abk": "BN",
+   "name": "Bern",
+   "bpuic": 8507000,
+   "atlas": [
+    46.948832,
+    7.439131
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "bern"
+   ],
+   "regionen": [],
+   "linien": [],
+   "linie_sbb": "220",
+   "km": 0.10552,
+   "osm": {
+    "node": 3081154349,
+    "name": "Bern",
+    "ref": "BN",
+    "uic_ref": "8507000",
+    "railway": "station",
+    "ll": [
+     46.9489092,
+     7.4399554
+    ],
+    "abstand_m": 63,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "12",
+    "13",
+    "49",
+    "50"
+   ]
+  },
+  "BNB": {
+   "abk": "BNB",
+   "name": "Bern Brünnen Westside",
+   "bpuic": 8516154,
+   "atlas": [
+    46.944037,
+    7.375278
+   ],
+   "betreiber": "BLS-bn",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "bern_brunnen_westside"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "osm": {
+    "node": 1870421883,
+    "name": "Bern Brünnen Westside",
+    "ref": "BNB",
+    "uic_ref": "8516154",
+    "railway": "station",
+    "ll": [
+     46.9440746,
+     7.3754366
+    ],
+    "abstand_m": 13,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "2"
+   ]
+  },
+  "BNHB": {
+   "abk": "BNHB",
+   "name": "Bern Henkerbrünnli",
+   "bpuic": 8516765,
+   "atlas": [
+    46.953522,
+    7.438849
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "",
+   "plaene": [
+    "bern"
+   ],
+   "regionen": [],
+   "linien": [],
+   "zuordnung": "teil",
+   "linie_sbb": "9220",
+   "km": -0.40001,
+   "osm": null,
+   "gleise_perron_sbb": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "12",
+    "13",
+    "49",
+    "50"
+   ]
+  },
+  "BNVB": {
+   "abk": "BNVB",
+   "name": "Bern Vorbahnhof (Dsta)",
+   "bpuic": 8510364,
+   "atlas": [
+    46.949467,
+    7.426645
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "",
+   "plaene": [
+    "bern"
+   ],
+   "regionen": [],
+   "linien": [],
+   "zuordnung": "teil",
+   "linie_sbb": "9250",
+   "km": 96.103,
+   "osm": null,
+   "gleise_perron_sbb": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "12",
+    "13",
+    "49",
+    "50"
+   ]
+  },
+  "BOLE": {
+   "abk": "BOLE",
+   "name": "Bôle",
+   "bpuic": 8504218,
+   "atlas": [
+    46.969423,
+    6.838374
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "bole"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "linie_sbb": "219",
+   "km": 8.3,
+   "osm": {
+    "node": 1951370014,
+    "name": "Bôle",
+    "ref": "BOLE",
+    "uic_ref": "8504218",
+    "railway": "station",
+    "ll": [
+     46.9691055,
+     6.8379501
+    ],
+    "abstand_m": 48,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1"
+   ]
+  },
+  "BORR": {
+   "abk": "BORR",
+   "name": "Borrweg",
+   "bpuic": 8503050,
+   "atlas": [
+    47.364203,
+    8.511815
+   ],
+   "betreiber": "SZU",
+   "verkehrsmittel": "",
+   "plaene": [
+    "szu__borrweg"
+   ],
+   "regionen": [
+    "szu"
+   ],
+   "linien": [
+    "713"
+   ],
+   "osm": {
+    "node": 1261958523,
+    "name": "Zürich Friesenberg",
+    "ref": "FRIB",
+    "uic_ref": "8503052",
+    "railway": "halt",
+    "ll": [
+     47.3648164,
+     8.5075769
+    ],
+    "abstand_m": 326,
+    "wie": "naehe"
+   }
+  },
+  "BS": {
+   "abk": "BS",
+   "name": "Basel SBB",
+   "bpuic": 8500010,
+   "atlas": [
+    47.547412,
+    7.589563
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "basel"
+   ],
+   "regionen": [],
+   "linien": [],
+   "linie_sbb": "510",
+   "km": 142.20294,
+   "osm": {
+    "node": 3080746011,
+    "name": "Basel SBB",
+    "ref": "BS",
+    "uic_ref": "8500010",
+    "railway": "station",
+    "ll": [
+     47.5476225,
+     7.5896417
+    ],
+    "abstand_m": 24,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "30",
+    "31",
+    "33",
+    "35"
+   ]
+  },
+  "BSO": {
+   "abk": "BSO",
+   "name": "Basel SBB Ost (Abzw)",
+   "bpuic": 8515387,
+   "atlas": [
+    47.544936,
+    7.59562
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "",
+   "plaene": [
+    "basel"
+   ],
+   "regionen": [],
+   "linien": [],
+   "zuordnung": "teil",
+   "linie_sbb": "230",
+   "km": 122.46443,
+   "osm": null,
+   "gleise_perron_sbb": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "30",
+    "31",
+    "33",
+    "35"
+   ]
+  },
+  "BSSS": {
+   "abk": "BSSS",
+   "name": "Basel SBB Süd",
+   "bpuic": 8511070,
+   "atlas": [
+    47.546337,
+    7.58877
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "",
+   "plaene": [
+    "basel"
+   ],
+   "regionen": [],
+   "linien": [],
+   "zuordnung": "teil",
+   "linie_sbb": "514",
+   "km": 142.1386,
+   "osm": {
+    "node": 3080746011,
+    "name": "Basel SBB",
+    "ref": "BS",
+    "uic_ref": "8500010",
+    "railway": "station",
+    "ll": [
+     47.5476225,
+     7.5896417
+    ],
+    "abstand_m": 157,
+    "wie": "naehe"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "30",
+    "31",
+    "33",
+    "35"
+   ]
+  },
+  "BST": {
+   "abk": "BST",
+   "name": "Basel SBB Tiefbahnhof",
+   "bpuic": 8510697,
+   "atlas": [
+    47.547073,
+    7.588753
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "",
+   "plaene": [
+    "basel"
+   ],
+   "regionen": [],
+   "linien": [],
+   "zuordnung": "teil",
+   "linie_sbb": "9498",
+   "km": 0.005,
+   "osm": {
+    "node": 3080746011,
+    "name": "Basel SBB",
+    "ref": "BS",
+    "uic_ref": "8500010",
+    "railway": "station",
+    "ll": [
+     47.5476225,
+     7.5896417
+    ],
+    "abstand_m": 90,
+    "wie": "naehe"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "30",
+    "31",
+    "33",
+    "35"
+   ]
+  },
+  "BSTO": {
+   "abk": "BSTO",
+   "name": "Basel SBB Tiefbahnhof Ost(Vzw)",
+   "bpuic": 8510696,
+   "atlas": [
+    47.544301,
+    7.596874
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "",
+   "plaene": [
+    "basel"
+   ],
+   "regionen": [],
+   "linien": [],
+   "zuordnung": "teil",
+   "linie_sbb": "9499",
+   "km": 0.001,
+   "osm": null,
+   "gleise_perron_sbb": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "30",
+    "31",
+    "33",
+    "35"
+   ]
+  },
+  "BSW": {
+   "abk": "BSW",
+   "name": "Basel SBB West (Abzw)",
+   "bpuic": 8515389,
+   "atlas": [
+    47.54619,
+    7.579567
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "",
+   "plaene": [
+    "basel"
+   ],
+   "regionen": [],
+   "linien": [],
+   "zuordnung": "teil",
+   "linie_sbb": "510",
+   "km": 141.382,
+   "osm": null,
+   "gleise_perron_sbb": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "30",
+    "31",
+    "33",
+    "35"
+   ]
+  },
+  "BV": {
+   "abk": "BV",
+   "name": "Bevaix",
+   "bpuic": 8504206,
+   "atlas": [
+    46.929696,
+    6.81168
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "bevaix"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "linie_sbb": "210",
+   "km": 62.27922,
+   "osm": {
+    "node": 3081154350,
+    "name": "Bevaix",
+    "ref": "BV",
+    "uic_ref": "8504206",
+    "railway": "station",
+    "ll": [
+     46.9296713,
+     6.8117235
+    ],
+    "abstand_m": 4,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "2"
+   ]
+  },
+  "CABM": {
+   "abk": "CABM",
+   "name": "Chamby-Musée",
+   "bpuic": 8501306,
+   "atlas": [
+    46.453822,
+    6.912405
+   ],
+   "betreiber": "MVR-cev",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "mob__chamby"
+   ],
+   "regionen": [
+    "mob"
+   ],
+   "linien": [],
+   "zuordnung": "teil",
+   "osm": {
+    "node": 5167518198,
+    "name": "Chamby-Musée",
+    "ref": "CABM",
+    "uic_ref": "8501306",
+    "railway": "station",
+    "ll": [
+     46.4537588,
+     6.9122994
+    ],
+    "abstand_m": 11,
+    "wie": "uic_ref"
+   }
+  },
+  "CABY": {
+   "abk": "CABY",
+   "name": "Chamby",
+   "bpuic": 8501376,
+   "atlas": [
+    46.449322,
+    6.913514
+   ],
+   "betreiber": "MOB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "mob__chamby"
+   ],
+   "regionen": [
+    "mob"
+   ],
+   "linien": [
+    "114",
+    "120"
+   ],
+   "osm": {
+    "node": 2797758582,
+    "name": "Chamby",
+    "ref": "CABY",
+    "uic_ref": "8501376",
+    "railway": "station",
+    "ll": [
+     46.4493209,
+     6.9135244
+    ],
+    "abstand_m": 1,
+    "wie": "uic_ref"
+   }
+  },
+  "CASE": {
+   "abk": "CASE",
+   "name": "Les Cases",
+   "bpuic": 8501387,
+   "atlas": [
+    46.45592,
+    6.99771
+   ],
+   "betreiber": "MOB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "mob__les_cases"
+   ],
+   "regionen": [
+    "mob"
+   ],
+   "linien": [
+    "120"
+   ],
+   "osm": {
+    "node": 2827598128,
+    "name": "Les Cases",
+    "ref": "CASE",
+    "uic_ref": "8501387",
+    "railway": "halt",
+    "ll": [
+     46.4559407,
+     6.9978476
+    ],
+    "abstand_m": 11,
+    "wie": "uic_ref"
+   }
+  },
+  "CAUX": {
+   "abk": "CAUX",
+   "name": "Caux",
+   "bpuic": 8501371,
+   "atlas": [
+    46.43114,
+    6.93852
+   ],
+   "betreiber": "MVR-mtgn",
+   "verkehrsmittel": "RACK_RAILWAY",
+   "plaene": [
+    "mob__caux"
+   ],
+   "regionen": [
+    "mob"
+   ],
+   "linien": [
+    "122"
+   ],
+   "osm": {
+    "node": 2797614424,
+    "name": "Caux",
+    "ref": "CAUX",
+    "uic_ref": "8501371",
+    "railway": "station",
+    "ll": [
+     46.4311481,
+     6.9385239
+    ],
+    "abstand_m": 1,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_osm": [
+    "1",
+    "2",
+    "3"
+   ]
+  },
+  "CC": {
+   "abk": "CC",
+   "name": "Concise",
+   "bpuic": 8504203,
+   "atlas": [
+    46.850882,
+    6.723157
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "concise"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "linie_sbb": "210",
+   "km": 50.752,
+   "osm": {
+    "node": 983805184,
+    "name": "Concise",
+    "ref": "CC",
+    "uic_ref": "8504203",
+    "railway": "station",
+    "ll": [
+     46.850876,
+     6.723166
+    ],
+    "abstand_m": 1,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "2"
+   ]
+  },
+  "CDM": {
+   "abk": "CDM",
+   "name": "Champ-du-Moulin",
+   "bpuic": 8504217,
+   "atlas": [
+    46.959912,
+    6.774989
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "champ_du_moulin"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "linie_sbb": "219",
+   "km": 13.64584,
+   "osm": {
+    "node": 1688809253,
+    "name": "Champ du Moulin",
+    "ref": "CDM",
+    "uic_ref": "8504217",
+    "railway": "station",
+    "ll": [
+     46.9599174,
+     6.7749714
+    ],
+    "abstand_m": 1,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "2"
+   ]
+  },
+  "CGE": {
+   "abk": "CGE",
+   "name": "Montreux-Collège",
+   "bpuic": 8501380,
+   "atlas": [
+    46.436083,
+    6.912677
+   ],
+   "betreiber": "MOB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "mob__montreux"
+   ],
+   "regionen": [
+    "mob"
+   ],
+   "linien": [],
+   "zuordnung": "teil",
+   "osm": {
+    "node": 2793864786,
+    "name": "Montreux-Collège",
+    "ref": "CGE",
+    "uic_ref": "8501380",
+    "railway": "halt",
+    "ll": [
+     46.4360734,
+     6.9126678
+    ],
+    "abstand_m": 1,
+    "wie": "uic_ref"
+   }
+  },
+  "CHAL": {
+   "abk": "CHAL",
+   "name": "Châtelard VD",
+   "bpuic": 8501382,
+   "atlas": [
+    46.44678,
+    6.90114
+   ],
+   "betreiber": "MOB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "mob__chatelard"
+   ],
+   "regionen": [
+    "mob"
+   ],
+   "linien": [
+    "120"
+   ],
+   "osm": {
+    "node": 374342357,
+    "name": "Châtelard",
+    "ref": "CHAL",
+    "uic_ref": "8501382",
+    "railway": "halt",
+    "ll": [
+     46.4467904,
+     6.9011475
+    ],
+    "abstand_m": 1,
+    "wie": "uic_ref"
+   }
+  },
+  "CHER": {
+   "abk": "CHER",
+   "name": "Chernex",
+   "bpuic": 8501375,
+   "atlas": [
+    46.445936,
+    6.910129
+   ],
+   "betreiber": "MOB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "mob__chernex"
+   ],
+   "regionen": [
+    "mob"
+   ],
+   "linien": [
+    "120"
+   ],
+   "osm": {
+    "node": 2797750712,
+    "name": "Chernex",
+    "ref": null,
+    "uic_ref": "8501375",
+    "railway": "station",
+    "ll": [
+     46.4463674,
+     6.9095592
+    ],
+    "abstand_m": 65,
+    "wie": "uic_ref"
+   }
+  },
+  "CHN": {
+   "abk": "CHN",
+   "name": "Chambrelien",
+   "bpuic": 8504234,
+   "atlas": [
+    46.967109,
+    6.812257
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "chambrelien"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "linie_sbb": "223",
+   "km": 10.3982,
+   "osm": {
+    "node": 1955142185,
+    "name": "Chambrelien",
+    "ref": "CHN",
+    "uic_ref": "8504234",
+    "railway": "station",
+    "ll": [
+     46.9672516,
+     6.8125105
+    ],
+    "abstand_m": 25,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "2"
+   ]
+  },
+  "CHNF": {
+   "abk": "CHNF",
+   "name": "Chambrelien (cul-de-sac)",
+   "bpuic": 8515315,
+   "atlas": [
+    46.965434,
+    6.808691
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "",
+   "plaene": [
+    "chambrelien"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "zuordnung": "teil",
+   "linie_sbb": "223",
+   "km": 10.73519,
+   "osm": {
+    "node": 1955142185,
+    "name": "Chambrelien",
+    "ref": "CHN",
+    "uic_ref": "8504234",
+    "railway": "station",
+    "ll": [
+     46.9672516,
+     6.8125105
+    ],
+    "abstand_m": 353,
+    "wie": "naehe"
+   }
+  },
+  "CHNN": {
+   "abk": "CHNN",
+   "name": "Chambrelien Nord (bif)",
+   "bpuic": 8515316,
+   "atlas": [
+    46.968421,
+    6.813551
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "",
+   "plaene": [
+    "chambrelien"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "zuordnung": "teil",
+   "linie_sbb": "223",
+   "km": 10.2231,
+   "osm": {
+    "node": 1955142185,
+    "name": "Chambrelien",
+    "ref": "CHN",
+    "uic_ref": "8504234",
+    "railway": "station",
+    "ll": [
+     46.9672516,
+     6.8125105
+    ],
+    "abstand_m": 152,
+    "wie": "naehe"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "2"
+   ]
+  },
+  "CHOE": {
+   "abk": "CHOE",
+   "name": "Château-d'Oex",
+   "bpuic": 8501394,
+   "atlas": [
+    46.474758,
+    7.132099
+   ],
+   "betreiber": "MOB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "mob__chateau_d_oex"
+   ],
+   "regionen": [
+    "mob"
+   ],
+   "linien": [
+    "120"
+   ],
+   "osm": {
+    "node": 306504255,
+    "name": "Château-d'Oex",
+    "ref": null,
+    "uic_ref": "8501394",
+    "railway": "station",
+    "ll": [
+     46.4749072,
+     7.1326107
+    ],
+    "abstand_m": 43,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_osm": [
+    "2",
+    "3"
+   ]
+  },
+  "CLB": {
+   "abk": "CLB",
+   "name": "Colombier NE",
+   "bpuic": 8504209,
+   "atlas": [
+    46.967652,
+    6.84887
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "colombier"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "linie_sbb": "210",
+   "km": 67.66967,
+   "osm": {
+    "node": 3081154360,
+    "name": "Colombier",
+    "ref": "CLB",
+    "uic_ref": "8504209",
+    "railway": "station",
+    "ll": [
+     46.9676649,
+     6.848989
+    ],
+    "abstand_m": 9,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "2",
+    "3"
+   ]
+  },
+  "CORN": {
+   "abk": "CORN",
+   "name": "Cornaux NE",
+   "bpuic": 8504223,
+   "atlas": [
+    47.038572,
+    7.023366
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "cornaux"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "linie_sbb": "216",
+   "km": 0.0,
+   "osm": {
+    "node": 3081154365,
+    "name": "Cornaux",
+    "ref": "CORN",
+    "uic_ref": "8504223",
+    "railway": "station",
+    "ll": [
+     47.038728,
+     7.0233932
+    ],
+    "abstand_m": 17,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "2",
+    "3"
+   ]
+  },
+  "COUR": {
+   "abk": "COUR",
+   "name": "Courtepin",
+   "bpuic": 8504184,
+   "atlas": [
+    46.86712,
+    7.12271
+   ],
+   "betreiber": "TPF",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "courtepin"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "osm": {
+    "node": 3664792744,
+    "name": "Courtepin",
+    "ref": null,
+    "uic_ref": "8504184",
+    "railway": "station",
+    "ll": [
+     46.8673981,
+     7.1226892
+    ],
+    "abstand_m": 31,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "2"
+   ]
+  },
+  "CP": {
+   "abk": "CP",
+   "name": "Corcelles-Peseux",
+   "bpuic": 8504232,
+   "atlas": [
+    46.983351,
+    6.883814
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "corcelles_peseux"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "linie_sbb": "223",
+   "km": 4.32248,
+   "osm": {
+    "node": 3081154361,
+    "name": "Corcelles-Peseux",
+    "ref": "CP",
+    "uic_ref": "8504232",
+    "railway": "station",
+    "ll": [
+     46.9833892,
+     6.8838017
+    ],
+    "abstand_m": 4,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1"
+   ]
+  },
+  "CRDB": {
+   "abk": "CRDB",
+   "name": "Crêt-d'y-Bau",
+   "bpuic": 8501365,
+   "atlas": [
+    46.43515,
+    6.95537
+   ],
+   "betreiber": "MVR-mtgn",
+   "verkehrsmittel": "RACK_RAILWAY",
+   "plaene": [
+    "mob__cret_d_y_bau"
+   ],
+   "regionen": [
+    "mob"
+   ],
+   "linien": [
+    "122"
+   ],
+   "osm": {
+    "node": 477540732,
+    "name": "Crêt-d'y-Bau",
+    "ref": "CRDB",
+    "uic_ref": "8501365",
+    "railway": "halt",
+    "ll": [
+     46.4352058,
+     6.9555069
+    ],
+    "abstand_m": 12,
+    "wie": "uic_ref"
+   }
+  },
+  "CRFR": {
+   "abk": "CRFR",
+   "name": "Cressier FR",
+   "bpuic": 8504185,
+   "atlas": [
+    46.90018,
+    7.14972
+   ],
+   "betreiber": "TPF",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "cressier_fr"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "osm": {
+    "node": 3664792745,
+    "name": "Cressier FR",
+    "ref": null,
+    "uic_ref": "8504185",
+    "railway": "station",
+    "ll": [
+     46.9001996,
+     7.1497552
+    ],
+    "abstand_m": 3,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1"
+   ]
+  },
+  "CRNE": {
+   "abk": "CRNE",
+   "name": "Cressier NE",
+   "bpuic": 8504224,
+   "atlas": [
+    47.051953,
+    7.039532
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "cressier"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "linie_sbb": "210",
+   "km": 85.55013,
+   "osm": {
+    "node": 3200044857,
+    "name": "Cressier",
+    "ref": "CRNE",
+    "uic_ref": "8504224",
+    "railway": "halt",
+    "ll": [
+     47.0518862,
+     7.0395403
+    ],
+    "abstand_m": 7,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "2"
+   ]
+  },
+  "CVT": {
+   "abk": "CVT",
+   "name": "Couvet CFF",
+   "bpuic": 8504214,
+   "atlas": [
+    46.930382,
+    6.634017
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "",
+   "plaene": [
+    "couvet"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "zuordnung": "teil",
+   "linie_sbb": "219",
+   "km": 26.04313,
+   "osm": null,
+   "gleise_perron_sbb": [
+    "1"
+   ]
+  },
+  "CVTR": {
+   "abk": "CVTR",
+   "name": "Couvet",
+   "bpuic": 8504285,
+   "atlas": [
+    46.922959,
+    6.635298
+   ],
+   "betreiber": "TRN-rvt",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "couvet"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "osm": {
+    "node": 307412768,
+    "name": "Couvet",
+    "ref": "CVTR",
+    "uic_ref": "8504285",
+    "railway": "station",
+    "ll": [
+     46.9239018,
+     6.6360347
+    ],
+    "abstand_m": 119,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1"
+   ]
+  },
+  "DEU": {
+   "abk": "DEU",
+   "name": "Les Deurres",
+   "bpuic": 8504231,
+   "atlas": [
+    46.985525,
+    6.899148
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "les_deurres"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "linie_sbb": "223",
+   "km": 3.102,
+   "osm": {
+    "node": 1949801868,
+    "name": "Les Deurres",
+    "ref": "DEU",
+    "uic_ref": "8504231",
+    "railway": "halt",
+    "ll": [
+     46.985424,
+     6.8989188
+    ],
+    "abstand_m": 21,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1"
+   ]
+  },
+  "DK": {
+   "abk": "DK",
+   "name": "Däniken SO",
+   "bpuic": 8502111,
+   "atlas": [
+    47.35639,
+    7.978771
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "daniken"
+   ],
+   "regionen": [
+    "olten"
+   ],
+   "linien": [
+    "540",
+    "650"
+   ],
+   "linie_sbb": "540",
+   "km": 45.67343,
+   "osm": {
+    "node": 3080746012,
+    "name": "Däniken",
+    "ref": "DK",
+    "uic_ref": "8502111",
+    "railway": "station",
+    "ll": [
+     47.3563151,
+     7.978642
+    ],
+    "abstand_m": 13,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "2",
+    "3",
+    "4"
+   ],
+   "gleise_perron_osm": [
+    "2",
+    "3",
+    "4"
+   ]
+  },
+  "DKO": {
+   "abk": "DKO",
+   "name": "Däniken Ost",
+   "bpuic": 8502143,
+   "atlas": [
+    47.358479,
+    7.983519
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "",
+   "plaene": [
+    "daniken"
+   ],
+   "regionen": [
+    "olten"
+   ],
+   "linien": [],
+   "zuordnung": "teil",
+   "linie_sbb": "650",
+   "km": 48.11923,
+   "osm": null,
+   "gleise_perron_sbb": [
+    "2",
+    "3",
+    "4"
+   ]
+  },
+  "DKRB": {
+   "abk": "DKRB",
+   "name": "Däniken RB",
+   "bpuic": 8516159,
+   "atlas": [
+    47.35342,
+    7.971285
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "",
+   "plaene": [
+    "daniken"
+   ],
+   "regionen": [
+    "olten"
+   ],
+   "linien": [],
+   "zuordnung": "teil",
+   "linie_sbb": "540",
+   "km": 45.0,
+   "osm": null,
+   "gleise_perron_sbb": [
+    "2",
+    "3",
+    "4"
+   ]
+  },
+  "DOM": {
+   "abk": "DOM",
+   "name": "Domdidier",
+   "bpuic": 8504125,
+   "atlas": [
+    46.868512,
+    7.011383
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "domdidier"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "linie_sbb": "251",
+   "km": 66.18946,
+   "osm": {
+    "node": 5286177951,
+    "name": "Domdidier",
+    "ref": null,
+    "uic_ref": "8504125",
+    "railway": "station",
+    "ll": [
+     46.8686141,
+     7.0116813
+    ],
+    "abstand_m": 25,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1"
+   ]
+  },
+  "DOP": {
+   "abk": "DOP",
+   "name": "Dompierre FR",
+   "bpuic": 8504124,
+   "atlas": [
+    46.854403,
+    6.985369
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "dompierre"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "linie_sbb": "251",
+   "km": 63.65763,
+   "osm": {
+    "node": 1446930653,
+    "name": "Dompierre",
+    "ref": "DOP",
+    "uic_ref": "8504124",
+    "railway": "station",
+    "ll": [
+     46.8546799,
+     6.9857161
+    ],
+    "abstand_m": 41,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "2"
+   ]
+  },
+  "DU": {
+   "abk": "DU",
+   "name": "Dulliken",
+   "bpuic": 8502110,
+   "atlas": [
+    47.354276,
+    7.946501
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "dulliken"
+   ],
+   "regionen": [
+    "olten"
+   ],
+   "linien": [
+    "540"
+   ],
+   "linie_sbb": "540",
+   "km": 42.94104,
+   "osm": {
+    "node": 1502109772,
+    "name": "Dulliken",
+    "ref": "DU",
+    "uic_ref": "8502110",
+    "railway": "station",
+    "ll": [
+     47.3541026,
+     7.9463852
+    ],
+    "abstand_m": 21,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "gleise_perron_osm": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ]
+  },
+  "ECTS": {
+   "abk": "ECTS",
+   "name": "Les Echets",
+   "bpuic": 8501364,
+   "atlas": [
+    46.43218,
+    6.94489
+   ],
+   "betreiber": "MVR-mtgn",
+   "verkehrsmittel": "RACK_RAILWAY",
+   "plaene": [
+    "mob__les_echets"
+   ],
+   "regionen": [
+    "mob"
+   ],
+   "linien": [
+    "122"
+   ],
+   "osm": {
+    "node": 983835736,
+    "name": "Les Echets",
+    "ref": "ECTS",
+    "uic_ref": "8501364",
+    "railway": "halt",
+    "ll": [
+     46.4320053,
+     6.9447922
+    ],
+    "abstand_m": 21,
+    "wie": "uic_ref"
+   }
+  },
+  "FG": {
+   "abk": "FG",
+   "name": "Faoug",
+   "bpuic": 8504127,
+   "atlas": [
+    46.90831,
+    7.074546
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "faoug"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "linie_sbb": "251",
+   "km": 72.80486,
+   "osm": {
+    "node": 1975565226,
+    "name": "Faoug",
+    "ref": "FG",
+    "uic_ref": "8504127",
+    "railway": "station",
+    "ll": [
+     46.9082719,
+     7.0746046
+    ],
+    "abstand_m": 6,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1"
+   ]
+  },
+  "FLED": {
+   "abk": "FLED",
+   "name": "Flendruz",
+   "bpuic": 8501396,
+   "atlas": [
+    46.482359,
+    7.186565
+   ],
+   "betreiber": "MOB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "mob__flendruz"
+   ],
+   "regionen": [
+    "mob"
+   ],
+   "linien": [
+    "120"
+   ],
+   "osm": {
+    "node": 306507932,
+    "name": "Flendruz",
+    "ref": null,
+    "uic_ref": "8501396",
+    "railway": "station",
+    "ll": [
+     46.482389,
+     7.186575
+    ],
+    "abstand_m": 3,
+    "wie": "uic_ref"
+   }
+  },
+  "FON": {
+   "abk": "FON",
+   "name": "Fontanivent",
+   "bpuic": 8501374,
+   "atlas": [
+    46.45273,
+    6.90233
+   ],
+   "betreiber": "MOB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "mob__fontanivent"
+   ],
+   "regionen": [
+    "mob"
+   ],
+   "linien": [
+    "120"
+   ],
+   "osm": {
+    "node": 2797768526,
+    "name": "Fontanivent",
+    "ref": "FON",
+    "uic_ref": "8501374",
+    "railway": "halt",
+    "ll": [
+     46.4527988,
+     6.9022556
+    ],
+    "abstand_m": 10,
+    "wie": "uic_ref"
+   }
+  },
+  "FRAE": {
+   "abk": "FRAE",
+   "name": "Fräschels",
+   "bpuic": 8504401,
+   "atlas": [
+    46.999126,
+    7.20604
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "fraschels"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "linie_sbb": "251",
+   "km": 87.67316,
+   "osm": {
+    "node": 1976395718,
+    "name": "Fräschels",
+    "ref": null,
+    "uic_ref": "8504401",
+    "railway": "halt",
+    "ll": [
+     46.9990837,
+     7.206027
+    ],
+    "abstand_m": 5,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1"
+   ]
+  },
+  "FRIB": {
+   "abk": "FRIB",
+   "name": "Zürich Friesenberg",
+   "bpuic": 8503052,
+   "atlas": [
+    47.364799,
+    8.507507
+   ],
+   "betreiber": "SZU",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "szu__zurich_friesenberg"
+   ],
+   "regionen": [
+    "szu"
+   ],
+   "linien": [
+    "713"
+   ],
+   "osm": {
+    "node": 1261958523,
+    "name": "Zürich Friesenberg",
+    "ref": "FRIB",
+    "uic_ref": "8503052",
+    "railway": "halt",
+    "ll": [
+     47.3648164,
+     8.5075769
+    ],
+    "abstand_m": 6,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1"
+   ],
+   "gleise_perron_osm": [
+    "1"
+   ]
+  },
+  "GEC": {
+   "abk": "GEC",
+   "name": "Les Geneveys-sur-Coffrane",
+   "bpuic": 8504236,
+   "atlas": [
+    47.015096,
+    6.853218
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "les_geneveys_sur_coffrane"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "linie_sbb": "224",
+   "km": 16.8975,
+   "osm": {
+    "node": 1955180993,
+    "name": "Les Geneveys-sur-Coffrane",
+    "ref": "GEC",
+    "uic_ref": "8504236",
+    "railway": "station",
+    "ll": [
+     47.0151219,
+     6.8531634
+    ],
+    "abstand_m": 5,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "2"
+   ]
+  },
+  "GLCO": {
+   "abk": "GLCO",
+   "name": "Glion-Collège",
+   "bpuic": 8501308,
+   "atlas": [
+    46.43478,
+    6.928737
+   ],
+   "betreiber": "MVR-mtgn",
+   "verkehrsmittel": "RACK_RAILWAY",
+   "plaene": [
+    "mob__glion_college"
+   ],
+   "regionen": [
+    "mob"
+   ],
+   "linien": [
+    "122"
+   ],
+   "osm": {
+    "node": 5033962291,
+    "name": "Glion-Collège",
+    "ref": "GLCO",
+    "uic_ref": "8501308",
+    "railway": "halt",
+    "ll": [
+     46.4347779,
+     6.9287316
+    ],
+    "abstand_m": 0,
+    "wie": "uic_ref"
+   }
+  },
+  "GLHA": {
+   "abk": "GLHA",
+   "name": "Glion-Alpes",
+   "bpuic": 8501230,
+   "atlas": [
+    46.433804,
+    6.925753
+   ],
+   "betreiber": "MVR-mtgn",
+   "verkehrsmittel": "RACK_RAILWAY",
+   "plaene": [
+    "mob__glion"
+   ],
+   "regionen": [
+    "mob"
+   ],
+   "linien": [],
+   "zuordnung": "teil",
+   "osm": {
+    "node": 374211843,
+    "name": "Glion-Alpes",
+    "ref": "GLHA",
+    "uic_ref": "8501230",
+    "railway": "halt",
+    "ll": [
+     46.4338338,
+     6.9258292
+    ],
+    "abstand_m": 7,
+    "wie": "uic_ref"
+   }
+  },
+  "GLI": {
+   "abk": "GLI",
+   "name": "Glion",
+   "bpuic": 8501370,
+   "atlas": [
+    46.431805,
+    6.924186
+   ],
+   "betreiber": "MVR-mtgn",
+   "verkehrsmittel": "RACK_RAILWAY",
+   "plaene": [
+    "mob__glion"
+   ],
+   "regionen": [
+    "mob"
+   ],
+   "linien": [
+    "121",
+    "122"
+   ],
+   "osm": {
+    "node": 2797580802,
+    "name": "Glion",
+    "ref": "GLI",
+    "uic_ref": "8501370",
+    "railway": "station",
+    "ll": [
+     46.4319287,
+     6.9240596
+    ],
+    "abstand_m": 17,
+    "wie": "uic_ref"
+   }
+  },
+  "GMM": {
+   "abk": "GMM",
+   "name": "Gümmenen",
+   "bpuic": 8504486,
+   "atlas": [
+    46.942182,
+    7.234409
+   ],
+   "betreiber": "BLS-bn",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "gummenen"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "osm": {
+    "node": 3081154382,
+    "name": "Gümmenen",
+    "ref": "GMM",
+    "uic_ref": "8504486",
+    "railway": "station",
+    "ll": [
+     46.9421914,
+     7.2347821
+    ],
+    "abstand_m": 28,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "2"
+   ]
+  },
+  "GOR": {
+   "abk": "GOR",
+   "name": "Gorgier-St-Aubin",
+   "bpuic": 8504205,
+   "atlas": [
+    46.899076,
+    6.781026
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "gorgier_saint_aubin"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "linie_sbb": "210",
+   "km": 58.097,
+   "osm": {
+    "node": 696524685,
+    "name": "Gorgier-Saint-Aubin",
+    "ref": "GOR",
+    "uic_ref": "8504205",
+    "railway": "station",
+    "ll": [
+     46.8991067,
+     6.7811233
+    ],
+    "abstand_m": 8,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "2",
+    "3"
+   ]
+  },
+  "GP": {
+   "abk": "GP",
+   "name": "Gampelen",
+   "bpuic": 8504482,
+   "atlas": [
+    47.009364,
+    7.056442
+   ],
+   "betreiber": "BLS-bn",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "gampelen"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "osm": {
+    "node": 3092219560,
+    "name": "Gampelen",
+    "ref": "GP",
+    "uic_ref": "8504482",
+    "railway": "station",
+    "ll": [
+     47.0090844,
+     7.0582153
+    ],
+    "abstand_m": 138,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "2"
+   ]
+  },
+  "GRS": {
+   "abk": "GRS",
+   "name": "Grandson",
+   "bpuic": 8504201,
+   "atlas": [
+    46.806283,
+    6.641944
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "grandson"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "linie_sbb": "210",
+   "km": 42.71125,
+   "osm": {
+    "node": 3081154377,
+    "name": "Grandson",
+    "ref": "GRS",
+    "uic_ref": "8504201",
+    "railway": "station",
+    "ll": [
+     46.8063263,
+     6.641844
+    ],
+    "abstand_m": 9,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "2",
+    "3"
+   ]
+  },
+  "GRUB": {
+   "abk": "GRUB",
+   "name": "Gruben",
+   "bpuic": 8507270,
+   "atlas": [
+    46.49043,
+    7.280315
+   ],
+   "betreiber": "MOB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "mob__gruben"
+   ],
+   "regionen": [
+    "mob"
+   ],
+   "linien": [
+    "120"
+   ],
+   "osm": {
+    "node": 6314760040,
+    "name": "Gruben",
+    "ref": null,
+    "uic_ref": "8507270",
+    "railway": "station",
+    "ll": [
+     46.4902893,
+     7.2803213
+    ],
+    "abstand_m": 16,
+    "wie": "uic_ref"
+   }
+  },
+  "GST": {
+   "abk": "GST",
+   "name": "Gstaad",
+   "bpuic": 8501399,
+   "atlas": [
+    46.474945,
+    7.284225
+   ],
+   "betreiber": "MOB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "mob__gstaad"
+   ],
+   "regionen": [
+    "mob"
+   ],
+   "linien": [
+    "120"
+   ],
+   "osm": {
+    "node": 6314721997,
+    "name": "Gstaad",
+    "ref": "GST",
+    "uic_ref": "8501399",
+    "railway": "station",
+    "ll": [
+     46.4750908,
+     7.2841394
+    ],
+    "abstand_m": 17,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_osm": [
+    "1",
+    "2",
+    "3"
+   ]
+  },
+  "GZ": {
+   "abk": "GZ",
+   "name": "Galmiz",
+   "bpuic": 8504129,
+   "atlas": [
+    46.950871,
+    7.153207
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "galmiz"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "linie_sbb": "251",
+   "km": 80.674,
+   "osm": {
+    "node": 1976391941,
+    "name": "Galmiz",
+    "ref": "GZ",
+    "uic_ref": "8504129",
+    "railway": "station",
+    "ll": [
+     46.9508111,
+     7.1531341
+    ],
+    "abstand_m": 9,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1"
+   ]
+  },
+  "HDC": {
+   "abk": "HDC",
+   "name": "Haut-de-Caux",
+   "bpuic": 8501357,
+   "atlas": [
+    46.43437,
+    6.94795
+   ],
+   "betreiber": "MVR-mtgn",
+   "verkehrsmittel": "RACK_RAILWAY",
+   "plaene": [
+    "mob__caux"
+   ],
+   "regionen": [
+    "mob"
+   ],
+   "linien": [],
+   "zuordnung": "teil",
+   "osm": {
+    "node": 983835765,
+    "name": "Haut-de-Caux",
+    "ref": "HDC",
+    "uic_ref": "8501357",
+    "railway": "halt",
+    "ll": [
+     46.4342828,
+     6.9475692
+    ],
+    "abstand_m": 31,
+    "wie": "uic_ref"
+   }
+  },
+  "HGV": {
+   "abk": "HGV",
+   "name": "Les Hauts-Geneveys",
+   "bpuic": 8504237,
+   "atlas": [
+    47.047177,
+    6.874673
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "les_hauts_geneveys"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "linie_sbb": "224",
+   "km": 20.98843,
+   "osm": {
+    "node": 1955180999,
+    "name": "Les Hauts-Geneveys",
+    "ref": "HGV",
+    "uic_ref": "8504237",
+    "railway": "station",
+    "ll": [
+     47.0472056,
+     6.8748367
+    ],
+    "abstand_m": 13,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "2"
+   ]
+  },
+  "INS": {
+   "abk": "INS",
+   "name": "Ins",
+   "bpuic": 8504483,
+   "atlas": [
+    46.999831,
+    7.099561
+   ],
+   "betreiber": "BLS-bn",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "ins"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [
+    "220",
+    "256"
+   ],
+   "osm": {
+    "node": 1425180904,
+    "name": "Ins",
+    "ref": "INS",
+    "uic_ref": "8504483",
+    "railway": "station",
+    "ll": [
+     46.9998876,
+     7.0995985
+    ],
+    "abstand_m": 7,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "3",
+    "4"
+   ],
+   "gleise_perron_osm": [
+    "1"
+   ]
+  },
+  "INSD": {
+   "abk": "INSD",
+   "name": "Ins Dorf",
+   "bpuic": 8504468,
+   "atlas": [
+    47.00558,
+    7.10681
+   ],
+   "betreiber": "ASM-bti",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "ins"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "zuordnung": "teil",
+   "osm": {
+    "node": 2867980976,
+    "name": "Ins Dorf",
+    "ref": "INSD",
+    "uic_ref": "8504468",
+    "railway": "station",
+    "ll": [
+     47.0056105,
+     7.1064594
+    ],
+    "abstand_m": 27,
+    "wie": "uic_ref"
+   }
+  },
+  "JAMA": {
+   "abk": "JAMA",
+   "name": "Jaman",
+   "bpuic": 8501367,
+   "atlas": [
+    46.44134,
+    6.97679
+   ],
+   "betreiber": "MVR-mtgn",
+   "verkehrsmittel": "RACK_RAILWAY",
+   "plaene": [
+    "mob__jaman"
+   ],
+   "regionen": [
+    "mob"
+   ],
+   "linien": [
+    "122"
+   ],
+   "osm": {
+    "node": 2833545015,
+    "name": "Jaman",
+    "ref": "JAMA",
+    "uic_ref": "8501367",
+    "railway": "station",
+    "ll": [
+     46.4414736,
+     6.9769435
+    ],
+    "abstand_m": 19,
+    "wie": "uic_ref"
+   }
+  },
+  "JKLM": {
+   "abk": "JKLM",
+   "name": "Bern JKLM",
+   "bpuic": 8507012,
+   "atlas": [
+    46.948243,
+    7.428895
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "",
+   "plaene": [
+    "bern"
+   ],
+   "regionen": [],
+   "linien": [],
+   "zuordnung": "teil",
+   "linie_sbb": "250",
+   "km": 96.32138,
+   "osm": null,
+   "gleise_perron_sbb": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "12",
+    "13",
+    "49",
+    "50"
+   ]
+  },
+  "JOR": {
+   "abk": "JOR",
+   "name": "Jor",
+   "bpuic": 8501386,
+   "atlas": [
+    46.45467,
+    6.96512
+   ],
+   "betreiber": "MOB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "mob__jor"
+   ],
+   "regionen": [
+    "mob"
+   ],
+   "linien": [
+    "120"
+   ],
+   "osm": {
+    "node": 2827606185,
+    "name": "Jor",
+    "ref": null,
+    "uic_ref": "8501386",
+    "railway": "halt",
+    "ll": [
+     46.4546413,
+     6.9651467
+    ],
+    "abstand_m": 4,
+    "wie": "uic_ref"
+   }
+  },
+  "KAL": {
+   "abk": "KAL",
+   "name": "Kallnach",
+   "bpuic": 8504402,
+   "atlas": [
+    47.025523,
+    7.235196
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "kallnach"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "linie_sbb": "251",
+   "km": 91.37025,
+   "osm": {
+    "node": 3081154386,
+    "name": "Kallnach",
+    "ref": "KAL",
+    "uic_ref": "8504402",
+    "railway": "station",
+    "ll": [
+     47.0255068,
+     7.2352046
+    ],
+    "abstand_m": 2,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1"
+   ]
+  },
+  "KF": {
+   "abk": "KF",
+   "name": "Konolfingen",
+   "bpuic": 8508202,
+   "atlas": [
+    46.880702,
+    7.621367
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "konolfingen"
+   ],
+   "regionen": [],
+   "linien": [
+    "430",
+    "460"
+   ],
+   "linie_sbb": "430",
+   "km": 18.74137,
+   "osm": {
+    "node": 3081154389,
+    "name": "Konolfingen",
+    "ref": "KF",
+    "uic_ref": "8508202",
+    "railway": "station",
+    "ll": [
+     46.8807793,
+     7.621417
+    ],
+    "abstand_m": 9,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "2",
+    "3",
+    "4",
+    "5",
+    "6"
+   ],
+   "gleise_perron_osm": [
+    "1",
+    "3",
+    "4",
+    "5",
+    "6"
+   ]
+  },
+  "KLO": {
+   "abk": "KLO",
+   "name": "Klosters Platz",
+   "bpuic": 8509068,
+   "atlas": [
+    46.869554,
+    9.880847
+   ],
+   "betreiber": "RhB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "vereina__klosters_platz"
+   ],
+   "regionen": [
+    "vereina"
+   ],
+   "linien": [
+    "910",
+    "915"
+   ],
+   "osm": {
+    "node": 1231713221,
+    "name": "Klosters Platz",
+    "ref": "KLO",
+    "uic_ref": "8509068",
+    "railway": "station",
+    "ll": [
+     46.869383,
+     9.8809843
+    ],
+    "abstand_m": 22,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_osm": [
+    "1",
+    "2",
+    "3"
+   ]
+  },
+  "KZ": {
+   "abk": "KZ",
+   "name": "Kerzers",
+   "bpuic": 8504400,
+   "atlas": [
+    46.975079,
+    7.19281
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "kerzers"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "linie_sbb": "259",
+   "km": 84.81079,
+   "osm": {
+    "node": 3081154388,
+    "name": "Kerzers",
+    "ref": "KZ",
+    "uic_ref": "8504400",
+    "railway": "station",
+    "ll": [
+     46.9750938,
+     7.1928802
+    ],
+    "abstand_m": 6,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "3"
+   ]
+  },
+  "KZPP": {
+   "abk": "KZPP",
+   "name": "Kerzers Papiliorama",
+   "bpuic": 8516444,
+   "atlas": [
+    46.989774,
+    7.199281
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "kerzers_papiliorama"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "linie_sbb": "251",
+   "km": 86.517,
+   "osm": {
+    "node": 2873268542,
+    "name": "Kerzers Papiliorama",
+    "ref": null,
+    "uic_ref": "8516444",
+    "railway": "halt",
+    "ll": [
+     46.9896534,
+     7.1992449
+    ],
+    "abstand_m": 14,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1"
+   ]
+  },
+  "KZS": {
+   "abk": "KZS",
+   "name": "Kerzers Süd (Abzw)",
+   "bpuic": 8515334,
+   "atlas": [
+    46.973762,
+    7.192481
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "",
+   "plaene": [
+    "kerzers"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "zuordnung": "teil",
+   "linie_sbb": "259",
+   "km": 84.65956,
+   "osm": {
+    "node": 3081154388,
+    "name": "Kerzers",
+    "ref": "KZ",
+    "uic_ref": "8504400",
+    "railway": "station",
+    "ll": [
+     46.9750938,
+     7.1928802
+    ],
+    "abstand_m": 151,
+    "wie": "naehe"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "3"
+   ]
+  },
+  "KZW": {
+   "abk": "KZW",
+   "name": "Kerzers West (Abzw)",
+   "bpuic": 8518338,
+   "atlas": [
+    46.973662,
+    7.192089
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "",
+   "plaene": [
+    "kerzers"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "zuordnung": "teil",
+   "linie_sbb": "251",
+   "km": 84.64406,
+   "osm": {
+    "node": 3081154388,
+    "name": "Kerzers",
+    "ref": "KZ",
+    "uic_ref": "8504400",
+    "railway": "station",
+    "ll": [
+     46.9750938,
+     7.1928802
+    ],
+    "abstand_m": 170,
+    "wie": "naehe"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "3"
+   ]
+  },
+  "LD": {
+   "abk": "LD",
+   "name": "Le Landeron",
+   "bpuic": 8504225,
+   "atlas": [
+    47.056636,
+    7.066335
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "le_landeron"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "linie_sbb": "210",
+   "km": 87.71714,
+   "osm": {
+    "node": 5137617912,
+    "name": "Le Landeron",
+    "ref": "LD",
+    "uic_ref": "8504225",
+    "railway": "station",
+    "ll": [
+     47.0566109,
+     7.0663071
+    ],
+    "abstand_m": 4,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "2",
+    "3"
+   ]
+  },
+  "LENK": {
+   "abk": "LENK",
+   "name": "Lenk im Simmental",
+   "bpuic": 8507279,
+   "atlas": [
+    46.458002,
+    7.443782
+   ],
+   "betreiber": "MOB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "mob__lenk_im_simmental"
+   ],
+   "regionen": [
+    "mob"
+   ],
+   "linien": [
+    "321"
+   ],
+   "osm": {
+    "node": 8131826725,
+    "name": "Lenk im Simmental",
+    "ref": null,
+    "uic_ref": "8507279",
+    "railway": "station",
+    "ll": [
+     46.4579692,
+     7.4437345
+    ],
+    "abstand_m": 5,
+    "wie": "uic_ref"
+   }
+  },
+  "LF": {
+   "abk": "LF",
+   "name": "Läufelfingen",
+   "bpuic": 8500035,
+   "atlas": [
+    47.392133,
+    7.856232
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "laufelfingen"
+   ],
+   "regionen": [
+    "olten"
+   ],
+   "linien": [
+    "503"
+   ],
+   "linie_sbb": "503",
+   "km": 30.82169,
+   "osm": {
+    "node": 3080746018,
+    "name": "Läufelfingen",
+    "ref": "LF",
+    "uic_ref": "8500035",
+    "railway": "station",
+    "ll": [
+     47.3921341,
+     7.8562499
+    ],
+    "abstand_m": 1,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "2"
+   ],
+   "gleise_perron_osm": [
+    "1",
+    "2"
+   ]
+  },
+  "LIG": {
+   "abk": "LIG",
+   "name": "Ligerz",
+   "bpuic": 8504227,
+   "atlas": [
+    47.083769,
+    7.135157
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "",
+   "plaene": [
+    "ligerz"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "linie_sbb": "210",
+   "km": 94.00279,
+   "osm": {
+    "node": 9831727481,
+    "name": "Ligerz",
+    "ref": null,
+    "uic_ref": "8504356",
+    "railway": "station",
+    "ll": [
+     47.0839813,
+     7.1347585
+    ],
+    "abstand_m": 38,
+    "wie": "name"
+   },
+   "gleise_perron_sbb": [
+    "1"
+   ]
+  },
+  "LOEW": {
+   "abk": "LOEW",
+   "name": "Muntelier-Löwenberg",
+   "bpuic": 8504140,
+   "atlas": [
+    46.937974,
+    7.133262
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "muntelier_lowenberg"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "linie_sbb": "251",
+   "km": 78.5725,
+   "osm": {
+    "node": 1976379410,
+    "name": "Muntelier-Löwenberg",
+    "ref": null,
+    "uic_ref": "8504140",
+    "railway": "halt",
+    "ll": [
+     46.9380722,
+     7.1333032
+    ],
+    "abstand_m": 11,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1"
+   ]
+  },
+  "MATE": {
+   "abk": "MATE",
+   "name": "Matten i.S.",
+   "bpuic": 8507277,
+   "atlas": [
+    46.49371,
+    7.42164
+   ],
+   "betreiber": "MOB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "mob__matten"
+   ],
+   "regionen": [
+    "mob"
+   ],
+   "linien": [
+    "321"
+   ],
+   "osm": {
+    "node": 555006353,
+    "name": "Matten",
+    "ref": null,
+    "uic_ref": "8507277",
+    "railway": "station",
+    "ll": [
+     46.49385,
+     7.4215537
+    ],
+    "abstand_m": 17,
+    "wie": "uic_ref"
+   }
+  },
+  "MEP": {
+   "abk": "MEP",
+   "name": "Marin-Epagnier",
+   "bpuic": 8504481,
+   "atlas": [
+    47.009107,
+    7.010595
+   ],
+   "betreiber": "BLS-bn",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "marin_epagnier"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "osm": {
+    "node": 3081154407,
+    "name": "Marin-Epagnier",
+    "ref": "MEP",
+    "uic_ref": "8504481",
+    "railway": "station",
+    "ll": [
+     47.0090238,
+     7.0106675
+    ],
+    "abstand_m": 11,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "3",
+    "4"
+   ]
+  },
+  "MM": {
+   "abk": "MM",
+   "name": "Müntschemier",
+   "bpuic": 8504484,
+   "atlas": [
+    46.993323,
+    7.142439
+   ],
+   "betreiber": "BLS-bn",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "muntschemier"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "osm": {
+    "node": 3836116267,
+    "name": "Müntschemier",
+    "ref": "MM",
+    "uic_ref": "8504484",
+    "railway": "station",
+    "ll": [
+     46.9933569,
+     7.142263
+    ],
+    "abstand_m": 14,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "2"
+   ]
+  },
+  "MOT": {
+   "abk": "MOT",
+   "name": "Môtiers NE",
+   "bpuic": 8504286,
+   "atlas": [
+    46.911822,
+    6.610227
+   ],
+   "betreiber": "TRN-rvt",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "motiers"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "osm": {
+    "node": 307412745,
+    "name": "Môtiers",
+    "ref": "MOT",
+    "uic_ref": "8504286",
+    "railway": "station",
+    "ll": [
+     46.9117911,
+     6.6103145
+    ],
+    "abstand_m": 7,
+    "wie": "uic_ref"
+   }
+  },
+  "MRT": {
+   "abk": "MRT",
+   "name": "Murten/Morat",
+   "bpuic": 8504128,
+   "atlas": [
+    46.925347,
+    7.115283
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "murten"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "zuordnung": "name_teil",
+   "linie_sbb": "255",
+   "km": 22.1623,
+   "osm": {
+    "node": 3081154411,
+    "name": "Murten/Morat",
+    "ref": "MRT",
+    "uic_ref": "8504128",
+    "railway": "station",
+    "ll": [
+     46.9254192,
+     7.1153138
+    ],
+    "abstand_m": 8,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ]
+  },
+  "MTB": {
+   "abk": "MTB",
+   "name": "Montbovon",
+   "bpuic": 8504070,
+   "atlas": [
+    46.485426,
+    7.04214
+   ],
+   "betreiber": "TPF",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "mob__montbovon"
+   ],
+   "regionen": [
+    "mob"
+   ],
+   "linien": [
+    "120",
+    "247"
+   ],
+   "osm": {
+    "node": 13992652435,
+    "name": "Montbovon",
+    "ref": "MTB",
+    "uic_ref": "8504070",
+    "railway": "station",
+    "ll": [
+     46.4859108,
+     7.0426078
+    ],
+    "abstand_m": 65,
+    "wie": "uic_ref"
+   }
+  },
+  "MUCO": {
+   "abk": "MUCO",
+   "name": "Münchenwiler-Courgevaux",
+   "bpuic": 8504186,
+   "atlas": [
+    46.9109,
+    7.11623
+   ],
+   "betreiber": "TPF",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "munchenwiler_courgevaux"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "osm": {
+    "node": 3664792746,
+    "name": "Münchenwiler-Courgevaux",
+    "ref": "MUCO",
+    "uic_ref": "8504186",
+    "railway": "station",
+    "ll": [
+     46.9112436,
+     7.1153997
+    ],
+    "abstand_m": 74,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "2"
+   ]
+  },
+  "MX": {
+   "abk": "MX",
+   "name": "Montreux",
+   "bpuic": 8501300,
+   "atlas": [
+    46.435884,
+    6.91044
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "mob__montreux"
+   ],
+   "regionen": [
+    "mob"
+   ],
+   "linien": [
+    "100",
+    "120",
+    "121"
+   ],
+   "linie_sbb": "100",
+   "km": 24.5365,
+   "osm": {
+    "node": 2793870896,
+    "name": "Montreux",
+    "ref": "MX",
+    "uic_ref": "8501300",
+    "railway": "station",
+    "ll": [
+     46.4358597,
+     6.9103688
+    ],
+    "abstand_m": 6,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "3"
+   ],
+   "gleise_perron_osm": [
+    "1",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9"
+   ]
+  },
+  "NE": {
+   "abk": "NE",
+   "name": "Neuchâtel",
+   "bpuic": 8504221,
+   "atlas": [
+    46.996727,
+    6.935702
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "neuchatel"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [
+    "210",
+    "215",
+    "220"
+   ],
+   "linie_sbb": "215",
+   "km": 75.29488,
+   "osm": {
+    "node": 3081154414,
+    "name": "Neuchâtel",
+    "ref": "NE",
+    "uic_ref": "8504221",
+    "railway": "station",
+    "ll": [
+     46.9965783,
+     6.9358276
+    ],
+    "abstand_m": 19,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7"
+   ],
+   "gleise_perron_osm": [
+    "1",
+    "2"
+   ]
+  },
+  "NEBI": {
+   "abk": "NEBI",
+   "name": "Neuchâtel-Vauseyon (bif)",
+   "bpuic": 8515347,
+   "atlas": [
+    46.991937,
+    6.919613
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "",
+   "plaene": [
+    "neuchatel_vauseyon"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "zuordnung": "teil",
+   "linie_sbb": "210",
+   "km": 73.95785,
+   "osm": {
+    "node": 270166064,
+    "name": "Evole",
+    "ref": "NELI",
+    "uic_ref": "8530708",
+    "railway": "station",
+    "ll": [
+     46.9896679,
+     6.9234642
+    ],
+    "abstand_m": 386,
+    "wie": "naehe"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7"
+   ]
+  },
+  "NEMA": {
+   "abk": "NEMA",
+   "name": "Neuchâtel Est (bif)",
+   "bpuic": 8504242,
+   "atlas": [
+    47.000488,
+    6.945352
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "",
+   "plaene": [
+    "neuchatel"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "zuordnung": "teil",
+   "linie_sbb": "210",
+   "km": 76.14,
+   "osm": null,
+   "gleise_perron_sbb": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7"
+   ]
+  },
+  "NEPS": {
+   "abk": "NEPS",
+   "name": "Neuchâtel Port-de-Serrières",
+   "bpuic": 8504509,
+   "atlas": [
+    46.98089,
+    6.904831
+   ],
+   "betreiber": "TRN-tn",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "serrieres"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "zuordnung": "teil",
+   "osm": {
+    "node": 357390773,
+    "name": "Port-de-Serrières",
+    "ref": "NEPS",
+    "uic_ref": "8504509",
+    "railway": "station",
+    "ll": [
+     46.9808914,
+     6.9049043
+    ],
+    "abstand_m": 6,
+    "wie": "uic_ref"
+   }
+  },
+  "NESE": {
+   "abk": "NESE",
+   "name": "Neuchâtel-Serrières",
+   "bpuic": 8504220,
+   "atlas": [
+    46.983962,
+    6.903363
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "serrieres"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "zuordnung": "name_teil",
+   "linie_sbb": "210",
+   "km": 72.39006,
+   "osm": {
+    "node": 1948006333,
+    "name": "Serrières",
+    "ref": "NESE",
+    "uic_ref": "8504220",
+    "railway": "station",
+    "ll": [
+     46.9839776,
+     6.9033365
+    ],
+    "abstand_m": 3,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "2"
+   ]
+  },
+  "NETR": {
+   "abk": "NETR",
+   "name": "Neuchâtel-Triage",
+   "bpuic": 8504240,
+   "atlas": [
+    46.997828,
+    6.939144
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "",
+   "plaene": [
+    "neuchatel"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "zuordnung": "teil",
+   "linie_sbb": "215",
+   "km": 75.58378,
+   "osm": {
+    "node": 3081154414,
+    "name": "Neuchâtel",
+    "ref": "NE",
+    "uic_ref": "8504221",
+    "railway": "station",
+    "ll": [
+     46.9965783,
+     6.9358276
+    ],
+    "abstand_m": 287,
+    "wie": "naehe"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7"
+   ]
+  },
+  "NEVS": {
+   "abk": "NEVS",
+   "name": "Neuchâtel-Vauseyon",
+   "bpuic": 8504230,
+   "atlas": [
+    46.9909,
+    6.916382
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "",
+   "plaene": [
+    "neuchatel_vauseyon"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [
+    "210",
+    "223"
+   ],
+   "linie_sbb": "223",
+   "km": 1.6442,
+   "osm": null,
+   "gleise_perron_sbb": [
+    "1"
+   ]
+  },
+  "NOI": {
+   "abk": "NOI",
+   "name": "Noiraigue",
+   "bpuic": 8504216,
+   "atlas": [
+    46.95492,
+    6.721799
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "noiraigue"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "linie_sbb": "219",
+   "km": 18.10913,
+   "osm": {
+    "node": 300351185,
+    "name": "Noiraigue",
+    "ref": "NOI",
+    "uic_ref": "8504216",
+    "railway": "station",
+    "ll": [
+     46.9549426,
+     6.7218242
+    ],
+    "abstand_m": 3,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "2",
+    "3"
+   ]
+  },
+  "NPLI": {
+   "abk": "NPLI",
+   "name": "Neuchâtel Place Pury Littorail",
+   "bpuic": 8504398,
+   "atlas": [
+    46.989412,
+    6.928188
+   ],
+   "betreiber": "TRN-tn",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "neuchatel"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "zuordnung": "teil",
+   "osm": {
+    "node": 355014243,
+    "name": "Place Pury Littorail",
+    "ref": "NPLI",
+    "uic_ref": "8504398",
+    "railway": "station",
+    "ll": [
+     46.989361,
+     6.9281168
+    ],
+    "abstand_m": 8,
+    "wie": "uic_ref"
+   }
+  },
+  "NSRL": {
+   "abk": "NSRL",
+   "name": "Neuchâtel Serrières Ruau",
+   "bpuic": 8530710,
+   "atlas": [
+    46.979737,
+    6.895037
+   ],
+   "betreiber": "TRN-tn",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "serrieres"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "zuordnung": "teil",
+   "osm": {
+    "node": 570232826,
+    "name": "Serrières Ruau",
+    "ref": "NSRL",
+    "uic_ref": "8530710",
+    "railway": "halt",
+    "ll": [
+     46.9798128,
+     6.8955035
+    ],
+    "abstand_m": 36,
+    "wie": "uic_ref"
+   }
+  },
+  "NV": {
+   "abk": "NV",
+   "name": "La Neuveville",
+   "bpuic": 8504226,
+   "atlas": [
+    47.062833,
+    7.095232
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "la_neuveville"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "linie_sbb": "210",
+   "km": 90.04861,
+   "osm": {
+    "node": 3081154393,
+    "name": "La Neuveville",
+    "ref": "NV",
+    "uic_ref": "8504226",
+    "railway": "halt",
+    "ll": [
+     47.0627767,
+     7.095358
+    ],
+    "abstand_m": 11,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "2"
+   ]
+  },
+  "OES": {
+   "abk": "OES",
+   "name": "Oeschseite",
+   "bpuic": 8507273,
+   "atlas": [
+    46.53137,
+    7.35229
+   ],
+   "betreiber": "MOB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "mob__oeschseite"
+   ],
+   "regionen": [
+    "mob"
+   ],
+   "linien": [
+    "120"
+   ],
+   "osm": {
+    "node": 6136596724,
+    "name": "Oeschseite",
+    "ref": "OES",
+    "uic_ref": "8507273",
+    "railway": "station",
+    "ll": [
+     46.5310796,
+     7.3517718
+    ],
+    "abstand_m": 51,
+    "wie": "uic_ref"
+   }
+  },
+  "OL": {
+   "abk": "OL",
+   "name": "Olten",
+   "bpuic": 8500218,
+   "atlas": [
+    47.351935,
+    7.9077
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "olten"
+   ],
+   "regionen": [
+    "olten"
+   ],
+   "linien": [
+    "410",
+    "450",
+    "500",
+    "503",
+    "531",
+    "540"
+   ],
+   "linie_sbb": "410",
+   "km": 39.29156,
+   "osm": {
+    "node": 636798044,
+    "name": "Olten",
+    "ref": "OL",
+    "uic_ref": "8500218",
+    "railway": "station",
+    "ll": [
+     47.3519349,
+     7.9075219
+    ],
+    "abstand_m": 13,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+   ]
+  },
+  "OLH": {
+   "abk": "OLH",
+   "name": "Olten Hammer",
+   "bpuic": 8500217,
+   "atlas": [
+    47.348555,
+    7.897724
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "olten_hammer"
+   ],
+   "regionen": [
+    "olten"
+   ],
+   "linien": [
+    "410"
+   ],
+   "linie_sbb": "410",
+   "km": 40.6274,
+   "osm": {
+    "node": 3081128624,
+    "name": "Olten Hammer",
+    "ref": "OLH",
+    "uic_ref": "8500217",
+    "railway": "station",
+    "ll": [
+     47.3485347,
+     7.8978781
+    ],
+    "abstand_m": 12,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+   ],
+   "gleise_perron_osm": [
+    "1",
+    "10",
+    "11",
+    "12",
+    "2",
+    "3",
+    "4",
+    "7",
+    "8",
+    "9"
+   ]
+  },
+  "OLS": {
+   "abk": "OLS",
+   "name": "Olten Süd (Abzw)",
+   "bpuic": 8515418,
+   "atlas": [
+    47.345617,
+    7.90763
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "",
+   "plaene": [
+    "olten"
+   ],
+   "regionen": [
+    "olten"
+   ],
+   "linien": [],
+   "zuordnung": "teil",
+   "linie_sbb": "500",
+   "km": 40.0,
+   "osm": null,
+   "gleise_perron_sbb": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+   ]
+  },
+  "ONB": {
+   "abk": "ONB",
+   "name": "Onnens-Bonvillars",
+   "bpuic": 8504202,
+   "atlas": [
+    46.832641,
+    6.689859
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "",
+   "plaene": [
+    "onnens_bonvillars"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "linie_sbb": "210",
+   "km": 47.482,
+   "osm": null
+  },
+  "PACC": {
+   "abk": "PACC",
+   "name": "Paccot",
+   "bpuic": 8501366,
+   "atlas": [
+    46.43776,
+    6.96269
+   ],
+   "betreiber": "MVR-mtgn",
+   "verkehrsmittel": "RACK_RAILWAY",
+   "plaene": [
+    "mob__paccot"
+   ],
+   "regionen": [
+    "mob"
+   ],
+   "linien": [
+    "122"
+   ],
+   "osm": {
+    "node": 983835738,
+    "name": "Paccot",
+    "ref": "PACC",
+    "uic_ref": "8501366",
+    "railway": "halt",
+    "ll": [
+     46.4377004,
+     6.9636101
+    ],
+    "abstand_m": 71,
+    "wie": "uic_ref"
+   }
+  },
+  "PALZ": {
+   "abk": "PALZ",
+   "name": "Château-d'Oex La Palaz",
+   "bpuic": 8501198,
+   "atlas": [
+    46.4759,
+    7.143834
+   ],
+   "betreiber": "MOB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "mob__chateau_d_oex"
+   ],
+   "regionen": [
+    "mob"
+   ],
+   "linien": [],
+   "zuordnung": "teil",
+   "osm": {
+    "node": 7101631560,
+    "name": "Château-d'Oex La Palaz",
+    "ref": null,
+    "uic_ref": "8501198",
+    "railway": "station",
+    "ll": [
+     46.4758536,
+     7.1437874
+    ],
+    "abstand_m": 6,
+    "wie": "uic_ref"
+   }
+  },
+  "PEN": {
+   "abk": "PEN",
+   "name": "Pensier",
+   "bpuic": 8504183,
+   "atlas": [
+    46.84161,
+    7.13529
+   ],
+   "betreiber": "TPF",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "pensier"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "osm": {
+    "node": 3664792747,
+    "name": "Pensier",
+    "ref": null,
+    "uic_ref": "8504183",
+    "railway": "station",
+    "ll": [
+     46.8416761,
+     7.1353102
+    ],
+    "abstand_m": 8,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "2"
+   ]
+  },
+  "PERC": {
+   "abk": "PERC",
+   "name": "La Perche",
+   "bpuic": 8501368,
+   "atlas": [
+    46.4364,
+    6.9751
+   ],
+   "betreiber": "MVR-mtgn",
+   "verkehrsmittel": "RACK_RAILWAY",
+   "plaene": [
+    "mob__la_perche"
+   ],
+   "regionen": [
+    "mob"
+   ],
+   "linien": [
+    "122"
+   ],
+   "osm": {
+    "node": 477540610,
+    "name": "La Perche",
+    "ref": "PERC",
+    "uic_ref": "8501368",
+    "railway": "halt",
+    "ll": [
+     46.4364296,
+     6.9750765
+    ],
+    "abstand_m": 4,
+    "wie": "uic_ref"
+   }
+  },
+  "PLAC": {
+   "abk": "PLAC",
+   "name": "Planchamp",
+   "bpuic": 8501383,
+   "atlas": [
+    46.45118,
+    6.901
+   ],
+   "betreiber": "MOB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "mob__planchamp"
+   ],
+   "regionen": [
+    "mob"
+   ],
+   "linien": [
+    "120"
+   ],
+   "osm": {
+    "node": 983835739,
+    "name": "Planchamp",
+    "ref": "PLAC",
+    "uic_ref": "8501383",
+    "railway": "halt",
+    "ll": [
+     46.4510495,
+     6.9010588
+    ],
+    "abstand_m": 15,
+    "wie": "uic_ref"
+   }
+  },
+  "PLCH": {
+   "abk": "PLCH",
+   "name": "Montreux-Les Planches",
+   "bpuic": 8501360,
+   "atlas": [
+    46.4331,
+    6.91756
+   ],
+   "betreiber": "MVR-mtgn",
+   "verkehrsmittel": "RACK_RAILWAY",
+   "plaene": [
+    "mob__montreux_les_planches"
+   ],
+   "regionen": [
+    "mob"
+   ],
+   "linien": [
+    "121"
+   ],
+   "osm": {
+    "node": 983835749,
+    "name": "Montreux-Les Planches",
+    "ref": "PLCH",
+    "uic_ref": "8501360",
+    "railway": "halt",
+    "ll": [
+     46.4332751,
+     6.9173482
+    ],
+    "abstand_m": 25,
+    "wie": "uic_ref"
+   }
+  },
+  "PRST": {
+   "abk": "PRST",
+   "name": "La Presta Mines d'asphalte",
+   "bpuic": 8504284,
+   "atlas": [
+    46.931097,
+    6.654361
+   ],
+   "betreiber": "TRN-rvt",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "la_presta_mines_d_asphalte"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "osm": {
+    "node": 307412779,
+    "name": "La Presta - Mines d'Asphalte",
+    "ref": "PRST",
+    "uic_ref": "8504284",
+    "railway": "halt",
+    "ll": [
+     46.9310851,
+     6.6543733
+    ],
+    "abstand_m": 2,
+    "wie": "uic_ref"
+   }
+  },
+  "RCH": {
+   "abk": "RCH",
+   "name": "Bern Riedbach",
+   "bpuic": 8504488,
+   "atlas": [
+    46.941154,
+    7.33405
+   ],
+   "betreiber": "BLS-bn",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "riedbach"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "zuordnung": "name_teil",
+   "osm": {
+    "node": 1870460759,
+    "name": "Riedbach",
+    "ref": "RCH",
+    "uic_ref": "8504488",
+    "railway": "station",
+    "ll": [
+     46.9411401,
+     7.334196
+    ],
+    "abstand_m": 11,
+    "wie": "uic_ref"
+   }
+  },
+  "RILI": {
+   "abk": "RILI",
+   "name": "Ringlikon",
+   "bpuic": 8503056,
+   "atlas": [
+    47.360298,
+    8.477428
+   ],
+   "betreiber": "SZU",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "szu__ringlikon"
+   ],
+   "regionen": [
+    "szu"
+   ],
+   "linien": [
+    "713"
+   ],
+   "osm": {
+    "node": 1262073820,
+    "name": "Ringlikon",
+    "ref": "RILI",
+    "uic_ref": "8503056",
+    "railway": "station",
+    "ll": [
+     47.360255,
+     8.4773761
+    ],
+    "abstand_m": 6,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "2"
+   ],
+   "gleise_perron_osm": [
+    "1",
+    "2"
+   ]
+  },
+  "RODN": {
+   "abk": "RODN",
+   "name": "Rochers-de-Naye",
+   "bpuic": 8501369,
+   "atlas": [
+    46.43168,
+    6.97902
+   ],
+   "betreiber": "MVR-mtgn",
+   "verkehrsmittel": "RACK_RAILWAY",
+   "plaene": [
+    "mob__rochers_de_naye"
+   ],
+   "regionen": [
+    "mob"
+   ],
+   "linien": [
+    "122"
+   ],
+   "osm": {
+    "node": 454143274,
+    "name": "Rochers de Naye",
+    "ref": null,
+    "uic_ref": "8501369",
+    "railway": "station",
+    "ll": [
+     46.4318411,
+     6.9788166
+    ],
+    "abstand_m": 24,
+    "wie": "uic_ref"
+   }
+  },
+  "ROSI": {
+   "abk": "ROSI",
+   "name": "Rossinière",
+   "bpuic": 8501392,
+   "atlas": [
+    46.464889,
+    7.082756
+   ],
+   "betreiber": "MOB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "mob__rossiniere"
+   ],
+   "regionen": [
+    "mob"
+   ],
+   "linien": [
+    "120"
+   ],
+   "osm": {
+    "node": 8131835131,
+    "name": "Rossinière",
+    "ref": null,
+    "uic_ref": "8501392",
+    "railway": "station",
+    "ll": [
+     46.4647906,
+     7.0829273
+    ],
+    "abstand_m": 17,
+    "wie": "uic_ref"
+   }
+  },
+  "ROSS": {
+   "abk": "ROSS",
+   "name": "Rosshäusern",
+   "bpuic": 8504487,
+   "atlas": [
+    46.934342,
+    7.29687
+   ],
+   "betreiber": "BLS-bn",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "rosshausern"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "osm": {
+    "node": 3081154425,
+    "name": "Rosshäusern",
+    "ref": "ROSS",
+    "uic_ref": "8504487",
+    "railway": "station",
+    "ll": [
+     46.9343355,
+     7.2968204
+    ],
+    "abstand_m": 4,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "2",
+    "3"
+   ]
+  },
+  "ROU": {
+   "abk": "ROU",
+   "name": "Rougemont",
+   "bpuic": 8501397,
+   "atlas": [
+    46.48846,
+    7.208829
+   ],
+   "betreiber": "MOB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "mob__rougemont"
+   ],
+   "regionen": [
+    "mob"
+   ],
+   "linien": [
+    "120"
+   ],
+   "osm": {
+    "node": 306507958,
+    "name": "Rougemont",
+    "ref": null,
+    "uic_ref": "8501397",
+    "railway": "station",
+    "ll": [
+     46.4883914,
+     7.2089064
+    ],
+    "abstand_m": 10,
+    "wie": "uic_ref"
+   }
+  },
+  "RTR": {
+   "abk": "RTR",
+   "name": "Rothrist",
+   "bpuic": 8508103,
+   "atlas": [
+    47.306456,
+    7.879396
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "rothrist"
+   ],
+   "regionen": [
+    "olten"
+   ],
+   "linien": [
+    "400",
+    "450",
+    "451",
+    "453"
+   ],
+   "linie_sbb": "450",
+   "km": 46.20125,
+   "osm": {
+    "node": 3876626738,
+    "name": "Rothrist",
+    "ref": "RTR",
+    "uic_ref": "8508103",
+    "railway": "station",
+    "ll": [
+     47.3064073,
+     7.8794548
+    ],
+    "abstand_m": 7,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "4"
+   ],
+   "gleise_perron_osm": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ]
+  },
+  "SAAN": {
+   "abk": "SAAN",
+   "name": "Saanen",
+   "bpuic": 8501398,
+   "atlas": [
+    46.48857,
+    7.26027
+   ],
+   "betreiber": "MOB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "mob__saanen"
+   ],
+   "regionen": [
+    "mob"
+   ],
+   "linien": [
+    "120"
+   ],
+   "osm": {
+    "node": 3877871123,
+    "name": "Saanen",
+    "ref": null,
+    "uic_ref": "8501398",
+    "railway": "station",
+    "ll": [
+     46.4886037,
+     7.2605015
+    ],
+    "abstand_m": 18,
+    "wie": "uic_ref"
+   }
+  },
+  "SAAV": {
+   "abk": "SAAV",
+   "name": "Sagliains Autoverlad",
+   "bpuic": 8511261,
+   "atlas": [
+    46.763388,
+    10.096529
+   ],
+   "betreiber": "RhB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "vereina__sagliains"
+   ],
+   "regionen": [
+    "vereina"
+   ],
+   "linien": [
+    "910",
+    "960"
+   ],
+   "zuordnung": "name_teil",
+   "osm": null,
+   "gleise_perron_osm": [
+    "3",
+    "4"
+   ]
+  },
+  "SAF": {
+   "abk": "SAF",
+   "name": "Safenwil",
+   "bpuic": 8502100,
+   "atlas": [
+    47.321758,
+    7.983518
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "safenwil"
+   ],
+   "regionen": [
+    "olten"
+   ],
+   "linien": [
+    "504"
+   ],
+   "linie_sbb": "504",
+   "km": 6.56045,
+   "osm": {
+    "node": 3080746025,
+    "name": "Safenwil",
+    "ref": "SAF",
+    "uic_ref": "8502100",
+    "railway": "station",
+    "ll": [
+     47.3217185,
+     7.9835109
+    ],
+    "abstand_m": 4,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "2"
+   ],
+   "gleise_perron_osm": [
+    "1",
+    "2"
+   ]
+  },
+  "SAGL": {
+   "abk": "SAGL",
+   "name": "Sagliains",
+   "bpuic": 8509269,
+   "atlas": [
+    46.764829,
+    10.103053
+   ],
+   "betreiber": "RhB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "vereina__sagliains"
+   ],
+   "regionen": [
+    "vereina"
+   ],
+   "linien": [
+    "910",
+    "960"
+   ],
+   "osm": {
+    "node": 2731339186,
+    "name": "Sagliains",
+    "ref": "SAGL",
+    "uic_ref": "8509269",
+    "railway": "station",
+    "ll": [
+     46.7648182,
+     10.1030516
+    ],
+    "abstand_m": 1,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_osm": [
+    "3",
+    "4"
+   ]
+  },
+  "SAMO": {
+   "abk": "SAMO",
+   "name": "Saanenmöser",
+   "bpuic": 8507272,
+   "atlas": [
+    46.517403,
+    7.311397
+   ],
+   "betreiber": "MOB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "mob__saanenmoser"
+   ],
+   "regionen": [
+    "mob"
+   ],
+   "linien": [
+    "120"
+   ],
+   "osm": {
+    "node": 3877902839,
+    "name": "Saanenmöser",
+    "ref": "SAMO",
+    "uic_ref": "8507272",
+    "railway": "station",
+    "ll": [
+     46.5174071,
+     7.3114479
+    ],
+    "abstand_m": 4,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_osm": [
+    "1",
+    "2"
+   ]
+  },
+  "SASS": {
+   "abk": "SASS",
+   "name": "Sasslatsch (Abzw)",
+   "bpuic": 8516026,
+   "atlas": [
+    46.759163,
+    10.087543
+   ],
+   "betreiber": "RhB",
+   "verkehrsmittel": "",
+   "plaene": [
+    "vereina__sasslatsch"
+   ],
+   "regionen": [
+    "vereina"
+   ],
+   "linien": [
+    "914",
+    "960"
+   ],
+   "zuordnung": "name_teil",
+   "osm": null
+  },
+  "SAST": {
+   "abk": "SAST",
+   "name": "Sagliains Sasslatsch (Abzw)",
+   "bpuic": 8516945,
+   "atlas": [
+    46.76171,
+    10.087156
+   ],
+   "betreiber": "RhB",
+   "verkehrsmittel": "",
+   "plaene": [
+    "vereina__sagliains_sasslatsch"
+   ],
+   "regionen": [
+    "vereina"
+   ],
+   "linien": [
+    "910",
+    "914"
+   ],
+   "zuordnung": "name_teil",
+   "osm": null
+  },
+  "SBL": {
+   "abk": "SBL",
+   "name": "St-Blaise CFF",
+   "bpuic": 8504222,
+   "atlas": [
+    47.014576,
+    6.98211
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "saint_blaise_cff"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "linie_sbb": "210",
+   "km": 79.36773,
+   "osm": {
+    "node": 3081154429,
+    "name": "Saint-Blaise CFF",
+    "ref": "SBL",
+    "uic_ref": "8504222",
+    "railway": "station",
+    "ll": [
+     47.0145305,
+     6.9821423
+    ],
+    "abstand_m": 6,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "2"
+   ]
+  },
+  "SBLB": {
+   "abk": "SBLB",
+   "name": "St-Blaise-Lac",
+   "bpuic": 8504480,
+   "atlas": [
+    47.012104,
+    6.984686
+   ],
+   "betreiber": "BLS-bn",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "saint_blaise_lac"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "osm": {
+    "node": 3081154428,
+    "name": "Saint Blaise-Lac",
+    "ref": "SBLB",
+    "uic_ref": "8504480",
+    "railway": "station",
+    "ll": [
+     47.0120851,
+     6.9846917
+    ],
+    "abstand_m": 2,
+    "wie": "uic_ref"
+   }
+  },
+  "SCI": {
+   "abk": "SCI",
+   "name": "Les Sciernes",
+   "bpuic": 8501379,
+   "atlas": [
+    46.491646,
+    7.034522
+   ],
+   "betreiber": "MOB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "mob__les_sciernes"
+   ],
+   "regionen": [
+    "mob"
+   ],
+   "linien": [
+    "120"
+   ],
+   "osm": {
+    "node": 426953627,
+    "name": "Les Sciernes",
+    "ref": null,
+    "uic_ref": "8501379",
+    "railway": "station",
+    "ll": [
+     46.4916117,
+     7.0346151
+    ],
+    "abstand_m": 8,
+    "wie": "uic_ref"
+   }
+  },
+  "SCOE": {
+   "abk": "SCOE",
+   "name": "Schönenwerd SO",
+   "bpuic": 8502112,
+   "atlas": [
+    47.371424,
+    8.000158
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "schonenwerd"
+   ],
+   "regionen": [
+    "olten"
+   ],
+   "linien": [
+    "540"
+   ],
+   "linie_sbb": "540",
+   "km": 48.1296,
+   "osm": {
+    "node": 3080746026,
+    "name": "Schönenwerd",
+    "ref": "SCOE",
+    "uic_ref": "8502112",
+    "railway": "station",
+    "ll": [
+     47.3713259,
+     8.0001867
+    ],
+    "abstand_m": 11,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "2"
+   ],
+   "gleise_perron_osm": [
+    "1",
+    "2"
+   ]
+  },
+  "SCR": {
+   "abk": "SCR",
+   "name": "Schönried",
+   "bpuic": 8507271,
+   "atlas": [
+    46.504373,
+    7.290958
+   ],
+   "betreiber": "MOB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "mob__schonried"
+   ],
+   "regionen": [
+    "mob"
+   ],
+   "linien": [
+    "120"
+   ],
+   "osm": {
+    "node": 187228398,
+    "name": "Schönried",
+    "ref": "SCR",
+    "uic_ref": "8507271",
+    "railway": "station",
+    "ll": [
+     46.5043881,
+     7.2908891
+    ],
+    "abstand_m": 6,
+    "wie": "uic_ref"
+   }
+  },
+  "SDY": {
+   "abk": "SDY",
+   "name": "Sendy-Sollard",
+   "bpuic": 8501385,
+   "atlas": [
+    46.447107,
+    6.930133
+   ],
+   "betreiber": "MOB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "mob__sendy_sollard"
+   ],
+   "regionen": [
+    "mob"
+   ],
+   "linien": [
+    "120"
+   ],
+   "osm": {
+    "node": 983835747,
+    "name": "Sendy-Sollard",
+    "ref": null,
+    "uic_ref": "8501385",
+    "railway": "halt",
+    "ll": [
+     46.4471615,
+     6.9301965
+    ],
+    "abstand_m": 8,
+    "wie": "uic_ref"
+   }
+  },
+  "SELF": {
+   "abk": "SELF",
+   "name": "Klosters Selfranga",
+   "bpuic": 8509095,
+   "atlas": [
+    46.856078,
+    9.883842
+   ],
+   "betreiber": "RhB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "vereina__klosters_selfranga"
+   ],
+   "regionen": [
+    "vereina"
+   ],
+   "linien": [
+    "910"
+   ],
+   "osm": null
+  },
+  "SELS": {
+   "abk": "SELS",
+   "name": "Selfranga Süd",
+   "bpuic": 8516025,
+   "atlas": [
+    46.84462,
+    9.906823
+   ],
+   "betreiber": "RhB",
+   "verkehrsmittel": "",
+   "plaene": [
+    "vereina__selfranga_sud"
+   ],
+   "regionen": [
+    "vereina"
+   ],
+   "linien": [
+    "910"
+   ],
+   "osm": null
+  },
+  "SHF": {
+   "abk": "SHF",
+   "name": "Zürich Schweighof",
+   "bpuic": 8503053,
+   "atlas": [
+    47.364942,
+    8.503532
+   ],
+   "betreiber": "SZU",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "szu__zurich_schweighof"
+   ],
+   "regionen": [
+    "szu"
+   ],
+   "linien": [
+    "713"
+   ],
+   "osm": {
+    "node": 3313770935,
+    "name": "Zürich Schweighof",
+    "ref": "SHF",
+    "uic_ref": "8503053",
+    "railway": "halt",
+    "ll": [
+     47.3649655,
+     8.5035323
+    ],
+    "abstand_m": 3,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1"
+   ],
+   "gleise_perron_osm": [
+    "1"
+   ]
+  },
+  "SNOR": {
+   "abk": "SNOR",
+   "name": "Sagliains Nord",
+   "bpuic": 8516027,
+   "atlas": [
+    46.769307,
+    10.07065
+   ],
+   "betreiber": "RhB",
+   "verkehrsmittel": "",
+   "plaene": [
+    "vereina__sagliains_nord"
+   ],
+   "regionen": [
+    "vereina"
+   ],
+   "linien": [
+    "910"
+   ],
+   "osm": null
+  },
+  "SO": {
+   "abk": "SO",
+   "name": "Solothurn",
+   "bpuic": 8500207,
+   "atlas": [
+    47.204193,
+    7.542689
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "solothurn"
+   ],
+   "regionen": [],
+   "linien": [
+    "410",
+    "415",
+    "421"
+   ],
+   "linie_sbb": "292",
+   "km": 0.0,
+   "osm": {
+    "node": 3081128632,
+    "name": "Solothurn",
+    "ref": "SO",
+    "uic_ref": "8500207",
+    "railway": "station",
+    "ll": [
+     47.2042524,
+     7.5426793
+    ],
+    "abstand_m": 7,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "2",
+    "3",
+    "5",
+    "6"
+   ],
+   "gleise_perron_osm": [
+    "1",
+    "10",
+    "2",
+    "21",
+    "3",
+    "5",
+    "6",
+    "9"
+   ]
+  },
+  "SOBT": {
+   "abk": "SOBT",
+   "name": "Solothurn Baseltor",
+   "bpuic": 8500280,
+   "atlas": [
+    47.20999,
+    7.5419
+   ],
+   "betreiber": "ASM-snb",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "solothurn"
+   ],
+   "regionen": [],
+   "linien": [],
+   "zuordnung": "teil",
+   "osm": {
+    "node": 3209161380,
+    "name": "Solothurn Baseltor",
+    "ref": "SOBT",
+    "uic_ref": "8500280",
+    "railway": "halt",
+    "ll": [
+     47.2098657,
+     7.541708
+    ],
+    "abstand_m": 20,
+    "wie": "uic_ref"
+   }
+  },
+  "SORM": {
+   "abk": "SORM",
+   "name": "Solothurn RM (Abzw)",
+   "bpuic": 8515425,
+   "atlas": [
+    47.20367,
+    7.5407
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "",
+   "plaene": [
+    "solothurn"
+   ],
+   "regionen": [],
+   "linien": [],
+   "zuordnung": "teil",
+   "linie_sbb": "421",
+   "km": 0.30584,
+   "osm": {
+    "node": 3081128632,
+    "name": "Solothurn",
+    "ref": "SO",
+    "uic_ref": "8500207",
+    "railway": "station",
+    "ll": [
+     47.2042524,
+     7.5426793
+    ],
+    "abstand_m": 163,
+    "wie": "naehe"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "2",
+    "3",
+    "5",
+    "6"
+   ]
+  },
+  "SOST": {
+   "abk": "SOST",
+   "name": "Solothurn Sternen",
+   "bpuic": 8500272,
+   "atlas": [
+    47.2123,
+    7.54536
+   ],
+   "betreiber": "ASM-snb",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "solothurn"
+   ],
+   "regionen": [],
+   "linien": [],
+   "zuordnung": "teil",
+   "osm": {
+    "node": 11694633145,
+    "name": "Solothurn Sternen",
+    "ref": "SOST",
+    "uic_ref": "8500272",
+    "railway": "halt",
+    "ll": [
+     47.2124016,
+     7.5455324
+    ],
+    "abstand_m": 17,
+    "wie": "uic_ref"
+   }
+  },
+  "STST": {
+   "abk": "STST",
+   "name": "St. Stephan",
+   "bpuic": 8507276,
+   "atlas": [
+    46.505347,
+    7.400666
+   ],
+   "betreiber": "MOB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "mob__st_stephan"
+   ],
+   "regionen": [
+    "mob"
+   ],
+   "linien": [
+    "321"
+   ],
+   "osm": {
+    "node": 2662927320,
+    "name": "St. Stephan",
+    "ref": null,
+    "uic_ref": "8507276",
+    "railway": "station",
+    "ll": [
+     46.5053789,
+     7.4006906
+    ],
+    "abstand_m": 4,
+    "wie": "uic_ref"
+   }
+  },
+  "SUGI": {
+   "abk": "SUGI",
+   "name": "Sugiez",
+   "bpuic": 8504188,
+   "atlas": [
+    46.96413,
+    7.11935
+   ],
+   "betreiber": "TPF",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "sugiez"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "osm": {
+    "node": 3838637244,
+    "name": "Sugiez",
+    "ref": "SUGI",
+    "uic_ref": "8504188",
+    "railway": "station",
+    "ll": [
+     46.9641612,
+     7.1193044
+    ],
+    "abstand_m": 5,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "2"
+   ]
+  },
+  "SUS": {
+   "abk": "SUS",
+   "name": "Susch",
+   "bpuic": 8509263,
+   "atlas": [
+    46.752058,
+    10.07946
+   ],
+   "betreiber": "RhB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "vereina__susch"
+   ],
+   "regionen": [
+    "vereina"
+   ],
+   "linien": [
+    "960"
+   ],
+   "osm": {
+    "node": 266207902,
+    "name": "Susch",
+    "ref": "SUS",
+    "uic_ref": "8509263",
+    "railway": "station",
+    "ll": [
+     46.7520148,
+     10.0794387
+    ],
+    "abstand_m": 5,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_osm": [
+    "1",
+    "2"
+   ]
+  },
+  "SW": {
+   "abk": "SW",
+   "name": "Solothurn West",
+   "bpuic": 8500206,
+   "atlas": [
+    47.206717,
+    7.531949
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "solothurn"
+   ],
+   "regionen": [],
+   "linien": [],
+   "zuordnung": "teil",
+   "linie_sbb": "410",
+   "km": 74.78302,
+   "osm": {
+    "node": 1688491262,
+    "name": "Solothurn West",
+    "ref": "SW",
+    "uic_ref": "8500206",
+    "railway": "halt",
+    "ll": [
+     47.2067502,
+     7.5319881
+    ],
+    "abstand_m": 5,
+    "wie": "uic_ref"
+   }
+  },
+  "TH": {
+   "abk": "TH",
+   "name": "Thun",
+   "bpuic": 8507100,
+   "atlas": [
+    46.754853,
+    7.629606
+   ],
+   "betreiber": "BLS-bls",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "thun"
+   ],
+   "regionen": [],
+   "linien": [],
+   "osm": {
+    "node": 3081154442,
+    "name": "Thun",
+    "ref": "TH",
+    "uic_ref": "8507100",
+    "railway": "station",
+    "ll": [
+     46.7549449,
+     7.6296169
+    ],
+    "abstand_m": 10,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "16",
+    "18"
+   ]
+  },
+  "TINE": {
+   "abk": "TINE",
+   "name": "La Tine",
+   "bpuic": 8501391,
+   "atlas": [
+    46.467149,
+    7.04652
+   ],
+   "betreiber": "MOB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "mob__la_tine"
+   ],
+   "regionen": [
+    "mob"
+   ],
+   "linien": [
+    "120"
+   ],
+   "osm": {
+    "node": 306504177,
+    "name": "La Tine",
+    "ref": null,
+    "uic_ref": "8501391",
+    "railway": "station",
+    "ll": [
+     46.4671807,
+     7.0465379
+    ],
+    "abstand_m": 4,
+    "wie": "uic_ref"
+   }
+  },
+  "TK": {
+   "abk": "TK",
+   "name": "Tecknau",
+   "bpuic": 8500028,
+   "atlas": [
+    47.44576,
+    7.887618
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "tecknau"
+   ],
+   "regionen": [
+    "olten"
+   ],
+   "linien": [
+    "500"
+   ],
+   "linie_sbb": "500",
+   "km": 28.16,
+   "osm": {
+    "node": 3080746030,
+    "name": "Tecknau",
+    "ref": "TK",
+    "uic_ref": "8500028",
+    "railway": "station",
+    "ll": [
+     47.4457879,
+     7.8876953
+    ],
+    "abstand_m": 7,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "3",
+    "4"
+   ],
+   "gleise_perron_osm": [
+    "3",
+    "4"
+   ]
+  },
+  "TOV": {
+   "abk": "TOV",
+   "name": "Toveyre",
+   "bpuic": 8501361,
+   "atlas": [
+    46.4279,
+    6.92847
+   ],
+   "betreiber": "MVR-mtgn",
+   "verkehrsmittel": "RACK_RAILWAY",
+   "plaene": [
+    "mob__toveyre"
+   ],
+   "regionen": [
+    "mob"
+   ],
+   "linien": [
+    "121"
+   ],
+   "osm": {
+    "node": 983835751,
+    "name": "Toveyre",
+    "ref": "TOV",
+    "uic_ref": "8501361",
+    "railway": "halt",
+    "ll": [
+     46.427891,
+     6.9285684
+    ],
+    "abstand_m": 8,
+    "wie": "uic_ref"
+   }
+  },
+  "TR": {
+   "abk": "TR",
+   "name": "Travers",
+   "bpuic": 8504215,
+   "atlas": [
+    46.942412,
+    6.676562
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "travers"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "linie_sbb": "219",
+   "km": 22.44673,
+   "osm": {
+    "node": 1944846875,
+    "name": "Travers",
+    "ref": "TR",
+    "uic_ref": "8504215",
+    "railway": "station",
+    "ll": [
+     46.94243,
+     6.6762301
+    ],
+    "abstand_m": 25,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "2"
+   ]
+  },
+  "TREM": {
+   "abk": "TREM",
+   "name": "Le Tremblex",
+   "bpuic": 8501363,
+   "atlas": [
+    46.435927,
+    6.932586
+   ],
+   "betreiber": "MVR-mtgn",
+   "verkehrsmittel": "RACK_RAILWAY",
+   "plaene": [
+    "mob__le_tremblex"
+   ],
+   "regionen": [
+    "mob"
+   ],
+   "linien": [
+    "122"
+   ],
+   "osm": {
+    "node": 983835754,
+    "name": "Le Tremblex",
+    "ref": "TREM",
+    "uic_ref": "8501363",
+    "railway": "halt",
+    "ll": [
+     46.4359414,
+     6.9326309
+    ],
+    "abstand_m": 4,
+    "wie": "uic_ref"
+   }
+  },
+  "TROU": {
+   "abk": "TROU",
+   "name": "Travers Ouest",
+   "bpuic": 8515366,
+   "atlas": [
+    46.93951,
+    6.672345
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "",
+   "plaene": [
+    "travers"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "zuordnung": "teil",
+   "linie_sbb": "219",
+   "km": 22.918,
+   "osm": null,
+   "gleise_perron_sbb": [
+    "1",
+    "2"
+   ]
+  },
+  "TUE": {
+   "abk": "TUE",
+   "name": "Tüscherz",
+   "bpuic": 8504229,
+   "atlas": [
+    47.115008,
+    7.197318
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "tuscherz"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "linie_sbb": "210",
+   "km": 99.953,
+   "osm": {
+    "node": 1946558958,
+    "name": "Tüscherz",
+    "ref": "TUE",
+    "uic_ref": "8504229",
+    "railway": "station",
+    "ll": [
+     47.1140823,
+     7.1959136
+    ],
+    "abstand_m": 148,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "2"
+   ]
+  },
+  "TWN": {
+   "abk": "TWN",
+   "name": "Twann",
+   "bpuic": 8504228,
+   "atlas": [
+    47.093664,
+    7.156498
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "twann"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "linie_sbb": "9210",
+   "km": 95.9766,
+   "osm": {
+    "node": 3081154447,
+    "name": "Twann",
+    "ref": "TWN",
+    "uic_ref": "8504228",
+    "railway": "station",
+    "ll": [
+     47.0937557,
+     7.1566154
+    ],
+    "abstand_m": 14,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "2",
+    "3"
+   ]
+  },
+  "UEBE": {
+   "abk": "UEBE",
+   "name": "Uetliberg",
+   "bpuic": 8503057,
+   "atlas": [
+    47.352074,
+    8.487556
+   ],
+   "betreiber": "SZU",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "szu__uetliberg"
+   ],
+   "regionen": [
+    "szu"
+   ],
+   "linien": [
+    "713"
+   ],
+   "osm": {
+    "node": 1262086033,
+    "name": "Uetliberg",
+    "ref": "UEBE",
+    "uic_ref": "8503057",
+    "railway": "station",
+    "ll": [
+     47.3518692,
+     8.4874187
+    ],
+    "abstand_m": 25,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "2"
+   ],
+   "gleise_perron_osm": [
+    "1",
+    "2"
+   ]
+  },
+  "VALM": {
+   "abk": "VALM",
+   "name": "Valmont",
+   "bpuic": 8501362,
+   "atlas": [
+    46.42855,
+    6.9293
+   ],
+   "betreiber": "MVR-mtgn",
+   "verkehrsmittel": "RACK_RAILWAY",
+   "plaene": [
+    "mob__valmont"
+   ],
+   "regionen": [
+    "mob"
+   ],
+   "linien": [
+    "121"
+   ],
+   "osm": {
+    "node": 983835753,
+    "name": "Valmont",
+    "ref": "VALM",
+    "uic_ref": "8501362",
+    "railway": "halt",
+    "ll": [
+     46.4285383,
+     6.9293905
+    ],
+    "abstand_m": 7,
+    "wie": "uic_ref"
+   }
+  },
+  "VERX": {
+   "abk": "VERX",
+   "name": "Vernex (diag)",
+   "bpuic": 8519695,
+   "atlas": [
+    46.440252,
+    6.905172
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "",
+   "plaene": [
+    "mob__vernex"
+   ],
+   "regionen": [
+    "mob"
+   ],
+   "linien": [
+    "100"
+   ],
+   "zuordnung": "name_teil",
+   "linie_sbb": "100",
+   "km": 23.877,
+   "osm": {
+    "node": 207308604,
+    "name": "Belmont-sur-Montreux",
+    "ref": "BEMM",
+    "uic_ref": "8501390",
+    "railway": "halt",
+    "ll": [
+     46.4420987,
+     6.9059653
+    ],
+    "abstand_m": 214,
+    "wie": "naehe"
+   }
+  },
+  "VNOR": {
+   "abk": "VNOR",
+   "name": "Vereina Nord",
+   "bpuic": 8516023,
+   "atlas": [
+    46.812793,
+    9.976182
+   ],
+   "betreiber": "RhB",
+   "verkehrsmittel": "",
+   "plaene": [
+    "vereina__vereina_nord"
+   ],
+   "regionen": [
+    "vereina"
+   ],
+   "linien": [
+    "910"
+   ],
+   "osm": null
+  },
+  "VSUD": {
+   "abk": "VSUD",
+   "name": "Vereina Süd",
+   "bpuic": 8516024,
+   "atlas": [
+    46.802567,
+    9.998432
+   ],
+   "betreiber": "RhB",
+   "verkehrsmittel": "",
+   "plaene": [
+    "vereina__vereina_sud"
+   ],
+   "regionen": [
+    "vereina"
+   ],
+   "linien": [
+    "910"
+   ],
+   "osm": null
+  },
+  "VUAR": {
+   "abk": "VUAR",
+   "name": "Vuarennes",
+   "bpuic": 8501381,
+   "atlas": [
+    46.439138,
+    6.91098
+   ],
+   "betreiber": "MOB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "mob__vuarennes"
+   ],
+   "regionen": [
+    "mob"
+   ],
+   "linien": [
+    "120"
+   ],
+   "osm": {
+    "node": 306500168,
+    "name": "Vuarennes",
+    "ref": "VUAR",
+    "uic_ref": "8501381",
+    "railway": "halt",
+    "ll": [
+     46.4391384,
+     6.9109929
+    ],
+    "abstand_m": 1,
+    "wie": "uic_ref"
+   }
+  },
+  "WBOL": {
+   "abk": "WBOL",
+   "name": "Wangen bei Olten",
+   "bpuic": 8500216,
+   "atlas": [
+    47.341401,
+    7.868361
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "wangen_bei_olten"
+   ],
+   "regionen": [
+    "olten"
+   ],
+   "linien": [
+    "410"
+   ],
+   "linie_sbb": "410",
+   "km": 43.04188,
+   "osm": {
+    "node": 3081128636,
+    "name": "Wangen bei Olten",
+    "ref": "WBOL",
+    "uic_ref": "8500216",
+    "railway": "station",
+    "ll": [
+     47.3413595,
+     7.8682199
+    ],
+    "abstand_m": 12,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "3",
+    "4"
+   ],
+   "gleise_perron_osm": [
+    "3",
+    "4"
+   ]
+  },
+  "ZBR": {
+   "abk": "ZBR",
+   "name": "Zihlbrücke",
+   "bpuic": 8504490,
+   "atlas": [
+    47.009277,
+    7.030573
+   ],
+   "betreiber": "BLS-bn",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "zihlbruecke"
+   ],
+   "regionen": [
+    "ne"
+   ],
+   "linien": [],
+   "osm": {
+    "node": 11808339007,
+    "name": "Zihlbrücke",
+    "ref": null,
+    "uic_ref": "8504490",
+    "railway": "halt",
+    "ll": [
+     47.0092673,
+     7.0305644
+    ],
+    "abstand_m": 1,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1"
+   ]
+  },
+  "ZBZ": {
+   "abk": "ZBZ",
+   "name": "Zürich Binz",
+   "bpuic": 8503051,
+   "atlas": [
+    47.362763,
+    8.518297
+   ],
+   "betreiber": "SZU",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "szu__zurich_binz"
+   ],
+   "regionen": [
+    "szu"
+   ],
+   "linien": [
+    "713"
+   ],
+   "osm": {
+    "node": 1261444152,
+    "name": "Zürich Binz",
+    "ref": "ZBZ",
+    "uic_ref": "8503051",
+    "railway": "halt",
+    "ll": [
+     47.3628473,
+     8.5180854
+    ],
+    "abstand_m": 18,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "2"
+   ],
+   "gleise_perron_osm": [
+    "1"
+   ]
+  },
+  "ZF": {
+   "abk": "ZF",
+   "name": "Zofingen",
+   "bpuic": 8502001,
+   "atlas": [
+    47.288053,
+    7.943118
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "zofingen"
+   ],
+   "regionen": [
+    "olten"
+   ],
+   "linien": [
+    "500",
+    "504"
+   ],
+   "linie_sbb": "500",
+   "km": 47.46243,
+   "osm": {
+    "node": 3081128643,
+    "name": "Zofingen",
+    "ref": "ZF",
+    "uic_ref": "8502001",
+    "railway": "station",
+    "ll": [
+     47.2878472,
+     7.9431327
+    ],
+    "abstand_m": 23,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "2",
+    "3",
+    "40"
+   ],
+   "gleise_perron_osm": [
+    "1",
+    "2",
+    "3",
+    "40"
+   ]
+  },
+  "ZFN": {
+   "abk": "ZFN",
+   "name": "Zofingen Nord (Abzw)",
+   "bpuic": 8515435,
+   "atlas": [
+    47.291221,
+    7.940277
+   ],
+   "betreiber": "SBB",
+   "verkehrsmittel": "",
+   "plaene": [
+    "zofingen"
+   ],
+   "regionen": [
+    "olten"
+   ],
+   "linien": [],
+   "zuordnung": "teil",
+   "linie_sbb": "500",
+   "km": 47.05,
+   "osm": null,
+   "gleise_perron_sbb": [
+    "1",
+    "2",
+    "3",
+    "40"
+   ]
+  },
+  "ZGH": {
+   "abk": "ZGH",
+   "name": "Zürich Giesshübel",
+   "bpuic": 8503091,
+   "atlas": [
+    47.362611,
+    8.522016
+   ],
+   "betreiber": "SZU",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "szu__zurich_giesshubel"
+   ],
+   "regionen": [
+    "szu"
+   ],
+   "linien": [
+    "712",
+    "713",
+    "717"
+   ],
+   "osm": {
+    "node": 1264771132,
+    "name": "Zürich Giesshübel",
+    "ref": "ZGH",
+    "uic_ref": "8503091",
+    "railway": "station",
+    "ll": [
+     47.3626083,
+     8.5220149
+    ],
+    "abstand_m": 0,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "2"
+   ],
+   "gleise_perron_osm": [
+    "1",
+    "2"
+   ]
+  },
+  "ZSAA": {
+   "abk": "ZSAA",
+   "name": "Zürich Saalsporthalle",
+   "bpuic": 8503087,
+   "atlas": [
+    47.357795,
+    8.521969
+   ],
+   "betreiber": "SZU",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "szu__zurich_giesshubel"
+   ],
+   "regionen": [
+    "szu"
+   ],
+   "linien": [
+    "712",
+    "713",
+    "717"
+   ],
+   "osm": {
+    "node": 1264808495,
+    "name": "Zürich Saalsporthalle",
+    "ref": "ZSAA",
+    "uic_ref": "8503087",
+    "railway": "station",
+    "ll": [
+     47.3580067,
+     8.5218339
+    ],
+    "abstand_m": 26,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "2"
+   ],
+   "gleise_perron_osm": [
+    "1",
+    "2"
+   ]
+  },
+  "ZSEL": {
+   "abk": "ZSEL",
+   "name": "Zürich Selnau",
+   "bpuic": 8503090,
+   "atlas": [
+    47.372238,
+    8.531725
+   ],
+   "betreiber": "SZU",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "szu__zurich_selnau"
+   ],
+   "regionen": [
+    "szu"
+   ],
+   "linien": [
+    "712",
+    "727"
+   ],
+   "osm": {
+    "node": 1261444104,
+    "name": "Zürich Selnau",
+    "ref": "ZSEL",
+    "uic_ref": "8503090",
+    "railway": "station",
+    "ll": [
+     47.3724695,
+     8.5318556
+    ],
+    "abstand_m": 28,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_sbb": [
+    "1",
+    "2"
+   ],
+   "gleise_perron_osm": [
+    "1",
+    "2",
+    "3",
+    "31",
+    "32",
+    "4",
+    "5"
+   ]
+  },
+  "ZUSS": {
+   "abk": "ZUSS",
+   "name": "Zürich HB SZU Süd (Spw)",
+   "bpuic": 8518396,
+   "atlas": [
+    47.376547,
+    8.535607
+   ],
+   "betreiber": "SZU",
+   "verkehrsmittel": "",
+   "plaene": [
+    "szu__zurich_selnau"
+   ],
+   "regionen": [
+    "szu"
+   ],
+   "linien": [
+    "712",
+    "727"
+   ],
+   "zuordnung": "name_teil",
+   "osm": {
+    "node": 1236383343,
+    "name": "Zürich Hauptbahnhof",
+    "ref": "ZUE",
+    "uic_ref": "8503000",
+    "railway": "station",
+    "ll": [
+     47.3781008,
+     8.5393635
+    ],
+    "abstand_m": 331,
+    "wie": "naehe"
+   },
+   "gleise_perron_osm": [
+    "1",
+    "2",
+    "3",
+    "31",
+    "32",
+    "4",
+    "5"
+   ]
+  },
+  "ZW": {
+   "abk": "ZW",
+   "name": "Zweisimmen",
+   "bpuic": 8507290,
+   "atlas": [
+    46.553483,
+    7.374862
+   ],
+   "betreiber": "BLS-sez",
+   "verkehrsmittel": "TRAIN",
+   "plaene": [
+    "mob__zweisimmen"
+   ],
+   "regionen": [
+    "mob"
+   ],
+   "linien": [
+    "120",
+    "320",
+    "321"
+   ],
+   "osm": {
+    "node": 2752093541,
+    "name": "Zweisimmen",
+    "ref": "ZW",
+    "uic_ref": "8507290",
+    "railway": "station",
+    "ll": [
+     46.5534849,
+     7.3747496
+    ],
+    "abstand_m": 9,
+    "wie": "uic_ref"
+   },
+   "gleise_perron_osm": [
+    "3",
+    "4",
+    "5",
+    "6"
+   ]
+  }
+ },
+ "plaene": {
+  "region": {
+   "key": "region",
+   "name": "Region Olten",
+   "gruppe": "Region",
+   "region": "olten",
+   "fingerabdruck": "96cbc6cbf790",
+   "quelle": "Werkstatt Olten",
+   "workflow": "seite",
+   "commit": "5e32a01ec41b4bad4c69fbfafb7611ec3da483e2",
+   "art": "code",
+   "regionalplan": true,
+   "veraltet": false
+  },
+  "region_ne": {
+   "key": "region_ne",
+   "name": "Region Neuchâtel",
+   "gruppe": "Region",
+   "region": "ne",
+   "fingerabdruck": "b9709d10c24d",
+   "quelle": "Werkstatt NE",
+   "workflow": "seite",
+   "commit": "5e32a01ec41b4bad4c69fbfafb7611ec3da483e2",
+   "art": "code",
+   "regionalplan": true,
+   "veraltet": false
+  },
+  "region_mob": {
+   "key": "region_mob",
+   "name": "Region MOB / Rochers-de-Naye",
+   "gruppe": "Region",
+   "region": "mob",
+   "fingerabdruck": "b71d49443fad",
+   "quelle": "Linien-Region mob",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "regionalplan": true,
+   "veraltet": true
+  },
+  "region_vereina": {
+   "key": "region_vereina",
+   "name": "Region Vereina (Klosters – Sagliains – Susch)",
+   "gruppe": "Region",
+   "region": "vereina",
+   "fingerabdruck": "c12a3c5c9614",
+   "quelle": "Linien-Region vereina",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "regionalplan": true,
+   "veraltet": true
+  },
+  "region_szu": {
+   "key": "region_szu",
+   "name": "Region SZU (Zürich HB – Giesshübel – Saalsporthalle / Uetliberg)",
+   "gruppe": "Region",
+   "region": "szu",
+   "fingerabdruck": "143b8e8c8775",
+   "quelle": "Linien-Region szu",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "regionalplan": true,
+   "veraltet": true
+  },
+  "basel": {
+   "key": "basel",
+   "name": "Basel SBB",
+   "gruppe": "Grosse Knoten",
+   "region": null,
+   "fingerabdruck": "07df2b87e4ec",
+   "quelle": "fest (zusatz_plaene.json)",
+   "workflow": "-",
+   "commit": null,
+   "datum": "15.10.2026",
+   "art": "fest",
+   "abk": [
+    "BS",
+    "BSTO",
+    "BST",
+    "BSSS",
+    "BSO",
+    "BSW"
+   ],
+   "veraltet": "fest"
+  },
+  "bern": {
+   "key": "bern",
+   "name": "Bern",
+   "gruppe": "Grosse Knoten",
+   "region": null,
+   "fingerabdruck": "9cb50d00065c",
+   "quelle": "fest (zusatz_plaene.json)",
+   "workflow": "-",
+   "commit": null,
+   "datum": "15.10.2026",
+   "art": "fest",
+   "abk": [
+    "BN",
+    "JKLM",
+    "BNVB",
+    "BNHB"
+   ],
+   "veraltet": "fest"
+  },
+  "thun": {
+   "key": "thun",
+   "name": "Thun",
+   "gruppe": "Bahnhöfe ohne Regionalplan",
+   "region": null,
+   "fingerabdruck": "274bef8eee82",
+   "quelle": "Referenz (Werkstatt-Datei olten/reg)",
+   "workflow": "seite (Datei)",
+   "commit": "c401dc75882ffd6b36514f7046aba79d99322e3d",
+   "datum": "2026-10-26",
+   "art": "datei",
+   "abk": [
+    "TH"
+   ],
+   "ort": [
+    46.755448,
+    7.628392
+   ],
+   "veraltet": "fest"
+  },
+  "konolfingen": {
+   "key": "konolfingen",
+   "name": "Konolfingen",
+   "gruppe": "Bahnhöfe ohne Regionalplan",
+   "region": null,
+   "fingerabdruck": "f4c0c95c3771",
+   "quelle": "Repo-Bahnhof",
+   "workflow": "plaene",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "KF"
+   ],
+   "ort": [
+    46.880065,
+    7.619758
+   ],
+   "veraltet": true
+  },
+  "solothurn": {
+   "key": "solothurn",
+   "name": "Solothurn",
+   "gruppe": "Bahnhöfe ohne Regionalplan",
+   "region": null,
+   "fingerabdruck": "7aa471088ee2",
+   "quelle": "Repo-Bahnhof",
+   "workflow": "plaene",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "SO",
+    "SW",
+    "SOST",
+    "SOBT",
+    "SORM"
+   ],
+   "ort": [
+    47.204473,
+    7.546117
+   ],
+   "veraltet": true
+  },
+  "olten": {
+   "key": "olten",
+   "name": "Olten",
+   "gruppe": "Olten 1 · Knoten Olten",
+   "region": "olten",
+   "fingerabdruck": "63a183070fd8",
+   "quelle": "Werkstatt Olten",
+   "workflow": "seite",
+   "commit": "5e32a01ec41b4bad4c69fbfafb7611ec3da483e2",
+   "art": "code",
+   "abk": [
+    "OL",
+    "OLS"
+   ],
+   "ort": [
+    47.355199,
+    7.910565
+   ],
+   "veraltet": false
+  },
+  "olten_hammer": {
+   "key": "olten_hammer",
+   "name": "Olten Hammer",
+   "gruppe": "Olten 1 · Knoten Olten",
+   "region": "olten",
+   "fingerabdruck": "b60811cdcc15",
+   "quelle": "Werkstatt Olten",
+   "workflow": "seite",
+   "commit": "5e32a01ec41b4bad4c69fbfafb7611ec3da483e2",
+   "art": "code",
+   "abk": [
+    "OLH"
+   ],
+   "ort": [
+    47.347746,
+    7.89831
+   ],
+   "veraltet": false
+  },
+  "aarburg_oftringen": {
+   "key": "aarburg_oftringen",
+   "name": "Aarburg-Oftringen",
+   "gruppe": "Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil",
+   "region": "olten",
+   "fingerabdruck": "8e28ff9dd913",
+   "quelle": "Werkstatt Olten",
+   "workflow": "seite",
+   "commit": "5e32a01ec41b4bad4c69fbfafb7611ec3da483e2",
+   "art": "code",
+   "abk": [
+    "ABO",
+    "ABOS",
+    "ABOW"
+   ],
+   "ort": [
+    47.319662,
+    7.909109
+   ],
+   "veraltet": false
+  },
+  "rothrist": {
+   "key": "rothrist",
+   "name": "Rothrist",
+   "gruppe": "Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil",
+   "region": "olten",
+   "fingerabdruck": "f3b3b690291d",
+   "quelle": "Werkstatt Olten",
+   "workflow": "seite",
+   "commit": "5e32a01ec41b4bad4c69fbfafb7611ec3da483e2",
+   "art": "code",
+   "abk": [
+    "RTR"
+   ],
+   "ort": [
+    47.302103,
+    7.870113
+   ],
+   "veraltet": false
+  },
+  "zofingen": {
+   "key": "zofingen",
+   "name": "Zofingen",
+   "gruppe": "Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil",
+   "region": "olten",
+   "fingerabdruck": "10ae3279d0ea",
+   "quelle": "Werkstatt Olten",
+   "workflow": "seite",
+   "commit": "5e32a01ec41b4bad4c69fbfafb7611ec3da483e2",
+   "art": "code",
+   "abk": [
+    "ZF",
+    "ZFN"
+   ],
+   "ort": [
+    47.287607,
+    7.943047
+   ],
+   "veraltet": false
+  },
+  "safenwil": {
+   "key": "safenwil",
+   "name": "Safenwil",
+   "gruppe": "Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil",
+   "region": "olten",
+   "fingerabdruck": "edba1ce8b230",
+   "quelle": "Werkstatt Olten",
+   "workflow": "seite",
+   "commit": "5e32a01ec41b4bad4c69fbfafb7611ec3da483e2",
+   "art": "code",
+   "abk": [
+    "SAF"
+   ],
+   "ort": [
+    47.322019,
+    7.98159
+   ],
+   "veraltet": false
+  },
+  "dulliken": {
+   "key": "dulliken",
+   "name": "Dulliken",
+   "gruppe": "Olten 3 · Olten – Aarau",
+   "region": "olten",
+   "fingerabdruck": "1157b5c7a75f",
+   "quelle": "Werkstatt Olten",
+   "workflow": "seite",
+   "commit": "5e32a01ec41b4bad4c69fbfafb7611ec3da483e2",
+   "art": "code",
+   "abk": [
+    "DU"
+   ],
+   "ort": [
+    47.353885,
+    7.946483
+   ],
+   "veraltet": false
+  },
+  "daniken": {
+   "key": "daniken",
+   "name": "Däniken",
+   "gruppe": "Olten 3 · Olten – Aarau",
+   "region": "olten",
+   "fingerabdruck": "926cee699edd",
+   "quelle": "Werkstatt Olten",
+   "workflow": "seite",
+   "commit": "5e32a01ec41b4bad4c69fbfafb7611ec3da483e2",
+   "art": "code",
+   "abk": [
+    "DK",
+    "DKO",
+    "DKRB"
+   ],
+   "ort": [
+    47.356139,
+    7.977618
+   ],
+   "veraltet": false
+  },
+  "schonenwerd": {
+   "key": "schonenwerd",
+   "name": "Schönenwerd",
+   "gruppe": "Olten 3 · Olten – Aarau",
+   "region": "olten",
+   "fingerabdruck": "48e815acacdf",
+   "quelle": "Werkstatt Olten",
+   "workflow": "seite",
+   "commit": "5e32a01ec41b4bad4c69fbfafb7611ec3da483e2",
+   "art": "code",
+   "abk": [
+    "SCOE"
+   ],
+   "ort": [
+    47.372875,
+    8.001911
+   ],
+   "veraltet": false
+  },
+  "aarau": {
+   "key": "aarau",
+   "name": "Aarau",
+   "gruppe": "Olten 3 · Olten – Aarau",
+   "region": "olten",
+   "fingerabdruck": "e5f86ea0cd25",
+   "quelle": "Werkstatt Olten",
+   "workflow": "seite",
+   "commit": "5e32a01ec41b4bad4c69fbfafb7611ec3da483e2",
+   "art": "code",
+   "abk": [
+    "AA",
+    "ATOR"
+   ],
+   "ort": [
+    47.39114,
+    8.053279
+   ],
+   "veraltet": false
+  },
+  "tecknau": {
+   "key": "tecknau",
+   "name": "Tecknau",
+   "gruppe": "Olten 4 · Hauenstein",
+   "region": "olten",
+   "fingerabdruck": "a42c988c04bc",
+   "quelle": "Werkstatt Olten",
+   "workflow": "seite",
+   "commit": "5e32a01ec41b4bad4c69fbfafb7611ec3da483e2",
+   "art": "code",
+   "abk": [
+    "TK"
+   ],
+   "ort": [
+    47.446928,
+    7.885369
+   ],
+   "veraltet": false
+  },
+  "laufelfingen": {
+   "key": "laufelfingen",
+   "name": "Läufelfingen",
+   "gruppe": "Olten 4 · Hauenstein",
+   "region": "olten",
+   "fingerabdruck": "f6ef742731cc",
+   "quelle": "Werkstatt Olten",
+   "workflow": "seite",
+   "commit": "5e32a01ec41b4bad4c69fbfafb7611ec3da483e2",
+   "art": "code",
+   "abk": [
+    "LF"
+   ],
+   "ort": [
+    47.392741,
+    7.855813
+   ],
+   "veraltet": false
+  },
+  "wangen_bei_olten": {
+   "key": "wangen_bei_olten",
+   "name": "Wangen b. O.",
+   "gruppe": "Olten 5 · Olten – Solothurn",
+   "region": "olten",
+   "fingerabdruck": "6e780447e0b5",
+   "quelle": "Werkstatt Olten",
+   "workflow": "seite",
+   "commit": "5e32a01ec41b4bad4c69fbfafb7611ec3da483e2",
+   "art": "code",
+   "abk": [
+    "WBOL"
+   ],
+   "ort": [
+    47.340195,
+    7.867127
+   ],
+   "veraltet": false
+  },
+  "ins": {
+   "key": "ins",
+   "name": "Ins",
+   "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
+   "region": "ne",
+   "fingerabdruck": "906a0f0ebd0f",
+   "quelle": "Referenz (Werkstatt-Datei olten/reg)",
+   "workflow": "seite (Datei)",
+   "commit": "c401dc75882ffd6b36514f7046aba79d99322e3d",
+   "datum": "2026-10-26",
+   "art": "datei",
+   "abk": [
+    "INS",
+    "INSD"
+   ],
+   "ort": [
+    46.9996,
+    7.099515
+   ],
+   "veraltet": "fest"
+  },
+  "kerzers": {
+   "key": "kerzers",
+   "name": "Kerzers",
+   "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
+   "region": "ne",
+   "fingerabdruck": "c885815f5cd6",
+   "quelle": "Referenz (Werkstatt-Datei olten/reg)",
+   "workflow": "seite (Datei)",
+   "commit": "ed545b63d0f79f7a1306ce4188eb867ae600ae51",
+   "datum": "2026-10-27",
+   "art": "datei",
+   "abk": [
+    "KZ",
+    "KZS",
+    "KZW"
+   ],
+   "ort": [
+    46.974654,
+    7.192479
+   ],
+   "veraltet": "fest"
+  },
+  "neuchatel": {
+   "key": "neuchatel",
+   "name": "Neuchâtel",
+   "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
+   "region": "ne",
+   "fingerabdruck": "c1e076701c0d",
+   "quelle": "Repo-Bahnhof",
+   "workflow": "plaene",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "NE",
+    "NETR",
+    "NEMA",
+    "NPLI"
+   ],
+   "ort": [
+    46.997922,
+    6.93822
+   ],
+   "veraltet": true
+  },
+  "saint_blaise_lac": {
+   "key": "saint_blaise_lac",
+   "name": "Saint-Blaise Lac",
+   "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
+   "region": "ne",
+   "fingerabdruck": "e4d0f9aa313b",
+   "quelle": "fest (zusatz_plaene.json)",
+   "workflow": "-",
+   "commit": null,
+   "datum": "21.10.2026",
+   "art": "fest",
+   "abk": [
+    "SBLB"
+   ],
+   "ort": [
+    47.012167,
+    6.985239
+   ],
+   "veraltet": "fest"
+  },
+  "marin_epagnier": {
+   "key": "marin_epagnier",
+   "name": "Marin-Epagnier",
+   "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
+   "region": "ne",
+   "fingerabdruck": "44ee6fa83be0",
+   "quelle": "fest (zusatz_plaene.json)",
+   "workflow": "-",
+   "commit": null,
+   "datum": "21.10.2026",
+   "art": "fest",
+   "abk": [
+    "MEP"
+   ],
+   "ort": [
+    47.009151,
+    7.010668
+   ],
+   "veraltet": "fest"
+  },
+  "zihlbruecke": {
+   "key": "zihlbruecke",
+   "name": "Zihlbrücke",
+   "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
+   "region": "ne",
+   "fingerabdruck": "0245a61912f8",
+   "quelle": "fest (zusatz_plaene.json)",
+   "workflow": "-",
+   "commit": null,
+   "datum": "21.10.2026",
+   "art": "fest",
+   "abk": [
+    "ZBR"
+   ],
+   "ort": [
+    47.009238,
+    7.030564
+   ],
+   "veraltet": "fest"
+  },
+  "gampelen": {
+   "key": "gampelen",
+   "name": "Gampelen",
+   "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
+   "region": "ne",
+   "fingerabdruck": "6a8899b73d27",
+   "quelle": "fest (zusatz_plaene.json)",
+   "workflow": "-",
+   "commit": null,
+   "datum": "21.10.2026",
+   "art": "fest",
+   "abk": [
+    "GP"
+   ],
+   "ort": [
+    47.009084,
+    7.058215
+   ],
+   "veraltet": "fest"
+  },
+  "muntschemier": {
+   "key": "muntschemier",
+   "name": "Müntschemier",
+   "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
+   "region": "ne",
+   "fingerabdruck": "711cf7ae75c4",
+   "quelle": "fest (zusatz_plaene.json)",
+   "workflow": "-",
+   "commit": null,
+   "datum": "21.10.2026",
+   "art": "fest",
+   "abk": [
+    "MM"
+   ],
+   "ort": [
+    46.992821,
+    7.144019
+   ],
+   "veraltet": "fest"
+  },
+  "gummenen": {
+   "key": "gummenen",
+   "name": "Gümmenen",
+   "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
+   "region": "ne",
+   "fingerabdruck": "8b12322361e1",
+   "quelle": "fest (zusatz_plaene.json)",
+   "workflow": "-",
+   "commit": null,
+   "datum": "21.10.2026",
+   "art": "fest",
+   "abk": [
+    "GMM"
+   ],
+   "ort": [
+    46.943702,
+    7.234782
+   ],
+   "veraltet": "fest"
+  },
+  "rosshausern": {
+   "key": "rosshausern",
+   "name": "Rosshäusern",
+   "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
+   "region": "ne",
+   "fingerabdruck": "184ef9119777",
+   "quelle": "fest (zusatz_plaene.json)",
+   "workflow": "-",
+   "commit": null,
+   "datum": "21.10.2026",
+   "art": "fest",
+   "abk": [
+    "ROSS"
+   ],
+   "ort": [
+    46.934336,
+    7.29682
+   ],
+   "veraltet": "fest"
+  },
+  "riedbach": {
+   "key": "riedbach",
+   "name": "Riedbach",
+   "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
+   "region": "ne",
+   "fingerabdruck": "2402607d1dce",
+   "quelle": "fest (zusatz_plaene.json)",
+   "workflow": "-",
+   "commit": null,
+   "datum": "21.10.2026",
+   "art": "fest",
+   "abk": [
+    "RCH"
+   ],
+   "ort": [
+    46.941133,
+    7.333752
+   ],
+   "veraltet": "fest"
+  },
+  "bern_brunnen_westside": {
+   "key": "bern_brunnen_westside",
+   "name": "Bern Brünnen Westside",
+   "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
+   "region": "ne",
+   "fingerabdruck": "443dd4229d7e",
+   "quelle": "fest (zusatz_plaene.json)",
+   "workflow": "-",
+   "commit": null,
+   "datum": "21.10.2026",
+   "art": "fest",
+   "abk": [
+    "BNB"
+   ],
+   "ort": [
+    46.943415,
+    7.375437
+   ],
+   "veraltet": "fest"
+  },
+  "sugiez": {
+   "key": "sugiez",
+   "name": "Sugiez",
+   "gruppe": "NE 2 · Ins – Sugiez – Murten",
+   "region": "ne",
+   "fingerabdruck": "f6008ddb9f45",
+   "quelle": "fest (zusatz_plaene.json)",
+   "workflow": "-",
+   "commit": null,
+   "datum": "21.10.2026",
+   "art": "fest",
+   "abk": [
+    "SUGI"
+   ],
+   "ort": [
+    46.963096,
+    7.120475
+   ],
+   "veraltet": "fest"
+  },
+  "muntelier_lowenberg": {
+   "key": "muntelier_lowenberg",
+   "name": "Muntelier-Löwenberg",
+   "gruppe": "NE 2 · Ins – Sugiez – Murten",
+   "region": "ne",
+   "fingerabdruck": "c30d8a4bf575",
+   "quelle": "fest (zusatz_plaene.json)",
+   "workflow": "-",
+   "commit": null,
+   "datum": "21.10.2026",
+   "art": "fest",
+   "abk": [
+    "LOEW"
+   ],
+   "ort": [
+    46.941826,
+    7.139434
+   ],
+   "veraltet": "fest"
+  },
+  "murten": {
+   "key": "murten",
+   "name": "Murten",
+   "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
+   "region": "ne",
+   "fingerabdruck": "7810b617eece",
+   "quelle": "Referenz (Werkstatt-Datei olten/reg)",
+   "workflow": "seite (Datei)",
+   "commit": "c401dc75882ffd6b36514f7046aba79d99322e3d",
+   "datum": "2026-10-26",
+   "art": "datei",
+   "abk": [
+    "MRT"
+   ],
+   "ort": [
+    46.924827,
+    7.114599
+   ],
+   "veraltet": "fest"
+  },
+  "kallnach": {
+   "key": "kallnach",
+   "name": "Kallnach",
+   "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
+   "region": "ne",
+   "fingerabdruck": "1c967c26f6d2",
+   "quelle": "fest (zusatz_plaene.json)",
+   "workflow": "-",
+   "commit": null,
+   "datum": "21.10.2026",
+   "art": "fest",
+   "abk": [
+    "KAL"
+   ],
+   "ort": [
+    47.025507,
+    7.235205
+   ],
+   "veraltet": "fest"
+  },
+  "fraschels": {
+   "key": "fraschels",
+   "name": "Fräschels",
+   "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
+   "region": "ne",
+   "fingerabdruck": "180ff51cb80d",
+   "quelle": "fest (zusatz_plaene.json)",
+   "workflow": "-",
+   "commit": null,
+   "datum": "21.10.2026",
+   "art": "fest",
+   "abk": [
+    "FRAE"
+   ],
+   "ort": [
+    46.999084,
+    7.206027
+   ],
+   "veraltet": "fest"
+  },
+  "kerzers_papiliorama": {
+   "key": "kerzers_papiliorama",
+   "name": "Kerzers Papiliorama",
+   "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
+   "region": "ne",
+   "fingerabdruck": "d0288813d692",
+   "quelle": "fest (zusatz_plaene.json)",
+   "workflow": "-",
+   "commit": null,
+   "datum": "21.10.2026",
+   "art": "fest",
+   "abk": [
+    "KZPP"
+   ],
+   "ort": [
+    46.989653,
+    7.199245
+   ],
+   "veraltet": "fest"
+  },
+  "galmiz": {
+   "key": "galmiz",
+   "name": "Galmiz",
+   "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
+   "region": "ne",
+   "fingerabdruck": "95c445489cf1",
+   "quelle": "fest (zusatz_plaene.json)",
+   "workflow": "-",
+   "commit": null,
+   "datum": "21.10.2026",
+   "art": "fest",
+   "abk": [
+    "GZ"
+   ],
+   "ort": [
+    46.950811,
+    7.153134
+   ],
+   "veraltet": "fest"
+  },
+  "faoug": {
+   "key": "faoug",
+   "name": "Faoug",
+   "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
+   "region": "ne",
+   "fingerabdruck": "0b51f39f23fd",
+   "quelle": "fest (zusatz_plaene.json)",
+   "workflow": "-",
+   "commit": null,
+   "datum": "21.10.2026",
+   "art": "fest",
+   "abk": [
+    "FG"
+   ],
+   "ort": [
+    46.908272,
+    7.074605
+   ],
+   "veraltet": "fest"
+  },
+  "avenches": {
+   "key": "avenches",
+   "name": "Avenches",
+   "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
+   "region": "ne",
+   "fingerabdruck": "694944d742cb",
+   "quelle": "fest (zusatz_plaene.json)",
+   "workflow": "-",
+   "commit": null,
+   "datum": "21.10.2026",
+   "art": "fest",
+   "abk": [
+    "AV"
+   ],
+   "ort": [
+    46.889434,
+    7.048835
+   ],
+   "veraltet": "fest"
+  },
+  "domdidier": {
+   "key": "domdidier",
+   "name": "Domdidier",
+   "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
+   "region": "ne",
+   "fingerabdruck": "7296c4677a0d",
+   "quelle": "fest (zusatz_plaene.json)",
+   "workflow": "-",
+   "commit": null,
+   "datum": "21.10.2026",
+   "art": "fest",
+   "abk": [
+    "DOM"
+   ],
+   "ort": [
+    46.870554,
+    7.01439
+   ],
+   "veraltet": "fest"
+  },
+  "dompierre": {
+   "key": "dompierre",
+   "name": "Dompierre",
+   "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
+   "region": "ne",
+   "fingerabdruck": "4f0a97297f6f",
+   "quelle": "fest (zusatz_plaene.json)",
+   "workflow": "-",
+   "commit": null,
+   "datum": "21.10.2026",
+   "art": "fest",
+   "abk": [
+    "DOP"
+   ],
+   "ort": [
+    46.85468,
+    6.985716
+   ],
+   "veraltet": "fest"
+  },
+  "munchenwiler_courgevaux": {
+   "key": "munchenwiler_courgevaux",
+   "name": "Münchenwiler-Courgevaux",
+   "gruppe": "NE 4 · Murten – Fribourg",
+   "region": "ne",
+   "fingerabdruck": "5a096ab16f3c",
+   "quelle": "fest (zusatz_plaene.json)",
+   "workflow": "-",
+   "commit": null,
+   "datum": "21.10.2026",
+   "art": "fest",
+   "abk": [
+    "MUCO"
+   ],
+   "ort": [
+    46.911244,
+    7.1154
+   ],
+   "veraltet": "fest"
+  },
+  "cressier_fr": {
+   "key": "cressier_fr",
+   "name": "Cressier FR",
+   "gruppe": "NE 4 · Murten – Fribourg",
+   "region": "ne",
+   "fingerabdruck": "323b8821426a",
+   "quelle": "fest (zusatz_plaene.json)",
+   "workflow": "-",
+   "commit": null,
+   "datum": "21.10.2026",
+   "art": "fest",
+   "abk": [
+    "CRFR"
+   ],
+   "ort": [
+    46.899691,
+    7.149137
+   ],
+   "veraltet": "fest"
+  },
+  "courtepin": {
+   "key": "courtepin",
+   "name": "Courtepin",
+   "gruppe": "NE 4 · Murten – Fribourg",
+   "region": "ne",
+   "fingerabdruck": "b79eefa5545c",
+   "quelle": "fest (zusatz_plaene.json)",
+   "workflow": "-",
+   "commit": null,
+   "datum": "21.10.2026",
+   "art": "fest",
+   "abk": [
+    "COUR"
+   ],
+   "ort": [
+    46.868989,
+    7.123697
+   ],
+   "veraltet": "fest"
+  },
+  "pensier": {
+   "key": "pensier",
+   "name": "Pensier",
+   "gruppe": "NE 4 · Murten – Fribourg",
+   "region": "ne",
+   "fingerabdruck": "3f54681aefc8",
+   "quelle": "fest (zusatz_plaene.json)",
+   "workflow": "-",
+   "commit": null,
+   "datum": "21.10.2026",
+   "art": "fest",
+   "abk": [
+    "PEN"
+   ],
+   "ort": [
+    46.841676,
+    7.13531
+   ],
+   "veraltet": "fest"
+  },
+  "saint_blaise_cff": {
+   "key": "saint_blaise_cff",
+   "name": "Saint-Blaise CFF",
+   "gruppe": "NE 5 · Neuchâtel – Biel",
+   "region": "ne",
+   "fingerabdruck": "33a8b32924cb",
+   "quelle": "fest (zusatz_plaene.json)",
+   "workflow": "-",
+   "commit": null,
+   "datum": "21.10.2026",
+   "art": "fest",
+   "abk": [
+    "SBL"
+   ],
+   "ort": [
+    47.01453,
+    6.985239
+   ],
+   "veraltet": "fest"
+  },
+  "cornaux": {
+   "key": "cornaux",
+   "name": "Cornaux",
+   "gruppe": "NE 5 · Neuchâtel – Biel",
+   "region": "ne",
+   "fingerabdruck": "7555c155fd49",
+   "quelle": "fest (zusatz_plaene.json)",
+   "workflow": "-",
+   "commit": null,
+   "datum": "21.10.2026",
+   "art": "fest",
+   "abk": [
+    "CORN"
+   ],
+   "ort": [
+    47.036671,
+    7.030848
+   ],
+   "veraltet": "fest"
+  },
+  "cressier": {
+   "key": "cressier",
+   "name": "Cressier NE",
+   "gruppe": "NE 5 · Neuchâtel – Biel",
+   "region": "ne",
+   "fingerabdruck": "fdb5850ad419",
+   "quelle": "fest (zusatz_plaene.json)",
+   "workflow": "-",
+   "commit": null,
+   "datum": "21.10.2026",
+   "art": "fest",
+   "abk": [
+    "CRNE"
+   ],
+   "ort": [
+    47.04067,
+    7.032467
+   ],
+   "veraltet": "fest"
+  },
+  "le_landeron": {
+   "key": "le_landeron",
+   "name": "Le Landeron",
+   "gruppe": "NE 5 · Neuchâtel – Biel",
+   "region": "ne",
+   "fingerabdruck": "df02fa7e11af",
+   "quelle": "fest (zusatz_plaene.json)",
+   "workflow": "-",
+   "commit": null,
+   "datum": "21.10.2026",
+   "art": "fest",
+   "abk": [
+    "LD"
+   ],
+   "ort": [
+    47.056936,
+    7.066307
+   ],
+   "veraltet": "fest"
+  },
+  "la_neuveville": {
+   "key": "la_neuveville",
+   "name": "La Neuveville",
+   "gruppe": "NE 5 · Neuchâtel – Biel",
+   "region": "ne",
+   "fingerabdruck": "abec60f96346",
+   "quelle": "fest (zusatz_plaene.json)",
+   "workflow": "-",
+   "commit": null,
+   "datum": "21.10.2026",
+   "art": "fest",
+   "abk": [
+    "NV"
+   ],
+   "ort": [
+    47.062777,
+    7.095358
+   ],
+   "veraltet": "fest"
+  },
+  "ligerz": {
+   "key": "ligerz",
+   "name": "Ligerz",
+   "gruppe": "NE 5 · Neuchâtel – Biel",
+   "region": "ne",
+   "fingerabdruck": "f6e13f38d4bc",
+   "quelle": "fest (zusatz_plaene.json)",
+   "workflow": "-",
+   "commit": null,
+   "datum": "21.10.2026",
+   "art": "fest",
+   "abk": [
+    "LIG"
+   ],
+   "ort": [
+    47.08232,
+    7.130921
+   ],
+   "veraltet": "fest"
+  },
+  "twann": {
+   "key": "twann",
+   "name": "Twann",
+   "gruppe": "NE 5 · Neuchâtel – Biel",
+   "region": "ne",
+   "fingerabdruck": "01869952fbea",
+   "quelle": "fest (zusatz_plaene.json)",
+   "workflow": "-",
+   "commit": null,
+   "datum": "21.10.2026",
+   "art": "fest",
+   "abk": [
+    "TWN"
+   ],
+   "ort": [
+    47.093838,
+    7.157008
+   ],
+   "veraltet": "fest"
+  },
+  "tuscherz": {
+   "key": "tuscherz",
+   "name": "Tüscherz",
+   "gruppe": "NE 5 · Neuchâtel – Biel",
+   "region": "ne",
+   "fingerabdruck": "73bbb2af2c09",
+   "quelle": "fest (zusatz_plaene.json)",
+   "workflow": "-",
+   "commit": null,
+   "datum": "25.10.2026",
+   "art": "fest",
+   "abk": [
+    "TUE"
+   ],
+   "ort": [
+    47.115708,
+    7.198379
+   ],
+   "veraltet": "fest"
+  },
+  "serrieres": {
+   "key": "serrieres",
+   "name": "Serrières",
+   "gruppe": "NE 6 · Neuchâtel – Yverdon",
+   "region": "ne",
+   "fingerabdruck": "2ab3a05912b0",
+   "quelle": "fest (zusatz_plaene.json)",
+   "workflow": "-",
+   "commit": null,
+   "datum": "21.10.2026",
+   "art": "fest",
+   "abk": [
+    "NESE",
+    "NEPS",
+    "NSRL"
+   ],
+   "ort": [
+    46.985278,
+    6.907165
+   ],
+   "veraltet": "fest"
+  },
+  "auvernier": {
+   "key": "auvernier",
+   "name": "Auvernier",
+   "gruppe": "NE 6 · Neuchâtel – Yverdon",
+   "region": "ne",
+   "fingerabdruck": "fae55c71318c",
+   "quelle": "fest (zusatz_plaene.json)",
+   "workflow": "-",
+   "commit": null,
+   "datum": "21.10.2026",
+   "art": "fest",
+   "abk": [
+    "AUV",
+    "AVLI"
+   ],
+   "ort": [
+    46.979376,
+    6.877085
+   ],
+   "veraltet": "fest"
+  },
+  "colombier": {
+   "key": "colombier",
+   "name": "Colombier",
+   "gruppe": "NE 6 · Neuchâtel – Yverdon",
+   "region": "ne",
+   "fingerabdruck": "28e24f1b19d2",
+   "quelle": "fest (zusatz_plaene.json)",
+   "workflow": "-",
+   "commit": null,
+   "datum": "21.10.2026",
+   "art": "fest",
+   "abk": [
+    "CLB"
+   ],
+   "ort": [
+    46.966398,
+    6.84716
+   ],
+   "veraltet": "fest"
+  },
+  "boudry": {
+   "key": "boudry",
+   "name": "Boudry",
+   "gruppe": "NE 6 · Neuchâtel – Yverdon",
+   "region": "ne",
+   "fingerabdruck": "0651b51739b5",
+   "quelle": "fest (zusatz_plaene.json)",
+   "workflow": "-",
+   "commit": null,
+   "datum": "21.10.2026",
+   "art": "fest",
+   "abk": [
+    "BDR"
+   ],
+   "ort": [
+    46.958741,
+    6.840293
+   ],
+   "veraltet": "fest"
+  },
+  "bevaix": {
+   "key": "bevaix",
+   "name": "Bevaix",
+   "gruppe": "NE 6 · Neuchâtel – Yverdon",
+   "region": "ne",
+   "fingerabdruck": "e569bb42b5dd",
+   "quelle": "fest (zusatz_plaene.json)",
+   "workflow": "-",
+   "commit": null,
+   "datum": "21.10.2026",
+   "art": "fest",
+   "abk": [
+    "BV"
+   ],
+   "ort": [
+    46.929671,
+    6.811724
+   ],
+   "veraltet": "fest"
+  },
+  "gorgier_saint_aubin": {
+   "key": "gorgier_saint_aubin",
+   "name": "Gorgier-Saint-Aubin",
+   "gruppe": "NE 6 · Neuchâtel – Yverdon",
+   "region": "ne",
+   "fingerabdruck": "a0d4aa3ef353",
+   "quelle": "fest (zusatz_plaene.json)",
+   "workflow": "-",
+   "commit": null,
+   "datum": "21.10.2026",
+   "art": "fest",
+   "abk": [
+    "GOR"
+   ],
+   "ort": [
+    46.898656,
+    6.780344
+   ],
+   "veraltet": "fest"
+  },
+  "onnens_bonvillars": {
+   "key": "onnens_bonvillars",
+   "name": "Onnens-Bonvillars",
+   "gruppe": "NE 6 · Neuchâtel – Yverdon",
+   "region": "ne",
+   "fingerabdruck": "55498cfb0fbb",
+   "quelle": "fest (zusatz_plaene.json)",
+   "workflow": "-",
+   "commit": null,
+   "datum": "26.10.2026",
+   "art": "fest",
+   "abk": [
+    "ONB"
+   ],
+   "ort": [
+    46.832033,
+    6.687893
+   ],
+   "veraltet": "fest"
+  },
+  "concise": {
+   "key": "concise",
+   "name": "Concise",
+   "gruppe": "NE 6 · Neuchâtel – Yverdon",
+   "region": "ne",
+   "fingerabdruck": "da91687facf7",
+   "quelle": "fest (zusatz_plaene.json)",
+   "workflow": "-",
+   "commit": null,
+   "datum": "21.10.2026",
+   "art": "fest",
+   "abk": [
+    "CC"
+   ],
+   "ort": [
+    46.850876,
+    6.723166
+   ],
+   "veraltet": "fest"
+  },
+  "grandson": {
+   "key": "grandson",
+   "name": "Grandson",
+   "gruppe": "NE 6 · Neuchâtel – Yverdon",
+   "region": "ne",
+   "fingerabdruck": "3eee8ebca127",
+   "quelle": "fest (zusatz_plaene.json)",
+   "workflow": "-",
+   "commit": null,
+   "datum": "21.10.2026",
+   "art": "fest",
+   "abk": [
+    "GRS"
+   ],
+   "ort": [
+    46.804552,
+    6.637141
+   ],
+   "veraltet": "fest"
+  },
+  "bole": {
+   "key": "bole",
+   "name": "Bôle",
+   "gruppe": "NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier",
+   "region": "ne",
+   "fingerabdruck": "9165900b49e8",
+   "quelle": "fest (zusatz_plaene.json)",
+   "workflow": "-",
+   "commit": null,
+   "datum": "21.10.2026",
+   "art": "fest",
+   "abk": [
+    "BOLE"
+   ],
+   "ort": [
+    46.967351,
+    6.845889
+   ],
+   "veraltet": "fest"
+  },
+  "champ_du_moulin": {
+   "key": "champ_du_moulin",
+   "name": "Champ-du-Moulin",
+   "gruppe": "NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier",
+   "region": "ne",
+   "fingerabdruck": "bc0f0e330d20",
+   "quelle": "fest (zusatz_plaene.json)",
+   "workflow": "-",
+   "commit": null,
+   "datum": "21.10.2026",
+   "art": "fest",
+   "abk": [
+    "CDM"
+   ],
+   "ort": [
+    46.959917,
+    6.774971
+   ],
+   "veraltet": "fest"
+  },
+  "noiraigue": {
+   "key": "noiraigue",
+   "name": "Noiraigue",
+   "gruppe": "NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier",
+   "region": "ne",
+   "fingerabdruck": "fdac4b1cecc7",
+   "quelle": "fest (zusatz_plaene.json)",
+   "workflow": "-",
+   "commit": null,
+   "datum": "21.10.2026",
+   "art": "fest",
+   "abk": [
+    "NOI"
+   ],
+   "ort": [
+    46.95486,
+    6.72398
+   ],
+   "veraltet": "fest"
+  },
+  "travers": {
+   "key": "travers",
+   "name": "Travers",
+   "gruppe": "NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier",
+   "region": "ne",
+   "fingerabdruck": "3f143fbdeb09",
+   "quelle": "fest (zusatz_plaene.json)",
+   "workflow": "-",
+   "commit": null,
+   "datum": "21.10.2026",
+   "art": "fest",
+   "abk": [
+    "TR",
+    "TROU"
+   ],
+   "ort": [
+    46.942101,
+    6.676173
+   ],
+   "veraltet": "fest"
+  },
+  "la_presta_mines_d_asphalte": {
+   "key": "la_presta_mines_d_asphalte",
+   "name": "La Presta - Mines d'Asphalte",
+   "gruppe": "NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier",
+   "region": "ne",
+   "fingerabdruck": "961b2dbd5ba0",
+   "quelle": "fest (zusatz_plaene.json)",
+   "workflow": "-",
+   "commit": null,
+   "datum": "21.10.2026",
+   "art": "fest",
+   "abk": [
+    "PRST"
+   ],
+   "ort": [
+    46.931085,
+    6.654373
+   ],
+   "veraltet": "fest"
+  },
+  "couvet": {
+   "key": "couvet",
+   "name": "Couvet",
+   "gruppe": "NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier",
+   "region": "ne",
+   "fingerabdruck": "889231e1dfed",
+   "quelle": "fest (zusatz_plaene.json)",
+   "workflow": "-",
+   "commit": null,
+   "datum": "21.10.2026",
+   "art": "fest",
+   "abk": [
+    "CVTR",
+    "CVT"
+   ],
+   "ort": [
+    46.923902,
+    6.636035
+   ],
+   "veraltet": "fest"
+  },
+  "motiers": {
+   "key": "motiers",
+   "name": "Môtiers",
+   "gruppe": "NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier",
+   "region": "ne",
+   "fingerabdruck": "a2615a47dc5a",
+   "quelle": "fest (zusatz_plaene.json)",
+   "workflow": "-",
+   "commit": null,
+   "datum": "21.10.2026",
+   "art": "fest",
+   "abk": [
+    "MOT"
+   ],
+   "ort": [
+    46.911791,
+    6.610315
+   ],
+   "veraltet": "fest"
+  },
+  "neuchatel_vauseyon": {
+   "key": "neuchatel_vauseyon",
+   "name": "Neuchâtel Vauseyon",
+   "gruppe": "NE 8 · Neuchâtel – La Chaux-de-Fonds",
+   "region": "ne",
+   "fingerabdruck": "f3a899ea9b44",
+   "quelle": "Repo-Bahnhof",
+   "workflow": "plaene",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "NEVS",
+    "NEBI"
+   ],
+   "ort": [
+    46.990629,
+    6.917526
+   ],
+   "veraltet": true
+  },
+  "les_deurres": {
+   "key": "les_deurres",
+   "name": "Les Deurres",
+   "gruppe": "NE 8 · Neuchâtel – La Chaux-de-Fonds",
+   "region": "ne",
+   "fingerabdruck": "5f52571c0202",
+   "quelle": "fest (zusatz_plaene.json)",
+   "workflow": "-",
+   "commit": null,
+   "datum": "21.10.2026",
+   "art": "fest",
+   "abk": [
+    "DEU"
+   ],
+   "ort": [
+    46.985024,
+    6.906539
+   ],
+   "veraltet": "fest"
+  },
+  "corcelles_peseux": {
+   "key": "corcelles_peseux",
+   "name": "Corcelles-Peseux",
+   "gruppe": "NE 8 · Neuchâtel – La Chaux-de-Fonds",
+   "region": "ne",
+   "fingerabdruck": "222c0762676b",
+   "quelle": "fest (zusatz_plaene.json)",
+   "workflow": "-",
+   "commit": null,
+   "datum": "21.10.2026",
+   "art": "fest",
+   "abk": [
+    "CP"
+   ],
+   "ort": [
+    46.979376,
+    6.877085
+   ],
+   "veraltet": "fest"
+  },
+  "chambrelien": {
+   "key": "chambrelien",
+   "name": "Chambrelien",
+   "gruppe": "NE 8 · Neuchâtel – La Chaux-de-Fonds",
+   "region": "ne",
+   "fingerabdruck": "f021848acbf3",
+   "quelle": "fest (zusatz_plaene.json)",
+   "workflow": "-",
+   "commit": null,
+   "datum": "21.10.2026",
+   "art": "fest",
+   "abk": [
+    "CHN",
+    "CHNF",
+    "CHNN"
+   ],
+   "ort": [
+    46.967252,
+    6.812511
+   ],
+   "veraltet": "fest"
+  },
+  "les_geneveys_sur_coffrane": {
+   "key": "les_geneveys_sur_coffrane",
+   "name": "Les Geneveys-sur-Coffrane",
+   "gruppe": "NE 8 · Neuchâtel – La Chaux-de-Fonds",
+   "region": "ne",
+   "fingerabdruck": "575d007ff3d0",
+   "quelle": "fest (zusatz_plaene.json)",
+   "workflow": "-",
+   "commit": null,
+   "datum": "21.10.2026",
+   "art": "fest",
+   "abk": [
+    "GEC"
+   ],
+   "ort": [
+    47.015122,
+    6.853163
+   ],
+   "veraltet": "fest"
+  },
+  "les_hauts_geneveys": {
+   "key": "les_hauts_geneveys",
+   "name": "Les Hauts-Geneveys",
+   "gruppe": "NE 8 · Neuchâtel – La Chaux-de-Fonds",
+   "region": "ne",
+   "fingerabdruck": "a929445a26a2",
+   "quelle": "fest (zusatz_plaene.json)",
+   "workflow": "-",
+   "commit": null,
+   "datum": "21.10.2026",
+   "art": "fest",
+   "abk": [
+    "HGV"
+   ],
+   "ort": [
+    47.048601,
+    6.875496
+   ],
+   "veraltet": "fest"
+  },
+  "mob__allieres": {
+   "key": "mob__allieres",
+   "name": "Allières",
+   "gruppe": "MOB · Bahnhöfe",
+   "region": "mob",
+   "fingerabdruck": "7feb9f3b2266",
+   "quelle": "Linien-Region mob",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "ALLI"
+   ],
+   "ort": [
+    46.469371,
+    7.007809
+   ],
+   "veraltet": true
+  },
+  "mob__belmont_sur_montreux": {
+   "key": "mob__belmont_sur_montreux",
+   "name": "Belmont-sur-Montreux",
+   "gruppe": "MOB · Bahnhöfe",
+   "region": "mob",
+   "fingerabdruck": "ce7198287b0d",
+   "quelle": "Linien-Region mob",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "BEMM"
+   ],
+   "ort": [
+    46.443379,
+    6.904428
+   ],
+   "veraltet": true
+  },
+  "mob__blankenburg": {
+   "key": "mob__blankenburg",
+   "name": "Blankenburg",
+   "gruppe": "MOB · Bahnhöfe",
+   "region": "mob",
+   "fingerabdruck": "a61d6d95c73f",
+   "quelle": "Linien-Region mob",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "BLB"
+   ],
+   "ort": [
+    46.540863,
+    7.385579
+   ],
+   "veraltet": true
+  },
+  "mob__caux": {
+   "key": "mob__caux",
+   "name": "Caux",
+   "gruppe": "MOB · Bahnhöfe",
+   "region": "mob",
+   "fingerabdruck": "6758345690fc",
+   "quelle": "Linien-Region mob",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "CAUX",
+    "HDC"
+   ],
+   "ort": [
+    46.431193,
+    6.938492
+   ],
+   "veraltet": true
+  },
+  "mob__chamby": {
+   "key": "mob__chamby",
+   "name": "Chamby",
+   "gruppe": "MOB · Bahnhöfe",
+   "region": "mob",
+   "fingerabdruck": "280d45b4aa53",
+   "quelle": "Linien-Region mob",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "CABY",
+    "CABM"
+   ],
+   "ort": [
+    46.449657,
+    6.913466
+   ],
+   "veraltet": true
+  },
+  "mob__chateau_d_oex": {
+   "key": "mob__chateau_d_oex",
+   "name": "Château-d'Oex",
+   "gruppe": "MOB · Bahnhöfe",
+   "region": "mob",
+   "fingerabdruck": "163fc6d519a4",
+   "quelle": "Linien-Region mob",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "CHOE",
+    "PALZ"
+   ],
+   "ort": [
+    46.47499,
+    7.132143
+   ],
+   "veraltet": true
+  },
+  "mob__chatelard": {
+   "key": "mob__chatelard",
+   "name": "Châtelard",
+   "gruppe": "MOB · Bahnhöfe",
+   "region": "mob",
+   "fingerabdruck": "88d22da915cd",
+   "quelle": "Linien-Region mob",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "CHAL"
+   ],
+   "ort": [
+    46.447038,
+    6.901337
+   ],
+   "veraltet": true
+  },
+  "mob__chernex": {
+   "key": "mob__chernex",
+   "name": "Chernex",
+   "gruppe": "MOB · Bahnhöfe",
+   "region": "mob",
+   "fingerabdruck": "7285288f4fca",
+   "quelle": "Linien-Region mob",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "CHER"
+   ],
+   "ort": [
+    46.446556,
+    6.909359
+   ],
+   "veraltet": true
+  },
+  "mob__cret_d_y_bau": {
+   "key": "mob__cret_d_y_bau",
+   "name": "Crêt-d'y-Bau",
+   "gruppe": "MOB · Bahnhöfe",
+   "region": "mob",
+   "fingerabdruck": "3652f73d7837",
+   "quelle": "Linien-Region mob",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "CRDB"
+   ],
+   "ort": [
+    46.435303,
+    6.955606
+   ],
+   "veraltet": true
+  },
+  "mob__flendruz": {
+   "key": "mob__flendruz",
+   "name": "Flendruz",
+   "gruppe": "MOB · Bahnhöfe",
+   "region": "mob",
+   "fingerabdruck": "0ac061d72135",
+   "quelle": "Linien-Region mob",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "FLED"
+   ],
+   "ort": [
+    46.482388,
+    7.187024
+   ],
+   "veraltet": true
+  },
+  "mob__fontanivent": {
+   "key": "mob__fontanivent",
+   "name": "Fontanivent",
+   "gruppe": "MOB · Bahnhöfe",
+   "region": "mob",
+   "fingerabdruck": "2dc46f52764c",
+   "quelle": "Linien-Region mob",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "FON"
+   ],
+   "ort": [
+    46.453066,
+    6.902233
+   ],
+   "veraltet": true
+  },
+  "mob__glion_college": {
+   "key": "mob__glion_college",
+   "name": "Glion-Collège",
+   "gruppe": "MOB · Bahnhöfe",
+   "region": "mob",
+   "fingerabdruck": "1f3fcc089e7b",
+   "quelle": "Linien-Region mob",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "GLCO"
+   ],
+   "ort": [
+    46.434776,
+    6.928651
+   ],
+   "veraltet": true
+  },
+  "mob__glion": {
+   "key": "mob__glion",
+   "name": "Glion",
+   "gruppe": "MOB · Bahnhöfe",
+   "region": "mob",
+   "fingerabdruck": "a7550b9d4b91",
+   "quelle": "Linien-Region mob",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "GLI",
+    "GLHA"
+   ],
+   "ort": [
+    46.432292,
+    6.92463
+   ],
+   "veraltet": true
+  },
+  "mob__gruben": {
+   "key": "mob__gruben",
+   "name": "Gruben",
+   "gruppe": "MOB · Bahnhöfe",
+   "region": "mob",
+   "fingerabdruck": "7a2d7afaf110",
+   "quelle": "Linien-Region mob",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "GRUB"
+   ],
+   "ort": [
+    46.490531,
+    7.280508
+   ],
+   "veraltet": true
+  },
+  "mob__gstaad": {
+   "key": "mob__gstaad",
+   "name": "Gstaad",
+   "gruppe": "MOB · Bahnhöfe",
+   "region": "mob",
+   "fingerabdruck": "3c60b8789a02",
+   "quelle": "Linien-Region mob",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "GST"
+   ],
+   "ort": [
+    46.475452,
+    7.283289
+   ],
+   "veraltet": true
+  },
+  "mob__jaman": {
+   "key": "mob__jaman",
+   "name": "Jaman",
+   "gruppe": "MOB · Bahnhöfe",
+   "region": "mob",
+   "fingerabdruck": "191bd4b1c3fa",
+   "quelle": "Linien-Region mob",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "JAMA"
+   ],
+   "ort": [
+    46.441771,
+    6.976878
+   ],
+   "veraltet": true
+  },
+  "mob__jor": {
+   "key": "mob__jor",
+   "name": "Jor",
+   "gruppe": "MOB · Bahnhöfe",
+   "region": "mob",
+   "fingerabdruck": "5976832badd9",
+   "quelle": "Linien-Region mob",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "JOR"
+   ],
+   "ort": [
+    46.454563,
+    6.964711
+   ],
+   "veraltet": true
+  },
+  "mob__la_perche": {
+   "key": "mob__la_perche",
+   "name": "La Perche",
+   "gruppe": "MOB · Bahnhöfe",
+   "region": "mob",
+   "fingerabdruck": "2df243608d69",
+   "quelle": "Linien-Region mob",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "PERC"
+   ],
+   "ort": [
+    46.43651,
+    6.975341
+   ],
+   "veraltet": true
+  },
+  "mob__la_tine": {
+   "key": "mob__la_tine",
+   "name": "La Tine",
+   "gruppe": "MOB · Bahnhöfe",
+   "region": "mob",
+   "fingerabdruck": "6141054ba08b",
+   "quelle": "Linien-Region mob",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "TINE"
+   ],
+   "ort": [
+    46.467381,
+    7.04615
+   ],
+   "veraltet": true
+  },
+  "mob__le_tremblex": {
+   "key": "mob__le_tremblex",
+   "name": "Le Tremblex",
+   "gruppe": "MOB · Bahnhöfe",
+   "region": "mob",
+   "fingerabdruck": "f5aef3a3c0cd",
+   "quelle": "Linien-Region mob",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "TREM"
+   ],
+   "ort": [
+    46.436224,
+    6.933091
+   ],
+   "veraltet": true
+  },
+  "mob__lenk_im_simmental": {
+   "key": "mob__lenk_im_simmental",
+   "name": "Lenk im Simmental",
+   "gruppe": "MOB · Bahnhöfe",
+   "region": "mob",
+   "fingerabdruck": "78a2d6d40932",
+   "quelle": "Linien-Region mob",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "LENK"
+   ],
+   "ort": [
+    46.458518,
+    7.443651
+   ],
+   "veraltet": true
+  },
+  "mob__les_avants": {
+   "key": "mob__les_avants",
+   "name": "Les Avants",
+   "gruppe": "MOB · Bahnhöfe",
+   "region": "mob",
+   "fingerabdruck": "df5845892612",
+   "quelle": "Linien-Region mob",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "AVA"
+   ],
+   "ort": [
+    46.45326,
+    6.943047
+   ],
+   "veraltet": true
+  },
+  "mob__les_cases": {
+   "key": "mob__les_cases",
+   "name": "Les Cases",
+   "gruppe": "MOB · Bahnhöfe",
+   "region": "mob",
+   "fingerabdruck": "8061c1435425",
+   "quelle": "Linien-Region mob",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "CASE"
+   ],
+   "ort": [
+    46.455971,
+    6.99786
+   ],
+   "veraltet": true
+  },
+  "mob__les_echets": {
+   "key": "mob__les_echets",
+   "name": "Les Echets",
+   "gruppe": "MOB · Bahnhöfe",
+   "region": "mob",
+   "fingerabdruck": "f7913d4b6ef4",
+   "quelle": "Linien-Region mob",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "ECTS"
+   ],
+   "ort": [
+    46.432001,
+    6.943982
+   ],
+   "veraltet": true
+  },
+  "mob__les_sciernes": {
+   "key": "mob__les_sciernes",
+   "name": "Les Sciernes",
+   "gruppe": "MOB · Bahnhöfe",
+   "region": "mob",
+   "fingerabdruck": "be76e5bcf6b6",
+   "quelle": "Linien-Region mob",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "SCI"
+   ],
+   "ort": [
+    46.491411,
+    7.03409
+   ],
+   "veraltet": true
+  },
+  "mob__matten": {
+   "key": "mob__matten",
+   "name": "Matten",
+   "gruppe": "MOB · Bahnhöfe",
+   "region": "mob",
+   "fingerabdruck": "8dc9d5ffe8e8",
+   "quelle": "Linien-Region mob",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "MATE"
+   ],
+   "ort": [
+    46.493945,
+    7.421087
+   ],
+   "veraltet": true
+  },
+  "mob__montbovon": {
+   "key": "mob__montbovon",
+   "name": "Montbovon",
+   "gruppe": "MOB · Bahnhöfe",
+   "region": "mob",
+   "fingerabdruck": "8f47652a3854",
+   "quelle": "Linien-Region mob",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "MTB"
+   ],
+   "ort": [
+    46.485351,
+    7.042027
+   ],
+   "veraltet": true
+  },
+  "mob__montreux_les_planches": {
+   "key": "mob__montreux_les_planches",
+   "name": "Montreux-Les Planches",
+   "gruppe": "MOB · Bahnhöfe",
+   "region": "mob",
+   "fingerabdruck": "e104ca0065f1",
+   "quelle": "Linien-Region mob",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "PLCH"
+   ],
+   "ort": [
+    46.433648,
+    6.916986
+   ],
+   "veraltet": true
+  },
+  "mob__montreux": {
+   "key": "mob__montreux",
+   "name": "Montreux",
+   "gruppe": "MOB · Bahnhöfe",
+   "region": "mob",
+   "fingerabdruck": "f7963a129617",
+   "quelle": "Linien-Region mob",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "MX",
+    "CGE"
+   ],
+   "ort": [
+    46.435555,
+    6.911483
+   ],
+   "veraltet": true
+  },
+  "mob__oeschseite": {
+   "key": "mob__oeschseite",
+   "name": "Oeschseite",
+   "gruppe": "MOB · Bahnhöfe",
+   "region": "mob",
+   "fingerabdruck": "16d28f965e23",
+   "quelle": "Linien-Region mob",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "OES"
+   ],
+   "ort": [
+    46.53125,
+    7.3522
+   ],
+   "veraltet": true
+  },
+  "mob__paccot": {
+   "key": "mob__paccot",
+   "name": "Paccot",
+   "gruppe": "MOB · Bahnhöfe",
+   "region": "mob",
+   "fingerabdruck": "1a4495d9ab88",
+   "quelle": "Linien-Region mob",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "PACC"
+   ],
+   "ort": [
+    46.43799,
+    6.963425
+   ],
+   "veraltet": true
+  },
+  "mob__planchamp": {
+   "key": "mob__planchamp",
+   "name": "Planchamp",
+   "gruppe": "MOB · Bahnhöfe",
+   "region": "mob",
+   "fingerabdruck": "fc3e64a7b276",
+   "quelle": "Linien-Region mob",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "PLAC"
+   ],
+   "ort": [
+    46.450659,
+    6.901162
+   ],
+   "veraltet": true
+  },
+  "mob__rochers_de_naye": {
+   "key": "mob__rochers_de_naye",
+   "name": "Rochers de Naye",
+   "gruppe": "MOB · Bahnhöfe",
+   "region": "mob",
+   "fingerabdruck": "0051a5a9952d",
+   "quelle": "Linien-Region mob",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "RODN"
+   ],
+   "ort": [
+    46.431516,
+    6.979528
+   ],
+   "veraltet": true
+  },
+  "mob__rossiniere": {
+   "key": "mob__rossiniere",
+   "name": "Rossinière",
+   "gruppe": "MOB · Bahnhöfe",
+   "region": "mob",
+   "fingerabdruck": "98cc3ba867de",
+   "quelle": "Linien-Region mob",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "ROSI"
+   ],
+   "ort": [
+    46.464731,
+    7.082755
+   ],
+   "veraltet": true
+  },
+  "mob__rougemont": {
+   "key": "mob__rougemont",
+   "name": "Rougemont",
+   "gruppe": "MOB · Bahnhöfe",
+   "region": "mob",
+   "fingerabdruck": "9ea16c7a6380",
+   "quelle": "Linien-Region mob",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "ROU"
+   ],
+   "ort": [
+    46.488422,
+    7.209251
+   ],
+   "veraltet": true
+  },
+  "mob__saanen": {
+   "key": "mob__saanen",
+   "name": "Saanen",
+   "gruppe": "MOB · Bahnhöfe",
+   "region": "mob",
+   "fingerabdruck": "6962244617e5",
+   "quelle": "Linien-Region mob",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "SAAN"
+   ],
+   "ort": [
+    46.488393,
+    7.261029
+   ],
+   "veraltet": true
+  },
+  "mob__saanenmoser": {
+   "key": "mob__saanenmoser",
+   "name": "Saanenmöser",
+   "gruppe": "MOB · Bahnhöfe",
+   "region": "mob",
+   "fingerabdruck": "11f44402c18a",
+   "quelle": "Linien-Region mob",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "SAMO"
+   ],
+   "ort": [
+    46.517454,
+    7.311681
+   ],
+   "veraltet": true
+  },
+  "mob__schonried": {
+   "key": "mob__schonried",
+   "name": "Schönried",
+   "gruppe": "MOB · Bahnhöfe",
+   "region": "mob",
+   "fingerabdruck": "72654549792c",
+   "quelle": "Linien-Region mob",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "SCR"
+   ],
+   "ort": [
+    46.504221,
+    7.290911
+   ],
+   "veraltet": true
+  },
+  "mob__sendy_sollard": {
+   "key": "mob__sendy_sollard",
+   "name": "Sendy-Sollard",
+   "gruppe": "MOB · Bahnhöfe",
+   "region": "mob",
+   "fingerabdruck": "d7cbe2587e22",
+   "quelle": "Linien-Region mob",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "SDY"
+   ],
+   "ort": [
+    46.447334,
+    6.929868
+   ],
+   "veraltet": true
+  },
+  "mob__st_stephan": {
+   "key": "mob__st_stephan",
+   "name": "St. Stephan",
+   "gruppe": "MOB · Bahnhöfe",
+   "region": "mob",
+   "fingerabdruck": "5b597ef54876",
+   "quelle": "Linien-Region mob",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "STST"
+   ],
+   "ort": [
+    46.505289,
+    7.400573
+   ],
+   "veraltet": true
+  },
+  "mob__toveyre": {
+   "key": "mob__toveyre",
+   "name": "Toveyre",
+   "gruppe": "MOB · Bahnhöfe",
+   "region": "mob",
+   "fingerabdruck": "fd3f827c5fe8",
+   "quelle": "Linien-Region mob",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "TOV"
+   ],
+   "ort": [
+    46.427687,
+    6.92859
+   ],
+   "veraltet": true
+  },
+  "mob__valmont": {
+   "key": "mob__valmont",
+   "name": "Valmont",
+   "gruppe": "MOB · Bahnhöfe",
+   "region": "mob",
+   "fingerabdruck": "bf95ca773d70",
+   "quelle": "Linien-Region mob",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "VALM"
+   ],
+   "ort": [
+    46.428323,
+    6.929981
+   ],
+   "veraltet": true
+  },
+  "mob__vernex": {
+   "key": "mob__vernex",
+   "name": "Vernex",
+   "gruppe": "MOB · Bahnhöfe",
+   "region": "mob",
+   "fingerabdruck": "b37105353bb1",
+   "quelle": "Linien-Region mob",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "VERX"
+   ],
+   "ort": [
+    46.440374,
+    6.904918
+   ],
+   "veraltet": true
+  },
+  "mob__vuarennes": {
+   "key": "mob__vuarennes",
+   "name": "Vuarennes",
+   "gruppe": "MOB · Bahnhöfe",
+   "region": "mob",
+   "fingerabdruck": "a1589d214c82",
+   "quelle": "Linien-Region mob",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "VUAR"
+   ],
+   "ort": [
+    46.439311,
+    6.91057
+   ],
+   "veraltet": true
+  },
+  "mob__zweisimmen": {
+   "key": "mob__zweisimmen",
+   "name": "Zweisimmen",
+   "gruppe": "MOB · Bahnhöfe",
+   "region": "mob",
+   "fingerabdruck": "e6422d6f71c6",
+   "quelle": "Linien-Region mob",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "ZW"
+   ],
+   "ort": [
+    46.552509,
+    7.375311
+   ],
+   "veraltet": true
+  },
+  "vereina__klosters_platz": {
+   "key": "vereina__klosters_platz",
+   "name": "Klosters Platz",
+   "gruppe": "Vereina · Bahnhöfe",
+   "region": "vereina",
+   "fingerabdruck": "6036db4ebfb2",
+   "quelle": "Linien-Region vereina",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "KLO"
+   ],
+   "ort": [
+    46.86942,
+    9.880358
+   ],
+   "veraltet": true
+  },
+  "vereina__klosters_selfranga": {
+   "key": "vereina__klosters_selfranga",
+   "name": "Klosters Selfranga",
+   "gruppe": "Vereina · Bahnhöfe",
+   "region": "vereina",
+   "fingerabdruck": "62aae46651b2",
+   "quelle": "Linien-Region vereina",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "SELF"
+   ],
+   "ort": [
+    46.855521,
+    9.884537
+   ],
+   "veraltet": true
+  },
+  "vereina__sagliains_nord": {
+   "key": "vereina__sagliains_nord",
+   "name": "Sagliains Nord",
+   "gruppe": "Vereina · Bahnhöfe",
+   "region": "vereina",
+   "fingerabdruck": "3e7d943dc2bb",
+   "quelle": "Linien-Region vereina",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "SNOR"
+   ],
+   "ort": [
+    46.76914,
+    10.071012
+   ],
+   "veraltet": true
+  },
+  "vereina__sagliains_sasslatsch": {
+   "key": "vereina__sagliains_sasslatsch",
+   "name": "Sagliains Sasslatsch",
+   "gruppe": "Vereina · Bahnhöfe",
+   "region": "vereina",
+   "fingerabdruck": "139a2ab02739",
+   "quelle": "Linien-Region vereina",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "SAST"
+   ],
+   "ort": [
+    46.761904,
+    10.08772
+   ],
+   "veraltet": true
+  },
+  "vereina__sagliains": {
+   "key": "vereina__sagliains",
+   "name": "Sagliains · Autoverlad",
+   "gruppe": "Vereina · Bahnhöfe",
+   "region": "vereina",
+   "fingerabdruck": "f792a1bbc7f5",
+   "quelle": "Linien-Region vereina",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "SAGL",
+    "SAAV"
+   ],
+   "ort": [
+    46.764204,
+    10.099995
+   ],
+   "veraltet": true
+  },
+  "vereina__sasslatsch": {
+   "key": "vereina__sasslatsch",
+   "name": "Sasslatsch",
+   "gruppe": "Vereina · Bahnhöfe",
+   "region": "vereina",
+   "fingerabdruck": "8ca79a1e7774",
+   "quelle": "Linien-Region vereina",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "SASS"
+   ],
+   "ort": [
+    46.759113,
+    10.087334
+   ],
+   "veraltet": true
+  },
+  "vereina__selfranga_sud": {
+   "key": "vereina__selfranga_sud",
+   "name": "Selfranga Süd",
+   "gruppe": "Vereina · Bahnhöfe",
+   "region": "vereina",
+   "fingerabdruck": "e6da95d57d4d",
+   "quelle": "Linien-Region vereina",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "SELS"
+   ],
+   "ort": [
+    46.844877,
+    9.906263
+   ],
+   "veraltet": true
+  },
+  "vereina__susch": {
+   "key": "vereina__susch",
+   "name": "Susch",
+   "gruppe": "Vereina · Bahnhöfe",
+   "region": "vereina",
+   "fingerabdruck": "ae698e80c3ab",
+   "quelle": "Linien-Region vereina",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "SUS"
+   ],
+   "ort": [
+    46.751877,
+    10.079411
+   ],
+   "veraltet": true
+  },
+  "vereina__vereina_nord": {
+   "key": "vereina__vereina_nord",
+   "name": "Vereina Nord",
+   "gruppe": "Vereina · Bahnhöfe",
+   "region": "vereina",
+   "fingerabdruck": "1f7718352ec8",
+   "quelle": "Linien-Region vereina",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "VNOR"
+   ],
+   "ort": [
+    46.812657,
+    9.976468
+   ],
+   "veraltet": true
+  },
+  "vereina__vereina_sud": {
+   "key": "vereina__vereina_sud",
+   "name": "Vereina Süd",
+   "gruppe": "Vereina · Bahnhöfe",
+   "region": "vereina",
+   "fingerabdruck": "dff85afbaebd",
+   "quelle": "Linien-Region vereina",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "VSUD"
+   ],
+   "ort": [
+    46.802752,
+    9.998027
+   ],
+   "veraltet": true
+  },
+  "szu__berghof": {
+   "key": "szu__berghof",
+   "name": "Berghof",
+   "gruppe": "SZU · Bahnhöfe",
+   "region": "szu",
+   "fingerabdruck": "0c1c99d1dfb9",
+   "quelle": "Linien-Region szu",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "BGF"
+   ],
+   "ort": [
+    47.368559,
+    8.480968
+   ],
+   "veraltet": true
+  },
+  "szu__borrweg": {
+   "key": "szu__borrweg",
+   "name": "Borrweg",
+   "gruppe": "SZU · Bahnhöfe",
+   "region": "szu",
+   "fingerabdruck": "28dc263c7e76",
+   "quelle": "Linien-Region szu",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "BORR"
+   ],
+   "ort": [
+    47.36422,
+    8.511666
+   ],
+   "veraltet": true
+  },
+  "szu__ringlikon": {
+   "key": "szu__ringlikon",
+   "name": "Ringlikon",
+   "gruppe": "SZU · Bahnhöfe",
+   "region": "szu",
+   "fingerabdruck": "afa3c7e8860a",
+   "quelle": "Linien-Region szu",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "RILI"
+   ],
+   "ort": [
+    47.360708,
+    8.47686
+   ],
+   "veraltet": true
+  },
+  "szu__uetliberg": {
+   "key": "szu__uetliberg",
+   "name": "Uetliberg",
+   "gruppe": "SZU · Bahnhöfe",
+   "region": "szu",
+   "fingerabdruck": "d07538b7314e",
+   "quelle": "Linien-Region szu",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "UEBE"
+   ],
+   "ort": [
+    47.352868,
+    8.487528
+   ],
+   "veraltet": true
+  },
+  "szu__zurich_binz": {
+   "key": "szu__zurich_binz",
+   "name": "Zürich Binz",
+   "gruppe": "SZU · Bahnhöfe",
+   "region": "szu",
+   "fingerabdruck": "fddb55d9d377",
+   "quelle": "Linien-Region szu",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "ZBZ"
+   ],
+   "ort": [
+    47.362906,
+    8.517819
+   ],
+   "veraltet": true
+  },
+  "szu__zurich_friesenberg": {
+   "key": "szu__zurich_friesenberg",
+   "name": "Zürich Friesenberg",
+   "gruppe": "SZU · Bahnhöfe",
+   "region": "szu",
+   "fingerabdruck": "f3880ec985cc",
+   "quelle": "Linien-Region szu",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "FRIB"
+   ],
+   "ort": [
+    47.364897,
+    8.506753
+   ],
+   "veraltet": true
+  },
+  "szu__zurich_giesshubel": {
+   "key": "szu__zurich_giesshubel",
+   "name": "Zürich Giesshübel · Zürich Saalsporthalle",
+   "gruppe": "SZU · Bahnhöfe",
+   "region": "szu",
+   "fingerabdruck": "527e503c9122",
+   "quelle": "Linien-Region szu",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "ZGH",
+    "ZSAA"
+   ],
+   "ort": [
+    47.36147,
+    8.521751
+   ],
+   "veraltet": true
+  },
+  "szu__zurich_schweighof": {
+   "key": "szu__zurich_schweighof",
+   "name": "Zürich Schweighof",
+   "gruppe": "SZU · Bahnhöfe",
+   "region": "szu",
+   "fingerabdruck": "f7af5a5f4aa8",
+   "quelle": "Linien-Region szu",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "SHF"
+   ],
+   "ort": [
+    47.364978,
+    8.50402
+   ],
+   "veraltet": true
+  },
+  "szu__zurich_selnau": {
+   "key": "szu__zurich_selnau",
+   "name": "Zürich Selnau · Zürich HB SZU Süd",
+   "gruppe": "SZU · Bahnhöfe",
+   "region": "szu",
+   "fingerabdruck": "4f1a55ad4120",
+   "quelle": "Linien-Region szu",
+   "workflow": "regionen",
+   "commit": "8f292901283f3b9191de5be0dcb66a4663ddb748",
+   "art": "code",
+   "abk": [
+    "ZSEL",
+    "ZUSS"
+   ],
+   "ort": [
+    47.373804,
+    8.534004
+   ],
+   "veraltet": true
+  }
+ },
+ "ohne_dienststelle": [],
+ "mehrfach": {
+  "kerzers": [
+   "werkstatt/olten",
+   "werkstatt/ne"
+  ],
+  "neuchatel": [
+   "werkstatt/olten",
+   "werkstatt/ne",
+   "bahnhoefe"
+  ],
+  "onnens_bonvillars": [
+   "werkstatt/olten",
+   "werkstatt/ne"
+  ],
+  "neuchatel_vauseyon": [
+   "werkstatt/ne",
+   "bahnhoefe"
+  ]
+ }
+}

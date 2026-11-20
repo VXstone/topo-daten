@@ -1,0 +1,148 @@
+[
+ {
+  "code": "OG",
+  "abk": "AA",
+  "text": "Aarau: Gleis mit Perron laut SBB 10 ohne Perron-ref in OSM (SBB 1/2/3/4/5/6/10 · OSM 0/1/12/13/2/3/4/5/6)"
+ },
+ {
+  "code": "OR",
+  "abk": "ATOR",
+  "text": "Aarau Torfeld: Abkürzung atlas ATOR ≠ OSM railway:ref AATO"
+ },
+ {
+  "code": "OG",
+  "abk": "INS",
+  "text": "Ins: Gleis mit Perron laut SBB 3/4 ohne Perron-ref in OSM (SBB 3/4 · OSM 1)"
+ },
+ {
+  "code": "OG",
+  "abk": "KF",
+  "text": "Konolfingen: Gleis mit Perron laut SBB 2 ohne Perron-ref in OSM (SBB 2/3/4/5/6 · OSM 1/3/4/5/6)"
+ },
+ {
+  "code": "OU",
+  "abk": "LIG",
+  "text": "Ligerz: BPUIC atlas 8504227 ≠ OSM uic_ref 8504356"
+ },
+ {
+  "code": "OG",
+  "abk": "NE",
+  "text": "Neuchâtel: Gleis mit Perron laut SBB 3/4/5/6/7 ohne Perron-ref in OSM (SBB 1/2/3/4/5/6/7 · OSM 1/2)"
+ },
+ {
+  "code": "OK",
+  "abk": "SAAV",
+  "text": "Sagliains Autoverlad: keine OSM-Station mit diesem Namen, dieser Abkürzung oder BPUIC"
+ },
+ {
+  "code": "OK",
+  "abk": "SELF",
+  "text": "Klosters Selfranga: keine OSM-Station mit diesem Namen, dieser Abkürzung oder BPUIC"
+ },
+ {
+  "code": "OL",
+  "abk": "SO",
+  "text": "Solothurn: Linie SBB 292 (km 0.0) nicht unter den OSM-Linien im Plan (410, 415, 421)"
+ },
+ {
+  "code": "OG",
+  "abk": "ZBZ",
+  "text": "Zürich Binz: Gleis mit Perron laut SBB 2 ohne Perron-ref in OSM (SBB 1/2 · OSM 1)"
+ },
+ {
+  "code": "OB",
+  "abk": "BODE",
+  "text": "Region mob: Betriebspunkt Boden (BODE) im Perimeter ohne Plan",
+  "region": "mob"
+ },
+ {
+  "code": "OB",
+  "abk": "CHAU",
+  "text": "Region mob: Betriebspunkt La Chaudanne-Les Moulins (CHAU) im Perimeter ohne Plan",
+  "region": "mob"
+ },
+ {
+  "code": "OB",
+  "abk": "COMS",
+  "text": "Region mob: Betriebspunkt Les Combes (COMS) im Perimeter ohne Plan",
+  "region": "mob"
+ },
+ {
+  "code": "OB",
+  "abk": "GRAC",
+  "text": "Region mob: Betriebspunkt Les Granges-Gérignoz (GRAC) im Perimeter ohne Plan",
+  "region": "mob"
+ },
+ {
+  "code": "OB",
+  "abk": "SONZ",
+  "text": "Region mob: Betriebspunkt Sonzier (SONZ) im Perimeter ohne Plan",
+  "region": "mob"
+ },
+ {
+  "code": "OB",
+  "abk": "STOI",
+  "text": "Region mob: Betriebspunkt Stöckli (STOI) im Perimeter ohne Plan",
+  "region": "mob"
+ },
+ {
+  "code": "OB",
+  "abk": "BRG",
+  "text": "Region ne: Betriebspunkt Bargen BE (BRG) im Perimeter ohne Plan",
+  "region": "ne"
+ },
+ {
+  "code": "OB",
+  "abk": "CN",
+  "text": "Region ne: Betriebspunkt Corcelles-Nord (CN) im Perimeter ohne Plan",
+  "region": "ne"
+ },
+ {
+  "code": "OB",
+  "abk": "MML",
+  "text": "Region ne: Betriebspunkt Montmollin-Montezillon (MML) im Perimeter ohne Plan",
+  "region": "ne"
+ },
+ {
+  "code": "OB",
+  "abk": "MUN",
+  "text": "Region ne: Betriebspunkt Muntelier (MUN) im Perimeter ohne Plan",
+  "region": "ne"
+ },
+ {
+  "code": "OB",
+  "abk": "VAU",
+  "text": "Region ne: Betriebspunkt Vaumarcus (VAU) im Perimeter ohne Plan",
+  "region": "ne"
+ },
+ {
+  "code": "OB",
+  "abk": "KGD",
+  "text": "Region olten: Betriebspunkt Küngoldingen (KGD) im Perimeter ohne Plan",
+  "region": "olten"
+ },
+ {
+  "code": "OB",
+  "abk": "TRI",
+  "text": "Region olten: Betriebspunkt Trimbach (TRI) im Perimeter ohne Plan",
+  "region": "olten"
+ },
+ {
+  "code": "OB",
+  "abk": "WAST",
+  "text": "Region olten: Betriebspunkt Walterswil-Striegel (WAST) im Perimeter ohne Plan",
+  "region": "olten"
+ },
+ {
+  "code": "OB",
+  "abk": "TRLI",
+  "text": "Region szu: Betriebspunkt Zürich Triemli (TRLI) im Perimeter ohne Plan",
+  "region": "szu"
+ },
+ {
+  "code": "OB",
+  "abk": "ZUSZ",
+  "text": "Region szu: Betriebspunkt Zürich HB SZU (ZUSZ) im Perimeter ohne Plan",
+  "region": "szu"
+ }
+]
