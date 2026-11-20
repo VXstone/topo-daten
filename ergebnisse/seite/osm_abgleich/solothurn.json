@@ -297,6 +297,12 @@
 },
 {
 "regel": "VD1",
+"x": 1268.1,
+"y": 269.6,
+"text": "zwei Gleise 16 px aufeinander"
+},
+{
+"regel": "VD1",
 "x": 1433.6,
 "y": 160.4,
 "text": "zwei Gleise 26 px aufeinander"
@@ -316,11 +322,11 @@
 ],
 "info": {
 "dkw_osm_unvollstaendig": [],
-"gleise": 115,
+"gleise": 114,
 "knoten_plan": 59,
 "dkw_plan": 2,
 "knoten_osm": 61,
 "versatz_y": 0.0,
-"netz_auf_plan": 1.0
+"netz_auf_plan": 0.99
 }
 }

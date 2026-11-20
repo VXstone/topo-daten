@@ -58,6 +58,6 @@ Befund < 40 px im selben Plan, ohne G2.
 | · | vnyq | aarau |  | 99.4 | Zwischengerade |
 | · | wvrp | mob__zweisimmen |  | 48.5 | kreuzt das andere oder biegt von DKW falsch ab |
 | · | wyu2 | mob__glion |  | 154.0 | dieser Perron? |
-| ✓ | xke0 | solothurn | ME, MZ, W2 | 22.5 | Zwischengerade, doppelter Abstand |
+| ✓ | xke0 | solothurn | MZ | 25.3 | Zwischengerade, doppelter Abstand |
 | ✓ | z6f2 | konolfingen | MX | 21.0 | DKW? |
 | ✓ | zcz3 | solothurn | G7, MX, VB2 | 18.0 | nicht verbunden |

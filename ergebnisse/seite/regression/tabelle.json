@@ -1,8 +1,9 @@
 {
- "erzeugt": "2026-11-19 15:02 UTC",
+ "erzeugt": "2026-11-20 15:43 UTC",
  "plaene": 147,
- "geaendert": 2,
+ "geaendert": 3,
  "einordnung": {
+  "Fehler? Topologie": 1,
   "gleichwertig": 2
  },
  "zeilen": [
@@ -13,7 +14,42 @@
    "abgenommen": false,
    "basis": "veröffentlicht",
    "basis_commit": "f9ec503",
-   "stellen": 0
+   "stellen": 0,
+   "letzte_aenderung": "2026-11-19T14:39",
+   "einordnung": "gleichwertig",
+   "delta": "",
+   "alt": {
+    "G3": 2,
+    "G2": 26,
+    "G6": 7,
+    "G7": 5,
+    "G8": 1,
+    "G5": 3,
+    "T7": 17,
+    "W53": 15,
+    "W55": 5,
+    "GS": 8,
+    "GG": 23,
+    "GQ": 2,
+    "GP": 3,
+    "GW": 4
+   },
+   "neu": {
+    "G3": 2,
+    "G2": 26,
+    "G6": 7,
+    "G7": 5,
+    "G8": 1,
+    "G5": 3,
+    "T7": 17,
+    "W53": 15,
+    "W55": 5,
+    "GS": 8,
+    "GG": 23,
+    "GQ": 2,
+    "GP": 3,
+    "GW": 4
+   }
   },
   {
    "key": "region_ne",
@@ -57,7 +93,7 @@
    "gruppe": "Werkzeugkasten",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -66,7 +102,7 @@
    "gruppe": "Werkzeugkasten",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -84,7 +120,7 @@
    "gruppe": "Grosse Knoten",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -93,7 +129,7 @@
    "gruppe": "Grosse Knoten",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -102,7 +138,7 @@
    "gruppe": "Bahnhöfe ohne Regionalplan",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-15)",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -121,7 +157,42 @@
    "abgenommen": false,
    "basis": "veröffentlicht",
    "basis_commit": "2482066",
-   "stellen": 0
+   "stellen": 1,
+   "letzte_aenderung": "2026-11-17T21:57",
+   "einordnung": "Fehler? Topologie",
+   "delta": "GG 4→5, T7 3→2, VD1 7→8 (Wunsch-Summe -8)",
+   "alt": {
+    "G2": 3,
+    "G6": 7,
+    "G7": 3,
+    "T7": 3,
+    "W53": 2,
+    "W56": 1,
+    "GS": 12,
+    "GG": 4,
+    "VA1": 1,
+    "VB1": 6,
+    "VB2": 14,
+    "VC1": 1,
+    "VD1": 7,
+    "VD2": 1
+   },
+   "neu": {
+    "G2": 3,
+    "G6": 7,
+    "G7": 3,
+    "T7": 2,
+    "W53": 2,
+    "W56": 1,
+    "GS": 12,
+    "GG": 5,
+    "VA1": 1,
+    "VB1": 6,
+    "VB2": 14,
+    "VC1": 1,
+    "VD1": 8,
+    "VD2": 1
+   }
   },
   {
    "key": "olten",
@@ -165,7 +236,7 @@
    "gruppe": "Olten 1 · Knoten Olten",
    "abgenommen": true,
    "basis": "bestätigt 2026-11-07",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -183,7 +254,7 @@
    "gruppe": "Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-29)",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 2,
    "letzte_aenderung": "2026-11-17T21:57",
    "einordnung": "gleichwertig",
@@ -239,7 +310,7 @@
    "gruppe": "Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil",
    "abgenommen": true,
    "basis": "bestätigt 2026-11-07",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -248,7 +319,7 @@
    "gruppe": "Olten 3 · Olten – Aarau",
    "abgenommen": true,
    "basis": "bestätigt 2026-11-07",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -257,7 +328,7 @@
    "gruppe": "Olten 3 · Olten – Aarau",
    "abgenommen": true,
    "basis": "bestätigt 2026-11-07",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -266,7 +337,7 @@
    "gruppe": "Olten 3 · Olten – Aarau",
    "abgenommen": true,
    "basis": "bestätigt 2026-11-08",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0,
    "letzte_aenderung": "2026-11-17T21:57",
    "einordnung": "vermutlich besser",
@@ -292,7 +363,36 @@
    "abgenommen": false,
    "basis": "veröffentlicht",
    "basis_commit": "f9ec503",
-   "stellen": 0
+   "stellen": 0,
+   "letzte_aenderung": "2026-11-19T14:39",
+   "einordnung": "Fehler? Topologie",
+   "delta": "GG 6→8, VB1 7→9, VD1 7→9",
+   "alt": {
+    "G2": 1,
+    "G7": 1,
+    "T7": 1,
+    "W53": 0,
+    "W56": 20,
+    "GS": 3,
+    "GG": 6,
+    "GP": 2,
+    "VB1": 7,
+    "VB2": 4,
+    "VD1": 7
+   },
+   "neu": {
+    "G2": 1,
+    "G7": 1,
+    "T7": 1,
+    "W53": 0,
+    "W56": 20,
+    "GS": 3,
+    "GG": 8,
+    "GP": 2,
+    "VB1": 9,
+    "VB2": 4,
+    "VD1": 9
+   }
   },
   {
    "key": "tecknau",
@@ -300,7 +400,7 @@
    "gruppe": "Olten 4 · Hauenstein",
    "abgenommen": true,
    "basis": "bestätigt 2026-11-07",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -309,7 +409,7 @@
    "gruppe": "Olten 4 · Hauenstein",
    "abgenommen": true,
    "basis": "bestätigt 2026-11-07",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -318,7 +418,7 @@
    "gruppe": "Olten 5 · Olten – Solothurn",
    "abgenommen": true,
    "basis": "bestätigt 2026-11-07",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -327,7 +427,7 @@
    "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-26)",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -336,7 +436,7 @@
    "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
    "abgenommen": true,
    "basis": "bestätigt 2026-11-07",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -345,7 +445,7 @@
    "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
    "abgenommen": true,
    "basis": "bestätigt 2026-11-08",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0,
    "letzte_aenderung": "2026-11-16T05:13",
    "einordnung": "gleichwertig",
@@ -373,7 +473,7 @@
    "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-15)",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -382,7 +482,7 @@
    "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-15)",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -391,7 +491,7 @@
    "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-15)",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -400,7 +500,7 @@
    "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-15)",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -409,7 +509,7 @@
    "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-16)",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -418,7 +518,7 @@
    "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-17)",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -427,7 +527,7 @@
    "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-20)",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -436,7 +536,7 @@
    "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-20)",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -445,7 +545,7 @@
    "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-20)",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -454,7 +554,7 @@
    "gruppe": "NE 2 · Ins – Sugiez – Murten",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-16)",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -463,7 +563,7 @@
    "gruppe": "NE 2 · Ins – Sugiez – Murten",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-16)",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -472,7 +572,7 @@
    "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
    "abgenommen": true,
    "basis": "bestätigt 2026-11-07",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -481,7 +581,7 @@
    "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-20)",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -490,7 +590,7 @@
    "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-19)",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -499,7 +599,7 @@
    "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-19)",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -508,7 +608,7 @@
    "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-16)",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -517,7 +617,7 @@
    "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-16)",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -526,7 +626,7 @@
    "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-19)",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -535,7 +635,7 @@
    "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-19)",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -544,7 +644,7 @@
    "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-19)",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -553,7 +653,7 @@
    "gruppe": "NE 4 · Murten – Fribourg",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-20)",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -562,7 +662,7 @@
    "gruppe": "NE 4 · Murten – Fribourg",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-20)",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -571,7 +671,7 @@
    "gruppe": "NE 4 · Murten – Fribourg",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-20)",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -580,7 +680,7 @@
    "gruppe": "NE 4 · Murten – Fribourg",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-20)",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -589,7 +689,7 @@
    "gruppe": "NE 5 · Neuchâtel – Biel",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-15)",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -598,7 +698,7 @@
    "gruppe": "NE 5 · Neuchâtel – Biel",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-15)",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -607,7 +707,7 @@
    "gruppe": "NE 5 · Neuchâtel – Biel",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-15)",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -616,7 +716,7 @@
    "gruppe": "NE 5 · Neuchâtel – Biel",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-20)",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -625,7 +725,7 @@
    "gruppe": "NE 5 · Neuchâtel – Biel",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-15)",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -634,7 +734,7 @@
    "gruppe": "NE 5 · Neuchâtel – Biel",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-17)",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -643,7 +743,7 @@
    "gruppe": "NE 5 · Neuchâtel – Biel",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-15)",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -652,7 +752,7 @@
    "gruppe": "NE 5 · Neuchâtel – Biel",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-26)",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -661,7 +761,7 @@
    "gruppe": "NE 6 · Neuchâtel – Yverdon",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-15)",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -670,7 +770,7 @@
    "gruppe": "NE 6 · Neuchâtel – Yverdon",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-20)",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -679,7 +779,7 @@
    "gruppe": "NE 6 · Neuchâtel – Yverdon",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-16)",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -688,7 +788,7 @@
    "gruppe": "NE 6 · Neuchâtel – Yverdon",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-15)",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -697,7 +797,7 @@
    "gruppe": "NE 6 · Neuchâtel – Yverdon",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-20)",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -706,7 +806,7 @@
    "gruppe": "NE 6 · Neuchâtel – Yverdon",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-20)",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -715,7 +815,7 @@
    "gruppe": "NE 6 · Neuchâtel – Yverdon",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-26)",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -724,7 +824,7 @@
    "gruppe": "NE 6 · Neuchâtel – Yverdon",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-20)",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -733,7 +833,7 @@
    "gruppe": "NE 6 · Neuchâtel – Yverdon",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-20)",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -742,7 +842,7 @@
    "gruppe": "NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-20)",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -751,7 +851,7 @@
    "gruppe": "NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-15)",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -760,7 +860,7 @@
    "gruppe": "NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-15)",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -769,7 +869,7 @@
    "gruppe": "NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-15)",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -778,7 +878,7 @@
    "gruppe": "NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-19)",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -787,7 +887,7 @@
    "gruppe": "NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-20)",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -796,7 +896,7 @@
    "gruppe": "NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-20)",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -805,7 +905,7 @@
    "gruppe": "NE 8 · Neuchâtel – La Chaux-de-Fonds",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-29)",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -814,7 +914,7 @@
    "gruppe": "NE 8 · Neuchâtel – La Chaux-de-Fonds",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-20)",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -823,7 +923,7 @@
    "gruppe": "NE 8 · Neuchâtel – La Chaux-de-Fonds",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-15)",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -832,7 +932,7 @@
    "gruppe": "NE 8 · Neuchâtel – La Chaux-de-Fonds",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-20)",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -841,7 +941,7 @@
    "gruppe": "NE 8 · Neuchâtel – La Chaux-de-Fonds",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-19)",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {
@@ -850,7 +950,7 @@
    "gruppe": "NE 8 · Neuchâtel – La Chaux-de-Fonds",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-20)",
-   "basis_commit": "682c303",
+   "basis_commit": "d7f27ad",
    "stellen": 0
   },
   {

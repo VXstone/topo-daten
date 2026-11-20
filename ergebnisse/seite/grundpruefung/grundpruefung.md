@@ -4,7 +4,7 @@
 
 | Plan | GS | GG | GQ | GP | GW | GT | Ebene |
 |---|---|---|---|---|---|---|---|
-| aarau | 3 | 6 | · | 2 | · | 1 ↓5 | 24.0 |
+| aarau | 3 | **8** (Basis 6) | · | 2 | · | 1 ↓5 | 24.0 |
 | aarburg_oftringen | · | · | · | · | · | · | 24.0 |
 | auvernier | · | 1 | · | · | · | 1 | 24.0 |
 | avenches | · | · | · | · | · | · | 24.0 |
@@ -121,7 +121,7 @@
 | saint_blaise_lac | · | · | · | · | · | · | 24.0 |
 | schonenwerd | · | · | · | · | · | · | 24.0 |
 | serrieres | · | · | · | · | · | · | 24.0 |
-| solothurn | 12 | 4 | · | · | · | 1 | 24.0 |
+| solothurn | 12 | **5** (Basis 4) | · | · | · | 1 | 24.0 |
 | sugiez | · | · | · | · | · | · | 24.0 |
 | szu__berghof | · | · | · | · | · | · | 24.0 |
 | szu__borrweg | · | · | · | · | · | · | 24.0 |
@@ -152,3 +152,21 @@
 | zofingen | · | 1 | · | · | · | · | 24.0 |
 
 Regeln: GS = Schnitt ohne DKW/Kreuzung/Niveautrennung; GG = Gleis auf Gleis; GQ = Querabstand nach Knick ≠ davor; GP = Pfeil nach innen / auf Nachbargleis; GW = Knick oder Abgang 90°; GT = Treppe
+
+## NEUE Befunde
+
+- **aarau** GG: 6 → 8
+  - 2129.1/378.8: zwei Gleise 32 px aufeinander
+  - 3125.9/210.8: zwei Gleise 30 px aufeinander
+  - 3167.6/234.7: zwei Gleise 12 px aufeinander
+  - 2979.5/282.8: zwei Gleise 20 px aufeinander
+  - 2710.6/378.8: zwei Gleise 13 px aufeinander
+  - 2583.1/210.8: zwei Gleise 83 px aufeinander
+  - 3043.9/162.8: zwei Gleise 13 px aufeinander
+  - 1335.5/306.8: zwei Gleise 14 px aufeinander
+- **solothurn** GG: 4 → 5
+  - 855.1/184.4: zwei Gleise 17 px aufeinander
+  - 1412.7/160.3: zwei Gleise 12 px aufeinander
+  - 1268.1/269.6: zwei Gleise 16 px aufeinander
+  - 1433.6/160.4: zwei Gleise 26 px aufeinander
+  - 1495.6/184.4: zwei Gleise 57 px aufeinander

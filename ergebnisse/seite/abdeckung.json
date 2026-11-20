@@ -761,11 +761,9 @@
    "text": "Zwischengerade, doppelter Abstand",
    "abgedeckt": true,
    "regeln": [
-    "ME",
-    "MZ",
-    "W2"
+    "MZ"
    ],
-   "naechster": 22.5,
+   "naechster": 25.3,
    "naechste_regel": "MZ",
    "plan_da": true
   },

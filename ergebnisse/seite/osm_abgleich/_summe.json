@@ -1,11 +1,11 @@
 {
  "aarau": {
-  "VB1": 7,
+  "VB1": 9,
   "VB2": 4,
-  "VD1": 7,
+  "VD1": 9,
   "dkw_osm_unvollstaendig": [],
   "gleise": 172,
-  "knoten_plan": 59,
+  "knoten_plan": 57,
   "dkw_plan": 0,
   "knoten_osm": 71,
   "versatz_y": 0.0,
@@ -588,15 +588,15 @@
   "VB1": 6,
   "VB2": 14,
   "VC1": 1,
-  "VD1": 7,
+  "VD1": 8,
   "VD2": 1,
   "dkw_osm_unvollstaendig": [],
-  "gleise": 115,
+  "gleise": 114,
   "knoten_plan": 59,
   "dkw_plan": 2,
   "knoten_osm": 61,
   "versatz_y": 0.0,
-  "netz_auf_plan": 1.0
+  "netz_auf_plan": 0.99
  },
  "szu__berghof": {
   "dkw_osm_unvollstaendig": [],

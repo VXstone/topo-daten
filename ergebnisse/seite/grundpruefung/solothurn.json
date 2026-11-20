@@ -2,7 +2,7 @@
  "ebene": 24.0,
  "zaehl": {
   "GS": 12,
-  "GG": 4,
+  "GG": 5,
   "GQ": 0,
   "GP": 0,
   "GW": 0,
@@ -92,6 +92,12 @@
    "x": 1412.7,
    "y": 160.3,
    "text": "zwei Gleise 12 px aufeinander"
+  },
+  {
+   "regel": "GG",
+   "x": 1268.1,
+   "y": 269.6,
+   "text": "zwei Gleise 16 px aufeinander"
   },
   {
    "regel": "GG",
