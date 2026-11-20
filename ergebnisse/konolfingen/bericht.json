@@ -7,49 +7,49 @@
   "5/6 Mittelperron 150.0 [1782] → 1694 1858 OSM-Perron",
   "geschrieben konolfingen_override.json"
  ],
- "topologie": "{'B': 2, 'F': 1}",
+ "topologie": "{'B': 2}",
  "verbindungen_abweichungen": 2,
  "verbindungen": [
-  "Abgang 460 Luzern (edge y174 x782): ABWEICHUNG",
-  "Abgang 430 Hasle-Rüegsau (side y174 x631): ABWEICHUNG"
+  "Abgang 460 Luzern (edge y187 x788): ABWEICHUNG",
+  "Abgang 430 Hasle-Rüegsau (side y187 x636): ABWEICHUNG"
  ],
  "regeln": [
   {
    "regel": "G2",
-   "x": 314.0,
-   "y": 123.2,
+   "x": 319.9,
+   "y": 136.4,
    "bahnhof": null,
    "text": "Weiche ohne Ausrundung (60°)"
   },
   {
    "regel": "G2",
-   "x": 369.5,
-   "y": 269.6,
+   "x": 375.4,
+   "y": 282.8,
    "bahnhof": null,
    "text": "Weiche ohne Ausrundung (60°)"
   },
   {
    "regel": "G7",
-   "x": 366.3,
-   "y": 269.6,
+   "x": 372.1,
+   "y": 282.8,
    "bahnhof": null,
-   "text": "Gleisende nicht angebunden, nächstes Gleis 2.8 px"
+   "text": "Gleisende nicht angebunden, nächstes Gleis 2.9 px"
   }
  ],
  "planrand": [],
  "netz": [
   {
    "regel": "T10",
-   "x": 372.6,
-   "y": 197.6,
+   "x": 375.5,
+   "y": 210.8,
    "text": "Durchfahrgleis (beidseitig ans Streckengleis angeschlossen, 489 m Nebengleis, service=siding) schwarz gezeichnet",
    "way": 23493308,
    "gleis": "44"
   },
   {
    "regel": "Z1",
-   "x": 502.0,
-   "y": 149.6,
+   "x": 507.8,
+   "y": 162.8,
    "text": "Gleisnummer 1 53 px neben der Perronmitte"
   }
  ],
@@ -60,13 +60,13 @@
   "topo_C": 0,
   "topo_D": 0,
   "topo_E": 0,
-  "topo_F": 1,
+  "topo_F": 0,
   "regel_G2": 2,
   "regel_G7": 1,
   "netz_T10": 1,
   "netz_Z1": 1,
   "boegen_pax": 11,
-  "boegen_alle": 45,
+  "boegen_alle": 48,
   "ruhe_treppen": 0,
   "ruhe_ecken": 0,
   "randabstand": 0
