@@ -4,7 +4,7 @@
   "HT2": 4,
   "HT3": 0,
   "HT4": 1,
-  "HT5": 9
+  "HT5": 10
  },
  "befunde": [
   {
@@ -197,16 +197,25 @@
    "art": "fehlt"
   },
   {
+   "regel": "HT5",
+   "x": 3708.5,
+   "y": 294.8,
+   "text": "Fahrweg Abgang 650 Lenzburg (13046508676) ↔ Gl. 14 in OSM, fehlt im Plan",
+   "von": "Abgang 650 Lenzburg (13046508676)",
+   "nach": "Gl. 14",
+   "art": "fehlt"
+  },
+  {
    "regel": "_info",
    "x": 0,
    "y": 0,
-   "text": "Fahrwege: 18/18 Ziele im Plan gefunden, OSM 74, Plan 71",
+   "text": "Fahrwege: 18/18 Ziele im Plan gefunden, OSM 74, Plan 70",
    "ohne_lage": []
   }
  ],
  "osm_abgleich": {
-  "VB1": 9,
+  "VB1": 7,
   "VB2": 4,
-  "VD1": 9
+  "VD1": 7
  }
 }

@@ -5,8 +5,8 @@
 | Plan | HT1 | HT2 | HT3 | HT4 | HT5 | Summe |
 |---|---|---|---|---|---|---|
 | olten | 13 | 25 | 7 | 2 | 176 | 223 |
+| aarau | 7 | 4 | · | 1 | 10 | 22 |
 | solothurn | 4 | 1 | · | · | 17 | 22 |
-| aarau | 7 | 4 | · | 1 | 9 ↓10 | 21 |
 | neuchatel | · | · | 2 | · | 17 | 19 |
 | szu__zurich_giesshubel | 1 | 8 | 1 | 1 | 5 | 16 |
 | rothrist | 2 | 5 | · | · | 6 | 13 |
