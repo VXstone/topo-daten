@@ -1,9 +1,15 @@
 {
  "region": "szu",
- "erzeugt": "2026-11-20 17:45 UTC",
+ "erzeugt": "2026-11-20 18:04 UTC",
  "bahnhoefe": {
   "uetliberg": {
    "name": "Uetliberg",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "ringlikon": {
+   "name": "Ringlikon",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -12,12 +18,6 @@
    "name": "Zürich Selnau",
    "ok": true,
    "befunde": "Befunde: {'B': 4}",
-   "optionen": []
-  },
-  "ringlikon": {
-   "name": "Ringlikon",
-   "ok": true,
-   "befunde": "Befunde: {}",
    "optionen": []
   },
   "zurich_binz": {
@@ -41,7 +41,7 @@
   "zurich_giesshubel": {
    "name": "Zürich Giesshübel",
    "ok": true,
-   "befunde": "Befunde: {'A': 2, 'B': 312, 'C': 1, 'F': 4}",
+   "befunde": "Befunde: {'A': 2, 'B': 311, 'C': 1, 'F': 4}",
    "optionen": []
   },
   "berghof": {
@@ -67,10 +67,10 @@
  },
  "lage_suche": {
   "ausgang": 421,
-  "ergebnis": 315,
+  "ergebnis": 317,
   "drehung": {
-   "Uetliberg": 120,
-   "Zürich Giesshübel": -30
+   "Uetliberg": 90,
+   "Zürich Giesshübel": 0
   },
   "varianten": 37
  },
@@ -82,11 +82,11 @@
   "T5": 1
  },
  "ruhe": {
-  "treppen": 5,
+  "treppen": 4,
   "ecken": 0
  },
  "regeln": {
-  "G2": 1,
+  "G2": 2,
   "G7": 1,
   "G8": 1
  },
@@ -95,7 +95,7 @@
  },
  "planrand": 0,
  "lage": {
-  "L3a": 1
+  "L3a": 2
  },
  "kennzahlen": {
   "topo_T1": 2,
@@ -109,15 +109,15 @@
   "verk_S2": 0,
   "verk_S3": 2,
   "perron_P1": 1,
-  "regel_G2": 1,
+  "regel_G2": 2,
   "regel_G7": 1,
   "regel_G8": 1,
-  "ruhe_treppen": 5,
+  "ruhe_treppen": 4,
   "ruhe_ecken": 0,
   "planrand": 0,
-  "lage_L3a": 1
+  "lage_L3a": 2
  },
- "unruhe": 635,
+ "unruhe": 629,
  "unruhe_teile": {
   "topo_T1": 100,
   "topo_T4": 50,
@@ -127,9 +127,9 @@
   "verk_S1": 50,
   "verk_S3": 100,
   "perron_P1": 30,
-  "regel_G2": 2,
+  "regel_G2": 4,
   "regel_G7": 10,
   "regel_G8": 3,
-  "ruhe_treppen": 40
+  "ruhe_treppen": 32
  }
 }

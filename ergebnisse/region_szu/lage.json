@@ -14,64 +14,63 @@
   "merge_junction_m": 200
  },
  "Zürich Selnau": [
-  1109,
-  -618
+  1153,
+  -660
  ],
  "Ringlikon": [
-  -1127,
-  343
+  -960,
+  800
  ],
  "Uetliberg": [
-  -1512,
-  440
+  -1267,
+  1001
  ],
  "Zürich Giesshübel": [
-  709,
-  87
+  624,
+  -13
  ],
  "Zürich Binz": [
-  559,
-  67
+  522,
+  46
  ],
  "Zürich Friesenberg": [
-  22,
-  153
+  37,
+  292
  ],
  "Zürich Schweighof": [
-  -203,
-  190
+  -167,
+  395
  ],
  "Berghof": [
-  -606,
-  255
+  -515,
+  571
  ],
  "Borrweg": [
-  291,
-  110
+  279,
+  169
  ],
  "Abgang 712 #11": [
-  252,
-  419
+  47,
+  0
  ],
  "drehung_auto": {
   "Zürich Selnau": -60,
-  "Ringlikon": 170.8,
-  "Uetliberg": 120,
-  "Zürich Giesshübel": -30,
-  "Zürich Binz": -9.2,
-  "Zürich Friesenberg": -9.2,
-  "Zürich Schweighof": -9.2,
-  "Berghof": -5.7,
-  "Borrweg": -6.9
+  "Ringlikon": 153.1,
+  "Uetliberg": 90,
+  "Zürich Binz": -26.9,
+  "Zürich Friesenberg": -26.9,
+  "Zürich Schweighof": -26.9,
+  "Berghof": -23.4,
+  "Borrweg": -24.5
  },
  "drehung": {
-  "Uetliberg": 120,
-  "Zürich Giesshübel": -30
+  "Uetliberg": 90,
+  "Zürich Giesshübel": 0
  },
  "suche": {
   "drehung": {
-   "Uetliberg": 120,
-   "Zürich Giesshübel": -30
+   "Uetliberg": 90,
+   "Zürich Giesshübel": 0
   }
  }
 }

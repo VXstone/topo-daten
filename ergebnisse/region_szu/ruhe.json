@@ -20,28 +20,19 @@
  {
   "regel": "T7",
   "art": "Treppe",
-  "x": 1131.1,
+  "x": 1185.1,
   "y": 196.6,
   "versatz": 34.1,
   "plan": "zurich_giesshubel",
-  "text": "zurich_giesshubel: Treppe bei x=1131.1, y=196.6"
+  "text": "zurich_giesshubel: Treppe bei x=1185.1, y=196.6"
  },
  {
   "regel": "T7",
   "art": "Treppe",
-  "x": 1475.2,
-  "y": 135.2,
-  "versatz": 50.7,
+  "x": 770.5,
+  "y": 152.6,
+  "versatz": 35.5,
   "plan": "zurich_selnau",
-  "text": "zurich_selnau: Treppe bei x=1475.2, y=135.2"
- },
- {
-  "regel": "T7",
-  "art": "Treppe",
-  "x": 1438.1,
-  "y": 147.2,
-  "versatz": 23.1,
-  "plan": "zurich_selnau",
-  "text": "zurich_selnau: Treppe bei x=1438.1, y=147.2"
+  "text": "zurich_selnau: Treppe bei x=770.5, y=152.6"
  }
 ]
