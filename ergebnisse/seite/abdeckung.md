@@ -1,4 +1,4 @@
-# Hinweis-Abdeckung 31/57
+# Hinweis-Abdeckung 30/57
 
 Befund < 40 px im selben Plan, ohne G2.
 
@@ -14,7 +14,7 @@ Befund < 40 px im selben Plan, ohne G2.
 | ✓ | 3za5 | region | G6, MZ | 4.9 | 90 Grad, statt 2 Weichen nur eine |
 | ✓ | 4xdm | region | G7 | 0.5 | Gleisanschluss dazwischen, Verbindungen prüfen |
 | ✓ | 5yz7 | mob__montreux | MQ | 27.1 | Perron zwischen 4 und 3 |
-| ✓ | 6gk4 | mob__zweisimmen | MK, MZ | 37.7 | noch ein Gleis links raus |
+| · | 6gk4 | mob__zweisimmen |  | 95.4 | noch ein Gleis links raus |
 | · | 6rwy | mob__montreux |  | 87.9 | keine Mittelperrons Normalspur |
 | ✓ | 7ma7 | solothurn | VB1, VD1 | 8.5 | Fenster bis Abzweig |
 | ✓ | 8bce | konolfingen | MX | 1.9 | Gleise hin und her, Pfeile retour |
