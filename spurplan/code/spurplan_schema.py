@@ -4007,7 +4007,10 @@ def _zg_zusammenlegen(svg_paths):
         pts = []; cur = None
         for c, a in re.findall(r"([MHLQCV])([^MHLQCV]*)", sp):
             v = [float(x) for x in re.findall(r"-?\d+(?:\.\d+)?", a)]
-            if c == "C": return None
+            if c == "C":                  # steiler S-Bogen (scurve, zu eng): als Gerade zum Endpunkt (K0b, Solothurn)
+                if not CFG.get("zg_cbogen", True): return None
+                for i in range(0, len(v) - 5, 6): cur = (v[i + 4], v[i + 5]); pts.append(cur)
+                continue
             if c == "M": cur = (v[0], v[1]); pts.append(cur)
             elif c == "H":
                 for x in v: cur = (x, cur[1]); pts.append(cur)
@@ -4040,13 +4043,37 @@ def _zg_zusammenlegen(svg_paths):
             if min(q[0] for q in P) - tol > p[0] or max(q[0] for q in P) + tol < p[0]: continue
             if any(_abst(p, a, b) <= tol for a, b in zip(P, P[1:])): return True
         return False
+    def _nahe(p, ausser, tol=1.0):
+        """(Punkt auf einem Weichenpunkt?, Teile, die p berühren)"""
+        dot = any(math.hypot(p[0] - dx_, p[1] - dy_) < 2.5 for dx_, dy_, *_r in dots); ks = set()
+        for k, T in enumerate(teile):
+            if k in ausser: continue
+            P = T[3]
+            if min(q[0] for q in P) - tol > p[0] or max(q[0] for q in P) + tol < p[0]: continue
+            if any(_abst(p, a, b) <= tol for a, b in zip(P, P[1:])): ks.add(k)
+        return dot, ks
+    r_ab = CFG["sw_radius"] + 1.5
+    def _abzweig(k, p):
+        """K0b (Hinweis Solothurn xke0): Teil k beginnt/endet als Weiche am Knick p – waagrecht bis p, dann schräg weg.
+        Gibt (Ende 0/1, Zielebene y, x-Richtung) oder None."""
+        P = teile[k][3]
+        for e, Q in ((0, P), (1, P[::-1])):
+            if len(Q) >= 3 and abs(Q[0][1] - p[1]) < 0.5 and math.dist(Q[0], p) <= r_ab and math.dist(Q[1], p) <= 1.5 \
+                    and abs(Q[2][1] - p[1]) >= 0.5:
+                return e, Q[2][1], (1 if Q[2][0] > Q[1][0] else -1)
+        return None
     key = lambda p: (round(p[0] * 2) / 2, round(p[1] * 2) / 2)
     enden = collections.defaultdict(list)
     for k, T in enumerate(teile): enden[key(T[3][0])].append((k, 0)); enden[key(T[3][-1])].append((k, 1))
     nb = {}
     for kp, l in enden.items():
-        if len(l) == 2 and l[0][0] != l[1][0] and teile[l[0][0]][0] == teile[l[1][0]][0] and not _knoten(kp, {l[0][0], l[1][0]}):
-            nb[l[0]] = l[1]; nb[l[1]] = l[0]
+        if len(l) != 2 or l[0][0] == l[1][0]: continue
+        # K0b (Zweisimmen jy8r): über den Wechsel dünn↔dick verketten, Klassengrenze wird beim Zusammenlegen auf die Schräge gelegt
+        if teile[l[0][0]][0] != teile[l[1][0]][0] and not CFG.get("zg_klassen", True): continue
+        dot_, ks_ = _nahe(kp, {l[0][0], l[1][0]})
+        if dot_: continue
+        if ks_ and not (CFG.get("zg_abzweig", True) and all(_abzweig(k, kp) for k in ks_)): continue
+        nb[l[0]] = l[1]; nb[l[1]] = l[0]
     seen = set(); ketten = []
     for k in range(len(teile)):
         if k in seen: continue
@@ -4055,18 +4082,41 @@ def _zg_zusammenlegen(svg_paths):
             j, f = nb[(cur, e)]
             if j == k: break
             cur, e = j, 1 - f; g += 1
-        pts = []; ids = []; c = cur
+        pts = []; ids = []; c = cur; grenzen = []
         while c not in seen:
-            seen.add(c); ids.append(c); P = teile[c][3] if e == 0 else teile[c][3][::-1]
+            seen.add(c); P = teile[c][3] if e == 0 else teile[c][3][::-1]
+            if ids and teile[c][0] != teile[ids[-1]][0]: grenzen.append(pts[-1])
+            ids.append(c)
             pts += P if not pts else P[1:]
             if (c, 1 - e) not in nb: break
             c, f = nb[(c, 1 - e)]; e = f
-        ketten.append((ids, _ecken_(pts)))
+        ketten.append((ids, _ecken_(pts), grenzen))
     # Gleisnummern: Stücke mit Nummer sind echte Gleise (REGELN 1.9 «ausser … Gleis mit Perron oder Nummer»)
     _nr = [(X(float(np.median([q_[0] for q_ in sg_["p"]]))), Y(seglane[sg_["id"]])) for sg_ in segs if sg_.get("ref") and sg_["id"] in seglane] if "seglane" in globals() else []
     ersatz = []; n_ = 0
-    for ids, p in ketten:
-        neu = list(p); geaendert = False; i = 1; _g = 0
+    kette_von = {t: n for n, (ids_, _p, _gr) in enumerate(ketten) for t in ids_}
+    abz_neu = {}               # Ketten-Nr. → neue Punkte (Abzweig aus der Schräge)
+    def _knick_frei(a1, a2, ids, y_lo, y_hi, sx):
+        """Waagrechtes Stück a1–a2 ohne Weiche an den Knicken – oder nur mit Abzweig(en), die auf dem Stück beginnen und auf eine
+        Ebene zwischen y_lo und y_hi in Laufrichtung sx führen (K0b Solothurn). Gibt Liste der Abzweige oder None."""
+        aus = {}; xl, xh = min(a1[0], a2[0]) - r_ab, max(a1[0], a2[0]) + r_ab
+        if CFG.get("zg_abzweig", True):
+            for k, T in enumerate(teile):
+                if k in ids: continue
+                P = T[3]
+                for e, Q in ((0, P), (1, P[::-1])):
+                    if len(Q) >= 3 and abs(Q[0][1] - a1[1]) < 0.5 and abs(Q[1][1] - a1[1]) < 0.5 and xl <= Q[0][0] <= xh \
+                            and xl <= Q[1][0] <= xh and abs(Q[2][1] - a1[1]) >= 0.5:
+                        aus[k] = (e, Q[2][1], 1 if Q[2][0] > Q[1][0] else -1)
+        for p in (a1, a2):
+            dot_, ks_ = _nahe(p, set(ids))
+            if dot_: return None
+            if any(k not in aus for k in ks_): return None
+        for k, a_ in aus.items():
+            if not (min(y_lo, y_hi) + 0.5 < a_[1] < max(y_lo, y_hi) - 0.5) or a_[2] != sx: return None
+        return list(aus.items())
+    for ids, p, grenzen in ketten:
+        neu = list(p); geaendert = False; i = 1; _g = 0; abz = []; slope = None; zonen = []
         while i < len(neu) - 2 and _g < 200:
             _g += 1
             a0, a1, a2, a3 = neu[i - 1], neu[i], neu[i + 1], neu[i + 2]
@@ -4074,11 +4124,17 @@ def _zg_zusammenlegen(svg_paths):
             ok = abs(a2[1] - a1[1]) <= 0.3 and 0.3 < L < lmax and abs(dy1) >= 0.5 and abs(dy3) >= 0.5 and (dy1 > 0) == (dy3 > 0) \
                 and abs(a0[1] - (neu[i - 2][1] if i >= 2 else a0[1])) <= 0.3 and abs(a3[1] - (neu[i + 3][1] if i + 3 < len(neu) else a3[1])) <= 0.3 \
                 and (a3[0] - a0[0]) * (a2[0] - a1[0]) > 0
-            if ok and not _knoten(a1, set(ids)) and not _knoten(a2, set(ids)) \
-                    and not any(min(a1[0], a2[0]) - 2 <= x <= max(a1[0], a2[0]) + 2 and abs(y - a1[1]) < 1.0 for x, y in _nr):
-                sx = 1 if a3[0] > a0[0] else -1; run = abs(a3[1] - a0[1]) / t60
+            sx = 1 if a3[0] > a0[0] else -1
+            f1 = _knick_frei(a1, a2, ids, a0[1], a3[1], sx) if ok else None; f2 = []
+            if ok and f1 is not None \
+                    and not any(min(a1[0], a2[0]) - 2 <= x <= max(a1[0], a2[0]) + 2 and abs(y - a1[1]) < 1.0 for x, y in _nr) \
+                    and not ((f1 or f2) and slope is not None):
+                run = abs(a3[1] - a0[1]) / t60
                 if abs(a3[0] - a0[0]) + 0.5 >= run:
                     xs = (a0[0] + a3[0]) / 2 - sx * run / 2
+                    if f1 or f2: abz = [(k_, a_, ((xs, a0[1]), (xs + sx * run, a3[1]))) for k_, a_ in f1 + f2]
+                    slope = ((xs, a0[1]), (xs + sx * run, a3[1]))
+                    zonen.append((min(a0[0], a3[0]), max(a0[0], a3[0]), slope))
                     neu[i - 1:i + 3] = [a0, (xs, a0[1]), (xs + sx * run, a3[1]), a3]
                     neu = _ecken_(neu); geaendert = True; n_ += 1
                     if ARGS.dbg: print("ZG zusammengelegt", [(round(x, 1), round(y, 1)) for x, y in (a1, a2)])
@@ -4091,16 +4147,61 @@ def _zg_zusammenlegen(svg_paths):
             for a_i, b_i in ((0, 1), (-1, -2)):
                 if len(neu) < 3: break
                 pa, pb = neu[a_i], neu[b_i]
-                if abs(pa[1] - pb[1]) <= 0.3 and abs(pb[0] - pa[0]) > r_ + 0.5 \
+                kl_ = teile[ids[0 if a_i == 0 else -1]][0]
+                weiter_ = any(T_[0] == kl_ and min(math.dist(pa, T_[3][0]), math.dist(pa, T_[3][-1])) <= 3.0
+                              for k, T_ in enumerate(teile) if k not in ids)   # dicker Fahrweg setzt dort fort (Solothurn)
+                if abs(pa[1] - pb[1]) <= 0.3 and abs(pb[0] - pa[0]) > r_ + 0.5 and not weiter_ \
                         and _knoten(((pa[0] + pb[0]) / 2, pa[1]), set(ids)) and _knoten(pa, set(ids)):
                     neu[a_i] = (pb[0] - math.copysign(r_, pb[0] - pa[0]), pa[1])
-            ersatz.append((ids, neu))
+            # Abzweig direkt aus der Schräge (K0b Solothurn): Weiche dort, wo die Schräge die Ebene des Abzweigs kreuzt
+            for k_, (e_, yb_, sxb_), (s0_, s1_) in abz:
+                n_k = kette_von.get(k_)
+                if n_k is None or n_k in abz_neu: continue
+                kids_, kp_, _gr = ketten[n_k]
+                Q = kp_ if math.dist(kp_[0], teile[k_][3][0 if e_ == 0 else -1]) < 0.6 else kp_[::-1]
+                j_ = next((j for j in range(1, len(Q)) if abs(Q[j][1] - yb_) < 0.3), None)
+                if j_ is None: continue
+                t_ = (yb_ - s0_[1]) / (s1_[1] - s0_[1]); xw = s0_[0] + t_ * (s1_[0] - s0_[0])
+                if (Q[-1][0] - xw) * sxb_ <= r_ + 1: continue
+                ux_, uy_ = s1_[0] - s0_[0], s1_[1] - s0_[1]; L_ = math.hypot(ux_, uy_)
+                # von der Schräge her: Punkt um r vor der Weiche auf der Schräge (Seite, von der der Abzweig kommt)
+                sg_ = -1 if (yb_ - s0_[1]) * (s1_[1] - s0_[1]) > 0 and abs(yb_ - s0_[1]) > 1e-6 else 1
+                vor = (xw - ux_ / L_ * r_ * 1.0, yb_ - uy_ / L_ * r_ * 1.0)
+                abz_neu[n_k] = [vor, (xw, yb_), (xw + sxb_ * max(r_, 0.5), yb_)] + [q for q in Q[j_:] if (q[0] - xw) * sxb_ > r_]
+            ersatz.append((ids, neu, grenzen, zonen))
     if not ersatz: return 0
     weg = collections.defaultdict(set)
-    for ids, neu in ersatz:
-        k_ = teile[ids[0]][0]
+    for ids, neu, grenzen, zonen in ersatz:
         for t in ids: weg[(teile[t][0], teile[t][1])].add(teile[t][2])
-        svg_paths[k_].append(_rund(neu, CFG["sw_radius"]))
+        k0_ = teile[ids[0]][0]
+        if not grenzen:
+            svg_paths[k0_].append(_rund(neu, CFG["sw_radius"])); continue
+        # Klassengrenzen (dünn↔dick, K0b Zweisimmen): lag eine Grenze im zusammengelegten Bereich (zwischen den beiden alten
+        # Schrägen), kommt sie in die Mitte der neuen Schräge; sonst bleibt sie an ihrer Stelle.
+        def _proj(gm):
+            j_ = min(range(len(neu) - 1), key=lambda j: _abst(gm, neu[j], neu[j + 1]))
+            a_, b_ = neu[j_], neu[j_ + 1]; dx_, dy_ = b_[0] - a_[0], b_[1] - a_[1]; L2_ = dx_ * dx_ + dy_ * dy_ or 1
+            t_ = max(0, min(1, ((gm[0] - a_[0]) * dx_ + (gm[1] - a_[1]) * dy_) / L2_)); return j_ + t_, (a_[0] + t_ * dx_, a_[1] + t_ * dy_)
+        pos = []
+        for g_ in grenzen:
+            z_ = next((z for z in zonen if z[0] + 0.5 < g_[0] < z[1] - 0.5), None)
+            gm = ((z_[2][0][0] + z_[2][1][0]) / 2, (z_[2][0][1] + z_[2][1][1]) / 2) if z_ else g_
+            pos.append(_proj(gm))
+        pos.sort(key=lambda q: q[0])
+        kl = k0_; start = 0.0; rest = list(neu); stuecke = []
+        cur_pts = []; prev = 0
+        for u_, pm in pos:
+            j_ = int(u_)
+            stuecke.append((kl, neu[prev:j_ + 1] + [pm] if not cur_pts else cur_pts + neu[prev:j_ + 1] + [pm]))
+            cur_pts = [pm]; prev = j_ + 1; kl = not kl
+        stuecke.append((kl, cur_pts + neu[prev:]))
+        for kl_, pts_ in stuecke:
+            pts_ = [q for n_, q in enumerate(pts_) if n_ == 0 or math.dist(q, pts_[n_ - 1]) > 0.05]
+            if len(pts_) >= 2: svg_paths[kl_].append(_rund(pts_, CFG["sw_radius"]))
+    for n_k, pts_ in abz_neu.items():
+        kids_ = ketten[n_k][0]
+        for t in kids_: weg[(teile[t][0], teile[t][1])].add(teile[t][2])
+        svg_paths[teile[kids_[0]][0]].append(_rund(pts_, CFG["sw_radius"]))
     for (k_, j_), subs in weg.items():
         rest = [sp_.strip() for sp_ in re.split(r"(?=M)", svg_paths[k_][j_]) if sp_.strip() and sp_.strip() not in subs]
         svg_paths[k_][j_] = " ".join(rest)
