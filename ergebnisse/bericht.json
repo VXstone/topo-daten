@@ -1,6 +1,6 @@
 {
- "erzeugt": "2026-11-20 16:17 UTC",
- "lauf": "https://github.com/VXstone/topo-daten/actions/runs/44771658334",
+ "erzeugt": "2026-11-20 17:22 UTC",
+ "lauf": "https://github.com/VXstone/topo-daten/actions/runs/44782407554",
  "bahnhoefe": {
   "neuchatel": {
    "ok": true,
@@ -33,7 +33,7 @@
   "konolfingen": {
    "ok": true,
    "fehler": null,
-   "topologie": "{'B': 2}",
+   "topologie": "{'B': 2, 'F': 1}",
    "verbindungen_abweichungen": 2,
    "gleich_wie_vergleich": null,
    "regeln": {
@@ -46,10 +46,12 @@
    },
    "differenz_stellen": null,
    "qualitaet": {
-    "status": "besser",
-    "schlechter": {},
+    "status": "schlechter",
+    "schlechter": {
+     "topo_F": 1
+    },
     "besser": {
-     "boegen_alle": -3,
+     "boegen_alle": -6,
      "netz_A1": -2,
      "netz_D11": -1,
      "netz_F7": -1,
@@ -60,14 +62,15 @@
      "topo_A": -1
     },
     "topologie_offen": {
-     "topo_B": 2
+     "topo_B": 2,
+     "topo_F": 1
     },
     "neu": {
      "netz_Z1": 1,
      "ruhe_treppen": 0,
      "ruhe_ecken": 0
     },
-    "unruhe": 118,
+    "unruhe": 168,
     "unruhe_basis": 196
    }
   },

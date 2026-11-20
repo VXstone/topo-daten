@@ -8,58 +8,59 @@ $ spurplan_schema.py --src konolfingen.json --nowarp
 Bahnhof Konolfingen: Achse 3695 m, Ausschnitt s=1206…2230, 29 Weichen, 3 Perrons
 R1c Bündel kompakt: [('verbindung_schraeg', 156705005, 6, 1884, 1964), ('ebene_leer', 6)]
 G6: 1 Überstand(e) vor Ausrundung gekürzt
-chains 17 lanes 12 segs 62 W 1256 H 518
+chains 17 lanes 11 segs 62 W 1256 H 505
 
 $ spurplan_warp.py konolfingen
 Optimization terminated successfully. (HiGHS Status 7: Optimal)
-Breite linear 942 px -> entzerrt 612 px
+Breite linear 942 px -> entzerrt 606 px
 
 $ spurplan_schema.py --src konolfingen.json
 Bahnhof Konolfingen: Achse 3695 m, Ausschnitt s=1206…2230, 29 Weichen, 3 Perrons
 R1c Bündel kompakt: [('verbindung_schraeg', 156705005, 6, 1884, 1964), ('ebene_leer', 6)]
 G6: 3 Überstand(e) vor Ausrundung gekürzt
-chains 17 lanes 12 segs 62 W 929 H 518
+chains 17 lanes 11 segs 62 W 923 H 505
 
 $ spurplan_warp.py konolfingen
 Optimization terminated successfully. (HiGHS Status 7: Optimal)
-Breite linear 942 px -> entzerrt 612 px
+Breite linear 942 px -> entzerrt 606 px
 
 $ spurplan_schema.py --src konolfingen.json
 Bahnhof Konolfingen: Achse 3695 m, Ausschnitt s=1206…2230, 29 Weichen, 3 Perrons
 R1c Bündel kompakt: [('verbindung_schraeg', 156705005, 6, 1884, 1964), ('ebene_leer', 6)]
 G6: 3 Überstand(e) vor Ausrundung gekürzt
-chains 17 lanes 12 segs 62 W 929 H 518
+chains 17 lanes 11 segs 62 W 923 H 505
 
 $ spurplan_check.py --src konolfingen.json --out /tmp/spurplan_lauf/_check_konolfingen.svg
 Bahnhof Konolfingen: Achse 3695 m, Ausschnitt s=1206…2230, 29 Weichen, 3 Perrons
 R1c Bündel kompakt: [('verbindung_schraeg', 156705005, 6, 1884, 1964), ('ebene_leer', 6)]
 G6: 3 Überstand(e) vor Ausrundung gekürzt
-chains 17 lanes 12 segs 62 W 929 H 518
-Befunde: {'B': 2}
-eindeutig: {'B': 2}
-B x=   397 y=  283  Überlagerung 22px: 11 (way 33390862) / yard (way 739598378)
-B x=   397 y=  283  Überlagerung 22px: Gleis (way 606745360) / yard (way 739598378)
+chains 17 lanes 11 segs 62 W 923 H 505
+Befunde: {'B': 2, 'F': 1}
+eindeutig: {'B': 2, 'F': 1}
+B x=   391 y=  270  Überlagerung 22px: 11 (way 33390862) / yard (way 739598378)
+B x=   391 y=  270  Überlagerung 22px: Gleis (way 606745360) / yard (way 739598378)
+F x=   314 y=  123  Weiche falsch herum: Weichenanfang in OSM spur (way 156705034), gezeichnet S41 (way 156705026)
 
 $ spurplan_schema.py --src konolfingen.json --bare --out konolfingen_bare.svg
 Bahnhof Konolfingen: Achse 3695 m, Ausschnitt s=1206…2230, 29 Weichen, 3 Perrons
 R1c Bündel kompakt: [('verbindung_schraeg', 156705005, 6, 1884, 1964), ('ebene_leer', 6)]
 G6: 3 Überstand(e) vor Ausrundung gekürzt
-chains 17 lanes 12 segs 62 W 929 H 436
+chains 17 lanes 11 segs 62 W 923 H 423
 
 Verbindungsprüfung konolfingen: 0 Perrongleise, 5 Abgänge (Personenverkehr)
-  Abgang 460 Bern (edge y187 x177): ok (3 Ziele)
-  Abgang 460 Luzern (edge y187 x788): ABWEICHUNG
-        zu viel im Plan: 430 Hasle-Rüegsau (side y187 x636)
-  Abgang 460 Luzern (edge y211 x788): ok (2 Ziele)
-  Abgang 430 Steffisburg (side y283 x375): ok (3 Ziele)
-  Abgang 430 Hasle-Rüegsau (side y187 x636): ABWEICHUNG
-        zu viel im Plan: 460 Luzern (edge y187 x788)
+  Abgang 460 Bern (edge y174 x177): ok (3 Ziele)
+  Abgang 460 Luzern (edge y174 x782): ABWEICHUNG
+        zu viel im Plan: 430 Hasle-Rüegsau (side y174 x631)
+  Abgang 460 Luzern (edge y198 x782): ok (2 Ziele)
+  Abgang 430 Steffisburg (side y270 x370): ok (3 Ziele)
+  Abgang 430 Hasle-Rüegsau (side y174 x631): ABWEICHUNG
+        zu viel im Plan: 460 Luzern (edge y174 x782)
 → 2 Abweichungen
 Weichen ohne Ausrundung (Linienende unter >35° auf Gleis): 3
-   x375 y283  60°
-   x622 y211  36°
-   x636 y187  37°
+   x370 y270  60°
+   x617 y198  36°
+   x630 y174  36°
 
 Netzprüfung konolfingen: {'T10': 1, 'Z1': 1}; Durchfahrgleise 3
-  T10  x=375.5 y=210.8  Durchfahrgleis (beidseitig ans Streckengleis angeschlossen, 489 m Nebengleis, service=siding) schwarz gezeichnet  (way 23493308)
-  Z1   x=507.8 y=162.8  Gleisnummer 1 53 px neben der Perronmitte
+  T10  x=372.6 y=197.6  Durchfahrgleis (beidseitig ans Streckengleis angeschlossen, 489 m Nebengleis, service=siding) schwarz gezeichnet  (way 23493308)
+  Z1   x=502.0 y=149.6  Gleisnummer 1 53 px neben der Perronmitte
