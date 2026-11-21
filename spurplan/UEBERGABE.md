@@ -106,8 +106,10 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - [x] **K0 Sichtbar: Ins im Regionalplan + Zwischengeraden im Bahnhofplan** – 19.11. nachmittags, Commits 83a0dc2/64a3fa4, Seite v156 (Nachtrag K0)
 - [x] **K0b Zwischengeraden Rest (REGELN 1.9)** (v157, 20.11.)
 - [x] **V3 Bahnhofregister + OSM-Verdacht + Sperre «veraltet»** – 20.11. abends, Commits 5e32a01/ce5b16c, Seite v158 (Nachtrag V3)
-- [~] **V4 NE in den gemeinsamen Bauweg** (REGELN 0.9/4.11) – 20.11. spät: Bauweg steht (d979b78, 0c47dd1), Seite **nicht** veröffentlicht – G0 rot (Nachtrag V4)
-- [ ] **V4b G0 grün + veröffentlichen** (klein): Treppe Les Deurres–Vauseyon im Regionalplan NE, T7-Artefakt Prüfkreis, Liste «einfacher» – **vor** K0c
+- [x] **V4 NE in den gemeinsamen Bauweg** (REGELN 0.9/4.11) – 20.11. spät Bauweg (d979b78, 0c47dd1), mit V4b veröffentlicht (v160)
+- [x] **V4b G0 grün + veröffentlichen** – 21.11. vormittags, Commit 16ca65c, Seite v160 (Nachtrag V4b)
+- [ ] **V4c NE: HT-Befunde abbauen** (mittel): Netzmodell folgt der Typvorlage; echte HT in Le Landeron, Riedbach, Colombier … – siehe Schritt V4c
+- [ ] **V4d NE ruhig + Nebengleise kürzen** (mittel, REGELN 4.5/5.9): S-Kurven pjyb/vpkw/zlwn, W59-Kürzung nach Daniels Wahl – siehe V4d
 - [ ] **K0c Selnau parallel (REGELN 2.2, `r34_kette`)** (klein) – siehe Nachtrag 20.11. ~19:15; nach V3/V4, vor T-SZU1
 - [ ] **V5 ein Lauf für alle Regionen** / **V6 Netz West (Neuchâtel–Biel–Solothurn–Olten)** – danach – Zweisimmen (dünn→dick am Knick), Solothurn (Weiche am Knick, doppelter Abstand), Selnau (ZL ~4 Ebenen, nur auf Daniels Antwort); Liste `ergebnisse/seite/zwischengeraden.md` – vor oder nach T-SZU1, wie Daniel will
 - [ ] **T-SZU1 DKW aus 4-Arm-Weiche (REGELN 2.4) und Güterverkehr schwarz (REGELN 1.21)** (klein, Entscheid Daniel 18.11.) – nach K0
@@ -321,7 +323,22 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   Weiche, T7 zählt ihn als Anschluss (Gümmenen, Ligerz: Geometrie gleich) → T7 soll Prüfkreise ignorieren. region_ne G2 35→32, W53 8→10 erklären.
 - (3) Liste «einfacher als abgenommen» (REGELN 0.9): W59 (5.9) misst, kürzt noch nichts. Höchste Werte: Cornaux 12, Onnens 12, Travers 5,
   Colombier 3 – Kürzung als eigener Code-Schritt, Daniel zuerst die Liste zeigen.
-- Fertig: seite grün, Seite veröffentlicht (NE-Karten «aus Code»), offene NE-Hinweise pjyb/vpkw/zlwn angesehen.
+- Fertig: seite grün, Seite veröffentlicht (NE-Karten «aus Code»), offene NE-Hinweise pjyb/vpkw/zlwn angesehen. **Erledigt 21.11. (v160).**
+
+### V4c – NE: HT-Befunde abbauen (aus V4b, 21.11.)
+- Einstieg: «Weiter mit UEBERGABE.md – Schritt V4c: NE HT»
+- Anlass: 53 NE-Pläne seit V4 erstmals von HT gemessen; Ausgangsstand steht in `hauptgleis_basis.json` (80 Befunde). Zwei Arten:
+  (a) **Messartefakt Typvorlage**: `vorlage.py` zeichnet die Weiche an der Standardstelle, `<b>_netz.json` (spurplan_schema) hat
+  noch die OSM-Lage → Paar HT1+HT2 (Gümmenen, Sugiez, Muntschemier, Galmiz, Pensier …). Lösung: vorlage.py schreibt das Netzmodell
+  mit (Weichen/Abzweige an der gezeichneten Stelle, OSM-Knoten bleiben). (b) **echt oder unklar**: Le Landeron (HT2 6, HT5 5),
+  Riedbach (HT2 7), Colombier (HT3 3), Cornaux/Gorgier/Bevaix HT5 – je Plan ansehen, Zielplan an Daniel.
+- Fertig: Basis NE sinkt (Artefakte weg), echte Fehler als Hinweis-Liste bzw. behoben, Seite veröffentlicht.
+
+### V4d – NE ruhig und Nebengleise kürzen (aus V4b, 21.11.)
+- Einstieg: «Weiter mit UEBERGABE.md – Schritt V4d: NE ruhig»
+- Zielplan Regionalplan NE: S-Kurve Riedbach–Bern Brünnen (Hinweis pjyb), Knick vor Muntelier (vpkw), leichte S-Kurve vor
+  Tüscherz (zlwn) – REGELN 4.5. Dazu W59-Kürzung (REGELN 5.9) erst nach Daniels Wahl aus der Liste (Cornaux 12, Onnens 12,
+  Travers 5, Colombier 3; ausserhalb NE Rothrist 21, Thun 16, Zofingen 10).
 
 ### K0b – Zwischengeraden Rest (aus K0, 19.11.)
 - Einstieg: «Weiter mit UEBERGABE.md – Schritt K0b: Zwischengeraden Rest»
@@ -742,3 +759,12 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - bauen.py: NE-Karten aus dem Bau («aus Code · NE-Bauweg»), Gruppe/Status aus zusatz_plaene.json. `veraltet_basis` ohne NE (bleiben Basel, Bern, Referenzen).
 - 13 Pläne geändert (Auvernier, Bevaix, Bôle, Chambrelien, Colombier, Cornaux, Marin, Onnens, Riedbach, Travers, Twann, Murten, Ins) – alle Topologie
   gleich, Differenzbilder angesehen; Typvorlagen byte-gleich. W59 (REGELN 5.9) gemessen, Gewicht 0. Rest → V4b.
+
+### 21.11.2026 ~11:55 – Schritt V4b abgeschlossen, Seite v160 (Commit 16ca65c, ergebnisse 476a7bc)
+- Treppe Les Deurres → Vauseyon: Auslöser war Murten (Abgang Fribourg 19 px verschoben → Netz 4 px verschoben → Vauseyon-Port
+  auf der anderen Seite der Portgeraden, Kandidat «Knick am Schnittpunkt» fiel weg). Neu REGELN 4.5 `schraeg_port`: Ende ≤ 8°
+  neben der Portgeraden → schräge Gerade, Knick am Port. Lokal nachstellbar (lokal = Workflow). Wirkung: NE nur Vauseyon, Olten
+  gleich, Vereina 1 Stelle ruhiger (Sasslatsch-Abzweig eine Gerade bis zum Portal). Bisektion: `netz_lage.py` direkt in /tmp/region_ne (5 s).
+- T7 (ruhe.py) zählt den orangen Prüfkreis nicht mehr als Anschluss → Regression 18 → 1 «schlechter?» (Bôle W56 6→7, aus V4 bekannt).
+- Sperre HT wäre ebenfalls rot gewesen: 53 NE-Pläne erstmals gemessen → Ausgangsstand in die Basis (wie HT-Einführung 18.11.) → V4c.
+- Hinweise pjyb/vpkw/zlwn beantwortet (Stellen noch da) → V4d. Abnahmen unverändert (69).
