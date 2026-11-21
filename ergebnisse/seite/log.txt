@@ -65,14 +65,11 @@ Hinweis-Abdeckung: 30/57 (Befund < 40 px, ohne G2)
 index.html 2047 KB, 149 Pläne
 /home/runner/work/topo-daten/topo-daten/spurplan/code/alle_plaene_pruefen.py:231: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
   json.dump(dict(erzeugt=datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"), plaene=len(zeilen), geaendert=len(gz),
-region_ne                    veröffentlicht                     41 Stellen  vermutlich besser  G2 35→32, T7 6→5, W53 8→9 (Wunsch-Summe -2)
-region_vereina               veröffentlicht                      1 Stellen  gleichwertig  
 olten                        bestätigt 2026-11-08                0 Stellen  gleichwertig  OSM VB1 13, VB2 25, VC1 7, VD1 10 (kein Alt-Stand)
 olten_hammer                 bestätigt 2026-11-07                0 Stellen  gleichwertig  OSM VB1 1 (kein Alt-Stand)
 rothrist                     Archivbeginn (Abnahme 2026-10-29)    2 Stellen  gleichwertig  OSM VA2 1, VB1 4, VB2 6 (kein Alt-Stand)
 zofingen                     bestätigt 2026-11-08               26 Stellen  vermutlich besser  W59 11→10 · OSM VA2 2, VB1 3, VD1 1 (kein Alt-Stand)
 schonenwerd                  bestätigt 2026-11-08                0 Stellen  vermutlich besser  GG 1→0 · OSM VB2 2, VD1 1 (kein Alt-Stand)
-aarau                        veröffentlicht                      0 Stellen  gleichwertig  
 laufelfingen                 bestätigt 2026-11-07                0 Stellen  gleichwertig  OSM ok (kein Alt-Stand)
 neuchatel                    bestätigt 2026-11-08                0 Stellen  gleichwertig  OSM VA2 4, VC1 2, VD1 3 (kein Alt-Stand)
 saint_blaise_lac             Archivbeginn (Abnahme 2026-10-15)    1 Stellen  gleichwertig  OSM VB1 3, VB2 2, VD1 1 (kein Alt-Stand)
@@ -126,5 +123,5 @@ corcelles_peseux             Archivbeginn (Abnahme 2026-10-15)    0 Stellen  gle
 chambrelien                  Archivbeginn (Abnahme 2026-10-20)    2 Stellen  gleichwertig  OSM VA1 1, VB1 1 (kein Alt-Stand)
 les_geneveys_sur_coffrane    Archivbeginn (Abnahme 2026-10-19)    1 Stellen  gleichwertig  OSM VB1 2, VB2 2, VD1 1 (kein Alt-Stand)
 les_hauts_geneveys           Archivbeginn (Abnahme 2026-10-20)    2 Stellen  gleichwertig  OSM VB2 1, VD1 1 (kein Alt-Stand)
-Regression: 147 Pläne, 36 geändert {'vermutlich besser': 2, 'gleichwertig': 33, 'schlechter?': 1}
+Regression: 147 Pläne, 34 geändert {'gleichwertig': 32, 'vermutlich besser': 1, 'schlechter?': 1}
 Ausnahmen: 910 Einträge, 125 Orte: {'Schalter': 351, 'Ortswissen': 245, 'Geometrie': 188, 'Typvorlage': 126} | ohne Grund: 0
