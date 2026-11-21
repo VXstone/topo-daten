@@ -337,8 +337,9 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 ### V4d – NE ruhig und Nebengleise kürzen (aus V4b, 21.11.)
 - Einstieg: «Weiter mit UEBERGABE.md – Schritt V4d: NE ruhig»
 - Zielplan Regionalplan NE: S-Kurve Riedbach–Bern Brünnen (Hinweis pjyb), Knick vor Muntelier (vpkw), leichte S-Kurve vor
-  Tüscherz (zlwn) – REGELN 4.5. Dazu W59-Kürzung (REGELN 5.9) erst nach Daniels Wahl aus der Liste (Cornaux 12, Onnens 12,
-  Travers 5, Colombier 3; ausserhalb NE Rothrist 21, Thun 16, Zofingen 10).
+  Tüscherz (zlwn) – REGELN 4.5. Dazu W59-Kürzung (REGELN 5.9): Daniel 21.11.: **Onnens-Bonvillars kürzen** («eher zu lang»),
+  **Cornaux nicht** («wirkt gut gedrängt», W59 misst dort Überlänge, die keine ist → Messung prüfen). Rest der Liste (Travers 5,
+  Colombier 3; Rothrist 21, Thun 16, Zofingen 10) noch offen.
 
 ### K0b – Zwischengeraden Rest (aus K0, 19.11.)
 - Einstieg: «Weiter mit UEBERGABE.md – Schritt K0b: Zwischengeraden Rest»
