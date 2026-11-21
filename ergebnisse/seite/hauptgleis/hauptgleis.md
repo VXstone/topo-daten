@@ -9,23 +9,23 @@
 | aarau | 7 | 4 | · | 1 | 9 ↓10 | 21 |
 | neuchatel | · | · | 2 | · | 17 | 19 |
 | szu__zurich_giesshubel | 1 | 8 | 1 | 1 | 5 | 16 |
-| le_landeron | **2** (Basis 1) | **6** (Basis 1) | · | · | 5 ↓6 | 13 |
+| le_landeron | **2** (Basis 1) | **6** (Basis 0) | · | · | 5 | 13 |
 | riedbach | **4** (Basis 0) | **7** (Basis 1) | · | · | 2 | 13 |
 | rothrist | 2 | 5 | · | · | 6 | 13 |
-| bevaix | **4** (Basis 0) | **3** (Basis 0) | · | · | **5** (Basis 4) | 12 |
-| bern_brunnen_westside | **7** (Basis 2) | **4** (Basis 0) | · | · | 0 ↓3 | 11 |
+| bevaix | **4** (Basis 0) | **3** (Basis 0) | · | · | **5** (Basis 3) | 12 |
+| bern_brunnen_westside | **7** (Basis 2) | **4** (Basis 0) | · | · | 0 ↓2 | 11 |
 | gorgier_saint_aubin | **3** (Basis 1) | **3** (Basis 1) | · | · | 5 ↓7 | 11 |
-| tuscherz | **4** (Basis 0) | **4** (Basis 1) | · | · | **2** (Basis 1) | 10 |
+| tuscherz | **4** (Basis 1) | **4** (Basis 1) | · | · | **2** (Basis 1) | 10 |
 | konolfingen | · | 2 | · | · | 7 | 9 |
 | daniken | 2 | · | · | · | 6 | 8 |
 | grandson | **5** (Basis 2) | **2** (Basis 0) | · | · | 1 ↓4 | 8 |
 | cornaux | · | 1 | 1 | · | 5 | 7 |
 | mob__zweisimmen | · | 4 | · | · | 3 | 7 |
-| serrieres | **3** (Basis 1) | **3** (Basis 2) | · | · | 1 ↓3 | 7 |
 | neuchatel_vauseyon | · | 1 | · | · | 5 | 6 |
 | rosshausern | **4** (Basis 2) | **2** (Basis 0) | · | · | 0 ↓3 | 6 |
 | saint_blaise_cff | · | **4** (Basis 0) | · | · | **2** (Basis 0) | 6 |
-| avenches | **3** (Basis 2) | **2** (Basis 1) | · | · | · | 5 |
+| serrieres | **3** (Basis 0) | **3** (Basis 0) | · | · | · | 6 |
+| avenches | **3** (Basis 1) | **2** (Basis 0) | · | · | · | 5 |
 | mob__chamby | 2 | 1 | · | 1 | 1 | 5 |
 | mob__montreux | · | 5 | · | · | · | 5 |
 | saint_blaise_lac | **3** (Basis 1) | **2** (Basis 0) | · | · | · | 5 |
@@ -38,7 +38,7 @@
 | munchenwiler_courgevaux | **2** (Basis 0) | **2** (Basis 0) | · | · | · | 4 |
 | muntelier_lowenberg | **2** (Basis 0) | **2** (Basis 0) | · | · | · | 4 |
 | noiraigue | **2** (Basis 0) | **2** (Basis 0) | · | · | · | 4 |
-| sugiez | **2** (Basis 0) | **2** (Basis 1) | · | · | · | 4 |
+| sugiez | **2** (Basis 0) | **2** (Basis 0) | · | · | · | 4 |
 | vereina__klosters_platz | 3 | · | · | · | 1 | 4 |
 | zihlbruecke | **1** (Basis 0) | **1** (Basis 0) | · | · | 2 | 4 |
 | bole | · | 2 | 1 | · | · | 3 |
@@ -85,7 +85,7 @@
 | la_presta_mines_d_asphalte | · | · | · | · | · | 0 |
 | laufelfingen | · | · | · | · | · | 0 |
 | les_deurres | · | · | · | · | · | 0 |
-| les_hauts_geneveys | · | 0 ↓1 | · | · | · | 0 |
+| les_hauts_geneveys | · | · | · | · | · | 0 |
 | marin_epagnier | · | · | · | · | · | 0 |
 | mob__allieres | · | · | · | · | · | 0 |
 | mob__belmont_sur_montreux | · | · | · | · | · | 0 |
@@ -144,11 +144,11 @@ Regeln: HT1 = OSM-Weiche am Hauptgleis ohne Abzweig im Plan; HT2 = Abzweig am Ha
 
 ## NEUE Befunde
 
-- **avenches** HT1: 2 → 3
+- **avenches** HT1: 1 → 3
   - 555.9/134.2: OSM-Weiche 1975565269 ohne Abzweig im Plan
   - 338.8/134.2: OSM-Weiche 1975565235 ohne Abzweig im Plan
   - 796.0/134.2: OSM-Weiche 1975565340 ohne Abzweig im Plan
-- **avenches** HT2: 1 → 2
+- **avenches** HT2: 0 → 2
   - 390.0/134.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
   - 573.9/110.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
 - **bern_brunnen_westside** HT1: 2 → 7
@@ -173,7 +173,7 @@ Regeln: HT1 = OSM-Weiche am Hauptgleis ohne Abzweig im Plan; HT2 = Abzweig am Ha
   - 651.7/110.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
   - 711.4/110.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
   - 410.0/134.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-- **bevaix** HT5: 4 → 5
+- **bevaix** HT5: 3 → 5
   - 576.4/122.0: Fahrweg Abgang 210 Yverdon (12594175178) ↔ Gl. 1 im Plan, nicht in OSM
   - 504.2/122.0: Fahrweg Abgang 210 Yverdon (12594175178) ↔ Gl. 541 im Plan, nicht in OSM
   - 570.9/122.0: Fahrweg Abgang 210 Yverdon (12594175178) ↔ Gl. 651 im Plan, nicht in OSM
@@ -229,7 +229,7 @@ Regeln: HT1 = OSM-Weiche am Hauptgleis ohne Abzweig im Plan; HT2 = Abzweig am Ha
 - **le_landeron** HT1: 1 → 2
   - 1309.6/134.0: OSM-Weiche 632541285 ohne Abzweig im Plan
   - 1348.5/158.0: OSM-Weiche 468396891 ohne Abzweig im Plan
-- **le_landeron** HT2: 1 → 6
+- **le_landeron** HT2: 0 → 6
   - 436.3/158.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
   - 470.1/134.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
   - 771.7/134.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
@@ -314,21 +314,21 @@ Regeln: HT1 = OSM-Weiche am Hauptgleis ohne Abzweig im Plan; HT2 = Abzweig am Ha
 - **saint_blaise_lac** HT2: 0 → 2
   - 390.0/134.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
   - 637.7/134.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-- **serrieres** HT1: 1 → 3
+- **serrieres** HT1: 0 → 3
   - 1249.7/134.0: OSM-Weiche 1694785513 ohne Abzweig im Plan
   - 1284.7/110.0: OSM-Weiche 631505851 ohne Abzweig im Plan
   - 1239.7/134.0: OSM-Weiche 631505831 ohne Abzweig im Plan
-- **serrieres** HT2: 2 → 3
-  - 436.3/134.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-  - 470.1/110.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-  - 737.7/134.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
+- **serrieres** HT2: 0 → 3
+  - 651.7/134.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
+  - 685.6/110.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
+  - 617.7/134.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
 - **sugiez** HT1: 0 → 2
   - 866.0/134.0: OSM-Weiche 9560732155 ohne Abzweig im Plan
   - 909.7/110.0: OSM-Weiche 7365097834 ohne Abzweig im Plan
-- **sugiez** HT2: 1 → 2
+- **sugiez** HT2: 0 → 2
   - 617.7/134.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
   - 390.0/134.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-- **tuscherz** HT1: 0 → 4
+- **tuscherz** HT1: 1 → 4
   - 790.5/158.0: OSM-Weiche 1946460604 ohne Abzweig im Plan
   - 822.4/134.0: OSM-Weiche 1946460608 ohne Abzweig im Plan
   - 850.2/110.0: OSM-Weiche 1946460636 ohne Abzweig im Plan

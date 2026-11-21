@@ -4,7 +4,7 @@
   "HT2": 3,
   "HT3": 0,
   "HT4": 0,
-  "HT5": 1
+  "HT5": 0
  },
  "befunde": [
   {
@@ -30,7 +30,7 @@
   },
   {
    "regel": "HT2",
-   "x": 436.3,
+   "x": 651.7,
    "y": 134.0,
    "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
    "ways": [
@@ -41,7 +41,7 @@
   },
   {
    "regel": "HT2",
-   "x": 470.1,
+   "x": 685.6,
    "y": 110.0,
    "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
    "ways": [
@@ -52,7 +52,7 @@
   },
   {
    "regel": "HT2",
-   "x": 737.7,
+   "x": 617.7,
    "y": 134.0,
    "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
    "ways": [
@@ -62,19 +62,10 @@
    ]
   },
   {
-   "regel": "HT5",
-   "x": 475.2,
-   "y": 122.0,
-   "text": "Fahrweg Abgang 210 Yverdon (433346842) ↔ Gl. 127 im Plan, nicht in OSM",
-   "von": "Abgang 210 Yverdon (433346842)",
-   "nach": "Gl. 127",
-   "art": "zusaetzlich"
-  },
-  {
    "regel": "_info",
    "x": 0,
    "y": 0,
-   "text": "Fahrwege: 3/10 Ziele im Plan gefunden, OSM 1, Plan 2",
+   "text": "Fahrwege: 3/10 Ziele im Plan gefunden, OSM 1, Plan 1",
    "ohne_lage": [
     "Abgang 210 Neuchâtel (10106458550)",
     "Abgang 210 Neuchâtel (10106458551)",

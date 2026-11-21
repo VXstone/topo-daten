@@ -1,4 +1,4 @@
-# Veraltet gegen Code-Stand b440c7a
+# Veraltet gegen Code-Stand 35555b4
 
 - basel: fest (zusatz_plaene.json), Commit -
 - bern: fest (zusatz_plaene.json), Commit -

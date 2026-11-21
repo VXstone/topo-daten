@@ -645,7 +645,7 @@ Erzeugt von `spurplan/code/overrides_liste.py`. Ziel (Entscheid 13.11.): nur Ort
 | Werkstatt NE | serrieres | cfg.margin_x | Schalter | 1 | Entwurf 14.10.2026 (Claude), Serrières, OSM-Stand 12.10. | werkstatt/ne/serrieres_override.json |
 | Werkstatt NE | serrieres | cfg.towns | Schalter | 1 | Entwurf 14.10.2026 (Claude), Serrières, OSM-Stand 12.10. | werkstatt/ne/serrieres_override.json |
 | Werkstatt NE | serrieres | vorlage | Typvorlage | 6 | Entwurf 14.10.2026 (Claude), Serrières, OSM-Stand 12.10. | werkstatt/ne/ne_vorlagen_overrides.json |
-| Werkstatt NE | serrieres | vorlage | Typvorlage | 6 | Entwurf 14.10.2026 (Claude), Serrières, OSM-Stand 12.10. | werkstatt/ne/serrieres_override.json |
+| Werkstatt NE | serrieres | vorlage | Typvorlage | 7 | Entwurf 14.10.2026 (Claude), Serrières, OSM-Stand 12.10. | werkstatt/ne/serrieres_override.json |
 | Werkstatt NE | sugiez | _perrons | Ortswissen | 1 | Entwurf 15.10.2026 (Claude), Sugiez, OSM-Stand 12.10. | werkstatt/ne/ne_vorlagen_overrides.json |
 | Werkstatt NE | sugiez | _perrons | Ortswissen | 1 | Entwurf 15.10.2026 (Claude), Sugiez, OSM-Stand 12.10. | werkstatt/ne/sugiez_override.json |
 | Werkstatt NE | sugiez | nummern_px | Ortswissen | 2 | Entwurf 15.10.2026 (Claude), Sugiez, OSM-Stand 12.10. | werkstatt/ne/ne_vorlagen_overrides.json |
