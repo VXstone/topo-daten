@@ -1,0 +1,14 @@
+{
+ "_quelle": "Gümmenen Typvorlage (einspur kreuzung) mit Netzmodell aus vorlage.py, V4c 21.11.2026, gedreht 90°",
+ "erwartet": [],
+ "nicht": [
+  {
+   "regel": "HT1",
+   "anlass": "Typvorlage: Netzmodell liegt auf dem gezeichneten Plan (V4c), Weiche 569101885 = Abzweig x 390"
+  },
+  {
+   "regel": "HT2",
+   "anlass": "dito, kein Abzweig ohne OSM-Weiche"
+  }
+ ]
+}

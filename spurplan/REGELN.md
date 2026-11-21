@@ -39,7 +39,11 @@ Knoten in Plan und OSM gleich – Äste nach der Hauptrichtung in zwei Seiten, W
 Weiche nur geradeaus; DKW-Symbol = ein Knoten. Prüffälle `hauptgleis_faelle/` (Giesshübel, Spurwechsel fehlt, Schere, falsche
 Seite; je 0°/90°), Selbsttest in `seite` und `pruefstand`. Ziel ist **0** in jedem Plan; bis dahin Ausgangsstand als Basis
 (`hauptgleis_basis.json`), jeder **neue** Befund macht `seite` rot (wie G0). Berichte nennen G0 **und** HT. Zielbilder von Hand (ohne Netzmodell) nur aus der
-Weichenfolge je Hauptgleis aus OSM, die Liste wird mitgegeben.
+Weichenfolge je Hauptgleis aus OSM, die Liste wird mitgegeben. **Netzmodell = gezeichneter Plan (seit 21.11., V4c):** zeichnet
+die Typvorlage den Bahnhof neu (`vorlage.py`), legt sie auch `<key>_netz.json` auf ihre Zeichnung – OSM-Weichen eins zu eins an
+den Abzweig der Vorlage (Reihenfolge längs bleibt), übrige Knoten über Abgänge/Gleisnummern abgebildet, OSM-Verbindungen
+zwischen zwei Weichen, die der allgemeine Lauf nicht zeichnete (Spurwechsel), ergänzt; Lauf-Fassung bleibt `<key>_netz_lauf.json`.
+Sonst misst HT die alte Lage (Paar HT1+HT2 = Messartefakt). Prüffälle `vorlage_gummenen`, `vorlage_saint_blaise_cff`.
 
 **Bahnhofregister und Sperre «veraltet» (VR, seit 20.11., Entscheid D. Eckenstein «Regionen harmonisieren, OSM-Fehler
 erkennen»).** Jeder Bahnhof steht **einmal** im Register `spurplan/netz/bahnhoefe.json` (Schlüssel **SBB-Abkürzung**, dazu

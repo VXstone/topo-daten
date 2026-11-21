@@ -290,6 +290,175 @@ def zeichne(V, osm=None, title="Bahnhof", mit_text=True):
              vorlage=f'{st} {form}')
     return full, bare, P, befund, "\n".join(body), (W, ymin, ymax, M, PL, PR)
 
+def _monoton(paare):
+    """Stützpunkte (a, b): gleiche a gemittelt, dann längste Teilfolge mit b steigend oder fallend (die längere gewinnt)"""
+    import collections
+    g = collections.defaultdict(list)
+    for a, b in paare: g[round(a, 1)].append(b)
+    P = sorted((a, sum(v) / len(v)) for a, v in g.items())
+    def lis(sg):
+        n = len(P); best = [1] * n; prev = [-1] * n
+        for i in range(n):
+            for j in range(i):
+                if sg * (P[i][1] - P[j][1]) > 0.05 and best[j] + 1 > best[i]: best[i] = best[j] + 1; prev[i] = j
+        if not n: return []
+        i = max(range(n), key=lambda k: best[k]); out = []
+        while i >= 0: out.append(P[i]); i = prev[i]
+        return out[::-1]
+    a, b = lis(1), lis(-1)
+    return (a, 1) if len(a) >= len(b) else (b, -1)
+
+
+def _abbildung(paare):
+    """stückweise lineare, monotone Abbildung durch die Stützpunkte; ausserhalb Steigung ±1"""
+    S, sg = _monoton(paare)
+    if not S: return lambda v: v
+    def f(v):
+        if v <= S[0][0]: return S[0][1] + sg * (v - S[0][0])
+        if v >= S[-1][0]: return S[-1][1] + sg * (v - S[-1][0])
+        for (a0, b0), (a1, b1) in zip(S, S[1:]):
+            if a0 <= v <= a1: return b0 + (b1 - b0) * (v - a0) / (a1 - a0)
+        return v
+    return f
+
+
+def _verbindungen(key, N, weichen, max_ways=5):
+    """Ketten von OSM-Ways ausserhalb des Netzmodells, die zwei Weichen des Netzmodells verbinden (ohne weitere Weiche
+    dazwischen): [(knotenkette, {way: knotenmenge}, {way: tags})]. Quelle: OSM-Ausschnitt <key>.json im Arbeitsordner."""
+    import collections
+    if not os.path.exists(f"{key}.json"): return [], {}
+    D = json.load(open(f"{key}.json")); D = D["elements"] if isinstance(D, dict) else D
+    drin = {g["way"] for g in N["gleise"]} | {g["way"] // 100 for g in N["gleise"]}
+    W = {e["id"]: e for e in D if e["type"] == "way" and e["id"] not in drin and e.get("tags", {}).get("railway") == "rail"}
+    LL = {}
+    for e in W.values():
+        for n, g in zip(e.get("nodes", []), e.get("geometry") or []):
+            if g: LL.setdefault(n, (g["lat"], g["lon"]))
+    nb = collections.defaultdict(list)
+    for w, e in W.items():
+        for n in e["nodes"]: nb[n].append(w)
+    out, gesehen = [], set()
+    for s in sorted(weichen):
+        stapel = [(s, [s], [])]
+        while stapel:
+            n, kette, ws = stapel.pop()
+            for w in nb[n]:
+                if w in ws: continue
+                nd = W[w]["nodes"]; i = nd.index(n)
+                for rng in (range(i + 1, len(nd)), range(i - 1, -1, -1)):
+                    k2 = list(kette)
+                    for k in rng:
+                        m = nd[k]; k2.append(m)
+                        if m in weichen:
+                            if m != s and (min(s, m), max(s, m)) not in gesehen:
+                                gesehen.add((min(s, m), max(s, m)))
+                                wsn = ws + [w]
+                                out.append((k2, {x: set(W[x]["nodes"]) for x in wsn}, {x: W[x].get("tags", {}) for x in wsn}))
+                            break
+                        if m in kette: break
+                        if (len(nb[m]) > 1 or k in (0, len(nd) - 1)) and len(ws) + 1 < max_ways:
+                            stapel.append((m, k2[:], ws + [w]))
+    return out, LL
+
+
+def netz_mitschreiben(key, full, P):
+    """V4c (21.11.2026, REGELN 0.1 / Kopf «HT»): die Typvorlage zeichnet den Bahnhof neu, das Netzmodell <key>_netz.json
+    (spurplan_schema, allgemeiner Lauf) trug noch die alte Lage – HT/G0/OSM-Abgleich fanden die Weichen nicht (Paar HT1+HT2,
+    Gümmenen, Sugiez …). Hier wird das Netzmodell auf den GEZEICHNETEN Plan gelegt: OSM-Knoten und -Weichen bleiben, nur ihre
+    Planlage folgt der Vorlage. Abbildung quer über Abgänge und Gleisnummern, längs über Abgänge und die zugeordneten
+    Weichen (OSM-Weiche ↔ Abzweig der Vorlage, eins zu eins, Reihenfolge längs bleibt); Weichen liegen genau am Abzweig.
+    Das Netzmodell des allgemeinen Laufs bleibt als <key>_netz_lauf.json."""
+    import re
+    try:
+        import osm_abgleich as OA
+    except ImportError:
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__))); import osm_abgleich as OA
+    import numpy as np
+    from scipy.optimize import linear_sum_assignment
+    fn = f"{key}_netz.json"; fl = f"{key}_netz_lauf.json"
+    if not os.path.exists(fn): return None
+    N = json.load(open(fn))
+    if N.get("vorlage"):
+        if not os.path.exists(fl): return "Netzmodell schon auf der Vorlage, Lauf-Fassung fehlt"
+        N = json.load(open(fl))
+    else:
+        shutil.copy(fn, fl)
+    KN = {int(k): v for k, v in N["knoten"].items()}
+    abg = {a.get("knoten"): a for a in N.get("abgaenge", []) if a.get("knoten") is not None}
+    # quer: Abgänge und Gleisnummern
+    nums = [(float(m.group(1)), float(m.group(2)) - 6.5, m.group(3)) for m in
+            re.finditer(r'<text x="([-\d.]+)" y="([-\d.]+)" font-size="19" text-anchor="middle"[^>]*>([^<]+)</text>', full)]
+    py_ = [(abg[p["knoten"]]["y"], p["y"]) for p in P["ports"] if p.get("knoten") in abg and p["kind"] == "edge"]
+    for _, y, t in nums:
+        py_ += [(g["y"], y) for g in N["gleise"] if g.get("y") is not None and g.get("pax") and str(g.get("gleis")) == t]
+    fy = _abbildung(py_)
+    # längs: Abgänge, dann Weichen
+    px_ = [(abg[p["knoten"]]["x"], p["x"]) for p in P["ports"] if p.get("knoten") in abg and p["kind"] == "edge"]
+    fx0 = _abbildung(px_)
+    gleise, _, _, luecken = OA.plan_lesen(full)
+    PK = [k for k in OA.plan_knoten(gleise, luecken) if k[4] >= 3] if gleise else []
+    lagen = {}
+    for g in N["gleise"]:
+        if g.get("y") is None: continue
+        for n in g["knoten"]: lagen.setdefault(n, set()).add(g["y"])
+    sw = [n for n, v in KN.items() if v.get("typ") in ("switch", "railway_crossing") and v.get("y") is not None]
+    for n in sw: lagen.setdefault(n, set()).add(KN[n]["y"])
+    zu = {}
+    if sw and PK:
+        C = np.full((len(sw), len(PK)), 1e6)
+        for i, n in enumerate(sw):
+            x = fx0(KN[n]["x"])
+            for j, k in enumerate(PK):
+                dy = min(abs(fy(y) - k[1]) for y in lagen[n])
+                if dy < 6:
+                    c = abs(x - k[0]) + 4 * dy
+                    if c < 300: C[i, j] = c
+        ri, ci = linear_sum_assignment(C)
+        zu = {sw[r]: PK[c] for r, c in zip(ri, ci) if C[r, c] < 1e6}
+    S, _ = _monoton(px_ + [(KN[n]["x"], k[0]) for n, k in zu.items()])
+    erlaubt = {round(a, 1) for a, _ in S}
+    zu = {n: k for n, k in zu.items() if round(KN[n]["x"], 1) in erlaubt}
+    fx = _abbildung(px_ + [(KN[n]["x"], k[0]) for n, k in zu.items()])
+    r1 = lambda v: round(float(v), 1)
+    for n, v in KN.items():
+        if n in zu: v["x"], v["y"] = r1(zu[n][0]), r1(zu[n][1])
+        else:
+            v["x"] = r1(fx(v["x"])) if v.get("x") is not None else None
+            v["y"] = r1(fy(v["y"])) if v.get("y") is not None else None
+    for g in N["gleise"]:
+        if g.get("y") is not None: g["y"] = r1(fy(g["y"]))
+    # OSM-Verbindungen zwischen zwei Weichen des Netzmodells, die der allgemeine Lauf nicht gezeichnet hat (St-Blaise CFF:
+    # Spurwechsel 49773692 fehlte im Netzmodell -> HT5 «Fahrweg im Plan, nicht in OSM», obwohl OSM ihn hat). Die Vorlage
+    # zeichnet solche Spurwechsel; das Netzmodell bekommt die OSM-Ways (Zwischenknoten auf der Geraden zwischen den Weichen).
+    N["gleise"] = [g for g in N["gleise"] if not g.get("vorlage_verbindung")]
+    zusatz, LL = _verbindungen(key, N, {n for n, v in KN.items() if v.get("typ") == "switch"})
+    for kette, ways, tags in zusatz:
+        a, b = KN[kette[0]], KN[kette[-1]]
+        for i, n in enumerate(kette[1:-1], 1):
+            if n in KN: continue
+            t = i / (len(kette) - 1)
+            KN[n] = dict(lat=(LL.get(n) or (None, None))[0], lon=(LL.get(n) or (None, None))[1], x=r1(a["x"] + t * (b["x"] - a["x"])), y=r1(a["y"] + t * (b["y"] - a["y"])), typ=None)
+        for w in ways:
+            kn = [n for n in kette if n in ways[w]]
+            N["gleise"].append(dict(id=f"v{w}", way=w, knoten=kn, ebene=None, y=None, pax=not tags[w].get("service"),
+                                    service=tags[w].get("service"), usage=tags[w].get("usage"), ref=tags[w].get("ref"),
+                                    gleis=tags[w].get("railway:track_ref"), spur=tags[w].get("gauge"), stillgelegt=False,
+                                    vorlage_verbindung=True))
+    N["knoten"] = {str(n): v for n, v in KN.items()}
+    neu_abg = []
+    for p in P["ports"]:
+        a = dict(abg.get(p.get("knoten"), {k_: v_ for k_, v_ in p.items()}))
+        a.update(kind=p["kind"], x=p["x"], y=p["y"], dx=p["dx"], dy=p["dy"]); neu_abg.append(a)
+    N["abgaenge"] = neu_abg
+    N["perrons"] = [dict(x0=r1(m.group(1)), y=r1(float(m.group(2)) + 4), x1=r1(float(m.group(1)) + float(m.group(3))))
+                    for m in re.finditer(r'<rect x="([-\d.]+)" y="([-\d.]+)" width="([\d.]+)" height="8" rx="1.5"', full)]
+    N["nummern"] = [dict(text=t, x=r1(x), y=r1(y)) for x, y, t in nums]
+    N["W"], N["H"] = r1(P["W"]), r1(P["H"])
+    N["vorlage"] = dict(weichen=len(sw), zugeordnet=len(zu), abzweige_plan=len(PK), verbindungen=len(zusatz))
+    json.dump(N, open(fn, "w"), ensure_ascii=False, indent=0)
+    return None if len(zu) == len(sw) else f"Netzmodell: {len(zu)} von {len(sw)} OSM-Weichen einem Abzweig der Vorlage zugeordnet"
+
+
 def run(key):
     ov = json.load(open(f"{key}_override.json"))
     V = ov.get("vorlage")
@@ -308,6 +477,11 @@ def run(key):
         if tR != nR: bef.append(f"rechts: {tR} Streckengleise in der Vorlage, {nR} in OSM")
     except Exception as ex:
         bef.append(f"OSM-Abgleich nicht möglich: {ex}")
+    try:
+        nb = netz_mitschreiben(key, full, P)
+        if nb: bef.append(nb)
+    except Exception as ex:
+        bef.append(f"Netzmodell nicht mitgeschrieben: {ex}")
     open(f"{key}_spurplan.svg", "w").write(full); open(f"{key}_spurplan_check.svg", "w").write(full)
     open(f"{key}_bare.svg", "w").write(bare); json.dump(P, open(f"{key}_ports.json", "w"), ensure_ascii=False)
     json.dump(bef, open(f"{key}_vorlage_befund.json", "w"), ensure_ascii=False)

@@ -24,7 +24,7 @@ OSM = sys.argv[sys.argv.index("--osm") + 1] if "--osm" in sys.argv else None    
 shutil.rmtree(TMP, ignore_errors=True); shutil.copytree(WS, TMP)
 # Code nur aus code/ (26.10.2026: eine Fassung für alle Regionen, die Werkstatt-Kopien sind gelöscht)
 for f in ("spurplan_schema.py", "spurplan_warp.py", "spurplan_check.py", "netz_pruefung.py", "netz_lage.py", "lage_auto.py",
-          "vorlage.py", "viewbox_text.py", "qualitaet.py"):
+          "vorlage.py", "viewbox_text.py", "qualitaet.py", "osm_abgleich.py"):   # osm_abgleich: vorlage.py legt das Netzmodell auf den Plan (V4c)
     shutil.copy(os.path.join(HERE, f), TMP)
 py = sys.executable
 def sh(args, timeout=900, cwd=None):
@@ -84,7 +84,7 @@ def kette(b, opt, cwd=None):
 # netz_lage.py sie liest (z. B. olten_ost_bare.svg -> olten_ost_regional_bare.svg). Der Ordner ist die Quelle.
 for v in K.get("varianten", []):
     d_ = os.path.join(TMP, v["ordner"]); b = v["bahnhof"]
-    for f in ("spurplan_schema.py", "spurplan_warp.py", "spurplan_check.py", "vorlage.py", "viewbox_text.py"):
+    for f in ("spurplan_schema.py", "spurplan_warp.py", "spurplan_check.py", "vorlage.py", "viewbox_text.py", "osm_abgleich.py"):
         shutil.copy(os.path.join(HERE, f), d_)
     alt = {f: lesen(os.path.join(d_, f)) for f in v["nach_oben"]}
     rc, o = kette(b, v.get("optionen", []), cwd=d_)

@@ -1,0 +1,11 @@
+{
+ "_quelle": "St-Blaise CFF Typvorlage mit Netzmodell aus vorlage.py, V4c 21.11.2026, gedreht 0°",
+ "erwartet": [],
+ "nicht": [
+  {
+   "regel": "HT5",
+   "text": "Abgang 210 Biel (632416798) ↔ Abgang 210 Neuchâtel (632407347)",
+   "anlass": "Spurwechsel Ost (Way 49773692) fehlte im Netzmodell; vorlage.py ergänzt OSM-Verbindungen zwischen Weichen"
+  }
+ ]
+}
