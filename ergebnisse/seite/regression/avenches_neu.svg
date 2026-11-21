@@ -17,11 +17,15 @@
 <circle cx="1161.7" cy="136.4" r="3.2" fill="#111"/>
 <circle cx="1159.1" cy="110.0" r="3.2" fill="#111"/>
 <circle cx="663.0" cy="136.4" r="3.2" fill="#111"/>
+<rect x="498.4" y="141.6" width="26" height="16" fill="#fff"/>
+<text x="511.4" y="156.1" font-size="19" text-anchor="middle" fill="#00862f">2</text>
+<rect x="467.9" y="165.6" width="26" height="16" fill="#fff"/>
+<text x="480.9" y="180.1" font-size="19" text-anchor="middle" fill="#00862f">1</text>
 <path d="M1220.3,173.6H1242.3" stroke="#00862f" stroke-width="3.6" fill="none"/>
 <path d="M46.2,173.6H24.2" stroke="#00862f" stroke-width="3.6" fill="none"/>
 <text x="1254.3" y="160.6" font-size="22" text-anchor="start" fill="#00862f">Linie 251</text>
 <text x="1254.3" y="186.6" font-size="22" text-anchor="start" fill="#00862f">Murten →</text>
 <text x="12.2" y="160.6" font-size="22" text-anchor="end" fill="#00862f">Linie 251</text>
 <text x="12.2" y="186.6" font-size="22" text-anchor="end" fill="#00862f">← Payerne</text>
-<text x="494.7" y="270.8" font-size="38" font-weight="700" text-anchor="middle" fill="#00862f">Avenches</text>
+<text x="622.5" y="270.8" font-size="38" font-weight="700" text-anchor="middle" fill="#00862f">Avenches</text>
 </svg>

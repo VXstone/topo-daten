@@ -1,4 +1,4 @@
-# Ausnahmen je Ort (REGELN 6) – 913 Einträge an 125 Orten: 354 Schalter, 245 Ortswissen, 189 Geometrie, 125 Typvorlage
+# Ausnahmen je Ort (REGELN 6) – 915 Einträge an 125 Orten: 354 Schalter, 245 Ortswissen, 191 Geometrie, 125 Typvorlage
 
 Erzeugt von `spurplan/code/overrides_liste.py`. Ziel (Entscheid 13.11.): nur Ortswissen bleibt; Geometrie abbauen.
 
@@ -23,6 +23,7 @@ Erzeugt von `spurplan/code/overrides_liste.py`. Ziel (Entscheid 13.11.): nur Ort
 | Werkstatt Olten | ins | 5 |  |  | 4 |
 | Werkstatt Olten | olten_ost_regional |  | 2 |  | 4 |
 | Repo | neuchatel_vauseyon | 1 | 3 |  | 3 |
+| Werkstatt NE | avenches | 2 | 6 | 1 | 3 |
 | Werkstatt NE | chambrelien | 4 | 3 |  | 3 |
 | Werkstatt Olten | aarau |  | 2 |  | 3 |
 | Werkstatt Olten | aarburg_oftringen |  | 1 |  | 3 |
@@ -41,7 +42,6 @@ Erzeugt von `spurplan/code/overrides_liste.py`. Ziel (Entscheid 13.11.): nur Ort
 | Werkstatt Olten | saint_blaise_cff | 1 | 1 | 1 | 2 |
 | Repo | solothurn | 2 |  |  | 1 |
 | Werkstatt NE | auvernier | 4 | 3 |  | 1 |
-| Werkstatt NE | avenches | 2 | 6 | 1 | 1 |
 | Werkstatt NE | bole |  | 3 |  | 1 |
 | Werkstatt NE | colombier | 3 | 3 |  | 1 |
 | Werkstatt NE | corcelles_peseux | 5 | 3 |  | 1 |
@@ -180,6 +180,8 @@ Erzeugt von `spurplan/code/overrides_liste.py`. Ziel (Entscheid 13.11.): nur Ort
 | Werkstatt NE | auvernier | cfg.margin_x | Schalter | 1 | Entwurf 14.10.2026 (Claude), Auvernier, OSM-Stand 12.10. | werkstatt/ne/auvernier_override.json |
 | Werkstatt NE | auvernier | cfg.towns | Schalter | 1 | Entwurf 14.10.2026 (Claude), Auvernier, OSM-Stand 12.10. | werkstatt/ne/auvernier_override.json |
 | Werkstatt NE | avenches | _v4e | Geometrie | 1 | Entwurf 16.10.2026 (Claude), Avenches, OSM-Stand 12.10. | werkstatt/ne/avenches_override.json |
+| Werkstatt NE | avenches | gleise | Geometrie | 2 | Entwurf 16.10.2026 (Claude), Avenches, OSM-Stand 12.10. | werkstatt/ne/avenches_override.json |
+| Werkstatt NE | avenches | nummern | Geometrie | 1 | Entwurf 16.10.2026 (Claude), Avenches, OSM-Stand 12.10. | werkstatt/ne/avenches_override.json |
 | Werkstatt NE | avenches | _gleisnummern | Ortswissen | 1 | Entwurf 16.10.2026 (Claude), Avenches, OSM-Stand 12.10. | werkstatt/ne/avenches_override.json |
 | Werkstatt NE | avenches | _gleisnummern | Ortswissen | 1 | Entwurf 16.10.2026 (Claude), Avenches, OSM-Stand 12.10. | werkstatt/ne/ne_vorlagen_overrides.json |
 | Werkstatt NE | avenches | cfg | Schalter | 3 | Entwurf 16.10.2026 (Claude), Avenches, OSM-Stand 12.10. | werkstatt/ne/ne_vorlagen_overrides.json |

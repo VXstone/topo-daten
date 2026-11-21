@@ -432,6 +432,24 @@
   "umfang": 1
  },
  {
+  "datei": "werkstatt/ne/avenches_override.json",
+  "weg": "Werkstatt NE",
+  "ort": "avenches",
+  "schluessel": "gleise",
+  "art": "Geometrie",
+  "grund": "Entwurf 16.10.2026 (Claude), Avenches, OSM-Stand 12.10.",
+  "umfang": 2
+ },
+ {
+  "datei": "werkstatt/ne/avenches_override.json",
+  "weg": "Werkstatt NE",
+  "ort": "avenches",
+  "schluessel": "nummern",
+  "art": "Geometrie",
+  "grund": "Entwurf 16.10.2026 (Claude), Avenches, OSM-Stand 12.10.",
+  "umfang": 1
+ },
+ {
   "datei": "werkstatt/ne/bern_brunnen_westside_override.json",
   "weg": "Werkstatt NE",
   "ort": "bern_brunnen_westside",

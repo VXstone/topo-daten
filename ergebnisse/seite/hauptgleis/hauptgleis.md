@@ -16,7 +16,6 @@
 | mob__zweisimmen | · | 4 | · | · | 3 | 7 |
 | neuchatel_vauseyon | · | 1 | · | · | 5 | 6 |
 | mob__chamby | 2 | 1 | · | 1 | 1 | 5 |
-| mob__montreux | · | 5 | · | · | · | 5 |
 | travers | · | 3 | · | · | 2 | 5 |
 | auvernier | · | · | · | · | 4 | 4 |
 | colombier | · | · | 3 | · | 1 | 4 |
@@ -25,6 +24,7 @@
 | vereina__klosters_platz | 3 | · | · | · | 1 | 4 |
 | bevaix | · | · | · | · | 3 | 3 |
 | bole | · | 2 | 1 | · | · | 3 |
+| mob__montreux | · | 3 ↓5 | · | · | · | 3 |
 | riedbach | · | 1 | · | · | 2 | 3 |
 | schonenwerd | · | 2 | · | · | 1 | 3 |
 | tecknau | · | 1 | · | · | 2 | 3 |
