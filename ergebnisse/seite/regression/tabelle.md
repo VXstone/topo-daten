@@ -1,14 +1,14 @@
-147 Pläne, 42 geändert: 32 gleichwertig, 7 schlechter?, 3 vermutlich besser
+147 Pläne, 40 geändert: 7 schlechter?, 2 vermutlich besser, 31 gleichwertig
 
 | Plan | Gruppe | Basis | Stellen | Einordnung | Kennzahlen alt→neu | G0 | HT | letzte Änderung |
 |---|---|---|---|---|---|---|---|---|
 | grandson | NE 6 · Neuchâtel – Yverdon | Archivbeginn (Abnahme 2026-10-20) | 6 | schlechter? | G2 0→1 · OSM ok (kein Alt-Stand) | 0 | HT5 1 | 2026-11-21T15:24 |
-| avenches | NE 3 · Lyss – Kerzers – Murten – Payerne | Archivbeginn (Abnahme 2026-10-19) | 4 | schlechter? | W56 0→2, W59 2→7 (Wunsch-Summe +6) · OSM VB1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-21T20:58 |
+| avenches | NE 3 · Lyss – Kerzers – Murten – Payerne | Archivbeginn (Abnahme 2026-10-19) | 4 | schlechter? | W56 0→2, W59 2→7 (Wunsch-Summe +6) · OSM VB1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-21T21:10 |
 | gorgier_saint_aubin | NE 6 · Neuchâtel – Yverdon | Archivbeginn (Abnahme 2026-10-20) | 4 | schlechter? | G2 1→3, T7 0→2 (Wunsch-Summe +16) · OSM VB1 2, VB2 1, VD1 2 (kein Alt-Stand) | 0 | HT2 1 · HT5 3 | 2026-11-21T15:24 |
 | bole | NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier | Archivbeginn (Abnahme 2026-10-20) | 3 | schlechter? | W56 6→7 (Wunsch-Summe +3) · OSM VB1 1, VB2 2, VC1 1 (kein Alt-Stand) | 0 | HT2 2 · HT3 1 | 2026-11-20T21:23 |
 | le_landeron | NE 5 · Neuchâtel – Biel | Archivbeginn (Abnahme 2026-10-20) | 2 | schlechter? | G2 0→1, T7 2→3 (Wunsch-Summe +8) · OSM VD1 1 (kein Alt-Stand) | 0 | HT5 1 | 2026-11-21T15:24 |
 | saint_blaise_lac | NE 1 · Neuchâtel – Ins – Kerzers – Bern | Archivbeginn (Abnahme 2026-10-15) | 1 | schlechter? | G2 0→1, T7 4→3 (Wunsch-Summe -8) · OSM VD1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-21T15:24 |
-| region_ne | Region | veröffentlicht | 57 | schlechter? | G2 38→43, W53 8→6 (Wunsch-Summe -12) | GS 1 · GG 2 · GQ 1 | – | 2026-11-21T20:58 |
+| region_ne | Region | veröffentlicht | 57 | schlechter? | G2 38→43, W53 8→6 (Wunsch-Summe -12) | GS 1 · GG 2 · GQ 1 | – | 2026-11-21T21:10 |
 | auvernier | NE 6 · Neuchâtel – Yverdon | Archivbeginn (Abnahme 2026-10-20) | 14 | gleichwertig | OSM VB1 1, VD1 1 (kein Alt-Stand) | GG 1 · GT 1 | HT5 4 | 2026-11-20T21:23 |
 | gampelen | NE 1 · Neuchâtel – Ins – Kerzers – Bern | Archivbeginn (Abnahme 2026-10-15) | 11 | gleichwertig | OSM ok (kein Alt-Stand) | 0 | 0 | 2026-11-21T15:24 |
 | saint_blaise_cff | NE 5 · Neuchâtel – Biel | Archivbeginn (Abnahme 2026-10-15) | 8 | gleichwertig | OSM ok (kein Alt-Stand) | 0 | 0 | 2026-11-21T11:53 |
@@ -40,10 +40,8 @@
 | couvet | NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier | Archivbeginn (Abnahme 2026-10-20) | 1 | gleichwertig | OSM VD1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-20T21:23 |
 | motiers | NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier | Archivbeginn (Abnahme 2026-10-20) | 1 | gleichwertig | OSM VD1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-20T21:23 |
 | les_geneveys_sur_coffrane | NE 8 · Neuchâtel – La Chaux-de-Fonds | Archivbeginn (Abnahme 2026-10-19) | 1 | gleichwertig | OSM VD1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-20T21:23 |
-| region | Region | veröffentlicht | 1 | gleichwertig |  | GS 8 · GG 23 · GQ 2 · GP 3 · GW 4 · GT 6 | – | 2026-11-21T20:58 |
-| zofingen | Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil | bestätigt 2026-11-08 | 25 | vermutlich besser | W59 11→10 · OSM VA2 2, VB1 3, VD1 1 (kein Alt-Stand) | GG 1 | HT1 2 | 2026-11-21T20:58 |
-| rothrist | Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil | Archivbeginn (Abnahme 2026-10-29) | 1 | vermutlich besser | W59 21→11 · OSM VA2 1, VB1 5, VB2 5 (kein Alt-Stand) | GS 2 · GG 1 · GQ 1 · GT 2 | HT1 2 · HT2 4 · HT5 6 | 2026-11-21T20:58 |
-| mob__montreux | MOB · Bahnhöfe | veröffentlicht | 1 | vermutlich besser | G2 2→3, VB2 6→4 | GS 1 · GG 2 · GQ 1 · GP 1 | HT2 3 | 2026-11-16T05:19 |
+| zofingen | Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil | bestätigt 2026-11-08 | 26 | vermutlich besser | W59 11→10 · OSM VA2 2, VB1 3, VD1 1 (kein Alt-Stand) | GG 1 | HT1 2 | 2026-11-21T20:58 |
+| mob__montreux | MOB · Bahnhöfe | veröffentlicht | 1 | vermutlich besser | G2 2→3, VB2 6→4 | GS 1 · GG 2 · GQ 1 · GP 1 | HT2 3 | 2026-11-21T21:10 |
 
 Grundprüfung G0 aller Pläne: `ergebnisse/seite/grundpruefung/grundpruefung.md`
 Hauptgleis-Topologie HT aller Pläne mit Netzmodell: `ergebnisse/seite/hauptgleis/hauptgleis.md`

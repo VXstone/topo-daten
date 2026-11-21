@@ -99,7 +99,7 @@ onnens_bonvillars                  {'VA1': 1, 'VA2': 1, 'VB1': 2, 'VD1': 1}
 pensier                            {'VD1': 1}
 riedbach                           {'VB2': 1}
 rosshausern                        {}
-rothrist                           {'VA2': 1, 'VB1': 5, 'VB2': 5}
+rothrist                           {'VA2': 1, 'VB1': 4, 'VB2': 6}
 safenwil                           {}
 saint_blaise_cff                   {}
 saint_blaise_lac                   {'VD1': 1}
@@ -133,4 +133,4 @@ vereina__vereina_sud               {}
 wangen_bei_olten                   {'VB2': 1}
 zihlbruecke                        {}
 zofingen                           {'VA2': 2, 'VB1': 3, 'VD1': 1}
-OSM-Abgleich: 135 Pläne {'VA1': 8, 'VA2': 11, 'VB1': 81, 'VB2': 92, 'VC1': 21, 'VD1': 111, 'VD2': 1}
+OSM-Abgleich: 135 Pläne {'VA1': 8, 'VA2': 11, 'VB1': 80, 'VB2': 93, 'VC1': 21, 'VD1': 111, 'VD2': 1}

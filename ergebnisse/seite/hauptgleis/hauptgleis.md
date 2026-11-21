@@ -9,7 +9,7 @@
 | aarau | 7 | 4 | · | 1 | 9 ↓10 | 21 |
 | neuchatel | · | · | 2 | · | 17 | 19 |
 | szu__zurich_giesshubel | 1 | 8 | 1 | 1 | 5 | 16 |
-| rothrist | 2 | 4 ↓5 | · | · | 6 | 12 |
+| rothrist | 2 | 5 | · | · | 6 | 13 |
 | konolfingen | · | 2 | · | · | 7 | 9 |
 | daniken | 2 | · | · | · | 6 | 8 |
 | cornaux | · | 1 | 1 | · | 5 | 7 |
