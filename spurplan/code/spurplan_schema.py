@@ -4040,10 +4040,18 @@ if RU.get("g6_knubbel", True):
 # hochgeht»): ein Stumpfgleis (Prellbock), dessen gerades Ende ein anderes gezeichnetes Gleis ohne Weiche schneidet, endet
 # kurz vor dem Schnitt. Abstell-/Anschlussgleise sind ohne Längenmassstab gezeichnet (2.10); in OSM liegt das Gleisende vor
 # dem querenden Gleis, erst die Stauchung schiebt es darüber. cfg «stumpf_vor_schnitt» (alle Wege), Abstand
-# «stumpf_schnitt_px» (8 px vor dem Schnitt), mindestens «stumpf_min_px» (6 px) ab der letzten Weiche, sonst bleibt es.
+# «stumpf_schnitt_px» (8 px vor dem Schnitt), mindestens «stumpf_min_px» (6 px) ab der letzten Weiche, höchstens
+# «stumpf_max_px» (3 Ebenen) gekürzt, sonst bleibt es. DKW und OSM-Kreuzungen sind kein Schnitt (Rothrist/Zofingen: sonst
+# wurden Gleise durch das DKW-Feld hindurch um Hunderte px gekürzt).
 STUMPF_X = {}
 def _stumpf_vor_schnitt(svg_paths, dots):
     _ab = CFG.get("stumpf_schnitt_px", 8.0); _mn = CFG.get("stumpf_min_px", 6.0)
+    _mx = CFG.get("stumpf_max_px", 3 * CFG["lane_px"])        # höchstens so viel kürzen (sonst ist es kein gestauchtes Ende)
+        # (Zofingen: EKW-Kreuzung): kein Schnitt an einem gezeichneten OSM-Weichen- oder Kreuzungsknoten, an einem Symbol der
+    # Regel 45 und an DKW von Hand (dkw_px)
+    _frei = [(xpos(n_, SD[n_][0]), ypos(n_)) for n_, t_ in ntag.items()
+             if t_.get("railway") in ("switch", "railway_crossing") and n_ in home and n_ in SD]
+    _frei += [(v_[0], v_[1]) for v_ in R45_DKW.values()] + [(PXW(d_["x"]), float(d_["y"])) for d_ in OVR.get("dkw_px", [])]
     def _poly(sp_):
         toks = re.findall(r"([MHLQV])([^MHLQV]*)", sp_); pts = []; cur = None
         for c, a in toks:
@@ -4097,10 +4105,11 @@ def _stumpf_vor_schnitt(svg_paths, dots):
             for (ax, ay), (bx, by) in zip(P, P[1:]):
                 if (ay - yd) * (by - yd) >= 0: continue
                 x_ = ax + (yd - ay) * (bx - ax) / (by - ay)
+                if any(math.hypot(x_ - fx, yd - fy) < 12 for fx, fy in _frei): continue
                 if (x_ - xj) * dr > 0.5 and (xd - x_) * dr > -0.5 and (xc is None or (x_ - xc) * dr < 0): xc = x_
         if xc is None: continue
         xn = xc - dr * _ab
-        if (xn - xj) * dr < _mn: continue
+        if (xn - xj) * dr < _mn or (xd - xn) * dr > _mx: continue
         for a_ in lauf:
             x0, x1 = (float(hor[a_][1]), float(hor[a_][3]))
             lo_, hi_ = (x0, x1) if dr > 0 else (x1, x0)
