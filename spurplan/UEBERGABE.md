@@ -332,7 +332,18 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   noch die OSM-Lage → Paar HT1+HT2 (Gümmenen, Sugiez, Muntschemier, Galmiz, Pensier …). Lösung: vorlage.py schreibt das Netzmodell
   mit (Weichen/Abzweige an der gezeichneten Stelle, OSM-Knoten bleiben). (b) **echt oder unklar**: Le Landeron (HT2 6, HT5 5),
   Riedbach (HT2 7), Colombier (HT3 3), Cornaux/Gorgier/Bevaix HT5 – je Plan ansehen, Zielplan an Daniel.
-- Fertig: Basis NE sinkt (Artefakte weg), echte Fehler als Hinweis-Liste bzw. behoben, Seite veröffentlicht.
+- Fertig: Basis NE sinkt (Artefakte weg), echte Fehler als Hinweis-Liste bzw. behoben, Seite veröffentlicht. **Erledigt 21.11. (v161).**
+- **Stand 21.11. (V4c):** Artefakte weg (vorlage.py legt das Netzmodell auf den Plan, REGELN Kopf «HT»); St-Blaise CFF und Serrières
+  korrigiert; Gampelen = Frage F6. **Rest Typvorlagen (lokal, 51):** Spurwechsel/Weiche am Planrand fehlt in der Vorlage – Rosshäusern
+  (HT1 2, HT5 3), Bern Brünnen (HT1 2, HT5 2), Grandson (HT1 2, HT5 4), Ligerz/St-Blaise Lac/Avenches (je HT1 1); Fahrwege zu Gleisen mit
+  Streckennummer (Gl. 501/652/709 …) – Gorgier (7), Le Landeron (5), Bevaix (3) erst ansehen, ob Ziel-Zuordnung oder echt; künstlicher
+  Schnitt am Planrand Riedbach/Tüscherz/Zihlbrücke. **Nicht-Vorlagen NE:** Colombier HT3 3, Cornaux HT5 5, Travers HT2 3, Bôle HT2 2/HT3 1,
+  Neuchâtel HT5 17, Vauseyon HT5 5, Auvernier HT5 4 – nächster Schritt V4e.
+
+### V4e – NE: HT-Rest (aus V4c, 21.11.)
+- Einstieg: «Weiter mit UEBERGABE.md – Schritt V4e: NE HT-Rest»
+- Liste oben unter V4c «Rest». Zuerst Antwort F6 (Gampelen) umsetzen; dann je Plan OSM ansehen, Vorlage/Override nach OSM (REGELN 0.1),
+  Vorher/Nachher an Daniel wie St-Blaise CFF. Fertig: NE-Pläne HT 0 oder als OSM-Ausnahme begründet.
 
 ### V4d – NE ruhig und Nebengleise kürzen (aus V4b, 21.11.)
 - Einstieg: «Weiter mit UEBERGABE.md – Schritt V4d: NE ruhig»
@@ -769,3 +780,13 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - T7 (ruhe.py) zählt den orangen Prüfkreis nicht mehr als Anschluss → Regression 18 → 1 «schlechter?» (Bôle W56 6→7, aus V4 bekannt).
 - Sperre HT wäre ebenfalls rot gewesen: 53 NE-Pläne erstmals gemessen → Ausgangsstand in die Basis (wie HT-Einführung 18.11.) → V4c.
 - Hinweise pjyb/vpkw/zlwn beantwortet (Stellen noch da) → V4d. Abnahmen unverändert (69).
+
+### 21.11.2026 ~13:20 – Schritt V4c abgeschlossen, Seite v161 (Commits b440c7a … c0aa2bb, ergebnisse dab114d)
+- Ursache Paar HT1+HT2 in Typvorlagen: Netzmodell aus dem allgemeinen Lauf, Vorlage zeichnet anders. Neu `vorlage.netz_mitschreiben`
+  (REGELN Kopf «HT»): Weichen reihenfolgetreu an die Abzweige (Abgänge + Perronmitte als Stützpunkte), OSM-Spurwechsel zwischen zwei
+  Weichen ergänzt (fehlten im Netzmodell → falsche HT5), Lauf-Fassung `<b>_netz_lauf.json`. Fallstrick: `spurplan_check` in
+  region_olten_lauf überschrieb das Netzmodell wieder → wird jetzt mit gesichert (wie ports.json).
+- 42 Typvorlagen HT 159 → 51 (lokal; HT5 findet jetzt fast alle Ziele, darum in 6 Plänen HT5 höher – erstmals gemessen, kein Rückschritt).
+- Sichtbar: St-Blaise CFF beide Spurwechsel Seite Biel, Serrières Spurwechsel Seite Neuchâtel (je HT → 0, abgenommene Pläne, Differenzbild an
+  Daniel). Gampelen → Frage F6. Prüffälle `hauptgleis_faelle/vorlage_*`. G0 unverändert.
+
