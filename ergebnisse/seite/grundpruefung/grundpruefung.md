@@ -110,7 +110,7 @@
 | pensier | · | · | · | · | · | · | 24.0 |
 | region | 8 | 23 | 2 | 3 | 4 | 6 ↓10 | 10.08 |
 | region_mob | 3 | 3 | 1 | 3 | · | 0 ↓1 | 10.08 |
-| region_ne | 1 | **3** (Basis 2) | 1 | · | · | 2 ↓4 | 10.08 |
+| region_ne | 1 | 2 | 1 | · | · | 4 | 10.08 |
 | region_szu | 18 | 28 | 5 | · | · | 1 | 10.08 |
 | region_vereina | 1 | 5 | 2 | · | · | 2 | 10.08 |
 | riedbach | · | · | · | · | · | · | 24.0 |
@@ -152,10 +152,3 @@
 | zofingen | · | 1 | · | · | · | · | 24.0 |
 
 Regeln: GS = Schnitt ohne DKW/Kreuzung/Niveautrennung; GG = Gleis auf Gleis; GQ = Querabstand nach Knick ≠ davor; GP = Pfeil nach innen / auf Nachbargleis; GW = Knick oder Abgang 90°; GT = Treppe
-
-## NEUE Befunde
-
-- **region_ne** GG: 2 → 3
-  - -1502.3/36.5: zwei Gleise 12 px aufeinander
-  - 572.6/-1249.9: zwei Gleise 15 px aufeinander
-  - -2892.3/1656.9: zwei Gleise 14 px aufeinander

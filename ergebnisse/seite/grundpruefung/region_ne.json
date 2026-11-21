@@ -2,11 +2,11 @@
  "ebene": 10.08,
  "zaehl": {
   "GS": 1,
-  "GG": 3,
+  "GG": 2,
   "GQ": 1,
   "GP": 0,
   "GW": 0,
-  "GT": 2
+  "GT": 4
  },
  "befunde": [
   {
@@ -28,16 +28,22 @@
    "text": "zwei Gleise 15 px aufeinander"
   },
   {
-   "regel": "GG",
-   "x": -2892.3,
-   "y": 1656.9,
-   "text": "zwei Gleise 14 px aufeinander"
-  },
-  {
    "regel": "GQ",
    "x": 1500.4,
    "y": -888.6,
    "text": "Querabstand nach dem Knick 23.2 px statt 15.9 px wie davor"
+  },
+  {
+   "regel": "GT",
+   "x": -2889.2,
+   "y": 1661.2,
+   "text": "Treppe, Versatz 20.1 px"
+  },
+  {
+   "regel": "GT",
+   "x": -2895.1,
+   "y": 1652.6,
+   "text": "Treppe, Versatz 20.1 px"
   },
   {
    "regel": "GT",

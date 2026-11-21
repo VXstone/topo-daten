@@ -62,14 +62,14 @@ Hinweis-Abdeckung: 30/57 (Befund < 40 px, ohne G2)
 ✓ xke0 solothurn                    MZ                        25.3  Zwischengerade, doppelter Abstand
 ✓ z6f2 konolfingen                  MX                        21.0  DKW?
 ✓ zcz3 solothurn                    G7,MX,VB2                 18.0  nicht verbunden
-index.html 2048 KB, 149 Pläne
+index.html 2056 KB, 149 Pläne
 /home/runner/work/topo-daten/topo-daten/spurplan/code/alle_plaene_pruefen.py:231: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
   json.dump(dict(erzeugt=datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"), plaene=len(zeilen), geaendert=len(gz),
-region_ne                    veröffentlicht                     14 Stellen  Fehler? Topologie  G2 32→38, GG 2→3, W53 7→8 (Wunsch-Summe +6)
+region_ne                    veröffentlicht                     14 Stellen  schlechter?  G2 32→38, W53 7→8 (Wunsch-Summe +6)
 fragen                       veröffentlicht                      7 Stellen  vermutlich besser  W56 4→0 (Wunsch-Summe -12)
 olten                        bestätigt 2026-11-08                0 Stellen  gleichwertig  OSM VB1 13, VB2 25, VC1 7, VD1 10 (kein Alt-Stand)
 olten_hammer                 bestätigt 2026-11-07                0 Stellen  gleichwertig  OSM VB1 1 (kein Alt-Stand)
-rothrist                     Archivbeginn (Abnahme 2026-10-29)    2 Stellen  gleichwertig  OSM VA2 1, VB1 4, VB2 6 (kein Alt-Stand)
+rothrist                     Archivbeginn (Abnahme 2026-10-29)    0 Stellen  gleichwertig  OSM VA2 1, VB1 4, VB2 6 (kein Alt-Stand)
 zofingen                     bestätigt 2026-11-08               26 Stellen  vermutlich besser  W59 11→10 · OSM VA2 2, VB1 3, VD1 1 (kein Alt-Stand)
 schonenwerd                  bestätigt 2026-11-08                0 Stellen  vermutlich besser  GG 1→0 · OSM VB2 2, VD1 1 (kein Alt-Stand)
 laufelfingen                 bestätigt 2026-11-07                0 Stellen  gleichwertig  OSM ok (kein Alt-Stand)
@@ -125,5 +125,5 @@ corcelles_peseux             Archivbeginn (Abnahme 2026-10-15)    0 Stellen  gle
 chambrelien                  Archivbeginn (Abnahme 2026-10-20)    2 Stellen  gleichwertig  OSM VA1 1, VB1 1 (kein Alt-Stand)
 les_geneveys_sur_coffrane    Archivbeginn (Abnahme 2026-10-19)    1 Stellen  gleichwertig  OSM VD1 1 (kein Alt-Stand)
 les_hauts_geneveys           Archivbeginn (Abnahme 2026-10-20)    2 Stellen  gleichwertig  OSM VD1 1 (kein Alt-Stand)
-Regression: 147 Pläne, 41 geändert {'Fehler? Topologie': 1, 'vermutlich besser': 3, 'gleichwertig': 32, 'schlechter?': 5}
+Regression: 147 Pläne, 40 geändert {'schlechter?': 6, 'vermutlich besser': 3, 'gleichwertig': 31}
 Ausnahmen: 910 Einträge, 125 Orte: {'Schalter': 351, 'Ortswissen': 245, 'Geometrie': 188, 'Typvorlage': 126} | ohne Grund: 0
