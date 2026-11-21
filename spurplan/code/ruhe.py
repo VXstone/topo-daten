@@ -32,7 +32,8 @@ def _polys(svg):
                     if not pts or abs(z - pts[-1]) > 0.3: pts.append(z)
             if len(pts) >= 2: out.append((float(w), np.array([[z.real, z.imag] for z in pts])))
     kreise = [(float(re.search(r'cx="([-\d.]+)"', c).group(1)), float(re.search(r'cy="([-\d.]+)"', c).group(1)))
-              for c in re.findall(r'<circle\b[^>]*>', s) if 'cx="' in c and 'cy="' in c]
+              for c in re.findall(r'<circle\b[^>]*>', s) if 'cx="' in c and 'cy="' in c
+              and not ('fill="none"' in c and 'stroke="#f80"' in c)]   # oranger Prüfkreis «W» ist kein Anschluss (V4b, 21.11.)
     return out, kreise
 
 def _vereinfachen(pts, tol=1.2):

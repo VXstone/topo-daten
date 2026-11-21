@@ -550,6 +550,13 @@ def connector(A, a, B, b, direkt=False, pfeil=False):
         # aus dem Spurplan an, zwei Pfade mit Knick ergaben einen Knubbel (G6) und ein V
         if (not pfeil or turn(a, dAB) <= 3) and turn(a, dAB) <= L0.get("auto_knick", 61) and turn(dAB, -b) <= 8:      # Knick direkt am Port (andere Ende liegt auf der Linie)
             cands.append((score([a, dAB, -b], [np.linalg.norm(B - A)]) - 8, [A, B]))
+        # Schräge Gerade mit Knick am Port (21.11.2026, V4b Les Deurres – Neuchâtel Vauseyon, REGELN 4.5): liegt das andere
+        # Ende fast auf der Portgeraden (höchstens «schraeg_max» Grad daneben), gerade hin und erst dort abknicken – auf
+        # welcher Seite der Portgeraden es liegt, darf nicht entscheiden (sonst blieb dort nur die Treppe; Murten verschob
+        # das Netz um 4 px und die Seite wechselte). Schalter Lage «schraeg_port».
+        if (L0.get("schraeg_port", True) and not pfeil and turn(a, dAB) <= L0.get("schraeg_max", 8)
+                and turn(dAB, -b) <= L0.get("auto_knick", 61)):
+            cands.append((score([a, dAB, -b], [np.linalg.norm(B - A)]) - 6, [A, B]))
         M_ = np.array([a, -b]).T
         if abs(np.linalg.det(M_)) > 1e-6:
             t_, s_ = np.linalg.solve(M_, B - A)
