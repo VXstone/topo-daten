@@ -29,9 +29,7 @@
    "optionen": [],
    "plan_geaendert": false,
    "bare_geaendert": false,
-   "netz": {
-    "D11": 1
-   },
+   "netz": {},
    "topologie": "{}",
    "qualitaet": {
     "topo_A": 0,
@@ -40,7 +38,6 @@
     "topo_D": 0,
     "topo_E": 0,
     "topo_F": 0,
-    "netz_D11": 1,
     "boegen_pax": 4,
     "boegen_alle": 4,
     "randabstand": 0
@@ -94,9 +91,7 @@
    "optionen": [],
    "plan_geaendert": false,
    "bare_geaendert": false,
-   "netz": {
-    "D11": 2
-   },
+   "netz": {},
    "topologie": "{}",
    "qualitaet": {
     "topo_A": 0,
@@ -105,7 +100,6 @@
     "topo_D": 0,
     "topo_E": 0,
     "topo_F": 0,
-    "netz_D11": 2,
     "boegen_pax": 0,
     "boegen_alle": 0,
     "randabstand": 0
@@ -193,7 +187,7 @@
    "plan_geaendert": false,
    "bare_geaendert": false,
    "netz": {
-    "D11": 4
+    "D11": 2
    },
    "topologie": "{'A': 1, 'F': 1}",
    "qualitaet": {
@@ -203,7 +197,7 @@
     "topo_D": 0,
     "topo_E": 0,
     "topo_F": 1,
-    "netz_D11": 4,
+    "netz_D11": 2,
     "boegen_pax": 0,
     "boegen_alle": 18,
     "randabstand": 0
@@ -334,7 +328,9 @@
    "optionen": [],
    "plan_geaendert": false,
    "bare_geaendert": false,
-   "netz": {},
+   "netz": {
+    "D11": 1
+   },
    "topologie": "{}",
    "qualitaet": {
     "topo_A": 0,
@@ -343,6 +339,7 @@
     "topo_D": 0,
     "topo_E": 0,
     "topo_F": 0,
+    "netz_D11": 1,
     "boegen_pax": 0,
     "boegen_alle": 0,
     "randabstand": 0
@@ -377,7 +374,9 @@
    "optionen": [],
    "plan_geaendert": false,
    "bare_geaendert": false,
-   "netz": {},
+   "netz": {
+    "D11": 1
+   },
    "topologie": "{}",
    "qualitaet": {
     "topo_A": 0,
@@ -386,6 +385,7 @@
     "topo_D": 0,
     "topo_E": 0,
     "topo_F": 0,
+    "netz_D11": 1,
     "boegen_pax": 0,
     "boegen_alle": 7,
     "randabstand": 0
@@ -396,7 +396,9 @@
    "optionen": [],
    "plan_geaendert": false,
    "bare_geaendert": false,
-   "netz": {},
+   "netz": {
+    "D11": 1
+   },
    "topologie": "{}",
    "qualitaet": {
     "topo_A": 0,
@@ -405,6 +407,7 @@
     "topo_D": 0,
     "topo_E": 0,
     "topo_F": 0,
+    "netz_D11": 1,
     "boegen_pax": 0,
     "boegen_alle": 0,
     "randabstand": 0
@@ -437,7 +440,9 @@
    "optionen": [],
    "plan_geaendert": false,
    "bare_geaendert": false,
-   "netz": {},
+   "netz": {
+    "D11": 1
+   },
    "topologie": "{}",
    "qualitaet": {
     "topo_A": 0,
@@ -446,6 +451,7 @@
     "topo_D": 0,
     "topo_E": 0,
     "topo_F": 0,
+    "netz_D11": 1,
     "boegen_pax": 0,
     "boegen_alle": 3,
     "randabstand": 0
@@ -539,9 +545,7 @@
    "optionen": [],
    "plan_geaendert": false,
    "bare_geaendert": false,
-   "netz": {
-    "D11": 2
-   },
+   "netz": {},
    "topologie": "{}",
    "qualitaet": {
     "topo_A": 0,
@@ -550,7 +554,6 @@
     "topo_D": 0,
     "topo_E": 0,
     "topo_F": 0,
-    "netz_D11": 2,
     "boegen_pax": 0,
     "boegen_alle": 0,
     "randabstand": 0
@@ -738,9 +741,7 @@
    "optionen": [],
    "plan_geaendert": false,
    "bare_geaendert": false,
-   "netz": {
-    "D11": 1
-   },
+   "netz": {},
    "topologie": "{'F': 1}",
    "qualitaet": {
     "topo_A": 0,
@@ -749,7 +750,6 @@
     "topo_D": 0,
     "topo_E": 0,
     "topo_F": 1,
-    "netz_D11": 1,
     "boegen_pax": 0,
     "boegen_alle": 7,
     "randabstand": 0
@@ -761,8 +761,7 @@
    "plan_geaendert": false,
    "bare_geaendert": false,
    "netz": {
-    "T10": 1,
-    "D11": 1
+    "T10": 1
    },
    "topologie": "{'F': 2}",
    "qualitaet": {
@@ -773,7 +772,6 @@
     "topo_E": 0,
     "topo_F": 2,
     "netz_T10": 1,
-    "netz_D11": 1,
     "boegen_pax": 2,
     "boegen_alle": 12,
     "randabstand": 0
@@ -928,7 +926,9 @@
    "optionen": [],
    "plan_geaendert": false,
    "bare_geaendert": false,
-   "netz": {},
+   "netz": {
+    "D11": 1
+   },
    "topologie": "{}",
    "qualitaet": {
     "topo_A": 0,
@@ -937,6 +937,7 @@
     "topo_D": 0,
     "topo_E": 0,
     "topo_F": 0,
+    "netz_D11": 1,
     "boegen_pax": 0,
     "boegen_alle": 0,
     "randabstand": 0
@@ -1148,7 +1149,6 @@
    "topo_D": 0,
    "topo_E": 0,
    "topo_F": 0,
-   "netz_D11": 1,
    "boegen_pax": 4,
    "boegen_alle": 4,
    "randabstand": 0
@@ -1184,7 +1184,6 @@
    "topo_D": 0,
    "topo_E": 0,
    "topo_F": 0,
-   "netz_D11": 2,
    "boegen_pax": 0,
    "boegen_alle": 0,
    "randabstand": 0
@@ -1240,7 +1239,7 @@
    "topo_D": 0,
    "topo_E": 0,
    "topo_F": 1,
-   "netz_D11": 4,
+   "netz_D11": 2,
    "boegen_pax": 0,
    "boegen_alle": 18,
    "randabstand": 0
@@ -1320,6 +1319,7 @@
    "topo_D": 0,
    "topo_E": 0,
    "topo_F": 0,
+   "netz_D11": 1,
    "boegen_pax": 0,
    "boegen_alle": 0,
    "randabstand": 0
@@ -1344,6 +1344,7 @@
    "topo_D": 0,
    "topo_E": 0,
    "topo_F": 0,
+   "netz_D11": 1,
    "boegen_pax": 0,
    "boegen_alle": 7,
    "randabstand": 0
@@ -1355,6 +1356,7 @@
    "topo_D": 0,
    "topo_E": 0,
    "topo_F": 0,
+   "netz_D11": 1,
    "boegen_pax": 0,
    "boegen_alle": 0,
    "randabstand": 0
@@ -1378,6 +1380,7 @@
    "topo_D": 0,
    "topo_E": 0,
    "topo_F": 0,
+   "netz_D11": 1,
    "boegen_pax": 0,
    "boegen_alle": 3,
    "randabstand": 0
@@ -1436,7 +1439,6 @@
    "topo_D": 0,
    "topo_E": 0,
    "topo_F": 0,
-   "netz_D11": 2,
    "boegen_pax": 0,
    "boegen_alle": 0,
    "randabstand": 0
@@ -1549,7 +1551,6 @@
    "topo_D": 0,
    "topo_E": 0,
    "topo_F": 1,
-   "netz_D11": 1,
    "boegen_pax": 0,
    "boegen_alle": 7,
    "randabstand": 0
@@ -1562,7 +1563,6 @@
    "topo_E": 0,
    "topo_F": 2,
    "netz_T10": 1,
-   "netz_D11": 1,
    "boegen_pax": 2,
    "boegen_alle": 12,
    "randabstand": 0
@@ -1655,6 +1655,7 @@
    "topo_D": 0,
    "topo_E": 0,
    "topo_F": 0,
+   "netz_D11": 1,
    "boegen_pax": 0,
    "boegen_alle": 0,
    "randabstand": 0
