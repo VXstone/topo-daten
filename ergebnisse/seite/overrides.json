@@ -444,6 +444,15 @@
   "datei": "werkstatt/ne/bern_brunnen_westside_override.json",
   "weg": "Werkstatt NE",
   "ort": "bern_brunnen_westside",
+  "schluessel": "cfg.s_max_fix",
+  "art": "Schalter",
+  "grund": "Entwurf 16.10.2026 (Claude), Bern Brünnen Westside, OSM-Stand 12.10.",
+  "umfang": 1
+ },
+ {
+  "datei": "werkstatt/ne/bern_brunnen_westside_override.json",
+  "weg": "Werkstatt NE",
+  "ort": "bern_brunnen_westside",
   "schluessel": "vorlage",
   "art": "Typvorlage",
   "grund": "Entwurf 16.10.2026 (Claude), Bern Brünnen Westside, OSM-Stand 12.10.",

@@ -9,7 +9,7 @@ muntschemier {"ok": true, "optionen": [], "plan_geaendert": false, "bare_geaende
 gummenen {"ok": true, "optionen": [], "plan_geaendert": false, "bare_geaendert": false, "netz": {}, "topologie": "{}", "qualitaet": {"topo_A": 0, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "topo_F": 0, "boegen_pax": 2, "boegen_alle": 2, "randabstand": 0}}
 rosshausern {"ok": true, "optionen": [], "plan_geaendert": true, "bare_geaendert": true, "netz": {}, "topologie": "{}", "qualitaet": {"topo_A": 0, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "topo_F": 0, "boegen_pax": 2, "boegen_alle": 8, "randabstand": 1}}
 riedbach {"ok": true, "optionen": [], "plan_geaendert": false, "bare_geaendert": false, "netz": {}, "topologie": "{}", "qualitaet": {"topo_A": 0, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "topo_F": 0, "boegen_pax": 0, "boegen_alle": 12, "randabstand": 0}}
-bern_brunnen_westside {"ok": true, "optionen": [], "plan_geaendert": true, "bare_geaendert": true, "netz": {"D11": 2}, "topologie": "{'A': 1, 'F': 1}", "qualitaet": {"topo_A": 1, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "topo_F": 1, "netz_D11": 2, "boegen_pax": 0, "boegen_alle": 18, "randabstand": 0}}
+bern_brunnen_westside {"ok": true, "optionen": [], "plan_geaendert": true, "bare_geaendert": true, "netz": {"D11": 2}, "topologie": "{'A': 1, 'F': 1}", "qualitaet": {"topo_A": 1, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "topo_F": 1, "netz_D11": 2, "boegen_pax": 0, "boegen_alle": 16, "randabstand": 0}}
 sugiez {"ok": true, "optionen": [], "plan_geaendert": false, "bare_geaendert": false, "netz": {}, "topologie": "{}", "qualitaet": {"topo_A": 0, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "topo_F": 0, "boegen_pax": 4, "boegen_alle": 6, "randabstand": 0}}
 muntelier_lowenberg {"ok": true, "optionen": [], "plan_geaendert": false, "bare_geaendert": false, "netz": {}, "topologie": "{}", "qualitaet": {"topo_A": 0, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "topo_F": 0, "boegen_pax": 1, "boegen_alle": 3, "randabstand": 0}}
 kallnach {"ok": true, "optionen": [], "plan_geaendert": false, "bare_geaendert": false, "netz": {"T10": 1}, "topologie": "{}", "qualitaet": {"topo_A": 0, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "topo_F": 0, "netz_T10": 1, "boegen_pax": 0, "boegen_alle": 4, "randabstand": 0}}
@@ -56,7 +56,7 @@ les_hauts_geneveys {"ok": true, "optionen": [], "plan_geaendert": false, "bare_g
 murten {"ok": true, "optionen": [], "plan_geaendert": false, "bare_geaendert": false, "netz": {"A1": 1}, "topologie": "{}", "qualitaet": {"topo_A": 0, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "topo_F": 0, "netz_A1": 1, "boegen_pax": 12, "boegen_alle": 16, "randabstand": 0}}
 Regionalgeometrie /home/runner/work/topo-daten/topo-daten/spurplan/werkstatt/olten/feedback/region_ne.svg: Achse 10.05 px, 91 Streckenpfade; keine Befunde
 
-Region Neuchâtel: {"ok": true, "geaendert": true, "geometrie": {"plan": "/home/runner/work/topo-daten/topo-daten/spurplan/werkstatt/olten/feedback/region_ne.svg", "achse": 10.050495990878385, "befunde": []}}
+Region Neuchâtel: {"ok": true, "geaendert": true, "geometrie": {"plan": "/home/runner/work/topo-daten/topo-daten/spurplan/werkstatt/olten/feedback/region_ne.svg", "achse": 10.047258039868742, "befunde": []}}
 Kennzahlen gegen die Basis:
   auvernier              neu   
   avenches               neu   

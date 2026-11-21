@@ -1,4 +1,4 @@
-# Ausnahmen je Ort (REGELN 6) – 910 Einträge an 125 Orten: 351 Schalter, 245 Ortswissen, 188 Geometrie, 126 Typvorlage
+# Ausnahmen je Ort (REGELN 6) – 911 Einträge an 125 Orten: 352 Schalter, 245 Ortswissen, 188 Geometrie, 126 Typvorlage
 
 Erzeugt von `spurplan/code/overrides_liste.py`. Ziel (Entscheid 13.11.): nur Ortswissen bleibt; Geometrie abbauen.
 
@@ -56,7 +56,7 @@ Erzeugt von `spurplan/code/overrides_liste.py`. Ziel (Entscheid 13.11.): nur Ort
 | Region mob | Montreux |  | 1 |  |  |
 | Region mob | Zweisimmen |  | 1 |  |  |
 | Werkstatt NE | avenches | 2 | 4 | 2 |  |
-| Werkstatt NE | bern_brunnen_westside | 2 | 4 | 2 |  |
+| Werkstatt NE | bern_brunnen_westside | 2 | 5 | 2 |  |
 | Werkstatt NE | bevaix | 2 | 4 | 2 |  |
 | Werkstatt NE | boudry | 6 | 4 | 2 |  |
 | Werkstatt NE | champ_du_moulin |  | 4 | 2 |  |
@@ -192,6 +192,7 @@ Erzeugt von `spurplan/code/overrides_liste.py`. Ziel (Entscheid 13.11.): nur Ort
 | Werkstatt NE | bern_brunnen_westside | cfg | Schalter | 3 | Entwurf 16.10.2026 (Claude), Bern Brünnen Westside, OSM-Stand 12.10. | werkstatt/ne/ne_vorlagen_overrides.json |
 | Werkstatt NE | bern_brunnen_westside | cfg.lt_dist_w | Schalter | 1 | Entwurf 16.10.2026 (Claude), Bern Brünnen Westside, OSM-Stand 12.10. | werkstatt/ne/bern_brunnen_westside_override.json |
 | Werkstatt NE | bern_brunnen_westside | cfg.margin_x | Schalter | 1 | Entwurf 16.10.2026 (Claude), Bern Brünnen Westside, OSM-Stand 12.10. | werkstatt/ne/bern_brunnen_westside_override.json |
+| Werkstatt NE | bern_brunnen_westside | cfg.s_max_fix | Schalter | 1 | Entwurf 16.10.2026 (Claude), Bern Brünnen Westside, OSM-Stand 12.10. | werkstatt/ne/bern_brunnen_westside_override.json |
 | Werkstatt NE | bern_brunnen_westside | cfg.towns | Schalter | 1 | Entwurf 16.10.2026 (Claude), Bern Brünnen Westside, OSM-Stand 12.10. | werkstatt/ne/bern_brunnen_westside_override.json |
 | Werkstatt NE | bern_brunnen_westside | vorlage | Typvorlage | 8 | Entwurf 16.10.2026 (Claude), Bern Brünnen Westside, OSM-Stand 12.10. | werkstatt/ne/bern_brunnen_westside_override.json |
 | Werkstatt NE | bern_brunnen_westside | vorlage | Typvorlage | 7 | Entwurf 16.10.2026 (Claude), Bern Brünnen Westside, OSM-Stand 12.10. | werkstatt/ne/ne_vorlagen_overrides.json |
