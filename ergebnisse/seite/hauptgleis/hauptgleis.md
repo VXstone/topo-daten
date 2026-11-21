@@ -9,66 +9,66 @@
 | aarau | 7 | 4 | · | 1 | 9 ↓10 | 21 |
 | neuchatel | · | · | 2 | · | 17 | 19 |
 | szu__zurich_giesshubel | 1 | 8 | 1 | 1 | 5 | 16 |
-| le_landeron | **2** (Basis 0) | **6** (Basis 0) | · | · | **5** (Basis 0) | 13 |
-| riedbach | **4** (Basis 0) | **7** (Basis 0) | · | · | **2** (Basis 0) | 13 |
+| le_landeron | 2 | 6 | · | · | 5 | 13 |
+| riedbach | 4 | 7 | · | · | 2 | 13 |
 | rothrist | 2 | 5 | · | · | 6 | 13 |
-| bevaix | **4** (Basis 0) | **3** (Basis 0) | · | · | **5** (Basis 0) | 12 |
-| bern_brunnen_westside | **7** (Basis 0) | **4** (Basis 0) | · | · | · | 11 |
-| gorgier_saint_aubin | **3** (Basis 0) | **3** (Basis 0) | · | · | **5** (Basis 0) | 11 |
-| tuscherz | **4** (Basis 0) | **4** (Basis 0) | · | · | **2** (Basis 0) | 10 |
+| bevaix | 4 | 3 | · | · | 5 | 12 |
+| bern_brunnen_westside | 7 | 4 | · | · | · | 11 |
+| gorgier_saint_aubin | 3 | 3 | · | · | 5 | 11 |
+| tuscherz | 4 | 4 | · | · | 2 | 10 |
 | konolfingen | · | 2 | · | · | 7 | 9 |
 | daniken | 2 | · | · | · | 6 | 8 |
-| grandson | **5** (Basis 0) | **2** (Basis 0) | · | · | **1** (Basis 0) | 8 |
-| cornaux | · | **1** (Basis 0) | **1** (Basis 0) | · | **5** (Basis 0) | 7 |
+| grandson | 5 | 2 | · | · | 1 | 8 |
+| cornaux | · | 1 | 1 | · | 5 | 7 |
 | mob__zweisimmen | · | 4 | · | · | 3 | 7 |
-| serrieres | **3** (Basis 0) | **3** (Basis 0) | · | · | **1** (Basis 0) | 7 |
+| serrieres | 3 | 3 | · | · | 1 | 7 |
 | neuchatel_vauseyon | · | 1 | · | · | 5 | 6 |
-| rosshausern | **4** (Basis 0) | **2** (Basis 0) | · | · | · | 6 |
-| avenches | **3** (Basis 0) | **2** (Basis 0) | · | · | · | 5 |
+| rosshausern | 4 | 2 | · | · | · | 6 |
+| avenches | 3 | 2 | · | · | · | 5 |
 | mob__chamby | 2 | 1 | · | 1 | 1 | 5 |
 | mob__montreux | · | 5 | · | · | · | 5 |
-| saint_blaise_cff | · | **4** (Basis 0) | · | · | **1** (Basis 0) | 5 |
-| saint_blaise_lac | **3** (Basis 0) | **2** (Basis 0) | · | · | · | 5 |
-| travers | · | **3** (Basis 0) | · | · | **2** (Basis 0) | 5 |
-| auvernier | · | · | · | · | **4** (Basis 0) | 4 |
-| colombier | · | · | **3** (Basis 0) | · | **1** (Basis 0) | 4 |
-| domdidier | **2** (Basis 0) | **2** (Basis 0) | · | · | · | 4 |
-| les_geneveys_sur_coffrane | **2** (Basis 0) | **2** (Basis 0) | · | · | · | 4 |
+| saint_blaise_cff | · | 4 | · | · | 1 | 5 |
+| saint_blaise_lac | 3 | 2 | · | · | · | 5 |
+| travers | · | 3 | · | · | 2 | 5 |
+| auvernier | · | · | · | · | 4 | 4 |
+| colombier | · | · | 3 | · | 1 | 4 |
+| domdidier | 2 | 2 | · | · | · | 4 |
+| les_geneveys_sur_coffrane | 2 | 2 | · | · | · | 4 |
 | mob__montbovon | 3 | · | · | · | 1 | 4 |
-| munchenwiler_courgevaux | **2** (Basis 0) | **2** (Basis 0) | · | · | · | 4 |
-| muntelier_lowenberg | **2** (Basis 0) | **2** (Basis 0) | · | · | · | 4 |
-| noiraigue | **2** (Basis 0) | **2** (Basis 0) | · | · | · | 4 |
-| sugiez | **2** (Basis 0) | **2** (Basis 0) | · | · | · | 4 |
+| munchenwiler_courgevaux | 2 | 2 | · | · | · | 4 |
+| muntelier_lowenberg | 2 | 2 | · | · | · | 4 |
+| noiraigue | 2 | 2 | · | · | · | 4 |
+| sugiez | 2 | 2 | · | · | · | 4 |
 | vereina__klosters_platz | 3 | · | · | · | 1 | 4 |
-| zihlbruecke | **1** (Basis 0) | **1** (Basis 0) | · | · | **2** (Basis 0) | 4 |
-| bole | · | **2** (Basis 0) | **1** (Basis 0) | · | · | 3 |
-| boudry | **2** (Basis 0) | **1** (Basis 0) | · | · | · | 3 |
-| courtepin | **1** (Basis 0) | **2** (Basis 0) | · | · | · | 3 |
-| ligerz | **2** (Basis 0) | **1** (Basis 0) | · | · | · | 3 |
-| pensier | **1** (Basis 0) | **2** (Basis 0) | · | · | · | 3 |
+| zihlbruecke | 1 | 1 | · | · | 2 | 4 |
+| bole | · | 2 | 1 | · | · | 3 |
+| boudry | 2 | 1 | · | · | · | 3 |
+| courtepin | 1 | 2 | · | · | · | 3 |
+| ligerz | 2 | 1 | · | · | · | 3 |
+| pensier | 1 | 2 | · | · | · | 3 |
 | schonenwerd | · | 2 | · | · | 1 | 3 |
 | tecknau | · | 1 | · | · | 2 | 3 |
 | vereina__klosters_selfranga | 1 | · | · | · | 2 | 3 |
 | vereina__sagliains | 1 | 1 | · | · | 1 | 3 |
-| chambrelien | **1** (Basis 0) | · | · | · | **1** (Basis 0) | 2 |
-| champ_du_moulin | **1** (Basis 0) | **1** (Basis 0) | · | · | · | 2 |
-| galmiz | **1** (Basis 0) | **1** (Basis 0) | · | · | · | 2 |
-| gampelen | · | **2** (Basis 0) | · | · | · | 2 |
-| gummenen | **1** (Basis 0) | **1** (Basis 0) | · | · | · | 2 |
+| chambrelien | 1 | · | · | · | 1 | 2 |
+| champ_du_moulin | 1 | 1 | · | · | · | 2 |
+| galmiz | 1 | 1 | · | · | · | 2 |
+| gampelen | · | 2 | · | · | · | 2 |
+| gummenen | 1 | 1 | · | · | · | 2 |
 | mob__paccot | 2 | · | · | · | · | 2 |
 | mob__saanen | · | 1 | · | · | 1 | 2 |
 | mob__vernex | · | · | · | · | 2 | 2 |
-| motiers | **1** (Basis 0) | **1** (Basis 0) | · | · | · | 2 |
-| muntschemier | **1** (Basis 0) | **1** (Basis 0) | · | · | · | 2 |
-| murten | · | · | · | · | **2** (Basis 0) | 2 |
+| motiers | 1 | 1 | · | · | · | 2 |
+| muntschemier | 1 | 1 | · | · | · | 2 |
+| murten | · | · | · | · | 2 | 2 |
 | szu__zurich_selnau | · | 2 | · | · | · | 2 |
 | zofingen | 2 | · | · | · | · | 2 |
-| cressier_fr | · | **1** (Basis 0) | · | · | · | 1 |
+| cressier_fr | · | 1 | · | · | · | 1 |
 | dulliken | · | · | · | · | 1 | 1 |
 | mob__glion | · | · | · | · | 1 | 1 |
 | mob__jor | 1 | · | · | · | · | 1 |
 | mob__rossiniere | · | · | · | · | 1 | 1 |
-| onnens_bonvillars | **1** (Basis 0) | · | · | · | · | 1 |
+| onnens_bonvillars | 1 | · | · | · | · | 1 |
 | szu__uetliberg | · | 1 | · | · | · | 1 |
 | aarburg_oftringen | · | · | · | · | · | 0 |
 | concise | · | · | · | · | · | 0 |
@@ -141,273 +141,3 @@
 | wangen_bei_olten | · | · | · | · | · | 0 |
 
 Regeln: HT1 = OSM-Weiche am Hauptgleis ohne Abzweig im Plan; HT2 = Abzweig am Hauptgleis im Plan ohne OSM-Weiche; HT3 = Gleis an der falschen Weiche (Hauptgleis); HT4 = Abzweig zur falschen Seite; HT5 = Fahrweg im Plan ≠ OSM
-
-## NEUE Befunde
-
-- **auvernier** HT5: 0 → 4
-  - 428.2/158.0: Fahrweg Abgang 210 Yverdon (432502731) ↔ Gl. 823 in OSM, fehlt im Plan
-  - 417.4/170.0: Fahrweg Abgang 210 Yverdon (628105339) ↔ Gl. 821 in OSM, fehlt im Plan
-  - 428.2/146.0: Fahrweg Abgang 210 Yverdon (628105339) ↔ Gl. 823 in OSM, fehlt im Plan
-  - 398.1/146.0: Fahrweg Abgang 219 Travers (9815501613) ↔ Gl. 821 in OSM, fehlt im Plan
-- **avenches** HT1: 0 → 3
-  - 555.9/134.2: OSM-Weiche 1975565269 ohne Abzweig im Plan
-  - 338.8/134.2: OSM-Weiche 1975565235 ohne Abzweig im Plan
-  - 796.0/134.2: OSM-Weiche 1975565340 ohne Abzweig im Plan
-- **avenches** HT2: 0 → 2
-  - 390.0/134.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-  - 573.9/110.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-- **bern_brunnen_westside** HT1: 0 → 7
-  - 698.2/133.9: OSM-Weiche 1873375812 ohne Abzweig im Plan
-  - 726.1/157.9: OSM-Weiche 1873375841 ohne Abzweig im Plan
-  - 1160.8/157.9: OSM-Weiche 5198964014 ohne Abzweig im Plan
-  - 1571.1/157.9: OSM-Weiche 1244528391 ohne Abzweig im Plan
-  - 1192.7/133.9: OSM-Weiche 5198964015 ohne Abzweig im Plan
-  - 1194.4/133.9: OSM-Weiche 5198964017 ohne Abzweig im Plan
-  - 1222.3/157.9: OSM-Weiche 5198964016 ohne Abzweig im Plan
-- **bern_brunnen_westside** HT2: 0 → 4
-  - 771.7/134.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-  - 805.6/110.0: Gleise berühren sich (4 Richtungen), in OSM keine Weiche/Kreuzung
-  - 797.6/110.0: Gleise berühren sich (4 Richtungen), in OSM keine Weiche/Kreuzung
-  - 831.4/134.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-- **bevaix** HT1: 0 → 4
-  - 1018.5/110.0: OSM-Weiche 240238653 ohne Abzweig im Plan
-  - 917.3/134.0: OSM-Weiche 434342830 ohne Abzweig im Plan
-  - 856.5/110.0: OSM-Weiche 1951472706 ohne Abzweig im Plan
-  - 828.6/134.0: OSM-Weiche 1951472704 ohne Abzweig im Plan
-- **bevaix** HT2: 0 → 3
-  - 651.7/110.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-  - 711.4/110.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-  - 410.0/134.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-- **bevaix** HT5: 0 → 5
-  - 576.4/122.0: Fahrweg Abgang 210 Yverdon (12594175178) ↔ Gl. 1 im Plan, nicht in OSM
-  - 504.2/122.0: Fahrweg Abgang 210 Yverdon (12594175178) ↔ Gl. 541 im Plan, nicht in OSM
-  - 570.9/122.0: Fahrweg Abgang 210 Yverdon (12594175178) ↔ Gl. 651 im Plan, nicht in OSM
-  - 856.9/122.0: Fahrweg Abgang 210 Neuchâtel (240238653) ↔ Gl. 541 in OSM, fehlt im Plan
-  - 923.6/122.0: Fahrweg Abgang 210 Neuchâtel (240238653) ↔ Gl. 651 in OSM, fehlt im Plan
-- **bole** HT2: 0 → 2
-  - 1128.2/156.4: Gleise berühren sich (4 Richtungen), in OSM keine Weiche/Kreuzung
-  - 1150.4/118.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-- **bole** HT3: 0 → 1
-  - 1111.0/174.0: Gleis (Way 49448901) im Plan an Knoten 575097059 angebunden, in OSM nicht
-- **boudry** HT1: 0 → 2
-  - 1129.7/110.0: OSM-Weiche 628087095 ohne Abzweig im Plan
-  - 1157.6/134.0: OSM-Weiche 628087097 ohne Abzweig im Plan
-- **boudry** HT2: 0 → 1
-  - 651.7/110.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-- **chambrelien** HT1: 0 → 1
-  - 607.9/158.0: OSM-Weiche 393419063 ohne Abzweig im Plan
-- **chambrelien** HT5: 0 → 1
-  - 577.5/122.0: Fahrweg Abgang 224 La Chaux-de-Fonds (266382833) ↔ Gl. 2 in OSM, fehlt im Plan
-- **champ_du_moulin** HT1: 0 → 1
-  - 956.2/110.0: OSM-Weiche 631547245 ohne Abzweig im Plan
-- **champ_du_moulin** HT2: 0 → 1
-  - 637.7/110.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-- **colombier** HT3: 0 → 3
-  - 816.4/158.0: Gleis (Way 49447813) im Plan an Knoten 628087130 angebunden, in OSM nicht
-  - 833.6/158.0: Gleis (Way 49447813) im Plan an Knoten 433556101 angebunden, in OSM nicht
-  - 734.6/134.0: Gleis (Way 49447813) im Plan an Knoten 628087128 angebunden, in OSM nicht
-- **colombier** HT5: 0 → 1
-  - 1655.0/122.0: Fahrweg Abgang 210 Neuchâtel (628087279) ↔ Gl. 811 in OSM, fehlt im Plan
-- **cornaux** HT2: 0 → 1
-  - 341.1/147.2: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-- **cornaux** HT3: 0 → 1
-  - 369.0/171.2: Gleis (Way 1047225769) im Plan an Knoten 632441560 angebunden, in OSM nicht
-- **cornaux** HT5: 0 → 5
-  - 659.7/159.2: Fahrweg Abgang 210 Biel (632441756) ↔ Abgang 210 Neuchâtel (468155360) im Plan, nicht in OSM
-  - 470.9/159.1: Fahrweg Abgang 210 Neuchâtel (468155360) ↔ Gl. 2 im Plan, nicht in OSM
-  - 518.9/159.2: Fahrweg Abgang 210 Neuchâtel (468155360) ↔ Gl. A2 im Plan, nicht in OSM
-  - 591.2/159.2: Fahrweg Abgang 210 Neuchâtel (468155360) ↔ Gl. A72 im Plan, nicht in OSM
-  - 659.7/159.2: Fahrweg Abgang 210 Neuchâtel (468155360) ↔ Gl. A92 im Plan, nicht in OSM
-- **courtepin** HT1: 0 → 1
-  - 580.3/134.0: OSM-Weiche 3664792780 ohne Abzweig im Plan
-- **courtepin** HT2: 0 → 2
-  - 500.0/110.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-  - 757.7/110.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-- **cressier_fr** HT2: 0 → 1
-  - 410.0/110.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-- **domdidier** HT1: 0 → 2
-  - 208.0/147.2: OSM-Weiche 1975584333 ohne Abzweig im Plan
-  - 830.5/147.2: OSM-Weiche 1976353738 ohne Abzweig im Plan
-- **domdidier** HT2: 0 → 2
-  - 410.0/110.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-  - 647.7/110.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-- **galmiz** HT1: 0 → 1
-  - 890.3/134.0: OSM-Weiche 1976391970 ohne Abzweig im Plan
-- **galmiz** HT2: 0 → 1
-  - 637.7/134.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-- **gampelen** HT2: 0 → 2
-  - 436.3/134.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-  - 470.1/110.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-- **gorgier_saint_aubin** HT1: 0 → 3
-  - 712.3/134.0: OSM-Weiche 443249143 ohne Abzweig im Plan
-  - 740.2/110.0: OSM-Weiche 443249140 ohne Abzweig im Plan
-  - 621.8/158.0: OSM-Weiche 534709416 ohne Abzweig im Plan
-- **gorgier_saint_aubin** HT2: 0 → 3
-  - 436.3/110.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-  - 771.7/134.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-  - 805.6/110.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-- **gorgier_saint_aubin** HT5: 0 → 5
-  - 535.1/122.0: Fahrweg Abgang 210 Neuchâtel (623764576) ↔ Abgang 210 Yverdon (1951569814) im Plan, nicht in OSM
-  - 423.2/134.0: Fahrweg Abgang 210 Yverdon (1951569814) ↔ Gl. 501 im Plan, nicht in OSM
-  - 423.1/122.0: Fahrweg Abgang 210 Yverdon (1951569814) ↔ Gl. 502 im Plan, nicht in OSM
-  - 535.1/122.0: Fahrweg Abgang 210 Yverdon (1951569814) ↔ Gl. 541 im Plan, nicht in OSM
-  - 423.0/122.0: Fahrweg Abgang 210 Yverdon (1951569819) ↔ Gl. 503 in OSM, fehlt im Plan
-- **grandson** HT1: 0 → 5
-  - 496.8/110.0: OSM-Weiche 1662292733 ohne Abzweig im Plan
-  - 1047.3/134.0: OSM-Weiche 1681788069 ohne Abzweig im Plan
-  - 1075.2/158.0: OSM-Weiche 240238898 ohne Abzweig im Plan
-  - 430.1/158.0: OSM-Weiche 1662292711 ohne Abzweig im Plan
-  - 458.0/134.0: OSM-Weiche 1662292718 ohne Abzweig im Plan
-- **grandson** HT2: 0 → 2
-  - 651.7/134.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-  - 685.6/158.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-- **grandson** HT5: 0 → 1
-  - 886.3/134.0: Gleisende -1208 am Planrand: in OSM läuft das Gleis im Plan weiter (künstlicher Schnitt, Gleis fehlt dazwischen)
-- **gummenen** HT1: 0 → 1
-  - 519.1/134.0: OSM-Weiche 569101885 ohne Abzweig im Plan
-- **gummenen** HT2: 0 → 1
-  - 390.0/110.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-- **le_landeron** HT1: 0 → 2
-  - 1309.6/134.0: OSM-Weiche 632541285 ohne Abzweig im Plan
-  - 1348.5/158.0: OSM-Weiche 468396891 ohne Abzweig im Plan
-- **le_landeron** HT2: 0 → 6
-  - 436.3/158.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-  - 470.1/134.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-  - 771.7/134.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-  - 805.6/158.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-  - 510.0/134.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-  - 757.7/134.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-- **le_landeron** HT5: 0 → 5
-  - 581.1/170.0: Fahrweg Abgang 210 Neuchâtel (249162305) ↔ Gl. 2 im Plan, nicht in OSM
-  - 581.1/158.0: Fahrweg Abgang 210 Neuchâtel (249162305) ↔ Gl. 3 im Plan, nicht in OSM
-  - 370.7/170.0: Fahrweg Abgang 210 Neuchâtel (249162305) ↔ Gl. 709 im Plan, nicht in OSM
-  - 581.1/146.0: Fahrweg Abgang 210 Neuchâtel (5137617913) ↔ Gl. 3 im Plan, nicht in OSM
-  - 370.7/158.0: Fahrweg Abgang 210 Neuchâtel (5137617913) ↔ Gl. 709 in OSM, fehlt im Plan
-- **les_geneveys_sur_coffrane** HT1: 0 → 2
-  - 528.3/110.0: OSM-Weiche 662607448 ohne Abzweig im Plan
-  - 967.4/110.0: OSM-Weiche 471596482 ohne Abzweig im Plan
-- **les_geneveys_sur_coffrane** HT2: 0 → 2
-  - 390.0/110.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-  - 637.7/110.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-- **ligerz** HT1: 0 → 2
-  - 228.8/110.0: OSM-Weiche 1676192637 ohne Abzweig im Plan
-  - 389.7/158.0: OSM-Weiche 1676192646 ohne Abzweig im Plan
-- **ligerz** HT2: 0 → 1
-  - 400.0/110.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-- **motiers** HT1: 0 → 1
-  - 694.5/134.0: OSM-Weiche 307412747 ohne Abzweig im Plan
-- **motiers** HT2: 0 → 1
-  - 390.0/134.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-- **munchenwiler_courgevaux** HT1: 0 → 2
-  - 452.3/110.0: OSM-Weiche 3664795660 ohne Abzweig im Plan
-  - 988.2/110.0: OSM-Weiche 1425220174 ohne Abzweig im Plan
-- **munchenwiler_courgevaux** HT2: 0 → 2
-  - 390.0/110.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-  - 637.7/110.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-- **muntelier_lowenberg** HT1: 0 → 2
-  - 1000.6/110.0: OSM-Weiche 1423831253 ohne Abzweig im Plan
-  - 1005.7/110.0: OSM-Weiche 1976379436 ohne Abzweig im Plan
-- **muntelier_lowenberg** HT2: 0 → 2
-  - 647.7/110.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-  - 657.7/110.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-- **muntschemier** HT1: 0 → 1
-  - 422.3/110.0: OSM-Weiche 3836116278 ohne Abzweig im Plan
-- **muntschemier** HT2: 0 → 1
-  - 390.0/134.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-- **murten** HT5: 0 → 2
-  - 478.2/213.2: Fahrweg Abgang 255 Fribourg (250884070) ↔ Gl. 13 im Plan, nicht in OSM
-  - 422.9/147.2: Fahrweg Abgang 251 Payerne (1958407193) ↔ Gl. 1 in OSM, fehlt im Plan
-- **noiraigue** HT1: 0 → 2
-  - 563.9/134.0: OSM-Weiche 430900028 ohne Abzweig im Plan
-  - 970.6/134.0: OSM-Weiche 430900016 ohne Abzweig im Plan
-- **noiraigue** HT2: 0 → 2
-  - 390.0/134.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-  - 637.7/134.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-- **onnens_bonvillars** HT1: 0 → 1
-  - 634.2/171.2: OSM-Weiche 1952965095 ohne Abzweig im Plan
-- **pensier** HT1: 0 → 1
-  - 471.9/134.0: OSM-Weiche 1352967713 ohne Abzweig im Plan
-- **pensier** HT2: 0 → 2
-  - 390.0/110.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-  - 637.7/110.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-- **riedbach** HT1: 0 → 4
-  - 570.8/134.0: OSM-Weiche 1873340863 ohne Abzweig im Plan
-  - 999.9/110.0: OSM-Weiche 29383735 ohne Abzweig im Plan
-  - 965.9/134.0: OSM-Weiche 5602754263 ohne Abzweig im Plan
-  - 997.8/110.0: OSM-Weiche 5602754264 ohne Abzweig im Plan
-- **riedbach** HT2: 0 → 7
-  - 436.3/134.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-  - 470.1/110.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-  - 771.7/110.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-  - 805.6/134.0: Gleise berühren sich (4 Richtungen), in OSM keine Weiche/Kreuzung
-  - 797.6/134.0: Gleise berühren sich (4 Richtungen), in OSM keine Weiche/Kreuzung
-  - 831.4/110.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-  - 530.0/134.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-- **riedbach** HT5: 0 → 2
-  - 665.8/134.0: Gleisende -1061 am Planrand: in OSM läuft das Gleis im Plan weiter (künstlicher Schnitt, Gleis fehlt dazwischen)
-  - 518.0/122.0: Fahrweg Abgang 220 Kerzers (1873393558) ↔ Gl. 2 im Plan, nicht in OSM
-- **rosshausern** HT1: 0 → 4
-  - 1057.4/110.0: OSM-Weiche 1822839647 ohne Abzweig im Plan
-  - 375.2/134.0: OSM-Weiche 1360518538 ohne Abzweig im Plan
-  - 347.3/110.0: OSM-Weiche 1244528397 ohne Abzweig im Plan
-  - 997.7/158.0: OSM-Weiche 1822839640 ohne Abzweig im Plan
-- **rosshausern** HT2: 0 → 2
-  - 651.7/134.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-  - 685.6/110.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-- **saint_blaise_cff** HT2: 0 → 4
-  - 436.3/134.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-  - 470.1/110.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-  - 771.7/110.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-  - 805.6/134.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-- **saint_blaise_cff** HT5: 0 → 1
-  - 539.7/122.0: Fahrweg Abgang 210 Neuchâtel (632407345) ↔ Gl. 2 im Plan, nicht in OSM
-- **saint_blaise_lac** HT1: 0 → 3
-  - 475.4/134.0: OSM-Weiche 29385653 ohne Abzweig im Plan
-  - 873.3/134.0: OSM-Weiche 29385652 ohne Abzweig im Plan
-  - 845.4/110.0: OSM-Weiche 632380557 ohne Abzweig im Plan
-- **saint_blaise_lac** HT2: 0 → 2
-  - 390.0/134.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-  - 637.7/134.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-- **serrieres** HT1: 0 → 3
-  - 1249.7/134.0: OSM-Weiche 1694785513 ohne Abzweig im Plan
-  - 1284.7/110.0: OSM-Weiche 631505851 ohne Abzweig im Plan
-  - 1239.7/134.0: OSM-Weiche 631505831 ohne Abzweig im Plan
-- **serrieres** HT2: 0 → 3
-  - 436.3/134.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-  - 470.1/110.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-  - 737.7/134.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-- **serrieres** HT5: 0 → 1
-  - 475.2/122.0: Fahrweg Abgang 210 Yverdon (433346842) ↔ Gl. 127 im Plan, nicht in OSM
-- **sugiez** HT1: 0 → 2
-  - 866.0/134.0: OSM-Weiche 9560732155 ohne Abzweig im Plan
-  - 909.7/110.0: OSM-Weiche 7365097834 ohne Abzweig im Plan
-- **sugiez** HT2: 0 → 2
-  - 617.7/134.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-  - 390.0/134.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-- **travers** HT2: 0 → 3
-  - 933.3/134.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-  - 408.0/158.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-  - 435.8/134.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-- **travers** HT5: 0 → 2
-  - 528.2/158.0: Fahrweg Abgang 221 Fleurier (610650614) ↔ Gl. 2 im Plan, nicht in OSM
-  - 384.9/158.0: Fahrweg Abgang 221 Fleurier (610650614) ↔ Gl. 314 im Plan, nicht in OSM
-- **tuscherz** HT1: 0 → 4
-  - 790.5/158.0: OSM-Weiche 1946460604 ohne Abzweig im Plan
-  - 822.4/134.0: OSM-Weiche 1946460608 ohne Abzweig im Plan
-  - 850.2/110.0: OSM-Weiche 1946460636 ohne Abzweig im Plan
-  - 744.7/158.0: OSM-Weiche 1946460601 ohne Abzweig im Plan
-- **tuscherz** HT2: 0 → 4
-  - 651.7/110.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-  - 685.6/134.0: Gleise berühren sich (4 Richtungen), in OSM keine Weiche/Kreuzung
-  - 677.6/134.0: Gleise berühren sich (4 Richtungen), in OSM keine Weiche/Kreuzung
-  - 617.7/134.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-- **tuscherz** HT5: 0 → 2
-  - 685.0/158.0: Gleisende -1089 am Planrand: in OSM läuft das Gleis im Plan weiter (künstlicher Schnitt, Gleis fehlt dazwischen)
-  - 803.5/122.0: Fahrweg Abgang 210 Biel (249162547) ↔ Gl. 1 in OSM, fehlt im Plan
-- **zihlbruecke** HT1: 0 → 1
-  - 658.3/110.0: OSM-Weiche 632385979 ohne Abzweig im Plan
-- **zihlbruecke** HT2: 0 → 1
-  - 747.7/110.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-- **zihlbruecke** HT5: 0 → 2
-  - 729.3/110.0: Fahrweg Abgang 220 Ins (2867982337) ↔ Gl. 134 im Plan, nicht in OSM
-  - 729.3/110.0: Fahrweg Gl. 234 ↔ Gleisende 9600679144 im Plan, nicht in OSM
