@@ -89,7 +89,7 @@ for v in K.get("varianten", []):
     alt = {f: lesen(os.path.join(d_, f)) for f in v["nach_oben"]}
     rc, o = kette(b, v.get("optionen", []), cwd=d_)
     _topo = None
-    _fertig = {} if rc else {k_: lesen(os.path.join(d_, f"{b}_{k_}")) for k_ in ("spurplan.svg", "ports.json", "bare.svg")}
+    _fertig = {} if rc else {k_: lesen(os.path.join(d_, f"{b}_{k_}")) for k_ in ("spurplan.svg", "ports.json", "bare.svg", "netz.json")}
     if not rc:          # Grundregeln auch für Varianten prüfen (27.10., Kerzers: alle Weichen ab Hauptgleis gezeichnet?)
         import re as _re
         _o3 = sh(["spurplan_check.py", "--src", f"{b}.json"] + v.get("optionen", []), cwd=d_)[1]
@@ -121,7 +121,7 @@ for b, opt in K["bahnhoefe"].items():
         e["bare_geaendert"] = lesen(os.path.join(TMP, f"{b}_bare.svg")) != alt["bare.svg"]
         # spurplan_check rechnet spurplan_schema neu und überschreibt <b>_spurplan.svg (V4 20.11.: Typvorlage und
         # Beschriftungsrand gingen so verloren) – Ergebnis der Kette sichern und nach den Prüfungen zurückschreiben
-        _fertig = {k_: lesen(os.path.join(TMP, f"{b}_{k_}")) for k_ in ("spurplan.svg", "ports.json", "bare.svg")}   # auch ports (Typvorlage, 20.11.)
+        _fertig = {k_: lesen(os.path.join(TMP, f"{b}_{k_}")) for k_ in ("spurplan.svg", "ports.json", "bare.svg", "netz.json")}   # auch ports (Typvorlage, 20.11.) und Netzmodell (V4c 21.11.: vorlage.py legt es auf den Plan)
         rc2, o2 = sh(["netz_pruefung.py", b])
         nb = os.path.join(TMP, f"{b}_netz_befunde.json")
         e["netz"] = dict(collections.Counter(x["regel"] for x in json.load(open(nb))["befunde"])) if os.path.exists(nb) else o2[-300:]
