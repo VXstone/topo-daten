@@ -1,85 +1,22 @@
 {
  "zaehl": {
-  "HT1": 3,
-  "HT2": 3,
+  "HT1": 0,
+  "HT2": 0,
   "HT3": 0,
   "HT4": 0,
   "HT5": 0
  },
  "befunde": [
   {
-   "regel": "HT1",
-   "x": 1249.7,
-   "y": 134.0,
-   "text": "OSM-Weiche 1694785513 ohne Abzweig im Plan",
-   "osm": 1694785513
-  },
-  {
-   "regel": "HT1",
-   "x": 1284.7,
-   "y": 110.0,
-   "text": "OSM-Weiche 631505851 ohne Abzweig im Plan",
-   "osm": 631505851
-  },
-  {
-   "regel": "HT1",
-   "x": 1239.7,
-   "y": 134.0,
-   "text": "OSM-Weiche 631505831 ohne Abzweig im Plan",
-   "osm": 631505831
-  },
-  {
-   "regel": "HT2",
-   "x": 651.7,
-   "y": 134.0,
-   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
-   "ways": [
-    37136448,
-    37214731,
-    1104398009
-   ]
-  },
-  {
-   "regel": "HT2",
-   "x": 685.6,
-   "y": 110.0,
-   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
-   "ways": [
-    32030607,
-    1104398010,
-    1104398011
-   ]
-  },
-  {
-   "regel": "HT2",
-   "x": 617.7,
-   "y": 134.0,
-   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
-   "ways": [
-    37136448,
-    37214731,
-    1104398009
-   ]
-  },
-  {
    "regel": "_info",
    "x": 0,
    "y": 0,
-   "text": "Fahrwege: 3/10 Ziele im Plan gefunden, OSM 1, Plan 1",
-   "ohne_lage": [
-    "Abgang 210 Neuchâtel (10106458550)",
-    "Abgang 210 Neuchâtel (10106458551)",
-    "Gl. 1",
-    "Gl. 130",
-    "Gl. 2",
-    "Gl. 227",
-    "Gl. 230"
-   ]
+   "text": "Fahrwege: 10/10 Ziele im Plan gefunden, OSM 18, Plan 18",
+   "ohne_lage": []
   }
  ],
  "osm_abgleich": {
   "VA1": 3,
-  "VB1": 6,
-  "VB2": 4
+  "VB1": 3
  }
 }

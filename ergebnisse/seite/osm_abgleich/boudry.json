@@ -1,36 +1,6 @@
 {
 "plan": "boudry",
-"befunde": [
-{
-"regel": "VB1",
-"x": 1129.7,
-"y": 110.0,
-"text": "OSM-Weiche 628087095 ohne Abzweig im Plan",
-"osm": 628087095
-},
-{
-"regel": "VB1",
-"x": 1157.6,
-"y": 134.0,
-"text": "OSM-Weiche 628087097 ohne Abzweig im Plan",
-"osm": 628087097
-},
-{
-"regel": "VB2",
-"x": 651.7,
-"y": 110.0,
-"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
-"ways": [
-184648385,
-683973529,
-1104398039
-],
-"farben": [
-"gruen",
-"schwarz"
-]
-}
-],
+"befunde": [],
 "info": {
 "dkw_osm_unvollstaendig": [],
 "gleise": 5,
@@ -38,6 +8,6 @@
 "dkw_plan": 0,
 "knoten_osm": 5,
 "versatz_y": 0.0,
-"netz_auf_plan": 0.35
+"netz_auf_plan": 0.82
 }
 }

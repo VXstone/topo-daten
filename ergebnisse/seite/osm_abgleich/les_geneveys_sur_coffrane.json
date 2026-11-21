@@ -2,48 +2,6 @@
 "plan": "les_geneveys_sur_coffrane",
 "befunde": [
 {
-"regel": "VB1",
-"x": 528.3,
-"y": 110.0,
-"text": "OSM-Weiche 662607448 ohne Abzweig im Plan",
-"osm": 662607448
-},
-{
-"regel": "VB1",
-"x": 967.4,
-"y": 110.0,
-"text": "OSM-Weiche 471596482 ohne Abzweig im Plan",
-"osm": 471596482
-},
-{
-"regel": "VB2",
-"x": 390.0,
-"y": 110.0,
-"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
-"ways": [
-51951505,
-184955016,
-507891447
-],
-"farben": [
-"gruen"
-]
-},
-{
-"regel": "VB2",
-"x": 637.7,
-"y": 110.0,
-"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
-"ways": [
-51951505,
-184955016,
-507891447
-],
-"farben": [
-"gruen"
-]
-},
-{
 "regel": "VD1",
 "x": 513.8,
 "y": 110.0,
@@ -57,6 +15,6 @@
 "dkw_plan": 0,
 "knoten_osm": 2,
 "versatz_y": 0.0,
-"netz_auf_plan": 0.5
+"netz_auf_plan": 1.0
 }
 }

@@ -4,7 +4,7 @@
   "HT2": 2,
   "HT3": 0,
   "HT4": 0,
-  "HT5": 0
+  "HT5": 4
  },
  "befunde": [
   {
@@ -14,7 +14,8 @@
    "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
    "ways": [
     108258346,
-    108258347
+    108258347,
+    1042749150
    ]
   },
   {
@@ -24,20 +25,52 @@
    "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
    "ways": [
     27821630,
-    41821121
+    41821121,
+    1042749151
    ]
+  },
+  {
+   "regel": "HT5",
+   "x": 552.4,
+   "y": 122.0,
+   "text": "Fahrweg Abgang 220 Ins (9598269750) ↔ Abgang 220 Neuchâtel (1242403123) im Plan, nicht in OSM",
+   "von": "Abgang 220 Ins (9598269750)",
+   "nach": "Abgang 220 Neuchâtel (1242403123)",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 563.8,
+   "y": 122.0,
+   "text": "Fahrweg Abgang 220 Ins (9598269750) ↔ Gl. 133 im Plan, nicht in OSM",
+   "von": "Abgang 220 Ins (9598269750)",
+   "nach": "Gl. 133",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 454.4,
+   "y": 122.0,
+   "text": "Fahrweg Abgang 220 Neuchâtel (1242403123) ↔ Gl. 1 im Plan, nicht in OSM",
+   "von": "Abgang 220 Neuchâtel (1242403123)",
+   "nach": "Gl. 1",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 552.4,
+   "y": 122.0,
+   "text": "Fahrweg Abgang 220 Neuchâtel (1242403123) ↔ Gl. 232 im Plan, nicht in OSM",
+   "von": "Abgang 220 Neuchâtel (1242403123)",
+   "nach": "Gl. 232",
+   "art": "zusaetzlich"
   },
   {
    "regel": "_info",
    "x": 0,
    "y": 0,
-   "text": "Fahrwege: 4/8 Ziele im Plan gefunden, OSM 2, Plan 2",
-   "ohne_lage": [
-    "Abgang 220 Ins (9598269749)",
-    "Abgang 220 Ins (9598269750)",
-    "Gl. 132",
-    "Gl. 232"
-   ]
+   "text": "Fahrwege: 10/10 Ziele im Plan gefunden, OSM 14, Plan 18",
+   "ohne_lage": []
   }
  ],
  "osm_abgleich": {

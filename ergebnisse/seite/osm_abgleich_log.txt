@@ -1,32 +1,32 @@
 aarau                              {'VB1': 7, 'VB2': 4, 'VD1': 7}
 aarburg_oftringen                  {}
 auvernier                          {'VB1': 1, 'VD1': 1}
-avenches                           {'VB1': 6, 'VB2': 2, 'VD1': 1}
-bern_brunnen_westside              {'VB1': 10, 'VB2': 4}
-bevaix                             {'VB1': 4, 'VB2': 4}
+avenches                           {'VB1': 4, 'VD1': 1}
+bern_brunnen_westside              {'VB1': 5}
+bevaix                             {}
 bole                               {'VB1': 1, 'VC1': 1, 'VB2': 2}
-boudry                             {'VB1': 2, 'VB2': 1}
+boudry                             {}
 chambrelien                        {'VA1': 1, 'VB1': 1}
-champ_du_moulin                    {'VB1': 1, 'VB2': 1, 'VD1': 1}
+champ_du_moulin                    {'VD1': 1}
 colombier                          {'VC1': 3}
 concise                            {}
 corcelles_peseux                   {}
 cornaux                            {'VB1': 1, 'VB2': 2, 'VC1': 1, 'VD1': 4}
-courtepin                          {'VB1': 1, 'VB2': 2, 'VD1': 1}
+courtepin                          {'VB2': 1, 'VD1': 1}
 couvet                             {'VD1': 1}
 cressier                           {}
-cressier_fr                        {'VB2': 1}
+cressier_fr                        {}
 daniken                            {'VB1': 2, 'VD1': 2}
-domdidier                          {'VB1': 5, 'VB2': 3}
+domdidier                          {'VB1': 2}
 dompierre                          {}
 dulliken                           {}
 faoug                              {}
 fraschels                          {}
-galmiz                             {'VB1': 1, 'VB2': 1, 'VD1': 1}
+galmiz                             {'VD1': 1}
 gampelen                           {'VB2': 2}
-gorgier_saint_aubin                {'VB1': 5, 'VB2': 4, 'VD1': 2}
-grandson                           {'VB1': 5, 'VB2': 2}
-gummenen                           {'VB1': 1, 'VB2': 1}
+gorgier_saint_aubin                {'VB1': 4, 'VB2': 1, 'VD1': 2}
+grandson                           {'VB1': 2}
+gummenen                           {}
 ins                                {}
 kallnach                           {'VD1': 1}
 kerzers_papiliorama                {}
@@ -34,11 +34,11 @@ konolfingen                        {'VB1': 1, 'VB2': 2, 'VC1': 1, 'VD1': 2}
 la_neuveville                      {}
 la_presta_mines_d_asphalte         {}
 laufelfingen                       {}
-le_landeron                        {'VB1': 2, 'VB2': 6, 'VD1': 1}
+le_landeron                        {'VB1': 1, 'VD1': 1}
 les_deurres                        {}
-les_geneveys_sur_coffrane          {'VB1': 2, 'VB2': 2, 'VD1': 1}
-les_hauts_geneveys                 {'VB2': 1, 'VD1': 1}
-ligerz                             {'VB1': 2, 'VB2': 1}
+les_geneveys_sur_coffrane          {'VD1': 1}
+les_hauts_geneveys                 {'VD1': 1}
+ligerz                             {'VB1': 1}
 marin_epagnier                     {}
 mob__allieres                      {}
 mob__belmont_sur_montreux          {}
@@ -85,28 +85,28 @@ mob__valmont                       {}
 mob__vernex                        {}
 mob__vuarennes                     {}
 mob__zweisimmen                    {'VA1': 1, 'VB2': 4, 'VD1': 3}
-motiers                            {'VB1': 1, 'VB2': 1, 'VD1': 1}
-munchenwiler_courgevaux            {'VB1': 2, 'VB2': 2, 'VD1': 1}
-muntelier_lowenberg                {'VA1': 1, 'VB1': 6, 'VB2': 3}
-muntschemier                       {'VB1': 3, 'VB2': 2, 'VD1': 1}
+motiers                            {'VD1': 1}
+munchenwiler_courgevaux            {'VD1': 1}
+muntelier_lowenberg                {'VA1': 1, 'VB1': 4}
+muntschemier                       {'VB1': 2, 'VD1': 1}
 murten                             {}
 neuchatel                          {'VA2': 4, 'VC1': 2, 'VD1': 3}
 neuchatel_vauseyon                 {'VB2': 1}
-noiraigue                          {'VB1': 2, 'VB2': 2, 'VD1': 1}
+noiraigue                          {'VD1': 1}
 olten                              {'VB1': 13, 'VB2': 25, 'VC1': 7, 'VD1': 10}
 olten_hammer                       {'VB1': 1}
 onnens_bonvillars                  {'VA1': 1, 'VA2': 1, 'VB1': 2, 'VD1': 1}
-pensier                            {'VB1': 1, 'VB2': 2, 'VD1': 1}
-riedbach                           {'VB1': 4, 'VB2': 7}
-rosshausern                        {'VB1': 4, 'VB2': 2}
+pensier                            {'VD1': 1}
+riedbach                           {'VB2': 1}
+rosshausern                        {'VB1': 2}
 rothrist                           {'VA2': 1, 'VB1': 4, 'VB2': 6}
 safenwil                           {}
-saint_blaise_cff                   {'VB2': 4}
-saint_blaise_lac                   {'VB1': 3, 'VB2': 2, 'VD1': 1}
+saint_blaise_cff                   {}
+saint_blaise_lac                   {'VB1': 1, 'VD1': 1}
 schonenwerd                        {'VB2': 2, 'VD1': 1}
-serrieres                          {'VA1': 3, 'VB1': 6, 'VB2': 4}
+serrieres                          {'VA1': 3, 'VB1': 3}
 solothurn                          {'VA1': 1, 'VB1': 6, 'VB2': 14, 'VC1': 1, 'VD1': 7, 'VD2': 1}
-sugiez                             {'VB1': 2, 'VB2': 2, 'VD1': 1}
+sugiez                             {'VD1': 1}
 szu__berghof                       {}
 szu__borrweg                       {}
 szu__ringlikon                     {}
@@ -118,7 +118,7 @@ szu__zurich_schweighof             {}
 szu__zurich_selnau                 {'VB2': 2}
 tecknau                            {'VB2': 1}
 travers                            {'VB2': 3}
-tuscherz                           {'VB1': 4, 'VB2': 4}
+tuscherz                           {'VB1': 1, 'VB2': 1}
 twann                              {}
 vereina__klosters_platz            {'VB1': 3, 'VD1': 4}
 vereina__klosters_selfranga        {'VB1': 2, 'VD1': 1}
@@ -131,6 +131,6 @@ vereina__susch                     {}
 vereina__vereina_nord              {}
 vereina__vereina_sud               {}
 wangen_bei_olten                   {'VB2': 1}
-zihlbruecke                        {'VB1': 1, 'VB2': 1}
+zihlbruecke                        {}
 zofingen                           {'VA2': 2, 'VB1': 3, 'VD1': 1}
-OSM-Abgleich: 135 Pläne {'VA1': 8, 'VA2': 11, 'VB1': 147, 'VB2': 167, 'VC1': 21, 'VD1': 112, 'VD2': 1}
+OSM-Abgleich: 135 Pläne {'VA1': 8, 'VA2': 11, 'VB1': 93, 'VB2': 97, 'VC1': 21, 'VD1': 112, 'VD2': 1}

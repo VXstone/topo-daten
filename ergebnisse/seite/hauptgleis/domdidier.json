@@ -1,53 +1,21 @@
 {
  "zaehl": {
-  "HT1": 2,
-  "HT2": 2,
+  "HT1": 0,
+  "HT2": 0,
   "HT3": 0,
   "HT4": 0,
   "HT5": 0
  },
  "befunde": [
   {
-   "regel": "HT1",
-   "x": 208.0,
-   "y": 147.2,
-   "text": "OSM-Weiche 1975584333 ohne Abzweig im Plan",
-   "osm": 1975584333
-  },
-  {
-   "regel": "HT1",
-   "x": 830.5,
-   "y": 147.2,
-   "text": "OSM-Weiche 1976353738 ohne Abzweig im Plan",
-   "osm": 1976353738
-  },
-  {
-   "regel": "HT2",
-   "x": 410.0,
-   "y": 110.0,
-   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
-   "ways": []
-  },
-  {
-   "regel": "HT2",
-   "x": 647.7,
-   "y": 110.0,
-   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
-   "ways": []
-  },
-  {
    "regel": "_info",
    "x": 0,
    "y": 0,
-   "text": "Fahrwege: 1/3 Ziele im Plan gefunden, OSM 0, Plan 0",
-   "ohne_lage": [
-    "Abgang 251 Murten (1425220242)",
-    "Gl. 1"
-   ]
+   "text": "Fahrwege: 2/2 Ziele im Plan gefunden, OSM 1, Plan 1",
+   "ohne_lage": []
   }
  ],
  "osm_abgleich": {
-  "VB1": 5,
-  "VB2": 3
+  "VB1": 2
  }
 }

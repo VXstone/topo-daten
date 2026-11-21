@@ -2,48 +2,6 @@
 "plan": "munchenwiler_courgevaux",
 "befunde": [
 {
-"regel": "VB1",
-"x": 452.3,
-"y": 110.0,
-"text": "OSM-Weiche 3664795660 ohne Abzweig im Plan",
-"osm": 3664795660
-},
-{
-"regel": "VB1",
-"x": 988.2,
-"y": 110.0,
-"text": "OSM-Weiche 1425220174 ohne Abzweig im Plan",
-"osm": 1425220174
-},
-{
-"regel": "VB2",
-"x": 390.0,
-"y": 110.0,
-"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
-"ways": [
-129123293,
-362102333,
-705122876
-],
-"farben": [
-"gruen"
-]
-},
-{
-"regel": "VB2",
-"x": 637.7,
-"y": 110.0,
-"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
-"ways": [
-129123293,
-362102333,
-705122876
-],
-"farben": [
-"gruen"
-]
-},
-{
 "regel": "VD1",
 "x": 513.8,
 "y": 110.0,
@@ -57,6 +15,6 @@
 "dkw_plan": 0,
 "knoten_osm": 2,
 "versatz_y": 0.0,
-"netz_auf_plan": 0.5
+"netz_auf_plan": 1.0
 }
 }

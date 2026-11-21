@@ -1,30 +1,6 @@
 {
 "plan": "gummenen",
-"befunde": [
-{
-"regel": "VB1",
-"x": 519.1,
-"y": 134.0,
-"text": "OSM-Weiche 569101885 ohne Abzweig im Plan",
-"osm": 569101885
-},
-{
-"regel": "VB2",
-"x": 390.0,
-"y": 110.0,
-"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
-"ways": [
-27821494,
-27821495,
-53012331,
-121816269,
-572527064
-],
-"farben": [
-"gruen"
-]
-}
-],
+"befunde": [],
 "info": {
 "dkw_osm_unvollstaendig": [],
 "gleise": 2,

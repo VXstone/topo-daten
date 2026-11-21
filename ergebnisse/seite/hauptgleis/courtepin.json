@@ -1,33 +1,15 @@
 {
  "zaehl": {
-  "HT1": 1,
-  "HT2": 2,
+  "HT1": 0,
+  "HT2": 1,
   "HT3": 0,
   "HT4": 0,
   "HT5": 0
  },
  "befunde": [
   {
-   "regel": "HT1",
-   "x": 580.3,
-   "y": 134.0,
-   "text": "OSM-Weiche 3664792780 ohne Abzweig im Plan",
-   "osm": 3664792780
-  },
-  {
    "regel": "HT2",
    "x": 500.0,
-   "y": 110.0,
-   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
-   "ways": [
-    30672940,
-    362102337,
-    380542608
-   ]
-  },
-  {
-   "regel": "HT2",
-   "x": 757.7,
    "y": 110.0,
    "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
    "ways": [
@@ -41,15 +23,12 @@
    "regel": "_info",
    "x": 0,
    "y": 0,
-   "text": "Fahrwege: 3/4 Ziele im Plan gefunden, OSM 3, Plan 3",
-   "ohne_lage": [
-    "Gl. 2"
-   ]
+   "text": "Fahrwege: 4/4 Ziele im Plan gefunden, OSM 5, Plan 5",
+   "ohne_lage": []
   }
  ],
  "osm_abgleich": {
-  "VB1": 1,
-  "VB2": 2,
+  "VB2": 1,
   "VD1": 1
  }
 }

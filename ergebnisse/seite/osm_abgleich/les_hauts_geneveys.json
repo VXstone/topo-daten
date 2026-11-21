@@ -2,16 +2,6 @@
 "plan": "les_hauts_geneveys",
 "befunde": [
 {
-"regel": "VB2",
-"x": 549.7,
-"y": 86.0,
-"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
-"ways": [],
-"farben": [
-"schwarz"
-]
-},
-{
 "regel": "VD1",
 "x": 513.8,
 "y": 110.0,
@@ -24,7 +14,7 @@
 "knoten_plan": 4,
 "dkw_plan": 0,
 "knoten_osm": 4,
-"versatz_y": -37.0,
-"netz_auf_plan": 0.43
+"versatz_y": 0.0,
+"netz_auf_plan": 0.71
 }
 }

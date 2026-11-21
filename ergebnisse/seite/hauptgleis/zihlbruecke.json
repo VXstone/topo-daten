@@ -1,61 +1,37 @@
 {
  "zaehl": {
-  "HT1": 1,
-  "HT2": 1,
+  "HT1": 0,
+  "HT2": 0,
   "HT3": 0,
   "HT4": 0,
   "HT5": 2
  },
  "befunde": [
   {
-   "regel": "HT1",
-   "x": 658.3,
-   "y": 110.0,
-   "text": "OSM-Weiche 632385979 ohne Abzweig im Plan",
-   "osm": 632385979
-  },
-  {
-   "regel": "HT2",
-   "x": 747.7,
-   "y": 110.0,
-   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
-   "ways": [
-    27821631,
-    27821632,
-    108258345,
-    180601994
-   ]
-  },
-  {
    "regel": "HT5",
-   "x": 729.3,
-   "y": 110.0,
-   "text": "Fahrweg Abgang 220 Ins (2867982337) ↔ Gl. 134 im Plan, nicht in OSM",
-   "von": "Abgang 220 Ins (2867982337)",
-   "nach": "Gl. 134",
-   "art": "zusaetzlich"
-  },
-  {
-   "regel": "HT5",
-   "x": 729.3,
-   "y": 110.0,
+   "x": 829.7,
+   "y": 118.0,
    "text": "Fahrweg Gl. 234 ↔ Gleisende 9600679144 im Plan, nicht in OSM",
    "von": "Gl. 234",
    "nach": "Gleisende 9600679144",
    "art": "zusaetzlich"
   },
   {
+   "regel": "HT5",
+   "x": 829.7,
+   "y": 126.0,
+   "text": "Fahrweg Abgang 220 Ins (2867982337) ↔ Gl. 234 in OSM, fehlt im Plan",
+   "von": "Abgang 220 Ins (2867982337)",
+   "nach": "Gl. 234",
+   "art": "fehlt"
+  },
+  {
    "regel": "_info",
    "x": 0,
    "y": 0,
-   "text": "Fahrwege: 5/6 Ziele im Plan gefunden, OSM 4, Plan 6",
-   "ohne_lage": [
-    "Abgang 220 Neuchâtel (305479984)"
-   ]
+   "text": "Fahrwege: 6/6 Ziele im Plan gefunden, OSM 9, Plan 9",
+   "ohne_lage": []
   }
  ],
- "osm_abgleich": {
-  "VB1": 1,
-  "VB2": 1
- }
+ "osm_abgleich": {}
 }

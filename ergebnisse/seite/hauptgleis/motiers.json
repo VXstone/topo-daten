@@ -1,44 +1,21 @@
 {
  "zaehl": {
-  "HT1": 1,
-  "HT2": 1,
+  "HT1": 0,
+  "HT2": 0,
   "HT3": 0,
   "HT4": 0,
   "HT5": 0
  },
  "befunde": [
   {
-   "regel": "HT1",
-   "x": 694.5,
-   "y": 134.0,
-   "text": "OSM-Weiche 307412747 ohne Abzweig im Plan",
-   "osm": 307412747
-  },
-  {
-   "regel": "HT2",
-   "x": 390.0,
-   "y": 134.0,
-   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
-   "ways": [
-    61695404,
-    685304413,
-    696950940,
-    696950941
-   ]
-  },
-  {
    "regel": "_info",
    "x": 0,
    "y": 0,
-   "text": "Fahrwege: 1/2 Ziele im Plan gefunden, OSM 0, Plan 0",
-   "ohne_lage": [
-    "Abgang 221 Travers (307412748)"
-   ]
+   "text": "Fahrwege: 4/4 Ziele im Plan gefunden, OSM 5, Plan 5",
+   "ohne_lage": []
   }
  ],
  "osm_abgleich": {
-  "VB1": 1,
-  "VB2": 1,
   "VD1": 1
  }
 }

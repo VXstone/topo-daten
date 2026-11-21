@@ -2,30 +2,8 @@
 "plan": "courtepin",
 "befunde": [
 {
-"regel": "VB1",
-"x": 580.3,
-"y": 134.0,
-"text": "OSM-Weiche 3664792780 ohne Abzweig im Plan",
-"osm": 3664792780
-},
-{
 "regel": "VB2",
 "x": 500.0,
-"y": 110.0,
-"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
-"ways": [
-30672940,
-362102337,
-380542608
-],
-"farben": [
-"gruen",
-"schwarz"
-]
-},
-{
-"regel": "VB2",
-"x": 757.7,
 "y": 110.0,
 "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
 "ways": [
@@ -35,7 +13,8 @@
 380542608
 ],
 "farben": [
-"gruen"
+"gruen",
+"schwarz"
 ]
 },
 {
@@ -52,6 +31,6 @@
 "dkw_plan": 0,
 "knoten_osm": 2,
 "versatz_y": 0.0,
-"netz_auf_plan": 0.5
+"netz_auf_plan": 0.75
 }
 }
