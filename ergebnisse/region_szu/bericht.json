@@ -1,16 +1,10 @@
 {
  "region": "szu",
- "erzeugt": "2026-11-20 21:48 UTC",
- "code_commit": "0c47dd1af10130c6e28834abfc250d473ad946cb",
+ "erzeugt": "2026-11-21 10:32 UTC",
+ "code_commit": "16ca65c4c672f60c1f6fa522f3b786d865c4bd81",
  "bahnhoefe": {
   "uetliberg": {
    "name": "Uetliberg",
-   "ok": true,
-   "befunde": "Befunde: {}",
-   "optionen": []
-  },
-  "ringlikon": {
-   "name": "Ringlikon",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -21,14 +15,14 @@
    "befunde": "Befunde: {'B': 4}",
    "optionen": []
   },
-  "zurich_binz": {
-   "name": "Zürich Binz",
+  "ringlikon": {
+   "name": "Ringlikon",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "zurich_friesenberg": {
-   "name": "Zürich Friesenberg",
+  "zurich_binz": {
+   "name": "Zürich Binz",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -39,8 +33,8 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "berghof": {
-   "name": "Berghof",
+  "zurich_friesenberg": {
+   "name": "Zürich Friesenberg",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -49,6 +43,12 @@
    "name": "Zürich Giesshübel",
    "ok": true,
    "befunde": "Befunde: {'A': 2, 'B': 311, 'C': 1, 'F': 4}",
+   "optionen": []
+  },
+  "berghof": {
+   "name": "Berghof",
+   "ok": true,
+   "befunde": "Befunde: {}",
    "optionen": []
   },
   "borrweg": {

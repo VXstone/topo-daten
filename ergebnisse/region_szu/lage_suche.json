@@ -198,14 +198,14 @@
    "drehung": {
     "Zürich Giesshübel": -30
    },
-   "unruhe": 319,
+   "unruhe": 329,
    "kennzahlen": {
     "topo_T1": 2,
     "topo_T4": 1,
     "topo_T3": 3,
     "lage_L3a": 1,
     "regel_G2": 1,
-    "regel_G7": 1,
+    "regel_G7": 2,
     "regel_G8": 1,
     "ruhe_ecken": 1
    }
@@ -471,7 +471,7 @@
    "drehung": {
     "Zürich Giesshübel": 30
    },
-   "unruhe": 345,
+   "unruhe": 355,
    "kennzahlen": {
     "topo_T1": 2,
     "topo_T4": 1,
@@ -479,7 +479,7 @@
     "lage_L4": 1,
     "lage_L3a": 2,
     "regel_G2": 1,
-    "regel_G7": 1,
+    "regel_G7": 2,
     "regel_G8": 1
    }
   },
@@ -488,14 +488,14 @@
    "drehung": {
     "Zürich Giesshübel": -30
    },
-   "unruhe": 319,
+   "unruhe": 329,
    "kennzahlen": {
     "topo_T1": 2,
     "topo_T4": 1,
     "topo_T3": 3,
     "lage_L3a": 1,
     "regel_G2": 1,
-    "regel_G7": 1,
+    "regel_G7": 2,
     "regel_G8": 1,
     "ruhe_ecken": 1
    }
@@ -505,7 +505,7 @@
    "drehung": {
     "Zürich Giesshübel": 60
    },
-   "unruhe": 455,
+   "unruhe": 451,
    "kennzahlen": {
     "topo_T1": 2,
     "topo_T4": 1,
@@ -516,7 +516,7 @@
     "regel_G2": 2,
     "regel_G7": 1,
     "regel_G8": 1,
-    "ruhe_ecken": 2
+    "ruhe_ecken": 1
    }
   },
   {
