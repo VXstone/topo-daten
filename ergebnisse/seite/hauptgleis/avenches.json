@@ -1,6 +1,6 @@
 {
  "zaehl": {
-  "HT1": 1,
+  "HT1": 0,
   "HT2": 0,
   "HT3": 0,
   "HT4": 0,
@@ -8,22 +8,14 @@
  },
  "befunde": [
   {
-   "regel": "HT1",
-   "x": 556.7,
-   "y": 134.0,
-   "text": "OSM-Weiche 1975565269 ohne Abzweig im Plan",
-   "osm": 1975565269
-  },
-  {
    "regel": "_info",
    "x": 0,
    "y": 0,
-   "text": "Fahrwege: 3/3 Ziele im Plan gefunden, OSM 3, Plan 3",
+   "text": "Fahrwege: 2/2 Ziele im Plan gefunden, OSM 1, Plan 1",
    "ohne_lage": []
   }
  ],
  "osm_abgleich": {
-  "VB1": 4,
-  "VD1": 1
+  "VB1": 1
  }
 }

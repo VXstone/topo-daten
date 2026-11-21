@@ -399,10 +399,19 @@
   "datei": "werkstatt/ne/avenches_override.json",
   "weg": "Werkstatt NE",
   "ort": "avenches",
-  "schluessel": "vorlage",
-  "art": "Typvorlage",
+  "schluessel": "cfg.s_max_fix",
+  "art": "Schalter",
   "grund": "Entwurf 16.10.2026 (Claude), Avenches, OSM-Stand 12.10.",
-  "umfang": 6
+  "umfang": 1
+ },
+ {
+  "datei": "werkstatt/ne/avenches_override.json",
+  "weg": "Werkstatt NE",
+  "ort": "avenches",
+  "schluessel": "cfg.d_lim_neben",
+  "art": "Schalter",
+  "grund": "Entwurf 16.10.2026 (Claude), Avenches, OSM-Stand 12.10.",
+  "umfang": 1
  },
  {
   "datei": "werkstatt/ne/avenches_override.json",
@@ -410,6 +419,15 @@
   "ort": "avenches",
   "schluessel": "_gleisnummern",
   "art": "Ortswissen",
+  "grund": "Entwurf 16.10.2026 (Claude), Avenches, OSM-Stand 12.10.",
+  "umfang": 1
+ },
+ {
+  "datei": "werkstatt/ne/avenches_override.json",
+  "weg": "Werkstatt NE",
+  "ort": "avenches",
+  "schluessel": "_v4e",
+  "art": "Geometrie",
   "grund": "Entwurf 16.10.2026 (Claude), Avenches, OSM-Stand 12.10.",
   "umfang": 1
  },

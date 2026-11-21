@@ -32,15 +32,14 @@
   "netz_auf_plan": 0.96
  },
  "avenches": {
-  "VB1": 4,
-  "VD1": 1,
+  "VB1": 1,
   "dkw_osm_unvollstaendig": [],
-  "gleise": 5,
-  "knoten_plan": 5,
+  "gleise": 30,
+  "knoten_plan": 16,
   "dkw_plan": 0,
-  "knoten_osm": 10,
+  "knoten_osm": 17,
   "versatz_y": 0.0,
-  "netz_auf_plan": 0.47
+  "netz_auf_plan": 1.0
  },
  "bern_brunnen_westside": {
   "VB1": 3,
@@ -1000,11 +999,11 @@
  },
  "rothrist": {
   "VA2": 1,
-  "VB1": 4,
-  "VB2": 6,
+  "VB1": 5,
+  "VB2": 5,
   "dkw_osm_unvollstaendig": [],
-  "gleise": 84,
-  "knoten_plan": 44,
+  "gleise": 81,
+  "knoten_plan": 40,
   "dkw_plan": 4,
   "knoten_osm": 44,
   "versatz_y": 0.0,
@@ -1333,8 +1332,8 @@
   "VB1": 3,
   "VD1": 1,
   "dkw_osm_unvollstaendig": [],
-  "gleise": 46,
-  "knoten_plan": 24,
+  "gleise": 45,
+  "knoten_plan": 23,
   "dkw_plan": 3,
   "knoten_osm": 28,
   "versatz_y": 0.0,

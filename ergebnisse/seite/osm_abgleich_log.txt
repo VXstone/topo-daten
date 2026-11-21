@@ -1,7 +1,7 @@
 aarau                              {'VB1': 7, 'VB2': 4, 'VD1': 7}
 aarburg_oftringen                  {}
 auvernier                          {'VB1': 1, 'VD1': 1}
-avenches                           {'VB1': 4, 'VD1': 1}
+avenches                           {'VB1': 1}
 bern_brunnen_westside              {'VB1': 3}
 bevaix                             {}
 bole                               {'VB1': 1, 'VC1': 1, 'VB2': 2}
@@ -99,7 +99,7 @@ onnens_bonvillars                  {'VA1': 1, 'VA2': 1, 'VB1': 2, 'VD1': 1}
 pensier                            {'VD1': 1}
 riedbach                           {'VB2': 1}
 rosshausern                        {}
-rothrist                           {'VA2': 1, 'VB1': 4, 'VB2': 6}
+rothrist                           {'VA2': 1, 'VB1': 5, 'VB2': 5}
 safenwil                           {}
 saint_blaise_cff                   {}
 saint_blaise_lac                   {'VD1': 1}
@@ -133,4 +133,4 @@ vereina__vereina_sud               {}
 wangen_bei_olten                   {'VB2': 1}
 zihlbruecke                        {}
 zofingen                           {'VA2': 2, 'VB1': 3, 'VD1': 1}
-OSM-Abgleich: 135 Pläne {'VA1': 8, 'VA2': 11, 'VB1': 83, 'VB2': 95, 'VC1': 21, 'VD1': 112, 'VD2': 1}
+OSM-Abgleich: 135 Pläne {'VA1': 8, 'VA2': 11, 'VB1': 81, 'VB2': 94, 'VC1': 21, 'VD1': 111, 'VD2': 1}

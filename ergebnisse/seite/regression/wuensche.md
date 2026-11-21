@@ -4,11 +4,11 @@ Wünsche je Plan (REGELN 5: W53 S-Kurven ×6, W55 Bahnhofsabstand ×3, W56 Leerl
 |---|---|---|---|---|---|
 | bern | Grosse Knoten | 15 |  | 7 | 111 |
 | region | Region | 15 | 5 |  | 105 |
-| region_ne | Region | 8 | 5 |  | 63 |
 | aarau | Olten 3 · Olten – Aarau | 0 |  | 20 | 60 |
 | region_mob | Region | 6 | 7 |  | 57 |
 | region_vereina | Region | 5 | 9 |  | 57 |
 | region_szu | Region | 9 |  |  | 54 |
+| region_ne | Region | 6 | 5 |  | 51 |
 | basel | Grosse Knoten | 7 |  | 2 | 48 |
 | olten | Olten 1 · Knoten Olten | 3 |  | 3 | 27 |
 | szu__zurich_selnau | SZU · Bahnhöfe | 2 |  | 4 | 24 |
@@ -32,6 +32,7 @@ Wünsche je Plan (REGELN 5: W53 S-Kurven ×6, W55 Bahnhofsabstand ×3, W56 Leerl
 | vereina__selfranga_sud | Vereina · Bahnhöfe | 1 |  | 1 | 9 |
 | thun | Bahnhöfe ohne Regionalplan | 1 |  | 0 | 6 |
 | dulliken | Olten 3 · Olten – Aarau | 0 |  | 2 | 6 |
+| avenches | NE 3 · Lyss – Kerzers – Murten – Payerne | 0 |  | 2 | 6 |
 | corcelles_peseux | NE 8 · Neuchâtel – La Chaux-de-Fonds | 0 |  | 2 | 6 |
 | chambrelien | NE 8 · Neuchâtel – La Chaux-de-Fonds | 1 |  | 0 | 6 |
 | mob__chamby | MOB · Bahnhöfe | 1 |  | 0 | 6 |
@@ -74,7 +75,6 @@ Wünsche je Plan (REGELN 5: W53 S-Kurven ×6, W55 Bahnhofsabstand ×3, W56 Leerl
 | kerzers_papiliorama | NE 3 · Lyss – Kerzers – Murten – Payerne | 0 |  | 0 | 0 |
 | galmiz | NE 3 · Lyss – Kerzers – Murten – Payerne | 0 |  | 0 | 0 |
 | faoug | NE 3 · Lyss – Kerzers – Murten – Payerne | 0 |  | 0 | 0 |
-| avenches | NE 3 · Lyss – Kerzers – Murten – Payerne | 0 |  | 0 | 0 |
 | domdidier | NE 3 · Lyss – Kerzers – Murten – Payerne | 0 |  | 0 | 0 |
 | dompierre | NE 3 · Lyss – Kerzers – Murten – Payerne | 0 |  | 0 | 0 |
 | munchenwiler_courgevaux | NE 4 · Murten – Fribourg | 0 |  | 0 | 0 |

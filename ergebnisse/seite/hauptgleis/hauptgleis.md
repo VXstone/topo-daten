@@ -9,7 +9,7 @@
 | aarau | 7 | 4 | · | 1 | 9 ↓10 | 21 |
 | neuchatel | · | · | 2 | · | 17 | 19 |
 | szu__zurich_giesshubel | 1 | 8 | 1 | 1 | 5 | 16 |
-| rothrist | 2 | 5 | · | · | 6 | 13 |
+| rothrist | 2 | 4 ↓5 | · | · | 6 | 12 |
 | konolfingen | · | 2 | · | · | 7 | 9 |
 | daniken | 2 | · | · | · | 6 | 8 |
 | cornaux | · | 1 | 1 | · | 5 | 7 |
@@ -40,7 +40,6 @@
 | szu__zurich_selnau | · | 2 | · | · | · | 2 |
 | zihlbruecke | · | · | · | · | 2 | 2 |
 | zofingen | 2 | · | · | · | · | 2 |
-| avenches | 1 | · | · | · | · | 1 |
 | courtepin | · | 1 | · | · | · | 1 |
 | dulliken | · | · | · | · | 1 | 1 |
 | grandson | · | · | · | · | 1 | 1 |
@@ -52,6 +51,7 @@
 | onnens_bonvillars | 1 | · | · | · | · | 1 |
 | szu__uetliberg | · | 1 | · | · | · | 1 |
 | aarburg_oftringen | · | · | · | · | · | 0 |
+| avenches | 0 ↓1 | · | · | · | · | 0 |
 | boudry | · | · | · | · | · | 0 |
 | champ_du_moulin | · | · | · | · | · | 0 |
 | concise | · | · | · | · | · | 0 |

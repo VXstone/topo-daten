@@ -1,4 +1,4 @@
-# Ausnahmen je Ort (REGELN 6) – 911 Einträge an 125 Orten: 352 Schalter, 245 Ortswissen, 188 Geometrie, 126 Typvorlage
+# Ausnahmen je Ort (REGELN 6) – 913 Einträge an 125 Orten: 354 Schalter, 245 Ortswissen, 189 Geometrie, 125 Typvorlage
 
 Erzeugt von `spurplan/code/overrides_liste.py`. Ziel (Entscheid 13.11.): nur Ortswissen bleibt; Geometrie abbauen.
 
@@ -41,6 +41,7 @@ Erzeugt von `spurplan/code/overrides_liste.py`. Ziel (Entscheid 13.11.): nur Ort
 | Werkstatt Olten | saint_blaise_cff | 1 | 1 | 1 | 2 |
 | Repo | solothurn | 2 |  |  | 1 |
 | Werkstatt NE | auvernier | 4 | 3 |  | 1 |
+| Werkstatt NE | avenches | 2 | 6 | 1 | 1 |
 | Werkstatt NE | bole |  | 3 |  | 1 |
 | Werkstatt NE | colombier | 3 | 3 |  | 1 |
 | Werkstatt NE | corcelles_peseux | 5 | 3 |  | 1 |
@@ -55,7 +56,6 @@ Erzeugt von `spurplan/code/overrides_liste.py`. Ziel (Entscheid 13.11.): nur Ort
 | Werkstatt Olten | schonenwerd |  | 1 |  | 1 |
 | Region mob | Montreux |  | 1 |  |  |
 | Region mob | Zweisimmen |  | 1 |  |  |
-| Werkstatt NE | avenches | 2 | 4 | 2 |  |
 | Werkstatt NE | bern_brunnen_westside | 2 | 5 | 2 |  |
 | Werkstatt NE | bevaix | 2 | 4 | 2 |  |
 | Werkstatt NE | boudry | 6 | 4 | 2 |  |
@@ -179,13 +179,15 @@ Erzeugt von `spurplan/code/overrides_liste.py`. Ziel (Entscheid 13.11.): nur Ort
 | Werkstatt NE | auvernier | cfg.lt_dist_w | Schalter | 1 | Entwurf 14.10.2026 (Claude), Auvernier, OSM-Stand 12.10. | werkstatt/ne/auvernier_override.json |
 | Werkstatt NE | auvernier | cfg.margin_x | Schalter | 1 | Entwurf 14.10.2026 (Claude), Auvernier, OSM-Stand 12.10. | werkstatt/ne/auvernier_override.json |
 | Werkstatt NE | auvernier | cfg.towns | Schalter | 1 | Entwurf 14.10.2026 (Claude), Auvernier, OSM-Stand 12.10. | werkstatt/ne/auvernier_override.json |
+| Werkstatt NE | avenches | _v4e | Geometrie | 1 | Entwurf 16.10.2026 (Claude), Avenches, OSM-Stand 12.10. | werkstatt/ne/avenches_override.json |
 | Werkstatt NE | avenches | _gleisnummern | Ortswissen | 1 | Entwurf 16.10.2026 (Claude), Avenches, OSM-Stand 12.10. | werkstatt/ne/avenches_override.json |
 | Werkstatt NE | avenches | _gleisnummern | Ortswissen | 1 | Entwurf 16.10.2026 (Claude), Avenches, OSM-Stand 12.10. | werkstatt/ne/ne_vorlagen_overrides.json |
 | Werkstatt NE | avenches | cfg | Schalter | 3 | Entwurf 16.10.2026 (Claude), Avenches, OSM-Stand 12.10. | werkstatt/ne/ne_vorlagen_overrides.json |
+| Werkstatt NE | avenches | cfg.d_lim_neben | Schalter | 1 | Entwurf 16.10.2026 (Claude), Avenches, OSM-Stand 12.10. | werkstatt/ne/avenches_override.json |
 | Werkstatt NE | avenches | cfg.lt_dist_w | Schalter | 1 | Entwurf 16.10.2026 (Claude), Avenches, OSM-Stand 12.10. | werkstatt/ne/avenches_override.json |
 | Werkstatt NE | avenches | cfg.margin_x | Schalter | 1 | Entwurf 16.10.2026 (Claude), Avenches, OSM-Stand 12.10. | werkstatt/ne/avenches_override.json |
+| Werkstatt NE | avenches | cfg.s_max_fix | Schalter | 1 | Entwurf 16.10.2026 (Claude), Avenches, OSM-Stand 12.10. | werkstatt/ne/avenches_override.json |
 | Werkstatt NE | avenches | cfg.towns | Schalter | 1 | Entwurf 16.10.2026 (Claude), Avenches, OSM-Stand 12.10. | werkstatt/ne/avenches_override.json |
-| Werkstatt NE | avenches | vorlage | Typvorlage | 6 | Entwurf 16.10.2026 (Claude), Avenches, OSM-Stand 12.10. | werkstatt/ne/avenches_override.json |
 | Werkstatt NE | avenches | vorlage | Typvorlage | 6 | Entwurf 16.10.2026 (Claude), Avenches, OSM-Stand 12.10. | werkstatt/ne/ne_vorlagen_overrides.json |
 | Werkstatt NE | bern_brunnen_westside | _gleisnummern | Ortswissen | 1 | Entwurf 16.10.2026 (Claude), Bern Brünnen Westside, OSM-Stand 12.10. | werkstatt/ne/bern_brunnen_westside_override.json |
 | Werkstatt NE | bern_brunnen_westside | _gleisnummern | Ortswissen | 1 | Entwurf 16.10.2026 (Claude), Bern Brünnen Westside, OSM-Stand 12.10. | werkstatt/ne/ne_vorlagen_overrides.json |
