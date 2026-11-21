@@ -81,6 +81,7 @@ NE-Bahnhöfe (fest seit 21.10., Schritt N2), Basel/Bern (P2b), Thun/Ins/Murten/K
 | 0.7 | **Detailgrad:** kleine Bahnhöfe ganze Anlage, grosse Knoten Hauptgleise + jede Weiche als Abgang. | Regel | G7, B16, B17 | Sicht |
 | 0.8 | **Darstellung:** Symbole, Beschriftung, Kompaktheit. | Regel/Wunsch | G8 | Ebene 1.F, 5 |
 | 0.9 | **Kartographische Freiheit** (seit 20.11., Daniel): alles, was die Karte lesbarer und nicht falscher macht, ist erwünscht – einfacher darf Ziel sein (kürzere Nebengleise, gleichmässigere Bahnhofsabstände, weniger Knicke), auch an abgenommenen Plänen. Grenze: 0.1 Topologie stimmt, und die **Hauptfahrwege sind intuitiv erkennbar** (durchgehende Hauptgleise gerade und dick, Abzweige als Abzweige). | Grundsatz | 20.11. | Ebene 5, Regression «Vorschlag: einfacher» |
+| 0.10 | **Hinweise nach Priorität** (seit 21.11., Daniel): Hinweise mit Topologie- oder Überschneidungsfehler (Gleis über Gleis, Schnitt, falsch/nicht angebunden, fehlende Weiche/Gleis/Doppelspur, Weiche falsch herum) sind **prio** (Pin-Nummer rot), alle übrigen **nice** (orange). Claude schlägt die Einstufung vor, Daniel schaltet um (Knopf am Hinweis). Der Fahrplan nimmt prio zuerst. | Grundsatz | 21.11. | Feld `prio` in Sammlung `feedback`, seite.html |
 
 ---
 

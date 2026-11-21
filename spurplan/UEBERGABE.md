@@ -9,6 +9,12 @@ Nachträge: am Ende eines Schritts **höchstens 10 Zeilen** in Abschnitt 6 und d
 Wird Abschnitt 6 länger als ~60 Zeilen, die ältesten Nachträge ins Archiv verschieben.
 
 ## 0. Arbeitsweise (gilt in jedem Schritt)
+- **Einstieg (Daniel kopiert):** «Weiter mit UEBERGABE.md – Schritt X, mit Artefakt und Repo schreibend» = Freigabe für: Repo
+  anhängen mit Schreibrecht + push auf main, Feedback-Datenbank lesen und schreiben (Antworten, prio), Seite veröffentlichen, wenn
+  die Sperren grün sind. Die Werkzeug-Freigaben der App kommen trotzdem als Klicks – darum alle **in den ersten Minuten** auslösen.
+- **Berichten wie Daniel schaut (21.11.):** zuerst, was er im Regionalplan der Seite sieht – mit Vorher/Nachher-Ausschnitt der Stelle
+  (wie Vauseyon 20.11.); Technik und Gründe nur auf Nachfrage. Was nur angenommen statt angesehen ist, so benennen
+  («angenommen, nicht geprüft»). Hinweise **prio zuerst** (REGELN 0.10).
 - **Zuerst die Zugriffe holen, solange Daniel da ist** (er bestätigt sie gleich zu Beginn): (1) Repo VXstone/topo-daten mit
   Schreibrecht anhängen (`add_repo`, access push) und `git clone --depth 1`; (2) Feedback-Seite: ArtifactData `list` der
   Sammlungen `feedback` und `abnahme` mit `out_dir`; (3) die erste Schreibfreigabe der Datenbank früh holen, z. B. eine offene

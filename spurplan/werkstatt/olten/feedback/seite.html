@@ -5,7 +5,7 @@
 /* Layout: Arbeitsplatz wie ein Planungstisch: links Planliste, Mitte der Plan (zoom/pan, Klick = Hinweis), rechts die Hinweise zum Plan */
 :root{
   --bg:#e9eeea; --panel:#ffffff; --fg:#16201a; --muted:#5a665e; --line:#d2dad4; --hover:#f1f5f2;
-  --accent:#00862f; --accent-fg:#ffffff; --pin:#d4351c; --pin-done:#7d8a80; --sketch:#1f6feb;
+  --accent:#00862f; --accent-fg:#ffffff; --pin:#d4351c; --pin-prio:#a8001a; --pin-done:#7d8a80; --sketch:#1f6feb;
   --ok:#00862f; --warn:#a86400; --info:#00649e; --violet:#8a1fb0;
   --f-body:"Fira Sans","Source Sans 3",Helvetica,Arial,sans-serif;
   --f-disp:"Fira Sans Condensed","Fira Sans",Helvetica,Arial,sans-serif;
@@ -14,11 +14,11 @@
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
   --bg:#111613; --panel:#192019; --fg:#e4ebe6; --muted:#98a59c; --line:#2b352e; --hover:#202a23;
-  --accent:#3db26a; --accent-fg:#06200f; --pin:#ff6a4d; --pin-done:#8d9a91; --sketch:#5aa2ff;
+  --accent:#3db26a; --accent-fg:#06200f; --pin:#ff6a4d; --pin-prio:#ff2626; --pin-done:#8d9a91; --sketch:#5aa2ff;
   --ok:#4cc27a; --warn:#e3a246; --info:#5fb3e6; --violet:#d189f0; color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#111613; --panel:#192019; --fg:#e4ebe6; --muted:#98a59c; --line:#2b352e; --hover:#202a23;
-  --accent:#3db26a; --accent-fg:#06200f; --pin:#ff6a4d; --pin-done:#8d9a91; --sketch:#5aa2ff;
+  --accent:#3db26a; --accent-fg:#06200f; --pin:#ff6a4d; --pin-prio:#ff2626; --pin-done:#8d9a91; --sketch:#5aa2ff;
   --ok:#4cc27a; --warn:#e3a246; --info:#5fb3e6; --violet:#d189f0; color-scheme:dark}
 [hidden]{display:none!important}
 html,body{height:100%}
@@ -92,7 +92,7 @@ aside.notes h3 small{font-family:var(--f-body);font-weight:400;color:var(--muted
 .note:hover{border-color:var(--muted)}
 .note.sel{border-color:var(--pin);box-shadow:0 0 0 1px var(--pin)}
 .note .h{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted)}
-.note .n{font-family:var(--f-mono);font-weight:600;color:var(--fg);background:var(--hover);border-radius:4px;padding:0 5px}
+.note .n{font-family:var(--f-mono);font-weight:600;color:var(--fg);background:var(--hover);border-radius:4px;padding:0 5px} .note .n.prio{background:var(--pin-prio);color:#fff}
 .note .t{white-space:pre-wrap;overflow-wrap:anywhere}
 .note .a{font-size:13px;border-left:2px solid var(--accent);padding-left:8px;color:var(--fg);white-space:pre-wrap;overflow-wrap:anywhere}
 .note .a b{color:var(--accent);font-weight:600}
@@ -389,7 +389,7 @@ function drawPins(){
   if(!pinsG)return;const u=unitPx(),r=10*u;let h="";
   const list=planEntries(cur);
   const L="abcdefghijklmnopqrstuvwxyz";
-  list.forEach((e,i)=>{if(!visible(e))return;const done=e.status==="erledigt",sel=e.id===selId,col=done?"var(--pin-done)":"var(--pin)";
+  list.forEach((e,i)=>{if(!visible(e))return;const done=e.status==="erledigt",sel=e.id===selId,col=done?"var(--pin-done)":(e.prio?"var(--pin-prio)":"var(--pin)");   /* prio (Daniel 21.11.): Nummer rot statt orange */
     const P=pts(e);if(!P.length)return;
     if(P.length>1)h+=`<polyline points="${P.map(q=>q.x+","+q.y).join(" ")}" fill="none" stroke="${col}" stroke-width="${1.5*u}" stroke-dasharray="${3*u} ${3*u}" opacity="${sel?.9:.45}" pointer-events="none"/>`;
     P.forEach((q,k)=>{const lb=(i+1)+(P.length>1?L[k]:"");
@@ -417,13 +417,13 @@ function renderList(){
   if(!db){$("#list").innerHTML=`<div class="empty">Die Hinweise werden geladen, sobald die Seite mit claude.ai verbunden ist.</div>`;return}
   if(!list.length){$("#list").innerHTML=`<div class="empty">${all.length?"Keine Hinweise in diesem Filter.":"Noch keine Hinweise zu diesem Plan. Klick im Plan auf die Stelle, die nicht stimmt, und beschreibe kurz das Problem."}</div>`;return}
   $("#list").innerHTML=list.map(({e,i})=>`<div class="note ${e.id===selId?"sel":""}" data-id="${e.id}">
-    <div class="h"><span class="n">${i+1}</span><span class="st ${e.status}">${STLAB[e.status]||esc(e.status)}</span>${isReg(cur)?`<span>${esc([...new Set(((e.punkte&&e.punkte.length)?e.punkte:[e]).map(q=>q.bahnhof_name||"Strecke"))].join(", "))}</span>`:""}${e.punkte&&e.punkte.length>1?`<span>· ${e.punkte.length} Stellen</span>`:""}${e.skizze&&e.skizze.length&&!e._reg?`<span>· ✎ Skizze</span>`:""}${e._reg?`<span class="src" title="Hinweis aus dem Regionalplan, hier an derselben Stelle im Spurplan">Regionalplan</span>`:""}<span class="spacer"></span><span>${fmtDate(e.erstellt)}</span></div>
+    <div class="h"><span class="n${e.prio?" prio":""}" title="${e.prio?"prio (Topologie, Überschneidung …)":"nice"}">${i+1}</span><span class="st ${e.status}">${STLAB[e.status]||esc(e.status)}</span>${isReg(cur)?`<span>${esc([...new Set(((e.punkte&&e.punkte.length)?e.punkte:[e]).map(q=>q.bahnhof_name||"Strecke"))].join(", "))}</span>`:""}${e.punkte&&e.punkte.length>1?`<span>· ${e.punkte.length} Stellen</span>`:""}${e.skizze&&e.skizze.length&&!e._reg?`<span>· ✎ Skizze</span>`:""}${e._reg?`<span class="src" title="Hinweis aus dem Regionalplan, hier an derselben Stelle im Spurplan">Regionalplan</span>`:""}<span class="spacer"></span><span>${fmtDate(e.erstellt)}</span></div>
     <div class="t">${esc(e.text)}</div>
     ${e.antwort?`<div class="a"><b>Claude${e.version?" · "+esc(e.version):""}:</b> ${esc(e.antwort)}</div>`:""}
     ${(e.rueckmeldungen||[]).map(r=>`<div class="a du"><b>Du:</b> ${esc(r.text)}</div>`).join("")}
     ${replyId===e.id?`<div class="reply"><textarea id="replyTxt" placeholder="Deine Antwort an Claude"></textarea><div class="row"><button class="btn quiet" data-a="replyNo">Abbrechen</button><button class="btn prim" data-a="replySave">Antwort senden</button></div></div>`:""}
     <div class="acts">${confirmDel===e.id?`<span style="font-size:12px;color:var(--muted)">Wirklich löschen?</span><button class="btn" data-a="delYes">Löschen</button><button class="btn" data-a="delNo">Behalten</button>`:
-      `${e.antwort&&replyId!==e.id?`<button class="btn" data-a="reply">Antworten</button>`:""}${e.status!=="erledigt"?`<button class="btn" data-a="done">Erledigt</button>`:`<button class="btn" data-a="reopen">Wieder öffnen</button>`}<button class="btn quiet" data-a="del">Löschen</button>`}</div></div>`).join("");
+      `<button class="btn quiet" data-a="prio" title="Priorität umschalten">${e.prio?"prio → nice":"nice → prio"}</button>${e.antwort&&replyId!==e.id?`<button class="btn" data-a="reply">Antworten</button>`:""}${e.status!=="erledigt"?`<button class="btn" data-a="done">Erledigt</button>`:`<button class="btn" data-a="reopen">Wieder öffnen</button>`}<button class="btn quiet" data-a="del">Löschen</button>`}</div></div>`).join("");
   const rt=document.getElementById("replyTxt");if(rt&&document.activeElement!==rt)rt.focus({preventScroll:true});
 }
 $("#filter").addEventListener("click",e=>{const b=e.target.closest("button[data-f]");if(b){filterSt=b.dataset.f;renderAll()}});
@@ -442,6 +442,7 @@ $("#list").addEventListener("click",async ev=>{
     if(act==="delYes"){confirmDel=null;await ref.delete();toast("Hinweis gelöscht");return}
     if(act==="done")await ref.update({status:"erledigt",erledigt_am:new Date().toISOString()});
     if(act==="reopen")await ref.update({status:"offen"});
+    if(act==="prio"){const e=entries.find(x=>x.id===id);await ref.update({prio:!(e&&e.prio)});toast(e&&e.prio?"als nice markiert":"als prio markiert")}
   }catch(err){toast("Änderung nicht gespeichert")}
 });
 function select(id,center){
