@@ -1,4 +1,4 @@
-147 Pläne, 35 geändert: 2 vermutlich besser, 32 gleichwertig, 1 schlechter?
+147 Pläne, 36 geändert: 2 vermutlich besser, 33 gleichwertig, 1 schlechter?
 
 | Plan | Gruppe | Basis | Stellen | Einordnung | Kennzahlen alt→neu | G0 | HT | letzte Änderung |
 |---|---|---|---|---|---|---|---|---|
@@ -35,8 +35,9 @@
 | couvet | NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier | Archivbeginn (Abnahme 2026-10-20) | 1 | gleichwertig | OSM VD1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-20T21:23 |
 | motiers | NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier | Archivbeginn (Abnahme 2026-10-20) | 1 | gleichwertig | OSM VB1 1, VB2 1, VD1 1 (kein Alt-Stand) | 0 | HT1 1 · HT2 1 | 2026-11-20T21:23 |
 | les_geneveys_sur_coffrane | NE 8 · Neuchâtel – La Chaux-de-Fonds | Archivbeginn (Abnahme 2026-10-19) | 1 | gleichwertig | OSM VB1 2, VB2 2, VD1 1 (kein Alt-Stand) | 0 | HT1 2 · HT2 2 | 2026-11-20T21:23 |
+| region_vereina | Region | veröffentlicht | 1 | gleichwertig |  | GS 1 · GG 5 · GQ 2 · GT 2 | – | 2026-11-17T04:27 |
 | zofingen | Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil | bestätigt 2026-11-08 | 26 | vermutlich besser | W59 11→10 · OSM VA2 2, VB1 3, VD1 1 (kein Alt-Stand) | GG 1 | HT1 2 | 2026-11-20T21:23 |
-| region_ne | Region | veröffentlicht | 41 | vermutlich besser | G2 35→32, T7 6→5, W53 8→9 (Wunsch-Summe -2) | GS 1 · GG 2 · GQ 1 · GT 4 | – | 2026-11-20T21:49 |
+| region_ne | Region | veröffentlicht | 41 | vermutlich besser | G2 35→32, T7 6→5, W53 8→9 (Wunsch-Summe -2) | GS 1 · GG 2 · GQ 1 · GT 4 | – | 2026-11-21T10:37 |
 
 Grundprüfung G0 aller Pläne: `ergebnisse/seite/grundpruefung/grundpruefung.md`
 Hauptgleis-Topologie HT aller Pläne mit Netzmodell: `ergebnisse/seite/hauptgleis/hauptgleis.md`
