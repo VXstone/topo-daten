@@ -1,7 +1,7 @@
 {
  "region": "mob",
- "erzeugt": "2026-11-21 10:27 UTC",
- "code_commit": "16ca65c4c672f60c1f6fa522f3b786d865c4bd81",
+ "erzeugt": "2026-11-21 11:28 UTC",
+ "code_commit": "b440c7a0988784d73e29608a20909528506107a9",
  "bahnhoefe": {
   "schonried": {
    "name": "Schönried",
@@ -109,14 +109,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "jaman": {
-   "name": "Jaman",
+  "chamby": {
+   "name": "Chamby",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "chamby": {
-   "name": "Chamby",
+  "jaman": {
+   "name": "Jaman",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
