@@ -348,7 +348,11 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 
 ### V4e – NE: HT-Rest (aus V4c, 21.11.)
 - Einstieg: «Weiter mit UEBERGABE.md – Schritt V4e: NE HT-Rest»
-- Liste oben unter V4c «Rest». Zuerst Antwort F6 (Gampelen) umsetzen; dann je Plan OSM ansehen, Vorlage/Override nach OSM (REGELN 0.1),
+- **Avenches zuerst (Daniel 21.11. abends, REGELN 3.6):** ohne Typvorlage aus dem Code, Override `cfg.s_max_fix` 3680 (Industriegebiet
+  ~700 m östlich mit 5–6 Weichen kommt mit). Lokal: HT 0, aber G0 GS 1 (Gleis der südlichen Abstellanlage kreuzt Stumpen ohne Weiche,
+  x 613/y 198) und GG 1 (31 px aufeinander, x 775/y 220) → Abstellanlagen-Regel im allgemeinen Code (REGELN 2.10 «fehlt», wie Solothurn
+  0bw9). Erst mit G0 grün veröffentlichen. Bern Brünnen ohne Bümpliz-Nebengleis erledigt (v163).
+- Liste oben unter V4c «Rest». F6 (Gampelen) erledigt; dann je Plan OSM ansehen, Vorlage/Override nach OSM (REGELN 0.1),
   Vorher/Nachher an Daniel wie St-Blaise CFF. Fertig: NE-Pläne HT 0 oder als OSM-Ausnahme begründet.
 
 ### V4d – NE ruhig und Nebengleise kürzen (aus V4b, 21.11.)

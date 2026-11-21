@@ -172,6 +172,7 @@ welche Muster erkannt wurden (V0).
 | 3.3 | Knotenpläne: Pläne nur an ruhigen Stellen schneiden (≥ 500 m ohne Weiche); nahe Betriebspunkte teilen einen Plan (≤ 2500 m); Halte ohne Weiche schneiden nie | | 3.11., T9 | straenge `--knoten` | – | **LR** |
 | 3.4 | Jeder SBB-Betriebspunkt ist in einem Plan enthalten (eigener oder gemeinsamer Knotenplan, 13.11.: «eigener Plan je Betriebspunkt» aufgehoben); ein Abzweig mit Weichen ist nie nur ein Knick | | R8, R14, T8 | | O2 | alle |
 | 3.5 | Kreuzungsgleis (beide Enden auf demselben Streckengleis, ≤ 600 m) gehört samt Weichen zum näheren Betriebspunkt. Kreuzungsstelle aus zwei Streckengleisen (zwei getrennte Wege zwischen denselben zwei Verzweigungen, je ≤ 600 m) gehört samt beiden Weichen zum Betriebspunkt, der ihrer Mitte am nächsten liegt (seit 18.11., T-SZU Borrweg: Weichen gingen an Binz und Friesenberg) | | 5.11. | `kreuzungsgleis_m`; region_vorbereiten/straenge «Kreuzungsstelle» | V1/V2, S1, GG | **LR** |
+| 3.6 | Anschluss- und Industrieanlagen bis etwa 4–5 Gleise (Mass Cornaux), die an der Strecke eines Bahnhofs hängen, kommen ganz in dessen Bahnhofplan (auch ~700 m vom Bahnhof weg, Avenches), besonders wenn sie einfach sind; grössere Anlagen nach 3.1. Ein Neben-/Anschlussgleis gehört zum Betriebspunkt, dem seine Weiche am nächsten liegt (Bern Brünnen: Abstellgleis 240 m vor Bümpliz Nord gehört zu Bümpliz Nord) – seit 21.11. (Daniel, V4c) | Avenches, Bern Brünnen | | Typvorlage (`vorlage`) bzw. Planfenster `s_min_fix`/`s_max_fix` | HT1 | NE |
 
 ---
 

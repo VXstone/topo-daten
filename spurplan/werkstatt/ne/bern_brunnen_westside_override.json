@@ -192,7 +192,8 @@
    ]
   },
   "margin_x": 330,
-  "lt_dist_w": 2.0
+  "lt_dist_w": 2.0,
+  "s_max_fix": 1550
  },
  "vorlage": {
   "strecke": "doppelspur",
@@ -225,17 +226,10 @@
     "seite": "oben",
     "stumpen": 1,
     "pfeil": true
-   },
-   {
-    "art": "anschluss",
-    "ende": "rechts",
-    "lage": "aussen",
-    "seite": "unten",
-    "stumpen": 1
    }
   ],
   "_hinweis": "17.10. OSM: Ost zwei Spurwechsel hintereinander (651->75, 75->...), West einer (652->651)",
-  "_hinweis_v4c": "V4c 21.11.2026 (HT, REGELN 0.1; Daniel «die anderen wie St-Blaise»): OSM: Anschluss (spur) ab 1873334811 Richtung Kerzers oben, Abstellgleis 108469842 ab 1244528391 Seite Bern unten fehlten"
+  "_hinweis_v4c": "V4c 21.11.2026 (HT, REGELN 0.1; Daniel «die anderen wie St-Blaise»): OSM: Anschluss (spur) ab 1873334811 Richtung Kerzers oben, Abstellgleis 108469842 ab 1244528391 Seite Bern unten fehlten · 21.11. abends (Daniel): Abstellgleis 108469842 gehört zu Bümpliz Nord (Weiche 240 m davor, REGELN 3.6) – weg, Planfenster endet davor (s_max_fix 1550 m, ruhig zwischen Spurwechsel 1363 m und Weiche 1742 m)"
  },
  "_gleisnummern": "SBB Open Data perronoberflache (gleisnummern_sbb.py, 19.10.2026)"
 }
