@@ -374,7 +374,6 @@ def netz_mitschreiben(key, full, P):
     except ImportError:
         sys.path.insert(0, os.path.dirname(os.path.abspath(__file__))); import osm_abgleich as OA
     import numpy as np
-    from scipy.optimize import linear_sum_assignment
     fn = f"{key}_netz.json"; fl = f"{key}_netz_lauf.json"
     if not os.path.exists(fn): return None
     N = json.load(open(fn))
@@ -394,6 +393,11 @@ def netz_mitschreiben(key, full, P):
     fy = _abbildung(py_)
     # längs: Abgänge, dann Weichen
     px_ = [(abg[p["knoten"]]["x"], p["x"]) for p in P["ports"] if p.get("knoten") in abg and p["kind"] == "edge"]
+    # Perronmitte als Stützpunkt (Serrières 21.11.: nur über die Abgänge lag die OSM-Weiche 70 px neben dem Abzweig)
+    pv = [(float(m.group(1)) + float(m.group(3)) / 2) for m in
+          re.finditer(r'<rect x="([-\d.]+)" y="([-\d.]+)" width="([\d.]+)" height="8" rx="1.5"', full)]
+    pn = [(p_["x0"] + p_["x1"]) / 2 for p_ in N.get("perrons", [])]
+    if pv and pn: px_.append((sum(pn) / len(pn), sum(pv) / len(pv)))
     fx0 = _abbildung(px_)
     gleise, _, _, luecken = OA.plan_lesen(full)
     PK = [k for k in OA.plan_knoten(gleise, luecken) if k[4] >= 3] if gleise else []
@@ -403,18 +407,33 @@ def netz_mitschreiben(key, full, P):
         for n in g["knoten"]: lagen.setdefault(n, set()).add(g["y"])
     sw = [n for n, v in KN.items() if v.get("typ") in ("switch", "railway_crossing") and v.get("y") is not None]
     for n in sw: lagen.setdefault(n, set()).add(KN[n]["y"])
+    # Zuordnung reihenfolgetreu (wie Sequenzabgleich): OSM-Weichen und Abzweige je längs sortiert, Paar nur bei passender
+    # Ebene; Auslassen kostet SKIP. Serrières 21.11.: die reine Kostenminimierung tauschte Anschluss- und Spurwechselweiche.
     zu = {}
+    SKIP = 150.0
     if sw and PK:
-        C = np.full((len(sw), len(PK)), 1e6)
-        for i, n in enumerate(sw):
-            x = fx0(KN[n]["x"])
-            for j, k in enumerate(PK):
-                dy = min(abs(fy(y) - k[1]) for y in lagen[n])
-                if dy < 6:
-                    c = abs(x - k[0]) + 4 * dy
-                    if c < 300: C[i, j] = c
-        ri, ci = linear_sum_assignment(C)
-        zu = {sw[r]: PK[c] for r, c in zip(ri, ci) if C[r, c] < 1e6}
+        S_ = sorted(sw, key=lambda n: (fx0(KN[n]["x"]), KN[n]["y"])); K_ = sorted(PK, key=lambda k: (k[0], k[1]))
+        def kost(n, k):
+            dy = min(abs(fy(y) - k[1]) for y in lagen[n])
+            return abs(fx0(KN[n]["x"]) - k[0]) + 4 * dy if dy < 6 else None
+        I, J = len(S_), len(K_)
+        D = [[0.0] * (J + 1) for _ in range(I + 1)]; Z = [[None] * (J + 1) for _ in range(I + 1)]
+        for i in range(I + 1):
+            for j in range(J + 1):
+                if i == 0 and j == 0: continue
+                best = []
+                if i: best.append((D[i - 1][j] + SKIP, "s"))
+                if j: best.append((D[i][j - 1] + SKIP, "k"))
+                if i and j:
+                    c = kost(S_[i - 1], K_[j - 1])
+                    if c is not None and c < 2 * SKIP: best.append((D[i - 1][j - 1] + c, "p"))
+                D[i][j], Z[i][j] = min(best)
+        i, j = I, J
+        while i or j:
+            z = Z[i][j]
+            if z == "p": zu[S_[i - 1]] = K_[j - 1]; i -= 1; j -= 1
+            elif z == "s": i -= 1
+            else: j -= 1
     S, _ = _monoton(px_ + [(KN[n]["x"], k[0]) for n, k in zu.items()])
     erlaubt = {round(a, 1) for a, _ in S}
     zu = {n: k for n, k in zu.items() if round(KN[n]["x"], 1) in erlaubt}

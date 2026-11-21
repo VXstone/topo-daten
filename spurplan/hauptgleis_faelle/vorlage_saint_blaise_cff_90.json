@@ -3,9 +3,16 @@
  "erwartet": [],
  "nicht": [
   {
+   "regel": "HT1",
+   "anlass": "Spurwechsel 49773692 und 171035994–96 fehlten im Netzmodell; vorlage.py ergänzt OSM-Verbindungen zwischen Weichen; beide Spurwechsel Seite Biel"
+  },
+  {
+   "regel": "HT2",
+   "anlass": "Spurwechsel 49773692 und 171035994–96 fehlten im Netzmodell; vorlage.py ergänzt OSM-Verbindungen zwischen Weichen; beide Spurwechsel Seite Biel"
+  },
+  {
    "regel": "HT5",
-   "text": "Abgang 210 Biel (632416798) ↔ Abgang 210 Neuchâtel (632407347)",
-   "anlass": "Spurwechsel Ost (Way 49773692) fehlte im Netzmodell; vorlage.py ergänzt OSM-Verbindungen zwischen Weichen"
+   "anlass": "Spurwechsel 49773692 und 171035994–96 fehlten im Netzmodell; vorlage.py ergänzt OSM-Verbindungen zwischen Weichen; beide Spurwechsel Seite Biel"
   }
  ]
 }

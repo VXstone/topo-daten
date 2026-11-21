@@ -186,7 +186,7 @@
   "zusaetze": [
    {
     "art": "spurwechsel",
-    "ende": "links",
+    "ende": "rechts",
     "anzahl": 1,
     "richtung": "steigend"
    },
@@ -197,6 +197,7 @@
     "seite": "unten",
     "stumpen": 2
    }
-  ]
+  ],
+  "_hinweis_v4c": "V4c 21.11.2026 (HT, REGELN 0.1): OSM-Spurwechsel 157267597 (1694785513 unten -> 631505851 oben) liegt östlich der Perrons, Seite Neuchâtel; vorher links gezeichnet"
  }
 }
