@@ -4036,6 +4036,90 @@ if RU.get("g6_knubbel", True):
     if _nk: print(f"G6: {_nk} Überstand(e) vor Ausrundung gekürzt")
 
 
+# REGELN 2.10 (Schritt V4e, 21.11.2026, Avenches – Daniel: «Stumpen nach rechts soll VOR dem Gleis enden, das ins Hauptgleis
+# hochgeht»): ein Stumpfgleis (Prellbock), dessen gerades Ende ein anderes gezeichnetes Gleis ohne Weiche schneidet, endet
+# kurz vor dem Schnitt. Abstell-/Anschlussgleise sind ohne Längenmassstab gezeichnet (2.10); in OSM liegt das Gleisende vor
+# dem querenden Gleis, erst die Stauchung schiebt es darüber. cfg «stumpf_vor_schnitt» (alle Wege), Abstand
+# «stumpf_schnitt_px» (8 px vor dem Schnitt), mindestens «stumpf_min_px» (6 px) ab der letzten Weiche, sonst bleibt es.
+STUMPF_X = {}
+def _stumpf_vor_schnitt(svg_paths, dots):
+    _ab = CFG.get("stumpf_schnitt_px", 8.0); _mn = CFG.get("stumpf_min_px", 6.0)
+    def _poly(sp_):
+        toks = re.findall(r"([MHLQV])([^MHLQV]*)", sp_); pts = []; cur = None
+        for c, a in toks:
+            v = [float(t) for t in re.findall(r"-?[\d.]+", a)]
+            if c == "M": cur = (v[0], v[1]); pts.append(cur)
+            elif c == "H":
+                for x in v: cur = (x, cur[1]); pts.append(cur)
+            elif c == "V":
+                for y in v: cur = (cur[0], y); pts.append(cur)
+            elif c == "L":
+                for i in range(0, len(v) - 1, 2): cur = (v[i], v[i + 1]); pts.append(cur)
+            elif c == "Q":
+                for i in range(0, len(v) - 3, 4):
+                    c0 = cur; cq = (v[i], v[i + 1]); ce = (v[i + 2], v[i + 3])
+                    for t in (0.25, 0.5, 0.75, 1.0):
+                        pts.append(((1 - t) ** 2 * c0[0] + 2 * (1 - t) * t * cq[0] + t * t * ce[0],
+                                    (1 - t) ** 2 * c0[1] + 2 * (1 - t) * t * cq[1] + t * t * ce[1]))
+                    cur = ce
+        return pts
+    alle = [(k_, i_, sp_.strip()) for k_, v_ in svg_paths.items() for i_, d_ in enumerate(v_) for sp_ in re.split(r"(?=M)", d_) if sp_.strip()]
+    poly = [_poly(sp_) for _, _, sp_ in alle]
+    hor = [re.fullmatch(r"M(-?[\d.]+),(-?[\d.]+)H(-?[\d.]+)", sp_) for _, _, sp_ in alle]
+    _stopxy = {(round(xpos(n_, SD[n_][0]), 1), round(ypos(n_), 1)): n_ for n_ in stops if n_ in home}
+    neu_dots = list(dots); ersatz = {}; n_ok = 0
+    for j_, d_ in enumerate(dots):
+        xd, yd = d_[0], d_[1]
+        # waagrechte Teilstücke auf der Höhe des Prellbocks, zusammenhängend vom Prellbock nach innen
+        hs = [(a_, (float(m_[1]), float(m_[3]))) for a_, m_ in enumerate(hor) if m_ and abs(float(m_[2]) - yd) < 0.3]
+        if not any(abs(x0 - xd) < 0.3 or abs(x1 - xd) < 0.3 for _, (x0, x1) in hs): continue
+        dr = None
+        for _, (x0, x1) in hs:
+            if abs(x1 - xd) < 0.3 and abs(x0 - xd) >= 0.3: dr = 1 if x1 > x0 else -1
+            if abs(x0 - xd) < 0.3 and abs(x1 - xd) >= 0.3: dr = 1 if x0 > x1 else -1
+        if dr is None: continue
+        lauf = set(); lim = xd
+        while True:
+            w_ = [(a_, xs_) for a_, xs_ in hs if a_ not in lauf and any(abs(x - lim) < 0.3 for x in xs_)]
+            if not w_: break
+            for a_, xs_ in w_: lauf.add(a_); lim = min(lim, *xs_) if dr > 0 else max(lim, *xs_)
+        # innere Grenze: letzte Stelle, an der ein anderes Gleis auf der Höhe ansetzt (Weiche) – davon weg zum Prellbock
+        xj = lim
+        for b_, P in enumerate(poly):
+            if b_ in lauf: continue
+            for q in (P[0], P[-1]):
+                if abs(q[1] - yd) < 0.6 and (q[0] - lim) * dr >= -0.3 and (xd - q[0]) * dr > 0.3: xj = max(xj, q[0]) if dr > 0 else min(xj, q[0])
+        # Schnitte anderer Gleise mit dem Stück xj … Prellbock
+        xc = None
+        for b_, P in enumerate(poly):
+            if b_ in lauf: continue
+            if any(abs(q[1] - yd) < 0.6 and (q[0] - xj) * dr >= -0.3 and (xd - q[0]) * dr >= -0.3 for q in (P[0], P[-1])): continue
+            for (ax, ay), (bx, by) in zip(P, P[1:]):
+                if (ay - yd) * (by - yd) >= 0: continue
+                x_ = ax + (yd - ay) * (bx - ax) / (by - ay)
+                if (x_ - xj) * dr > 0.5 and (xd - x_) * dr > -0.5 and (xc is None or (x_ - xc) * dr < 0): xc = x_
+        if xc is None: continue
+        xn = xc - dr * _ab
+        if (xn - xj) * dr < _mn: continue
+        for a_ in lauf:
+            x0, x1 = (float(hor[a_][1]), float(hor[a_][3]))
+            lo_, hi_ = (x0, x1) if dr > 0 else (x1, x0)
+            if (lo_ - xn) * dr >= 0: ersatz[a_] = ""                      # ganz hinter dem neuen Ende
+            elif (hi_ - xn) * dr > 0:
+                ersatz[a_] = (f"M{x0:.1f},{yd:.1f}H{xn:.1f}" if (x1 - x0) * dr > 0 else f"M{xn:.1f},{yd:.1f}H{x1:.1f}")
+        neu_dots[j_] = (round(xn, 1),) + tuple(d_[1:]); n_ok += 1
+        n_ = _stopxy.get((round(xd, 1), round(yd, 1)))
+        if n_ is not None: STUMPF_X[n_] = round(xn, 1)
+        if ARGS.dbg: print("STUMPF", round(xd, 1), round(yd, 1), "->", round(xn, 1), "Schnitt", round(xc, 1))
+    for a_, neu_ in ersatz.items():
+        k_, i_, sp_ = alle[a_]
+        svg_paths[k_][i_] = re.sub(r"\s{2,}", " ", svg_paths[k_][i_].replace(sp_, neu_, 1)).strip()
+    for k_ in svg_paths: svg_paths[k_] = [d_ for d_ in svg_paths[k_] if d_]
+    return n_ok, neu_dots
+if CFG.get("stumpf_vor_schnitt", True):
+    _ns, dots = _stumpf_vor_schnitt(svg_paths, dots)
+    if _ns: print(f"REGELN 2.10: {_ns} Stumpfgleis(e) vor dem Schnitt beendet")
+
 def _zg_zusammenlegen(svg_paths):
     """REGELN 1.9 (Schritt K0, 19.11.2026; Hinweise Aarau fmlk/vnyq, Zweisimmen jy8r): Zwischengerade im Bahnhofplan –
     ein Gleis wechselt zweimal in dieselbe Richtung die Ebene (Schräge – kurzes waagrechtes Stück – Schräge), an den beiden
@@ -5452,7 +5536,7 @@ if not ARGS.bare and ARGS.out in (None, f"{key}_spurplan.svg"):
     for sg in segs:
         for n_ in sg["nodes"]:
             if n_ in SD and n_ in LL and n_ not in _kn:
-                _kn[n_] = dict(lat=LL[n_][0], lon=LL[n_][1], x=_f(xpos(n_, SD[n_][0])), y=_f(ypos(n_)) if n_ in home else None,
+                _kn[n_] = dict(lat=LL[n_][0], lon=LL[n_][1], x=_f(STUMPF_X.get(n_, xpos(n_, SD[n_][0]))), y=_f(ypos(n_)) if n_ in home else None,
                                typ=ntag.get(n_, {}).get("railway"))
     _NETZ = dict(
         bahnhof=key, titel=CFG["title"], W=_f(W), H=_f(H),

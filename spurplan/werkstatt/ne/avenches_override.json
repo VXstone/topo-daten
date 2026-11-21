@@ -192,36 +192,10 @@
    ]
   },
   "margin_x": 330,
-  "lt_dist_w": 2.0
+  "lt_dist_w": 2.0,
+  "s_max_fix": 3680,
+  "d_lim_neben": 110
  },
- "vorlage": {
-  "strecke": "einspur",
-  "form": "kreuzung",
-  "gleise": [
-   "2",
-   "1"
-  ],
-  "pax": [
-   false,
-   true
-  ],
-  "perrons": "aussen",
-  "zusaetze": [
-   {
-    "art": "anschluss",
-    "ende": "rechts",
-    "lage": "innen",
-    "seite": "unten",
-    "stumpen": 2
-   },
-   {
-    "art": "anschluss",
-    "ende": "rechts",
-    "lage": "aussen",
-    "seite": "oben",
-    "stumpen": 1
-   }
-  ]
- },
- "_gleisnummern": "SBB Open Data perronoberflache (gleisnummern_sbb.py, 19.10.2026)"
+ "_gleisnummern": "SBB Open Data perronoberflache (gleisnummern_sbb.py, 19.10.2026)",
+ "_v4e": "V4e 21.11.2026 (REGELN 3.6): ohne Typvorlage aus dem Code; Fenster bis Industriegebiet Ost (s_max_fix), Abstellanlage Süd ganz (d_lim_neben)"
 }
