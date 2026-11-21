@@ -353,6 +353,7 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   x 613/y 198) und GG 1 (31 px aufeinander, x 775/y 220) → Abstellanlagen-Regel im allgemeinen Code (REGELN 2.10 «fehlt», wie Solothurn
   0bw9). Daniel 21.11. sah dieselben zwei Stellen: Stumpen nach rechts soll VOR dem Gleis enden, das ins Hauptgleis
   hochgeht (kreuzt die Schräge), und «Miniknubbel» vor dem Pfeil nach unten ganz rechts (= GG). Erst mit G0 grün veröffentlichen. Bern Brünnen ohne Bümpliz-Nebengleis erledigt (v163).
+  **Avenches erledigt 21.11. spät (v164)** – Nachtrag V4e. Weiter mit dem Rest unten (nächster Chat, gleicher Einstieg).
 - Liste oben unter V4c «Rest». F6 (Gampelen) erledigt; dann je Plan OSM ansehen, Vorlage/Override nach OSM (REGELN 0.1),
   Vorher/Nachher an Daniel wie St-Blaise CFF. Fertig: NE-Pläne HT 0 oder als OSM-Ausnahme begründet.
 
@@ -801,3 +802,11 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - Sichtbar: St-Blaise CFF beide Spurwechsel Seite Biel, Serrières Spurwechsel Seite Neuchâtel (je HT → 0, abgenommene Pläne, Differenzbild an
   Daniel). Gampelen → Frage F6. Prüffälle `hauptgleis_faelle/vorlage_*`. G0 unverändert.
 
+### 21.11.2026 ~22:45 – Schritt V4e Teil 1: Avenches, Seite v164 (Commits f3871dc, e240519, dad7a31; ergebnisse 930d990)
+- Avenches ohne Typvorlage: `s_max_fix` 3680 (Industriegebiet Ost), `d_lim_neben` 110 (Abstellanlage Süd ~100 m neben der Strecke ganz mit
+  Prellböcken – vorher zwei gleiche Pfeile aufeinander = GG/«Miniknubbel»), Gleisnummern 1/2 per `gleise`/`nummern` (REGELN 3.6). G0 0, HT 0.
+- Neu REGELN 2.10 `_stumpf_vor_schnitt`: Stumpfgleis endet 8 px vor einem Schnitt ohne Weiche (GS weg); nicht an Weichen-/Kreuzungsknoten,
+  R45-DKW, `dkw_px`, höchstens 3 Ebenen kürzen. Erste Fassung kürzte Rothrist (durch das DKW-Feld, ~600 px), Zofingen (EKW) und Montreux –
+  korrigiert; im Endstand ändert die Regel nur Avenches. Regionalplan NE: Avenches länger, Linie Murten–Payerne gestreckt (Domdidier rückt).
+- osm_abgleich Avenches VB1 1 (Weichen 1975565327/…332 im Plan an einem Punkt; vorher fälschlich dem Schnitt zugeordnet) – keine Sperre.
+- Rest V4e unverändert (Liste unter V4c «Rest» / Nicht-Vorlagen). Abnahmen unverändert (69).
