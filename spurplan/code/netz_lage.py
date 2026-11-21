@@ -944,7 +944,9 @@ def route_geom(r):
         return [track_line(core, pa_[j], pb_[j], o, defer_s=(id(ea), na) not in STACK and not _fr, defer_e=(id(eb), nb) not in STACK and not _fr, late=_late, late_f=_lf) for j, o in enumerate(_o)]
     def _cross(ls):
         G_ = [_LSx([tuple(p) for p in l]) for l in ls]
-        return sum(1 for i in range(len(G_)) for j in range(i + 1, len(G_)) if G_[i].crosses(G_[j]))
+        # auch aufeinanderliegende Gleise zählen (V4c 21.11.: Concise – Onnens lagen 14 px aufeinander, crosses() = False; G0 GG)
+        return sum(1 for i in range(len(G_)) for j in range(i + 1, len(G_))
+                   if G_[i].crosses(G_[j]) or G_[i].intersection(G_[j].buffer(0.5)).length > 6)
     # Paarung nach Strang (3.11.2026): tragen beide Enden dieselben Strang-Nummern, verbindet jedes Gleis seinen Partner
     # (nicht oberstes mit oberstem). Kreuzen sich die Gleise dabei, liegen die Stränge in den beiden Plänen verschieden
     # (Gleissprung ohne Weiche) -> Befund T2.

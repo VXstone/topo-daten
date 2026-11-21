@@ -342,6 +342,8 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   **Nachmittag 21.11. (Daniel: F6 = A, «die anderen wie St-Blaise»):** Gampelen, Rosshäusern, Bern Brünnen, Grandson, St-Blaise Lac nach OSM;
   Typvorlagen 51 → 22. Rest: Avenches HT1 (Abstellschlaufe statt Stumpen), Ligerz HT1 (Messung: Abbildung quer je Seite fehlt),
   Bevaix/Gorgier/Riedbach/Tüscherz/Zihlbrücke/Bern Brünnen HT5 (Gleisziele, Planrand), Courtepin HT2.
+  Regionalplan: Concise – Onnens lagen die Gleise 14 px aufeinander (G0 GG, numerisches Kippen nach den Vorlagen) → netz_lage `_cross`
+  zählt Überlagerung (REGELN 4.5); dort bleibt ein kleiner paralleler Versatz → V4d.
 
 ### V4e – NE: HT-Rest (aus V4c, 21.11.)
 - Einstieg: «Weiter mit UEBERGABE.md – Schritt V4e: NE HT-Rest»
