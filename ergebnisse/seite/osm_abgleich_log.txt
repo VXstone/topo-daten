@@ -67,7 +67,7 @@ mob__les_echets                    {}
 mob__les_sciernes                  {}
 mob__matten                        {}
 mob__montbovon                     {'VB1': 4, 'VD1': 2}
-mob__montreux                      {'VA2': 3, 'VB2': 4, 'VD1': 2}
+mob__montreux                      {'VA2': 3, 'VB2': 6, 'VD1': 2}
 mob__montreux_les_planches         {}
 mob__oeschseite                    {}
 mob__paccot                        {'VB1': 2}
@@ -133,4 +133,4 @@ vereina__vereina_sud               {}
 wangen_bei_olten                   {'VB2': 1}
 zihlbruecke                        {}
 zofingen                           {'VA2': 2, 'VB1': 3, 'VD1': 1}
-OSM-Abgleich: 135 Pläne {'VA1': 8, 'VA2': 11, 'VB1': 80, 'VB2': 93, 'VC1': 21, 'VD1': 111, 'VD2': 1}
+OSM-Abgleich: 135 Pläne {'VA1': 8, 'VA2': 11, 'VB1': 80, 'VB2': 95, 'VC1': 21, 'VD1': 111, 'VD2': 1}

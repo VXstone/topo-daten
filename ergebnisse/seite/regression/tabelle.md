@@ -1,4 +1,4 @@
-147 Pläne, 40 geändert: 7 schlechter?, 2 vermutlich besser, 31 gleichwertig
+147 Pläne, 39 geändert: 7 schlechter?, 1 vermutlich besser, 31 gleichwertig
 
 | Plan | Gruppe | Basis | Stellen | Einordnung | Kennzahlen alt→neu | G0 | HT | letzte Änderung |
 |---|---|---|---|---|---|---|---|---|
@@ -40,8 +40,7 @@
 | couvet | NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier | Archivbeginn (Abnahme 2026-10-20) | 1 | gleichwertig | OSM VD1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-20T21:23 |
 | motiers | NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier | Archivbeginn (Abnahme 2026-10-20) | 1 | gleichwertig | OSM VD1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-20T21:23 |
 | les_geneveys_sur_coffrane | NE 8 · Neuchâtel – La Chaux-de-Fonds | Archivbeginn (Abnahme 2026-10-19) | 1 | gleichwertig | OSM VD1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-20T21:23 |
-| zofingen | Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil | bestätigt 2026-11-08 | 26 | vermutlich besser | W59 11→10 · OSM VA2 2, VB1 3, VD1 1 (kein Alt-Stand) | GG 1 | HT1 2 | 2026-11-21T20:58 |
-| mob__montreux | MOB · Bahnhöfe | veröffentlicht | 1 | vermutlich besser | G2 2→3, VB2 6→4 | GS 1 · GG 2 · GQ 1 · GP 1 | HT2 3 | 2026-11-21T21:10 |
+| zofingen | Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil | bestätigt 2026-11-08 | 26 | vermutlich besser | W59 11→10 · OSM VA2 2, VB1 3, VD1 1 (kein Alt-Stand) | GG 1 | HT1 2 | 2026-11-21T21:27 |
 
 Grundprüfung G0 aller Pläne: `ergebnisse/seite/grundpruefung/grundpruefung.md`
 Hauptgleis-Topologie HT aller Pläne mit Netzmodell: `ergebnisse/seite/hauptgleis/hauptgleis.md`
