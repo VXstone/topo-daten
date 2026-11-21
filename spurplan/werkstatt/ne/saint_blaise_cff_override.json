@@ -211,17 +211,12 @@
   "zusaetze": [
    {
     "art": "spurwechsel",
-    "ende": "links",
-    "anzahl": 1,
-    "richtung": "steigend"
-   },
-   {
-    "art": "spurwechsel",
     "ende": "rechts",
-    "anzahl": 1,
-    "richtung": "fallend"
+    "anzahl": 2,
+    "richtung": "steigend"
    }
-  ]
+  ],
+  "_hinweis_v4c": "V4c 21.11.2026 (HT, REGELN 0.1): OSM hat beide Spurwechsel östlich der Perrons (Seite Biel): erst 1821345664 unten -> 1821345669 oben, dann 468098347 oben -> 1693772540 unten; vorher links steigend + rechts fallend gezeichnet"
  },
  "_gleisnummern": "SBB Open Data perronoberflache (gleisnummern_sbb.py, 19.10.2026)",
  "_aenderungen": [
