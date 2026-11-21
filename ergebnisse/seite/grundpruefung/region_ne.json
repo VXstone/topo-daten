@@ -6,55 +6,43 @@
   "GQ": 1,
   "GP": 0,
   "GW": 0,
-  "GT": 4
+  "GT": 2
  },
  "befunde": [
   {
    "regel": "GS",
-   "x": -2755.7,
-   "y": 1474.0,
+   "x": -2750.3,
+   "y": 1473.3,
    "text": "Gleise kreuzen sich (88°) ohne DKW, Kreuzung oder Niveautrennung"
   },
   {
    "regel": "GG",
-   "x": -1531.4,
-   "y": 45.4,
+   "x": -1527.7,
+   "y": 43.2,
    "text": "zwei Gleise 12 px aufeinander"
   },
   {
    "regel": "GG",
-   "x": 583.6,
-   "y": -1282.7,
+   "x": 540.7,
+   "y": -1251.5,
    "text": "zwei Gleise 15 px aufeinander"
   },
   {
    "regel": "GQ",
-   "x": 1521.7,
-   "y": -881.2,
+   "x": 1525.4,
+   "y": -883.4,
    "text": "Querabstand nach dem Knick 23.2 px statt 15.9 px wie davor"
   },
   {
    "regel": "GT",
-   "x": -2917.2,
-   "y": 1671.1,
-   "text": "Treppe, Versatz 20.2 px"
+   "x": 611.2,
+   "y": -1312.7,
+   "text": "Treppe, Versatz 20.1 px"
   },
   {
    "regel": "GT",
-   "x": -2923.1,
-   "y": 1662.5,
-   "text": "Treppe, Versatz 20.2 px"
-  },
-  {
-   "regel": "GT",
-   "x": 655.3,
-   "y": -1344.4,
-   "text": "Treppe, Versatz 20.2 px"
-  },
-  {
-   "regel": "GT",
-   "x": 659.3,
-   "y": -1334.8,
+   "x": 615.3,
+   "y": -1303.1,
    "text": "Treppe, Versatz 20.2 px"
   }
  ]

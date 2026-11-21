@@ -24,10 +24,10 @@
 | serrieres | **3** (Basis 1) | **3** (Basis 2) | · | · | 1 ↓3 | 7 |
 | neuchatel_vauseyon | · | 1 | · | · | 5 | 6 |
 | rosshausern | **4** (Basis 2) | **2** (Basis 0) | · | · | 0 ↓3 | 6 |
+| saint_blaise_cff | · | **4** (Basis 0) | · | · | **2** (Basis 0) | 6 |
 | avenches | **3** (Basis 2) | **2** (Basis 1) | · | · | · | 5 |
 | mob__chamby | 2 | 1 | · | 1 | 1 | 5 |
 | mob__montreux | · | 5 | · | · | · | 5 |
-| saint_blaise_cff | · | **4** (Basis 1) | · | · | 1 | 5 |
 | saint_blaise_lac | **3** (Basis 1) | **2** (Basis 0) | · | · | · | 5 |
 | travers | · | 3 | · | · | 2 | 5 |
 | auvernier | · | · | · | · | 4 | 4 |
@@ -299,11 +299,14 @@ Regeln: HT1 = OSM-Weiche am Hauptgleis ohne Abzweig im Plan; HT2 = Abzweig am Ha
 - **rosshausern** HT2: 0 → 2
   - 651.7/134.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
   - 685.6/110.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-- **saint_blaise_cff** HT2: 1 → 4
-  - 436.3/134.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-  - 470.1/110.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-  - 771.7/110.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-  - 805.6/134.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
+- **saint_blaise_cff** HT2: 0 → 4
+  - 651.7/134.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
+  - 685.6/110.0: Gleise berühren sich (4 Richtungen), in OSM keine Weiche/Kreuzung
+  - 677.6/110.0: Gleise berühren sich (4 Richtungen), in OSM keine Weiche/Kreuzung
+  - 711.4/134.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
+- **saint_blaise_cff** HT5: 0 → 2
+  - 539.7/122.0: Fahrweg Abgang 210 Neuchâtel (632407345) ↔ Gl. 2 im Plan, nicht in OSM
+  - 544.1/122.0: Fahrweg Abgang 210 Neuchâtel (632407347) ↔ Gl. 1 im Plan, nicht in OSM
 - **saint_blaise_lac** HT1: 1 → 3
   - 475.4/134.0: OSM-Weiche 29385653 ohne Abzweig im Plan
   - 873.3/134.0: OSM-Weiche 29385652 ohne Abzweig im Plan

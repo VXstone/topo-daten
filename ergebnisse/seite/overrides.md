@@ -623,7 +623,7 @@ Erzeugt von `spurplan/code/overrides_liste.py`. Ziel (Entscheid 13.11.): nur Ort
 | Werkstatt NE | saint_blaise_cff | cfg.margin_x | Schalter | 1 | Entwurf 14.10.2026 (Claude), Saint-Blaise CFF, OSM-Stand 12.10. | werkstatt/ne/saint_blaise_cff_override.json |
 | Werkstatt NE | saint_blaise_cff | cfg.towns | Schalter | 1 | Entwurf 14.10.2026 (Claude), Saint-Blaise CFF, OSM-Stand 12.10. | werkstatt/ne/saint_blaise_cff_override.json |
 | Werkstatt NE | saint_blaise_cff | vorlage | Typvorlage | 6 | Entwurf 14.10.2026 (Claude), Saint-Blaise CFF, OSM-Stand 12.10. | werkstatt/ne/ne_vorlagen_overrides.json |
-| Werkstatt NE | saint_blaise_cff | vorlage | Typvorlage | 6 | Entwurf 14.10.2026 (Claude), Saint-Blaise CFF, OSM-Stand 12.10. | werkstatt/ne/saint_blaise_cff_override.json |
+| Werkstatt NE | saint_blaise_cff | vorlage | Typvorlage | 7 | Entwurf 14.10.2026 (Claude), Saint-Blaise CFF, OSM-Stand 12.10. | werkstatt/ne/saint_blaise_cff_override.json |
 | Werkstatt NE | saint_blaise_lac | pax_ways | Ortswissen | 3 | Entwurf 14.10.2026 (Claude), Saint Blaise-Lac, OSM-Stand 12.10. | werkstatt/ne/ne_vorlagen_overrides.json |
 | Werkstatt NE | saint_blaise_lac | pax_ways | Ortswissen | 3 | Entwurf 14.10.2026 (Claude), Saint Blaise-Lac, OSM-Stand 12.10. | werkstatt/ne/saint_blaise_lac_override.json |
 | Werkstatt NE | saint_blaise_lac | cfg | Schalter | 3 | Entwurf 14.10.2026 (Claude), Saint Blaise-Lac, OSM-Stand 12.10. | werkstatt/ne/ne_vorlagen_overrides.json |

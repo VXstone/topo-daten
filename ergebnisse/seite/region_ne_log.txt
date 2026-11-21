@@ -24,7 +24,7 @@ munchenwiler_courgevaux {"ok": true, "optionen": [], "plan_geaendert": false, "b
 cressier_fr {"ok": true, "optionen": [], "plan_geaendert": false, "bare_geaendert": false, "netz": {"D11": 1}, "topologie": "{}", "qualitaet": {"topo_A": 0, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "topo_F": 0, "netz_D11": 1, "boegen_pax": 0, "boegen_alle": 3, "randabstand": 0}}
 courtepin {"ok": true, "optionen": [], "plan_geaendert": false, "bare_geaendert": false, "netz": {}, "topologie": "{}", "qualitaet": {"topo_A": 0, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "topo_F": 0, "boegen_pax": 4, "boegen_alle": 4, "randabstand": 0}}
 pensier {"ok": true, "optionen": [], "plan_geaendert": false, "bare_geaendert": false, "netz": {}, "topologie": "{}", "qualitaet": {"topo_A": 0, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "topo_F": 0, "boegen_pax": 4, "boegen_alle": 4, "randabstand": 0}}
-saint_blaise_cff {"ok": true, "optionen": [], "plan_geaendert": false, "bare_geaendert": false, "netz": {}, "topologie": "{}", "qualitaet": {"topo_A": 0, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "topo_F": 0, "boegen_pax": 0, "boegen_alle": 4, "randabstand": 0}}
+saint_blaise_cff {"ok": true, "optionen": [], "plan_geaendert": true, "bare_geaendert": true, "netz": {}, "topologie": "{}", "qualitaet": {"topo_A": 0, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "topo_F": 0, "boegen_pax": 0, "boegen_alle": 4, "randabstand": 0}}
 cornaux {"ok": true, "optionen": [], "plan_geaendert": false, "bare_geaendert": false, "netz": {"Z1": 2, "D11": 1, "F7": 1}, "topologie": "{}", "qualitaet": {"topo_A": 0, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "topo_F": 0, "netz_Z1": 2, "netz_D11": 1, "netz_F7": 1, "boegen_pax": 0, "boegen_alle": 47, "randabstand": 0}}
 cressier {"ok": true, "optionen": [], "plan_geaendert": false, "bare_geaendert": false, "netz": {}, "topologie": "{}", "qualitaet": {"topo_A": 0, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "topo_F": 0, "boegen_pax": 0, "boegen_alle": 0, "randabstand": 0}}
 le_landeron {"ok": true, "optionen": [], "plan_geaendert": false, "bare_geaendert": false, "netz": {}, "topologie": "{}", "qualitaet": {"topo_A": 0, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "topo_F": 0, "boegen_pax": 4, "boegen_alle": 12, "randabstand": 0}}
@@ -54,9 +54,9 @@ chambrelien {"ok": true, "optionen": [], "plan_geaendert": false, "bare_geaender
 les_geneveys_sur_coffrane {"ok": true, "optionen": [], "plan_geaendert": false, "bare_geaendert": false, "netz": {}, "topologie": "{}", "qualitaet": {"topo_A": 0, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "topo_F": 0, "boegen_pax": 4, "boegen_alle": 4, "randabstand": 0}}
 les_hauts_geneveys {"ok": true, "optionen": [], "plan_geaendert": false, "bare_geaendert": false, "netz": {}, "topologie": "{}", "qualitaet": {"topo_A": 0, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "topo_F": 0, "boegen_pax": 4, "boegen_alle": 9, "randabstand": 0}}
 murten {"ok": true, "optionen": [], "plan_geaendert": false, "bare_geaendert": false, "netz": {"A1": 1}, "topologie": "{}", "qualitaet": {"topo_A": 0, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "topo_F": 0, "netz_A1": 1, "boegen_pax": 12, "boegen_alle": 16, "randabstand": 0}}
-Regionalgeometrie /home/runner/work/topo-daten/topo-daten/spurplan/werkstatt/olten/feedback/region_ne.svg: Achse 10.06 px, 91 Streckenpfade; keine Befunde
+Regionalgeometrie /home/runner/work/topo-daten/topo-daten/spurplan/werkstatt/olten/feedback/region_ne.svg: Achse 10.05 px, 91 Streckenpfade; keine Befunde
 
-Region Neuchâtel: {"ok": true, "geaendert": true, "geometrie": {"plan": "/home/runner/work/topo-daten/topo-daten/spurplan/werkstatt/olten/feedback/region_ne.svg", "achse": 10.058112905567823, "befunde": []}}
+Region Neuchâtel: {"ok": true, "geaendert": true, "geometrie": {"plan": "/home/runner/work/topo-daten/topo-daten/spurplan/werkstatt/olten/feedback/region_ne.svg", "achse": 10.053332479440215, "befunde": []}}
 Kennzahlen gegen die Basis:
   auvernier              neu   
   avenches               neu   

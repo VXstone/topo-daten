@@ -1,9 +1,10 @@
-147 Pläne, 34 geändert: 32 gleichwertig, 1 vermutlich besser, 1 schlechter?
+147 Pläne, 36 geändert: 2 vermutlich besser, 33 gleichwertig, 1 schlechter?
 
 | Plan | Gruppe | Basis | Stellen | Einordnung | Kennzahlen alt→neu | G0 | HT | letzte Änderung |
 |---|---|---|---|---|---|---|---|---|
 | bole | NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier | Archivbeginn (Abnahme 2026-10-20) | 3 | schlechter? | W56 6→7 (Wunsch-Summe +3) · OSM VB1 1, VB2 2, VC1 1 (kein Alt-Stand) | 0 | HT2 2 · HT3 1 | 2026-11-20T21:23 |
 | auvernier | NE 6 · Neuchâtel – Yverdon | Archivbeginn (Abnahme 2026-10-20) | 14 | gleichwertig | OSM VB1 1, VD1 1 (kein Alt-Stand) | GG 1 · GT 1 | HT5 4 | 2026-11-20T21:23 |
+| saint_blaise_cff | NE 5 · Neuchâtel – Biel | Archivbeginn (Abnahme 2026-10-15) | 8 | gleichwertig | OSM VB2 4 (kein Alt-Stand) | 0 | **HT2 4 (Basis 0)** · **HT5 2 (Basis 0)** | 2026-11-20T21:23 |
 | colombier | NE 6 · Neuchâtel – Yverdon | Archivbeginn (Abnahme 2026-10-16) | 7 | gleichwertig | OSM VC1 3 (kein Alt-Stand) | 0 | HT3 3 · HT5 1 | 2026-11-20T21:23 |
 | twann | NE 5 · Neuchâtel – Biel | Archivbeginn (Abnahme 2026-10-15) | 5 | gleichwertig | OSM ok (kein Alt-Stand) | 0 | 0 | 2026-11-20T21:23 |
 | cornaux | NE 5 · Neuchâtel – Biel | Archivbeginn (Abnahme 2026-10-15) | 4 | gleichwertig | OSM VB1 1, VB2 2, VC1 1, VD1 4 (kein Alt-Stand) | GS 1 · GG 4 | HT2 1 · HT3 1 · HT5 5 | 2026-11-20T21:23 |
@@ -36,6 +37,7 @@
 | motiers | NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier | Archivbeginn (Abnahme 2026-10-20) | 1 | gleichwertig | OSM VB1 1, VB2 1, VD1 1 (kein Alt-Stand) | 0 | **HT1 1 (Basis 0)** · **HT2 1 (Basis 0)** | 2026-11-20T21:23 |
 | les_geneveys_sur_coffrane | NE 8 · Neuchâtel – La Chaux-de-Fonds | Archivbeginn (Abnahme 2026-10-19) | 1 | gleichwertig | OSM VB1 2, VB2 2, VD1 1 (kein Alt-Stand) | 0 | **HT1 2 (Basis 0)** · **HT2 2 (Basis 0)** | 2026-11-20T21:23 |
 | zofingen | Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil | bestätigt 2026-11-08 | 26 | vermutlich besser | W59 11→10 · OSM VA2 2, VB1 3, VD1 1 (kein Alt-Stand) | GG 1 | HT1 2 | 2026-11-20T21:23 |
+| region_ne | Region | veröffentlicht | 64 | vermutlich besser | W53 9→7 (Wunsch-Summe -12) | GS 1 · GG 2 · GQ 1 · GT 2 | – | 2026-11-21T10:37 |
 
 Grundprüfung G0 aller Pläne: `ergebnisse/seite/grundpruefung/grundpruefung.md`
 Hauptgleis-Topologie HT aller Pläne mit Netzmodell: `ergebnisse/seite/hauptgleis/hauptgleis.md`
