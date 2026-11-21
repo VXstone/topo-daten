@@ -159,7 +159,13 @@
    true
   ],
   "perrons": "aussen",
-  "zusaetze": []
+  "zusaetze": [
+   {
+    "art": "schutzstumpen",
+    "ende": "rechts"
+   }
+  ],
+  "_hinweis_v4c": "V4c 21.11.2026 (HT, REGELN 0.1; Daniel «die anderen wie St-Blaise»): OSM: Gl. 1 läuft über die Weiche 632380557 hinaus (yard 49771602) – Stumpen rechts"
  },
  "_aenderungen": [
   "20.10.: Anschlüsse neu aus OSM (Verbindungen zwischen Hauptgleisen sind keine Anschlüsse)"

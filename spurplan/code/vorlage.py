@@ -158,7 +158,9 @@ def zeichne(V, osm=None, title="Bahnhof", mit_text=True):
                 xk = (SL + DX * abs(i - h)) if not rechts else (SR - DX * abs(i - h))
                 if (V.get("stumpf") == "links" and not rechts) or (V.get("stumpf") == "rechts" and rechts): continue
                 x_e = xk + (1 if rechts else -1) * float(a.get("laenge", 26))
-                lines.append(([(xk, ys[i]), (x_e, ys[i])], False, None))
+                # Beginn am Anfang der Ausrundung (V4c 21.11.: an der Ecke selbst berührte der Stumpen das ausgerundete Gleis
+                # nicht – Weiche im Plan nicht erkannt, HT1 St-Blaise Lac); gezeichnet unter dem Gleis, sieht gleich aus
+                lines.append(([(xk - (1 if rechts else -1) * R, ys[i]), (x_e, ys[i])], False, None))
                 if a.get("prellbock", True): dots.append((x_e, ys[i]))
         elif art == "linie":
             # Ergänzung von Hand in Pixeln (Gorgier 20.10.: Weichenverbindung und Stumpen der Anschlussgleise nach OSM);
@@ -473,7 +475,8 @@ def netz_mitschreiben(key, full, P):
                     for m in re.finditer(r'<rect x="([-\d.]+)" y="([-\d.]+)" width="([\d.]+)" height="8" rx="1.5"', full)]
     N["nummern"] = [dict(text=t, x=r1(x), y=r1(y)) for x, y, t in nums]
     N["W"], N["H"] = r1(P["W"]), r1(P["H"])
-    N["vorlage"] = dict(weichen=len(sw), zugeordnet=len(zu), abzweige_plan=len(PK), verbindungen=len(zusatz))
+    N["vorlage"] = dict(weichen=len(sw), zugeordnet=len(zu), abzweige_plan=len(PK), verbindungen=len(zusatz),
+                        gezeichnet=sorted(int(n) for n in zu))      # Weichen mit Abzweig in der Vorlage (hauptgleis: Abgang an Weiche)
     json.dump(N, open(fn, "w"), ensure_ascii=False, indent=0)
     return None if len(zu) == len(sw) else f"Netzmodell: {len(zu)} von {len(sw)} OSM-Weichen einem Abzweig der Vorlage zugeordnet"
 

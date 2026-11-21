@@ -43,7 +43,8 @@ Weichenfolge je Hauptgleis aus OSM, die Liste wird mitgegeben. **Netzmodell = ge
 die Typvorlage den Bahnhof neu (`vorlage.py`), legt sie auch `<key>_netz.json` auf ihre Zeichnung – OSM-Weichen eins zu eins an
 den Abzweig der Vorlage (Reihenfolge längs bleibt), übrige Knoten über Abgänge/Gleisnummern abgebildet, OSM-Verbindungen
 zwischen zwei Weichen, die der allgemeine Lauf nicht zeichnete (Spurwechsel), ergänzt; Lauf-Fassung bleibt `<key>_netz_lauf.json`.
-Sonst misst HT die alte Lage (Paar HT1+HT2 = Messartefakt). Prüffälle `vorlage_gummenen`, `vorlage_saint_blaise_cff`.
+Sonst misst HT die alte Lage (Paar HT1+HT2 = Messartefakt). Liegt der Planrand genau auf einer Weiche, die die Vorlage zeichnet
+(Netzmodell `vorlage.gezeichnet`), zählt das Stück zwischen zwei Abgängen zum Plan (sonst ausserhalb, Tecknau). Prüffälle `vorlage_gummenen`, `vorlage_saint_blaise_cff`.
 
 **Bahnhofregister und Sperre «veraltet» (VR, seit 20.11., Entscheid D. Eckenstein «Regionen harmonisieren, OSM-Fehler
 erkennen»).** Jeder Bahnhof steht **einmal** im Register `spurplan/netz/bahnhoefe.json` (Schlüssel **SBB-Abkürzung**, dazu

@@ -1,7 +1,7 @@
 {
  "_quelle": "hauptgleis.py (Schritt HT, REGELN 0.1 / Kopf «HT»); je Abschnitt Zählung je Plan und Regel",
  "_stand": {
-  "plaene": "Ausgangsstand 18.11.2026 (Seite v155, ergebnisse 644a346 + Lauf zu 2bd032b), lokal mit hauptgleis.py gerechnet · 21.11.2026 (V4b): 53 NE-Bahnhofspläne erstmals gemessen (seit V4 aus Code; vorher feste Oktober-Pläne ohne HT), Ausgangsstand aus seite-Lauf d89f8f7 (ergebnisse 422c1dc) · 21.11.2026 (V4c): 42 Typvorlage-Pläne NE neu gemessen, Netzmodell liegt jetzt auf dem gezeichneten Plan (vorlage.py, REGELN Kopf «HT») – Messartefakt HT1+HT2 weg; St-Blaise CFF und Serrières Spurwechsel auf die OSM-Seite, HT5 findet die Ziele (lokal = Workflow)"
+  "plaene": "Ausgangsstand 18.11.2026 (Seite v155, ergebnisse 644a346 + Lauf zu 2bd032b), lokal mit hauptgleis.py gerechnet · 21.11.2026 (V4b): 53 NE-Bahnhofspläne erstmals gemessen (seit V4 aus Code; vorher feste Oktober-Pläne ohne HT), Ausgangsstand aus seite-Lauf d89f8f7 (ergebnisse 422c1dc) · 21.11.2026 (V4c): 42 Typvorlage-Pläne NE neu gemessen, Netzmodell liegt jetzt auf dem gezeichneten Plan (vorlage.py, REGELN Kopf «HT») – Messartefakt HT1+HT2 weg; St-Blaise CFF und Serrières Spurwechsel auf die OSM-Seite, HT5 findet die Ziele (lokal = Workflow) · 21.11. nachmittags: F6 Gampelen (Daniel: kein Spurwechsel), Rosshäusern/Bern Brünnen/Grandson/St-Blaise Lac Vorlage nach OSM ergänzt, Schutzstumpen ab Ausrundung, Abgang an gezeichneter Weiche (Typvorlagen 51 -> 22)"
  },
  "plaene": {
   "aarau": {
@@ -33,7 +33,7 @@
    "HT5": 0
   },
   "bern_brunnen_westside": {
-   "HT1": 2,
+   "HT1": 0,
    "HT2": 0,
    "HT3": 0,
    "HT4": 0,
@@ -181,24 +181,24 @@
   },
   "gampelen": {
    "HT1": 0,
-   "HT2": 2,
-   "HT3": 0,
-   "HT4": 0,
-   "HT5": 4
-  },
-  "gorgier_saint_aubin": {
-   "HT1": 1,
-   "HT2": 1,
-   "HT3": 0,
-   "HT4": 0,
-   "HT5": 7
-  },
-  "grandson": {
-   "HT1": 2,
    "HT2": 0,
    "HT3": 0,
    "HT4": 0,
-   "HT5": 4
+   "HT5": 0
+  },
+  "gorgier_saint_aubin": {
+   "HT1": 0,
+   "HT2": 1,
+   "HT3": 0,
+   "HT4": 0,
+   "HT5": 3
+  },
+  "grandson": {
+   "HT1": 0,
+   "HT2": 0,
+   "HT3": 0,
+   "HT4": 0,
+   "HT5": 1
   },
   "gummenen": {
    "HT1": 0,
@@ -257,11 +257,11 @@
    "HT5": 0
   },
   "le_landeron": {
-   "HT1": 1,
+   "HT1": 0,
    "HT2": 0,
    "HT3": 0,
    "HT4": 0,
-   "HT5": 5
+   "HT5": 1
   },
   "les_deurres": {
    "HT1": 0,
@@ -705,11 +705,11 @@
    "HT5": 2
   },
   "rosshausern": {
-   "HT1": 2,
+   "HT1": 0,
    "HT2": 0,
    "HT3": 0,
    "HT4": 0,
-   "HT5": 3
+   "HT5": 0
   },
   "rothrist": {
    "HT1": 2,
@@ -733,7 +733,7 @@
    "HT5": 0
   },
   "saint_blaise_lac": {
-   "HT1": 1,
+   "HT1": 0,
    "HT2": 0,
    "HT3": 0,
    "HT4": 0,

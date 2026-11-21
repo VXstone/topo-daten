@@ -339,6 +339,9 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   Streckennummer (Gl. 501/652/709 …) – Gorgier (7), Le Landeron (5), Bevaix (3) erst ansehen, ob Ziel-Zuordnung oder echt; künstlicher
   Schnitt am Planrand Riedbach/Tüscherz/Zihlbrücke. **Nicht-Vorlagen NE:** Colombier HT3 3, Cornaux HT5 5, Travers HT2 3, Bôle HT2 2/HT3 1,
   Neuchâtel HT5 17, Vauseyon HT5 5, Auvernier HT5 4 – nächster Schritt V4e.
+  **Nachmittag 21.11. (Daniel: F6 = A, «die anderen wie St-Blaise»):** Gampelen, Rosshäusern, Bern Brünnen, Grandson, St-Blaise Lac nach OSM;
+  Typvorlagen 51 → 22. Rest: Avenches HT1 (Abstellschlaufe statt Stumpen), Ligerz HT1 (Messung: Abbildung quer je Seite fehlt),
+  Bevaix/Gorgier/Riedbach/Tüscherz/Zihlbrücke/Bern Brünnen HT5 (Gleisziele, Planrand), Courtepin HT2.
 
 ### V4e – NE: HT-Rest (aus V4c, 21.11.)
 - Einstieg: «Weiter mit UEBERGABE.md – Schritt V4e: NE HT-Rest»

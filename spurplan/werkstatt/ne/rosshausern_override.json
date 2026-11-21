@@ -212,7 +212,14 @@
     "ende": "rechts",
     "anzahl": 1,
     "richtung": "steigend"
+   },
+   {
+    "art": "spurwechsel",
+    "ende": "links",
+    "anzahl": 1,
+    "richtung": "fallend"
    }
-  ]
+  ],
+  "_hinweis_v4c": "V4c 21.11.2026 (HT, REGELN 0.1; Daniel «die anderen wie St-Blaise»): OSM-Spurwechsel 621502355 (1244528397 oben -> 1360518538 unten) Seite Kerzers fehlte"
  }
 }

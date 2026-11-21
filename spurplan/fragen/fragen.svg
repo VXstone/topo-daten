@@ -1,35 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 450" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
-<rect width="1500" height="450" fill="#fff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 2000" font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif">
+<rect width="1500" height="2000" fill="#fff"/>
 <text x="30" y="52" font-size="34" font-weight="600" fill="#16201a">Fragen an Dani</text>
 <text x="30" y="84" font-size="17" fill="#5a665e">Antwort: Pin ins Feld mit «A», «B» oder eigenem Text. Vorschlag Claude jeweils A. Entscheide kommen danach in REGELN.md.</text>
-<rect x="20" y="120" width="1460" height="320" rx="10" fill="#f4f7f5" stroke="#d2dad4"/>
-<text x="40" y="158" font-size="24" font-weight="600" fill="#00862f">F6 · Gampelen: Spurwechsel Seite Neuchâtel</text>
-<text x="40" y="182" font-size="14" fill="#5a665e">REGELN 0.1 (HT) · Plan gampelen</text>
-<text x="40" y="212" font-size="16" fill="#16201a">Die Vorlage zeichnet westlich der Perrons einen</text>
-<text x="40" y="233" font-size="16" fill="#16201a">Spurwechsel. OSM hat dort keine Weiche – die nächste liegt</text>
-<text x="40" y="254" font-size="16" fill="#16201a">1,9 km westlich. Gibt es den Spurwechsel real?</text>
-<text x="40" y="283" font-size="16" font-weight="600" fill="#16201a">A</text>
-<text x="64" y="283" font-size="16" fill="#16201a">Nein – Spurwechsel weglassen (Plan = OSM, HT 6 -&gt; 0).</text>
-<text x="40" y="310" font-size="16" font-weight="600" fill="#16201a">B</text>
-<text x="64" y="310" font-size="16" fill="#16201a">Ja – er existiert, OSM ist unvollständig: bleibt,</text>
-<text x="64" y="331" font-size="16" fill="#16201a">Gampelen kommt in die OSM-Ausnahmen.</text>
-<text x="40" y="358" font-size="13" font-style="italic" fill="#5a665e">Gampelen ist abgenommen; ohne Antwort ändere ich nichts.</text>
-<rect x="580.0" y="180.6" width="880.0" height="198.7" fill="#fff" stroke="#d2dad4"/>
-<clipPath id="fq-clip-0"><rect x="580.0" y="180.6" width="880.0" height="198.7"/></clipPath>
-<g clip-path="url(#fq-clip-0)"><g font-family="Fira Sans, Source Sans 3, Helvetica, Arial, sans-serif" transform="translate(580.00,180.65) scale(1.41935) translate(-250,-60)">
-<rect width="100%" height="100%" fill="#fff"/>
-<g fill="none" stroke-linecap="round" stroke-linejoin="round">
-<path d="M436.3,134.0L441.3,134.0Q446.3,134.0 448.8,129.7L457.6,114.3Q460.1,110.0 465.1,110.0L470.1,110.0" stroke="#111" stroke-width="1.6"/>
-<path d="M275.0,110.0L829.7,110.0 M275.0,134.0L829.7,134.0" stroke="#00862f" stroke-width="3.6"/>
-</g>
-<rect x="578.9" y="95.0" width="110.0" height="8" rx="1.5" fill="#00862f"/>
-<rect x="578.9" y="141.0" width="110.0" height="8" rx="1.5" fill="#00862f"/>
-<rect x="620.9" y="102.0" width="26" height="16" fill="#fff" stroke="none"/><text x="633.9" y="116.5" font-size="19" text-anchor="middle" fill="#00862f">1</text>
-<rect x="620.9" y="126.0" width="26" height="16" fill="#fff" stroke="none"/><text x="633.9" y="140.5" font-size="19" text-anchor="middle" fill="#00862f">2</text>
-<text x="263.0" y="109.0" font-size="22" text-anchor="end" fill="#00862f">Linie 220</text>
-<text x="263.0" y="135.0" font-size="22" text-anchor="end" fill="#00862f">← Neuchâtel</text>
-<text x="841.7" y="109.0" font-size="22" text-anchor="start" fill="#00862f">Linie 220</text>
-<text x="841.7" y="135.0" font-size="22" text-anchor="start" fill="#00862f">Ins →</text>
-<text x="633.9" y="201.0" font-size="38" font-weight="700" text-anchor="middle" fill="#00862f">Gampelen</text>
-</g></g>
+<text x="30" y="140" font-size="22" fill="#00862f">Keine offenen Fragen. Beantwortete Entscheide stehen in REGELN.md (Abschnitt 7 nennt, wohin).</text>
 </svg>

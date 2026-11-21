@@ -149,7 +149,9 @@ def osm_graph(N, T, W, K, WT):
         return _xy((v["lat"], v["lon"]), lat0) if v and v.get("lat") is not None else None
     # je Way der Abschnitt zwischen dem ersten und letzten Knoten, den das Netzmodell zeichnet, mit ALLEN OSM-Knoten
     # dazwischen (die Gleisstücke des Netzmodells lassen Knoten aus, an denen andere Ways anschliessen – Giesshübel)
-    aus_kn = {a.get("knoten") for a in N.get("abgaenge", [])}
+    # Abgangsknoten: ein Stück zwischen zwei Abgängen liegt ausserhalb des Plans (Tecknau) – ausser die Typvorlage zeichnet
+    # an beiden eine Weiche (Le Landeron/Gorgier V4c 21.11.: Planrand genau auf dem Spurwechsel, Vorlage zeichnet ihn im Plan)
+    aus_kn = {a.get("knoten") for a in N.get("abgaenge", [])} - set((N.get("vorlage") or {}).get("gezeichnet", []))
     spanne = collections.defaultdict(set)
     for gl in N["gleise"]:
         w = gl["way"] if gl["way"] in W else gl["way"] // 100      # geteilter Way (Netzmodell): 324969020 01 -> 324969020
