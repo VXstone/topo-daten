@@ -1,64 +1,21 @@
 {
  "zaehl": {
-  "HT1": 2,
+  "HT1": 0,
   "HT2": 0,
   "HT3": 0,
   "HT4": 0,
-  "HT5": 3
+  "HT5": 0
  },
  "befunde": [
-  {
-   "regel": "HT1",
-   "x": 362.1,
-   "y": 134.0,
-   "text": "OSM-Weiche 1360518538 ohne Abzweig im Plan",
-   "osm": 1360518538
-  },
-  {
-   "regel": "HT1",
-   "x": 343.3,
-   "y": 110.0,
-   "text": "OSM-Weiche 1244528397 ohne Abzweig im Plan",
-   "osm": 1244528397
-  },
-  {
-   "regel": "HT5",
-   "x": 552.4,
-   "y": 122.0,
-   "text": "Fahrweg Abgang 220 Bern (1244528388) ↔ Abgang 220 Kerzers (1360518559) in OSM, fehlt im Plan",
-   "von": "Abgang 220 Bern (1244528388)",
-   "nach": "Abgang 220 Kerzers (1360518559)",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 586.5,
-   "y": 122.0,
-   "text": "Fahrweg Abgang 220 Bern (1244528388) ↔ Gl. 73 in OSM, fehlt im Plan",
-   "von": "Abgang 220 Bern (1244528388)",
-   "nach": "Gl. 73",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 394.4,
-   "y": 122.0,
-   "text": "Fahrweg Abgang 220 Kerzers (1360518559) ↔ Gl. 2 in OSM, fehlt im Plan",
-   "von": "Abgang 220 Kerzers (1360518559)",
-   "nach": "Gl. 2",
-   "art": "fehlt"
-  },
   {
    "regel": "_info",
    "x": 0,
    "y": 0,
-   "text": "Fahrwege: 9/10 Ziele im Plan gefunden, OSM 18, Plan 15",
+   "text": "Fahrwege: 9/10 Ziele im Plan gefunden, OSM 18, Plan 18",
    "ohne_lage": [
     "Gl. 42"
    ]
   }
  ],
- "osm_abgleich": {
-  "VB1": 2
- }
+ "osm_abgleich": {}
 }

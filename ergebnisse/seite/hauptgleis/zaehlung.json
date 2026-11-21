@@ -28,7 +28,7 @@
   "HT5": 0
  },
  "bern_brunnen_westside": {
-  "HT1": 2,
+  "HT1": 0,
   "HT2": 0,
   "HT3": 0,
   "HT4": 0,
@@ -176,24 +176,24 @@
  },
  "gampelen": {
   "HT1": 0,
-  "HT2": 2,
-  "HT3": 0,
-  "HT4": 0,
-  "HT5": 4
- },
- "gorgier_saint_aubin": {
-  "HT1": 1,
-  "HT2": 1,
-  "HT3": 0,
-  "HT4": 0,
-  "HT5": 7
- },
- "grandson": {
-  "HT1": 2,
   "HT2": 0,
   "HT3": 0,
   "HT4": 0,
-  "HT5": 4
+  "HT5": 0
+ },
+ "gorgier_saint_aubin": {
+  "HT1": 0,
+  "HT2": 1,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 3
+ },
+ "grandson": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 1
  },
  "gummenen": {
   "HT1": 0,
@@ -252,11 +252,11 @@
   "HT5": 0
  },
  "le_landeron": {
-  "HT1": 1,
+  "HT1": 0,
   "HT2": 0,
   "HT3": 0,
   "HT4": 0,
-  "HT5": 5
+  "HT5": 1
  },
  "les_deurres": {
   "HT1": 0,
@@ -700,11 +700,11 @@
   "HT5": 2
  },
  "rosshausern": {
-  "HT1": 2,
+  "HT1": 0,
   "HT2": 0,
   "HT3": 0,
   "HT4": 0,
-  "HT5": 3
+  "HT5": 0
  },
  "rothrist": {
   "HT1": 2,
@@ -728,7 +728,7 @@
   "HT5": 0
  },
  "saint_blaise_lac": {
-  "HT1": 1,
+  "HT1": 0,
   "HT2": 0,
   "HT3": 0,
   "HT4": 0,

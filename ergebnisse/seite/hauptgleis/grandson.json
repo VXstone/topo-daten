@@ -1,70 +1,27 @@
 {
  "zaehl": {
-  "HT1": 2,
+  "HT1": 0,
   "HT2": 0,
   "HT3": 0,
   "HT4": 0,
-  "HT5": 4
+  "HT5": 1
  },
  "befunde": [
   {
-   "regel": "HT1",
-   "x": 402.0,
-   "y": 110.0,
-   "text": "OSM-Weiche 1662292733 ohne Abzweig im Plan",
-   "osm": 1662292733
-  },
-  {
-   "regel": "HT1",
-   "x": 358.1,
-   "y": 158.0,
-   "text": "OSM-Weiche 1662292711 ohne Abzweig im Plan",
-   "osm": 1662292711
-  },
-  {
    "regel": "HT5",
-   "x": 651.7,
+   "x": 771.7,
    "y": 134.0,
    "art": "kuenstlich",
    "osm": -1208,
    "text": "Gleisende -1208 am Planrand: in OSM läuft das Gleis im Plan weiter (künstlicher Schnitt, Gleis fehlt dazwischen)"
   },
   {
-   "regel": "HT5",
-   "x": 552.4,
-   "y": 146.0,
-   "text": "Fahrweg Abgang 210 Neuchâtel (8957508879) ↔ Abgang 210 Yverdon (240238917) in OSM, fehlt im Plan",
-   "von": "Abgang 210 Neuchâtel (8957508879)",
-   "nach": "Abgang 210 Yverdon (240238917)",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 394.4,
-   "y": 134.0,
-   "text": "Fahrweg Abgang 210 Yverdon (240238917) ↔ Gl. 1 in OSM, fehlt im Plan",
-   "von": "Abgang 210 Yverdon (240238917)",
-   "nach": "Gl. 1",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 394.4,
-   "y": 146.0,
-   "text": "Fahrweg Abgang 210 Yverdon (240238917) ↔ Gl. 2 in OSM, fehlt im Plan",
-   "von": "Abgang 210 Yverdon (240238917)",
-   "nach": "Gl. 2",
-   "art": "fehlt"
-  },
-  {
    "regel": "_info",
    "x": 0,
    "y": 0,
-   "text": "Fahrwege: 7/7 Ziele im Plan gefunden, OSM 12, Plan 9",
+   "text": "Fahrwege: 7/7 Ziele im Plan gefunden, OSM 12, Plan 12",
    "ohne_lage": []
   }
  ],
- "osm_abgleich": {
-  "VB1": 2
- }
+ "osm_abgleich": {}
 }

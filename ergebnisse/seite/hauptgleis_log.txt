@@ -2,7 +2,7 @@ aarau                                  HT1 7 HT2 4 HT3 0 HT4 1 HT5 9
 aarburg_oftringen                      HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 auvernier                              HT1 0 HT2 0 HT3 0 HT4 0 HT5 4
 avenches                               HT1 1 HT2 0 HT3 0 HT4 0 HT5 0
-bern_brunnen_westside                  HT1 2 HT2 0 HT3 0 HT4 0 HT5 2
+bern_brunnen_westside                  HT1 0 HT2 0 HT3 0 HT4 0 HT5 2
 bevaix                                 HT1 0 HT2 0 HT3 0 HT4 0 HT5 3
 bole                                   HT1 0 HT2 2 HT3 1 HT4 0 HT5 0
 boudry                                 HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
@@ -23,9 +23,9 @@ dulliken                               HT1 0 HT2 0 HT3 0 HT4 0 HT5 1
 faoug                                  HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 fraschels                              HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 galmiz                                 HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
-gampelen                               HT1 0 HT2 2 HT3 0 HT4 0 HT5 4
-gorgier_saint_aubin                    HT1 1 HT2 1 HT3 0 HT4 0 HT5 7
-grandson                               HT1 2 HT2 0 HT3 0 HT4 0 HT5 4
+gampelen                               HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
+gorgier_saint_aubin                    HT1 0 HT2 1 HT3 0 HT4 0 HT5 3
+grandson                               HT1 0 HT2 0 HT3 0 HT4 0 HT5 1
 gummenen                               HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 ins                                    HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 kallnach                               HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
@@ -34,7 +34,7 @@ konolfingen                            HT1 0 HT2 2 HT3 0 HT4 0 HT5 7
 la_neuveville                          HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 la_presta_mines_d_asphalte             HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 laufelfingen                           HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
-le_landeron                            HT1 1 HT2 0 HT3 0 HT4 0 HT5 5
+le_landeron                            HT1 0 HT2 0 HT3 0 HT4 0 HT5 1
 les_deurres                            HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 les_geneveys_sur_coffrane              HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 les_hauts_geneveys                     HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
@@ -98,11 +98,11 @@ olten_hammer                           HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 onnens_bonvillars                      HT1 1 HT2 0 HT3 0 HT4 0 HT5 0
 pensier                                HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 riedbach                               HT1 0 HT2 1 HT3 0 HT4 0 HT5 2
-rosshausern                            HT1 2 HT2 0 HT3 0 HT4 0 HT5 3
+rosshausern                            HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 rothrist                               HT1 2 HT2 5 HT3 0 HT4 0 HT5 6
 safenwil                               HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 saint_blaise_cff                       HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
-saint_blaise_lac                       HT1 1 HT2 0 HT3 0 HT4 0 HT5 0
+saint_blaise_lac                       HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 schonenwerd                            HT1 0 HT2 2 HT3 0 HT4 0 HT5 1
 serrieres                              HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 solothurn                              HT1 4 HT2 1 HT3 0 HT4 0 HT5 17
@@ -133,4 +133,4 @@ vereina__vereina_sud                   HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 wangen_bei_olten                       HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 zihlbruecke                            HT1 0 HT2 0 HT3 0 HT4 0 HT5 2
 zofingen                               HT1 2 HT2 0 HT3 0 HT4 0 HT5 0
-Hauptgleis HT: {'HT1': 58, 'HT2': 76, 'HT3': 15, 'HT4': 5, 'HT5': 314} – 135 Pläne, 50 mit HT > 0
+Hauptgleis HT: {'HT1': 49, 'HT2': 74, 'HT3': 15, 'HT4': 5, 'HT5': 296} – 135 Pläne, 47 mit HT > 0

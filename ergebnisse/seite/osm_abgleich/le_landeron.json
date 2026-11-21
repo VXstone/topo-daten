@@ -2,13 +2,6 @@
 "plan": "le_landeron",
 "befunde": [
 {
-"regel": "VB1",
-"x": 537.8,
-"y": 110.0,
-"text": "OSM-Weiche 477515436 ohne Abzweig im Plan",
-"osm": 477515436
-},
-{
 "regel": "VD1",
 "x": 633.9,
 "y": 134.0,
@@ -18,7 +11,7 @@
 "info": {
 "dkw_osm_unvollstaendig": [],
 "gleise": 6,
-"knoten_plan": 6,
+"knoten_plan": 7,
 "dkw_plan": 0,
 "knoten_osm": 8,
 "versatz_y": 0.0,

@@ -2,7 +2,7 @@ aarau                              {'VB1': 7, 'VB2': 4, 'VD1': 7}
 aarburg_oftringen                  {}
 auvernier                          {'VB1': 1, 'VD1': 1}
 avenches                           {'VB1': 4, 'VD1': 1}
-bern_brunnen_westside              {'VB1': 5}
+bern_brunnen_westside              {'VB1': 3}
 bevaix                             {}
 bole                               {'VB1': 1, 'VC1': 1, 'VB2': 2}
 boudry                             {}
@@ -23,9 +23,9 @@ dulliken                           {}
 faoug                              {}
 fraschels                          {}
 galmiz                             {'VD1': 1}
-gampelen                           {'VB2': 2}
-gorgier_saint_aubin                {'VB1': 4, 'VB2': 1, 'VD1': 2}
-grandson                           {'VB1': 2}
+gampelen                           {}
+gorgier_saint_aubin                {'VB1': 2, 'VB2': 1, 'VD1': 2}
+grandson                           {}
 gummenen                           {}
 ins                                {}
 kallnach                           {'VD1': 1}
@@ -34,7 +34,7 @@ konolfingen                        {'VB1': 1, 'VB2': 2, 'VC1': 1, 'VD1': 2}
 la_neuveville                      {}
 la_presta_mines_d_asphalte         {}
 laufelfingen                       {}
-le_landeron                        {'VB1': 1, 'VD1': 1}
+le_landeron                        {'VD1': 1}
 les_deurres                        {}
 les_geneveys_sur_coffrane          {'VD1': 1}
 les_hauts_geneveys                 {'VD1': 1}
@@ -98,11 +98,11 @@ olten_hammer                       {'VB1': 1}
 onnens_bonvillars                  {'VA1': 1, 'VA2': 1, 'VB1': 2, 'VD1': 1}
 pensier                            {'VD1': 1}
 riedbach                           {'VB2': 1}
-rosshausern                        {'VB1': 2}
+rosshausern                        {}
 rothrist                           {'VA2': 1, 'VB1': 4, 'VB2': 6}
 safenwil                           {}
 saint_blaise_cff                   {}
-saint_blaise_lac                   {'VB1': 1, 'VD1': 1}
+saint_blaise_lac                   {'VD1': 1}
 schonenwerd                        {'VB2': 2, 'VD1': 1}
 serrieres                          {'VA1': 3, 'VB1': 3}
 solothurn                          {'VA1': 1, 'VB1': 6, 'VB2': 14, 'VC1': 1, 'VD1': 7, 'VD2': 1}
@@ -133,4 +133,4 @@ vereina__vereina_sud               {}
 wangen_bei_olten                   {'VB2': 1}
 zihlbruecke                        {}
 zofingen                           {'VA2': 2, 'VB1': 3, 'VD1': 1}
-OSM-Abgleich: 135 Pläne {'VA1': 8, 'VA2': 11, 'VB1': 93, 'VB2': 97, 'VC1': 21, 'VD1': 112, 'VD2': 1}
+OSM-Abgleich: 135 Pläne {'VA1': 8, 'VA2': 11, 'VB1': 83, 'VB2': 95, 'VC1': 21, 'VD1': 112, 'VD2': 1}

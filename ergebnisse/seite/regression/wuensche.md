@@ -4,8 +4,8 @@ Wünsche je Plan (REGELN 5: W53 S-Kurven ×6, W55 Bahnhofsabstand ×3, W56 Leerl
 |---|---|---|---|---|---|
 | bern | Grosse Knoten | 15 |  | 7 | 111 |
 | region | Region | 15 | 5 |  | 105 |
+| region_ne | Region | 8 | 5 |  | 63 |
 | aarau | Olten 3 · Olten – Aarau | 0 |  | 20 | 60 |
-| region_ne | Region | 7 | 5 |  | 57 |
 | region_mob | Region | 6 | 7 |  | 57 |
 | region_vereina | Region | 5 | 9 |  | 57 |
 | region_szu | Region | 9 |  |  | 54 |

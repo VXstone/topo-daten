@@ -193,7 +193,7 @@ Erzeugt von `spurplan/code/overrides_liste.py`. Ziel (Entscheid 13.11.): nur Ort
 | Werkstatt NE | bern_brunnen_westside | cfg.lt_dist_w | Schalter | 1 | Entwurf 16.10.2026 (Claude), Bern Brünnen Westside, OSM-Stand 12.10. | werkstatt/ne/bern_brunnen_westside_override.json |
 | Werkstatt NE | bern_brunnen_westside | cfg.margin_x | Schalter | 1 | Entwurf 16.10.2026 (Claude), Bern Brünnen Westside, OSM-Stand 12.10. | werkstatt/ne/bern_brunnen_westside_override.json |
 | Werkstatt NE | bern_brunnen_westside | cfg.towns | Schalter | 1 | Entwurf 16.10.2026 (Claude), Bern Brünnen Westside, OSM-Stand 12.10. | werkstatt/ne/bern_brunnen_westside_override.json |
-| Werkstatt NE | bern_brunnen_westside | vorlage | Typvorlage | 7 | Entwurf 16.10.2026 (Claude), Bern Brünnen Westside, OSM-Stand 12.10. | werkstatt/ne/bern_brunnen_westside_override.json |
+| Werkstatt NE | bern_brunnen_westside | vorlage | Typvorlage | 8 | Entwurf 16.10.2026 (Claude), Bern Brünnen Westside, OSM-Stand 12.10. | werkstatt/ne/bern_brunnen_westside_override.json |
 | Werkstatt NE | bern_brunnen_westside | vorlage | Typvorlage | 7 | Entwurf 16.10.2026 (Claude), Bern Brünnen Westside, OSM-Stand 12.10. | werkstatt/ne/ne_vorlagen_overrides.json |
 | Werkstatt NE | bevaix | _gleisnummern | Ortswissen | 1 | Entwurf 16.10.2026 (Claude), Bevaix, OSM-Stand 12.10. | werkstatt/ne/bevaix_override.json |
 | Werkstatt NE | bevaix | _gleisnummern | Ortswissen | 1 | Entwurf 16.10.2026 (Claude), Bevaix, OSM-Stand 12.10. | werkstatt/ne/ne_vorlagen_overrides.json |
@@ -347,7 +347,7 @@ Erzeugt von `spurplan/code/overrides_liste.py`. Ziel (Entscheid 13.11.): nur Ort
 | Werkstatt NE | gampelen | cfg.lt_dist_w | Schalter | 1 | Entwurf 14.10.2026 (Claude), Gampelen, OSM-Stand 12.10. | werkstatt/ne/gampelen_override.json |
 | Werkstatt NE | gampelen | cfg.margin_x | Schalter | 1 | Entwurf 14.10.2026 (Claude), Gampelen, OSM-Stand 12.10. | werkstatt/ne/gampelen_override.json |
 | Werkstatt NE | gampelen | cfg.towns | Schalter | 1 | Entwurf 14.10.2026 (Claude), Gampelen, OSM-Stand 12.10. | werkstatt/ne/gampelen_override.json |
-| Werkstatt NE | gampelen | vorlage | Typvorlage | 6 | Entwurf 14.10.2026 (Claude), Gampelen, OSM-Stand 12.10. | werkstatt/ne/gampelen_override.json |
+| Werkstatt NE | gampelen | vorlage | Typvorlage | 7 | Entwurf 14.10.2026 (Claude), Gampelen, OSM-Stand 12.10. | werkstatt/ne/gampelen_override.json |
 | Werkstatt NE | gampelen | vorlage | Typvorlage | 6 | Entwurf 14.10.2026 (Claude), Gampelen, OSM-Stand 12.10. | werkstatt/ne/ne_vorlagen_overrides.json |
 | Werkstatt NE | gorgier_saint_aubin | _gleisnummern | Ortswissen | 1 | Entwurf 16.10.2026 (Claude), Gorgier-Saint-Aubin, OSM-Stand 12.10. | werkstatt/ne/gorgier_saint_aubin_override.json |
 | Werkstatt NE | gorgier_saint_aubin | _gleisnummern | Ortswissen | 1 | Entwurf 16.10.2026 (Claude), Gorgier-Saint-Aubin, OSM-Stand 12.10. | werkstatt/ne/ne_vorlagen_overrides.json |
@@ -363,7 +363,7 @@ Erzeugt von `spurplan/code/overrides_liste.py`. Ziel (Entscheid 13.11.): nur Ort
 | Werkstatt NE | grandson | cfg.lt_dist_w | Schalter | 1 | Entwurf 16.10.2026 (Claude), Grandson, OSM-Stand 12.10. | werkstatt/ne/grandson_override.json |
 | Werkstatt NE | grandson | cfg.margin_x | Schalter | 1 | Entwurf 16.10.2026 (Claude), Grandson, OSM-Stand 12.10. | werkstatt/ne/grandson_override.json |
 | Werkstatt NE | grandson | cfg.towns | Schalter | 1 | Entwurf 16.10.2026 (Claude), Grandson, OSM-Stand 12.10. | werkstatt/ne/grandson_override.json |
-| Werkstatt NE | grandson | vorlage | Typvorlage | 9 | Entwurf 16.10.2026 (Claude), Grandson, OSM-Stand 12.10. | werkstatt/ne/grandson_override.json |
+| Werkstatt NE | grandson | vorlage | Typvorlage | 10 | Entwurf 16.10.2026 (Claude), Grandson, OSM-Stand 12.10. | werkstatt/ne/grandson_override.json |
 | Werkstatt NE | grandson | vorlage | Typvorlage | 9 | Entwurf 16.10.2026 (Claude), Grandson, OSM-Stand 12.10. | werkstatt/ne/ne_vorlagen_overrides.json |
 | Werkstatt NE | gummenen | cfg | Schalter | 3 | Entwurf 16.10.2026 (Claude), Gümmenen, OSM-Stand 12.10. | werkstatt/ne/ne_vorlagen_overrides.json |
 | Werkstatt NE | gummenen | cfg.lt_dist_w | Schalter | 1 | Entwurf 16.10.2026 (Claude), Gümmenen, OSM-Stand 12.10. | werkstatt/ne/gummenen_override.json |
@@ -611,7 +611,7 @@ Erzeugt von `spurplan/code/overrides_liste.py`. Ziel (Entscheid 13.11.): nur Ort
 | Werkstatt NE | rosshausern | cfg.margin_x | Schalter | 1 | Entwurf 16.10.2026 (Claude), Rosshäusern, OSM-Stand 12.10. | werkstatt/ne/rosshausern_override.json |
 | Werkstatt NE | rosshausern | cfg.towns | Schalter | 1 | Entwurf 16.10.2026 (Claude), Rosshäusern, OSM-Stand 12.10. | werkstatt/ne/rosshausern_override.json |
 | Werkstatt NE | rosshausern | vorlage | Typvorlage | 6 | Entwurf 16.10.2026 (Claude), Rosshäusern, OSM-Stand 12.10. | werkstatt/ne/ne_vorlagen_overrides.json |
-| Werkstatt NE | rosshausern | vorlage | Typvorlage | 6 | Entwurf 16.10.2026 (Claude), Rosshäusern, OSM-Stand 12.10. | werkstatt/ne/rosshausern_override.json |
+| Werkstatt NE | rosshausern | vorlage | Typvorlage | 7 | Entwurf 16.10.2026 (Claude), Rosshäusern, OSM-Stand 12.10. | werkstatt/ne/rosshausern_override.json |
 | Werkstatt NE | saint_blaise_cff | weglassen | Geometrie | 4 | Entwurf 14.10.2026 (Claude), Saint-Blaise CFF, OSM-Stand 12.10. | werkstatt/ne/ne_vorlagen_overrides.json |
 | Werkstatt NE | saint_blaise_cff | weglassen | Geometrie | 4 | Entwurf 14.10.2026 (Claude), Saint-Blaise CFF, OSM-Stand 12.10. | werkstatt/ne/saint_blaise_cff_override.json |
 | Werkstatt NE | saint_blaise_cff | zeichnen | Geometrie | 3 | Entwurf 14.10.2026 (Claude), Saint-Blaise CFF, OSM-Stand 12.10. | werkstatt/ne/ne_vorlagen_overrides.json |
@@ -631,7 +631,7 @@ Erzeugt von `spurplan/code/overrides_liste.py`. Ziel (Entscheid 13.11.): nur Ort
 | Werkstatt NE | saint_blaise_lac | cfg.margin_x | Schalter | 1 | Entwurf 14.10.2026 (Claude), Saint Blaise-Lac, OSM-Stand 12.10. | werkstatt/ne/saint_blaise_lac_override.json |
 | Werkstatt NE | saint_blaise_lac | cfg.towns | Schalter | 1 | Entwurf 14.10.2026 (Claude), Saint Blaise-Lac, OSM-Stand 12.10. | werkstatt/ne/saint_blaise_lac_override.json |
 | Werkstatt NE | saint_blaise_lac | vorlage | Typvorlage | 6 | Entwurf 14.10.2026 (Claude), Saint Blaise-Lac, OSM-Stand 12.10. | werkstatt/ne/ne_vorlagen_overrides.json |
-| Werkstatt NE | saint_blaise_lac | vorlage | Typvorlage | 6 | Entwurf 14.10.2026 (Claude), Saint Blaise-Lac, OSM-Stand 12.10. | werkstatt/ne/saint_blaise_lac_override.json |
+| Werkstatt NE | saint_blaise_lac | vorlage | Typvorlage | 7 | Entwurf 14.10.2026 (Claude), Saint Blaise-Lac, OSM-Stand 12.10. | werkstatt/ne/saint_blaise_lac_override.json |
 | Werkstatt NE | serrieres | nummern_px | Ortswissen | 2 | Entwurf 14.10.2026 (Claude), Serrières, OSM-Stand 12.10. | werkstatt/ne/ne_vorlagen_overrides.json |
 | Werkstatt NE | serrieres | nummern_px | Ortswissen | 2 | Entwurf 14.10.2026 (Claude), Serrières, OSM-Stand 12.10. | werkstatt/ne/serrieres_override.json |
 | Werkstatt NE | serrieres | nummern_weg | Ortswissen | 2 | Entwurf 14.10.2026 (Claude), Serrières, OSM-Stand 12.10. | werkstatt/ne/ne_vorlagen_overrides.json |

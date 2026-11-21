@@ -32,18 +32,18 @@
   },
   {
    "regel": "HT5",
-   "x": 454.4,
+   "x": 275.0,
    "y": 122.0,
-   "text": "Fahrweg Abgang 220 Kerzers (1873393558) ↔ Gl. 2 im Plan, nicht in OSM",
+   "text": "Fahrweg Abgang 220 Kerzers (1873393558) ↔ Abgang 220 Kerzers (1873393560) in OSM, fehlt im Plan",
    "von": "Abgang 220 Kerzers (1873393558)",
-   "nach": "Gl. 2",
-   "art": "zusaetzlich"
+   "nach": "Abgang 220 Kerzers (1873393560)",
+   "art": "fehlt"
   },
   {
    "regel": "_info",
    "x": 0,
    "y": 0,
-   "text": "Fahrwege: 7/7 Ziele im Plan gefunden, OSM 13, Plan 14",
+   "text": "Fahrwege: 7/7 Ziele im Plan gefunden, OSM 15, Plan 14",
    "ohne_lage": []
   }
  ],
