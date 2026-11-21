@@ -10,8 +10,12 @@ OK   vorlage_gummenen_0.svg kein HT1 /  – Typvorlage: Netzmodell liegt auf dem
 OK   vorlage_gummenen_0.svg kein HT2 /  – dito, kein Abzweig ohne OSM-Weiche
 OK   vorlage_gummenen_90.svg kein HT1 /  – Typvorlage: Netzmodell liegt auf dem gezeichneten Plan (V4c), Weiche 569101885 = Abzweig x 390
 OK   vorlage_gummenen_90.svg kein HT2 /  – dito, kein Abzweig ohne OSM-Weiche
-OK   vorlage_saint_blaise_cff_0.svg kein HT5 / Abgang 210 Biel (632416798) ↔ Abgang 210 Neuchâtel (632407347) – Spurwechsel Ost (Way 49773692) fehlte im Netzmodell; vorlage.py ergänzt OSM-Verbindungen zwischen Weichen
-OK   vorlage_saint_blaise_cff_90.svg kein HT5 / Abgang 210 Biel (632416798) ↔ Abgang 210 Neuchâtel (632407347) – Spurwechsel Ost (Way 49773692) fehlte im Netzmodell; vorlage.py ergänzt OSM-Verbindungen zwischen Weichen
+OK   vorlage_saint_blaise_cff_0.svg kein HT1 /  – Spurwechsel 49773692 und 171035994–96 fehlten im Netzmodell; vorlage.py ergänzt OSM-Verbindungen zwischen Weichen; beide Spurwechsel Seite Biel
+OK   vorlage_saint_blaise_cff_0.svg kein HT2 /  – Spurwechsel 49773692 und 171035994–96 fehlten im Netzmodell; vorlage.py ergänzt OSM-Verbindungen zwischen Weichen; beide Spurwechsel Seite Biel
+OK   vorlage_saint_blaise_cff_0.svg kein HT5 /  – Spurwechsel 49773692 und 171035994–96 fehlten im Netzmodell; vorlage.py ergänzt OSM-Verbindungen zwischen Weichen; beide Spurwechsel Seite Biel
+OK   vorlage_saint_blaise_cff_90.svg kein HT1 /  – Spurwechsel 49773692 und 171035994–96 fehlten im Netzmodell; vorlage.py ergänzt OSM-Verbindungen zwischen Weichen; beide Spurwechsel Seite Biel
+OK   vorlage_saint_blaise_cff_90.svg kein HT2 /  – Spurwechsel 49773692 und 171035994–96 fehlten im Netzmodell; vorlage.py ergänzt OSM-Verbindungen zwischen Weichen; beide Spurwechsel Seite Biel
+OK   vorlage_saint_blaise_cff_90.svg kein HT5 /  – Spurwechsel 49773692 und 171035994–96 fehlten im Netzmodell; vorlage.py ergänzt OSM-Verbindungen zwischen Weichen; beide Spurwechsel Seite Biel
 OK   wangen_0.svg kein HT1 /  – unverändert: kein Befund
 OK   wangen_0.svg kein HT2 /  – unverändert: kein Befund
 OK   wangen_0.svg kein HT3 /  – unverändert: kein Befund
