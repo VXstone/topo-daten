@@ -33,7 +33,7 @@
 | kallnach | NE 3 · Lyss – Kerzers – Murten – Payerne | Archivbeginn (Abnahme 2026-10-20) | 1 | gleichwertig | OSM VD1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-20T21:23 |
 | domdidier | NE 3 · Lyss – Kerzers – Murten – Payerne | Archivbeginn (Abnahme 2026-10-19) | 1 | gleichwertig | OSM VB1 2 (kein Alt-Stand) | 0 | 0 | 2026-11-20T21:23 |
 | munchenwiler_courgevaux | NE 4 · Murten – Fribourg | Archivbeginn (Abnahme 2026-10-20) | 1 | gleichwertig | OSM VD1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-20T21:23 |
-| courtepin | NE 4 · Murten – Fribourg | Archivbeginn (Abnahme 2026-10-20) | 1 | gleichwertig | OSM VB2 1, VD1 1 (kein Alt-Stand) | 0 | HT2 1 | 2026-11-20T21:23 |
+| courtepin | NE 4 · Murten – Fribourg | Archivbeginn (Abnahme 2026-10-20) | 1 | gleichwertig | OSM VB2 1, VD1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-20T21:23 |
 | pensier | NE 4 · Murten – Fribourg | Archivbeginn (Abnahme 2026-10-20) | 1 | gleichwertig | OSM VD1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-20T21:23 |
 | champ_du_moulin | NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier | Archivbeginn (Abnahme 2026-10-15) | 1 | gleichwertig | OSM VD1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-20T21:23 |
 | noiraigue | NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier | Archivbeginn (Abnahme 2026-10-15) | 1 | gleichwertig | OSM VD1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-20T21:23 |

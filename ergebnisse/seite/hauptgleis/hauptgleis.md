@@ -36,7 +36,6 @@
 | zihlbruecke | · | · | · | · | 2 | 2 |
 | zofingen | 2 | · | · | · | · | 2 |
 | bevaix | · | · | · | · | 1 | 1 |
-| courtepin | · | 1 | · | · | · | 1 |
 | grandson | · | · | · | · | 1 | 1 |
 | le_landeron | · | · | · | · | 1 | 1 |
 | mob__glion | · | · | · | · | 1 | 1 |
@@ -53,6 +52,7 @@
 | champ_du_moulin | · | · | · | · | · | 0 |
 | concise | · | · | · | · | · | 0 |
 | corcelles_peseux | · | · | · | · | · | 0 |
+| courtepin | · | · | · | · | · | 0 |
 | couvet | · | · | · | · | · | 0 |
 | cressier | · | · | · | · | · | 0 |
 | cressier_fr | · | · | · | · | · | 0 |
@@ -141,3 +141,7 @@
 | wangen_bei_olten | · | · | · | · | · | 0 |
 
 Regeln: HT1 = OSM-Weiche am Hauptgleis ohne Abzweig im Plan; HT2 = Abzweig am Hauptgleis im Plan ohne OSM-Weiche; HT3 = Gleis an der falschen Weiche (Hauptgleis); HT4 = Abzweig zur falschen Seite; HT5 = Fahrweg im Plan ≠ OSM
+
+## Ausnahmen (REGELN 6, `spurplan/hauptgleis_ausnahmen.json`, nicht gezählt)
+
+- **courtepin** HT2 500.0/110.0: Industriegleis nördlich, rechts Richtung Courtepin abzweigend: in Betrieb (Satellitenbild, Daniel 22.11.2026); in OSM endet es 1 m neben dem Streckengleis ohne gemeinsamen Knoten
