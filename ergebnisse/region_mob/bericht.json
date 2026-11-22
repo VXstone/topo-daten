@@ -1,6 +1,6 @@
 {
  "region": "mob",
- "erzeugt": "2026-11-22 18:56 UTC",
+ "erzeugt": "2026-11-22 19:05 UTC",
  "code_commit": "f3b63199a93977a28f5d787177ac25784a99227f",
  "bahnhoefe": {
   "schonried": {
@@ -77,14 +77,14 @@
     "--hauptgleise"
    ]
   },
-  "glion": {
-   "name": "Glion",
+  "caux": {
+   "name": "Caux",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "caux": {
-   "name": "Caux",
+  "glion": {
+   "name": "Glion",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
