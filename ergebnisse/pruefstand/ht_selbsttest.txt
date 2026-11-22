@@ -8,10 +8,20 @@ OK   giesshuebel_90.svg HT5 -208.4/225.5 künstlicher Schnitt – dito, Mittelgl
 OK   giesshuebel_90.svg HT1 178.0/1697.4  – Weiche 1262541542 an 717 ohne Abzweig
 OK   vorlage_bern_brunnen_0.svg kein HT5 /  – Doppelter Spurwechsel: zweite Diagonale begann vor dem Ende der ersten (SW_GAP); Gleis aus mehreren OSM-Stücken (Gl. 75) nur über ein Stück erreichbar
 OK   vorlage_bern_brunnen_90.svg kein HT5 /  – Doppelter Spurwechsel: zweite Diagonale begann vor dem Ende der ersten (SW_GAP); Gleis aus mehreren OSM-Stücken (Gl. 75) nur über ein Stück erreichbar
+OK   vorlage_gorgier_saint_aubin_0.svg kein HT5 /  – Gl. 512 (2-m-Stück hinter der Spurwechselweiche) lag im Netzmodell vor der Weiche
+OK   vorlage_gorgier_saint_aubin_0.svg kein HT2 /  – Anschlussring: OSM-Weichen ohne Partner (weichen in der Vorlage)
+OK   vorlage_gorgier_saint_aubin_90.svg kein HT5 /  – Gl. 512 (2-m-Stück hinter der Spurwechselweiche) lag im Netzmodell vor der Weiche
+OK   vorlage_gorgier_saint_aubin_90.svg kein HT2 /  – Anschlussring: OSM-Weichen ohne Partner (weichen in der Vorlage)
 OK   vorlage_gummenen_0.svg kein HT1 /  – Typvorlage: Netzmodell liegt auf dem gezeichneten Plan (V4c), Weiche 569101885 = Abzweig x 390
 OK   vorlage_gummenen_0.svg kein HT2 /  – dito, kein Abzweig ohne OSM-Weiche
 OK   vorlage_gummenen_90.svg kein HT1 /  – Typvorlage: Netzmodell liegt auf dem gezeichneten Plan (V4c), Weiche 569101885 = Abzweig x 390
 OK   vorlage_gummenen_90.svg kein HT2 /  – dito, kein Abzweig ohne OSM-Weiche
+OK   vorlage_le_landeron_0.svg kein HT5 /  – Planrand genau auf der Spurwechselweiche, Abgang ohne aus_ll: der Spurwechsel selbst galt als Fahrweg Abgang ↔ Abgang
+OK   vorlage_le_landeron_90.svg kein HT5 /  – Planrand genau auf der Spurwechselweiche, Abgang ohne aus_ll: der Spurwechsel selbst galt als Fahrweg Abgang ↔ Abgang
+OK   vorlage_riedbach_0.svg kein HT5 /  – künstlicher Schnitt: Lauf führte das tote Abstellgleis aufs Streckengleis
+OK   vorlage_riedbach_0.svg kein HT2 /  – dito, erfundene Weiche
+OK   vorlage_riedbach_90.svg kein HT5 /  – künstlicher Schnitt: Lauf führte das tote Abstellgleis aufs Streckengleis
+OK   vorlage_riedbach_90.svg kein HT2 /  – dito, erfundene Weiche
 OK   vorlage_saint_blaise_cff_0.svg kein HT1 /  – Spurwechsel 49773692 und 171035994–96 fehlten im Netzmodell; vorlage.py ergänzt OSM-Verbindungen zwischen Weichen; beide Spurwechsel Seite Biel
 OK   vorlage_saint_blaise_cff_0.svg kein HT2 /  – Spurwechsel 49773692 und 171035994–96 fehlten im Netzmodell; vorlage.py ergänzt OSM-Verbindungen zwischen Weichen; beide Spurwechsel Seite Biel
 OK   vorlage_saint_blaise_cff_0.svg kein HT5 /  – Spurwechsel 49773692 und 171035994–96 fehlten im Netzmodell; vorlage.py ergänzt OSM-Verbindungen zwischen Weichen; beide Spurwechsel Seite Biel
@@ -22,6 +32,7 @@ OK   vorlage_tuscherz_0.svg kein HT1 /  – Weichen-Zuordnung über alle Gleise 
 OK   vorlage_tuscherz_0.svg kein HT2 /  – dito, Spurwechsel oben
 OK   vorlage_tuscherz_90.svg kein HT1 /  – Weichen-Zuordnung über alle Gleise sortiert: Anschlussweiche unten blieb ohne Partner
 OK   vorlage_tuscherz_90.svg kein HT2 /  – dito, Spurwechsel oben
+OK   vorlage_zihlbruecke_0.svg kein HT5 /  – zwei Abgänge Ins mit demselben OSM-Knoten; Doppelspurbeginn nach OSM oben
 OK   wangen_0.svg kein HT1 /  – unverändert: kein Befund
 OK   wangen_0.svg kein HT2 /  – unverändert: kein Befund
 OK   wangen_0.svg kein HT3 /  – unverändert: kein Befund
