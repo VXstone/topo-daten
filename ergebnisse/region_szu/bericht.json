@@ -1,6 +1,6 @@
 {
  "region": "szu",
- "erzeugt": "2026-11-22 08:15 UTC",
+ "erzeugt": "2026-11-22 08:23 UTC",
  "code_commit": "0037b08e21b7474ce926d81606eb3abb33b8685a",
  "bahnhoefe": {
   "uetliberg": {
@@ -9,16 +9,16 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "ringlikon": {
-   "name": "Ringlikon",
-   "ok": true,
-   "befunde": "Befunde: {}",
-   "optionen": []
-  },
   "zurich_selnau": {
    "name": "Zürich Selnau",
    "ok": true,
    "befunde": "Befunde: {'B': 4}",
+   "optionen": []
+  },
+  "ringlikon": {
+   "name": "Ringlikon",
+   "ok": true,
+   "befunde": "Befunde: {}",
    "optionen": []
   },
   "zurich_binz": {
