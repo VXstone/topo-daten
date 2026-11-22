@@ -4,45 +4,45 @@
 
 | Plan | HT1 | HT2 | HT3 | HT4 | HT5 | Summe |
 |---|---|---|---|---|---|---|
-| olten | 10 ↓13 | 21 ↓25 | 7 | 2 | 165 ↓174 | 205 |
+| olten | 10 | 21 | 7 | 2 | 165 | 205 |
 | neuchatel | · | · | 2 | · | 17 | 19 |
-| solothurn | 2 ↓4 | 1 | · | · | 15 | 18 |
-| aarau | 3 ↓7 | 4 | · | 1 | 9 | 17 |
+| solothurn | 2 | 1 | · | · | 15 | 18 |
+| aarau | 3 | 4 | · | 1 | 9 | 17 |
 | szu__zurich_giesshubel | 1 | 9 | · | 1 | 5 | 16 |
-| rothrist | 2 | 4 ↓5 | · | · | 5 ↓6 | 11 |
+| rothrist | 2 | 4 | · | · | 5 | 11 |
 | konolfingen | · | 2 | · | · | 6 | 8 |
-| mob__chamby | 1 ↓2 | 1 | · | 1 | 1 | 4 |
+| mob__chamby | 1 | 1 | · | 1 | 1 | 4 |
 | vereina__klosters_platz | 3 | · | · | · | 1 | 4 |
-| mob__zweisimmen | · | 3 ↓4 | · | · | 0 ↓1 | 3 |
+| mob__zweisimmen | · | 3 | · | · | · | 3 |
 | schonenwerd | · | 2 | · | · | 1 | 3 |
 | tecknau | · | 1 | · | · | 2 | 3 |
 | vereina__klosters_selfranga | 1 | · | · | · | 2 | 3 |
 | vereina__sagliains | 1 | 1 | · | · | 1 | 3 |
-| daniken | 2 | · | · | · | 0 ↓3 | 2 |
-| mob__montbovon | 2 ↓3 | · | · | · | 0 ↓1 | 2 |
+| daniken | 2 | · | · | · | · | 2 |
+| mob__montbovon | 2 | · | · | · | · | 2 |
 | mob__paccot | 2 | · | · | · | · | 2 |
 | mob__saanen | · | 1 | · | · | 1 | 2 |
 | szu__zurich_selnau | · | 2 | · | · | · | 2 |
 | zofingen | 2 | · | · | · | · | 2 |
 | mob__glion | · | · | · | · | 1 | 1 |
 | mob__jor | 1 | · | · | · | · | 1 |
-| mob__montreux | · | 1 ↓5 | · | · | · | 1 |
+| mob__montreux | · | 1 | · | · | · | 1 |
 | mob__rossiniere | · | · | · | · | 1 | 1 |
-| neuchatel_vauseyon | · | 1 | · | · | 0 ↓3 | 1 |
+| neuchatel_vauseyon | · | 1 | · | · | · | 1 |
 | szu__uetliberg | · | 1 | · | · | · | 1 |
 | aarburg_oftringen | · | · | · | · | · | 0 |
 | auvernier | · | · | · | · | · | 0 |
 | avenches | · | · | · | · | · | 0 |
 | bern_brunnen_westside | · | · | · | · | · | 0 |
 | bevaix | · | · | · | · | · | 0 |
-| bole | · | 0 ↓2 | 0 ↓1 | · | · | 0 |
+| bole | · | · | · | · | · | 0 |
 | boudry | · | · | · | · | · | 0 |
-| chambrelien | 0 ↓1 | · | · | · | 0 ↓1 | 0 |
+| chambrelien | · | · | · | · | · | 0 |
 | champ_du_moulin | · | · | · | · | · | 0 |
-| colombier | · | · | 0 ↓3 | · | · | 0 |
+| colombier | · | · | · | · | · | 0 |
 | concise | · | · | · | · | · | 0 |
 | corcelles_peseux | · | · | · | · | · | 0 |
-| cornaux | · | 0 ↓1 | 0 ↓1 | · | 0 ↓5 | 0 |
+| cornaux | · | · | · | · | · | 0 |
 | courtepin | · | · | · | · | · | 0 |
 | couvet | · | · | · | · | · | 0 |
 | cressier | · | · | · | · | · | 0 |
@@ -109,10 +109,10 @@
 | munchenwiler_courgevaux | · | · | · | · | · | 0 |
 | muntelier_lowenberg | · | · | · | · | · | 0 |
 | muntschemier | · | · | · | · | · | 0 |
-| murten | · | · | · | · | 0 ↓2 | 0 |
+| murten | · | · | · | · | · | 0 |
 | noiraigue | · | · | · | · | · | 0 |
 | olten_hammer | · | · | · | · | · | 0 |
-| onnens_bonvillars | 0 ↓1 | · | · | · | · | 0 |
+| onnens_bonvillars | · | · | · | · | · | 0 |
 | pensier | · | · | · | · | · | 0 |
 | riedbach | · | · | · | · | · | 0 |
 | rosshausern | · | · | · | · | · | 0 |
@@ -127,7 +127,7 @@
 | szu__zurich_binz | · | · | · | · | · | 0 |
 | szu__zurich_friesenberg | · | · | · | · | · | 0 |
 | szu__zurich_schweighof | · | · | · | · | · | 0 |
-| travers | · | 0 ↓3 | · | · | 0 ↓2 | 0 |
+| travers | · | · | · | · | · | 0 |
 | tuscherz | · | · | · | · | · | 0 |
 | twann | · | · | · | · | · | 0 |
 | vereina__sagliains_nord | · | · | · | · | · | 0 |
