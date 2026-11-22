@@ -4,7 +4,7 @@
   "HT2": 25,
   "HT3": 7,
   "HT4": 2,
-  "HT5": 176
+  "HT5": 174
  },
  "befunde": [
   {
@@ -1781,6 +1781,15 @@
   },
   {
    "regel": "HT5",
+   "x": 1205.7,
+   "y": 305.0,
+   "text": "Fahrweg Abgang 540 Aarau (25522388) ↔ Gl. 331 im Plan, nicht in OSM",
+   "von": "Abgang 540 Aarau (25522388)",
+   "nach": "Gl. 331",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
    "x": 1111.0,
    "y": 317.0,
    "text": "Fahrweg Abgang 540 Aarau (25522388) ↔ Gl. 354 im Plan, nicht in OSM",
@@ -2069,15 +2078,6 @@
   },
   {
    "regel": "HT5",
-   "x": 1573.8,
-   "y": 178.1,
-   "text": "Fahrweg Abgang 503 Sissach (13343327653) ↔ Gl. 171 in OSM, fehlt im Plan",
-   "von": "Abgang 503 Sissach (13343327653)",
-   "nach": "Gl. 171",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
    "x": 1332.7,
    "y": 202.1,
    "text": "Fahrweg Abgang 503 Sissach (13343327653) ↔ Gl. 331 in OSM, fehlt im Plan",
@@ -2132,15 +2132,6 @@
   },
   {
    "regel": "HT5",
-   "x": 1327.8,
-   "y": 293.0,
-   "text": "Fahrweg Abgang 540 Aarau (3191652525) ↔ Gl. 322 in OSM, fehlt im Plan",
-   "von": "Abgang 540 Aarau (3191652525)",
-   "nach": "Gl. 322",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
    "x": 1233.7,
    "y": 305.0,
    "text": "Fahrweg Abgang 540 Aarau (3191652525) ↔ Gl. 331 in OSM, fehlt im Plan",
@@ -2149,19 +2140,10 @@
    "art": "fehlt"
   },
   {
-   "regel": "HT5",
-   "x": 1068.0,
-   "y": 317.0,
-   "text": "Fahrweg Abgang 540 Aarau (635803003) ↔ Gl. 364 in OSM, fehlt im Plan",
-   "von": "Abgang 540 Aarau (635803003)",
-   "nach": "Gl. 364",
-   "art": "fehlt"
-  },
-  {
    "regel": "_info",
    "x": 0,
    "y": 0,
-   "text": "Fahrwege: 70/78 Ziele im Plan gefunden, OSM 394, Plan 538",
+   "text": "Fahrwege: 70/78 Ziele im Plan gefunden, OSM 394, Plan 542",
    "ohne_lage": [
     "Gl. 115",
     "Gl. 125",

@@ -4,50 +4,14 @@
   "HT2": 0,
   "HT3": 0,
   "HT4": 0,
-  "HT5": 4
+  "HT5": 0
  },
  "befunde": [
-  {
-   "regel": "HT5",
-   "x": 428.2,
-   "y": 158.0,
-   "text": "Fahrweg Abgang 210 Yverdon (432502731) ↔ Gl. 823 in OSM, fehlt im Plan",
-   "von": "Abgang 210 Yverdon (432502731)",
-   "nach": "Gl. 823",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 417.4,
-   "y": 170.0,
-   "text": "Fahrweg Abgang 210 Yverdon (628105339) ↔ Gl. 821 in OSM, fehlt im Plan",
-   "von": "Abgang 210 Yverdon (628105339)",
-   "nach": "Gl. 821",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 428.2,
-   "y": 146.0,
-   "text": "Fahrweg Abgang 210 Yverdon (628105339) ↔ Gl. 823 in OSM, fehlt im Plan",
-   "von": "Abgang 210 Yverdon (628105339)",
-   "nach": "Gl. 823",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 398.1,
-   "y": 146.0,
-   "text": "Fahrweg Abgang 219 Travers (9815501613) ↔ Gl. 821 in OSM, fehlt im Plan",
-   "von": "Abgang 219 Travers (9815501613)",
-   "nach": "Gl. 821",
-   "art": "fehlt"
-  },
   {
    "regel": "_info",
    "x": 0,
    "y": 0,
-   "text": "Fahrwege: 17/17 Ziele im Plan gefunden, OSM 57, Plan 53",
+   "text": "Fahrwege: 17/17 Ziele im Plan gefunden, OSM 57, Plan 57",
    "ohne_lage": []
   }
  ],

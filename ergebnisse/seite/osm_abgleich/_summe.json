@@ -398,14 +398,13 @@
   "netz_auf_plan": 0.71
  },
  "ligerz": {
-  "VB1": 1,
   "dkw_osm_unvollstaendig": [],
-  "gleise": 2,
-  "knoten_plan": 1,
+  "gleise": 3,
+  "knoten_plan": 2,
   "dkw_plan": 0,
   "knoten_osm": 2,
   "versatz_y": 0.0,
-  "netz_auf_plan": 0.29
+  "netz_auf_plan": 0.86
  },
  "marin_epagnier": {
   "dkw_osm_unvollstaendig": [],
@@ -1192,15 +1191,13 @@
   "netz_auf_plan": 0.89
  },
  "tuscherz": {
-  "VB1": 1,
-  "VB2": 1,
   "dkw_osm_unvollstaendig": [],
   "gleise": 5,
   "knoten_plan": 5,
   "dkw_plan": 0,
   "knoten_osm": 5,
   "versatz_y": 0.0,
-  "netz_auf_plan": 0.7
+  "netz_auf_plan": 0.8
  },
  "twann": {
   "dkw_osm_unvollstaendig": [],

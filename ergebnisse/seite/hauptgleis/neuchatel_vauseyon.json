@@ -4,7 +4,7 @@
   "HT2": 1,
   "HT3": 0,
   "HT4": 0,
-  "HT5": 5
+  "HT5": 3
  },
  "befunde": [
   {
@@ -42,28 +42,10 @@
    "art": "zusaetzlich"
   },
   {
-   "regel": "HT5",
-   "x": 489.8,
-   "y": 206.0,
-   "text": "Fahrweg Abgang 210 Yverdon (416419147) ↔ Gl. 131 in OSM, fehlt im Plan",
-   "von": "Abgang 210 Yverdon (416419147)",
-   "nach": "Gl. 131",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 600.4,
-   "y": 230.0,
-   "text": "Fahrweg Abgang 210 Yverdon (433343742) ↔ Gl. 231 in OSM, fehlt im Plan",
-   "von": "Abgang 210 Yverdon (433343742)",
-   "nach": "Gl. 231",
-   "art": "fehlt"
-  },
-  {
    "regel": "_info",
    "x": 0,
    "y": 0,
-   "text": "Fahrwege: 12/13 Ziele im Plan gefunden, OSM 26, Plan 27",
+   "text": "Fahrwege: 12/13 Ziele im Plan gefunden, OSM 26, Plan 29",
    "ohne_lage": [
     "Gl. 3"
    ]

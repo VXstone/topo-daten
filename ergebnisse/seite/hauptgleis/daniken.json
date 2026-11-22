@@ -4,7 +4,7 @@
   "HT2": 0,
   "HT3": 0,
   "HT4": 0,
-  "HT5": 6
+  "HT5": 3
  },
  "befunde": [
   {
@@ -49,37 +49,10 @@
    "art": "zusaetzlich"
   },
   {
-   "regel": "HT5",
-   "x": 951.2,
-   "y": 182.0,
-   "text": "Fahrweg Abgang 540 Aarau (13124924147) ↔ Gl. 81 in OSM, fehlt im Plan",
-   "von": "Abgang 540 Aarau (13124924147)",
-   "nach": "Gl. 81",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 951.2,
-   "y": 170.0,
-   "text": "Fahrweg Abgang 540 Aarau (13124924148) ↔ Gl. 81 in OSM, fehlt im Plan",
-   "von": "Abgang 540 Aarau (13124924148)",
-   "nach": "Gl. 81",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 951.2,
-   "y": 194.0,
-   "text": "Fahrweg Abgang 650 Aarau (13124924149) ↔ Gl. 81 in OSM, fehlt im Plan",
-   "von": "Abgang 650 Aarau (13124924149)",
-   "nach": "Gl. 81",
-   "art": "fehlt"
-  },
-  {
    "regel": "_info",
    "x": 0,
    "y": 0,
-   "text": "Fahrwege: 22/22 Ziele im Plan gefunden, OSM 73, Plan 73",
+   "text": "Fahrwege: 22/22 Ziele im Plan gefunden, OSM 73, Plan 76",
    "ohne_lage": []
   }
  ],

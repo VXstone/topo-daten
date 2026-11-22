@@ -4,32 +4,14 @@
   "HT2": 0,
   "HT3": 0,
   "HT4": 0,
-  "HT5": 2
+  "HT5": 0
  },
  "befunde": [
-  {
-   "regel": "HT5",
-   "x": 877.7,
-   "y": 122.0,
-   "text": "Fahrweg Abgang 220 Bern (6469561344) ↔ Gl. 75 in OSM, fehlt im Plan",
-   "von": "Abgang 220 Bern (6469561344)",
-   "nach": "Gl. 75",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 540.3,
-   "y": 122.0,
-   "text": "Fahrweg Abgang 220 Kerzers (1244528401) ↔ Gl. 75 in OSM, fehlt im Plan",
-   "von": "Abgang 220 Kerzers (1244528401)",
-   "nach": "Gl. 75",
-   "art": "fehlt"
-  },
   {
    "regel": "_info",
    "x": 0,
    "y": 0,
-   "text": "Fahrwege: 13/13 Ziele im Plan gefunden, OSM 34, Plan 32",
+   "text": "Fahrwege: 13/13 Ziele im Plan gefunden, OSM 34, Plan 34",
    "ohne_lage": []
   }
  ],

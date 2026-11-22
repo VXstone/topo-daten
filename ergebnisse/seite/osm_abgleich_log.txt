@@ -38,7 +38,7 @@ le_landeron                        {'VD1': 1}
 les_deurres                        {}
 les_geneveys_sur_coffrane          {'VD1': 1}
 les_hauts_geneveys                 {'VD1': 1}
-ligerz                             {'VB1': 1}
+ligerz                             {}
 marin_epagnier                     {}
 mob__allieres                      {}
 mob__belmont_sur_montreux          {}
@@ -118,7 +118,7 @@ szu__zurich_schweighof             {}
 szu__zurich_selnau                 {'VB2': 2}
 tecknau                            {'VB2': 1}
 travers                            {'VB2': 3}
-tuscherz                           {'VB1': 1, 'VB2': 1}
+tuscherz                           {}
 twann                              {}
 vereina__klosters_platz            {'VB1': 3, 'VD1': 4}
 vereina__klosters_selfranga        {'VB1': 2, 'VD1': 1}
@@ -133,4 +133,4 @@ vereina__vereina_sud               {}
 wangen_bei_olten                   {'VB2': 1}
 zihlbruecke                        {}
 zofingen                           {'VA2': 2, 'VB1': 3, 'VD1': 1}
-OSM-Abgleich: 135 Pläne {'VA1': 8, 'VA2': 11, 'VB1': 80, 'VB2': 95, 'VC1': 21, 'VD1': 111, 'VD2': 1}
+OSM-Abgleich: 135 Pläne {'VA1': 8, 'VA2': 11, 'VB1': 78, 'VB2': 94, 'VC1': 21, 'VD1': 111, 'VD2': 1}

@@ -4,54 +4,51 @@
 
 | Plan | HT1 | HT2 | HT3 | HT4 | HT5 | Summe |
 |---|---|---|---|---|---|---|
-| olten | 13 | 25 | 7 | 2 | 176 | 223 |
-| solothurn | 4 | 1 | · | · | 17 | 22 |
+| olten | 13 | 25 | 7 | 2 | 174 ↓176 | 221 |
 | aarau | 7 | 4 | · | 1 | 9 ↓10 | 21 |
+| solothurn | 4 | 1 | · | · | 15 ↓17 | 20 |
 | neuchatel | · | · | 2 | · | 17 | 19 |
 | szu__zurich_giesshubel | 1 | 8 | 1 | 1 | 5 | 16 |
 | rothrist | 2 | 5 | · | · | 6 | 13 |
-| konolfingen | · | 2 | · | · | 7 | 9 |
-| daniken | 2 | · | · | · | 6 | 8 |
+| konolfingen | · | 2 | · | · | 6 ↓7 | 8 |
 | cornaux | · | 1 | 1 | · | 5 | 7 |
-| mob__zweisimmen | · | 4 | · | · | 3 | 7 |
-| neuchatel_vauseyon | · | 1 | · | · | 5 | 6 |
+| daniken | 2 | · | · | · | 3 ↓6 | 5 |
 | mob__chamby | 2 | 1 | · | 1 | 1 | 5 |
 | mob__montreux | · | 5 | · | · | · | 5 |
+| mob__zweisimmen | · | 4 | · | · | 1 ↓3 | 5 |
 | travers | · | 3 | · | · | 2 | 5 |
-| auvernier | · | · | · | · | 4 | 4 |
-| colombier | · | · | 3 | · | 1 | 4 |
-| gorgier_saint_aubin | · | 1 | · | · | 3 | 4 |
 | mob__montbovon | 3 | · | · | · | 1 | 4 |
+| neuchatel_vauseyon | · | 1 | · | · | 3 ↓5 | 4 |
 | vereina__klosters_platz | 3 | · | · | · | 1 | 4 |
-| bevaix | · | · | · | · | 3 | 3 |
 | bole | · | 2 | 1 | · | · | 3 |
+| colombier | · | · | 3 | · | 0 ↓1 | 3 |
+| gorgier_saint_aubin | · | 1 | · | · | 2 ↓3 | 3 |
 | riedbach | · | 1 | · | · | 2 | 3 |
 | schonenwerd | · | 2 | · | · | 1 | 3 |
 | tecknau | · | 1 | · | · | 2 | 3 |
-| tuscherz | 1 | 1 | · | · | 1 | 3 |
 | vereina__klosters_selfranga | 1 | · | · | · | 2 | 3 |
 | vereina__sagliains | 1 | 1 | · | · | 1 | 3 |
-| bern_brunnen_westside | · | · | · | · | 2 | 2 |
 | chambrelien | 1 | · | · | · | 1 | 2 |
 | mob__paccot | 2 | · | · | · | · | 2 |
 | mob__saanen | · | 1 | · | · | 1 | 2 |
-| mob__vernex | · | · | · | · | 2 | 2 |
 | murten | · | · | · | · | 2 | 2 |
 | szu__zurich_selnau | · | 2 | · | · | · | 2 |
 | zihlbruecke | · | · | · | · | 2 | 2 |
 | zofingen | 2 | · | · | · | · | 2 |
+| bevaix | · | · | · | · | 1 ↓3 | 1 |
 | courtepin | · | 1 | · | · | · | 1 |
-| dulliken | · | · | · | · | 1 | 1 |
 | grandson | · | · | · | · | 1 | 1 |
 | le_landeron | · | · | · | · | 1 | 1 |
-| ligerz | 1 | · | · | · | · | 1 |
 | mob__glion | · | · | · | · | 1 | 1 |
 | mob__jor | 1 | · | · | · | · | 1 |
 | mob__rossiniere | · | · | · | · | 1 | 1 |
 | onnens_bonvillars | 1 | · | · | · | · | 1 |
 | szu__uetliberg | · | 1 | · | · | · | 1 |
+| tuscherz | 0 ↓1 | 0 ↓1 | · | · | 1 | 1 |
 | aarburg_oftringen | · | · | · | · | · | 0 |
+| auvernier | · | · | · | · | 0 ↓4 | 0 |
 | avenches | 0 ↓1 | · | · | · | · | 0 |
+| bern_brunnen_westside | · | · | · | · | 0 ↓2 | 0 |
 | boudry | · | · | · | · | · | 0 |
 | champ_du_moulin | · | · | · | · | · | 0 |
 | concise | · | · | · | · | · | 0 |
@@ -61,6 +58,7 @@
 | cressier_fr | · | · | · | · | · | 0 |
 | domdidier | · | · | · | · | · | 0 |
 | dompierre | · | · | · | · | · | 0 |
+| dulliken | · | · | · | · | 0 ↓1 | 0 |
 | faoug | · | · | · | · | · | 0 |
 | fraschels | · | · | · | · | · | 0 |
 | galmiz | · | · | · | · | · | 0 |
@@ -75,6 +73,7 @@
 | les_deurres | · | · | · | · | · | 0 |
 | les_geneveys_sur_coffrane | · | · | · | · | · | 0 |
 | les_hauts_geneveys | · | · | · | · | · | 0 |
+| ligerz | 0 ↓1 | · | · | · | · | 0 |
 | marin_epagnier | · | · | · | · | · | 0 |
 | mob__allieres | · | · | · | · | · | 0 |
 | mob__belmont_sur_montreux | · | · | · | · | · | 0 |
@@ -110,6 +109,7 @@
 | mob__st_stephan | · | · | · | · | · | 0 |
 | mob__toveyre | · | · | · | · | · | 0 |
 | mob__valmont | · | · | · | · | · | 0 |
+| mob__vernex | · | · | · | · | 0 ↓2 | 0 |
 | mob__vuarennes | · | · | · | · | · | 0 |
 | motiers | · | · | · | · | · | 0 |
 | munchenwiler_courgevaux | · | · | · | · | · | 0 |

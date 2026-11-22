@@ -1,21 +1,13 @@
 {
 "plan": "ligerz",
-"befunde": [
-{
-"regel": "VB1",
-"x": 431.4,
-"y": 122.0,
-"text": "OSM-Weiche 1676192646 ohne Abzweig im Plan",
-"osm": 1676192646
-}
-],
+"befunde": [],
 "info": {
 "dkw_osm_unvollstaendig": [],
-"gleise": 2,
-"knoten_plan": 1,
+"gleise": 3,
+"knoten_plan": 2,
 "dkw_plan": 0,
 "knoten_osm": 2,
 "versatz_y": 0.0,
-"netz_auf_plan": 0.29
+"netz_auf_plan": 0.86
 }
 }

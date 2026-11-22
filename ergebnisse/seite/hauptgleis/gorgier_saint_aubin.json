@@ -4,7 +4,7 @@
   "HT2": 1,
   "HT3": 0,
   "HT4": 0,
-  "HT5": 3
+  "HT5": 2
  },
  "befunde": [
   {
@@ -42,19 +42,10 @@
    "art": "fehlt"
   },
   {
-   "regel": "HT5",
-   "x": 496.6,
-   "y": 122.0,
-   "text": "Fahrweg Abgang 210 Yverdon (1951569819) ↔ Gl. 503 in OSM, fehlt im Plan",
-   "von": "Abgang 210 Yverdon (1951569819)",
-   "nach": "Gl. 503",
-   "art": "fehlt"
-  },
-  {
    "regel": "_info",
    "x": 0,
    "y": 0,
-   "text": "Fahrwege: 12/12 Ziele im Plan gefunden, OSM 34, Plan 31",
+   "text": "Fahrwege: 12/12 Ziele im Plan gefunden, OSM 34, Plan 32",
    "ohne_lage": []
   }
  ],

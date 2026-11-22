@@ -4,7 +4,7 @@
   "HT2": 2,
   "HT3": 0,
   "HT4": 0,
-  "HT5": 7
+  "HT5": 6
  },
  "befunde": [
   {
@@ -91,19 +91,10 @@
    "art": "fehlt"
   },
   {
-   "regel": "HT5",
-   "x": 570.8,
-   "y": 174.8,
-   "text": "Fahrweg Gl. 72 ↔ Gleisende 1866974722 in OSM, fehlt im Plan",
-   "von": "Gl. 72",
-   "nach": "Gleisende 1866974722",
-   "art": "fehlt"
-  },
-  {
    "regel": "_info",
    "x": 0,
    "y": 0,
-   "text": "Fahrwege: 18/18 Ziele im Plan gefunden, OSM 55, Plan 50",
+   "text": "Fahrwege: 18/18 Ziele im Plan gefunden, OSM 55, Plan 51",
    "ohne_lage": []
   }
  ],

@@ -4,7 +4,7 @@
   "HT2": 1,
   "HT3": 0,
   "HT4": 0,
-  "HT5": 17
+  "HT5": 15
  },
  "befunde": [
   {
@@ -46,15 +46,6 @@
     49715373,
     1273524863
    ]
-  },
-  {
-   "regel": "HT5",
-   "x": 355.2,
-   "y": 172.4,
-   "text": "Fahrweg Abgang 410 Biel/Bienne (1139244757) ↔ Gl. 481 in OSM, fehlt im Plan",
-   "von": "Abgang 410 Biel/Bienne (1139244757)",
-   "nach": "Gl. 481",
-   "art": "fehlt"
   },
   {
    "regel": "HT5",
@@ -192,19 +183,10 @@
    "art": "fehlt"
   },
   {
-   "regel": "HT5",
-   "x": 973.5,
-   "y": 218.9,
-   "text": "Fahrweg Abgang 421 Burgdorf (9237893759) ↔ Gl. 1 in OSM, fehlt im Plan",
-   "von": "Abgang 421 Burgdorf (9237893759)",
-   "nach": "Gl. 1",
-   "art": "fehlt"
-  },
-  {
    "regel": "_info",
    "x": 0,
    "y": 0,
-   "text": "Fahrwege: 27/27 Ziele im Plan gefunden, OSM 116, Plan 99",
+   "text": "Fahrwege: 27/27 Ziele im Plan gefunden, OSM 116, Plan 101",
    "ohne_lage": []
   }
  ],

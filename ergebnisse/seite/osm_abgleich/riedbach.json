@@ -3,16 +3,16 @@
 "befunde": [
 {
 "regel": "VB2",
-"x": 771.7,
-"y": 110.0,
+"x": 530.0,
+"y": 134.0,
 "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
 "ways": [
+176851504,
+176851505,
 176855586,
-445228959,
 586391653,
 586391654,
 586391655,
-586391656,
 586391657
 ],
 "farben": [

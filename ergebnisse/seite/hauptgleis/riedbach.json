@@ -9,23 +9,23 @@
  "befunde": [
   {
    "regel": "HT2",
-   "x": 771.7,
-   "y": 110.0,
+   "x": 530.0,
+   "y": 134.0,
    "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
    "ways": [
+    176851504,
+    176851505,
     176855586,
-    445228959,
     586391653,
     586391654,
     586391655,
-    586391656,
     586391657
    ]
   },
   {
    "regel": "HT5",
-   "x": 561.9,
-   "y": 158.0,
+   "x": 530.0,
+   "y": 134.0,
    "art": "kuenstlich",
    "osm": -1061,
    "text": "Gleisende -1061 am Planrand: in OSM läuft das Gleis im Plan weiter (künstlicher Schnitt, Gleis fehlt dazwischen)"

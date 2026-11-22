@@ -4,12 +4,12 @@
   "HT2": 0,
   "HT3": 0,
   "HT4": 0,
-  "HT5": 3
+  "HT5": 1
  },
  "befunde": [
   {
    "regel": "HT5",
-   "x": 770.5,
+   "x": 764.0,
    "y": 122.0,
    "text": "Fahrweg Abgang 210 Neuchâtel (12594175198) ↔ Gl. 662 in OSM, fehlt im Plan",
    "von": "Abgang 210 Neuchâtel (12594175198)",
@@ -17,28 +17,10 @@
    "art": "fehlt"
   },
   {
-   "regel": "HT5",
-   "x": 463.4,
-   "y": 122.0,
-   "text": "Fahrweg Abgang 210 Yverdon (12594175179) ↔ Gl. 652 in OSM, fehlt im Plan",
-   "von": "Abgang 210 Yverdon (12594175179)",
-   "nach": "Gl. 652",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 493.2,
-   "y": 122.0,
-   "text": "Fahrweg Abgang 210 Yverdon (12594175179) ↔ Gl. 662 in OSM, fehlt im Plan",
-   "von": "Abgang 210 Yverdon (12594175179)",
-   "nach": "Gl. 662",
-   "art": "fehlt"
-  },
-  {
    "regel": "_info",
    "x": 0,
    "y": 0,
-   "text": "Fahrwege: 11/11 Ziele im Plan gefunden, OSM 27, Plan 24",
+   "text": "Fahrwege: 11/11 Ziele im Plan gefunden, OSM 27, Plan 26",
    "ohne_lage": []
   }
  ],

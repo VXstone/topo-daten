@@ -4,7 +4,7 @@
   "HT2": 0,
   "HT3": 3,
   "HT4": 0,
-  "HT5": 1
+  "HT5": 0
  },
  "befunde": [
   {
@@ -47,19 +47,10 @@
    ]
   },
   {
-   "regel": "HT5",
-   "x": 1655.0,
-   "y": 122.0,
-   "text": "Fahrweg Abgang 210 Neuchâtel (628087279) ↔ Gl. 811 in OSM, fehlt im Plan",
-   "von": "Abgang 210 Neuchâtel (628087279)",
-   "nach": "Gl. 811",
-   "art": "fehlt"
-  },
-  {
    "regel": "_info",
    "x": 0,
    "y": 0,
-   "text": "Fahrwege: 14/14 Ziele im Plan gefunden, OSM 35, Plan 34",
+   "text": "Fahrwege: 14/14 Ziele im Plan gefunden, OSM 35, Plan 35",
    "ohne_lage": []
   }
  ],

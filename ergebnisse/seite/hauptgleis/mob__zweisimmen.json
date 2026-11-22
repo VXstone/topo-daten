@@ -4,7 +4,7 @@
   "HT2": 4,
   "HT3": 0,
   "HT4": 0,
-  "HT5": 3
+  "HT5": 1
  },
  "befunde": [
   {
@@ -72,28 +72,10 @@
    "art": "zusaetzlich"
   },
   {
-   "regel": "HT5",
-   "x": 769.2,
-   "y": 182.0,
-   "text": "Fahrweg Gl. 37 ↔ Gleisende 263008102 in OSM, fehlt im Plan",
-   "von": "Gl. 37",
-   "nach": "Gleisende 263008102",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 740.4,
-   "y": 206.0,
-   "text": "Fahrweg Gl. 37 ↔ Gleisende 5300983598 in OSM, fehlt im Plan",
-   "von": "Gl. 37",
-   "nach": "Gleisende 5300983598",
-   "art": "fehlt"
-  },
-  {
    "regel": "_info",
    "x": 0,
    "y": 0,
-   "text": "Fahrwege: 10/26 Ziele im Plan gefunden, OSM 18, Plan 17",
+   "text": "Fahrwege: 10/26 Ziele im Plan gefunden, OSM 18, Plan 19",
    "ohne_lage": [
     "Abgang 120 Gstaad (13135626536)",
     "Abgang 321 Lenk (13135626539)",
