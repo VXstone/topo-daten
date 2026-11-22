@@ -366,6 +366,9 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   Lage des Laufs): Chambrelien HT1 1/HT5 1, Onnens HT1 1, Colombier HT3 3, Cornaux 7, Travers 5, Bôle 3, Murten 2; dazu Neuchâtel 19 und
   Vauseyon 4 (eigener Bau). Vorschlag nächster Schritt: wie `vorlage.netz_mitschreiben` ein Netzmodell auf die zeichnen-Linien legen
   (OSM-Weichen an die gezeichneten Abzweige, Zusatz `weichen` erlaubt), dann je Plan echte Fehler von Messartefakten trennen.
+  **Stand 22.11. abends (v169):** auch die Hand-Linien-Pläne NE HT 0 (Chambrelien, Onnens, Colombier, Cornaux, Travers, Bôle, Murten).
+  **Rest V4e: nur Neuchâtel (HT3 2, HT5 17) und Vauseyon (HT2 1)** – beide aus dem Workflow `plaene` (nicht region_ne-Kette; `vorlage
+  --weichen` läuft dort nicht). Nächster Chat: Neuchâtel ansehen (Abgänge Biel/Ins/Yverdon ↔ Gl. 5–7 und A42–A72 «im Plan, nicht in OSM»).
   Riedbach Anschluss-T geklärt (Daniel 22.11.: von Seite Bern erreichbar, Zurücksetzen Richtung Bern = OSM) → Vorlage `gegen` (v168).
   Prüffall vorlage_riedbach_90: HT2 gedreht nicht geprüft (Zuordnung Doppelspurwechsel Ost kippt nur gedreht) – ansehen.
   Daniel 22.11.: Seite eines neuen Gleises (oben/unten, Zihlbrücke) ist kein harter Fehler – wichtig ist Weiche da und Topologie richtig.
@@ -849,3 +852,14 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - Regression: keine neue Zeile «schlechter?» (die 6 sind älter, bekannt); G0 unverändert. Abnahmen nicht neu exportiert (keine neuen seit V4e Teil 2).
 - Fallstrick: lokaler Lauf (region_olten_lauf) schreibt in werkstatt/ne – vor dem Commit zurücksetzen (Numerik lokal ≠ Workflow).
 - Nachtrag 12:15 (v168, ergebnisse 15c82c8): Riedbach Anschluss-T nach OSM (Daniel), Vorlage `gegen` (REGELN Kopf HT). Prüfstand-Lauf 738d349 rot (Prüffall riedbach_90), mit 6947437 behoben.
+
+### 22.11.2026 ~17:20 – Schritt V4e Teil 4, Seite v169 (Commits cb6414d, 42ddfe6; ergebnisse 66b75bc)
+- Sichtbar: Chambrelien – Gl. 2 mündet vor dem Abzweig 224 ein (vorher am selben Punkt = V, im Plan nicht befahrbar), Gl. 3 mündet in die
+  Weiche 393419063 (endete 12 px davor). Übrige Hand-Linien-Pläne waren richtig gezeichnet, nur falsch gemessen.
+- REGELN Kopf HT «Hand-Linien»: `vorlage.py --weichen` (zeichnen.weichen, zeichnen.netz_ergaenzen) in region_olten_lauf.kette; Messung:
+  Abzweig mit geradem Vorstück, DKW als Weichenpaar, Teilungspunkte aus allen Berührpunkten, Gleisziel = Mitte.
+- Fallstrick: erste Fassung ergänzte OSM-Verbindungen in allen zeichnen-Plänen -> Olten HT1/3/4 neu (seite rot, cb6414d); jetzt nur auf Wunsch.
+  Messänderungen über alle 135 Pläne alt/neu verglichen (`hauptgleis.py --alle` auf ergebnisse/seite/plaene + netz.tgz): nur Abnahmen,
+  ausser Giesshübel HT3 -> HT2 an derselben Kreuzung (Basis bewusst). HT gesamt 46/70/15/5/261 -> 33/55/9/5/233, Basis gesenkt (17 Pläne).
+- Prüffälle zeichnen_chambrelien/murten/cornaux/onnens_bonvillars (0/90°). G0 unverändert.
+
