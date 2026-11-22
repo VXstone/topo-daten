@@ -5310,6 +5310,7 @@ def _treppe_abgang():
         print(f"W8 Abgang {po.get('town')}: Schräge durchgezogen bis zum Abgang ({start[0]:.0f} -> {Pp[0]:.0f} px)")
 _treppe_abgang()
 
+R39B = []
 def _abgang_weichen():
     """Regel 39b (28.10.2026, Vauseyon Hinweis ok5v: «weiter oben ist noch ein Mini-Stumpen auf die andere Seite»):
     Weichen kurz hinter einem seitlichen Abgang (bis 150 m entlang der Strecke) werden auf der Abgangsschräge angedeutet:
@@ -5342,13 +5343,13 @@ def _abgang_weichen():
                     ende = ww["nodes"][-1] if i_ == 0 else ww["nodes"][0]
                     tot = use_[ende] == 1
                     v_ = np.subtract(P[ww["nodes"][j_]], P[cur]); s_dir = project(tuple(np.add(P[cur], v_)))[0] - project(P[cur])[0]
-                    gef.append((dist_, 1 if s_dir > 0 else -1, tot, ww["id"]))
+                    gef.append((dist_, 1 if s_dir > 0 else -1, tot, ww["id"], cur))
         if not gef: continue
         m_ = re.match(r'<path d="M([-\d.]+),([-\d.]+)L([-\d.]+),([-\d.]+)"', out[si["ex"]])
         if not m_: continue
         a_ = (float(m_.group(1)), float(m_.group(2))); b_ = (float(m_.group(3)), float(m_.group(4)))
         L_ = math.dist(a_, b_)
-        for k_, (d_, dx_, tot, wid) in enumerate(gef[:3]):
+        for k_, (d_, dx_, tot, wid, kn_) in enumerate(gef[:3]):
             t_ = min(0.75, 0.25 + 0.2 * k_ + d_ / 600)
             q_ = (a_[0] + (b_[0] - a_[0]) * t_, a_[1] + (b_[1] - a_[1]) * t_)
             u_ = ((b_[0] - a_[0]) / L_, (b_[1] - a_[1]) / L_)
@@ -5358,6 +5359,7 @@ def _abgang_weichen():
             if tot: out.append(f'<circle cx="{e_[0]:.1f}" cy="{e_[1]:.1f}" r="3.2" fill="{black}"/>')
             else: out.append(f'<path d="M{e_[0]:.1f},{e_[1] - 4:.1f}L{e_[0] + 9 * dx_:.1f},{e_[1]:.1f}L{e_[0]:.1f},{e_[1] + 4:.1f}Z" fill="{black}"/>')
             print(f"R39b Abgang {PORTS[si['port']].get('town')}: Weiche {d_:.0f} m hinter dem Planrand angedeutet (Way {wid})")
+            R39B.append(dict(osm=int(kn_), way=int(wid), x=round(q_[0], 1), y=round(q_[1], 1)))     # Netzmodell: angedeutete Weiche (HT, V4e)
 _abgang_weichen()
 UEBER_AUTO = []
 def _t4_auto():
@@ -5565,7 +5567,8 @@ if not ARGS.bare and ARGS.out in (None, f"{key}_spurplan.svg"):
                  for m in re.finditer(r'<text x="([-\d.]+)" y="([-\d.]+)" font-size="19" text-anchor="middle"[^>]*>([^<]+)</text>', _svg)],
         perrons_osm=[dict(way=int(e["id"]), name=e["tags"].get("name"), ref=e["tags"].get("ref"),
                           punkte=[[g["lat"], g["lon"]] for g in e["geometry"]]) for e in PLAT],
-        abgaenge=[{k_: (v_ if not isinstance(v_, float) else round(v_, 5)) for k_, v_ in p_.items()} for p_ in PORTS])
+        abgaenge=[{k_: (v_ if not isinstance(v_, float) else round(v_, 5)) for k_, v_ in p_.items()} for p_ in PORTS],
+        angedeutet=R39B)
     json.dump(_NETZ, open(f"{key}_netz.json", "w"), ensure_ascii=False, indent=0)
 print("chains", len(C), "lanes", maxlane + 1, "segs", len(segs), "W", round(W), "H", round(H))
 

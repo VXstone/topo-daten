@@ -1,0 +1,14 @@
+{
+ "_quelle": "V4e 22.11.2026, Code (Workflow plaene, Hand-Linien + vorlage --weichen), Neuchâtel, gedreht 90° · HT1 nur 0°: gedreht ordnet osm_abgleich die R47-Weichen nicht zu (Gleis-«y» im Testaufbau nicht gedreht, wie Zihlbrücke 90°)",
+ "erwartet": [],
+ "nicht": [
+  {
+   "regel": "HT5",
+   "anlass": "Netzmodell ohne Hand-Linien-Verbindungen (DKW 3/58/63 als Kreuzung + 4 Weichen, R47-Spurwechsel): Biel/Yverdon/Ins ↔ Gl. 5–7 «im Plan, nicht in OSM»; flache Kreuzung EKW 109 (Biel → Ins)"
+  },
+  {
+   "regel": "HT3",
+   "anlass": "A15/A44 an DKW-Knoten angebunden (Bogen-Ways fehlten im Netzmodell)"
+  }
+ ]
+}

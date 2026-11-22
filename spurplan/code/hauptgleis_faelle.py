@@ -38,6 +38,7 @@ def drehen_netz(N, grad):
     for a in N.get("abgaenge", []):
         a["x"], a["y"] = drehen_xy(a["x"], a["y"], grad); a["dx"], a["dy"] = drehen_xy(a.get("dx", 0), a.get("dy", 0), grad)
     for m in N.get("nummern", []): m["x"], m["y"] = drehen_xy(m["x"], m["y"], grad)
+    for m in N.get("angedeutet", []): m["x"], m["y"] = drehen_xy(m["x"], m["y"], grad)      # Regel 39b (V4e)
     return N
 
 

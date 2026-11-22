@@ -83,6 +83,7 @@ class Graph:
         self.kreuzung = set()
         self._paare = {}
         self.fern = {}
+        self.partner = {}                    # Kreuzung -> {linie: linie geradeaus} (nur OSM, aus allen Ways am Knoten)
 
     def kante(self, a, b, linie, da, db, doppelt_pruefen=False):
         if doppelt_pruefen:
@@ -105,11 +106,16 @@ class Graph:
                     U[(i, e)].append((j, f)); U[(j, f)].append((i, e))
                 continue
             S = _seiten([a[2] for a in A])
+            partner = self.partner.get(n)
             for p, (i, e, di, li) in enumerate(A):
                 for q, (j, f, dj, lj) in enumerate(A):
                     if p == q or S[p] == S[q]: continue
                     if n in self.kreuzung:
-                        if li != lj and float(np.dot(di, dj)) > -0.9: continue
+                        if partner is not None and li != lj:
+                            # V4e (22.11.2026, Neuchâtel EKW 109): flache Kreuzung (≈ 6°) – geradeaus heisst: der Way, der in
+                            # OSM die Fortsetzung ist (alle Ways am Knoten, paarweise am geradesten), nicht jeder Ast < 25°
+                            if partner.get(li) != lj: continue
+                        elif li != lj and float(np.dot(di, dj)) > -0.9: continue
                     U[(i, e)].append((j, f))
         return U
 
@@ -189,6 +195,37 @@ def osm_graph(N, T, W, K, WT):
     for n in list(G.aeste):
         t = T.get(n, {})
         if t.get("railway") == "railway_crossing": G.kreuzung.add(n)
+    # Geradeaus an Kreuzungen aus ALLEN OSM-Ways am Knoten (auch nicht gezeichnete, z. B. das Abstellgleis hinter einer
+    # EKW): Arme paarweise nach Gegenrichtung, am geradesten zuerst; Linie = Way (geteilte Ways des Netzmodells -> OSM-Way)
+    if G.kreuzung:
+        inv = collections.defaultdict(list)
+        for n in G.kreuzung: inv[n] = []
+        for w, nd in W.items():
+            for i, m in enumerate(nd):
+                if m in inv: inv[m].append((w, i))
+        for n, occ in inv.items():
+            arme = []
+            for w, i in occ:
+                nd = W[w]
+                for st in (-1, 1):
+                    if not 0 <= i + st < len(nd): continue
+                    j = i + st; p0 = pos(n); d = None
+                    while 0 <= j < len(nd) and p0 is not None:
+                        q = pos(nd[j])
+                        if q is not None and (np.linalg.norm(q - p0) >= 20 or j in (0, len(nd) - 1)): d = _einheit(q - p0); break
+                        j += st
+                    if d is not None: arme.append((w, d))
+            paare = sorted((float(np.dot(arme[a][1], arme[b][1])), a, b) for a in range(len(arme)) for b in range(a + 1, len(arme)))
+            frei, pm = set(range(len(arme))), {}
+            for dd, a, b in paare:
+                if dd > -0.7: break
+                if a in frei and b in frei:            # derselbe Way durch den Knoten: Paar ohne Eintrag (li == lj gilt ohnehin)
+                    frei -= {a, b}
+                    if arme[a][0] != arme[b][0]: pm[arme[a][0]] = arme[b][0]; pm[arme[b][0]] = arme[a][0]
+            if pm:
+                linien = {k[3] for k in G.aeste[n]}
+                basis = lambda l: l if l in W else l // 100
+                G.partner[n] = {l: next((l2 for l2 in linien if basis(l2) == pm.get(basis(l))), None) for l in linien}
     return G
 
 
@@ -521,9 +558,11 @@ def _fahrwege(N, KN, GO, GP_, lage, gleise, pax_ways, knoten_pax, T, W, K):
             return L_ > 0.5 and abs((bx_ - ax_) * (y0_ - ay_) - (by_ - ay_) * (x0_ - ax_)) / L_ < 1.0
         for (x, y) in pts:
             p = Point(x, y); c = [pk[int(j)] for j in ptree.query(p.buffer(14))]
-            if not c: continue
-            k = min(c, key=lambda k: lage[k].distance(p))
-            if lage[k].distance(p) <= 3 and auf_linie(k): ks_ |= {(k, 0), (k, 1)}
+            # nächste Kante AUF der Geraden (≤ 3 px; gleich nahe zählen alle), nicht die nächste überhaupt (Neuchâtel A15:
+            # die Schräge 507898420 beginnt 2 px vor der Mitte des Stücks 1271585757 und war näher als das Gleis selbst)
+            c = sorted((lage[k].distance(p), k) for k in c if auf_linie(k))
+            for d_, k in c:
+                if d_ <= 3 and d_ <= c[0][0] + 0.5: ks_ |= {(k, 0), (k, 1)}
         plan_ziel[name] = (ks_, ks_)
     namen = sorted(n for n in ziele if n in plan_ziel)
     UO, UP = GO.uebergaenge(), GP_.uebergaenge()

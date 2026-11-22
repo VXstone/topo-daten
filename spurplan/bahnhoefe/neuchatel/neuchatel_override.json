@@ -253,6 +253,7 @@
    35434218,
    35434221,
    35567629,
+   35567630,
    35567923,
    49689309,
    49689312,
@@ -267,6 +268,7 @@
    1219093724,
    1219093737,
    1219093738,
+   1222936423,
    1222936427,
    1222936428,
    1222936429,
@@ -476,9 +478,35 @@
     "pax": false,
     "pfeil": true,
     "_osm": "507898311: weiter in die Abstellgruppe B"
+   },
+   {
+    "pts": [
+     [
+      "x:1424.8",
+      "y:206"
+     ],
+     [
+      "x:1417.8",
+      "y:206"
+     ],
+     [
+      "x:1390.1",
+      "y:254"
+     ],
+     [
+      "x:1379.1",
+      "y:273.1"
+     ]
+    ],
+    "pax": false,
+    "rund": 7,
+    "pfeil": true,
+    "_osm": "V4e 22.11.2026: 35567630 (Biel unteres Gleis, Weiche 416783522) kreuzt die Linie nach Ins an der EKW 109 (Kreuzung 416784002) gerade und läuft als Abstellgleis 579953609 weiter (Pfeil). Die Bogenweiche 1222936423 (von Ins/Osten ins Abstellgleis) ist mit diesem Pfeil angedeutet. Vorher mündete die Schräge ins Gleis nach Ins = Fahrweg Biel -> Ins, den es in OSM nicht gibt (HT5)"
    }
   ],
-  "_zweck": "Hinweise Neuchâtel 20.10.: Doppelspur Standardabstand, Pfeile in der Doppelspur = eine Verbindung, DKW"
+  "_zweck": "Hinweise Neuchâtel 20.10.: Doppelspur Standardabstand, Pfeile in der Doppelspur = eine Verbindung, DKW",
+  "netz_ergaenzen": true,
+  "_netz_ergaenzen": "V4e 22.11.2026: OSM-Verbindungen der Hand-Linien (DKW 3, 58, 63, R47-Spurwechsel) ins Netzmodell, damit HT die Fahrwege wie gezeichnet misst"
  },
  "dkw_px": [
   {

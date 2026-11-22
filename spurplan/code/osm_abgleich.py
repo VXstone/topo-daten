@@ -195,6 +195,8 @@ def abgleich(svg_text, N, TAGS, WAYN):
     BEF = []
     bef = lambda r, x, y, t, **o: BEF.append(dict(regel=r, x=round(x, 1), y=round(y, 1), text=t, **o))
     KN = {int(k): v for k, v in N["knoten"].items() if v.get("y") is not None}
+    K_LL = {int(k): (v["lat"], v["lon"]) for k, v in N["knoten"].items() if v.get("lat") is not None}
+    _m = lambda a, b: math.hypot((a[1] - b[1]) * 111320 * math.cos(math.radians(a[0])), (a[0] - b[0]) * 110540)
     # OSM-Graph aus den gezeichneten Gleisstücken (Kanten zwischen aufeinanderfolgenden Knoten der ganzen Ways)
     ways = {g["way"] for g in N["gleise"]}
     nachbarn = collections.defaultdict(set)
@@ -336,9 +338,22 @@ def abgleich(svg_text, N, TAGS, WAYN):
         for m, i in list(zu_osm.items()):
             w = osm_kn[m]
             if m in nachbarn[n] and kosten(n, PK[i]) < 40: zu_osm[n] = i; break
+    # REGELN 2.4 (V4e 22.11.2026, Neuchâtel DKW 3 und Gl. 2/1): OSM bildet eine DKW oft als Kreuzung mit vier Weichen
+    # (double_slip, je 3 Arme) und zwei Bogen-Ways ab. Eine solche Bogenweiche gilt als gezeichnet, wenn der Plan an der
+    # Kreuzung daneben (≤ 30 m) ein DKW-Symbol hat – sie ist Teil der DKW, kein eigener Abzweig
+    kreuz_alle = {int(k): v for k, v in N["knoten"].items() if TAGS.get(int(k), {}).get("railway") == "railway_crossing"}
+    def _dkw_teil(n, v):
+        if "slip" not in swt0(n) or not dkw_plan or n not in K_LL: return False
+        for X, w in kreuz_alle.items():
+            if X not in K_LL or _m(K_LL[n], K_LL[X]) > 30: continue
+            # Lage der Kreuzung im Plan; ohne eigene Ebene (Zwischenknoten) die Weiche selbst
+            xy = (w["x"], w["y"] + versatz) if w.get("x") is not None and w.get("y") is not None else (v["x"], v["y"])
+            if any(math.hypot(c[0] - xy[0], c[1] - xy[1]) < R_DKW for c in dkw_plan): return True
+        return False
     # VB1: OSM-Weiche ohne Abzweig im Plan (DKW zählt über VA1)
     for n, v in KN.items():
         if typ(n) != "switch" or "slip" in swt(n) or n in zu_osm: continue
+        if _dkw_teil(n, v): continue
         if len(nachbarn[n]) < 3: continue           # Ast nicht gezeichnet (stillgelegt, ausserhalb): kein Befund hier
         bef("VB1", v["x"], v["y"], f"OSM-Weiche {n} ohne Abzweig im Plan", osm=n)
     # VB2 / VC1
@@ -346,6 +361,9 @@ def abgleich(svg_text, N, TAGS, WAYN):
         n0 = zu_plan.get(i)
         if n0 is None:
             if any(math.hypot(c[0] - x, c[1] - y) < R_DKW for c in dkw_plan): continue
+            # V4e (22.11.2026, Vauseyon): Weiche hinter dem Planrand, auf der Abgangsschräge angedeutet (Regel 39b) – der
+            # Stummel steht für eine OSM-Weiche ausserhalb des Plans, nicht für einen Abzweig an dieser Stelle
+            if any(math.hypot(a_["x"] - x, a_["y"] - y) < 4 for a_ in N.get("angedeutet", [])): continue
             # V4e (22.11.2026, Chambrelien): OSM-DKW als Weichenpaar gezeichnet (zwei Abzweige dicht nacheinander, gleiche
             # Fahrmöglichkeiten) – zweiter Abzweig ist kein VB2; die Fahrwege prüft HT5
             if any("slip" in swt(n_) and math.hypot(v_["x"] - x, v_["y"] - y) < R_DKW for n_, v_ in KN.items()

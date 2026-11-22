@@ -60,6 +60,9 @@ for b in liste:
             m = re.search(r"Befunde: (\{.*\})", o); ber["topologie"] = m.group(1) if m else None
     if ok and '"vorlage"' in open(os.path.join(w, f"{b}_override.json")).read():
         rc, o = sh(py + ["vorlage.py", b], w); log.append(o[-2000:])
+    elif ok and any(k in (json.load(open(os.path.join(w, f"{b}_override.json"))).get("zeichnen") or {}) for k in ("weichen", "netz_ergaenzen")):
+        # V4e (22.11.2026, Neuchâtel): wie region_olten_lauf – Netzmodell an die Hand-Linien (REGELN Kopf HT «Hand-Linien»)
+        rc, o = sh(py + ["vorlage.py", "--weichen", b], w); log.append(o[-2000:])
     if ok:
         rc, o = sh(py + ["verbindungen_pruefen.py", b] + opt, w); log.append(o[-4000:])
         m = re.search(r"→ (\d+) Abweichungen", o); ber["verbindungen_abweichungen"] = int(m.group(1)) if m else None

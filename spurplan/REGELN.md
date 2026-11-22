@@ -58,6 +58,12 @@ Prüffälle `vorlage_le_landeron`, `vorlage_gorgier_saint_aubin`, `vorlage_riedb
 auf 30 px, Onnens); Abzweige < 7,5 px zusammen; Teilungspunkte der Plan-Linien aus allen Berührpunkten, kurze Verbindungsstücke
 sind kein Doppel (Murten); Gleisziel = Gleismitte; OSM-DKW als Weichenpaar gezeichnet ist kein VB2 (Chambrelien, HT5 prüft die
 Fahrwege). Prüffälle `zeichnen_chambrelien`, `zeichnen_murten`, `zeichnen_cornaux`, `zeichnen_onnens_bonvillars`.
+**Seit 22.11. abends (V4e Neuchâtel/Vauseyon):** `vorlage.py --weichen` läuft auch im Workflow `plaene` (`lauf.py`, Pläne mit
+`zeichnen.weichen`/`netz_ergaenzen`); eine Kette endet auch an einer Kreuzung (OSM-DKW = Kreuzung + 4 Weichen, DKW 58).
+Messung: an einer Kreuzung heisst geradeaus der Way, der in OSM die Fortsetzung ist (alle Ways am Knoten paarweise, am geradesten
+zuerst; flache EKW 109 ≈ 6°); mehrteiliges Perrongleis zählt die nächste Kante **auf seiner Geraden** (Neuchâtel A15); eine
+Bogenweiche einer OSM-DKW (≤ 30 m neben der Kreuzung) unter einem DKW-Symbol ist gezeichnet (kein HT1); ein nach Regel 1.16 (R39b)
+angedeuteter Stummel ist kein Abzweig (Netzmodell `angedeutet`, Vauseyon). Prüffälle `zeichnen_neuchatel`, `neuchatel_vauseyon`.
 
 **Bahnhofregister und Sperre «veraltet» (VR, seit 20.11., Entscheid D. Eckenstein «Regionen harmonisieren, OSM-Fehler
 erkennen»).** Jeder Bahnhof steht **einmal** im Register `spurplan/netz/bahnhoefe.json` (Schlüssel **SBB-Abkürzung**, dazu
