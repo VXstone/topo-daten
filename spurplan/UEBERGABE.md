@@ -366,8 +366,8 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   Lage des Laufs): Chambrelien HT1 1/HT5 1, Onnens HT1 1, Colombier HT3 3, Cornaux 7, Travers 5, Bôle 3, Murten 2; dazu Neuchâtel 19 und
   Vauseyon 4 (eigener Bau). Vorschlag nächster Schritt: wie `vorlage.netz_mitschreiben` ein Netzmodell auf die zeichnen-Linien legen
   (OSM-Weichen an die gezeichneten Abzweige, Zusatz `weichen` erlaubt), dann je Plan echte Fehler von Messartefakten trennen.
-  Offene Frage Riedbach (Anschluss-T): OSM zweigt vom Streckengleis Richtung Kerzers/Gümmenen ab, Zurücksetzen Richtung Bern – Plan
-  (Daniel 20.10.) umgekehrt. Daniel fragen, bevor geändert wird.
+  Riedbach Anschluss-T geklärt (Daniel 22.11.: von Seite Bern erreichbar, Zurücksetzen Richtung Bern = OSM) → Vorlage `gegen` (v168).
+  Daniel 22.11.: Seite eines neuen Gleises (oben/unten, Zihlbrücke) ist kein harter Fehler – wichtig ist Weiche da und Topologie richtig.
 - Liste oben unter V4c «Rest». F6 (Gampelen) erledigt; dann je Plan OSM ansehen, Vorlage/Override nach OSM (REGELN 0.1),
   Vorher/Nachher an Daniel wie St-Blaise CFF. Fertig: NE-Pläne HT 0 oder als OSM-Ausnahme begründet.
 

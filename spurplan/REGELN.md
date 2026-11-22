@@ -51,7 +51,7 @@ Gorgier, Riedbach). Im Netzmodell der Vorlage bleibt die Knotenfolge je Gleis wi
 vor ihr; Gorgier Gl. 512, Bevaix Gl. 662); ein künstlicher Knoten, an dem der Lauf ein totes Nebengleis aufs Streckengleis
 führte, wird aufgelöst (OSM ohne Verbindung; Grandson, Riedbach, Tüscherz). Wo die Ebene des Laufs nicht zur Vorlage passt,
 legt der Zusatz `weichen: [[osm, x, y]]` die OSM-Weiche an den gezeichneten Abzweig (Gorgier Anschlussring, Tüscherz,
-Zihlbrücke), `abgaenge_knoten` die OSM-Knoten der Abgänge je Seite (Zihlbrücke: Lauf kannte nur einen Abgang Ins).
+Zihlbrücke), `abgaenge_knoten` die OSM-Knoten der Abgänge je Seite (Zihlbrücke: Lauf kannte nur einen Abgang Ins). Anschluss `gegen` (innen, läuft aber nach aussen; T-Stumpen zum Bahnhof = Zurücksetzen): Riedbach, Daniel 22.11.
 Prüffälle `vorlage_le_landeron`, `vorlage_gorgier_saint_aubin`, `vorlage_riedbach`, `vorlage_zihlbruecke_0`.
 
 **Bahnhofregister und Sperre «veraltet» (VR, seit 20.11., Entscheid D. Eckenstein «Regionen harmonisieren, OSM-Fehler

@@ -15,7 +15,7 @@ Beschreibung (Override "vorlage"):
    "zusaetze": [                                           (alle Seiten- und Perronangaben wie gezeichnet, auch gespiegelt)
      {"art": "spurwechsel", "ende": "links|rechts", "anzahl": 1|2, "richtung": "steigend|fallend"},
      {"art": "anschluss", "ende": "links|rechts", "lage": "innen|aussen", "seite": "oben|unten", "stumpen": 1|2, "pfeil": false,
-      "gleich_lang": false, "verlaengern": 0, "t_form": false, "t_laenge": 60},   # t_form: zweiter Stumpen am Fuss in Gegenrichtung   # gleich_lang (nur innen): alle Stumpen enden gleich, verlaengern px über den Perron hinaus
+      "gleich_lang": false, "verlaengern": 0, "t_form": false, "t_laenge": 60, "gegen": false},   # t_form: zweiter Stumpen am Fuss in Gegenrichtung   # gleich_lang (nur innen): alle Stumpen enden gleich, verlaengern px über den Perron hinaus
      {"art": "abzweig", "ende": "links|rechts", "seite": "oben|unten"},
      {"art": "doppelspurbeginn", "ende": "links|rechts", "seite": "oben|unten", "aus": "kreuzungsgleis"?} ]}
 Grundriss (kanonisch, vor dem Spiegeln): Kreuzungs- und Überholgleise liegen oben bzw. aussen, Anschlüsse am
@@ -136,6 +136,10 @@ def zeichne(V, osm=None, title="Bahnhof", mit_text=True):
             elif on_neben: xs = (SR - DX - 30) if rechts else (SL + DX + 30)
             else: xs = (SR + 30) if rechts else (SL - 30)
             dirx = (-1 if innen else 1) * (1 if rechts else -1)
+            # V4e (22.11.2026, Riedbach, Daniel): "gegen": der Anschluss zweigt innen ab, läuft aber nach aussen (von der
+            # Bahnhofseite her direkt befahrbar); der T-Stumpen zeigt dann zum Bahnhof (Zurücksetzen)
+            gegen = innen and a.get("gegen", False)
+            if gegen: dirx = -dirx
             if not innen and not on_neben and any(z_["art"] == "spurwechsel" and z_.get("ende", "rechts") == a.get("ende", "rechts") for z_ in zs):
                 xs += (1 if rechts else -1) * (2 * DX + 75)      # nicht im Spurwechsel abzweigen (Grandson 20.10.: wirkte wie Kreuzung)
             for j in range(stp):
@@ -143,7 +147,7 @@ def zeichne(V, osm=None, title="Bahnhof", mit_text=True):
                 y_from = gi_y if j == 0 else gi_y + sg * LANE
                 x_d = x_s + dirx * abs(y_ - y_from) / T60
                 L_ = 90 - 20 * j
-                if innen:
+                if innen and not gegen:
                     rand = (x1p + 12) if rechts else (x0p - 12)
                     L_ = max(36 - 8 * j, abs(rand - x_d) - 22 * j)
                 x_e = x_d + dirx * L_
