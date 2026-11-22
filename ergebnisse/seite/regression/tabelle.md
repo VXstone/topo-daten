@@ -13,7 +13,7 @@
 | saint_blaise_cff | NE 5 · Neuchâtel – Biel | Archivbeginn (Abnahme 2026-10-15) | 9 | gleichwertig | OSM ok (kein Alt-Stand) | 0 | 0 | 2026-11-22T05:27 |
 | colombier | NE 6 · Neuchâtel – Yverdon | Archivbeginn (Abnahme 2026-10-16) | 7 | gleichwertig | OSM VC1 3 (kein Alt-Stand) | 0 | HT3 3 | 2026-11-20T21:23 |
 | rosshausern | NE 1 · Neuchâtel – Ins – Kerzers – Bern | Archivbeginn (Abnahme 2026-10-20) | 6 | gleichwertig | OSM ok (kein Alt-Stand) | 0 | 0 | 2026-11-21T15:24 |
-| riedbach | NE 1 · Neuchâtel – Ins – Kerzers – Bern | Archivbeginn (Abnahme 2026-10-20) | 5 | gleichwertig | OSM ok (kein Alt-Stand) | 0 | 0 | 2026-11-22T05:27 |
+| riedbach | NE 1 · Neuchâtel – Ins – Kerzers – Bern | Archivbeginn (Abnahme 2026-10-20) | 5 | gleichwertig | OSM ok (kein Alt-Stand) | 0 | 0 | 2026-11-22T11:48 |
 | ligerz | NE 5 · Neuchâtel – Biel | Archivbeginn (Abnahme 2026-10-17) | 5 | gleichwertig | OSM ok (kein Alt-Stand) | 0 | 0 | 2026-11-22T05:27 |
 | twann | NE 5 · Neuchâtel – Biel | Archivbeginn (Abnahme 2026-10-15) | 5 | gleichwertig | OSM ok (kein Alt-Stand) | 0 | 0 | 2026-11-20T21:23 |
 | zihlbruecke | NE 1 · Neuchâtel – Ins – Kerzers – Bern | Archivbeginn (Abnahme 2026-10-15) | 4 | gleichwertig | OSM ok (kein Alt-Stand) | 0 | 0 | 2026-11-22T08:19 |
@@ -40,7 +40,7 @@
 | couvet | NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier | Archivbeginn (Abnahme 2026-10-20) | 1 | gleichwertig | OSM VD1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-20T21:23 |
 | motiers | NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier | Archivbeginn (Abnahme 2026-10-20) | 1 | gleichwertig | OSM VD1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-20T21:23 |
 | les_geneveys_sur_coffrane | NE 8 · Neuchâtel – La Chaux-de-Fonds | Archivbeginn (Abnahme 2026-10-19) | 1 | gleichwertig | OSM VD1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-20T21:23 |
-| region_ne | Region | veröffentlicht | 1 | gleichwertig |  | GS 1 · GG 2 · GQ 1 | – | 2026-11-22T08:52 |
+| region_ne | Region | veröffentlicht | 1 | gleichwertig |  | GS 1 · GG 2 · GQ 1 | – | 2026-11-22T11:48 |
 | zofingen | Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil | bestätigt 2026-11-08 | 26 | vermutlich besser | W59 11→10 · OSM VA2 2, VB1 3, VD1 1 (kein Alt-Stand) | GG 1 | HT1 2 | 2026-11-21T21:27 |
 
 Grundprüfung G0 aller Pläne: `ergebnisse/seite/grundpruefung/grundpruefung.md`
