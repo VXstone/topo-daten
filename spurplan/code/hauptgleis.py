@@ -84,6 +84,7 @@ class Graph:
         self._paare = {}
         self.fern = {}
         self.partner = {}                    # Kreuzung -> {linie: linie geradeaus} (nur OSM, aus allen Ways am Knoten)
+        self.ekw = {}                        # Plan: EKW-Knoten -> {(ast, ast)} erlaubte Bogenfahrt (eine Klammer, V4e)
 
     def kante(self, a, b, linie, da, db, doppelt_pruefen=False):
         if doppelt_pruefen:
@@ -110,6 +111,7 @@ class Graph:
             for p, (i, e, di, li) in enumerate(A):
                 for q, (j, f, dj, lj) in enumerate(A):
                     if p == q or S[p] == S[q]: continue
+                    if n in self.ekw and li != lj and float(np.dot(di, dj)) > -0.9 and frozenset((p, q)) not in self.ekw[n]: continue
                     if n in self.kreuzung:
                         if partner is not None and li != lj:
                             # V4e (22.11.2026, Neuchâtel EKW 109): flache Kreuzung (≈ 6°) – geradeaus heisst: der Way, der in
@@ -289,6 +291,33 @@ def plan_graph(gleise, luecken, boegen):
             k = G.kante(a, b, li, da, db)
             from shapely.ops import substring
             lage[k] = substring(g, t0, t1)
+    # EKW (V4e 22.11.2026, Neuchâtel EKW 109, Hinweis Daniel): ein DKW-Symbol mit Bögen nur in EINEM Winkel ist eine EKW –
+    # erlaubt sind geradeaus und die eine Bogenfahrt zwischen den zwei Ästen, die diesen Winkel begrenzen
+    for j in range(len(dkw)):
+        A = G.aeste.get(j, [])
+        if len(A) < 4: continue
+        # Schnittpunkt der durchgehenden Linien (die Knotenlage ist das Mittel der Bögen, liegt bei einer EKW im Bogenwinkel)
+        ls = sorted({a[3] for a in A}); pk_ = []
+        for i1 in range(len(ls)):
+            for i2 in range(i1 + 1, len(ls)):
+                q_ = Gs[ls[i1]].intersection(Gs[ls[i2]])
+                pk_ += [t for t in getattr(q_, "geoms", [q_]) if not t.is_empty and t.geom_type == "Point"]
+        X = min(pk_, key=lambda t: math.hypot(t.x - knoten[j][0], t.y - knoten[j][1])) if pk_ else None
+        if X is None or math.hypot(X.x - knoten[j][0], X.y - knoten[j][1]) > 8: continue
+        bs = [np.array([b.x - X.x, -(b.y - X.y)]) for b in boegen if math.hypot(b.x - dkw[j][0], b.y - dkw[j][1]) < 12]
+        bs = [_einheit(v) for v in bs if np.linalg.norm(v) > 0.3]
+        bs = [v for v in bs if v is not None]
+        if not bs or any(float(np.dot(bs[0], v)) < 0.3 for v in bs): continue          # Bögen in zwei Winkeln: DKW
+        v = _einheit(np.sum(bs, axis=0))
+        best = None
+        for p in range(len(A)):
+            for q in range(p + 1, len(A)):
+                if A[p][3] == A[q][3] or float(np.dot(A[p][2], A[q][2])) < -0.9: continue
+                bis = _einheit(A[p][2] + A[q][2])
+                if bis is None: continue
+                sc = float(np.dot(bis, v))
+                if best is None or sc > best[0]: best = (sc, p, q)
+        if best and best[0] > 0.5: G.ekw[j] = {frozenset((best[1], best[2]))}
     # Kreuzung: Knoten, an dem Linien durchgehen (innen) und kein DKW-Bogen nahe ist
     for n, A in G.aeste.items():
         if len(A) >= 4 and n >= len(dkw):                   # nur der DKW-Knoten selbst erlaubt Übergänge (Olten: Schnitt 13 px neben DKW)

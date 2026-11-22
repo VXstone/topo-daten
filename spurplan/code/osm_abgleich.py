@@ -289,7 +289,7 @@ def abgleich(svg_text, N, TAGS, WAYN):
             if not any(math.hypot(c[0] - v["x"], c[1] - v["y"]) < R_DKW for c in dkw_plan):
                 bef("VA1", v["x"], v["y"], f"OSM-{'DKW' if 'double' in swt(n) else 'EKW'} {n} im Plan nicht als DKW gezeichnet", osm=n)
     for c in dkw_plan:
-        if not any(("slip" in swt(n)) and math.hypot(c[0] - v["x"], c[1] - v["y"]) < R_DKW for n, v in KN.items()):
+        if not any(("slip" in swt0(n)) and math.hypot(c[0] - v["x"], c[1] - v["y"]) < R_DKW for n, v in KN.items()):   # EKW-Bogenweiche hat 3 Arme (V4e)
             bef("VA2", c[0], c[1], "im Plan als DKW gezeichnet, in OSM keine DKW/EKW in der Nähe")
     # Zuordnung OSM-Knoten <-> Plan-Abzweig eins zu eins (nächste zuerst). Längs des Gleises darf der Plan den Abzweig
     # verschieben (Spurwechsel in Standardlänge, Entzerrung): Abstand quer zählt vierfach, Grenze 40 px längs.

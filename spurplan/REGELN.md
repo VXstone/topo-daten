@@ -63,7 +63,8 @@ Fahrwege). Prüffälle `zeichnen_chambrelien`, `zeichnen_murten`, `zeichnen_corn
 Messung: an einer Kreuzung heisst geradeaus der Way, der in OSM die Fortsetzung ist (alle Ways am Knoten paarweise, am geradesten
 zuerst; flache EKW 109 ≈ 6°); mehrteiliges Perrongleis zählt die nächste Kante **auf seiner Geraden** (Neuchâtel A15); eine
 Bogenweiche einer OSM-DKW (≤ 30 m neben der Kreuzung) unter einem DKW-Symbol ist gezeichnet (kein HT1); ein nach Regel 1.16 (R39b)
-angedeuteter Stummel ist kein Abzweig (Netzmodell `angedeutet`, Vauseyon). Prüffälle `zeichnen_neuchatel`, `neuchatel_vauseyon`.
+angedeuteter Stummel ist kein Abzweig (Netzmodell `angedeutet`, Vauseyon). Prüffälle `zeichnen_neuchatel`, `neuchatel_vauseyon`. EKW (Symbol mit **einer** Klammer, REGELN 2.4): im Plan nur geradeaus und die eine Bogenfahrt zwischen den Ästen des Klammerwinkels
+(Neuchâtel EKW 109, Hinweis Daniel 22.11.: «EKW-Symbol, sonst sieht man nicht, dass von Ins abgebogen werden kann»); OSM-Bogenweiche mit 3 Armen zählt für VA2 als EKW.
 
 **Bahnhofregister und Sperre «veraltet» (VR, seit 20.11., Entscheid D. Eckenstein «Regionen harmonisieren, OSM-Fehler
 erkennen»).** Jeder Bahnhof steht **einmal** im Register `spurplan/netz/bahnhoefe.json` (Schlüssel **SBB-Abkürzung**, dazu

@@ -9,6 +9,10 @@
   {
    "regel": "HT3",
    "anlass": "A15/A44 an DKW-Knoten angebunden (Bogen-Ways fehlten im Netzmodell)"
+  },
+  {
+   "regel": "HT5",
+   "anlass": "EKW 109 mit einer Klammer: nur Ins (Osten) -> Abstellgleis; ohne EKW-Regel galt das Symbol als DKW (Biel -> Ins)"
   }
  ]
 }
