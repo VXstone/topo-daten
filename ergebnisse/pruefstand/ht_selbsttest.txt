@@ -56,4 +56,16 @@ OK   wangen_schere_90.svg HT5 / im Plan, nicht in OSM – zusätzlicher Fahrweg 
 OK   wangen_schere_90.svg kein HT4 /  – 
 OK   wangen_seite_0.svg HT4 840.8/213.2  – Spurwechsel Ost zweigt im Netzmodell zur falschen Seite ab
 OK   wangen_seite_90.svg HT4 -213.2/840.8  – Spurwechsel Ost zweigt im Netzmodell zur falschen Seite ab
+OK   zeichnen_chambrelien_0.svg kein HT5 /  – Gl. 2 und Verbindung 224 am selben Punkt (V) – nicht befahrbar
+OK   zeichnen_chambrelien_0.svg kein HT1 /  – Gleis 3 endete vor der Weiche 393419063
+OK   zeichnen_chambrelien_90.svg kein HT5 /  – Gl. 2 und Verbindung 224 am selben Punkt (V) – nicht befahrbar
+OK   zeichnen_chambrelien_90.svg kein HT1 /  – Gleis 3 endete vor der Weiche 393419063
+OK   zeichnen_cornaux_0.svg kein HT2 /  – Spurwechsel mit geradem Vorstück doppelt gezählt
+OK   zeichnen_cornaux_0.svg kein HT5 /  – von Hand ersetzter Spurwechsel fehlte auf der OSM-Seite
+OK   zeichnen_cornaux_90.svg kein HT2 /  – Spurwechsel mit geradem Vorstück doppelt gezählt
+OK   zeichnen_cornaux_90.svg kein HT5 /  – von Hand ersetzter Spurwechsel fehlte auf der OSM-Seite
+OK   zeichnen_murten_0.svg kein HT5 /  – Knoten-Zusammenfassung 5 px: Gl. 2 hing nicht an Gl. 1; Gl. 13 Ziel am Gleisende
+OK   zeichnen_murten_90.svg kein HT5 /  – Knoten-Zusammenfassung 5 px: Gl. 2 hing nicht an Gl. 1; Gl. 13 Ziel am Gleisende
+OK   zeichnen_onnens_bonvillars_0.svg kein HT1 /  – Spurwechsel mit geradem Vorstück im Plan nicht als Abzweig erkannt
+OK   zeichnen_onnens_bonvillars_90.svg kein HT1 /  – Spurwechsel mit geradem Vorstück im Plan nicht als Abzweig erkannt
 Selbsttest HT: bestanden
