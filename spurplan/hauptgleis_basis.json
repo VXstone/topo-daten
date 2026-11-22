@@ -1,7 +1,7 @@
 {
  "_quelle": "hauptgleis.py (Schritt HT, REGELN 0.1 / Kopf «HT»); je Abschnitt Zählung je Plan und Regel",
  "_stand": {
-  "plaene": "Ausgangsstand 18.11.2026 (Seite v155, ergebnisse 644a346 + Lauf zu 2bd032b), lokal mit hauptgleis.py gerechnet · 21.11.2026 (V4b): 53 NE-Bahnhofspläne erstmals gemessen (seit V4 aus Code; vorher feste Oktober-Pläne ohne HT), Ausgangsstand aus seite-Lauf d89f8f7 (ergebnisse 422c1dc) · 21.11.2026 (V4c): 42 Typvorlage-Pläne NE neu gemessen, Netzmodell liegt jetzt auf dem gezeichneten Plan (vorlage.py, REGELN Kopf «HT») – Messartefakt HT1+HT2 weg; St-Blaise CFF und Serrières Spurwechsel auf die OSM-Seite, HT5 findet die Ziele (lokal = Workflow) · 21.11. nachmittags: F6 Gampelen (Daniel: kein Spurwechsel), Rosshäusern/Bern Brünnen/Grandson/St-Blaise Lac Vorlage nach OSM ergänzt, Schutzstumpen ab Ausrundung, Abgang an gezeichneter Weiche (Typvorlagen 51 -> 22)"
+  "plaene": "Ausgangsstand 18.11.2026 (Seite v155, ergebnisse 644a346 + Lauf zu 2bd032b), lokal mit hauptgleis.py gerechnet · 21.11.2026 (V4b): 53 NE-Bahnhofspläne erstmals gemessen (seit V4 aus Code; vorher feste Oktober-Pläne ohne HT), Ausgangsstand aus seite-Lauf d89f8f7 (ergebnisse 422c1dc) · 21.11.2026 (V4c): 42 Typvorlage-Pläne NE neu gemessen, Netzmodell liegt jetzt auf dem gezeichneten Plan (vorlage.py, REGELN Kopf «HT») – Messartefakt HT1+HT2 weg; St-Blaise CFF und Serrières Spurwechsel auf die OSM-Seite, HT5 findet die Ziele (lokal = Workflow) · 21.11. nachmittags: F6 Gampelen (Daniel: kein Spurwechsel), Rosshäusern/Bern Brünnen/Grandson/St-Blaise Lac Vorlage nach OSM ergänzt, Schutzstumpen ab Ausrundung, Abgang an gezeichneter Weiche (Typvorlagen 51 -> 22) · 22.11.2026 (V4e Teil 2, Seite v165, ergebnisse 713dd2b): doppelter Spurwechsel mit Gerade dazwischen, Bevaix/Ligerz nach OSM, Weichenzuordnung je Gleis, HT5 mehrteilige Perrongleise – gesenkt: aarau, auvernier, avenches, bern_brunnen_westside, bevaix, colombier, daniken, dulliken, gorgier_saint_aubin, konolfingen, ligerz, mob__vernex, mob__zweisimmen, neuchatel_vauseyon, olten, solothurn, tuscherz"
  },
  "plaene": {
   "aarau": {
@@ -9,7 +9,7 @@
    "HT2": 4,
    "HT3": 0,
    "HT4": 1,
-   "HT5": 10
+   "HT5": 9
   },
   "aarburg_oftringen": {
    "HT1": 0,
@@ -23,10 +23,10 @@
    "HT2": 0,
    "HT3": 0,
    "HT4": 0,
-   "HT5": 4
+   "HT5": 0
   },
   "avenches": {
-   "HT1": 1,
+   "HT1": 0,
    "HT2": 0,
    "HT3": 0,
    "HT4": 0,
@@ -37,14 +37,14 @@
    "HT2": 0,
    "HT3": 0,
    "HT4": 0,
-   "HT5": 2
+   "HT5": 0
   },
   "bevaix": {
    "HT1": 0,
    "HT2": 0,
    "HT3": 0,
    "HT4": 0,
-   "HT5": 3
+   "HT5": 1
   },
   "bole": {
    "HT1": 0,
@@ -79,7 +79,7 @@
    "HT2": 0,
    "HT3": 3,
    "HT4": 0,
-   "HT5": 1
+   "HT5": 0
   },
   "concise": {
    "HT1": 0,
@@ -135,7 +135,7 @@
    "HT2": 0,
    "HT3": 0,
    "HT4": 0,
-   "HT5": 6
+   "HT5": 3
   },
   "domdidier": {
    "HT1": 0,
@@ -156,7 +156,7 @@
    "HT2": 0,
    "HT3": 0,
    "HT4": 0,
-   "HT5": 1
+   "HT5": 0
   },
   "faoug": {
    "HT1": 0,
@@ -191,7 +191,7 @@
    "HT2": 1,
    "HT3": 0,
    "HT4": 0,
-   "HT5": 3
+   "HT5": 2
   },
   "grandson": {
    "HT1": 0,
@@ -233,7 +233,7 @@
    "HT2": 2,
    "HT3": 0,
    "HT4": 0,
-   "HT5": 7
+   "HT5": 6
   },
   "la_neuveville": {
    "HT1": 0,
@@ -285,7 +285,7 @@
    "HT5": 0
   },
   "ligerz": {
-   "HT1": 1,
+   "HT1": 0,
    "HT2": 0,
    "HT3": 0,
    "HT4": 0,
@@ -597,7 +597,7 @@
    "HT2": 0,
    "HT3": 0,
    "HT4": 0,
-   "HT5": 2
+   "HT5": 0
   },
   "mob__vuarennes": {
    "HT1": 0,
@@ -611,7 +611,7 @@
    "HT2": 4,
    "HT3": 0,
    "HT4": 0,
-   "HT5": 3
+   "HT5": 1
   },
   "motiers": {
    "HT1": 0,
@@ -660,7 +660,7 @@
    "HT2": 1,
    "HT3": 0,
    "HT4": 0,
-   "HT5": 5
+   "HT5": 3
   },
   "noiraigue": {
    "HT1": 0,
@@ -674,7 +674,7 @@
    "HT2": 25,
    "HT3": 7,
    "HT4": 2,
-   "HT5": 176
+   "HT5": 174
   },
   "olten_hammer": {
    "HT1": 0,
@@ -758,7 +758,7 @@
    "HT2": 1,
    "HT3": 0,
    "HT4": 0,
-   "HT5": 17
+   "HT5": 15
   },
   "sugiez": {
    "HT1": 0,
@@ -845,8 +845,8 @@
    "HT5": 2
   },
   "tuscherz": {
-   "HT1": 1,
-   "HT2": 1,
+   "HT1": 0,
+   "HT2": 0,
    "HT3": 0,
    "HT4": 0,
    "HT5": 1

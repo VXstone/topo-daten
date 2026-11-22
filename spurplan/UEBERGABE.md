@@ -354,6 +354,13 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   0bw9). Daniel 21.11. sah dieselben zwei Stellen: Stumpen nach rechts soll VOR dem Gleis enden, das ins Hauptgleis
   hochgeht (kreuzt die Schräge), und «Miniknubbel» vor dem Pfeil nach unten ganz rechts (= GG). Erst mit G0 grün veröffentlichen. Bern Brünnen ohne Bümpliz-Nebengleis erledigt (v163).
   **Avenches erledigt 21.11. spät (v164)** – Nachtrag V4e. Weiter mit dem Rest unten (nächster Chat, gleicher Einstieg).
+- **Stand 22.11. früh (v165):** erledigt Ligerz, Tüscherz HT1/HT2, Bern Brünnen, Auvernier, Colombier-HT5, Typvorlagen-Spurwechselpaare.
+  **Rest NE (Seite v165):** Typvorlagen – Bevaix HT5 1 (Abgang Neuchâtel = Spurwechselweiche, Messung: Gl. 662 zwischen Weiche und Abgang),
+  Gorgier HT2 1/HT5 2 (Gleisring Anschluss, Linien 512/513), Riedbach HT2 1/HT5 2, Tüscherz/Grandson/Riedbach je HT5 «künstlicher Schnitt»
+  am Planrand, Le Landeron HT5 1, Zihlbrücke HT5 2, **Courtepin HT2 1 = OSM-Fehler?** (Industriegleis 705109983 hat in OSM keinen
+  gemeinsamen Knoten mit der Strecke → Frage an Daniel: OSM korrigieren oder Ausnahme, REGELN 6). Nicht-Vorlagen – Chambrelien HT1 1
+  (OSM-DKW 393419061 im Plan als zwei Weichen), Onnens HT1 1 (Spurwechsel 184779526), Colombier HT3 3, Cornaux 7, Travers 5, Bôle 3,
+  Neuchâtel 19, Vauseyon 4, Murten 2.
 - Liste oben unter V4c «Rest». F6 (Gampelen) erledigt; dann je Plan OSM ansehen, Vorlage/Override nach OSM (REGELN 0.1),
   Vorher/Nachher an Daniel wie St-Blaise CFF. Fertig: NE-Pläne HT 0 oder als OSM-Ausnahme begründet.
 
@@ -810,3 +817,15 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   korrigiert; im Endstand ändert die Regel nur Avenches. Regionalplan NE: Avenches länger, Linie Murten–Payerne gestreckt (Domdidier rückt).
 - osm_abgleich Avenches VB1 1 (Weichen 1975565327/…332 im Plan an einem Punkt; vorher fälschlich dem Schnitt zugeordnet) – keine Sperre.
 - Rest V4e unverändert (Liste unter V4c «Rest» / Nicht-Vorlagen). Abnahmen unverändert (69).
+
+### 22.11.2026 ~07:00 – Schritt V4e Teil 2, Seite v165 (Commit b38a85c, ergebnisse 713dd2b)
+- Doppelter Spurwechsel der Typvorlage: zweite Weiche begann 8 px VOR dem Ende der ersten (Reihenfolge am gemeinsamen Gleis vertauscht)
+  → `vorlage.SW_GAP` 28 px, kurze Gerade dazwischen (REGELN 2.2). Sichtbar: Bevaix (dazu `richtung` steigend wie OSM), Bern Brünnen, Riedbach,
+  Tüscherz, St-Blaise CFF. Fallstrick: links verschob es auch einfache Spurwechsel – nur bei «anzahl 2».
+- Ligerz: Doppelspurbeginn `seite` oben (OSM: durchgehend ist das südliche Gleis) + Abstellgleis als `linie`; dabei Fehler in vorlage.py
+  (doppelspurbeginn oben: `ys.insert(0)` verschob die Indizes, Schräge fehlte) behoben.
+- vorlage.netz_mitschreiben: Weichen je Gleis reihenfolgetreu (Tüscherz HT1+HT2 weg). hauptgleis HT5: mehrteilige Perrongleise (OSM track_ref
+  über mehrere Ways, z. B. 652/662) im Plan über alle ihre Kanten auf derselben Geraden (REGELN Kopf HT) – nur Abnahmen von Befunden, alle Pläne.
+  Prüffälle `vorlage_bern_brunnen`, `vorlage_tuscherz`. HT gesamt 271 HT5 (vorher 292), Basis gesenkt (17 Pläne). G0 unverändert, Abnahmen 69.
+- Regression: geänderte Zeilen alle erklärt (SW_GAP, Ligerz-Override, Messung); region_ne G2 43→36, Ligerz und Riedbach im Regionalplan.
+- Lokal ≠ Workflow: Ins HT5 2 nur lokal (Lage-Numerik), Workflow 0. Werkzeuge: OSM-Skizze längs Fensterachse war hilfreich (nicht im Repo).
