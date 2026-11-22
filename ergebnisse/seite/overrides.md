@@ -139,7 +139,7 @@ Erzeugt von `spurplan/code/overrides_liste.py`. Ziel (Entscheid 13.11.): nur Ort
 | Region mob | Montreux | --hauptgleise | Schalter | 1 | Region MOB (21.10.2026, Wunsch D. Eckenstein): Meterspur Mon | regionen/mob/region.json |
 | Region mob | Zweisimmen | --hauptgleise | Schalter | 1 | Region MOB (21.10.2026, Wunsch D. Eckenstein): Meterspur Mon | regionen/mob/region.json |
 | Repo | neuchatel | abgang | Geometrie | 1 | Entwurf 14.10.2026 (Claude), Neuchâtel, OSM-Stand 12.10. | bahnhoefe/neuchatel/neuchatel_override.json |
-| Repo | neuchatel | dkw_px | Geometrie | 4 | Entwurf 14.10.2026 (Claude), Neuchâtel, OSM-Stand 12.10. | bahnhoefe/neuchatel/neuchatel_override.json |
+| Repo | neuchatel | dkw_px | Geometrie | 5 | Entwurf 14.10.2026 (Claude), Neuchâtel, OSM-Stand 12.10. | bahnhoefe/neuchatel/neuchatel_override.json |
 | Repo | neuchatel | kein_pax | Geometrie | 1 | Entwurf 14.10.2026 (Claude), Neuchâtel, OSM-Stand 12.10. | bahnhoefe/neuchatel/neuchatel_override.json |
 | Repo | neuchatel | r38_seite | Geometrie | 3 | Entwurf 14.10.2026 (Claude), Neuchâtel, OSM-Stand 12.10. | bahnhoefe/neuchatel/neuchatel_override.json |
 | Repo | neuchatel | weglassen | Geometrie | 0 | Entwurf 14.10.2026 (Claude), Neuchâtel, OSM-Stand 12.10. | bahnhoefe/neuchatel/neuchatel_override.json |

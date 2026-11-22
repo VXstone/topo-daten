@@ -879,7 +879,6 @@
   "netz_auf_plan": 1.0
  },
  "neuchatel": {
-  "VA2": 4,
   "VD1": 1,
   "dkw_osm_unvollstaendig": [
    11296350712,
@@ -901,7 +900,7 @@
   ],
   "gleise": 83,
   "knoten_plan": 33,
-  "dkw_plan": 4,
+  "dkw_plan": 5,
   "knoten_osm": 50,
   "versatz_y": 0.0,
   "netz_auf_plan": 0.82

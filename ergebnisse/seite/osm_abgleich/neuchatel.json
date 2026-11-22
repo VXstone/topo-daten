@@ -2,30 +2,6 @@
 "plan": "neuchatel",
 "befunde": [
 {
-"regel": "VA2",
-"x": 907.4,
-"y": 181.4,
-"text": "im Plan als DKW gezeichnet, in OSM keine DKW/EKW in der Nähe"
-},
-{
-"regel": "VA2",
-"x": 1053.5,
-"y": 181.4,
-"text": "im Plan als DKW gezeichnet, in OSM keine DKW/EKW in der Nähe"
-},
-{
-"regel": "VA2",
-"x": 511.6,
-"y": 205.4,
-"text": "im Plan als DKW gezeichnet, in OSM keine DKW/EKW in der Nähe"
-},
-{
-"regel": "VA2",
-"x": 783.3,
-"y": 253.4,
-"text": "im Plan als DKW gezeichnet, in OSM keine DKW/EKW in der Nähe"
-},
-{
 "regel": "VD1",
 "x": 899.0,
 "y": 206.0,
@@ -53,7 +29,7 @@
 ],
 "gleise": 83,
 "knoten_plan": 33,
-"dkw_plan": 4,
+"dkw_plan": 5,
 "knoten_osm": 50,
 "versatz_y": 0.0,
 "netz_auf_plan": 0.82
