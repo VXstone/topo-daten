@@ -31,6 +31,8 @@ $ spurplan_schema.py --src neuchatel.json --bare --out neuchatel_bare.svg --haup
 Bahnhof Neuchâtel: Achse 6510 m, Ausschnitt s=2683…4400, 38 Weichen, 6 Perrons
 chains 9 lanes 7 segs 85 W 1871 H 368
 
+neuchatel Netzmodell: 0 von 0 Weichen an die Hand-Linien gelegt, 14 OSM-Verbindungen ergänzt
+
 Verbindungsprüfung neuchatel: 7 Perrongleise, 5 Abgänge (Personenverkehr)
   Gleis  1 West Hinweis: Plan grün nach 210 Yverdon (edge y158 x327), in OSM nur über Nebengleis (siding)
   Gleis  1 West OSM 1 / Plan 2  ok
