@@ -4,27 +4,9 @@
   "HT2": 0,
   "HT3": 0,
   "HT4": 0,
-  "HT5": 2
+  "HT5": 0
  },
  "befunde": [
-  {
-   "regel": "HT5",
-   "x": 829.7,
-   "y": 118.0,
-   "text": "Fahrweg Gl. 234 ↔ Gleisende 9600679144 im Plan, nicht in OSM",
-   "von": "Gl. 234",
-   "nach": "Gleisende 9600679144",
-   "art": "zusaetzlich"
-  },
-  {
-   "regel": "HT5",
-   "x": 829.7,
-   "y": 126.0,
-   "text": "Fahrweg Abgang 220 Ins (2867982337) ↔ Gl. 234 in OSM, fehlt im Plan",
-   "von": "Abgang 220 Ins (2867982337)",
-   "nach": "Gl. 234",
-   "art": "fehlt"
-  },
   {
    "regel": "_info",
    "x": 0,

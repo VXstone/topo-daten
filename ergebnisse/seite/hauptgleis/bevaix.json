@@ -4,23 +4,14 @@
   "HT2": 0,
   "HT3": 0,
   "HT4": 0,
-  "HT5": 1
+  "HT5": 0
  },
  "befunde": [
-  {
-   "regel": "HT5",
-   "x": 764.0,
-   "y": 122.0,
-   "text": "Fahrweg Abgang 210 Neuchâtel (12594175198) ↔ Gl. 662 in OSM, fehlt im Plan",
-   "von": "Abgang 210 Neuchâtel (12594175198)",
-   "nach": "Gl. 662",
-   "art": "fehlt"
-  },
   {
    "regel": "_info",
    "x": 0,
    "y": 0,
-   "text": "Fahrwege: 11/11 Ziele im Plan gefunden, OSM 27, Plan 26",
+   "text": "Fahrwege: 11/11 Ziele im Plan gefunden, OSM 27, Plan 27",
    "ohne_lage": []
   }
  ],

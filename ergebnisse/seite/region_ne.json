@@ -70,9 +70,11 @@
   "zihlbruecke": {
    "ok": true,
    "optionen": [],
-   "plan_geaendert": false,
-   "bare_geaendert": false,
-   "netz": {},
+   "plan_geaendert": true,
+   "bare_geaendert": true,
+   "netz": {
+    "A5": 1
+   },
    "topologie": "{}",
    "qualitaet": {
     "topo_A": 0,
@@ -81,6 +83,7 @@
     "topo_D": 0,
     "topo_E": 0,
     "topo_F": 0,
+    "netz_A5": 1,
     "boegen_pax": 0,
     "boegen_alle": 0,
     "randabstand": 0
@@ -1173,6 +1176,7 @@
    "topo_D": 0,
    "topo_E": 0,
    "topo_F": 0,
+   "netz_A5": 1,
    "boegen_pax": 0,
    "boegen_alle": 0,
    "randabstand": 0

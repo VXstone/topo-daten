@@ -694,7 +694,7 @@ Erzeugt von `spurplan/code/overrides_liste.py`. Ziel (Entscheid 13.11.): nur Ort
 | Werkstatt NE | zihlbruecke | cfg.margin_x | Schalter | 1 | Entwurf 14.10.2026 (Claude), Zihlbrücke, OSM-Stand 12.10. | werkstatt/ne/zihlbruecke_override.json |
 | Werkstatt NE | zihlbruecke | cfg.towns | Schalter | 1 | Entwurf 14.10.2026 (Claude), Zihlbrücke, OSM-Stand 12.10. | werkstatt/ne/zihlbruecke_override.json |
 | Werkstatt NE | zihlbruecke | vorlage | Typvorlage | 6 | Entwurf 14.10.2026 (Claude), Zihlbrücke, OSM-Stand 12.10. | werkstatt/ne/ne_vorlagen_overrides.json |
-| Werkstatt NE | zihlbruecke | vorlage | Typvorlage | 6 | Entwurf 14.10.2026 (Claude), Zihlbrücke, OSM-Stand 12.10. | werkstatt/ne/zihlbruecke_override.json |
+| Werkstatt NE | zihlbruecke | vorlage | Typvorlage | 7 | Entwurf 14.10.2026 (Claude), Zihlbrücke, OSM-Stand 12.10. | werkstatt/ne/zihlbruecke_override.json |
 | Werkstatt Olten | aarau | _abgang | Geometrie | 1 | Testfall Aarau (Wunsch D. Eckenstein 8.11.2026, Schritt P): Aarau bis in den Wald vor Rupperswil; Regionalplan Olten. | werkstatt/olten/aarau_override.json |
 | Werkstatt Olten | aarau | _fenster | Geometrie | 1 | Testfall Aarau (Wunsch D. Eckenstein 8.11.2026, Schritt P): Aarau bis in den Wald vor Rupperswil; Regionalplan Olten. | werkstatt/olten/aarau_override.json |
 | Werkstatt Olten | aarau | abgang | Geometrie | 8 | Testfall Aarau (Wunsch D. Eckenstein 8.11.2026, Schritt P): Aarau bis in den Wald vor Rupperswil; Regionalplan Olten. | werkstatt/olten/aarau_override.json |

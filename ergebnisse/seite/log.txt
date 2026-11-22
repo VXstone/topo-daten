@@ -62,7 +62,7 @@ Hinweis-Abdeckung: 30/57 (Befund < 40 px, ohne G2)
 ✓ xke0 solothurn                    MZ                        25.3  Zwischengerade, doppelter Abstand
 ✓ z6f2 konolfingen                  MX                        21.0  DKW?
 ✓ zcz3 solothurn                    G7,MX,VB2                 18.0  nicht verbunden
-index.html 2051 KB, 149 Pläne
+index.html 2060 KB, 149 Pläne
 /home/runner/work/topo-daten/topo-daten/spurplan/code/alle_plaene_pruefen.py:231: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
   json.dump(dict(erzeugt=datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"), plaene=len(zeilen), geaendert=len(gz),
 olten                        bestätigt 2026-11-08                0 Stellen  gleichwertig  OSM VB1 13, VB2 25, VC1 7, VD1 10 (kein Alt-Stand)
@@ -74,12 +74,12 @@ laufelfingen                 bestätigt 2026-11-07                0 Stellen  gle
 neuchatel                    bestätigt 2026-11-08                0 Stellen  gleichwertig  OSM VA2 4, VC1 2, VD1 3 (kein Alt-Stand)
 saint_blaise_lac             Archivbeginn (Abnahme 2026-10-15)    1 Stellen  schlechter?  G2 0→1, T7 4→3 (Wunsch-Summe -8) · OSM VD1 1 (kein Alt-Stand)
 marin_epagnier               Archivbeginn (Abnahme 2026-10-15)    1 Stellen  gleichwertig  OSM ok (kein Alt-Stand)
-zihlbruecke                  Archivbeginn (Abnahme 2026-10-15)    1 Stellen  gleichwertig  OSM ok (kein Alt-Stand)
+zihlbruecke                  Archivbeginn (Abnahme 2026-10-15)    4 Stellen  gleichwertig  OSM ok (kein Alt-Stand)
 gampelen                     Archivbeginn (Abnahme 2026-10-15)   11 Stellen  gleichwertig  OSM ok (kein Alt-Stand)
 muntschemier                 Archivbeginn (Abnahme 2026-10-16)    1 Stellen  gleichwertig  OSM VB1 2, VD1 1 (kein Alt-Stand)
 gummenen                     Archivbeginn (Abnahme 2026-10-17)    1 Stellen  gleichwertig  OSM ok (kein Alt-Stand)
 rosshausern                  Archivbeginn (Abnahme 2026-10-20)    6 Stellen  gleichwertig  OSM ok (kein Alt-Stand)
-riedbach                     Archivbeginn (Abnahme 2026-10-20)    2 Stellen  gleichwertig  OSM VB2 1 (kein Alt-Stand)
+riedbach                     Archivbeginn (Abnahme 2026-10-20)    2 Stellen  gleichwertig  OSM ok (kein Alt-Stand)
 bern_brunnen_westside        Archivbeginn (Abnahme 2026-10-20)    3 Stellen  gleichwertig  OSM VB1 3 (kein Alt-Stand)
 sugiez                       Archivbeginn (Abnahme 2026-10-16)    1 Stellen  gleichwertig  OSM VD1 1 (kein Alt-Stand)
 muntelier_lowenberg          Archivbeginn (Abnahme 2026-10-16)    2 Stellen  gleichwertig  OSM VA1 1, VB1 4 (kein Alt-Stand)
@@ -108,7 +108,7 @@ auvernier                    Archivbeginn (Abnahme 2026-10-20)   14 Stellen  gle
 colombier                    Archivbeginn (Abnahme 2026-10-16)    7 Stellen  gleichwertig  OSM VC1 3 (kein Alt-Stand)
 boudry                       Archivbeginn (Abnahme 2026-10-15)    0 Stellen  gleichwertig  OSM ok (kein Alt-Stand)
 bevaix                       Archivbeginn (Abnahme 2026-10-20)    2 Stellen  gleichwertig  OSM ok (kein Alt-Stand)
-gorgier_saint_aubin          Archivbeginn (Abnahme 2026-10-20)    4 Stellen  schlechter?  G2 1→3, T7 0→2 (Wunsch-Summe +16) · OSM VB1 2, VB2 1, VD1 2 (kein Alt-Stand)
+gorgier_saint_aubin          Archivbeginn (Abnahme 2026-10-20)    4 Stellen  schlechter?  G2 1→3, T7 0→2 (Wunsch-Summe +16) · OSM VB1 1, VD1 2 (kein Alt-Stand)
 onnens_bonvillars            Archivbeginn (Abnahme 2026-10-26)    0 Stellen  schlechter?  G2 1→2 · OSM VA1 1, VA2 1, VB1 2, VD1 1 (kein Alt-Stand)
 concise                      Archivbeginn (Abnahme 2026-10-20)    0 Stellen  gleichwertig  OSM ok (kein Alt-Stand)
 grandson                     Archivbeginn (Abnahme 2026-10-20)    6 Stellen  schlechter?  G2 0→1 · OSM ok (kein Alt-Stand)

@@ -259,8 +259,7 @@
   "netz_auf_plan": 1.0
  },
  "gorgier_saint_aubin": {
-  "VB1": 2,
-  "VB2": 1,
+  "VB1": 1,
   "VD1": 2,
   "dkw_osm_unvollstaendig": [],
   "gleise": 10,
@@ -268,7 +267,7 @@
   "dkw_plan": 0,
   "knoten_osm": 12,
   "versatz_y": 0.0,
-  "netz_auf_plan": 0.91
+  "netz_auf_plan": 0.88
  },
  "grandson": {
   "dkw_osm_unvollstaendig": [],
@@ -277,7 +276,7 @@
   "dkw_plan": 0,
   "knoten_osm": 6,
   "versatz_y": 0.0,
-  "netz_auf_plan": 0.86
+  "netz_auf_plan": 0.92
  },
  "gummenen": {
   "dkw_osm_unvollstaendig": [],
@@ -978,14 +977,13 @@
   "netz_auf_plan": 0.67
  },
  "riedbach": {
-  "VB2": 1,
   "dkw_osm_unvollstaendig": [],
   "gleise": 7,
   "knoten_plan": 8,
   "dkw_plan": 0,
   "knoten_osm": 8,
   "versatz_y": 0.0,
-  "netz_auf_plan": 0.91
+  "netz_auf_plan": 0.9
  },
  "rosshausern": {
   "dkw_osm_unvollstaendig": [],
@@ -1197,7 +1195,7 @@
   "dkw_plan": 0,
   "knoten_osm": 5,
   "versatz_y": 0.0,
-  "netz_auf_plan": 0.8
+  "netz_auf_plan": 0.89
  },
  "twann": {
   "dkw_osm_unvollstaendig": [],
@@ -1322,7 +1320,7 @@
   "dkw_plan": 0,
   "knoten_osm": 1,
   "versatz_y": 0.0,
-  "netz_auf_plan": 0.0
+  "netz_auf_plan": 0.78
  },
  "zofingen": {
   "VA2": 2,

@@ -1,26 +1,6 @@
 {
 "plan": "riedbach",
-"befunde": [
-{
-"regel": "VB2",
-"x": 530.0,
-"y": 134.0,
-"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
-"ways": [
-176851504,
-176851505,
-176855586,
-586391653,
-586391654,
-586391655,
-586391657
-],
-"farben": [
-"gruen",
-"schwarz"
-]
-}
-],
+"befunde": [],
 "info": {
 "dkw_osm_unvollstaendig": [],
 "gleise": 7,
@@ -28,6 +8,6 @@
 "dkw_plan": 0,
 "knoten_osm": 8,
 "versatz_y": 0.0,
-"netz_auf_plan": 0.91
+"netz_auf_plan": 0.9
 }
 }

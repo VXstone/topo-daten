@@ -4,17 +4,9 @@
   "HT2": 0,
   "HT3": 0,
   "HT4": 0,
-  "HT5": 1
+  "HT5": 0
  },
  "befunde": [
-  {
-   "regel": "HT5",
-   "x": 568.1,
-   "y": 158.0,
-   "art": "kuenstlich",
-   "osm": -1089,
-   "text": "Gleisende -1089 am Planrand: in OSM läuft das Gleis im Plan weiter (künstlicher Schnitt, Gleis fehlt dazwischen)"
-  },
   {
    "regel": "_info",
    "x": 0,

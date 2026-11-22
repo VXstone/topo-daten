@@ -24,7 +24,7 @@ faoug                              {}
 fraschels                          {}
 galmiz                             {'VD1': 1}
 gampelen                           {}
-gorgier_saint_aubin                {'VB1': 2, 'VB2': 1, 'VD1': 2}
+gorgier_saint_aubin                {'VB1': 1, 'VD1': 2}
 grandson                           {}
 gummenen                           {}
 ins                                {}
@@ -97,7 +97,7 @@ olten                              {'VB1': 13, 'VB2': 25, 'VC1': 7, 'VD1': 10}
 olten_hammer                       {'VB1': 1}
 onnens_bonvillars                  {'VA1': 1, 'VA2': 1, 'VB1': 2, 'VD1': 1}
 pensier                            {'VD1': 1}
-riedbach                           {'VB2': 1}
+riedbach                           {}
 rosshausern                        {}
 rothrist                           {'VA2': 1, 'VB1': 4, 'VB2': 6}
 safenwil                           {}
@@ -133,4 +133,4 @@ vereina__vereina_sud               {}
 wangen_bei_olten                   {'VB2': 1}
 zihlbruecke                        {}
 zofingen                           {'VA2': 2, 'VB1': 3, 'VD1': 1}
-OSM-Abgleich: 135 Pläne {'VA1': 8, 'VA2': 11, 'VB1': 78, 'VB2': 94, 'VC1': 21, 'VD1': 111, 'VD2': 1}
+OSM-Abgleich: 135 Pläne {'VA1': 8, 'VA2': 11, 'VB1': 77, 'VB2': 92, 'VC1': 21, 'VD1': 111, 'VD2': 1}

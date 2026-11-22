@@ -4,23 +4,14 @@
   "HT2": 0,
   "HT3": 0,
   "HT4": 0,
-  "HT5": 1
+  "HT5": 0
  },
  "befunde": [
-  {
-   "regel": "HT5",
-   "x": 949.7,
-   "y": 146.0,
-   "text": "Fahrweg Abgang 210 Biel (471169184) ↔ Abgang 210 Biel (632541287) in OSM, fehlt im Plan",
-   "von": "Abgang 210 Biel (471169184)",
-   "nach": "Abgang 210 Biel (632541287)",
-   "art": "fehlt"
-  },
   {
    "regel": "_info",
    "x": 0,
    "y": 0,
-   "text": "Fahrwege: 11/11 Ziele im Plan gefunden, OSM 27, Plan 26",
+   "text": "Fahrwege: 11/11 Ziele im Plan gefunden, OSM 26, Plan 26",
    "ohne_lage": []
   }
  ],
