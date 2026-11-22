@@ -90,8 +90,8 @@ munchenwiler_courgevaux            {'VD1': 1}
 muntelier_lowenberg                {'VA1': 1, 'VB1': 4}
 muntschemier                       {'VB1': 2, 'VD1': 1}
 murten                             {}
-neuchatel                          {'VA2': 4, 'VC1': 2, 'VD1': 3}
-neuchatel_vauseyon                 {'VB2': 1}
+neuchatel                          {'VA2': 4, 'VD1': 1}
+neuchatel_vauseyon                 {}
 noiraigue                          {'VD1': 1}
 olten                              {'VB1': 10, 'VB2': 21, 'VC1': 7, 'VD1': 10}
 olten_hammer                       {'VB1': 1}
@@ -133,4 +133,4 @@ vereina__vereina_sud               {}
 wangen_bei_olten                   {}
 zihlbruecke                        {}
 zofingen                           {'VA2': 2, 'VB1': 2, 'VD1': 1}
-OSM-Abgleich: 135 Pläne {'VA1': 8, 'VA2': 11, 'VB1': 61, 'VB2': 73, 'VC1': 14, 'VD1': 111, 'VD2': 1}
+OSM-Abgleich: 135 Pläne {'VA1': 8, 'VA2': 11, 'VB1': 61, 'VB2': 72, 'VC1': 12, 'VD1': 109, 'VD2': 1}

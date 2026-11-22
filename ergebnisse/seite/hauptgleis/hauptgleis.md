@@ -5,7 +5,6 @@
 | Plan | HT1 | HT2 | HT3 | HT4 | HT5 | Summe |
 |---|---|---|---|---|---|---|
 | olten | 10 | 21 | 7 | 2 | 165 | 205 |
-| neuchatel | · | · | **2** (Basis 0) | · | **20** (Basis 0) | 22 |
 | aarau | 3 | 4 | · | 1 | 9 | 17 |
 | solothurn | 2 | 1 | · | · | 14 | 17 |
 | szu__zurich_giesshubel | 1 | 9 | · | 1 | 5 | 16 |
@@ -28,7 +27,6 @@
 | mob__jor | 1 | · | · | · | · | 1 |
 | mob__montreux | · | 1 | · | · | · | 1 |
 | mob__rossiniere | · | · | · | · | 1 | 1 |
-| neuchatel_vauseyon | · | **1** (Basis 0) | · | · | · | 1 |
 | szu__uetliberg | · | 1 | · | · | · | 1 |
 | aarburg_oftringen | · | · | · | · | · | 0 |
 | auvernier | · | · | · | · | · | 0 |
@@ -110,6 +108,8 @@
 | muntelier_lowenberg | · | · | · | · | · | 0 |
 | muntschemier | · | · | · | · | · | 0 |
 | murten | · | · | · | · | · | 0 |
+| neuchatel | · | · | · | · | · | 0 |
+| neuchatel_vauseyon | · | · | · | · | · | 0 |
 | noiraigue | · | · | · | · | · | 0 |
 | olten_hammer | · | · | · | · | · | 0 |
 | onnens_bonvillars | · | · | · | · | · | 0 |
@@ -145,32 +145,3 @@ Regeln: HT1 = OSM-Weiche am Hauptgleis ohne Abzweig im Plan; HT2 = Abzweig am Ha
 ## Ausnahmen (REGELN 6, `spurplan/hauptgleis_ausnahmen.json`, nicht gezählt)
 
 - **courtepin** HT2 500.0/110.0: Industriegleis nördlich, rechts Richtung Courtepin abzweigend: in Betrieb (Satellitenbild, Daniel 22.11.2026); in OSM endet es 1 m neben dem Streckengleis ohne gemeinsamen Knoten
-
-## NEUE Befunde
-
-- **neuchatel** HT3: 0 → 2
-  - 512.0/206.0: Gleis (Way 35545993) im Plan an Knoten 11296350764 angebunden, in OSM nicht
-  - 1032.0/206.0: Gleis (Way 579953621) im Plan an Knoten 416783517 angebunden, in OSM nicht
-- **neuchatel** HT5: 0 → 20
-  - 1120.0/182.0: Fahrweg Abgang 210 Biel (249162197) ↔ Gl. 5 im Plan, nicht in OSM
-  - 1120.0/170.0: Fahrweg Abgang 210 Biel (249162197) ↔ Gl. 6 im Plan, nicht in OSM
-  - 1116.5/158.0: Fahrweg Abgang 210 Biel (249162197) ↔ Gl. 7 im Plan, nicht in OSM
-  - 1264.7/230.0: Fahrweg Abgang 210 Biel (249162197) ↔ Gl. A42 im Plan, nicht in OSM
-  - 1367.7/230.0: Fahrweg Abgang 210 Biel (249162197) ↔ Gl. A52 im Plan, nicht in OSM
-  - 1438.6/230.0: Fahrweg Abgang 210 Biel (249162197) ↔ Gl. A62 im Plan, nicht in OSM
-  - 1513.4/230.0: Fahrweg Abgang 210 Biel (249162197) ↔ Gl. A72 im Plan, nicht in OSM
-  - 1120.0/158.0: Fahrweg Abgang 210 Biel (9608269774) ↔ Gl. 6 im Plan, nicht in OSM
-  - 1116.5/146.0: Fahrweg Abgang 210 Biel (9608269774) ↔ Gl. 7 im Plan, nicht in OSM
-  - 1264.7/218.0: Fahrweg Abgang 210 Biel (9608269774) ↔ Gl. A42 im Plan, nicht in OSM
-  - 1367.7/218.0: Fahrweg Abgang 210 Biel (9608269774) ↔ Gl. A52 im Plan, nicht in OSM
-  - 1438.6/218.0: Fahrweg Abgang 210 Biel (9608269774) ↔ Gl. A62 im Plan, nicht in OSM
-  - 1513.4/218.0: Fahrweg Abgang 210 Biel (9608269774) ↔ Gl. A72 im Plan, nicht in OSM
-  - 503.5/170.0: Fahrweg Abgang 210 Yverdon (415649794) ↔ Gl. 5 im Plan, nicht in OSM
-  - 503.5/158.0: Fahrweg Abgang 210 Yverdon (415649794) ↔ Gl. 6 im Plan, nicht in OSM
-  - 499.9/146.0: Fahrweg Abgang 210 Yverdon (415649794) ↔ Gl. 7 im Plan, nicht in OSM
-  - 384.1/170.0: Fahrweg Abgang 210 Yverdon (415649794) ↔ Gl. A15 im Plan, nicht in OSM
-  - 1120.0/206.0: Fahrweg Abgang 220 Ins (416783525) ↔ Gl. 5 im Plan, nicht in OSM
-  - 1120.0/194.0: Fahrweg Abgang 220 Ins (416783525) ↔ Gl. 6 im Plan, nicht in OSM
-  - 1116.5/182.0: Fahrweg Abgang 220 Ins (416783525) ↔ Gl. 7 im Plan, nicht in OSM
-- **neuchatel_vauseyon** HT2: 0 → 1
-  - 678.5/59.3: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung

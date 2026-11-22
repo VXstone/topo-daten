@@ -26,40 +26,6 @@
 "text": "im Plan als DKW gezeichnet, in OSM keine DKW/EKW in der Nähe"
 },
 {
-"regel": "VC1",
-"x": 512.0,
-"y": 206.0,
-"text": "Gleis (Way 35545993) im Plan an Knoten 11296350764 angebunden, in OSM nicht",
-"osm": 11296350764,
-"ways": [
-35545993,
-1271585757
-]
-},
-{
-"regel": "VC1",
-"x": 1032.0,
-"y": 206.0,
-"text": "Gleis (Way 579953621) im Plan an Knoten 416783517 angebunden, in OSM nicht",
-"osm": 416783517,
-"ways": [
-579953621,
-1222936426
-]
-},
-{
-"regel": "VD1",
-"x": 1438.3,
-"y": 206.0,
-"text": "zwei Gleise 20 px aufeinander"
-},
-{
-"regel": "VD1",
-"x": 1383.4,
-"y": 254.0,
-"text": "zwei Gleise 20 px aufeinander"
-},
-{
 "regel": "VD1",
 "x": 899.0,
 "y": 206.0,
@@ -69,22 +35,27 @@
 "info": {
 "dkw_osm_unvollstaendig": [
 11296350712,
+11296350714,
 11296350715,
 11296350717,
 11296350764,
+11296350765,
 11296350767,
 11343288453,
+11343288464,
 11343288465,
 11343288468,
+11343328169,
 11343328180,
 11343328181,
-11343328182
+11343328182,
+11343328186
 ],
-"gleise": 84,
+"gleise": 83,
 "knoten_plan": 33,
 "dkw_plan": 4,
-"knoten_osm": 45,
+"knoten_osm": 50,
 "versatz_y": 0.0,
-"netz_auf_plan": 0.93
+"netz_auf_plan": 0.83
 }
 }

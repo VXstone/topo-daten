@@ -1,19 +1,12 @@
 {
  "zaehl": {
   "HT1": 0,
-  "HT2": 1,
+  "HT2": 0,
   "HT3": 0,
   "HT4": 0,
   "HT5": 0
  },
  "befunde": [
-  {
-   "regel": "HT2",
-   "x": 678.5,
-   "y": 59.3,
-   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
-   "ways": []
-  },
   {
    "regel": "_info",
    "x": 0,
@@ -24,7 +17,5 @@
    ]
   }
  ],
- "osm_abgleich": {
-  "VB2": 1
- }
+ "osm_abgleich": {}
 }

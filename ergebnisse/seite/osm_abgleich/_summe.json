@@ -880,30 +880,33 @@
  },
  "neuchatel": {
   "VA2": 4,
-  "VC1": 2,
-  "VD1": 3,
+  "VD1": 1,
   "dkw_osm_unvollstaendig": [
    11296350712,
+   11296350714,
    11296350715,
    11296350717,
    11296350764,
+   11296350765,
    11296350767,
    11343288453,
+   11343288464,
    11343288465,
    11343288468,
+   11343328169,
    11343328180,
    11343328181,
-   11343328182
+   11343328182,
+   11343328186
   ],
-  "gleise": 84,
+  "gleise": 83,
   "knoten_plan": 33,
   "dkw_plan": 4,
-  "knoten_osm": 45,
+  "knoten_osm": 50,
   "versatz_y": 0.0,
-  "netz_auf_plan": 0.93
+  "netz_auf_plan": 0.83
  },
  "neuchatel_vauseyon": {
-  "VB2": 1,
   "dkw_osm_unvollstaendig": [],
   "gleise": 25,
   "knoten_plan": 7,
