@@ -1,16 +1,10 @@
 {
  "region": "szu",
- "erzeugt": "2026-11-21 21:21 UTC",
- "code_commit": "dad7a315f52ff6fd8fcc5ef707d40b79519a6bd1",
+ "erzeugt": "2026-11-22 05:22 UTC",
+ "code_commit": "b38a85c8643edda77f78109e27a57d225f52dc4e",
  "bahnhoefe": {
   "uetliberg": {
    "name": "Uetliberg",
-   "ok": true,
-   "befunde": "Befunde: {}",
-   "optionen": []
-  },
-  "ringlikon": {
-   "name": "Ringlikon",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -21,20 +15,26 @@
    "befunde": "Befunde: {'B': 4}",
    "optionen": []
   },
+  "ringlikon": {
+   "name": "Ringlikon",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
   "zurich_binz": {
    "name": "Zürich Binz",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "zurich_friesenberg": {
-   "name": "Zürich Friesenberg",
+  "zurich_schweighof": {
+   "name": "Zürich Schweighof",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "zurich_schweighof": {
-   "name": "Zürich Schweighof",
+  "zurich_friesenberg": {
+   "name": "Zürich Friesenberg",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
