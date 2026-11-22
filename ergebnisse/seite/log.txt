@@ -62,7 +62,7 @@ Hinweis-Abdeckung: 30/57 (Befund < 40 px, ohne G2)
 ✓ xke0 solothurn                    MZ                        25.3  Zwischengerade, doppelter Abstand
 ✓ z6f2 konolfingen                  MX                        21.0  DKW?
 ✓ zcz3 solothurn                    G7,MX,VB2                 18.0  nicht verbunden
-index.html 2060 KB, 149 Pläne
+index.html 2051 KB, 149 Pläne
 /home/runner/work/topo-daten/topo-daten/spurplan/code/alle_plaene_pruefen.py:231: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
   json.dump(dict(erzeugt=datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"), plaene=len(zeilen), geaendert=len(gz),
 olten                        bestätigt 2026-11-08                0 Stellen  gleichwertig  OSM VB1 13, VB2 25, VC1 7, VD1 10 (kein Alt-Stand)
