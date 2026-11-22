@@ -1,4 +1,4 @@
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/region_vorbereiten.py /home/runner/work/topo-daten/topo-daten/schweiz_bahn.json.gz /home/runner/work/topo-daten/topo-daten/spurplan/regionen/mob/region.json /tmp/spurplan_region/mob  (23.9 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/region_vorbereiten.py /home/runner/work/topo-daten/topo-daten/schweiz_bahn.json.gz /home/runner/work/topo-daten/topo-daten/spurplan/regionen/mob/region.json /tmp/spurplan_region/mob  (23.6 s, rc 0)
 e_tremblex                  Le Tremblex                  Weichen  1 Spur 800
   caux                         Caux                         Weichen  4 Spur 800
   les_avants                   Les Avants                   Weichen  5 Spur 1000
@@ -171,64 +171,24 @@ Topologie aus dem Strangbild: 57 Strecken, Counter({'station': 45, 'halt': 8, 'e
 Bereiche nach Strängen: Glion (-30 Knoten), Chernex (-29 Knoten), Toveyre (-3 Knoten), Sonzier (-22 Knoten)
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src schonried.json --nowarp  (1.3 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src schonried.json --nowarp  (1.2 s, rc 0)
 Bahnhof Schönried: Achse 8970 m, Ausschnitt s=4279…4699, 2 Weichen, 1 Perrons
 chains 2 lanes 2 segs 4 W 735 H 240
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src la_tine.json --nowarp  (1.4 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src la_tine.json --nowarp  (1.3 s, rc 0)
 Bahnhof La Tine: Achse 8980 m, Ausschnitt s=4247…4701, 3 Weichen, 1 Perrons
 chains 3 lanes 3 segs 5 W 816 H 253
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src les_avants.json --nowarp  (1.4 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src les_avants.json --nowarp  (1.3 s, rc 0)
 Bahnhof Les Avants: Achse 8975 m, Ausschnitt s=4216…4696, 5 Weichen, 2 Perrons
 chains 5 lanes 5 segs 13 W 812 H 289
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src chateau_d_oex.json --nowarp  (1.5 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src chateau_d_oex.json --nowarp  (1.4 s, rc 0)
 Bahnhof Château-d'Oex: Achse 8970 m, Ausschnitt s=4235…4705, 7 Weichen, 2 Perrons
 chains 6 lanes 6 segs 17 W 882 H 314
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py les_avants  (0.5 s, rc 0)
-Optimization terminated successfully. (HiGHS Status 7: Optimal)
-Breite linear 442 px -> entzerrt 428 px
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py schonried  (0.6 s, rc 0)
-Optimization terminated successfully. (HiGHS Status 7: Optimal)
-Breite linear 386 px -> entzerrt 386 px
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py la_tine  (0.6 s, rc 0)
-Optimization terminated successfully. (HiGHS Status 7: Optimal)
-Breite linear 418 px -> entzerrt 420 px
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py chateau_d_oex  (0.5 s, rc 0)
-Optimization terminated successfully. (HiGHS Status 7: Optimal)
-Breite linear 432 px -> entzerrt 508 px
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src schonried.json  (1.0 s, rc 0)
-Bahnhof Schönried: Achse 8970 m, Ausschnitt s=4279…4699, 2 Weichen, 1 Perrons
-chains 2 lanes 2 segs 4 W 735 H 240
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src la_tine.json  (1.0 s, rc 0)
-Bahnhof La Tine: Achse 8980 m, Ausschnitt s=4247…4701, 3 Weichen, 1 Perrons
-chains 3 lanes 3 segs 5 W 819 H 253
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src les_avants.json  (1.1 s, rc 0)
-Bahnhof Les Avants: Achse 8975 m, Ausschnitt s=4216…4696, 5 Weichen, 2 Perrons
-chains 5 lanes 5 segs 13 W 799 H 289
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src chateau_d_oex.json  (1.1 s, rc 0)
-Bahnhof Château-d'Oex: Achse 8970 m, Ausschnitt s=4235…4705, 7 Weichen, 2 Perrons
-chains 6 lanes 6 segs 17 W 957 H 314
 
 
 $ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py schonried  (0.5 s, rc 0)
@@ -271,7 +231,47 @@ Bahnhof Château-d'Oex: Achse 8970 m, Ausschnitt s=4235…4705, 7 Weichen, 2 Per
 chains 6 lanes 6 segs 17 W 957 H 314
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src schonried.json --out /tmp/_chk_schonried.svg  (1.0 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py schonried  (0.5 s, rc 0)
+Optimization terminated successfully. (HiGHS Status 7: Optimal)
+Breite linear 386 px -> entzerrt 386 px
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py la_tine  (0.6 s, rc 0)
+Optimization terminated successfully. (HiGHS Status 7: Optimal)
+Breite linear 418 px -> entzerrt 420 px
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py les_avants  (0.5 s, rc 0)
+Optimization terminated successfully. (HiGHS Status 7: Optimal)
+Breite linear 442 px -> entzerrt 428 px
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py chateau_d_oex  (0.5 s, rc 0)
+Optimization terminated successfully. (HiGHS Status 7: Optimal)
+Breite linear 432 px -> entzerrt 508 px
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src schonried.json  (1.0 s, rc 0)
+Bahnhof Schönried: Achse 8970 m, Ausschnitt s=4279…4699, 2 Weichen, 1 Perrons
+chains 2 lanes 2 segs 4 W 735 H 240
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src la_tine.json  (1.0 s, rc 0)
+Bahnhof La Tine: Achse 8980 m, Ausschnitt s=4247…4701, 3 Weichen, 1 Perrons
+chains 3 lanes 3 segs 5 W 819 H 253
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src les_avants.json  (1.1 s, rc 0)
+Bahnhof Les Avants: Achse 8975 m, Ausschnitt s=4216…4696, 5 Weichen, 2 Perrons
+chains 5 lanes 5 segs 13 W 799 H 289
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src chateau_d_oex.json  (1.1 s, rc 0)
+Bahnhof Château-d'Oex: Achse 8970 m, Ausschnitt s=4235…4705, 7 Weichen, 2 Perrons
+chains 6 lanes 6 segs 17 W 957 H 314
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src schonried.json --out /tmp/_chk_schonried.svg  (0.9 s, rc 0)
 Bahnhof Schönried: Achse 8970 m, Ausschnitt s=4279…4699, 2 Weichen, 1 Perrons
 chains 2 lanes 2 segs 4 W 735 H 240
 Befunde: {}
@@ -301,7 +301,7 @@ Befunde: {}
 eindeutig: {}
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src schonried.json --bare --out schonried_bare.svg  (1.0 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src schonried.json --bare --out schonried_bare.svg  (0.9 s, rc 0)
 Bahnhof Schönried: Achse 8970 m, Ausschnitt s=4279…4699, 2 Weichen, 1 Perrons
 chains 2 lanes 2 segs 4 W 735 H 239
 
@@ -321,7 +321,7 @@ Bahnhof Château-d'Oex: Achse 8970 m, Ausschnitt s=4235…4705, 7 Weichen, 2 Per
 chains 6 lanes 6 segs 17 W 957 H 313
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src flendruz.json --nowarp  (0.9 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src flendruz.json --nowarp  (1.0 s, rc 0)
 Bahnhof Flendruz: Achse 8965 m, Ausschnitt s=4276…4696, 3 Weichen, 1 Perrons
 chains 3 lanes 3 segs 6 W 826 H 253
 
@@ -376,14 +376,14 @@ Optimization terminated successfully. (HiGHS Status 7: Optimal)
 Breite linear 386 px -> entzerrt 388 px
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py rougemont  (0.5 s, rc 0)
-Optimization terminated successfully. (HiGHS Status 7: Optimal)
-Breite linear 386 px -> entzerrt 384 px
-
-
 $ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src rochers_de_naye.json  (0.9 s, rc 0)
 Bahnhof Rochers de Naye: Achse 5970 m, Ausschnitt s=4284…4704, 1 Weichen, 1 Perrons
 chains 2 lanes 2 segs 4 W 616 H 240
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py rougemont  (0.5 s, rc 0)
+Optimization terminated successfully. (HiGHS Status 7: Optimal)
+Breite linear 386 px -> entzerrt 384 px
 
 
 $ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src les_sciernes.json  (1.1 s, rc 0)
@@ -416,16 +416,16 @@ Bahnhof Rochers de Naye: Achse 5970 m, Ausschnitt s=4284…4704, 1 Weichen, 1 Pe
 chains 2 lanes 2 segs 4 W 616 H 240
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src les_sciernes.json  (1.1 s, rc 0)
-Bahnhof Les Sciernes: Achse 8975 m, Ausschnitt s=4148…4699, 2 Weichen, 2 Perrons
-chains 2 lanes 2 segs 4 W 947 H 240
-
-
 $ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src flendruz.json --out /tmp/_chk_flendruz.svg  (1.0 s, rc 0)
 Bahnhof Flendruz: Achse 8965 m, Ausschnitt s=4276…4696, 3 Weichen, 1 Perrons
 chains 3 lanes 3 segs 6 W 828 H 253
 Befunde: {}
 eindeutig: {}
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src les_sciernes.json  (1.1 s, rc 0)
+Bahnhof Les Sciernes: Achse 8975 m, Ausschnitt s=4148…4699, 2 Weichen, 2 Perrons
+chains 2 lanes 2 segs 4 W 947 H 240
 
 
 $ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src rougemont.json --out /tmp/_chk_rougemont.svg  (1.0 s, rc 0)
@@ -454,7 +454,7 @@ Befunde: {}
 eindeutig: {}
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src rougemont.json --bare --out rougemont_bare.svg  (1.0 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src rougemont.json --bare --out rougemont_bare.svg  (0.9 s, rc 0)
 Bahnhof Rougemont: Achse 8985 m, Ausschnitt s=4284…4704, 3 Weichen, 2 Perrons
 chains 3 lanes 3 segs 7 W 730 H 263
 
@@ -484,7 +484,7 @@ Optimization terminated successfully. (HiGHS Status 7: Optimal)
 Breite linear 386 px -> entzerrt 386 px
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src blankenburg.json --nowarp  (0.9 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src blankenburg.json --nowarp  (1.0 s, rc 0)
 Bahnhof Blankenburg: Achse 7310 m, Ausschnitt s=2611…3031, 2 Weichen, 2 Perrons
 chains 2 lanes 2 segs 4 W 761 H 240
 
@@ -514,7 +514,7 @@ Optimization terminated successfully. (HiGHS Status 7: Optimal)
 Breite linear 386 px -> entzerrt 386 px
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src blankenburg.json  (1.0 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src blankenburg.json  (0.9 s, rc 0)
 Bahnhof Blankenburg: Achse 7310 m, Ausschnitt s=2611…3031, 2 Weichen, 2 Perrons
 chains 2 lanes 2 segs 4 W 761 H 240
 
@@ -524,17 +524,17 @@ Optimization terminated successfully. (HiGHS Status 7: Optimal)
 Breite linear 386 px -> entzerrt 378 px
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src zweisimmen.json --hauptgleise --nowarp  (2.3 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py blankenburg  (0.5 s, rc 0)
+Optimization terminated successfully. (HiGHS Status 7: Optimal)
+Breite linear 386 px -> entzerrt 386 px
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src zweisimmen.json --hauptgleise --nowarp  (2.4 s, rc 0)
 Hauptgleis aus Funktion: [24289106, 548732851, 548732852, 548740275, 959792635]
 Bahnhof Zweisimmen: Achse 4200 m, Ausschnitt s=1387…2153, 25 Weichen, 3 Perrons
 G6: 1 Überstand(e) vor Ausrundung gekürzt
 REGELN 1.9: 1 Zwischengerade(n) zu einer Schräge zusammengelegt
 chains 12 lanes 7 segs 46 W 1155 H 363
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py blankenburg  (0.5 s, rc 0)
-Optimization terminated successfully. (HiGHS Status 7: Optimal)
-Breite linear 386 px -> entzerrt 386 px
 
 
 $ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src matten.json  (0.9 s, rc 0)
@@ -617,7 +617,7 @@ REGELN 1.9: 1 Zwischengerade(n) zu einer Schräge zusammengelegt
 chains 12 lanes 7 segs 46 W 1269 H 363
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src glion.json --nowarp  (1.1 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src glion.json --nowarp  (1.2 s, rc 0)
 Bahnhof Glion: Achse 8815 m, Ausschnitt s=4127…4551, 13 Weichen, 3 Perrons
 chains 15 lanes 11 segs 33 W 839 H 444
 
@@ -710,9 +710,16 @@ Bahnhof Chernex: Achse 8970 m, Ausschnitt s=4279…4699, 14 Weichen, 3 Perrons
 chains 11 lanes 10 segs 34 W 827 H 355
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src caux.json --out /tmp/_chk_caux.svg  (1.1 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src caux.json --out /tmp/_chk_caux.svg  (1.0 s, rc 0)
 Bahnhof Caux: Achse 8955 m, Ausschnitt s=4271…4691, 4 Weichen, 3 Perrons
 chains 4 lanes 4 segs 12 W 824 H 287
+Befunde: {}
+eindeutig: {}
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src glion.json --out /tmp/_chk_glion.svg  (1.1 s, rc 0)
+Bahnhof Glion: Achse 8815 m, Ausschnitt s=4127…4551, 13 Weichen, 3 Perrons
+chains 15 lanes 11 segs 33 W 867 H 444
 Befunde: {}
 eindeutig: {}
 
@@ -720,13 +727,6 @@ eindeutig: {}
 $ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py chernex  (0.5 s, rc 0)
 Optimization terminated successfully. (HiGHS Status 7: Optimal)
 Breite linear 386 px -> entzerrt 312 px
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src glion.json --out /tmp/_chk_glion.svg  (1.2 s, rc 0)
-Bahnhof Glion: Achse 8815 m, Ausschnitt s=4127…4551, 13 Weichen, 3 Perrons
-chains 15 lanes 11 segs 33 W 867 H 444
-Befunde: {}
-eindeutig: {}
 
 
 $ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src montreux.json --hauptgleise --out /tmp/_chk_montreux.svg  (1.3 s, rc 0)
@@ -758,20 +758,15 @@ Bahnhof Chernex: Achse 8970 m, Ausschnitt s=4279…4699, 14 Weichen, 3 Perrons
 chains 11 lanes 10 segs 34 W 752 H 355
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py chernex  (0.5 s, rc 0)
-Optimization terminated successfully. (HiGHS Status 7: Optimal)
-Breite linear 386 px -> entzerrt 312 px
-
-
 $ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src montreux.json --hauptgleise --bare --out montreux_bare.svg  (1.3 s, rc 0)
 Bahnhof Montreux: Achse 4920 m, Ausschnitt s=2218…2830, 22 Weichen, 5 Perrons
 G6: 1 Überstand(e) vor Ausrundung gekürzt
 chains 12 lanes 10 segs 47 W 930 H 420
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src allieres.json --nowarp  (1.0 s, rc 0)
-Bahnhof Allières: Achse 8975 m, Ausschnitt s=4200…4700, 3 Weichen, 1 Perrons
-chains 3 lanes 3 segs 8 W 899 H 252
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py chernex  (0.5 s, rc 0)
+Optimization terminated successfully. (HiGHS Status 7: Optimal)
+Breite linear 386 px -> entzerrt 312 px
 
 
 $ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src chamby.json --nowarp  (1.1 s, rc 0)
@@ -779,14 +774,19 @@ Bahnhof Chamby: Achse 8955 m, Ausschnitt s=4273…4693, 6 Weichen, 2 Perrons
 chains 3 lanes 3 segs 12 W 835 H 263
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py allieres  (0.5 s, rc 0)
-Optimization terminated successfully. (HiGHS Status 7: Optimal)
-Breite linear 460 px -> entzerrt 460 px
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src allieres.json --nowarp  (1.0 s, rc 0)
+Bahnhof Allières: Achse 8975 m, Ausschnitt s=4200…4700, 3 Weichen, 1 Perrons
+chains 3 lanes 3 segs 8 W 899 H 252
 
 
 $ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py chamby  (0.5 s, rc 0)
 Optimization terminated successfully. (HiGHS Status 7: Optimal)
 Breite linear 386 px -> entzerrt 325 px
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py allieres  (0.5 s, rc 0)
+Optimization terminated successfully. (HiGHS Status 7: Optimal)
+Breite linear 460 px -> entzerrt 460 px
 
 
 $ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src jaman.json --nowarp  (1.0 s, rc 0)
@@ -814,15 +814,6 @@ Bahnhof Chamby: Achse 8955 m, Ausschnitt s=4273…4693, 6 Weichen, 2 Perrons
 chains 3 lanes 3 segs 12 W 774 H 263
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src chernex.json --out /tmp/_chk_chernex.svg  (1.2 s, rc 0)
-Bahnhof Chernex: Achse 8970 m, Ausschnitt s=4279…4699, 14 Weichen, 3 Perrons
-chains 11 lanes 10 segs 34 W 752 H 355
-Befunde: {'B': 1, 'F': 1}
-eindeutig: {'B': 1, 'F': 1}
-B x=   284 y=  124  Überlagerung 36px: yard (way 97681152) / yard (way 532530101)
-F x=   289 y=  123  Weiche falsch herum: Weichenanfang in OSM yard (way 97681150), gezeichnet yard (way 97681152)
-
-
 $ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py allieres  (0.5 s, rc 0)
 Optimization terminated successfully. (HiGHS Status 7: Optimal)
 Breite linear 460 px -> entzerrt 460 px
@@ -831,6 +822,15 @@ Breite linear 460 px -> entzerrt 460 px
 $ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src jaman.json  (1.0 s, rc 0)
 Bahnhof Jaman: Achse 7680 m, Ausschnitt s=4277…4697, 2 Weichen, 2 Perrons
 chains 2 lanes 2 segs 7 W 819 H 240
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src chernex.json --out /tmp/_chk_chernex.svg  (1.3 s, rc 0)
+Bahnhof Chernex: Achse 8970 m, Ausschnitt s=4279…4699, 14 Weichen, 3 Perrons
+chains 11 lanes 10 segs 34 W 752 H 355
+Befunde: {'B': 1, 'F': 1}
+eindeutig: {'B': 1, 'F': 1}
+B x=   284 y=  124  Überlagerung 36px: yard (way 97681152) / yard (way 532530101)
+F x=   289 y=  123  Weiche falsch herum: Weichenanfang in OSM yard (way 97681150), gezeichnet yard (way 97681152)
 
 
 $ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py chamby  (0.5 s, rc 0)
@@ -848,14 +848,14 @@ Bahnhof Allières: Achse 8975 m, Ausschnitt s=4200…4700, 3 Weichen, 1 Perrons
 chains 3 lanes 3 segs 8 W 899 H 252
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src chernex.json --bare --out chernex_bare.svg  (1.2 s, rc 0)
-Bahnhof Chernex: Achse 8970 m, Ausschnitt s=4279…4699, 14 Weichen, 3 Perrons
-chains 11 lanes 10 segs 34 W 752 H 355
-
-
 $ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src chamby.json  (1.1 s, rc 0)
 Bahnhof Chamby: Achse 8955 m, Ausschnitt s=4273…4693, 6 Weichen, 2 Perrons
 chains 3 lanes 3 segs 12 W 774 H 263
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src chernex.json --bare --out chernex_bare.svg  (1.2 s, rc 0)
+Bahnhof Chernex: Achse 8970 m, Ausschnitt s=4279…4699, 14 Weichen, 3 Perrons
+chains 11 lanes 10 segs 34 W 752 H 355
 
 
 $ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src jaman.json  (1.0 s, rc 0)
@@ -899,14 +899,14 @@ Bahnhof Allières: Achse 8975 m, Ausschnitt s=4200…4700, 3 Weichen, 1 Perrons
 chains 3 lanes 3 segs 8 W 899 H 252
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src jaman.json --bare --out jaman_bare.svg  (1.0 s, rc 0)
-Bahnhof Jaman: Achse 7680 m, Ausschnitt s=4277…4697, 2 Weichen, 2 Perrons
-chains 2 lanes 2 segs 7 W 819 H 239
-
-
 $ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src chamby.json --bare --out chamby_bare.svg  (1.1 s, rc 0)
 Bahnhof Chamby: Achse 8955 m, Ausschnitt s=4273…4693, 6 Weichen, 2 Perrons
 chains 3 lanes 3 segs 12 W 774 H 263
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src jaman.json --bare --out jaman_bare.svg  (1.0 s, rc 0)
+Bahnhof Jaman: Achse 7680 m, Ausschnitt s=4277…4697, 2 Weichen, 2 Perrons
+chains 2 lanes 2 segs 7 W 819 H 239
 
 
 $ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src saanen.json  (1.0 s, rc 0)
@@ -944,14 +944,14 @@ Optimization terminated successfully. (HiGHS Status 7: Optimal)
 Breite linear 452 px -> entzerrt 426 px
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src saanen.json  (1.0 s, rc 0)
-Bahnhof Saanen: Achse 8975 m, Ausschnitt s=4284…4764, 8 Weichen, 1 Perrons
-chains 4 lanes 4 segs 13 W 856 H 276
-
-
 $ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py gstaad  (0.5 s, rc 0)
 Optimization terminated successfully. (HiGHS Status 7: Optimal)
 Breite linear 647 px -> entzerrt 678 px
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src saanen.json  (1.0 s, rc 0)
+Bahnhof Saanen: Achse 8975 m, Ausschnitt s=4284…4764, 8 Weichen, 1 Perrons
+chains 4 lanes 4 segs 13 W 856 H 276
 
 
 $ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src saanenmoser.json  (1.0 s, rc 0)
@@ -991,17 +991,17 @@ Optimization terminated successfully. (HiGHS Status 7: Optimal)
 Breite linear 647 px -> entzerrt 678 px
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src saanen.json --bare --out saanen_bare.svg  (1.0 s, rc 0)
-Bahnhof Saanen: Achse 8975 m, Ausschnitt s=4284…4764, 8 Weichen, 1 Perrons
-chains 4 lanes 4 segs 13 W 856 H 276
-
-
 $ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src saanenmoser.json  (1.0 s, rc 0)
 Bahnhof Saanenmöser: Achse 8970 m, Ausschnitt s=4280…4752, 5 Weichen, 2 Perrons
 chains 3 lanes 3 segs 10 W 880 H 263
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src oeschseite.json  (1.0 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src saanen.json --bare --out saanen_bare.svg  (1.0 s, rc 0)
+Bahnhof Saanen: Achse 8975 m, Ausschnitt s=4284…4764, 8 Weichen, 1 Perrons
+chains 4 lanes 4 segs 13 W 856 H 276
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src oeschseite.json  (1.1 s, rc 0)
 Bahnhof Oeschseite: Achse 8975 m, Ausschnitt s=4279…4771, 3 Weichen, 2 Perrons
 chains 2 lanes 2 segs 6 W 867 H 240
 
@@ -1016,7 +1016,7 @@ Bahnhof Gruben: Achse 8970 m, Ausschnitt s=4278…4698, 2 Weichen, 2 Perrons
 chains 2 lanes 2 segs 3 W 760 H 240
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src saanenmoser.json --out /tmp/_chk_saanenmoser.svg  (1.0 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src saanenmoser.json --out /tmp/_chk_saanenmoser.svg  (1.1 s, rc 0)
 Bahnhof Saanenmöser: Achse 8970 m, Ausschnitt s=4280…4752, 5 Weichen, 2 Perrons
 chains 3 lanes 3 segs 10 W 880 H 263
 Befunde: {}
@@ -1035,7 +1035,7 @@ Optimization terminated successfully. (HiGHS Status 7: Optimal)
 Breite linear 386 px -> entzerrt 386 px
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src gstaad.json --out /tmp/_chk_gstaad.svg  (1.1 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src gstaad.json --out /tmp/_chk_gstaad.svg  (1.2 s, rc 0)
 Bahnhof Gstaad: Achse 8975 m, Ausschnitt s=4002…4705, 6 Weichen, 2 Perrons
 chains 5 lanes 5 segs 15 W 1081 H 300
 Befunde: {}
@@ -1047,22 +1047,17 @@ Bahnhof Saanenmöser: Achse 8970 m, Ausschnitt s=4280…4752, 5 Weichen, 2 Perro
 chains 3 lanes 3 segs 10 W 880 H 263
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src gruben.json  (1.0 s, rc 0)
-Bahnhof Gruben: Achse 8970 m, Ausschnitt s=4278…4698, 2 Weichen, 2 Perrons
-chains 2 lanes 2 segs 3 W 760 H 240
-
-
 $ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src oeschseite.json --bare --out oeschseite_bare.svg  (1.0 s, rc 0)
 Bahnhof Oeschseite: Achse 8975 m, Ausschnitt s=4279…4771, 3 Weichen, 2 Perrons
 chains 2 lanes 2 segs 6 W 867 H 239
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py gruben  (0.5 s, rc 0)
-Optimization terminated successfully. (HiGHS Status 7: Optimal)
-Breite linear 386 px -> entzerrt 386 px
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src gruben.json  (1.0 s, rc 0)
+Bahnhof Gruben: Achse 8970 m, Ausschnitt s=4278…4698, 2 Weichen, 2 Perrons
+chains 2 lanes 2 segs 3 W 760 H 240
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src lenk_im_simmental.json --nowarp  (0.9 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src lenk_im_simmental.json --nowarp  (1.0 s, rc 0)
 Hauptgleis aus Funktion: [97945362, 230501865, 230501866, 230501867, 230501868]
 Bahnhof Lenk im Simmental: Achse 5990 m, Ausschnitt s=4435…4971, 9 Weichen, 2 Perrons
 chains 3 lanes 3 segs 16 W 842 H 264
@@ -1071,6 +1066,11 @@ chains 3 lanes 3 segs 16 W 842 H 264
 $ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src gstaad.json --bare --out gstaad_bare.svg  (1.1 s, rc 0)
 Bahnhof Gstaad: Achse 8975 m, Ausschnitt s=4002…4705, 6 Weichen, 2 Perrons
 chains 5 lanes 5 segs 15 W 1081 H 300
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py gruben  (0.5 s, rc 0)
+Optimization terminated successfully. (HiGHS Status 7: Optimal)
+Breite linear 386 px -> entzerrt 386 px
 
 
 $ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src rossiniere.json --nowarp  (1.0 s, rc 0)
@@ -1083,17 +1083,17 @@ Optimization terminated successfully. (HiGHS Status 7: Optimal)
 Breite linear 493 px -> entzerrt 442 px
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src gruben.json  (1.0 s, rc 0)
-Bahnhof Gruben: Achse 8970 m, Ausschnitt s=4278…4698, 2 Weichen, 2 Perrons
-chains 2 lanes 2 segs 3 W 760 H 240
-
-
 $ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py rossiniere  (0.5 s, rc 0)
 Optimization terminated successfully. (HiGHS Status 7: Optimal)
 Breite linear 386 px -> entzerrt 350 px
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src lenk_im_simmental.json  (1.0 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src gruben.json  (1.0 s, rc 0)
+Bahnhof Gruben: Achse 8970 m, Ausschnitt s=4278…4698, 2 Weichen, 2 Perrons
+chains 2 lanes 2 segs 3 W 760 H 240
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src lenk_im_simmental.json  (0.9 s, rc 0)
 Hauptgleis aus Funktion: [97945362, 230501865, 230501866, 230501867, 230501868]
 Bahnhof Lenk im Simmental: Achse 5990 m, Ausschnitt s=4435…4971, 9 Weichen, 2 Perrons
 chains 3 lanes 3 segs 16 W 792 H 264
@@ -1104,13 +1104,6 @@ Bahnhof Montbovon: Achse 9030 m, Ausschnitt s=4337…5012, 9 Weichen, 2 Perrons
 chains 4 lanes 4 segs 15 W 1058 H 425
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src gruben.json --out /tmp/_chk_gruben.svg  (1.0 s, rc 0)
-Bahnhof Gruben: Achse 8970 m, Ausschnitt s=4278…4698, 2 Weichen, 2 Perrons
-chains 2 lanes 2 segs 3 W 760 H 240
-Befunde: {}
-eindeutig: {}
-
-
 $ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py lenk_im_simmental  (0.5 s, rc 0)
 Optimization terminated successfully. (HiGHS Status 7: Optimal)
 Breite linear 493 px -> entzerrt 442 px
@@ -1119,6 +1112,13 @@ Breite linear 493 px -> entzerrt 442 px
 $ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src rossiniere.json  (1.0 s, rc 0)
 Bahnhof Rossinière: Achse 8980 m, Ausschnitt s=4282…4702, 6 Weichen, 2 Perrons
 chains 3 lanes 3 segs 11 W 796 H 263
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src gruben.json --out /tmp/_chk_gruben.svg  (1.0 s, rc 0)
+Bahnhof Gruben: Achse 8970 m, Ausschnitt s=4278…4698, 2 Weichen, 2 Perrons
+chains 2 lanes 2 segs 3 W 760 H 240
+Befunde: {}
+eindeutig: {}
 
 
 $ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py montbovon  (0.5 s, rc 0)
@@ -1176,7 +1176,7 @@ Optimization terminated successfully. (HiGHS Status 7: Optimal)
 Breite linear 573 px -> entzerrt 573 px
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src rossiniere.json --out /tmp/_chk_rossiniere.svg  (1.1 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src rossiniere.json --out /tmp/_chk_rossiniere.svg  (1.0 s, rc 0)
 Bahnhof Rossinière: Achse 8980 m, Ausschnitt s=4282…4702, 6 Weichen, 2 Perrons
 chains 3 lanes 3 segs 11 W 796 H 263
 Befunde: {}
@@ -1291,7 +1291,7 @@ Optimization terminated successfully. (HiGHS Status 7: Optimal)
 Breite linear 386 px -> entzerrt 386 px
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src belmont_sur_montreux.json --bare --out belmont_sur_montreux_bare.svg  (1.0 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src belmont_sur_montreux.json --bare --out belmont_sur_montreux_bare.svg  (0.9 s, rc 0)
 Bahnhof Belmont-sur-Montreux: Achse 7535 m, Ausschnitt s=2849…3471, 2 Weichen, 1 Perrons
 chains 2 lanes 2 segs 4 W 1012 H 239
 
@@ -1392,14 +1392,14 @@ Optimization terminated successfully. (HiGHS Status 7: Optimal)
 Breite linear 389 px -> entzerrt 389 px
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src les_echets.json  (0.9 s, rc 0)
-Bahnhof Les Echets: Achse 8955 m, Ausschnitt s=4274…4694, 0 Weichen, 1 Perrons
-chains 1 lanes 1 segs 1 W 804 H 216
-
-
 $ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src la_perche.json --bare --out la_perche_bare.svg  (0.9 s, rc 0)
 Bahnhof La Perche: Achse 7060 m, Ausschnitt s=4272…4692, 0 Weichen, 1 Perrons
 chains 1 lanes 1 segs 4 W 832 H 215
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src les_echets.json  (0.9 s, rc 0)
+Bahnhof Les Echets: Achse 8955 m, Ausschnitt s=4274…4694, 0 Weichen, 1 Perrons
+chains 1 lanes 1 segs 1 W 804 H 216
 
 
 $ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py les_echets  (0.5 s, rc 0)
@@ -1414,24 +1414,14 @@ Befunde: {}
 eindeutig: {}
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src paccot.json  (1.0 s, rc 0)
-Bahnhof Paccot: Achse 8955 m, Ausschnitt s=4271…4693, 2 Weichen, 1 Perrons
-chains 2 lanes 1 segs 4 W 831 H 216
-
-
 $ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src planchamp.json --nowarp  (0.9 s, rc 0)
 Bahnhof Planchamp: Achse 8655 m, Ausschnitt s=3977…4397, 0 Weichen, 1 Perrons
 chains 1 lanes 1 segs 2 W 765 H 216
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src les_echets.json  (0.9 s, rc 0)
-Bahnhof Les Echets: Achse 8955 m, Ausschnitt s=4274…4694, 0 Weichen, 1 Perrons
-chains 1 lanes 1 segs 1 W 804 H 216
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py paccot  (0.5 s, rc 0)
-Optimization terminated successfully. (HiGHS Status 7: Optimal)
-Breite linear 389 px -> entzerrt 389 px
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src paccot.json  (1.0 s, rc 0)
+Bahnhof Paccot: Achse 8955 m, Ausschnitt s=4271…4693, 2 Weichen, 1 Perrons
+chains 2 lanes 1 segs 4 W 831 H 216
 
 
 $ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py planchamp  (0.5 s, rc 0)
@@ -1439,9 +1429,24 @@ Optimization terminated successfully. (HiGHS Status 7: Optimal)
 Breite linear 386 px -> entzerrt 386 px
 
 
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py paccot  (0.5 s, rc 0)
+Optimization terminated successfully. (HiGHS Status 7: Optimal)
+Breite linear 389 px -> entzerrt 389 px
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src les_echets.json  (0.9 s, rc 0)
+Bahnhof Les Echets: Achse 8955 m, Ausschnitt s=4274…4694, 0 Weichen, 1 Perrons
+chains 1 lanes 1 segs 1 W 804 H 216
+
+
 $ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src cret_d_y_bau.json --bare --out cret_d_y_bau_bare.svg  (0.9 s, rc 0)
 Bahnhof Crêt-d'y-Bau: Achse 8960 m, Ausschnitt s=4272…4692, 0 Weichen, 1 Perrons
 chains 1 lanes 1 segs 1 W 833 H 215
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src planchamp.json  (0.9 s, rc 0)
+Bahnhof Planchamp: Achse 8655 m, Ausschnitt s=3977…4397, 0 Weichen, 1 Perrons
+chains 1 lanes 1 segs 2 W 765 H 216
 
 
 $ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src les_echets.json --out /tmp/_chk_les_echets.svg  (0.9 s, rc 0)
@@ -1449,11 +1454,6 @@ Bahnhof Les Echets: Achse 8955 m, Ausschnitt s=4274…4694, 0 Weichen, 1 Perrons
 chains 1 lanes 1 segs 1 W 804 H 216
 Befunde: {}
 eindeutig: {}
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src planchamp.json  (0.9 s, rc 0)
-Bahnhof Planchamp: Achse 8655 m, Ausschnitt s=3977…4397, 0 Weichen, 1 Perrons
-chains 1 lanes 1 segs 2 W 765 H 216
 
 
 $ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src paccot.json  (1.0 s, rc 0)
@@ -1530,14 +1530,14 @@ Bahnhof Toveyre: Achse 7770 m, Ausschnitt s=3085…3505, 0 Weichen, 1 Perrons
 chains 1 lanes 1 segs 7 W 836 H 216
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src montreux_les_planches.json  (0.9 s, rc 0)
-Bahnhof Montreux-Les Planches: Achse 6700 m, Ausschnitt s=2008…2428, 0 Weichen, 1 Perrons
-chains 1 lanes 1 segs 4 W 804 H 216
-
-
 $ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src sendy_sollard.json  (1.0 s, rc 0)
 Bahnhof Sendy-Sollard: Achse 8950 m, Ausschnitt s=4217…4691, 2 Weichen, 0 Perrons
 chains 2 lanes 2 segs 7 W 838 H 240
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src montreux_les_planches.json  (0.9 s, rc 0)
+Bahnhof Montreux-Les Planches: Achse 6700 m, Ausschnitt s=2008…2428, 0 Weichen, 1 Perrons
+chains 1 lanes 1 segs 4 W 804 H 216
 
 
 $ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src planchamp.json --bare --out planchamp_bare.svg  (0.9 s, rc 0)
@@ -1641,7 +1641,7 @@ Bahnhof Valmont: Achse 8235 m, Ausschnitt s=3554…3974, 0 Weichen, 1 Perrons
 chains 1 lanes 1 segs 2 W 770 H 216
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src fontanivent.json --nowarp  (1.0 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src fontanivent.json --nowarp  (0.9 s, rc 0)
 Bahnhof Fontanivent: Achse 8965 m, Ausschnitt s=4278…4698, 3 Weichen, 1 Perrons
 chains 3 lanes 3 segs 6 W 782 H 253
 
@@ -1673,19 +1673,19 @@ Optimization terminated successfully. (HiGHS Status 7: Optimal)
 Breite linear 386 px -> entzerrt 386 px
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src les_cases.json --nowarp  (1.0 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src les_cases.json --nowarp  (0.9 s, rc 0)
 Bahnhof Les Cases: Achse 8980 m, Ausschnitt s=4286…4706, 3 Weichen, 1 Perrons
 chains 3 lanes 3 segs 6 W 793 H 253
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src fontanivent.json  (1.0 s, rc 0)
-Bahnhof Fontanivent: Achse 8965 m, Ausschnitt s=4278…4698, 3 Weichen, 1 Perrons
-chains 3 lanes 3 segs 6 W 797 H 253
 
 
 $ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src valmont.json --bare --out valmont_bare.svg  (0.9 s, rc 0)
 Bahnhof Valmont: Achse 8235 m, Ausschnitt s=3554…3974, 0 Weichen, 1 Perrons
 chains 1 lanes 1 segs 2 W 770 H 215
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src fontanivent.json  (0.9 s, rc 0)
+Bahnhof Fontanivent: Achse 8965 m, Ausschnitt s=4278…4698, 3 Weichen, 1 Perrons
+chains 3 lanes 3 segs 6 W 797 H 253
 
 
 $ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py les_cases  (0.5 s, rc 0)
@@ -1740,16 +1740,16 @@ Bahnhof Le Tremblex: Achse 8960 m, Ausschnitt s=4276…4696, 1 Weichen, 1 Perron
 chains 2 lanes 2 segs 5 W 801 H 239
 
 
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src jor.json  (1.0 s, rc 0)
+Bahnhof Jor: Achse 8970 m, Ausschnitt s=4276…4696, 4 Weichen, 1 Perrons
+chains 4 lanes 4 segs 10 W 818 H 276
+
+
 $ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src fontanivent.json --out /tmp/_chk_fontanivent.svg  (1.0 s, rc 0)
 Bahnhof Fontanivent: Achse 8965 m, Ausschnitt s=4278…4698, 3 Weichen, 1 Perrons
 chains 3 lanes 3 segs 6 W 797 H 253
 Befunde: {}
 eindeutig: {}
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src jor.json  (1.0 s, rc 0)
-Bahnhof Jor: Achse 8970 m, Ausschnitt s=4276…4696, 4 Weichen, 1 Perrons
-chains 4 lanes 4 segs 10 W 818 H 276
 
 
 $ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src les_cases.json  (1.0 s, rc 0)
@@ -1794,14 +1794,14 @@ Bahnhof Vernex: Achse 4860 m, Ausschnitt s=1566…1986, 4 Weichen, 0 Perrons
 chains 2 lanes 2 segs 8 W 837 H 240
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src les_cases.json --bare --out les_cases_bare.svg  (1.0 s, rc 0)
-Bahnhof Les Cases: Achse 8980 m, Ausschnitt s=4286…4706, 3 Weichen, 1 Perrons
-chains 3 lanes 3 segs 6 W 772 H 252
-
-
 $ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src glion_college.json  (0.9 s, rc 0)
 Bahnhof Glion-Collège: Achse 8950 m, Ausschnitt s=4175…4695, 0 Weichen, 2 Perrons
 chains 1 lanes 1 segs 3 W 787 H 216
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src les_cases.json --bare --out les_cases_bare.svg  (1.0 s, rc 0)
+Bahnhof Les Cases: Achse 8980 m, Ausschnitt s=4286…4706, 3 Weichen, 1 Perrons
+chains 3 lanes 3 segs 6 W 772 H 252
 
 
 $ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py vernex  (0.5 s, rc 0)
@@ -1831,12 +1831,12 @@ Bahnhof Vernex: Achse 4860 m, Ausschnitt s=1566…1986, 4 Weichen, 0 Perrons
 chains 2 lanes 2 segs 8 W 678 H 240
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src jor.json --bare --out jor_bare.svg  (0.9 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src jor.json --bare --out jor_bare.svg  (1.0 s, rc 0)
 Bahnhof Jor: Achse 8970 m, Ausschnitt s=4276…4696, 4 Weichen, 1 Perrons
 chains 4 lanes 4 segs 10 W 818 H 276
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py vernex  (0.3 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py vernex  (0.4 s, rc 0)
 Optimization terminated successfully. (HiGHS Status 7: Optimal)
 Breite linear 386 px -> entzerrt 227 px
 
@@ -1920,15 +1920,15 @@ F11 quer ausgerichtet: {'La Perche': -3.9}
 ok 6588 4210
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/lage_suche.py mob_region --max-sek 1500 --json lage_suche.json  (270.5 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/lage_suche.py mob_region --max-sek 1500 --json lage_suche.json  (269.3 s, rc 0)
 Lagesuche mob_region: Ausgang Unruhe 165 {'topo_T6': 2, 'lage_L3a': 7, 'regel_G2': 19, 'regel_G6': 1, 'ruhe_ecken': 2, 'ruhe_treppen': 2}; Knotenbahnhöfe ['Chamby', 'Lenk im Simmental', 'Montbovon', 'Montreux', 'Rochers de Naye', 'Zweisimmen']
   Montbovon: 120 -> 60  Unruhe 165 -> 59
   Montreux: 60 -> 30  Unruhe 59 -> 49
-Lagesuche mob_region: Unruhe 165 -> 49 in 270 s, 73 Varianten
+Lagesuche mob_region: Unruhe 165 -> 49 in 269 s, 73 Varianten
 Lage übernommen: {'Montbovon': 60, 'Montreux': 30}
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/netz_lage.py mob_region Region MOB / Rochers-de-Naye region.svg --pruefen  (2.7 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/netz_lage.py mob_region Region MOB / Rochers-de-Naye region.svg --pruefen  (2.6 s, rc 0)
 eux – Vuarennes: 59 m ab Montreux: Nebengleis/Anschluss (Way 963691444, siding) nicht im Plan
   Montreux – Vuarennes: 67 m ab Montreux: Nebengleis/Anschluss (Way 963691445, siding) nicht im Plan
   Montreux – Vuarennes: 98 m ab Montreux: Nebengleis/Anschluss (Way 963691447, yard) nicht im Plan
