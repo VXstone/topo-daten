@@ -1,10 +1,10 @@
 {
  "zaehl": {
   "HT1": 1,
-  "HT2": 8,
-  "HT3": 1,
+  "HT2": 9,
+  "HT3": 0,
   "HT4": 1,
-  "HT5": 5
+  "HT5": 6
  },
  "befunde": [
   {
@@ -231,24 +231,52 @@
    ]
   },
   {
-   "regel": "HT3",
+   "regel": "HT2",
    "x": 1395.9,
    "y": 232.0,
-   "text": "Gleis (Way 110676789) im Plan an Knoten 1263316982 angebunden, in OSM nicht",
-   "osm": 1263316982,
+   "text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
    "ways": [
+    28860581,
+    35932596,
+    43523175,
     110676789,
+    110676790,
     110676793,
     110676795,
     110676802,
+    110676803,
     110676813,
+    110676814,
     110676826,
+    110678986,
+    110679006,
     110679016,
+    110679019,
+    111425579,
+    302538265,
+    302538279,
+    302538388,
+    302538403,
+    302538404,
+    302538471,
+    302538472,
+    302538473,
+    302538627,
     302539327,
     302539359,
     302539360,
     302540038,
-    302540868
+    302540868,
+    302541330,
+    302542005,
+    302542007,
+    318381004,
+    324969014,
+    324969020,
+    324980586,
+    326218893,
+    1254890323,
+    32496902001
    ]
   },
   {
@@ -350,6 +378,15 @@
   },
   {
    "regel": "HT5",
+   "x": 451.5,
+   "y": 208.4,
+   "text": "Fahrweg Abgang 712 Adliswil (11645709818) ↔ Gl. 2 in OSM, fehlt im Plan",
+   "von": "Abgang 712 Adliswil (11645709818)",
+   "nach": "Gl. 2",
+   "art": "fehlt"
+  },
+  {
+   "regel": "HT5",
    "x": 978.8,
    "y": 147.2,
    "text": "Fahrweg Abgang 713 Uetliberg (11465267216) ↔ Gl. 2 in OSM, fehlt im Plan",
@@ -361,14 +398,14 @@
    "regel": "_info",
    "x": 0,
    "y": 0,
-   "text": "Fahrwege: 11/11 Ziele im Plan gefunden, OSM 33, Plan 32",
+   "text": "Fahrwege: 11/11 Ziele im Plan gefunden, OSM 33, Plan 31",
    "ohne_lage": []
   }
  ],
  "osm_abgleich": {
   "VB1": 2,
-  "VB2": 8,
-  "VC1": 5,
+  "VB2": 9,
+  "VC1": 4,
   "VD1": 37
  }
 }

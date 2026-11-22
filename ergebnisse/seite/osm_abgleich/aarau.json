@@ -10,38 +10,10 @@
 },
 {
 "regel": "VB1",
-"x": 3173.8,
-"y": 234.8,
-"text": "OSM-Weiche 1799626827 ohne Abzweig im Plan",
-"osm": 1799626827
-},
-{
-"regel": "VB1",
 "x": 2145.0,
 "y": 378.8,
 "text": "OSM-Weiche 382373821 ohne Abzweig im Plan",
 "osm": 382373821
-},
-{
-"regel": "VB1",
-"x": 2989.7,
-"y": 282.8,
-"text": "OSM-Weiche 1799626709 ohne Abzweig im Plan",
-"osm": 1799626709
-},
-{
-"regel": "VB1",
-"x": 1303.1,
-"y": 234.8,
-"text": "OSM-Weiche 3736070802 ohne Abzweig im Plan",
-"osm": 3736070802
-},
-{
-"regel": "VB1",
-"x": 1342.4,
-"y": 306.8,
-"text": "OSM-Weiche 12196972116 ohne Abzweig im Plan",
-"osm": 12196972116
 },
 {
 "regel": "VB1",
@@ -157,7 +129,7 @@
 "info": {
 "dkw_osm_unvollstaendig": [],
 "gleise": 172,
-"knoten_plan": 59,
+"knoten_plan": 60,
 "dkw_plan": 0,
 "knoten_osm": 71,
 "versatz_y": 0.0,

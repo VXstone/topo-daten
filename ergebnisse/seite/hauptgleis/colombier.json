@@ -2,50 +2,11 @@
  "zaehl": {
   "HT1": 0,
   "HT2": 0,
-  "HT3": 3,
+  "HT3": 0,
   "HT4": 0,
   "HT5": 0
  },
  "befunde": [
-  {
-   "regel": "HT3",
-   "x": 816.4,
-   "y": 158.0,
-   "text": "Gleis (Way 49447813) im Plan an Knoten 628087130 angebunden, in OSM nicht",
-   "osm": 628087130,
-   "ways": [
-    49447813,
-    49447815,
-    49447825,
-    1104398030
-   ]
-  },
-  {
-   "regel": "HT3",
-   "x": 833.6,
-   "y": 158.0,
-   "text": "Gleis (Way 49447813) im Plan an Knoten 433556101 angebunden, in OSM nicht",
-   "osm": 433556101,
-   "ways": [
-    49447813,
-    49447815,
-    49447825,
-    1104398030
-   ]
-  },
-  {
-   "regel": "HT3",
-   "x": 734.6,
-   "y": 134.0,
-   "text": "Gleis (Way 49447813) im Plan an Knoten 628087128 angebunden, in OSM nicht",
-   "osm": 628087128,
-   "ways": [
-    49447813,
-    49447815,
-    49447825,
-    1104398030
-   ]
-  },
   {
    "regel": "_info",
    "x": 0,
@@ -54,7 +15,5 @@
    "ohne_lage": []
   }
  ],
- "osm_abgleich": {
-  "VC1": 3
- }
+ "osm_abgleich": {}
 }

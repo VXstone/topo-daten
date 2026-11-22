@@ -2,13 +2,6 @@
 "plan": "cornaux",
 "befunde": [
 {
-"regel": "VB1",
-"x": 496.0,
-"y": 274.4,
-"text": "OSM-Weiche 468197883 ohne Abzweig im Plan",
-"osm": 468197883
-},
-{
 "regel": "VB2",
 "x": 642.0,
 "y": 261.2,
@@ -24,31 +17,6 @@
 ],
 "farben": [
 "schwarz"
-]
-},
-{
-"regel": "VB2",
-"x": 341.1,
-"y": 147.2,
-"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
-"ways": [
-1047225769,
-1230148584
-],
-"farben": [
-"gruen",
-"schwarz"
-]
-},
-{
-"regel": "VC1",
-"x": 369.0,
-"y": 171.2,
-"text": "Gleis (Way 1047225769) im Plan an Knoten 632441560 angebunden, in OSM nicht",
-"osm": 632441560,
-"ways": [
-1047225769,
-1230148584
 ]
 },
 {
@@ -79,10 +47,10 @@
 "info": {
 "dkw_osm_unvollstaendig": [],
 "gleise": 52,
-"knoten_plan": 27,
+"knoten_plan": 28,
 "dkw_plan": 0,
 "knoten_osm": 32,
 "versatz_y": 0.0,
-"netz_auf_plan": 0.98
+"netz_auf_plan": 0.95
 }
 }

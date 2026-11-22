@@ -4,7 +4,7 @@
   "HT2": 1,
   "HT3": 0,
   "HT4": 0,
-  "HT5": 3
+  "HT5": 0
  },
  "befunde": [
   {
@@ -15,37 +15,10 @@
    "ways": []
   },
   {
-   "regel": "HT5",
-   "x": 600.4,
-   "y": 218.0,
-   "text": "Fahrweg Abgang 210 Yverdon (416419147) ↔ Gl. 231 im Plan, nicht in OSM",
-   "von": "Abgang 210 Yverdon (416419147)",
-   "nach": "Gl. 231",
-   "art": "zusaetzlich"
-  },
-  {
-   "regel": "HT5",
-   "x": 736.8,
-   "y": 154.1,
-   "text": "Fahrweg Abgang 223 La Chaux-de-Fonds (266382886) ↔ Gl. 131 im Plan, nicht in OSM",
-   "von": "Abgang 223 La Chaux-de-Fonds (266382886)",
-   "nach": "Gl. 131",
-   "art": "zusaetzlich"
-  },
-  {
-   "regel": "HT5",
-   "x": 847.4,
-   "y": 166.1,
-   "text": "Fahrweg Abgang 223 La Chaux-de-Fonds (266382886) ↔ Gl. 231 im Plan, nicht in OSM",
-   "von": "Abgang 223 La Chaux-de-Fonds (266382886)",
-   "nach": "Gl. 231",
-   "art": "zusaetzlich"
-  },
-  {
    "regel": "_info",
    "x": 0,
    "y": 0,
-   "text": "Fahrwege: 12/13 Ziele im Plan gefunden, OSM 26, Plan 29",
+   "text": "Fahrwege: 12/13 Ziele im Plan gefunden, OSM 26, Plan 26",
    "ohne_lage": [
     "Gl. 3"
    ]

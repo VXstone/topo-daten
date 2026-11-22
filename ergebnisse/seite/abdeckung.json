@@ -64,7 +64,6 @@
    "text": "Perron und Gleis verdreht, Mittelperron?",
    "abgedeckt": true,
    "regeln": [
-    "VB1",
     "VD1"
    ],
    "naechster": 23.2,
@@ -550,8 +549,7 @@
    "abgedeckt": true,
    "regeln": [
     "MX",
-    "VA2",
-    "VB2"
+    "VA2"
    ],
    "naechster": 13.0,
    "naechste_regel": "MX",

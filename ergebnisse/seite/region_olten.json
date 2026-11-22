@@ -228,6 +228,7 @@
    "plan_geaendert": true,
    "bare_geaendert": true,
    "netz": {
+    "T10": 1,
     "Z2": 4
    },
    "topologie": "{}",
@@ -238,6 +239,7 @@
     "topo_D": 0,
     "topo_E": 0,
     "topo_F": 0,
+    "netz_T10": 1,
     "netz_Z2": 4,
     "boegen_pax": 93,
     "boegen_alle": 114,
@@ -550,6 +552,7 @@
    "topo_D": 0,
    "topo_E": 0,
    "topo_F": 0,
+   "netz_T10": 1,
    "netz_Z2": 4,
    "boegen_pax": 93,
    "boegen_alle": 114,
@@ -627,9 +630,11 @@
    "schlechter": {},
    "besser": {},
    "topologie_offen": {},
-   "neu": {},
-   "unruhe": 8,
-   "unruhe_basis": 8
+   "neu": {
+    "netz_T10": 1
+   },
+   "unruhe": 10,
+   "unruhe_basis": 10
   },
   "olten_hammer": {
    "status": "gleich",

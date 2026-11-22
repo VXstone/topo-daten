@@ -2,21 +2,11 @@
 "plan": "mob__chernex",
 "befunde": [
 {
-"regel": "VB2",
-"x": 258.1,
-"y": 149.6,
-"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
-"ways": [
-97681150,
-97681152,
-532530101,
-532530105,
-532530106,
-532530107
-],
-"farben": [
-"braun"
-]
+"regel": "VB1",
+"x": 289.4,
+"y": 123.2,
+"text": "OSM-Weiche 1130904032 ohne Abzweig im Plan",
+"osm": 1130904032
 },
 {
 "regel": "VB2",
@@ -71,7 +61,7 @@
 "info": {
 "dkw_osm_unvollstaendig": [],
 "gleise": 27,
-"knoten_plan": 18,
+"knoten_plan": 16,
 "dkw_plan": 0,
 "knoten_osm": 14,
 "versatz_y": 0.0,

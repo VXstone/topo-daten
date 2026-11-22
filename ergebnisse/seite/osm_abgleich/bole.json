@@ -3,60 +3,23 @@
 "befunde": [
 {
 "regel": "VB1",
+"x": 1146.2,
+"y": 136.4,
+"text": "OSM-Weiche 575097059 ohne Abzweig im Plan",
+"osm": 575097059
+},
+{
+"regel": "VB1",
 "x": 1176.8,
 "y": 110.0,
 "text": "OSM-Weiche 628091925 ohne Abzweig im Plan",
 "osm": 628091925
-},
-{
-"regel": "VC1",
-"x": 1111.0,
-"y": 174.0,
-"text": "Gleis (Way 49448901) im Plan an Knoten 575097059 angebunden, in OSM nicht",
-"osm": 575097059,
-"ways": [
-49448901,
-49448904
-]
-},
-{
-"regel": "VB2",
-"x": 1128.2,
-"y": 156.4,
-"text": "Gleise berühren sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
-"ways": [
-45279438,
-49448901,
-49448902,
-49448904,
-157259847
-],
-"farben": [
-"schwarz"
-]
-},
-{
-"regel": "VB2",
-"x": 1150.4,
-"y": 118.0,
-"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
-"ways": [
-45279438,
-49448901,
-49448902,
-49448904,
-157259846,
-157259847
-],
-"farben": [
-"schwarz"
-]
 }
 ],
 "info": {
 "dkw_osm_unvollstaendig": [],
 "gleise": 8,
-"knoten_plan": 6,
+"knoten_plan": 3,
 "dkw_plan": 0,
 "knoten_osm": 5,
 "versatz_y": 0.0,

@@ -37,30 +37,6 @@
 },
 {
 "regel": "VB2",
-"x": 664.2,
-"y": 160.4,
-"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
-"ways": [
-87369574,
-139107104,
-139107105,
-139107106,
-157733586,
-157743968,
-157743970,
-157743971,
-773830208,
-773830214,
-780534820,
-780534821
-],
-"farben": [
-"gruen",
-"schwarz"
-]
-},
-{
-"regel": "VB2",
 "x": 1660.0,
 "y": 122.9,
 "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
@@ -149,7 +125,7 @@
 "info": {
 "dkw_osm_unvollstaendig": [],
 "gleise": 84,
-"knoten_plan": 44,
+"knoten_plan": 43,
 "dkw_plan": 4,
 "knoten_osm": 44,
 "versatz_y": 0.0,

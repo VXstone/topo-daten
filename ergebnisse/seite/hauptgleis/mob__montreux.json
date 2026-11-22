@@ -1,7 +1,7 @@
 {
  "zaehl": {
   "HT1": 0,
-  "HT2": 5,
+  "HT2": 1,
   "HT3": 0,
   "HT4": 0,
   "HT5": 0
@@ -17,66 +17,6 @@
     274706715,
     532556697,
     963691446
-   ]
-  },
-  {
-   "regel": "HT2",
-   "x": 431.2,
-   "y": 206.0,
-   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
-   "ways": [
-    97211358,
-    97211375,
-    274706713,
-    1112528289,
-    1112528290,
-    1112528291
-   ]
-  },
-  {
-   "regel": "HT2",
-   "x": 431.2,
-   "y": 182.0,
-   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
-   "ways": [
-    97211358,
-    97211363,
-    97211369,
-    97211375,
-    97211377,
-    274706710,
-    1112528290,
-    1112528291
-   ]
-  },
-  {
-   "regel": "HT2",
-   "x": 472.9,
-   "y": 206.0,
-   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
-   "ways": [
-    28566932,
-    97211377,
-    274706710,
-    1112528289,
-    1112528291
-   ]
-  },
-  {
-   "regel": "HT2",
-   "x": 486.8,
-   "y": 206.0,
-   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
-   "ways": [
-    28566931,
-    28566932,
-    97211358,
-    97211362,
-    97211375,
-    274706710,
-    274706713,
-    1112528289,
-    1112528291
    ]
   },
   {
@@ -101,7 +41,7 @@
  ],
  "osm_abgleich": {
   "VA2": 3,
-  "VB2": 6,
+  "VB2": 1,
   "VD1": 2
  }
 }

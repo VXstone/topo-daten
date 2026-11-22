@@ -1,10 +1,10 @@
 {
  "zaehl": {
   "HT1": 2,
-  "HT2": 5,
+  "HT2": 4,
   "HT3": 0,
   "HT4": 0,
-  "HT5": 6
+  "HT5": 5
  },
  "befunde": [
   {
@@ -20,26 +20,6 @@
    "y": 160.4,
    "text": "OSM-Weiche 1699843135 ohne Abzweig im Plan",
    "osm": 1699843135
-  },
-  {
-   "regel": "HT2",
-   "x": 664.2,
-   "y": 160.4,
-   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
-   "ways": [
-    87369574,
-    139107104,
-    139107105,
-    139107106,
-    157733586,
-    157743968,
-    157743970,
-    157743971,
-    773830208,
-    773830214,
-    780534820,
-    780534821
-   ]
   },
   {
    "regel": "HT2",
@@ -100,15 +80,6 @@
   },
   {
    "regel": "HT5",
-   "x": 263.6,
-   "y": 220.4,
-   "text": "Fahrweg Abgang 450 Bern (1699887364) ↔ Gl. 350 im Plan, nicht in OSM",
-   "von": "Abgang 450 Bern (1699887364)",
-   "nach": "Gl. 350",
-   "art": "zusaetzlich"
-  },
-  {
-   "regel": "HT5",
    "x": 1916.8,
    "y": 220.4,
    "text": "Fahrweg Abgang 453 Zofingen (7223639880) ↔ Gl. 1 im Plan, nicht in OSM",
@@ -127,7 +98,7 @@
   },
   {
    "regel": "HT5",
-   "x": 2059.7,
+   "x": 2052.1,
    "y": 220.4,
    "text": "Fahrweg Abgang 453 Zofingen (7223639880) ↔ Gl. 454 im Plan, nicht in OSM",
    "von": "Abgang 453 Zofingen (7223639880)",
@@ -136,7 +107,7 @@
   },
   {
    "regel": "HT5",
-   "x": 2044.5,
+   "x": 2017.9,
    "y": 220.4,
    "text": "Fahrweg Abgang 453 Zofingen (7223639880) ↔ Gl. 511 im Plan, nicht in OSM",
    "von": "Abgang 453 Zofingen (7223639880)",
@@ -145,7 +116,7 @@
   },
   {
    "regel": "HT5",
-   "x": 1606.2,
+   "x": 1428.5,
    "y": 220.4,
    "text": "Fahrweg Abgang 453 Zofingen (7223639880) ↔ Gl. 671 im Plan, nicht in OSM",
    "von": "Abgang 453 Zofingen (7223639880)",
@@ -156,7 +127,7 @@
    "regel": "_info",
    "x": 0,
    "y": 0,
-   "text": "Fahrwege: 27/28 Ziele im Plan gefunden, OSM 108, Plan 114",
+   "text": "Fahrwege: 27/28 Ziele im Plan gefunden, OSM 108, Plan 113",
    "ohne_lage": [
     "Gl. 450"
    ]
@@ -165,6 +136,6 @@
  "osm_abgleich": {
   "VA2": 1,
   "VB1": 4,
-  "VB2": 6
+  "VB2": 5
  }
 }

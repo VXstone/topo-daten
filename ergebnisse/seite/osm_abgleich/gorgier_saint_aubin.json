@@ -2,13 +2,6 @@
 "plan": "gorgier_saint_aubin",
 "befunde": [
 {
-"regel": "VB1",
-"x": 526.3,
-"y": 195.2,
-"text": "OSM-Weiche 443249186 ohne Abzweig im Plan",
-"osm": 443249186
-},
-{
 "regel": "VD1",
 "x": 516.2,
 "y": 195.2,
@@ -24,7 +17,7 @@
 "info": {
 "dkw_osm_unvollstaendig": [],
 "gleise": 10,
-"knoten_plan": 11,
+"knoten_plan": 12,
 "dkw_plan": 0,
 "knoten_osm": 12,
 "versatz_y": 0.0,

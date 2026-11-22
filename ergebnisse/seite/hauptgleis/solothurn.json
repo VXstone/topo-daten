@@ -1,6 +1,6 @@
 {
  "zaehl": {
-  "HT1": 4,
+  "HT1": 2,
   "HT2": 1,
   "HT3": 0,
   "HT4": 0,
@@ -9,24 +9,10 @@
  "befunde": [
   {
    "regel": "HT1",
-   "x": 1420.7,
-   "y": 160.4,
-   "text": "OSM-Weiche 1599161049 ohne Abzweig im Plan",
-   "osm": 1599161049
-  },
-  {
-   "regel": "HT1",
    "x": 1524.0,
    "y": 184.4,
    "text": "OSM-Weiche 1599161050 ohne Abzweig im Plan",
    "osm": 1599161050
-  },
-  {
-   "regel": "HT1",
-   "x": 1418.9,
-   "y": 160.4,
-   "text": "OSM-Weiche 630418274 ohne Abzweig im Plan",
-   "osm": 630418274
   },
   {
    "regel": "HT1",
@@ -49,7 +35,7 @@
   },
   {
    "regel": "HT5",
-   "x": 545.2,
+   "x": 522.4,
    "y": 172.4,
    "text": "Fahrweg Abgang 410 Biel/Bienne (11694665904) ↔ Gl. 442 in OSM, fehlt im Plan",
    "von": "Abgang 410 Biel/Bienne (11694665904)",
@@ -130,7 +116,7 @@
   },
   {
    "regel": "HT5",
-   "x": 1236.1,
+   "x": 1224.8,
    "y": 213.9,
    "text": "Fahrweg Abgang 415 Lyss (9237893722) ↔ Gl. 332 in OSM, fehlt im Plan",
    "von": "Abgang 415 Lyss (9237893722)",
@@ -148,7 +134,7 @@
   },
   {
    "regel": "HT5",
-   "x": 1236.1,
+   "x": 1185.6,
    "y": 201.9,
    "text": "Fahrweg Abgang 415 Lyss (9237893722) ↔ Gl. 351 in OSM, fehlt im Plan",
    "von": "Abgang 415 Lyss (9237893722)",
@@ -157,7 +143,7 @@
   },
   {
    "regel": "HT5",
-   "x": 1097.5,
+   "x": 1141.0,
    "y": 213.9,
    "text": "Fahrweg Abgang 415 Lyss (9237893722) ↔ Gl. 362 in OSM, fehlt im Plan",
    "von": "Abgang 415 Lyss (9237893722)",
@@ -192,8 +178,8 @@
  ],
  "osm_abgleich": {
   "VA1": 1,
-  "VB1": 6,
-  "VB2": 14,
+  "VB1": 4,
+  "VB2": 13,
   "VC1": 1,
   "VD1": 7,
   "VD2": 1

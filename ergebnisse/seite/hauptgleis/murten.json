@@ -4,27 +4,9 @@
   "HT2": 0,
   "HT3": 0,
   "HT4": 0,
-  "HT5": 2
+  "HT5": 0
  },
  "befunde": [
-  {
-   "regel": "HT5",
-   "x": 478.2,
-   "y": 213.2,
-   "text": "Fahrweg Abgang 255 Fribourg (250884070) ↔ Gl. 13 im Plan, nicht in OSM",
-   "von": "Abgang 255 Fribourg (250884070)",
-   "nach": "Gl. 13",
-   "art": "zusaetzlich"
-  },
-  {
-   "regel": "HT5",
-   "x": 422.9,
-   "y": 147.2,
-   "text": "Fahrweg Abgang 251 Payerne (1958407193) ↔ Gl. 1 in OSM, fehlt im Plan",
-   "von": "Abgang 251 Payerne (1958407193)",
-   "nach": "Gl. 1",
-   "art": "fehlt"
-  },
   {
    "regel": "_info",
    "x": 0,

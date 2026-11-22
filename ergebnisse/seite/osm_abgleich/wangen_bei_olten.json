@@ -1,26 +1,10 @@
 {
 "plan": "wangen_bei_olten",
-"befunde": [
-{
-"regel": "VB2",
-"x": 457.7,
-"y": 162.8,
-"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
-"ways": [
-145634086,
-145634099,
-263977260,
-263977263
-],
-"farben": [
-"schwarz"
-]
-}
-],
+"befunde": [],
 "info": {
 "dkw_osm_unvollstaendig": [],
 "gleise": 38,
-"knoten_plan": 18,
+"knoten_plan": 17,
 "dkw_plan": 0,
 "knoten_osm": 18,
 "versatz_y": 0.0,

@@ -7,7 +7,7 @@ Befund < 40 px im selben Plan, ohne G2.
 | ✓ | 0bw9 | solothurn | G6, MX, VB1, VB2, W1, W2 | 19.2 | Gleis nach unten, Knick, über anderen Gleisen nach oben |
 | ✓ | 0fpo | solothurn | MX, VA1, VC1, W2 | 18.8 | sauberes Gleis ins Nichts |
 | ✓ | 0k4j | region | G5 | 27.3 | Eppenbergtunnel Weichen/Stummel |
-| ✓ | 2vxh | mob__chamby | VB1, VD1 | 23.2 | Perron und Gleis verdreht, Mittelperron? |
+| ✓ | 2vxh | mob__chamby | VD1 | 23.2 | Perron und Gleis verdreht, Mittelperron? |
 | ✓ | 33fs | konolfingen | MQ | 15.6 | Gleis unter Gleis, sehr steil |
 | · | 3ctb | mob__montreux |  | 260.5 | Knubbel, keine Gegen-S-Kurve |
 | ✓ | 3d6h | konolfingen | G7, MX, VB2, VC1 | 18.1 | Abstellgleise über Streckengleise |
@@ -43,7 +43,7 @@ Befund < 40 px im selben Plan, ohne G2.
 | · | lld9 | olten |  | 119.8 | Anschlussgleise südlich Olten |
 | ✓ | lotw | mob__chamby | VB2, VD1 | 20.1 | Pfeil andere Seite, Stumpen am Perron |
 | ✓ | mkad | aarau | MF | 38.2 | Meterspur-Perron? |
-| ✓ | mp8h | mob__montreux | MX, VA2, VB2 | 13.0 | 90 Grad? |
+| ✓ | mp8h | mob__montreux | MX, VA2 | 13.0 | 90 Grad? |
 | ✓ | obvp | solothurn | G6, VB1, VD1, W1, W2 | 0.7 | 90 Grad Knick? |
 | ✓ | q31m | mob__zweisimmen | VB2 | 34.0 | Meterspur an 6/7 nicht angebunden |
 | · | qotw | vereina__klosters_platz |  | 83.3 | Mittelperron zwischen 2 und 3 |

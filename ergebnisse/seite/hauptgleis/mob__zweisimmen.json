@@ -4,7 +4,7 @@
   "HT2": 4,
   "HT3": 0,
   "HT4": 0,
-  "HT5": 1
+  "HT5": 0
  },
  "befunde": [
   {
@@ -63,19 +63,10 @@
    ]
   },
   {
-   "regel": "HT5",
-   "x": 769.1,
-   "y": 170.0,
-   "text": "Fahrweg Gl. 37 ↔ Gleisende 4030958947 im Plan, nicht in OSM",
-   "von": "Gl. 37",
-   "nach": "Gleisende 4030958947",
-   "art": "zusaetzlich"
-  },
-  {
    "regel": "_info",
    "x": 0,
    "y": 0,
-   "text": "Fahrwege: 10/26 Ziele im Plan gefunden, OSM 18, Plan 19",
+   "text": "Fahrwege: 10/26 Ziele im Plan gefunden, OSM 18, Plan 18",
    "ohne_lage": [
     "Abgang 120 Gstaad (13135626536)",
     "Abgang 321 Lenk (13135626539)",

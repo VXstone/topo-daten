@@ -226,7 +226,7 @@ Erzeugt von `spurplan/code/overrides_liste.py`. Ziel (Entscheid 13.11.): nur Ort
 | Werkstatt NE | boudry | vorlage | Typvorlage | 6 | Entwurf 14.10.2026 (Claude), Boudry, OSM-Stand 12.10. | werkstatt/ne/ne_vorlagen_overrides.json |
 | Werkstatt NE | chambrelien | _rund | Geometrie | 1 | Entwurf 14.10.2026 (Claude), Chambrelien, OSM-Stand 12.10. | werkstatt/ne/chambrelien_override.json |
 | Werkstatt NE | chambrelien | abgang | Geometrie | 1 | Entwurf 14.10.2026 (Claude), Chambrelien, OSM-Stand 12.10. | werkstatt/ne/chambrelien_override.json |
-| Werkstatt NE | chambrelien | zeichnen | Geometrie | 4 | Entwurf 14.10.2026 (Claude), Chambrelien, OSM-Stand 12.10. | werkstatt/ne/chambrelien_override.json |
+| Werkstatt NE | chambrelien | zeichnen | Geometrie | 6 | Entwurf 14.10.2026 (Claude), Chambrelien, OSM-Stand 12.10. | werkstatt/ne/chambrelien_override.json |
 | Werkstatt NE | chambrelien | nummern_px | Ortswissen | 2 | Entwurf 14.10.2026 (Claude), Chambrelien, OSM-Stand 12.10. | werkstatt/ne/chambrelien_override.json |
 | Werkstatt NE | chambrelien | nummern_weg | Ortswissen | 7 | Entwurf 14.10.2026 (Claude), Chambrelien, OSM-Stand 12.10. | werkstatt/ne/chambrelien_override.json |
 | Werkstatt NE | chambrelien | perrons_px | Ortswissen | 2 | Entwurf 14.10.2026 (Claude), Chambrelien, OSM-Stand 12.10. | werkstatt/ne/chambrelien_override.json |
@@ -240,7 +240,7 @@ Erzeugt von `spurplan/code/overrides_liste.py`. Ziel (Entscheid 13.11.): nur Ort
 | Werkstatt NE | champ_du_moulin | cfg.towns | Schalter | 1 | Entwurf 14.10.2026 (Claude), Champ du Moulin, OSM-Stand 12.10. | werkstatt/ne/champ_du_moulin_override.json |
 | Werkstatt NE | champ_du_moulin | vorlage | Typvorlage | 6 | Entwurf 14.10.2026 (Claude), Champ du Moulin, OSM-Stand 12.10. | werkstatt/ne/champ_du_moulin_override.json |
 | Werkstatt NE | champ_du_moulin | vorlage | Typvorlage | 6 | Entwurf 14.10.2026 (Claude), Champ du Moulin, OSM-Stand 12.10. | werkstatt/ne/ne_vorlagen_overrides.json |
-| Werkstatt NE | colombier | zeichnen | Geometrie | 3 | Entwurf 14.10.2026 (Claude), Colombier, OSM-Stand 12.10. | werkstatt/ne/colombier_override.json |
+| Werkstatt NE | colombier | zeichnen | Geometrie | 5 | Entwurf 14.10.2026 (Claude), Colombier, OSM-Stand 12.10. | werkstatt/ne/colombier_override.json |
 | Werkstatt NE | colombier | nummern_px | Ortswissen | 3 | Entwurf 14.10.2026 (Claude), Colombier, OSM-Stand 12.10. | werkstatt/ne/colombier_override.json |
 | Werkstatt NE | colombier | perrons_px | Ortswissen | 2 | Entwurf 14.10.2026 (Claude), Colombier, OSM-Stand 12.10. | werkstatt/ne/colombier_override.json |
 | Werkstatt NE | colombier | platforms | Ortswissen | 0 | Entwurf 14.10.2026 (Claude), Colombier, OSM-Stand 12.10. | werkstatt/ne/colombier_override.json |
@@ -668,7 +668,7 @@ Erzeugt von `spurplan/code/overrides_liste.py`. Ziel (Entscheid 13.11.): nur Ort
 | Werkstatt NE | sugiez | vorlage | Typvorlage | 6 | Entwurf 15.10.2026 (Claude), Sugiez, OSM-Stand 12.10. | werkstatt/ne/ne_vorlagen_overrides.json |
 | Werkstatt NE | sugiez | vorlage | Typvorlage | 6 | Entwurf 15.10.2026 (Claude), Sugiez, OSM-Stand 12.10. | werkstatt/ne/sugiez_override.json |
 | Werkstatt NE | travers | weglassen | Geometrie | 1 | Entwurf 14.10.2026 (Claude), Travers, OSM-Stand 12.10. | werkstatt/ne/travers_override.json |
-| Werkstatt NE | travers | zeichnen | Geometrie | 3 | Entwurf 14.10.2026 (Claude), Travers, OSM-Stand 12.10. | werkstatt/ne/travers_override.json |
+| Werkstatt NE | travers | zeichnen | Geometrie | 5 | Entwurf 14.10.2026 (Claude), Travers, OSM-Stand 12.10. | werkstatt/ne/travers_override.json |
 | Werkstatt NE | travers | cfg.lt_dist_w | Schalter | 1 | Entwurf 14.10.2026 (Claude), Travers, OSM-Stand 12.10. | werkstatt/ne/travers_override.json |
 | Werkstatt NE | travers | cfg.margin_x | Schalter | 1 | Entwurf 14.10.2026 (Claude), Travers, OSM-Stand 12.10. | werkstatt/ne/travers_override.json |
 | Werkstatt NE | travers | cfg.towns | Schalter | 1 | Entwurf 14.10.2026 (Claude), Travers, OSM-Stand 12.10. | werkstatt/ne/travers_override.json |
