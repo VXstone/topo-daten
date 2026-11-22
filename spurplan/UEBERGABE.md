@@ -367,6 +367,7 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   Vauseyon 4 (eigener Bau). Vorschlag nächster Schritt: wie `vorlage.netz_mitschreiben` ein Netzmodell auf die zeichnen-Linien legen
   (OSM-Weichen an die gezeichneten Abzweige, Zusatz `weichen` erlaubt), dann je Plan echte Fehler von Messartefakten trennen.
   Riedbach Anschluss-T geklärt (Daniel 22.11.: von Seite Bern erreichbar, Zurücksetzen Richtung Bern = OSM) → Vorlage `gegen` (v168).
+  Prüffall vorlage_riedbach_90: HT2 gedreht nicht geprüft (Zuordnung Doppelspurwechsel Ost kippt nur gedreht) – ansehen.
   Daniel 22.11.: Seite eines neuen Gleises (oben/unten, Zihlbrücke) ist kein harter Fehler – wichtig ist Weiche da und Topologie richtig.
 - Liste oben unter V4c «Rest». F6 (Gampelen) erledigt; dann je Plan OSM ansehen, Vorlage/Override nach OSM (REGELN 0.1),
   Vorher/Nachher an Daniel wie St-Blaise CFF. Fertig: NE-Pläne HT 0 oder als OSM-Ausnahme begründet.
