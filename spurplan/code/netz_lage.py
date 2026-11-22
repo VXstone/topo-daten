@@ -28,6 +28,11 @@ G, BK = "#00862f", "#111"
 TAN60 = math.tan(math.radians(60))
 TG = CFG["lane"] * CFG["S"]                     # Gleisabstand Strecke = Ebenenabstand im Spurplan
 T = json.load(open(f"{NAME}_topologie.json"))
+def slug_de(s):
+    for a, b in (("ä", "ae"), ("ö", "oe"), ("ü", "ue"), ("Ä", "Ae"), ("Ö", "Oe"), ("Ü", "Ue")): s = s.replace(a, b)
+    return slug(s)
+
+
 def slug(s):
     s = unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode().lower()
     return re.sub(r"[^a-z0-9]+", "_", s).strip("_")
@@ -62,8 +67,11 @@ L0 = json.load(open(f"{NAME}_lage.json")) if os.path.exists(f"{NAME}_lage.json")
 CFG.update(L0.get("cfg", {}))       # Lage "cfg": Grundwerte je Region (Region MOB: dichte Betriebspunkte, cover_m/merge_station_m kleiner)
 for i, n in nodes.items():
     n["inset"] = None
-    if n["kind"] == "station" and os.path.exists(slug(n["name"]) + "_ports.json"):
-        n["inset"] = slug(n["name"])
+    # V4e (22.11.2026): Schlüssel mit Umlaut als ae/oe/ue zuerst (Zihlbrücke = «zihlbruecke»; «zihlbrucke» war eine
+    # veraltete Oktober-Fassung in der Werkstatt – der Regionalplan zeigte sie statt des Bahnhofplans, REGELN 0.9)
+    _sl = next((c for c in (slug_de(n["name"]), slug(n["name"])) if os.path.exists(c + "_ports.json")), None)
+    if n["kind"] == "station" and _sl:
+        n["inset"] = _sl
         # eigene Fassung für den Regionalplan (Detailplan mit grösserem Ausschnitt, z. B. Rothrist 14.10.)
         if os.path.exists(n["inset"] + "_regional_ports.json"): n["inset"] += "_regional"
         PORTS[i] = json.load(open(n["inset"] + "_ports.json"))
