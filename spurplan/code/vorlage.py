@@ -26,6 +26,10 @@ import json, math, sys, os, shutil
 G, K = "#00862f", "#111"
 HW, NW = 3.6, 1.6
 LANE = 24; T60 = math.tan(math.radians(60)); DX = LANE / T60; R = 7.0
+# Doppelter Spurwechsel (V4e 22.11.2026, REGELN 2.1/HT5): Abstand der zwei Diagonalen längs. Mit 12 px lag der Anfang der
+# zweiten Weiche (gezeichnet je ~10 px Ausrundung) 8 px VOR dem Ende der ersten – Reihenfolge am gemeinsamen Gleis
+# vertauscht (Bevaix: OSM erst 1→2, dann 2→1; im Plan zweigte 2→1 vor der Einmündung 1→2 ab). 28 px = 8 px Gerade dazwischen.
+SW_GAP = 28
 Y0 = 110; XL = 330; ANL = 70; LOOP = 200; PER = 110
 
 def rund(pts, r=R):
@@ -94,11 +98,11 @@ def zeichne(V, osm=None, title="Bahnhof", mit_text=True):
         if art == "spurwechsel" and len(haupt) >= 2:
             ya, yb = ys[haupt[0]], ys[haupt[1]]
             n_ = int(a.get("anzahl", 1)); steig = a.get("richtung", "steigend") == "steigend"
-            x0 = (SR + 34) if rechts else (SL - 34 - 2 * DX - 12)
+            x0 = (SR + 34) if rechts else (SL - 34 - 2 * DX - (SW_GAP if n_ >= 2 else 12))   # einfacher Spurwechsel links wie bisher
             if n_ >= 2 and not steig:      # doppelt, zuerst fallend (Tüscherz 25.10.: OSM erst 1→2, dann 2→1; R3 Reihenfolge)
-                lines.append(([(x0, ya), (x0 + DX, yb)], False, None)); lines.append(([(x0 + DX + 12, yb), (x0 + 2 * DX + 12, ya)], False, None))
+                lines.append(([(x0, ya), (x0 + DX, yb)], False, None)); lines.append(([(x0 + DX + SW_GAP, yb), (x0 + 2 * DX + SW_GAP, ya)], False, None))
             elif n_ >= 2:
-                lines.append(([(x0, yb), (x0 + DX, ya)], False, None)); lines.append(([(x0 + DX + 12, ya), (x0 + 2 * DX + 12, yb)], False, None))
+                lines.append(([(x0, yb), (x0 + DX, ya)], False, None)); lines.append(([(x0 + DX + SW_GAP, ya), (x0 + 2 * DX + SW_GAP, yb)], False, None))
             else:
                 lines.append(([(x0, yb if steig else ya), (x0 + DX, ya if steig else yb)], False, None))
             # Spurwechsel schwarz (Riedbach/Rosshäusern 20.10.: "Spurwechsel alle schwarz"), wie im Regionalplan
@@ -111,13 +115,14 @@ def zeichne(V, osm=None, title="Bahnhof", mit_text=True):
                     ends[1 if rechts else -1].append(yk)
         elif art == "doppelspurbeginn":
             h = haupt[0] if not unten else haupt[-1]
-            yn = ys[h] + (LANE if unten else -LANE)
-            if yn < ys[0]: ys.insert(0, yn)
-            if yn > ys[-1]: ys.append(yn)
+            yh = ys[h]; yn = yh + (LANE if unten else -LANE)
+            # V4e 22.11.2026 (Ligerz, seite «oben»): früher ys.insert(0, …) – danach zeigte ys[h] auf das neue Gleis und die
+            # Schräge fehlte. Neue Ebene hinten anhängen, Indizes der Hauptgleise bleiben gültig.
+            if yn not in ys: ys.append(yn)
             xs = (XH - 60) if rechts else (XL + 60)
             pe = PR if rechts else PL
-            if rechts: lines.append(([(xs, ys[h]), (xs + DX, yn), (pe, yn)], True, None))
-            else: lines.append(([(pe, yn), (xs - DX, yn), (xs, ys[h])], True, None))
+            if rechts: lines.append(([(xs, yh), (xs + DX, yn), (pe, yn)], True, None))
+            else: lines.append(([(pe, yn), (xs - DX, yn), (xs, yh)], True, None))
             ends[1 if rechts else -1].append(yn)
         elif art == "anschluss":
             alle = sorted(set(ys))
@@ -413,11 +418,26 @@ def netz_mitschreiben(key, full, P):
     # Ebene; Auslassen kostet SKIP. Serrières 21.11.: die reine Kostenminimierung tauschte Anschluss- und Spurwechselweiche.
     zu = {}
     SKIP = 150.0
+    def kost(n, k):
+        dy = min(abs(fy(y) - k[1]) for y in lagen[n])
+        return abs(fx0(KN[n]["x"]) - k[0]) + 4 * dy if dy < 6 else None
+    # V4e (22.11.2026, Tüscherz): Reihenfolge nur JE GLEIS (Ebene der Weiche im Netzmodell ↔ Ebene des Abzweigs im Plan).
+    # Über alle Gleise zusammen sortiert verlangte der Abgleich, dass auch Weichen auf verschiedenen Gleisen in gleicher
+    # Reihenfolge liegen (OSM: Spurwechsel oben 615 m vor Anschluss unten 668 m; Vorlage umgekehrt) -> eine Weiche blieb
+    # ohne Partner (HT1 + HT2), obwohl jedes Gleis für sich stimmt.
+    gruppen_ = []
     if sw and PK:
-        S_ = sorted(sw, key=lambda n: (fx0(KN[n]["x"]), KN[n]["y"])); K_ = sorted(PK, key=lambda k: (k[0], k[1]))
-        def kost(n, k):
-            dy = min(abs(fy(y) - k[1]) for y in lagen[n])
-            return abs(fx0(KN[n]["x"]) - k[0]) + 4 * dy if dy < 6 else None
+        ebenen = sorted({round(k[1], 1) for k in PK})
+        def ebene(n):
+            y = fy(KN[n]["y"]); e = min(ebenen, key=lambda q: abs(q - y))
+            return e if abs(e - y) < 6 else None
+        for e in ebenen:
+            gruppen_.append(([n for n in sw if ebene(n) == e], [k for k in PK if round(k[1], 1) == e]))
+        rest = [n for n in sw if ebene(n) is None]
+        if rest: gruppen_.append((rest, [k for k in PK]))
+    for sw_g, PK_g in gruppen_:
+        if not sw_g or not PK_g: continue
+        S_ = sorted(sw_g, key=lambda n: (fx0(KN[n]["x"]), KN[n]["y"])); K_ = sorted(PK_g, key=lambda k: (k[0], k[1]))
         I, J = len(S_), len(K_)
         D = [[0.0] * (J + 1) for _ in range(I + 1)]; Z = [[None] * (J + 1) for _ in range(I + 1)]
         for i in range(I + 1):
@@ -433,12 +453,13 @@ def netz_mitschreiben(key, full, P):
         i, j = I, J
         while i or j:
             z = Z[i][j]
-            if z == "p": zu[S_[i - 1]] = K_[j - 1]; i -= 1; j -= 1
+            if z == "p":
+                if K_[j - 1] not in zu.values(): zu[S_[i - 1]] = K_[j - 1]
+                i -= 1; j -= 1
             elif z == "s": i -= 1
             else: j -= 1
-    S, _ = _monoton(px_ + [(KN[n]["x"], k[0]) for n, k in zu.items()])
-    erlaubt = {round(a, 1) for a, _ in S}
-    zu = {n: k for n, k in zu.items() if round(KN[n]["x"], 1) in erlaubt}
+    # Längsabbildung der übrigen Knoten nur aus der monotonen Teilfolge (_abbildung); die Weichen selbst bleiben an ihrem
+    # Abzweig, auch wenn sie gleisübergreifend anders liegen als in OSM (V4e: Reihenfolge gilt je Gleis, s. oben)
     fx = _abbildung(px_ + [(KN[n]["x"], k[0]) for n, k in zu.items()])
     r1 = lambda v: round(float(v), 1)
     for n, v in KN.items():

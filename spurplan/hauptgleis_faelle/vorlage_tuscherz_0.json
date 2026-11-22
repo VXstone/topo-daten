@@ -1,0 +1,14 @@
+{
+ "_quelle": "V4e 22.11.2026, lokal aus Code (region_ne), Tüscherz, gedreht 0°",
+ "erwartet": [],
+ "nicht": [
+  {
+   "regel": "HT1",
+   "anlass": "Weichen-Zuordnung über alle Gleise sortiert: Anschlussweiche unten blieb ohne Partner"
+  },
+  {
+   "regel": "HT2",
+   "anlass": "dito, Spurwechsel oben"
+  }
+ ]
+}

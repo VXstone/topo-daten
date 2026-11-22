@@ -391,6 +391,7 @@ def _fahrwege(N, KN, GO, GP_, lage, gleise, pax_ways, knoten_pax, T, W, K):
     BEF = []
     # Enden in OSM: Abgänge (grün) und Knoten mit einem Ast an einem Hauptgleis
     ziele = {}                                         # name -> ((start, ziel) in OSM, plan-xy, art)
+    stuetz = {}                                        # Perrongleis -> Planlage aller seiner Knoten (V4e, mehrteilige Gleise)
     lat0 = next(iter(K.values()))[0] if K else 47.0
     richtung = {}
     ersatz, kuenstlich = _schnitte(N, KN, W, K)
@@ -445,6 +446,12 @@ def _fahrwege(N, KN, GO, GP_, lage, gleise, pax_ways, knoten_pax, T, W, K):
             xy += [(KN[n]["x"], KN[n]["y"]) for n in gl["knoten"] if KN.get(n, {}).get("x") is not None and KN.get(n, {}).get("y") is not None]
         # Lage: Gleisnummer-Schild im Plan (Netzmodell «nummern»), sonst Mitte der Knoten auf der Ebene des Gleisstücks
         schild = [(m["x"], m["y"]) for m in N.get("nummern", []) if str(m.get("text")) == nr]
+        # Mitten zwischen benachbarten Knoten (nicht die Knoten selbst: ein Knoten an einer Weiche liegt auf zwei Kanten)
+        mit = []
+        for gl in gls:
+            q = [(KN[n]["x"], KN[n]["y"]) for n in gl["knoten"] if KN.get(n, {}).get("x") is not None and KN.get(n, {}).get("y") is not None]
+            mit += [((a[0] + b[0]) / 2, (a[1] + b[1]) / 2) for a, b in zip(q, q[1:]) if math.dist(a, b) > 0.5]   # drehfest
+        if ks and mit: stuetz[f"Gl. {nr}"] = mit
         if ks and schild:
             ziele[f"Gl. {nr}"] = (_beide(ks), schild[0], "perron")
         elif ks and xy:
@@ -489,6 +496,23 @@ def _fahrwege(N, KN, GO, GP_, lage, gleise, pax_ways, knoten_pax, T, W, K):
         if not c: continue
         k = min(c, key=lambda k: lage[k].distance(p))
         if lage[k].distance(p) <= 14: plan_ziel[name] = _beide({k})
+    # V4e (22.11.2026): ein Gleis mit Nummer aus mehreren OSM-Stücken (Bevaix Gl. 652: Streckengleis bis zur Spurwechselweiche
+    # und ein 2-m-Stück dahinter) ist in OSM über JEDES Stück erreichbar, im Plan nur über die eine Kante am Schild bzw. an
+    # der Mitte -> HT5 «fehlt im Plan» ohne Fehler. Im Plan zählen darum alle grünen Kanten, auf denen die Mitte zwischen zwei
+    # benachbarten Knoten des Gleises liegt (≤ 3 px; Knoten selbst nicht – an einer Weiche lägen sie auf zwei Kanten).
+    for name, pts in stuetz.items():
+        if name not in plan_ziel or ziele[name][2] != "perron": continue
+        ks_ = set(plan_ziel[name][0]); x0_, y0_ = ziele[name][1]
+        def auf_linie(k):            # Kante liegt auf derselben Geraden wie das Ziel (drehfest; Chambrelien: Netzmodell-Ebene ≠ Zeichnung)
+            (ax_, ay_), (bx_, by_) = lage[k].coords[0], lage[k].coords[-1]
+            L_ = math.hypot(bx_ - ax_, by_ - ay_)
+            return L_ > 0.5 and abs((bx_ - ax_) * (y0_ - ay_) - (by_ - ay_) * (x0_ - ax_)) / L_ < 1.0
+        for (x, y) in pts:
+            p = Point(x, y); c = [pk[int(j)] for j in ptree.query(p.buffer(14))]
+            if not c: continue
+            k = min(c, key=lambda k: lage[k].distance(p))
+            if lage[k].distance(p) <= 3 and auf_linie(k): ks_ |= {(k, 0), (k, 1)}
+        plan_ziel[name] = (ks_, ks_)
     namen = sorted(n for n in ziele if n in plan_ziel)
     UO, UP = GO.uebergaenge(), GP_.uebergaenge()
     def paare(G, U, zu):

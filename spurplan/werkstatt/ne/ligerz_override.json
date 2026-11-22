@@ -181,7 +181,31 @@
    {
     "art": "doppelspurbeginn",
     "ende": "links",
-    "seite": "unten"
+    "seite": "oben",
+    "_osm": "OSM: durchgehend nach Biel ist das südliche Gleis, das nördliche mündet in Weiche 1676192646 ein (HT1, V4e 22.11.)"
+   },
+   {
+    "art": "linie",
+    "pts": [
+     [
+      312,
+      86
+     ],
+     [
+      319,
+      86
+     ],
+     [
+      332.9,
+      62
+     ],
+     [
+      372,
+      62
+     ]
+    ],
+    "punkt_ende": true,
+    "_osm": "Abstellgleis 184797820 (Prellbock 1946558963) ab Weiche 1676192637 am nördlichen Gleis, gleich am Planrand (HT1, V4e 22.11.)"
    }
   ],
   "_hinweis": "Daniel 15.10.: ohne Perron, kein Bahnhof mehr – nur der Übergang Doppelspur/Einspur"
