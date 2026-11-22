@@ -111,6 +111,7 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - [x] **V4b G0 grün + veröffentlichen** – 21.11. vormittags, Commit 16ca65c, Seite v160 (Nachtrag V4b)
 - [x] **V4c NE: HT-Befunde abbauen** – 21.11. (v161/v162)
 - [x] **V4e NE: HT-Rest** – 21./22.11. (v164–v170), alle NE-Pläne HT 0 bzw. Ausnahme Courtepin (Nachträge V4e Teil 1–5)
+- [ ] **V4f Neuchâtel im Regionalplan wie im Bahnhofplan** (Hinweis Daniel 22.11.: Ostkopf mit EKW 109 fehlt im Regionalplan NE; REGELN «Regionalplan wie Bahnhofplan», wie R4 Rothrist) – siehe Nachtrag 22.11. ~21:30
 - [ ] **V4d NE ruhig + Nebengleise kürzen** (mittel, REGELN 4.5/5.9): S-Kurven pjyb/vpkw/zlwn, W59-Kürzung nach Daniels Wahl – siehe V4d
 - [ ] **K0c Selnau parallel (REGELN 2.2, `r34_kette`)** (klein) – siehe Nachtrag 20.11. ~19:15; nach V3/V4, vor T-SZU1
 - [ ] **V5 ein Lauf für alle Regionen** / **V6 Netz West (Neuchâtel–Biel–Solothurn–Olten)** – danach – Zweisimmen (dünn→dick am Knick), Solothurn (Weiche am Knick, doppelter Abstand), Selnau (ZL ~4 Ebenen, nur auf Daniels Antwort); Liste `ergebnisse/seite/zwischengeraden.md` – vor oder nach T-SZU1, wie Daniel will
@@ -876,3 +877,11 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - Alle 135 Pläne alt/neu gemessen: nur Neuchâtel, Vauseyon (-> 0) und Solothurn HT5 15 -> 14; Basis HT und G0 (Neuchâtel GG 3 -> 1) gesenkt.
   Prüffälle `zeichnen_neuchatel` (HT1 nur 0°, Testaufbau), `neuchatel_vauseyon`. Fallstrick: erster seite-Lauf nach Push lief vor `plaene` -> rot, später grün.
 - Offen fürs Auge: Neuchâtel im Regionalplan NE ist noch die Werkstatt-Fassung (Fenster ohne Ostkopf) – REGELN 4.x «Regionalplan wie Bahnhofplan».
+
+### 22.11.2026 ~21:30 – Nachtrag V4e: EKW 109 mit Symbol, Seite v171 (Commit e1446b5, ergebnisse d457c93)
+- Daniel: «bräuchte ein EKW-Symbol, man sieht nicht, dass von Ins abgebogen werden kann» → `dkw_px` mit einer Klammer (Ins Ost ↔ Abstellgleis).
+  Messung: Symbol mit einer Klammer = EKW, nur geradeaus + diese Bogenfahrt (REGELN Kopf HT / 2.4); OSM-Bogenweiche mit 3 Armen zählt für VA2.
+  Alle 135 Pläne gemessen: nur Neuchâtel ändert (VA2 4 -> 0). HT 0, G0 grün.
+- Daniel: «der Teil fehlt im Regionalplan völlig» – stimmt: Region NE nutzt `werkstatt/ne/neuchatel_*` (Fenster ohne Ostkopf, eigener
+  Override), nicht den Bahnhofplan aus `plaene`. → neuer Schritt **V4f** (Fahrplan): Neuchâtel im Regionalplan aus dem Bahnhofplan
+  (wie Vauseyon als `repo_bahnhoefe`), Nachbarfenster Saint-Blaise/Serrières prüfen (T13), Zielbild Ostkopf mit EKW im Regionalplan.
