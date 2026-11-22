@@ -848,4 +848,4 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - Prüffälle vorlage_le_landeron/gorgier/riedbach (0/90°), vorlage_zihlbruecke_0 (90° scheitert am Testaufbau: Gleis-«y» wird nicht gedreht).
 - Regression: keine neue Zeile «schlechter?» (die 6 sind älter, bekannt); G0 unverändert. Abnahmen nicht neu exportiert (keine neuen seit V4e Teil 2).
 - Fallstrick: lokaler Lauf (region_olten_lauf) schreibt in werkstatt/ne – vor dem Commit zurücksetzen (Numerik lokal ≠ Workflow).
-
+- Nachtrag 12:15 (v168, ergebnisse 15c82c8): Riedbach Anschluss-T nach OSM (Daniel), Vorlage `gegen` (REGELN Kopf HT). Prüfstand-Lauf 738d349 rot (Prüffall riedbach_90), mit 6947437 behoben.
