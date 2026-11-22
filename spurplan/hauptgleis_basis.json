@@ -1,7 +1,7 @@
 {
  "_quelle": "hauptgleis.py (Schritt HT, REGELN 0.1 / Kopf «HT»); je Abschnitt Zählung je Plan und Regel",
  "_stand": {
-  "plaene": "Ausgangsstand 18.11.2026 (Seite v155, ergebnisse 644a346 + Lauf zu 2bd032b), lokal mit hauptgleis.py gerechnet · 21.11.2026 (V4b): 53 NE-Bahnhofspläne erstmals gemessen (seit V4 aus Code; vorher feste Oktober-Pläne ohne HT), Ausgangsstand aus seite-Lauf d89f8f7 (ergebnisse 422c1dc) · 21.11.2026 (V4c): 42 Typvorlage-Pläne NE neu gemessen, Netzmodell liegt jetzt auf dem gezeichneten Plan (vorlage.py, REGELN Kopf «HT») – Messartefakt HT1+HT2 weg; St-Blaise CFF und Serrières Spurwechsel auf die OSM-Seite, HT5 findet die Ziele (lokal = Workflow) · 21.11. nachmittags: F6 Gampelen (Daniel: kein Spurwechsel), Rosshäusern/Bern Brünnen/Grandson/St-Blaise Lac Vorlage nach OSM ergänzt, Schutzstumpen ab Ausrundung, Abgang an gezeichneter Weiche (Typvorlagen 51 -> 22) · 22.11.2026 (V4e Teil 2, Seite v165, ergebnisse 713dd2b): doppelter Spurwechsel mit Gerade dazwischen, Bevaix/Ligerz nach OSM, Weichenzuordnung je Gleis, HT5 mehrteilige Perrongleise – gesenkt: aarau, auvernier, avenches, bern_brunnen_westside, bevaix, colombier, daniken, dulliken, gorgier_saint_aubin, konolfingen, ligerz, mob__vernex, mob__zweisimmen, neuchatel_vauseyon, olten, solothurn, tuscherz"
+  "plaene": "Ausgangsstand 18.11.2026 (Seite v155, ergebnisse 644a346 + Lauf zu 2bd032b), lokal mit hauptgleis.py gerechnet · 21.11.2026 (V4b): 53 NE-Bahnhofspläne erstmals gemessen (seit V4 aus Code; vorher feste Oktober-Pläne ohne HT), Ausgangsstand aus seite-Lauf d89f8f7 (ergebnisse 422c1dc) · 21.11.2026 (V4c): 42 Typvorlage-Pläne NE neu gemessen, Netzmodell liegt jetzt auf dem gezeichneten Plan (vorlage.py, REGELN Kopf «HT») – Messartefakt HT1+HT2 weg; St-Blaise CFF und Serrières Spurwechsel auf die OSM-Seite, HT5 findet die Ziele (lokal = Workflow) · 21.11. nachmittags: F6 Gampelen (Daniel: kein Spurwechsel), Rosshäusern/Bern Brünnen/Grandson/St-Blaise Lac Vorlage nach OSM ergänzt, Schutzstumpen ab Ausrundung, Abgang an gezeichneter Weiche (Typvorlagen 51 -> 22) · 22.11.2026 (V4e Teil 2, Seite v165, ergebnisse 713dd2b): doppelter Spurwechsel mit Gerade dazwischen, Bevaix/Ligerz nach OSM, Weichenzuordnung je Gleis, HT5 mehrteilige Perrongleise – gesenkt: aarau, auvernier, avenches, bern_brunnen_westside, bevaix, colombier, daniken, dulliken, gorgier_saint_aubin, konolfingen, ligerz, mob__vernex, mob__zweisimmen, neuchatel_vauseyon, olten, solothurn, tuscherz · 22.11. Courtepin HT2 als Ausnahme (Daniel: Industriegleis in Betrieb, OSM-Lücke)"
  },
  "plaene": {
   "aarau": {
@@ -104,7 +104,7 @@
   },
   "courtepin": {
    "HT1": 0,
-   "HT2": 1,
+   "HT2": 0,
    "HT3": 0,
    "HT4": 0,
    "HT5": 0

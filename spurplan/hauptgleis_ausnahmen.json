@@ -1,0 +1,7 @@
+{
+ "_zweck": "Ausnahmen zur Sperre HT (REGELN 6 «HT-Ausnahmen»): je Plan Befunde, die Daniel als richtig bestätigt hat (OSM unvollständig). Nur auf Daniels Entscheid eintragen. Treffer = gleiche Regel, Lage ≤ 15 px; sie werden nicht gezählt, aber im Bericht als «Ausnahme» gezeigt.",
+ "courtepin": [
+  {"regel": "HT2", "x": 500.0, "y": 110.0, "osm": "Way 705109983 (siding, industrial)",
+   "grund": "Industriegleis nördlich, rechts Richtung Courtepin abzweigend: in Betrieb (Satellitenbild, Daniel 22.11.2026); in OSM endet es 1 m neben dem Streckengleis ohne gemeinsamen Knoten"}
+ ]
+}

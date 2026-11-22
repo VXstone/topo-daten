@@ -357,8 +357,8 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - **Stand 22.11. früh (v165):** erledigt Ligerz, Tüscherz HT1/HT2, Bern Brünnen, Auvernier, Colombier-HT5, Typvorlagen-Spurwechselpaare.
   **Rest NE (Seite v165):** Typvorlagen – Bevaix HT5 1 (Abgang Neuchâtel = Spurwechselweiche, Messung: Gl. 662 zwischen Weiche und Abgang),
   Gorgier HT2 1/HT5 2 (Gleisring Anschluss, Linien 512/513), Riedbach HT2 1/HT5 2, Tüscherz/Grandson/Riedbach je HT5 «künstlicher Schnitt»
-  am Planrand, Le Landeron HT5 1, Zihlbrücke HT5 2, **Courtepin HT2 1 = OSM-Fehler?** (Industriegleis 705109983 hat in OSM keinen
-  gemeinsamen Knoten mit der Strecke; Daniel 22.11.: das westliche Gleis ist nicht mehr angeschlossen (OSM-Spur 705109982/362102323, nicht gezeichnet – stimmt), das nördliche rechts (Richtung Courtepin) schon → Plan richtig, OSM-Lücke 1 m am Südende; offen: OSM korrigieren oder Ausnahme, REGELN 6). Nicht-Vorlagen – Chambrelien HT1 1
+  am Planrand, Le Landeron HT5 1, Zihlbrücke HT5 2, **Courtepin HT2 erledigt** (Industriegleis 705109983 hat in OSM keinen
+  gemeinsamen Knoten mit der Strecke; Daniel 22.11.: das westliche Gleis ist nicht mehr angeschlossen (OSM-Spur 705109982/362102323, nicht gezeichnet – stimmt), das nördliche rechts (Richtung Courtepin) schon → Plan richtig, OSM-Lücke 1 m am Südende; Daniel 22.11.: Ausnahme, genutzte Anlage laut Satellitenbild → REGELN 6 «HT-Ausnahmen»). Nicht-Vorlagen – Chambrelien HT1 1
   (OSM-DKW 393419061 im Plan als zwei Weichen), Onnens HT1 1 (Spurwechsel 184779526), Colombier HT3 3, Cornaux 7, Travers 5, Bôle 3,
   Neuchâtel 19, Vauseyon 4, Murten 2.
 - Liste oben unter V4c «Rest». F6 (Gampelen) erledigt; dann je Plan OSM ansehen, Vorlage/Override nach OSM (REGELN 0.1),

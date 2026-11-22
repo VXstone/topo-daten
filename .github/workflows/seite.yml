@@ -9,7 +9,7 @@ on:
       label: { description: "Label des Regionalplans Olten", required: false, default: "Region Olten" }
   push:
     branches: [main]
-    paths: ["spurplan/code/bahnhofregister.py", "spurplan/netz/veraltet_basis.json", "spurplan/netz/osm_ausnahmen.json", "spurplan/werkstatt/**", "spurplan/hinweise.json", "spurplan/hinweise_offen.json", "spurplan/code/osm_abgleich.py", "spurplan/code/hinweis_abdeckung.py", "spurplan/code/ausschnitte.py", "spurplan/code/alle_plaene_pruefen.py", "spurplan/abnahmen.json", "spurplan/code/grundpruefung.py", "spurplan/grundpruefung_basis.json", "spurplan/grundpruefung_faelle/**", "spurplan/code/hauptgleis.py", "spurplan/hauptgleis_basis.json", "spurplan/hauptgleis_faelle/**"]
+    paths: ["spurplan/code/bahnhofregister.py", "spurplan/netz/veraltet_basis.json", "spurplan/netz/osm_ausnahmen.json", "spurplan/werkstatt/**", "spurplan/hinweise.json", "spurplan/hinweise_offen.json", "spurplan/code/osm_abgleich.py", "spurplan/code/hinweis_abdeckung.py", "spurplan/code/ausschnitte.py", "spurplan/code/alle_plaene_pruefen.py", "spurplan/abnahmen.json", "spurplan/code/grundpruefung.py", "spurplan/grundpruefung_basis.json", "spurplan/grundpruefung_faelle/**", "spurplan/code/hauptgleis.py", "spurplan/hauptgleis_basis.json", "spurplan/hauptgleis_ausnahmen.json", "spurplan/hauptgleis_faelle/**"]
   workflow_run:
     workflows: ["regionen", "plaene", "pruefstand"]
     types: [completed]

@@ -556,6 +556,17 @@ def _netz_datei(netz_dir, key):
     return None
 
 
+AUSNAHMEN = os.path.join(os.path.dirname(HERE), "hauptgleis_ausnahmen.json")
+def _ausnahmen(key, R, pfad=AUSNAHMEN):
+    """REGELN 6 «HT-Ausnahmen» (22.11.2026, Courtepin): von Daniel bestätigte Befunde (OSM unvollständig) zählen nicht;
+    sie bleiben im Bericht mit regel «_ausnahme» und Grund. Treffer: gleiche Regel, Lage ≤ 15 px."""
+    A = json.load(open(pfad)).get(key, []) if os.path.exists(pfad) else []
+    for a in A:
+        for x in R["befunde"]:
+            if x["regel"] == a["regel"] and math.dist((x["x"], x["y"]), (a["x"], a["y"])) <= 15:
+                R["zaehl"][x["regel"]] -= 1; x["ausnahme_von"] = x["regel"]; x["regel"] = "_ausnahme"; x["grund"] = a["grund"]; break
+
+
 def alle(plaene, netz_dir, osm, out, basis=None, basis_setzen=False, abschnitt="plaene", rekursiv=False):
     os.makedirs(out, exist_ok=True); O = osm_laden(osm); tab = {}
     muster = os.path.join(plaene, "**", "*.svg") if rekursiv else os.path.join(plaene, "*.svg")
@@ -568,6 +579,7 @@ def alle(plaene, netz_dir, osm, out, basis=None, basis_setzen=False, abschnitt="
         try: R = pruefen(open(f).read(), json.load(open(nf)), O)
         except Exception as e:
             print(f"FEHLER {key}: {e}", file=sys.stderr); tab[key] = dict(fehler=str(e)[:200]); continue
+        _ausnahmen(key, R)
         json.dump(R, open(os.path.join(out, key + ".json"), "w"), ensure_ascii=False, indent=1)
         tab[key] = dict(R["zaehl"])
         print(f"{key:<38} " + " ".join(f"{r} {R['zaehl'][r]}" for r in REGELN))
@@ -588,6 +600,11 @@ def alle(plaene, netz_dir, osm, out, basis=None, basis_setzen=False, abschnitt="
         cell = lambda r: (f"**{z[r]}** (Basis {b.get(r, 0)})" if z[r] > b.get(r, 0) else (f"{z[r]} ↓{b.get(r, 0)}" if z[r] < b.get(r, 0) else str(z[r]) if z[r] else "·"))
         L.append(f"| {key} | " + " | ".join(cell(r) for r in REGELN) + f" | {sum(z[r] for r in REGELN)} |")
     L += ["", "Regeln: " + "; ".join(f"{r} = {TEXT[r]}" for r in REGELN)]
+    _A = json.load(open(AUSNAHMEN)) if os.path.exists(AUSNAHMEN) else {}
+    _A = {k: v for k, v in _A.items() if not k.startswith("_") and k in tab}
+    if _A:
+        L += ["", "## Ausnahmen (REGELN 6, `spurplan/hauptgleis_ausnahmen.json`, nicht gezählt)", ""]
+        L += [f"- **{k}** {a['regel']} {a['x']}/{a['y']}: {a['grund']}" for k, v in sorted(_A.items()) for a in v]
     if neu:
         L += ["", "## NEUE Befunde", ""]
         for key, r, b, n in neu:

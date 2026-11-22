@@ -234,7 +234,9 @@ Galmiz Perron südlich / Kreuzungsgleis grün, Rothrist Detailvariante (E11), Ke
 («aus Code <Commit> <Datum>» / «fest seit <Datum>»; Referenzen Thun/Ins/Murten/Kerzers seit 20.11. ehrlich «fest seit», sie sind
 Dateien). **OSM-Ausnahmen** (seit 20.11., VR): ein Befund der Karte «OSM-Verdacht», den Daniel als richtig bestätigt
 («B Ausnahme»), steht als `"<Code>:<Abk>": "<Entscheid, Datum>"` in `spurplan/netz/osm_ausnahmen.json` und wird nicht mehr
-gemeldet; «A OSM korrigieren» heisst: in OSM beheben, nicht im Code umgehen.
+gemeldet; «A OSM korrigieren» heisst: in OSM beheben, nicht im Code umgehen. **HT-Ausnahmen** (seit 22.11., Courtepin): ein HT-Befund, den
+Daniel als richtig bestätigt (Anlage real so, OSM unvollständig – z. B. Satellitenbild), steht in `spurplan/hauptgleis_ausnahmen.json`
+(Plan, Regel, Lage, Grund); `hauptgleis.py` zählt ihn nicht mehr, zeigt ihn aber im Bericht als «Ausnahme». Eintrag nur auf Daniels Entscheid.
 
 ---
 
