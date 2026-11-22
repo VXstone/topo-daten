@@ -361,6 +361,13 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   gemeinsamen Knoten mit der Strecke; Daniel 22.11.: das westliche Gleis ist nicht mehr angeschlossen (OSM-Spur 705109982/362102323, nicht gezeichnet – stimmt), das nördliche rechts (Richtung Courtepin) schon → Plan richtig, OSM-Lücke 1 m am Südende; Daniel 22.11.: Ausnahme, genutzte Anlage laut Satellitenbild → REGELN 6 «HT-Ausnahmen»). Nicht-Vorlagen – Chambrelien HT1 1
   (OSM-DKW 393419061 im Plan als zwei Weichen), Onnens HT1 1 (Spurwechsel 184779526), Colombier HT3 3, Cornaux 7, Travers 5, Bôle 3,
   Neuchâtel 19, Vauseyon 4, Murten 2.
+- **Stand 22.11. vormittags (v167):** Typvorlagen NE alle HT 0 (Le Landeron, Gorgier, Riedbach, Grandson, Tüscherz, Bevaix, Zihlbrücke;
+  Courtepin = Ausnahme). **Rest = nur noch Pläne mit «zeichnen»-Override** (Hand-Linien, die das Netzmodell nicht kennt → HT misst die
+  Lage des Laufs): Chambrelien HT1 1/HT5 1, Onnens HT1 1, Colombier HT3 3, Cornaux 7, Travers 5, Bôle 3, Murten 2; dazu Neuchâtel 19 und
+  Vauseyon 4 (eigener Bau). Vorschlag nächster Schritt: wie `vorlage.netz_mitschreiben` ein Netzmodell auf die zeichnen-Linien legen
+  (OSM-Weichen an die gezeichneten Abzweige, Zusatz `weichen` erlaubt), dann je Plan echte Fehler von Messartefakten trennen.
+  Offene Frage Riedbach (Anschluss-T): OSM zweigt vom Streckengleis Richtung Kerzers/Gümmenen ab, Zurücksetzen Richtung Bern – Plan
+  (Daniel 20.10.) umgekehrt. Daniel fragen, bevor geändert wird.
 - Liste oben unter V4c «Rest». F6 (Gampelen) erledigt; dann je Plan OSM ansehen, Vorlage/Override nach OSM (REGELN 0.1),
   Vorher/Nachher an Daniel wie St-Blaise CFF. Fertig: NE-Pläne HT 0 oder als OSM-Ausnahme begründet.
 
@@ -829,3 +836,15 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   Prüffälle `vorlage_bern_brunnen`, `vorlage_tuscherz`. HT gesamt HT1 48→46, HT2 74→73, HT5 296→271, Basis gesenkt (17 Pläne). G0 unverändert, Abnahmen 69.
 - Regression: geänderte Zeilen alle erklärt (SW_GAP, Ligerz-Override, Messung); region_ne G2 43→36, Ligerz und Riedbach im Regionalplan.
 - Lokal ≠ Workflow: Ins HT5 2 nur lokal (Lage-Numerik), Workflow 0. Werkzeuge: OSM-Skizze längs Fensterachse war hilfreich (nicht im Repo).
+
+### 22.11.2026 ~10:20 – Schritt V4e Teil 3, Seite v167 (Commits 0037b08, 4cf5457; ergebnisse 9fb85fd)
+- NE-Typvorlagen HT 0 (Basis gesenkt: bevaix, gorgier, grandson, le_landeron, riedbach, tuscherz, zihlbruecke). HT gesamt 40 → 33 Pläne > 0.
+- Messung (REGELN Kopf HT): Abgang ohne `aus_ll` bekommt die Richtung vom Plan-Schwerpunkt weg (Le Landeron/Gorgier/Riedbach: Spurwechsel
+  am Rand galt als Fahrweg). vorlage.netz_mitschreiben: Knotenfolge je Gleis (Gorgier 512, Bevaix 662), künstliche Schnitte des Laufs auflösen
+  (Grandson/Riedbach/Tüscherz), Zusätze `weichen` (Gorgier Ring, Tüscherz, Zihlbrücke) und `abgaenge_knoten` (Zihlbrücke). Pläne byte-gleich.
+- Sichtbar: Zihlbrücke Doppelspurbeginn Ins nach OSM oben (Gl. 234 nach Norden). Regionalplan zeigte eine veraltete Oktober-Datei
+  «zihlbrucke» (Umlaut-Slug) → netz_lage sucht ae/oe/ue zuerst (REGELN 4.11); Treppe Zihlbrücke–Gampelen weg.
+- Prüffälle vorlage_le_landeron/gorgier/riedbach (0/90°), vorlage_zihlbruecke_0 (90° scheitert am Testaufbau: Gleis-«y» wird nicht gedreht).
+- Regression: keine neue Zeile «schlechter?» (die 6 sind älter, bekannt); G0 unverändert. Abnahmen nicht neu exportiert (keine neuen seit V4e Teil 2).
+- Fallstrick: lokaler Lauf (region_olten_lauf) schreibt in werkstatt/ne – vor dem Commit zurücksetzen (Numerik lokal ≠ Workflow).
+
