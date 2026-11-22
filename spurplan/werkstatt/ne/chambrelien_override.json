@@ -179,7 +179,7 @@
       "y:158"
      ],
      [
-      "x:640",
+      "x:652",
       "y:158"
      ]
     ],
@@ -234,22 +234,22 @@
       "y:110"
      ],
      [
-      "x:623.7",
+      "x:640",
       "y:110"
      ]
     ],
     "pax": false,
-    "_osm": "Gleis 3 (yard): eine gerade Schräge ab Gleis 1, Gleis 2 zweigt daraus ab (Hinweis 20.10.: Weichen verbunden, Rundung)",
+    "_osm": "Gleis 3 (yard): eine gerade Schräge ab Gleis 1, Gleis 2 zweigt daraus ab (Hinweis 20.10.: Weichen verbunden, Rundung) · 22.11.: endet an der Weiche 393419063 (vorher 12 px davor, nicht angeschlossen)",
     "rund": 7
    },
    {
     "pts": [
      [
-      "x:636",
+      "x:640",
       "y:110"
      ],
      [
-      "x:640",
+      "x:652",
       "y:110"
      ]
     ],
@@ -282,11 +282,11 @@
    {
     "pts": [
      [
-      "x:584",
+      "x:598",
       "y:158"
      ],
      [
-      "x:596",
+      "x:604",
       "y:158"
      ],
      [
@@ -294,15 +294,38 @@
       "y:110"
      ],
      [
-      "+13",
+      "x:640",
       "y:110"
      ]
     ],
-    "_osm": "679284116 Verbindung zur 224",
+    "_osm": "679284116 Verbindung zur 224 · 22.11. (V4e): beginnt nach der Einmündung von Gleis 2 (vorher am selben Punkt = V, im Plan nicht befahrbar), endet an der Weiche zu Gleis 3",
     "rund": 16
    }
   ],
-  "_kurz": "18.10.: Planende rechts bei x 665 statt 835 – im Regionalplan knicken die Äste direkt nach dem Bahnhof"
+  "_kurz": "18.10.: Planende rechts bei x 665 statt 835 – im Regionalplan knicken die Äste direkt nach dem Bahnhof",
+  "weichen": [
+   [
+    393419063,
+    640.0,
+    110.0
+   ],
+   [
+    393990650,
+    384.0,
+    158.0
+   ],
+   [
+    418915470,
+    402.9,
+    146.0
+   ],
+   [
+    393419061,
+    593.5,
+    158.0
+   ]
+  ],
+  "_weichen": "V4e 22.11.: OSM-Weichen an die Hand-Linien (DKW 393419061 als Weichenpaar 588.9/598 gezeichnet)"
  },
  "platforms": [],
  "perrons_px": [

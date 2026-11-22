@@ -52,7 +52,12 @@ vor ihr; Gorgier Gl. 512, Bevaix Gl. 662); ein künstlicher Knoten, an dem der L
 führte, wird aufgelöst (OSM ohne Verbindung; Grandson, Riedbach, Tüscherz). Wo die Ebene des Laufs nicht zur Vorlage passt,
 legt der Zusatz `weichen: [[osm, x, y]]` die OSM-Weiche an den gezeichneten Abzweig (Gorgier Anschlussring, Tüscherz,
 Zihlbrücke), `abgaenge_knoten` die OSM-Knoten der Abgänge je Seite (Zihlbrücke: Lauf kannte nur einen Abgang Ins). Anschluss `gegen` (innen, läuft aber nach aussen; T-Stumpen zum Bahnhof = Zurücksetzen): Riedbach, Daniel 22.11.
-Prüffälle `vorlage_le_landeron`, `vorlage_gorgier_saint_aubin`, `vorlage_riedbach`, `vorlage_zihlbruecke_0`.
+Prüffälle `vorlage_le_landeron`, `vorlage_gorgier_saint_aubin`, `vorlage_riedbach`, `vorlage_zihlbruecke_0`. **Hand-Linien (`zeichnen`, seit 22.11.):** `vorlage.py --weichen` legt auch dort das Netzmodell auf die Zeichnung
+(`zeichnen.weichen: [[osm, x, y]]`) und ergänzt OSM-Verbindungen zwischen zwei Weichen, deren Ways die Hand-Linie ersetzt
+(`weglassen`/`zeichnen.weg`; Cornaux, Travers). Messung: ein Ast mit geradem Vorstück auf dem Gleis ist ein Abzweig (Richtung
+auf 30 px, Onnens); Abzweige < 7,5 px zusammen; Teilungspunkte der Plan-Linien aus allen Berührpunkten, kurze Verbindungsstücke
+sind kein Doppel (Murten); Gleisziel = Gleismitte; OSM-DKW als Weichenpaar gezeichnet ist kein VB2 (Chambrelien, HT5 prüft die
+Fahrwege). Prüffälle `zeichnen_chambrelien`, `zeichnen_murten`, `zeichnen_cornaux`, `zeichnen_onnens_bonvillars`.
 
 **Bahnhofregister und Sperre «veraltet» (VR, seit 20.11., Entscheid D. Eckenstein «Regionen harmonisieren, OSM-Fehler
 erkennen»).** Jeder Bahnhof steht **einmal** im Register `spurplan/netz/bahnhoefe.json` (Schlüssel **SBB-Abkürzung**, dazu

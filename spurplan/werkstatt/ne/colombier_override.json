@@ -229,7 +229,25 @@
     "punkt_anfang": true,
     "_osm": "Abstellgleis 706"
    }
-  ]
+  ],
+  "weichen": [
+   [
+    628087128,
+    734.6,
+    134.0
+   ],
+   [
+    628087130,
+    816.4,
+    158.0
+   ],
+   [
+    433556101,
+    833.6,
+    158.0
+   ]
+  ],
+  "_weichen": "V4e 22.11.: OSM-Weichen an die Hand-Linien (Zufahrt Gl. 1 über 507897671/507897670, 721 West, 706 Ost)"
  },
  "platforms": [],
  "perrons_px": [

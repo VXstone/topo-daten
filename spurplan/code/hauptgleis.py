@@ -223,10 +223,15 @@ def plan_graph(gleise, luecken, boegen):
         else: knoten.append([p.x, p.y])
     KP = [Point(k) for k in knoten]
     ktree = STRtree(KP)
+    # V4e (22.11.2026, Murten): Teilungspunkte aus den ursprünglichen Berührpunkten, nicht nur aus dem zusammengefassten
+    # Knoten (zwei Berührungen 5 px auseinander -> ein Knoten am einen Punkt; die Linie durch den anderen wurde nicht geteilt,
+    # Gl. 2 hing nicht an Gl. 1)
+    PO = [p for p in pts if not gap(p)]; potree = STRtree(PO) if PO else None
     G = Graph(); lage = {}                               # kante -> (linie, LineString)
     for li, g in enumerate(Gs):
         L = g.length
         ts = sorted({0.0, L} | {g.project(KP[int(j)]) for j in ktree.query(g.buffer(1.5)) if g.distance(KP[int(j)]) < 1.5 and int(j) >= len(dkw)}
+                    | ({g.project(PO[int(j)]) for j in potree.query(g.buffer(1.5)) if g.distance(PO[int(j)]) < 1.5} if potree else set())
                     | {g.project(KP[j]) for j in range(len(dkw)) if g.distance(KP[j]) < 4})
         ts2 = [ts[0]]
         for t in ts[1:]:
@@ -377,7 +382,15 @@ def _beide(ks):
 
 def _ohne_doppel(gleise):
     G = [g["geo"] for g in gleise]; tree = STRtree(G); weg = set()
+    # V4e (22.11.2026, Murten Gl. 1): ein kurzes gerades Verbindungsstück zwischen zwei Gleisstücken (beide Enden sind Enden
+    # anderer Stücke) ist kein Doppel, auch wenn eine abzweigende Kurve dort fast deckungsgleich beginnt
+    from shapely.geometry import Point as _P
+    enden = [(_P(g.coords[0]), _P(g.coords[-1])) for g in G]
+    def verbinder(i):
+        if G[i].length > 12: return False
+        return all(any(k != i and min(e.distance(a), e.distance(b)) < 0.6 for k, (a, b) in enumerate(enden)) for e in enden[i])
     for i, g in enumerate(G):
+        if verbinder(i): continue
         for j in tree.query(g.buffer(1.0)):
             j = int(j)
             if j == i or j in weg: continue
@@ -464,7 +477,8 @@ def _fahrwege(N, KN, GO, GP_, lage, gleise, pax_ways, knoten_pax, T, W, K):
             ebene = collections.Counter(gl.get("y") for gl in gls if gl.get("y") is not None).most_common(1)
             yy = ebene[0][0] if ebene else collections.Counter(p[1] for p in xy).most_common(1)[0][0]
             xs = sorted(p[0] for p in xy if abs(p[1] - yy) < 1) or sorted(p[0] for p in xy)
-            ziele[f"Gl. {nr}"] = (_beide(ks), (xs[len(xs) // 2], yy), "perron")
+            # Mitte des Gleises, nicht Median der Knoten (Murten Gl. 13: zwei Knoten -> der Median war die Weiche am Ende)
+            ziele[f"Gl. {nr}"] = (_beide(ks), ((xs[0] + xs[-1]) / 2 if len(xs) % 2 == 0 else xs[len(xs) // 2], yy), "perron")
     if len(ziele) < 2 or not GP_.kanten: return BEF
     # Lage im gezeichneten Plan. Enden (Abgänge, Gleisenden) -> Enden der grünen Linien im Plan, eins zu eins (Ungarische
     # Methode, Abstand zur Netzmodell-Lage; der Plan zeichnet Abgänge oft schräg weg, Aarburg-Oftringen 451 Rothrist), danach

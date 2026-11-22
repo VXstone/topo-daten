@@ -132,16 +132,24 @@ def plan_knoten(gleise, luecken):
         idx = [int(j) for j in tree.query(p.buffer(1.2)) if G[int(j)].distance(p) < 1.2]
         if len(idx) < 2: continue
         R = _verschieden([r for j in idx for r in _richtung(G[j], p)])
+        # V4e (22.11.2026, Onnens): ein Ast beginnt auf dem Gleis und läuft erst ein Stück darauf, bevor er abbiegt (gerades
+        # Vorstück + Ausrundung): auf 15 px nur zwei Richtungen – mit 30 px gemessen, wenn ein Gleis hier anfängt
+        if len(R) == 2 and any(min(Point(G[j].coords[0]).distance(p), Point(G[j].coords[-1]).distance(p)) < 1.2 for j in idx):
+            R2 = _verschieden([r for j in idx for r in _richtung(G[j], p, 30.0)])
+            if len(R2) >= 3: R = R2; vorstueck = True
+            else: vorstueck = False
+        else: vorstueck = False
         if len(R) >= 3:
             art = "X" if len(R) >= 4 and all(G[j].project(p) > 1.5 and G[j].project(p) < G[j].length - 1.5 for j in idx) else "W"
-            out.append([p.x, p.y, art, set(idx), len(R)])
+            out.append([p.x, p.y, art, set(idx), len(R), vorstueck])
     # ein Abzweig im Plan liefert oft zwei Punkte (Teilpfad endet an der Weiche, Ast beginnt 2–5 px daneben): 6 px zusammen
+    # Abzweige mit geradem Vorstück (V4e) gehören zum Abzweig am Ende des Vorstücks (bis 12 px)
     zus = []
-    for o in out:
+    for o in sorted(out, key=lambda o: o[5]):
         for z in zus:
-            if math.hypot(z[0] - o[0], z[1] - o[1]) < 6: z[3] |= o[3]; z[4] = max(z[4], o[4]); break
+            if math.hypot(z[0] - o[0], z[1] - o[1]) < (12 if (o[5] or z[5]) else 7.5): z[3] |= o[3]; z[4] = max(z[4], o[4]); break
         else: zus.append(o)
-    return [tuple(z) for z in zus]
+    return [tuple(z[:5]) for z in zus]
 
 
 _ARME = {}
@@ -322,6 +330,10 @@ def abgleich(svg_text, N, TAGS, WAYN):
         n0 = zu_plan.get(i)
         if n0 is None:
             if any(math.hypot(c[0] - x, c[1] - y) < R_DKW for c in dkw_plan): continue
+            # V4e (22.11.2026, Chambrelien): OSM-DKW als Weichenpaar gezeichnet (zwei Abzweige dicht nacheinander, gleiche
+            # Fahrmöglichkeiten) – zweiter Abzweig ist kein VB2; die Fahrwege prüft HT5
+            if any("slip" in swt(n_) and math.hypot(v_["x"] - x, v_["y"] - y) < R_DKW for n_, v_ in KN.items()
+                   if v_.get("x") is not None and v_.get("y") is not None): continue
             bef("VB2", x, y, f"Gleise {'kreuzen' if art == 'X' else 'berühren'} sich ({nr} Richtungen), in OSM keine Weiche/Kreuzung",
                 ways=sorted({w for j in idx for w in g_ways.get(j, ())}), farben=sorted({gleise[j]["farbe"] for j in idx}))
             continue

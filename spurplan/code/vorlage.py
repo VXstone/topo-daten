@@ -592,6 +592,43 @@ def netz_mitschreiben(key, full, P):
     return None if len(zu) == sw_alle else f"Netzmodell: {len(zu)} von {sw_alle} OSM-Weichen einem Abzweig der Vorlage zugeordnet"
 
 
+def weichen_festlegen(key):
+    """V4e (22.11.2026, Chambrelien): Pläne mit Hand-Linien («zeichnen» im Override) – das Netzmodell kennt die Lage der dort
+    gezeichneten Weichen nicht (HT1/HT2 als Messartefakt). «zeichnen.weichen»: [[osm, x, y]] legt sie an den gezeichneten
+    Abzweig; Ways in «zeichnen.weg» behalten sonst ihre Lage aus dem Lauf."""
+    ov = json.load(open(f"{key}_override.json")); W_ = (ov.get("zeichnen") or {}).get("weichen") or []
+    fn = f"{key}_netz.json"
+    if not ov.get("zeichnen") or not os.path.exists(fn): return None
+    N = json.load(open(fn)); n_ = 0
+    for o, x, y in W_:
+        v = N["knoten"].get(str(int(o)))
+        if v is not None: v["x"], v["y"] = round(float(x), 1), round(float(y), 1); n_ += 1
+    # OSM-Verbindungen zwischen zwei Weichen des Netzmodells, die der Lauf nicht zeichnet, weil die Hand-Linie sie ersetzt
+    # (Cornaux: Spurwechsel 49776111 «weglassen» + von Hand) – sonst fehlt der Fahrweg auf der OSM-Seite (HT5 «im Plan, nicht in OSM»)
+    KN = {int(k): v for k, v in N["knoten"].items()}
+    N["gleise"] = [g for g in N["gleise"] if not g.get("vorlage_verbindung")]
+    zusatz, LL = _verbindungen(key, N, {n for n, v in KN.items() if v.get("typ") == "switch"})
+    ersetzt = set(ov.get("weglassen") or []) | set((ov.get("zeichnen") or {}).get("weg") or [])
+    zusatz = [z for z in zusatz if set(z[1]) <= ersetzt]          # nur Ways, die eine Hand-Linie ersetzt
+    r1 = lambda v: round(float(v), 1)
+    for kette, ways, tags in zusatz:
+        a, b = KN[kette[0]], KN[kette[-1]]
+        if None in (a.get("x"), a.get("y"), b.get("x"), b.get("y")): continue
+        for i, n in enumerate(kette[1:-1], 1):
+            if n in KN: continue
+            t = i / (len(kette) - 1)
+            KN[n] = dict(lat=(LL.get(n) or (None, None))[0], lon=(LL.get(n) or (None, None))[1], x=r1(a["x"] + t * (b["x"] - a["x"])), y=r1(a["y"] + t * (b["y"] - a["y"])), typ=None)
+        for w in ways:
+            kn = [n for n in kette if n in ways[w]]
+            N["gleise"].append(dict(id=f"v{w}", way=w, knoten=kn, ebene=None, y=None, pax=not tags[w].get("service"),
+                                    service=tags[w].get("service"), usage=tags[w].get("usage"), ref=tags[w].get("ref"),
+                                    gleis=tags[w].get("railway:track_ref"), spur=tags[w].get("gauge"), stillgelegt=False,
+                                    vorlage_verbindung=True))
+    N["knoten"] = {str(n): v for n, v in KN.items()}
+    json.dump(N, open(fn, "w"), ensure_ascii=False, indent=0)
+    print(key, f"Netzmodell: {n_} von {len(W_)} Weichen an die Hand-Linien gelegt, {len(zusatz)} OSM-Verbindungen ergänzt")
+
+
 def run(key):
     ov = json.load(open(f"{key}_override.json"))
     V = ov.get("vorlage")
@@ -684,4 +721,7 @@ def blaupause2(out):
 if __name__ == "__main__":
     if sys.argv[1:2] == ["--blaupause2"]: blaupause2(sys.argv[2] if len(sys.argv) > 2 else "blaupause2.svg")
     else:
-        for k in sys.argv[1:]: run(k)
+        if sys.argv[1:2] == ["--weichen"]:
+            for k in sys.argv[2:]: weichen_festlegen(k)
+        else:
+            for k in sys.argv[1:]: run(k)
