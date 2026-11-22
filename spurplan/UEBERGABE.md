@@ -19,7 +19,8 @@ Wird Abschnitt 6 länger als ~60 Zeilen, die ältesten Nachträge ins Archiv ver
   Schreibrecht anhängen (`add_repo`, access push) und `git clone --depth 1`; (2) Feedback-Seite: ArtifactData `list` der
   Sammlungen `feedback` und `abnahme` mit `out_dir`; (3) die erste Schreibfreigabe der Datenbank früh holen, z. B. eine offene
   Antwort des Schritts gleich schreiben. Veröffentlichen fragt erst am Ende – Daniel sagen, wann es so weit ist.
-- **Ein Chat je Schritt**, Einstieg = Satz in Anführungszeichen. Nacheinander, nie parallel (alle ändern denselben Code).
+- **Ein Chat je Schritt**, Einstieg = Satz in Anführungszeichen. **Am Ende jedes Berichts den Einstieg für den nächsten Chat als
+  Code-Block zum Kopieren** (Daniel 22.11.). Nacheinander, nie parallel (alle ändern denselben Code).
 - **Nutzung sparen:** UEBERGABE nur abschnittsweise lesen; Feedback-Seite nie ganz öffnen (1,8 MB) – Hinweise/Abnahmen mit
   ArtifactData `list` + `out_dir` als Dateien holen und mit Python filtern; Rechenläufe im Workflow statt lokal, Bilder nur als
   Ausschnitt rendern; Zahlen/Tabellen lesen statt ganze SVG.
