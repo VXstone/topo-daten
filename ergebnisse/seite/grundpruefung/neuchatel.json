@@ -1,7 +1,7 @@
 {
  "ebene": 24.0,
  "zaehl": {
-  "GS": 1,
+  "GS": 0,
   "GG": 1,
   "GQ": 0,
   "GP": 0,
@@ -9,12 +9,6 @@
   "GT": 1
  },
  "befunde": [
-  {
-   "regel": "GS",
-   "x": 1390.1,
-   "y": 254.0,
-   "text": "Gleise kreuzen sich (60°) ohne DKW, Kreuzung oder Niveautrennung"
-  },
   {
    "regel": "GG",
    "x": 898.9,

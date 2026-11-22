@@ -101,7 +101,7 @@
 | muntelier_lowenberg | · | · | · | · | · | · | 24.0 |
 | muntschemier | · | · | · | · | · | · | 24.0 |
 | murten | · | · | · | · | · | · | 24.0 |
-| neuchatel | **1** (Basis 0) | 1 ↓3 | · | · | · | 1 | 24.0 |
+| neuchatel | · | 1 | · | · | · | 1 | 24.0 |
 | neuchatel_vauseyon | · | · | · | · | · | · | 24.0 |
 | noiraigue | · | · | · | · | · | · | 24.0 |
 | olten | 1 | 13 | 1 | 1 | · | 4 | 24.0 |
@@ -152,8 +152,3 @@
 | zofingen | · | 1 | · | · | · | · | 24.0 |
 
 Regeln: GS = Schnitt ohne DKW/Kreuzung/Niveautrennung; GG = Gleis auf Gleis; GQ = Querabstand nach Knick ≠ davor; GP = Pfeil nach innen / auf Nachbargleis; GW = Knick oder Abgang 90°; GT = Treppe
-
-## NEUE Befunde
-
-- **neuchatel** GS: 0 → 1
-  - 1390.1/254.0: Gleise kreuzen sich (60°) ohne DKW, Kreuzung oder Niveautrennung
