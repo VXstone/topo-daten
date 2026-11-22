@@ -826,6 +826,6 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   (doppelspurbeginn oben: `ys.insert(0)` verschob die Indizes, Schräge fehlte) behoben.
 - vorlage.netz_mitschreiben: Weichen je Gleis reihenfolgetreu (Tüscherz HT1+HT2 weg). hauptgleis HT5: mehrteilige Perrongleise (OSM track_ref
   über mehrere Ways, z. B. 652/662) im Plan über alle ihre Kanten auf derselben Geraden (REGELN Kopf HT) – nur Abnahmen von Befunden, alle Pläne.
-  Prüffälle `vorlage_bern_brunnen`, `vorlage_tuscherz`. HT gesamt 271 HT5 (vorher 292), Basis gesenkt (17 Pläne). G0 unverändert, Abnahmen 69.
+  Prüffälle `vorlage_bern_brunnen`, `vorlage_tuscherz`. HT gesamt HT1 48→46, HT2 74→73, HT5 296→271, Basis gesenkt (17 Pläne). G0 unverändert, Abnahmen 69.
 - Regression: geänderte Zeilen alle erklärt (SW_GAP, Ligerz-Override, Messung); region_ne G2 43→36, Ligerz und Riedbach im Regionalplan.
 - Lokal ≠ Workflow: Ins HT5 2 nur lokal (Lage-Numerik), Workflow 0. Werkzeuge: OSM-Skizze längs Fensterachse war hilfreich (nicht im Repo).
