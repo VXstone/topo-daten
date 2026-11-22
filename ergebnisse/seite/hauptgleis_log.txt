@@ -90,7 +90,7 @@ munchenwiler_courgevaux                HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 muntelier_lowenberg                    HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 muntschemier                           HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 murten                                 HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
-neuchatel                              HT1 0 HT2 0 HT3 2 HT4 0 HT5 17
+neuchatel                              HT1 0 HT2 0 HT3 2 HT4 0 HT5 20
 neuchatel_vauseyon                     HT1 0 HT2 1 HT3 0 HT4 0 HT5 0
 noiraigue                              HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 olten                                  HT1 10 HT2 21 HT3 7 HT4 2 HT5 165
@@ -105,7 +105,7 @@ saint_blaise_cff                       HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 saint_blaise_lac                       HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 schonenwerd                            HT1 0 HT2 2 HT3 0 HT4 0 HT5 1
 serrieres                              HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
-solothurn                              HT1 2 HT2 1 HT3 0 HT4 0 HT5 15
+solothurn                              HT1 2 HT2 1 HT3 0 HT4 0 HT5 14
 sugiez                                 HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 szu__berghof                           HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 szu__borrweg                           HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
@@ -133,4 +133,7 @@ vereina__vereina_sud                   HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 wangen_bei_olten                       HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 zihlbruecke                            HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 zofingen                               HT1 2 HT2 0 HT3 0 HT4 0 HT5 0
-Hauptgleis HT: {'HT1': 33, 'HT2': 55, 'HT3': 9, 'HT4': 5, 'HT5': 233} – 135 Pläne, 26 mit HT > 0
+Hauptgleis HT: {'HT1': 33, 'HT2': 55, 'HT3': 9, 'HT4': 5, 'HT5': 235} – 135 Pläne, 26 mit HT > 0
+NEU neuchatel HT3: 0 -> 2
+NEU neuchatel HT5: 0 -> 20
+NEU neuchatel_vauseyon HT2: 0 -> 1

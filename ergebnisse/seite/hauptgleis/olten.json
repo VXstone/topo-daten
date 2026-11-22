@@ -724,6 +724,15 @@
   },
   {
    "regel": "HT5",
+   "x": 1917.4,
+   "y": 290.0,
+   "text": "Fahrweg Abgang 500 Basel (1510193399) ↔ Abgang 531 Aarau (617747521) im Plan, nicht in OSM",
+   "von": "Abgang 500 Basel (1510193399)",
+   "nach": "Abgang 531 Aarau (617747521)",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
    "x": 1432.4,
    "y": 158.0,
    "text": "Fahrweg Abgang 500 Basel (1510193399) ↔ Gl. 1 im Plan, nicht in OSM",
@@ -810,6 +819,15 @@
    "text": "Fahrweg Abgang 500 Basel (1510193399) ↔ Gl. 28 im Plan, nicht in OSM",
    "von": "Abgang 500 Basel (1510193399)",
    "nach": "Gl. 28",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 1905.3,
+   "y": 278.0,
+   "text": "Fahrweg Abgang 500 Basel (1510193399) ↔ Gl. 285 im Plan, nicht in OSM",
+   "von": "Abgang 500 Basel (1510193399)",
+   "nach": "Gl. 285",
    "art": "zusaetzlich"
   },
   {
@@ -1867,29 +1885,11 @@
   },
   {
    "regel": "HT5",
-   "x": 1852.4,
-   "y": 266.0,
-   "text": "Fahrweg Abgang 500 Basel (1510193403) ↔ Gl. 175 in OSM, fehlt im Plan",
-   "von": "Abgang 500 Basel (1510193403)",
-   "nach": "Gl. 175",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
    "x": 1905.3,
    "y": 266.0,
    "text": "Fahrweg Abgang 500 Basel (1510193403) ↔ Gl. 285 in OSM, fehlt im Plan",
    "von": "Abgang 500 Basel (1510193403)",
    "nach": "Gl. 285",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1728.7,
-   "y": 266.0,
-   "text": "Fahrweg Abgang 500 Basel (1510193403) ↔ Gl. 319 in OSM, fehlt im Plan",
-   "von": "Abgang 500 Basel (1510193403)",
-   "nach": "Gl. 319",
    "art": "fehlt"
   },
   {
@@ -1977,7 +1977,7 @@
    "regel": "_info",
    "x": 0,
    "y": 0,
-   "text": "Fahrwege: 68/78 Ziele im Plan gefunden, OSM 382, Plan 521",
+   "text": "Fahrwege: 68/78 Ziele im Plan gefunden, OSM 378, Plan 521",
    "ohne_lage": [
     "Gl. 115",
     "Gl. 125",

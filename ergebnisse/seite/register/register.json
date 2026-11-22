@@ -1,7 +1,7 @@
 {
  "_zweck": "Bahnhofregister (V3, 20.11.2026): jeder Bahnhof einmal, Schlüssel SBB-Abkürzung. Erzeugt von code/bahnhofregister.py im Workflow seite.",
- "code_stand": "42ddfe637dbb2f34c7deedba3fec9c0a943e5089",
- "seite_commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+ "code_stand": "f3b63199a93977a28f5d787177ac25784a99227f",
+ "seite_commit": "f3b63199a93977a28f5d787177ac25784a99227f",
  "bahnhoefe": {
   "AA": {
    "abk": "AA",
@@ -6748,7 +6748,7 @@
    "fingerabdruck": "96cbc6cbf790",
    "quelle": "Werkstatt Olten",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "regionalplan": true,
    "veraltet": false
@@ -6761,7 +6761,7 @@
    "fingerabdruck": "a5d2d2bf4c7e",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "regionalplan": true,
    "veraltet": false
@@ -6777,7 +6777,7 @@
    "commit": "42ddfe637dbb2f34c7deedba3fec9c0a943e5089",
    "art": "code",
    "regionalplan": true,
-   "veraltet": false
+   "veraltet": true
   },
   "region_vereina": {
    "key": "region_vereina",
@@ -6790,7 +6790,7 @@
    "commit": "42ddfe637dbb2f34c7deedba3fec9c0a943e5089",
    "art": "code",
    "regionalplan": true,
-   "veraltet": false
+   "veraltet": true
   },
   "region_szu": {
    "key": "region_szu",
@@ -6803,7 +6803,7 @@
    "commit": "42ddfe637dbb2f34c7deedba3fec9c0a943e5089",
    "art": "code",
    "regionalplan": true,
-   "veraltet": false
+   "veraltet": true
   },
   "basel": {
    "key": "basel",
@@ -6882,7 +6882,7 @@
     46.880065,
     7.619758
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "solothurn": {
    "key": "solothurn",
@@ -6905,7 +6905,7 @@
     47.204473,
     7.546117
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "olten": {
    "key": "olten",
@@ -6915,7 +6915,7 @@
    "fingerabdruck": "a7d7b3785fb4",
    "quelle": "Werkstatt Olten",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "OL",
@@ -6935,7 +6935,7 @@
    "fingerabdruck": "c37933715dbc",
    "quelle": "Werkstatt Olten",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "OLH"
@@ -6954,7 +6954,7 @@
    "fingerabdruck": "8e28ff9dd913",
    "quelle": "Werkstatt Olten",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "ABO",
@@ -6975,7 +6975,7 @@
    "fingerabdruck": "f3b3b690291d",
    "quelle": "Werkstatt Olten",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "RTR"
@@ -6994,7 +6994,7 @@
    "fingerabdruck": "13872647f75a",
    "quelle": "Werkstatt Olten",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "ZF",
@@ -7014,7 +7014,7 @@
    "fingerabdruck": "edba1ce8b230",
    "quelle": "Werkstatt Olten",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "SAF"
@@ -7033,7 +7033,7 @@
    "fingerabdruck": "1157b5c7a75f",
    "quelle": "Werkstatt Olten",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "DU"
@@ -7052,7 +7052,7 @@
    "fingerabdruck": "926cee699edd",
    "quelle": "Werkstatt Olten",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "DK",
@@ -7073,7 +7073,7 @@
    "fingerabdruck": "48e815acacdf",
    "quelle": "Werkstatt Olten",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "SCOE"
@@ -7092,7 +7092,7 @@
    "fingerabdruck": "db9c0d30a222",
    "quelle": "Werkstatt Olten",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "AA",
@@ -7112,7 +7112,7 @@
    "fingerabdruck": "a42c988c04bc",
    "quelle": "Werkstatt Olten",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "TK"
@@ -7131,7 +7131,7 @@
    "fingerabdruck": "e09f604e1e1d",
    "quelle": "Werkstatt Olten",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "LF"
@@ -7150,7 +7150,7 @@
    "fingerabdruck": "6e780447e0b5",
    "quelle": "Werkstatt Olten",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "WBOL"
@@ -7224,7 +7224,7 @@
     46.997922,
     6.93822
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "saint_blaise_lac": {
    "key": "saint_blaise_lac",
@@ -7234,7 +7234,7 @@
    "fingerabdruck": "7574dc0b0215",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "SBLB"
@@ -7253,7 +7253,7 @@
    "fingerabdruck": "976ea5d6388e",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "MEP"
@@ -7272,7 +7272,7 @@
    "fingerabdruck": "77a3a8cfce9b",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "ZBR"
@@ -7291,7 +7291,7 @@
    "fingerabdruck": "63fbf2e21546",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "GP"
@@ -7310,7 +7310,7 @@
    "fingerabdruck": "552a74d8437a",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "MM"
@@ -7329,7 +7329,7 @@
    "fingerabdruck": "0e47fff20159",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "GMM"
@@ -7348,7 +7348,7 @@
    "fingerabdruck": "d1be05e1ffa4",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "ROSS"
@@ -7367,7 +7367,7 @@
    "fingerabdruck": "cd416d1f34f3",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "RCH"
@@ -7386,7 +7386,7 @@
    "fingerabdruck": "2787ed5d389a",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "BNB"
@@ -7405,7 +7405,7 @@
    "fingerabdruck": "1348eb6e6a12",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "SUGI"
@@ -7424,7 +7424,7 @@
    "fingerabdruck": "1084ecb13328",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "LOEW"
@@ -7463,7 +7463,7 @@
    "fingerabdruck": "a21695515b60",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "KAL"
@@ -7482,7 +7482,7 @@
    "fingerabdruck": "33e6bcaf7687",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "FRAE"
@@ -7501,7 +7501,7 @@
    "fingerabdruck": "33de528d695f",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "KZPP"
@@ -7520,7 +7520,7 @@
    "fingerabdruck": "56250a8292da",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "GZ"
@@ -7539,7 +7539,7 @@
    "fingerabdruck": "20b37940ea8a",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "FG"
@@ -7558,7 +7558,7 @@
    "fingerabdruck": "9a4e24c8a756",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "AV"
@@ -7577,7 +7577,7 @@
    "fingerabdruck": "521686b50794",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "DOM"
@@ -7596,7 +7596,7 @@
    "fingerabdruck": "a23cbd847302",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "DOP"
@@ -7615,7 +7615,7 @@
    "fingerabdruck": "6cc8ab449832",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "MUCO"
@@ -7634,7 +7634,7 @@
    "fingerabdruck": "3b36d288de7a",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "CRFR"
@@ -7653,7 +7653,7 @@
    "fingerabdruck": "6b01dece45c1",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "COUR"
@@ -7672,7 +7672,7 @@
    "fingerabdruck": "9fb314178879",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "PEN"
@@ -7691,7 +7691,7 @@
    "fingerabdruck": "53388373d52c",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "SBL"
@@ -7710,7 +7710,7 @@
    "fingerabdruck": "e2e1afc61706",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "CORN"
@@ -7729,7 +7729,7 @@
    "fingerabdruck": "6d0c76c417a9",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "CRNE"
@@ -7748,7 +7748,7 @@
    "fingerabdruck": "0b0556f46b95",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "LD"
@@ -7767,7 +7767,7 @@
    "fingerabdruck": "6ab64518e653",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "NV"
@@ -7786,7 +7786,7 @@
    "fingerabdruck": "2f6bd4781ab4",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "LIG"
@@ -7805,7 +7805,7 @@
    "fingerabdruck": "7e55019dc56c",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "TWN"
@@ -7824,7 +7824,7 @@
    "fingerabdruck": "2c53e480adb3",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "TUE"
@@ -7843,7 +7843,7 @@
    "fingerabdruck": "88bc688363cc",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "NESE",
@@ -7864,7 +7864,7 @@
    "fingerabdruck": "1d39f1aa61e6",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "AUV",
@@ -7884,7 +7884,7 @@
    "fingerabdruck": "380fe02144e8",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "CLB"
@@ -7903,7 +7903,7 @@
    "fingerabdruck": "1ee3ec9f6eff",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "BDR"
@@ -7922,7 +7922,7 @@
    "fingerabdruck": "13c73ef063ff",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "BV"
@@ -7941,7 +7941,7 @@
    "fingerabdruck": "85024ebc184d",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "GOR"
@@ -7960,7 +7960,7 @@
    "fingerabdruck": "11877970d286",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "ONB"
@@ -7979,7 +7979,7 @@
    "fingerabdruck": "4df00d31a952",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "CC"
@@ -7998,7 +7998,7 @@
    "fingerabdruck": "0b541f4facce",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "GRS"
@@ -8017,7 +8017,7 @@
    "fingerabdruck": "d2d8f4dfec66",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "BOLE"
@@ -8036,7 +8036,7 @@
    "fingerabdruck": "db9eec1f9ebf",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "CDM"
@@ -8055,7 +8055,7 @@
    "fingerabdruck": "fdd2c2a51fc9",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "NOI"
@@ -8074,7 +8074,7 @@
    "fingerabdruck": "2543e1e53840",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "TR",
@@ -8094,7 +8094,7 @@
    "fingerabdruck": "e351bdb312bc",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "PRST"
@@ -8113,7 +8113,7 @@
    "fingerabdruck": "1ed7c1647506",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "CVTR",
@@ -8133,7 +8133,7 @@
    "fingerabdruck": "01058f77a1f8",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "MOT"
@@ -8162,7 +8162,7 @@
     46.990629,
     6.917526
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "les_deurres": {
    "key": "les_deurres",
@@ -8172,7 +8172,7 @@
    "fingerabdruck": "137519671b4a",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "DEU"
@@ -8191,7 +8191,7 @@
    "fingerabdruck": "895ca13da82f",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "CP"
@@ -8210,7 +8210,7 @@
    "fingerabdruck": "215396699792",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "CHN",
@@ -8231,7 +8231,7 @@
    "fingerabdruck": "692c3ff7f832",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "GEC"
@@ -8250,7 +8250,7 @@
    "fingerabdruck": "048798aad871",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "b3b28d6eb95af568f0a3dadd946eb85712741e08",
+   "commit": "f3b63199a93977a28f5d787177ac25784a99227f",
    "art": "code",
    "abk": [
     "HGV"
@@ -8278,7 +8278,7 @@
     46.469371,
     7.007809
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__belmont_sur_montreux": {
    "key": "mob__belmont_sur_montreux",
@@ -8297,7 +8297,7 @@
     46.443379,
     6.904428
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__blankenburg": {
    "key": "mob__blankenburg",
@@ -8316,7 +8316,7 @@
     46.540863,
     7.385579
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__caux": {
    "key": "mob__caux",
@@ -8336,7 +8336,7 @@
     46.431193,
     6.938492
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__chamby": {
    "key": "mob__chamby",
@@ -8356,7 +8356,7 @@
     46.449657,
     6.913466
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__chateau_d_oex": {
    "key": "mob__chateau_d_oex",
@@ -8376,7 +8376,7 @@
     46.47499,
     7.132143
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__chatelard": {
    "key": "mob__chatelard",
@@ -8395,7 +8395,7 @@
     46.447038,
     6.901337
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__chernex": {
    "key": "mob__chernex",
@@ -8414,7 +8414,7 @@
     46.446556,
     6.909359
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__cret_d_y_bau": {
    "key": "mob__cret_d_y_bau",
@@ -8433,7 +8433,7 @@
     46.435303,
     6.955606
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__flendruz": {
    "key": "mob__flendruz",
@@ -8452,7 +8452,7 @@
     46.482388,
     7.187024
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__fontanivent": {
    "key": "mob__fontanivent",
@@ -8471,7 +8471,7 @@
     46.453066,
     6.902233
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__glion_college": {
    "key": "mob__glion_college",
@@ -8490,7 +8490,7 @@
     46.434776,
     6.928651
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__glion": {
    "key": "mob__glion",
@@ -8510,7 +8510,7 @@
     46.432292,
     6.92463
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__gruben": {
    "key": "mob__gruben",
@@ -8529,7 +8529,7 @@
     46.490531,
     7.280508
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__gstaad": {
    "key": "mob__gstaad",
@@ -8548,7 +8548,7 @@
     46.475452,
     7.283289
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__jaman": {
    "key": "mob__jaman",
@@ -8567,7 +8567,7 @@
     46.441771,
     6.976878
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__jor": {
    "key": "mob__jor",
@@ -8586,7 +8586,7 @@
     46.454563,
     6.964711
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__la_perche": {
    "key": "mob__la_perche",
@@ -8605,7 +8605,7 @@
     46.43651,
     6.975341
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__la_tine": {
    "key": "mob__la_tine",
@@ -8624,7 +8624,7 @@
     46.467381,
     7.04615
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__le_tremblex": {
    "key": "mob__le_tremblex",
@@ -8643,7 +8643,7 @@
     46.436224,
     6.933091
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__lenk_im_simmental": {
    "key": "mob__lenk_im_simmental",
@@ -8662,7 +8662,7 @@
     46.458518,
     7.443651
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__les_avants": {
    "key": "mob__les_avants",
@@ -8681,7 +8681,7 @@
     46.45326,
     6.943047
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__les_cases": {
    "key": "mob__les_cases",
@@ -8700,7 +8700,7 @@
     46.455971,
     6.99786
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__les_echets": {
    "key": "mob__les_echets",
@@ -8719,7 +8719,7 @@
     46.432001,
     6.943982
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__les_sciernes": {
    "key": "mob__les_sciernes",
@@ -8738,7 +8738,7 @@
     46.491411,
     7.03409
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__matten": {
    "key": "mob__matten",
@@ -8757,7 +8757,7 @@
     46.493945,
     7.421087
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__montbovon": {
    "key": "mob__montbovon",
@@ -8776,7 +8776,7 @@
     46.485351,
     7.042027
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__montreux_les_planches": {
    "key": "mob__montreux_les_planches",
@@ -8795,7 +8795,7 @@
     46.433648,
     6.916986
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__montreux": {
    "key": "mob__montreux",
@@ -8815,7 +8815,7 @@
     46.435555,
     6.911483
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__oeschseite": {
    "key": "mob__oeschseite",
@@ -8834,7 +8834,7 @@
     46.53125,
     7.3522
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__paccot": {
    "key": "mob__paccot",
@@ -8853,7 +8853,7 @@
     46.43799,
     6.963425
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__planchamp": {
    "key": "mob__planchamp",
@@ -8872,7 +8872,7 @@
     46.450659,
     6.901162
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__rochers_de_naye": {
    "key": "mob__rochers_de_naye",
@@ -8891,7 +8891,7 @@
     46.431516,
     6.979528
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__rossiniere": {
    "key": "mob__rossiniere",
@@ -8910,7 +8910,7 @@
     46.464731,
     7.082755
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__rougemont": {
    "key": "mob__rougemont",
@@ -8929,7 +8929,7 @@
     46.488422,
     7.209251
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__saanen": {
    "key": "mob__saanen",
@@ -8948,7 +8948,7 @@
     46.488393,
     7.261029
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__saanenmoser": {
    "key": "mob__saanenmoser",
@@ -8967,7 +8967,7 @@
     46.517454,
     7.311681
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__schonried": {
    "key": "mob__schonried",
@@ -8986,7 +8986,7 @@
     46.504221,
     7.290911
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__sendy_sollard": {
    "key": "mob__sendy_sollard",
@@ -9005,7 +9005,7 @@
     46.447334,
     6.929868
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__st_stephan": {
    "key": "mob__st_stephan",
@@ -9024,7 +9024,7 @@
     46.505289,
     7.400573
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__toveyre": {
    "key": "mob__toveyre",
@@ -9043,7 +9043,7 @@
     46.427687,
     6.92859
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__valmont": {
    "key": "mob__valmont",
@@ -9062,7 +9062,7 @@
     46.428323,
     6.929981
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__vernex": {
    "key": "mob__vernex",
@@ -9081,7 +9081,7 @@
     46.440374,
     6.904918
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__vuarennes": {
    "key": "mob__vuarennes",
@@ -9100,7 +9100,7 @@
     46.439311,
     6.91057
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "mob__zweisimmen": {
    "key": "mob__zweisimmen",
@@ -9119,7 +9119,7 @@
     46.552509,
     7.375311
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "vereina__klosters_platz": {
    "key": "vereina__klosters_platz",
@@ -9138,7 +9138,7 @@
     46.86942,
     9.880358
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "vereina__klosters_selfranga": {
    "key": "vereina__klosters_selfranga",
@@ -9157,7 +9157,7 @@
     46.855521,
     9.884537
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "vereina__sagliains_nord": {
    "key": "vereina__sagliains_nord",
@@ -9176,7 +9176,7 @@
     46.76914,
     10.071012
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "vereina__sagliains_sasslatsch": {
    "key": "vereina__sagliains_sasslatsch",
@@ -9195,7 +9195,7 @@
     46.761904,
     10.08772
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "vereina__sagliains": {
    "key": "vereina__sagliains",
@@ -9215,7 +9215,7 @@
     46.764204,
     10.099995
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "vereina__sasslatsch": {
    "key": "vereina__sasslatsch",
@@ -9234,7 +9234,7 @@
     46.759113,
     10.087334
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "vereina__selfranga_sud": {
    "key": "vereina__selfranga_sud",
@@ -9253,7 +9253,7 @@
     46.844877,
     9.906263
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "vereina__susch": {
    "key": "vereina__susch",
@@ -9272,7 +9272,7 @@
     46.751877,
     10.079411
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "vereina__vereina_nord": {
    "key": "vereina__vereina_nord",
@@ -9291,7 +9291,7 @@
     46.812657,
     9.976468
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "vereina__vereina_sud": {
    "key": "vereina__vereina_sud",
@@ -9310,7 +9310,7 @@
     46.802752,
     9.998027
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "szu__berghof": {
    "key": "szu__berghof",
@@ -9329,7 +9329,7 @@
     47.368559,
     8.480968
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "szu__borrweg": {
    "key": "szu__borrweg",
@@ -9348,7 +9348,7 @@
     47.36422,
     8.511666
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "szu__ringlikon": {
    "key": "szu__ringlikon",
@@ -9367,7 +9367,7 @@
     47.360708,
     8.47686
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "szu__uetliberg": {
    "key": "szu__uetliberg",
@@ -9386,7 +9386,7 @@
     47.352868,
     8.487528
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "szu__zurich_binz": {
    "key": "szu__zurich_binz",
@@ -9405,7 +9405,7 @@
     47.362906,
     8.517819
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "szu__zurich_friesenberg": {
    "key": "szu__zurich_friesenberg",
@@ -9424,7 +9424,7 @@
     47.364897,
     8.506753
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "szu__zurich_giesshubel": {
    "key": "szu__zurich_giesshubel",
@@ -9444,7 +9444,7 @@
     47.36147,
     8.521751
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "szu__zurich_schweighof": {
    "key": "szu__zurich_schweighof",
@@ -9463,7 +9463,7 @@
     47.364978,
     8.50402
    ],
-   "veraltet": false
+   "veraltet": true
   },
   "szu__zurich_selnau": {
    "key": "szu__zurich_selnau",
@@ -9483,7 +9483,7 @@
     47.373804,
     8.534004
    ],
-   "veraltet": false
+   "veraltet": true
   }
  },
  "ohne_dienststelle": [],

@@ -6,6 +6,8 @@ OK   giesshuebel_90.svg HT2 -184.4/1328.2  – Gleise kreuzen sich im Depot, in 
 OK   giesshuebel_90.svg HT5 -232.4/2020.4 künstlicher Schnitt – Achsknick 65°: Gleis endet am Planrand statt durchzulaufen (REGELN 2.15)
 OK   giesshuebel_90.svg HT5 -208.4/225.5 künstlicher Schnitt – dito, Mittelgleis
 OK   giesshuebel_90.svg HT1 178.0/1697.4  – Weiche 1262541542 an 717 ohne Abzweig
+OK   neuchatel_vauseyon_0.svg kein HT2 /  – Regel 39b: Weiche 266382885 hinter dem Planrand als Stummel auf der Abgangsschräge La Chaux-de-Fonds angedeutet
+OK   neuchatel_vauseyon_90.svg kein HT2 /  – Regel 39b: Weiche 266382885 hinter dem Planrand als Stummel auf der Abgangsschräge La Chaux-de-Fonds angedeutet
 OK   vorlage_bern_brunnen_0.svg kein HT5 /  – Doppelter Spurwechsel: zweite Diagonale begann vor dem Ende der ersten (SW_GAP); Gleis aus mehreren OSM-Stücken (Gl. 75) nur über ein Stück erreichbar
 OK   vorlage_bern_brunnen_90.svg kein HT5 /  – Doppelter Spurwechsel: zweite Diagonale begann vor dem Ende der ersten (SW_GAP); Gleis aus mehreren OSM-Stücken (Gl. 75) nur über ein Stück erreichbar
 OK   vorlage_gorgier_saint_aubin_0.svg kein HT5 /  – Gl. 512 (2-m-Stück hinter der Spurwechselweiche) lag im Netzmodell vor der Weiche
@@ -66,6 +68,11 @@ OK   zeichnen_cornaux_90.svg kein HT2 /  – Spurwechsel mit geradem Vorstück d
 OK   zeichnen_cornaux_90.svg kein HT5 /  – von Hand ersetzter Spurwechsel fehlte auf der OSM-Seite
 OK   zeichnen_murten_0.svg kein HT5 /  – Knoten-Zusammenfassung 5 px: Gl. 2 hing nicht an Gl. 1; Gl. 13 Ziel am Gleisende
 OK   zeichnen_murten_90.svg kein HT5 /  – Knoten-Zusammenfassung 5 px: Gl. 2 hing nicht an Gl. 1; Gl. 13 Ziel am Gleisende
+OK   zeichnen_neuchatel_0.svg kein HT5 /  – Netzmodell ohne Hand-Linien-Verbindungen (DKW 3/58/63 als Kreuzung + 4 Weichen, R47-Spurwechsel): Biel/Yverdon/Ins ↔ Gl. 5–7 «im Plan, nicht in OSM»; flache Kreuzung EKW 109 (Biel → Ins)
+OK   zeichnen_neuchatel_0.svg kein HT3 /  – A15/A44 an DKW-Knoten angebunden (Bogen-Ways fehlten im Netzmodell)
+OK   zeichnen_neuchatel_0.svg kein HT1 /  – Bogenweiche einer OSM-DKW (Kreuzung + 4 Weichen) unter dem DKW-Symbol
+OK   zeichnen_neuchatel_90.svg kein HT5 /  – Netzmodell ohne Hand-Linien-Verbindungen (DKW 3/58/63 als Kreuzung + 4 Weichen, R47-Spurwechsel): Biel/Yverdon/Ins ↔ Gl. 5–7 «im Plan, nicht in OSM»; flache Kreuzung EKW 109 (Biel → Ins)
+OK   zeichnen_neuchatel_90.svg kein HT3 /  – A15/A44 an DKW-Knoten angebunden (Bogen-Ways fehlten im Netzmodell)
 OK   zeichnen_onnens_bonvillars_0.svg kein HT1 /  – Spurwechsel mit geradem Vorstück im Plan nicht als Abzweig erkannt
 OK   zeichnen_onnens_bonvillars_90.svg kein HT1 /  – Spurwechsel mit geradem Vorstück im Plan nicht als Abzweig erkannt
 Selbsttest HT: bestanden

@@ -4,7 +4,7 @@
   "HT2": 1,
   "HT3": 0,
   "HT4": 0,
-  "HT5": 15
+  "HT5": 14
  },
  "befunde": [
   {
@@ -32,15 +32,6 @@
     49715373,
     1273524863
    ]
-  },
-  {
-   "regel": "HT5",
-   "x": 522.4,
-   "y": 172.4,
-   "text": "Fahrweg Abgang 410 Biel/Bienne (11694665904) ↔ Gl. 442 in OSM, fehlt im Plan",
-   "von": "Abgang 410 Biel/Bienne (11694665904)",
-   "nach": "Gl. 442",
-   "art": "fehlt"
   },
   {
    "regel": "HT5",
@@ -172,7 +163,7 @@
    "regel": "_info",
    "x": 0,
    "y": 0,
-   "text": "Fahrwege: 27/27 Ziele im Plan gefunden, OSM 116, Plan 101",
+   "text": "Fahrwege: 27/27 Ziele im Plan gefunden, OSM 116, Plan 102",
    "ohne_lage": []
   }
  ],

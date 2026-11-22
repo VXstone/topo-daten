@@ -143,7 +143,7 @@ Erzeugt von `spurplan/code/overrides_liste.py`. Ziel (Entscheid 13.11.): nur Ort
 | Repo | neuchatel | kein_pax | Geometrie | 1 | Entwurf 14.10.2026 (Claude), Neuchâtel, OSM-Stand 12.10. | bahnhoefe/neuchatel/neuchatel_override.json |
 | Repo | neuchatel | r38_seite | Geometrie | 3 | Entwurf 14.10.2026 (Claude), Neuchâtel, OSM-Stand 12.10. | bahnhoefe/neuchatel/neuchatel_override.json |
 | Repo | neuchatel | weglassen | Geometrie | 0 | Entwurf 14.10.2026 (Claude), Neuchâtel, OSM-Stand 12.10. | bahnhoefe/neuchatel/neuchatel_override.json |
-| Repo | neuchatel | zeichnen | Geometrie | 3 | Entwurf 14.10.2026 (Claude), Neuchâtel, OSM-Stand 12.10. | bahnhoefe/neuchatel/neuchatel_override.json |
+| Repo | neuchatel | zeichnen | Geometrie | 5 | Entwurf 14.10.2026 (Claude), Neuchâtel, OSM-Stand 12.10. | bahnhoefe/neuchatel/neuchatel_override.json |
 | Repo | neuchatel | _behalten | Ortswissen | 1 | Entwurf 14.10.2026 (Claude), Neuchâtel, OSM-Stand 12.10. | bahnhoefe/neuchatel/neuchatel_override.json |
 | Repo | neuchatel | _perrons | Ortswissen | 1 | Entwurf 14.10.2026 (Claude), Neuchâtel, OSM-Stand 12.10. | bahnhoefe/neuchatel/neuchatel_override.json |
 | Repo | neuchatel | behalten | Ortswissen | 8 | Entwurf 14.10.2026 (Claude), Neuchâtel, OSM-Stand 12.10. | bahnhoefe/neuchatel/neuchatel_override.json |
