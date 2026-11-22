@@ -109,7 +109,8 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - [x] **V3 Bahnhofregister + OSM-Verdacht + Sperre «veraltet»** – 20.11. abends, Commits 5e32a01/ce5b16c, Seite v158 (Nachtrag V3)
 - [x] **V4 NE in den gemeinsamen Bauweg** (REGELN 0.9/4.11) – 20.11. spät Bauweg (d979b78, 0c47dd1), mit V4b veröffentlicht (v160)
 - [x] **V4b G0 grün + veröffentlichen** – 21.11. vormittags, Commit 16ca65c, Seite v160 (Nachtrag V4b)
-- [ ] **V4c NE: HT-Befunde abbauen** (mittel): Netzmodell folgt der Typvorlage; echte HT in Le Landeron, Riedbach, Colombier … – siehe Schritt V4c
+- [x] **V4c NE: HT-Befunde abbauen** – 21.11. (v161/v162)
+- [x] **V4e NE: HT-Rest** – 21./22.11. (v164–v170), alle NE-Pläne HT 0 bzw. Ausnahme Courtepin (Nachträge V4e Teil 1–5)
 - [ ] **V4d NE ruhig + Nebengleise kürzen** (mittel, REGELN 4.5/5.9): S-Kurven pjyb/vpkw/zlwn, W59-Kürzung nach Daniels Wahl – siehe V4d
 - [ ] **K0c Selnau parallel (REGELN 2.2, `r34_kette`)** (klein) – siehe Nachtrag 20.11. ~19:15; nach V3/V4, vor T-SZU1
 - [ ] **V5 ein Lauf für alle Regionen** / **V6 Netz West (Neuchâtel–Biel–Solothurn–Olten)** – danach – Zweisimmen (dünn→dick am Knick), Solothurn (Weiche am Knick, doppelter Abstand), Selnau (ZL ~4 Ebenen, nur auf Daniels Antwort); Liste `ergebnisse/seite/zwischengeraden.md` – vor oder nach T-SZU1, wie Daniel will
@@ -373,6 +374,7 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   Riedbach Anschluss-T geklärt (Daniel 22.11.: von Seite Bern erreichbar, Zurücksetzen Richtung Bern = OSM) → Vorlage `gegen` (v168).
   Prüffall vorlage_riedbach_90: HT2 gedreht nicht geprüft (Zuordnung Doppelspurwechsel Ost kippt nur gedreht) – ansehen.
   Daniel 22.11.: Seite eines neuen Gleises (oben/unten, Zihlbrücke) ist kein harter Fehler – wichtig ist Weiche da und Topologie richtig.
+- **Erledigt 22.11. spät (v170): Neuchâtel und Vauseyon HT 0 – V4e abgeschlossen** (Nachtrag V4e Teil 5).
 - Liste oben unter V4c «Rest». F6 (Gampelen) erledigt; dann je Plan OSM ansehen, Vorlage/Override nach OSM (REGELN 0.1),
   Vorher/Nachher an Daniel wie St-Blaise CFF. Fertig: NE-Pläne HT 0 oder als OSM-Ausnahme begründet.
 
@@ -864,3 +866,13 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   ausser Giesshübel HT3 -> HT2 an derselben Kreuzung (Basis bewusst). HT gesamt 46/70/15/5/261 -> 33/55/9/5/233, Basis gesenkt (17 Pläne).
 - Prüffälle zeichnen_chambrelien/murten/cornaux/onnens_bonvillars (0/90°). G0 unverändert.
 
+### 22.11.2026 ~20:55 – Schritt V4e Teil 5 (Abschluss), Seite v170 (Commits f3b6319, d42f0b0; ergebnisse 33d9692)
+- Sichtbar (nur Bahnhofplan Neuchâtel, Ostkopf): 35567630 (Biel unteres Gleis) kreuzt die Linie nach Ins an der EKW 109 gerade und läuft
+  als Abstellgleis weiter (Pfeil) – vorher mündete die Schräge ins Gleis nach Ins (Fahrweg Biel -> Ins, den OSM nicht hat). Hand-Linie im
+  Override (`zeichnen`), Kreuzung auf OSM-Knoten 416784002 (G0 GS). Regionalpläne unverändert (Region NE nutzt das kürzere Werkstatt-Neuchâtel).
+- Übrige 19+1 Befunde = Messung (REGELN Kopf HT, Nachtrag 22.11. abends): `vorlage --weichen` jetzt auch in `lauf.py` (Neuchâtel `netz_ergaenzen`),
+  Kette endet an Kreuzung (OSM-DKW 58/63 = Kreuzung + 4 Weichen), Kreuzung geradeaus = OSM-Fortsetzung (flache EKW), Perrongleis-Kante auf
+  seiner Geraden, DKW-Bogenweiche unter DKW-Symbol kein HT1, Regel-39b-Stummel (Vauseyon, Netzmodell `angedeutet`) kein HT2.
+- Alle 135 Pläne alt/neu gemessen: nur Neuchâtel, Vauseyon (-> 0) und Solothurn HT5 15 -> 14; Basis HT und G0 (Neuchâtel GG 3 -> 1) gesenkt.
+  Prüffälle `zeichnen_neuchatel` (HT1 nur 0°, Testaufbau), `neuchatel_vauseyon`. Fallstrick: erster seite-Lauf nach Push lief vor `plaene` -> rot, später grün.
+- Offen fürs Auge: Neuchâtel im Regionalplan NE ist noch die Werkstatt-Fassung (Fenster ohne Ostkopf) – REGELN 4.x «Regionalplan wie Bahnhofplan».
