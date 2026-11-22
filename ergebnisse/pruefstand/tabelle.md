@@ -1,4 +1,4 @@
-# Prüfstand – Bausteine × Drehungen (2026-11-21 21:28 UTC)
+# Prüfstand – Bausteine × Drehungen (2026-11-22 05:25 UTC)
 
 Zählung je Fall (Regel Anzahl); leer = ohne Befund. Rangfolge der Regeln: T, PF, X, E, K, Q, P, QK, F, Z, D, G2, G3, G4, G5, G6, G7, G8
 
@@ -29,7 +29,7 @@ Zählung je Fall (Regel Anzahl); leer = ohne Befund. Rangfolge der Regeln: T, PF
 | vorlage | L2 |  |  |  | E 2 Z 1 | E 2 Z 1 |  |  |  |
 | vorlage | Z1 |  |  |  | E 4 Z 4 | E 4 Z 4 |  |  |  |
 | vorlage | Z2 |  |  |  | E 4 Z 4 | E 4 Z 4 |  |  |  |
-| vorlage | Z3 |  | G2 2 | G2 2 | E 4 Z 4 G2 2 | E 4 Z 4 G2 2 | G2 2 |  |  |
+| vorlage | Z3 |  |  |  | E 4 Z 4 | E 4 Z 4 |  |  |  |
 | vorlage | Z4 |  |  |  | E 2 Z 2 | E 2 Z 2 |  |  |  |
 | vorlage | Z5 | Q 2 | Q 2 | Q 2 | E 2 Q 2 Z 2 | E 2 Q 2 Z 2 | Q 2 | Q 2 | Q 2 |
 | vorlage | Z6 |  |  |  | E 4 Z 4 | E 4 Z 4 |  |  |  |
@@ -38,11 +38,15 @@ Zählung je Fall (Regel Anzahl); leer = ohne Befund. Rangfolge der Regeln: T, PF
 
 ## Befunde je Regel (Summe über alle Fälle)
 
-T 33 · PF 16 · X 27 · E 122 · K 4 · Q 84 · P 2 · Z 112 · D 3 · G2 11 · G7 1
+T 33 · PF 16 · X 27 · E 122 · K 4 · Q 84 · P 2 · Z 112 · D 3 · G2 1 · G7 1
 
 ## Gegen die Basis
 
-- keine Verschlechterung
+- vorlage/Z3/d30: G2 2 → 0 (besser)
+- vorlage/Z3/dm30: G2 2 → 0 (besser)
+- vorlage/Z3/d60: G2 2 → 0 (besser)
+- vorlage/Z3/dm60: G2 2 → 0 (besser)
+- vorlage/Z3/d90: G2 2 → 0 (besser)
 
 ## Befundliste
 

@@ -6,6 +6,8 @@ OK   giesshuebel_90.svg HT2 -184.4/1328.2  – Gleise kreuzen sich im Depot, in 
 OK   giesshuebel_90.svg HT5 -232.4/2020.4 künstlicher Schnitt – Achsknick 65°: Gleis endet am Planrand statt durchzulaufen (REGELN 2.15)
 OK   giesshuebel_90.svg HT5 -208.4/225.5 künstlicher Schnitt – dito, Mittelgleis
 OK   giesshuebel_90.svg HT1 178.0/1697.4  – Weiche 1262541542 an 717 ohne Abzweig
+OK   vorlage_bern_brunnen_0.svg kein HT5 /  – Doppelter Spurwechsel: zweite Diagonale begann vor dem Ende der ersten (SW_GAP); Gleis aus mehreren OSM-Stücken (Gl. 75) nur über ein Stück erreichbar
+OK   vorlage_bern_brunnen_90.svg kein HT5 /  – Doppelter Spurwechsel: zweite Diagonale begann vor dem Ende der ersten (SW_GAP); Gleis aus mehreren OSM-Stücken (Gl. 75) nur über ein Stück erreichbar
 OK   vorlage_gummenen_0.svg kein HT1 /  – Typvorlage: Netzmodell liegt auf dem gezeichneten Plan (V4c), Weiche 569101885 = Abzweig x 390
 OK   vorlage_gummenen_0.svg kein HT2 /  – dito, kein Abzweig ohne OSM-Weiche
 OK   vorlage_gummenen_90.svg kein HT1 /  – Typvorlage: Netzmodell liegt auf dem gezeichneten Plan (V4c), Weiche 569101885 = Abzweig x 390
@@ -16,6 +18,10 @@ OK   vorlage_saint_blaise_cff_0.svg kein HT5 /  – Spurwechsel 49773692 und 171
 OK   vorlage_saint_blaise_cff_90.svg kein HT1 /  – Spurwechsel 49773692 und 171035994–96 fehlten im Netzmodell; vorlage.py ergänzt OSM-Verbindungen zwischen Weichen; beide Spurwechsel Seite Biel
 OK   vorlage_saint_blaise_cff_90.svg kein HT2 /  – Spurwechsel 49773692 und 171035994–96 fehlten im Netzmodell; vorlage.py ergänzt OSM-Verbindungen zwischen Weichen; beide Spurwechsel Seite Biel
 OK   vorlage_saint_blaise_cff_90.svg kein HT5 /  – Spurwechsel 49773692 und 171035994–96 fehlten im Netzmodell; vorlage.py ergänzt OSM-Verbindungen zwischen Weichen; beide Spurwechsel Seite Biel
+OK   vorlage_tuscherz_0.svg kein HT1 /  – Weichen-Zuordnung über alle Gleise sortiert: Anschlussweiche unten blieb ohne Partner
+OK   vorlage_tuscherz_0.svg kein HT2 /  – dito, Spurwechsel oben
+OK   vorlage_tuscherz_90.svg kein HT1 /  – Weichen-Zuordnung über alle Gleise sortiert: Anschlussweiche unten blieb ohne Partner
+OK   vorlage_tuscherz_90.svg kein HT2 /  – dito, Spurwechsel oben
 OK   wangen_0.svg kein HT1 /  – unverändert: kein Befund
 OK   wangen_0.svg kein HT2 /  – unverändert: kein Befund
 OK   wangen_0.svg kein HT3 /  – unverändert: kein Befund
