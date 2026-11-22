@@ -218,7 +218,15 @@
     "ende": "rechts",
     "lage": "innen",
     "seite": "unten",
-    "stumpen": 1
+    "stumpen": 1,
+    "weichen": [
+     [
+      1946460601,
+      617.7,
+      134.0
+     ]
+    ],
+    "_osm_weiche": "1946460601: Abstellgleis 184190244 zweigt vom Streckengleis ab (V4e 22.11.)"
    }
   ]
  },

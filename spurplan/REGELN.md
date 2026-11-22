@@ -45,6 +45,14 @@ den Abzweig der Vorlage (Reihenfolge längs bleibt), übrige Knoten über Abgän
 zwischen zwei Weichen, die der allgemeine Lauf nicht zeichnete (Spurwechsel), ergänzt; Lauf-Fassung bleibt `<key>_netz_lauf.json`.
 Sonst misst HT die alte Lage (Paar HT1+HT2 = Messartefakt). Liegt der Planrand genau auf einer Weiche, die die Vorlage zeichnet
 (Netzmodell `vorlage.gezeichnet`), zählt das Stück zwischen zwei Abgängen zum Plan (sonst ausserhalb, Tecknau). Prüffälle `vorlage_gummenen`, `vorlage_saint_blaise_cff`. **Seit 22.11. (V4e):** Weichen werden der Vorlage **je Gleis** reihenfolgetreu zugeordnet (Ebene der Weiche ↔ Ebene des Abzweigs), nicht über alle Gleise zusammen – Weichen auf verschiedenen Gleisen dürfen längs anders liegen als in OSM (Tüscherz); ein Perrongleis aus mehreren OSM-Stücken ist im Plan über jede grüne Kante erreichbar, auf der die Mitte zweier seiner Knoten liegt (gleiche Gerade wie das Ziel; Bevaix Gl. 652, Auvernier, Däniken). Prüffälle `vorlage_bern_brunnen`, `vorlage_tuscherz`.
+**Seit 22.11. (V4e Teil 3):** Abgang ohne Richtung nach aussen (`aus_ll` fehlt, Planrand genau auf einer Spurwechselweiche):
+aussen = vom Schwerpunkt der Plan-Knoten weg – sonst galt der Spurwechsel selbst als Fahrweg Abgang ↔ Abgang (Le Landeron,
+Gorgier, Riedbach). Im Netzmodell der Vorlage bleibt die Knotenfolge je Gleis wie im Lauf (Knoten hinter einer Weiche nicht
+vor ihr; Gorgier Gl. 512, Bevaix Gl. 662); ein künstlicher Knoten, an dem der Lauf ein totes Nebengleis aufs Streckengleis
+führte, wird aufgelöst (OSM ohne Verbindung; Grandson, Riedbach, Tüscherz). Wo die Ebene des Laufs nicht zur Vorlage passt,
+legt der Zusatz `weichen: [[osm, x, y]]` die OSM-Weiche an den gezeichneten Abzweig (Gorgier Anschlussring, Tüscherz,
+Zihlbrücke), `abgaenge_knoten` die OSM-Knoten der Abgänge je Seite (Zihlbrücke: Lauf kannte nur einen Abgang Ins).
+Prüffälle `vorlage_le_landeron`, `vorlage_gorgier_saint_aubin`, `vorlage_riedbach`, `vorlage_zihlbruecke_0`.
 
 **Bahnhofregister und Sperre «veraltet» (VR, seit 20.11., Entscheid D. Eckenstein «Regionen harmonisieren, OSM-Fehler
 erkennen»).** Jeder Bahnhof steht **einmal** im Register `spurplan/netz/bahnhoefe.json` (Schlüssel **SBB-Abkürzung**, dazu

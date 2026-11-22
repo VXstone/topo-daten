@@ -1,0 +1,14 @@
+{
+ "_quelle": "V4e 22.11.2026, lokal aus Code (region_ne), Gorgier-Saint-Aubin, gedreht 0°",
+ "erwartet": [],
+ "nicht": [
+  {
+   "regel": "HT5",
+   "anlass": "Gl. 512 (2-m-Stück hinter der Spurwechselweiche) lag im Netzmodell vor der Weiche"
+  },
+  {
+   "regel": "HT2",
+   "anlass": "Anschlussring: OSM-Weichen ohne Partner (weichen in der Vorlage)"
+  }
+ ]
+}

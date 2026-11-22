@@ -1,0 +1,10 @@
+{
+ "_quelle": "V4e 22.11.2026, lokal aus Code (region_ne), Le Landeron, gedreht 0°",
+ "erwartet": [],
+ "nicht": [
+  {
+   "regel": "HT5",
+   "anlass": "Planrand genau auf der Spurwechselweiche, Abgang ohne aus_ll: der Spurwechsel selbst galt als Fahrweg Abgang ↔ Abgang"
+  }
+ ]
+}

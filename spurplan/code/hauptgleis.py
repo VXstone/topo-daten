@@ -399,11 +399,17 @@ def _fahrwege(N, KN, GO, GP_, lage, gleise, pax_ways, knoten_pax, T, W, K):
         BEF.append(dict(regel="HT5", x=round(x, 1), y=round(y, 1), art="kuenstlich", osm=n,
                         text=f"Gleisende {n} am Planrand: in OSM läuft das Gleis im Plan weiter (künstlicher Schnitt, Gleis fehlt dazwischen)"))
     abg_kn = {ersatz.get(a.get("knoten"), a.get("knoten")) for a in N.get("abgaenge", [])} | {a.get("knoten") for a in N.get("abgaenge", [])}
+    # V4e (22.11.2026): Abgang ohne «aus_ll» (Typvorlage, Planrand genau auf einer Spurwechselweiche – Le Landeron, Gorgier,
+    # Riedbach): Richtung nach aussen = vom Schwerpunkt der Plan-Knoten weg. Sonst gilt der Spurwechsel am Rand selbst als
+    # Fahrweg Abgang ↔ Abgang (in OSM nur mit Richtungswechsel befahrbar).
+    _pk = [_xy((v["lat"], v["lon"]), lat0) for v in KN.values() if v.get("lat") is not None]
+    mitte = np.mean(_pk, axis=0) if _pk else None
     for a in N.get("abgaenge", []):
         n = a.get("knoten"); n = ersatz.get(n, n)
         if not a.get("pax") or n not in GO.aeste: continue
         ll = a.get("aus_ll") or None
         aussen = _einheit(_xy(ll, lat0) - _xy(K[n], lat0)) if ll and n in K else None
+        if aussen is None and mitte is not None and n in K: aussen = _einheit(_xy(K[n], lat0) - mitte)
         name = f"Abgang {a.get('ref') or ''} {a.get('town') or ''} ({n})".replace("  ", " ")
         ziele[name] = (GO.ende(n, aussen), (a["x"], a["y"]), "ende")
         richtung[name] = ((a.get("ref"), a.get("town"), a.get("dx"), a.get("dy")), (a.get("dx") or 0, a.get("dy") or 0))

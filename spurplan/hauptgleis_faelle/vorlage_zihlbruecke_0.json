@@ -1,0 +1,10 @@
+{
+ "_quelle": "V4e 22.11.2026, lokal aus Code (region_ne), Zihlbrücke, gedreht 0°",
+ "erwartet": [],
+ "nicht": [
+  {
+   "regel": "HT5",
+   "anlass": "zwei Abgänge Ins mit demselben OSM-Knoten; Doppelspurbeginn nach OSM oben"
+  }
+ ]
+}

@@ -156,8 +156,22 @@
    {
     "art": "doppelspurbeginn",
     "ende": "rechts",
-    "seite": "unten"
+    "seite": "oben",
+    "_osm": "V4e 22.11.: durchgehend ist Gl. 134 (südlich), Gl. 234 zweigt nach Norden ab (wie Ligerz)",
+    "weichen": [
+     [
+      632385979,
+      747.7,
+      110.0
+     ]
+    ]
    }
-  ]
+  ],
+  "abgaenge_knoten": {
+   "rechts": [
+    2867982337,
+    9600679144
+   ]
+  }
  }
 }

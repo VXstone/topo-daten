@@ -258,7 +258,19 @@
      ]
     ],
     "punkt_ende": true,
-    "_osm": "525 (Weiche 935 m) hinunter, 505 nach rechts bis Prellbock 1222 m (D.E. 20.10.)"
+    "_osm": "525 (Weiche 935 m) hinunter, 505 nach rechts bis Prellbock 1222 m (D.E. 20.10.)",
+    "weichen": [
+     [
+      443249181,
+      482.0,
+      182.0
+     ],
+     [
+      443249186,
+      526.3,
+      195.2
+     ]
+    ]
    },
    {
     "art": "linie",
@@ -276,7 +288,14 @@
       195.2
      ]
     ],
-    "_osm": "684645119: Verbindung oberes -> unteres Anschlussgleis"
+    "_osm": "684645119: Verbindung oberes -> unteres Anschlussgleis",
+    "weichen": [
+     [
+      443249179,
+      533.9,
+      182.0
+     ]
+    ]
    }
   ]
  },

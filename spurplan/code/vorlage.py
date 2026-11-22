@@ -9,6 +9,8 @@ Beschreibung (Override "vorlage"):
    "perrons": "aussen" | "mittel" | "oben" | "unten" | "keine" | Kombination mit "+",
    "spiegeln": false                                       (true = oben/unten vertauscht, z. B. Kreuzungsgleis unten)
    "orte": {"links": "Murten", "rechts": "Fribourg"}      (optional: Zielort je Seite, wenn die Peilung irrt)
+   "abgaenge_knoten": {"rechts": [osm, osm]}              (optional: OSM-Knoten der Abgänge je Seite von oben nach unten, V4e)
+   jeder Zusatz optional "weichen": [[osm, x, y]]         (OSM-Weiche am gezeichneten Abzweig festlegen, V4e)
    "gleise": ["1", "2"], "pax": [true, true]               (von oben nach unten, wie gezeichnet)
    "zusaetze": [                                           (alle Seiten- und Perronangaben wie gezeichnet, auch gespiegelt)
      {"art": "spurwechsel", "ende": "links|rechts", "anzahl": 1|2, "richtung": "steigend|fallend"},
@@ -21,7 +23,7 @@ Grundriss (kanonisch, vor dem Spiegeln): Kreuzungs- und Überholgleise liegen ob
 Ausgabe wie der allgemeine Lauf (<b>_spurplan.svg, _spurplan_check.svg, _bare.svg, _ports.json); die OSM-Abgänge des
 allgemeinen Laufs werden als <b>_osm_ports.json gesichert und zugeordnet (Liniennummer, Ort, Peilung bleiben).
 """
-import json, math, sys, os, shutil
+import collections, json, math, sys, os, shutil
 
 G, K = "#00862f", "#111"
 HW, NW = 3.6, 1.6
@@ -227,6 +229,12 @@ def zeichne(V, osm=None, title="Bahnhof", mit_text=True):
             p.update(kind="edge", x=round(PL if dx < 0 else PR, 1), y=float(y), dx=dx, dy=0, pax=True)
             _ort = (V.get("orte") or {}).get("links" if dx < 0 else "rechts")     # Ortskenntnis: Zielort je Seite
             if _ort: p["town"] = _ort
+            # V4e (22.11.2026, Zihlbrücke): der allgemeine Lauf kennt nur einen Abgang, die Vorlage zeichnet zwei (Doppel-
+            # spurbeginn am Rand) -> beide bekamen denselben OSM-Knoten (HT5). OSM-Knoten je Abgang von oben nach unten.
+            _kn = (V.get("abgaenge_knoten") or {}).get("links" if dx < 0 else "rechts") or []
+            if j < len(_kn) and _kn[j]:
+                if p.get("knoten") != _kn[j]: p.pop("aus_ll", None)
+                p["knoten"] = int(_kn[j])
             ports.append(p)
     os_side = [p for p in (osm or {}).get("ports", []) if p["kind"] == "side"] if osm else []
     if osm and len(os_side) != len(side_ports): befund.append(f"{len(side_ports)} seitliche Abzweige in der Vorlage, {len(os_side)} im allgemeinen Lauf")
@@ -368,6 +376,58 @@ def _verbindungen(key, N, weichen, max_ways=5):
     return out, LL
 
 
+def _schnitt_bereinigen(N):
+    """V4e (22.11.2026, Grandson/Riedbach/Tüscherz, HT5 «künstlicher Schnitt» + HT2): Der allgemeine Lauf führte ein totes
+    Nebengleis bis aufs Streckengleis und teilte dieses dort mit einem künstlichen Knoten (negative ID) – OSM hat keine
+    Verbindung (Riedbach: Ende 68 m neben dem Gleis). Die Typvorlage zeichnet den Bahnhof neu; im Netzmodell werden die zwei
+    Stücke desselben Ways wieder zusammengesetzt und das Nebengleis endet an seinem letzten OSM-Knoten."""
+    ends = collections.defaultdict(list)
+    for i, g in enumerate(N["gleise"]):
+        for e in (0, -1):
+            n = g["knoten"][e]
+            if n < 0: ends[n].append((i, e))
+    weg = set()
+    for n, L in ends.items():
+        ways = collections.Counter(N["gleise"][i]["way"] for i, _ in L)
+        durch = [w for w, c in ways.items() if c == 2]
+        if len(L) < 3 or len(durch) != 1: continue
+        (i1, e1), (i2, e2) = [(i, e) for i, e in L if N["gleise"][i]["way"] == durch[0]]
+        a, b = N["gleise"][i1]["knoten"], N["gleise"][i2]["knoten"]
+        a = a if e1 == -1 else a[::-1]; b = b if e2 == 0 else b[::-1]
+        N["gleise"][i1]["knoten"] = a[:-1] + b[1:]; weg.add(i2)
+        for i, e in L:
+            if N["gleise"][i]["way"] == durch[0]: continue
+            kn = N["gleise"][i]["knoten"]
+            N["gleise"][i]["knoten"] = kn[:-1] if e == -1 else kn[1:]
+        N["knoten"].pop(str(n), None); N["knoten"].pop(n, None)
+    N["gleise"] = [g for i, g in enumerate(N["gleise"]) if i not in weg]
+
+
+def _reihenfolge_halten(gleise, KN, alt_x, fest):
+    """V4e (22.11.2026, Gorgier Gl. 512): Die Weichen springen an den gezeichneten Abzweig, die übrigen Knoten folgen nur der
+    Längsabbildung – ein Knoten kurz hinter einer Weiche landete so VOR ihr (Gl. 512: 2-m-Stück hinter der Spurwechselweiche
+    lag im Netzmodell auf der anderen Seite des Abzweigs -> HT5 «fehlt im Plan» ohne Fehler im Plan). Längs jedes Gleises
+    bleibt die Reihenfolge der Knoten wie im Lauf: ein freier Knoten wird zwischen die festen Nachbarn (Weichen) geschoben."""
+    for _ in range(3):
+        for g in gleise:
+            L = [n for n in g["knoten"] if n in KN and KN[n].get("x") is not None and alt_x.get(n) is not None]
+            if len(L) < 2: continue
+            s = 1 if alt_x[L[-1]] >= alt_x[L[0]] else -1
+            for i, n in enumerate(L):
+                if n in fest: continue
+                vor = [KN[m]["x"] for m in L[:i] if m in fest and s * (alt_x[n] - alt_x[m]) > 0]
+                nach = [KN[m]["x"] for m in L[i + 1:] if m in fest and s * (alt_x[m] - alt_x[n]) > 0]
+                x = KN[n]["x"]
+                lo = (max(vor) if s > 0 else None) if vor else None
+                hi = (min(nach) if s > 0 else None) if nach else None
+                if s < 0:
+                    lo = max(nach) if nach else None; hi = min(vor) if vor else None
+                if lo is not None and hi is not None and lo > hi: continue
+                if lo is not None and x <= lo: x = lo + min(2.0, ((hi - lo) / 2) if hi is not None else 2.0)
+                if hi is not None and x >= hi: x = hi - min(2.0, ((hi - lo) / 2) if lo is not None else 2.0)
+                KN[n]["x"] = round(float(x), 1)
+
+
 def netz_mitschreiben(key, full, P):
     """V4c (21.11.2026, REGELN 0.1 / Kopf «HT»): die Typvorlage zeichnet den Bahnhof neu, das Netzmodell <key>_netz.json
     (spurplan_schema, allgemeiner Lauf) trug noch die alte Lage – HT/G0/OSM-Abgleich fanden die Weichen nicht (Paar HT1+HT2,
@@ -389,6 +449,7 @@ def netz_mitschreiben(key, full, P):
         N = json.load(open(fl))
     else:
         shutil.copy(fn, fl)
+    _schnitt_bereinigen(N)
     KN = {int(k): v for k, v in N["knoten"].items()}
     abg = {a.get("knoten"): a for a in N.get("abgaenge", []) if a.get("knoten") is not None}
     # quer: Abgänge und Gleisnummern
@@ -417,6 +478,17 @@ def netz_mitschreiben(key, full, P):
     # Zuordnung reihenfolgetreu (wie Sequenzabgleich): OSM-Weichen und Abzweige je längs sortiert, Paar nur bei passender
     # Ebene; Auslassen kostet SKIP. Serrières 21.11.: die reine Kostenminimierung tauschte Anschluss- und Spurwechselweiche.
     zu = {}
+    # V4e (22.11.2026, Gorgier Anschlussring, Tüscherz): Weichen an Zusätzen der Vorlage ({"art": …, "weichen": [[osm, x, y]]})
+    # stehen fest – das Netzmodell des Laufs legt alle Anschlussweichen auf eine Ebene, die Vorlage zeichnet sie auf zwei;
+    # über die Ebene allein fand der Abgleich keinen Partner (HT2 am gezeichneten Abzweig)
+    try:
+        _V = json.load(open(f"{key}_override.json")).get("vorlage") or {}
+    except Exception:
+        _V = {}
+    for z_ in _V.get("zusaetze", []):
+        for w_ in z_.get("weichen", []):
+            if int(w_[0]) in KN: zu[int(w_[0])] = (float(w_[1]), float(w_[2]))
+    sw_alle = len(sw); sw = [n for n in sw if n not in zu]
     SKIP = 150.0
     def kost(n, k):
         dy = min(abs(fy(y) - k[1]) for y in lagen[n])
@@ -454,7 +526,7 @@ def netz_mitschreiben(key, full, P):
         while i or j:
             z = Z[i][j]
             if z == "p":
-                if K_[j - 1] not in zu.values(): zu[S_[i - 1]] = K_[j - 1]
+                if K_[j - 1] not in zu.values() and (K_[j - 1][0], K_[j - 1][1]) not in zu.values(): zu[S_[i - 1]] = K_[j - 1]
                 i -= 1; j -= 1
             elif z == "s": i -= 1
             else: j -= 1
@@ -462,6 +534,7 @@ def netz_mitschreiben(key, full, P):
     # Abzweig, auch wenn sie gleisübergreifend anders liegen als in OSM (V4e: Reihenfolge gilt je Gleis, s. oben)
     fx = _abbildung(px_ + [(KN[n]["x"], k[0]) for n, k in zu.items()])
     r1 = lambda v: round(float(v), 1)
+    alt_x = {n: v.get("x") for n, v in KN.items()}
     for n, v in KN.items():
         if n in zu: v["x"], v["y"] = r1(zu[n][0]), r1(zu[n][1])
         else:
@@ -469,6 +542,19 @@ def netz_mitschreiben(key, full, P):
             v["y"] = r1(fy(v["y"])) if v.get("y") is not None else None
     for g in N["gleise"]:
         if g.get("y") is not None: g["y"] = r1(fy(g["y"]))
+    _reihenfolge_halten(N["gleise"], KN, alt_x, set(zu))
+    # Abgänge mit festgelegtem OSM-Knoten (abgaenge_knoten): das Gleisstück vom Abgang bis zur ersten Weiche liegt auf der
+    # Höhe des Abgangs (Zihlbrücke: der Lauf zeichnete das andere Gleis gerade, eine Höhenabbildung passt nicht für beide)
+    _fest_kn = {int(k_) for v_ in (_V.get("abgaenge_knoten") or {}).values() for k_ in v_ if k_}
+    for p_ in P["ports"]:
+        if p_.get("knoten") not in _fest_kn or p_["kind"] != "edge": continue
+        for g in N["gleise"]:
+            kn = g["knoten"]
+            if p_["knoten"] not in (kn[0], kn[-1]): continue
+            for n in kn:
+                if n in zu or n not in KN: continue
+                KN[n]["y"] = r1(p_["y"])
+            if g.get("y") is not None: g["y"] = r1(p_["y"])
     # OSM-Verbindungen zwischen zwei Weichen des Netzmodells, die der allgemeine Lauf nicht gezeichnet hat (St-Blaise CFF:
     # Spurwechsel 49773692 fehlte im Netzmodell -> HT5 «Fahrweg im Plan, nicht in OSM», obwohl OSM ihn hat). Die Vorlage
     # zeichnet solche Spurwechsel; das Netzmodell bekommt die OSM-Ways (Zwischenknoten auf der Geraden zwischen den Weichen).
@@ -496,10 +582,10 @@ def netz_mitschreiben(key, full, P):
                     for m in re.finditer(r'<rect x="([-\d.]+)" y="([-\d.]+)" width="([\d.]+)" height="8" rx="1.5"', full)]
     N["nummern"] = [dict(text=t, x=r1(x), y=r1(y)) for x, y, t in nums]
     N["W"], N["H"] = r1(P["W"]), r1(P["H"])
-    N["vorlage"] = dict(weichen=len(sw), zugeordnet=len(zu), abzweige_plan=len(PK), verbindungen=len(zusatz),
+    N["vorlage"] = dict(weichen=sw_alle, zugeordnet=len(zu), abzweige_plan=len(PK), verbindungen=len(zusatz),
                         gezeichnet=sorted(int(n) for n in zu))      # Weichen mit Abzweig in der Vorlage (hauptgleis: Abgang an Weiche)
     json.dump(N, open(fn, "w"), ensure_ascii=False, indent=0)
-    return None if len(zu) == len(sw) else f"Netzmodell: {len(zu)} von {len(sw)} OSM-Weichen einem Abzweig der Vorlage zugeordnet"
+    return None if len(zu) == sw_alle else f"Netzmodell: {len(zu)} von {sw_alle} OSM-Weichen einem Abzweig der Vorlage zugeordnet"
 
 
 def run(key):
