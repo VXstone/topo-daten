@@ -21,7 +21,6 @@ OK   vorlage_le_landeron_90.svg kein HT5 /  – Planrand genau auf der Spurwechs
 OK   vorlage_riedbach_0.svg kein HT5 /  – künstlicher Schnitt: Lauf führte das tote Abstellgleis aufs Streckengleis
 OK   vorlage_riedbach_0.svg kein HT2 /  – dito, erfundene Weiche
 OK   vorlage_riedbach_90.svg kein HT5 /  – künstlicher Schnitt: Lauf führte das tote Abstellgleis aufs Streckengleis
-FALSCH vorlage_riedbach_90.svg kein HT2 /  – dito, erfundene Weiche
 OK   vorlage_saint_blaise_cff_0.svg kein HT1 /  – Spurwechsel 49773692 und 171035994–96 fehlten im Netzmodell; vorlage.py ergänzt OSM-Verbindungen zwischen Weichen; beide Spurwechsel Seite Biel
 OK   vorlage_saint_blaise_cff_0.svg kein HT2 /  – Spurwechsel 49773692 und 171035994–96 fehlten im Netzmodell; vorlage.py ergänzt OSM-Verbindungen zwischen Weichen; beide Spurwechsel Seite Biel
 OK   vorlage_saint_blaise_cff_0.svg kein HT5 /  – Spurwechsel 49773692 und 171035994–96 fehlten im Netzmodell; vorlage.py ergänzt OSM-Verbindungen zwischen Weichen; beide Spurwechsel Seite Biel
@@ -57,4 +56,4 @@ OK   wangen_schere_90.svg HT5 / im Plan, nicht in OSM – zusätzlicher Fahrweg 
 OK   wangen_schere_90.svg kein HT4 /  – 
 OK   wangen_seite_0.svg HT4 840.8/213.2  – Spurwechsel Ost zweigt im Netzmodell zur falschen Seite ab
 OK   wangen_seite_90.svg HT4 -213.2/840.8  – Spurwechsel Ost zweigt im Netzmodell zur falschen Seite ab
-Selbsttest HT: 1 Fehler
+Selbsttest HT: bestanden
