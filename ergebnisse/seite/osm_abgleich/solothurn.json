@@ -172,13 +172,19 @@
 ]
 },
 {
-"regel": "VC1",
-"x": 1436.5,
-"y": 341.6,
-"text": "Gleis (Way 136053985) im Plan an Knoten 630418294 angebunden, in OSM nicht",
-"osm": 630418294,
+"regel": "VB2",
+"x": 1410.6,
+"y": 398.4,
+"text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
 "ways": [
-136053985
+49565840,
+49565842,
+49565844,
+136053985,
+251195472
+],
+"farben": [
+"schwarz"
 ]
 },
 {
@@ -208,28 +214,18 @@
 },
 {
 "regel": "VB2",
-"x": 1160.0,
-"y": 506.0,
-"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
-"ways": [],
-"farben": [
-"braun"
-]
-},
-{
-"regel": "VB2",
-"x": 1152.0,
-"y": 506.0,
-"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
-"ways": [],
-"farben": [
-"braun"
-]
-},
-{
-"regel": "VB2",
 "x": 1119.6,
 "y": 86.0,
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+"ways": [],
+"farben": [
+"braun"
+]
+},
+{
+"regel": "VB2",
+"x": 1160.0,
+"y": 506.0,
 "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
 "ways": [],
 "farben": [

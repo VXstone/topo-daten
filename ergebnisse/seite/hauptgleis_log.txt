@@ -30,7 +30,7 @@ gummenen                               HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 ins                                    HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 kallnach                               HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 kerzers_papiliorama                    HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
-konolfingen                            HT1 1 HT2 2 HT3 0 HT4 0 HT5 6
+konolfingen                            HT1 0 HT2 2 HT3 0 HT4 0 HT5 6
 la_neuveville                          HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 la_presta_mines_d_asphalte             HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 laufelfingen                           HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
@@ -84,7 +84,7 @@ mob__toveyre                           HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 mob__valmont                           HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 mob__vernex                            HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 mob__vuarennes                         HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
-mob__zweisimmen                        HT1 0 HT2 4 HT3 0 HT4 0 HT5 0
+mob__zweisimmen                        HT1 0 HT2 3 HT3 0 HT4 0 HT5 0
 motiers                                HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 munchenwiler_courgevaux                HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 muntelier_lowenberg                    HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
@@ -93,7 +93,7 @@ murten                                 HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 neuchatel                              HT1 0 HT2 0 HT3 2 HT4 0 HT5 17
 neuchatel_vauseyon                     HT1 0 HT2 1 HT3 0 HT4 0 HT5 0
 noiraigue                              HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
-olten                                  HT1 15 HT2 20 HT3 9 HT4 3 HT5 143
+olten                                  HT1 10 HT2 21 HT3 7 HT4 2 HT5 165
 olten_hammer                           HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 onnens_bonvillars                      HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 pensier                                HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
@@ -113,7 +113,7 @@ szu__ringlikon                         HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 szu__uetliberg                         HT1 0 HT2 1 HT3 0 HT4 0 HT5 0
 szu__zurich_binz                       HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 szu__zurich_friesenberg                HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
-szu__zurich_giesshubel                 HT1 1 HT2 9 HT3 0 HT4 1 HT5 6
+szu__zurich_giesshubel                 HT1 1 HT2 9 HT3 0 HT4 1 HT5 5
 szu__zurich_schweighof                 HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 szu__zurich_selnau                     HT1 0 HT2 2 HT3 0 HT4 0 HT5 0
 tecknau                                HT1 0 HT2 1 HT3 0 HT4 0 HT5 2
@@ -133,10 +133,4 @@ vereina__vereina_sud                   HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 wangen_bei_olten                       HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 zihlbruecke                            HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 zofingen                               HT1 2 HT2 0 HT3 0 HT4 0 HT5 0
-Hauptgleis HT: {'HT1': 39, 'HT2': 55, 'HT3': 11, 'HT4': 6, 'HT5': 212} – 135 Pläne, 26 mit HT > 0
-NEU konolfingen HT1: 0 -> 1
-NEU olten HT1: 13 -> 15
-NEU olten HT3: 7 -> 9
-NEU olten HT4: 2 -> 3
-NEU szu__zurich_giesshubel HT2: 8 -> 9
-NEU szu__zurich_giesshubel HT5: 5 -> 6
+Hauptgleis HT: {'HT1': 33, 'HT2': 55, 'HT3': 9, 'HT4': 5, 'HT5': 233} – 135 Pläne, 26 mit HT > 0

@@ -18,7 +18,7 @@
 | ligerz | NE 5 · Neuchâtel – Biel | Archivbeginn (Abnahme 2026-10-17) | 5 | gleichwertig | OSM ok (kein Alt-Stand) | 0 | 0 | 2026-11-22T05:27 |
 | twann | NE 5 · Neuchâtel – Biel | Archivbeginn (Abnahme 2026-10-15) | 5 | gleichwertig | OSM ok (kein Alt-Stand) | 0 | 0 | 2026-11-20T21:23 |
 | zihlbruecke | NE 1 · Neuchâtel – Ins – Kerzers – Bern | Archivbeginn (Abnahme 2026-10-15) | 4 | gleichwertig | OSM ok (kein Alt-Stand) | 0 | 0 | 2026-11-22T08:19 |
-| cornaux | NE 5 · Neuchâtel – Biel | Archivbeginn (Abnahme 2026-10-15) | 4 | gleichwertig | OSM VB2 1, VD1 4 (kein Alt-Stand) | GS 1 · GG 4 | 0 | 2026-11-20T21:23 |
+| cornaux | NE 5 · Neuchâtel – Biel | Archivbeginn (Abnahme 2026-10-15) | 4 | gleichwertig | OSM VD1 4 (kein Alt-Stand) | GS 1 · GG 4 | 0 | 2026-11-20T21:23 |
 | bern_brunnen_westside | NE 1 · Neuchâtel – Ins – Kerzers – Bern | Archivbeginn (Abnahme 2026-10-20) | 3 | gleichwertig | OSM VB1 3 (kein Alt-Stand) | 0 | 0 | 2026-11-22T05:27 |
 | serrieres | NE 6 · Neuchâtel – Yverdon | Archivbeginn (Abnahme 2026-10-15) | 3 | gleichwertig | OSM VA1 3, VB1 3 (kein Alt-Stand) | 0 | 0 | 2026-11-21T12:04 |
 | travers | NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier | Archivbeginn (Abnahme 2026-10-15) | 3 | gleichwertig | OSM ok (kein Alt-Stand) | 0 | 0 | 2026-11-20T21:23 |

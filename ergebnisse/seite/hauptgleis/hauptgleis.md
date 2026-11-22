@@ -4,16 +4,16 @@
 
 | Plan | HT1 | HT2 | HT3 | HT4 | HT5 | Summe |
 |---|---|---|---|---|---|---|
-| olten | **15** (Basis 13) | 20 ↓25 | **9** (Basis 7) | **3** (Basis 2) | 143 ↓174 | 190 |
+| olten | 10 ↓13 | 21 ↓25 | 7 | 2 | 165 ↓174 | 205 |
 | neuchatel | · | · | 2 | · | 17 | 19 |
 | solothurn | 2 ↓4 | 1 | · | · | 15 | 18 |
 | aarau | 3 ↓7 | 4 | · | 1 | 9 | 17 |
-| szu__zurich_giesshubel | 1 | **9** (Basis 8) | 0 ↓1 | 1 | **6** (Basis 5) | 17 |
+| szu__zurich_giesshubel | 1 | 9 | · | 1 | 5 | 16 |
 | rothrist | 2 | 4 ↓5 | · | · | 5 ↓6 | 11 |
-| konolfingen | **1** (Basis 0) | 2 | · | · | 6 | 9 |
+| konolfingen | · | 2 | · | · | 6 | 8 |
 | mob__chamby | 1 ↓2 | 1 | · | 1 | 1 | 4 |
-| mob__zweisimmen | · | 4 | · | · | 0 ↓1 | 4 |
 | vereina__klosters_platz | 3 | · | · | · | 1 | 4 |
+| mob__zweisimmen | · | 3 ↓4 | · | · | 0 ↓1 | 3 |
 | schonenwerd | · | 2 | · | · | 1 | 3 |
 | tecknau | · | 1 | · | · | 2 | 3 |
 | vereina__klosters_selfranga | 1 | · | · | · | 2 | 3 |
@@ -145,55 +145,3 @@ Regeln: HT1 = OSM-Weiche am Hauptgleis ohne Abzweig im Plan; HT2 = Abzweig am Ha
 ## Ausnahmen (REGELN 6, `spurplan/hauptgleis_ausnahmen.json`, nicht gezählt)
 
 - **courtepin** HT2 500.0/110.0: Industriegleis nördlich, rechts Richtung Courtepin abzweigend: in Betrieb (Satellitenbild, Daniel 22.11.2026); in OSM endet es 1 m neben dem Streckengleis ohne gemeinsamen Knoten
-
-## NEUE Befunde
-
-- **konolfingen** HT1: 0 → 1
-  - 308.8/186.8: OSM-Weiche 1689230812 ohne Abzweig im Plan
-- **olten** HT1: 13 → 15
-  - 430.8/350.0: OSM-Weiche 635800896 ohne Abzweig im Plan
-  - 480.6/326.0: OSM-Weiche 635800902 ohne Abzweig im Plan
-  - 799.6/326.0: OSM-Weiche 635801245 ohne Abzweig im Plan
-  - 956.7/350.0: OSM-Weiche 635802164 ohne Abzweig im Plan
-  - 883.5/326.0: OSM-Weiche 635801483 ohne Abzweig im Plan
-  - 382.1/302.0: OSM-Weiche 635800871 ohne Abzweig im Plan
-  - 915.6/182.0: OSM-Weiche 635801598 ohne Abzweig im Plan
-  - 800.1/158.0: OSM-Weiche 635801196 ohne Abzweig im Plan
-  - 799.1/158.0: OSM-Weiche 635801255 ohne Abzweig im Plan
-  - 1006.8/278.0: OSM-Weiche 6360514582 ohne Abzweig im Plan
-  - 1263.7/230.0: OSM-Weiche 635802715 ohne Abzweig im Plan
-  - 1117.1/206.0: OSM-Weiche 2696673789 ohne Abzweig im Plan
-  - 976.2/267.2: OSM-Weiche 6360514584 ohne Abzweig im Plan
-  - 994.4/302.0: OSM-Weiche 6746815797 ohne Abzweig im Plan
-  - 1655.3/350.0: OSM-Weiche 635804037 ohne Abzweig im Plan
-- **olten** HT3: 7 → 9
-  - 821.9/168.0: Gleis (Way 195008189) im Plan an Knoten 635801281 angebunden, in OSM nicht
-  - 850.0/182.0: Gleis (Way 195008189) im Plan an Knoten 635801355 angebunden, in OSM nicht
-  - 944.0/326.0: Gleis (Way 378517711) im Plan an Knoten 635802175 angebunden, in OSM nicht
-  - 951.0/158.0: Gleis (Way 136910732) im Plan an Knoten 635801812 angebunden, in OSM nicht
-  - 266.0/254.0: Gleis (Way 230265767) im Plan an Knoten 9233845854 angebunden, in OSM nicht
-  - 1076.0/206.0: Gleis (Way 197523818) im Plan an Knoten 635802407 angebunden, in OSM nicht
-  - 907.0/182.0: Gleis (Way 195008189) im Plan an Knoten 635801600 angebunden, in OSM nicht
-  - 907.0/182.0: Gleis (Way 136910732) im Plan an Knoten 635801600 angebunden, in OSM nicht
-  - 394.8/326.0: Gleis (Way 50062881) im Plan an Knoten 635800864 angebunden, in OSM nicht
-- **olten** HT4: 2 → 3
-  - 996.2/254.0: Weiche 2077484616: Äste (Ways 197523816, 378517710) im Plan auf der anderen Seite als in OSM
-  - 1006.8/278.0: Weiche 6360514582: Äste (Ways 380867859, 679251567) im Plan auf der anderen Seite als in OSM
-  - 1118.9/254.0: Weiche 6360515787: Äste (Ways 679251541, 1264378757) im Plan auf der anderen Seite als in OSM
-- **szu__zurich_giesshubel** HT2: 8 → 9
-  - 848.8/208.4: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-  - 1328.2/184.4: Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung
-  - 1279.1/232.4: Gleise berühren sich (4 Richtungen), in OSM keine Weiche/Kreuzung
-  - 1315.2/184.4: Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung
-  - 1441.2/160.4: Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung
-  - 1427.4/184.4: Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung
-  - 1395.9/232.0: Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung
-  - 1205.8/232.4: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-  - 1286.2/110.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-- **szu__zurich_giesshubel** HT5: 5 → 6
-  - 225.5/232.4: Gleisende -1000324969020000 am Planrand: in OSM läuft das Gleis im Plan weiter (künstlicher Schnitt, Gleis fehlt dazwischen)
-  - 2020.4/232.4: Gleisende -1000324969020027 am Planrand: in OSM läuft das Gleis im Plan weiter (künstlicher Schnitt, Gleis fehlt dazwischen)
-  - 225.5/208.4: Gleisende -1000351899126002 am Planrand: in OSM läuft das Gleis im Plan weiter (künstlicher Schnitt, Gleis fehlt dazwischen)
-  - 2020.4/184.4: Gleisende -1000351899126031 am Planrand: in OSM läuft das Gleis im Plan weiter (künstlicher Schnitt, Gleis fehlt dazwischen)
-  - 451.5/208.4: Fahrweg Abgang 712 Adliswil (11645709818) ↔ Gl. 2 in OSM, fehlt im Plan
-  - 978.8/147.2: Fahrweg Abgang 713 Uetliberg (11465267216) ↔ Gl. 2 in OSM, fehlt im Plan

@@ -2,24 +2,6 @@
 "plan": "cornaux",
 "befunde": [
 {
-"regel": "VB2",
-"x": 642.0,
-"y": 261.2,
-"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
-"ways": [
-39129679,
-39129684,
-39129685,
-154866173,
-154866176,
-154866177,
-507899763
-],
-"farben": [
-"schwarz"
-]
-},
-{
 "regel": "VD1",
 "x": 503.6,
 "y": 274.4,
@@ -47,7 +29,7 @@
 "info": {
 "dkw_osm_unvollstaendig": [],
 "gleise": 52,
-"knoten_plan": 28,
+"knoten_plan": 27,
 "dkw_plan": 0,
 "knoten_osm": 32,
 "versatz_y": 0.0,

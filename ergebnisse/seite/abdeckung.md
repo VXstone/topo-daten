@@ -1,11 +1,11 @@
-# Hinweis-Abdeckung 30/57
+# Hinweis-Abdeckung 29/57
 
 Befund < 40 px im selben Plan, ohne G2.
 
 | | Hinweis | Plan | Regeln | nächster px | Text |
 |---|---|---|---|---|---|
 | ✓ | 0bw9 | solothurn | G6, MX, VB1, VB2, W1, W2 | 19.2 | Gleis nach unten, Knick, über anderen Gleisen nach oben |
-| ✓ | 0fpo | solothurn | MX, VA1, VC1, W2 | 18.8 | sauberes Gleis ins Nichts |
+| ✓ | 0fpo | solothurn | MX, VA1, W2 | 18.8 | sauberes Gleis ins Nichts |
 | ✓ | 0k4j | region | G5 | 27.3 | Eppenbergtunnel Weichen/Stummel |
 | ✓ | 2vxh | mob__chamby | VD1 | 23.2 | Perron und Gleis verdreht, Mittelperron? |
 | ✓ | 33fs | konolfingen | MQ | 15.6 | Gleis unter Gleis, sehr steil |
@@ -38,21 +38,21 @@ Befund < 40 px im selben Plan, ohne G2.
 | · | jy8r | mob__zweisimmen |  | 49.6 | Zwischengerade? |
 | · | k4qi | mob__rossiniere |  |  | Stumpen? |
 | · | ldor | aarau |  | 122.6 | was ist das für ein Gleis |
-| · | ldwo | mob__zweisimmen |  | 51.1 | Versatz? |
+| · | ldwo | mob__zweisimmen |  | 86.2 | Versatz? |
 | ✓ | lhm4 | aarau | VB1 | 4.8 | Stummel richtige Seite? |
 | · | lld9 | olten |  | 119.8 | Anschlussgleise südlich Olten |
 | ✓ | lotw | mob__chamby | VB2, VD1 | 20.1 | Pfeil andere Seite, Stumpen am Perron |
 | ✓ | mkad | aarau | MF | 38.2 | Meterspur-Perron? |
 | ✓ | mp8h | mob__montreux | MX, VA2 | 13.0 | 90 Grad? |
 | ✓ | obvp | solothurn | G6, VB1, VD1, W1, W2 | 0.7 | 90 Grad Knick? |
-| ✓ | q31m | mob__zweisimmen | VB2 | 34.0 | Meterspur an 6/7 nicht angebunden |
+| · | q31m | mob__zweisimmen |  | 96.2 | Meterspur an 6/7 nicht angebunden |
 | · | qotw | vereina__klosters_platz |  | 83.3 | Mittelperron zwischen 2 und 3 |
 | · | r9xv | aarau |  | 47.9 | Stummel korrekt? |
 | · | rap4 | mob__le_tremblex |  |  | Nebengleis nicht fett |
-| ✓ | t6x0 | solothurn | G6, MP, MX, VA1, VB2, VC1, W2 | 5.3 | Kreuzung in OSM? |
+| ✓ | t6x0 | solothurn | G6, MP, MX, VA1, VB2, W2 | 5.3 | Kreuzung in OSM? |
 | ✓ | tnvp | konolfingen | G7, MX, VB2, VC1 | 2.7 | Knubbel kurz gerade |
 | · | ttv8 | konolfingen |  | 55.3 | DKW? |
-| · | u13h | mob__zweisimmen |  | 54.0 | Stumpen Normalspur? |
+| · | u13h | mob__zweisimmen |  | 84.0 | Stumpen Normalspur? |
 | ✓ | uyue | solothurn | G6, VB2, VD2 | 2.3 | Perron auf Gleis, gerader Knubbel |
 | · | v2w8 | mob__glion |  | 109.8 | Riesenabstand Schiebebühne |
 | · | vnyq | aarau |  | 99.4 | Zwischengerade |

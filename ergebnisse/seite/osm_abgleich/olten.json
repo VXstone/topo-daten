@@ -2,13 +2,6 @@
 "plan": "olten",
 "befunde": [
 {
-"regel": "VA1",
-"x": 823.6,
-"y": 158.0,
-"text": "OSM-DKW 635801281 im Plan nicht als DKW gezeichnet",
-"osm": 635801281
-},
-{
 "regel": "VB1",
 "x": 430.8,
 "y": 350.0,
@@ -38,13 +31,6 @@
 },
 {
 "regel": "VB1",
-"x": 883.5,
-"y": 326.0,
-"text": "OSM-Weiche 635801483 ohne Abzweig im Plan",
-"osm": 635801483
-},
-{
-"regel": "VB1",
 "x": 382.1,
 "y": 302.0,
 "text": "OSM-Weiche 635800871 ohne Abzweig im Plan",
@@ -66,20 +52,6 @@
 },
 {
 "regel": "VB1",
-"x": 799.1,
-"y": 158.0,
-"text": "OSM-Weiche 635801255 ohne Abzweig im Plan",
-"osm": 635801255
-},
-{
-"regel": "VB1",
-"x": 1006.8,
-"y": 278.0,
-"text": "OSM-Weiche 6360514582 ohne Abzweig im Plan",
-"osm": 6360514582
-},
-{
-"regel": "VB1",
 "x": 1263.7,
 "y": 230.0,
 "text": "OSM-Weiche 635802715 ohne Abzweig im Plan",
@@ -94,24 +66,41 @@
 },
 {
 "regel": "VB1",
-"x": 976.2,
-"y": 267.2,
-"text": "OSM-Weiche 6360514584 ohne Abzweig im Plan",
-"osm": 6360514584
-},
-{
-"regel": "VB1",
-"x": 994.4,
-"y": 302.0,
-"text": "OSM-Weiche 6746815797 ohne Abzweig im Plan",
-"osm": 6746815797
-},
-{
-"regel": "VB1",
 "x": 1655.3,
 "y": 350.0,
 "text": "OSM-Weiche 635804037 ohne Abzweig im Plan",
 "osm": 635804037
+},
+{
+"regel": "VB2",
+"x": 956.9,
+"y": 314.0,
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+"ways": [
+378517711,
+380867859
+],
+"farben": [
+"schwarz"
+]
+},
+{
+"regel": "VB2",
+"x": 1697.1,
+"y": 206.0,
+"text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
+"ways": [
+10057037,
+48647165,
+48647246,
+50062969,
+1332412902,
+1332412905,
+1525494919
+],
+"farben": [
+"gruen"
+]
 },
 {
 "regel": "VB2",
@@ -152,32 +141,39 @@
 ]
 },
 {
-"regel": "VC1",
+"regel": "VB2",
 "x": 821.9,
 "y": 168.0,
-"text": "Gleis (Way 195008189) im Plan an Knoten 635801281 angebunden, in OSM nicht",
-"osm": 635801281,
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
 "ways": [
 195008189,
+195008190,
+196578217,
 196578224,
+230265798,
 230265800,
 378517710,
 679251549,
 679251561,
 679258585,
+702696957,
 702696959,
+904059591,
 1003002464,
 1332412914,
 1332417468,
 1461527813
+],
+"farben": [
+"gruen",
+"schwarz"
 ]
 },
 {
-"regel": "VC1",
+"regel": "VB2",
 "x": 850.0,
 "y": 182.0,
-"text": "Gleis (Way 195008189) im Plan an Knoten 635801355 angebunden, in OSM nicht",
-"osm": 635801355,
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
 "ways": [
 195008189,
 196578224,
@@ -191,6 +187,10 @@
 1332412914,
 1332417468,
 1461527813
+],
+"farben": [
+"gruen",
+"schwarz"
 ]
 },
 {
@@ -208,7 +208,6 @@
 173173290,
 230265754,
 378516511,
-718445981,
 1331904821,
 1331908789
 ],
@@ -225,24 +224,7 @@
 "osm": 635802175,
 "ways": [
 378517711,
-380867859,
-679251563,
-718445981
-]
-},
-{
-"regel": "VB2",
-"x": 956.9,
-"y": 314.0,
-"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
-"ways": [
-378517711,
-380867859,
-679251563,
-718445981
-],
-"farben": [
-"schwarz"
+380867859
 ]
 },
 {
@@ -254,9 +236,7 @@
 230265770,
 378517711,
 380867859,
-679251563,
 679251564,
-679251567,
 884583191
 ],
 "farben": [
@@ -311,24 +291,6 @@
 },
 {
 "regel": "VB2",
-"x": 1697.1,
-"y": 206.0,
-"text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
-"ways": [
-10057037,
-48647165,
-48647246,
-50062969,
-1332412902,
-1332412905,
-1525494919
-],
-"farben": [
-"gruen"
-]
-},
-{
-"regel": "VB2",
 "x": 1733.0,
 "y": 206.0,
 "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
@@ -340,25 +302,6 @@
 1332412902,
 1332412905,
 1525494919
-],
-"farben": [
-"gruen"
-]
-},
-{
-"regel": "VB2",
-"x": 332.6,
-"y": 230.0,
-"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
-"ways": [
-57016117,
-137216808,
-137216810,
-137713643,
-195008192,
-396181910,
-783711750,
-977851899
 ],
 "farben": [
 "gruen"
@@ -384,7 +327,6 @@
 "ways": [
 197523818,
 380867858,
-679251563,
 679251568
 ]
 },
@@ -433,7 +375,6 @@
 "ways": [
 197523818,
 380867858,
-679251563,
 679251568
 ],
 "farben": [
@@ -652,10 +593,10 @@
 "info": {
 "dkw_osm_unvollstaendig": [],
 "gleise": 131,
-"knoten_plan": 84,
+"knoten_plan": 83,
 "dkw_plan": 2,
-"knoten_osm": 90,
+"knoten_osm": 86,
 "versatz_y": 0.0,
-"netz_auf_plan": 0.74
+"netz_auf_plan": 0.82
 }
 }

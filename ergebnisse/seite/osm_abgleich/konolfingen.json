@@ -2,20 +2,6 @@
 "plan": "konolfingen",
 "befunde": [
 {
-"regel": "VB1",
-"x": 305.3,
-"y": 123.2,
-"text": "OSM-Weiche 1689230852 ohne Abzweig im Plan",
-"osm": 1689230852
-},
-{
-"regel": "VB1",
-"x": 308.8,
-"y": 186.8,
-"text": "OSM-Weiche 1689230812 ohne Abzweig im Plan",
-"osm": 1689230812
-},
-{
 "regel": "VB2",
 "x": 361.5,
 "y": 306.8,
@@ -85,7 +71,7 @@
 1689231106
 ],
 "gleise": 55,
-"knoten_plan": 25,
+"knoten_plan": 26,
 "dkw_plan": 4,
 "knoten_osm": 29,
 "versatz_y": 0.0,

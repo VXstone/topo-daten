@@ -4,9 +4,9 @@
 18 Einträge
 index.html 2044 KB, 148 Pläne
 21 Hinweise, 21 Ausschnitte
-Hinweis-Abdeckung: 30/57 (Befund < 40 px, ohne G2)
+Hinweis-Abdeckung: 29/57 (Befund < 40 px, ohne G2)
 ✓ 0bw9 solothurn                    G6,MX,VB1,VB2,W1,W2       19.2  Gleis nach unten, Knick, über anderen Gleisen nach oben
-✓ 0fpo solothurn                    MX,VA1,VC1,W2             18.8  sauberes Gleis ins Nichts
+✓ 0fpo solothurn                    MX,VA1,W2                 18.8  sauberes Gleis ins Nichts
 ✓ 0k4j region                       G5                        27.3  Eppenbergtunnel Weichen/Stummel
 ✓ 2vxh mob__chamby                  VD1                       23.2  Perron und Gleis verdreht, Mittelperron?
 ✓ 33fs konolfingen                  MQ                        15.6  Gleis unter Gleis, sehr steil
@@ -39,21 +39,21 @@ Hinweis-Abdeckung: 30/57 (Befund < 40 px, ohne G2)
 · jy8r mob__zweisimmen              -                         49.6  Zwischengerade?
 · k4qi mob__rossiniere              -                            -  Stumpen?
 · ldor aarau                        -                        122.6  was ist das für ein Gleis
-· ldwo mob__zweisimmen              -                         51.1  Versatz?
+· ldwo mob__zweisimmen              -                         86.2  Versatz?
 ✓ lhm4 aarau                        VB1                        4.8  Stummel richtige Seite?
 · lld9 olten                        -                        119.8  Anschlussgleise südlich Olten
 ✓ lotw mob__chamby                  VB2,VD1                   20.1  Pfeil andere Seite, Stumpen am Perron
 ✓ mkad aarau                        MF                        38.2  Meterspur-Perron?
 ✓ mp8h mob__montreux                MX,VA2                    13.0  90 Grad?
 ✓ obvp solothurn                    G6,VB1,VD1,W1,W2           0.7  90 Grad Knick?
-✓ q31m mob__zweisimmen              VB2                       34.0  Meterspur an 6/7 nicht angebunden
+· q31m mob__zweisimmen              -                         96.2  Meterspur an 6/7 nicht angebunden
 · qotw vereina__klosters_platz      -                         83.3  Mittelperron zwischen 2 und 3
 · r9xv aarau                        -                         47.9  Stummel korrekt?
 · rap4 mob__le_tremblex             -                            -  Nebengleis nicht fett
-✓ t6x0 solothurn                    G6,MP,MX,VA1,VB2,VC1,W2     5.3  Kreuzung in OSM?
+✓ t6x0 solothurn                    G6,MP,MX,VA1,VB2,W2        5.3  Kreuzung in OSM?
 ✓ tnvp konolfingen                  G7,MX,VB2,VC1              2.7  Knubbel kurz gerade
 · ttv8 konolfingen                  -                         55.3  DKW?
-· u13h mob__zweisimmen              -                         54.0  Stumpen Normalspur?
+· u13h mob__zweisimmen              -                         84.0  Stumpen Normalspur?
 ✓ uyue solothurn                    G6,VB2,VD2                 2.3  Perron auf Gleis, gerader Knubbel
 · v2w8 mob__glion                   -                        109.8  Riesenabstand Schiebebühne
 · vnyq aarau                        -                         99.4  Zwischengerade
@@ -62,11 +62,11 @@ Hinweis-Abdeckung: 30/57 (Befund < 40 px, ohne G2)
 ✓ xke0 solothurn                    MZ                        25.3  Zwischengerade, doppelter Abstand
 ✓ z6f2 konolfingen                  MX                        21.0  DKW?
 ✓ zcz3 solothurn                    G7,MX,VB2                 18.0  nicht verbunden
-index.html 2051 KB, 149 Pläne
+index.html 2060 KB, 149 Pläne
 /home/runner/work/topo-daten/topo-daten/spurplan/code/alle_plaene_pruefen.py:231: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
   json.dump(dict(erzeugt=datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"), plaene=len(zeilen), geaendert=len(gz),
 region_ne                    veröffentlicht                      6 Stellen  vermutlich besser  G2 36→30
-olten                        bestätigt 2026-11-08                0 Stellen  gleichwertig  OSM VA1 1, VB1 15, VB2 20, VC1 9, VD1 10 (kein Alt-Stand)
+olten                        bestätigt 2026-11-08                0 Stellen  gleichwertig  OSM VB1 10, VB2 21, VC1 7, VD1 10 (kein Alt-Stand)
 olten_hammer                 bestätigt 2026-11-07                0 Stellen  gleichwertig  OSM VB1 1 (kein Alt-Stand)
 rothrist                     Archivbeginn (Abnahme 2026-10-29)    0 Stellen  gleichwertig  OSM VA2 1, VB1 4, VB2 5 (kein Alt-Stand)
 zofingen                     bestätigt 2026-11-08               26 Stellen  vermutlich besser  W59 11→10 · OSM VA2 2, VB1 2, VD1 1 (kein Alt-Stand)
@@ -97,7 +97,7 @@ cressier_fr                  Archivbeginn (Abnahme 2026-10-20)    0 Stellen  gle
 courtepin                    Archivbeginn (Abnahme 2026-10-20)    1 Stellen  gleichwertig  OSM VB2 1, VD1 1 (kein Alt-Stand)
 pensier                      Archivbeginn (Abnahme 2026-10-20)    1 Stellen  gleichwertig  OSM VD1 1 (kein Alt-Stand)
 saint_blaise_cff             Archivbeginn (Abnahme 2026-10-15)    9 Stellen  gleichwertig  OSM ok (kein Alt-Stand)
-cornaux                      Archivbeginn (Abnahme 2026-10-15)    4 Stellen  gleichwertig  OSM VB2 1, VD1 4 (kein Alt-Stand)
+cornaux                      Archivbeginn (Abnahme 2026-10-15)    4 Stellen  gleichwertig  OSM VD1 4 (kein Alt-Stand)
 cressier                     Archivbeginn (Abnahme 2026-10-15)    0 Stellen  gleichwertig  OSM ok (kein Alt-Stand)
 le_landeron                  Archivbeginn (Abnahme 2026-10-20)    2 Stellen  schlechter?  G2 0→1, T7 2→3 (Wunsch-Summe +8) · OSM VD1 1 (kein Alt-Stand)
 la_neuveville                Archivbeginn (Abnahme 2026-10-15)    0 Stellen  gleichwertig  OSM ok (kein Alt-Stand)

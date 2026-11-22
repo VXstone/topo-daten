@@ -1,5 +1,5 @@
 {
- "abgedeckt": 30,
+ "abgedeckt": 29,
  "offen": 57,
  "radius": 40.0,
  "ohne": [
@@ -35,7 +35,6 @@
    "regeln": [
     "MX",
     "VA1",
-    "VC1",
     "W2"
    ],
    "naechster": 18.8,
@@ -481,8 +480,8 @@
    "text": "Versatz?",
    "abgedeckt": false,
    "regeln": [],
-   "naechster": 51.1,
-   "naechste_regel": "VB2",
+   "naechster": 86.2,
+   "naechste_regel": "MZ",
    "plan_da": true
   },
   {
@@ -579,12 +578,10 @@
    "x": 536.7,
    "y": 178.3,
    "text": "Meterspur an 6/7 nicht angebunden",
-   "abgedeckt": true,
-   "regeln": [
-    "VB2"
-   ],
-   "naechster": 34.0,
-   "naechste_regel": "VB2",
+   "abgedeckt": false,
+   "regeln": [],
+   "naechster": 96.2,
+   "naechste_regel": "MZ",
    "plan_da": true
   },
   {
@@ -636,7 +633,6 @@
     "MX",
     "VA1",
     "VB2",
-    "VC1",
     "W2"
    ],
    "naechster": 5.3,
@@ -680,8 +676,8 @@
    "text": "Stumpen Normalspur?",
    "abgedeckt": false,
    "regeln": [],
-   "naechster": 54.0,
-   "naechste_regel": "VB2",
+   "naechster": 84.0,
+   "naechste_regel": "MZ",
    "plan_da": true
   },
   {

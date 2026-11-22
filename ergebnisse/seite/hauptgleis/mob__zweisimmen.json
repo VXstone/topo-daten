@@ -1,7 +1,7 @@
 {
  "zaehl": {
   "HT1": 0,
-  "HT2": 4,
+  "HT2": 3,
   "HT3": 0,
   "HT4": 0,
   "HT5": 0
@@ -21,16 +21,6 @@
     548740275,
     959792639,
     1026495423
-   ]
-  },
-  {
-   "regel": "HT2",
-   "x": 556.5,
-   "y": 206.0,
-   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
-   "ways": [
-    548732850,
-    959792642
    ]
   },
   {
@@ -89,7 +79,7 @@
  ],
  "osm_abgleich": {
   "VA1": 1,
-  "VB2": 4,
+  "VB2": 3,
   "VD1": 3
  }
 }

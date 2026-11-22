@@ -29,19 +29,6 @@
 },
 {
 "regel": "VB2",
-"x": 556.5,
-"y": 206.0,
-"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
-"ways": [
-548732850,
-959792642
-],
-"farben": [
-"braun"
-]
-},
-{
-"regel": "VB2",
 "x": 448.4,
 "y": 219.2,
 "text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
@@ -97,7 +84,7 @@
 "info": {
 "dkw_osm_unvollstaendig": [],
 "gleise": 51,
-"knoten_plan": 22,
+"knoten_plan": 21,
 "dkw_plan": 0,
 "knoten_osm": 22,
 "versatz_y": 0.0,

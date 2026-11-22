@@ -265,7 +265,7 @@ Erzeugt von `spurplan/code/overrides_liste.py`. Ziel (Entscheid 13.11.): nur Ort
 | Werkstatt NE | corcelles_peseux | cfg.margin_x | Schalter | 1 | Entwurf 14.10.2026 (Claude), Corcelles-Peseux, OSM-Stand 12.10. | werkstatt/ne/corcelles_peseux_override.json |
 | Werkstatt NE | corcelles_peseux | cfg.towns | Schalter | 1 | Entwurf 14.10.2026 (Claude), Corcelles-Peseux, OSM-Stand 12.10. | werkstatt/ne/corcelles_peseux_override.json |
 | Werkstatt NE | cornaux | weglassen | Geometrie | 1 | Entwurf 14.10.2026 (Claude), Cornaux, OSM-Stand 12.10. | werkstatt/ne/cornaux_override.json |
-| Werkstatt NE | cornaux | zeichnen | Geometrie | 3 | Entwurf 14.10.2026 (Claude), Cornaux, OSM-Stand 12.10. | werkstatt/ne/cornaux_override.json |
+| Werkstatt NE | cornaux | zeichnen | Geometrie | 4 | Entwurf 14.10.2026 (Claude), Cornaux, OSM-Stand 12.10. | werkstatt/ne/cornaux_override.json |
 | Werkstatt NE | cornaux | nummern_px | Ortswissen | 2 | Entwurf 14.10.2026 (Claude), Cornaux, OSM-Stand 12.10. | werkstatt/ne/cornaux_override.json |
 | Werkstatt NE | cornaux | cfg.lt_dist_w | Schalter | 1 | Entwurf 14.10.2026 (Claude), Cornaux, OSM-Stand 12.10. | werkstatt/ne/cornaux_override.json |
 | Werkstatt NE | cornaux | cfg.margin_x | Schalter | 1 | Entwurf 14.10.2026 (Claude), Cornaux, OSM-Stand 12.10. | werkstatt/ne/cornaux_override.json |
@@ -668,7 +668,7 @@ Erzeugt von `spurplan/code/overrides_liste.py`. Ziel (Entscheid 13.11.): nur Ort
 | Werkstatt NE | sugiez | vorlage | Typvorlage | 6 | Entwurf 15.10.2026 (Claude), Sugiez, OSM-Stand 12.10. | werkstatt/ne/ne_vorlagen_overrides.json |
 | Werkstatt NE | sugiez | vorlage | Typvorlage | 6 | Entwurf 15.10.2026 (Claude), Sugiez, OSM-Stand 12.10. | werkstatt/ne/sugiez_override.json |
 | Werkstatt NE | travers | weglassen | Geometrie | 1 | Entwurf 14.10.2026 (Claude), Travers, OSM-Stand 12.10. | werkstatt/ne/travers_override.json |
-| Werkstatt NE | travers | zeichnen | Geometrie | 5 | Entwurf 14.10.2026 (Claude), Travers, OSM-Stand 12.10. | werkstatt/ne/travers_override.json |
+| Werkstatt NE | travers | zeichnen | Geometrie | 6 | Entwurf 14.10.2026 (Claude), Travers, OSM-Stand 12.10. | werkstatt/ne/travers_override.json |
 | Werkstatt NE | travers | cfg.lt_dist_w | Schalter | 1 | Entwurf 14.10.2026 (Claude), Travers, OSM-Stand 12.10. | werkstatt/ne/travers_override.json |
 | Werkstatt NE | travers | cfg.margin_x | Schalter | 1 | Entwurf 14.10.2026 (Claude), Travers, OSM-Stand 12.10. | werkstatt/ne/travers_override.json |
 | Werkstatt NE | travers | cfg.towns | Schalter | 1 | Entwurf 14.10.2026 (Claude), Travers, OSM-Stand 12.10. | werkstatt/ne/travers_override.json |
