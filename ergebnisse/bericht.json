@@ -1,7 +1,7 @@
 {
- "erzeugt": "2026-11-22 19:55 UTC",
- "lauf": "https://github.com/VXstone/topo-daten/actions/runs/45063372530",
- "code_commit": "0f3de8986709e196994f035e11e11ecbf2e373c6",
+ "erzeugt": "2026-11-22 20:02 UTC",
+ "lauf": "https://github.com/VXstone/topo-daten/actions/runs/45064017572",
+ "code_commit": "e1446b5a477df180d9383b6a216cd3eca816566b",
  "bahnhoefe": {
   "neuchatel": {
    "ok": true,
@@ -19,7 +19,6 @@
     "status": "besser",
     "schlechter": {},
     "besser": {
-     "boegen_alle": -1,
      "regel_G2": -10,
      "regel_G8": -1
     },
