@@ -607,7 +607,8 @@ def weichen_festlegen(key):
     # (Cornaux: Spurwechsel 49776111 «weglassen» + von Hand) – sonst fehlt der Fahrweg auf der OSM-Seite (HT5 «im Plan, nicht in OSM»)
     KN = {int(k): v for k, v in N["knoten"].items()}
     N["gleise"] = [g for g in N["gleise"] if not g.get("vorlage_verbindung")]
-    zusatz, LL = _verbindungen(key, N, {n for n, v in KN.items() if v.get("typ") == "switch"})
+    zusatz, LL = _verbindungen(key, N, {n for n, v in KN.items() if v.get("typ") == "switch"}) \
+        if (ov.get("zeichnen") or {}).get("netz_ergaenzen") else ([], {})        # nur auf Wunsch (Olten: sonst neue HT)
     ersetzt = set(ov.get("weglassen") or []) | set((ov.get("zeichnen") or {}).get("weg") or [])
     zusatz = [z for z in zusatz if set(z[1]) <= ersetzt]          # nur Ways, die eine Hand-Linie ersetzt
     r1 = lambda v: round(float(v), 1)

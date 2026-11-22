@@ -138,16 +138,32 @@ def plan_knoten(gleise, luecken):
             R2 = _verschieden([r for j in idx for r in _richtung(G[j], p, 30.0)])
             if len(R2) >= 3: R = R2; vorstueck = True
             else: vorstueck = False
-        else: vorstueck = False
+        else:
+            # Ast beginnt in der Flucht des Gleises (auf 6 px gleiche Richtung, eine Ausrundung weicht dort schon ab) und biegt danach ab: gehört zum Abzweig am
+            # Ende des Vorstücks (Cornaux: Hand-Linie beginnt 7 px vor der Weiche)
+            ende = [j for j in idx if min(Point(G[j].coords[0]).distance(p), Point(G[j].coords[-1]).distance(p)) < 1.2]
+            kurz = lambda j: _richtung(G[j], p, 6.0)
+            vorstueck = any(_verschieden(kurz(j) + [r for k in idx if k != j for r in kurz(k)]) != (kurz(j) + [r for k in idx if k != j for r in kurz(k)])
+                            for j in ende) and len(R) >= 3
         if len(R) >= 3:
             art = "X" if len(R) >= 4 and all(G[j].project(p) > 1.5 and G[j].project(p) < G[j].length - 1.5 for j in idx) else "W"
-            out.append([p.x, p.y, art, set(idx), len(R), vorstueck])
+            # Ast mit Vorstück = Gleis, das hier beginnt und auf 30 px von allen anderen abweicht (nicht die Fortsetzung des Gleises)
+            def _weg(j):
+                r = _richtung(G[j], p, 30.0); o_ = [q for k in idx if k != j for q in _richtung(G[k], p, 30.0)]
+                o_ += [(q + 180) % 360 for q in o_]          # auch keine Fortsetzung (Gegenrichtung) eines anderen Gleises
+                return len(_verschieden(r + o_)) == len(_verschieden(o_)) + len(r)
+            ende_ = {j for j in idx if min(Point(G[j].coords[0]).distance(p), Point(G[j].coords[-1]).distance(p)) < 1.2 and _weg(j)}
+            out.append([p.x, p.y, art, set(idx), len(R), vorstueck, ende_ if vorstueck else set()])
     # ein Abzweig im Plan liefert oft zwei Punkte (Teilpfad endet an der Weiche, Ast beginnt 2–5 px daneben): 6 px zusammen
     # Abzweige mit geradem Vorstück (V4e) gehören zum Abzweig am Ende des Vorstücks (bis 12 px)
     zus = []
     for o in sorted(out, key=lambda o: o[5]):
         for z in zus:
-            if math.hypot(z[0] - o[0], z[1] - o[1]) < (12 if (o[5] or z[5]) else 7.5): z[3] |= o[3]; z[4] = max(z[4], o[4]); break
+            # Vorstück: nur mit dem Abzweig desselben Asts (das Gleis, das hier beginnt, gehört auch dorthin) – nicht mit
+            # einer Nachbarweiche (Bevaix/Aarburg: Spurwechsel 8 px hinter dem Ende des vorigen)
+            d_ = math.hypot(z[0] - o[0], z[1] - o[1])
+            if d_ < 6.6 or (d_ < 12 and ((o[5] and o[6] & z[3]) or (z[5] and z[6] & o[3]))):
+                z[3] |= o[3]; z[4] = max(z[4], o[4]); break
         else: zus.append(o)
     return [tuple(z[:5]) for z in zus]
 

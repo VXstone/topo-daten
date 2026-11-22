@@ -76,7 +76,7 @@ def kette(b, opt, cwd=None):
     if os.path.exists(ov) and "vorlage" in json.load(open(ov)):
         rc, o = sh(["vorlage.py", b], cwd=cwd)
         if rc: return rc, o[-800:]
-    elif os.path.exists(ov) and json.load(open(ov)).get("zeichnen"):
+    elif os.path.exists(ov) and any(k in (json.load(open(ov)).get("zeichnen") or {}) for k in ("weichen", "netz_ergaenzen")):
         sh(["vorlage.py", "--weichen", b], cwd=cwd)          # V4e 22.11.: Netzmodell an die Hand-Linien (REGELN Kopf HT)
     sh(["viewbox_text.py", f"{b}_spurplan.svg"], cwd=cwd)
     return 0, ""

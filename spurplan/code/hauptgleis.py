@@ -382,15 +382,7 @@ def _beide(ks):
 
 def _ohne_doppel(gleise):
     G = [g["geo"] for g in gleise]; tree = STRtree(G); weg = set()
-    # V4e (22.11.2026, Murten Gl. 1): ein kurzes gerades Verbindungsstück zwischen zwei Gleisstücken (beide Enden sind Enden
-    # anderer Stücke) ist kein Doppel, auch wenn eine abzweigende Kurve dort fast deckungsgleich beginnt
-    from shapely.geometry import Point as _P
-    enden = [(_P(g.coords[0]), _P(g.coords[-1])) for g in G]
-    def verbinder(i):
-        if G[i].length > 12: return False
-        return all(any(k != i and min(e.distance(a), e.distance(b)) < 0.6 for k, (a, b) in enumerate(enden)) for e in enden[i])
     for i, g in enumerate(G):
-        if verbinder(i): continue
         for j in tree.query(g.buffer(1.0)):
             j = int(j)
             if j == i or j in weg: continue
