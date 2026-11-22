@@ -41,7 +41,7 @@
 | auvernier | · | · | · | · | · | 0 |
 | avenches | · | · | · | · | · | 0 |
 | bern_brunnen_westside | · | · | · | · | · | 0 |
-| bevaix | · | · | · | · | 0 ↓1 | 0 |
+| bevaix | · | · | · | · | · | 0 |
 | boudry | · | · | · | · | · | 0 |
 | champ_du_moulin | · | · | · | · | · | 0 |
 | concise | · | · | · | · | · | 0 |
@@ -57,8 +57,8 @@
 | fraschels | · | · | · | · | · | 0 |
 | galmiz | · | · | · | · | · | 0 |
 | gampelen | · | · | · | · | · | 0 |
-| gorgier_saint_aubin | · | 0 ↓1 | · | · | 0 ↓2 | 0 |
-| grandson | · | · | · | · | 0 ↓1 | 0 |
+| gorgier_saint_aubin | · | · | · | · | · | 0 |
+| grandson | · | · | · | · | · | 0 |
 | gummenen | · | · | · | · | · | 0 |
 | ins | · | · | · | · | · | 0 |
 | kallnach | · | · | · | · | · | 0 |
@@ -66,7 +66,7 @@
 | la_neuveville | · | · | · | · | · | 0 |
 | la_presta_mines_d_asphalte | · | · | · | · | · | 0 |
 | laufelfingen | · | · | · | · | · | 0 |
-| le_landeron | · | · | · | · | 0 ↓1 | 0 |
+| le_landeron | · | · | · | · | · | 0 |
 | les_deurres | · | · | · | · | · | 0 |
 | les_geneveys_sur_coffrane | · | · | · | · | · | 0 |
 | les_hauts_geneveys | · | · | · | · | · | 0 |
@@ -115,7 +115,7 @@
 | noiraigue | · | · | · | · | · | 0 |
 | olten_hammer | · | · | · | · | · | 0 |
 | pensier | · | · | · | · | · | 0 |
-| riedbach | · | 0 ↓1 | · | · | 0 ↓2 | 0 |
+| riedbach | · | · | · | · | · | 0 |
 | rosshausern | · | · | · | · | · | 0 |
 | safenwil | · | · | · | · | · | 0 |
 | saint_blaise_cff | · | · | · | · | · | 0 |
@@ -128,7 +128,7 @@
 | szu__zurich_binz | · | · | · | · | · | 0 |
 | szu__zurich_friesenberg | · | · | · | · | · | 0 |
 | szu__zurich_schweighof | · | · | · | · | · | 0 |
-| tuscherz | · | · | · | · | 0 ↓1 | 0 |
+| tuscherz | · | · | · | · | · | 0 |
 | twann | · | · | · | · | · | 0 |
 | vereina__sagliains_nord | · | · | · | · | · | 0 |
 | vereina__sagliains_sasslatsch | · | · | · | · | · | 0 |
@@ -138,7 +138,7 @@
 | vereina__vereina_nord | · | · | · | · | · | 0 |
 | vereina__vereina_sud | · | · | · | · | · | 0 |
 | wangen_bei_olten | · | · | · | · | · | 0 |
-| zihlbruecke | · | · | · | · | 0 ↓2 | 0 |
+| zihlbruecke | · | · | · | · | · | 0 |
 
 Regeln: HT1 = OSM-Weiche am Hauptgleis ohne Abzweig im Plan; HT2 = Abzweig am Hauptgleis im Plan ohne OSM-Weiche; HT3 = Gleis an der falschen Weiche (Hauptgleis); HT4 = Abzweig zur falschen Seite; HT5 = Fahrweg im Plan ≠ OSM
 
