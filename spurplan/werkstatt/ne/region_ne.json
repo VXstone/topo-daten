@@ -1,5 +1,5 @@
 {
- "_zweck": "Region Neuchâtel im Workflow: code/region_olten_lauf.py --konfig werkstatt/ne/region_ne.json baut alle NE-Bahnhofspläne (V4, 20.11.2026, REGELN 0.9/4.11: gemeinsamer Bauweg, Typvorlagen über vorlage.py in derselben Kette) und setzt den Regionalplan mit netz_lage.py ne_region zusammen. Neuchâtel kommt aus dem Workflow plaene, Kerzers als Variante, Vauseyon als Repo-Bahnhof. Die Karten der Seite übernehmen die gebauten Pläne (bauen.py, «aus Code»); Murten/Ins/Kerzers-Karten bleiben Referenzen.",
+ "_zweck": "Region Neuchâtel im Workflow: code/region_olten_lauf.py --konfig werkstatt/ne/region_ne.json baut alle NE-Bahnhofspläne (V4, 20.11.2026, REGELN 0.9/4.11: gemeinsamer Bauweg, Typvorlagen über vorlage.py in derselben Kette) und setzt den Regionalplan mit netz_lage.py ne_region zusammen. Neuchâtel und Vauseyon kommen als Repo-Bahnhöfe aus dem Workflow plaene (Neuchâtel seit V4f 23.11., REGELN 4.11: Regionalplan wie Bahnhofplan), Kerzers als Variante. Die Karten der Seite übernehmen die gebauten Pläne (bauen.py, «aus Code»); Murten/Ins/Kerzers-Karten bleiben Referenzen.",
  "bahnhoefe": {
   "ins": [],
   "saint_blaise_lac": [],
@@ -78,6 +78,7 @@
   }
  ],
  "repo_bahnhoefe": [
-  "neuchatel_vauseyon"
+  "neuchatel_vauseyon",
+  "neuchatel"
  ]
 }
