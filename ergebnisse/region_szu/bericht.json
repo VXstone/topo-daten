@@ -1,7 +1,7 @@
 {
  "region": "szu",
- "erzeugt": "2026-11-23 18:30 UTC",
- "code_commit": "a7928dba47f44fecee06a4fd2ee9954152fd40f6",
+ "erzeugt": "2026-11-23 18:48 UTC",
+ "code_commit": "44943a40ec13d8ec48d0b46b05fc9a8e4bd29241",
  "bahnhoefe": {
   "uetliberg": {
    "name": "Uetliberg",
@@ -27,14 +27,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "zurich_schweighof": {
-   "name": "Zürich Schweighof",
+  "zurich_friesenberg": {
+   "name": "Zürich Friesenberg",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "zurich_friesenberg": {
-   "name": "Zürich Friesenberg",
+  "zurich_schweighof": {
+   "name": "Zürich Schweighof",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -45,14 +45,14 @@
    "befunde": "Befunde: {'A': 2, 'B': 311, 'C': 1, 'F': 4}",
    "optionen": []
   },
-  "berghof": {
-   "name": "Berghof",
+  "borrweg": {
+   "name": "Borrweg",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "borrweg": {
-   "name": "Borrweg",
+  "berghof": {
+   "name": "Berghof",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
