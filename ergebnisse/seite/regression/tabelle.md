@@ -2,7 +2,7 @@
 
 | Plan | Gruppe | Basis | Stellen | Einordnung | Kennzahlen alt→neu | G0 | HT | letzte Änderung |
 |---|---|---|---|---|---|---|---|---|
-| onnens_bonvillars | NE 6 · Neuchâtel – Yverdon | Archivbeginn (Abnahme 2026-10-26) | 9 | schlechter? | G2 1→2, W56 5→2, W59 6→2 (Wunsch-Summe -9) · OSM VA1 1, VA2 1, VB1 1, VD1 1 (kein Alt-Stand) | GG 1 · GT 1 | 0 | 2026-11-20T21:23 |
+| onnens_bonvillars | NE 6 · Neuchâtel – Yverdon | Archivbeginn (Abnahme 2026-10-26) | 9 | schlechter? | G2 1→2, W56 5→2, W59 6→2 (Wunsch-Summe -9) · OSM VA1 1, VA2 1, VB1 1, VD1 1 (kein Alt-Stand) | GG 1 · GT 1 | 0 | 2026-11-23T09:09 |
 | grandson | NE 6 · Neuchâtel – Yverdon | Archivbeginn (Abnahme 2026-10-20) | 6 | schlechter? | G2 0→1 · OSM ok (kein Alt-Stand) | 0 | 0 | 2026-11-21T15:24 |
 | chambrelien | NE 8 · Neuchâtel – La Chaux-de-Fonds | Archivbeginn (Abnahme 2026-10-20) | 5 | schlechter? | G2 1→0, T7 0→1 (Wunsch-Summe +8) · OSM VA1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-22T15:43 |
 | avenches | NE 3 · Lyss – Kerzers – Murten – Payerne | Archivbeginn (Abnahme 2026-10-19) | 4 | schlechter? | W56 0→2, W59 0→1 (Wunsch-Summe +6) · OSM VB1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-21T21:10 |
@@ -42,7 +42,7 @@
 | couvet | NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier | Archivbeginn (Abnahme 2026-10-20) | 1 | gleichwertig | OSM VD1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-20T21:23 |
 | motiers | NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier | Archivbeginn (Abnahme 2026-10-20) | 1 | gleichwertig | OSM VD1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-20T21:23 |
 | les_geneveys_sur_coffrane | NE 8 · Neuchâtel – La Chaux-de-Fonds | Archivbeginn (Abnahme 2026-10-19) | 1 | gleichwertig | OSM VD1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-20T21:23 |
-| region_ne | Region | veröffentlicht | 29 | gleichwertig |  | GS 1 · GG 2 · GQ 1 | – | 2026-11-23T08:38 |
+| region_ne | Region | veröffentlicht | 29 | gleichwertig |  | GS 1 · GG 2 · GQ 1 | – | 2026-11-23T09:09 |
 | neuchatel | NE 1 · Neuchâtel – Ins – Kerzers – Bern | bestätigt 2026-11-08 | 2 | vermutlich besser | GG 3→1 · OSM VD1 1 (kein Alt-Stand) | GG 1 · GT 1 | 0 | 2026-11-22T20:14 |
 
 Grundprüfung G0 aller Pläne: `ergebnisse/seite/grundpruefung/grundpruefung.md`
