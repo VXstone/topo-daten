@@ -6873,7 +6873,7 @@
    "fingerabdruck": "f4c0c95c3771",
    "quelle": "Repo-Bahnhof",
    "workflow": "plaene",
-   "commit": "1c866863f87155c72973dd0750f582b69ea2596b",
+   "commit": "755a8df3a27ffef7121664b3ee563c49c731f6a8",
    "art": "code",
    "abk": [
     "KF"
@@ -6882,7 +6882,7 @@
     46.880065,
     7.619758
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "solothurn": {
    "key": "solothurn",
@@ -6892,7 +6892,7 @@
    "fingerabdruck": "7aa471088ee2",
    "quelle": "Repo-Bahnhof",
    "workflow": "plaene",
-   "commit": "1c866863f87155c72973dd0750f582b69ea2596b",
+   "commit": "755a8df3a27ffef7121664b3ee563c49c731f6a8",
    "art": "code",
    "abk": [
     "SO",
@@ -6905,7 +6905,7 @@
     47.204473,
     7.546117
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "olten": {
    "key": "olten",
@@ -7212,7 +7212,7 @@
    "fingerabdruck": "9cb9d64fef0d",
    "quelle": "Repo-Bahnhof",
    "workflow": "plaene",
-   "commit": "1c866863f87155c72973dd0750f582b69ea2596b",
+   "commit": "755a8df3a27ffef7121664b3ee563c49c731f6a8",
    "art": "code",
    "abk": [
     "NE",
@@ -7224,7 +7224,7 @@
     46.997957,
     6.93831
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "saint_blaise_lac": {
    "key": "saint_blaise_lac",
@@ -8152,7 +8152,7 @@
    "fingerabdruck": "f3a899ea9b44",
    "quelle": "Repo-Bahnhof",
    "workflow": "plaene",
-   "commit": "1c866863f87155c72973dd0750f582b69ea2596b",
+   "commit": "755a8df3a27ffef7121664b3ee563c49c731f6a8",
    "art": "code",
    "abk": [
     "NEVS",
@@ -8162,7 +8162,7 @@
     46.990629,
     6.917526
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "les_deurres": {
    "key": "les_deurres",
