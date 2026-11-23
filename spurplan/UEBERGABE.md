@@ -112,7 +112,7 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - [x] **V4c NE: HT-Befunde abbauen** – 21.11. (v161/v162)
 - [x] **V4e NE: HT-Rest** – 21./22.11. (v164–v170), alle NE-Pläne HT 0 bzw. Ausnahme Courtepin (Nachträge V4e Teil 1–5)
 - [x] **V4f Neuchâtel im Regionalplan wie im Bahnhofplan** – 23.11. vormittags, Commit 43a3919, Seite v172 (Nachtrag V4f)
-- [ ] **V4d NE ruhig + Nebengleise kürzen** (mittel, REGELN 4.5/5.9): 23.11. Teil 1 v173 – pjyb/zlwn behoben, Onnens kürzer, W59 neu; **offen: vpkw Muntelier (Rückfrage A/B)**, Rest W59-Liste – siehe Nachtrag V4d
+- [ ] **V4d NE ruhig + Nebengleise kürzen** (mittel, REGELN 4.5/5.9): 23.11. Teil 1 v173 – pjyb/zlwn behoben, Onnens kürzer, W59 neu; **offen: vpkw Muntelier – Daniel 23.11.: B, Abgangswinkel anpassen (REGELN 4.12)**, Rest W59-Liste – siehe Nachtrag V4d
 - [ ] **K0c Selnau parallel (REGELN 2.2, `r34_kette`)** (klein) – siehe Nachtrag 20.11. ~19:15; nach V3/V4, vor T-SZU1
 - [ ] **V5 ein Lauf für alle Regionen** / **V6 Netz West (Neuchâtel–Biel–Solothurn–Olten)** – danach – Zweisimmen (dünn→dick am Knick), Solothurn (Weiche am Knick, doppelter Abstand), Selnau (ZL ~4 Ebenen, nur auf Daniels Antwort); Liste `ergebnisse/seite/zwischengeraden.md` – vor oder nach T-SZU1, wie Daniel will
 - [ ] **T-SZU1 DKW aus 4-Arm-Weiche (REGELN 2.4) und Güterverkehr schwarz (REGELN 1.21)** (klein, Entscheid Daniel 18.11.) – nach K0
@@ -905,4 +905,4 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   Versuch A über `seiten_richtung` (Gewicht 10) verzog Galmiz (V-Form), Versuch «Einmündung gerade» in place() verschob Sugiez – beide verworfen.
 - Regression: geändert durch V4d nur onnens_bonvillars (G2 1→2, W56 5→2, W59 6→2) und region_ne (Block-Verschiebungen um ~5 px); G0/HT ohne Zunahme.
   Die übrigen «schlechter?» (Grandson, Chambrelien, Avenches, Gorgier, Bôle, Le Landeron, St-Blaise Lac) sind ältere Stände vs. Archiv-Abnahme.
-
+- Daniel 23.11. 10:40 zu vpkw: Variante B – Abgangswinkel der Abzweigweiche an die Strecke anpassen statt Knick (REGELN 4.12, neu). Block-Verschiebungen nicht melden (REGELN Vergleich).
