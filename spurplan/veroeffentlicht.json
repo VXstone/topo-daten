@@ -1,7 +1,7 @@
 {
  "_zweck": "Zuletzt veröffentlichte Fassung der Feedback-Seite (Commit auf Branch ergebnisse); Basis der Regression für nicht abgenommene Pläne. Claude führt es beim Veröffentlichen nach.",
- "ergebnisse": "8eb3e4d",
- "version": 173,
+ "ergebnisse": "5b86f93",
+ "version": 174,
  "notiz_159": "21.11.2026: v158 + prio-Hinweise rot (Vorlage seite.html), keine Planänderung; ergebnisse-Basis bleibt bb5df3c",
  "notiz_160": "21.11.2026: V4b – NE-Karten aus Code, Vauseyon ohne Treppe (REGELN 4.5 schraeg_port); ergebnisse 476a7bc (Commit 16ca65c)",
  "notiz_161": "21.11.2026: V4c – Netzmodell der Typvorlagen auf dem Plan (HT NE 159→51 in den Typvorlagen), St-Blaise CFF und Serrières Spurwechsel wie OSM, Frage F6 Gampelen; ergebnisse dab114d (Commit c0aa2bb)",
@@ -16,5 +16,6 @@
  "notiz_170": "22.11.2026 spät: V4e Teil 5 – Neuchâtel und Vauseyon HT 0: Neuchâtel Ost 35567630 kreuzt die Linie nach Ins an der EKW 109 gerade (vorher Einmündung = Fahrweg Biel -> Ins), übrige Befunde Messung (Hand-Linien-Netzmodell im Workflow plaene, Kreuzung geradeaus nach OSM, DKW-Bogenweichen, Regel-39b-Stummel Vauseyon); ergebnisse 33d9692 (Commit d42f0b0). Nur der Neuchâtel-Bahnhofplan geändert, Regionalpläne gleich",
  "notiz_171": "22.11.2026 spät: Neuchâtel EKW 109 mit Symbol (eine Klammer: Ins/Osten -> Abstellgleis), HT misst EKW als nur eine Bogenfahrt (REGELN Kopf HT, 2.4); ergebnisse d457c93 (Commit e1446b5). Nur Bahnhofplan Neuchâtel geändert",
  "notiz_172": "23.11.2026: V4f – Regionalplan NE nimmt Neuchâtel aus dem Bahnhofplan (repo_bahnhoefe, REGELN 4.11): Ostkopf mit EKW 109 und Abstellgleis jetzt auch im Regionalplan; Plan länger -> Nachbarn verschieben sich als Block, Gampelen ruhiger; region_ne G2 30->32 = G2 des Bahnhofplans Neuchâtel (bestätigt 8.11.); ergebnisse fccd4b0 (Commit 43a3919). Nur region_ne geändert",
- "notiz_173": "23.11.2026: V4d – Doppelspur-Paarung in Ketten (REGELN 4.5 kette_paarung), Onnens-Bonvillars kürzer (cfg leer_max, REGELN 5.9); ergebnisse 8eb3e4d (Commit 6f56298)"
+ "notiz_173": "23.11.2026: V4d – Doppelspur-Paarung in Ketten (REGELN 4.5 kette_paarung), Onnens-Bonvillars kürzer (cfg leer_max, REGELN 5.9); ergebnisse 8eb3e4d (Commit 6f56298)",
+ "notiz_174": "23.11.2026 abends: V4d Teil 2 – Muntelier Abzweig Sugiez 42° statt 60°, Strecke ohne Knick (REGELN 4.12, netz_lage _abgang_winkel + lage_auto place ab der Weiche); ergebnisse 5b86f93 (Commit 44943a4). Nur region_ne geändert"
 }
