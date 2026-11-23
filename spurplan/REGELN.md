@@ -237,6 +237,7 @@ Pläne verändern, um diese Zahlen zu senken – auch abgenommene –, und der V
   besser», er bestätigt kurz (Vorgabe 6.11.); bei abgenommenen Plänen nimmt er neu ab;
 - **gleichwertig**, wenn Regeln und Wünsche gleich bleiben → Differenzbild ansehen (Fallstrick: neu erfundene Weiche);
 - **schlechter**, wenn die Wunsch-Summe steigt → nur mit Begründung im Nachtrag.
+- **egal (nicht melden)**: Verschiebung als Block – ein ganzer Abschnitt oder Bahnhof parallel um wenige px versetzt, Form und Topologie gleich (seit 23.11., Daniel: «für Leser:innen nicht wahrnehmbar»). Im Bericht nicht aufführen; gemeldet werden nur Formänderungen (Knick, Versatz, Länge, Gleis/Weiche).
 
 E9 (abgenommene Pläne dürfen sich nur ohne Topologieänderung ändern) bleibt und ist hier enthalten. **Abnahme = Vergleichsbasis, kein Einfrieren** (13.11.): auch abgenommene und bisher feste Pläne (NE, Basel, Bern, Referenzen) werden aus dem Code erzeugt; der Vergleich zeigt «besser» oder «Fehler».
 
