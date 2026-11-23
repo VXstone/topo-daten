@@ -138,22 +138,6 @@
   "W59": 0
  },
  {
-  "key": "olten_hammer",
-  "gruppe": "Olten 1 · Knoten Olten",
-  "summe": 12,
-  "W53": 0,
-  "W56": 4,
-  "W59": 4
- },
- {
-  "key": "rothrist",
-  "gruppe": "Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil",
-  "summe": 12,
-  "W53": 0,
-  "W56": 4,
-  "W59": 10
- },
- {
   "key": "szu__borrweg",
   "gruppe": "SZU · Bahnhöfe",
   "summe": 12,
@@ -218,6 +202,14 @@
   "W59": 0
  },
  {
+  "key": "olten_hammer",
+  "gruppe": "Olten 1 · Knoten Olten",
+  "summe": 6,
+  "W53": 0,
+  "W56": 2,
+  "W59": 1
+ },
+ {
   "key": "dulliken",
   "gruppe": "Olten 3 · Olten – Aarau",
   "summe": 6,
@@ -232,14 +224,6 @@
   "W53": 0,
   "W56": 2,
   "W59": 0
- },
- {
-  "key": "onnens_bonvillars",
-  "gruppe": "NE 6 · Neuchâtel – Yverdon",
-  "summe": 6,
-  "W53": 0,
-  "W56": 2,
-  "W59": 2
  },
  {
   "key": "corcelles_peseux",
@@ -306,6 +290,14 @@
   "W59": 2
  },
  {
+  "key": "rothrist",
+  "gruppe": "Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil",
+  "summe": 3,
+  "W53": 0,
+  "W56": 1,
+  "W59": 3
+ },
+ {
   "key": "safenwil",
   "gruppe": "Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil",
   "summe": 3,
@@ -320,14 +312,6 @@
   "W53": 0,
   "W56": 1,
   "W59": 0
- },
- {
-  "key": "tecknau",
-  "gruppe": "Olten 4 · Hauenstein",
-  "summe": 3,
-  "W53": 0,
-  "W56": 1,
-  "W59": 3
  },
  {
   "key": "wangen_bei_olten",
@@ -376,6 +360,14 @@
   "W53": 0,
   "W56": 1,
   "W59": 0
+ },
+ {
+  "key": "onnens_bonvillars",
+  "gruppe": "NE 6 · Neuchâtel – Yverdon",
+  "summe": 3,
+  "W53": 0,
+  "W56": 1,
+  "W59": 1
  },
  {
   "key": "mob__allieres",
@@ -472,6 +464,14 @@
   "W53": 0,
   "W56": 0,
   "W59": 0
+ },
+ {
+  "key": "tecknau",
+  "gruppe": "Olten 4 · Hauenstein",
+  "summe": 0,
+  "W53": 0,
+  "W56": 0,
+  "W59": 2
  },
  {
   "key": "saint_blaise_lac",

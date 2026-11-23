@@ -9,7 +9,7 @@
  "befunde": [
   {
    "regel": "HT1",
-   "x": 2093.3,
+   "x": 1843.7,
    "y": 232.4,
    "text": "OSM-Weiche 7223639881 ohne Abzweig im Plan",
    "osm": 7223639881
@@ -23,7 +23,7 @@
   },
   {
    "regel": "HT2",
-   "x": 1918.1,
+   "x": 1668.5,
    "y": 160.4,
    "text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
    "ways": [
@@ -37,7 +37,7 @@
   },
   {
    "regel": "HT2",
-   "x": 1878.0,
+   "x": 1628.4,
    "y": 160.4,
    "text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
    "ways": [
@@ -51,7 +51,7 @@
   },
   {
    "regel": "HT2",
-   "x": 2036.3,
+   "x": 1786.7,
    "y": 232.4,
    "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
    "ways": [
@@ -80,7 +80,7 @@
   },
   {
    "regel": "HT5",
-   "x": 1916.8,
+   "x": 1667.1,
    "y": 220.4,
    "text": "Fahrweg Abgang 453 Zofingen (7223639880) ↔ Gl. 1 im Plan, nicht in OSM",
    "von": "Abgang 453 Zofingen (7223639880)",
@@ -89,7 +89,7 @@
   },
   {
    "regel": "HT5",
-   "x": 1885.1,
+   "x": 1635.4,
    "y": 208.4,
    "text": "Fahrweg Abgang 453 Zofingen (7223639880) ↔ Gl. 2 im Plan, nicht in OSM",
    "von": "Abgang 453 Zofingen (7223639880)",
@@ -98,7 +98,7 @@
   },
   {
    "regel": "HT5",
-   "x": 2052.1,
+   "x": 1802.5,
    "y": 220.4,
    "text": "Fahrweg Abgang 453 Zofingen (7223639880) ↔ Gl. 454 im Plan, nicht in OSM",
    "von": "Abgang 453 Zofingen (7223639880)",
@@ -107,7 +107,7 @@
   },
   {
    "regel": "HT5",
-   "x": 2017.9,
+   "x": 1768.3,
    "y": 220.4,
    "text": "Fahrweg Abgang 453 Zofingen (7223639880) ↔ Gl. 511 im Plan, nicht in OSM",
    "von": "Abgang 453 Zofingen (7223639880)",
@@ -116,7 +116,7 @@
   },
   {
    "regel": "HT5",
-   "x": 1428.5,
+   "x": 1247.9,
    "y": 220.4,
    "text": "Fahrweg Abgang 453 Zofingen (7223639880) ↔ Gl. 671 im Plan, nicht in OSM",
    "von": "Abgang 453 Zofingen (7223639880)",

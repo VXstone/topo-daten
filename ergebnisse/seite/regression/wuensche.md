@@ -20,8 +20,6 @@ Wünsche je Plan (REGELN 5: W53 S-Kurven ×6, W55 Bahnhofsabstand ×3, W56 Leerl
 | auvernier | NE 6 · Neuchâtel – Yverdon | 1 |  | 3 | 15 |
 | colombier | NE 6 · Neuchâtel – Yverdon | 0 |  | 5 | 15 |
 | szu__zurich_giesshubel | SZU · Bahnhöfe | 2 |  | 1 | 15 |
-| olten_hammer | Olten 1 · Knoten Olten | 0 |  | 4 | 12 |
-| rothrist | Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil | 0 |  | 4 | 12 |
 | szu__borrweg | SZU · Bahnhöfe | 1 |  | 2 | 12 |
 | laufelfingen | Olten 4 · Hauenstein | 0 |  | 3 | 9 |
 | kerzers | NE 1 · Neuchâtel – Ins – Kerzers – Bern | 1 |  | 1 | 9 |
@@ -30,9 +28,9 @@ Wünsche je Plan (REGELN 5: W53 S-Kurven ×6, W55 Bahnhofsabstand ×3, W56 Leerl
 | neuchatel_vauseyon | NE 8 · Neuchâtel – La Chaux-de-Fonds | 0 |  | 3 | 9 |
 | vereina__selfranga_sud | Vereina · Bahnhöfe | 1 |  | 1 | 9 |
 | thun | Bahnhöfe ohne Regionalplan | 1 |  | 0 | 6 |
+| olten_hammer | Olten 1 · Knoten Olten | 0 |  | 2 | 6 |
 | dulliken | Olten 3 · Olten – Aarau | 0 |  | 2 | 6 |
 | avenches | NE 3 · Lyss – Kerzers – Murten – Payerne | 0 |  | 2 | 6 |
-| onnens_bonvillars | NE 6 · Neuchâtel – Yverdon | 0 |  | 2 | 6 |
 | corcelles_peseux | NE 8 · Neuchâtel – La Chaux-de-Fonds | 0 |  | 2 | 6 |
 | chambrelien | NE 8 · Neuchâtel – La Chaux-de-Fonds | 1 |  | 0 | 6 |
 | mob__chamby | MOB · Bahnhöfe | 1 |  | 0 | 6 |
@@ -41,15 +39,16 @@ Wünsche je Plan (REGELN 5: W53 S-Kurven ×6, W55 Bahnhofsabstand ×3, W56 Leerl
 | mob__zweisimmen | MOB · Bahnhöfe | 1 |  | 0 | 6 |
 | vereina__klosters_selfranga | Vereina · Bahnhöfe | 0 |  | 2 | 6 |
 | vereina__sagliains | Vereina · Bahnhöfe | 0 |  | 2 | 6 |
+| rothrist | Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil | 0 |  | 1 | 3 |
 | safenwil | Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil | 0 |  | 1 | 3 |
 | daniken | Olten 3 · Olten – Aarau | 0 |  | 1 | 3 |
-| tecknau | Olten 4 · Hauenstein | 0 |  | 1 | 3 |
 | wangen_bei_olten | Olten 5 · Olten – Solothurn | 0 |  | 1 | 3 |
 | ins | NE 1 · Neuchâtel – Ins – Kerzers – Bern | 0 |  | 1 | 3 |
 | marin_epagnier | NE 1 · Neuchâtel – Ins – Kerzers – Bern | 0 |  | 1 | 3 |
 | zihlbruecke | NE 1 · Neuchâtel – Ins – Kerzers – Bern | 0 |  | 1 | 3 |
 | gummenen | NE 1 · Neuchâtel – Ins – Kerzers – Bern | 0 |  | 1 | 3 |
 | twann | NE 5 · Neuchâtel – Biel | 0 |  | 1 | 3 |
+| onnens_bonvillars | NE 6 · Neuchâtel – Yverdon | 0 |  | 1 | 3 |
 | mob__allieres | MOB · Bahnhöfe | 0 |  | 1 | 3 |
 | mob__belmont_sur_montreux | MOB · Bahnhöfe | 0 |  | 1 | 3 |
 | mob__glion_college | MOB · Bahnhöfe | 0 |  | 1 | 3 |
@@ -62,6 +61,7 @@ Wünsche je Plan (REGELN 5: W53 S-Kurven ×6, W55 Bahnhofsabstand ×3, W56 Leerl
 | konolfingen | Bahnhöfe ohne Regionalplan | 0 |  | 0 | 0 |
 | aarburg_oftringen | Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil | 0 |  | 0 | 0 |
 | zofingen | Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil | 0 |  | 0 | 0 |
+| tecknau | Olten 4 · Hauenstein | 0 |  | 0 | 0 |
 | saint_blaise_lac | NE 1 · Neuchâtel – Ins – Kerzers – Bern | 0 |  | 0 | 0 |
 | gampelen | NE 1 · Neuchâtel – Ins – Kerzers – Bern | 0 |  | 0 | 0 |
 | muntschemier | NE 1 · Neuchâtel – Ins – Kerzers – Bern | 0 |  | 0 | 0 |

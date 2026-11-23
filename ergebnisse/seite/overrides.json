@@ -6762,6 +6762,15 @@
   "datei": "werkstatt/olten/olten_hammer_override.json",
   "weg": "Werkstatt Olten",
   "ort": "olten_hammer",
+  "schluessel": "cfg.leer_max",
+  "art": "Schalter",
+  "grund": "Hinweise D. Eckenstein 13.10.2026: Ausschnitt endet vor der Südeinfahrt Olten; Mittelperron zwischen den Hauptgleisen 2 (Nord) und 3 (Süd). Perronlage geschätzt um den Stationspunkt (s 4420-4570), in OSM fehlt der Perron.",
+  "umfang": 1
+ },
+ {
+  "datei": "werkstatt/olten/olten_hammer_override.json",
+  "weg": "Werkstatt Olten",
+  "ort": "olten_hammer",
   "schluessel": "gleise",
   "art": "Geometrie",
   "grund": "Hinweise D. Eckenstein 13.10.2026: Ausschnitt endet vor der Südeinfahrt Olten; Mittelperron zwischen den Hauptgleisen 2 (Nord) und 3 (Süd). Perronlage geschätzt um den Stationspunkt (s 4420-4570), in OSM fehlt der Perron.",
@@ -7896,6 +7905,15 @@
   "datei": "werkstatt/olten/rothrist_override.json",
   "weg": "Werkstatt Olten",
   "ort": "rothrist",
+  "schluessel": "cfg.leer_max",
+  "art": "Schalter",
+  "grund": "Achse aus Pfad West(450)->Ost(451/453), Fenster bis zum Zusammenlauf der 450er (West) und 451/453 (Ost), Hinweise 14.10.",
+  "umfang": 1
+ },
+ {
+  "datei": "werkstatt/olten/rothrist_override.json",
+  "weg": "Werkstatt Olten",
+  "ort": "rothrist",
   "schluessel": "ebene_wie",
   "art": "Geometrie",
   "grund": "Achse aus Pfad West(450)->Ost(451/453), Fenster bis zum Zusammenlauf der 450er (West) und 451/453 (Ost), Hinweise 14.10.",
@@ -8023,6 +8041,15 @@
   "weg": "Werkstatt Olten",
   "ort": "tecknau",
   "schluessel": "cfg.side_lane_factor",
+  "art": "Schalter",
+  "grund": "Hinweise D. Eckenstein (Feedback-Seite, Runde 3): Mittelperron 3/4, Spurwechsel ohne Zwischengerade, Gleise 1 und 2 beschriften. Perronlage geschätzt um den Stationspunkt (s 4469), in OSM fehlt der Perron. Runde 4: Verbindung 2->1 ohne Zwischengerade, Gl. 2 gerade Richtung Luzern und Gl. 1 kommt herunter, Hauptgleise laufen gerade an den Planrand.",
+  "umfang": 1
+ },
+ {
+  "datei": "werkstatt/olten/tecknau_override.json",
+  "weg": "Werkstatt Olten",
+  "ort": "tecknau",
+  "schluessel": "cfg.leer_max",
   "art": "Schalter",
   "grund": "Hinweise D. Eckenstein (Feedback-Seite, Runde 3): Mittelperron 3/4, Spurwechsel ohne Zwischengerade, Gleise 1 und 2 beschriften. Perronlage geschätzt um den Stationspunkt (s 4469), in OSM fehlt der Perron. Runde 4: Verbindung 2->1 ohne Zwischengerade, Gl. 2 gerade Richtung Luzern und Gl. 1 kommt herunter, Hauptgleise laufen gerade an den Planrand.",
   "umfang": 1

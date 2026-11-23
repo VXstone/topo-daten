@@ -79,14 +79,14 @@
  {
   "regel": "G2",
   "x": 4.2,
-  "y": -945.4,
+  "y": -947.3,
   "bahnhof": "Tecknau",
   "text": "Weiche ohne Ausrundung (15°)"
  },
  {
   "regel": "G2",
   "x": -26.0,
-  "y": -1114.3,
+  "y": -1096.9,
   "bahnhof": "Tecknau",
   "text": "Weiche ohne Ausrundung (15°)"
  },
@@ -127,10 +127,17 @@
  },
  {
   "regel": "G2",
-  "x": -16.0,
-  "y": 475.2,
+  "x": -44.1,
+  "y": 499.2,
   "bahnhof": null,
-  "text": "Weiche ohne Ausrundung (48°)"
+  "text": "Weiche ohne Ausrundung (60°)"
+ },
+ {
+  "regel": "G2",
+  "x": -16.0,
+  "y": 476.7,
+  "bahnhof": null,
+  "text": "Weiche ohne Ausrundung (45°)"
  },
  {
   "regel": "G2",

@@ -1,4 +1,4 @@
-# Ausnahmen je Ort (REGELN 6) – 916 Einträge an 125 Orten: 355 Schalter, 245 Ortswissen, 191 Geometrie, 125 Typvorlage
+# Ausnahmen je Ort (REGELN 6) – 919 Einträge an 125 Orten: 358 Schalter, 245 Ortswissen, 191 Geometrie, 125 Typvorlage
 
 Erzeugt von `spurplan/code/overrides_liste.py`. Ziel (Entscheid 13.11.): nur Ortswissen bleibt; Geometrie abbauen.
 
@@ -12,7 +12,7 @@ Erzeugt von `spurplan/code/overrides_liste.py`. Ziel (Entscheid 13.11.): nur Ort
 | Werkstatt Olten | thun | 2 | 3 |  | 10 |
 | Werkstatt Olten | zofingen | 2 | 3 |  | 9 |
 | Werkstatt Olten | olten_ost |  | 6 |  | 8 |
-| Werkstatt Olten | rothrist |  | 9 |  | 8 |
+| Werkstatt Olten | rothrist |  | 10 |  | 8 |
 | Repo | neuchatel | 8 | 9 |  | 6 |
 | Werkstatt NE | galmiz | 6 | 4 | 2 | 6 |
 | Werkstatt NE | neuchatel | 8 | 7 |  | 5 |
@@ -28,7 +28,7 @@ Erzeugt von `spurplan/code/overrides_liste.py`. Ziel (Entscheid 13.11.): nur Ort
 | Werkstatt Olten | aarau |  | 2 |  | 3 |
 | Werkstatt Olten | aarburg_oftringen |  | 1 |  | 3 |
 | Werkstatt Olten | galmiz | 3 | 1 | 1 | 3 |
-| Werkstatt Olten | tecknau | 1 | 4 |  | 3 |
+| Werkstatt Olten | tecknau | 1 | 5 |  | 3 |
 | Werkstatt Olten | wangen_bei_olten | 1 |  |  | 3 |
 | Werkstatt NE | cornaux | 1 | 3 |  | 2 |
 | Werkstatt NE | ligerz |  | 4 | 2 | 2 |
@@ -52,7 +52,7 @@ Erzeugt von `spurplan/code/overrides_liste.py`. Ziel (Entscheid 13.11.): nur Ort
 | Werkstatt Olten | muntelier_lowenberg | 3 | 1 | 1 | 1 |
 | Werkstatt Olten | murten | 1 | 2 |  | 1 |
 | Werkstatt Olten | neuchatel | 7 | 7 |  | 1 |
-| Werkstatt Olten | olten_hammer | 1 | 3 |  | 1 |
+| Werkstatt Olten | olten_hammer | 1 | 4 |  | 1 |
 | Werkstatt Olten | schonenwerd |  | 1 |  | 1 |
 | Region mob | Montreux |  | 1 |  |  |
 | Region mob | Zweisimmen |  | 1 |  |  |
@@ -932,6 +932,7 @@ Erzeugt von `spurplan/code/overrides_liste.py`. Ziel (Entscheid 13.11.): nur Ort
 | Werkstatt Olten | olten_hammer | gleise | Geometrie | 2 | Hinweise D. Eckenstein 13.10.2026: Ausschnitt endet vor der Südeinfahrt Olten; Mittelperron zwischen den Hauptgleisen 2 (Nord) und 3 (Süd).  | werkstatt/olten/olten_hammer_override.json |
 | Werkstatt Olten | olten_hammer | platforms | Ortswissen | 1 | Hinweise D. Eckenstein 13.10.2026: Ausschnitt endet vor der Südeinfahrt Olten; Mittelperron zwischen den Hauptgleisen 2 (Nord) und 3 (Süd).  | werkstatt/olten/olten_hammer_override.json |
 | Werkstatt Olten | olten_hammer | cfg.axis_snap | Schalter | 1 | Hinweise D. Eckenstein 13.10.2026: Ausschnitt endet vor der Südeinfahrt Olten; Mittelperron zwischen den Hauptgleisen 2 (Nord) und 3 (Süd).  | werkstatt/olten/olten_hammer_override.json |
+| Werkstatt Olten | olten_hammer | cfg.leer_max | Schalter | 1 | Hinweise D. Eckenstein 13.10.2026: Ausschnitt endet vor der Südeinfahrt Olten; Mittelperron zwischen den Hauptgleisen 2 (Nord) und 3 (Süd).  | werkstatt/olten/olten_hammer_override.json |
 | Werkstatt Olten | olten_hammer | cfg.rules | Schalter | 1 | Hinweise D. Eckenstein 13.10.2026: Ausschnitt endet vor der Südeinfahrt Olten; Mittelperron zwischen den Hauptgleisen 2 (Nord) und 3 (Süd).  | werkstatt/olten/olten_hammer_override.json |
 | Werkstatt Olten | olten_hammer | cfg.s_max_fix | Schalter | 1 | Hinweise D. Eckenstein 13.10.2026: Ausschnitt endet vor der Südeinfahrt Olten; Mittelperron zwischen den Hauptgleisen 2 (Nord) und 3 (Süd).  | werkstatt/olten/olten_hammer_override.json |
 | Werkstatt Olten | olten_ost | abgang | Geometrie | 2 | Betriebspunkt Olten Ost (Name D. Eckenstein 20.10.), Daten region.json, synthetischer Stationsknoten, Kreis 650 m, --hauptgleise | werkstatt/olten/olten_ost/olten_ost_override.json |
@@ -976,6 +977,7 @@ Erzeugt von `spurplan/code/overrides_liste.py`. Ziel (Entscheid 13.11.): nur Ort
 | Werkstatt Olten | rothrist | zeichnen | Geometrie | 3 | Achse aus Pfad West(450)->Ost(451/453), Fenster bis zum Zusammenlauf der 450er (West) und 451/453 (Ost), Hinweise 14.10. | werkstatt/olten/rothrist_override.json |
 | Werkstatt Olten | rothrist | cfg.axis_snap | Schalter | 1 | Achse aus Pfad West(450)->Ost(451/453), Fenster bis zum Zusammenlauf der 450er (West) und 451/453 (Ost), Hinweise 14.10. | werkstatt/olten/rothrist_override.json |
 | Werkstatt Olten | rothrist | cfg.d_lim | Schalter | 1 | Achse aus Pfad West(450)->Ost(451/453), Fenster bis zum Zusammenlauf der 450er (West) und 451/453 (Ost), Hinweise 14.10. | werkstatt/olten/rothrist_override.json |
+| Werkstatt Olten | rothrist | cfg.leer_max | Schalter | 1 | Achse aus Pfad West(450)->Ost(451/453), Fenster bis zum Zusammenlauf der 450er (West) und 451/453 (Ost), Hinweise 14.10. | werkstatt/olten/rothrist_override.json |
 | Werkstatt Olten | rothrist | cfg.rules | Schalter | 1 | Regionalplan-Variante Rothrist (Daten aus region.json): Grundeinstellungen ohne Ausschnitt/Handzeichnung des Detailplans (15.10.) | werkstatt/olten/regional_rothrist/rothrist_override.json |
 | Werkstatt Olten | rothrist | cfg.rules | Schalter | 1 | Achse aus Pfad West(450)->Ost(451/453), Fenster bis zum Zusammenlauf der 450er (West) und 451/453 (Ost), Hinweise 14.10. | werkstatt/olten/rothrist_override.json |
 | Werkstatt Olten | rothrist | cfg.s_max_fix | Schalter | 1 | Achse aus Pfad West(450)->Ost(451/453), Fenster bis zum Zusammenlauf der 450er (West) und 451/453 (Ost), Hinweise 14.10. | werkstatt/olten/rothrist_override.json |
@@ -1010,6 +1012,7 @@ Erzeugt von `spurplan/code/overrides_liste.py`. Ziel (Entscheid 13.11.): nur Ort
 | Werkstatt Olten | tecknau | nummern | Geometrie | 2 | Hinweise D. Eckenstein (Feedback-Seite, Runde 3): Mittelperron 3/4, Spurwechsel ohne Zwischengerade, Gleise 1 und 2 beschriften. Perronlage  | werkstatt/olten/tecknau_override.json |
 | Werkstatt Olten | tecknau | schraeg | Geometrie | 2 | Hinweise D. Eckenstein (Feedback-Seite, Runde 3): Mittelperron 3/4, Spurwechsel ohne Zwischengerade, Gleise 1 und 2 beschriften. Perronlage  | werkstatt/olten/tecknau_override.json |
 | Werkstatt Olten | tecknau | platforms | Ortswissen | 1 | Hinweise D. Eckenstein (Feedback-Seite, Runde 3): Mittelperron 3/4, Spurwechsel ohne Zwischengerade, Gleise 1 und 2 beschriften. Perronlage  | werkstatt/olten/tecknau_override.json |
+| Werkstatt Olten | tecknau | cfg.leer_max | Schalter | 1 | Hinweise D. Eckenstein (Feedback-Seite, Runde 3): Mittelperron 3/4, Spurwechsel ohne Zwischengerade, Gleise 1 und 2 beschriften. Perronlage  | werkstatt/olten/tecknau_override.json |
 | Werkstatt Olten | tecknau | cfg.px_per_m | Schalter | 1 | Hinweise D. Eckenstein (Feedback-Seite, Runde 3): Mittelperron 3/4, Spurwechsel ohne Zwischengerade, Gleise 1 und 2 beschriften. Perronlage  | werkstatt/olten/tecknau_override.json |
 | Werkstatt Olten | tecknau | cfg.rules | Schalter | 1 | Hinweise D. Eckenstein (Feedback-Seite, Runde 3): Mittelperron 3/4, Spurwechsel ohne Zwischengerade, Gleise 1 und 2 beschriften. Perronlage  | werkstatt/olten/tecknau_override.json |
 | Werkstatt Olten | tecknau | cfg.s_max_fix | Schalter | 1 | Hinweise D. Eckenstein (Feedback-Seite, Runde 3): Mittelperron 3/4, Spurwechsel ohne Zwischengerade, Gleise 1 und 2 beschriften. Perronlage  | werkstatt/olten/tecknau_override.json |

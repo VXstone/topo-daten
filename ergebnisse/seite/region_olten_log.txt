@@ -5,7 +5,7 @@ Variante {"ok": true, "ordner": "regional_rothrist", "topologie": "{}", "geaende
 aarburg_oftringen {"ok": true, "optionen": [], "plan_geaendert": false, "bare_geaendert": false, "netz": {"T10": 1}, "topologie": "{}", "qualitaet": {"topo_A": 0, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "topo_F": 0, "netz_T10": 1, "boegen_pax": 7, "boegen_alle": 13, "randabstand": 0}}
 dulliken {"ok": true, "optionen": [], "plan_geaendert": false, "bare_geaendert": false, "netz": {}, "topologie": "{}", "qualitaet": {"topo_A": 0, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "topo_F": 0, "boegen_pax": 0, "boegen_alle": 6, "randabstand": 0}}
 laufelfingen {"ok": true, "optionen": [], "plan_geaendert": true, "bare_geaendert": false, "netz": {}, "topologie": "{}", "qualitaet": {"topo_A": 0, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "topo_F": 0, "boegen_pax": 4, "boegen_alle": 4, "randabstand": 0}}
-rothrist {"ok": true, "optionen": [], "plan_geaendert": true, "bare_geaendert": true, "netz": {"T10": 1, "D11": 2, "F7": 1}, "topologie": "{}", "qualitaet": {"topo_A": 0, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "topo_F": 0, "netz_T10": 1, "netz_D11": 2, "netz_F7": 1, "boegen_pax": 28, "boegen_alle": 61, "randabstand": 0}}
+rothrist {"ok": true, "optionen": [], "plan_geaendert": true, "bare_geaendert": true, "netz": {"T10": 1, "D11": 2, "F7": 1}, "topologie": "{'F': 1}", "qualitaet": {"topo_A": 0, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "topo_F": 1, "netz_T10": 1, "netz_D11": 2, "netz_F7": 1, "boegen_pax": 28, "boegen_alle": 61, "randabstand": 0}}
 safenwil {"ok": true, "optionen": [], "plan_geaendert": true, "bare_geaendert": true, "netz": {}, "topologie": "{}", "qualitaet": {"topo_A": 0, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "topo_F": 0, "boegen_pax": 4, "boegen_alle": 12, "randabstand": 0}}
 schonenwerd {"ok": true, "optionen": [], "plan_geaendert": true, "bare_geaendert": true, "netz": {}, "topologie": "{}", "qualitaet": {"topo_A": 0, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "topo_F": 0, "boegen_pax": 0, "boegen_alle": 6, "randabstand": 0}}
 tecknau {"ok": true, "optionen": [], "plan_geaendert": true, "bare_geaendert": true, "netz": {"T10": 1, "D11": 2, "D12": 1}, "topologie": "{}", "qualitaet": {"topo_A": 0, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "topo_F": 0, "netz_T10": 1, "netz_D11": 2, "netz_D12": 1, "boegen_pax": 0, "boegen_alle": 18, "randabstand": 0}}
@@ -23,7 +23,7 @@ Regionalgeometrie /home/runner/work/topo-daten/topo-daten/spurplan/werkstatt/olt
   F11 x=2340.8 y=-475.1  Versatz 5.0 px ohne Grund zwischen zwei parallelen Stücken
   F11 x=2340.8 y=-460.0  Versatz 5.0 px ohne Grund zwischen zwei parallelen Stücken
 
-Region Olten: {"ok": true, "geaendert": true, "geometrie": {"plan": "/home/runner/work/topo-daten/topo-daten/spurplan/werkstatt/olten/feedback/region.svg", "achse": 10.049105468494192, "befunde": [{"regel": "A1", "x": 85.6, "y": -178.5, "text": "zwei Streckengleise 11.8 px auseinander (1.17 Achsen) über 42 px"}, {"regel": "F11", "x": -118.6, "y": 770.5, "text": "Versatz 4.2 px ohne Grund zwischen zwei parallelen Stücken"}, {"regel": "W8", "x": 48.1, "y": 1442.0, "text": "kurzes Zwischenstück 7.5 px zwischen zwei Knicken (120°/90°)"}, {"regel": "W8", "x": -28.7, "y": 484.5, "text": "kurzes Zwischenstück 10.8 px zwischen zwei Knicken (30°/60°)"}, {"regel": "F11", "x": 2340.8, "y": -475.1, "text": "Versatz 5.0 px ohne Grund zwischen zwei parallelen Stücken"}, {"regel": "F11", "x": 2340.8, "y": -460.0, "text": "Versatz 5.0 px ohne Grund zwischen zwei parallelen Stücken"}]}}
+Region Olten: {"ok": true, "geaendert": true, "geometrie": {"plan": "/home/runner/work/topo-daten/topo-daten/spurplan/werkstatt/olten/feedback/region.svg", "achse": 10.050076648692464, "befunde": [{"regel": "A1", "x": 85.6, "y": -178.5, "text": "zwei Streckengleise 11.8 px auseinander (1.17 Achsen) über 42 px"}, {"regel": "F11", "x": -118.6, "y": 770.5, "text": "Versatz 4.2 px ohne Grund zwischen zwei parallelen Stücken"}, {"regel": "W8", "x": 48.1, "y": 1442.0, "text": "kurzes Zwischenstück 7.5 px zwischen zwei Knicken (120°/90°)"}, {"regel": "W8", "x": -28.7, "y": 484.5, "text": "kurzes Zwischenstück 10.8 px zwischen zwei Knicken (30°/60°)"}, {"regel": "F11", "x": 2340.8, "y": -475.1, "text": "Versatz 5.0 px ohne Grund zwischen zwei parallelen Stücken"}, {"regel": "F11", "x": 2340.8, "y": -460.0, "text": "Versatz 5.0 px ohne Grund zwischen zwei parallelen Stücken"}]}}
 Kennzahlen gegen die Basis:
   aarau                  neu   
   aarburg_oftringen      gleich   
@@ -32,7 +32,7 @@ Kennzahlen gegen die Basis:
   laufelfingen           gleich   
   olten                  gleich   
   olten_hammer           gleich   
-  rothrist               gleich   
+  rothrist               schlechter {'topo_F': 1}  | Topologie offen: {'topo_F': 1}
   safenwil               gleich   
   schonenwerd            gleich   
   tecknau                gleich   
