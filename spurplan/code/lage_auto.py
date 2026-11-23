@@ -272,7 +272,7 @@ def ketten(nodes, MAJOR, routes, anchor, PORTS, S, P, fix, L0):
         z = np.linalg.lstsq(np.array(rows), np.array(rhs), rcond=None)[0]
         return {n: z[2 * hidx[n]: 2 * hidx[n] + 2] for n in hubs}
     def place(hp):
-        pos = dict(hp)
+        pos = dict(hp); _qn = {}
         for ch in chains:
             a, b = ch["seq"][0], ch["seq"][-1]
             A = hp[a] + port(a, ch["ks"][0]); B = hp[b] + port(b, ch["ks"][-1])
@@ -332,6 +332,23 @@ def ketten(nodes, MAJOR, routes, anchor, PORTS, S, P, fix, L0):
                     _q1 = [float(rotv(np.array(p_, float), rot[n]) @ nv) for p_ in _as[0]["pts"]]
                     _q2 = [float(rotv(np.array(p_, float), rot[n]) @ nv) for p_ in _as[1]["pts"]]
                     x_, y_ = min(((x_, y_) for x_ in _q1 for y_ in _q2), key=lambda t: abs(t[0] - t[1]))
+                    # Paarung mit dem Nachbarn (23.11.2026, V4d, Hinweis pjyb Riedbach – Bern Brünnen): bei Doppelspur gibt es
+                    # zwei gleich gerade Paare (Gl. 1 oder Gl. 2 auf der Achse); gewählt wird das, dessen Gleise an die Gleise
+                    # des vorherigen Bahnhofs der Kette anschliessen – sonst ein Gleisabstand Versatz auf der Strecke
+                    # (S-Kurve). Lage auto.kette_paarung (Standard an), REGELN 4.5.
+                    _kp = inn[j - 1] if j > 0 else None
+                    if P.get("kette_paarung", True) and _kp is not None and _kp in _qn and anc(prev_k, _kp) is not None \
+                            and anc(prev_k, n) is not None and anc(prev_k, _kp).get("pts") and anc(prev_k, n).get("pts"):
+                        _d0 = abs(x_ - y_)
+                        _kand = sorted({(round(a1, 3), round(a2, 3)) for a1 in _q1 for a2 in _q2 if abs(a1 - a2) <= _d0 + 0.5})
+                        _pv = [float(rotv(np.array(p_, float), rot[_kp]) @ nv) - _qn[_kp] for p_ in anc(prev_k, _kp)["pts"]]
+                        _cv = [float(rotv(np.array(p_, float), rot[n]) @ nv) for p_ in anc(prev_k, n)["pts"]]
+                        def _miss(t_):
+                            qq_ = (t_[0] + t_[1]) / 2
+                            return sum(min(abs(c_ - qq_ - v_) for v_ in _pv) for c_ in _cv)
+                        if len(_kand) > 1:
+                            x_, y_ = min(_kand, key=_miss)
+                            if os.environ.get("KIPPDBG"): print("PAAR", nodes[n]["name"], _kand, round(_miss((x_, y_)), 1))
                     q = (x_ + y_) / 2
                     # Kippen statt Versatz (4.11.2026, Punkt 4, Château-d'Oex: Einspur links auf Gl. 1, rechts auf Gl. 3):
                     # liegen Ein- und Ausfahrt quer versetzt, wird der Plan um höchstens «kipp_max» Grad (8°) gedreht,
@@ -352,7 +369,7 @@ def ketten(nodes, MAJOR, routes, anchor, PORTS, S, P, fix, L0):
                         if best_k[1] and best_k[0] < 0.5:
                             rot[n] = rot[n] + best_k[1]
                             q = (float(rotv(np.array(_p1, float), rot[n]) @ nv) + float(rotv(np.array(_p2, float), rot[n]) @ nv)) / 2
-                pos[n] = pos[n] - nv * q
+                pos[n] = pos[n] - nv * q; _qn[n] = q
         return pos
     def bbox(n, p):
         w, h = boxwh(n); a = math.radians(rot.get(n, 0)); c, s = abs(math.cos(a)), abs(math.sin(a))

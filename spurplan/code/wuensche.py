@@ -253,12 +253,21 @@ def messen(svg_text, key="", topo=None):
 
 
 def nebengleis_ueberlaenge(linien, frei=80.0):
-    """W59 (REGELN 5.9): Summe der Längen dünner Gleise über `frei` px hinaus (je zusammenhängender Linie)."""
+    """W59 (REGELN 5.9): leere Länge dünner Gleise über `frei` px hinaus. Seit 23.11.2026 (V4d, Daniel: Cornaux «wirkt gut
+    gedrängt», Onnens-Bonvillars «eher zu lang»): gezählt wird nur ein gerades Stück eines dünnen Gleises zwischen zwei
+    Ereignissen des Plans (Knickpunkt/Weiche/Ende irgendeines Gleises in der Längsrichtung) – ein Gleisfeld mit vielen
+    Weichen nebeneinander ist nicht zu lang, ein einzelnes Abstellgleis ohne Nachbarn schon."""
+    xs = np.array(sorted({round(float(p_[0]), 1) for _, pts, _ in linien for p_ in pts}))
     tot = 0.0
     for w, pts, _ in linien:
         if w >= 2.5: continue
-        L = float(np.sum(np.hypot(*np.diff(pts, axis=0).T)))
-        tot += max(0.0, L - frei)
+        P_ = np.asarray(pts, float)
+        for a_, b_ in zip(P_[:-1], P_[1:]):
+            dx, dy = abs(b_[0] - a_[0]), abs(b_[1] - a_[1])
+            if dx <= frei or dy > 0.05 * dx: continue
+            x0, x1 = sorted((float(a_[0]), float(b_[0])))
+            ev = [x0] + [x for x in xs if x0 + 0.5 < x < x1 - 0.5] + [x1]
+            tot += sum(max(0.0, e1 - e0 - frei) for e0, e1 in zip(ev[:-1], ev[1:]))
     return tot
 
 

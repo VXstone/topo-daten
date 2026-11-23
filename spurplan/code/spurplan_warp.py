@@ -27,11 +27,15 @@ for a_, b_, wpx, wt in R["req"]:
     if j <= i: continue
     row = np.zeros(2 * n); row[i:j] = -1; A.append(row); b.append(-wpx)      # Breite >= Standard
     if wt > 0: c[i:j] += wt * (1.0 if base[i:j].sum() < 4 * wpx else 0.15)             # lange Verbindungen: nicht stauchen
+# cfg.leer_max (px, REGELN 5.9 «kurze Nebengleise», V4d 23.11.2026, Onnens-Bonvillars): ein Abschnitt ohne Weiche, Perron-
+# oder andere Mindestbreite wird höchstens so breit gezeichnet (Zielbreite statt Massstab); Mindestbreiten (req) gelten weiter
+LMAX = R.get("leer_max")
+ziel = np.minimum(base, float(LMAX)) if LMAX else base
 for i in range(n):
-    r1 = np.zeros(2 * n); r1[i] = 1; r1[n + i] = -1; A.append(r1); b.append(base[i])
-    r2 = np.zeros(2 * n); r2[i] = -1; r2[n + i] = -1; A.append(r2); b.append(-base[i])
+    r1 = np.zeros(2 * n); r1[i] = 1; r1[n + i] = -1; A.append(r1); b.append(ziel[i])
+    r2 = np.zeros(2 * n); r2[i] = -1; r2[n + i] = -1; A.append(r2); b.append(-ziel[i])
 WMIN = R.get("warp_min", 0.15)      # cfg.warp_min: Mindestanteil des Massstabs (Rothrist regional 20.10.: nicht stauchen)
-bounds = [(WMIN * base[i], None) for i in range(n)] + [(0, None)] * n
+bounds = [(WMIN * ziel[i], None) for i in range(n)] + [(0, None)] * n
 res = linprog(c, A_ub=np.array(A), b_ub=np.array(b), bounds=bounds, method="highs")
 print(res.message)
 x = np.r_[0, np.cumsum(res.x[:n])]

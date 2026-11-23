@@ -196,7 +196,8 @@
   "rules": {
    "r44": true,
    "r48": true
-  }
+  },
+  "leer_max": 150
  },
  "_gleisnummern": "keine: Perrons stillgelegt (OSM disused) -> nicht gezeichnet, ohne Perron keine Nummer (Regel 20.10.)",
  "zeichnen": {
