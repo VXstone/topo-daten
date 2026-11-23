@@ -272,6 +272,27 @@ for (eid, i), a_ in anchor.items():
         a_["ext"] = [(rotv(p, r_), rotv(q, r_)) for p, q in a_.get("ext", [])]
 print("senkrecht:", [nodes[i]["name"] for i in ROT if ROT[i]])
 
+# REGELN 4.12: Stummel seitlicher Abgänge im Spurplan finden (Lage ab der Weiche, Abgangswinkel im Regionalplan)
+def _teilpfade(body):
+    subs = []                                   # (Pfad-Text, Teilpfad-Text, Punkte)
+    for m_ in re.finditer(r'<path d="([^"]+)"[^>]*/>', body):
+        for sp_ in re.split(r'(?=M)', m_.group(1)):
+            if not sp_.strip(): continue
+            nums = [float(x) for x in re.findall(r'-?\d+(?:\.\d+)?', sp_)]
+            subs.append((m_.group(0), sp_, [np.array(nums[i:i + 2]) for i in range(0, len(nums) - 1, 2)]))
+    return subs
+def _stummel(body, pp_):
+    """Stummel eines seitlichen Abgangs: Teilpfad, der am Anschlusspunkt endet und an einer Weiche auf einem geraden,
+    waagrechten Gleis beginnt. Ergebnis dict(sw, m, e, a_alt, sub) in Planpixeln oder None."""
+    from shapely.geometry import LineString as _LSa, Point as _PTa
+    subs = _teilpfade(body); pp_ = np.asarray(pp_, float)
+    stub = [t for t in subs if len(t[2]) >= 3 and np.linalg.norm(t[2][-1] - pp_) < 0.8]
+    if len(stub) != 1: return None
+    pts_ = stub[0][2]; sw = pts_[0]; m0 = pts_[1] - sw; ln0 = np.linalg.norm(m0)
+    if ln0 < 1e-6 or abs(m0[1]) > 0.05 * ln0: return None          # Weiche ab geradem (waagrechtem) Gleis
+    m_pl = m0 / ln0; e_pl = pts_[-1] - pts_[-2]; e_pl = e_pl / (np.linalg.norm(e_pl) or 1)
+    if not any(t is not stub[0] and len(t[2]) >= 2 and _LSa(t[2]).distance(_PTa(sw)) < 0.8 for t in subs): return None
+    return dict(sw=sw, m=m_pl, e=e_pl, a_alt=math.degrees(math.acos(max(-1, min(1, float(m_pl @ e_pl))))), sub=stub[0][1], subs=subs)
 # ------------------------------------------------------------------ 3. Hauptknoten, Strecken, Lage
 MAJOR = [n for n in ids if nodes[n]["inset"] or nodes[n]["kind"] in ("junction", "exit")]
 routes, used = [], set()
@@ -315,6 +336,16 @@ if AUTO:
             nm_, rf_ = k_.split("|")
             if nodes[i_]["name"] == nm_ and rf_ in a_.get("refs", []):
                 a_["v"] = np.array([math.cos(math.radians(wk_)), -math.sin(math.radians(wk_))])
+    # REGELN 4.12: seitlicher Abgang mit einem Gleis und einfachem Stummel – die Lage rechnet ab der Weiche
+    if L0.get("abgang_winkel", True):
+        for (eid_, i_), a_ in anchor.items():
+            if not a_.get("side") or len(a_.get("pts", [])) != 1 or not a_.get("port_plan") or not nodes[i_].get("inset"): continue
+            try: _bd = open(nodes[i_]["inset"] + "_bare.svg").read()
+            except Exception: continue
+            _st = _stummel(_bd, a_["port_plan"][0])
+            if _st is None: continue
+            _c = np.array([(PORTS[i_]["x_lo"] + PORTS[i_]["x_hi"]) / 2, (PORTS[i_]["y_lo"] + PORTS[i_]["y_hi"]) / 2])
+            a_["weiche"] = dict(off=(_st["sw"] - _c) * S, a_alt=_st["a_alt"], m=_st["m"], e=_st["e"])
     if os.environ.get("REFDBG"): [print("REF", nodes[i_]["name"], a_.get("refs"), a_["v"], a_["off"], a_.get("ext")) for (e_, i_), a_ in anchor.items() if nodes[i_]["name"] == os.environ["REFDBG"]]
     pos, rot_ = lage_auto.ketten(nodes, MAJOR, routes, anchor, PORTS, S, AUTO, _fix, L0)
     for i in ROT: ROT[i] = rot_.get(i, 0)
@@ -1155,51 +1186,34 @@ def _hat_portale(n):
     return False
 # REGELN 4.12 (23.11.2026, Daniel zu vpkw Muntelier: «weniger Knicke vor festem Winkel»): kommt eine Strecke schräg an einen
 # seitlichen Abzweig eines Spurplans, bekommt im Regionalplan diese eine Weiche den Winkel der Strecke (ausgerundet, 20–75°)
-# statt Stummel unter 60° plus Knick. Nur «einfache Situation»: ein Gleis, Stummel = eine Weiche ab einem geraden Gleis,
-# kein anderes Gleis des Plans im neuen Weg. Der Stummel im Spurplan entfällt, die Strecke beginnt an der Weiche.
-# cfg/Lage «abgang_winkel» (Standard an), Grenzen «abgang_winkel_min»/«_max»/«_dmax».
+# statt Stummel unter 60° plus Knick – auch kein Knick beim Nachbarbahnhof: die Lage (lage_auto) rechnet die Strecke ab der
+# Weiche statt ab dem Stummelende. Nur «einfache Situation»: ein Gleis, Stummel = eine Weiche ab einem geraden Gleis, kein
+# anderes Gleis des Plans im neuen Weg. Der Stummel im Spurplan entfällt, die Strecke beginnt an der Weiche.
+# Lage «abgang_winkel» (Standard an), Grenzen «abgang_winkel_min»/«_max»/«_dmax».
 def _abgang_winkel(n_, a_, pe, q):
-    if not L0.get("abgang_winkel", True) or n_ not in STOUT or not a_.get("side") or len(a_.get("pts", [])) != 1 or not a_.get("port_plan"):
-        return None
-    from shapely.geometry import LineString as _LSa, Point as _PTa
+    if not L0.get("abgang_winkel", True) or n_ not in STOUT or not (a_.get("weiche") or {}).get("lage"): return None   # nur wenn die Lage ab der Weiche rechnete
+    from shapely.geometry import LineString as _LSa
     P_ = PORTS[n_]; c_ = np.array([(P_["x_lo"] + P_["x_hi"]) / 2, (P_["y_lo"] + P_["y_hi"]) / 2]); r_ = ROT.get(n_, 0)
-    reg = lambda p_: pos[n_] + rotv((np.asarray(p_, float) - c_) * S, r_)
-    pp_ = np.array(a_["port_plan"][0]); body = out[STOUT[n_]]
-    subs = []                                   # (Pfad-Text, Teilpfad-Text, Punkte)
-    for m_ in re.finditer(r'<path d="([^"]+)"[^>]*/>', body):
-        for sp_ in re.split(r'(?=M)', m_.group(1)):
-            if not sp_.strip(): continue
-            nums = [float(x) for x in re.findall(r'-?\d+(?:\.\d+)?', sp_)]
-            subs.append((m_.group(0), sp_, [np.array(nums[i:i + 2]) for i in range(0, len(nums) - 1, 2)]))
-    stub = [t for t in subs if len(t[2]) >= 3 and np.linalg.norm(t[2][-1] - pp_) < 0.8]
-    if len(stub) != 1: return None
-    full, sp_, pts_ = stub[0]
-    sw = pts_[0]; m0 = pts_[1] - sw; ln0 = np.linalg.norm(m0)
-    if ln0 < 1e-6 or abs(m0[1]) > 0.05 * ln0: return None          # Weiche ab geradem (waagrechtem) Gleis
-    m_pl = m0 / ln0; e_pl = pts_[-1] - pts_[-2]; e_pl = e_pl / (np.linalg.norm(e_pl) or 1)
-    a_alt = math.degrees(math.acos(max(-1, min(1, float(m_pl @ e_pl)))))
-    if not any(t is not stub[0] and _LSa(t[2]).distance(_PTa(sw)) < 0.8 for t in subs if len(t[2]) >= 2): return None   # Weiche liegt auf einem Gleis
-    m_rg = rotv(m_pl, r_); lk = 2 * CFG["R"]
-    sw_rg = reg(sw); k_rg = sw_rg + m_rg * lk
-    d_ = np.asarray(q, float) - k_rg; ld_ = np.linalg.norm(d_)
-    if ld_ < 4 * CFG["R"]: return None
-    d_ = d_ / ld_; a_neu = math.degrees(math.acos(max(-1, min(1, float(m_rg @ d_)))))
-    e_rg = rotv(e_pl, r_)
-    if _cr(m_rg, d_) * _cr(m_rg, e_rg) <= 0: return None               # gleiche Seite wie der Stummel
+    body = out[STOUT[n_]]; st_ = _stummel(body, a_["port_plan"][0])
+    if st_ is None: return None
+    sw, m_pl, e_pl, a_alt = st_["sw"], st_["m"], st_["e"], st_["a_alt"]
+    m_rg = rotv(m_pl, r_); lk = 2 * CFG["R"]; sw_rg = pos[n_] + rotv((sw - c_) * S, r_)
+    u_ = np.asarray(q, float) - sw_rg; lu_ = np.linalg.norm(u_)
+    if lu_ < 4 * CFG["R"]: return None
+    u_ = u_ / lu_; a_neu = math.degrees(math.acos(max(-1, min(1, float(m_rg @ u_)))))
+    if _cr(m_rg, u_) * _cr(m_rg, rotv(e_pl, r_)) <= 0: return None    # gleiche Seite wie der Stummel
     if not (L0.get("abgang_winkel_min", 20) <= a_neu <= L0.get("abgang_winkel_max", 75)): return None
-    if abs(a_neu - a_alt) < 4 or abs(a_neu - a_alt) > L0.get("abgang_winkel_dmax", 40): return None
-    # neuer Weg im Plan (Planpixel): ab der Weiche bis zur Länge des alten Stummels; kein anderes Gleis darf ihn kreuzen
-    d_pl = rotv(d_, -r_); k_pl = sw + m_pl * lk / S
-    L_st = float(np.linalg.norm(pts_[-1] - sw)) * 1.2
-    neu = _LSa([k_pl, k_pl + d_pl * L_st])
-    for t in subs:
-        if t is stub[0] or len(t[2]) < 2: continue
-        g_ = _LSa(t[2])
-        if g_.distance(neu) < 6 and g_.distance(_PTa(sw)) > 0.8: return None
-    out[STOUT[n_]] = body.replace(full, full.replace(sp_, "").replace('d=" ', 'd="').replace('d=""', 'd="M0,0"'))
+    if abs(a_neu - a_alt) > L0.get("abgang_winkel_dmax", 40): return None
+    # neuer Weg im Plan (Planpixel) ab der Ausrundung (Ecke an der Weiche) bis über das Stummelende hinaus: kein anderes Gleis darf ihn berühren
+    u_pl = rotv(u_, -r_); L_st = float(np.linalg.norm(a_["port_plan"][0] - sw))
+    neu = _LSa([sw + u_pl * CFG["R"] / S, sw + u_pl * L_st * 1.5])
+    for t in st_["subs"]:
+        if t[1] == st_["sub"] or len(t[2]) < 2: continue
+        if _LSa(t[2]).distance(neu) < 6: return None
+    out[STOUT[n_]] = re.sub(r'<path d="([^"]+)"', lambda mm: '<path d="' + (mm.group(1).replace(st_["sub"], "").strip() or "M0,0") + '"', body)
     print(f"  REGELN 4.12: {nodes[n_]['name']} Abgang {a_alt:.0f}° -> {a_neu:.0f}° (Weiche an die Strecke angepasst)")
     ABGANG_W.append(dict(plan=nodes[n_]["name"], alt=round(a_alt), neu=round(a_neu)))
-    return [sw_rg, k_rg]
+    return [sw_rg - m_rg * lk, sw_rg]
 ABGANG_W = []
 RLINES = []
 DEFER_L = []

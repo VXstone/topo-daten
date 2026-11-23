@@ -178,9 +178,14 @@ def ketten(nodes, MAJOR, routes, anchor, PORTS, S, P, fix, L0):
                 if b_: _sd.append(math.atan2(np.mean([math.sin(math.radians(b)) for b in b_]), np.mean([math.cos(math.radians(b)) for b in b_])))
             th = math.degrees(math.atan2(np.mean([math.sin(a_) for a_ in _sd]), np.mean([math.cos(a_) for a_ in _sd])))
         a = round(-th / P["schritt"]) * P["schritt"]; rot[n] = ((a + 180) % 360) - 180
-    def port(n, k):         # Anschlusspunkt der Strecke k am Knoten n relativ zur Mitte (gedreht)
+    def port(n, k, weiche=False):         # Anschlusspunkt der Strecke k am Knoten n relativ zur Mitte (gedreht)
         a_ = anc(k, n)
         if a_ is None or n in inner: return np.zeros(2)
+        # REGELN 4.12 (23.11.2026, Muntelier): seitlicher Abgang mit einfachem Stummel – die Kette (innere Bahnhöfe) liegt
+        # auf der Geraden ab der Weiche, ihr Winkel passt sich an (netz_lage _abgang_winkel); sonst wandert der Knick zum
+        # Nachbarbahnhof. Nur in place(), die Knoten-Ausgleichsrechnung bleibt beim Stummelende (keine Fernwirkung).
+        if weiche and a_.get("weiche") and (L0.get("abgang_winkel", True) if isinstance(L0, dict) else True):
+            return rotv(np.array(a_["weiche"]["off"], float), rot.get(n, 0))
         return rotv(np.array(a_["off"], float), rot.get(n, 0))
     def need(ch):           # Platzbedarf der inneren Bahnhöfe entlang der Kette (an Abzweigen mehr Luft)
         inn = ch["seq"][1:-1]
@@ -276,6 +281,21 @@ def ketten(nodes, MAJOR, routes, anchor, PORTS, S, P, fix, L0):
         for ch in chains:
             a, b = ch["seq"][0], ch["seq"][-1]
             A = hp[a] + port(a, ch["ks"][0]); B = hp[b] + port(b, ch["ks"][-1])
+            # REGELN 4.12: Kette ab der Weiche eines seitlichen Abgangs, wenn der Abgangswinkel dann in den Grenzen liegt
+            for j_, h_ in ((0, a), (-1, b)):
+                a_ = anc(ch["ks"][j_], h_)
+                if not (a_ and a_.get("weiche") and h_ not in inner and (L0.get("abgang_winkel", True) if isinstance(L0, dict) else True)): continue
+                W_ = hp[h_] + port(h_, ch["ks"][j_], True); a_["weiche"]["lage"] = False
+                Z_ = B if j_ == 0 else A
+                u_ = Z_ - W_; u_ = u_ / (np.linalg.norm(u_) or 1); m_ = rotv(np.array(a_["weiche"]["m"], float), rot.get(h_, 0))
+                e_ = rotv(np.array(a_["weiche"]["e"], float), rot.get(h_, 0))
+                w_ = math.degrees(math.acos(max(-1, min(1, float(m_ @ u_)))))
+                _L = L0 if isinstance(L0, dict) else {}
+                if (m_[0] * u_[1] - m_[1] * u_[0]) * (m_[0] * e_[1] - m_[1] * e_[0]) > 0 and _L.get("abgang_winkel_min", 20) <= w_ <= _L.get("abgang_winkel_max", 75) \
+                        and abs(w_ - a_["weiche"]["a_alt"]) <= _L.get("abgang_winkel_dmax", 40):
+                    a_["weiche"]["lage"] = True
+                    if j_ == 0: A = W_
+                    else: B = W_
             inn = ch["seq"][1:-1]
             if not inn: continue
             dv = B - A; Ltot = np.linalg.norm(dv) or 1.0; u = dv / Ltot
