@@ -1,4 +1,4 @@
-147 Pläne, 42 geändert: 32 gleichwertig, 2 vermutlich besser, 8 schlechter?
+147 Pläne, 42 geändert: 31 gleichwertig, 3 vermutlich besser, 8 schlechter?
 
 | Plan | Gruppe | Basis | Stellen | Einordnung | Kennzahlen alt→neu | G0 | HT | letzte Änderung |
 |---|---|---|---|---|---|---|---|---|
@@ -10,7 +10,6 @@
 | bole | NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier | Archivbeginn (Abnahme 2026-10-20) | 3 | schlechter? | W56 6→7 (Wunsch-Summe +3) · OSM VB1 2 (kein Alt-Stand) | 0 | 0 | 2026-11-20T21:23 |
 | le_landeron | NE 5 · Neuchâtel – Biel | Archivbeginn (Abnahme 2026-10-20) | 2 | schlechter? | G2 0→1, T7 2→3 (Wunsch-Summe +8) · OSM VD1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-21T15:24 |
 | saint_blaise_lac | NE 1 · Neuchâtel – Ins – Kerzers – Bern | Archivbeginn (Abnahme 2026-10-15) | 1 | schlechter? | G2 0→1, T7 4→3 (Wunsch-Summe -8) · OSM VD1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-21T15:24 |
-| zofingen | Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil | bestätigt 2026-11-08 | 26 | gleichwertig | OSM VA2 2, VB1 2, VD1 1 (kein Alt-Stand) | GG 1 | HT1 2 | 2026-11-21T21:27 |
 | auvernier | NE 6 · Neuchâtel – Yverdon | Archivbeginn (Abnahme 2026-10-20) | 14 | gleichwertig | OSM VB1 1, VD1 1 (kein Alt-Stand) | GG 1 · GT 1 | 0 | 2026-11-20T21:23 |
 | gampelen | NE 1 · Neuchâtel – Ins – Kerzers – Bern | Archivbeginn (Abnahme 2026-10-15) | 11 | gleichwertig | OSM ok (kein Alt-Stand) | 0 | 0 | 2026-11-21T15:24 |
 | saint_blaise_cff | NE 5 · Neuchâtel – Biel | Archivbeginn (Abnahme 2026-10-15) | 9 | gleichwertig | OSM ok (kein Alt-Stand) | 0 | 0 | 2026-11-22T05:27 |
@@ -41,9 +40,10 @@
 | couvet | NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier | Archivbeginn (Abnahme 2026-10-20) | 1 | gleichwertig | OSM VD1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-20T21:23 |
 | motiers | NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier | Archivbeginn (Abnahme 2026-10-20) | 1 | gleichwertig | OSM VD1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-20T21:23 |
 | les_geneveys_sur_coffrane | NE 8 · Neuchâtel – La Chaux-de-Fonds | Archivbeginn (Abnahme 2026-10-19) | 1 | gleichwertig | OSM VD1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-20T21:23 |
-| region_ne | Region | veröffentlicht | 1 | gleichwertig |  | GS 1 · GG 2 · GQ 1 | – | 2026-11-23T18:53 |
-| colombier | NE 6 · Neuchâtel – Yverdon | Archivbeginn (Abnahme 2026-10-16) | 7 | vermutlich besser | W56 6→5, W59 1→0 (Wunsch-Summe -3) · OSM ok (kein Alt-Stand) | 0 | 0 | 2026-11-20T21:23 |
-| neuchatel | NE 1 · Neuchâtel – Ins – Kerzers – Bern | bestätigt 2026-11-08 | 2 | vermutlich besser | GG 3→1 · OSM VD1 1 (kein Alt-Stand) | GG 1 · GT 1 | 0 | 2026-11-22T20:14 |
+| region_ne | Region | veröffentlicht | 1 | gleichwertig |  | GS 1 · GG 2 · GQ 1 | – | 2026-11-23T21:35 |
+| zofingen | Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil | bestätigt 2026-11-08 | 26 | vermutlich besser | VB1 3→2, VB2 3→0, VD1 5→1 | GG 1 | HT1 2 | 2026-11-21T21:27 |
+| colombier | NE 6 · Neuchâtel – Yverdon | Archivbeginn (Abnahme 2026-10-16) | 7 | vermutlich besser | W56 6→5, W59 1→0 (Wunsch-Summe -3) · OSM ok (kein Alt-Stand) | 0 | 0 | 2026-11-23T21:35 |
+| neuchatel | NE 1 · Neuchâtel – Ins – Kerzers – Bern | bestätigt 2026-11-08 | 2 | vermutlich besser | GG 3→1, VA1 5→0, VB2 3→0, VC1 1→0, VD1 4→1 | GG 1 · GT 1 | 0 | 2026-11-22T20:14 |
 
 Grundprüfung G0 aller Pläne: `ergebnisse/seite/grundpruefung/grundpruefung.md`
 Hauptgleis-Topologie HT aller Pläne mit Netzmodell: `ergebnisse/seite/hauptgleis/hauptgleis.md`
