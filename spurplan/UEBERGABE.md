@@ -111,7 +111,7 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - [x] **V4b G0 grün + veröffentlichen** – 21.11. vormittags, Commit 16ca65c, Seite v160 (Nachtrag V4b)
 - [x] **V4c NE: HT-Befunde abbauen** – 21.11. (v161/v162)
 - [x] **V4e NE: HT-Rest** – 21./22.11. (v164–v170), alle NE-Pläne HT 0 bzw. Ausnahme Courtepin (Nachträge V4e Teil 1–5)
-- [ ] **V4f Neuchâtel im Regionalplan wie im Bahnhofplan** (Hinweis Daniel 22.11.: Ostkopf mit EKW 109 fehlt im Regionalplan NE; REGELN «Regionalplan wie Bahnhofplan», wie R4 Rothrist) – siehe Nachtrag 22.11. ~21:30
+- [x] **V4f Neuchâtel im Regionalplan wie im Bahnhofplan** – 23.11. vormittags, Commit 43a3919, Seite v172 (Nachtrag V4f)
 - [ ] **V4d NE ruhig + Nebengleise kürzen** (mittel, REGELN 4.5/5.9): S-Kurven pjyb/vpkw/zlwn, W59-Kürzung nach Daniels Wahl – siehe V4d
 - [ ] **K0c Selnau parallel (REGELN 2.2, `r34_kette`)** (klein) – siehe Nachtrag 20.11. ~19:15; nach V3/V4, vor T-SZU1
 - [ ] **V5 ein Lauf für alle Regionen** / **V6 Netz West (Neuchâtel–Biel–Solothurn–Olten)** – danach – Zweisimmen (dünn→dick am Knick), Solothurn (Weiche am Knick, doppelter Abstand), Selnau (ZL ~4 Ebenen, nur auf Daniels Antwort); Liste `ergebnisse/seite/zwischengeraden.md` – vor oder nach T-SZU1, wie Daniel will
@@ -885,3 +885,13 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - Daniel: «der Teil fehlt im Regionalplan völlig» – stimmt: Region NE nutzt `werkstatt/ne/neuchatel_*` (Fenster ohne Ostkopf, eigener
   Override), nicht den Bahnhofplan aus `plaene`. → neuer Schritt **V4f** (Fahrplan): Neuchâtel im Regionalplan aus dem Bahnhofplan
   (wie Vauseyon als `repo_bahnhoefe`), Nachbarfenster Saint-Blaise/Serrières prüfen (T13), Zielbild Ostkopf mit EKW im Regionalplan.
+
+### 23.11.2026 ~09:45 – Schritt V4f abgeschlossen, Seite v172 (Commit 43a3919)
+- Sichtbar: Regionalplan NE zeigt Neuchâtel wie den Bahnhofplan – Ostkopf mit Spurwechsel, EKW 109 (Symbol) und Abstellgleis-Pfeil.
+- Umsetzung: `region_ne.json` `repo_bahnhoefe` + «neuchatel» (wie Vauseyon), REGELN 4.11 ergänzt. Ports gleich aufgebaut (2 West, 3 Ost), nur
+  weiter östlich → keine Lage-Anpassung nötig. Werkstatt-Dateien `werkstatt/ne/neuchatel_*` (spurplan, warp, override …) sind jetzt unbenutzt;
+  `neuchatel_fenster.json` bleibt für T13 der Nachbarn (Fenster West unverändert, Ost 3 km vor St-Blaise CFF → kein Konflikt).
+- Regression: nur region_ne (G2 30→32 = G2 des Bahnhofplans Neuchâtel, bestätigt 8.11.); Nachbarn verschieben sich als Block (Plan länger),
+  Gampelen ohne die zwei Knicke (ruhiger), Biel-Linie um 0.1° gedreht. G0/HT grün, Topologie T1–T6 0. netz_lage meldet neu eine
+  Überlappung der Rahmen St-Blaise Lac/CFF (nur Rechtecke, im Bild getrennt). Abnahmen unverändert.
+
