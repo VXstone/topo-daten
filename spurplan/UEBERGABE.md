@@ -112,7 +112,7 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - [x] **V4c NE: HT-Befunde abbauen** – 21.11. (v161/v162)
 - [x] **V4e NE: HT-Rest** – 21./22.11. (v164–v170), alle NE-Pläne HT 0 bzw. Ausnahme Courtepin (Nachträge V4e Teil 1–5)
 - [x] **V4f Neuchâtel im Regionalplan wie im Bahnhofplan** – 23.11. vormittags, Commit 43a3919, Seite v172 (Nachtrag V4f)
-- [ ] **V4d NE ruhig + Nebengleise kürzen** (mittel, REGELN 4.5/5.9): S-Kurven pjyb/vpkw/zlwn, W59-Kürzung nach Daniels Wahl – siehe V4d
+- [ ] **V4d NE ruhig + Nebengleise kürzen** (mittel, REGELN 4.5/5.9): 23.11. Teil 1 v173 – pjyb/zlwn behoben, Onnens kürzer, W59 neu; **offen: vpkw Muntelier (Rückfrage A/B)**, Rest W59-Liste – siehe Nachtrag V4d
 - [ ] **K0c Selnau parallel (REGELN 2.2, `r34_kette`)** (klein) – siehe Nachtrag 20.11. ~19:15; nach V3/V4, vor T-SZU1
 - [ ] **V5 ein Lauf für alle Regionen** / **V6 Netz West (Neuchâtel–Biel–Solothurn–Olten)** – danach – Zweisimmen (dünn→dick am Knick), Solothurn (Weiche am Knick, doppelter Abstand), Selnau (ZL ~4 Ebenen, nur auf Daniels Antwort); Liste `ergebnisse/seite/zwischengeraden.md` – vor oder nach T-SZU1, wie Daniel will
 - [ ] **T-SZU1 DKW aus 4-Arm-Weiche (REGELN 2.4) und Güterverkehr schwarz (REGELN 1.21)** (klein, Entscheid Daniel 18.11.) – nach K0
@@ -894,4 +894,15 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - Regression: nur region_ne (G2 30→32 = G2 des Bahnhofplans Neuchâtel, bestätigt 8.11.); Nachbarn verschieben sich als Block (Plan länger),
   Gampelen ohne die zwei Knicke (ruhiger), Biel-Linie um 0.1° gedreht. G0/HT grün, Topologie T1–T6 0. netz_lage meldet neu eine
   Überlappung der Rahmen St-Blaise Lac/CFF (nur Rechtecke, im Bild getrennt). Abnahmen unverändert.
+
+### 23.11.2026 ~10:40 – Schritt V4d Teil 1, Seite v173 (Commit 6f56298, ergebnisse 8eb3e4d)
+- Sichtbar (Regionalplan NE): S-Kurve Riedbach – Bern Brünnen (pjyb) und Twann – Tüscherz (zlwn) weg – Ursache je ein Gleisabstand Versatz,
+  weil Doppelspur-Bahnhöfe das Achsgleis zufällig wählten (Gl. 1 oder 2). Neu `kette_paarung` in lage_auto.py (REGELN 4.5): Achsgleis passend
+  zum Nachbarn der Kette. Regionalplan NE G0 GT 4 → 0. Olten/MOB/Vereina/SZU unverändert.
+- Onnens-Bonvillars kürzer (Daniels Wahl): cfg `leer_max` 150 in spurplan_warp.py (REGELN 5.9), Plan 1820 → 1446 px; Kette Yverdon rückt nach.
+  W59 misst jetzt nur leere Länge (Cornaux 12 → 0, Onnens 6 → 2); NE-Rest: Avenches/Colombier/Galmiz/Travers je 1.
+- vpkw Muntelier: Knick vor der 60°-Weiche (Linie Sugiez kommt ~80°) – Rückfrage an Daniel: (A) Knick nach Sugiez, (B) Abzweig flacher.
+  Versuch A über `seiten_richtung` (Gewicht 10) verzog Galmiz (V-Form), Versuch «Einmündung gerade» in place() verschob Sugiez – beide verworfen.
+- Regression: geändert durch V4d nur onnens_bonvillars (G2 1→2, W56 5→2, W59 6→2) und region_ne (Block-Verschiebungen um ~5 px); G0/HT ohne Zunahme.
+  Die übrigen «schlechter?» (Grandson, Chambrelien, Avenches, Gorgier, Bôle, Le Landeron, St-Blaise Lac) sind ältere Stände vs. Archiv-Abnahme.
 
