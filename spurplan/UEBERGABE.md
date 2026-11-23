@@ -112,7 +112,7 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - [x] **V4c NE: HT-Befunde abbauen** – 21.11. (v161/v162)
 - [x] **V4e NE: HT-Rest** – 21./22.11. (v164–v170), alle NE-Pläne HT 0 bzw. Ausnahme Courtepin (Nachträge V4e Teil 1–5)
 - [x] **V4f Neuchâtel im Regionalplan wie im Bahnhofplan** – 23.11. vormittags, Commit 43a3919, Seite v172 (Nachtrag V4f)
-- [ ] **V4d NE ruhig + Nebengleise kürzen** (mittel, REGELN 4.5/5.9): 23.11. Teil 1 v173 – pjyb/zlwn behoben, Onnens kürzer, W59 neu; Teil 2 abends v174: vpkw Muntelier (REGELN 4.12, Weiche 42°); **offen: Rest W59-Liste (Travers, Colombier, Avenches, Galmiz; Rothrist, Thun, Zofingen)** – siehe Nachträge V4d
+- [ ] **V4d NE ruhig + Nebengleise kürzen** (mittel, REGELN 4.5/5.9): 23.11. Teil 1 v173 – pjyb/zlwn behoben, Onnens kürzer, W59 neu; Teil 2 abends v174: vpkw Muntelier (REGELN 4.12, Weiche 42°); Teil 3 spät v175: Colombier 706 kürzer, W59 Perron = Inhalt (Travers/Galmiz/Avenches ok); **offen: Rothrist (W59 10), Olten Hammer 4, Tecknau 3 – Olten-Seite, Daniel entscheidet, ob kürzen** – siehe Nachträge V4d
 - [ ] **K0c Selnau parallel (REGELN 2.2, `r34_kette`)** (klein) – siehe Nachtrag 20.11. ~19:15; nach V3/V4, vor T-SZU1
 - [ ] **V5 ein Lauf für alle Regionen** / **V6 Netz West (Neuchâtel–Biel–Solothurn–Olten)** – danach – Zweisimmen (dünn→dick am Knick), Solothurn (Weiche am Knick, doppelter Abstand), Selnau (ZL ~4 Ebenen, nur auf Daniels Antwort); Liste `ergebnisse/seite/zwischengeraden.md` – vor oder nach T-SZU1, wie Daniel will
 - [ ] **T-SZU1 DKW aus 4-Arm-Weiche (REGELN 2.4) und Güterverkehr schwarz (REGELN 1.21)** (klein, Entscheid Daniel 18.11.) – nach K0
@@ -915,3 +915,11 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   verschoben sich Auvernier/Serrières – darum nur in place(). Olten byte-gleich, Linien-Regionen ohne Wirkung (Stummel-Bedingung).
 - Regression: nur region_ne geändert (1 Stelle, «vermutlich besser», G2 32→31); G0 unverändert. Kein Prüfstand-Fall (Regionalplan).
 
+### 23.11.2026 ~22:50 – Schritt V4d Teil 3: W59-Rest NE, Seite v175 (Commit 9909f2d; ergebnisse 58727d7)
+- Sichtbar (Bahnhofplan und Regionalplan NE): Colombier – Abstellgleis 706 (Prellbock Seite Neuchâtel) endet 112 px früher, sonst nichts geändert.
+  Hand-Linien-Plan (`zeichnen`) → Kürzung im Override (x:1137 → x:1025), `leer_max` wirkt dort nicht (REGELN 5.9).
+- W59-Messung (REGELN 5.9): Perron ≤ 40 px quer daneben = Inhalt. Angesehen: Travers (Abstellgleise längs Perron, Rest 0.56 → 1 ist Rundung),
+  Galmiz (Kreuzungsgleis längs Perron) → 0, Avenches (viele kurze Stücke knapp über 80 px) → 0 – kein Kürzen nötig, Bild wie bisher.
+- Messänderung über alle Pläne: nur Abnahmen sinken (MOB La Tine/Gruben/Flendruz/Oeschseite/Les Sciernes, Aarburg, Tecknau 4→3, Olten Hammer 5→4).
+- Regression: geändert nur colombier («vermutlich besser», W56 6→5, W59 1→0) und region_ne (1 Stelle, gleichwertig); G0/HT unverändert. Abnahmen unverändert.
+- Avenches Gl. 2 dünn mit Nummer ist so gewollt (V4e 21.11., `_v4e` im Override) – nicht geändert.
