@@ -209,7 +209,7 @@ for i in [i for i in ids if nodes[i]["inset"]]:
                 pp = [(a + vn * (fr - float(a @ vn)), b) for a, b in pp]
             pts = [a for a, b in pp]
             anchor[(id(e), i)] = dict(off=np.mean(pts, axis=0), v=v0, pts=pts, pax=all(P[k]["pax"] for k in grp), ext=pp, refs=[P[k]["ref"] for k in grp], side=all(P[k]["kind"] == "side" for k in grp),
-                                      strang=[P[k].get("strang") for k in grp])
+                                      strang=[P[k].get("strang") for k in grp], port_plan=[(float(P[k]["x"]), float(P[k]["y"])) for k in grp])
         elif [k for k in range(len(P)) if k not in taken and P[k]["ref"] in e["refs"]]:
             # Fallback: freier Anschluss derselben Linie
             k0 = [k for k in range(len(P)) if k not in taken and P[k]["ref"] in e["refs"]][0]; v0 = port_vec(P[k0])
@@ -221,7 +221,7 @@ for i in [i for i in ids if nodes[i]["inset"]]:
                 pp = [(a + vn * (fr - float(a @ vn)), b) for a, b in pp]
             pts = [a for a, b in pp]
             anchor[(id(e), i)] = dict(off=np.mean(pts, axis=0), v=v0, pts=pts, pax=all(P[k]["pax"] for k in grp), ext=pp, refs=[P[k]["ref"] for k in grp], side=all(P[k]["kind"] == "side" for k in grp),
-                                      strang=[P[k].get("strang") for k in grp])
+                                      strang=[P[k].get("strang") for k in grp], port_plan=[(float(P[k]["x"]), float(P[k]["y"])) for k in grp])
         else:     # kein passender Anschluss: Kastenende in Streckenrichtung
             right = math.cos(math.radians(br)) >= 0
             off = np.array([((PORTS[i]["x_hi"] - cx) if right else (PORTS[i]["x_lo"] - cx)) * S, 0.0])
@@ -765,6 +765,7 @@ if L0.get("pfeile_verbinden", True):
         for q in PORTS[n_].get("pfeile", []):
             if q.get("doppelt") and q.get("ziel"): PF_WEG[n_].add(q["id"])
 # Spurpläne
+STOUT = {}
 for n in [n for n in ids if nodes[n]["inset"]]:
     P = PORTS[n]; cx = (P["x_lo"] + P["x_hi"]) / 2; cy = (P["y_lo"] + P["y_hi"]) / 2
     svg = open(nodes[n]["inset"] + "_bare.svg").read()
@@ -777,6 +778,7 @@ for n in [n for n in ids if nodes[n]["inset"]]:
     body = re.sub(r'font-size="([\d.]+)"', lambda m: f'font-size="{float(m.group(1)) * 0.6 / S:.1f}"', body)
     if a_:      # Schrift aufrecht halten
         body = re.sub(r'<text x="([-\d.]+)" y="([-\d.]+)"', lambda m: f'<text transform="rotate({-a_} {m.group(1)} {float(m.group(2)) - 4:.1f})" x="{m.group(1)}" y="{m.group(2)}"', body)
+    STOUT[n] = len(out)     # REGELN 4.12: Abgangswinkel im Regionalplan ändert den Stummel nachträglich
     out.append(f'<g data-st="{nodes[n]["inset"].replace("_regional", "")}" data-name="{nodes[n]["name"]}" transform="translate({pos[n][0]:.1f},{pos[n][1]:.1f}) rotate({a_}) translate({-cx * S:.1f},{-cy * S:.1f}) scale({S})">{body}</g>')
     bx_ = boxes()[n]
     if abs(a_) == 90: text(bx_[2] + 8, pos[n][1] + 6, nodes[n].get("titel", nodes[n]["name"]), 16, "start", 700)
@@ -1151,6 +1153,54 @@ def _hat_portale(n):
         try: return bool(json.load(open(f_)).get("portale"))
         except Exception: pass
     return False
+# REGELN 4.12 (23.11.2026, Daniel zu vpkw Muntelier: «weniger Knicke vor festem Winkel»): kommt eine Strecke schräg an einen
+# seitlichen Abzweig eines Spurplans, bekommt im Regionalplan diese eine Weiche den Winkel der Strecke (ausgerundet, 20–75°)
+# statt Stummel unter 60° plus Knick. Nur «einfache Situation»: ein Gleis, Stummel = eine Weiche ab einem geraden Gleis,
+# kein anderes Gleis des Plans im neuen Weg. Der Stummel im Spurplan entfällt, die Strecke beginnt an der Weiche.
+# cfg/Lage «abgang_winkel» (Standard an), Grenzen «abgang_winkel_min»/«_max»/«_dmax».
+def _abgang_winkel(n_, a_, pe, q):
+    if not L0.get("abgang_winkel", True) or n_ not in STOUT or not a_.get("side") or len(a_.get("pts", [])) != 1 or not a_.get("port_plan"):
+        return None
+    from shapely.geometry import LineString as _LSa, Point as _PTa
+    P_ = PORTS[n_]; c_ = np.array([(P_["x_lo"] + P_["x_hi"]) / 2, (P_["y_lo"] + P_["y_hi"]) / 2]); r_ = ROT.get(n_, 0)
+    reg = lambda p_: pos[n_] + rotv((np.asarray(p_, float) - c_) * S, r_)
+    pp_ = np.array(a_["port_plan"][0]); body = out[STOUT[n_]]
+    subs = []                                   # (Pfad-Text, Teilpfad-Text, Punkte)
+    for m_ in re.finditer(r'<path d="([^"]+)"[^>]*/>', body):
+        for sp_ in re.split(r'(?=M)', m_.group(1)):
+            if not sp_.strip(): continue
+            nums = [float(x) for x in re.findall(r'-?\d+(?:\.\d+)?', sp_)]
+            subs.append((m_.group(0), sp_, [np.array(nums[i:i + 2]) for i in range(0, len(nums) - 1, 2)]))
+    stub = [t for t in subs if len(t[2]) >= 3 and np.linalg.norm(t[2][-1] - pp_) < 0.8]
+    if len(stub) != 1: return None
+    full, sp_, pts_ = stub[0]
+    sw = pts_[0]; m0 = pts_[1] - sw; ln0 = np.linalg.norm(m0)
+    if ln0 < 1e-6 or abs(m0[1]) > 0.05 * ln0: return None          # Weiche ab geradem (waagrechtem) Gleis
+    m_pl = m0 / ln0; e_pl = pts_[-1] - pts_[-2]; e_pl = e_pl / (np.linalg.norm(e_pl) or 1)
+    a_alt = math.degrees(math.acos(max(-1, min(1, float(m_pl @ e_pl)))))
+    if not any(t is not stub[0] and _LSa(t[2]).distance(_PTa(sw)) < 0.8 for t in subs if len(t[2]) >= 2): return None   # Weiche liegt auf einem Gleis
+    m_rg = rotv(m_pl, r_); lk = 2 * CFG["R"]
+    sw_rg = reg(sw); k_rg = sw_rg + m_rg * lk
+    d_ = np.asarray(q, float) - k_rg; ld_ = np.linalg.norm(d_)
+    if ld_ < 4 * CFG["R"]: return None
+    d_ = d_ / ld_; a_neu = math.degrees(math.acos(max(-1, min(1, float(m_rg @ d_)))))
+    e_rg = rotv(e_pl, r_)
+    if _cr(m_rg, d_) * _cr(m_rg, e_rg) <= 0: return None               # gleiche Seite wie der Stummel
+    if not (L0.get("abgang_winkel_min", 20) <= a_neu <= L0.get("abgang_winkel_max", 75)): return None
+    if abs(a_neu - a_alt) < 4 or abs(a_neu - a_alt) > L0.get("abgang_winkel_dmax", 40): return None
+    # neuer Weg im Plan (Planpixel): ab der Weiche bis zur Länge des alten Stummels; kein anderes Gleis darf ihn kreuzen
+    d_pl = rotv(d_, -r_); k_pl = sw + m_pl * lk / S
+    L_st = float(np.linalg.norm(pts_[-1] - sw)) * 1.2
+    neu = _LSa([k_pl, k_pl + d_pl * L_st])
+    for t in subs:
+        if t is stub[0] or len(t[2]) < 2: continue
+        g_ = _LSa(t[2])
+        if g_.distance(neu) < 6 and g_.distance(_PTa(sw)) > 0.8: return None
+    out[STOUT[n_]] = body.replace(full, full.replace(sp_, "").replace('d=" ', 'd="').replace('d=""', 'd="M0,0"'))
+    print(f"  REGELN 4.12: {nodes[n_]['name']} Abgang {a_alt:.0f}° -> {a_neu:.0f}° (Weiche an die Strecke angepasst)")
+    ABGANG_W.append(dict(plan=nodes[n_]["name"], alt=round(a_alt), neu=round(a_neu)))
+    return [sw_rg, k_rg]
+ABGANG_W = []
 RLINES = []
 DEFER_L = []
 _XOPTS = []   # bereits gesetzte Spurwechsel (nicht übereinander)
@@ -1202,6 +1252,11 @@ for r in routes:
                 inner = pe - v_ * (5 if _side else 9)
                 if _side:          # seitlicher Abgang: erst ein Stück in Stummelrichtung weiter, dann abbiegen; keine Maske (sie deckte
                     # Stummel und Nachbargleise ab, Hinweise Region NE 20.10.: Ins, Murten "nicht mehr angebunden")
+                    _aw = next((_abgang_winkel(n_, a_, pe, q_) for n_, e_ in ((na, r["first"]), (nb, r["last"])) for a_ in [anchor.get((id(e_), n_))]
+                                if a_ and n_ in pos and any(np.linalg.norm(pos[n_] + p_ - pe) < 1.5 for p_ in a_["pts"] + [a_["off"]])
+                                and len(g_["lines"]) == 1), None)
+                    if _aw is not None:        # REGELN 4.12: Strecke beginnt an der Weiche, Winkel der Strecke
+                        l = _aw + l[1:] if end_ == 0 else l[:-1] + _aw[::-1]; continue
                     ext_ = pe + v_ * 10
                     l = [pe, ext_] + l[1:] if end_ == 0 else l[:-1] + [ext_, pe]; continue
                 out.append(f'<path d="M{(pe - v_ * 9.5)[0]:.1f},{(pe - v_ * 9.5)[1]:.1f}L{(pe + v_ * 2.5)[0]:.1f},{(pe + v_ * 2.5)[1]:.1f}" stroke="#fff" stroke-width="{w + 2.4:.1f}" fill="none"/>')
