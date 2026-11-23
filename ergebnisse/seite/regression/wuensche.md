@@ -14,11 +14,11 @@ Wünsche je Plan (REGELN 5: W53 S-Kurven ×6, W55 Bahnhofsabstand ×3, W56 Leerl
 | szu__zurich_selnau | SZU · Bahnhöfe | 2 |  | 4 | 24 |
 | schonenwerd | Olten 3 · Olten – Aarau | 0 |  | 7 | 21 |
 | bole | NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier | 0 |  | 7 | 21 |
-| colombier | NE 6 · Neuchâtel – Yverdon | 0 |  | 6 | 18 |
 | solothurn | Bahnhöfe ohne Regionalplan | 2 |  | 1 | 15 |
 | neuchatel | NE 1 · Neuchâtel – Ins – Kerzers – Bern | 2 |  | 1 | 15 |
 | murten | NE 3 · Lyss – Kerzers – Murten – Payerne | 1 |  | 3 | 15 |
 | auvernier | NE 6 · Neuchâtel – Yverdon | 1 |  | 3 | 15 |
+| colombier | NE 6 · Neuchâtel – Yverdon | 0 |  | 5 | 15 |
 | szu__zurich_giesshubel | SZU · Bahnhöfe | 2 |  | 1 | 15 |
 | olten_hammer | Olten 1 · Knoten Olten | 0 |  | 4 | 12 |
 | rothrist | Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil | 0 |  | 4 | 12 |

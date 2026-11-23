@@ -90,14 +90,6 @@
   "W59": 0
  },
  {
-  "key": "colombier",
-  "gruppe": "NE 6 · Neuchâtel – Yverdon",
-  "summe": 18,
-  "W53": 0,
-  "W56": 6,
-  "W59": 1
- },
- {
   "key": "solothurn",
   "gruppe": "Bahnhöfe ohne Regionalplan",
   "summe": 15,
@@ -130,6 +122,14 @@
   "W59": 0
  },
  {
+  "key": "colombier",
+  "gruppe": "NE 6 · Neuchâtel – Yverdon",
+  "summe": 15,
+  "W53": 0,
+  "W56": 5,
+  "W59": 0
+ },
+ {
   "key": "szu__zurich_giesshubel",
   "gruppe": "SZU · Bahnhöfe",
   "summe": 15,
@@ -143,7 +143,7 @@
   "summe": 12,
   "W53": 0,
   "W56": 4,
-  "W59": 5
+  "W59": 4
  },
  {
   "key": "rothrist",
@@ -231,7 +231,7 @@
   "summe": 6,
   "W53": 0,
   "W56": 2,
-  "W59": 1
+  "W59": 0
  },
  {
   "key": "onnens_bonvillars",
@@ -327,7 +327,7 @@
   "summe": 3,
   "W53": 0,
   "W56": 1,
-  "W59": 4
+  "W59": 3
  },
  {
   "key": "wangen_bei_olten",
@@ -407,7 +407,7 @@
   "summe": 3,
   "W53": 0,
   "W56": 1,
-  "W59": 2
+  "W59": 1
  },
  {
   "key": "mob__sendy_sollard",
@@ -463,7 +463,7 @@
   "summe": 0,
   "W53": 0,
   "W56": 0,
-  "W59": 1
+  "W59": 0
  },
  {
   "key": "zofingen",
@@ -567,7 +567,7 @@
   "summe": 0,
   "W53": 0,
   "W56": 0,
-  "W59": 1
+  "W59": 0
  },
  {
   "key": "faoug",
@@ -839,7 +839,7 @@
   "summe": 0,
   "W53": 0,
   "W56": 0,
-  "W59": 1
+  "W59": 0
  },
  {
   "key": "mob__fontanivent",
@@ -863,7 +863,7 @@
   "summe": 0,
   "W53": 0,
   "W56": 0,
-  "W59": 1
+  "W59": 0
  },
  {
   "key": "mob__gstaad",
@@ -903,7 +903,7 @@
   "summe": 0,
   "W53": 0,
   "W56": 0,
-  "W59": 2
+  "W59": 0
  },
  {
   "key": "mob__le_tremblex",
@@ -975,7 +975,7 @@
   "summe": 0,
   "W53": 0,
   "W56": 0,
-  "W59": 1
+  "W59": 0
  },
  {
   "key": "mob__paccot",
