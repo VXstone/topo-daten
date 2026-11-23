@@ -1,4 +1,4 @@
-147 Pläne, 42 geändert: 33 gleichwertig, 1 vermutlich besser, 8 schlechter?
+147 Pläne, 42 geändert: 2 vermutlich besser, 32 gleichwertig, 8 schlechter?
 
 | Plan | Gruppe | Basis | Stellen | Einordnung | Kennzahlen alt→neu | G0 | HT | letzte Änderung |
 |---|---|---|---|---|---|---|---|---|
@@ -42,8 +42,8 @@
 | couvet | NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier | Archivbeginn (Abnahme 2026-10-20) | 1 | gleichwertig | OSM VD1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-20T21:23 |
 | motiers | NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier | Archivbeginn (Abnahme 2026-10-20) | 1 | gleichwertig | OSM VD1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-20T21:23 |
 | les_geneveys_sur_coffrane | NE 8 · Neuchâtel – La Chaux-de-Fonds | Archivbeginn (Abnahme 2026-10-19) | 1 | gleichwertig | OSM VD1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-20T21:23 |
-| region_ne | Region | veröffentlicht | 1 | gleichwertig |  | GS 1 · GG 2 · GQ 1 | – | 2026-11-23T18:33 |
 | neuchatel | NE 1 · Neuchâtel – Ins – Kerzers – Bern | bestätigt 2026-11-08 | 2 | vermutlich besser | GG 3→1 · OSM VD1 1 (kein Alt-Stand) | GG 1 · GT 1 | 0 | 2026-11-22T20:14 |
+| region_ne | Region | veröffentlicht | 1 | vermutlich besser | G2 32→31 | GS 1 · GG 2 · GQ 1 | – | 2026-11-23T18:33 |
 
 Grundprüfung G0 aller Pläne: `ergebnisse/seite/grundpruefung/grundpruefung.md`
 Hauptgleis-Topologie HT aller Pläne mit Netzmodell: `ergebnisse/seite/hauptgleis/hauptgleis.md`
