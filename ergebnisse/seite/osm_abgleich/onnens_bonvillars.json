@@ -3,27 +3,27 @@
 "befunde": [
 {
 "regel": "VA1",
-"x": 667.3,
+"x": 628.0,
 "y": 123.2,
 "text": "OSM-DKW 1953027582 im Plan nicht als DKW gezeichnet",
 "osm": 1953027582
 },
 {
 "regel": "VA2",
-"x": 655.3,
+"x": 616.0,
 "y": 109.4,
 "text": "im Plan als DKW gezeichnet, in OSM keine DKW/EKW in der Nähe"
 },
 {
 "regel": "VB1",
-"x": 704.2,
+"x": 664.9,
 "y": 123.2,
 "text": "OSM-Weiche 1953027687 ohne Abzweig im Plan",
 "osm": 1953027687
 },
 {
 "regel": "VD1",
-"x": 641.4,
+"x": 602.1,
 "y": 171.2,
 "text": "zwei Gleise 14 px aufeinander"
 }

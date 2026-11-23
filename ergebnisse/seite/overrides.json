@@ -4224,6 +4224,15 @@
   "datei": "werkstatt/ne/onnens_bonvillars_override.json",
   "weg": "Werkstatt NE",
   "ort": "onnens_bonvillars",
+  "schluessel": "cfg.leer_max",
+  "art": "Schalter",
+  "grund": "Entwurf 19.10.2026 (Claude), Onnens-Bonvillars, OSM-Stand 12.10.; Stationsknoten synthetisch (OSM ohne)",
+  "umfang": 1
+ },
+ {
+  "datei": "werkstatt/ne/onnens_bonvillars_override.json",
+  "weg": "Werkstatt NE",
+  "ort": "onnens_bonvillars",
   "schluessel": "_gleisnummern",
   "art": "Ortswissen",
   "grund": "Entwurf 19.10.2026 (Claude), Onnens-Bonvillars, OSM-Stand 12.10.; Stationsknoten synthetisch (OSM ohne)",

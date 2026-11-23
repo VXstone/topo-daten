@@ -1,4 +1,4 @@
-# Ausnahmen je Ort (REGELN 6) – 915 Einträge an 125 Orten: 354 Schalter, 245 Ortswissen, 191 Geometrie, 125 Typvorlage
+# Ausnahmen je Ort (REGELN 6) – 916 Einträge an 125 Orten: 355 Schalter, 245 Ortswissen, 191 Geometrie, 125 Typvorlage
 
 Erzeugt von `spurplan/code/overrides_liste.py`. Ziel (Entscheid 13.11.): nur Ortswissen bleibt; Geometrie abbauen.
 
@@ -33,7 +33,7 @@ Erzeugt von `spurplan/code/overrides_liste.py`. Ziel (Entscheid 13.11.): nur Ort
 | Werkstatt NE | cornaux | 1 | 3 |  | 2 |
 | Werkstatt NE | ligerz |  | 4 | 2 | 2 |
 | Werkstatt NE | muntelier_lowenberg | 6 | 4 | 2 | 2 |
-| Werkstatt NE | onnens_bonvillars | 1 | 4 |  | 2 |
+| Werkstatt NE | onnens_bonvillars | 1 | 5 |  | 2 |
 | Werkstatt NE | travers |  | 3 |  | 2 |
 | Werkstatt NE | twann |  | 3 |  | 2 |
 | Werkstatt Olten | kuerzen |  |  |  | 2 |
@@ -591,6 +591,7 @@ Erzeugt von `spurplan/code/overrides_liste.py`. Ziel (Entscheid 13.11.): nur Ort
 | Werkstatt NE | onnens_bonvillars | dkw_px | Geometrie | 1 | Entwurf 19.10.2026 (Claude), Onnens-Bonvillars, OSM-Stand 12.10.; Stationsknoten synthetisch (OSM ohne) | werkstatt/ne/onnens_bonvillars_override.json |
 | Werkstatt NE | onnens_bonvillars | zeichnen | Geometrie | 2 | Entwurf 19.10.2026 (Claude), Onnens-Bonvillars, OSM-Stand 12.10.; Stationsknoten synthetisch (OSM ohne) | werkstatt/ne/onnens_bonvillars_override.json |
 | Werkstatt NE | onnens_bonvillars | _gleisnummern | Ortswissen | 1 | Entwurf 19.10.2026 (Claude), Onnens-Bonvillars, OSM-Stand 12.10.; Stationsknoten synthetisch (OSM ohne) | werkstatt/ne/onnens_bonvillars_override.json |
+| Werkstatt NE | onnens_bonvillars | cfg.leer_max | Schalter | 1 | Entwurf 19.10.2026 (Claude), Onnens-Bonvillars, OSM-Stand 12.10.; Stationsknoten synthetisch (OSM ohne) | werkstatt/ne/onnens_bonvillars_override.json |
 | Werkstatt NE | onnens_bonvillars | cfg.lt_dist_w | Schalter | 1 | Entwurf 19.10.2026 (Claude), Onnens-Bonvillars, OSM-Stand 12.10.; Stationsknoten synthetisch (OSM ohne) | werkstatt/ne/onnens_bonvillars_override.json |
 | Werkstatt NE | onnens_bonvillars | cfg.margin_x | Schalter | 1 | Entwurf 19.10.2026 (Claude), Onnens-Bonvillars, OSM-Stand 12.10.; Stationsknoten synthetisch (OSM ohne) | werkstatt/ne/onnens_bonvillars_override.json |
 | Werkstatt NE | onnens_bonvillars | cfg.rules | Schalter | 1 | Entwurf 19.10.2026 (Claude), Onnens-Bonvillars, OSM-Stand 12.10.; Stationsknoten synthetisch (OSM ohne) | werkstatt/ne/onnens_bonvillars_override.json |
