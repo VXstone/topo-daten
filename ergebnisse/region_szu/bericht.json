@@ -1,7 +1,7 @@
 {
  "region": "szu",
- "erzeugt": "2026-11-23 09:17 UTC",
- "code_commit": "6f56298581480ccd40bff7a4cf3805a056edac57",
+ "erzeugt": "2026-11-23 18:22 UTC",
+ "code_commit": "a7928dba47f44fecee06a4fd2ee9954152fd40f6",
  "bahnhoefe": {
   "uetliberg": {
    "name": "Uetliberg",
@@ -39,12 +39,6 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "borrweg": {
-   "name": "Borrweg",
-   "ok": true,
-   "befunde": "Befunde: {}",
-   "optionen": []
-  },
   "zurich_giesshubel": {
    "name": "Zürich Giesshübel",
    "ok": true,
@@ -53,6 +47,12 @@
   },
   "berghof": {
    "name": "Berghof",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "borrweg": {
+   "name": "Borrweg",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
