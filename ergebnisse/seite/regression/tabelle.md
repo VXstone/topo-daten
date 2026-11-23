@@ -1,4 +1,4 @@
-147 Pläne, 40 geändert: 2 vermutlich besser, 7 schlechter?, 31 gleichwertig
+147 Pläne, 41 geändert: 8 schlechter?, 2 vermutlich besser, 31 gleichwertig
 
 | Plan | Gruppe | Basis | Stellen | Einordnung | Kennzahlen alt→neu | G0 | HT | letzte Änderung |
 |---|---|---|---|---|---|---|---|---|
@@ -9,6 +9,7 @@
 | bole | NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier | Archivbeginn (Abnahme 2026-10-20) | 3 | schlechter? | W56 6→7 (Wunsch-Summe +3) · OSM VB1 2 (kein Alt-Stand) | 0 | 0 | 2026-11-20T21:23 |
 | le_landeron | NE 5 · Neuchâtel – Biel | Archivbeginn (Abnahme 2026-10-20) | 2 | schlechter? | G2 0→1, T7 2→3 (Wunsch-Summe +8) · OSM VD1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-21T15:24 |
 | saint_blaise_lac | NE 1 · Neuchâtel – Ins – Kerzers – Bern | Archivbeginn (Abnahme 2026-10-15) | 1 | schlechter? | G2 0→1, T7 4→3 (Wunsch-Summe -8) · OSM VD1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-21T15:24 |
+| region_ne | Region | veröffentlicht | 8 | schlechter? | G2 30→32 | GS 1 · GG 2 · GQ 1 | – | 2026-11-22T15:43 |
 | auvernier | NE 6 · Neuchâtel – Yverdon | Archivbeginn (Abnahme 2026-10-20) | 14 | gleichwertig | OSM VB1 1, VD1 1 (kein Alt-Stand) | GG 1 · GT 1 | 0 | 2026-11-20T21:23 |
 | gampelen | NE 1 · Neuchâtel – Ins – Kerzers – Bern | Archivbeginn (Abnahme 2026-10-15) | 11 | gleichwertig | OSM ok (kein Alt-Stand) | 0 | 0 | 2026-11-21T15:24 |
 | saint_blaise_cff | NE 5 · Neuchâtel – Biel | Archivbeginn (Abnahme 2026-10-15) | 9 | gleichwertig | OSM ok (kein Alt-Stand) | 0 | 0 | 2026-11-22T05:27 |
