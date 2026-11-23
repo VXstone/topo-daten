@@ -920,6 +920,6 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   Hand-Linien-Plan (`zeichnen`) → Kürzung im Override (x:1137 → x:1025), `leer_max` wirkt dort nicht (REGELN 5.9).
 - W59-Messung (REGELN 5.9): Perron ≤ 40 px quer daneben = Inhalt. Angesehen: Travers (Abstellgleise längs Perron, Rest 0.56 → 1 ist Rundung),
   Galmiz (Kreuzungsgleis längs Perron) → 0, Avenches (viele kurze Stücke knapp über 80 px) → 0 – kein Kürzen nötig, Bild wie bisher.
-- Messänderung über alle Pläne: nur Abnahmen sinken (MOB La Tine/Gruben/Flendruz/Oeschseite/Les Sciernes, Aarburg, Tecknau 4→3, Olten Hammer 5→4).
+- Messänderung über alle Pläne: W59 nur kleiner (MOB La Tine/Gruben/Flendruz/Oeschseite/Les Sciernes, Aarburg, Tecknau 4→3, Olten Hammer 5→4).
 - Regression: geändert nur colombier («vermutlich besser», W56 6→5, W59 1→0) und region_ne (1 Stelle, gleichwertig); G0/HT unverändert. Abnahmen unverändert.
 - Avenches Gl. 2 dünn mit Nummer ist so gewollt (V4e 21.11., `_v4e` im Override) – nicht geändert.
