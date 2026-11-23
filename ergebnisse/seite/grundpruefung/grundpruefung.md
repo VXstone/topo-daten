@@ -108,7 +108,7 @@
 | olten_hammer | · | · | · | · | · | · | 24.0 |
 | onnens_bonvillars | · | 1 | · | · | · | 1 | 24.0 |
 | pensier | · | · | · | · | · | · | 24.0 |
-| region | **9** (Basis 8) | 23 | 2 | 3 | 4 | 6 ↓10 | 10.08 |
+| region | 8 | 23 | 2 | 3 | 4 | 6 ↓10 | 10.08 |
 | region_mob | 3 | 3 | 1 | 3 | · | 0 ↓1 | 10.08 |
 | region_ne | 1 | 2 | 1 | · | · | 0 ↓4 | 10.08 |
 | region_szu | 18 | 28 | 5 | · | · | 1 | 10.08 |
@@ -152,16 +152,3 @@
 | zofingen | · | 1 | · | · | · | · | 24.0 |
 
 Regeln: GS = Schnitt ohne DKW/Kreuzung/Niveautrennung; GG = Gleis auf Gleis; GQ = Querabstand nach Knick ≠ davor; GP = Pfeil nach innen / auf Nachbargleis; GW = Knick oder Abgang 90°; GT = Treppe
-
-## NEUE Befunde
-
-- **region** GS: 8 → 9
-  - -5.9/-207.5: Gleise kreuzen sich (60°) ohne DKW, Kreuzung oder Niveautrennung
-  - 3584.9/-437.4: Gleise kreuzen sich (46°) ohne DKW, Kreuzung oder Niveautrennung
-  - 2614.4/-477.7: Gleise kreuzen sich (60°) ohne DKW, Kreuzung oder Niveautrennung
-  - 2626.1/-457.5: Gleise kreuzen sich (60°) ohne DKW, Kreuzung oder Niveautrennung
-  - -8.1/471.7: Gleise kreuzen sich (26°) ohne DKW, Kreuzung oder Niveautrennung
-  - 2278.1/-467.2: Gleise kreuzen sich (62°) ohne DKW, Kreuzung oder Niveautrennung
-  - 2075.8/-464.8: Gleise kreuzen sich (83°) ohne DKW, Kreuzung oder Niveautrennung
-  - -1233.0/1014.3: Gleise kreuzen sich (30°) ohne DKW, Kreuzung oder Niveautrennung
-  - -1243.0/1031.6: Gleise kreuzen sich (30°) ohne DKW, Kreuzung oder Niveautrennung

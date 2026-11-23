@@ -1,4 +1,4 @@
-# Ausnahmen je Ort (REGELN 6) – 919 Einträge an 125 Orten: 358 Schalter, 245 Ortswissen, 191 Geometrie, 125 Typvorlage
+# Ausnahmen je Ort (REGELN 6) – 918 Einträge an 125 Orten: 357 Schalter, 245 Ortswissen, 191 Geometrie, 125 Typvorlage
 
 Erzeugt von `spurplan/code/overrides_liste.py`. Ziel (Entscheid 13.11.): nur Ortswissen bleibt; Geometrie abbauen.
 
@@ -52,7 +52,7 @@ Erzeugt von `spurplan/code/overrides_liste.py`. Ziel (Entscheid 13.11.): nur Ort
 | Werkstatt Olten | muntelier_lowenberg | 3 | 1 | 1 | 1 |
 | Werkstatt Olten | murten | 1 | 2 |  | 1 |
 | Werkstatt Olten | neuchatel | 7 | 7 |  | 1 |
-| Werkstatt Olten | olten_hammer | 1 | 4 |  | 1 |
+| Werkstatt Olten | olten_hammer | 1 | 3 |  | 1 |
 | Werkstatt Olten | schonenwerd |  | 1 |  | 1 |
 | Region mob | Montreux |  | 1 |  |  |
 | Region mob | Zweisimmen |  | 1 |  |  |
@@ -932,7 +932,6 @@ Erzeugt von `spurplan/code/overrides_liste.py`. Ziel (Entscheid 13.11.): nur Ort
 | Werkstatt Olten | olten_hammer | gleise | Geometrie | 2 | Hinweise D. Eckenstein 13.10.2026: Ausschnitt endet vor der Südeinfahrt Olten; Mittelperron zwischen den Hauptgleisen 2 (Nord) und 3 (Süd).  | werkstatt/olten/olten_hammer_override.json |
 | Werkstatt Olten | olten_hammer | platforms | Ortswissen | 1 | Hinweise D. Eckenstein 13.10.2026: Ausschnitt endet vor der Südeinfahrt Olten; Mittelperron zwischen den Hauptgleisen 2 (Nord) und 3 (Süd).  | werkstatt/olten/olten_hammer_override.json |
 | Werkstatt Olten | olten_hammer | cfg.axis_snap | Schalter | 1 | Hinweise D. Eckenstein 13.10.2026: Ausschnitt endet vor der Südeinfahrt Olten; Mittelperron zwischen den Hauptgleisen 2 (Nord) und 3 (Süd).  | werkstatt/olten/olten_hammer_override.json |
-| Werkstatt Olten | olten_hammer | cfg.leer_max | Schalter | 1 | Hinweise D. Eckenstein 13.10.2026: Ausschnitt endet vor der Südeinfahrt Olten; Mittelperron zwischen den Hauptgleisen 2 (Nord) und 3 (Süd).  | werkstatt/olten/olten_hammer_override.json |
 | Werkstatt Olten | olten_hammer | cfg.rules | Schalter | 1 | Hinweise D. Eckenstein 13.10.2026: Ausschnitt endet vor der Südeinfahrt Olten; Mittelperron zwischen den Hauptgleisen 2 (Nord) und 3 (Süd).  | werkstatt/olten/olten_hammer_override.json |
 | Werkstatt Olten | olten_hammer | cfg.s_max_fix | Schalter | 1 | Hinweise D. Eckenstein 13.10.2026: Ausschnitt endet vor der Südeinfahrt Olten; Mittelperron zwischen den Hauptgleisen 2 (Nord) und 3 (Süd).  | werkstatt/olten/olten_hammer_override.json |
 | Werkstatt Olten | olten_ost | abgang | Geometrie | 2 | Betriebspunkt Olten Ost (Name D. Eckenstein 20.10.), Daten region.json, synthetischer Stationsknoten, Kreis 650 m, --hauptgleise | werkstatt/olten/olten_ost/olten_ost_override.json |

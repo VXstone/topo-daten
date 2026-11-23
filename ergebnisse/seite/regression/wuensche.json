@@ -138,6 +138,14 @@
   "W59": 0
  },
  {
+  "key": "olten_hammer",
+  "gruppe": "Olten 1 · Knoten Olten",
+  "summe": 12,
+  "W53": 0,
+  "W56": 4,
+  "W59": 4
+ },
+ {
   "key": "szu__borrweg",
   "gruppe": "SZU · Bahnhöfe",
   "summe": 12,
@@ -200,14 +208,6 @@
   "W53": 1,
   "W56": 0,
   "W59": 0
- },
- {
-  "key": "olten_hammer",
-  "gruppe": "Olten 1 · Knoten Olten",
-  "summe": 6,
-  "W53": 0,
-  "W56": 2,
-  "W59": 1
  },
  {
   "key": "dulliken",

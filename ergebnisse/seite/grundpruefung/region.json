@@ -1,7 +1,7 @@
 {
  "ebene": 10.08,
  "zaehl": {
-  "GS": 9,
+  "GS": 8,
   "GG": 23,
   "GQ": 2,
   "GP": 3,
@@ -32,12 +32,6 @@
    "x": 2626.1,
    "y": -457.5,
    "text": "Gleise kreuzen sich (60°) ohne DKW, Kreuzung oder Niveautrennung"
-  },
-  {
-   "regel": "GS",
-   "x": -8.1,
-   "y": 471.7,
-   "text": "Gleise kreuzen sich (26°) ohne DKW, Kreuzung oder Niveautrennung"
   },
   {
    "regel": "GS",
@@ -180,7 +174,7 @@
   {
    "regel": "GG",
    "x": -7.9,
-   "y": 465.0,
+   "y": 463.4,
    "text": "zwei Gleise 15 px aufeinander"
   },
   {
