@@ -5621,7 +5621,9 @@ for e in PLAT:
 for _a, _b, _px in OVR.get("platz", []):      # Override "platz": Mindestbreite zwischen zwei Knoten (Kerzers: Kreuzung)
     if _a in SD and _b in SD: REQ.append((min(SD[_a][0], SD[_b][0]), max(SD[_a][0], SD[_b][0]), _px, 2.0))
 json.dump(dict(req=REQ, s_min=CFG["s_min"], s_max=CFG["s_max"], px_per_m=CFG["px_per_m"], warp_min=CFG.get("warp_min", 0.15), leer_max=CFG.get("leer_max"),
-               nodes=sorted({float(SD[n][0]) for sg in segs for n in sg["nodes"]})), open(CFG["req_file"], "w"))
+               nodes=sorted({float(SD[n][0]) for sg in segs for n in sg["nodes"]}),
+               ereignisse=sorted({float(SD[n][0]) for sg in segs for n in (sg["nodes"][0], sg["nodes"][-1]) if n in SD})),   # leer_max: Segmentgrenzen
+          open(CFG["req_file"], "w"))
 
 if os.environ.get("KNOTDBG"):            # Diagnose Schritt E: Lage einzelner Knoten
     for n_ in map(int, os.environ["KNOTDBG"].split(",")):

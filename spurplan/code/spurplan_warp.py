@@ -12,6 +12,11 @@ from scipy.optimize import linprog
 R = json.load(open(PFX + "req.json"))
 k = R["px_per_m"]
 knots = sorted(set([R["s_min"], R["s_max"]] + [a for a, b, w, _ in R["req"]] + [b for a, b, w, _ in R["req"]]))
+# cfg.leer_max (V4d Teil 3, 23.11.2026 spät, Rothrist/Olten Hammer): auch Knoten der Gleise (Gleisende, Pfeil, Weiche ohne
+# Mindestbreite; Anfang/Ende jedes Segments, req.json «ereignisse») sind Stützstellen – gekürzt wird nur der leere Abschnitt zwischen zwei Ereignissen wie bei W59, Pfeile und
+# Prellböcke in einem langen Abschnitt rücken nicht zusammen
+if R.get("leer_max"):
+    knots = sorted(set(knots) | {v for v in R.get("ereignisse", []) if R["s_min"] < v < R["s_max"]})
 ks = [knots[0]]
 for v in knots[1:]:
     if v - ks[-1] > 0.3: ks.append(v)
@@ -35,7 +40,7 @@ for i in range(n):
     r1 = np.zeros(2 * n); r1[i] = 1; r1[n + i] = -1; A.append(r1); b.append(ziel[i])
     r2 = np.zeros(2 * n); r2[i] = -1; r2[n + i] = -1; A.append(r2); b.append(-ziel[i])
 WMIN = R.get("warp_min", 0.15)      # cfg.warp_min: Mindestanteil des Massstabs (Rothrist regional 20.10.: nicht stauchen)
-bounds = [(WMIN * ziel[i], None) for i in range(n)] + [(0, None)] * n
+bounds = [(min(WMIN * base[i], ziel[i]), None) for i in range(n)] + [(0, None)] * n   # leer_max senkt nicht die Untergrenze anderer Abschnitte
 res = linprog(c, A_ub=np.array(A), b_ub=np.array(b), bounds=bounds, method="highs")
 print(res.message)
 x = np.r_[0, np.cumsum(res.x[:n])]

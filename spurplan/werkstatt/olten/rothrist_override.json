@@ -10,7 +10,8 @@
    "r43": true,
    "r44v": false,
    "r48": true
-  }
+  },
+  "leer_max": 150
  },
  "ebene_wie": [
   [
@@ -181,44 +182,46 @@
    {
     "pts": [
      [
-      "x:1721",
+      "n:1699953345+66.6",
       "y:136"
      ],
      [
-      "x:1713.5",
+      "n:1699953345+59.1",
       "y:123"
      ],
      [
-      "x:1654",
+      "n:1699953345-0.4",
       "y:123"
      ],
      [
-      "x:1640.1",
+      "n:1699953345-14.3",
       "y:99"
      ]
     ],
     "pax": false,
     "pfeil": true,
-    "_zweck": "Industriegleis Nord (15.10.): zweigt aus Gleis 5 nach links oben ab, nicht mehr auf Gleis 5 gezeichnet"
+    "_zweck": "Industriegleis Nord (15.10.): zweigt aus Gleis 5 nach links oben ab, nicht mehr auf Gleis 5 gezeichnet",
+    "_lage": "V4d 23.11.2026: x-Werte relativ zur Weiche 1699953345 (vorher absolut x:), damit die Linie mit leer_max mitwandert"
    },
    {
     "pts": [
      [
-      "x:1700",
+      "n:1699953345+45.6",
       "y:110"
      ],
      [
-      "x:1667.5",
+      "n:1699953345+13.1",
       "y:110"
      ],
      [
-      "x:1660",
+      "n:1699953345+5.6",
       "y:123"
      ]
     ],
     "pax": false,
     "punkt_anfang": true,
-    "_zweck": "Stumpengleis 773837140 aus der Weiche 1699953345"
+    "_zweck": "Stumpengleis 773837140 aus der Weiche 1699953345",
+    "_lage": "V4d 23.11.2026: x-Werte relativ zur Weiche 1699953345 (vorher absolut x:), damit die Linie mit leer_max mitwandert"
    }
   ]
  },
