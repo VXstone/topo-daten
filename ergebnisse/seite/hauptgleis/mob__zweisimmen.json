@@ -1,99 +1,86 @@
 {
  "zaehl": {
   "HT1": 0,
-  "HT2": 2,
+  "HT2": 3,
   "HT3": 0,
   "HT4": 0,
-  "HT5": 5
+  "HT5": 0
  },
  "befunde": [
   {
    "regel": "HT2",
-   "x": 245.7,
-   "y": 147.2,
+   "x": 386.2,
+   "y": 230.0,
    "text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
    "ways": [
+    154217570,
     154217577,
     400546210,
-    548732850,
-    959792642,
+    400546215,
+    400546218,
+    548740275,
+    959792639,
     1026495423
    ]
   },
   {
    "regel": "HT2",
-   "x": 259.9,
-   "y": 158.0,
-   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "x": 448.4,
+   "y": 219.2,
+   "text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
    "ways": [
     154217577,
+    200987563,
     400546210,
-    548732850,
-    959792642,
+    959792639,
     1026495423
    ]
   },
   {
-   "regel": "HT5",
-   "x": 244.2,
-   "y": 158.0,
-   "text": "Fahrweg Abgang 120 Lenk (1667842076) ↔ Gleisende 5300983598 im Plan, nicht in OSM",
-   "von": "Abgang 120 Lenk (1667842076)",
-   "nach": "Gleisende 5300983598",
-   "art": "zusaetzlich"
-  },
-  {
-   "regel": "HT5",
-   "x": 519.3,
-   "y": 158.0,
-   "text": "Fahrweg Abgang 320 Spiez (13124267647) ↔ Gleisende 5300983598 in OSM, fehlt im Plan",
-   "von": "Abgang 320 Spiez (13124267647)",
-   "nach": "Gleisende 5300983598",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 329.5,
-   "y": 182.0,
-   "text": "Fahrweg Gl. 12 ↔ Gleisende 5300983598 in OSM, fehlt im Plan",
-   "von": "Gl. 12",
-   "nach": "Gleisende 5300983598",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 468.2,
-   "y": 158.0,
-   "text": "Fahrweg Gl. 37 ↔ Gleisende 5300983598 in OSM, fehlt im Plan",
-   "von": "Gl. 37",
-   "nach": "Gleisende 5300983598",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 505.5,
-   "y": 158.0,
-   "text": "Fahrweg Gl. 534 ↔ Gleisende 5300983598 in OSM, fehlt im Plan",
-   "von": "Gl. 534",
-   "nach": "Gleisende 5300983598",
-   "art": "fehlt"
+   "regel": "HT2",
+   "x": 270.9,
+   "y": 230.0,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    24289106,
+    200986826,
+    548732851,
+    548732852,
+    548740275,
+    674288586,
+    959792635,
+    959792639
+   ]
   },
   {
    "regel": "_info",
    "x": 0,
    "y": 0,
-   "text": "Fahrwege: 11/15 Ziele im Plan gefunden, OSM 18, Plan 15",
+   "text": "Fahrwege: 10/26 Ziele im Plan gefunden, OSM 18, Plan 18",
    "ohne_lage": [
+    "Abgang 120 Gstaad (13135626536)",
+    "Abgang 321 Lenk (13135626539)",
+    "Gl. 3",
+    "Gl. 4",
+    "Gl. 5",
+    "Gl. 77",
     "Gl. 8",
+    "Gl. 805",
+    "Gl. 86",
     "Gl. 87",
+    "Gl. 97",
     "Gleisende 1667842210",
+    "Gleisende 1667842212",
+    "Gleisende 242729811",
+    "Gleisende 8880374759",
     "Gleisende 9464160433"
    ]
   }
  ],
- "auf_plan": 1,
+ "auf_plan": 0,
  "osm_abgleich": {
-  "VB2": 2,
-  "VD1": 2
+  "VA1": 1,
+  "VB2": 3,
+  "VD1": 3
  }
 }

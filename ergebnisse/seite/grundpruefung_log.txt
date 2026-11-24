@@ -1,4 +1,4 @@
-Grundprüfung: {'GS': 147, 'GG': 162, 'GQ': 52, 'GP': 52, 'GW': 6, 'GT': 40, 'GE': 345} – 147 Pläne
+Grundprüfung: {'GS': 146, 'GG': 163, 'GQ': 52, 'GP': 52, 'GW': 4, 'GT': 40, 'GE': 340} – 147 Pläne
 NEU aarau GE: 0 -> 5
 NEU aarburg_oftringen GE: 0 -> 1
 NEU basel GE: 0 -> 13
@@ -7,24 +7,15 @@ NEU blaupause GE: 0 -> 157
 NEU blaupause2 GE: 0 -> 62
 NEU cornaux GE: 0 -> 1
 NEU konolfingen GE: 0 -> 1
-NEU mob__glion GE: 0 -> 1
-NEU mob__gstaad GE: 0 -> 1
-NEU mob__jaman GG: 0 -> 1
-NEU mob__jaman GE: 0 -> 1
 NEU mob__les_avants GE: 0 -> 2
 NEU mob__montbovon GE: 0 -> 1
-NEU mob__paccot GS: 0 -> 1
-NEU mob__paccot GE: 0 -> 1
 NEU region GE: 0 -> 27
-NEU region_mob GS: 3 -> 4
-NEU region_mob GE: 0 -> 25
+NEU region_mob GE: 0 -> 24
 NEU region_ne GE: 0 -> 3
 NEU region_szu GQ: 4 -> 8
-NEU region_szu GW: 0 -> 1
 NEU region_szu GE: 0 -> 12
 NEU region_vereina GE: 0 -> 2
 NEU solothurn GE: 0 -> 11
-NEU szu__ringlikon GW: 0 -> 1
 NEU szu__zurich_giesshubel GQ: 5 -> 7
 NEU szu__zurich_giesshubel GE: 0 -> 6
 NEU thun GE: 0 -> 2

@@ -1,12 +1,26 @@
 {
  "zaehl": {
-  "HT1": 0,
+  "HT1": 2,
   "HT2": 0,
   "HT3": 0,
   "HT4": 0,
   "HT5": 0
  },
  "befunde": [
+  {
+   "regel": "HT1",
+   "x": 271.4,
+   "y": 110.0,
+   "text": "OSM-Weiche 2367600218 ohne Abzweig im Plan",
+   "osm": 2367600218
+  },
+  {
+   "regel": "HT1",
+   "x": 390.0,
+   "y": 110.0,
+   "text": "OSM-Weiche 2367600209 ohne Abzweig im Plan",
+   "osm": 2367600209
+  },
   {
    "regel": "_info",
    "x": 0,
@@ -16,5 +30,7 @@
   }
  ],
  "auf_plan": 0,
- "osm_abgleich": {}
+ "osm_abgleich": {
+  "VB1": 2
+ }
 }

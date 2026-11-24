@@ -1,26 +1,20 @@
 {
  "ebene": 24.0,
  "zaehl": {
-  "GS": 1,
-  "GG": 0,
+  "GS": 0,
+  "GG": 1,
   "GQ": 0,
   "GP": 0,
   "GW": 0,
   "GT": 0,
-  "GE": 1
+  "GE": 0
  },
  "befunde": [
   {
-   "regel": "GS",
-   "x": 386.8,
-   "y": 133.0,
-   "text": "Gleise kreuzen sich (57°) ohne DKW, Kreuzung oder Niveautrennung"
-  },
-  {
-   "regel": "GE",
-   "x": 390.0,
-   "y": 134.0,
-   "text": "Gleisende 2.3 px neben einem Gleis (Stoss), Stück 199 px"
+   "regel": "GG",
+   "x": 330.7,
+   "y": 110.0,
+   "text": "zwei Gleise 119 px aufeinander"
   }
  ]
 }

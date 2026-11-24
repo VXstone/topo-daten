@@ -1,37 +1,10 @@
 {
 "plan": "mob__jaman",
-"befunde": [
-{
-"regel": "VB1",
-"x": 230.0,
-"y": 110.0,
-"text": "OSM-Weiche 2367589190 ohne Abzweig im Plan",
-"osm": 2367589190
-},
-{
-"regel": "VB1",
-"x": 303.0,
-"y": 110.0,
-"text": "OSM-Weiche 2367589168 ohne Abzweig im Plan",
-"osm": 2367589168
-},
-{
-"regel": "VD2",
-"x": 236.3,
-"y": 121.0,
-"text": "Gleis läuft 7 px durch ein Perron"
-},
-{
-"regel": "VD2",
-"x": 236.3,
-"y": 121.0,
-"text": "Gleis läuft 7 px durch ein Perron"
-}
-],
+"befunde": [],
 "info": {
 "dkw_osm_unvollstaendig": [],
-"gleise": 5,
-"knoten_plan": 0,
+"gleise": 7,
+"knoten_plan": 2,
 "dkw_plan": 0,
 "knoten_osm": 2,
 "versatz_y": 0.0,

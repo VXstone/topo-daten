@@ -1,7 +1,7 @@
 {
  "ZG": 9,
  "ZL": 8,
- "HK": 5,
+ "HK": 6,
  "plaene": {
   "aarau": {
    "ZG": 0,
@@ -683,8 +683,24 @@
   "mob__zweisimmen": {
    "ZG": 0,
    "ZL": 0,
-   "HK": 0,
-   "befunde": []
+   "HK": 1,
+   "befunde": [
+    {
+     "art": "HK",
+     "x": 364.9,
+     "y": 254.0,
+     "laenge": 15.0,
+     "farbe": "#9a5b1e",
+     "von": [
+      357.4,
+      254.0
+     ],
+     "bis": [
+      372.4,
+      254.0
+     ]
+    }
+   ]
   },
   "motiers": {
    "ZG": 0,

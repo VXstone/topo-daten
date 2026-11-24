@@ -51,11 +51,11 @@ mob__chernex                       {'VB1': 1, 'VB2': 3, 'VD1': 1}
 mob__cret_d_y_bau                  {}
 mob__flendruz                      {}
 mob__fontanivent                   {}
-mob__glion                         {'VB2': 2}
+mob__glion                         {}
 mob__glion_college                 {}
 mob__gruben                        {}
-mob__gstaad                        {'VB1': 1}
-mob__jaman                         {'VB1': 2, 'VD2': 2}
+mob__gstaad                        {}
+mob__jaman                         {}
 mob__jor                           {'VB1': 1}
 mob__la_perche                     {}
 mob__la_tine                       {}
@@ -70,7 +70,7 @@ mob__montbovon                     {'VB1': 3, 'VD1': 2}
 mob__montreux                      {'VA2': 3, 'VB2': 2, 'VD1': 2}
 mob__montreux_les_planches         {}
 mob__oeschseite                    {}
-mob__paccot                        {}
+mob__paccot                        {'VB1': 2}
 mob__planchamp                     {}
 mob__rochers_de_naye               {}
 mob__rossiniere                    {}
@@ -84,7 +84,7 @@ mob__toveyre                       {}
 mob__valmont                       {}
 mob__vernex                        {}
 mob__vuarennes                     {}
-mob__zweisimmen                    {'VB2': 2, 'VD1': 2}
+mob__zweisimmen                    {'VA1': 1, 'VB2': 3, 'VD1': 3}
 motiers                            {'VD1': 1}
 munchenwiler_courgevaux            {'VD1': 1}
 muntelier_lowenberg                {'VA1': 1, 'VB1': 4}
@@ -134,4 +134,4 @@ vereina__vereina_sud               {}
 wangen_bei_olten                   {}
 zihlbruecke                        {}
 zofingen                           {'VB1': 1, 'VD1': 1}
-OSM-Abgleich: 136 Pläne {'VA1': 8, 'VA2': 5, 'VB1': 61, 'VB2': 72, 'VC1': 11, 'VD1': 93, 'VD2': 3}
+OSM-Abgleich: 136 Pläne {'VA1': 9, 'VA2': 5, 'VB1': 60, 'VB2': 71, 'VC1': 11, 'VD1': 94, 'VD2': 1}

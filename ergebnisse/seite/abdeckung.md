@@ -14,13 +14,13 @@ Befund < 40 px im selben Plan, ohne G2.
 | ✓ | 3za5 | region | G6, MZ | 4.9 | 90 Grad, statt 2 Weichen nur eine |
 | ✓ | 4xdm | region | G7 | 0.5 | Gleisanschluss dazwischen, Verbindungen prüfen |
 | ✓ | 5yz7 | mob__montreux | MQ | 27.1 | Perron zwischen 4 und 3 |
-| ✓ | 6gk4 | mob__zweisimmen | VD1 | 13.9 | noch ein Gleis links raus |
+| · | 6gk4 | mob__zweisimmen |  | 95.4 | noch ein Gleis links raus |
 | · | 6rwy | mob__montreux |  | 87.9 | keine Mittelperrons Normalspur |
 | ✓ | 7ma7 | solothurn | VB1, VD1 | 8.5 | Fenster bis Abzweig |
 | ✓ | 8bce | konolfingen | MX | 1.9 | Gleise hin und her, Pfeile retour |
 | · | 8gyi | mob__montreux |  | 123.3 | Knick vor Tunnelportal |
 | · | afkt | mob__montreux |  | 66.1 | Mindestabstand |
-| · | b3j5 | mob__zweisimmen |  | 87.9 | DKW? |
+| ✓ | b3j5 | mob__zweisimmen | VA1 | 4.8 | DKW? |
 | · | bhlv | aarau |  | 66.9 | 4/5 Hauptachsen gerade |
 | ✓ | ce8r | solothurn | G6, MP, MX, VB2, W2 | 5.0 | 90 Grad |
 | · | cw2j | aarau |  | 195.6 | Tunnel nur ein Gleis unter den anderen durch |
@@ -31,33 +31,33 @@ Befund < 40 px im selben Plan, ohne G2.
 | · | fmlk | aarau |  | 79.0 | Zwischengeraden |
 | · | foiy | solothurn |  | 125.7 | Gleis nicht mehr lang (Pfeil) |
 | · | fuyq | vereina__sagliains_sasslatsch |  |  | fettes Gleis endet an Perron/Autoverlad |
-| · | i06s | mob__glion |  | 412.5 | Symbol Schiebebühne |
+| · | i06s | mob__glion |  | 87.6 | Symbol Schiebebühne |
 | · | j57v | region |  | 52.7 | Knubbel vom geraden Strang |
 | ✓ | jbs1 | region | G6, ME, MZ | 25.7 | fehlen Weichen |
 | ✓ | jxpf | region_vereina | ME, MZ | 30.3 | S-Kurve Klosters |
-| · | jy8r | mob__zweisimmen |  | 65.2 | Zwischengerade? |
+| · | jy8r | mob__zweisimmen |  | 49.6 | Zwischengerade? |
 | · | k4qi | mob__rossiniere |  |  | Stumpen? |
 | · | ldor | aarau |  | 122.6 | was ist das für ein Gleis |
-| · | ldwo | mob__zweisimmen |  | 173.3 | Versatz? |
+| · | ldwo | mob__zweisimmen |  | 86.2 | Versatz? |
 | ✓ | lhm4 | aarau | VB1 | 4.8 | Stummel richtige Seite? |
 | · | lld9 | olten |  | 119.8 | Anschlussgleise südlich Olten |
 | ✓ | lotw | mob__chamby | VB2, VD1 | 20.1 | Pfeil andere Seite, Stumpen am Perron |
 | ✓ | mkad | aarau | MF | 38.2 | Meterspur-Perron? |
 | ✓ | mp8h | mob__montreux | MX, VA2 | 13.0 | 90 Grad? |
 | ✓ | obvp | solothurn | G6, VB1, VD1, W1, W2 | 0.7 | 90 Grad Knick? |
-| · | q31m | mob__zweisimmen |  | 143.7 | Meterspur an 6/7 nicht angebunden |
+| · | q31m | mob__zweisimmen |  | 96.2 | Meterspur an 6/7 nicht angebunden |
 | · | qotw | vereina__klosters_platz |  | 83.3 | Mittelperron zwischen 2 und 3 |
 | · | r9xv | aarau |  | 47.9 | Stummel korrekt? |
 | · | rap4 | mob__le_tremblex |  |  | Nebengleis nicht fett |
 | ✓ | t6x0 | solothurn | G6, MP, MX, VA1, VB2, W2 | 5.3 | Kreuzung in OSM? |
 | ✓ | tnvp | konolfingen | G7, MX, VB2, VC1 | 2.7 | Knubbel kurz gerade |
 | · | ttv8 | konolfingen |  | 55.3 | DKW? |
-| · | u13h | mob__zweisimmen |  | 122.4 | Stumpen Normalspur? |
+| · | u13h | mob__zweisimmen |  | 84.0 | Stumpen Normalspur? |
 | ✓ | uyue | solothurn | G6, VB2, VD2 | 2.3 | Perron auf Gleis, gerader Knubbel |
-| · | v2w8 | mob__glion |  | 154.0 | Riesenabstand Schiebebühne |
+| · | v2w8 | mob__glion |  | 109.8 | Riesenabstand Schiebebühne |
 | · | vnyq | aarau |  | 99.4 | Zwischengerade |
-| · | wvrp | mob__zweisimmen |  | 53.2 | kreuzt das andere oder biegt von DKW falsch ab |
-| · | wyu2 | mob__glion |  | 210.2 | dieser Perron? |
+| · | wvrp | mob__zweisimmen |  | 48.5 | kreuzt das andere oder biegt von DKW falsch ab |
+| · | wyu2 | mob__glion |  | 154.0 | dieser Perron? |
 | ✓ | xke0 | solothurn | MZ | 25.3 | Zwischengerade, doppelter Abstand |
 | ✓ | z6f2 | konolfingen | MX | 21.0 | DKW? |
 | ✓ | zcz3 | solothurn | G7, MX, VB2 | 18.0 | nicht verbunden |

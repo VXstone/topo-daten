@@ -5,17 +5,14 @@
 | Plan | HT1 | HT2 | HT3 | HT4 | HT5 | Summe |
 |---|---|---|---|---|---|---|
 | olten | 10 | 21 | 5 ↓7 | **4** (Basis 2) | 165 | 205 |
-| mob__glion | · | **2** (Basis 0) | · | · | **16** (Basis 1) | 18 |
 | aarau | 3 | 4 | · | 1 | 9 | 17 |
 | solothurn | 2 | 1 | · | · | 14 | 17 |
 | szu__zurich_giesshubel | 0 ↓2 | **8** (Basis 7) | · | 1 | **4** (Basis 2) | 13 |
 | rothrist | 2 | 4 | · | · | 5 | 11 |
 | konolfingen | · | 2 | · | · | 6 | 8 |
-| mob__zweisimmen | · | 2 ↓3 | · | · | **5** (Basis 0) | 7 |
 | mob__chamby | 1 | 1 | · | 1 | 1 | 4 |
 | vereina__klosters_platz | 3 | · | · | · | 1 | 4 |
-| mob__gstaad | **1** (Basis 0) | · | · | · | **2** (Basis 0) | 3 |
-| mob__jaman | **2** (Basis 0) | · | · | · | **1** (Basis 0) | 3 |
+| mob__zweisimmen | · | 3 | · | · | · | 3 |
 | schonenwerd | · | 2 | · | · | 1 | 3 |
 | tecknau | · | 1 | · | · | 2 | 3 |
 | vereina__klosters_selfranga | 1 | · | · | · | 2 | 3 |
@@ -23,7 +20,9 @@
 | zofingen | 1 ↓2 | · | · | · | 2 | 3 |
 | daniken | 2 | · | · | · | · | 2 |
 | mob__montbovon | 2 | · | · | · | · | 2 |
+| mob__paccot | 2 | · | · | · | · | 2 |
 | mob__saanen | · | 1 | · | · | 1 | 2 |
+| mob__glion | · | · | · | · | 1 | 1 |
 | mob__jor | 1 | · | · | · | · | 1 |
 | mob__montreux | · | 1 | · | · | · | 1 |
 | mob__rossiniere | · | · | · | · | 1 | 1 |
@@ -80,6 +79,8 @@
 | mob__fontanivent | · | · | · | · | · | 0 |
 | mob__glion_college | · | · | · | · | · | 0 |
 | mob__gruben | · | · | · | · | · | 0 |
+| mob__gstaad | · | · | · | · | · | 0 |
+| mob__jaman | · | · | · | · | · | 0 |
 | mob__la_perche | · | · | · | · | · | 0 |
 | mob__la_tine | · | · | · | · | · | 0 |
 | mob__le_tremblex | · | · | · | · | · | 0 |
@@ -91,7 +92,6 @@
 | mob__matten | · | · | · | · | · | 0 |
 | mob__montreux_les_planches | · | · | · | · | · | 0 |
 | mob__oeschseite | · | · | · | · | · | 0 |
-| mob__paccot | 0 ↓2 | · | · | · | · | 0 |
 | mob__planchamp | · | · | · | · | · | 0 |
 | mob__rochers_de_naye | · | · | · | · | · | 0 |
 | mob__rougemont | · | · | · | · | · | 0 |
@@ -149,42 +149,6 @@ Regeln: HT1 = OSM-Weiche am Hauptgleis ohne Abzweig im Plan; HT2 = Abzweig am Ha
 
 ## NEUE Befunde
 
-- **mob__glion** HT2: 0 → 2
-  - 287.3/219.2: Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung
-  - 287.3/232.4: Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung
-- **mob__glion** HT5: 1 → 16
-  - 295.8/183.2: Fahrweg Gleisende 6818327349 ↔ Gleisende 8915842698 im Plan, nicht in OSM
-  - 295.8/213.8: Fahrweg Gleisende 6818327349 ↔ Gleisende 8915842701 im Plan, nicht in OSM
-  - 295.8/225.8: Fahrweg Gleisende 6818327349 ↔ Gleisende 8915842702 im Plan, nicht in OSM
-  - 295.8/237.8: Fahrweg Gleisende 6818327349 ↔ Gleisende 8915842703 im Plan, nicht in OSM
-  - 295.8/249.8: Fahrweg Gleisende 6818327349 ↔ Gleisende 8915842704 im Plan, nicht in OSM
-  - 290.3/225.8: Fahrweg Gleisende 8915842698 ↔ Gleisende 8915842701 im Plan, nicht in OSM
-  - 290.3/237.8: Fahrweg Gleisende 8915842698 ↔ Gleisende 8915842702 im Plan, nicht in OSM
-  - 290.3/249.8: Fahrweg Gleisende 8915842698 ↔ Gleisende 8915842703 im Plan, nicht in OSM
-  - 290.3/261.8: Fahrweg Gleisende 8915842698 ↔ Gleisende 8915842704 im Plan, nicht in OSM
-  - 290.3/268.4: Fahrweg Gleisende 8915842701 ↔ Gleisende 8915842702 im Plan, nicht in OSM
-  - 290.3/280.4: Fahrweg Gleisende 8915842701 ↔ Gleisende 8915842703 im Plan, nicht in OSM
-  - 290.3/292.4: Fahrweg Gleisende 8915842701 ↔ Gleisende 8915842704 im Plan, nicht in OSM
-  - 290.3/292.4: Fahrweg Gleisende 8915842702 ↔ Gleisende 8915842703 im Plan, nicht in OSM
-  - 290.3/304.4: Fahrweg Gleisende 8915842702 ↔ Gleisende 8915842704 im Plan, nicht in OSM
-  - 290.3/316.4: Fahrweg Gleisende 8915842703 ↔ Gleisende 8915842704 im Plan, nicht in OSM
-  - 283.5/163.1: Fahrweg Abgang 122 Caux (477540864) ↔ Abgang 122 Rochers-de-Naye (477540862) in OSM, fehlt im Plan
-- **mob__gstaad** HT1: 0 → 1
-  - 748.4/110.0: OSM-Weiche 2186994919 ohne Abzweig im Plan
-- **mob__gstaad** HT5: 0 → 2
-  - 660.0/118.1: Fahrweg Abgang 120 Zweisimmen (2186994919) ↔ Gl. 2 in OSM, fehlt im Plan
-  - 660.0/130.1: Fahrweg Abgang 120 Zweisimmen (2186994919) ↔ Gl. 3 in OSM, fehlt im Plan
-- **mob__jaman** HT1: 0 → 2
-  - 230.0/110.0: OSM-Weiche 2367589190 ohne Abzweig im Plan
-  - 303.0/110.0: OSM-Weiche 2367589168 ohne Abzweig im Plan
-- **mob__jaman** HT5: 0 → 1
-  - 336.8/113.9: Fahrweg Abgang 122 Glion (2367589190) ↔ Abgang 122 Rochers-de-Naye (477540623) in OSM, fehlt im Plan
-- **mob__zweisimmen** HT5: 0 → 5
-  - 244.2/158.0: Fahrweg Abgang 120 Lenk (1667842076) ↔ Gleisende 5300983598 im Plan, nicht in OSM
-  - 519.3/158.0: Fahrweg Abgang 320 Spiez (13124267647) ↔ Gleisende 5300983598 in OSM, fehlt im Plan
-  - 329.5/182.0: Fahrweg Gl. 12 ↔ Gleisende 5300983598 in OSM, fehlt im Plan
-  - 468.2/158.0: Fahrweg Gl. 37 ↔ Gleisende 5300983598 in OSM, fehlt im Plan
-  - 505.5/158.0: Fahrweg Gl. 534 ↔ Gleisende 5300983598 in OSM, fehlt im Plan
 - **olten** HT4: 2 → 4
   - 430.4/164.0: Weiche 635800855: Äste (Ways 50062913, 195008184) im Plan auf der anderen Seite als in OSM
   - 438.8/158.0: Weiche 635800831: Äste (Ways 50062913, 57016119) im Plan auf der anderen Seite als in OSM

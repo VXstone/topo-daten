@@ -1,21 +1,13 @@
 {
 "plan": "mob__gstaad",
-"befunde": [
-{
-"regel": "VB1",
-"x": 748.4,
-"y": 110.0,
-"text": "OSM-Weiche 2186994919 ohne Abzweig im Plan",
-"osm": 2186994919
-}
-],
+"befunde": [],
 "info": {
 "dkw_osm_unvollstaendig": [],
 "gleise": 15,
-"knoten_plan": 5,
+"knoten_plan": 6,
 "dkw_plan": 0,
 "knoten_osm": 6,
 "versatz_y": 0.0,
-"netz_auf_plan": 0.93
+"netz_auf_plan": 1.0
 }
 }

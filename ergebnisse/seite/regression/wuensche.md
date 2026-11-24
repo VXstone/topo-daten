@@ -8,8 +8,8 @@ Wünsche je Plan (REGELN 5: W53 S-Kurven ×6, W55 Bahnhofsabstand ×3, W56 Leerl
 | region_mob | Region | 6 | 7 |  | 57 |
 | region_vereina | Region | 5 | 9 |  | 57 |
 | region_ne | Region | 6 | 5 |  | 51 |
-| region_szu | Region | 8 |  |  | 48 |
 | basel | Grosse Knoten | 7 |  | 2 | 48 |
+| region_szu | Region | 7 |  |  | 42 |
 | olten | Olten 1 · Knoten Olten | 3 |  | 3 | 27 |
 | szu__zurich_giesshubel | SZU · Bahnhöfe | 4 |  | 1 | 27 |
 | schonenwerd | Olten 3 · Olten – Aarau | 0 |  | 7 | 21 |
@@ -35,8 +35,8 @@ Wünsche je Plan (REGELN 5: W53 S-Kurven ×6, W55 Bahnhofsabstand ×3, W56 Leerl
 | chambrelien | NE 8 · Neuchâtel – La Chaux-de-Fonds | 1 |  | 0 | 6 |
 | mob__chamby | MOB · Bahnhöfe | 1 |  | 0 | 6 |
 | mob__lenk_im_simmental | MOB · Bahnhöfe | 1 |  | 0 | 6 |
-| mob__paccot | MOB · Bahnhöfe | 1 |  | 0 | 6 |
 | mob__rochers_de_naye | MOB · Bahnhöfe | 1 |  | 0 | 6 |
+| mob__zweisimmen | MOB · Bahnhöfe | 1 |  | 0 | 6 |
 | vereina__klosters_selfranga | Vereina · Bahnhöfe | 0 |  | 2 | 6 |
 | vereina__sagliains | Vereina · Bahnhöfe | 0 |  | 2 | 6 |
 | rothrist | Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil | 0 |  | 1 | 3 |
@@ -125,6 +125,7 @@ Wünsche je Plan (REGELN 5: W53 S-Kurven ×6, W55 Bahnhofsabstand ×3, W56 Leerl
 | mob__montreux_les_planches | MOB · Bahnhöfe | 0 |  | 0 | 0 |
 | mob__montreux | MOB · Bahnhöfe | 0 |  | 0 | 0 |
 | mob__oeschseite | MOB · Bahnhöfe | 0 |  | 0 | 0 |
+| mob__paccot | MOB · Bahnhöfe | 0 |  | 0 | 0 |
 | mob__planchamp | MOB · Bahnhöfe | 0 |  | 0 | 0 |
 | mob__rossiniere | MOB · Bahnhöfe | 0 |  | 0 | 0 |
 | mob__rougemont | MOB · Bahnhöfe | 0 |  | 0 | 0 |
@@ -136,7 +137,6 @@ Wünsche je Plan (REGELN 5: W53 S-Kurven ×6, W55 Bahnhofsabstand ×3, W56 Leerl
 | mob__valmont | MOB · Bahnhöfe | 0 |  | 0 | 0 |
 | mob__vernex | MOB · Bahnhöfe | 0 |  | 0 | 0 |
 | mob__vuarennes | MOB · Bahnhöfe | 0 |  | 0 | 0 |
-| mob__zweisimmen | MOB · Bahnhöfe | 0 |  | 0 | 0 |
 | vereina__klosters_platz | Vereina · Bahnhöfe | 0 |  | 0 | 0 |
 | vereina__sasslatsch | Vereina · Bahnhöfe | 0 |  | 0 | 0 |
 | vereina__susch | Vereina · Bahnhöfe | 0 |  | 0 | 0 |

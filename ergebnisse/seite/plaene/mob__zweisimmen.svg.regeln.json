@@ -1,23 +1,16 @@
 [
  {
   "regel": "G2",
-  "x": 266.1,
-  "y": 206.0,
-  "bahnhof": null,
-  "text": "Weiche ohne Ausrundung (16°)"
- },
- {
-  "regel": "G2",
-  "x": 257.9,
-  "y": 158.0,
+  "x": 268.9,
+  "y": 230.0,
   "bahnhof": null,
   "text": "Weiche ohne Ausrundung (24°)"
  },
  {
-  "regel": "G6",
-  "x": 230.0,
+  "regel": "G2",
+  "x": 462.6,
   "y": 134.0,
   "bahnhof": null,
-  "text": "Linien stossen mit Knick 120° zusammen (Knubbel)"
+  "text": "Weiche ohne Ausrundung (15°)"
  }
 ]

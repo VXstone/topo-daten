@@ -1,46 +1,20 @@
 {
  "zaehl": {
-  "HT1": 2,
+  "HT1": 0,
   "HT2": 0,
   "HT3": 0,
   "HT4": 0,
-  "HT5": 1
+  "HT5": 0
  },
  "befunde": [
-  {
-   "regel": "HT1",
-   "x": 230.0,
-   "y": 110.0,
-   "text": "OSM-Weiche 2367589190 ohne Abzweig im Plan",
-   "osm": 2367589190
-  },
-  {
-   "regel": "HT1",
-   "x": 303.0,
-   "y": 110.0,
-   "text": "OSM-Weiche 2367589168 ohne Abzweig im Plan",
-   "osm": 2367589168
-  },
-  {
-   "regel": "HT5",
-   "x": 336.8,
-   "y": 113.9,
-   "text": "Fahrweg Abgang 122 Glion (2367589190) ↔ Abgang 122 Rochers-de-Naye (477540623) in OSM, fehlt im Plan",
-   "von": "Abgang 122 Glion (2367589190)",
-   "nach": "Abgang 122 Rochers-de-Naye (477540623)",
-   "art": "fehlt"
-  },
   {
    "regel": "_info",
    "x": 0,
    "y": 0,
-   "text": "Fahrwege: 2/2 Ziele im Plan gefunden, OSM 1, Plan 0",
+   "text": "Fahrwege: 2/2 Ziele im Plan gefunden, OSM 1, Plan 1",
    "ohne_lage": []
   }
  ],
  "auf_plan": 0,
- "osm_abgleich": {
-  "VB1": 2,
-  "VD2": 2
- }
+ "osm_abgleich": {}
 }

@@ -2,25 +2,12 @@
  "ebene": 24.0,
  "zaehl": {
   "GS": 0,
-  "GG": 1,
+  "GG": 0,
   "GQ": 0,
   "GP": 0,
   "GW": 0,
   "GT": 0,
-  "GE": 1
+  "GE": 0
  },
- "befunde": [
-  {
-   "regel": "GG",
-   "x": 266.5,
-   "y": 110.0,
-   "text": "zwei Gleise 73 px aufeinander"
-  },
-  {
-   "regel": "GE",
-   "x": 221.0,
-   "y": 110.0,
-   "text": "loses Gleisende, Stück 16 px"
-  }
- ]
+ "befunde": []
 }

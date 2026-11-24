@@ -62,11 +62,11 @@
 | mob__cret_d_y_bau | · | · | · | · | · | · | · | 24.0 |
 | mob__flendruz | · | · | · | · | · | · | · | 24.0 |
 | mob__fontanivent | · | · | · | · | · | · | · | 24.0 |
-| mob__glion | · | · | · | · | · | · | **1** (Basis 0) | 24.0 |
+| mob__glion | · | · | · | · | · | · | · | 24.0 |
 | mob__glion_college | · | · | · | · | · | · | · | 24.0 |
 | mob__gruben | · | · | · | · | · | · | · | 24.0 |
-| mob__gstaad | · | · | · | · | · | · | **1** (Basis 0) | 24.0 |
-| mob__jaman | · | **1** (Basis 0) | · | · | · | · | **1** (Basis 0) | 24.0 |
+| mob__gstaad | · | · | · | · | · | · | · | 24.0 |
+| mob__jaman | · | · | · | · | · | · | · | 24.0 |
 | mob__jor | · | · | · | · | · | · | · | 24.0 |
 | mob__la_perche | · | · | · | · | · | · | · | 24.0 |
 | mob__la_tine | · | · | · | · | · | · | · | 24.0 |
@@ -81,7 +81,7 @@
 | mob__montreux | 1 | 2 | 1 | 1 | · | · | · | 24.0 |
 | mob__montreux_les_planches | · | · | · | · | · | · | · | 24.0 |
 | mob__oeschseite | · | · | · | · | · | · | · | 24.0 |
-| mob__paccot | **1** (Basis 0) | 0 ↓1 | · | · | · | · | **1** (Basis 0) | 24.0 |
+| mob__paccot | · | 1 | · | · | · | · | · | 24.0 |
 | mob__planchamp | · | · | · | · | · | · | · | 24.0 |
 | mob__rochers_de_naye | · | · | · | · | · | · | · | 24.0 |
 | mob__rossiniere | · | · | · | · | · | · | · | 24.0 |
@@ -95,7 +95,7 @@
 | mob__valmont | · | · | · | · | · | · | · | 24.0 |
 | mob__vernex | · | · | · | · | · | · | · | 24.0 |
 | mob__vuarennes | · | · | · | · | · | · | · | 24.0 |
-| mob__zweisimmen | 1 ↓2 | 0 ↓1 | · | · | · | 0 ↓1 | · | 24.0 |
+| mob__zweisimmen | 2 | 1 | · | · | · | 0 ↓1 | · | 24.0 |
 | motiers | · | · | · | · | · | · | · | 24.0 |
 | munchenwiler_courgevaux | · | · | · | · | · | · | · | 24.0 |
 | muntelier_lowenberg | · | · | · | · | · | · | · | 24.0 |
@@ -109,9 +109,9 @@
 | onnens_bonvillars | · | 1 | · | · | · | 1 | · | 24.0 |
 | pensier | · | · | · | · | · | · | · | 24.0 |
 | region | 8 | 22 ↓23 | 2 | 3 | 3 ↓4 | 6 ↓10 | **27** (Basis 0) | 10.08 |
-| region_mob | **4** (Basis 3) | 3 | 1 | 3 | · | 0 ↓1 | **25** (Basis 0) | 10.08 |
+| region_mob | 3 | 3 | 1 | 3 | · | 0 ↓1 | **24** (Basis 0) | 10.08 |
 | region_ne | 1 | 2 | 1 | · | · | 0 ↓4 | **3** (Basis 0) | 10.08 |
-| region_szu | 12 ↓18 | 14 ↓27 | **8** (Basis 4) | · | **1** (Basis 0) | 0 ↓1 | **12** (Basis 0) | 10.08 |
+| region_szu | 12 ↓18 | 14 ↓27 | **8** (Basis 4) | · | · | 0 ↓1 | **12** (Basis 0) | 10.08 |
 | region_vereina | 1 | 5 | 2 | · | · | 2 | **2** (Basis 0) | 10.08 |
 | riedbach | · | · | · | · | · | · | · | 24.0 |
 | rosshausern | · | · | · | · | · | · | · | 24.0 |
@@ -125,7 +125,7 @@
 | sugiez | · | · | · | · | · | · | · | 24.0 |
 | szu__berghof | · | · | · | · | · | · | · | 24.0 |
 | szu__borrweg | · | · | · | · | · | · | · | 24.0 |
-| szu__ringlikon | · | · | · | · | **1** (Basis 0) | · | · | 24.0 |
+| szu__ringlikon | · | · | · | · | · | · | · | 24.0 |
 | szu__uetliberg | · | · | · | · | · | · | · | 24.0 |
 | szu__zurich_binz | · | · | · | · | · | · | · | 24.0 |
 | szu__zurich_friesenberg | · | · | · | · | · | · | · | 24.0 |
@@ -413,23 +413,11 @@ Regeln: GS = Schnitt ohne DKW/Kreuzung/Niveautrennung; GG = Gleis auf Gleis; GQ 
   - 863.1/300.8: loses Gleisende, Stück 14 px
 - **konolfingen** GE: 0 → 1
   - 372.1/282.8: Gleisende 2.9 px neben einem Gleis (Stoss), Stück 249 px
-- **mob__glion** GE: 0 → 1
-  - 230.0/171.2: Gleisende 2.3 px neben einem Gleis (Stoss), Stück 41 px
-- **mob__gstaad** GE: 0 → 1
-  - 748.4/110.0: Gleisende 2.3 px neben einem Gleis (Stoss), Stück 81 px
-- **mob__jaman** GG: 0 → 1
-  - 266.5/110.0: zwei Gleise 73 px aufeinander
-- **mob__jaman** GE: 0 → 1
-  - 221.0/110.0: loses Gleisende, Stück 16 px
 - **mob__les_avants** GE: 0 → 2
   - 413.3/110.0: loses Gleisende, Stück 28 px
   - 438.2/110.0: loses Gleisende, Stück 9 px
 - **mob__montbovon** GE: 0 → 1
   - 322.8/-10.0: loses Gleisende, Stück 150 px
-- **mob__paccot** GS: 0 → 1
-  - 386.8/133.0: Gleise kreuzen sich (57°) ohne DKW, Kreuzung oder Niveautrennung
-- **mob__paccot** GE: 0 → 1
-  - 390.0/134.0: Gleisende 2.3 px neben einem Gleis (Stoss), Stück 199 px
 - **region** GE: 0 → 27
   - -587.5/721.1: Gleisende 5.5 px neben einem Gleis (Stoss), Stück 10 px
   - 24.3/752.7: loses Gleisende, Stück 25 px
@@ -458,65 +446,57 @@ Regeln: GS = Schnitt ohne DKW/Kreuzung/Niveautrennung; GG = Gleis auf Gleis; GQ 
   - -242.9/-1098.2: loses Gleisende, Stück 28 px
   - -243.0/-1177.2: loses Gleisende, Stück 28 px
   - -243.0/-1205.2: loses Gleisende, Stück 28 px
-- **region_mob** GS: 3 → 4
-  - -156.4/-730.8: Gleise kreuzen sich (59°) ohne DKW, Kreuzung oder Niveautrennung
-  - -5232.1/2403.5: Gleise kreuzen sich (44°) ohne DKW, Kreuzung oder Niveautrennung
-  - -4988.6/983.8: Gleise kreuzen sich (72°) ohne DKW, Kreuzung oder Niveautrennung
-  - -4393.6/2629.4: Gleise kreuzen sich (36°) ohne DKW, Kreuzung oder Niveautrennung
-- **region_mob** GE: 0 → 25
-  - -4428.3/408.9: loses Gleisende, Stück 12 px
-  - -4390.3/2681.2: Gleisende 3.8 px neben einem Gleis (Stoss), Stück 7 px
-  - -2830.3/2180.5: Gleisende 3.8 px neben einem Gleis (Stoss), Stück 7 px
-  - -3208.2/-49.4: loses Gleisende, Stück 63 px
-  - -5036.4/2602.3: loses Gleisende, Stück 205 px
-  - -4879.7/402.5: loses Gleisende, Stück 209 px
-  - -3179.8/-237.5: loses Gleisende, Stück 219 px
-  - -2661.1/-15.4: loses Gleisende, Stück 28 px
-  - -2688.0/-7.7: loses Gleisende, Stück 28 px
-  - -2339.5/-107.4: loses Gleisende, Stück 28 px
-  - -2312.6/-115.1: loses Gleisende, Stück 28 px
-  - -2282.9/-136.1: Gleisende 6.0 px neben einem Gleis (Stoss), Stück 28 px
-  - -2256.0/-143.8: Gleisende 6.0 px neben einem Gleis (Stoss), Stück 28 px
-  - -2219.8/-141.7: loses Gleisende, Stück 28 px
-  - -2192.9/-149.4: loses Gleisende, Stück 28 px
-  - 466.9/84.1: loses Gleisende, Stück 28 px
-  - 479.4/109.1: loses Gleisende, Stück 28 px
-  - 238.1/-398.9: Gleisende 6.0 px neben einem Gleis (Stoss), Stück 28 px
-  - 225.5/-424.0: Gleisende 6.0 px neben einem Gleis (Stoss), Stück 28 px
-  - -4459.1/2601.2: Gleisende 6.0 px neben einem Gleis (Stoss), Stück 28 px
-  - -4485.6/2592.3: loses Gleisende, Stück 28 px
-  - -4909.3/833.7: loses Gleisende, Stück 28 px
-  - -4904.7/806.1: loses Gleisende, Stück 28 px
-  - -3383.4/2331.6: loses Gleisende, Stück 28 px
-  - -3410.4/2339.3: loses Gleisende, Stück 28 px
+- **region_mob** GE: 0 → 24
+  - -3578.0/403.2: loses Gleisende, Stück 12 px
+  - -2359.1/-54.7: loses Gleisende, Stück 63 px
+  - 772.4/-1410.4: loses Gleisende, Stück 199 px
+  - -4178.6/2591.2: loses Gleisende, Stück 205 px
+  - -4029.1/396.8: loses Gleisende, Stück 209 px
+  - -2330.8/-242.8: loses Gleisende, Stück 219 px
+  - -1795.5/-42.8: Gleisende 6.0 px neben einem Gleis (Stoss), Stück 28 px
+  - -1822.2/-34.3: loses Gleisende, Stück 28 px
+  - -1470.8/-145.9: Gleisende 6.0 px neben einem Gleis (Stoss), Stück 28 px
+  - -1444.1/-154.3: loses Gleisende, Stück 28 px
+  - -1415.1/-176.1: Gleisende 6.0 px neben einem Gleis (Stoss), Stück 28 px
+  - -1388.4/-184.6: loses Gleisende, Stück 28 px
+  - -1352.1/-183.5: loses Gleisende, Stück 28 px
+  - -1325.4/-192.0: Gleisende 6.0 px neben einem Gleis (Stoss), Stück 28 px
+  - 1204.2/-53.0: Gleisende 6.0 px neben einem Gleis (Stoss), Stück 28 px
+  - 1216.7/-27.9: loses Gleisende, Stück 28 px
+  - 975.5/-536.0: Gleisende 6.0 px neben einem Gleis (Stoss), Stück 28 px
+  - 963.0/-561.1: loses Gleisende, Stück 28 px
+  - -3732.0/2393.6: loses Gleisende, Stück 28 px
+  - -3760.0/2391.5: Gleisende 6.0 px neben einem Gleis (Stoss), Stück 28 px
+  - -4058.5/827.8: loses Gleisende, Stück 28 px
+  - -4054.0/800.1: loses Gleisende, Stück 28 px
+  - -2405.1/2496.1: Gleisende 6.0 px neben einem Gleis (Stoss), Stück 28 px
+  - -2433.1/2493.9: loses Gleisende, Stück 28 px
 - **region_ne** GE: 0 → 3
   - 674.9/-1250.4: Gleisende 5.1 px neben einem Gleis (Stoss), Stück 6 px
   - 3093.4/1200.4: loses Gleisende, Stück 175 px
   - -3576.4/2416.5: loses Gleisende, Stück 152 px
 - **region_szu** GQ: 4 → 8
-  - 683.9/21.5: Querabstand nach dem Knick 4.8 px statt 10.1 px wie davor
-  - 683.9/21.5: Querabstand nach dem Knick 4.8 px statt 10.1 px wie davor
-  - 708.8/-21.6: Querabstand nach dem Knick 15.6 px statt 4.8 px wie davor
-  - 703.8/-13.8: Querabstand nach dem Knick 0.0 px statt 5.7 px wie davor
-  - 707.2/-18.8: Querabstand nach dem Knick 10.1 px statt 4.8 px wie davor
-  - 701.8/-27.9: Querabstand nach dem Knick 3.0 px statt 13.7 px wie davor
-  - 700.2/-25.1: Querabstand nach dem Knick 2.5 px statt 13.7 px wie davor
-  - 999.7/11.4: Querabstand nach dem Knick 10.0 px statt 5.7 px wie davor
-- **region_szu** GW: 0 → 1
-  - -882.4/598.9: Knick 104° im Gleis
+  - 688.8/19.3: Querabstand nach dem Knick 4.8 px statt 10.1 px wie davor
+  - 688.8/19.3: Querabstand nach dem Knick 4.8 px statt 10.1 px wie davor
+  - 713.7/-23.8: Querabstand nach dem Knick 15.6 px statt 4.8 px wie davor
+  - 708.7/-16.0: Querabstand nach dem Knick 0.0 px statt 5.7 px wie davor
+  - 712.1/-21.0: Querabstand nach dem Knick 10.1 px statt 4.8 px wie davor
+  - 706.7/-30.1: Querabstand nach dem Knick 3.0 px statt 13.7 px wie davor
+  - 705.1/-27.3: Querabstand nach dem Knick 2.5 px statt 13.7 px wie davor
+  - 1004.6/9.1: Querabstand nach dem Knick 10.1 px statt 5.8 px wie davor
 - **region_szu** GE: 0 → 12
-  - 649.9/26.5: loses Gleisende, Stück 108 px
-  - 736.1/-29.4: Gleisende 5.5 px neben einem Gleis (Stoss), Stück 81 px
-  - 722.5/-26.4: Gleisende 2.5 px neben einem Gleis (Stoss), Stück 48 px
-  - 675.7/-49.0: loses Gleisende, Stück 13 px
-  - 649.1/6.4: Gleisende 5.8 px neben einem Gleis (Stoss), Stück 20 px
-  - 664.2/6.4: loses Gleisende, Stück 22 px
-  - 590.0/87.0: loses Gleisende, Stück 113 px
-  - 793.5/-42.8: Gleisende 3.3 px neben einem Gleis (Stoss), Stück 7 px
-  - -782.0/561.2: loses Gleisende, Stück 28 px
-  - -756.1/550.7: loses Gleisende, Stück 28 px
-  - -353.5/374.2: loses Gleisende, Stück 28 px
-  - -379.4/384.8: Gleisende 5.9 px neben einem Gleis (Stoss), Stück 28 px
+  - 654.8/24.3: loses Gleisende, Stück 108 px
+  - 741.0/-31.6: Gleisende 5.5 px neben einem Gleis (Stoss), Stück 81 px
+  - 727.4/-28.6: Gleisende 2.5 px neben einem Gleis (Stoss), Stück 48 px
+  - 680.6/-51.2: loses Gleisende, Stück 13 px
+  - 654.0/4.2: Gleisende 5.8 px neben einem Gleis (Stoss), Stück 20 px
+  - 669.1/4.2: loses Gleisende, Stück 22 px
+  - 594.9/84.8: loses Gleisende, Stück 113 px
+  - 798.4/-45.0: Gleisende 3.3 px neben einem Gleis (Stoss), Stück 7 px
+  - -777.2/559.8: loses Gleisende, Stück 28 px
+  - -751.2/549.2: loses Gleisende, Stück 28 px
+  - -348.5/372.5: Gleisende 6.0 px neben einem Gleis (Stoss), Stück 28 px
+  - -374.4/383.0: Gleisende 6.0 px neben einem Gleis (Stoss), Stück 28 px
 - **region_vereina** GE: 0 → 2
   - -420.9/-352.7: loses Gleisende, Stück 32 px
   - -582.1/-850.4: loses Gleisende, Stück 209 px
@@ -532,8 +512,6 @@ Regeln: GS = Schnitt ohne DKW/Kreuzung/Niveautrennung; GG = Gleis auf Gleis; GQ 
   - 1111.6/86.0: loses Gleisende, Stück 52 px
   - 824.6/243.4: loses Gleisende, Stück 80 px
   - 905.0/243.4: loses Gleisende, Stück 80 px
-- **szu__ringlikon** GW: 0 → 1
-  - 233.1/110.0: Knick 104° im Gleis
 - **szu__zurich_giesshubel** GQ: 5 → 7
   - 471.5/255.2: Querabstand nach dem Knick 11.4 px statt 24.0 px wie davor
   - 471.5/255.2: Querabstand nach dem Knick 11.3 px statt 24.0 px wie davor
