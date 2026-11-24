@@ -326,10 +326,47 @@ def plan_graph(gleise, luecken, boegen):
 
 
 # ---------------------------------------------------------------- Prüfung
+def _auf_plan(N, gleise, GP_, pkn, T, r_max=8.0):
+    """REGELN Kopf «HT» (24.11.2026 abends, Daniel: «HT misst auf dem gezeichneten Plan statt Zwischenmodell»): die Knoten des
+    Netzmodells werden auf die gezeichneten Linien gelegt, bevor HT misst – eine Weiche auf den nächsten gezeichneten
+    Verzweigungspunkt (≤ r_max px), jeder andere Knoten auf den nächsten Punkt einer gezeichneten Linie (≤ r_max px). Weicht
+    das Netzmodell von der Zeichnung ab (warp, Nachbearbeitung), misst HT so die Zeichnung (früher Paar HT1+HT2 = Messartefakt)."""
+    if not gleise: return N, 0
+    geos = [g["geo"] for g in gleise]; tree = STRtree(geos)
+    jx = [(n, pkn[n]) for n, A in GP_.aeste.items() if len(A) >= 3 and n < len(pkn)]
+    def xy_(q): return (q.x, q.y) if hasattr(q, "x") else (float(q[0]), float(q[1]))
+    kn2, n_ = {}, 0
+    for k, v in N["knoten"].items():
+        if v.get("x") is None or v.get("y") is None: kn2[k] = v; continue
+        p = Point(v["x"], v["y"])
+        c = [int(j) for j in tree.query(p.buffer(r_max))]
+        d0 = min((geos[j].distance(p) for j in c), default=1e9)
+        neu = None
+        if T.get(int(k), {}).get("railway") == "switch" or "switch" in str(v.get("typ", "")):
+            cand = [(math.dist(xy_(q), (v["x"], v["y"])), xy_(q)) for _, q in jx]
+            cand = [c_ for c_ in cand if 0.5 < c_[0] <= r_max]
+            if cand and d0 > 0.5: neu = min(cand)[1]
+        if neu is None and 1.5 < d0 <= r_max:
+            j = min(c, key=lambda j: geos[j].distance(p)); q = geos[j].interpolate(geos[j].project(p)); neu = (q.x, q.y)
+        if neu is not None: kn2[k] = dict(v, x=round(neu[0], 2), y=round(neu[1], 2)); n_ += 1
+        else: kn2[k] = v
+    return dict(N, knoten=kn2), n_
+
+
 def pruefen(svg_text, N, osm):
     T, W, K, WT = osm
     BEF = []
     bef = lambda r, x, y, t, **o: BEF.append(dict(regel=r, x=round(x, 1), y=round(y, 1), text=t, **o))
+    # gezeichneter Plan zuerst (Graph), dann das Netzmodell auf die Zeichnung legen
+    gleise, boegen, perrons, luecken = OA.plan_lesen(svg_text)
+    gleise = _ohne_doppel(gleise)
+    # REGELN 1.21/HT (24.11.2026 abends, Daniel): schwarze Streckengleise mit Liniennummer (Güterverkehr, z. B. Giesshübel 717)
+    # bleiben Hauptgleise – im gezeichneten Plan zählt die schwarze Linie am Abgang einer Güterlinie wie grün.
+    _gab = [(a["x"], a["y"]) for a in N.get("abgaenge", []) if a.get("gueter") and a.get("x") is not None]
+    for i, gl in enumerate(gleise):
+        if gl["farbe"] != "gruen" and any(gl["geo"].distance(Point(p)) <= 3 for p in _gab): gl["ht"] = True
+    GP_, lage, pknoten = plan_graph(gleise, luecken, boegen) if gleise else (Graph(), {}, [])
+    N, n_auf = _auf_plan(N, gleise, GP_, pknoten, T)
     KN = {int(k): v for k, v in N["knoten"].items()}
     pax_ways = {g["way"] for g in N["gleise"] if g.get("pax")}
     knoten_pax = set()
@@ -346,11 +383,7 @@ def pruefen(svg_text, N, osm):
             bef("HT2", b["x"], b["y"], b["text"], ways=b.get("ways"))
         elif r == "VC1" and set(b.get("ways", ())) & pax_ways:
             bef("HT3", b["x"], b["y"], b["text"], osm=b.get("osm"), ways=b.get("ways"))
-    # Graphen
     GO = osm_graph(N, T, W, K, WT)
-    gleise, boegen, perrons, luecken = OA.plan_lesen(svg_text)
-    gleise = _ohne_doppel(gleise)
-    GP_, lage, pknoten = plan_graph(gleise, luecken, boegen) if gleise else (Graph(), {}, [])
     # HT4 Seite: an OSM-Weichen (3 Äste, einer am Hauptgleis) die zwei Äste auf der Weichenseite
     lat0 = next(iter(K.values()))[0] if K else 47.0
     for n, A in GO.aeste.items():
@@ -379,7 +412,7 @@ def pruefen(svg_text, N, osm):
     # HT5 Fahrwege
     BEF += _fahrwege(N, KN, GO, GP_, lage, gleise, pax_ways, knoten_pax, T, W, K)
     zaehl = {r: sum(1 for b in BEF if b["regel"] == r) for r in REGELN}
-    return dict(zaehl=zaehl, befunde=BEF, osm_abgleich={r: sum(1 for b in VA if b["regel"] == r) for r in sorted({b["regel"] for b in VA})})
+    return dict(zaehl=zaehl, befunde=BEF, auf_plan=n_auf, osm_abgleich={r: sum(1 for b in VA if b["regel"] == r) for r in sorted({b["regel"] for b in VA})})
 
 
 def _plan_richtung(GO, KN, n, k, e, v):
@@ -543,7 +576,7 @@ def _fahrwege(N, KN, GO, GP_, lage, gleise, pax_ways, knoten_pax, T, W, K):
     # innerhalb einer Abgangsgruppe (gleiche Netzmodell-x) die Reihenfolge quer wie im Netzmodell. Perrongleise -> nächste
     # grüne Kante (≤ 14 px).
     from scipy.optimize import linear_sum_assignment
-    gruen = lambda k: gleise[GP_.kanten[k][2]]["farbe"] == "gruen"
+    gruen = lambda k: gleise[GP_.kanten[k][2]]["farbe"] == "gruen" or gleise[GP_.kanten[k][2]].get("ht", False)
     pk = [k for k in lage if gruen(k)] or list(lage)
     ptree = STRtree([lage[k] for k in pk])
     plan_ziel = {}

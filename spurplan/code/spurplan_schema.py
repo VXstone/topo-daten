@@ -612,89 +612,9 @@ def _project_auf(p, A0_, AB_, AB2_, SS_):
     cr = AB_[i, 0] * (p - A0_[i])[1] - AB_[i, 1] * (p - A0_[i])[0]
     return SS_[i] + t[i] * 5.0, math.copysign(dd[i], cr)
 
-# REGELN 2.15 (T-SZU2, 24.11.2026, Giesshübel): Knickt die Achse im Planfenster um mehr als 30° (Kurs über je 100 m),
-# folgt sie dem Bündel mit der grössten parallelen Gleislänge (alle Gleise, Kurs ±15°), sofern dieses Bündel die Achse
-# vom Bahnhof her geradeaus fortsetzt (Kurs ±15°) und im Fenster mehr Gleislänge hat als der abbiegende Ast; der Knick
-# muss scharf sein (je 200 m davor und danach keine weitere Richtungsänderung > 15°, kein gleichmässiger Bogen). Die Achse
-# läuft ab dem Knick gerade in Bündelrichtung weiter; Knoten des abbiegenden Asts (näher am alten Achsast als an der neuen
-# Achse) liegen ausserhalb des Plans, der Ast verlässt ihn als seitlicher Abzweig (Schräge nach 2.6, Pfeil mit Ziel).
-# Den Betriebspunkt am Ast trennt straenge.py vom Knotenplan (eigener Plan). cfg «achse_knick» (Standard aus, 24.11.: in
-# Giesshübel liegt die Depot-Einfahrt auf der geraden Fortsetzung, GS 12 -> 20 – erst mit eigener Depot-Regel einschalten).
-_KN = None
-def _achse_knick():
-    rr = CFG["sw_search_m"]; cR = np.r_[0, np.cumsum(np.linalg.norm(np.diff(R, axis=0), axis=1))]
-    at = lambda s_: np.array([np.interp(s_, cR, R[:, 0]), np.interp(s_, cR, R[:, 1])])
-    def kurs(s0_, s1_):
-        v_ = at(s1_) - at(s0_); return math.atan2(v_[1], v_[0])
-    s_st = float(cR[int(np.argmin(np.hypot(R[:, 0], R[:, 1])))])
-    best_ = None
-    for sK in np.arange(cR[0] + 160, cR[-1] - 160, 10.0):
-        if np.hypot(*at(sK)) > rr - 50 or abs(sK - s_st) < 60: continue
-        sg_ = 1 if sK > s_st else -1
-        h_in = kurs(sK - sg_ * 150, sK - sg_ * 50); h_out = kurs(sK + sg_ * 50, sK + sg_ * 150)
-        dl_ = abs((math.degrees(h_out - h_in) + 180) % 360 - 180)
-        if dl_ <= 30 or (best_ is not None and dl_ <= best_[0]): continue
-        # Knick, kein gleichmässiger Bogen: vor und nach dem Knick je 200 m ohne weitere Richtungsänderung > 15°
-        h_in2 = kurs(sK - sg_ * 250, sK - sg_ * 150); h_out2 = kurs(sK + sg_ * 150, sK + sg_ * 250)
-        if abs((math.degrees(h_in - h_in2) + 180) % 360 - 180) > 15 or abs((math.degrees(h_out2 - h_out) + 180) % 360 - 180) > 15: continue
-        best_ = (dl_, float(sK), sg_, h_in, h_out)
-    if not best_: return None
-    dl_, sK, sg_, h_in, h_out = best_; K_ = at(sK)
-    seg_ = []                                                  # (Mitte, Kurs mod 180, Länge)
-    for w in ways.values():
-        for a_, b_ in zip(w["nodes"], w["nodes"][1:]):
-            if a_ not in P or b_ not in P: continue
-            pa, pb = np.array(P[a_]), np.array(P[b_]); L_ = float(np.linalg.norm(pb - pa))
-            m_ = (pa + pb) / 2
-            if L_ < 0.5 or np.hypot(*m_) > rr: continue
-            seg_.append((m_, math.degrees(math.atan2(pb[1] - pa[1], pb[0] - pa[0])) % 180, L_))
-    if not seg_: return None
-    ad = lambda a_, b_: abs((a_ - b_ + 90) % 180 - 90)
-    c_best = max(range(180), key=lambda c_: sum(L_ for _, h_, L_ in seg_ if ad(h_, c_) <= 15))
-    hi_, ho_ = math.degrees(h_in) % 180, math.degrees(h_out) % 180
-    u_in = np.array([math.cos(h_in), math.sin(h_in)])
-    L_b = sum(L_ for m_, h_, L_ in seg_ if ad(h_, c_best) <= 15); L_o = sum(L_ for m_, h_, L_ in seg_ if ad(h_, ho_) <= 15)
-    info_ = f"Knick {dl_:.0f}° bei s={sK:.0f} ({np.hypot(*K_):.0f} m vom Bahnhof), Bündel {c_best}° (Achse vor {hi_:.0f}°, nach {ho_:.0f}°), " \
-            f"im Fenster Bündel {L_b:.0f} m, Ast {L_o:.0f} m"
-    if ad(c_best, hi_) > 15 or ad(c_best, ho_) <= 15 or L_b < 300 or L_b <= L_o:
-        print("R2.15 nicht angewendet:", info_); return None
-    u_n = np.array([math.cos(math.radians(c_best)), math.sin(math.radians(c_best))])
-    if u_n @ u_in < 0: u_n = -u_n
-    # Richtung entlang des Bündels mit Länge gewichtet (genauer als das 1°-Raster)
-    _vs = [np.array([math.cos(math.radians(h_)), math.sin(math.radians(h_))]) * L_ for m_, h_, L_ in seg_ if ad(h_, c_best) <= 15]
-    _vs = [v_ if v_ @ u_n >= 0 else -v_ for v_ in _vs]; u_n = np.sum(_vs, axis=0); u_n = u_n / np.linalg.norm(u_n)
-    ext_ = np.array([K_ + u_n * t_ for t_ in np.arange(5, 3000, 5.0)])
-    keep_ = R[(cR - sK) * sg_ <= 0]
-    RA = np.vstack([keep_, ext_]) if sg_ > 0 else np.vstack([ext_[::-1], keep_])
-    return dict(sK=sK, sg=sg_, K=K_, RA=RA, info=info_)
-if CFG.get("achse_knick", False) and os.path.exists(f"{key}_axis.json") and not CFG.get("axis_auto"):
-    _KN = _achse_knick()
-if _KN:
-    _A0o, _ABo, _AB2o, _SSo, _Ro = A0, AB, AB2, SS, R           # alte Achse = abbiegender Ast
-    RA = _KN["RA"]; cA = np.r_[0, np.cumsum(np.linalg.norm(np.diff(RA, axis=0), axis=1))]
-    SS = np.arange(0, cA[-1], 5.0)
-    Rx = np.interp(SS, cA, RA[:, 0]); Ry = np.interp(SS, cA, RA[:, 1])
-    R = np.c_[np.convolve(np.pad(Rx, 4, "edge"), k, "valid"), np.convolve(np.pad(Ry, 4, "edge"), k, "valid")]
-    A0, AB = R[:-1], R[1:] - R[:-1]; AB2 = (AB ** 2).sum(1)
-    _kn_sKA = _project_auf(_KN["K"], A0, AB, AB2, SS)[0]; _kn_sg = _KN["sg"]; _kn_sKo = _KN["sK"]
-    def _ast(p, A0=A0, AB=AB, AB2=AB2, SS=SS):
-        """(s, d) auf dem Ast, falls p zum abbiegenden Ast gehört, sonst None."""
-        sA, dA = _project_auf(p, A0, AB, AB2, SS)
-        if (sA - _kn_sKA) * _kn_sg <= 20: return None
-        sB, dB = _project_auf(p, _A0o, _ABo, _AB2o, _SSo)
-        if (sB - _kn_sKo) * _kn_sg <= 0 or abs(dB) + 10 >= abs(dA): return None
-        return _kn_sKA + (sB - _kn_sKo), dB
-    _pB = np.array([np.interp(_kn_sKo + _kn_sg * 300, _SSo[:len(_Ro)], _Ro[:len(_SSo), j_]) for j_ in (0, 1)])
-    _kn_seite = 1 if _project_auf(_pB, A0, AB, AB2, SS)[1] > 0 else -1
-    _kn_doff = 4 * CFG["d_lim"] + 200                         # Ast liegt ausserhalb des Plans: Abzweig am Rand
-    print(f"R2.15 angewendet: {_KN['info']}; Ast Seite {_kn_seite:+d} verlässt den Plan als Abzweig")
-    def project(p, _A=(A0, AB, AB2, SS), _o=_kn_seite * _kn_doff):
-        b_ = _ast(p)
-        if b_ is not None: return b_[0], _o + b_[1] * (1 if _o > 0 else -1)
-        return _project_auf(p, *_A)
-else:
-    def project(p):
-        return _project_auf(p, A0, AB, AB2, SS)
+# REGELN 2.15: die Achse bleibt die Strecke (Fixpunkt); cfg «achse_knick» gestrichen 24.11.2026 abends (Daniel).
+def project(p):
+    return _project_auf(p, A0, AB, AB2, SS)
 
 SD = {n: project(p) for n, p in P.items()}
 if os.environ.get("SPUR_SD"): json.dump({str(n): [SD[n][0], SD[n][1], LL[n][0], LL[n][1]] for n in SD if n in LL}, open(os.environ["SPUR_SD"], "w"))
@@ -790,12 +710,115 @@ for w in ways.values():
 if ARGS.dbg:
     for _w in (195100338, 195100333, 43482320):
         if _w in ways: print("WAY", _w, [(n, [round(v) for v in SD[n]] if n in SD else None) for n in ways[_w]["nodes"]])
+# REGELN 2.15 (Neufassung 24.11.2026 abends, Entscheid Daniel «Strecke ist Fixpunkt», Testfall Giesshübel 717): eine
+# Linie (Streckengleis ohne service), die im Planfenster um mehr als 30° von der Achse weggeht, wird an ihrer Weiche zum
+# seitlichen Abgang (2.6): sie bekommt keine Ebene nach ihrem seitlichen Abstand, und was hinter ihr liegt (Gleise, die nur
+# über sie erreichbar sind), wird nicht gezeichnet – nichts hinter dem Pfeil. Kurs je Ast über 150 m ab der Weiche, Achse
+# = Tangente der Achse an der Weiche; an der Weiche läuft ein anderes Streckengleis ±15° zur Achse weiter.
+# cfg «linie_abgang» (Standard an), «linie_abgang_grad» (30), «linie_abgang_m» (150).
+_LINIE_AB = {}             # künstlicher Stummelknoten -> dy (Seite im SVG)
+_LINIE_WEG = set()         # Knoten hinter dem Abgang (nicht zeichnen)
+_LINIE_AB_REF = {}         # Stummelknoten -> Liniennummer des Asts
+_LINIE_AB_DX = {}          # Stummelknoten -> Richtung längs der Achse (+1 = steigendes s)
+_LINIE_AB_W = {}           # Stummelknoten -> Weiche
+def _linie_abgang():
+    if not CFG.get("linie_abgang", True): return
+    grad = CFG.get("linie_abgang_grad", 30.0); Lm = CFG.get("linie_abgang_m", 150.0)
+    nb = collections.defaultdict(set)                         # Nachbarn über alle Ways
+    pxn = collections.defaultdict(set)                        # Nachbarn über Streckengleise
+    for w in ways.values():
+        ns_ = w["nodes"]; px_ = passenger(w["tags"])
+        for a_, b_ in zip(ns_, ns_[1:]):
+            nb[a_].add(b_); nb[b_].add(a_)
+            if px_: pxn[a_].add(b_); pxn[b_].add(a_)
+    def tang(s_):
+        i_ = int(np.clip(np.searchsorted(SS, s_), 1, len(SS) - 2)); v_ = R[i_ + 1] - R[i_ - 1]
+        return v_ / (np.linalg.norm(v_) or 1)
+    def lauf(n_, m_, Lm=Lm):                                  # Punkt Lm Meter entlang der Linie ab n_ über m_
+        prev, cur, L_ = n_, m_, float(np.linalg.norm(np.subtract(P[m_], P[n_])))
+        while L_ < Lm:
+            nx_ = [q for q in pxn[cur] if q != prev and q in P]
+            if not nx_: break
+            v0 = np.subtract(P[cur], P[prev]); v0 = v0 / (np.linalg.norm(v0) or 1)
+            q = max(nx_, key=lambda q: float(v0 @ (np.subtract(P[q], P[cur]) / (np.linalg.norm(np.subtract(P[q], P[cur])) or 1))))
+            L_ += float(np.linalg.norm(np.subtract(P[q], P[cur]))); prev, cur = cur, q
+        return np.subtract(P[cur], P[n_]), L_
+    kand = []
+    for n_ in list(pxn):
+        if len(pxn[n_]) < 3 or n_ not in SD or n_ not in P: continue
+        s_, d_ = SD[n_]
+        if not (CFG["s_min"] <= s_ <= CFG["s_max"] and abs(d_) <= d_lim_at(s_)): continue
+        t_ = tang(s_); arme = []
+        for m_ in pxn[n_]:
+            if m_ not in P: continue
+            best_ = None
+            for Lk_ in (Lm, 1.5 * Lm, 2 * Lm):                # grösster Winkel der Sehne über 150/225/300 m (Bogen)
+                v_, L_ = lauf(n_, m_, Lk_)
+                if L_ < 40 or (best_ and L_ <= best_[2] + 1): continue
+                u_ = v_ / (np.linalg.norm(v_) or 1)
+                w_ = math.degrees(math.acos(min(1.0, abs(float(u_ @ t_)))))
+                if best_ is None or (w_ > best_[0] and Lk_ > Lm and best_[0] > 15) or Lk_ == Lm: best_ = (w_, u_, L_)
+                if best_[0] <= 15: break                          # läuft mit der Achse: nur die 150-m-Sehne zählt
+            if best_: arme.append((m_, best_[0], best_[1], best_[2]))
+        if os.environ.get("LADBG"): print("LA", n_, round(s_), round(d_), [(a_[0], round(a_[1]), round(a_[3])) for a_ in arme])
+        if not any(a_[1] <= 15 for a_ in arme): continue
+        for m_, w_, u_, L_ in arme:
+            if grad < w_ < 180 - grad: kand.append((n_, m_, w_, u_, t_))
+    for n_, m_, w_, u_, t_ in kand:
+        # alles hinter dem Abgang: von m_ aus erreichbar ohne n_; läuft es zum Bahnhof zurück, nur die Linie selbst
+        # Kern = Streckengleise des Bahnhofs ab der Weiche ohne den Ast (im Fenster-Umkreis)
+        kern = {n_}; st_ = [n_]
+        while st_:
+            q = st_.pop()
+            for r_ in pxn[q]:
+                if (q == n_ and r_ == m_) or r_ in kern or r_ not in P or math.hypot(*P[r_]) > CFG["sw_search_m"]: continue
+                kern.add(r_); st_.append(r_)
+        seen = {m_}; st_ = [m_]; zur = m_ in kern and m_
+        while st_:
+            q = st_.pop()
+            for r_ in nb[q]:
+                if r_ == n_ or r_ in seen: continue
+                if r_ not in P or math.hypot(*P[r_]) > CFG["sw_search_m"]: continue     # nur im Fenster-Umkreis
+                if r_ in kern: zur = zur or r_
+                seen.add(r_); st_.append(r_)
+        if zur:
+            print(f"R2.15 Abgang {n_}->{m_} ({w_:.0f}°): läuft zur Achse zurück (Knoten {zur}) – nicht angewendet"); continue
+        # Stummelknoten 15 m hinter der Weiche auf dem Ast
+        v_ = np.subtract(P[m_], P[n_]); Lv = float(np.linalg.norm(v_)) or 1
+        k_ = -(3 * 10 ** 15 + len(_LINIE_AB) + 1)
+        P[k_] = tuple(np.asarray(P[n_]) + v_ / Lv * min(15.0, 0.5 * Lv))
+        LL[k_] = (lat0 + P[k_][1] / ky, lon0 + P[k_][0] / kx)
+        SD[k_] = (SD[n_][0], SD[n_][1])                       # Stummel ohne Länge: belegt keine Ebene
+        cr_ = float(t_[0] * u_[1] - t_[1] * u_[0])
+        _LINIE_AB[k_] = -1 if cr_ > 0 else 1
+        _LINIE_AB_DX[k_] = 1 if float(u_ @ t_) > 0 else -1
+        _LINIE_AB_W[k_] = n_
+        _rf = [ways[w_]["tags"].get("ref") for w_ in ways if passenger(ways[w_]["tags"]) and ways[w_]["tags"].get("ref")
+               and any(q in seen for q in ways[w_]["nodes"])]
+        if _rf: _LINIE_AB_REF[k_] = collections.Counter(_rf).most_common(1)[0][0]
+        _LINIE_WEG.update(seen)
+        for w in ways.values():                               # Stummel in den Way n_ -> m_ einsetzen (mit Geometrie)
+            ns_ = w["nodes"]
+            for i_ in range(len(ns_) - 1):
+                if {ns_[i_], ns_[i_ + 1]} == {n_, m_}:
+                    w["nodes"] = ns_[:i_ + 1] + [k_] + ns_[i_ + 1:]
+                    if "geometry" in w: w["geometry"] = w["geometry"][:i_ + 1] + [dict(lat=LL[k_][0], lon=LL[k_][1])] + w["geometry"][i_ + 1:]
+                    break
+        use[k_] = 2
+        for sg in segs:                                       # Stummel in das Segment n_ -> m_ einsetzen
+            ns_ = sg["nodes"]
+            for i_ in range(len(ns_) - 1):
+                if {ns_[i_], ns_[i_ + 1]} == {n_, m_}:
+                    sg["nodes"] = ns_[:i_ + 1] + [k_] + ns_[i_ + 1:]; break
+        print(f"R2.15 Linie geht {w_:.0f}° von der Achse weg: Abgang an Weiche {n_} (Ast {m_}, {len(seen)} Knoten dahinter weg)")
+_linie_abgang()
 # Clipping auf Zeichenbereich
 # cfg "d_lim_neben" (28.10.2026, Vauseyon Hinweis v3f7): Abstell-/Anschlussgleise (service=spur/siding/yard) dürfen
 # seitlich weiter reichen als die Hauptgleise, damit kurze Anlagen ganz gezeichnet werden statt als Pfeil
 _NEBEN_N = {n for w in ways.values() if w["tags"].get("service") in ("spur", "siding", "yard") for n in w["nodes"]} \
     if CFG.get("d_lim_neben") else set()
 def inside(n):
+    if n in _LINIE_WEG: return False
     s, d = SD[n]
     if n in _NEBEN_N: return CFG["s_min"] <= s <= CFG["s_max"] and abs(d) <= max(d_lim_at(s), CFG["d_lim_neben"])
     return CFG["s_min"] <= s <= CFG["s_max"] and abs(d) <= d_lim_at(s)
@@ -2288,6 +2311,7 @@ for sg in segs:
     for end in (0, 1):
         if not sg["cut%d" % end]: continue
         nc = sg["nodes"][-1 if end else 0]; ni = sg["nodes"][0 if end else -1]
+        if nc in _LINIE_AB: continue                          # REGELN 2.15: Abgang an der Weiche, Ebene der Weiche
         # S2 (Konolfingen DKW 1689231120): Nebengleis endet an einem inneren Knoten, an dem ein anderes Gleis längs aus dem
         # Ausschnitt läuft (Flucht, _edge_flucht) – der Knoten bleibt, wo er ist; Pfeil in der Flucht beim Zeichnen
         if RU.get("rand_flucht", True) and not sg["pax"] and nc in EDGE_NODES and use[nc] >= 3 and _rand_nn(nc): continue
@@ -2687,6 +2711,8 @@ if CFG.get("kreuzung_schnitt", False):
 
 
 def exit_ref(sg):
+    for n in (sg["nodes"][0], sg["nodes"][-1]):           # REGELN 2.15: Linie, die an der Weiche abgeht
+        if n in _LINIE_AB_REF: return _LINIE_AB_REF[n]
     # Override "abgang": {"<way>": {"ref": "...", "ort": "..."}} - eigene Linie am Planrand (Thun: Gürbetal); "~Text" ohne "Linie"
     if str(sg["way"]) in OVR.get("abgang", {}) and "ref" in OVR["abgang"][str(sg["way"])]: return OVR["abgang"][str(sg["way"])]["ref"]
     r = sg["tags"].get("ref")
@@ -3032,6 +3058,7 @@ for sg in segs:
                 d = f"M{xa:.1f},{ya:.1f}H{q0:.1f}" + scurve(q0, ya, q1, yb) + f"M{q1:.1f},{yb:.1f}H{max(xb, q1):.1f}"
         else:
             d = ""
+    if d and len(sg["nodes"]) == 2 and (sg["nodes"][0] in _LINIE_AB or sg["nodes"][-1] in _LINIE_AB): d = ""   # 2.15: Stummel ohne Länge
     if d: svg_paths[sg["pax"]].append(d); DBG.append((sg["id"], d)); D_ERST.append((sg["id"], d))
     if ARGS.dbg and d and "200.2" in d: print("DRAW", sg["way"], sg["tags"].get("service"), sg["flat"], d[:120])
     edge0 = SD[sg["nodes"][0]][0] <= CFG["s_min"] + 15
@@ -5329,8 +5356,11 @@ for sg in segs:
         n = sg["nodes"][-1 if end else 0]
         s_, d_ = SD[n]
         x, y = (xpos(n, sg["s1"]), ypos(n)) if end else (xpos(n, sg["s0"]), ypos(n))
-        if ((abs(d_) > d_lim_at(s_) - 25 and not sg["flat"]) or sg["way"] in OVR.get("seitlich", []) or n in _KNICK_DY) and sg["way"] not in OVR.get("als_rand", []):   # seitlich abzweigende Strecke; "als_rand": Abgang am Längsrand (Regionalvariante Olten Ost 20.10.)
-            SIDE.append([x, y, end, _KNICK_DY.get(n, -1 if d_ > 0 else 1), sg, n])
+        if ((abs(d_) > d_lim_at(s_) - 25 and not sg["flat"]) or sg["way"] in OVR.get("seitlich", []) or n in _KNICK_DY or n in _LINIE_AB) and sg["way"] not in OVR.get("als_rand", []):   # seitlich abzweigende Strecke; "als_rand": Abgang am Längsrand (Regionalvariante Olten Ost 20.10.)
+            _end_s = (1 if _LINIE_AB_DX[n] > 0 else 0) if n in _LINIE_AB_DX else end     # 2.15: Richtung des Asts längs
+            if n in _LINIE_AB_W:                              # 2.15: Abgang beginnt an der Weiche (Ebene der Weiche)
+                _sw = _LINIE_AB_W[n]; x, y = xpos(_sw, SD[_sw][0]), ypos(_sw)
+            SIDE.append([x, y, _end_s, _LINIE_AB.get(n, _KNICK_DY.get(n, -1 if d_ > 0 else 1)), sg, n])
         elif n in _SEIT_N: continue
         else:
             if sg["way"] in ZEICHNEN_PORT: x, y = ZEICHNEN_PORT[sg["way"]]     # neu gezeichneter Abgang (Thun Gürbetal)

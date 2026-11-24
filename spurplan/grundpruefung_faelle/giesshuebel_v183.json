@@ -1,0 +1,7 @@
+{"erwartet": [
+  {"regel": "GE", "x": 799.1, "y": -178.0, "anlass": "REGELN 1.30: 717 Querstück links loses Ende (Daniel 24.11.)"},
+  {"regel": "GE", "x": 881.9, "y": -178.0, "anlass": "REGELN 1.30: Stummel hinter dem 717-Pfeil, unteres Ende"},
+  {"regel": "GE", "x": 886.9, "y": -202.0, "anlass": "REGELN 1.30: Stummel hinter dem 717-Pfeil, oberes Ende"}],
+ "nicht": [
+  {"regel": "GE", "x": 246.7, "y": 184.4, "anlass": "Prellbock (Punkt) ist kein loses Ende"},
+  {"regel": "GE", "x": 1209.6, "y": 232.4, "r": 8, "anlass": "beschrifteter Abgang Zürich HB ist kein loses Ende"}]}

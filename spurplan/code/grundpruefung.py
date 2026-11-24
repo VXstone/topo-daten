@@ -41,9 +41,10 @@ import ruhe
 
 TRACK = {"#00862f", "#111", "#111111", "#000", "#9a5b1e", "#9a5b1f"}
 GRUEN = {"#00862f"}
-REGELN = ["GS", "GG", "GQ", "GP", "GW", "GT"]
+REGELN = ["GS", "GG", "GQ", "GP", "GW", "GT", "GE"]
 TEXT = {"GS": "Schnitt ohne DKW/Kreuzung/Niveautrennung", "GG": "Gleis auf Gleis", "GQ": "Querabstand nach Knick ≠ davor",
-        "GP": "Pfeil nach innen / auf Nachbargleis", "GW": "Knick oder Abgang 90°", "GT": "Treppe"}
+        "GP": "Pfeil nach innen / auf Nachbargleis", "GW": "Knick oder Abgang 90°", "GT": "Treppe",
+        "GE": "loses Gleisende (kein Prellbock, Pfeil, Abgang oder Gleis)"}
 LANE_B, LANE_R = 24.0, 24 * 0.42          # Ebenenabstand Bahnhofplan / Regionalplan (S = 0,42)
 NICHT_PLAENE = {"fragen", "pruefstand", "osm_verdacht"}          # Werkzeugkasten-Karten ohne Gleise im Plansinn
 
@@ -67,7 +68,7 @@ def _mat(tr):
 def lesen(svg_text):
     """Gleise (Polylinien, Ausrundung = Ecke am Kontrollpunkt), DKW-Bögen, Lücken, Flügel, Pfeile, Punkte"""
     root = ET.fromstring(svg_text)
-    linien, boegen, luecken, fluegel, pfeile, punkte, schilder = [], [], [], [], [], [], []
+    linien, boegen, luecken, fluegel, pfeile, punkte, schilder, texte = [], [], [], [], [], [], [], []
 
     def walk(el, M, st):
         if el.get("class") == "befund": return
@@ -77,7 +78,11 @@ def lesen(svg_text):
         for k in ("stroke", "stroke-width", "fill", "stroke-opacity", "stroke-dasharray"):
             if el.get(k) is not None: st[k] = el.get(k)
         tp = lambda z: (M @ np.array([z.real, z.imag, 1.0]))[:2]
-        if tag == "text": return
+        if tag == "text":                                    # Abgangsbeschriftung («Zürich HB →») für GE
+            t_ = "".join(el.itertext())
+            if "→" in t_ or "←" in t_ or t_.startswith("Linie"):
+                texte.append(tp(complex(float(el.get("x", 0) or 0), float(el.get("y", 0) or 0))))
+            return
         if tag == "rect" and (el.get("fill") or "").lower() in ("#fff", "#ffffff", "white") and "%" not in (el.get("width") or "") \
                 and max(float(el.get("width", 0)), float(el.get("height", 0))) <= 60:          # Schild der Gleisnummer, nicht das Planblatt
             x, y, w_, h_ = (float(el.get(k, 0)) for k in ("x", "y", "width", "height"))
@@ -92,6 +97,7 @@ def lesen(svg_text):
             if P is None: pass
             elif el.get("data-pfeil") is not None or (fill in TRACK and col in ("", "none")):
                 pts = [tp(s.start) for s in P]
+                if len(P) == 2: pts.append(tp(P[-1].end))                # offenes Dreieck «M a L b L c» (Referenzen)
                 if len(pts) == 4 and np.linalg.norm(pts[3] - pts[0]) < 0.1: pts = pts[:3]   # geschlossen mit L zurück
                 if len(pts) == 3:                                     # Dreieck (schräge Perronflächen sind Vierecke)
                     _, i = min((np.linalg.norm(pts[i] - pts[(i + 1) % 3]), i) for i in range(3))
@@ -133,7 +139,7 @@ def lesen(svg_text):
         for ch in el: walk(ch, M, st)
 
     walk(root, np.eye(3), {})
-    return dict(linien=linien, boegen=boegen, luecken=luecken, fluegel=fluegel, pfeile=pfeile, punkte=punkte, schilder=schilder)
+    return dict(linien=linien, boegen=boegen, luecken=luecken, fluegel=fluegel, pfeile=pfeile, punkte=punkte, schilder=schilder, texte=texte)
 
 
 def ebene_schaetzen(linien):
@@ -288,8 +294,52 @@ def pruefen(svg_text, netz=None, lane=None):
         for x in ruhe.pruefe_linien([(g["w"], g["pts"])], motiv):
             if x["art"] == "Treppe": bef("GT", (x["x"], x["y"]), f"Treppe, Versatz {x['versatz']} px")
 
+    # GE loses Gleisende (REGELN 1.30, Entscheid Daniel 24.11.): jedes gezeichnete Gleisende ist ein Prellbock (Punkt), ein
+    # Pfeil, ein beschrifteter Abgang («→/←», «Linie …») oder mündet in ein anderes Gleis (≤ 2 px). Stoss 2–6 px wird als solcher benannt.
+    pfeil_pkte = [b for b, _, _ in D["pfeile"]] + [t for _, t, _ in D["pfeile"]]
+    EN = _ge_enden(linien, G, tree)
+    for i, (e, d, L, v) in enumerate(EN):
+        if any(math.dist(e, m) <= max(6.0, 0.3 * lane) for m in D["punkte"]): continue
+        # Unterbruch an einer Niveautrennung (Gleis taucht unter einem anderen durch, ohne weisse Lücke): gegenüber, jenseits
+        # eines anderen Gleises, setzt ein Ende in derselben Richtung fort (≤ 2,5 Ebenen, ≤ 8°)
+        if v is not None and d <= 0.8 * lane and any(
+                j != i and w is not None and float(v @ w) < -0.99 and 0 < float((np.asarray(f) - e) @ v) <= 2.5 * lane
+                and abs(float(v[0] * (f[1] - e[1]) - v[1] * (f[0] - e[0]))) <= 1.5 for j, (f, _, _, w) in enumerate(EN)): continue
+        if any(math.dist(e, m) <= max(4.0, 0.3 * lane) for m in pfeil_pkte): continue
+        if any(math.dist(e, m) <= 3.0 * lane for m in D["texte"]): continue
+        if in_luecke(e): continue
+        bef("GE", e, (f"Gleisende {d:.1f} px neben einem Gleis (Stoss)" if d <= 6 else "loses Gleisende")
+            + f", Stück {L:.0f} px")
+
     zaehl = {r: sum(1 for b in B if b["regel"] == r) for r in REGELN}
     return dict(ebene=lane, zaehl=zaehl, befunde=B)
+
+
+def _ist_fluegel(p):
+    """Brückenflügel «M a L b L c L d»: zwei kurze Schenkel (≤ 6 px) schräg zum Mittelstück (Bahnhofplan, dünn schwarz)"""
+    if len(p) != 4: return False
+    s0, s1, s2 = (np.linalg.norm(p[k + 1] - p[k]) for k in range(3))
+    if not (s0 <= 6 and s2 <= 6 and s1 > 2 * max(s0, s2)): return False
+    return all(20 <= PM._winkel(p[k] - p[k - 1], p[k + 1] - p[k]) <= 70 for k in (1, 2))
+
+
+def _ge_enden(linien, G, tree):
+    """Enden der gezeichneten Gleise, die nicht in ein anderes Gleis münden: [(Punkt, Abstand zum nächsten Gleis, Länge)].
+    Teilstücke (Subpfade), die sich berühren, zählen als verbunden."""
+    R = []
+    for i, g in enumerate(linien):
+        q = g["echt"]
+        if LineString(q).length < 0.5 or _ist_fluegel(g["pts"]): continue
+        for e, e2 in ((q[0], q[1]), (q[-1], q[-2])):
+            P_ = Point(e); dmin = 1e9
+            for k in (tree.query(P_.buffer(6.5)) if tree else []):
+                k = int(k)
+                if k == i: continue
+                dmin = min(dmin, G[k].distance(P_))
+            if dmin <= 2.0: continue                                   # Stoss bis 2 px gilt als verbunden (sichtbar zu)
+            v = np.asarray(e) - np.asarray(e2); n = np.linalg.norm(v)
+            R.append((e, dmin, G[i].length, v / n if n > 1e-6 else None))
+    return R
 
 
 def _netz(netz_dir, key):
