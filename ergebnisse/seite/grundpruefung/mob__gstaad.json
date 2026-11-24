@@ -7,7 +7,14 @@
   "GP": 0,
   "GW": 0,
   "GT": 0,
-  "GE": 0
+  "GE": 1
  },
- "befunde": []
+ "befunde": [
+  {
+   "regel": "GE",
+   "x": 748.4,
+   "y": 110.0,
+   "text": "Gleisende 2.3 px neben einem Gleis (Stoss), Stück 81 px"
+  }
+ ]
 }

@@ -2,7 +2,7 @@
 /home/runner/work/topo-daten/topo-daten/spurplan/werkstatt/olten/feedback/bauen.py:195: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
   _HEUTE = datetime.datetime.utcnow().strftime("%d.%m.%Y")
 18 Einträge
-index.html 2052 KB, 149 Pläne
+index.html 2047 KB, 149 Pläne
 21 Hinweise, 21 Ausschnitte
 Hinweis-Abdeckung: 29/57 (Befund < 40 px, ohne G2)
 ✓ 0bw9 solothurn                    G6,MX,VB1,VB2,W1,W2       19.2  Gleis nach unten, Knick, über anderen Gleisen nach oben
@@ -15,13 +15,13 @@ Hinweis-Abdeckung: 29/57 (Befund < 40 px, ohne G2)
 ✓ 3za5 region                       G6,MZ                      4.9  90 Grad, statt 2 Weichen nur eine
 ✓ 4xdm region                       G7                         0.5  Gleisanschluss dazwischen, Verbindungen prüfen
 ✓ 5yz7 mob__montreux                MQ                        27.1  Perron zwischen 4 und 3
-· 6gk4 mob__zweisimmen              -                         95.4  noch ein Gleis links raus
+✓ 6gk4 mob__zweisimmen              VD1                       13.9  noch ein Gleis links raus
 · 6rwy mob__montreux                -                         87.9  keine Mittelperrons Normalspur
 ✓ 7ma7 solothurn                    VB1,VD1                    8.5  Fenster bis Abzweig
 ✓ 8bce konolfingen                  MX                         1.9  Gleise hin und her, Pfeile retour
 · 8gyi mob__montreux                -                        123.3  Knick vor Tunnelportal
 · afkt mob__montreux                -                         66.1  Mindestabstand
-✓ b3j5 mob__zweisimmen              VA1                        4.8  DKW?
+· b3j5 mob__zweisimmen              -                         87.9  DKW?
 · bhlv aarau                        -                         66.9  4/5 Hauptachsen gerade
 ✓ ce8r solothurn                    G6,MP,MX,VB2,W2            5.0  90 Grad
 · cw2j aarau                        -                        195.6  Tunnel nur ein Gleis unter den anderen durch
@@ -32,44 +32,44 @@ Hinweis-Abdeckung: 29/57 (Befund < 40 px, ohne G2)
 · fmlk aarau                        -                         79.0  Zwischengeraden
 · foiy solothurn                    -                        125.7  Gleis nicht mehr lang (Pfeil)
 · fuyq vereina__sagliains_sasslatsch -                            -  fettes Gleis endet an Perron/Autoverlad
-· i06s mob__glion                   -                         87.6  Symbol Schiebebühne
+· i06s mob__glion                   -                        412.5  Symbol Schiebebühne
 · j57v region                       -                         52.7  Knubbel vom geraden Strang
 ✓ jbs1 region                       G6,ME,MZ                  25.7  fehlen Weichen
 ✓ jxpf region_vereina               ME,MZ                     30.3  S-Kurve Klosters
-· jy8r mob__zweisimmen              -                         49.6  Zwischengerade?
+· jy8r mob__zweisimmen              -                         65.2  Zwischengerade?
 · k4qi mob__rossiniere              -                            -  Stumpen?
 · ldor aarau                        -                        122.6  was ist das für ein Gleis
-· ldwo mob__zweisimmen              -                         86.2  Versatz?
+· ldwo mob__zweisimmen              -                        173.3  Versatz?
 ✓ lhm4 aarau                        VB1                        4.8  Stummel richtige Seite?
 · lld9 olten                        -                        119.8  Anschlussgleise südlich Olten
 ✓ lotw mob__chamby                  VB2,VD1                   20.1  Pfeil andere Seite, Stumpen am Perron
 ✓ mkad aarau                        MF                        38.2  Meterspur-Perron?
 ✓ mp8h mob__montreux                MX,VA2                    13.0  90 Grad?
 ✓ obvp solothurn                    G6,VB1,VD1,W1,W2           0.7  90 Grad Knick?
-· q31m mob__zweisimmen              -                         96.2  Meterspur an 6/7 nicht angebunden
+· q31m mob__zweisimmen              -                        143.7  Meterspur an 6/7 nicht angebunden
 · qotw vereina__klosters_platz      -                         83.3  Mittelperron zwischen 2 und 3
 · r9xv aarau                        -                         47.9  Stummel korrekt?
 · rap4 mob__le_tremblex             -                            -  Nebengleis nicht fett
 ✓ t6x0 solothurn                    G6,MP,MX,VA1,VB2,W2        5.3  Kreuzung in OSM?
 ✓ tnvp konolfingen                  G7,MX,VB2,VC1              2.7  Knubbel kurz gerade
 · ttv8 konolfingen                  -                         55.3  DKW?
-· u13h mob__zweisimmen              -                         84.0  Stumpen Normalspur?
+· u13h mob__zweisimmen              -                        122.4  Stumpen Normalspur?
 ✓ uyue solothurn                    G6,VB2,VD2                 2.3  Perron auf Gleis, gerader Knubbel
-· v2w8 mob__glion                   -                        109.8  Riesenabstand Schiebebühne
+· v2w8 mob__glion                   -                        154.0  Riesenabstand Schiebebühne
 · vnyq aarau                        -                         99.4  Zwischengerade
-· wvrp mob__zweisimmen              -                         48.5  kreuzt das andere oder biegt von DKW falsch ab
-· wyu2 mob__glion                   -                        154.0  dieser Perron?
+· wvrp mob__zweisimmen              -                         53.2  kreuzt das andere oder biegt von DKW falsch ab
+· wyu2 mob__glion                   -                        210.2  dieser Perron?
 ✓ xke0 solothurn                    MZ                        25.3  Zwischengerade, doppelter Abstand
 ✓ z6f2 konolfingen                  MX                        21.0  DKW?
 ✓ zcz3 solothurn                    G7,MX,VB2                 18.0  nicht verbunden
-index.html 2067 KB, 150 Pläne
-/home/runner/work/topo-daten/topo-daten/spurplan/code/alle_plaene_pruefen.py:231: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
-  json.dump(dict(erzeugt=datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"), plaene=len(zeilen), geaendert=len(gz),
+index.html 2053 KB, 150 Pläne
 region_ne                    veröffentlicht                     11 Stellen  vermutlich besser  T7 5→4 (Wunsch-Summe -8)
+region_mob                   veröffentlicht                      3 Stellen  Fehler? Topologie  G2 18→15, G6 3→2, GE 24→25, GS 3→4
+region_szu                   veröffentlicht                     11 Stellen  Fehler? Topologie  G8 1→0, GE 17→12, GG 13→14, GQ 4→8, GS 14→12, GW 0→1, T7 0→1, W53 9→8 (Wunsch-Summe +2)
 olten                        bestätigt 2026-11-08                0 Stellen  vermutlich besser  VB1 14→10, VB2 27→21
 olten_hammer                 bestätigt 2026-11-07               12 Stellen  vermutlich besser  W56 4→2, W59 4→1 (Wunsch-Summe -6)
 rothrist                     Archivbeginn (Abnahme 2026-10-29)   17 Stellen  vermutlich besser  G2 0→1, G6 1→0, VB2 6→5, W56 4→1, W59 10→3 (Wunsch-Summe -9)
-zofingen                     bestätigt 2026-11-08               29 Stellen  vermutlich besser  VA2 2→0, VB1 2→1, VD1 2→1
+zofingen                     bestätigt 2026-11-08                3 Stellen  vermutlich besser  VA2 2→0, VB1 3→1
 tecknau                      bestätigt 2026-11-07               14 Stellen  vermutlich besser  W56 1→0, W59 3→2 (Wunsch-Summe -3)
 laufelfingen                 bestätigt 2026-11-07                0 Stellen  gleichwertig  
 neuchatel                    bestätigt 2026-11-08                2 Stellen  vermutlich besser  GG 3→1, VA1 5→0, VC1 2→0, VD1 3→1
@@ -125,5 +125,16 @@ corcelles_peseux             Archivbeginn (Abnahme 2026-10-15)    0 Stellen  gle
 chambrelien                  Archivbeginn (Abnahme 2026-10-20)    5 Stellen  schlechter?  G2 1→0, T7 0→1 (Wunsch-Summe +8) · OSM VA1 1 (kein Alt-Stand)
 les_geneveys_sur_coffrane    Archivbeginn (Abnahme 2026-10-19)    1 Stellen  gleichwertig  OSM VD1 1 (kein Alt-Stand)
 les_hauts_geneveys           Archivbeginn (Abnahme 2026-10-20)    2 Stellen  gleichwertig  OSM VD1 1 (kein Alt-Stand)
-Regression: 148 Pläne, 45 geändert {'vermutlich besser': 8, 'schlechter?': 8, 'gleichwertig': 29}
+mob__caux                    veröffentlicht                     16 Stellen  gleichwertig  
+mob__glion                   veröffentlicht                     15 Stellen  Fehler? Topologie  G2 2→3, GE 0→1, T7 1→0, VB2 0→2 (Wunsch-Summe -8)
+mob__gstaad                  veröffentlicht                      9 Stellen  Fehler? Topologie  G2 4→3, GE 0→1, VB1 0→1/home/runner/work/topo-daten/topo-daten/spurplan/code/alle_plaene_pruefen.py:231: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  json.dump(dict(erzeugt=datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"), plaene=len(zeilen), geaendert=len(gz),
+
+mob__jaman                   veröffentlicht                     14 Stellen  Fehler? Topologie  GE 0→1, GG 0→1, VB1 0→2, VD2 0→2
+mob__le_tremblex             veröffentlicht                     10 Stellen  gleichwertig  
+mob__paccot                  veröffentlicht                     15 Stellen  Fehler? Topologie  G2 0→1, GE 0→1, GG 1→0, GS 0→1, VB1 2→0, W53 0→1 (Wunsch-Summe +6)
+mob__zweisimmen              veröffentlicht                      9 Stellen  Fehler? Topologie  G6 0→1, GG 1→0, GS 2→1, T7 1→0, VA1 1→0, VB2 4→2, VD1 3→2, W53 1→0 (Wunsch-Summe -14)
+szu__ringlikon               veröffentlicht                     21 Stellen  Fehler? Topologie  G7 0→1, GW 0→1
+szu__zurich_giesshubel       veröffentlicht                      6 Stellen  Fehler? Topologie  GE 11→6, GG 15→16, GQ 5→7, GS 11→10, VB1 3→1, VB2 8→9, VD1 25→22
+Regression: 148 Pläne, 56 geändert {'vermutlich besser': 8, 'Fehler? Topologie': 9, 'schlechter?': 8, 'gleichwertig': 31}
 Ausnahmen: 920 Einträge, 125 Orte: {'Schalter': 358, 'Ortswissen': 245, 'Geometrie': 192, 'Typvorlage': 125} | ohne Grund: 0

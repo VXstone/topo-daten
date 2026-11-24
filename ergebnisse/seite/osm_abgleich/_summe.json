@@ -434,12 +434,12 @@
  },
  "mob__caux": {
   "dkw_osm_unvollstaendig": [],
-  "gleise": 10,
+  "gleise": 9,
   "knoten_plan": 4,
   "dkw_plan": 0,
   "knoten_osm": 4,
   "versatz_y": 0.0,
-  "netz_auf_plan": 1.0
+  "netz_auf_plan": 0.78
  },
  "mob__chamby": {
   "VB1": 1,
@@ -511,13 +511,14 @@
   "netz_auf_plan": 1.0
  },
  "mob__glion": {
+  "VB2": 2,
   "dkw_osm_unvollstaendig": [],
-  "gleise": 27,
-  "knoten_plan": 8,
+  "gleise": 18,
+  "knoten_plan": 5,
   "dkw_plan": 0,
-  "knoten_osm": 8,
+  "knoten_osm": 3,
   "versatz_y": 0.0,
-  "netz_auf_plan": 1.0
+  "netz_auf_plan": 0.97
  },
  "mob__glion_college": {
   "dkw_osm_unvollstaendig": [],
@@ -538,18 +539,21 @@
   "netz_auf_plan": 1.0
  },
  "mob__gstaad": {
+  "VB1": 1,
   "dkw_osm_unvollstaendig": [],
   "gleise": 15,
-  "knoten_plan": 6,
+  "knoten_plan": 5,
   "dkw_plan": 0,
   "knoten_osm": 6,
   "versatz_y": 0.0,
-  "netz_auf_plan": 1.0
+  "netz_auf_plan": 0.93
  },
  "mob__jaman": {
+  "VB1": 2,
+  "VD2": 2,
   "dkw_osm_unvollstaendig": [],
-  "gleise": 7,
-  "knoten_plan": 2,
+  "gleise": 5,
+  "knoten_plan": 0,
   "dkw_plan": 0,
   "knoten_osm": 2,
   "versatz_y": 0.0,
@@ -585,12 +589,12 @@
  },
  "mob__le_tremblex": {
   "dkw_osm_unvollstaendig": [],
-  "gleise": 5,
+  "gleise": 4,
   "knoten_plan": 1,
   "dkw_plan": 0,
   "knoten_osm": 1,
   "versatz_y": 0.0,
-  "netz_auf_plan": 1.0
+  "netz_auf_plan": 0.75
  },
  "mob__lenk_im_simmental": {
   "dkw_osm_unvollstaendig": [],
@@ -688,14 +692,13 @@
   "netz_auf_plan": 1.0
  },
  "mob__paccot": {
-  "VB1": 2,
   "dkw_osm_unvollstaendig": [],
-  "gleise": 1,
-  "knoten_plan": 0,
+  "gleise": 4,
+  "knoten_plan": 2,
   "dkw_plan": 0,
   "knoten_osm": 2,
   "versatz_y": 0.0,
-  "netz_auf_plan": 1.0
+  "netz_auf_plan": 0.75
  },
  "mob__planchamp": {
   "dkw_osm_unvollstaendig": [],
@@ -816,16 +819,15 @@
   "netz_auf_plan": 1.0
  },
  "mob__zweisimmen": {
-  "VA1": 1,
-  "VB2": 3,
-  "VD1": 3,
+  "VB2": 2,
+  "VD1": 2,
   "dkw_osm_unvollstaendig": [],
-  "gleise": 51,
-  "knoten_plan": 21,
+  "gleise": 31,
+  "knoten_plan": 13,
   "dkw_plan": 0,
-  "knoten_osm": 22,
+  "knoten_osm": 14,
   "versatz_y": 0.0,
-  "netz_auf_plan": 0.98
+  "netz_auf_plan": 0.96
  },
  "motiers": {
   "VD1": 1,
@@ -1099,7 +1101,7 @@
   "dkw_plan": 0,
   "knoten_osm": 2,
   "versatz_y": 0.0,
-  "netz_auf_plan": 1.0
+  "netz_auf_plan": 0.87
  },
  "szu__uetliberg": {
   "VB2": 1,
@@ -1130,17 +1132,17 @@
   "netz_auf_plan": 1.0
  },
  "szu__zurich_giesshubel": {
-  "VB1": 3,
+  "VB1": 1,
   "VC1": 3,
-  "VB2": 8,
-  "VD1": 25,
+  "VB2": 9,
+  "VD1": 22,
   "dkw_osm_unvollstaendig": [],
   "gleise": 69,
   "knoten_plan": 30,
   "dkw_plan": 2,
-  "knoten_osm": 30,
+  "knoten_osm": 28,
   "versatz_y": 0.0,
-  "netz_auf_plan": 0.96
+  "netz_auf_plan": 0.97
  },
  "szu__zurich_saalsporthalle": {
   "VB2": 1,

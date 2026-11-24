@@ -1,29 +1,188 @@
 {
  "zaehl": {
   "HT1": 0,
-  "HT2": 0,
+  "HT2": 2,
   "HT3": 0,
   "HT4": 0,
-  "HT5": 1
+  "HT5": 16
  },
  "befunde": [
   {
+   "regel": "HT2",
+   "x": 287.3,
+   "y": 219.2,
+   "text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    275096214,
+    963886196,
+    963886203
+   ]
+  },
+  {
+   "regel": "HT2",
+   "x": 287.3,
+   "y": 232.4,
+   "text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    275096214,
+    963886197,
+    963886203
+   ]
+  },
+  {
    "regel": "HT5",
-   "x": 597.5,
-   "y": 260.6,
+   "x": 295.8,
+   "y": 183.2,
+   "text": "Fahrweg Gleisende 6818327349 ↔ Gleisende 8915842698 im Plan, nicht in OSM",
+   "von": "Gleisende 6818327349",
+   "nach": "Gleisende 8915842698",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 295.8,
+   "y": 213.8,
+   "text": "Fahrweg Gleisende 6818327349 ↔ Gleisende 8915842701 im Plan, nicht in OSM",
+   "von": "Gleisende 6818327349",
+   "nach": "Gleisende 8915842701",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 295.8,
+   "y": 225.8,
+   "text": "Fahrweg Gleisende 6818327349 ↔ Gleisende 8915842702 im Plan, nicht in OSM",
+   "von": "Gleisende 6818327349",
+   "nach": "Gleisende 8915842702",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 295.8,
+   "y": 237.8,
+   "text": "Fahrweg Gleisende 6818327349 ↔ Gleisende 8915842703 im Plan, nicht in OSM",
+   "von": "Gleisende 6818327349",
+   "nach": "Gleisende 8915842703",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 295.8,
+   "y": 249.8,
    "text": "Fahrweg Gleisende 6818327349 ↔ Gleisende 8915842704 im Plan, nicht in OSM",
    "von": "Gleisende 6818327349",
    "nach": "Gleisende 8915842704",
    "art": "zusaetzlich"
   },
   {
+   "regel": "HT5",
+   "x": 290.3,
+   "y": 225.8,
+   "text": "Fahrweg Gleisende 8915842698 ↔ Gleisende 8915842701 im Plan, nicht in OSM",
+   "von": "Gleisende 8915842698",
+   "nach": "Gleisende 8915842701",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 290.3,
+   "y": 237.8,
+   "text": "Fahrweg Gleisende 8915842698 ↔ Gleisende 8915842702 im Plan, nicht in OSM",
+   "von": "Gleisende 8915842698",
+   "nach": "Gleisende 8915842702",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 290.3,
+   "y": 249.8,
+   "text": "Fahrweg Gleisende 8915842698 ↔ Gleisende 8915842703 im Plan, nicht in OSM",
+   "von": "Gleisende 8915842698",
+   "nach": "Gleisende 8915842703",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 290.3,
+   "y": 261.8,
+   "text": "Fahrweg Gleisende 8915842698 ↔ Gleisende 8915842704 im Plan, nicht in OSM",
+   "von": "Gleisende 8915842698",
+   "nach": "Gleisende 8915842704",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 290.3,
+   "y": 268.4,
+   "text": "Fahrweg Gleisende 8915842701 ↔ Gleisende 8915842702 im Plan, nicht in OSM",
+   "von": "Gleisende 8915842701",
+   "nach": "Gleisende 8915842702",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 290.3,
+   "y": 280.4,
+   "text": "Fahrweg Gleisende 8915842701 ↔ Gleisende 8915842703 im Plan, nicht in OSM",
+   "von": "Gleisende 8915842701",
+   "nach": "Gleisende 8915842703",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 290.3,
+   "y": 292.4,
+   "text": "Fahrweg Gleisende 8915842701 ↔ Gleisende 8915842704 im Plan, nicht in OSM",
+   "von": "Gleisende 8915842701",
+   "nach": "Gleisende 8915842704",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 290.3,
+   "y": 292.4,
+   "text": "Fahrweg Gleisende 8915842702 ↔ Gleisende 8915842703 im Plan, nicht in OSM",
+   "von": "Gleisende 8915842702",
+   "nach": "Gleisende 8915842703",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 290.3,
+   "y": 304.4,
+   "text": "Fahrweg Gleisende 8915842702 ↔ Gleisende 8915842704 im Plan, nicht in OSM",
+   "von": "Gleisende 8915842702",
+   "nach": "Gleisende 8915842704",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 290.3,
+   "y": 316.4,
+   "text": "Fahrweg Gleisende 8915842703 ↔ Gleisende 8915842704 im Plan, nicht in OSM",
+   "von": "Gleisende 8915842703",
+   "nach": "Gleisende 8915842704",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 283.5,
+   "y": 163.1,
+   "text": "Fahrweg Abgang 122 Caux (477540864) ↔ Abgang 122 Rochers-de-Naye (477540862) in OSM, fehlt im Plan",
+   "von": "Abgang 122 Caux (477540864)",
+   "nach": "Abgang 122 Rochers-de-Naye (477540862)",
+   "art": "fehlt"
+  },
+  {
    "regel": "_info",
    "x": 0,
    "y": 0,
-   "text": "Fahrwege: 8/8 Ziele im Plan gefunden, OSM 2, Plan 3",
+   "text": "Fahrwege: 8/8 Ziele im Plan gefunden, OSM 2, Plan 16",
    "ohne_lage": []
   }
  ],
  "auf_plan": 0,
- "osm_abgleich": {}
+ "osm_abgleich": {
+  "VB2": 2
+ }
 }

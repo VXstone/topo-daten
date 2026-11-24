@@ -161,10 +161,12 @@
    "x": 413.2,
    "y": 129.6,
    "text": "noch ein Gleis links raus",
-   "abgedeckt": false,
-   "regeln": [],
-   "naechster": 95.4,
-   "naechste_regel": "MZ",
+   "abgedeckt": true,
+   "regeln": [
+    "VD1"
+   ],
+   "naechster": 13.9,
+   "naechste_regel": "VD1",
    "plan_da": true
   },
   {
@@ -238,12 +240,10 @@
    "x": 340.5,
    "y": 233.8,
    "text": "DKW?",
-   "abgedeckt": true,
-   "regeln": [
-    "VA1"
-   ],
-   "naechster": 4.8,
-   "naechste_regel": "VA1",
+   "abgedeckt": false,
+   "regeln": [],
+   "naechster": 87.9,
+   "naechste_regel": "MZ",
    "plan_da": true
   },
   {
@@ -389,8 +389,8 @@
    "text": "Symbol Schiebebühne",
    "abgedeckt": false,
    "regeln": [],
-   "naechster": 87.6,
-   "naechste_regel": "MQ",
+   "naechster": 412.5,
+   "naechste_regel": "VB2",
    "plan_da": true
   },
   {
@@ -444,8 +444,8 @@
    "text": "Zwischengerade?",
    "abgedeckt": false,
    "regeln": [],
-   "naechster": 49.6,
-   "naechste_regel": "VA1",
+   "naechster": 65.2,
+   "naechste_regel": "MZ",
    "plan_da": true
   },
   {
@@ -480,8 +480,8 @@
    "text": "Versatz?",
    "abgedeckt": false,
    "regeln": [],
-   "naechster": 86.2,
-   "naechste_regel": "MZ",
+   "naechster": 173.3,
+   "naechste_regel": "VD1",
    "plan_da": true
   },
   {
@@ -580,8 +580,8 @@
    "text": "Meterspur an 6/7 nicht angebunden",
    "abgedeckt": false,
    "regeln": [],
-   "naechster": 96.2,
-   "naechste_regel": "MZ",
+   "naechster": 143.7,
+   "naechste_regel": "VD1",
    "plan_da": true
   },
   {
@@ -676,8 +676,8 @@
    "text": "Stumpen Normalspur?",
    "abgedeckt": false,
    "regeln": [],
-   "naechster": 84.0,
-   "naechste_regel": "MZ",
+   "naechster": 122.4,
+   "naechste_regel": "VD1",
    "plan_da": true
   },
   {
@@ -704,8 +704,8 @@
    "text": "Riesenabstand Schiebebühne",
    "abgedeckt": false,
    "regeln": [],
-   "naechster": 109.8,
-   "naechste_regel": "MZ",
+   "naechster": 154.0,
+   "naechste_regel": "VB2",
    "plan_da": true
   },
   {
@@ -728,8 +728,8 @@
    "text": "kreuzt das andere oder biegt von DKW falsch ab",
    "abgedeckt": false,
    "regeln": [],
-   "naechster": 48.5,
-   "naechste_regel": "VB2",
+   "naechster": 53.2,
+   "naechste_regel": "VD1",
    "plan_da": true
   },
   {
@@ -740,8 +740,8 @@
    "text": "dieser Perron?",
    "abgedeckt": false,
    "regeln": [],
-   "naechster": 154.0,
-   "naechste_regel": "MQ",
+   "naechster": 210.2,
+   "naechste_regel": "VB2",
    "plan_da": true
   },
   {

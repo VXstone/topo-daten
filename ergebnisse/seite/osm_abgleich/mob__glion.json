@@ -1,13 +1,42 @@
 {
 "plan": "mob__glion",
-"befunde": [],
+"befunde": [
+{
+"regel": "VB2",
+"x": 287.3,
+"y": 219.2,
+"text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
+"ways": [
+275096214,
+963886196,
+963886203
+],
+"farben": [
+"braun"
+]
+},
+{
+"regel": "VB2",
+"x": 287.3,
+"y": 232.4,
+"text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
+"ways": [
+275096214,
+963886197,
+963886203
+],
+"farben": [
+"braun"
+]
+}
+],
 "info": {
 "dkw_osm_unvollstaendig": [],
-"gleise": 27,
-"knoten_plan": 8,
+"gleise": 18,
+"knoten_plan": 5,
 "dkw_plan": 0,
-"knoten_osm": 8,
+"knoten_osm": 3,
 "versatz_y": 0.0,
-"netz_auf_plan": 1.0
+"netz_auf_plan": 0.97
 }
 }

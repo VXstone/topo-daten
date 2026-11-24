@@ -372,10 +372,10 @@
  },
  "mob__glion": {
   "HT1": 0,
-  "HT2": 0,
+  "HT2": 2,
   "HT3": 0,
   "HT4": 0,
-  "HT5": 1
+  "HT5": 16
  },
  "mob__glion_college": {
   "HT1": 0,
@@ -392,18 +392,18 @@
   "HT5": 0
  },
  "mob__gstaad": {
-  "HT1": 0,
+  "HT1": 1,
   "HT2": 0,
   "HT3": 0,
   "HT4": 0,
-  "HT5": 0
+  "HT5": 2
  },
  "mob__jaman": {
-  "HT1": 0,
+  "HT1": 2,
   "HT2": 0,
   "HT3": 0,
   "HT4": 0,
-  "HT5": 0
+  "HT5": 1
  },
  "mob__jor": {
   "HT1": 1,
@@ -504,7 +504,7 @@
   "HT5": 0
  },
  "mob__paccot": {
-  "HT1": 2,
+  "HT1": 0,
   "HT2": 0,
   "HT3": 0,
   "HT4": 0,
@@ -603,10 +603,10 @@
  },
  "mob__zweisimmen": {
   "HT1": 0,
-  "HT2": 3,
+  "HT2": 2,
   "HT3": 0,
   "HT4": 0,
-  "HT5": 0
+  "HT5": 5
  },
  "motiers": {
   "HT1": 0,
@@ -805,11 +805,11 @@
   "HT5": 0
  },
  "szu__zurich_giesshubel": {
-  "HT1": 2,
-  "HT2": 7,
+  "HT1": 0,
+  "HT2": 8,
   "HT3": 0,
   "HT4": 1,
-  "HT5": 6
+  "HT5": 4
  },
  "szu__zurich_saalsporthalle": {
   "HT1": 0,
