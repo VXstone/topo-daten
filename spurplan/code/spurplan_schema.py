@@ -964,7 +964,7 @@ for sg in segs:
 # kein eigenes Gleis – sonst bekommt das Mittelstück eine eigene Ebene und drückt die beiden Streckengleise auseinander.
 # Bedingung: Kette aus ≥ 2 Stücken über Knoten ohne Abzweig, beide Enden an Weichen, ohne Personenverkehr/Gleisnummer,
 # beide Weichen an Streckengleisen mit Personenverkehr, zusammen < cfg «r34k_max_m» (150 m) lang, Seitenwechsel 1,5–6,5 m, kein langes paralleles Stück. cfg «r34_kette» (Standard an).
-if CFG.get("r34_kette", False):          # vorerst aus: G0/HT-Sperre (Selnau HT5, Giesshübel GS), Schritt K0c
+if CFG.get("r34_kette", True):           # an seit K0c (24.11.2026): Selnau HT5 erledigt durch V4e-Messung; Giesshübel GS +1 bewusst (Mittelgleis aus dem Achsknick, T-SZU2)
     _deg34 = collections.Counter(n for sg in segs for n in (sg["nodes"][0], sg["nodes"][-1]))
     _an34 = collections.defaultdict(list)
     for sg in segs: _an34[sg["nodes"][0]].append(sg); _an34[sg["nodes"][-1]].append(sg)
