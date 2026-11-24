@@ -17,7 +17,7 @@
 | tecknau | · | 1 | · | · | 2 | 3 |
 | vereina__klosters_selfranga | 1 | · | · | · | 2 | 3 |
 | vereina__sagliains | 1 | 1 | · | · | 1 | 3 |
-| zofingen | 1 ↓2 | · | · | · | **2** (Basis 0) | 3 |
+| zofingen | 1 ↓2 | · | · | · | 2 | 3 |
 | daniken | 2 | · | · | · | · | 2 |
 | mob__montbovon | 2 | · | · | · | · | 2 |
 | mob__paccot | 2 | · | · | · | · | 2 |
@@ -145,9 +145,3 @@ Regeln: HT1 = OSM-Weiche am Hauptgleis ohne Abzweig im Plan; HT2 = Abzweig am Ha
 ## Ausnahmen (REGELN 6, `spurplan/hauptgleis_ausnahmen.json`, nicht gezählt)
 
 - **courtepin** HT2 500.0/110.0: Industriegleis nördlich, rechts Richtung Courtepin abzweigend: in Betrieb (Satellitenbild, Daniel 22.11.2026); in OSM endet es 1 m neben dem Streckengleis ohne gemeinsamen Knoten
-
-## NEUE Befunde
-
-- **zofingen** HT5: 0 → 2
-  - 408.8/134.0: Fahrweg Abgang 504 Suhr (14310602217) ↔ Gl. 2 in OSM, fehlt im Plan
-  - 408.8/146.0: Fahrweg Abgang 504 Suhr (14310602217) ↔ Gl. 3 in OSM, fehlt im Plan
