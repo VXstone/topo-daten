@@ -1128,6 +1128,33 @@ if CFG.get("perron_fortsetzung", True):
         k_ = [A_] + weg + [Bn[0]]
         for x, y in zip(k_, k_[1:]): FW_PAARE.add((x["id"], y["id"]))
         if ARGS.dbg: print("PERRON-FORTSETZUNG Gl.", A_["ref"], [x["way"] for x in k_])
+# Stumpf-Fortsetzung (K0d 24.11.2026, Selnau HB-Ende, REGELN 1.8): ein Gleis, das ohne gezeichnete Weiche (Knoten mit
+# genau zwei gezeichneten Stücken – eine OSM-Weiche mit nur stillgelegtem Abzweig zählt nicht) über einen Bogen in ein
+# Stumpfgleis (Prellbock/Gleisende im Plan) weiterläuft, bleibt auf seiner Ebene: der Bogen wird Teil der Kette.
+# Beidseitig (Stumpf rechts oder links). cfg «stumpf_fortsetzung»: false schaltet ab.
+if CFG.get("stumpf_fortsetzung", True):
+    _deg2 = lambda n_: len(at[n_][0]) + len(at[n_][1]) == 2 and len(at[n_][0]) == 1
+    for _re in (True, False):
+        _aus = (lambda x: x["nodes"][-1]) if _re else (lambda x: x["nodes"][0])
+        _weiter = (lambda n_: at[n_][1]) if _re else (lambda n_: at[n_][0])
+        _cut = (lambda x: x["cut1"]) if _re else (lambda x: x["cut0"])
+        for A_ in [a for a in segs if a["flat"]]:
+            n_ = _aus(A_); weg, L_, ok = [], 0.0, False
+            while _deg2(n_):
+                d = _weiter(n_)[0]
+                if d["flat"]:
+                    ok = bool(weg) and not _weiter(_aus(d)) and not _cut(d) and len(at[_aus(d)][0]) + len(at[_aus(d)][1]) == 1
+                    if ok: weg.append(d)
+                    break
+                L_ += d["s1"] - d["s0"]
+                if L_ > CFG.get("stumpf_fortsetzung_m", 150): break
+                weg.append(d); n_ = _aus(d)
+                if not _weiter(n_) and not _cut(d) and len(at[n_][0]) + len(at[n_][1]) == 1: ok = True; break
+            if not ok: continue
+            for d in weg: d["flat"] = True
+            k_ = [A_] + weg if _re else ([A_] + weg)[::-1]
+            for x, y in zip(k_, k_[1:]): FW_PAARE.add((x["id"], y["id"]))
+            if ARGS.dbg: print("STUMPF-FORTSETZUNG", A_["way"], [x["way"] for x in weg])
 # Randzone (4.11.2026, Vernex): ein Gleiswechsel (service=crossover) zwischen zwei verschiedenen Streckengleisen ist immer
 # eine Schräge, auch wenn er in OSM kaum quer versetzt ist (die Streckengleise schwingen dort auseinander) - sonst wird er
 # eigenes Gleis auf einer Zwischenebene und die Doppelspur tritt im doppelten Abstand aus. cfg «randzone».

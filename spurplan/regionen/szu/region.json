@@ -94,6 +94,10 @@
    "cover_m": 200,
    "merge_station_m": 300,
    "merge_junction_m": 200
-  }
+  },
+  "drehung": {
+   "Uetliberg": 120
+  },
+  "_drehung": "Uetliberg 120 von Hand (K0d 24.11.2026): Lagesuche hat 90 und 120 gleich bewertet; 120 läuft ohne Ecke in Uetliberg ein (Stand v179)"
  }
 }
