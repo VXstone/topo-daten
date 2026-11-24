@@ -1,7 +1,7 @@
-# OSM-Verdacht (34) – Register 180 Bahnhöfe, 144 Pläne
+# OSM-Verdacht (35) – Register 180 Bahnhöfe, 145 Pläne
 
 - OB Betriebspunkt im Perimeter ohne Plan: 16
-- OG Gleise mit Perron SBB ≠ OSM: 12
+- OG Gleise mit Perron SBB ≠ OSM: 13
 - OK Keine OSM-Station gefunden: 2
 - OL Linie SBB nicht unter den OSM-Linien im Plan: 2
 - OR Abkürzung atlas ≠ OSM railway:ref: 1
@@ -27,6 +27,7 @@
 | OL | SO | Solothurn: Linie SBB 292 (km 0.0) nicht unter den OSM-Linien im Plan (410, 415, 421) |
 | OL | TWN | Twann: Linie SBB 9210 (km 95.9766) nicht unter den OSM-Linien im Plan (210) |
 | OG | ZBZ | Zürich Binz: Gleis mit Perron laut SBB 2 ohne Perron-ref in OSM (SBB 1/2 · OSM 1) |
+| OG | ZGH | Zürich Giesshübel: Gleis mit Perron laut SBB 2 ohne Perron-ref in OSM (SBB 1/2 · OSM 1) |
 | OB | BODE | Region mob: Betriebspunkt Boden (BODE) im Perimeter ohne Plan |
 | OB | CHAU | Region mob: Betriebspunkt La Chaudanne-Les Moulins (CHAU) im Perimeter ohne Plan |
 | OB | COMS | Region mob: Betriebspunkt Les Combes (COMS) im Perimeter ohne Plan |

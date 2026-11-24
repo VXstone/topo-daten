@@ -1,8 +1,8 @@
-147 Pläne, 45 geändert: 1 Fehler? Topologie, 7 vermutlich besser, 8 schlechter?, 29 gleichwertig
+148 Pläne, 46 geändert: 8 vermutlich besser, 8 schlechter?, 29 gleichwertig, 1 Fehler? Topologie
 
 | Plan | Gruppe | Basis | Stellen | Einordnung | Kennzahlen alt→neu | G0 | HT | letzte Änderung |
 |---|---|---|---|---|---|---|---|---|
-| region_szu | Region | veröffentlicht | 13 | Fehler? Topologie | G2 1→2, GS 14→15 | GS 15 · GG 26 · GQ 4 · GT 1 | – | 2026-11-24T14:20 |
+| szu__zurich_giesshubel | SZU · Bahnhöfe | veröffentlicht | 8 | Fehler? Topologie | G2 1→3, G3 4→0, GG 30→15, GS 12→11, VB1 2→3, VC1 4→3, VD1 34→25, W53 2→4 (Wunsch-Summe +12) | GS 11 · GG 15 · GQ 5 | **HT1 2 (Basis 1)** · HT2 7 · HT4 1 · HT5 2 | 2026-11-24T13:43 |
 | onnens_bonvillars | NE 6 · Neuchâtel – Yverdon | Archivbeginn (Abnahme 2026-10-26) | 9 | schlechter? | G2 1→2, W56 5→1, W59 6→1 (Wunsch-Summe -12) · OSM VA1 1, VA2 1, VB1 1, VD1 1 (kein Alt-Stand) | GG 1 · GT 1 | 0 | 2026-11-23T22:28 |
 | grandson | NE 6 · Neuchâtel – Yverdon | Archivbeginn (Abnahme 2026-10-20) | 6 | schlechter? | G2 0→1 · OSM ok (kein Alt-Stand) | 0 | 0 | 2026-11-21T15:24 |
 | chambrelien | NE 8 · Neuchâtel – La Chaux-de-Fonds | Archivbeginn (Abnahme 2026-10-20) | 5 | schlechter? | G2 1→0, T7 0→1 (Wunsch-Summe +8) · OSM VA1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-22T15:43 |
@@ -47,6 +47,7 @@
 | travers | NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier | Archivbeginn (Abnahme 2026-10-15) | 9 | vermutlich besser | W59 1→0 · OSM ok (kein Alt-Stand) | 0 | 0 | 2026-11-24T07:36 |
 | colombier | NE 6 · Neuchâtel – Yverdon | Archivbeginn (Abnahme 2026-10-16) | 7 | vermutlich besser | W56 6→5, W59 1→0 (Wunsch-Summe -3) · OSM ok (kein Alt-Stand) | 0 | 0 | 2026-11-23T21:35 |
 | neuchatel | NE 1 · Neuchâtel – Ins – Kerzers – Bern | bestätigt 2026-11-08 | 2 | vermutlich besser | GG 3→1, VA1 5→0, VC1 2→0, VD1 3→1 | GG 1 · GT 1 | 0 | 2026-11-22T20:14 |
+| region_szu | Region | veröffentlicht | 13 | vermutlich besser | G2 1→2, GG 26→13, W53 6→9 (Wunsch-Summe +18) | GS 14 · GG 13 · GQ 4 · GT 1 | – | 2026-11-24T14:20 |
 
 Grundprüfung G0 aller Pläne: `ergebnisse/seite/grundpruefung/grundpruefung.md`
 Hauptgleis-Topologie HT aller Pläne mit Netzmodell: `ergebnisse/seite/hauptgleis/hauptgleis.md`

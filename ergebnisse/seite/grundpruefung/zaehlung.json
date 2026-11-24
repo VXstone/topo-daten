@@ -963,10 +963,10 @@
   "ebene": 10.08
  },
  "region_szu": {
-  "GG": 26,
+  "GG": 13,
   "GP": 0,
   "GQ": 4,
-  "GS": 15,
+  "GS": 14,
   "GT": 1,
   "GW": 0,
   "ebene": 10.08
@@ -1125,10 +1125,19 @@
   "ebene": 24.0
  },
  "szu__zurich_giesshubel": {
-  "GG": 30,
+  "GG": 15,
   "GP": 0,
   "GQ": 5,
-  "GS": 12,
+  "GS": 11,
+  "GT": 0,
+  "GW": 0,
+  "ebene": 24.0
+ },
+ "szu__zurich_saalsporthalle": {
+  "GG": 0,
+  "GP": 0,
+  "GQ": 0,
+  "GS": 0,
   "GT": 0,
   "GW": 0,
   "ebene": 24.0

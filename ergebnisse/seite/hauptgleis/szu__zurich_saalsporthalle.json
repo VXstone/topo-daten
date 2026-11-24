@@ -1,0 +1,33 @@
+{
+ "zaehl": {
+  "HT1": 0,
+  "HT2": 1,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
+ },
+ "befunde": [
+  {
+   "regel": "HT2",
+   "x": 641.1,
+   "y": 134.0,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    110680664,
+    110680666,
+    304513220,
+    318380983
+   ]
+  },
+  {
+   "regel": "_info",
+   "x": 0,
+   "y": 0,
+   "text": "Fahrwege: 6/6 Ziele im Plan gefunden, OSM 11, Plan 11",
+   "ohne_lage": []
+  }
+ ],
+ "osm_abgleich": {
+  "VB2": 1
+ }
+}

@@ -1,6 +1,6 @@
 {
  "ZG": 9,
- "ZL": 5,
+ "ZL": 8,
  "HK": 6,
  "plaene": {
   "aarau": {
@@ -1039,9 +1039,62 @@
   },
   "szu__zurich_giesshubel": {
    "ZG": 0,
-   "ZL": 0,
+   "ZL": 1,
    "HK": 0,
-   "befunde": []
+   "befunde": [
+    {
+     "art": "ZL",
+     "x": 283.4,
+     "y": 208.4,
+     "laenge": 166.7,
+     "farbe": "#00862f",
+     "von": [
+      200.1,
+      208.4
+     ],
+     "bis": [
+      366.8,
+      208.4
+     ]
+    }
+   ]
+  },
+  "szu__zurich_saalsporthalle": {
+   "ZG": 0,
+   "ZL": 2,
+   "HK": 0,
+   "befunde": [
+    {
+     "art": "ZL",
+     "x": 491.8,
+     "y": 134.0,
+     "laenge": 101.9,
+     "farbe": "#111",
+     "von": [
+      440.9,
+      134.0
+     ],
+     "bis": [
+      542.8,
+      134.0
+     ]
+    },
+    {
+     "art": "ZL",
+     "x": 348.6,
+     "y": 134.0,
+     "laenge": 101.9,
+     "farbe": "#111",
+     "von": [
+      297.6,
+      134.0
+     ],
+     "bis": [
+      399.5,
+      134.0
+     ]
+    }
+   ]
   },
   "szu__zurich_schweighof": {
    "ZG": 0,

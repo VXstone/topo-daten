@@ -113,7 +113,8 @@ szu__ringlikon                         HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 szu__uetliberg                         HT1 0 HT2 1 HT3 0 HT4 0 HT5 0
 szu__zurich_binz                       HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 szu__zurich_friesenberg                HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
-szu__zurich_giesshubel                 HT1 1 HT2 8 HT3 0 HT4 1 HT5 5
+szu__zurich_giesshubel                 HT1 2 HT2 7 HT3 0 HT4 1 HT5 2
+szu__zurich_saalsporthalle             HT1 0 HT2 1 HT3 0 HT4 0 HT5 0
 szu__zurich_schweighof                 HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 szu__zurich_selnau                     HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 tecknau                                HT1 0 HT2 1 HT3 0 HT4 0 HT5 2
@@ -133,4 +134,6 @@ vereina__vereina_sud                   HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 wangen_bei_olten                       HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 zihlbruecke                            HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 zofingen                               HT1 1 HT2 0 HT3 0 HT4 0 HT5 2
-Hauptgleis HT: {'HT1': 32, 'HT2': 51, 'HT3': 7, 'HT4': 5, 'HT5': 214} – 135 Pläne, 23 mit HT > 0
+Hauptgleis HT: {'HT1': 33, 'HT2': 51, 'HT3': 7, 'HT4': 5, 'HT5': 211} – 136 Pläne, 24 mit HT > 0
+NEU szu__zurich_giesshubel HT1: 1 -> 2
+NEU szu__zurich_saalsporthalle HT2: 0 -> 1

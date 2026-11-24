@@ -805,11 +805,18 @@
   "HT5": 0
  },
  "szu__zurich_giesshubel": {
-  "HT1": 1,
-  "HT2": 8,
+  "HT1": 2,
+  "HT2": 7,
   "HT3": 0,
   "HT4": 1,
-  "HT5": 5
+  "HT5": 2
+ },
+ "szu__zurich_saalsporthalle": {
+  "HT1": 0,
+  "HT2": 1,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0
  },
  "szu__zurich_schweighof": {
   "HT1": 0,

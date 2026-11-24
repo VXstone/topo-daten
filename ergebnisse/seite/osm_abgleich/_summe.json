@@ -1130,17 +1130,27 @@
   "netz_auf_plan": 1.0
  },
  "szu__zurich_giesshubel": {
-  "VB1": 2,
-  "VC1": 4,
+  "VB1": 3,
+  "VC1": 3,
   "VB2": 8,
-  "VD1": 34,
+  "VD1": 25,
   "dkw_osm_unvollstaendig": [],
-  "gleise": 71,
-  "knoten_plan": 37,
+  "gleise": 69,
+  "knoten_plan": 30,
   "dkw_plan": 2,
-  "knoten_osm": 36,
+  "knoten_osm": 30,
   "versatz_y": 0.0,
-  "netz_auf_plan": 0.98
+  "netz_auf_plan": 0.96
+ },
+ "szu__zurich_saalsporthalle": {
+  "VB2": 1,
+  "dkw_osm_unvollstaendig": [],
+  "gleise": 36,
+  "knoten_plan": 7,
+  "dkw_plan": 0,
+  "knoten_osm": 6,
+  "versatz_y": 0.0,
+  "netz_auf_plan": 1.0
  },
  "szu__zurich_schweighof": {
   "dkw_osm_unvollstaendig": [],

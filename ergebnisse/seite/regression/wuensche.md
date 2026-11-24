@@ -7,10 +7,11 @@ Wünsche je Plan (REGELN 5: W53 S-Kurven ×6, W55 Bahnhofsabstand ×3, W56 Leerl
 | aarau | Olten 3 · Olten – Aarau | 0 |  | 20 | 60 |
 | region_mob | Region | 6 | 7 |  | 57 |
 | region_vereina | Region | 5 | 9 |  | 57 |
+| region_szu | Region | 9 |  |  | 54 |
 | region_ne | Region | 6 | 5 |  | 51 |
 | basel | Grosse Knoten | 7 |  | 2 | 48 |
-| region_szu | Region | 6 |  |  | 36 |
 | olten | Olten 1 · Knoten Olten | 3 |  | 3 | 27 |
+| szu__zurich_giesshubel | SZU · Bahnhöfe | 4 |  | 1 | 27 |
 | schonenwerd | Olten 3 · Olten – Aarau | 0 |  | 7 | 21 |
 | bole | NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier | 0 |  | 7 | 21 |
 | solothurn | Bahnhöfe ohne Regionalplan | 2 |  | 1 | 15 |
@@ -18,7 +19,6 @@ Wünsche je Plan (REGELN 5: W53 S-Kurven ×6, W55 Bahnhofsabstand ×3, W56 Leerl
 | murten | NE 3 · Lyss – Kerzers – Murten – Payerne | 1 |  | 3 | 15 |
 | auvernier | NE 6 · Neuchâtel – Yverdon | 1 |  | 3 | 15 |
 | colombier | NE 6 · Neuchâtel – Yverdon | 0 |  | 5 | 15 |
-| szu__zurich_giesshubel | SZU · Bahnhöfe | 2 |  | 1 | 15 |
 | szu__zurich_selnau | SZU · Bahnhöfe | 0 |  | 5 | 15 |
 | szu__borrweg | SZU · Bahnhöfe | 1 |  | 2 | 12 |
 | laufelfingen | Olten 4 · Hauenstein | 0 |  | 3 | 9 |
@@ -145,4 +145,5 @@ Wünsche je Plan (REGELN 5: W53 S-Kurven ×6, W55 Bahnhofsabstand ×3, W56 Leerl
 | szu__uetliberg | SZU · Bahnhöfe | 0 |  | 0 | 0 |
 | szu__zurich_binz | SZU · Bahnhöfe | 0 |  | 0 | 0 |
 | szu__zurich_friesenberg | SZU · Bahnhöfe | 0 |  | 0 | 0 |
+| szu__zurich_saalsporthalle | SZU · Bahnhöfe | 0 |  | 0 | 0 |
 | szu__zurich_schweighof | SZU · Bahnhöfe | 0 |  | 0 | 0 |

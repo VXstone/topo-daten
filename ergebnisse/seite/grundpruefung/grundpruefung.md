@@ -1,6 +1,6 @@
 # Grundprüfung G0 (REGELN «Grundprüfung als Sperre») – nur gezeichnete Geometrie
 
-146 Pläne; Basis: spurplan/grundpruefung_basis.json [plaene]. Neue Befunde (Zunahme gegen Basis) machen den Workflow rot.
+147 Pläne; Basis: spurplan/grundpruefung_basis.json [plaene]. Neue Befunde (Zunahme gegen Basis) machen den Workflow rot.
 
 | Plan | GS | GG | GQ | GP | GW | GT | Ebene |
 |---|---|---|---|---|---|---|---|
@@ -111,7 +111,7 @@
 | region | 8 | 22 ↓23 | 2 | 3 | 3 ↓4 | 6 ↓10 | 10.08 |
 | region_mob | 3 | 3 | 1 | 3 | · | 0 ↓1 | 10.08 |
 | region_ne | 1 | 2 | 1 | · | · | 0 ↓4 | 10.08 |
-| region_szu | 15 ↓18 | 26 ↓27 | 4 | · | · | 1 | 10.08 |
+| region_szu | 14 ↓18 | 13 ↓27 | 4 | · | · | 1 | 10.08 |
 | region_vereina | 1 | 5 | 2 | · | · | 2 | 10.08 |
 | riedbach | · | · | · | · | · | · | 24.0 |
 | rosshausern | · | · | · | · | · | · | 24.0 |
@@ -129,7 +129,8 @@
 | szu__uetliberg | · | · | · | · | · | · | 24.0 |
 | szu__zurich_binz | · | · | · | · | · | · | 24.0 |
 | szu__zurich_friesenberg | · | · | · | · | · | · | 24.0 |
-| szu__zurich_giesshubel | 12 | 30 ↓32 | 5 | · | · | · | 24.0 |
+| szu__zurich_giesshubel | 11 ↓12 | 15 ↓32 | 5 | · | · | · | 24.0 |
+| szu__zurich_saalsporthalle | · | · | · | · | · | · | 24.0 |
 | szu__zurich_schweighof | · | · | · | · | · | · | 24.0 |
 | szu__zurich_selnau | · | · | · | · | · | · | 24.0 |
 | tecknau | · | · | · | · | · | · | 24.0 |

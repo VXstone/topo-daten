@@ -37,6 +37,12 @@
   "W55": 9
  },
  {
+  "key": "region_szu",
+  "gruppe": "Region",
+  "summe": 54,
+  "W53": 9
+ },
+ {
   "key": "region_ne",
   "gruppe": "Region",
   "summe": 51,
@@ -52,17 +58,19 @@
   "W59": 3
  },
  {
-  "key": "region_szu",
-  "gruppe": "Region",
-  "summe": 36,
-  "W53": 6
- },
- {
   "key": "olten",
   "gruppe": "Olten 1 · Knoten Olten",
   "summe": 27,
   "W53": 3,
   "W56": 3,
+  "W59": 0
+ },
+ {
+  "key": "szu__zurich_giesshubel",
+  "gruppe": "SZU · Bahnhöfe",
+  "summe": 27,
+  "W53": 4,
+  "W56": 1,
   "W59": 0
  },
  {
@@ -119,14 +127,6 @@
   "summe": 15,
   "W53": 0,
   "W56": 5,
-  "W59": 0
- },
- {
-  "key": "szu__zurich_giesshubel",
-  "gruppe": "SZU · Bahnhöfe",
-  "summe": 15,
-  "W53": 2,
-  "W56": 1,
   "W59": 0
  },
  {
@@ -1131,6 +1131,14 @@
  },
  {
   "key": "szu__zurich_friesenberg",
+  "gruppe": "SZU · Bahnhöfe",
+  "summe": 0,
+  "W53": 0,
+  "W56": 0,
+  "W59": 0
+ },
+ {
+  "key": "szu__zurich_saalsporthalle",
   "gruppe": "SZU · Bahnhöfe",
   "summe": 0,
   "W53": 0,
