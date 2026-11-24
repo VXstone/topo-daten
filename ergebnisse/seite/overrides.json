@@ -6735,6 +6735,15 @@
   "datei": "werkstatt/olten/olten_hammer_override.json",
   "weg": "Werkstatt Olten",
   "ort": "olten_hammer",
+  "schluessel": "_v4g",
+  "art": "Geometrie",
+  "grund": "Hinweise D. Eckenstein 13.10.2026: Ausschnitt endet vor der Südeinfahrt Olten; Mittelperron zwischen den Hauptgleisen 2 (Nord) und 3 (Süd). Perronlage geschätzt um den Stationspunkt (s 4420-4570), in OSM fehlt der Perron.",
+  "umfang": 1
+ },
+ {
+  "datei": "werkstatt/olten/olten_hammer_override.json",
+  "weg": "Werkstatt Olten",
+  "ort": "olten_hammer",
   "schluessel": "cfg.axis_snap",
   "art": "Schalter",
   "grund": "Hinweise D. Eckenstein 13.10.2026: Ausschnitt endet vor der Südeinfahrt Olten; Mittelperron zwischen den Hauptgleisen 2 (Nord) und 3 (Süd). Perronlage geschätzt um den Stationspunkt (s 4420-4570), in OSM fehlt der Perron.",
@@ -6754,6 +6763,15 @@
   "weg": "Werkstatt Olten",
   "ort": "olten_hammer",
   "schluessel": "cfg.rules",
+  "art": "Schalter",
+  "grund": "Hinweise D. Eckenstein 13.10.2026: Ausschnitt endet vor der Südeinfahrt Olten; Mittelperron zwischen den Hauptgleisen 2 (Nord) und 3 (Süd). Perronlage geschätzt um den Stationspunkt (s 4420-4570), in OSM fehlt der Perron.",
+  "umfang": 1
+ },
+ {
+  "datei": "werkstatt/olten/olten_hammer_override.json",
+  "weg": "Werkstatt Olten",
+  "ort": "olten_hammer",
+  "schluessel": "cfg.leer_max",
   "art": "Schalter",
   "grund": "Hinweise D. Eckenstein 13.10.2026: Ausschnitt endet vor der Südeinfahrt Olten; Mittelperron zwischen den Hauptgleisen 2 (Nord) und 3 (Süd). Perronlage geschätzt um den Stationspunkt (s 4420-4570), in OSM fehlt der Perron.",
   "umfang": 1
