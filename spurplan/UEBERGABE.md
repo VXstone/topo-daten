@@ -120,7 +120,7 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - [x] **K0d Selnau HB-Ende (REGELN 1.8/1.23)** – 24.11. vormittags, Commits ca69e84/559d9e7, Seite v180 (Nachtrag K0d)
 - [x] **K0e Gleisnummern 21/22 am Mittelperron HB SZU** – 24.11. Mittag, Commit 9a91081, Seite v181 (Nachtrag K0e). War (klein, aus K0d): ein Gleis bekommt heute nur eine Nummer je Kette (`labels` in spurplan_schema: Gl. 1 + 21 sind eine Kette) – zweite Nummer, wo ein weiterer Perron an derselben Kette liegt; Dulliken-Regel (Nummer im Perronbereich) muss bleiben
 - [ ] **V5 ein Lauf für alle Regionen** / **V6 Netz West (Neuchâtel–Biel–Solothurn–Olten)** – danach – Zweisimmen (dünn→dick am Knick), Solothurn (Weiche am Knick, doppelter Abstand), Selnau (ZL ~4 Ebenen, nur auf Daniels Antwort); Liste `ergebnisse/seite/zwischengeraden.md` – vor oder nach T-SZU1, wie Daniel will
-- [ ] **T-SZU1 DKW aus 4-Arm-Weiche (REGELN 2.4) und Güterverkehr schwarz (REGELN 1.21)** (klein, Entscheid Daniel 18.11.) – nach K0
+- [x] **T-SZU1 DKW aus 4-Arm-Weiche (REGELN 2.4) und Güterverkehr schwarz (REGELN 1.21)** – 24.11. nachmittags, Commits 388c34f/0f13b55/5dbded2, Seite v182 (Nachtrag T-SZU1)
 - [ ] **T-SZU2 Achse knickt im Fenster (REGELN 2.15), Zielplan Giesshübel · Saalsporthalle** (Entscheid Daniel 18.11.: Variante C) – nach S2b/R4/S3 oder wenn Daniel es vorzieht
 - [ ] **S2b Konolfingen Gleisfeld West** (Zielbild Daniel 18.11.), **R4 Rothrist im Regionalplan** und **S3 Aarau
   Zwischengeraden mit Weiche** – nach T-SZU, je eigener Chat, alle gegen die G0-Sperre geprüft
@@ -983,3 +983,17 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - Regression: geändert nur szu__zurich_selnau und region_szu (je 1 Stelle, gleichwertig); übrige Zeilen der Tabelle = bekannte NE-Archivstände. G0/HT grün,
   Prüfstand grün. Kein Prüfstand-Baustein (Kette mit zwei Nummern + Hand-Perron ist synthetisch aufwendig, Fall nur SZU). Hinweis zi70 beantwortet.
 - Im Regionalplan stehen die Nummern waagrecht an der steilen Strecke, eng wie Gl. 1/2 in Selnau (bestehender Stil, nicht geändert).
+
+### 24.11.2026 ~15:15 – Schritt T-SZU1 abgeschlossen, Seite v182 (Commits 388c34f, 0f13b55, 5dbded2; ergebnisse 4944ae8)
+- Sichtbar: Giesshübel (Bahnhof- und Regionalplan SZU) – 717 schwarz, Pfeil «Linie 717 / Zürich Wiedikon» (vorher grün «Zürich HB»); Depot mit
+  zwei DKW-Symbolen (1263316996, 1263338286). Solothurn: 415 nach Lyss schwarz. Zofingen/Aarau/Region Olten/NE: DKW-Symbole an OSM-X-Weichen.
+- REGELN 1.21 `gueter_schwarz`: **nur Farbe** (Teilpfade auf Güterverkehrsgleisen am Schluss schwarz, Abgang mit Pfeil + schwarzer Beschriftung).
+  Erste Fassung mit `pax=False` verwarf Solothurn 415 als Streckenabgang (Stumpen, Pfeil nach innen, G0 GP) – verworfen.
+- REGELN 2.4 `dkw_4arme`: X-Knoten erkennen in spurplan_schema und osm_abgleich (gleiche Funktion). Ways zu Linien zusammensetzen
+  (`dkw_4arme_linien`) verschob Aarau (Pfeile nach innen) – aus. `_dkw_fallback`: liegt eine Seite auf der Knotenebene, Symbol zur Gegenseite.
+- Regionalplan SZU: mit dem Abgang nach Wiedikon drehte die Lagesuche Giesshübel um 30° (Binz über dem Titel) → `lage.drehung` Giesshübel 0 bis T-SZU2.
+- Regression: geändert nur aarau, region, region_ne (je DKW-Symbol), solothurn (415 schwarz; «Fehler? Topologie» = VA1 1→2, eine OSM-X-Weiche
+  ohne DKW im Plan – angenommen, nicht geprüft), zofingen (VA2 2→0; HT5 0→2 Messung am DKW-Symbol, Basis gesetzt), Giesshübel, region_szu.
+  G0/HT grün. OSM-Abgleich Giesshübel VD1 36→34, VB2 9→8. Kein Prüfstand-Baustein (Bausteine sind Meterspur ohne DKW-Messung) – offen.
+- Hinweise Giesshübel (8c9x, 8pv2, gd0v, h0ci, yrc8) gehören zu T-SZU2, nicht beantwortet. Abnahmen nicht neu exportiert.
+
