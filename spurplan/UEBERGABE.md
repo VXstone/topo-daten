@@ -117,12 +117,8 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   Regionalplan Olten rückt das Ostende 50 px vom Knoten Olten weg (Plan um die Mitte platziert); `_nebengleise` (netz_lage) verteilt das
   Nebengleis südlich Olten anteilig auf die längere Lücke → Schlaufe über Gl. 3 (G0 GS 8→9, Stelle −8/472). Zielplan: Olten Hammer kürzer, Nebengleis wie heute
 - [x] **K0c Selnau parallel (REGELN 2.2, `r34_kette`)** – 24.11. früh, Commit ca9a7b6, Seite v179 (Nachtrag K0c)
-- [ ] **K0d Selnau HB-Ende: Strecke ist Fixpunkt (REGELN 1.8)** (klein, Wunsch Daniel 24.11. vor T-SZU1): OSM hat 22 → 13 und 21 → 11 je
-  geradeaus (Prellbock), keine Verbindung dazwischen (12 nur über stillgelegtes Gleis 111425521/302554652). Plan führt 22 und 21 auf einen
-  gemeinsamen Punkt, 13 zweigt hoch ab (= HT2 2 Selnau in der Basis), Gl. 21 steigt dafür ab (T7). Vermutung (nicht geprüft): Weiche
-  11821888687 zählt wegen des stillgelegten Abzweigs als Weiche, darum darf 21b/11a die Ebene wechseln. Code: eine Weiche zählt nur, wenn
-  ihr Abzweig gezeichnet wird → Neben-/Abstellgleis, das eine Strecke ohne gezeichnete Weiche fortsetzt, behält deren Ebene (alle Pläne).
-  Zielplan: Selnau 22→13 und 21→11 gerade, ohne Abstieg; HT2 Selnau 2→0. Danach Regression aller Pläne (Kopfenden, stillgelegte Abzweige).
+- [x] **K0d Selnau HB-Ende (REGELN 1.8/1.23)** – 24.11. vormittags, Commits ca69e84/559d9e7, Seite v180 (Nachtrag K0d)
+- [ ] **K0e Gleisnummern 21/22 am Mittelperron HB SZU** (klein, aus K0d): ein Gleis bekommt heute nur eine Nummer je Kette (`labels` in spurplan_schema: Gl. 1 + 21 sind eine Kette) – zweite Nummer, wo ein weiterer Perron an derselben Kette liegt; Dulliken-Regel (Nummer im Perronbereich) muss bleiben
 - [ ] **V5 ein Lauf für alle Regionen** / **V6 Netz West (Neuchâtel–Biel–Solothurn–Olten)** – danach – Zweisimmen (dünn→dick am Knick), Solothurn (Weiche am Knick, doppelter Abstand), Selnau (ZL ~4 Ebenen, nur auf Daniels Antwort); Liste `ergebnisse/seite/zwischengeraden.md` – vor oder nach T-SZU1, wie Daniel will
 - [ ] **T-SZU1 DKW aus 4-Arm-Weiche (REGELN 2.4) und Güterverkehr schwarz (REGELN 1.21)** (klein, Entscheid Daniel 18.11.) – nach K0
 - [ ] **T-SZU2 Achse knickt im Fenster (REGELN 2.15), Zielplan Giesshübel · Saalsporthalle** (Entscheid Daniel 18.11.: Variante C) – nach S2b/R4/S3 oder wenn Daniel es vorzieht
@@ -969,3 +965,13 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - Regression: geändert nur region_szu (vermutlich besser), szu__zurich_selnau, szu__zurich_giesshubel; MOB/Vereina/Olten/NE unverändert. G0/HT grün.
   Erster seite-Lauf rot (sah alte Regionspläne vor `regionen`), zweiter grün. Abnahmen unverändert (keine neuen seit 22.11.).
 
+### 24.11.2026 ~09:15 – Schritt K0d abgeschlossen, Seite v180 (Commits ca69e84, 559d9e7; ergebnisse 9a0b156)
+- Sichtbar (Selnau Bahnhofplan + Regionalplan SZU): Gl. 22 läuft gerade in 13, Gl. 21 gerade in 11 – kein gemeinsamer Punkt, kein Abstieg mehr.
+  Ursache: OSM-Weichen 11821888686/687 haben nur stillgelegte Abzweige; der Bogen war an ihnen geteilt und wurde Schräge. Neu cfg
+  `stumpf_fortsetzung` (REGELN 1.8): Bogen ohne gezeichnete Weiche bis zum Stumpfgleis wird Teil der Kette. HT2 Selnau 2 → 0.
+- Daniel 08:34: Tramhaltekanten («Bahnhof Selnau» VBZ, «Bahnhofplatz/HB» tram=yes) über dem Tunnel weg – cfg `perron_ebene` (REGELN 1.23,
+  layer-Unterschied ≥ 2); Mittelperron HB SZU 21/22 fehlt in OSM → Override `platforms_plus` (Ortswissen). Gleisnummern 21/22 fehlen noch → K0e.
+- Nebenwirkung: Lagesuche SZU wählte bei Gleichstand Uetliberg 90° statt 120° (Ecke) → `lage.drehung` Uetliberg 120 in regionen/szu/region.json.
+- Regression: geändert nur szu__zurich_selnau (vermutlich besser, G2 3→0, T7 2→0), region_szu (vermutlich besser), travers (zwei Abstellgleise
+  enger, REGELN 1.5; HT/G0 0) und region_ne (nur Block). G0/HT grün, Prüfstand grün. Synthetischer Baustein zeigte den Fehler nicht → nicht aufgenommen.
+- Giesshübel: lokal andere Abgangsbeschriftung auch mit altem Code (Umgebung) – im Workflow unverändert. Hinweise e7qo, je0e, zi70, 0qpy beantwortet.

@@ -1,7 +1,7 @@
 {
  "_zweck": "Zuletzt veröffentlichte Fassung der Feedback-Seite (Commit auf Branch ergebnisse); Basis der Regression für nicht abgenommene Pläne. Claude führt es beim Veröffentlichen nach.",
- "ergebnisse": "58383b3",
- "version": 179,
+ "ergebnisse": "9a0b156",
+ "version": 180,
  "notiz_159": "21.11.2026: v158 + prio-Hinweise rot (Vorlage seite.html), keine Planänderung; ergebnisse-Basis bleibt bb5df3c",
  "notiz_160": "21.11.2026: V4b – NE-Karten aus Code, Vauseyon ohne Treppe (REGELN 4.5 schraeg_port); ergebnisse 476a7bc (Commit 16ca65c)",
  "notiz_161": "21.11.2026: V4c – Netzmodell der Typvorlagen auf dem Plan (HT NE 159→51 in den Typvorlagen), St-Blaise CFF und Serrières Spurwechsel wie OSM, Frage F6 Gampelen; ergebnisse dab114d (Commit c0aa2bb)",
@@ -22,5 +22,6 @@
  "notiz_176": "23.11.2026 spät: V4d Teil 4 – leer_max nur zwischen Segmentgrenzen (spurplan_warp, req «ereignisse»), Rothrist 150 und Tecknau 90 kürzer, Onnens 120 (1446→1430); Olten Hammer zurückgestellt (G0 GS im Regionalplan Olten); ergebnisse 0f5ca7f (Commit 0f155f3)",
  "notiz_177": "24.11.2026 früh: V4g – Olten Hammer kürzer (leer_max 150, REGELN 5.9), im Regionalplan Mitte −310 → −260 (Ende Seite Olten und Nebengleise unverändert); ergebnisse 52597a4 (Commit f4b39ed). Geändert nur olten_hammer und region (1 Stelle), G0 unverändert",
  "notiz_178": "24.11.2026 morgens: Phantom-Stumpen südlich Olten weg (OSM-Hauptgleisstücke als siding/yard, REGELN 4.7 Ausnahme, Daniel Ortskenntnis); ergebnisse e311a77 (Commit c08d0f6). Geändert nur region (vermutlich besser, GG 23→22, GW 4→3)",
- "notiz_179": "24.11.2026: K0c – REGELN 2.2 r34_kette an: Selnau Gl. 1/2 parallel, Gleiswechsel je eine Schräge (j9ou/pi77); geändert nur region_szu, szu__zurich_selnau, szu__zurich_giesshubel; ergebnisse 58383b3 (Commit ca9a7b6)"
+ "notiz_179": "24.11.2026: K0c – REGELN 2.2 r34_kette an: Selnau Gl. 1/2 parallel, Gleiswechsel je eine Schräge (j9ou/pi77); geändert nur region_szu, szu__zurich_selnau, szu__zurich_giesshubel; ergebnisse 58383b3 (Commit ca9a7b6)",
+ "notiz_180": "24.11.2026: K0d – Selnau HB-Ende: Gl. 22→13 und 21→11 gerade (REGELN 1.8 stumpf_fortsetzung), Tramhaltekanten über dem SZU-Tunnel weg (REGELN 1.23 perron_ebene), Mittelperron HB SZU 21/22 von Hand (platforms_plus), Uetliberg-Drehung 120 fest; ergebnisse 9a0b156 (Commit 559d9e7). Geändert szu__zurich_selnau, region_szu, travers (Abstellgleise enger, REGELN 1.5) und region_ne (Block)"
 }
