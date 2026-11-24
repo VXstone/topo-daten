@@ -21,7 +21,6 @@
 | mob__montbovon | 2 | · | · | · | · | 2 |
 | mob__paccot | 2 | · | · | · | · | 2 |
 | mob__saanen | · | 1 | · | · | 1 | 2 |
-| szu__zurich_selnau | · | 2 | · | · | · | 2 |
 | zofingen | 2 | · | · | · | · | 2 |
 | mob__glion | · | · | · | · | 1 | 1 |
 | mob__jor | 1 | · | · | · | · | 1 |
@@ -127,6 +126,7 @@
 | szu__zurich_binz | · | · | · | · | · | 0 |
 | szu__zurich_friesenberg | · | · | · | · | · | 0 |
 | szu__zurich_schweighof | · | · | · | · | · | 0 |
+| szu__zurich_selnau | · | 0 ↓2 | · | · | · | 0 |
 | travers | · | · | · | · | · | 0 |
 | tuscherz | · | · | · | · | · | 0 |
 | twann | · | · | · | · | · | 0 |

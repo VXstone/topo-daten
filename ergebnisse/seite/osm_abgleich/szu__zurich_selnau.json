@@ -1,44 +1,10 @@
 {
 "plan": "szu__zurich_selnau",
-"befunde": [
-{
-"regel": "VB2",
-"x": 1528.9,
-"y": 134.0,
-"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
-"ways": [
-107459422,
-111425502,
-302554482,
-302554484,
-1530360444
-],
-"farben": [
-"schwarz"
-]
-},
-{
-"regel": "VB2",
-"x": 1452.6,
-"y": 110.0,
-"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
-"ways": [
-107459422,
-107459423,
-111425502,
-302554482,
-302554484,
-302554651
-],
-"farben": [
-"gruen"
-]
-}
-],
+"befunde": [],
 "info": {
 "dkw_osm_unvollstaendig": [],
-"gleise": 42,
-"knoten_plan": 8,
+"gleise": 41,
+"knoten_plan": 4,
 "dkw_plan": 0,
 "knoten_osm": 7,
 "versatz_y": 0.0,

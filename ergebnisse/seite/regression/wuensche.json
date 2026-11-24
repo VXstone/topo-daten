@@ -44,18 +44,18 @@
   "W55": 5
  },
  {
-  "key": "region_szu",
-  "gruppe": "Region",
-  "summe": 48,
-  "W53": 8
- },
- {
   "key": "basel",
   "gruppe": "Grosse Knoten",
   "summe": 48,
   "W53": 7,
   "W56": 2,
   "W59": 3
+ },
+ {
+  "key": "region_szu",
+  "gruppe": "Region",
+  "summe": 42,
+  "W53": 7
  },
  {
   "key": "olten",
@@ -79,14 +79,6 @@
   "summe": 21,
   "W53": 0,
   "W56": 7,
-  "W59": 0
- },
- {
-  "key": "szu__zurich_selnau",
-  "gruppe": "SZU · Bahnhöfe",
-  "summe": 18,
-  "W53": 1,
-  "W56": 4,
   "W59": 0
  },
  {
@@ -143,6 +135,14 @@
   "summe": 12,
   "W53": 1,
   "W56": 2,
+  "W59": 0
+ },
+ {
+  "key": "szu__zurich_selnau",
+  "gruppe": "SZU · Bahnhöfe",
+  "summe": 12,
+  "W53": 0,
+  "W56": 4,
   "W59": 0
  },
  {

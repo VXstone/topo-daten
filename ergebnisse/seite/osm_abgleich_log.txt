@@ -115,7 +115,7 @@ szu__zurich_binz                   {}
 szu__zurich_friesenberg            {}
 szu__zurich_giesshubel             {'VB1': 2, 'VC1': 4, 'VB2': 9, 'VD1': 36}
 szu__zurich_schweighof             {}
-szu__zurich_selnau                 {'VB2': 2}
+szu__zurich_selnau                 {}
 tecknau                            {'VB2': 1}
 travers                            {}
 tuscherz                           {}
@@ -133,4 +133,4 @@ vereina__vereina_sud               {}
 wangen_bei_olten                   {}
 zihlbruecke                        {}
 zofingen                           {'VA2': 2, 'VB1': 2, 'VD1': 1}
-OSM-Abgleich: 135 Pläne {'VA1': 8, 'VA2': 7, 'VB1': 61, 'VB2': 72, 'VC1': 12, 'VD1': 108, 'VD2': 1}
+OSM-Abgleich: 135 Pläne {'VA1': 8, 'VA2': 7, 'VB1': 61, 'VB2': 70, 'VC1': 12, 'VD1': 108, 'VD2': 1}
