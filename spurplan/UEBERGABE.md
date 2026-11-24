@@ -112,8 +112,8 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - [x] **V4c NE: HT-Befunde abbauen** – 21.11. (v161/v162)
 - [x] **V4e NE: HT-Rest** – 21./22.11. (v164–v170), alle NE-Pläne HT 0 bzw. Ausnahme Courtepin (Nachträge V4e Teil 1–5)
 - [x] **V4f Neuchâtel im Regionalplan wie im Bahnhofplan** – 23.11. vormittags, Commit 43a3919, Seite v172 (Nachtrag V4f)
-- [ ] **V4d NE ruhig + Nebengleise kürzen** (mittel, REGELN 4.5/5.9): 23.11. Teil 1 v173 – pjyb/zlwn behoben, Onnens kürzer, W59 neu; Teil 2 abends v174: vpkw Muntelier (REGELN 4.12, Weiche 42°); Teil 3 spät v175: Colombier 706 kürzer, W59 Perron = Inhalt (Travers/Galmiz/Avenches ok); Teil 4 v176: Rothrist + Tecknau kürzer; **offen: Olten Hammer (→ Schritt V4g)** – siehe Nachträge V4d
-- [ ] **V4g Olten Hammer kürzer** (klein, Daniel 23.11.: «die drei sollten auch gekürzt werden»): `leer_max` 150 im Bahnhofplan ist gut, aber im
+- [ ] **V4d NE ruhig + Nebengleise kürzen** (mittel, REGELN 4.5/5.9): 23.11. Teil 1 v173 – pjyb/zlwn behoben, Onnens kürzer, W59 neu; Teil 2 abends v174: vpkw Muntelier (REGELN 4.12, Weiche 42°); Teil 3 spät v175: Colombier 706 kürzer, W59 Perron = Inhalt (Travers/Galmiz/Avenches ok); Teil 4 v176: Rothrist + Tecknau kürzer; Olten Hammer → V4g erledigt 24.11. – siehe Nachträge V4d
+- [x] **V4g Olten Hammer kürzer** – 24.11. früh (Nachtrag V4g). War: (klein, Daniel 23.11.: «die drei sollten auch gekürzt werden»): `leer_max` 150 im Bahnhofplan ist gut, aber im
   Regionalplan Olten rückt das Ostende 50 px vom Knoten Olten weg (Plan um die Mitte platziert); `_nebengleise` (netz_lage) verteilt das
   Nebengleis südlich Olten anteilig auf die längere Lücke → Schlaufe über Gl. 3 (G0 GS 8→9, Stelle −8/472). Zielplan: Olten Hammer kürzer, Nebengleis wie heute
 - [ ] **K0c Selnau parallel (REGELN 2.2, `r34_kette`)** (klein) – siehe Nachtrag 20.11. ~19:15; nach V3/V4, vor T-SZU1
@@ -935,3 +935,14 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - Rothrist-Override: Hand-Linien Industriegleis Nord/Stumpengleis von `x:` auf `n:1699953345±px` (wandern mit). Onnens `leer_max` 150 → 120 (sonst +73 px).
 - Olten Hammer zurückgestellt → V4g (G0 rot im ersten Lauf). Regression: rothrist/tecknau «vermutlich besser», region Olten T7 17→16, region_ne nur Block-
   Verschiebungen (Onnens 16 px kürzer); G0/HT unverändert. Abnahmen unverändert. Fallstrick: seite-Lauf vor plaene → einmal abgebrochen, später grün.
+
+### 24.11.2026 früh – Schritt V4g: Olten Hammer kürzer
+- Sichtbar: Bahnhofplan Olten Hammer mit `leer_max` 150 (REGELN 5.9) 1622 → 1383 px; im Regionalplan Olten bleibt das Ende Seite Olten mit den
+  Nebengleisen südlich Olten genau wie vorher, das Westende (Spurwechsel Seite Wangen) rückt ~100 px nach Osten, die Strecke bis Wangen wird länger.
+- Umsetzung nur Daten: cfg `leer_max` im Override + Mitte in `olten_region_lage.json` von −310 auf −260 (Ende Seite Olten bleibt). Lokal G0 der Region
+  gleich wie vorher (GS 8, GG 23).
+- Verworfen: allgemeine Regel «Nebengleise der freien Strecke weichen schon gezeichneten aus» (netz_lage `_stoert`): ein Stumpen Olten–Hammer fiel weg
+  (fand keinen freien Platz), in Aarau entstanden zwei neue GS. Ursache bleibt: `_nebengleise` legt Stumpen nach Anteil der freien Strecke; die zwei Stumpen
+  südlich Olten liegen schon heute aufeinander (G0 GG −8/463, Basis). Zur Herkunft: Hinweis lld9 (Daniel findet sie in OSM nicht) – vermutlich Reste
+  der Olten-Abstellanlage ausserhalb des Planfensters (Olten im Regionalplan nur Hauptgleise, REGELN 3.1) – angenommen, nicht geprüft.
+

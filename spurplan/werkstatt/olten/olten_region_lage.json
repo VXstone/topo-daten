@@ -137,7 +137,7 @@
   "Olten Hammer"
  ],
  "Olten Hammer": [
-  -310,
+  -260,
   495
  ],
  "gleise_strecke": {
@@ -253,5 +253,6 @@
   4420,
   -490
  ],
- "_aarau_8_11": "D. Eckenstein 8.11.: Aarau angehängt (aarau_anhaengen.py). Aarau tiefer als Schönenwerd: 540 kommt von oben, 650 von unten, nur das eine 540-Gleis unterquert bei Aarau West die 650 (−640 gab eine zweite, falsche Kreuzung 650×540 östlich Schönenwerd). Alte Abgänge #36/#42 entfernt; «osm»/«osm_versatz»: Spurwechsel-Suche über die erweiterte OSM-Datei."
+ "_aarau_8_11": "D. Eckenstein 8.11.: Aarau angehängt (aarau_anhaengen.py). Aarau tiefer als Schönenwerd: 540 kommt von oben, 650 von unten, nur das eine 540-Gleis unterquert bei Aarau West die 650 (−640 gab eine zweite, falsche Kreuzung 650×540 östlich Schönenwerd). Alte Abgänge #36/#42 entfernt; «osm»/«osm_versatz»: Spurwechsel-Suche über die erweiterte OSM-Datei.",
+ "_olten_hammer": "24.11. (V4g, REGELN 5.9): Bahnhofplan mit leer_max 150 um 239 px kürzer; Mitte um 50 px Richtung Olten, damit das Ostende (Seite Olten) und die Nebengleise südlich Olten bleiben wie vorher (vorher -310/495: Lücke länger, Nebengleis schlaufte über Gl. 3, G0 GS)"
 }
