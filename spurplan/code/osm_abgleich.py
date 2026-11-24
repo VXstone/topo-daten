@@ -168,6 +168,45 @@ def plan_knoten(gleise, luecken):
     return [tuple(z[:5]) for z in zus]
 
 
+# REGELN 2.4 (T-SZU1, 18.11.2026)
+def dkw_4arme_finden(D_, max_seite=20.0):
+    """Knoten-IDs der X-förmigen 4-Arm-Weichen (Kopie aus spurplan_schema.py, dort einzeln lauffähig)"""
+    _sw = {e["id"] for e in D_ if e["type"] == "node" and e.get("tags", {}).get("railway") == "switch"
+           and not e["tags"].get("railway:switch")}
+    arme = collections.defaultdict(dict)
+    for e in D_:
+        if e["type"] != "way" or e.get("tags", {}).get("railway") != "rail" or "geometry" not in e: continue
+        nd, ge = e["nodes"], e["geometry"]
+        for i_, n_ in enumerate(nd):
+            if n_ not in _sw: continue
+            for d_ in (-1, 1):
+                j_ = i_ + d_
+                if not 0 <= j_ < len(nd): continue
+                L_, k_ = 0.0, i_
+                while 0 <= k_ + d_ < len(nd) and L_ < 10:
+                    a_, b_ = ge[k_], ge[k_ + d_]
+                    L_ += math.hypot((a_["lon"] - b_["lon"]) * 111320 * math.cos(math.radians(a_["lat"])), (a_["lat"] - b_["lat"]) * 110540); k_ += d_
+                g0, g1 = ge[i_], ge[k_]
+                arme[n_][nd[j_]] = math.degrees(math.atan2(g1["lat"] - g0["lat"], (g1["lon"] - g0["lon"]) * math.cos(math.radians(g0["lat"]))))
+    _dw = lambda a, b: abs((a - b + 180) % 360 - 180)
+    erg = {}                            # Knoten -> zwei gerade Linien als Paare der Nachbarknoten (Arm Seite A, Arm Seite B)
+    for n_, am in arme.items():
+        if len(am) != 4: continue
+        k_ = list(am); r_ = [am[x] for x in k_]
+        for p_ in ((0, 1, 2, 3), (0, 2, 1, 3), (0, 3, 1, 2)):
+            a1, a2, b1, b2 = (r_[q] for q in p_)
+            if _dw(a1, a2) <= max_seite and _dw(b1, b2) <= max_seite:
+                ma = math.degrees(math.atan2(math.sin(math.radians(a1)) + math.sin(math.radians(a2)), math.cos(math.radians(a1)) + math.cos(math.radians(a2))))
+                mb = math.degrees(math.atan2(math.sin(math.radians(b1)) + math.sin(math.radians(b2)), math.cos(math.radians(b1)) + math.cos(math.radians(b2))))
+                if _dw(ma, mb) < 150: continue
+                # Linien: jeder Arm der Seite A mit dem Arm der Seite B, der ihn am geradesten fortsetzt
+                g1 = abs(180 - _dw(a1, b1)) + abs(180 - _dw(a2, b2)); g2 = abs(180 - _dw(a1, b2)) + abs(180 - _dw(a2, b1))
+                A1, A2, B1, B2 = (k_[q] for q in p_)
+                erg[n_] = [(A1, B1), (A2, B2)] if g1 <= g2 else [(A1, B2), (A2, B1)]
+                break
+    return erg
+
+
 _ARME = {}
 def osm_arme(TAGS, WAYN):
     """Arme (Nachbarknoten über alle Ways) je OSM-DKW/EKW, einmal für alle Pläne"""
@@ -184,9 +223,12 @@ def osm_arme(TAGS, WAYN):
 def osm_tags(pfad):
     T, W = {}, {}
     D = json.load(gzip.open(pfad) if pfad.endswith(".gz") else open(pfad))
-    for e in (D["elements"] if isinstance(D, dict) else D):
+    E_ = D["elements"] if isinstance(D, dict) else D
+    for e in E_:
         if e["type"] == "node": T[e["id"]] = e.get("tags", {})
         elif e["type"] == "way": W[e["id"]] = e.get("nodes", [])
+    for n in dkw_4arme_finden(E_):      # REGELN 2.4 (T-SZU1): X-förmige 4-Arm-Weiche = DKW, wie spurplan_schema
+        T[n] = {**T.get(n, {}), "railway:switch": "double_slip", "dkw_4arme": "yes"}
     return T, W
 
 

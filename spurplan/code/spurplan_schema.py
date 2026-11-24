@@ -105,6 +105,63 @@ for e in D:
         if n_ in _slip_nb: _slip_nb[n_].update(_nd[j_] for j_ in (i_ - 1, i_ + 1) if 0 <= j_ < len(_nd))
 DKW_3ARME = sorted(n_ for n_, s_ in _slip_nb.items() if len(s_) < 4)
 for n_ in DKW_3ARME: ntag[n_] = {**ntag[n_], "railway:switch": "default", "dkw_osm_unvollstaendig": "yes"}
+# REGELN 2.4 (T-SZU1, Entscheid Daniel 18.11.2026, Depot Giesshübel 1263316996/1263338286): eine OSM-Weiche ohne
+# railway:switch mit 4 Armen in einem Knoten, je zwei auf jeder Seite (X-Form, Arme einer Seite <= 20° auseinander), ist eine
+# DKW mit Symbol. Dreiwegweiche (3 Arme auf einer Seite) bleibt Weiche. cfg «dkw_4arme» (Standard an, alle Pläne).
+def dkw_4arme_finden(D_, max_seite=20.0):
+    """Knoten-IDs der X-förmigen 4-Arm-Weichen (gleiche Funktion in osm_abgleich.py)"""
+    _sw = {e["id"] for e in D_ if e["type"] == "node" and e.get("tags", {}).get("railway") == "switch"
+           and not e["tags"].get("railway:switch")}
+    arme = collections.defaultdict(dict)
+    for e in D_:
+        if e["type"] != "way" or e.get("tags", {}).get("railway") != "rail" or "geometry" not in e: continue
+        nd, ge = e["nodes"], e["geometry"]
+        for i_, n_ in enumerate(nd):
+            if n_ not in _sw: continue
+            for d_ in (-1, 1):
+                j_ = i_ + d_
+                if not 0 <= j_ < len(nd): continue
+                L_, k_ = 0.0, i_
+                while 0 <= k_ + d_ < len(nd) and L_ < 10:
+                    a_, b_ = ge[k_], ge[k_ + d_]
+                    L_ += math.hypot((a_["lon"] - b_["lon"]) * 111320 * math.cos(math.radians(a_["lat"])), (a_["lat"] - b_["lat"]) * 110540); k_ += d_
+                g0, g1 = ge[i_], ge[k_]
+                arme[n_][nd[j_]] = math.degrees(math.atan2(g1["lat"] - g0["lat"], (g1["lon"] - g0["lon"]) * math.cos(math.radians(g0["lat"]))))
+    _dw = lambda a, b: abs((a - b + 180) % 360 - 180)
+    erg = {}                            # Knoten -> zwei gerade Linien als Paare der Nachbarknoten (Arm Seite A, Arm Seite B)
+    for n_, am in arme.items():
+        if len(am) != 4: continue
+        k_ = list(am); r_ = [am[x] for x in k_]
+        for p_ in ((0, 1, 2, 3), (0, 2, 1, 3), (0, 3, 1, 2)):
+            a1, a2, b1, b2 = (r_[q] for q in p_)
+            if _dw(a1, a2) <= max_seite and _dw(b1, b2) <= max_seite:
+                ma = math.degrees(math.atan2(math.sin(math.radians(a1)) + math.sin(math.radians(a2)), math.cos(math.radians(a1)) + math.cos(math.radians(a2))))
+                mb = math.degrees(math.atan2(math.sin(math.radians(b1)) + math.sin(math.radians(b2)), math.cos(math.radians(b1)) + math.cos(math.radians(b2))))
+                if _dw(ma, mb) < 150: continue
+                # Linien: jeder Arm der Seite A mit dem Arm der Seite B, der ihn am geradesten fortsetzt
+                g1 = abs(180 - _dw(a1, b1)) + abs(180 - _dw(a2, b2)); g2 = abs(180 - _dw(a1, b2)) + abs(180 - _dw(a2, b1))
+                A1, A2, B1, B2 = (k_[q] for q in p_)
+                erg[n_] = [(A1, B1), (A2, B2)] if g1 <= g2 else [(A1, B2), (A2, B1)]
+                break
+    return erg
+DKW_4ARME = dkw_4arme_finden(D) if CFG.get("dkw_4arme", True) else {}
+for n_, linien_ in DKW_4ARME.items():
+    ntag[n_] = {**ntag.get(n_, {}), "railway:switch": "double_slip", "dkw_4arme": "yes"}
+    # Enden alle vier Arme als eigene Ways am Knoten (Giesshübel), laufen keine Linien durch – der DKW-Zeichner (wie bei
+    # OSM-DKW) braucht zwei durchgehende Linien: je Linie die beiden Ways zu einem zusammensetzen (Id und Tags des ersten).
+    for na_, nb_ in linien_:
+        def _w_am(nn_):
+            for w_ in ways.values():
+                nd_ = w_["nodes"]
+                for i_, x_ in enumerate(nd_):
+                    if x_ == n_ and ((i_ > 0 and nd_[i_ - 1] == nn_) or (i_ + 1 < len(nd_) and nd_[i_ + 1] == nn_)): return w_
+            return None
+        wa_, wb_ = _w_am(na_), _w_am(nb_)
+        if wa_ is None or wb_ is None or wa_ is wb_ or n_ not in (wa_["nodes"][0], wa_["nodes"][-1]) or n_ not in (wb_["nodes"][0], wb_["nodes"][-1]): continue
+        if wa_["nodes"][-1] != n_: wa_ = dict(wa_, nodes=wa_["nodes"][::-1], geometry=wa_["geometry"][::-1])
+        if wb_["nodes"][0] != n_: wb_ = dict(wb_, nodes=wb_["nodes"][::-1], geometry=wb_["geometry"][::-1])
+        ways.pop(wb_["id"], None)
+        ways[wa_["id"]] = dict(wa_, nodes=wa_["nodes"] + wb_["nodes"][1:], geometry=wa_["geometry"] + wb_["geometry"][1:])
 # Regel E3 automatisch (Schritt E, 7.11.2026; Ansatz nach Daniels Aufbau Montreux Westende, REGELN «Verschachtelte
 # Weichenanlagen» V4): OSM bildet eine DKW oft als Kreuzung (railway=railway_crossing) mit vier Weichen und zwei kurzen
 # Bogen-Ways ab. Am Kreuzungsknoten laufen zwei Linien durch – je ein Way, der durchläuft, oder zwei Way-Enden, die sich
@@ -635,6 +692,9 @@ def _seg_dist(q, pts):
 def passenger(t):
     r = t.get("railway:track_ref")
     if t.get("service"): return False
+    # REGELN 1.21 (T-SZU1, Entscheid Daniel 18.11.2026, 717 Giesshübel – Wiedikon): nur Güterverkehr = schwarz, Abgang mit
+    # schwarzem Pfeil (Beschriftung siehe GUETER_ABGANG). cfg «gueter_schwarz»
+    if CFG.get("gueter_schwarz", True) and t.get("railway:traffic_mode") == "freight": return False
     return True
 
 segs = []
@@ -897,7 +957,8 @@ if CFG.get("perron_nummer", True):
 # auch wenn OSM sie als service=crossover führt (D. Eckenstein: Perrongleise müssen in Dunkelgrün erreichbar sein)
 if RU.get("r43", False):
     _dg = [sg for sg in segs if not sg["flat"] and not sg["pax"] and sg["tags"].get("service") in (None, "crossover", "siding")
-           and sg["way"] not in OVR.get("kein_pax", [])]      # expliziter Override «kein_pax» gewinnt (Neuchâtel Ost 26.10.)
+           and sg["way"] not in OVR.get("kein_pax", [])
+           and not (CFG.get("gueter_schwarz", True) and sg["tags"].get("railway:traffic_mode") == "freight")]   # REGELN 1.21      # expliziter Override «kein_pax» gewinnt (Neuchâtel Ost 26.10.)
     _par = {id(x): id(x) for x in _dg}
     def _f43(a):
         while _par[a] != a: a = _par[a]
@@ -4991,6 +5052,12 @@ def _dkw_fallback(n, nx_, ny_, hp_):
     _l = [e for e in _e if e[0] < nx_ - 2]; _r = [e for e in _e if e[0] > nx_ + 2]
     if not (_l and _r): return False
     sa_ = np.sign(_l[0][1] - ny_); sb_ = np.sign(_r[0][1] - ny_)
+    if CFG.get("dkw_4arme", True):
+        # REGELN 2.4 (T-SZU1, Giesshübel 1263316996): je Seite die steilste Schräge; liegt eine Seite ganz auf der Ebene des
+        # Knotens (beide Linien laufen dort im Plan auf demselben Gleis weiter), zeigt das Symbol die Gegenseite
+        sa_ = np.sign(max(_l, key=lambda e: abs(e[1] - ny_))[1] - ny_); sb_ = np.sign(max(_r, key=lambda e: abs(e[1] - ny_))[1] - ny_)
+        if not sa_ and sb_: sa_ = -sb_
+        if not sb_ and sa_: sb_ = -sa_
     if not (sa_ and sb_ and sa_ != sb_): return False
     c0 = np.array([nx_, ny_])
     out.append(_dkw_klammer(c0, (-1, 0), (0.5, 0.866 * sb_), hp_)); out.append(_dkw_klammer(c0, (1, 0), (-0.5, 0.866 * sa_), hp_))
@@ -5059,6 +5126,7 @@ out.extend(DKW_EXTRA)
 for d_ in dots:
     x, y, pax = d_[:3]; _ms = len(d_) > 3 and d_[3]
     out.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{4.5 if pax else 3.2}" fill="{MS_BRAUN if _ms else (green if pax else black)}"/>')
+GUETER_LBL = set()  # (ref, Ort) der Güterverkehrs-Abgänge: Beschriftung schwarz (REGELN 1.21)
 PFEILE = []         # gezeichnete Pfeile mit Herkunft (verkettung.py bestimmt daraus den Nachbarplan, in dem das Gleis ankommt)
 def _pfeil_ziel(x, y, a):
     best_ = None
@@ -5084,6 +5152,19 @@ for x, y, a in STUBS:
     c, s_ = math.cos(a), math.sin(a)
     pts = [(x + 9 * c, y + 9 * s_), (x - 4 * s_, y + 4 * c), (x + 4 * s_, y - 4 * c)]
     out.append('<path d="M' + "L".join(f"{px:.1f},{py:.1f}" for px, py in pts) + f'Z" fill="{_pfeil_farbe(x, y, a)}"{_pfeil_attr(x, y, a)}/>')
+# REGELN 1.21 (T-SZU1): Abgang eines Güterverkehrsgleises mit Liniennummer (717 Giesshübel – Wiedikon) – schwarzer Pfeil und
+# Beschriftung «Linie 717 / Ziel» wie ein Streckenabgang (Ziel nach der Peilung wie bei Streckenabgängen)
+if CFG.get("gueter_schwarz", True):
+    _gw = [sg for sg in segs if sg["tags"].get("railway:traffic_mode") == "freight" and sg["tags"].get("ref")
+           and not sg["tags"].get("service") and not sg["pax"]]
+    for p_ in PFEILE:
+        sg_ = next((sg for sg in _gw if sg["way"] == p_.get("way") and p_.get("knoten") in sg["nodes"]), None)
+        if sg_ is None: continue
+        try: t_ = exit_town(sg_, p_["knoten"])
+        except Exception: t_ = None
+        c_, s_ = math.cos(p_["a"]), math.sin(p_["a"])
+        EXITS.append((p_["x"] + (16 if c_ >= 0 else -16), p_["y"] + 6, exit_ref(sg_), "start" if c_ >= 0 else "end", t_))   # neben der Pfeilspitze
+        GUETER_LBL.add((exit_ref(sg_), t_))
 # Pfeile, die auf dem Ende eines Hauptgleises liegen (Nebengleis läuft im selben Punkt aus), weglassen
 # (Hinweise Zofingen/Schönenwerd: "Pfeil direkt auf dem Streckengleis")
 _pax_ends = []
@@ -5555,7 +5636,7 @@ for (ref, anc, town), grp in _LGROUPS:
     dy_, dx_, lines = found or (0, 0, lines1)
     _LBOX.append(_box(xx + dx_, yy + dy_, lines))
     for k, t in enumerate(lines):
-        out.append(f'<text x="{xx + dx_:.1f}" y="{yy + dy_ - 6 + 26 * k - 13 * (len(lines) - 1):.1f}" font-size="22" text-anchor="{anc}" fill="{green}">{t}</text>')
+        out.append(f'<text x="{xx + dx_:.1f}" y="{yy + dy_ - 6 + 26 * k - 13 * (len(lines) - 1):.1f}" font-size="22" text-anchor="{anc}" fill="{black if (ref, town) in GUETER_LBL else green}">{t}</text>')
 # Titel unterhalb aller Gleise und Beschriftungen
 _ys = [Y(0)] + [e[1] + 10 for e in EXITS] + [y_ for _, y_, _ in STUBS] + ([MS_YMAX] if MS_YMAX is not None else [])
 ty = max(_ys) + 60
