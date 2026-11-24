@@ -1,4 +1,4 @@
-aarau                              {'VB1': 3, 'VB2': 4, 'VD1': 7}
+aarau                              {'VB1': 4, 'VB2': 6, 'VD1': 7}
 aarburg_oftringen                  {}
 auvernier                          {'VB1': 1, 'VD1': 1}
 avenches                           {'VB1': 1}
@@ -113,7 +113,7 @@ szu__ringlikon                     {}
 szu__uetliberg                     {'VB2': 1}
 szu__zurich_binz                   {}
 szu__zurich_friesenberg            {}
-szu__zurich_giesshubel             {'VB1': 2, 'VC1': 4, 'VB2': 9, 'VD1': 36}
+szu__zurich_giesshubel             {'VA1': 2, 'VB1': 2, 'VC1': 4, 'VB2': 9, 'VD1': 36}
 szu__zurich_schweighof             {}
 szu__zurich_selnau                 {}
 tecknau                            {'VB2': 1}
@@ -132,5 +132,5 @@ vereina__vereina_nord              {}
 vereina__vereina_sud               {}
 wangen_bei_olten                   {}
 zihlbruecke                        {}
-zofingen                           {'VA2': 2, 'VB1': 2, 'VD1': 1}
-OSM-Abgleich: 135 Pläne {'VA1': 8, 'VA2': 7, 'VB1': 61, 'VB2': 70, 'VC1': 12, 'VD1': 108, 'VD2': 1}
+zofingen                           {'VB1': 1, 'VD1': 1}
+OSM-Abgleich: 135 Pläne {'VA1': 10, 'VA2': 5, 'VB1': 61, 'VB2': 72, 'VC1': 12, 'VD1': 108, 'VD2': 1}

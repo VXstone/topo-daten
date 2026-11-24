@@ -2,9 +2,9 @@
  "ebene": 10.08,
  "zaehl": {
   "GS": 8,
-  "GG": 22,
+  "GG": 23,
   "GQ": 2,
-  "GP": 3,
+  "GP": 5,
   "GW": 3,
   "GT": 6
  },
@@ -17,31 +17,31 @@
   },
   {
    "regel": "GS",
-   "x": 3584.9,
+   "x": 3579.3,
    "y": -437.4,
    "text": "Gleise kreuzen sich (46°) ohne DKW, Kreuzung oder Niveautrennung"
   },
   {
    "regel": "GS",
-   "x": 2614.4,
+   "x": 2620.0,
    "y": -477.7,
    "text": "Gleise kreuzen sich (60°) ohne DKW, Kreuzung oder Niveautrennung"
   },
   {
    "regel": "GS",
-   "x": 2626.1,
+   "x": 2631.7,
    "y": -457.5,
    "text": "Gleise kreuzen sich (60°) ohne DKW, Kreuzung oder Niveautrennung"
   },
   {
    "regel": "GS",
-   "x": 2278.1,
+   "x": 2283.3,
    "y": -467.2,
    "text": "Gleise kreuzen sich (62°) ohne DKW, Kreuzung oder Niveautrennung"
   },
   {
    "regel": "GS",
-   "x": 2075.8,
+   "x": 2079.9,
    "y": -464.8,
    "text": "Gleise kreuzen sich (83°) ohne DKW, Kreuzung oder Niveautrennung"
   },
@@ -161,21 +161,27 @@
   },
   {
    "regel": "GG",
-   "x": 3576.4,
+   "x": 3570.8,
    "y": -487.7,
    "text": "zwei Gleise 13 px aufeinander"
   },
   {
    "regel": "GG",
-   "x": 3348.4,
+   "x": 3354.0,
    "y": -487.8,
    "text": "zwei Gleise 36 px aufeinander"
   },
   {
    "regel": "GG",
-   "x": 4322.2,
+   "x": 4316.8,
    "y": -441.0,
    "text": "zwei Gleise 23 px aufeinander"
+  },
+  {
+   "regel": "GG",
+   "x": 4314.4,
+   "y": -441.6,
+   "text": "zwei Gleise 16 px aufeinander"
   },
   {
    "regel": "GG",
@@ -209,13 +215,25 @@
   },
   {
    "regel": "GP",
-   "x": 3411.3,
+   "x": 3426.4,
+   "y": -499.0,
+   "text": "Pfeil zeigt innert 15 px auf ein Gleis"
+  },
+  {
+   "regel": "GP",
+   "x": 3435.7,
+   "y": -496.7,
+   "text": "Pfeil zeigt innert 15 px auf ein Gleis"
+  },
+  {
+   "regel": "GP",
+   "x": 3416.9,
    "y": -519.2,
    "text": "Pfeilspitze 4.4 px neben einem Gleis (< ½ Ebene)"
   },
   {
    "regel": "GP",
-   "x": 3469.0,
+   "x": 3463.4,
    "y": -522.4,
    "text": "Pfeil zeigt innert 15 px auf ein Gleis"
   },

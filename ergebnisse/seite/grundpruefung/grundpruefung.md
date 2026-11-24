@@ -4,7 +4,7 @@
 
 | Plan | GS | GG | GQ | GP | GW | GT | Ebene |
 |---|---|---|---|---|---|---|---|
-| aarau | 3 | 6 | · | 2 | · | 1 ↓5 | 24.0 |
+| aarau | 3 | 6 | · | **4** (Basis 2) | · | 1 ↓5 | 24.0 |
 | aarburg_oftringen | · | · | · | · | · | · | 24.0 |
 | auvernier | · | 1 | · | · | · | 1 | 24.0 |
 | avenches | · | · | · | · | · | · | 24.0 |
@@ -108,9 +108,9 @@
 | olten_hammer | · | · | · | · | · | · | 24.0 |
 | onnens_bonvillars | · | 1 | · | · | · | 1 | 24.0 |
 | pensier | · | · | · | · | · | · | 24.0 |
-| region | 8 | 22 ↓23 | 2 | 3 | 3 ↓4 | 6 ↓10 | 10.08 |
+| region | 8 | 23 | 2 | **5** (Basis 3) | 3 ↓4 | 6 ↓10 | 10.08 |
 | region_mob | 3 | 3 | 1 | 3 | · | 0 ↓1 | 10.08 |
-| region_ne | 1 | 2 | 1 | · | · | 0 ↓4 | 10.08 |
+| region_ne | 1 | **3** (Basis 2) | 1 | · | · | 0 ↓4 | 10.08 |
 | region_szu | 18 | 27 | 4 | · | · | 1 | 10.08 |
 | region_vereina | 1 | 5 | 2 | · | · | 2 | 10.08 |
 | riedbach | · | · | · | · | · | · | 24.0 |
@@ -152,3 +152,21 @@
 | zofingen | · | 1 | · | · | · | · | 24.0 |
 
 Regeln: GS = Schnitt ohne DKW/Kreuzung/Niveautrennung; GG = Gleis auf Gleis; GQ = Querabstand nach Knick ≠ davor; GP = Pfeil nach innen / auf Nachbargleis; GW = Knick oder Abgang 90°; GT = Treppe
+
+## NEUE Befunde
+
+- **aarau** GP: 2 → 4
+  - 2756.5/184.0: Pfeil zeigt innert 36 px auf ein Gleis
+  - 2778.5/189.6: Pfeil zeigt innert 36 px auf ein Gleis
+  - 2733.9/136.0: Pfeilspitze 10.4 px neben einem Gleis (< ½ Ebene)
+  - 2844.5/128.3: Pfeil zeigt innert 36 px auf ein Gleis
+- **region** GP: 3 → 5
+  - 32.7/142.7: Pfeil zeigt innert 15 px auf ein Gleis
+  - 3426.4/-499.0: Pfeil zeigt innert 15 px auf ein Gleis
+  - 3435.7/-496.7: Pfeil zeigt innert 15 px auf ein Gleis
+  - 3416.9/-519.2: Pfeilspitze 4.4 px neben einem Gleis (< ½ Ebene)
+  - 3463.4/-522.4: Pfeil zeigt innert 15 px auf ein Gleis
+- **region_ne** GG: 2 → 3
+  - -1573.7/73.7: zwei Gleise 12 px aufeinander
+  - 628.9/-1299.1: zwei Gleise 15 px aufeinander
+  - 2170.3/-326.2: zwei Gleise 45 px aufeinander

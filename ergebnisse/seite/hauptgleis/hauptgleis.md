@@ -5,7 +5,7 @@
 | Plan | HT1 | HT2 | HT3 | HT4 | HT5 | Summe |
 |---|---|---|---|---|---|---|
 | olten | 10 | 21 | 7 | 2 | 165 | 205 |
-| aarau | 3 | 4 | · | 1 | 9 | 17 |
+| aarau | 3 | **5** (Basis 4) | · | 1 | 9 | 18 |
 | solothurn | 2 | 1 | · | · | 14 | 17 |
 | szu__zurich_giesshubel | 1 | 9 | · | 1 | 5 | 16 |
 | rothrist | 2 | 4 | · | · | 5 | 11 |
@@ -17,11 +17,11 @@
 | tecknau | · | 1 | · | · | 2 | 3 |
 | vereina__klosters_selfranga | 1 | · | · | · | 2 | 3 |
 | vereina__sagliains | 1 | 1 | · | · | 1 | 3 |
+| zofingen | 1 ↓2 | · | · | · | **2** (Basis 0) | 3 |
 | daniken | 2 | · | · | · | · | 2 |
 | mob__montbovon | 2 | · | · | · | · | 2 |
 | mob__paccot | 2 | · | · | · | · | 2 |
 | mob__saanen | · | 1 | · | · | 1 | 2 |
-| zofingen | 2 | · | · | · | · | 2 |
 | mob__glion | · | · | · | · | 1 | 1 |
 | mob__jor | 1 | · | · | · | · | 1 |
 | mob__montreux | · | 1 | · | · | · | 1 |
@@ -145,3 +145,15 @@ Regeln: HT1 = OSM-Weiche am Hauptgleis ohne Abzweig im Plan; HT2 = Abzweig am Ha
 ## Ausnahmen (REGELN 6, `spurplan/hauptgleis_ausnahmen.json`, nicht gezählt)
 
 - **courtepin** HT2 500.0/110.0: Industriegleis nördlich, rechts Richtung Courtepin abzweigend: in Betrieb (Satellitenbild, Daniel 22.11.2026); in OSM endet es 1 m neben dem Streckengleis ohne gemeinsamen Knoten
+
+## NEUE Befunde
+
+- **aarau** HT2: 4 → 5
+  - 3120.4/330.8: Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung
+  - 2735.0/210.8: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
+  - 836.5/234.8: Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung
+  - 887.1/306.8: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
+  - 864.2/282.8: Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung
+- **zofingen** HT5: 0 → 2
+  - 408.8/134.0: Fahrweg Abgang 504 Suhr (14310602217) ↔ Gl. 2 in OSM, fehlt im Plan
+  - 408.8/146.0: Fahrweg Abgang 504 Suhr (14310602217) ↔ Gl. 3 in OSM, fehlt im Plan

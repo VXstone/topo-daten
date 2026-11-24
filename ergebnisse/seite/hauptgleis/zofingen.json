@@ -1,10 +1,10 @@
 {
  "zaehl": {
-  "HT1": 2,
+  "HT1": 1,
   "HT2": 0,
   "HT3": 0,
   "HT4": 0,
-  "HT5": 0
+  "HT5": 2
  },
  "befunde": [
   {
@@ -15,23 +15,34 @@
    "osm": 2023056388
   },
   {
-   "regel": "HT1",
-   "x": 349.9,
+   "regel": "HT5",
+   "x": 408.8,
    "y": 134.0,
-   "text": "OSM-Weiche 2055859622 ohne Abzweig im Plan",
-   "osm": 2055859622
+   "text": "Fahrweg Abgang 504 Suhr (14310602217) ↔ Gl. 2 in OSM, fehlt im Plan",
+   "von": "Abgang 504 Suhr (14310602217)",
+   "nach": "Gl. 2",
+   "art": "fehlt"
+  },
+  {
+   "regel": "HT5",
+   "x": 408.8,
+   "y": 146.0,
+   "text": "Fahrweg Abgang 504 Suhr (14310602217) ↔ Gl. 3 in OSM, fehlt im Plan",
+   "von": "Abgang 504 Suhr (14310602217)",
+   "nach": "Gl. 3",
+   "art": "fehlt"
   },
   {
    "regel": "_info",
    "x": 0,
    "y": 0,
-   "text": "Fahrwege: 13/13 Ziele im Plan gefunden, OSM 36, Plan 36",
+   "text": "Fahrwege: 13/13 Ziele im Plan gefunden, OSM 36, Plan 34",
    "ohne_lage": []
   }
  ],
  "osm_abgleich": {
   "VA2": 2,
-  "VB1": 2,
+  "VB1": 1,
   "VD1": 1
  }
 }

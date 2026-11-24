@@ -1,5 +1,5 @@
-Kreuzungsbahnhof kerzers: Kreuzungsbereich x=666…761, Äste Lyss 60°, Ins 120°, Bern 300°, Murten 240°, Zusatzabstand {'l': 7.150000000000105, 'r': 0.0}
-Variante {"ok": true, "ordner": "regional_kerzers", "topologie": "{}", "geaendert": []}
+Kreuzungsbahnhof kerzers: Kreuzungsbereich x=563…660, Äste Lyss 60°, Ins 120°, Bern 300°, Murten 240°, Zusatzabstand {'l': 100.04999999999998, 'r': 0.0}
+Variante {"ok": true, "ordner": "regional_kerzers", "topologie": "{}", "geaendert": ["kerzers_bare.svg", "kerzers_ports.json", "kerzers_spurplan.svg"]}
 ins {"ok": true, "optionen": [], "plan_geaendert": false, "bare_geaendert": false, "netz": {"T10": 1, "D11": 1}, "topologie": "{}", "qualitaet": {"topo_A": 0, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "topo_F": 0, "netz_T10": 1, "netz_D11": 1, "boegen_pax": 10, "boegen_alle": 19, "randabstand": 0}}
 saint_blaise_lac {"ok": true, "optionen": [], "plan_geaendert": true, "bare_geaendert": true, "netz": {}, "topologie": "{}", "qualitaet": {"topo_A": 0, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "topo_F": 0, "boegen_pax": 4, "boegen_alle": 4, "randabstand": 0}}
 marin_epagnier {"ok": true, "optionen": [], "plan_geaendert": false, "bare_geaendert": false, "netz": {"T10": 1, "F7": 1}, "topologie": "{}", "qualitaet": {"topo_A": 0, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "topo_F": 0, "netz_T10": 1, "netz_F7": 1, "boegen_pax": 4, "boegen_alle": 13, "randabstand": 0}}
@@ -54,9 +54,9 @@ chambrelien {"ok": true, "optionen": [], "plan_geaendert": true, "bare_geaendert
 les_geneveys_sur_coffrane {"ok": true, "optionen": [], "plan_geaendert": false, "bare_geaendert": false, "netz": {}, "topologie": "{}", "qualitaet": {"topo_A": 0, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "topo_F": 0, "boegen_pax": 4, "boegen_alle": 4, "randabstand": 0}}
 les_hauts_geneveys {"ok": true, "optionen": [], "plan_geaendert": false, "bare_geaendert": false, "netz": {}, "topologie": "{}", "qualitaet": {"topo_A": 0, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "topo_F": 0, "boegen_pax": 4, "boegen_alle": 9, "randabstand": 0}}
 murten {"ok": true, "optionen": [], "plan_geaendert": false, "bare_geaendert": false, "netz": {"A1": 1}, "topologie": "{}", "qualitaet": {"topo_A": 0, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "topo_F": 0, "netz_A1": 1, "boegen_pax": 12, "boegen_alle": 16, "randabstand": 0}}
-Regionalgeometrie /home/runner/work/topo-daten/topo-daten/spurplan/werkstatt/olten/feedback/region_ne.svg: Achse 10.08 px, 91 Streckenpfade; keine Befunde
+Regionalgeometrie /home/runner/work/topo-daten/topo-daten/spurplan/werkstatt/olten/feedback/region_ne.svg: Achse 10.07 px, 91 Streckenpfade; keine Befunde
 
-Region Neuchâtel: {"ok": true, "geaendert": true, "geometrie": {"plan": "/home/runner/work/topo-daten/topo-daten/spurplan/werkstatt/olten/feedback/region_ne.svg", "achse": 10.078548960724994, "befunde": []}}
+Region Neuchâtel: {"ok": true, "geaendert": true, "geometrie": {"plan": "/home/runner/work/topo-daten/topo-daten/spurplan/werkstatt/olten/feedback/region_ne.svg", "achse": 10.074480857098226, "befunde": []}}
 Kennzahlen gegen die Basis:
   auvernier              neu   
   avenches               neu   

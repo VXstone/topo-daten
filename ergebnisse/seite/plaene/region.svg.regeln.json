@@ -92,14 +92,21 @@
  },
  {
   "regel": "G2",
-  "x": 3382.7,
+  "x": 3388.3,
   "y": -497.8,
   "bahnhof": "Aarau",
   "text": "Weiche ohne Ausrundung (33°)"
  },
  {
   "regel": "G2",
-  "x": 3470.9,
+  "x": 3443.5,
+  "y": -519.0,
+  "bahnhof": "Aarau",
+  "text": "Weiche ohne Ausrundung (32°)"
+ },
+ {
+  "regel": "G2",
+  "x": 3465.3,
   "y": -525.7,
   "bahnhof": "Aarau",
   "text": "Weiche ohne Ausrundung (60°)"
@@ -127,56 +134,56 @@
  },
  {
   "regel": "G2",
-  "x": 2287.6,
+  "x": 2292.8,
   "y": -472.6,
   "bahnhof": null,
   "text": "Weiche ohne Ausrundung (60°)"
  },
  {
   "regel": "G2",
-  "x": 2288.0,
+  "x": 2293.3,
   "y": -462.5,
   "bahnhof": null,
   "text": "Weiche ohne Ausrundung (60°)"
  },
  {
   "regel": "G2",
-  "x": 4310.7,
+  "x": 4305.2,
   "y": -487.7,
   "bahnhof": null,
-  "text": "Weiche ohne Ausrundung (61°)"
+  "text": "Weiche ohne Ausrundung (60°)"
  },
  {
   "regel": "G2",
-  "x": 4313.1,
+  "x": 4307.8,
   "y": -447.4,
   "bahnhof": null,
   "text": "Weiche ohne Ausrundung (60°)"
  },
  {
   "regel": "G2",
-  "x": 4370.3,
+  "x": 4367.8,
   "y": -447.4,
   "bahnhof": null,
   "text": "Weiche ohne Ausrundung (59°)"
  },
  {
   "regel": "G2",
-  "x": 4312.5,
+  "x": 4307.6,
   "y": -447.4,
   "bahnhof": null,
   "text": "Weiche ohne Ausrundung (60°)"
  },
  {
   "regel": "G2",
-  "x": 4331.8,
+  "x": 4326.9,
   "y": -447.4,
   "bahnhof": null,
   "text": "Weiche ohne Ausrundung (60°)"
  },
  {
   "regel": "G2",
-  "x": 4313.6,
+  "x": 4308.3,
   "y": -447.4,
   "bahnhof": null,
   "text": "Weiche ohne Ausrundung (60°)"
@@ -239,14 +246,14 @@
  },
  {
   "regel": "G7",
-  "x": 2618.5,
+  "x": 2624.1,
   "y": -447.4,
   "bahnhof": "Aarau",
   "text": "Gleisende nicht angebunden, nächstes Gleis 11.6 px"
  },
  {
   "regel": "G7",
-  "x": 2631.9,
+  "x": 2637.5,
   "y": -447.4,
   "bahnhof": "Aarau",
   "text": "Gleisende nicht angebunden, nächstes Gleis 1.9 px"
@@ -266,29 +273,22 @@
   "text": "Gleisende nicht angebunden, nächstes Gleis 2.4 px"
  },
  {
-  "regel": "G8",
-  "x": 4322.2,
-  "y": -439.4,
-  "bahnhof": null,
-  "text": "Gleise 11 px deckungsgleich"
- },
- {
   "regel": "G5",
-  "x": 2278.1,
+  "x": 2283.3,
   "y": -467.2,
   "bahnhof": null,
   "text": "Spurwechsel kreuzen sich"
  },
  {
   "regel": "G5",
-  "x": 2075.8,
+  "x": 2079.9,
   "y": -465.3,
   "bahnhof": null,
   "text": "Spurwechsel kreuzen sich"
  },
  {
   "regel": "G5",
-  "x": 2133.0,
+  "x": 2137.4,
   "y": -462.9,
   "bahnhof": null,
   "text": "Spurwechsel kreuzen sich"

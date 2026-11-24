@@ -1,4 +1,4 @@
-aarau                                  HT1 3 HT2 4 HT3 0 HT4 1 HT5 9
+aarau                                  HT1 3 HT2 5 HT3 0 HT4 1 HT5 9
 aarburg_oftringen                      HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 auvernier                              HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 avenches                               HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
@@ -132,5 +132,7 @@ vereina__vereina_nord                  HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 vereina__vereina_sud                   HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 wangen_bei_olten                       HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 zihlbruecke                            HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
-zofingen                               HT1 2 HT2 0 HT3 0 HT4 0 HT5 0
-Hauptgleis HT: {'HT1': 33, 'HT2': 52, 'HT3': 7, 'HT4': 5, 'HT5': 215} – 135 Pläne, 23 mit HT > 0
+zofingen                               HT1 1 HT2 0 HT3 0 HT4 0 HT5 2
+Hauptgleis HT: {'HT1': 32, 'HT2': 53, 'HT3': 7, 'HT4': 5, 'HT5': 217} – 135 Pläne, 23 mit HT > 0
+NEU aarau HT2: 4 -> 5
+NEU zofingen HT5: 0 -> 2
