@@ -149,7 +149,7 @@ for n_, linien_ in DKW_4ARME.items():
     ntag[n_] = {**ntag.get(n_, {}), "railway:switch": "double_slip", "dkw_4arme": "yes"}
     # Enden alle vier Arme als eigene Ways am Knoten (Giesshübel), laufen keine Linien durch – der DKW-Zeichner (wie bei
     # OSM-DKW) braucht zwei durchgehende Linien: je Linie die beiden Ways zu einem zusammensetzen (Id und Tags des ersten).
-    for na_, nb_ in linien_:
+    for na_, nb_ in (linien_ if CFG.get("dkw_4arme_linien", False) else []):     # aus: verschob Aarau (Pfeile nach innen, 24.11.)
         def _w_am(nn_):
             for w_ in ways.values():
                 nd_ = w_["nodes"]
@@ -692,9 +692,6 @@ def _seg_dist(q, pts):
 def passenger(t):
     r = t.get("railway:track_ref")
     if t.get("service"): return False
-    # REGELN 1.21 (T-SZU1, Entscheid Daniel 18.11.2026, 717 Giesshübel – Wiedikon): nur Güterverkehr = schwarz, Abgang mit
-    # schwarzem Pfeil (Beschriftung siehe GUETER_ABGANG). cfg «gueter_schwarz»
-    if CFG.get("gueter_schwarz", True) and t.get("railway:traffic_mode") == "freight": return False
     return True
 
 segs = []
@@ -2815,6 +2812,7 @@ if RU.get("r44", False) and RU.get("r44v", True):
             if 0 < abs(xt - xo) < 25 and not (o in EDGE_NODES if "EDGE_NODES" in globals() else False):
                 xs_over[o] = _Xinv(xt)
 svg_paths = {True: [], False: []}
+D_ERST = []         # erste Zeichnung je Gleisstück (für REGELN 1.21: Güterverkehr schwarz, auch wenn DBG später zusammenfasst)
 # Schiebebühne (4.11. spät, Glion: Depot der Rochers-de-Naye-Bahn, OSM-Way mit note «shifting – lateral movement from track
 # to track»; sieben je ~25 m lange Depotgleise ohne Gleisverbindung erschienen als Punktreihe). Depotgleise hinter der Bühne
 # beginnen gemeinsam auf Höhe ihres Anfangs und sind mindestens «schiebe_px» (40 px) lang; die Bühne wird als gestrichelte
@@ -2950,7 +2948,7 @@ for sg in segs:
                 d = f"M{xa:.1f},{ya:.1f}H{q0:.1f}" + scurve(q0, ya, q1, yb) + f"M{q1:.1f},{yb:.1f}H{max(xb, q1):.1f}"
         else:
             d = ""
-    if d: svg_paths[sg["pax"]].append(d); DBG.append((sg["id"], d))
+    if d: svg_paths[sg["pax"]].append(d); DBG.append((sg["id"], d)); D_ERST.append((sg["id"], d))
     if ARGS.dbg and d and "200.2" in d: print("DRAW", sg["way"], sg["tags"].get("service"), sg["flat"], d[:120])
     edge0 = SD[sg["nodes"][0]][0] <= CFG["s_min"] + 15
     edge1 = SD[sg["nodes"][-1]][0] >= CFG["s_max"] - 15
@@ -5126,7 +5124,16 @@ out.extend(DKW_EXTRA)
 for d_ in dots:
     x, y, pax = d_[:3]; _ms = len(d_) > 3 and d_[3]
     out.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{4.5 if pax else 3.2}" fill="{MS_BRAUN if _ms else (green if pax else black)}"/>')
-GUETER_LBL = set()  # (ref, Ort) der Güterverkehrs-Abgänge: Beschriftung schwarz (REGELN 1.21)
+# REGELN 1.21 (T-SZU1, Entscheid Daniel 18.11.2026, 717 Giesshübel – Wiedikon): ein Gleis nur für Güterverkehr
+# (railway:traffic_mode=freight) ist schwarz, sein Abgang mit schwarzem Pfeil und schwarzer Beschriftung. Nur die Farbe:
+# Lage, Ebenen und Abgänge bleiben wie beim Streckengleis (pax), sonst verlöre z. B. Solothurn 415 seinen Streckenabgang.
+# cfg «gueter_schwarz» (Standard an).
+GUETER = {sg["id"] for sg in segs if CFG.get("gueter_schwarz", True) and sg["tags"].get("railway:traffic_mode") == "freight"}
+GUETER_LBL = set()  # (ref, Ort) der Güterverkehrs-Abgänge: Beschriftung schwarz
+def _gueter_pfeil(x, y, a):
+    c, s_ = math.cos(a), math.sin(a)
+    pts = [(x + 9 * c, y + 9 * s_), (x - 4 * s_, y + 4 * c), (x + 4 * s_, y - 4 * c)]
+    return '<path d="M' + "L".join(f"{px:.1f},{py:.1f}" for px, py in pts) + f'Z" fill="{black}"/>'
 PFEILE = []         # gezeichnete Pfeile mit Herkunft (verkettung.py bestimmt daraus den Nachbarplan, in dem das Gleis ankommt)
 def _pfeil_ziel(x, y, a):
     best_ = None
@@ -5152,19 +5159,6 @@ for x, y, a in STUBS:
     c, s_ = math.cos(a), math.sin(a)
     pts = [(x + 9 * c, y + 9 * s_), (x - 4 * s_, y + 4 * c), (x + 4 * s_, y - 4 * c)]
     out.append('<path d="M' + "L".join(f"{px:.1f},{py:.1f}" for px, py in pts) + f'Z" fill="{_pfeil_farbe(x, y, a)}"{_pfeil_attr(x, y, a)}/>')
-# REGELN 1.21 (T-SZU1): Abgang eines Güterverkehrsgleises mit Liniennummer (717 Giesshübel – Wiedikon) – schwarzer Pfeil und
-# Beschriftung «Linie 717 / Ziel» wie ein Streckenabgang (Ziel nach der Peilung wie bei Streckenabgängen)
-if CFG.get("gueter_schwarz", True):
-    _gw = [sg for sg in segs if sg["tags"].get("railway:traffic_mode") == "freight" and sg["tags"].get("ref")
-           and not sg["tags"].get("service") and not sg["pax"]]
-    for p_ in PFEILE:
-        sg_ = next((sg for sg in _gw if sg["way"] == p_.get("way") and p_.get("knoten") in sg["nodes"]), None)
-        if sg_ is None: continue
-        try: t_ = exit_town(sg_, p_["knoten"])
-        except Exception: t_ = None
-        c_, s_ = math.cos(p_["a"]), math.sin(p_["a"])
-        EXITS.append((p_["x"] + (16 if c_ >= 0 else -16), p_["y"] + 6, exit_ref(sg_), "start" if c_ >= 0 else "end", t_))   # neben der Pfeilspitze
-        GUETER_LBL.add((exit_ref(sg_), t_))
 # Pfeile, die auf dem Ende eines Hauptgleises liegen (Nebengleis läuft im selben Punkt aus), weglassen
 # (Hinweise Zofingen/Schönenwerd: "Pfeil direkt auf dem Streckengleis")
 _pax_ends = []
@@ -5231,7 +5225,7 @@ for sg in segs:
         elif n in _SEIT_N: continue
         else:
             if sg["way"] in ZEICHNEN_PORT: x, y = ZEICHNEN_PORT[sg["way"]]     # neu gezeichneter Abgang (Thun Gürbetal)
-            _c, _w = (green, 3.6) if sg["pax"] else (black, 1.6)
+            _c, _w = (green, 3.6) if sg["pax"] and sg["id"] not in GUETER else (black, 1.6)
             if sg.get("schmal"): _c = MS_BRAUN
             _xs = x - (1 if end else -1) * 22
             if sg["way"] in ZEICHNEN_PORT_AB and (ZEICHNEN_PORT_AB[sg["way"]][0] - _xs) * (1 if end else -1) > 0:
@@ -5247,8 +5241,11 @@ for sg in segs:
                         _xs = _hl
             out.append(f'<path d="M{_xs:.1f},{y:.1f}H{x:.1f}" stroke="{_c}" stroke-width="{_w}" fill="none"/>')   # Abgang bis an den Rand
             PORTS.append(dict(kind="edge", x=x, y=y, dx=1 if end else -1, dy=0, ref=exit_ref(sg), town=exit_town(sg, n),
-                              bearing=port_bearing(sg, n), lat=LL[n][0], lon=LL[n][1], pax=sg["pax"], way=sg["way"], **{k_: v_ for k_, v_ in _herkunft(sg, n).items() if k_ != "way"}))
+                              bearing=port_bearing(sg, n), lat=LL[n][0], lon=LL[n][1], pax=sg["pax"], **({"gueter": True} if sg["id"] in GUETER else {}), way=sg["way"], **{k_: v_ for k_, v_ in _herkunft(sg, n).items() if k_ != "way"}))
             EXITS.append((x + (12 if end else -12), y + 6, exit_ref(sg), "start" if end else "end", exit_town(sg, n)))
+            if sg["id"] in GUETER:
+                GUETER_LBL.add((exit_ref(sg), exit_town(sg, n)))
+                if not ARGS.bare: out.append(_gueter_pfeil(x, y, 0.0 if end else math.pi))
 U_INFO = []
 def _u_abgang(x, y, end, dy, sg, n):
     """U-Abgang (Schritt M): vom Wendepunkt weiter in Ankunftsrichtung bis hinter alles, was zwischen dem Gleis und dem
@@ -5297,12 +5294,13 @@ def _u_abgang(x, y, end, dy, sg, n):
         lb = CFG.get("u_rest_px", 56.0)                  # Schlussgerade nach der Ausrundung >= 40 px, sonst kurze Ecke (T7)
     pts_.append((pts_[-1][0] + vx_ * lb, pts_[-1][1] + vy_ * lb))
     d_ = _rund(pts_, r_)
-    _c = MS_BRAUN if sg.get("schmal") else green
-    out.append(f'<path d="{d_}" stroke="{_c}" stroke-width="3.6" stroke-linecap="round" fill="none" data-u="1"/>')
+    _c = MS_BRAUN if sg.get("schmal") else black if sg["id"] in GUETER else green
+    out.append(f'<path d="{d_}" stroke="{_c}" stroke-width="{1.6 if sg["id"] in GUETER else 3.6}" stroke-linecap="round" fill="none" data-u="1"/>')
     xen, yen = pts_[-1]
     PORTS.append(dict(kind="side", x=xen, y=yen, dx=-arr, dy=(dy if th_g < 179.0 else 0), vx=round(vx_, 4), vy=round(vy_, 4), u=True, ref=exit_ref(sg), town=exit_town(sg, n),
-                      bearing=port_bearing(sg, n), lat=LL[n][0], lon=LL[n][1], pax=sg["pax"], way=sg["way"], **{k_: v_ for k_, v_ in _herkunft(sg, n).items() if k_ != "way"}))
+                      bearing=port_bearing(sg, n), lat=LL[n][0], lon=LL[n][1], pax=sg["pax"], **({"gueter": True} if sg["id"] in GUETER else {}), way=sg["way"], **{k_: v_ for k_, v_ in _herkunft(sg, n).items() if k_ != "way"}))
     EXITS.append((xen - arr * 10, yen + (-14 if dy < 0 else 30), exit_ref(sg), "end" if arr > 0 else "start", exit_town(sg, n)))
+    if sg["id"] in GUETER: GUETER_LBL.add((exit_ref(sg), exit_town(sg, n))); out.append(_gueter_pfeil(xen, yen, math.atan2(vy_, vx_)))
     U_INFO.append(dict(x=x, y=y, yt=yt, arr=arr, dy=dy, n=n, winkel=th_g))
 for x, y, end, dy, sg, n in SIDE:
     if n in U_ABGANG:
@@ -5345,7 +5343,7 @@ for x, y, end, dy, sg, n in SIDE:
         if k_:
             out[_GREEN_IDX] = new_
             xf_, yf_ = x + dx_ * 0.5 * r_, y + dy * 0.866 * r_
-            out.append(f'<path d="M{x - dx_ * r_:.1f},{y:.1f}Q{x:.1f},{y:.1f} {xf_:.1f},{yf_:.1f}" stroke="{green}" stroke-width="3.6" fill="none"/>')
+            out.append(f'<path d="M{x - dx_ * r_:.1f},{y:.1f}Q{x:.1f},{y:.1f} {xf_:.1f},{yf_:.1f}" stroke="{black if sg["id"] in GUETER else green}" stroke-width="{1.6 if sg["id"] in GUETER else 3.6}" fill="none"/>')
             # Verbindung, die genau im Eckpunkt beginnt (Murten Gl. 4 -> 3): Anfang auf die Ausrundung legen, sonst hängt sie
             # 2 px neben dem Abgang (Regel D. Eckenstein 20.10.: Stoss > 1 px ist ein Befund)
             _mx, _my = 0.25 * (x - dx_ * r_) + 0.5 * x + 0.25 * xf_, 0.25 * y + 0.5 * y + 0.25 * yf_
@@ -5354,11 +5352,13 @@ for x, y, end, dy, sg, n in SIDE:
             x, y = xf_, yf_; _fil = True
     L = 105; x2, y2 = x - (1 - 2 * end) * L * 0.5, y + dy * L * 0.866
     PORTS.append(dict(kind="side", x=x, y=y, dx=-(1 - 2 * end), dy=dy, ref=exit_ref(sg), town=exit_town(sg, n),
-                      bearing=port_bearing(sg, n), lat=LL[n][0], lon=LL[n][1], pax=sg["pax"], way=sg["way"], **{k_: v_ for k_, v_ in _herkunft(sg, n).items() if k_ != "way"}))
+                      bearing=port_bearing(sg, n), lat=LL[n][0], lon=LL[n][1], pax=sg["pax"], **({"gueter": True} if sg["id"] in GUETER else {}), way=sg["way"], **{k_: v_ for k_, v_ in _herkunft(sg, n).items() if k_ != "way"}))
     if not ARGS.bare:
         x0_ = x if _fil else xpos(n, sg["s1"] if end else sg["s0"])
-        out.append(f'<path d="M{x0_:.1f},{y:.1f}L{x:.1f},{y:.1f}L{x2:.1f},{y2:.1f}" stroke="{green}" stroke-width="3.6" stroke-linecap="round" fill="none"/>')
+        out.append(f'<path d="M{x0_:.1f},{y:.1f}L{x:.1f},{y:.1f}L{x2:.1f},{y2:.1f}" stroke="{black if sg["id"] in GUETER else green}" stroke-width="{1.6 if sg["id"] in GUETER else 3.6}" stroke-linecap="round" fill="none"/>')
+        if sg["id"] in GUETER: out.append(_gueter_pfeil(x2, y2, math.atan2(y2 - y, x2 - x)))
     EXITS.append((x2, y2 + (-40 if dy < 0 else 44), exit_ref(sg), "middle", exit_town(sg, n)))
+    if sg["id"] in GUETER: GUETER_LBL.add((exit_ref(sg), exit_town(sg, n)))
     SIDE_INFO.append(dict(port=len(PORTS) - 1, exit=len(EXITS) - 1, x=x, y=y, x2=x2, y2=y2, ex=(len(out) - 1) if not ARGS.bare else None, sg=sg, n=n, r45=_r45f))
 
 def _treppe_abgang():
@@ -5667,6 +5667,39 @@ if DKW_FILLET:
         _bl = [f_ for f_ in DKW_FILLET if f'stroke="{black}"' in f_]; _gr = [f_ for f_ in DKW_FILLET if f_ not in _bl]
         out[_gi:_gi] = _bl; _gi2 = _gi + len(_bl) + 1; out[_gi2:_gi2] = _gr
     else: out.extend(DKW_FILLET)
+if GUETER:
+    try:
+        from shapely.ops import unary_union as _uu
+        from shapely.geometry import Point as _sP
+        from svgpathtools import parse_path as _ppg
+        _gl = []
+        for i_, d_ in DBG + D_ERST:
+            if i_ not in GUETER: continue
+            for sp_ in re.split(r"(?=M)", d_):
+                if not sp_.strip(): continue
+                try: _p = _ppg(sp_)
+                except Exception: continue
+                _q = [(_p.point(t_ / 40).real, _p.point(t_ / 40).imag) for t_ in range(41)] if _p.length() > 0 else []
+                if len(_q) > 1: _gl.append(_LS(_q))
+        _gz = _uu(_gl).buffer(3.0) if _gl else None
+        if _gz is not None:
+            for k_, o_ in enumerate(list(out)):
+                if not (o_.startswith('<path d="M') and f'stroke="{green}"' in o_ and 'stroke-width="3.6"' in o_): continue
+                d_ = o_.split('d="', 1)[1].split('"', 1)[0]
+                gr_, sw_ = [], []
+                for sp_ in re.split(r"(?=M)", d_):
+                    if not sp_.strip(): continue
+                    try: _p = _ppg(sp_)
+                    except Exception: gr_.append(sp_); continue
+                    _q = [(_p.point(t_ / 30).real, _p.point(t_ / 30).imag) for t_ in range(31)] if _p.length() > 0 else []
+                    # Teilpfad zu mindestens 80 % auf Güterverkehrsgleisen (Ausrundung/Rest am Ende zählt mit)
+                    (sw_ if _q and sum(_gz.contains(_sP(q_)) for q_ in _q) >= 0.8 * len(_q) else gr_).append(sp_.strip())
+                if sw_:
+                    out[k_] = o_.replace(f'd="{d_}"', f'd="{" ".join(gr_)}"') if gr_ else ""
+                    out.append(f'<path d="{" ".join(sw_)}" stroke="{black}" stroke-width="1.6" fill="none"/>')
+            out = [o_ for o_ in out if o_]
+    except Exception as e_:
+        print("GUETER-Farbe:", e_)
 _ty = [float(v) for o_ in out if o_.startswith("<text") for v in re.findall(r' y="(-?[\d.]+)"', o_)]
 _py = [float(v) for o_ in out if o_.startswith("<path") for v in re.findall(r"-?[\d.]+,(-?[\d.]+)", o_.split('d="', 1)[1].split('"', 1)[0])] if out else []
 _Y0 = min(0.0, min(_ty, default=0.0) - 26, min(_py, default=0.0) - 10)   # Beschriftung/Linien oberhalb des Plans nicht abschneiden (Bern Westkopf)
