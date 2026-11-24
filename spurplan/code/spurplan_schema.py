@@ -761,9 +761,16 @@ def _linie_abgang():
                 if best_[0] <= 15: break                          # läuft mit der Achse: nur die 150-m-Sehne zählt
             if best_: arme.append((m_, best_[0], best_[1], best_[2]))
         if os.environ.get("LADBG"): print("LA", n_, round(s_), round(d_), [(a_[0], round(a_[1]), round(a_[3])) for a_ in arme])
-        if not any(a_[1] <= 15 for a_ in arme): continue
+        # die Strecke läuft an der Weiche nach beiden Seiten weiter (zwei Arme ±15° zur Achse); sonst ist der Arm > 30° die
+        # Strecke selbst im Bogen (MOB Jaman/Gstaad/Glion, Prüfung 24.11. abends)
+        _durch = [a_ for a_ in arme if a_[1] <= 15]
+        if len(_durch) < 2: continue
+        _wref = lambda q: {ways[w2]["tags"].get("ref") for w2 in ways if passenger(ways[w2]["tags"]) and n_ in ways[w2]["nodes"] and q in ways[w2]["nodes"]} - {None}
+        _rd = set().union(*[_wref(a_[0]) for a_ in _durch])
         for m_, w_, u_, L_ in arme:
-            if grad < w_ < 180 - grad: kand.append((n_, m_, w_, u_, t_))
+            if not (grad < w_ < 180 - grad): continue
+            if _wref(m_) and _wref(m_) <= _rd: continue           # gleiche Linie wie die durchgehende Strecke: kein Abgang
+            kand.append((n_, m_, w_, u_, t_))
     for n_, m_, w_, u_, t_ in kand:
         # alles hinter dem Abgang: von m_ aus erreichbar ohne n_; läuft es zum Bahnhof zurück, nur die Linie selbst
         # Kern = Streckengleise des Bahnhofs ab der Weiche ohne den Ast (im Fenster-Umkreis)
