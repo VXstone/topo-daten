@@ -62,8 +62,7 @@ Hinweis-Abdeckung: 29/57 (Befund < 40 px, ohne G2)
 ✓ xke0 solothurn                    MZ                        25.3  Zwischengerade, doppelter Abstand
 ✓ z6f2 konolfingen                  MX                        21.0  DKW?
 ✓ zcz3 solothurn                    G7,MX,VB2                 18.0  nicht verbunden
-index.html 2049 KB, 150 Pläne
-region_ne                    veröffentlicht                     11 Stellen  vermutlich besser  T7 5→4 (Wunsch-Summe -8)
+index.html 2057 KB, 150 Pläne
 region_mob                   veröffentlicht                      3 Stellen  Fehler? Topologie  G2 18→15, G6 3→2, GE 24→25, GS 3→4
 region_szu                   veröffentlicht                     11 Stellen  Fehler? Topologie  G8 1→0, GE 17→12, GG 13→14, GQ 4→8, GS 14→12, GW 0→1, T7 0→1, W53 9→8 (Wunsch-Summe +2)
 olten                        bestätigt 2026-11-08                0 Stellen  vermutlich besser  VB1 14→10, VB2 27→21
@@ -127,14 +126,14 @@ les_geneveys_sur_coffrane    Archivbeginn (Abnahme 2026-10-19)    1 Stellen  gle
 les_hauts_geneveys           Archivbeginn (Abnahme 2026-10-20)    2 Stellen  gleichwertig  OSM VD1 1 (kein Alt-Stand)
 mob__caux                    veröffentlicht                     16 Stellen  gleichwertig  
 mob__glion                   veröffentlicht                     15 Stellen  Fehler? Topologie  G2 2→3, GE 0→1, T7 1→0, VB2 0→2 (Wunsch-Summe -8)
-mob__gstaad                  veröffentlicht                      9 Stellen  Fehler? Topologie  G2 4→3, GE 0→1, VB1 0→1/home/runner/work/topo-daten/topo-daten/spurplan/code/alle_plaene_pruefen.py:231: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+mob__gstaad                  veröffentlicht                      9 Stellen  Fehler? Topologie  G2 4→3, GE 0→1, VB1 0→1
+mob__jaman                   veröffentlicht                     14 Stellen  Fehler? Topologie  GE 0→1, GG 0→1, VB1 0→2, VD2 0→2/home/runner/work/topo-daten/topo-daten/spurplan/code/alle_plaene_pruefen.py:231: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
   json.dump(dict(erzeugt=datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"), plaene=len(zeilen), geaendert=len(gz),
 
-mob__jaman                   veröffentlicht                     14 Stellen  Fehler? Topologie  GE 0→1, GG 0→1, VB1 0→2, VD2 0→2
 mob__le_tremblex             veröffentlicht                     10 Stellen  gleichwertig  
 mob__paccot                  veröffentlicht                     15 Stellen  Fehler? Topologie  G2 0→1, GE 0→1, GG 1→0, GS 0→1, VB1 2→0, W53 0→1 (Wunsch-Summe +6)
 mob__zweisimmen              veröffentlicht                      9 Stellen  Fehler? Topologie  G6 0→1, GG 1→0, GS 2→1, T7 1→0, VA1 1→0, VB2 4→2, VD1 3→2, W53 1→0 (Wunsch-Summe -14)
 szu__ringlikon               veröffentlicht                     21 Stellen  Fehler? Topologie  G7 0→1, GW 0→1
 szu__zurich_giesshubel       veröffentlicht                      6 Stellen  Fehler? Topologie  GE 11→6, GG 15→16, GQ 5→7, GS 11→10, VB1 3→1, VB2 8→9, VD1 25→22
-Regression: 148 Pläne, 56 geändert {'vermutlich besser': 8, 'Fehler? Topologie': 9, 'schlechter?': 8, 'gleichwertig': 31}
+Regression: 148 Pläne, 55 geändert {'Fehler? Topologie': 9, 'vermutlich besser': 7, 'schlechter?': 8, 'gleichwertig': 31}
 Ausnahmen: 920 Einträge, 125 Orte: {'Schalter': 358, 'Ortswissen': 245, 'Geometrie': 192, 'Typvorlage': 125} | ohne Grund: 0

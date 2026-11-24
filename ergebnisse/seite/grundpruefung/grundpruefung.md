@@ -490,9 +490,9 @@ Regeln: GS = Schnitt ohne DKW/Kreuzung/Niveautrennung; GG = Gleis auf Gleis; GQ 
   - -3383.4/2331.6: loses Gleisende, Stück 28 px
   - -3410.4/2339.3: loses Gleisende, Stück 28 px
 - **region_ne** GE: 0 → 3
-  - 675.6/-1249.8: Gleisende 5.1 px neben einem Gleis (Stoss), Stück 6 px
-  - 3093.7/1200.2: loses Gleisende, Stück 175 px
-  - -3576.1/2416.0: loses Gleisende, Stück 152 px
+  - 674.9/-1250.4: Gleisende 5.1 px neben einem Gleis (Stoss), Stück 6 px
+  - 3093.4/1200.4: loses Gleisende, Stück 175 px
+  - -3576.4/2416.5: loses Gleisende, Stück 152 px
 - **region_szu** GQ: 4 → 8
   - 683.9/21.5: Querabstand nach dem Knick 4.8 px statt 10.1 px wie davor
   - 683.9/21.5: Querabstand nach dem Knick 4.8 px statt 10.1 px wie davor
