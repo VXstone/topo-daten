@@ -1,10 +1,16 @@
 {
  "region": "szu",
- "erzeugt": "2026-11-24 06:40 UTC",
- "code_commit": "ca9a7b6c11acb202d7b2c24650d8f598a1db3154",
+ "erzeugt": "2026-11-24 07:32 UTC",
+ "code_commit": "ca69e84713f7c2430f907c0d3a01ef24756e03dc",
  "bahnhoefe": {
   "uetliberg": {
    "name": "Uetliberg",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "zurich_selnau": {
+   "name": "Zürich Selnau",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -15,26 +21,20 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "zurich_selnau": {
-   "name": "Zürich Selnau",
-   "ok": true,
-   "befunde": "Befunde: {'B': 4}",
-   "optionen": []
-  },
   "zurich_binz": {
    "name": "Zürich Binz",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "zurich_schweighof": {
-   "name": "Zürich Schweighof",
+  "zurich_friesenberg": {
+   "name": "Zürich Friesenberg",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "zurich_friesenberg": {
-   "name": "Zürich Friesenberg",
+  "zurich_schweighof": {
+   "name": "Zürich Schweighof",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -67,13 +67,12 @@
   "S3": 2
  },
  "lage_suche": {
-  "ausgang": 421,
+  "ausgang": 377,
   "ergebnis": 317,
   "drehung": {
-   "Uetliberg": 120,
    "Zürich Giesshübel": 0
   },
-  "varianten": 37
+  "varianten": 25
  },
  "netz_lage": 0,
  "topologie_region": {
@@ -83,7 +82,7 @@
   "T5": 1
  },
  "ruhe": {
-  "treppen": 5,
+  "treppen": 3,
   "ecken": 0
  },
  "regeln": {
@@ -113,12 +112,12 @@
   "regel_G2": 2,
   "regel_G7": 1,
   "regel_G8": 1,
-  "ruhe_treppen": 5,
+  "ruhe_treppen": 3,
   "ruhe_ecken": 0,
   "planrand": 0,
   "lage_L3a": 2
  },
- "unruhe": 637,
+ "unruhe": 621,
  "unruhe_teile": {
   "topo_T1": 100,
   "topo_T4": 50,
@@ -131,6 +130,6 @@
   "regel_G2": 4,
   "regel_G7": 10,
   "regel_G8": 3,
-  "ruhe_treppen": 40
+  "ruhe_treppen": 24
  }
 }
