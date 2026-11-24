@@ -2,15 +2,6 @@
  {
   "regel": "T7",
   "art": "Treppe",
-  "x": 510.8,
-  "y": 146.0,
-  "versatz": 20.3,
-  "plan": "glion",
-  "text": "glion: Treppe bei x=510.8, y=146.0"
- },
- {
-  "regel": "T7",
-  "art": "Treppe",
   "x": 401.8,
   "y": 122.0,
   "versatz": 20.3,
@@ -28,21 +19,12 @@
  },
  {
   "regel": "T7",
-  "art": "Treppe",
-  "x": 350.4,
-  "y": 242.0,
-  "versatz": 20.3,
-  "plan": "zweisimmen",
-  "text": "zweisimmen: Treppe bei x=350.4, y=242.0"
- },
- {
-  "regel": "T7",
   "art": "Ecke",
-  "x": -2436.8,
-  "y": -90.2,
-  "winkel": 34.4,
+  "x": -3285.9,
+  "y": -84.9,
+  "winkel": 34.5,
   "neben": false,
   "plan": "Regionalplan",
-  "text": "Regionalplan: Ecke bei x=-2436.8, y=-90.2"
+  "text": "Regionalplan: Ecke bei x=-3285.9, y=-84.9"
  }
 ]

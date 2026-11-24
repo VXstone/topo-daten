@@ -1,22 +1,5 @@
 [
  {
-  "regel": "T1",
-  "plan": "Zürich Giesshübel",
-  "strang": 2,
-  "text": "Zürich Giesshübel: Gleis (Strang 2) nach Zürich Selnau endet im Leeren"
- },
- {
-  "regel": "T1",
-  "plan": "Zürich Giesshübel",
-  "strang": 13,
-  "text": "Zürich Giesshübel: Gleis (Strang 13) nach Zürich Selnau endet im Leeren"
- },
- {
-  "regel": "T4",
-  "plan": "Zürich Selnau – Zürich Giesshübel",
-  "text": "Zürich Selnau – Zürich Giesshübel: Stränge [2, 13] / [0] – Gleise nach Lage statt nach Strang verbunden"
- },
- {
   "regel": "T3",
   "plan": "Zürich Selnau",
   "strang": 0,
@@ -25,14 +8,8 @@
  {
   "regel": "T3",
   "plan": "Zürich Giesshübel",
-  "strang": 2,
-  "text": "Zürich Giesshübel: Streckengleis Zürich Giesshübel – Zürich Selnau (Strang 2) nicht angeschlossen"
- },
- {
-  "regel": "T3",
-  "plan": "Zürich Giesshübel",
-  "strang": 13,
-  "text": "Zürich Giesshübel: Streckengleis Zürich Giesshübel – Zürich Selnau (Strang 13) nicht angeschlossen"
+  "strang": 0,
+  "text": "Zürich Giesshübel: Streckengleis Zürich Selnau – Zürich Giesshübel (Strang 0) nicht angeschlossen"
  },
  {
   "regel": "T6",

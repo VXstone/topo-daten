@@ -1,7 +1,7 @@
 {
  "region": "mob",
- "erzeugt": "2026-11-24 20:15 UTC",
- "code_commit": "fcaaba3f7c5c65388a7c29de3c9992368cbdb55f",
+ "erzeugt": "2026-11-24 21:37 UTC",
+ "code_commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
  "bahnhoefe": {
   "schonried": {
    "name": "Schönried",
@@ -77,14 +77,14 @@
     "--hauptgleise"
    ]
   },
-  "caux": {
-   "name": "Caux",
+  "glion": {
+   "name": "Glion",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "glion": {
-   "name": "Glion",
+  "caux": {
+   "name": "Caux",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -163,14 +163,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "montbovon": {
-   "name": "Montbovon",
+  "belmont_sur_montreux": {
+   "name": "Belmont-sur-Montreux",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "belmont_sur_montreux": {
-   "name": "Belmont-sur-Montreux",
+  "montbovon": {
+   "name": "Montbovon",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -281,71 +281,90 @@
  "verkettung": {
   "V1": 0,
   "V2": 0,
-  "V3": 0,
-  "S1": 0,
+  "V3": 1,
+  "S1": 1,
   "S2": 0,
   "S3": 0
  },
  "lage_suche": {
-  "ausgang": 165,
-  "ergebnis": 49,
+  "ausgang": 382,
+  "ergebnis": 90,
   "drehung": {
+   "Glion": -90,
    "Montbovon": 60,
-   "Montreux": 30
+   "Montreux": 30,
+   "Zweisimmen": 0
   },
-  "varianten": 73
+  "varianten": 97
  },
  "netz_lage": 0,
- "topologie_region": {},
+ "topologie_region": {
+  "T3": 1
+ },
  "ruhe": {
-  "treppen": 4,
+  "treppen": 2,
   "ecken": 1
  },
  "regeln": {
-  "G2": 18,
-  "G6": 3
+  "G2": 15,
+  "G6": 2
+ },
+ "perrons": {
+  "P1": 2
  },
  "planrand": 0,
  "lage": {
-  "L3a": 8
+  "L3a": 5
  },
  "kennzahlen": {
+  "topo_T3": 1,
   "verk_V1": 0,
   "verk_V2": 0,
-  "verk_V3": 0,
-  "verk_S1": 0,
+  "verk_V3": 1,
+  "verk_S1": 1,
   "verk_S2": 0,
   "verk_S3": 0,
-  "regel_G2": 18,
-  "regel_G6": 3,
-  "ruhe_treppen": 4,
+  "perron_P1": 2,
+  "regel_G2": 15,
+  "regel_G6": 2,
+  "ruhe_treppen": 2,
   "ruhe_ecken": 1,
   "planrand": 0,
-  "lage_L3a": 8
+  "lage_L3a": 5
  },
- "unruhe": 81,
+ "unruhe": 266,
  "unruhe_teile": {
-  "regel_G2": 36,
-  "regel_G6": 9,
-  "ruhe_treppen": 32,
+  "topo_T3": 50,
+  "verk_V3": 50,
+  "verk_S1": 50,
+  "perron_P1": 60,
+  "regel_G2": 30,
+  "regel_G6": 6,
+  "ruhe_treppen": 16,
   "ruhe_ecken": 4
  },
  "vergleich": {
-  "status": "besser",
-  "schlechter": {},
+  "status": "schlechter",
+  "schlechter": {
+   "perron_P1": 2,
+   "topo_T3": 1,
+   "verk_S1": 1,
+   "verk_V3": 1
+  },
   "besser": {
    "lage_L2": -34,
    "lage_L3": -7,
-   "regel_G2": -5,
+   "regel_G2": -8,
+   "regel_G6": -1,
    "ruhe_ecken": -2,
-   "ruhe_treppen": -6,
+   "ruhe_treppen": -8,
    "topo_T6": -3
   },
   "topologie_offen": {},
   "neu": {
-   "lage_L3a": 8
+   "lage_L3a": 5
   },
-  "unruhe": 81,
+  "unruhe": 266,
   "unruhe_basis": 777
  }
 }
