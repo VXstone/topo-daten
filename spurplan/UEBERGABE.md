@@ -123,6 +123,14 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - [x] **T-SZU1 DKW aus 4-Arm-Weiche (REGELN 2.4) und Güterverkehr schwarz (REGELN 1.21)** – 24.11. nachmittags, Commits 388c34f/0f13b55/5dbded2, Seite v182 (Nachtrag T-SZU1)
 - [ ] **T-SZU2 Achse knickt im Fenster (REGELN 2.15), Zielplan Giesshübel · Saalsporthalle** (Entscheid Daniel 18.11.: Variante C) – nach S2b/R4/S3 oder wenn Daniel es vorzieht
   24.11. Teil 1 (nicht veröffentlicht): Code für 2.15 da, beide Schalter aus – Befund und Teil 2 im Nachtrag T-SZU2 (Abschnitt 6)
+  24.11. Teil 2 abends: Knick zwischen Betriebspunkten aktiv (Saalsporthalle eigener Plan, 712 seitlich nach unten), Seite v183 – Nachtrag T-SZU2 Teil 2
+- [ ] **T-SZU2 Teil 3 Giesshübel Depot und Regionalplan-Rest** (mittel, aus Teil 2): Zielbild `vergleich/szu/zielbild_giesshuebel.svg`.
+  (1) Depot-Fächer als eigenes Bündel über Y (OSM: Depot ab Y 899/970 und ab 713; heute hängen Depotgleise an X und kreuzen Y – VC1
+  110676795/110676782 an 1263316870, 110676800 an 1263316956; GS 11, GG 15); (2) Regionalplan: 713 nach Binz kreuzt die 712-Abgänge links
+  von Giesshübel (Binz liegt im Plan tiefer als der 713-Port); Sihltal-Verbindung mit S-Schwung (3 Ecken T7, T6 1 Haken); (3) Saalsporthalle:
+  Gl. 2 wechselt am Perronanfang eine Ebene (Treppe, HT2 1, Planrand 48 px links); (4) Prüfstand-Baustein «achse_knick»/«knick_abgang» fehlt;
+  (5) Messartefakt `osm_abgleich.plan_knoten`: Kandidat 1,4 px vor der Weiche verdeckt den Abzweig (HT1 Giesshübel 1260863706) – naive
+  Korrektur (jeden Kandidaten prüfen) ergab neue HT2 in Glion/Montreux/Rougemont/Neuchâtel/Olten, verworfen
 - [ ] **S2b Konolfingen Gleisfeld West** (Zielbild Daniel 18.11.), **R4 Rothrist im Regionalplan** und **S3 Aarau
   Zwischengeraden mit Weiche** – nach T-SZU, je eigener Chat, alle gegen die G0-Sperre geprüft
 - [x] **S1b Sagliains-Bündel durchgehend** (klein) – 16.11. früh, Commits af2a110/21556d3, Seite v150
@@ -1018,3 +1026,14 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   (Kurs 220–250°, 15–35° zur Achse) als eigenes Bündel über der Achse (Zielbild); (b) Regionalplan: Verbindung Abgang → Nachbarport ohne 90°.
   Erst dann beide Schalter an, G0 grün, veröffentlichen. Hinweis 8c9x hat Zwischenantwort, übrige Giesshübel-Hinweise offen.
 
+### 24.11.2026 ~22:30 – Schritt T-SZU2 Teil 2: Knick zwischen Betriebspunkten, Seite v183 (Commits fcaaba3, 1897e83; ergebnisse 818c37f)
+- Sichtbar: Regionalplan SZU – Saalsporthalle eigener Plan, die 712 verlässt Giesshübel nach unten (60°) Richtung Saalsporthalle; kein
+  zerschnittenes drittes Gleis mehr, der Saalsporthalle-Teil liegt nicht mehr über Binz/713. G0 Region GS 15→14, GG 26→13, GW 0 (Teil 1: 6).
+- REGELN 2.15 ergänzt: `straenge` `knoten_knick` **Standard an**; schreibt `knick_abgaenge.json` (Betriebspunkt, an dem andere Gleise ≥ 200 m
+  geradeaus weiterlaufen, zeichnet den Ast); `region_lauf` → cfg `knick_abgang`; `spurplan_schema` `_KNICK_DY` macht die Randgleise der Linie
+  zum seitlichen Abzweig (Seite aus der Geografie). `achse_knick` bleibt aus. MOB/Vereina lokal unverändert (kein Knick-Fall).
+- Probiert und verworfen: `lage.drehung` Saalsporthalle −30/−45/−60/0 (Parallelität/Knubbel G6/Treppe GT +1), Giesshübel frei drehen
+  (HB-Abgänge hängen frei, wie Teil 1). Lage bleibt Giesshübel 0, Saalsporthalle automatisch.
+- Giesshübel-Plan: GS 12→11, GG 30→15, HT2 9→7, HT5 5→2; HT1 1→2 und Saalsporthalle HT2 1 = Messartefakte → HT-Basis gesetzt (siehe `_stand`).
+- Regression: geändert nur szu__zurich_giesshubel («Fehler? Topologie» = VB1 Messartefakt 1260863706, VC1 4→3), region_szu, neu Saalsporthalle.
+- Rest → Schritt T-SZU2 Teil 3 (Depot-Bündel, 713 über 712 im Regionalplan, Saalsporthalle Gl. 2). Abnahmen nicht neu exportiert.
