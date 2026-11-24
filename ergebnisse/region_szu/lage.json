@@ -14,63 +14,58 @@
   "merge_junction_m": 200
  },
  "drehung": {
-  "Uetliberg": 120,
-  "Zürich Giesshübel": 0
+  "Uetliberg": 120
  },
  "_drehung": "Uetliberg 120 von Hand (K0d 24.11.2026): Lagesuche hat 90 und 120 gleich bewertet; 120 läuft ohne Ecke in Uetliberg ein (Stand v179)",
  "Zürich Selnau": [
-  1132,
-  -629
+  779,
+  -871
  ],
  "Ringlikon": [
-  -962,
-  782
+  -997,
+  591
  ],
  "Uetliberg": [
-  -1293,
-  974
+  -1214,
+  719
  ],
  "Zürich Giesshübel": [
-  642,
-  -16
+  473,
+  -39
  ],
  "Zürich Binz": [
-  528,
-  42
+  299,
+  -2
  ],
  "Zürich Friesenberg": [
-  41,
-  283
+  -196,
+  224
  ],
  "Zürich Schweighof": [
-  -164,
-  384
+  -404,
+  318
  ],
  "Berghof": [
-  -514,
-  557
+  -676,
+  442
  ],
  "Borrweg": [
-  284,
-  162
+  51,
+  111
  ],
  "Abgang 712 #11": [
-  77,
-  -2
+  520,
+  519
  ],
  "drehung_auto": {
   "Zürich Selnau": -60,
-  "Ringlikon": 153.7,
+  "Ringlikon": 155.5,
   "Uetliberg": 120,
-  "Zürich Binz": -26.3,
-  "Zürich Friesenberg": -26.3,
-  "Zürich Schweighof": -26.3,
-  "Berghof": -22.8,
-  "Borrweg": -24.0
- },
- "suche": {
-  "drehung": {
-   "Zürich Giesshübel": 0
-  }
+  "Zürich Giesshübel": -90,
+  "Zürich Binz": -24.5,
+  "Zürich Friesenberg": -24.5,
+  "Zürich Schweighof": -24.5,
+  "Berghof": -21.0,
+  "Borrweg": -22.1
  }
 }

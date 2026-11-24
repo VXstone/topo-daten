@@ -1,7 +1,7 @@
 {
  "region": "szu",
- "erzeugt": "2026-11-24 11:23 UTC",
- "code_commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+ "erzeugt": "2026-11-24 12:58 UTC",
+ "code_commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
  "bahnhoefe": {
   "uetliberg": {
    "name": "Uetliberg",
@@ -27,6 +27,12 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
+  "zurich_giesshubel": {
+   "name": "Zürich Giesshübel",
+   "ok": true,
+   "befunde": "Befunde: {'A': 2, 'B': 297, 'C': 1, 'F': 1}",
+   "optionen": []
+  },
   "zurich_friesenberg": {
    "name": "Zürich Friesenberg",
    "ok": true,
@@ -39,10 +45,10 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "zurich_giesshubel": {
-   "name": "Zürich Giesshübel",
+  "borrweg": {
+   "name": "Borrweg",
    "ok": true,
-   "befunde": "Befunde: {'A': 2, 'B': 312, 'C': 1, 'F': 4}",
+   "befunde": "Befunde: {}",
    "optionen": []
   },
   "berghof": {
@@ -50,44 +56,32 @@
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
-  },
-  "borrweg": {
-   "name": "Borrweg",
-   "ok": true,
-   "befunde": "Befunde: {}",
-   "optionen": []
   }
  },
  "verkettung": {
-  "V1": 1,
+  "V1": 0,
   "V2": 0,
   "V3": 0,
-  "S1": 1,
+  "S1": 2,
   "S2": 0,
   "S3": 2
  },
  "lage_suche": {
-  "ausgang": 377,
-  "ergebnis": 317,
-  "drehung": {
-   "Zürich Giesshübel": 0
-  },
-  "varianten": 25
+  "ausgang": 107,
+  "ergebnis": 107,
+  "drehung": {},
+  "varianten": 13
  },
  "netz_lage": 0,
  "topologie_region": {
-  "T1": 2,
-  "T4": 1,
-  "T3": 3,
-  "T5": 1
+  "T3": 2
  },
  "ruhe": {
-  "treppen": 3,
+  "treppen": 2,
   "ecken": 0
  },
  "regeln": {
   "G2": 2,
-  "G7": 1,
   "G8": 1
  },
  "perrons": {
@@ -95,41 +89,32 @@
  },
  "planrand": 0,
  "lage": {
-  "L3a": 2
+  "L3a": 1
  },
  "kennzahlen": {
-  "topo_T1": 2,
-  "topo_T4": 1,
-  "topo_T3": 3,
-  "topo_T5": 1,
-  "verk_V1": 1,
+  "topo_T3": 2,
+  "verk_V1": 0,
   "verk_V2": 0,
   "verk_V3": 0,
-  "verk_S1": 1,
+  "verk_S1": 2,
   "verk_S2": 0,
   "verk_S3": 2,
   "perron_P1": 1,
   "regel_G2": 2,
-  "regel_G7": 1,
   "regel_G8": 1,
-  "ruhe_treppen": 3,
+  "ruhe_treppen": 2,
   "ruhe_ecken": 0,
   "planrand": 0,
-  "lage_L3a": 2
+  "lage_L3a": 1
  },
- "unruhe": 621,
+ "unruhe": 353,
  "unruhe_teile": {
-  "topo_T1": 100,
-  "topo_T4": 50,
-  "topo_T3": 150,
-  "topo_T5": 50,
-  "verk_V1": 50,
-  "verk_S1": 50,
+  "topo_T3": 100,
+  "verk_S1": 100,
   "verk_S3": 100,
   "perron_P1": 30,
   "regel_G2": 4,
-  "regel_G7": 10,
   "regel_G8": 3,
-  "ruhe_treppen": 24
+  "ruhe_treppen": 16
  }
 }
