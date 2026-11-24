@@ -1,6 +1,6 @@
 {
  "region": "szu",
- "erzeugt": "2026-11-24 11:11 UTC",
+ "erzeugt": "2026-11-24 11:23 UTC",
  "code_commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
  "bahnhoefe": {
   "uetliberg": {
@@ -45,14 +45,14 @@
    "befunde": "Befunde: {'A': 2, 'B': 312, 'C': 1, 'F': 4}",
    "optionen": []
   },
-  "borrweg": {
-   "name": "Borrweg",
+  "berghof": {
+   "name": "Berghof",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "berghof": {
-   "name": "Berghof",
+  "borrweg": {
+   "name": "Borrweg",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []

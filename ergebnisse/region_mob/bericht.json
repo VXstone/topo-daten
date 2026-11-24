@@ -1,6 +1,6 @@
 {
  "region": "mob",
- "erzeugt": "2026-11-24 11:06 UTC",
+ "erzeugt": "2026-11-24 11:14 UTC",
  "code_commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
  "bahnhoefe": {
   "schonried": {
@@ -127,14 +127,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "oeschseite": {
-   "name": "Oeschseite",
+  "saanenmoser": {
+   "name": "Saanenmöser",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "saanenmoser": {
-   "name": "Saanenmöser",
+  "oeschseite": {
+   "name": "Oeschseite",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []

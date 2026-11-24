@@ -1,4 +1,4 @@
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/region_vorbereiten.py /home/runner/work/topo-daten/topo-daten/schweiz_bahn.json.gz /home/runner/work/topo-daten/topo-daten/spurplan/regionen/szu/region.json /tmp/spurplan_region/szu  (6.8 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/region_vorbereiten.py /home/runner/work/topo-daten/topo-daten/schweiz_bahn.json.gz /home/runner/work/topo-daten/topo-daten/spurplan/regionen/szu/region.json /tmp/spurplan_region/szu  (9.3 s, rc 0)
   Kreuzungsstelle 1260863634–1260863803 (495, 495 m) -> Betriebspunkt 12671124241
 Fernpunkte an Datenenden: 2
 Linien im Ausschnitt (ref, Betreiber, Name: Anzahl Ways):
@@ -32,7 +32,7 @@ Region: 329 Ways, 153 Knoten, 13 Betriebspunkte
   zurich_hb_szu_sud            Zürich HB SZU Süd            Weichen  7 Spur 1435
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/straenge.py region.json betriebspunkte.json /home/runner/work/topo-daten/topo-daten/spurplan/regionen/szu/region.json szu_region --knoten  (0.2 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/straenge.py region.json betriebspunkte.json /home/runner/work/topo-daten/topo-daten/spurplan/regionen/szu/region.json szu_region --knoten  (0.4 s, rc 0)
 Kreuzungsstelle 1260863634 1260863803 ganz zu Borrweg
 Nebengleis verbindet Zürich HB SZU Süd – Zürich Selnau (70 m Nebengleis)
 Knotenplan: Zürich Selnau · Zürich HB SZU Süd (Hauptpunkt Zürich Selnau)
@@ -77,7 +77,7 @@ Strangbild: 17 Stränge, 13 Strecken, 1 Abgänge, 24 Fahrbeziehungen, 0 Dreiecke
   Fahrbeziehung Zürich Triemli → Zürich Schweighof → Zürich Friesenberg
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/region_vorbereiten.py /home/runner/work/topo-daten/topo-daten/schweiz_bahn.json.gz /home/runner/work/topo-daten/topo-daten/spurplan/regionen/szu/region.json /tmp/spurplan_region/szu knoten.json  (6.8 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/region_vorbereiten.py /home/runner/work/topo-daten/topo-daten/schweiz_bahn.json.gz /home/runner/work/topo-daten/topo-daten/spurplan/regionen/szu/region.json /tmp/spurplan_region/szu knoten.json  (9.4 s, rc 0)
   Knotenplan Zürich Selnau: Zürich Selnau · Zürich HB SZU Süd
   Knotenplan Zürich Giesshübel: Zürich Giesshübel · Zürich Saalsporthalle
   Kreuzungsstelle 1260863634–1260863803 (495, 495 m) -> Betriebspunkt 12671124241
@@ -111,14 +111,14 @@ Region: 329 Ways, 151 Knoten, 11 Betriebspunkte
   zurich_selnau                Zürich Selnau                Weichen  7 Spur 1435
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/topologie_linien.py region.json betriebspunkte.json /home/runner/work/topo-daten/topo-daten/spurplan/regionen/szu/region.json szu_region  (0.2 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/topologie_linien.py region.json betriebspunkte.json /home/runner/work/topo-daten/topo-daten/spurplan/regionen/szu/region.json szu_region  (0.4 s, rc 0)
 Achsen: {'712': 3007, '713': 7921, '717': 980, '727': 921}
 Kanten: 11 Knoten: Counter({'station': 9, 'halt': 2, 'exit': 1})
 Achse durchgehend: Zürich Selnau 727 → 712 (8°)
 Achse durchgehend: Zürich Giesshübel 712 ← 727 (8°)
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/straenge.py region.json betriebspunkte.json /home/runner/work/topo-daten/topo-daten/spurplan/regionen/szu/region.json szu_region --topologie --bereiche  (0.3 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/straenge.py region.json betriebspunkte.json /home/runner/work/topo-daten/topo-daten/spurplan/regionen/szu/region.json szu_region --topologie --bereiche  (0.4 s, rc 0)
 Kreuzungsstelle 1260863634 1260863803 ganz zu Borrweg
 Strangbild: 14 Stränge, 11 Strecken, 1 Abgänge, 20 Fahrbeziehungen, 0 Dreiecke
   Abgang 712               – Zürich Giesshübel        2 Gleis(e)  Linie(n) 712
@@ -156,104 +156,104 @@ Topologie aus dem Strangbild: 11 Strecken, Counter({'station': 9, 'halt': 2, 'ex
 Bereiche nach Strängen: keine fremden Stränge in den Ausschnitten
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src uetliberg.json --nowarp  (0.8 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src uetliberg.json --nowarp  (1.4 s, rc 0)
 Bahnhof Uetliberg: Achse 6000 m, Ausschnitt s=4268…4699, 1 Weichen, 3 Perrons
 chains 2 lanes 2 segs 10 W 680 H 239
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src zurich_selnau.json --nowarp  (0.9 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src zurich_selnau.json --nowarp  (1.5 s, rc 0)
 Bahnhof Zürich Selnau · Zürich HB SZU Süd: Achse 6895 m, Ausschnitt s=3698…5540, 7 Weichen, 4 Perrons
 R1c Bündel kompakt: [('kette', 2, 1, 3982, 5454)]
 chains 3 lanes 2 segs 45 W 1864 H 240
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src ringlikon.json --nowarp  (1.0 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src ringlikon.json --nowarp  (1.7 s, rc 0)
 Bahnhof Ringlikon: Achse 7990 m, Ausschnitt s=4143…4707, 2 Weichen, 2 Perrons
 chains 2 lanes 2 segs 16 W 974 H 239
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py uetliberg  (0.4 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py uetliberg  (0.7 s, rc 0)
 Optimization terminated successfully. (HiGHS Status 7: Optimal)
 Breite linear 396 px -> entzerrt 383 px
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py zurich_selnau  (0.4 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py zurich_selnau  (0.7 s, rc 0)
 Optimization terminated successfully. (HiGHS Status 7: Optimal)
 Breite linear 1694 px -> entzerrt 1608 px
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py ringlikon  (0.4 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py ringlikon  (0.7 s, rc 0)
 Optimization terminated successfully. (HiGHS Status 7: Optimal)
 Breite linear 519 px -> entzerrt 525 px
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src uetliberg.json  (0.8 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src uetliberg.json  (1.4 s, rc 0)
 Bahnhof Uetliberg: Achse 6000 m, Ausschnitt s=4268…4699, 1 Weichen, 3 Perrons
 chains 2 lanes 2 segs 10 W 667 H 239
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src zurich_selnau.json  (0.9 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src zurich_selnau.json  (1.4 s, rc 0)
 Bahnhof Zürich Selnau · Zürich HB SZU Süd: Achse 6895 m, Ausschnitt s=3698…5540, 7 Weichen, 4 Perrons
 R1c Bündel kompakt: [('kette', 2, 1, 3982, 5454)]
 chains 3 lanes 2 segs 45 W 1778 H 240
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src ringlikon.json  (0.9 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src ringlikon.json  (1.6 s, rc 0)
 Bahnhof Ringlikon: Achse 7990 m, Ausschnitt s=4143…4707, 2 Weichen, 2 Perrons
 chains 2 lanes 2 segs 16 W 981 H 239
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py uetliberg  (0.4 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py uetliberg  (0.7 s, rc 0)
 Optimization terminated successfully. (HiGHS Status 7: Optimal)
 Breite linear 396 px -> entzerrt 383 px
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py zurich_selnau  (0.4 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py zurich_selnau  (0.7 s, rc 0)
 Optimization terminated successfully. (HiGHS Status 7: Optimal)
 Breite linear 1694 px -> entzerrt 1608 px
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src zurich_giesshubel.json --nowarp  (2.7 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py ringlikon  (0.7 s, rc 0)
+Optimization terminated successfully. (HiGHS Status 7: Optimal)
+Breite linear 519 px -> entzerrt 525 px
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src zurich_giesshubel.json --nowarp  (5.2 s, rc 0)
 Bahnhof Zürich Giesshübel · Zürich Saalsporthalle: Achse 6910 m, Ausschnitt s=2079…3631, 36 Weichen, 3 Perrons
 G6: 1 Überstand(e) vor Ausrundung gekürzt
 T4 automatisch: Way 110403403 über 1 Gleis(e) bei (1359,184)
 chains 18 lanes 7 segs 137 W 1878 H 338
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py ringlikon  (0.4 s, rc 0)
-Optimization terminated successfully. (HiGHS Status 7: Optimal)
-Breite linear 519 px -> entzerrt 525 px
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src uetliberg.json  (1.3 s, rc 0)
+Bahnhof Uetliberg: Achse 6000 m, Ausschnitt s=4268…4699, 1 Weichen, 3 Perrons
+chains 2 lanes 2 segs 10 W 667 H 239
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py zurich_giesshubel  (0.4 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src zurich_selnau.json  (1.5 s, rc 0)
+Bahnhof Zürich Selnau · Zürich HB SZU Süd: Achse 6895 m, Ausschnitt s=3698…5540, 7 Weichen, 4 Perrons
+R1c Bündel kompakt: [('kette', 2, 1, 3982, 5454)]
+chains 3 lanes 2 segs 45 W 1778 H 240
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py zurich_giesshubel  (0.7 s, rc 0)
 Optimization terminated successfully. (HiGHS Status 7: Optimal)
 Breite linear 1428 px -> entzerrt 1786 px
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src uetliberg.json  (0.9 s, rc 0)
-Bahnhof Uetliberg: Achse 6000 m, Ausschnitt s=4268…4699, 1 Weichen, 3 Perrons
-chains 2 lanes 2 segs 10 W 667 H 239
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src zurich_selnau.json  (0.9 s, rc 0)
-Bahnhof Zürich Selnau · Zürich HB SZU Süd: Achse 6895 m, Ausschnitt s=3698…5540, 7 Weichen, 4 Perrons
-R1c Bündel kompakt: [('kette', 2, 1, 3982, 5454)]
-chains 3 lanes 2 segs 45 W 1778 H 240
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src ringlikon.json  (1.0 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src ringlikon.json  (1.7 s, rc 0)
 Bahnhof Ringlikon: Achse 7990 m, Ausschnitt s=4143…4707, 2 Weichen, 2 Perrons
 chains 2 lanes 2 segs 16 W 981 H 239
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src uetliberg.json --out /tmp/_chk_uetliberg.svg  (0.9 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src uetliberg.json --out /tmp/_chk_uetliberg.svg  (1.3 s, rc 0)
 Bahnhof Uetliberg: Achse 6000 m, Ausschnitt s=4268…4699, 1 Weichen, 3 Perrons
 chains 2 lanes 2 segs 10 W 667 H 239
 Befunde: {}
 eindeutig: {}
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src zurich_selnau.json --out /tmp/_chk_zurich_selnau.svg  (1.0 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src zurich_selnau.json --out /tmp/_chk_zurich_selnau.svg  (1.6 s, rc 0)
 Bahnhof Zürich Selnau · Zürich HB SZU Süd: Achse 6895 m, Ausschnitt s=3698…5540, 7 Weichen, 4 Perrons
 R1c Bündel kompakt: [('kette', 2, 1, 3982, 5454)]
 chains 3 lanes 2 segs 45 W 1778 H 240
@@ -261,155 +261,185 @@ Befunde: {}
 eindeutig: {}
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src zurich_giesshubel.json  (1.6 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src ringlikon.json --out /tmp/_chk_ringlikon.svg  (1.7 s, rc 0)
+Bahnhof Ringlikon: Achse 7990 m, Ausschnitt s=4143…4707, 2 Weichen, 2 Perrons
+chains 2 lanes 2 segs 16 W 981 H 239
+Befunde: {}
+eindeutig: {}
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src uetliberg.json --bare --out uetliberg_bare.svg  (1.3 s, rc 0)
+Bahnhof Uetliberg: Achse 6000 m, Ausschnitt s=4268…4699, 1 Weichen, 3 Perrons
+chains 2 lanes 2 segs 10 W 667 H 239
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src zurich_giesshubel.json  (2.9 s, rc 0)
 Bahnhof Zürich Giesshübel · Zürich Saalsporthalle: Achse 6910 m, Ausschnitt s=2079…3631, 36 Weichen, 3 Perrons
 G6: 1 Überstand(e) vor Ausrundung gekürzt
 T4 automatisch: Way 110403403 über 1 Gleis(e) bei (1745,184)
 chains 18 lanes 7 segs 137 W 2235 H 338
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src ringlikon.json --out /tmp/_chk_ringlikon.svg  (1.0 s, rc 0)
-Bahnhof Ringlikon: Achse 7990 m, Ausschnitt s=4143…4707, 2 Weichen, 2 Perrons
-chains 2 lanes 2 segs 16 W 981 H 239
-Befunde: {}
-eindeutig: {}
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src uetliberg.json --bare --out uetliberg_bare.svg  (0.8 s, rc 0)
-Bahnhof Uetliberg: Achse 6000 m, Ausschnitt s=4268…4699, 1 Weichen, 3 Perrons
-chains 2 lanes 2 segs 10 W 667 H 239
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py zurich_giesshubel  (0.5 s, rc 0)
-Optimization terminated successfully. (HiGHS Status 7: Optimal)
-Breite linear 1428 px -> entzerrt 1741 px
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src zurich_selnau.json --bare --out zurich_selnau_bare.svg  (0.9 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src zurich_selnau.json --bare --out zurich_selnau_bare.svg  (1.5 s, rc 0)
 Bahnhof Zürich Selnau · Zürich HB SZU Süd: Achse 6895 m, Ausschnitt s=3698…5540, 7 Weichen, 4 Perrons
 R1c Bündel kompakt: [('kette', 2, 1, 3982, 5454)]
 chains 3 lanes 2 segs 45 W 1778 H 239
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src ringlikon.json --bare --out ringlikon_bare.svg  (1.0 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src zurich_binz.json --nowarp  (1.2 s, rc 0)
+Bahnhof Zürich Binz: Achse 6285 m, Ausschnitt s=4284…4704, 0 Weichen, 1 Perrons
+chains 1 lanes 1 segs 6 W 652 H 216
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py zurich_giesshubel  (0.7 s, rc 0)
+Optimization terminated successfully. (HiGHS Status 7: Optimal)
+Breite linear 1428 px -> entzerrt 1741 px
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src ringlikon.json --bare --out ringlikon_bare.svg  (1.6 s, rc 0)
 Bahnhof Ringlikon: Achse 7990 m, Ausschnitt s=4143…4707, 2 Weichen, 2 Perrons
 chains 2 lanes 2 segs 16 W 981 H 239
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src zurich_binz.json --nowarp  (0.8 s, rc 0)
-Bahnhof Zürich Binz: Achse 6285 m, Ausschnitt s=4284…4704, 0 Weichen, 1 Perrons
-chains 1 lanes 1 segs 6 W 652 H 216
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src zurich_friesenberg.json --nowarp  (0.8 s, rc 0)
-Bahnhof Zürich Friesenberg: Achse 7120 m, Ausschnitt s=4283…4703, 0 Weichen, 1 Perrons
-chains 1 lanes 1 segs 3 W 639 H 216
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py zurich_binz  (0.4 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py zurich_binz  (0.7 s, rc 0)
 Optimization terminated successfully. (HiGHS Status 7: Optimal)
 Breite linear 386 px -> entzerrt 386 px
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src zurich_schweighof.json --nowarp  (0.7 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src zurich_friesenberg.json --nowarp  (1.2 s, rc 0)
+Bahnhof Zürich Friesenberg: Achse 7120 m, Ausschnitt s=4283…4703, 0 Weichen, 1 Perrons
+chains 1 lanes 1 segs 3 W 639 H 216
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py zurich_friesenberg  (0.7 s, rc 0)
+Optimization terminated successfully. (HiGHS Status 7: Optimal)
+Breite linear 386 px -> entzerrt 386 px
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src zurich_schweighof.json --nowarp  (1.2 s, rc 0)
 Bahnhof Zürich Schweighof: Achse 7415 m, Ausschnitt s=4283…4703, 0 Weichen, 1 Perrons
 chains 1 lanes 1 segs 5 W 675 H 216
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py zurich_friesenberg  (0.4 s, rc 0)
-Optimization terminated successfully. (HiGHS Status 7: Optimal)
-Breite linear 386 px -> entzerrt 386 px
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py zurich_schweighof  (0.4 s, rc 0)
-Optimization terminated successfully. (HiGHS Status 7: Optimal)
-Breite linear 386 px -> entzerrt 386 px
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src zurich_binz.json  (0.8 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src zurich_binz.json  (1.2 s, rc 0)
 Bahnhof Zürich Binz: Achse 6285 m, Ausschnitt s=4284…4704, 0 Weichen, 1 Perrons
 chains 1 lanes 1 segs 6 W 652 H 216
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src zurich_friesenberg.json  (0.7 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py zurich_schweighof  (0.7 s, rc 0)
+Optimization terminated successfully. (HiGHS Status 7: Optimal)
+Breite linear 386 px -> entzerrt 386 px
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src zurich_friesenberg.json  (1.2 s, rc 0)
 Bahnhof Zürich Friesenberg: Achse 7120 m, Ausschnitt s=4283…4703, 0 Weichen, 1 Perrons
 chains 1 lanes 1 segs 3 W 639 H 216
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src zurich_giesshubel.json  (2.2 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py zurich_binz  (0.7 s, rc 0)
+Optimization terminated successfully. (HiGHS Status 7: Optimal)
+Breite linear 386 px -> entzerrt 386 px
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py zurich_friesenberg  (0.7 s, rc 0)
+Optimization terminated successfully. (HiGHS Status 7: Optimal)
+Breite linear 386 px -> entzerrt 386 px
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src zurich_schweighof.json  (1.2 s, rc 0)
+Bahnhof Zürich Schweighof: Achse 7415 m, Ausschnitt s=4283…4703, 0 Weichen, 1 Perrons
+chains 1 lanes 1 segs 5 W 675 H 216
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src zurich_binz.json  (1.2 s, rc 0)
+Bahnhof Zürich Binz: Achse 6285 m, Ausschnitt s=4284…4704, 0 Weichen, 1 Perrons
+chains 1 lanes 1 segs 6 W 652 H 216
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py zurich_schweighof  (0.7 s, rc 0)
+Optimization terminated successfully. (HiGHS Status 7: Optimal)
+Breite linear 386 px -> entzerrt 386 px
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src zurich_giesshubel.json  (4.0 s, rc 0)
 Bahnhof Zürich Giesshübel · Zürich Saalsporthalle: Achse 6910 m, Ausschnitt s=2079…3631, 36 Weichen, 3 Perrons
 G6: 1 Überstand(e) vor Ausrundung gekürzt
 T4 automatisch: Way 110403403 über 1 Gleis(e) bei (1700,184)
 chains 18 lanes 7 segs 137 W 2191 H 338
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py zurich_binz  (0.4 s, rc 0)
-Optimization terminated successfully. (HiGHS Status 7: Optimal)
-Breite linear 386 px -> entzerrt 386 px
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src zurich_schweighof.json  (0.8 s, rc 0)
-Bahnhof Zürich Schweighof: Achse 7415 m, Ausschnitt s=4283…4703, 0 Weichen, 1 Perrons
-chains 1 lanes 1 segs 5 W 675 H 216
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py zurich_friesenberg  (0.4 s, rc 0)
-Optimization terminated successfully. (HiGHS Status 7: Optimal)
-Breite linear 386 px -> entzerrt 386 px
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py zurich_schweighof  (0.4 s, rc 0)
-Optimization terminated successfully. (HiGHS Status 7: Optimal)
-Breite linear 386 px -> entzerrt 386 px
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src zurich_binz.json  (0.8 s, rc 0)
-Bahnhof Zürich Binz: Achse 6285 m, Ausschnitt s=4284…4704, 0 Weichen, 1 Perrons
-chains 1 lanes 1 segs 6 W 652 H 216
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src zurich_friesenberg.json  (0.7 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src zurich_friesenberg.json  (1.2 s, rc 0)
 Bahnhof Zürich Friesenberg: Achse 7120 m, Ausschnitt s=4283…4703, 0 Weichen, 1 Perrons
 chains 1 lanes 1 segs 3 W 639 H 216
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src zurich_schweighof.json  (0.8 s, rc 0)
-Bahnhof Zürich Schweighof: Achse 7415 m, Ausschnitt s=4283…4703, 0 Weichen, 1 Perrons
-chains 1 lanes 1 segs 5 W 675 H 216
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src zurich_binz.json --out /tmp/_chk_zurich_binz.svg  (0.8 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src zurich_binz.json --out /tmp/_chk_zurich_binz.svg  (1.2 s, rc 0)
 Bahnhof Zürich Binz: Achse 6285 m, Ausschnitt s=4284…4704, 0 Weichen, 1 Perrons
 chains 1 lanes 1 segs 6 W 652 H 216
 Befunde: {}
 eindeutig: {}
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src zurich_friesenberg.json --out /tmp/_chk_zurich_friesenberg.svg  (0.7 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src zurich_schweighof.json  (1.2 s, rc 0)
+Bahnhof Zürich Schweighof: Achse 7415 m, Ausschnitt s=4283…4703, 0 Weichen, 1 Perrons
+chains 1 lanes 1 segs 5 W 675 H 216
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src zurich_friesenberg.json --out /tmp/_chk_zurich_friesenberg.svg  (1.2 s, rc 0)
 Bahnhof Zürich Friesenberg: Achse 7120 m, Ausschnitt s=4283…4703, 0 Weichen, 1 Perrons
 chains 1 lanes 1 segs 3 W 639 H 216
 Befunde: {}
 eindeutig: {}
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src zurich_schweighof.json --out /tmp/_chk_zurich_schweighof.svg  (0.8 s, rc 0)
-Bahnhof Zürich Schweighof: Achse 7415 m, Ausschnitt s=4283…4703, 0 Weichen, 1 Perrons
-chains 1 lanes 1 segs 5 W 675 H 216
-Befunde: {}
-eindeutig: {}
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src zurich_binz.json --bare --out zurich_binz_bare.svg  (0.8 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src zurich_binz.json --bare --out zurich_binz_bare.svg  (1.2 s, rc 0)
 Bahnhof Zürich Binz: Achse 6285 m, Ausschnitt s=4284…4704, 0 Weichen, 1 Perrons
 chains 1 lanes 1 segs 6 W 652 H 215
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src zurich_friesenberg.json --bare --out zurich_friesenberg_bare.svg  (0.8 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src zurich_schweighof.json --out /tmp/_chk_zurich_schweighof.svg  (1.2 s, rc 0)
+Bahnhof Zürich Schweighof: Achse 7415 m, Ausschnitt s=4283…4703, 0 Weichen, 1 Perrons
+chains 1 lanes 1 segs 5 W 675 H 216
+Befunde: {}
+eindeutig: {}
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src zurich_friesenberg.json --bare --out zurich_friesenberg_bare.svg  (1.2 s, rc 0)
 Bahnhof Zürich Friesenberg: Achse 7120 m, Ausschnitt s=4283…4703, 0 Weichen, 1 Perrons
 chains 1 lanes 1 segs 3 W 639 H 215
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src zurich_giesshubel.json --out /tmp/_chk_zurich_giesshubel.svg  (2.7 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src berghof.json --nowarp  (1.3 s, rc 0)
+Bahnhof Berghof: Achse 8965 m, Ausschnitt s=4278…4700, 2 Weichen, 0 Perrons
+chains 2 lanes 2 segs 12 W 843 H 240
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src zurich_schweighof.json --bare --out zurich_schweighof_bare.svg  (1.2 s, rc 0)
+Bahnhof Zürich Schweighof: Achse 7415 m, Ausschnitt s=4283…4703, 0 Weichen, 1 Perrons
+chains 1 lanes 1 segs 5 W 675 H 215
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py berghof  (0.5 s, rc 0)
+Optimization terminated successfully. (HiGHS Status 7: Optimal)
+Breite linear 388 px -> entzerrt 391 px
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src borrweg.json --nowarp  (1.2 s, rc 0)
+Bahnhof Borrweg: Achse 6790 m, Ausschnitt s=4189…4805, 2 Weichen, 0 Perrons
+chains 2 lanes 2 segs 11 W 1008 H 240
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py borrweg  (0.7 s, rc 0)
+Optimization terminated successfully. (HiGHS Status 7: Optimal)
+Breite linear 566 px -> entzerrt 592 px
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src berghof.json  (0.8 s, rc 0)
+Bahnhof Berghof: Achse 8965 m, Ausschnitt s=4278…4700, 2 Weichen, 0 Perrons
+chains 2 lanes 2 segs 12 W 846 H 240
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src zurich_giesshubel.json --out /tmp/_chk_zurich_giesshubel.svg  (5.1 s, rc 0)
 =  232  Scheinverbindung: Gleis (way 110676803) berührt Gleis (way 32496902001)
 B x=  1355 y=  160  Überlagerung 170px: D3 (way 110676804) / yard (way 110676808)
 B x=  1356 y=  160  Scheinverbindung: yard (way 110676808) berührt yard (way 302540194)
@@ -445,93 +475,63 @@ F x=  1286 y=  140  Weiche falsch herum: Weichenanfang in OSM yard (way 11067682
 F x=  1295 y=  160  Weiche falsch herum: Weichenanfang in OSM yard (way 302540033), gezeichnet yard (way 110676786)
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src zurich_schweighof.json --bare --out zurich_schweighof_bare.svg  (0.8 s, rc 0)
-Bahnhof Zürich Schweighof: Achse 7415 m, Ausschnitt s=4283…4703, 0 Weichen, 1 Perrons
-chains 1 lanes 1 segs 5 W 675 H 215
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src berghof.json --nowarp  (0.8 s, rc 0)
-Bahnhof Berghof: Achse 8965 m, Ausschnitt s=4278…4700, 2 Weichen, 0 Perrons
-chains 2 lanes 2 segs 12 W 843 H 240
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src borrweg.json --nowarp  (0.7 s, rc 0)
-Bahnhof Borrweg: Achse 6790 m, Ausschnitt s=4189…4805, 2 Weichen, 0 Perrons
-chains 2 lanes 2 segs 11 W 1008 H 240
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py borrweg  (0.3 s, rc 0)
-Optimization terminated successfully. (HiGHS Status 7: Optimal)
-Breite linear 566 px -> entzerrt 592 px
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py berghof  (0.4 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py berghof  (0.6 s, rc 0)
 Optimization terminated successfully. (HiGHS Status 7: Optimal)
 Breite linear 388 px -> entzerrt 391 px
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src borrweg.json  (0.5 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src borrweg.json  (1.0 s, rc 0)
 Bahnhof Borrweg: Achse 6790 m, Ausschnitt s=4189…4805, 2 Weichen, 0 Perrons
 chains 2 lanes 2 segs 11 W 1033 H 240
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src berghof.json  (0.8 s, rc 0)
-Bahnhof Berghof: Achse 8965 m, Ausschnitt s=4278…4700, 2 Weichen, 0 Perrons
-chains 2 lanes 2 segs 12 W 846 H 240
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py borrweg  (0.3 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py borrweg  (0.7 s, rc 0)
 Optimization terminated successfully. (HiGHS Status 7: Optimal)
 Breite linear 566 px -> entzerrt 592 px
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src zurich_giesshubel.json --bare --out zurich_giesshubel_bare.svg  (2.1 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src berghof.json  (1.3 s, rc 0)
+Bahnhof Berghof: Achse 8965 m, Ausschnitt s=4278…4700, 2 Weichen, 0 Perrons
+chains 2 lanes 2 segs 12 W 846 H 240
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src zurich_giesshubel.json --bare --out zurich_giesshubel_bare.svg  (2.4 s, rc 0)
 Bahnhof Zürich Giesshübel · Zürich Saalsporthalle: Achse 6910 m, Ausschnitt s=2079…3631, 36 Weichen, 3 Perrons
 G6: 1 Überstand(e) vor Ausrundung gekürzt
 T4 automatisch: Way 110403403 über 1 Gleis(e) bei (1700,184)
 chains 18 lanes 7 segs 137 W 2191 H 337
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_warp.py berghof  (0.4 s, rc 0)
-Optimization terminated successfully. (HiGHS Status 7: Optimal)
-Breite linear 388 px -> entzerrt 391 px
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src borrweg.json  (0.5 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src borrweg.json  (1.1 s, rc 0)
 Bahnhof Borrweg: Achse 6790 m, Ausschnitt s=4189…4805, 2 Weichen, 0 Perrons
 chains 2 lanes 2 segs 11 W 1033 H 240
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src berghof.json  (0.5 s, rc 0)
-Bahnhof Berghof: Achse 8965 m, Ausschnitt s=4278…4700, 2 Weichen, 0 Perrons
-chains 2 lanes 2 segs 12 W 846 H 240
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src borrweg.json --out /tmp/_chk_borrweg.svg  (0.5 s, rc 0)
-Bahnhof Borrweg: Achse 6790 m, Ausschnitt s=4189…4805, 2 Weichen, 0 Perrons
-chains 2 lanes 2 segs 11 W 1033 H 240
-Befunde: {}
-eindeutig: {}
-
-
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src berghof.json --out /tmp/_chk_berghof.svg  (0.6 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src berghof.json --out /tmp/_chk_berghof.svg  (1.1 s, rc 0)
 Bahnhof Berghof: Achse 8965 m, Ausschnitt s=4278…4700, 2 Weichen, 0 Perrons
 chains 2 lanes 2 segs 12 W 846 H 240
 Befunde: {}
 eindeutig: {}
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src borrweg.json --bare --out borrweg_bare.svg  (0.5 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_check.py --src borrweg.json --out /tmp/_chk_borrweg.svg  (0.8 s, rc 0)
 Bahnhof Borrweg: Achse 6790 m, Ausschnitt s=4189…4805, 2 Weichen, 0 Perrons
-chains 2 lanes 2 segs 11 W 1033 H 239
+chains 2 lanes 2 segs 11 W 1033 H 240
+Befunde: {}
+eindeutig: {}
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src berghof.json --bare --out berghof_bare.svg  (0.5 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src berghof.json --bare --out berghof_bare.svg  (0.8 s, rc 0)
 Bahnhof Berghof: Achse 8965 m, Ausschnitt s=4278…4700, 2 Weichen, 0 Perrons
 chains 2 lanes 2 segs 12 W 846 H 239
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/verkettung.py region.json betriebspunkte.json --bericht verkettung.json --straenge szu_region_straenge.json  (0.2 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/spurplan_schema.py --src borrweg.json --bare --out borrweg_bare.svg  (0.8 s, rc 0)
+Bahnhof Borrweg: Achse 6790 m, Ausschnitt s=4189…4805, 2 Weichen, 0 Perrons
+chains 2 lanes 2 segs 11 W 1033 H 239
+
+
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/verkettung.py region.json betriebspunkte.json --bericht verkettung.json --straenge szu_region_straenge.json  (0.3 s, rc 0)
   Borrweg                  ↔ Zürich Binz              1:1  Zürich Binz: port / Borrweg: port
   Borrweg                  ↔ Zürich Friesenberg       1:1  Zürich Friesenberg: port / Borrweg: port
   Ringlikon                ↔ Uetliberg                1:1  Ringlikon: port / Uetliberg: port
@@ -545,7 +545,7 @@ S3 Zürich Giesshübel: Fahrbeziehung Zürich Selnau → Abgang Adliswil im Plan
 Verkettung: 6 Nachbarpaare, Counter({'S3': 2, 'V1': 1, 'S1': 1})
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/netz_lage.py szu_region Region SZU (Zürich HB – Giesshübel – Saalsporthalle / Uetliberg) region.svg  (0.4 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/netz_lage.py szu_region Region SZU (Zürich HB – Giesshübel – Saalsporthalle / Uetliberg) region.svg  (0.6 s, rc 0)
 Knoten: Counter({'spurplan': 9, 'halt': 2, 'exit': 1}) Kanten: 11
   Zürich Giesshübel: freie Anschlüsse [('712', 48), ('712', 48), ('712', 108)]
 senkrecht: ['Uetliberg']
@@ -557,14 +557,14 @@ senkrecht: ['Uetliberg']
 ok 3569 2036
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/lage_suche.py szu_region --max-sek 1500 --json lage_suche.json  (31.7 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/lage_suche.py szu_region --max-sek 1500 --json lage_suche.json  (49.6 s, rc 0)
 Lagesuche szu_region: Ausgang Unruhe 377 {'topo_T1': 2, 'topo_T4': 1, 'topo_T3': 3, 'topo_T6': 1, 'lage_L3a': 1, 'regel_G2': 2, 'regel_G7': 2, 'regel_G8': 1}; Knotenbahnhöfe ['Zürich Giesshübel', 'Zürich Selnau']
   Zürich Giesshübel: -90 -> 0  Unruhe 377 -> 317
-Lagesuche szu_region: Unruhe 377 -> 317 in 32 s, 25 Varianten
+Lagesuche szu_region: Unruhe 377 -> 317 in 50 s, 25 Varianten
 Lage übernommen: {'Zürich Giesshübel': 0}
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/netz_lage.py szu_region Region SZU (Zürich HB – Giesshübel – Saalsporthalle / Uetliberg) region.svg --pruefen  (0.5 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/netz_lage.py szu_region Region SZU (Zürich HB – Giesshübel – Saalsporthalle / Uetliberg) region.svg --pruefen  (0.8 s, rc 0)
 Knoten: Counter({'spurplan': 9, 'halt': 2, 'exit': 1}) Kanten: 11
   Zürich Giesshübel: freie Anschlüsse [('712', 48), ('712', 48), ('712', 108)]
 senkrecht: ['Uetliberg']
@@ -615,12 +615,12 @@ ok 3688 2183
   → 12 Befunde
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/gleisenden.py . --json gleisenden.json  (0.4 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/gleisenden.py . --json gleisenden.json  (0.6 s, rc 0)
 T5 zurich_giesshubel: Streckengleis endet im Leeren bei x=1635.4, y=-178.0
 T5: 1 Befunde
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/regel_pruefung.py region.svg --json regeln.json  (0.4 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/regel_pruefung.py region.svg --json regeln.json  (0.7 s, rc 0)
 G2	697.1,-37.1	Zürich Giesshübel	Weiche ohne Ausrundung (12°)
 G2	192.5,213.5	Borrweg	Weiche ohne Ausrundung (18°)
 G7	869.0,-158.1	Zürich Giesshübel	Gleisende nicht angebunden, nächstes Gleis 9.6 px
@@ -628,14 +628,14 @@ G8	734.7,-16.0	Zürich Giesshübel	Gleise 21 px deckungsgleich
 Regelprüfung: {'G2': 2, 'G7': 1, 'G8': 1}
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/ruhe.py . --json ruhe_plaene.json  (0.4 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/ruhe.py . --json ruhe_plaene.json  (0.5 s, rc 0)
 T7 ringlikon: Treppe bei x=681.5, y=122.0
 T7 uetliberg: Treppe bei x=296.9, y=122.0
 T7 zurich_giesshubel: Treppe bei x=1131.1, y=196.6
 T7: 3 Befunde (3 Treppen, 0 Ecken)
 
 
-$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/ruhe.py . --region region.svg --json ruhe_region.json  (0.3 s, rc 0)
+$ python3 /home/runner/work/topo-daten/topo-daten/spurplan/code/ruhe.py . --region region.svg --json ruhe_region.json  (0.5 s, rc 0)
 T7 Regionalplan: 0 Befunde (0 Treppen)
 
 
