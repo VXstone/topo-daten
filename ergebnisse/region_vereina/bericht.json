@@ -1,18 +1,18 @@
 {
  "region": "vereina",
- "erzeugt": "2026-11-24 13:58 UTC",
- "code_commit": "5dbded2c8a32c28261db445c6af796196d5a7fc2",
+ "erzeugt": "2026-11-24 15:54 UTC",
+ "code_commit": "a015e918a9b143c13ec945749a8ade6d5d4f3411",
  "bahnhoefe": {
-  "klosters_selfranga": {
-   "name": "Klosters Selfranga",
-   "ok": true,
-   "befunde": "Befunde: {'B': 4}",
-   "optionen": []
-  },
   "susch": {
    "name": "Susch",
    "ok": true,
    "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "klosters_selfranga": {
+   "name": "Klosters Selfranga",
+   "ok": true,
+   "befunde": "Befunde: {'B': 4}",
    "optionen": []
   },
   "sagliains": {
