@@ -48,8 +48,8 @@
 | travers | NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier | Archivbeginn (Abnahme 2026-10-15) | 9 | vermutlich besser | W59 1→0 · OSM ok (kein Alt-Stand) | 0 | 0 | 2026-11-24T07:36 |
 | colombier | NE 6 · Neuchâtel – Yverdon | Archivbeginn (Abnahme 2026-10-16) | 7 | vermutlich besser | W56 6→5, W59 1→0 (Wunsch-Summe -3) · OSM ok (kein Alt-Stand) | 0 | 0 | 2026-11-23T21:35 |
 | neuchatel | NE 1 · Neuchâtel – Ins – Kerzers – Bern | bestätigt 2026-11-08 | 2 | vermutlich besser | GG 3→1, VA1 5→0, VC1 2→0, VD1 3→1 | GG 1 · GT 1 | 0 | 2026-11-22T20:14 |
-| region_szu | Region | veröffentlicht | 13 | vermutlich besser | G2 2→1, G7 1→0, GG 27→26, GS 18→14, T7 1→0, W53 7→6 (Wunsch-Summe -14) | GS 14 · GG 26 · GQ 4 · GT 1 | – | 2026-11-24T13:15 |
-| szu__zurich_giesshubel | SZU · Bahnhöfe | veröffentlicht | 6 | vermutlich besser | G2 2→1, GG 32→30, T7 1→0, VB2 9→8, VD1 36→34 (Wunsch-Summe -8) | GS 12 · GG 30 · GQ 5 | HT1 1 · HT2 8 · HT4 1 · HT5 5 | 2026-11-24T13:15 |
+| region_szu | Region | veröffentlicht | 13 | vermutlich besser | G2 2→1, G7 1→0, GG 27→26, GS 18→14, T7 1→0, W53 7→6 (Wunsch-Summe -14) | GS 14 · GG 26 · GQ 4 · GT 1 | – | 2026-11-24T13:43 |
+| szu__zurich_giesshubel | SZU · Bahnhöfe | veröffentlicht | 6 | vermutlich besser | G2 2→1, GG 32→30, T7 1→0, VB2 9→8, VD1 36→34 (Wunsch-Summe -8) | GS 12 · GG 30 · GQ 5 | HT1 1 · HT2 8 · HT4 1 · HT5 5 | 2026-11-24T13:43 |
 | aarau | Olten 3 · Olten – Aarau | veröffentlicht | 2 | vermutlich besser | VB1 7→4 | GS 3 · GG 6 · GP 2 · GT 1 | HT1 3 · HT2 4 · HT4 1 · HT5 9 | 2026-11-24T13:32 |
 
 Grundprüfung G0 aller Pläne: `ergebnisse/seite/grundpruefung/grundpruefung.md`
