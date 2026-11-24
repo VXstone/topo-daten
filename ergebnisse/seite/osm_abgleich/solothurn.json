@@ -3,10 +3,24 @@
 "befunde": [
 {
 "regel": "VA1",
+"x": 1083.4,
+"y": 456.1,
+"text": "OSM-DKW 630417549 im Plan nicht als DKW gezeichnet",
+"osm": 630417549
+},
+{
+"regel": "VA1",
 "x": 1444.5,
 "y": 341.6,
 "text": "OSM-DKW 630418277 im Plan nicht als DKW gezeichnet",
 "osm": 630418277
+},
+{
+"regel": "VB1",
+"x": 905.7,
+"y": 243.4,
+"text": "OSM-Weiche 630417304 ohne Abzweig im Plan",
+"osm": 630417304
 },
 {
 "regel": "VB1",
@@ -189,21 +203,6 @@
 },
 {
 "regel": "VB2",
-"x": 834.4,
-"y": 269.6,
-"text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
-"ways": [
-49565863,
-49715372,
-49715373,
-1273524863
-],
-"farben": [
-"gruen"
-]
-},
-{
-"regel": "VB2",
 "x": 1146.1,
 "y": 482.0,
 "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
@@ -283,9 +282,9 @@
 ],
 "info": {
 "dkw_osm_unvollstaendig": [],
-"gleise": 114,
-"knoten_plan": 59,
-"dkw_plan": 2,
+"gleise": 113,
+"knoten_plan": 57,
+"dkw_plan": 1,
 "knoten_osm": 61,
 "versatz_y": 0.0,
 "netz_auf_plan": 0.99

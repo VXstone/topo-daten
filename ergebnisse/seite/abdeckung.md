@@ -60,4 +60,4 @@ Befund < 40 px im selben Plan, ohne G2.
 | · | wyu2 | mob__glion |  | 154.0 | dieser Perron? |
 | ✓ | xke0 | solothurn | MZ | 25.3 | Zwischengerade, doppelter Abstand |
 | ✓ | z6f2 | konolfingen | MX | 21.0 | DKW? |
-| ✓ | zcz3 | solothurn | G7, MX, VB2 | 18.0 | nicht verbunden |
+| ✓ | zcz3 | solothurn | A1, VB1 | 9.8 | nicht verbunden |

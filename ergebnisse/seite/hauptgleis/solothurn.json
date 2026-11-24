@@ -1,10 +1,10 @@
 {
  "zaehl": {
   "HT1": 2,
-  "HT2": 1,
+  "HT2": 0,
   "HT3": 0,
   "HT4": 0,
-  "HT5": 14
+  "HT5": 0
  },
  "befunde": [
   {
@@ -22,155 +22,17 @@
    "osm": 630418379
   },
   {
-   "regel": "HT2",
-   "x": 834.4,
-   "y": 269.6,
-   "text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
-   "ways": [
-    49565863,
-    49715372,
-    49715373,
-    1273524863
-   ]
-  },
-  {
-   "regel": "HT5",
-   "x": 1236.1,
-   "y": 213.9,
-   "text": "Fahrweg Abgang 410 Oensingen (630418379) ↔ Abgang 415 Lyss (9237893722) in OSM, fehlt im Plan",
-   "von": "Abgang 410 Oensingen (630418379)",
-   "nach": "Abgang 415 Lyss (9237893722)",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1236.2,
-   "y": 213.9,
-   "text": "Fahrweg Abgang 410 Oensingen (630418379) ↔ Gl. 433 in OSM, fehlt im Plan",
-   "von": "Abgang 410 Oensingen (630418379)",
-   "nach": "Gl. 433",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1236.1,
-   "y": 201.9,
-   "text": "Fahrweg Abgang 410 Oensingen (80923172) ↔ Abgang 415 Lyss (9237893722) in OSM, fehlt im Plan",
-   "von": "Abgang 410 Oensingen (80923172)",
-   "nach": "Abgang 415 Lyss (9237893722)",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1236.2,
-   "y": 201.9,
-   "text": "Fahrweg Abgang 410 Oensingen (80923172) ↔ Gl. 433 in OSM, fehlt im Plan",
-   "von": "Abgang 410 Oensingen (80923172)",
-   "nach": "Gl. 433",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1236.1,
-   "y": 225.9,
-   "text": "Fahrweg Abgang 410 Oensingen (9237850152) ↔ Abgang 415 Lyss (9237893722) in OSM, fehlt im Plan",
-   "von": "Abgang 410 Oensingen (9237850152)",
-   "nach": "Abgang 415 Lyss (9237893722)",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1236.2,
-   "y": 225.9,
-   "text": "Fahrweg Abgang 410 Oensingen (9237850152) ↔ Gl. 433 in OSM, fehlt im Plan",
-   "von": "Abgang 410 Oensingen (9237850152)",
-   "nach": "Gl. 433",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 969.5,
-   "y": 201.9,
-   "text": "Fahrweg Abgang 415 Lyss (9237893722) ↔ Gl. 1 in OSM, fehlt im Plan",
-   "von": "Abgang 415 Lyss (9237893722)",
-   "nach": "Gl. 1",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 956.4,
-   "y": 256.5,
-   "text": "Fahrweg Abgang 415 Lyss (9237893722) ↔ Gl. 3 in OSM, fehlt im Plan",
-   "von": "Abgang 415 Lyss (9237893722)",
-   "nach": "Gl. 3",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1224.8,
-   "y": 213.9,
-   "text": "Fahrweg Abgang 415 Lyss (9237893722) ↔ Gl. 332 in OSM, fehlt im Plan",
-   "von": "Abgang 415 Lyss (9237893722)",
-   "nach": "Gl. 332",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1236.1,
-   "y": 225.9,
-   "text": "Fahrweg Abgang 415 Lyss (9237893722) ↔ Gl. 343 in OSM, fehlt im Plan",
-   "von": "Abgang 415 Lyss (9237893722)",
-   "nach": "Gl. 343",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1185.6,
-   "y": 201.9,
-   "text": "Fahrweg Abgang 415 Lyss (9237893722) ↔ Gl. 351 in OSM, fehlt im Plan",
-   "von": "Abgang 415 Lyss (9237893722)",
-   "nach": "Gl. 351",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1141.0,
-   "y": 213.9,
-   "text": "Fahrweg Abgang 415 Lyss (9237893722) ↔ Gl. 362 in OSM, fehlt im Plan",
-   "von": "Abgang 415 Lyss (9237893722)",
-   "nach": "Gl. 362",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1010.3,
-   "y": 280.5,
-   "text": "Fahrweg Abgang 415 Lyss (9237893722) ↔ Gl. 5 in OSM, fehlt im Plan",
-   "von": "Abgang 415 Lyss (9237893722)",
-   "nach": "Gl. 5",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1010.3,
-   "y": 292.5,
-   "text": "Fahrweg Abgang 415 Lyss (9237893722) ↔ Gl. 6 in OSM, fehlt im Plan",
-   "von": "Abgang 415 Lyss (9237893722)",
-   "nach": "Gl. 6",
-   "art": "fehlt"
-  },
-  {
    "regel": "_info",
    "x": 0,
    "y": 0,
-   "text": "Fahrwege: 27/27 Ziele im Plan gefunden, OSM 116, Plan 102",
+   "text": "Fahrwege: 25/25 Ziele im Plan gefunden, OSM 101, Plan 101",
    "ohne_lage": []
   }
  ],
  "osm_abgleich": {
-  "VA1": 1,
-  "VB1": 4,
-  "VB2": 13,
+  "VA1": 2,
+  "VB1": 5,
+  "VB2": 12,
   "VD1": 7,
   "VD2": 1
  }

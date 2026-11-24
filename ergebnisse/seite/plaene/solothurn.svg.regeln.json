@@ -21,13 +21,6 @@
   "text": "Weiche ohne Ausrundung (60°)"
  },
  {
-  "regel": "G2",
-  "x": 849.5,
-  "y": 243.4,
-  "bahnhof": null,
-  "text": "Weiche ohne Ausrundung (60°)"
- },
- {
   "regel": "G6",
   "x": 1428.3,
   "y": 378.8,
@@ -78,23 +71,9 @@
  },
  {
   "regel": "G7",
-  "x": 826.7,
-  "y": 269.6,
-  "bahnhof": null,
-  "text": "Gleisende nicht angebunden, nächstes Gleis 6.6 px"
- },
- {
-  "regel": "G7",
   "x": 840.7,
   "y": 269.6,
   "bahnhof": null,
-  "text": "Gleisende nicht angebunden, nächstes Gleis 5.5 px"
- },
- {
-  "regel": "G7",
-  "x": 863.1,
-  "y": 269.6,
-  "bahnhof": null,
-  "text": "Gleisende nicht angebunden, nächstes Gleis 4.0 px"
+  "text": "Gleisende nicht angebunden, nächstes Gleis 4.5 px"
  }
 ]

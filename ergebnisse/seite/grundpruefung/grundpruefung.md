@@ -111,7 +111,7 @@
 | region | 8 | 23 | 2 | **5** (Basis 3) | 3 ↓4 | 6 ↓10 | 10.08 |
 | region_mob | 3 | 3 | 1 | 3 | · | 0 ↓1 | 10.08 |
 | region_ne | 1 | **3** (Basis 2) | 1 | · | · | 0 ↓4 | 10.08 |
-| region_szu | 18 | 27 | 4 | · | · | 1 | 10.08 |
+| region_szu | 9 ↓18 | 22 ↓27 | **5** (Basis 4) | **1** (Basis 0) | **1** (Basis 0) | 1 | 10.08 |
 | region_vereina | 1 | 5 | 2 | · | · | 2 | 10.08 |
 | riedbach | · | · | · | · | · | · | 24.0 |
 | rosshausern | · | · | · | · | · | · | 24.0 |
@@ -121,7 +121,7 @@
 | saint_blaise_lac | · | · | · | · | · | · | 24.0 |
 | schonenwerd | · | · | · | · | · | · | 24.0 |
 | serrieres | · | · | · | · | · | · | 24.0 |
-| solothurn | 12 | 4 | · | · | · | 1 | 24.0 |
+| solothurn | 11 ↓12 | 4 | · | **1** (Basis 0) | · | 1 | 24.0 |
 | sugiez | · | · | · | · | · | · | 24.0 |
 | szu__berghof | · | · | · | · | · | · | 24.0 |
 | szu__borrweg | · | · | · | · | · | · | 24.0 |
@@ -129,7 +129,7 @@
 | szu__uetliberg | · | · | · | · | · | · | 24.0 |
 | szu__zurich_binz | · | · | · | · | · | · | 24.0 |
 | szu__zurich_friesenberg | · | · | · | · | · | · | 24.0 |
-| szu__zurich_giesshubel | 12 | 32 | 5 | · | · | · | 24.0 |
+| szu__zurich_giesshubel | 12 | 25 ↓32 | 5 | **1** (Basis 0) | **1** (Basis 0) | **1** (Basis 0) | 24.0 |
 | szu__zurich_schweighof | · | · | · | · | · | · | 24.0 |
 | szu__zurich_selnau | · | · | · | · | · | · | 24.0 |
 | tecknau | · | · | · | · | · | · | 24.0 |
@@ -170,3 +170,21 @@ Regeln: GS = Schnitt ohne DKW/Kreuzung/Niveautrennung; GG = Gleis auf Gleis; GQ 
   - -1573.7/73.7: zwei Gleise 12 px aufeinander
   - 628.9/-1299.1: zwei Gleise 15 px aufeinander
   - 2170.3/-326.2: zwei Gleise 45 px aufeinander
+- **region_szu** GQ: 4 → 5
+  - 508.1/-69.6: Querabstand nach dem Knick 4.6 px statt 10.1 px wie davor
+  - 508.1/-69.6: Querabstand nach dem Knick 4.5 px statt 10.1 px wie davor
+  - 467.3/-93.1: Querabstand nach dem Knick 11.1 px statt 4.6 px wie davor
+  - 472.9/-89.4: Querabstand nach dem Knick 0.0 px statt 5.5 px wie davor
+  - 498.1/-400.2: Querabstand nach dem Knick 10.0 px statt 8.2 px wie davor
+- **region_szu** GP: 0 → 1
+  - 334.1/-249.5: Pfeilspitze 3.3 px neben einem Gleis (< ½ Ebene)
+- **region_szu** GW: 0 → 1
+  - 482.9/-53.9: Gleis stösst unter 78° auf ein anderes Gleis
+- **solothurn** GP: 0 → 1
+  - 887.5/213.1: Pfeil zeigt innert 36 px auf ein Gleis
+- **szu__zurich_giesshubel** GP: 0 → 1
+  - 1583.1/-170.1: Pfeilspitze 7.8 px neben einem Gleis (< ½ Ebene)
+- **szu__zurich_giesshubel** GW: 0 → 1
+  - 1117.4/184.4: Gleis stösst unter 78° auf ein anderes Gleis
+- **szu__zurich_giesshubel** GT: 0 → 1
+  - 1552.3/-168.8: Treppe, Versatz 76.6 px

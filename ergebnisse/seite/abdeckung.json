@@ -775,17 +775,16 @@
   {
    "id": "zcz3v5yhncmbd21obybz",
    "plan": "solothurn",
-   "x": 848.0,
+   "x": 904.2,
    "y": 253.1,
    "text": "nicht verbunden",
    "abgedeckt": true,
    "regeln": [
-    "G7",
-    "MX",
-    "VB2"
+    "A1",
+    "VB1"
    ],
-   "naechster": 18.0,
-   "naechste_regel": "G7",
+   "naechster": 9.8,
+   "naechste_regel": "VB1",
    "plan_da": true
   }
  ]

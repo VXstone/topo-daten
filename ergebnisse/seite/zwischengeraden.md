@@ -1,6 +1,6 @@
 # Zwischengeraden in Bahnhofplänen (REGELN 1.9)
 
-ZG 9 (< 2 Ebenen, legt der Code zusammen), ZL 5 (länger), HK 5 (Höcker)
+ZG 9 (< 2 Ebenen, legt der Code zusammen), ZL 5 (länger), HK 6 (Höcker)
 
 | Plan | ZG | ZL | HK | Lage (x/y) |
 |---|---|---|---|---|
@@ -11,3 +11,4 @@ ZG 9 (< 2 Ebenen, legt der Code zusammen), ZL 5 (länger), HK 5 (Höcker)
 | rothrist | 0 | 1 | 2 | ZL 1434/123, HK 494/227, HK 494/238 |
 | safenwil | 0 | 1 | 0 | ZL 432/110 |
 | mob__zweisimmen | 0 | 0 | 1 | HK 365/254 |
+| solothurn | 0 | 0 | 1 | HK 1078/456 |

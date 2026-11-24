@@ -6768,10 +6768,10 @@
    "fingerabdruck": "b71d49443fad",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "regionalplan": true,
-   "veraltet": true
+   "veraltet": false
   },
   "region_vereina": {
    "key": "region_vereina",
@@ -6781,23 +6781,23 @@
    "fingerabdruck": "3d16a1587185",
    "quelle": "Linien-Region vereina",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "regionalplan": true,
-   "veraltet": true
+   "veraltet": false
   },
   "region_szu": {
    "key": "region_szu",
    "name": "Region SZU (Zürich HB – Giesshübel – Saalsporthalle / Uetliberg)",
    "gruppe": "Region",
    "region": "szu",
-   "fingerabdruck": "e578f110aee8",
+   "fingerabdruck": "444dbbacd630",
    "quelle": "Linien-Region szu",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "regionalplan": true,
-   "veraltet": true
+   "veraltet": false
   },
   "basel": {
    "key": "basel",
@@ -6867,7 +6867,7 @@
    "fingerabdruck": "f4c0c95c3771",
    "quelle": "Repo-Bahnhof",
    "workflow": "plaene",
-   "commit": "5368368fedd85811767b3dfa0f531ce927d3e2bf",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "KF"
@@ -6876,17 +6876,17 @@
     46.880065,
     7.619758
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "solothurn": {
    "key": "solothurn",
    "name": "Solothurn",
    "gruppe": "Bahnhöfe ohne Regionalplan",
    "region": null,
-   "fingerabdruck": "7aa471088ee2",
+   "fingerabdruck": "122143035f4c",
    "quelle": "Repo-Bahnhof",
    "workflow": "plaene",
-   "commit": "5368368fedd85811767b3dfa0f531ce927d3e2bf",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "SO",
@@ -6899,7 +6899,7 @@
     47.204473,
     7.546117
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "olten": {
    "key": "olten",
@@ -7206,7 +7206,7 @@
    "fingerabdruck": "9cb9d64fef0d",
    "quelle": "Repo-Bahnhof",
    "workflow": "plaene",
-   "commit": "5368368fedd85811767b3dfa0f531ce927d3e2bf",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "NE",
@@ -7218,7 +7218,7 @@
     46.997957,
     6.93831
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "saint_blaise_lac": {
    "key": "saint_blaise_lac",
@@ -8146,7 +8146,7 @@
    "fingerabdruck": "f3a899ea9b44",
    "quelle": "Repo-Bahnhof",
    "workflow": "plaene",
-   "commit": "5368368fedd85811767b3dfa0f531ce927d3e2bf",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "NEVS",
@@ -8156,7 +8156,7 @@
     46.990629,
     6.917526
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "les_deurres": {
    "key": "les_deurres",
@@ -8263,7 +8263,7 @@
    "fingerabdruck": "7feb9f3b2266",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "ALLI"
@@ -8272,7 +8272,7 @@
     46.469371,
     7.007809
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "mob__belmont_sur_montreux": {
    "key": "mob__belmont_sur_montreux",
@@ -8282,7 +8282,7 @@
    "fingerabdruck": "ce7198287b0d",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "BEMM"
@@ -8291,7 +8291,7 @@
     46.443379,
     6.904428
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "mob__blankenburg": {
    "key": "mob__blankenburg",
@@ -8301,7 +8301,7 @@
    "fingerabdruck": "a61d6d95c73f",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "BLB"
@@ -8310,7 +8310,7 @@
     46.540863,
     7.385579
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "mob__caux": {
    "key": "mob__caux",
@@ -8320,7 +8320,7 @@
    "fingerabdruck": "6758345690fc",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "CAUX",
@@ -8330,7 +8330,7 @@
     46.431193,
     6.938492
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "mob__chamby": {
    "key": "mob__chamby",
@@ -8340,7 +8340,7 @@
    "fingerabdruck": "280d45b4aa53",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "CABY",
@@ -8350,7 +8350,7 @@
     46.449657,
     6.913466
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "mob__chateau_d_oex": {
    "key": "mob__chateau_d_oex",
@@ -8360,7 +8360,7 @@
    "fingerabdruck": "163fc6d519a4",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "CHOE",
@@ -8370,7 +8370,7 @@
     46.47499,
     7.132143
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "mob__chatelard": {
    "key": "mob__chatelard",
@@ -8380,7 +8380,7 @@
    "fingerabdruck": "88d22da915cd",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "CHAL"
@@ -8389,7 +8389,7 @@
     46.447038,
     6.901337
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "mob__chernex": {
    "key": "mob__chernex",
@@ -8399,7 +8399,7 @@
    "fingerabdruck": "7285288f4fca",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "CHER"
@@ -8408,7 +8408,7 @@
     46.446556,
     6.909359
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "mob__cret_d_y_bau": {
    "key": "mob__cret_d_y_bau",
@@ -8418,7 +8418,7 @@
    "fingerabdruck": "3652f73d7837",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "CRDB"
@@ -8427,7 +8427,7 @@
     46.435303,
     6.955606
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "mob__flendruz": {
    "key": "mob__flendruz",
@@ -8437,7 +8437,7 @@
    "fingerabdruck": "0ac061d72135",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "FLED"
@@ -8446,7 +8446,7 @@
     46.482388,
     7.187024
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "mob__fontanivent": {
    "key": "mob__fontanivent",
@@ -8456,7 +8456,7 @@
    "fingerabdruck": "2dc46f52764c",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "FON"
@@ -8465,7 +8465,7 @@
     46.453066,
     6.902233
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "mob__glion_college": {
    "key": "mob__glion_college",
@@ -8475,7 +8475,7 @@
    "fingerabdruck": "1f3fcc089e7b",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "GLCO"
@@ -8484,7 +8484,7 @@
     46.434776,
     6.928651
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "mob__glion": {
    "key": "mob__glion",
@@ -8494,7 +8494,7 @@
    "fingerabdruck": "a7550b9d4b91",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "GLI",
@@ -8504,7 +8504,7 @@
     46.432292,
     6.92463
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "mob__gruben": {
    "key": "mob__gruben",
@@ -8514,7 +8514,7 @@
    "fingerabdruck": "7a2d7afaf110",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "GRUB"
@@ -8523,7 +8523,7 @@
     46.490531,
     7.280508
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "mob__gstaad": {
    "key": "mob__gstaad",
@@ -8533,7 +8533,7 @@
    "fingerabdruck": "3c60b8789a02",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "GST"
@@ -8542,7 +8542,7 @@
     46.475452,
     7.283289
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "mob__jaman": {
    "key": "mob__jaman",
@@ -8552,7 +8552,7 @@
    "fingerabdruck": "191bd4b1c3fa",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "JAMA"
@@ -8561,7 +8561,7 @@
     46.441771,
     6.976878
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "mob__jor": {
    "key": "mob__jor",
@@ -8571,7 +8571,7 @@
    "fingerabdruck": "5976832badd9",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "JOR"
@@ -8580,7 +8580,7 @@
     46.454563,
     6.964711
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "mob__la_perche": {
    "key": "mob__la_perche",
@@ -8590,7 +8590,7 @@
    "fingerabdruck": "2df243608d69",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "PERC"
@@ -8599,7 +8599,7 @@
     46.43651,
     6.975341
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "mob__la_tine": {
    "key": "mob__la_tine",
@@ -8609,7 +8609,7 @@
    "fingerabdruck": "6141054ba08b",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "TINE"
@@ -8618,7 +8618,7 @@
     46.467381,
     7.04615
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "mob__le_tremblex": {
    "key": "mob__le_tremblex",
@@ -8628,7 +8628,7 @@
    "fingerabdruck": "f5aef3a3c0cd",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "TREM"
@@ -8637,7 +8637,7 @@
     46.436224,
     6.933091
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "mob__lenk_im_simmental": {
    "key": "mob__lenk_im_simmental",
@@ -8647,7 +8647,7 @@
    "fingerabdruck": "78a2d6d40932",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "LENK"
@@ -8656,7 +8656,7 @@
     46.458518,
     7.443651
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "mob__les_avants": {
    "key": "mob__les_avants",
@@ -8666,7 +8666,7 @@
    "fingerabdruck": "df5845892612",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "AVA"
@@ -8675,7 +8675,7 @@
     46.45326,
     6.943047
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "mob__les_cases": {
    "key": "mob__les_cases",
@@ -8685,7 +8685,7 @@
    "fingerabdruck": "8061c1435425",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "CASE"
@@ -8694,7 +8694,7 @@
     46.455971,
     6.99786
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "mob__les_echets": {
    "key": "mob__les_echets",
@@ -8704,7 +8704,7 @@
    "fingerabdruck": "f7913d4b6ef4",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "ECTS"
@@ -8713,7 +8713,7 @@
     46.432001,
     6.943982
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "mob__les_sciernes": {
    "key": "mob__les_sciernes",
@@ -8723,7 +8723,7 @@
    "fingerabdruck": "be76e5bcf6b6",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "SCI"
@@ -8732,7 +8732,7 @@
     46.491411,
     7.03409
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "mob__matten": {
    "key": "mob__matten",
@@ -8742,7 +8742,7 @@
    "fingerabdruck": "8dc9d5ffe8e8",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "MATE"
@@ -8751,7 +8751,7 @@
     46.493945,
     7.421087
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "mob__montbovon": {
    "key": "mob__montbovon",
@@ -8761,7 +8761,7 @@
    "fingerabdruck": "8f47652a3854",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "MTB"
@@ -8770,7 +8770,7 @@
     46.485351,
     7.042027
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "mob__montreux_les_planches": {
    "key": "mob__montreux_les_planches",
@@ -8780,7 +8780,7 @@
    "fingerabdruck": "e104ca0065f1",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "PLCH"
@@ -8789,7 +8789,7 @@
     46.433648,
     6.916986
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "mob__montreux": {
    "key": "mob__montreux",
@@ -8799,7 +8799,7 @@
    "fingerabdruck": "f7963a129617",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "MX",
@@ -8809,7 +8809,7 @@
     46.435555,
     6.911483
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "mob__oeschseite": {
    "key": "mob__oeschseite",
@@ -8819,7 +8819,7 @@
    "fingerabdruck": "16d28f965e23",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "OES"
@@ -8828,7 +8828,7 @@
     46.53125,
     7.3522
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "mob__paccot": {
    "key": "mob__paccot",
@@ -8838,7 +8838,7 @@
    "fingerabdruck": "1a4495d9ab88",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "PACC"
@@ -8847,7 +8847,7 @@
     46.43799,
     6.963425
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "mob__planchamp": {
    "key": "mob__planchamp",
@@ -8857,7 +8857,7 @@
    "fingerabdruck": "fc3e64a7b276",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "PLAC"
@@ -8866,7 +8866,7 @@
     46.450659,
     6.901162
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "mob__rochers_de_naye": {
    "key": "mob__rochers_de_naye",
@@ -8876,7 +8876,7 @@
    "fingerabdruck": "0051a5a9952d",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "RODN"
@@ -8885,7 +8885,7 @@
     46.431516,
     6.979528
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "mob__rossiniere": {
    "key": "mob__rossiniere",
@@ -8895,7 +8895,7 @@
    "fingerabdruck": "98cc3ba867de",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "ROSI"
@@ -8904,7 +8904,7 @@
     46.464731,
     7.082755
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "mob__rougemont": {
    "key": "mob__rougemont",
@@ -8914,7 +8914,7 @@
    "fingerabdruck": "9ea16c7a6380",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "ROU"
@@ -8923,7 +8923,7 @@
     46.488422,
     7.209251
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "mob__saanen": {
    "key": "mob__saanen",
@@ -8933,7 +8933,7 @@
    "fingerabdruck": "6962244617e5",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "SAAN"
@@ -8942,7 +8942,7 @@
     46.488393,
     7.261029
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "mob__saanenmoser": {
    "key": "mob__saanenmoser",
@@ -8952,7 +8952,7 @@
    "fingerabdruck": "11f44402c18a",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "SAMO"
@@ -8961,7 +8961,7 @@
     46.517454,
     7.311681
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "mob__schonried": {
    "key": "mob__schonried",
@@ -8971,7 +8971,7 @@
    "fingerabdruck": "72654549792c",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "SCR"
@@ -8980,7 +8980,7 @@
     46.504221,
     7.290911
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "mob__sendy_sollard": {
    "key": "mob__sendy_sollard",
@@ -8990,7 +8990,7 @@
    "fingerabdruck": "d7cbe2587e22",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "SDY"
@@ -8999,7 +8999,7 @@
     46.447334,
     6.929868
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "mob__st_stephan": {
    "key": "mob__st_stephan",
@@ -9009,7 +9009,7 @@
    "fingerabdruck": "5b597ef54876",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "STST"
@@ -9018,7 +9018,7 @@
     46.505289,
     7.400573
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "mob__toveyre": {
    "key": "mob__toveyre",
@@ -9028,7 +9028,7 @@
    "fingerabdruck": "fd3f827c5fe8",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "TOV"
@@ -9037,7 +9037,7 @@
     46.427687,
     6.92859
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "mob__valmont": {
    "key": "mob__valmont",
@@ -9047,7 +9047,7 @@
    "fingerabdruck": "bf95ca773d70",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "VALM"
@@ -9056,7 +9056,7 @@
     46.428323,
     6.929981
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "mob__vernex": {
    "key": "mob__vernex",
@@ -9066,7 +9066,7 @@
    "fingerabdruck": "b37105353bb1",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "VERX"
@@ -9075,7 +9075,7 @@
     46.440374,
     6.904918
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "mob__vuarennes": {
    "key": "mob__vuarennes",
@@ -9085,7 +9085,7 @@
    "fingerabdruck": "a1589d214c82",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "VUAR"
@@ -9094,7 +9094,7 @@
     46.439311,
     6.91057
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "mob__zweisimmen": {
    "key": "mob__zweisimmen",
@@ -9104,7 +9104,7 @@
    "fingerabdruck": "e6422d6f71c6",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "ZW"
@@ -9113,7 +9113,7 @@
     46.552509,
     7.375311
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "vereina__klosters_platz": {
    "key": "vereina__klosters_platz",
@@ -9123,7 +9123,7 @@
    "fingerabdruck": "6036db4ebfb2",
    "quelle": "Linien-Region vereina",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "KLO"
@@ -9132,7 +9132,7 @@
     46.86942,
     9.880358
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "vereina__klosters_selfranga": {
    "key": "vereina__klosters_selfranga",
@@ -9142,7 +9142,7 @@
    "fingerabdruck": "62aae46651b2",
    "quelle": "Linien-Region vereina",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "SELF"
@@ -9151,7 +9151,7 @@
     46.855521,
     9.884537
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "vereina__sagliains_nord": {
    "key": "vereina__sagliains_nord",
@@ -9161,7 +9161,7 @@
    "fingerabdruck": "3e7d943dc2bb",
    "quelle": "Linien-Region vereina",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "SNOR"
@@ -9170,7 +9170,7 @@
     46.76914,
     10.071012
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "vereina__sagliains_sasslatsch": {
    "key": "vereina__sagliains_sasslatsch",
@@ -9180,7 +9180,7 @@
    "fingerabdruck": "139a2ab02739",
    "quelle": "Linien-Region vereina",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "SAST"
@@ -9189,7 +9189,7 @@
     46.761904,
     10.08772
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "vereina__sagliains": {
    "key": "vereina__sagliains",
@@ -9199,7 +9199,7 @@
    "fingerabdruck": "f792a1bbc7f5",
    "quelle": "Linien-Region vereina",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "SAGL",
@@ -9209,7 +9209,7 @@
     46.764204,
     10.099995
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "vereina__sasslatsch": {
    "key": "vereina__sasslatsch",
@@ -9219,7 +9219,7 @@
    "fingerabdruck": "8ca79a1e7774",
    "quelle": "Linien-Region vereina",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "SASS"
@@ -9228,7 +9228,7 @@
     46.759113,
     10.087334
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "vereina__selfranga_sud": {
    "key": "vereina__selfranga_sud",
@@ -9238,7 +9238,7 @@
    "fingerabdruck": "e6da95d57d4d",
    "quelle": "Linien-Region vereina",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "SELS"
@@ -9247,7 +9247,7 @@
     46.844877,
     9.906263
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "vereina__susch": {
    "key": "vereina__susch",
@@ -9257,7 +9257,7 @@
    "fingerabdruck": "ae698e80c3ab",
    "quelle": "Linien-Region vereina",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "SUS"
@@ -9266,7 +9266,7 @@
     46.751877,
     10.079411
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "vereina__vereina_nord": {
    "key": "vereina__vereina_nord",
@@ -9276,7 +9276,7 @@
    "fingerabdruck": "1f7718352ec8",
    "quelle": "Linien-Region vereina",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "VNOR"
@@ -9285,7 +9285,7 @@
     46.812657,
     9.976468
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "vereina__vereina_sud": {
    "key": "vereina__vereina_sud",
@@ -9295,7 +9295,7 @@
    "fingerabdruck": "dff85afbaebd",
    "quelle": "Linien-Region vereina",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "VSUD"
@@ -9304,7 +9304,7 @@
     46.802752,
     9.998027
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "szu__berghof": {
    "key": "szu__berghof",
@@ -9314,7 +9314,7 @@
    "fingerabdruck": "0c1c99d1dfb9",
    "quelle": "Linien-Region szu",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "BGF"
@@ -9323,7 +9323,7 @@
     47.368559,
     8.480968
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "szu__borrweg": {
    "key": "szu__borrweg",
@@ -9333,7 +9333,7 @@
    "fingerabdruck": "28dc263c7e76",
    "quelle": "Linien-Region szu",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "BORR"
@@ -9342,7 +9342,7 @@
     47.36422,
     8.511666
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "szu__ringlikon": {
    "key": "szu__ringlikon",
@@ -9352,7 +9352,7 @@
    "fingerabdruck": "afa3c7e8860a",
    "quelle": "Linien-Region szu",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "RILI"
@@ -9361,7 +9361,7 @@
     47.360708,
     8.47686
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "szu__uetliberg": {
    "key": "szu__uetliberg",
@@ -9371,7 +9371,7 @@
    "fingerabdruck": "d07538b7314e",
    "quelle": "Linien-Region szu",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "UEBE"
@@ -9380,7 +9380,7 @@
     47.352868,
     8.487528
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "szu__zurich_binz": {
    "key": "szu__zurich_binz",
@@ -9390,7 +9390,7 @@
    "fingerabdruck": "fddb55d9d377",
    "quelle": "Linien-Region szu",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "ZBZ"
@@ -9399,7 +9399,7 @@
     47.362906,
     8.517819
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "szu__zurich_friesenberg": {
    "key": "szu__zurich_friesenberg",
@@ -9409,7 +9409,7 @@
    "fingerabdruck": "f3880ec985cc",
    "quelle": "Linien-Region szu",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "FRIB"
@@ -9418,17 +9418,17 @@
     47.364897,
     8.506753
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "szu__zurich_giesshubel": {
    "key": "szu__zurich_giesshubel",
    "name": "Zürich Giesshübel · Zürich Saalsporthalle",
    "gruppe": "SZU · Bahnhöfe",
    "region": "szu",
-   "fingerabdruck": "d16c0e120456",
+   "fingerabdruck": "7e823eb45252",
    "quelle": "Linien-Region szu",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "ZGH",
@@ -9438,7 +9438,7 @@
     47.36147,
     8.521751
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "szu__zurich_schweighof": {
    "key": "szu__zurich_schweighof",
@@ -9448,7 +9448,7 @@
    "fingerabdruck": "f7af5a5f4aa8",
    "quelle": "Linien-Region szu",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "SHF"
@@ -9457,7 +9457,7 @@
     47.364978,
     8.50402
    ],
-   "veraltet": true
+   "veraltet": false
   },
   "szu__zurich_selnau": {
    "key": "szu__zurich_selnau",
@@ -9467,7 +9467,7 @@
    "fingerabdruck": "84acfad782ef",
    "quelle": "Linien-Region szu",
    "workflow": "regionen",
-   "commit": "9a91081b2a75c7c400506013040f9ce3072943f6",
+   "commit": "388c34f1efbf5f571c68fb61b8016e6043024514",
    "art": "code",
    "abk": [
     "ZSEL",
@@ -9477,7 +9477,7 @@
     47.373804,
     8.534004
    ],
-   "veraltet": true
+   "veraltet": false
   }
  },
  "ohne_dienststelle": [],

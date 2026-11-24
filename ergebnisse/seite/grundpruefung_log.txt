@@ -1,4 +1,11 @@
-Grundprüfung: {'GS': 154, 'GG': 194, 'GQ': 46, 'GP': 56, 'GW': 4, 'GT': 41} – 146 Pläne
+Grundprüfung: {'GS': 144, 'GG': 182, 'GQ': 47, 'GP': 59, 'GW': 6, 'GT': 42} – 146 Pläne
 NEU aarau GP: 2 -> 4
 NEU region GP: 3 -> 5
 NEU region_ne GG: 2 -> 3
+NEU region_szu GQ: 4 -> 5
+NEU region_szu GP: 0 -> 1
+NEU region_szu GW: 0 -> 1
+NEU solothurn GP: 0 -> 1
+NEU szu__zurich_giesshubel GP: 0 -> 1
+NEU szu__zurich_giesshubel GW: 0 -> 1
+NEU szu__zurich_giesshubel GT: 0 -> 1
