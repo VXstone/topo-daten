@@ -36,3 +36,12 @@ Eigene Datei, damit sie nicht mit Übergaben anderer Chats kollidiert. Nach Umse
   diesen Bereich nochmals mit feinerem Suchradius / feinerer Mustererkennung (Schere, DKW, EKW, Durchschneidung,
   Weichenstrasse) – lokal, nicht den ganzen Plan.
 - Voraussetzung: Schritt E (DKW-Automatik) als erstes Muster; Prüfstand (Schritt 1) für die Bausteine.
+
+## Reserve: erst umsetzen, wenn nochmals Stolperer kommen (D. Eckenstein 24.11.2026)
+Ideen, die heute je mit einer Ausnahme gelöst sind. Erst angehen, wenn derselbe Fehler an einem weiteren Ort auftaucht – dann hier streichen,
+als Schritt in die UEBERGABE und entschieden nach REGELN.md.
+- **Falsch getaggte Nebengleise erkennen** (Anlass V4g, Olten Hammer – Bornlinie, Hinweis lld9): ein OSM-Weg mit `service=siding/yard`, der
+  Personenverkehr führt (`passenger_lines`), die Liniennummer eines Hauptgleises trägt und ihm entlang läuft, oder fast deckungsgleich (≤ ~5 m) neben
+  einem Hauptgleis liegt, ist ein Stück Haupt-/Verbindungsgleis und kein Nebengleis → auf freier Strecke nicht als Stumpen zeichnen, als OSM-Verdacht
+  melden. Heute: Ausnahme südlich Olten (REGELN 4.7, `nebengleis_hand`). Wirkt auf alle Regionen → eigener Schritt mit Regression.
+
