@@ -7,7 +7,7 @@
 | olten | 10 | 21 | 7 | 2 | 165 | 205 |
 | aarau | 3 | 4 | · | 1 | 9 | 17 |
 | solothurn | 2 | 1 | · | · | 11 ↓14 | 14 |
-| szu__zurich_giesshubel | **2** (Basis 1) | 7 ↓9 | · | 1 | 2 ↓5 | 12 |
+| szu__zurich_giesshubel | 2 | 7 | · | 1 | 2 | 12 |
 | rothrist | 2 | 4 | · | · | 5 | 11 |
 | konolfingen | · | 2 | · | · | 6 | 8 |
 | mob__chamby | 1 | 1 | · | 1 | 1 | 4 |
@@ -27,7 +27,7 @@
 | mob__montreux | · | 1 | · | · | · | 1 |
 | mob__rossiniere | · | · | · | · | 1 | 1 |
 | szu__uetliberg | · | 1 | · | · | · | 1 |
-| szu__zurich_saalsporthalle | · | **1** (Basis 0) | · | · | · | 1 |
+| szu__zurich_saalsporthalle | · | 1 | · | · | · | 1 |
 | aarburg_oftringen | · | · | · | · | · | 0 |
 | auvernier | · | · | · | · | · | 0 |
 | avenches | · | · | · | · | · | 0 |
@@ -146,11 +146,3 @@ Regeln: HT1 = OSM-Weiche am Hauptgleis ohne Abzweig im Plan; HT2 = Abzweig am Ha
 ## Ausnahmen (REGELN 6, `spurplan/hauptgleis_ausnahmen.json`, nicht gezählt)
 
 - **courtepin** HT2 500.0/110.0: Industriegleis nördlich, rechts Richtung Courtepin abzweigend: in Betrieb (Satellitenbild, Daniel 22.11.2026); in OSM endet es 1 m neben dem Streckengleis ohne gemeinsamen Knoten
-
-## NEUE Befunde
-
-- **szu__zurich_giesshubel** HT1: 1 → 2
-  - 881.9/-178.0: OSM-Weiche 1262541542 ohne Abzweig im Plan
-  - 800.1/232.4: OSM-Weiche 1260863706 ohne Abzweig im Plan
-- **szu__zurich_saalsporthalle** HT2: 0 → 1
-  - 641.1/134.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung

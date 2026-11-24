@@ -1,5 +1,5 @@
 {
- "erzeugt": "2026-11-24 20:41 UTC",
+ "erzeugt": "2026-11-24 20:55 UTC",
  "plaene": 148,
  "geaendert": 46,
  "einordnung": {
@@ -53,7 +53,7 @@
    "basis": "veröffentlicht",
    "basis_commit": "9cc926b",
    "stellen": 13,
-   "letzte_aenderung": "2026-11-24T14:20",
+   "letzte_aenderung": "2026-11-24T20:41",
    "einordnung": "vermutlich besser",
    "delta": "G2 1→2, GG 26→13, W53 6→9 (Wunsch-Summe +18)",
    "alt": {
@@ -81,7 +81,7 @@
    "gruppe": "Werkzeugkasten",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -108,7 +108,7 @@
    "gruppe": "Grosse Knoten",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -117,7 +117,7 @@
    "gruppe": "Grosse Knoten",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -126,7 +126,7 @@
    "gruppe": "Bahnhöfe ohne Regionalplan",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-15)",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -153,7 +153,7 @@
    "gruppe": "Olten 1 · Knoten Olten",
    "abgenommen": false,
    "basis": "bestätigt 2026-11-08",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0,
    "letzte_aenderung": "2026-11-20T21:23",
    "einordnung": "vermutlich besser",
@@ -199,7 +199,7 @@
    "gruppe": "Olten 1 · Knoten Olten",
    "abgenommen": true,
    "basis": "bestätigt 2026-11-07",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 12,
    "letzte_aenderung": "2026-11-24T05:54",
    "einordnung": "vermutlich besser",
@@ -225,7 +225,7 @@
    "gruppe": "Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil",
    "abgenommen": true,
    "basis": "bestätigt 2026-11-08",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -234,7 +234,7 @@
    "gruppe": "Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-29)",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 17,
    "letzte_aenderung": "2026-11-23T22:28",
    "einordnung": "vermutlich besser",
@@ -274,7 +274,7 @@
    "gruppe": "Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil",
    "abgenommen": true,
    "basis": "bestätigt 2026-11-08",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 29,
    "letzte_aenderung": "2026-11-24T13:04",
    "einordnung": "vermutlich besser",
@@ -305,7 +305,7 @@
    "gruppe": "Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil",
    "abgenommen": true,
    "basis": "bestätigt 2026-11-07",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -314,7 +314,7 @@
    "gruppe": "Olten 3 · Olten – Aarau",
    "abgenommen": true,
    "basis": "bestätigt 2026-11-07",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -323,7 +323,7 @@
    "gruppe": "Olten 3 · Olten – Aarau",
    "abgenommen": true,
    "basis": "bestätigt 2026-11-07",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -332,7 +332,7 @@
    "gruppe": "Olten 3 · Olten – Aarau",
    "abgenommen": true,
    "basis": "bestätigt 2026-11-08",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -350,7 +350,7 @@
    "gruppe": "Olten 4 · Hauenstein",
    "abgenommen": true,
    "basis": "bestätigt 2026-11-07",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 14,
    "letzte_aenderung": "2026-11-23T22:28",
    "einordnung": "vermutlich besser",
@@ -378,7 +378,7 @@
    "gruppe": "Olten 4 · Hauenstein",
    "abgenommen": true,
    "basis": "bestätigt 2026-11-07",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0,
    "letzte_aenderung": "2026-11-20T21:23",
    "einordnung": "gleichwertig",
@@ -402,7 +402,7 @@
    "gruppe": "Olten 5 · Olten – Solothurn",
    "abgenommen": true,
    "basis": "bestätigt 2026-11-07",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -411,7 +411,7 @@
    "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-26)",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -420,7 +420,7 @@
    "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
    "abgenommen": true,
    "basis": "bestätigt 2026-11-07",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -429,7 +429,7 @@
    "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
    "abgenommen": true,
    "basis": "bestätigt 2026-11-08",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 2,
    "letzte_aenderung": "2026-11-22T20:14",
    "einordnung": "vermutlich besser",
@@ -463,7 +463,7 @@
    "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-15)",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 1,
    "letzte_aenderung": "2026-11-21T15:24",
    "einordnung": "schlechter?",
@@ -488,7 +488,7 @@
    "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-15)",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 1,
    "letzte_aenderung": "2026-11-20T21:23",
    "einordnung": "gleichwertig",
@@ -514,7 +514,7 @@
    "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-15)",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 4,
    "letzte_aenderung": "2026-11-22T08:19",
    "einordnung": "gleichwertig",
@@ -538,7 +538,7 @@
    "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-15)",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 11,
    "letzte_aenderung": "2026-11-21T15:24",
    "einordnung": "gleichwertig",
@@ -562,7 +562,7 @@
    "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-16)",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 1,
    "letzte_aenderung": "2026-11-20T21:23",
    "einordnung": "gleichwertig",
@@ -586,7 +586,7 @@
    "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-17)",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 1,
    "letzte_aenderung": "2026-11-20T21:23",
    "einordnung": "gleichwertig",
@@ -610,7 +610,7 @@
    "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-20)",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 6,
    "letzte_aenderung": "2026-11-21T15:24",
    "einordnung": "gleichwertig",
@@ -634,7 +634,7 @@
    "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-20)",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 5,
    "letzte_aenderung": "2026-11-22T11:48",
    "einordnung": "gleichwertig",
@@ -658,7 +658,7 @@
    "gruppe": "NE 1 · Neuchâtel – Ins – Kerzers – Bern",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-20)",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 3,
    "letzte_aenderung": "2026-11-22T05:27",
    "einordnung": "gleichwertig",
@@ -682,7 +682,7 @@
    "gruppe": "NE 2 · Ins – Sugiez – Murten",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-16)",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 1,
    "letzte_aenderung": "2026-11-20T21:23",
    "einordnung": "gleichwertig",
@@ -706,7 +706,7 @@
    "gruppe": "NE 2 · Ins – Sugiez – Murten",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-16)",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 2,
    "letzte_aenderung": "2026-11-20T21:23",
    "einordnung": "gleichwertig",
@@ -730,7 +730,7 @@
    "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
    "abgenommen": true,
    "basis": "bestätigt 2026-11-07",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -739,7 +739,7 @@
    "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-20)",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 1,
    "letzte_aenderung": "2026-11-20T21:23",
    "einordnung": "gleichwertig",
@@ -763,7 +763,7 @@
    "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-19)",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0,
    "letzte_aenderung": "2026-11-20T21:23",
    "einordnung": "gleichwertig",
@@ -787,7 +787,7 @@
    "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-19)",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0,
    "letzte_aenderung": "2026-11-20T21:23",
    "einordnung": "gleichwertig",
@@ -811,7 +811,7 @@
    "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-16)",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0,
    "letzte_aenderung": "2026-11-20T21:23",
    "einordnung": "gleichwertig",
@@ -835,7 +835,7 @@
    "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-16)",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0,
    "letzte_aenderung": "2026-11-20T21:23",
    "einordnung": "gleichwertig",
@@ -859,7 +859,7 @@
    "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-19)",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 4,
    "letzte_aenderung": "2026-11-21T21:10",
    "einordnung": "schlechter?",
@@ -883,7 +883,7 @@
    "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-19)",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 1,
    "letzte_aenderung": "2026-11-20T21:23",
    "einordnung": "gleichwertig",
@@ -907,7 +907,7 @@
    "gruppe": "NE 3 · Lyss – Kerzers – Murten – Payerne",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-19)",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0,
    "letzte_aenderung": "2026-11-20T21:23",
    "einordnung": "gleichwertig",
@@ -931,7 +931,7 @@
    "gruppe": "NE 4 · Murten – Fribourg",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-20)",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 1,
    "letzte_aenderung": "2026-11-20T21:23",
    "einordnung": "gleichwertig",
@@ -955,7 +955,7 @@
    "gruppe": "NE 4 · Murten – Fribourg",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-20)",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0,
    "letzte_aenderung": "2026-11-20T21:23",
    "einordnung": "gleichwertig",
@@ -979,7 +979,7 @@
    "gruppe": "NE 4 · Murten – Fribourg",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-20)",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 1,
    "letzte_aenderung": "2026-11-20T21:23",
    "einordnung": "gleichwertig",
@@ -1003,7 +1003,7 @@
    "gruppe": "NE 4 · Murten – Fribourg",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-20)",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 1,
    "letzte_aenderung": "2026-11-20T21:23",
    "einordnung": "gleichwertig",
@@ -1027,7 +1027,7 @@
    "gruppe": "NE 5 · Neuchâtel – Biel",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-15)",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 9,
    "letzte_aenderung": "2026-11-22T05:27",
    "einordnung": "gleichwertig",
@@ -1051,7 +1051,7 @@
    "gruppe": "NE 5 · Neuchâtel – Biel",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-15)",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 4,
    "letzte_aenderung": "2026-11-20T21:23",
    "einordnung": "gleichwertig",
@@ -1081,7 +1081,7 @@
    "gruppe": "NE 5 · Neuchâtel – Biel",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-15)",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0,
    "letzte_aenderung": "2026-11-20T21:23",
    "einordnung": "gleichwertig",
@@ -1105,7 +1105,7 @@
    "gruppe": "NE 5 · Neuchâtel – Biel",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-20)",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 2,
    "letzte_aenderung": "2026-11-21T15:24",
    "einordnung": "schlechter?",
@@ -1130,7 +1130,7 @@
    "gruppe": "NE 5 · Neuchâtel – Biel",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-15)",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0,
    "letzte_aenderung": "2026-11-20T21:23",
    "einordnung": "gleichwertig",
@@ -1154,7 +1154,7 @@
    "gruppe": "NE 5 · Neuchâtel – Biel",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-17)",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 5,
    "letzte_aenderung": "2026-11-22T05:27",
    "einordnung": "gleichwertig",
@@ -1178,7 +1178,7 @@
    "gruppe": "NE 5 · Neuchâtel – Biel",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-15)",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 5,
    "letzte_aenderung": "2026-11-20T21:23",
    "einordnung": "gleichwertig",
@@ -1202,7 +1202,7 @@
    "gruppe": "NE 5 · Neuchâtel – Biel",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-26)",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 2,
    "letzte_aenderung": "2026-11-22T05:27",
    "einordnung": "gleichwertig",
@@ -1226,7 +1226,7 @@
    "gruppe": "NE 6 · Neuchâtel – Yverdon",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-15)",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 3,
    "letzte_aenderung": "2026-11-21T12:04",
    "einordnung": "gleichwertig",
@@ -1250,7 +1250,7 @@
    "gruppe": "NE 6 · Neuchâtel – Yverdon",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-20)",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 14,
    "letzte_aenderung": "2026-11-20T21:23",
    "einordnung": "gleichwertig",
@@ -1278,7 +1278,7 @@
    "gruppe": "NE 6 · Neuchâtel – Yverdon",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-16)",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 7,
    "letzte_aenderung": "2026-11-23T21:35",
    "einordnung": "vermutlich besser",
@@ -1302,7 +1302,7 @@
    "gruppe": "NE 6 · Neuchâtel – Yverdon",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-15)",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0,
    "letzte_aenderung": "2026-11-20T21:23",
    "einordnung": "gleichwertig",
@@ -1326,7 +1326,7 @@
    "gruppe": "NE 6 · Neuchâtel – Yverdon",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-20)",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 2,
    "letzte_aenderung": "2026-11-22T05:27",
    "einordnung": "gleichwertig",
@@ -1350,7 +1350,7 @@
    "gruppe": "NE 6 · Neuchâtel – Yverdon",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-20)",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 4,
    "letzte_aenderung": "2026-11-21T15:24",
    "einordnung": "schlechter?",
@@ -1376,7 +1376,7 @@
    "gruppe": "NE 6 · Neuchâtel – Yverdon",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-26)",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 9,
    "letzte_aenderung": "2026-11-23T22:28",
    "einordnung": "schlechter?",
@@ -1404,7 +1404,7 @@
    "gruppe": "NE 6 · Neuchâtel – Yverdon",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-20)",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0,
    "letzte_aenderung": "2026-11-20T21:23",
    "einordnung": "gleichwertig",
@@ -1428,7 +1428,7 @@
    "gruppe": "NE 6 · Neuchâtel – Yverdon",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-20)",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 6,
    "letzte_aenderung": "2026-11-21T15:24",
    "einordnung": "schlechter?",
@@ -1453,7 +1453,7 @@
    "gruppe": "NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-20)",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 3,
    "letzte_aenderung": "2026-11-20T21:23",
    "einordnung": "schlechter?",
@@ -1479,7 +1479,7 @@
    "gruppe": "NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-15)",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 1,
    "letzte_aenderung": "2026-11-20T21:23",
    "einordnung": "gleichwertig",
@@ -1503,7 +1503,7 @@
    "gruppe": "NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-15)",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 1,
    "letzte_aenderung": "2026-11-20T21:23",
    "einordnung": "gleichwertig",
@@ -1527,7 +1527,7 @@
    "gruppe": "NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-15)",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 9,
    "letzte_aenderung": "2026-11-24T07:36",
    "einordnung": "vermutlich besser",
@@ -1553,7 +1553,7 @@
    "gruppe": "NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-19)",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0,
    "letzte_aenderung": "2026-11-20T21:23",
    "einordnung": "gleichwertig",
@@ -1577,7 +1577,7 @@
    "gruppe": "NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-20)",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 1,
    "letzte_aenderung": "2026-11-20T21:23",
    "einordnung": "gleichwertig",
@@ -1601,7 +1601,7 @@
    "gruppe": "NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-20)",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 1,
    "letzte_aenderung": "2026-11-20T21:23",
    "einordnung": "gleichwertig",
@@ -1625,7 +1625,7 @@
    "gruppe": "NE 8 · Neuchâtel – La Chaux-de-Fonds",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-29)",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -1634,7 +1634,7 @@
    "gruppe": "NE 8 · Neuchâtel – La Chaux-de-Fonds",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-20)",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0,
    "letzte_aenderung": "2026-11-20T21:23",
    "einordnung": "gleichwertig",
@@ -1658,7 +1658,7 @@
    "gruppe": "NE 8 · Neuchâtel – La Chaux-de-Fonds",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-15)",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0,
    "letzte_aenderung": "2026-11-20T21:23",
    "einordnung": "gleichwertig",
@@ -1682,7 +1682,7 @@
    "gruppe": "NE 8 · Neuchâtel – La Chaux-de-Fonds",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-20)",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 5,
    "letzte_aenderung": "2026-11-22T15:43",
    "einordnung": "schlechter?",
@@ -1707,7 +1707,7 @@
    "gruppe": "NE 8 · Neuchâtel – La Chaux-de-Fonds",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-19)",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 1,
    "letzte_aenderung": "2026-11-20T21:23",
    "einordnung": "gleichwertig",
@@ -1731,7 +1731,7 @@
    "gruppe": "NE 8 · Neuchâtel – La Chaux-de-Fonds",
    "abgenommen": true,
    "basis": "Archivbeginn (Abnahme 2026-10-20)",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 2,
    "letzte_aenderung": "2026-11-20T21:23",
    "einordnung": "gleichwertig",
@@ -1755,7 +1755,7 @@
    "gruppe": "MOB · Bahnhöfe",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -1764,7 +1764,7 @@
    "gruppe": "MOB · Bahnhöfe",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -1773,7 +1773,7 @@
    "gruppe": "MOB · Bahnhöfe",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -1791,7 +1791,7 @@
    "gruppe": "MOB · Bahnhöfe",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -1800,7 +1800,7 @@
    "gruppe": "MOB · Bahnhöfe",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -1809,7 +1809,7 @@
    "gruppe": "MOB · Bahnhöfe",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -1818,7 +1818,7 @@
    "gruppe": "MOB · Bahnhöfe",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -1827,7 +1827,7 @@
    "gruppe": "MOB · Bahnhöfe",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -1836,7 +1836,7 @@
    "gruppe": "MOB · Bahnhöfe",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -1845,7 +1845,7 @@
    "gruppe": "MOB · Bahnhöfe",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -1854,7 +1854,7 @@
    "gruppe": "MOB · Bahnhöfe",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -1872,7 +1872,7 @@
    "gruppe": "MOB · Bahnhöfe",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -1881,7 +1881,7 @@
    "gruppe": "MOB · Bahnhöfe",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -1890,7 +1890,7 @@
    "gruppe": "MOB · Bahnhöfe",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -1899,7 +1899,7 @@
    "gruppe": "MOB · Bahnhöfe",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -1908,7 +1908,7 @@
    "gruppe": "MOB · Bahnhöfe",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -1917,7 +1917,7 @@
    "gruppe": "MOB · Bahnhöfe",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -1935,7 +1935,7 @@
    "gruppe": "MOB · Bahnhöfe",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -1944,7 +1944,7 @@
    "gruppe": "MOB · Bahnhöfe",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -1953,7 +1953,7 @@
    "gruppe": "MOB · Bahnhöfe",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -1962,7 +1962,7 @@
    "gruppe": "MOB · Bahnhöfe",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -1971,7 +1971,7 @@
    "gruppe": "MOB · Bahnhöfe",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -1980,7 +1980,7 @@
    "gruppe": "MOB · Bahnhöfe",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -1989,7 +1989,7 @@
    "gruppe": "MOB · Bahnhöfe",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -1998,7 +1998,7 @@
    "gruppe": "MOB · Bahnhöfe",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -2016,7 +2016,7 @@
    "gruppe": "MOB · Bahnhöfe",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -2025,7 +2025,7 @@
    "gruppe": "MOB · Bahnhöfe",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -2034,7 +2034,7 @@
    "gruppe": "MOB · Bahnhöfe",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -2043,7 +2043,7 @@
    "gruppe": "MOB · Bahnhöfe",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -2052,7 +2052,7 @@
    "gruppe": "MOB · Bahnhöfe",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -2061,7 +2061,7 @@
    "gruppe": "MOB · Bahnhöfe",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -2070,7 +2070,7 @@
    "gruppe": "MOB · Bahnhöfe",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -2079,7 +2079,7 @@
    "gruppe": "MOB · Bahnhöfe",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -2088,7 +2088,7 @@
    "gruppe": "MOB · Bahnhöfe",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -2097,7 +2097,7 @@
    "gruppe": "MOB · Bahnhöfe",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -2106,7 +2106,7 @@
    "gruppe": "MOB · Bahnhöfe",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -2115,7 +2115,7 @@
    "gruppe": "MOB · Bahnhöfe",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -2124,7 +2124,7 @@
    "gruppe": "MOB · Bahnhöfe",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -2133,7 +2133,7 @@
    "gruppe": "MOB · Bahnhöfe",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -2142,7 +2142,7 @@
    "gruppe": "MOB · Bahnhöfe",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -2160,7 +2160,7 @@
    "gruppe": "Vereina · Bahnhöfe",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -2178,7 +2178,7 @@
    "gruppe": "Vereina · Bahnhöfe",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -2187,7 +2187,7 @@
    "gruppe": "Vereina · Bahnhöfe",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -2196,7 +2196,7 @@
    "gruppe": "Vereina · Bahnhöfe",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -2205,7 +2205,7 @@
    "gruppe": "Vereina · Bahnhöfe",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -2214,7 +2214,7 @@
    "gruppe": "Vereina · Bahnhöfe",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -2223,7 +2223,7 @@
    "gruppe": "Vereina · Bahnhöfe",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -2232,7 +2232,7 @@
    "gruppe": "Vereina · Bahnhöfe",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -2241,7 +2241,7 @@
    "gruppe": "Vereina · Bahnhöfe",
    "abgenommen": false,
    "basis": "veröffentlicht",
-   "basis_commit": "e57899f",
+   "basis_commit": "4bb0858",
    "stellen": 0
   },
   {
@@ -2306,7 +2306,7 @@
    "basis": "veröffentlicht",
    "basis_commit": "9cc926b",
    "stellen": 8,
-   "letzte_aenderung": "2026-11-24T13:43",
+   "letzte_aenderung": "2026-11-24T20:41",
    "einordnung": "Fehler? Topologie",
    "delta": "G2 1→3, G3 4→0, GG 30→15, GS 12→11, VB1 2→3, VC1 4→3, VD1 34→25, W53 2→4 (Wunsch-Summe +12)",
    "alt": {
@@ -2343,9 +2343,12 @@
   },
   {
    "key": "szu__zurich_saalsporthalle",
+   "name": "Zürich Saalsporthalle",
    "gruppe": "SZU · Bahnhöfe",
-   "basis": "neu",
-   "stellen": null
+   "abgenommen": false,
+   "basis": "erste Fassung",
+   "basis_commit": "e304ec2",
+   "stellen": 0
   },
   {
    "key": "szu__zurich_schweighof",
