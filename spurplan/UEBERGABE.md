@@ -947,3 +947,8 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   der Olten-Abstellanlage ausserhalb des Planfensters (Olten im Regionalplan nur Hauptgleise, REGELN 3.1) – angenommen, nicht geprüft.
 - Regression (Workflow seite): geändert nur olten_hammer («vermutlich besser», W56 4→2, W59 4→1, G0 0) und region Olten (1 Stelle, gleichwertig, GS 8 wie
   vorher); übrige «schlechter?» sind die bekannten NE-Archivstände. Abnahmen unverändert. Hinweis lld9 beantwortet mit Frage: Stumpen weglassen?
+- Nachtrag 07:10 (Daniel: «Gleise zwischen Knick und Bornlinie … ich kenne den Ort, da sind keine solchen Gleise»): die drei Stumpen südlich Olten sind
+  OSM-Hauptgleis-/Verbindungsstücke mit Tag siding/yard (57016117 mit passenger_lines=2, 137216810 ref 450 längs Hauptgleis, 137216805 4 m neben Gl. 486) –
+  weggelassen über `nebengleis_hand` in `olten_region_lage.json` (REGELN 4.7 Ausnahme). Lokal G0 Region: GG 23→22, GW 1→0, sonst gleich. Hinweis lld9 beantwortet.
+  Idee für später (nicht entschieden): allgemein erkennen («siding» mit passenger_lines oder deckungsgleich mit Hauptgleis = kein Nebengleis).
+
