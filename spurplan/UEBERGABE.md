@@ -419,6 +419,11 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   713 geht nach W, 717 mit ~190°. Der Knotenplan mit Saalsporthalle hat ±1 km Fenster (`sw_search_m` 1009), der Knick liegt ganz drin.
   Gerade gezogen entlang der 712 schwenkt das Depot weg und läuft als Schrägen übers Bündel: Plan GS 11, GG 33, GQ 5; im Regionalplan
   zeigt der Sihltal-Abgang nach W und liegt nördlich des Uetlibergasts (REGELN 0.2/4.3).
+- **Daniel 24.11. 16:14 (nach T-SZU1): der Knoten ist mehr als der Achsknick** – Überführung Richtung HB, 3 Gleise Richtung HB, 3 Gleise
+  nach Adliswil, mitten drin ein Gleis quer über alles; schwarz/grün ist daneben ein Detail. Zielplan darum für den **ganzen Knoten**:
+  Niveautrennung als Brücke/Lücke nach REGELN 2.5 (OSM layer 1: Gl. 1 14944432, Gl. 2 110680664, Gl. 12 302538279, Gl. 13 302538266,
+  717 113971008, weitere 712-Stücke 110403403/111425579 – Liste beim Start gegen OSM prüfen), je 3 Gleise parallel Richtung HB und
+  Adliswil (REGELN 1.15), kein Gleis quer über das Bündel (G0 GS/GG). Das Gleis «über alles» beim Start benennen (Way, Tags) und Daniel zeigen.
 - Zielbild: `spurplan/vergleich/szu/zielbild_giesshuebel.svg` (Skizze 18.11., von Daniel durchgesehen; Depot vereinfacht, DKW fehlen).
 - Zielplan: **szu__zurich_giesshubel** – Achse = Einfahrt Selnau + Depot (gerade, ruhig), Sihltal 712 als Abzweig nach REGELN 2.6 Richtung
   Saalsporthalle, 713 als Abzweig nach Uetliberg; im Regionalplan Sihltal südlich, Uetliberg westlich. Zu Beginn Vorher-Ausschnitt +
@@ -436,7 +441,7 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   Zielbilder nur aus dieser Liste zeichnen und die Liste mitgeben (Fehler der ersten Skizze 18.11.: Schere, Depot-Anschlüsse, Gl. 43).
 - Danach aus der T-SZU-Arbeitsliste (Abschnitt 6) nur, was 2.15 nicht schon löst: 3 gegen 2 Gleise Selnau (V1/S1), S3 Adliswil↔Selnau,
   T5 Verbindungsgleis ohne Pfeil, Uetliberg 90° gedreht, Label Binz.
-- Fertig, wenn: Giesshübel ohne Depot-Schrägen über dem Bündel (GS/GG im Plan deutlich unter 11/33, Ziel 0), Sihltal im Regionalplan
+- Fertig, wenn: Überführung Richtung HB als Niveautrennung sichtbar, 3+3 Gleise parallel, Giesshübel ohne Depot-Schrägen über dem Bündel (GS/GG im Plan deutlich unter 11/33, Ziel 0), Sihltal im Regionalplan
   südlich, 2.15 in REGELN «heute aktiv in» nachgeführt, Seite veröffentlicht.
 
 ### S2b – Konolfingen Gleisfeld West (Ebenen-Löser)
