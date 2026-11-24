@@ -2,7 +2,7 @@
 /home/runner/work/topo-daten/topo-daten/spurplan/werkstatt/olten/feedback/bauen.py:195: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
   _HEUTE = datetime.datetime.utcnow().strftime("%d.%m.%Y")
 18 Einträge
-index.html 2051 KB, 148 Pläne
+index.html 2050 KB, 148 Pläne
 21 Hinweise, 21 Ausschnitte
 Hinweis-Abdeckung: 29/57 (Befund < 40 px, ohne G2)
 ✓ 0bw9 solothurn                    G6,MX,VB1,VB2,W1,W2       19.2  Gleis nach unten, Knick, über anderen Gleisen nach oben
@@ -65,7 +65,7 @@ Hinweis-Abdeckung: 29/57 (Befund < 40 px, ohne G2)
 index.html 2057 KB, 149 Pläne
 region                       veröffentlicht                      2 Stellen  gleichwertig  
 region_ne                    veröffentlicht                      0 Stellen  gleichwertig  
-region_szu                   veröffentlicht                     13 Stellen  vermutlich besser  G2 2→1, G7 1→0, GG 27→26, GS 18→14, T7 1→0, W53 7→6 (Wunsch-Summe -14)
+region_szu                   veröffentlicht                      2 Stellen  vermutlich besser  G7 1→0, GG 27→26, GS 18→15, T7 1→0, W53 7→6 (Wunsch-Summe -14)
 solothurn                    veröffentlicht                      2 Stellen  Fehler? Topologie  G7 3→2, VA1 1→2, VB1 6→4, VB2 14→13, VC1 1→0
 olten                        bestätigt 2026-11-08                0 Stellen  vermutlich besser  VB1 14→10, VB2 27→21
 olten_hammer                 bestätigt 2026-11-07               12 Stellen  vermutlich besser  W56 4→2, W59 4→1 (Wunsch-Summe -6)
