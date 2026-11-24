@@ -63,16 +63,14 @@ Hinweis-Abdeckung: 29/57 (Befund < 40 px, ohne G2)
 ✓ z6f2 konolfingen                  MX                        21.0  DKW?
 ✓ zcz3 solothurn                    G7,MX,VB2                 18.0  nicht verbunden
 index.html 2057 KB, 149 Pläne
-region                       veröffentlicht                      2 Stellen  gleichwertig  
-region_ne                    veröffentlicht                      0 Stellen  gleichwertig  
-region_szu                   veröffentlicht                      2 Stellen  vermutlich besser  G7 1→0, GG 27→26, GS 18→15, T7 1→0, W53 7→6 (Wunsch-Summe -14)
-solothurn                    veröffentlicht                      2 Stellen  Fehler? Topologie  G7 3→2, VA1 1→2, VB1 6→4, VB2 14→13, VC1 1→0
+/home/runner/work/topo-daten/topo-daten/spurplan/code/alle_plaene_pruefen.py:231: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  json.dump(dict(erzeugt=datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"), plaene=len(zeilen), geaendert=len(gz),
+region_szu                   veröffentlicht                     13 Stellen  Fehler? Topologie  G2 1→2, GS 14→15
 olten                        bestätigt 2026-11-08                0 Stellen  vermutlich besser  VB1 14→10, VB2 27→21
 olten_hammer                 bestätigt 2026-11-07               12 Stellen  vermutlich besser  W56 4→2, W59 4→1 (Wunsch-Summe -6)
 rothrist                     Archivbeginn (Abnahme 2026-10-29)   17 Stellen  vermutlich besser  G2 0→1, G6 1→0, VB2 6→5, W56 4→1, W59 10→3 (Wunsch-Summe -9)
 zofingen                     bestätigt 2026-11-08               29 Stellen  vermutlich besser  VA2 2→0, VB1 2→1, VD1 2→1
 schonenwerd                  bestätigt 2026-11-08                0 Stellen  vermutlich besser  GG 1→0, VB1 1→0, VD1 2→1
-aarau                        veröffentlicht                      2 Stellen  vermutlich besser  VB1 7→4
 tecknau                      bestätigt 2026-11-07               14 Stellen  vermutlich besser  W56 1→0, W59 3→2 (Wunsch-Summe -3)
 laufelfingen                 bestätigt 2026-11-07                0 Stellen  gleichwertig  
 neuchatel                    bestätigt 2026-11-08                2 Stellen  vermutlich besser  GG 3→1, VA1 5→0, VC1 2→0, VD1 3→1
@@ -128,9 +126,6 @@ les_deurres                  Archivbeginn (Abnahme 2026-10-20)    0 Stellen  gle
 corcelles_peseux             Archivbeginn (Abnahme 2026-10-15)    0 Stellen  gleichwertig  OSM ok (kein Alt-Stand)
 chambrelien                  Archivbeginn (Abnahme 2026-10-20)    5 Stellen  schlechter?  G2 1→0, T7 0→1 (Wunsch-Summe +8) · OSM VA1 1 (kein Alt-Stand)
 les_geneveys_sur_coffrane    Archivbeginn (Abnahme 2026-10-19)    1 Stellen  gleichwertig  OSM VD1 1 (kein Alt-Stand)
-les_hauts_geneveys           Archivbeginn (Abnahme 2026-10-20)    2 Stellen  gleichwertig  OSM VD1 1 (kein Alt-Stand)/home/runner/work/topo-daten/topo-daten/spurplan/code/alle_plaene_pruefen.py:231: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
-  json.dump(dict(erzeugt=datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"), plaene=len(zeilen), geaendert=len(gz),
-
-szu__zurich_giesshubel       veröffentlicht                      6 Stellen  vermutlich besser  G2 2→1, GG 32→30, T7 1→0, VB2 9→8, VD1 36→34 (Wunsch-Summe -8)
-Regression: 147 Pläne, 50 geändert {'gleichwertig': 30, 'vermutlich besser': 11, 'Fehler? Topologie': 1, 'schlechter?': 8}
+les_hauts_geneveys           Archivbeginn (Abnahme 2026-10-20)    2 Stellen  gleichwertig  OSM VD1 1 (kein Alt-Stand)
+Regression: 147 Pläne, 46 geändert {'Fehler? Topologie': 1, 'vermutlich besser': 8, 'schlechter?': 8, 'gleichwertig': 29}
 Ausnahmen: 920 Einträge, 125 Orte: {'Schalter': 358, 'Ortswissen': 245, 'Geometrie': 192, 'Typvorlage': 125} | ohne Grund: 0
