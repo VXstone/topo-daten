@@ -4,6 +4,7 @@
   "kennzahlen": {
    "topo_T3": 2,
    "topo_T6": 1,
+   "lage_L3a": 1,
    "regel_G2": 2,
    "ruhe_ecken": 3
   }
@@ -13,6 +14,7 @@
   "kennzahlen": {
    "topo_T3": 2,
    "topo_T6": 1,
+   "lage_L3a": 1,
    "regel_G2": 2,
    "ruhe_ecken": 3
   }
@@ -28,6 +30,7 @@
    "kennzahlen": {
     "topo_T3": 2,
     "topo_T6": 1,
+    "lage_L3a": 1,
     "regel_G2": 2,
     "ruhe_ecken": 3
    }
@@ -41,6 +44,7 @@
    "kennzahlen": {
     "topo_T3": 2,
     "topo_T6": 1,
+    "lage_L3a": 1,
     "regel_G2": 2,
     "ruhe_ecken": 3
    }
@@ -54,6 +58,7 @@
    "kennzahlen": {
     "topo_T3": 2,
     "topo_T6": 1,
+    "lage_L3a": 1,
     "regel_G2": 2,
     "ruhe_ecken": 5
    }
@@ -67,6 +72,7 @@
    "kennzahlen": {
     "topo_T3": 2,
     "topo_T6": 1,
+    "lage_L3a": 1,
     "regel_G2": 2,
     "ruhe_ecken": 3
    }
@@ -80,6 +86,7 @@
    "kennzahlen": {
     "topo_T3": 2,
     "topo_T6": 1,
+    "lage_L3a": 1,
     "regel_G2": 2,
     "ruhe_ecken": 7
    }
@@ -93,6 +100,7 @@
    "kennzahlen": {
     "topo_T3": 2,
     "topo_T6": 2,
+    "lage_L3a": 1,
     "regel_G2": 2,
     "ruhe_ecken": 6
    }
@@ -102,11 +110,12 @@
    "drehung": {
     "Zürich Selnau": -150
    },
-   "unruhe": 178,
+   "unruhe": 176,
    "kennzahlen": {
     "topo_T3": 2,
     "topo_T6": 1,
-    "regel_G2": 2,
+    "lage_L3a": 1,
+    "regel_G2": 1,
     "ruhe_ecken": 6
    }
   }

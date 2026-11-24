@@ -2,11 +2,11 @@
  {
   "regel": "T7",
   "art": "Treppe",
-  "x": 628.8,
+  "x": 681.5,
   "y": 122.0,
   "versatz": 20.3,
   "plan": "ringlikon",
-  "text": "ringlikon: Treppe bei x=628.8, y=122.0"
+  "text": "ringlikon: Treppe bei x=681.5, y=122.0"
  },
  {
   "regel": "T7",
@@ -29,31 +29,31 @@
  {
   "regel": "T7",
   "art": "Ecke",
-  "x": 564.2,
-  "y": 30.8,
-  "winkel": -37.8,
+  "x": 569.1,
+  "y": 28.5,
+  "winkel": -37.6,
   "neben": false,
   "plan": "Regionalplan",
-  "text": "Regionalplan: Ecke bei x=564.2, y=30.8"
+  "text": "Regionalplan: Ecke bei x=569.1, y=28.5"
  },
  {
   "regel": "T7",
   "art": "Ecke",
-  "x": 572.5,
-  "y": 55.7,
-  "winkel": 13.8,
+  "x": 577.4,
+  "y": 53.5,
+  "winkel": 13.7,
   "neben": false,
   "plan": "Regionalplan",
-  "text": "Regionalplan: Ecke bei x=572.5, y=55.7"
+  "text": "Regionalplan: Ecke bei x=577.4, y=53.5"
  },
  {
   "regel": "T7",
   "art": "Ecke",
-  "x": 565.2,
-  "y": 48.5,
-  "winkel": 15.6,
+  "x": 570.0,
+  "y": 46.3,
+  "winkel": 15.1,
   "neben": false,
   "plan": "Regionalplan",
-  "text": "Regionalplan: Ecke bei x=565.2, y=48.5"
+  "text": "Regionalplan: Ecke bei x=570.0, y=46.3"
  }
 ]

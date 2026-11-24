@@ -1,7 +1,7 @@
 {
  "region": "szu",
- "erzeugt": "2026-11-24 22:12 UTC",
- "code_commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
+ "erzeugt": "2026-11-24 22:58 UTC",
+ "code_commit": "05bd0464daf3680aadb6ea03d47d90df20b2b7d4",
  "bahnhoefe": {
   "uetliberg": {
    "name": "Uetliberg",
@@ -51,14 +51,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "berghof": {
-   "name": "Berghof",
+  "borrweg": {
+   "name": "Borrweg",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "borrweg": {
-   "name": "Borrweg",
+  "berghof": {
+   "name": "Berghof",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -94,7 +94,9 @@
   "P1": 1
  },
  "planrand": 1,
- "lage": {},
+ "lage": {
+  "L3a": 1
+ },
  "kennzahlen": {
   "topo_T3": 2,
   "topo_T6": 1,
@@ -108,7 +110,8 @@
   "regel_G2": 2,
   "ruhe_treppen": 3,
   "ruhe_ecken": 3,
-  "planrand": 1
+  "planrand": 1,
+  "lage_L3a": 1
  },
  "unruhe": 325,
  "unruhe_teile": {

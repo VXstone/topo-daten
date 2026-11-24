@@ -199,6 +199,13 @@
      true,
      "321"
     ]
+   ],
+   "zweisimmen": [
+    [
+     "ports",
+     true,
+     "321"
+    ]
    ]
   },
   "oeschseite|zweisimmen": {
@@ -275,6 +282,22 @@
     ]
    ]
   },
+  "glion|valmont": {
+   "glion": [
+    [
+     "ports",
+     true,
+     "121"
+    ]
+   ],
+   "valmont": [
+    [
+     "ports",
+     true,
+     "121"
+    ]
+   ]
+  },
   "glion|glion_college": {
    "glion": [
     [
@@ -288,22 +311,6 @@
      "ports",
      true,
      "122"
-    ]
-   ]
-  },
-  "glion|valmont": {
-   "glion": [
-    [
-     "ports",
-     true,
-     "122"
-    ]
-   ],
-   "valmont": [
-    [
-     "ports",
-     true,
-     "121"
     ]
    ]
   },
@@ -387,22 +394,6 @@
     ]
    ]
   },
-  "jaman|la_perche": {
-   "jaman": [
-    [
-     "ports",
-     true,
-     "122"
-    ]
-   ],
-   "la_perche": [
-    [
-     "ports",
-     true,
-     "122"
-    ]
-   ]
-  },
   "jaman|paccot": {
    "jaman": [
     [
@@ -412,6 +403,22 @@
     ]
    ],
    "paccot": [
+    [
+     "ports",
+     true,
+     "122"
+    ]
+   ]
+  },
+  "jaman|la_perche": {
+   "jaman": [
+    [
+     "ports",
+     true,
+     "122"
+    ]
+   ],
+   "la_perche": [
     [
      "ports",
      true,
@@ -612,18 +619,5 @@
    ]
   }
  },
- "befunde": [
-  {
-   "regel": "V3",
-   "a": "blankenburg",
-   "b": "zweisimmen",
-   "text": "Blankenburg: 1 Gleis(e) nach Zweisimmen, dort kommt keines zurück"
-  },
-  {
-   "regel": "S1",
-   "a": "zweisimmen",
-   "b": "blankenburg",
-   "text": "Zweisimmen: 0 Streckengleis(e) nach Blankenburg, Strangbild 1"
-  }
- ]
+ "befunde": []
 }
