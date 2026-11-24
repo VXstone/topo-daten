@@ -778,11 +778,24 @@ def _linie_abgang():
             q = st_.pop()
             for r_ in nb[q]:
                 if r_ == n_ or r_ in seen: continue
-                if r_ not in P or math.hypot(*P[r_]) > CFG["sw_search_m"]: continue     # nur im Fenster-Umkreis
+                if r_ not in P or math.hypot(*P[r_]) > 2 * CFG["sw_search_m"]: continue  # Umkreis 2× Fenster (Gleise, die
+                # hinter dem Abgang ausserhalb des Fensters weiterlaufen und wieder hineinragen, gehören auch dazu – Prüfstand ab60)
                 if r_ in kern: zur = zur or r_
                 seen.add(r_); st_.append(r_)
         if zur:
             print(f"R2.15 Abgang {n_}->{m_} ({w_:.0f}°): läuft zur Achse zurück (Knoten {zur}) – nicht angewendet"); continue
+        # weitere Gleise derselben Linie, die nicht am Bahnhof hängen (zweites Streckengleis des Asts beginnt erst dahinter,
+        # Prüfstand ab60: Gleisende 1533), gehören auch hinter den Pfeil
+        _rfs = {ways[w2]["tags"].get("ref") for w2 in ways if any(q in seen for q in ways[w2]["nodes"]) and ways[w2]["tags"].get("ref")}
+        for w2 in ways.values():
+            if w2["tags"].get("ref") in _rfs and passenger(w2["tags"]) and not any(q in kern for q in w2["nodes"]) \
+                    and not any(q in seen for q in w2["nodes"]):
+                st_ = [q for q in w2["nodes"] if q in P]; seen.update(st_)
+                while st_:
+                    q = st_.pop()
+                    for r_ in nb[q]:
+                        if r_ in seen or r_ in kern or r_ not in P or math.hypot(*P[r_]) > 2 * CFG["sw_search_m"]: continue
+                        seen.add(r_); st_.append(r_)
         # Stummelknoten 15 m hinter der Weiche auf dem Ast
         v_ = np.subtract(P[m_], P[n_]); Lv = float(np.linalg.norm(v_)) or 1
         k_ = -(3 * 10 ** 15 + len(_LINIE_AB) + 1)
