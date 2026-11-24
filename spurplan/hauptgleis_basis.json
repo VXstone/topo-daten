@@ -1,7 +1,7 @@
 {
  "_quelle": "hauptgleis.py (Schritt HT, REGELN 0.1 / Kopf «HT»); je Abschnitt Zählung je Plan und Regel",
  "_stand": {
-  "plaene": "Ausgangsstand 18.11.2026 (Seite v155, ergebnisse 644a346 + Lauf zu 2bd032b), lokal mit hauptgleis.py gerechnet · 21.11.2026 (V4b): 53 NE-Bahnhofspläne erstmals gemessen (seit V4 aus Code; vorher feste Oktober-Pläne ohne HT), Ausgangsstand aus seite-Lauf d89f8f7 (ergebnisse 422c1dc) · 21.11.2026 (V4c): 42 Typvorlage-Pläne NE neu gemessen, Netzmodell liegt jetzt auf dem gezeichneten Plan (vorlage.py, REGELN Kopf «HT») – Messartefakt HT1+HT2 weg; St-Blaise CFF und Serrières Spurwechsel auf die OSM-Seite, HT5 findet die Ziele (lokal = Workflow) · 21.11. nachmittags: F6 Gampelen (Daniel: kein Spurwechsel), Rosshäusern/Bern Brünnen/Grandson/St-Blaise Lac Vorlage nach OSM ergänzt, Schutzstumpen ab Ausrundung, Abgang an gezeichneter Weiche (Typvorlagen 51 -> 22) · 22.11.2026 (V4e Teil 2, Seite v165, ergebnisse 713dd2b): doppelter Spurwechsel mit Gerade dazwischen, Bevaix/Ligerz nach OSM, Weichenzuordnung je Gleis, HT5 mehrteilige Perrongleise – gesenkt: aarau, auvernier, avenches, bern_brunnen_westside, bevaix, colombier, daniken, dulliken, gorgier_saint_aubin, konolfingen, ligerz, mob__vernex, mob__zweisimmen, neuchatel_vauseyon, olten, solothurn, tuscherz · 22.11. Courtepin HT2 als Ausnahme (Daniel: Industriegleis in Betrieb, OSM-Lücke) · 22.11. (V4e Teil 3, ergebnisse 6611153): Typvorlagen NE HT 0 – Abgang am Spurwechsel, Knotenfolge je Gleis, künstliche Schnitte aufgelöst, Zihlbrücke nach OSM – gesenkt: bevaix, gorgier_saint_aubin, grandson, le_landeron, riedbach, tuscherz, zihlbruecke · 22.11. (V4e Teil 4): Messung Abzweig mit Vorstück – Giesshübel Kreuzung 1395.9 HT3 -> HT2 (gleicher Ort, Abzweig 1409 neu erkannt), bewusst · 22.11. abends (V4e Teil 4, ergebnisse 66b75bc): Hand-Linien-Pläne NE und genauere Messung – gesenkt: aarau, bole, chambrelien, colombier, cornaux, daniken, mob__chamby, mob__montbovon, mob__montreux, mob__zweisimmen, murten, neuchatel_vauseyon, olten, onnens_bonvillars, rothrist, solothurn, travers · 22.11. spät (V4e Teil 5): Neuchâtel (Hand-Linien-Netzmodell auch im Workflow plaene, EKW 109 gerade, Kreuzung geradeaus nach OSM, DKW-Bogenweichen) und Vauseyon (Regel-39b-Stummel) HT 0; Solothurn HT5 15 -> 14 (Perrongleis-Kante auf seiner Geraden) – gesenkt: neuchatel, neuchatel_vauseyon, solothurn · 24.11.2026 (T-SZU1): Zofingen HT5 0→2 – die zwei Kreuzungen 2055876787/2055859619 sind jetzt OSM-DKW (4 Arme, REGELN 2.4), Bild bis auf die Klammerfarbe gleich; Messung der Fahrwege 504↔Gl. 2/3 über das DKW-Symbol, nicht geprüft"
+  "plaene": "Ausgangsstand 18.11.2026 (Seite v155, ergebnisse 644a346 + Lauf zu 2bd032b), lokal mit hauptgleis.py gerechnet · 21.11.2026 (V4b): 53 NE-Bahnhofspläne erstmals gemessen (seit V4 aus Code; vorher feste Oktober-Pläne ohne HT), Ausgangsstand aus seite-Lauf d89f8f7 (ergebnisse 422c1dc) · 21.11.2026 (V4c): 42 Typvorlage-Pläne NE neu gemessen, Netzmodell liegt jetzt auf dem gezeichneten Plan (vorlage.py, REGELN Kopf «HT») – Messartefakt HT1+HT2 weg; St-Blaise CFF und Serrières Spurwechsel auf die OSM-Seite, HT5 findet die Ziele (lokal = Workflow) · 21.11. nachmittags: F6 Gampelen (Daniel: kein Spurwechsel), Rosshäusern/Bern Brünnen/Grandson/St-Blaise Lac Vorlage nach OSM ergänzt, Schutzstumpen ab Ausrundung, Abgang an gezeichneter Weiche (Typvorlagen 51 -> 22) · 22.11.2026 (V4e Teil 2, Seite v165, ergebnisse 713dd2b): doppelter Spurwechsel mit Gerade dazwischen, Bevaix/Ligerz nach OSM, Weichenzuordnung je Gleis, HT5 mehrteilige Perrongleise – gesenkt: aarau, auvernier, avenches, bern_brunnen_westside, bevaix, colombier, daniken, dulliken, gorgier_saint_aubin, konolfingen, ligerz, mob__vernex, mob__zweisimmen, neuchatel_vauseyon, olten, solothurn, tuscherz · 22.11. Courtepin HT2 als Ausnahme (Daniel: Industriegleis in Betrieb, OSM-Lücke) · 22.11. (V4e Teil 3, ergebnisse 6611153): Typvorlagen NE HT 0 – Abgang am Spurwechsel, Knotenfolge je Gleis, künstliche Schnitte aufgelöst, Zihlbrücke nach OSM – gesenkt: bevaix, gorgier_saint_aubin, grandson, le_landeron, riedbach, tuscherz, zihlbruecke · 22.11. (V4e Teil 4): Messung Abzweig mit Vorstück – Giesshübel Kreuzung 1395.9 HT3 -> HT2 (gleicher Ort, Abzweig 1409 neu erkannt), bewusst · 22.11. abends (V4e Teil 4, ergebnisse 66b75bc): Hand-Linien-Pläne NE und genauere Messung – gesenkt: aarau, bole, chambrelien, colombier, cornaux, daniken, mob__chamby, mob__montbovon, mob__montreux, mob__zweisimmen, murten, neuchatel_vauseyon, olten, onnens_bonvillars, rothrist, solothurn, travers · 22.11. spät (V4e Teil 5): Neuchâtel (Hand-Linien-Netzmodell auch im Workflow plaene, EKW 109 gerade, Kreuzung geradeaus nach OSM, DKW-Bogenweichen) und Vauseyon (Regel-39b-Stummel) HT 0; Solothurn HT5 15 -> 14 (Perrongleis-Kante auf seiner Geraden) – gesenkt: neuchatel, neuchatel_vauseyon, solothurn · 24.11.2026 (T-SZU1): Zofingen HT5 0→2 – die zwei Kreuzungen 2055876787/2055859619 sind jetzt OSM-DKW (4 Arme, REGELN 2.4), Bild bis auf die Klammerfarbe gleich; Messung der Fahrwege 504↔Gl. 2/3 über das DKW-Symbol, nicht geprüft · 24.11.2026 (T-SZU2 Teil 2, REGELN 2.15): Giesshübel ohne Saalsporthalle neu gesetzt (HT2 9→7, HT5 5→2; HT1 1→2 = Messartefakt: Pfadstoss 1,4 px vor W 1260863706 verdeckt den gezeichneten Spurwechsel in plan_knoten), Saalsporthalle neu (HT2 1 = Gl. 2 wechselt am Perronanfang die Ebene, kein Abzweig gezeichnet – Treppe, Folgeschritt)"
  },
  "plaene": {
   "aarau": {
@@ -810,11 +810,11 @@
    "HT5": 0
   },
   "szu__zurich_giesshubel": {
-   "HT1": 1,
-   "HT2": 9,
+   "HT1": 2,
+   "HT2": 7,
    "HT3": 0,
    "HT4": 1,
-   "HT5": 5
+   "HT5": 2
   },
   "szu__zurich_schweighof": {
    "HT1": 0,
@@ -948,6 +948,13 @@
    "HT3": 0,
    "HT4": 0,
    "HT5": 2
+  },
+  "szu__zurich_saalsporthalle": {
+   "HT1": 0,
+   "HT2": 1,
+   "HT3": 0,
+   "HT4": 0,
+   "HT5": 0
   }
  }
 }
