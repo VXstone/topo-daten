@@ -15,63 +15,57 @@
  },
  "drehung": {
   "Uetliberg": 120,
-  "Zürich Giesshübel": -30
+  "Zürich Giesshübel": 0
  },
- "_drehung": "Uetliberg 120 von Hand (K0d 24.11.2026): Lagesuche hat 90 und 120 gleich bewertet; 120 läuft ohne Ecke in Uetliberg ein (Stand v179)",
+ "_drehung": "Uetliberg 120 von Hand (K0d 24.11.2026): Lagesuche hat 90 und 120 gleich bewertet; 120 läuft ohne Ecke in Uetliberg ein (Stand v179); Zürich Giesshübel 0 von Hand (T-SZU1 24.11.2026): mit dem Abgang 717 nach Zürich Wiedikon drehte die Lagesuche Giesshübel um 30° (Binz überdeckte den Titel) – Lage wie v181 bis T-SZU2",
  "Zürich Selnau": [
-  1102,
-  -613
+  1132,
+  -629
  ],
  "Ringlikon": [
-  -1125,
-  341
+  -962,
+  782
  ],
  "Uetliberg": [
-  -1509,
-  439
+  -1293,
+  974
  ],
  "Zürich Giesshübel": [
-  711,
-  85
+  642,
+  -16
  ],
  "Zürich Binz": [
-  562,
-  65
+  528,
+  42
  ],
  "Zürich Friesenberg": [
-  25,
-  152
+  41,
+  283
  ],
  "Zürich Schweighof": [
-  -201,
-  188
+  -164,
+  384
  ],
  "Berghof": [
-  -604,
-  253
+  -514,
+  557
  ],
  "Borrweg": [
-  293,
-  109
+  284,
+  162
  ],
  "Abgang 712 #11": [
-  254,
-  417
+  77,
+  -2
  ],
  "drehung_auto": {
   "Zürich Selnau": -60,
-  "Ringlikon": 170.8,
+  "Ringlikon": 153.7,
   "Uetliberg": 120,
-  "Zürich Giesshübel": -30,
-  "Zürich Binz": -9.2,
-  "Zürich Friesenberg": -9.2,
-  "Zürich Schweighof": -9.2,
-  "Berghof": -5.7,
-  "Borrweg": -6.9
- },
- "suche": {
-  "drehung": {
-   "Zürich Giesshübel": -30
-  }
+  "Zürich Binz": -26.3,
+  "Zürich Friesenberg": -26.3,
+  "Zürich Schweighof": -26.3,
+  "Berghof": -22.8,
+  "Borrweg": -24.0
  }
 }

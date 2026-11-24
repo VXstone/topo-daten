@@ -1,7 +1,7 @@
 {
  "region": "szu",
- "erzeugt": "2026-11-24 13:28 UTC",
- "code_commit": "0f13b552b73552e00cfbf9086e30590c00185ab2",
+ "erzeugt": "2026-11-24 13:57 UTC",
+ "code_commit": "5dbded2c8a32c28261db445c6af796196d5a7fc2",
  "bahnhoefe": {
   "uetliberg": {
    "name": "Uetliberg",
@@ -39,16 +39,16 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "berghof": {
-   "name": "Berghof",
-   "ok": true,
-   "befunde": "Befunde: {}",
-   "optionen": []
-  },
   "zurich_giesshubel": {
    "name": "Zürich Giesshübel",
    "ok": true,
    "befunde": "Befunde: {'A': 2, 'B': 293, 'C': 1, 'F': 3}",
+   "optionen": []
+  },
+  "berghof": {
+   "name": "Berghof",
+   "ok": true,
+   "befunde": "Befunde: {}",
    "optionen": []
   },
   "borrweg": {
@@ -67,12 +67,10 @@
   "S3": 2
  },
  "lage_suche": {
-  "ausgang": 367,
-  "ergebnis": 305,
-  "drehung": {
-   "Zürich Giesshübel": -30
-  },
-  "varianten": 25
+  "ausgang": 307,
+  "ergebnis": 307,
+  "drehung": {},
+  "varianten": 7
  },
  "netz_lage": 0,
  "topologie_region": {
@@ -85,7 +83,7 @@
   "ecken": 0
  },
  "regeln": {
-  "G2": 1,
+  "G2": 2,
   "G8": 1
  },
  "perrons": {
@@ -93,7 +91,7 @@
  },
  "planrand": 0,
  "lage": {
-  "L3a": 1
+  "L3a": 2
  },
  "kennzahlen": {
   "topo_T1": 2,
@@ -106,14 +104,14 @@
   "verk_S2": 0,
   "verk_S3": 2,
   "perron_P1": 1,
-  "regel_G2": 1,
+  "regel_G2": 2,
   "regel_G8": 1,
   "ruhe_treppen": 2,
   "ruhe_ecken": 0,
   "planrand": 0,
-  "lage_L3a": 1
+  "lage_L3a": 2
  },
- "unruhe": 551,
+ "unruhe": 553,
  "unruhe_teile": {
   "topo_T1": 100,
   "topo_T4": 50,
@@ -122,7 +120,7 @@
   "verk_S1": 50,
   "verk_S3": 100,
   "perron_P1": 30,
-  "regel_G2": 2,
+  "regel_G2": 4,
   "regel_G8": 3,
   "ruhe_treppen": 16
  }
