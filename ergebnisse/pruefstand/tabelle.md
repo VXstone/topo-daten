@@ -1,4 +1,4 @@
-# Prüfstand – Bausteine × Drehungen (2026-11-24 21:50 UTC)
+# Prüfstand – Bausteine × Drehungen (2026-11-24 22:11 UTC)
 
 Zählung je Fall (Regel Anzahl); leer = ohne Befund. Rangfolge der Regeln: T, PF, X, E, K, Q, P, QK, F, Z, D, G2, G3, G4, G5, G6, G7, G8
 
@@ -8,7 +8,7 @@ Zählung je Fall (Regel Anzahl); leer = ohne Befund. Rangfolge der Regeln: T, PF
 | osm | r5_halt |  |  |  |  |  |  |  |  |
 | osm | r7_ueberholung |  |  |  |  |  |  |  |  |
 | osm | ab30 | T 2 | T 2 | T 2 | T 2 | T 2 | T 2 | T 2 | T 2 |
-| osm | ab60 | T 2 X 2 Q 1 | T 3 X 1 Q 1 Z 1 | X 1 | X 1 | T 2 X 1 G7 2 | T 3 X 1 Q 1 | T 3 X 3 Q 1 | X 1 |
+| osm | ab60 | T 1 Q 1 | T 1 Q 1 | T 1 | T 1 | T 1 Q 1 | T 1 Q 1 | T 1 Q 1 | T 1 |
 | osm | sagliains |  |  |  |  |  |  |  |  |
 | osm | unterwerfung | X 2 | X 2 | X 2 Z 1 | X 2 | X 2 Z 1 | X 2 | X 2 | X 2 |
 | osm | zwischengerade |  |  |  |  |  | X 3 K 4 D 1 |  |  |
@@ -38,22 +38,31 @@ Zählung je Fall (Regel Anzahl); leer = ohne Befund. Rangfolge der Regeln: T, PF
 
 ## Befunde je Regel (Summe über alle Fälle)
 
-T 29 · PF 16 · X 30 · E 122 · K 4 · Q 84 · Z 111 · D 1 · G7 2
+T 24 · PF 16 · X 19 · E 122 · K 4 · Q 85 · Z 110 · D 1
 
 ## Gegen die Basis
 
-- SCHLECHTER osm/ab60/d0: X 1 → 2
-- SCHLECHTER osm/ab60/dm30: X 0 → 1
-- SCHLECHTER osm/ab60/dm60: X 0 → 1
-- SCHLECHTER osm/ab60/dm60: G7 1 → 2
-- osm/ab60/d0: T 3 → 2 (besser)
+- SCHLECHTER osm/ab60/d60: T 0 → 1
+- SCHLECHTER osm/ab60/dm60: Q 0 → 1
+- SCHLECHTER osm/ab60/a60: T 0 → 1
+- osm/ab60/d0: T 3 → 1 (besser)
+- osm/ab60/d0: X 1 → 0 (besser)
 - osm/ab60/d0: Z 1 → 0 (besser)
-- osm/ab60/dm30: T 1 → 0 (besser)
+- osm/ab60/d30: T 3 → 1 (besser)
+- osm/ab60/d30: X 1 → 0 (besser)
+- osm/ab60/d30: Z 1 → 0 (besser)
 - osm/ab60/dm30: D 1 → 0 (besser)
-- osm/ab60/dm60: T 4 → 2 (besser)
+- osm/ab60/d60: X 1 → 0 (besser)
+- osm/ab60/dm60: T 4 → 1 (besser)
 - osm/ab60/dm60: P 2 → 0 (besser)
 - osm/ab60/dm60: D 1 → 0 (besser)
 - osm/ab60/dm60: G2 1 → 0 (besser)
+- osm/ab60/dm60: G7 1 → 0 (besser)
+- osm/ab60/d90: T 3 → 1 (besser)
+- osm/ab60/d90: X 1 → 0 (besser)
+- osm/ab60/a30: T 3 → 1 (besser)
+- osm/ab60/a30: X 3 → 0 (besser)
+- osm/ab60/a60: X 1 → 0 (besser)
 - vorlage/Z3/d30: G2 2 → 0 (besser)
 - vorlage/Z3/dm30: G2 2 → 0 (besser)
 - vorlage/Z3/d60: G2 2 → 0 (besser)
@@ -71,26 +80,18 @@ T 29 · PF 16 · X 30 · E 122 · K 4 · Q 84 · Z 111 · D 1 · G7 2
 - osm ab30 a30: **T** 4 statt 6 freie Gleisenden am Planrand (Strecke oder Gleis fehlt)
 - osm ab30 a60: **T** 4 statt 6 freie Gleisenden am Planrand (Strecke oder Gleis fehlt)
 - osm ab60 d0: **Q** Querabstand 6.0 px statt 10.1
-- osm ab60 d0: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (54°)
-- osm ab60 d0: **T** 8 statt 6 freie Gleisenden am Planrand (lose Gleisstücke)
-- osm ab60 d0: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (60°) (Bahnhof alpha)
+- osm ab60 d0: **T** 7 statt 6 freie Gleisenden am Planrand (lose Gleisstücke)
 - osm ab60 d30: **Q** Querabstand 6.0 px statt 10.1
-- osm ab60 d30: **Z** Zwischengerade 16.1 px
-- osm ab60 d30: **T** 9 statt 6 freie Gleisenden am Planrand (lose Gleisstücke)
-- osm ab60 d30: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (60°) (Bahnhof alpha)
-- osm ab60 dm30: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (60°) (Bahnhof alpha)
-- osm ab60 d60: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (60°) (Bahnhof alpha)
-- osm ab60 dm60: **T** 8 statt 6 freie Gleisenden am Planrand (lose Gleisstücke)
-- osm ab60 dm60: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (60°) (Bahnhof alpha)
-- osm ab60 d90: **Q** Querabstand 6.0 px statt 10.1
-- osm ab60 d90: **T** 9 statt 6 freie Gleisenden am Planrand (lose Gleisstücke)
-- osm ab60 d90: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (60°) (Bahnhof alpha)
-- osm ab60 a30: **Q** Querabstand 6.0 px statt 10.1
-- osm ab60 a30: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (60°)
-- osm ab60 a30: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (60°)
-- osm ab60 a30: **T** 9 statt 6 freie Gleisenden am Planrand (lose Gleisstücke)
-- osm ab60 a30: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (60°) (Bahnhof alpha)
-- osm ab60 a60: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (60°) (Bahnhof alpha)
+- osm ab60 d30: **T** 7 statt 6 freie Gleisenden am Planrand (lose Gleisstücke)
+- osm ab60 dm30: **T** 5 statt 6 freie Gleisenden am Planrand (Strecke oder Gleis fehlt)
+- osm ab60 d60: **T** 5 statt 6 freie Gleisenden am Planrand (Strecke oder Gleis fehlt)
+- osm ab60 dm60: **Q** Querabstand 6.0 px statt 10.1
+- osm ab60 dm60: **T** 7 statt 6 freie Gleisenden am Planrand (lose Gleisstücke)
+- osm ab60 d90: **Q** Querabstand 6.1 px statt 10.1
+- osm ab60 d90: **T** 7 statt 6 freie Gleisenden am Planrand (lose Gleisstücke)
+- osm ab60 a30: **Q** Querabstand 5.9 px statt 10.1
+- osm ab60 a30: **T** 7 statt 6 freie Gleisenden am Planrand (lose Gleisstücke)
+- osm ab60 a60: **T** 5 statt 6 freie Gleisenden am Planrand (Strecke oder Gleis fehlt)
 - osm unterwerfung d0: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (60°)
 - osm unterwerfung d0: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (60°)
 - osm unterwerfung d30: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (30°)

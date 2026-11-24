@@ -28,30 +28,30 @@
 | osm_ab30_dm60/alpha_spurplan | · | · | · | · | · | · | · | 24.0 |
 | osm_ab30_dm60/beta_spurplan | · | · | · | · | · | · | · | 24.0 |
 | osm_ab30_dm60/region | · | · | · | · | · | · | · | 10.08 |
-| osm_ab60_a30/alpha_spurplan | 1 | · | · | · | · | · | · | 24.0 |
+| osm_ab60_a30/alpha_spurplan | 0 ↓1 | · | · | · | · | · | · | 24.0 |
 | osm_ab60_a30/beta_spurplan | · | · | · | · | · | · | · | 24.0 |
-| osm_ab60_a30/region | 2 | · | · | · | · | 2 | **4** (Basis 0) | 10.08 |
-| osm_ab60_a60/alpha_spurplan | 1 | · | · | · | · | · | · | 24.0 |
+| osm_ab60_a30/region | 0 ↓2 | · | · | · | · | 2 | **2** (Basis 0) | 10.08 |
+| osm_ab60_a60/alpha_spurplan | 0 ↓1 | · | · | · | · | · | · | 24.0 |
 | osm_ab60_a60/beta_spurplan | · | · | · | · | · | · | · | 24.0 |
-| osm_ab60_a60/region | · | · | · | · | · | · | **2** (Basis 0) | 10.08 |
-| osm_ab60_d0/alpha_spurplan | 1 | · | · | · | · | · | · | 24.0 |
+| osm_ab60_a60/region | · | · | · | · | · | · | **1** (Basis 0) | 10.08 |
+| osm_ab60_d0/alpha_spurplan | 0 ↓1 | · | · | · | · | · | · | 24.0 |
 | osm_ab60_d0/beta_spurplan | · | · | · | · | · | · | · | 24.0 |
-| osm_ab60_d0/region | **1** (Basis 0) | · | · | · | · | · | **3** (Basis 0) | 10.08 |
-| osm_ab60_d30/alpha_spurplan | 1 | · | · | · | · | · | · | 24.0 |
+| osm_ab60_d0/region | · | · | · | · | · | · | **2** (Basis 0) | 10.08 |
+| osm_ab60_d30/alpha_spurplan | 0 ↓1 | · | · | · | · | · | · | 24.0 |
 | osm_ab60_d30/beta_spurplan | · | · | · | · | · | · | · | 24.0 |
-| osm_ab60_d30/region | · | · | · | · | · | · | **5** (Basis 0) | 10.08 |
-| osm_ab60_d60/alpha_spurplan | 1 | · | · | · | · | · | · | 24.0 |
+| osm_ab60_d30/region | · | · | · | · | · | · | **3** (Basis 0) | 10.08 |
+| osm_ab60_d60/alpha_spurplan | 0 ↓1 | · | · | · | · | · | · | 24.0 |
 | osm_ab60_d60/beta_spurplan | · | · | · | · | · | · | · | 24.0 |
-| osm_ab60_d60/region | · | · | · | · | · | · | **2** (Basis 0) | 10.08 |
-| osm_ab60_d90/alpha_spurplan | 1 | · | · | · | · | · | · | 24.0 |
+| osm_ab60_d60/region | · | · | · | · | · | · | **1** (Basis 0) | 10.08 |
+| osm_ab60_d90/alpha_spurplan | 0 ↓1 | · | · | · | · | · | · | 24.0 |
 | osm_ab60_d90/beta_spurplan | · | · | · | · | · | · | · | 24.0 |
-| osm_ab60_d90/region | · | · | · | · | · | · | **6** (Basis 0) | 10.08 |
-| osm_ab60_dm30/alpha_spurplan | **1** (Basis 0) | 0 ↓1 | · | · | · | · | · | 24.0 |
+| osm_ab60_d90/region | · | · | · | · | · | · | **4** (Basis 0) | 10.08 |
+| osm_ab60_dm30/alpha_spurplan | · | 0 ↓1 | · | · | · | · | · | 24.0 |
 | osm_ab60_dm30/beta_spurplan | · | · | · | · | · | · | · | 24.0 |
-| osm_ab60_dm30/region | · | · | · | · | · | · | **3** (Basis 0) | 10.08 |
-| osm_ab60_dm60/alpha_spurplan | **1** (Basis 0) | 0 ↓1 | · | · | · | · | · | 24.0 |
+| osm_ab60_dm30/region | · | · | · | · | · | · | **2** (Basis 0) | 10.08 |
+| osm_ab60_dm60/alpha_spurplan | · | 0 ↓1 | · | · | · | · | · | 24.0 |
 | osm_ab60_dm60/beta_spurplan | · | · | · | · | · | · | · | 24.0 |
-| osm_ab60_dm60/region | · | · | · | · | · | · | **3** (Basis 0) | 10.08 |
+| osm_ab60_dm60/region | · | · | · | · | · | · | **2** (Basis 0) | 10.08 |
 | osm_buendel_knick_a30/alpha_spurplan | · | · | · | · | · | · | · | 24.0 |
 | osm_buendel_knick_a30/beta_spurplan | · | · | · | · | · | · | · | 24.0 |
 | osm_buendel_knick_a30/region | · | · | · | · | · | 2 | · | 10.08 |
@@ -472,48 +472,31 @@ Regeln: GS = Schnitt ohne DKW/Kreuzung/Niveautrennung; GG = Gleis auf Gleis; GQ 
   - 46.7/-536.2: loses Gleisende, Stück 200 px
 - **osm_ab30_dm30/region** GE: 0 → 1
   - 462.2/266.3: loses Gleisende, Stück 197 px
-- **osm_ab60_a30/region** GE: 0 → 4
-  - -131.3/-0.0: loses Gleisende, Stück 9 px
-  - -133.3/6.8: Gleisende 3.3 px neben einem Gleis (Stoss), Stück 7 px
-  - -25.9/6.0: Gleisende 6.0 px neben einem Gleis (Stoss), Stück 28 px
-  - 2.1/6.0: Gleisende 6.0 px neben einem Gleis (Stoss), Stück 28 px
-- **osm_ab60_a60/region** GE: 0 → 2
-  - -52.1/58.4: loses Gleisende, Stück 9 px
+- **osm_ab60_a30/region** GE: 0 → 2
+  - -64.1/-41.5: Gleisende 5.9 px neben einem Gleis (Stoss), Stück 28 px
+  - -64.1/-69.5: Gleisende 5.9 px neben einem Gleis (Stoss), Stück 28 px
+- **osm_ab60_a60/region** GE: 0 → 1
   - -54.1/65.2: Gleisende 3.3 px neben einem Gleis (Stoss), Stück 7 px
-- **osm_ab60_d0/region** GS: 0 → 1
-  - -100.0/70.2: Gleise kreuzen sich (54°) ohne DKW, Kreuzung oder Niveautrennung
-- **osm_ab60_d0/region** GE: 0 → 3
-  - -102.9/70.2: Gleisende 2.4 px neben einem Gleis (Stoss), Stück 9 px
+- **osm_ab60_d0/region** GE: 0 → 2
   - -43.8/2.5: loses Gleisende, Stück 28 px
   - -27.5/-20.2: loses Gleisende, Stück 28 px
-- **osm_ab60_d30/region** GE: 0 → 5
-  - -87.3/58.9: loses Gleisende, Stück 9 px
-  - -85.7/65.8: Gleisende 3.3 px neben einem Gleis (Stoss), Stück 7 px
-  - -464.0/287.9: loses Gleisende, Stück 197 px
-  - -49.1/-32.5: Gleisende 6.0 px neben einem Gleis (Stoss), Stück 28 px
-  - -49.1/-60.5: Gleisende 6.0 px neben einem Gleis (Stoss), Stück 28 px
-- **osm_ab60_d60/region** GE: 0 → 2
-  - -56.5/74.2: loses Gleisende, Stück 9 px
+- **osm_ab60_d30/region** GE: 0 → 3
+  - -462.7/285.6: loses Gleisende, Stück 197 px
+  - -68.8/-31.5: Gleisende 6.0 px neben einem Gleis (Stoss), Stück 28 px
+  - -66.0/-59.4: Gleisende 6.0 px neben einem Gleis (Stoss), Stück 28 px
+- **osm_ab60_d60/region** GE: 0 → 1
   - -51.5/79.4: Gleisende 3.3 px neben einem Gleis (Stoss), Stück 7 px
-- **osm_ab60_d90/region** GE: 0 → 6
-  - 71.5/105.1: loses Gleisende, Stück 9 px
-  - 78.3/107.1: Gleisende 3.3 px neben einem Gleis (Stoss), Stück 7 px
-  - 81.6/-515.9: loses Gleisende, Stück 200 px
-  - 91.7/-515.9: loses Gleisende, Stück 200 px
-  - -31.0/-41.4: Gleisende 6.0 px neben einem Gleis (Stoss), Stück 28 px
-  - -59.0/-41.4: Gleisende 6.0 px neben einem Gleis (Stoss), Stück 28 px
-- **osm_ab60_dm30/alpha_spurplan** GS: 0 → 1
-  - 796.4/110.0: Gleise kreuzen sich (60°) ohne DKW, Kreuzung oder Niveautrennung
-- **osm_ab60_dm30/region** GE: 0 → 3
-  - -74.2/-56.5: loses Gleisende, Stück 9 px
+- **osm_ab60_d90/region** GE: 0 → 4
+  - 80.3/-518.2: loses Gleisende, Stück 200 px
+  - 90.4/-518.2: loses Gleisende, Stück 200 px
+  - 2.5/43.8: loses Gleisende, Stück 28 px
+  - -20.2/27.4: loses Gleisende, Stück 28 px
+- **osm_ab60_dm30/region** GE: 0 → 2
   - -79.4/-51.5: Gleisende 3.3 px neben einem Gleis (Stoss), Stück 7 px
   - 456.0/261.3: loses Gleisende, Stück 197 px
-- **osm_ab60_dm60/alpha_spurplan** GS: 0 → 1
-  - 796.4/110.0: Gleise kreuzen sich (60°) ohne DKW, Kreuzung oder Niveautrennung
-- **osm_ab60_dm60/region** GE: 0 → 3
-  - -58.9/-87.3: loses Gleisende, Stück 9 px
-  - -65.8/-85.7: Gleisende 3.3 px neben einem Gleis (Stoss), Stück 7 px
-  - 46.2/-51.9: Gleisende 2.5 px neben einem Gleis (Stoss), Stück 28 px
+- **osm_ab60_dm60/region** GE: 0 → 2
+  - 30.9/-68.9: Gleisende 6.0 px neben einem Gleis (Stoss), Stück 28 px
+  - 58.7/-66.1: Gleisende 6.0 px neben einem Gleis (Stoss), Stück 28 px
 - **osm_buendel_knick_d30/region** GE: 0 → 1
   - -448.9/257.9: loses Gleisende, Stück 197 px
 - **osm_buendel_knick_d90/region** GE: 0 → 2

@@ -1,18 +1,15 @@
-Grundprüfung: {'GS': 29, 'GG': 0, 'GQ': 0, 'GP': 0, 'GW': 60, 'GT': 149, 'GE': 112} – 456 Pläne
+Grundprüfung: {'GS': 18, 'GG': 0, 'GQ': 0, 'GP': 0, 'GW': 60, 'GT': 149, 'GE': 101} – 456 Pläne
 NEU osm_ab30_d30/region GE: 0 -> 1
 NEU osm_ab30_d90/region GE: 0 -> 2
 NEU osm_ab30_dm30/region GE: 0 -> 1
-NEU osm_ab60_a30/region GE: 0 -> 4
-NEU osm_ab60_a60/region GE: 0 -> 2
-NEU osm_ab60_d0/region GS: 0 -> 1
-NEU osm_ab60_d0/region GE: 0 -> 3
-NEU osm_ab60_d30/region GE: 0 -> 5
-NEU osm_ab60_d60/region GE: 0 -> 2
-NEU osm_ab60_d90/region GE: 0 -> 6
-NEU osm_ab60_dm30/alpha_spurplan GS: 0 -> 1
-NEU osm_ab60_dm30/region GE: 0 -> 3
-NEU osm_ab60_dm60/alpha_spurplan GS: 0 -> 1
-NEU osm_ab60_dm60/region GE: 0 -> 3
+NEU osm_ab60_a30/region GE: 0 -> 2
+NEU osm_ab60_a60/region GE: 0 -> 1
+NEU osm_ab60_d0/region GE: 0 -> 2
+NEU osm_ab60_d30/region GE: 0 -> 3
+NEU osm_ab60_d60/region GE: 0 -> 1
+NEU osm_ab60_d90/region GE: 0 -> 4
+NEU osm_ab60_dm30/region GE: 0 -> 2
+NEU osm_ab60_dm60/region GE: 0 -> 2
 NEU osm_buendel_knick_d30/region GE: 0 -> 1
 NEU osm_buendel_knick_d90/region GE: 0 -> 2
 NEU osm_buendel_knick_dm30/region GE: 0 -> 1
