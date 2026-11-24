@@ -2,10 +2,10 @@
  "ebene": 10.08,
  "zaehl": {
   "GS": 8,
-  "GG": 23,
+  "GG": 22,
   "GQ": 2,
   "GP": 3,
-  "GW": 4,
+  "GW": 3,
   "GT": 6
  },
  "befunde": [
@@ -173,12 +173,6 @@
   },
   {
    "regel": "GG",
-   "x": -7.9,
-   "y": 463.4,
-   "text": "zwei Gleise 15 px aufeinander"
-  },
-  {
-   "regel": "GG",
    "x": 4322.2,
    "y": -441.0,
    "text": "zwei Gleise 23 px aufeinander"
@@ -224,12 +218,6 @@
    "x": 3469.0,
    "y": -522.4,
    "text": "Pfeil zeigt innert 15 px auf ein Gleis"
-  },
-  {
-   "regel": "GW",
-   "x": -3.0,
-   "y": 476.2,
-   "text": "Knick 174° im Gleis"
   },
   {
    "regel": "GW",

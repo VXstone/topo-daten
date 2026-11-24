@@ -2,7 +2,7 @@
 /home/runner/work/topo-daten/topo-daten/spurplan/werkstatt/olten/feedback/bauen.py:195: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
   _HEUTE = datetime.datetime.utcnow().strftime("%d.%m.%Y")
 18 Einträge
-index.html 2046 KB, 148 Pläne
+index.html 2045 KB, 148 Pläne
 21 Hinweise, 21 Ausschnitte
 Hinweis-Abdeckung: 29/57 (Befund < 40 px, ohne G2)
 ✓ 0bw9 solothurn                    G6,MX,VB1,VB2,W1,W2       19.2  Gleis nach unten, Knick, über anderen Gleisen nach oben
@@ -62,9 +62,10 @@ Hinweis-Abdeckung: 29/57 (Befund < 40 px, ohne G2)
 ✓ xke0 solothurn                    MZ                        25.3  Zwischengerade, doppelter Abstand
 ✓ z6f2 konolfingen                  MX                        21.0  DKW?
 ✓ zcz3 solothurn                    G7,MX,VB2                 18.0  nicht verbunden
-index.html 2052 KB, 149 Pläne
+index.html 2051 KB, 149 Pläne
 /home/runner/work/topo-daten/topo-daten/spurplan/code/alle_plaene_pruefen.py:231: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
   json.dump(dict(erzeugt=datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"), plaene=len(zeilen), geaendert=len(gz),
+region                       veröffentlicht                      1 Stellen  vermutlich besser  G2 26→24, GG 23→22, GW 4→3
 olten                        bestätigt 2026-11-08                0 Stellen  vermutlich besser  VB1 14→10, VB2 27→21
 olten_hammer                 bestätigt 2026-11-07               12 Stellen  vermutlich besser  W56 4→2, W59 4→1 (Wunsch-Summe -6)
 rothrist                     Archivbeginn (Abnahme 2026-10-29)   17 Stellen  vermutlich besser  G2 0→1, G6 1→0, VB2 6→5, W56 4→1, W59 10→3 (Wunsch-Summe -9)
@@ -125,5 +126,5 @@ corcelles_peseux             Archivbeginn (Abnahme 2026-10-15)    0 Stellen  gle
 chambrelien                  Archivbeginn (Abnahme 2026-10-20)    5 Stellen  schlechter?  G2 1→0, T7 0→1 (Wunsch-Summe +8) · OSM VA1 1 (kein Alt-Stand)
 les_geneveys_sur_coffrane    Archivbeginn (Abnahme 2026-10-19)    1 Stellen  gleichwertig  OSM VD1 1 (kein Alt-Stand)
 les_hauts_geneveys           Archivbeginn (Abnahme 2026-10-20)    2 Stellen  gleichwertig  OSM VD1 1 (kein Alt-Stand)
-Regression: 147 Pläne, 44 geändert {'vermutlich besser': 6, 'schlechter?': 8, 'gleichwertig': 30}
+Regression: 147 Pläne, 45 geändert {'vermutlich besser': 7, 'schlechter?': 8, 'gleichwertig': 30}
 Ausnahmen: 920 Einträge, 125 Orte: {'Schalter': 358, 'Ortswissen': 245, 'Geometrie': 192, 'Typvorlage': 125} | ohne Grund: 0
