@@ -180,7 +180,7 @@ Regeln: HT1 = OSM-Weiche am Hauptgleis ohne Abzweig im Plan; HT2 = Abzweig am Ha
 - **mob__jaman** HT5: 0 → 1
   - 336.8/113.9: Fahrweg Abgang 122 Glion (2367589190) ↔ Abgang 122 Rochers-de-Naye (477540623) in OSM, fehlt im Plan
 - **mob__zweisimmen** HT5: 0 → 5
-  - 244.2/158.0: Fahrweg Abgang 321 Lenk (1667842076) ↔ Gleisende 5300983598 im Plan, nicht in OSM
+  - 244.2/158.0: Fahrweg Abgang 120 Lenk (1667842076) ↔ Gleisende 5300983598 im Plan, nicht in OSM
   - 519.3/158.0: Fahrweg Abgang 320 Spiez (13124267647) ↔ Gleisende 5300983598 in OSM, fehlt im Plan
   - 329.5/182.0: Fahrweg Gl. 12 ↔ Gleisende 5300983598 in OSM, fehlt im Plan
   - 468.2/158.0: Fahrweg Gl. 37 ↔ Gleisende 5300983598 in OSM, fehlt im Plan

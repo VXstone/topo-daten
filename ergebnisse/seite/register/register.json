@@ -1,7 +1,7 @@
 {
  "_zweck": "Bahnhofregister (V3, 20.11.2026): jeder Bahnhof einmal, Schlüssel SBB-Abkürzung. Erzeugt von code/bahnhofregister.py im Workflow seite.",
- "code_stand": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
- "seite_commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+ "code_stand": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
+ "seite_commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
  "bahnhoefe": {
   "AA": {
    "abk": "AA",
@@ -6704,6 +6704,7 @@
     "mob"
    ],
    "linien": [
+    "120",
     "320",
     "321"
    ],
@@ -6737,7 +6738,7 @@
    "fingerabdruck": "650c8fd8fe94",
    "quelle": "Werkstatt Olten",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "regionalplan": true,
    "veraltet": false
@@ -6750,7 +6751,7 @@
    "fingerabdruck": "88c3d0b97dfe",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "regionalplan": true,
    "veraltet": false
@@ -6763,7 +6764,7 @@
    "fingerabdruck": "ce7fe0646078",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "regionalplan": true,
    "veraltet": false
@@ -6776,7 +6777,7 @@
    "fingerabdruck": "3d16a1587185",
    "quelle": "Linien-Region vereina",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "regionalplan": true,
    "veraltet": false
@@ -6789,7 +6790,7 @@
    "fingerabdruck": "3e4f2af4d873",
    "quelle": "Linien-Region szu",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "regionalplan": true,
    "veraltet": false
@@ -6862,7 +6863,7 @@
    "fingerabdruck": "f4c0c95c3771",
    "quelle": "Repo-Bahnhof",
    "workflow": "plaene",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "KF"
@@ -6881,7 +6882,7 @@
    "fingerabdruck": "5c96fba97fe6",
    "quelle": "Repo-Bahnhof",
    "workflow": "plaene",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "SO",
@@ -6904,7 +6905,7 @@
    "fingerabdruck": "a7d7b3785fb4",
    "quelle": "Werkstatt Olten",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "OL",
@@ -6924,7 +6925,7 @@
    "fingerabdruck": "b0035eb2cefb",
    "quelle": "Werkstatt Olten",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "OLH"
@@ -6943,7 +6944,7 @@
    "fingerabdruck": "8e28ff9dd913",
    "quelle": "Werkstatt Olten",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "ABO",
@@ -6964,7 +6965,7 @@
    "fingerabdruck": "09d484af467e",
    "quelle": "Werkstatt Olten",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "RTR"
@@ -6983,7 +6984,7 @@
    "fingerabdruck": "3135c2cf0dee",
    "quelle": "Werkstatt Olten",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "ZF",
@@ -7003,7 +7004,7 @@
    "fingerabdruck": "edba1ce8b230",
    "quelle": "Werkstatt Olten",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "SAF"
@@ -7022,7 +7023,7 @@
    "fingerabdruck": "1157b5c7a75f",
    "quelle": "Werkstatt Olten",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "DU"
@@ -7041,7 +7042,7 @@
    "fingerabdruck": "926cee699edd",
    "quelle": "Werkstatt Olten",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "DK",
@@ -7062,7 +7063,7 @@
    "fingerabdruck": "48e815acacdf",
    "quelle": "Werkstatt Olten",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "SCOE"
@@ -7081,7 +7082,7 @@
    "fingerabdruck": "3030bad3934a",
    "quelle": "Werkstatt Olten",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "AA",
@@ -7101,7 +7102,7 @@
    "fingerabdruck": "ac7adce83715",
    "quelle": "Werkstatt Olten",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "TK"
@@ -7120,7 +7121,7 @@
    "fingerabdruck": "e09f604e1e1d",
    "quelle": "Werkstatt Olten",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "LF"
@@ -7139,7 +7140,7 @@
    "fingerabdruck": "6e780447e0b5",
    "quelle": "Werkstatt Olten",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "WBOL"
@@ -7201,7 +7202,7 @@
    "fingerabdruck": "9cb9d64fef0d",
    "quelle": "Repo-Bahnhof",
    "workflow": "plaene",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "NE",
@@ -7223,7 +7224,7 @@
    "fingerabdruck": "7574dc0b0215",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "SBLB"
@@ -7242,7 +7243,7 @@
    "fingerabdruck": "976ea5d6388e",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "MEP"
@@ -7261,7 +7262,7 @@
    "fingerabdruck": "77a3a8cfce9b",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "ZBR"
@@ -7280,7 +7281,7 @@
    "fingerabdruck": "63fbf2e21546",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "GP"
@@ -7299,7 +7300,7 @@
    "fingerabdruck": "552a74d8437a",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "MM"
@@ -7318,7 +7319,7 @@
    "fingerabdruck": "0e47fff20159",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "GMM"
@@ -7337,7 +7338,7 @@
    "fingerabdruck": "d1be05e1ffa4",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "ROSS"
@@ -7356,7 +7357,7 @@
    "fingerabdruck": "cd416d1f34f3",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "RCH"
@@ -7375,7 +7376,7 @@
    "fingerabdruck": "2787ed5d389a",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "BNB"
@@ -7394,7 +7395,7 @@
    "fingerabdruck": "1348eb6e6a12",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "SUGI"
@@ -7413,7 +7414,7 @@
    "fingerabdruck": "1084ecb13328",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "LOEW"
@@ -7452,7 +7453,7 @@
    "fingerabdruck": "a21695515b60",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "KAL"
@@ -7471,7 +7472,7 @@
    "fingerabdruck": "33e6bcaf7687",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "FRAE"
@@ -7490,7 +7491,7 @@
    "fingerabdruck": "33de528d695f",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "KZPP"
@@ -7509,7 +7510,7 @@
    "fingerabdruck": "56250a8292da",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "GZ"
@@ -7528,7 +7529,7 @@
    "fingerabdruck": "20b37940ea8a",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "FG"
@@ -7547,7 +7548,7 @@
    "fingerabdruck": "9a4e24c8a756",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "AV"
@@ -7566,7 +7567,7 @@
    "fingerabdruck": "521686b50794",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "DOM"
@@ -7585,7 +7586,7 @@
    "fingerabdruck": "a23cbd847302",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "DOP"
@@ -7604,7 +7605,7 @@
    "fingerabdruck": "6cc8ab449832",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "MUCO"
@@ -7623,7 +7624,7 @@
    "fingerabdruck": "3b36d288de7a",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "CRFR"
@@ -7642,7 +7643,7 @@
    "fingerabdruck": "6b01dece45c1",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "COUR"
@@ -7661,7 +7662,7 @@
    "fingerabdruck": "9fb314178879",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "PEN"
@@ -7680,7 +7681,7 @@
    "fingerabdruck": "53388373d52c",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "SBL"
@@ -7699,7 +7700,7 @@
    "fingerabdruck": "e2e1afc61706",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "CORN"
@@ -7718,7 +7719,7 @@
    "fingerabdruck": "6d0c76c417a9",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "CRNE"
@@ -7737,7 +7738,7 @@
    "fingerabdruck": "0b0556f46b95",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "LD"
@@ -7756,7 +7757,7 @@
    "fingerabdruck": "6ab64518e653",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "NV"
@@ -7775,7 +7776,7 @@
    "fingerabdruck": "2f6bd4781ab4",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "LIG"
@@ -7794,7 +7795,7 @@
    "fingerabdruck": "7e55019dc56c",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "TWN"
@@ -7813,7 +7814,7 @@
    "fingerabdruck": "2c53e480adb3",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "TUE"
@@ -7832,7 +7833,7 @@
    "fingerabdruck": "88bc688363cc",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "NESE",
@@ -7853,7 +7854,7 @@
    "fingerabdruck": "1d39f1aa61e6",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "AUV",
@@ -7873,7 +7874,7 @@
    "fingerabdruck": "d93f97104f51",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "CLB"
@@ -7892,7 +7893,7 @@
    "fingerabdruck": "1ee3ec9f6eff",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "BDR"
@@ -7911,7 +7912,7 @@
    "fingerabdruck": "13c73ef063ff",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "BV"
@@ -7930,7 +7931,7 @@
    "fingerabdruck": "85024ebc184d",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "GOR"
@@ -7949,7 +7950,7 @@
    "fingerabdruck": "09b699aa0339",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "ONB"
@@ -7968,7 +7969,7 @@
    "fingerabdruck": "4df00d31a952",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "CC"
@@ -7987,7 +7988,7 @@
    "fingerabdruck": "0b541f4facce",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "GRS"
@@ -8006,7 +8007,7 @@
    "fingerabdruck": "d2d8f4dfec66",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "BOLE"
@@ -8025,7 +8026,7 @@
    "fingerabdruck": "db9eec1f9ebf",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "CDM"
@@ -8044,7 +8045,7 @@
    "fingerabdruck": "fdd2c2a51fc9",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "NOI"
@@ -8063,7 +8064,7 @@
    "fingerabdruck": "302027607a31",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "TR",
@@ -8083,7 +8084,7 @@
    "fingerabdruck": "e351bdb312bc",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "PRST"
@@ -8102,7 +8103,7 @@
    "fingerabdruck": "1ed7c1647506",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "CVTR",
@@ -8122,7 +8123,7 @@
    "fingerabdruck": "01058f77a1f8",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "MOT"
@@ -8141,7 +8142,7 @@
    "fingerabdruck": "f3a899ea9b44",
    "quelle": "Repo-Bahnhof",
    "workflow": "plaene",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "NEVS",
@@ -8161,7 +8162,7 @@
    "fingerabdruck": "137519671b4a",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "DEU"
@@ -8180,7 +8181,7 @@
    "fingerabdruck": "895ca13da82f",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "CP"
@@ -8199,7 +8200,7 @@
    "fingerabdruck": "215396699792",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "CHN",
@@ -8220,7 +8221,7 @@
    "fingerabdruck": "692c3ff7f832",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "GEC"
@@ -8239,7 +8240,7 @@
    "fingerabdruck": "048798aad871",
    "quelle": "Werkstatt NE",
    "workflow": "seite",
-   "commit": "409feb6c39ef654a817c933b6ccabd5ef50c3701",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "HGV"
@@ -8258,7 +8259,7 @@
    "fingerabdruck": "7feb9f3b2266",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "ALLI"
@@ -8277,7 +8278,7 @@
    "fingerabdruck": "ce7198287b0d",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "BEMM"
@@ -8296,7 +8297,7 @@
    "fingerabdruck": "a61d6d95c73f",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "BLB"
@@ -8315,7 +8316,7 @@
    "fingerabdruck": "89a3bd178540",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "CAUX",
@@ -8335,7 +8336,7 @@
    "fingerabdruck": "280d45b4aa53",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "CABY",
@@ -8355,7 +8356,7 @@
    "fingerabdruck": "163fc6d519a4",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "CHOE",
@@ -8375,7 +8376,7 @@
    "fingerabdruck": "88d22da915cd",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "CHAL"
@@ -8394,7 +8395,7 @@
    "fingerabdruck": "7285288f4fca",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "CHER"
@@ -8413,7 +8414,7 @@
    "fingerabdruck": "3652f73d7837",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "CRDB"
@@ -8432,7 +8433,7 @@
    "fingerabdruck": "0ac061d72135",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "FLED"
@@ -8451,7 +8452,7 @@
    "fingerabdruck": "2dc46f52764c",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "FON"
@@ -8470,7 +8471,7 @@
    "fingerabdruck": "1f3fcc089e7b",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "GLCO"
@@ -8489,7 +8490,7 @@
    "fingerabdruck": "c1ee605a5765",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "GLI",
@@ -8509,7 +8510,7 @@
    "fingerabdruck": "7a2d7afaf110",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "GRUB"
@@ -8528,7 +8529,7 @@
    "fingerabdruck": "adc5d38ad066",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "GST"
@@ -8547,7 +8548,7 @@
    "fingerabdruck": "fcaac52ac8a2",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "JAMA"
@@ -8566,7 +8567,7 @@
    "fingerabdruck": "5976832badd9",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "JOR"
@@ -8585,7 +8586,7 @@
    "fingerabdruck": "2df243608d69",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "PERC"
@@ -8604,7 +8605,7 @@
    "fingerabdruck": "6141054ba08b",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "TINE"
@@ -8623,7 +8624,7 @@
    "fingerabdruck": "530b6f3f37d2",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "TREM"
@@ -8642,7 +8643,7 @@
    "fingerabdruck": "78a2d6d40932",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "LENK"
@@ -8661,7 +8662,7 @@
    "fingerabdruck": "df5845892612",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "AVA"
@@ -8680,7 +8681,7 @@
    "fingerabdruck": "8061c1435425",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "CASE"
@@ -8699,7 +8700,7 @@
    "fingerabdruck": "f7913d4b6ef4",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "ECTS"
@@ -8718,7 +8719,7 @@
    "fingerabdruck": "be76e5bcf6b6",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "SCI"
@@ -8737,7 +8738,7 @@
    "fingerabdruck": "8dc9d5ffe8e8",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "MATE"
@@ -8756,7 +8757,7 @@
    "fingerabdruck": "8f47652a3854",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "MTB"
@@ -8775,7 +8776,7 @@
    "fingerabdruck": "e104ca0065f1",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "PLCH"
@@ -8794,7 +8795,7 @@
    "fingerabdruck": "f7963a129617",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "MX",
@@ -8814,7 +8815,7 @@
    "fingerabdruck": "16d28f965e23",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "OES"
@@ -8833,7 +8834,7 @@
    "fingerabdruck": "1b98cada04c1",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "PACC"
@@ -8852,7 +8853,7 @@
    "fingerabdruck": "fc3e64a7b276",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "PLAC"
@@ -8871,7 +8872,7 @@
    "fingerabdruck": "0051a5a9952d",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "RODN"
@@ -8890,7 +8891,7 @@
    "fingerabdruck": "98cc3ba867de",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "ROSI"
@@ -8909,7 +8910,7 @@
    "fingerabdruck": "9ea16c7a6380",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "ROU"
@@ -8928,7 +8929,7 @@
    "fingerabdruck": "6962244617e5",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "SAAN"
@@ -8947,7 +8948,7 @@
    "fingerabdruck": "11f44402c18a",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "SAMO"
@@ -8966,7 +8967,7 @@
    "fingerabdruck": "72654549792c",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "SCR"
@@ -8985,7 +8986,7 @@
    "fingerabdruck": "d7cbe2587e22",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "SDY"
@@ -9004,7 +9005,7 @@
    "fingerabdruck": "5b597ef54876",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "STST"
@@ -9023,7 +9024,7 @@
    "fingerabdruck": "fd3f827c5fe8",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "TOV"
@@ -9042,7 +9043,7 @@
    "fingerabdruck": "bf95ca773d70",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "VALM"
@@ -9061,7 +9062,7 @@
    "fingerabdruck": "b37105353bb1",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "VERX"
@@ -9080,7 +9081,7 @@
    "fingerabdruck": "a1589d214c82",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "VUAR"
@@ -9096,10 +9097,10 @@
    "name": "Zweisimmen",
    "gruppe": "MOB · Bahnhöfe",
    "region": "mob",
-   "fingerabdruck": "d44c2949651f",
+   "fingerabdruck": "627ccd4f2862",
    "quelle": "Linien-Region mob",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "ZW"
@@ -9118,7 +9119,7 @@
    "fingerabdruck": "6036db4ebfb2",
    "quelle": "Linien-Region vereina",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "KLO"
@@ -9137,7 +9138,7 @@
    "fingerabdruck": "62aae46651b2",
    "quelle": "Linien-Region vereina",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "SELF"
@@ -9156,7 +9157,7 @@
    "fingerabdruck": "3e7d943dc2bb",
    "quelle": "Linien-Region vereina",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "SNOR"
@@ -9175,7 +9176,7 @@
    "fingerabdruck": "139a2ab02739",
    "quelle": "Linien-Region vereina",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "SAST"
@@ -9194,7 +9195,7 @@
    "fingerabdruck": "f792a1bbc7f5",
    "quelle": "Linien-Region vereina",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "SAGL",
@@ -9214,7 +9215,7 @@
    "fingerabdruck": "8ca79a1e7774",
    "quelle": "Linien-Region vereina",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "SASS"
@@ -9233,7 +9234,7 @@
    "fingerabdruck": "e6da95d57d4d",
    "quelle": "Linien-Region vereina",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "SELS"
@@ -9252,7 +9253,7 @@
    "fingerabdruck": "ae698e80c3ab",
    "quelle": "Linien-Region vereina",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "SUS"
@@ -9271,7 +9272,7 @@
    "fingerabdruck": "1f7718352ec8",
    "quelle": "Linien-Region vereina",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "VNOR"
@@ -9290,7 +9291,7 @@
    "fingerabdruck": "dff85afbaebd",
    "quelle": "Linien-Region vereina",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "VSUD"
@@ -9309,7 +9310,7 @@
    "fingerabdruck": "0c1c99d1dfb9",
    "quelle": "Linien-Region szu",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "BGF"
@@ -9328,7 +9329,7 @@
    "fingerabdruck": "28dc263c7e76",
    "quelle": "Linien-Region szu",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "BORR"
@@ -9347,7 +9348,7 @@
    "fingerabdruck": "443dbe410d5d",
    "quelle": "Linien-Region szu",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "RILI"
@@ -9366,7 +9367,7 @@
    "fingerabdruck": "d07538b7314e",
    "quelle": "Linien-Region szu",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "UEBE"
@@ -9385,7 +9386,7 @@
    "fingerabdruck": "fddb55d9d377",
    "quelle": "Linien-Region szu",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "ZBZ"
@@ -9404,7 +9405,7 @@
    "fingerabdruck": "f3880ec985cc",
    "quelle": "Linien-Region szu",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "FRIB"
@@ -9423,7 +9424,7 @@
    "fingerabdruck": "744cc760829c",
    "quelle": "Linien-Region szu",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "ZGH"
@@ -9442,7 +9443,7 @@
    "fingerabdruck": "17eefadaba33",
    "quelle": "Linien-Region szu",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "ZSAA"
@@ -9461,7 +9462,7 @@
    "fingerabdruck": "f7af5a5f4aa8",
    "quelle": "Linien-Region szu",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "SHF"
@@ -9480,7 +9481,7 @@
    "fingerabdruck": "84acfad782ef",
    "quelle": "Linien-Region szu",
    "workflow": "regionen",
-   "commit": "aae34a1f24e92d5e7bc59125f44b559d5b187272",
+   "commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
    "art": "code",
    "abk": [
     "ZSEL",
