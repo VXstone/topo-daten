@@ -6,7 +6,8 @@
   "GQ": 0,
   "GP": 0,
   "GW": 0,
-  "GT": 4
+  "GT": 4,
+  "GE": 157
  },
  "befunde": [
   {
@@ -62,6 +63,948 @@
    "x": 917.3,
    "y": 1016.0,
    "text": "Treppe, Versatz 69.3 px"
+  },
+  {
+   "regel": "GE",
+   "x": 50.0,
+   "y": 166.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 380.0,
+   "y": 166.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 440.0,
+   "y": 166.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 770.0,
+   "y": 166.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 830.0,
+   "y": 202.0,
+   "text": "loses Gleisende, Stück 369 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1160.0,
+   "y": 130.0,
+   "text": "loses Gleisende, Stück 369 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1220.0,
+   "y": 130.0,
+   "text": "loses Gleisende, Stück 369 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1550.0,
+   "y": 202.0,
+   "text": "loses Gleisende, Stück 369 px"
+  },
+  {
+   "regel": "GE",
+   "x": 50.0,
+   "y": 354.0,
+   "text": "loses Gleisende, Stück 150 px"
+  },
+  {
+   "regel": "GE",
+   "x": 50.0,
+   "y": 318.0,
+   "text": "loses Gleisende, Stück 190 px"
+  },
+  {
+   "regel": "GE",
+   "x": 440.0,
+   "y": 336.0,
+   "text": "loses Gleisende, Stück 230 px"
+  },
+  {
+   "regel": "GE",
+   "x": 830.0,
+   "y": 326.0,
+   "text": "loses Gleisende, Stück 170 px"
+  },
+  {
+   "regel": "GE",
+   "x": 830.0,
+   "y": 346.0,
+   "text": "loses Gleisende, Stück 170 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1220.0,
+   "y": 366.0,
+   "text": "loses Gleisende, Stück 191 px"
+  },
+  {
+   "regel": "GE",
+   "x": 50.0,
+   "y": 494.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 380.0,
+   "y": 494.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 50.0,
+   "y": 520.0,
+   "text": "loses Gleisende, Stück 120 px"
+  },
+  {
+   "regel": "GE",
+   "x": 170.0,
+   "y": 520.0,
+   "text": "loses Gleisende, Stück 120 px"
+  },
+  {
+   "regel": "GE",
+   "x": 440.0,
+   "y": 506.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 770.0,
+   "y": 506.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 830.0,
+   "y": 506.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1160.0,
+   "y": 506.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1220.0,
+   "y": 494.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1550.0,
+   "y": 494.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1220.0,
+   "y": 518.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1550.0,
+   "y": 518.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 50.0,
+   "y": 664.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 380.0,
+   "y": 664.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 50.0,
+   "y": 688.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 380.0,
+   "y": 688.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 440.0,
+   "y": 652.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 770.0,
+   "y": 652.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 440.0,
+   "y": 700.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 770.0,
+   "y": 700.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 830.0,
+   "y": 671.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1160.0,
+   "y": 671.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 830.0,
+   "y": 681.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1160.0,
+   "y": 681.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 930.0,
+   "y": 664.0,
+   "text": "loses Gleisende, Stück 70 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1000.0,
+   "y": 664.0,
+   "text": "loses Gleisende, Stück 70 px"
+  },
+  {
+   "regel": "GE",
+   "x": 930.0,
+   "y": 688.0,
+   "text": "loses Gleisende, Stück 70 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1000.0,
+   "y": 688.0,
+   "text": "loses Gleisende, Stück 70 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1220.0,
+   "y": 664.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1550.0,
+   "y": 664.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1423.9,
+   "y": 688.0,
+   "text": "loses Gleisende, Stück 135 px"
+  },
+  {
+   "regel": "GE",
+   "x": 50.0,
+   "y": 858.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 380.0,
+   "y": 858.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 253.9,
+   "y": 834.0,
+   "text": "loses Gleisende, Stück 135 px"
+  },
+  {
+   "regel": "GE",
+   "x": 440.0,
+   "y": 834.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 770.0,
+   "y": 834.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 506.1,
+   "y": 858.0,
+   "text": "loses Gleisende, Stück 135 px"
+  },
+  {
+   "regel": "GE",
+   "x": 830.0,
+   "y": 858.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1160.0,
+   "y": 858.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 896.1,
+   "y": 834.0,
+   "text": "loses Gleisende, Stück 135 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1220.0,
+   "y": 834.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1550.0,
+   "y": 834.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 50.0,
+   "y": 1016.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 380.0,
+   "y": 1016.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 440.0,
+   "y": 980.0,
+   "text": "loses Gleisende, Stück 369 px"
+  },
+  {
+   "regel": "GE",
+   "x": 770.0,
+   "y": 1016.0,
+   "text": "loses Gleisende, Stück 239 px"
+  },
+  {
+   "regel": "GE",
+   "x": 830.0,
+   "y": 986.0,
+   "text": "loses Gleisende, Stück 362 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1160.0,
+   "y": 1046.0,
+   "text": "loses Gleisende, Stück 362 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1550.0,
+   "y": 1004.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1220.0,
+   "y": 1028.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1550.0,
+   "y": 1028.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 380.0,
+   "y": 1174.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 50.0,
+   "y": 1198.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 380.0,
+   "y": 1198.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 440.0,
+   "y": 1174.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 770.0,
+   "y": 1174.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 440.0,
+   "y": 1198.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 770.0,
+   "y": 1198.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 830.0,
+   "y": 1174.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1160.0,
+   "y": 1174.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 830.0,
+   "y": 1198.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1160.0,
+   "y": 1198.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1220.0,
+   "y": 1150.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1550.0,
+   "y": 1150.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1220.0,
+   "y": 1174.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1550.0,
+   "y": 1174.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1220.0,
+   "y": 1198.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1550.0,
+   "y": 1198.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1220.0,
+   "y": 1222.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1550.0,
+   "y": 1222.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 50.0,
+   "y": 1368.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 380.0,
+   "y": 1368.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 50.0,
+   "y": 1344.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 380.0,
+   "y": 1344.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 537.3,
+   "y": 1308.0,
+   "text": "loses Gleisende, Stück 129 px"
+  },
+  {
+   "regel": "GE",
+   "x": 612.7,
+   "y": 1404.0,
+   "text": "loses Gleisende, Stück 129 px"
+  },
+  {
+   "regel": "GE",
+   "x": 440.0,
+   "y": 1356.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 770.0,
+   "y": 1356.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 927.3,
+   "y": 1404.0,
+   "text": "loses Gleisende, Stück 129 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1002.7,
+   "y": 1308.0,
+   "text": "loses Gleisende, Stück 129 px"
+  },
+  {
+   "regel": "GE",
+   "x": 830.0,
+   "y": 1356.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1160.0,
+   "y": 1356.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1220.0,
+   "y": 1356.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1550.0,
+   "y": 1356.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1317.3,
+   "y": 1308.0,
+   "text": "loses Gleisende, Stück 129 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1392.7,
+   "y": 1404.0,
+   "text": "loses Gleisende, Stück 129 px"
+  },
+  {
+   "regel": "GE",
+   "x": 50.0,
+   "y": 1502.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 380.0,
+   "y": 1502.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 50.0,
+   "y": 1550.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 380.0,
+   "y": 1550.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 537.3,
+   "y": 1478.0,
+   "text": "loses Gleisende, Stück 129 px"
+  },
+  {
+   "regel": "GE",
+   "x": 612.7,
+   "y": 1574.0,
+   "text": "loses Gleisende, Stück 129 px"
+  },
+  {
+   "regel": "GE",
+   "x": 440.0,
+   "y": 1526.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 770.0,
+   "y": 1526.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 830.0,
+   "y": 1526.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1160.0,
+   "y": 1526.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 950.4,
+   "y": 1466.0,
+   "text": "loses Gleisende, Stück 157 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1039.6,
+   "y": 1586.0,
+   "text": "loses Gleisende, Stück 157 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1220.0,
+   "y": 1526.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1550.0,
+   "y": 1526.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 50.0,
+   "y": 1726.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 380.0,
+   "y": 1726.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 380.0,
+   "y": 1666.0,
+   "text": "loses Gleisende, Stück 269 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1030.0,
+   "y": 1914.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1360.0,
+   "y": 1914.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1030.0,
+   "y": 1938.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1360.0,
+   "y": 1938.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 250.0,
+   "y": 2152.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 580.0,
+   "y": 2152.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 250.0,
+   "y": 2176.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 580.0,
+   "y": 2176.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 830.0,
+   "y": 2101.0,
+   "text": "loses Gleisende, Stück 460 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1195.8,
+   "y": 2267.0,
+   "text": "loses Gleisende, Stück 460 px"
+  },
+  {
+   "regel": "GE",
+   "x": 830.0,
+   "y": 2125.0,
+   "text": "loses Gleisende, Stück 419 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1168.1,
+   "y": 2267.0,
+   "text": "loses Gleisende, Stück 419 px"
+  },
+  {
+   "regel": "GE",
+   "x": 830.0,
+   "y": 2149.0,
+   "text": "loses Gleisende, Stück 377 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1140.4,
+   "y": 2267.0,
+   "text": "loses Gleisende, Stück 377 px"
+  },
+  {
+   "regel": "GE",
+   "x": 830.0,
+   "y": 2173.0,
+   "text": "loses Gleisende, Stück 336 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1112.7,
+   "y": 2267.0,
+   "text": "loses Gleisende, Stück 336 px"
+  },
+  {
+   "regel": "GE",
+   "x": 830.0,
+   "y": 2221.0,
+   "text": "loses Gleisende, Stück 243 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1073.1,
+   "y": 2221.0,
+   "text": "Gleisende 4.3 px neben einem Gleis (Stoss), Stück 243 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1182.3,
+   "y": 2221.0,
+   "text": "Gleisende 4.2 px neben einem Gleis (Stoss), Stück 318 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1500.0,
+   "y": 2221.0,
+   "text": "loses Gleisende, Stück 318 px"
+  },
+  {
+   "regel": "GE",
+   "x": 830.0,
+   "y": 2245.0,
+   "text": "loses Gleisende, Stück 257 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1087.0,
+   "y": 2245.0,
+   "text": "Gleisende 4.2 px neben einem Gleis (Stoss), Stück 257 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1196.1,
+   "y": 2245.0,
+   "text": "Gleisende 4.2 px neben einem Gleis (Stoss), Stück 304 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1500.0,
+   "y": 2245.0,
+   "text": "loses Gleisende, Stück 304 px"
+  },
+  {
+   "regel": "GE",
+   "x": 250.0,
+   "y": 2426.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 580.0,
+   "y": 2426.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1030.0,
+   "y": 2414.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1360.0,
+   "y": 2414.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1030.0,
+   "y": 2438.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1360.0,
+   "y": 2438.0,
+   "text": "loses Gleisende, Stück 330 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1050.0,
+   "y": 2390.0,
+   "text": "loses Gleisende, Stück 221 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1217.7,
+   "y": 2486.0,
+   "text": "loses Gleisende, Stück 221 px"
+  },
+  {
+   "regel": "GE",
+   "x": 250.0,
+   "y": 2640.0,
+   "text": "loses Gleisende, Stück 430 px"
+  },
+  {
+   "regel": "GE",
+   "x": 680.0,
+   "y": 2640.0,
+   "text": "loses Gleisende, Stück 430 px"
+  },
+  {
+   "regel": "GE",
+   "x": 250.0,
+   "y": 2664.0,
+   "text": "loses Gleisende, Stück 430 px"
+  },
+  {
+   "regel": "GE",
+   "x": 680.0,
+   "y": 2664.0,
+   "text": "loses Gleisende, Stück 430 px"
+  },
+  {
+   "regel": "GE",
+   "x": 250.0,
+   "y": 2688.0,
+   "text": "loses Gleisende, Stück 430 px"
+  },
+  {
+   "regel": "GE",
+   "x": 680.0,
+   "y": 2688.0,
+   "text": "loses Gleisende, Stück 430 px"
+  },
+  {
+   "regel": "GE",
+   "x": 250.0,
+   "y": 2712.0,
+   "text": "loses Gleisende, Stück 430 px"
+  },
+  {
+   "regel": "GE",
+   "x": 680.0,
+   "y": 2712.0,
+   "text": "loses Gleisende, Stück 430 px"
   }
  ]
 }

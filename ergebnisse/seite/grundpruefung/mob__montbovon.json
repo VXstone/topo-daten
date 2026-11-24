@@ -6,7 +6,8 @@
   "GQ": 0,
   "GP": 0,
   "GW": 0,
-  "GT": 0
+  "GT": 0,
+  "GE": 1
  },
  "befunde": [
   {
@@ -14,6 +15,12 @@
    "x": 274.1,
    "y": 110.0,
    "text": "zwei Gleise 40 px aufeinander"
+  },
+  {
+   "regel": "GE",
+   "x": 322.8,
+   "y": -10.0,
+   "text": "loses Gleisende, Stück 150 px"
   }
  ]
 }

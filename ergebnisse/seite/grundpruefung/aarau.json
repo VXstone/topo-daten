@@ -6,7 +6,8 @@
   "GQ": 0,
   "GP": 2,
   "GW": 0,
-  "GT": 1
+  "GT": 1,
+  "GE": 5
  },
  "befunde": [
   {
@@ -80,6 +81,36 @@
    "x": 2051.3,
    "y": 318.8,
    "text": "Treppe, Versatz 27.7 px"
+  },
+  {
+   "regel": "GE",
+   "x": 2998.1,
+   "y": 142.5,
+   "text": "loses Gleisende, Stück 176 px"
+  },
+  {
+   "regel": "GE",
+   "x": 2723.5,
+   "y": 136.4,
+   "text": "Gleisende 6.0 px neben einem Gleis (Stoss), Stück 27 px"
+  },
+  {
+   "regel": "GE",
+   "x": 2712.4,
+   "y": 162.8,
+   "text": "Gleisende 6.0 px neben einem Gleis (Stoss), Stück 27 px"
+  },
+  {
+   "regel": "GE",
+   "x": 800.2,
+   "y": 306.8,
+   "text": "loses Gleisende, Stück 46 px"
+  },
+  {
+   "regel": "GE",
+   "x": 846.1,
+   "y": 306.8,
+   "text": "loses Gleisende, Stück 46 px"
   }
  ]
 }

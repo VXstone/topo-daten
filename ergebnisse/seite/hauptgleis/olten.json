@@ -2,8 +2,8 @@
  "zaehl": {
   "HT1": 10,
   "HT2": 21,
-  "HT3": 7,
-  "HT4": 2,
+  "HT3": 5,
+  "HT4": 4,
   "HT5": 165
  },
  "befunde": [
@@ -109,7 +109,9 @@
    "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
    "ways": [
     136910732,
-    692444511
+    679251571,
+    692444511,
+    1331908790
    ]
   },
   {
@@ -218,17 +220,6 @@
     380867859,
     679251564,
     884583191
-   ]
-  },
-  {
-   "regel": "HT3",
-   "x": 951.0,
-   "y": 158.0,
-   "text": "Gleis (Way 136910732) im Plan an Knoten 635801812 angebunden, in OSM nicht",
-   "osm": 635801812,
-   "ways": [
-    136910732,
-    692444511
    ]
   },
   {
@@ -362,17 +353,6 @@
   },
   {
    "regel": "HT3",
-   "x": 907.0,
-   "y": 182.0,
-   "text": "Gleis (Way 136910732) im Plan an Knoten 635801600 angebunden, in OSM nicht",
-   "osm": 635801600,
-   "ways": [
-    136910732,
-    692444511
-   ]
-  },
-  {
-   "regel": "HT3",
    "x": 394.8,
    "y": 326.0,
    "text": "Gleis (Way 50062881) im Plan an Knoten 635800864 angebunden, in OSM nicht",
@@ -464,6 +444,28 @@
     230265758,
     230265783,
     976727148
+   ]
+  },
+  {
+   "regel": "HT4",
+   "x": 430.4,
+   "y": 164.0,
+   "text": "Weiche 635800855: Äste (Ways 50062913, 195008184) im Plan auf der anderen Seite als in OSM",
+   "osm": 635800855,
+   "ways": [
+    50062913,
+    195008184
+   ]
+  },
+  {
+   "regel": "HT4",
+   "x": 438.8,
+   "y": 158.0,
+   "text": "Weiche 635800831: Äste (Ways 50062913, 57016119) im Plan auf der anderen Seite als in OSM",
+   "osm": 635800831,
+   "ways": [
+    50062913,
+    57016119
    ]
   },
   {
@@ -679,8 +681,8 @@
   },
   {
    "regel": "HT5",
-   "x": 522.9,
-   "y": 206.0,
+   "x": 524.7,
+   "y": 207.8,
    "text": "Fahrweg Abgang 450 Bern (9233845856) ↔ Gl. 350 im Plan, nicht in OSM",
    "von": "Abgang 450 Bern (9233845856)",
    "nach": "Gl. 350",
@@ -886,8 +888,8 @@
   },
   {
    "regel": "HT5",
-   "x": 1578.2,
-   "y": 182.0,
+   "x": 1580.1,
+   "y": 183.8,
    "text": "Fahrweg Abgang 500 Basel (1510193399) ↔ Gl. 350 im Plan, nicht in OSM",
    "von": "Abgang 500 Basel (1510193399)",
    "nach": "Gl. 350",
@@ -967,7 +969,7 @@
   },
   {
    "regel": "HT5",
-   "x": 1291.2,
+   "x": 1320.0,
    "y": 182.0,
    "text": "Fahrweg Abgang 500 Basel (1510193399) ↔ Gl. 451 im Plan, nicht in OSM",
    "von": "Abgang 500 Basel (1510193399)",
@@ -1273,8 +1275,8 @@
   },
   {
    "regel": "HT5",
-   "x": 522.9,
-   "y": 242.0,
+   "x": 524.7,
+   "y": 243.8,
    "text": "Fahrweg Abgang 500 Luzern (9233862947) ↔ Gl. 350 im Plan, nicht in OSM",
    "von": "Abgang 500 Luzern (9233862947)",
    "nach": "Gl. 350",
@@ -1489,8 +1491,8 @@
   },
   {
    "regel": "HT5",
-   "x": 522.9,
-   "y": 230.0,
+   "x": 524.7,
+   "y": 231.8,
    "text": "Fahrweg Abgang 500 Luzern (9233862950) ↔ Gl. 350 im Plan, nicht in OSM",
    "von": "Abgang 500 Luzern (9233862950)",
    "nach": "Gl. 350",
@@ -1992,10 +1994,11 @@
    ]
   }
  ],
+ "auf_plan": 4,
  "osm_abgleich": {
   "VB1": 10,
   "VB2": 21,
-  "VC1": 7,
+  "VC1": 5,
   "VD1": 10
  }
 }

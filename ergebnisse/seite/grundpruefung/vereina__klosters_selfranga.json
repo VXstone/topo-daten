@@ -6,7 +6,8 @@
   "GQ": 1,
   "GP": 0,
   "GW": 0,
-  "GT": 0
+  "GT": 0,
+  "GE": 1
  },
  "befunde": [
   {
@@ -14,6 +15,12 @@
    "x": 352.9,
    "y": 122.0,
    "text": "Querabstand nach dem Knick 8.6 px statt 24.0 px wie davor"
+  },
+  {
+   "regel": "GE",
+   "x": 268.9,
+   "y": 110.0,
+   "text": "loses Gleisende, Stück 75 px"
   }
  ]
 }

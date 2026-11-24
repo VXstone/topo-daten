@@ -6,7 +6,21 @@
   "GQ": 0,
   "GP": 0,
   "GW": 0,
-  "GT": 0
+  "GT": 0,
+  "GE": 2
  },
- "befunde": []
+ "befunde": [
+  {
+   "regel": "GE",
+   "x": 413.3,
+   "y": 110.0,
+   "text": "loses Gleisende, Stück 28 px"
+  },
+  {
+   "regel": "GE",
+   "x": 438.2,
+   "y": 110.0,
+   "text": "loses Gleisende, Stück 9 px"
+  }
+ ]
 }

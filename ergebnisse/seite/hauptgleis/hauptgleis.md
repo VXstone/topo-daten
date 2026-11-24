@@ -4,10 +4,10 @@
 
 | Plan | HT1 | HT2 | HT3 | HT4 | HT5 | Summe |
 |---|---|---|---|---|---|---|
-| olten | 10 | 21 | 7 | 2 | 165 | 205 |
+| olten | 10 | 21 | 5 ↓7 | **4** (Basis 2) | 165 | 205 |
 | aarau | 3 | 4 | · | 1 | 9 | 17 |
-| solothurn | 2 | 1 | · | · | 11 ↓14 | 14 |
-| szu__zurich_giesshubel | 2 | 7 | · | 1 | 2 | 12 |
+| solothurn | 2 | 1 | · | · | 14 | 17 |
+| szu__zurich_giesshubel | 2 | 7 | · | 1 | **6** (Basis 2) | 16 |
 | rothrist | 2 | 4 | · | · | 5 | 11 |
 | konolfingen | · | 2 | · | · | 6 | 8 |
 | mob__chamby | 1 | 1 | · | 1 | 1 | 4 |
@@ -146,3 +146,18 @@ Regeln: HT1 = OSM-Weiche am Hauptgleis ohne Abzweig im Plan; HT2 = Abzweig am Ha
 ## Ausnahmen (REGELN 6, `spurplan/hauptgleis_ausnahmen.json`, nicht gezählt)
 
 - **courtepin** HT2 500.0/110.0: Industriegleis nördlich, rechts Richtung Courtepin abzweigend: in Betrieb (Satellitenbild, Daniel 22.11.2026); in OSM endet es 1 m neben dem Streckengleis ohne gemeinsamen Knoten
+
+## NEUE Befunde
+
+- **olten** HT4: 2 → 4
+  - 430.4/164.0: Weiche 635800855: Äste (Ways 50062913, 195008184) im Plan auf der anderen Seite als in OSM
+  - 438.8/158.0: Weiche 635800831: Äste (Ways 50062913, 57016119) im Plan auf der anderen Seite als in OSM
+  - 996.2/254.0: Weiche 2077484616: Äste (Ways 197523816, 378517710) im Plan auf der anderen Seite als in OSM
+  - 1118.9/254.0: Weiche 6360515787: Äste (Ways 679251541, 1264378757) im Plan auf der anderen Seite als in OSM
+- **szu__zurich_giesshubel** HT5: 2 → 6
+  - 495.1/175.1: Fahrweg Abgang 712 Adliswil (1263316971) ↔ Gl. 13 im Plan, nicht in OSM
+  - 513.6/19.1: Fahrweg Abgang 712 Adliswil (11465303605) ↔ Abgang 717 Zürich Wiedikon (11465303660) in OSM, fehlt im Plan
+  - 648.3/-34.0: Fahrweg Abgang 713 Uetliberg (11465267216) ↔ Abgang 717 Zürich Wiedikon (11465303660) in OSM, fehlt im Plan
+  - 592.6/171.2: Fahrweg Abgang 713 Uetliberg (11465267216) ↔ Gl. 2 in OSM, fehlt im Plan
+  - 688.3/-34.0: Fahrweg Abgang 717 Zürich Wiedikon (11465303660) ↔ Gl. 19 in OSM, fehlt im Plan
+  - 776.0/27.2: Fahrweg Abgang 717 Zürich Wiedikon (11465303660) ↔ Gl. 2 in OSM, fehlt im Plan

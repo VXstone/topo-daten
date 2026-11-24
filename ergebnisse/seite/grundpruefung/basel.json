@@ -6,7 +6,8 @@
   "GQ": 17,
   "GP": 20,
   "GW": 0,
-  "GT": 4
+  "GT": 4,
+  "GE": 13
  },
  "befunde": [
   {
@@ -776,6 +777,84 @@
    "x": 1826.8,
    "y": 410.0,
    "text": "Treppe, Versatz 27.7 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1389.7,
+   "y": 302.0,
+   "text": "loses Gleisende, Stück 258 px"
+  },
+  {
+   "regel": "GE",
+   "x": 450.7,
+   "y": 494.0,
+   "text": "Gleisende 2.5 px neben einem Gleis (Stoss), Stück 74 px"
+  },
+  {
+   "regel": "GE",
+   "x": 2395.4,
+   "y": 489.5,
+   "text": "loses Gleisende, Stück 121 px"
+  },
+  {
+   "regel": "GE",
+   "x": 782.1,
+   "y": 374.0,
+   "text": "loses Gleisende, Stück 115 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1498.1,
+   "y": 619.2,
+   "text": "Gleisende 5.2 px neben einem Gleis (Stoss), Stück 31 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1484.8,
+   "y": 583.9,
+   "text": "loses Gleisende, Stück 312 px"
+  },
+  {
+   "regel": "GE",
+   "x": 2561.1,
+   "y": 464.8,
+   "text": "Gleisende 5.6 px neben einem Gleis (Stoss), Stück 60 px"
+  },
+  {
+   "regel": "GE",
+   "x": 704.5,
+   "y": 169.6,
+   "text": "loses Gleisende, Stück 27 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1888.0,
+   "y": 323.1,
+   "text": "loses Gleisende, Stück 27 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1979.3,
+   "y": 1045.5,
+   "text": "loses Gleisende, Stück 513 px"
+  },
+  {
+   "regel": "GE",
+   "x": 276.3,
+   "y": 518.0,
+   "text": "Gleisende 2.1 px neben einem Gleis (Stoss), Stück 33 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1865.9,
+   "y": 656.9,
+   "text": "loses Gleisende, Stück 105 px"
+  },
+  {
+   "regel": "GE",
+   "x": 1855.1,
+   "y": 1045.5,
+   "text": "loses Gleisende, Stück 105 px"
   }
  ]
 }

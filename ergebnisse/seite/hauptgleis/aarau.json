@@ -152,7 +152,7 @@
   },
   {
    "regel": "HT5",
-   "x": 975.2,
+   "x": 1095.5,
    "y": 206.9,
    "text": "Fahrweg Abgang 540 Schönenwerd (635858312) ↔ Gl. 852 in OSM, fehlt im Plan",
    "von": "Abgang 540 Schönenwerd (635858312)",
@@ -161,8 +161,8 @@
   },
   {
    "regel": "HT5",
-   "x": 848.1,
-   "y": 206.9,
+   "x": 848.6,
+   "y": 205.9,
    "text": "Fahrweg Abgang 540 Schönenwerd (635858312) ↔ Gl. 854 in OSM, fehlt im Plan",
    "von": "Abgang 540 Schönenwerd (635858312)",
    "nach": "Gl. 854",
@@ -176,6 +176,7 @@
    "ohne_lage": []
   }
  ],
+ "auf_plan": 3,
  "osm_abgleich": {
   "VA2": 2,
   "VB1": 4,

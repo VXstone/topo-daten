@@ -6,7 +6,8 @@
   "GQ": 2,
   "GP": 0,
   "GW": 0,
-  "GT": 2
+  "GT": 2,
+  "GE": 2
  },
  "befunde": [
   {
@@ -68,6 +69,18 @@
    "x": -229.6,
    "y": -169.2,
    "text": "Treppe, Versatz 20.1 px"
+  },
+  {
+   "regel": "GE",
+   "x": -420.9,
+   "y": -352.7,
+   "text": "loses Gleisende, Stück 32 px"
+  },
+  {
+   "regel": "GE",
+   "x": -582.1,
+   "y": -850.4,
+   "text": "loses Gleisende, Stück 209 px"
   }
  ]
 }

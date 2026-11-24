@@ -1,4 +1,4 @@
-148 Pläne, 44 geändert: 7 vermutlich besser, 8 schlechter?, 29 gleichwertig
+148 Pläne, 45 geändert: 8 vermutlich besser, 8 schlechter?, 29 gleichwertig
 
 | Plan | Gruppe | Basis | Stellen | Einordnung | Kennzahlen alt→neu | G0 | HT | letzte Änderung |
 |---|---|---|---|---|---|---|---|---|
@@ -18,7 +18,7 @@
 | ligerz | NE 5 · Neuchâtel – Biel | Archivbeginn (Abnahme 2026-10-17) | 5 | gleichwertig | OSM ok (kein Alt-Stand) | 0 | 0 | 2026-11-22T05:27 |
 | twann | NE 5 · Neuchâtel – Biel | Archivbeginn (Abnahme 2026-10-15) | 5 | gleichwertig | OSM ok (kein Alt-Stand) | 0 | 0 | 2026-11-20T21:23 |
 | zihlbruecke | NE 1 · Neuchâtel – Ins – Kerzers – Bern | Archivbeginn (Abnahme 2026-10-15) | 4 | gleichwertig | OSM ok (kein Alt-Stand) | 0 | 0 | 2026-11-22T08:19 |
-| cornaux | NE 5 · Neuchâtel – Biel | Archivbeginn (Abnahme 2026-10-15) | 4 | gleichwertig | OSM VD1 4 (kein Alt-Stand) | GS 1 · GG 4 | 0 | 2026-11-20T21:23 |
+| cornaux | NE 5 · Neuchâtel – Biel | Archivbeginn (Abnahme 2026-10-15) | 4 | gleichwertig | OSM VD1 4 (kein Alt-Stand) | GS 1 · GG 4 · **GE 1 (Basis 0)** | 0 | 2026-11-20T21:23 |
 | bern_brunnen_westside | NE 1 · Neuchâtel – Ins – Kerzers – Bern | Archivbeginn (Abnahme 2026-10-20) | 3 | gleichwertig | OSM VB1 3 (kein Alt-Stand) | 0 | 0 | 2026-11-22T05:27 |
 | serrieres | NE 6 · Neuchâtel – Yverdon | Archivbeginn (Abnahme 2026-10-15) | 3 | gleichwertig | OSM VA1 3, VB1 3 (kein Alt-Stand) | 0 | 0 | 2026-11-21T12:04 |
 | muntelier_lowenberg | NE 2 · Ins – Sugiez – Murten | Archivbeginn (Abnahme 2026-10-16) | 2 | gleichwertig | OSM VA1 1, VB1 4 (kein Alt-Stand) | 0 | 0 | 2026-11-20T21:23 |
@@ -46,6 +46,7 @@
 | travers | NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier | Archivbeginn (Abnahme 2026-10-15) | 9 | vermutlich besser | W59 1→0 · OSM ok (kein Alt-Stand) | 0 | 0 | 2026-11-24T07:36 |
 | colombier | NE 6 · Neuchâtel – Yverdon | Archivbeginn (Abnahme 2026-10-16) | 7 | vermutlich besser | W56 6→5, W59 1→0 (Wunsch-Summe -3) · OSM ok (kein Alt-Stand) | 0 | 0 | 2026-11-23T21:35 |
 | neuchatel | NE 1 · Neuchâtel – Ins – Kerzers – Bern | bestätigt 2026-11-08 | 2 | vermutlich besser | GG 3→1, VA1 5→0, VC1 2→0, VD1 3→1 | GG 1 · GT 1 | 0 | 2026-11-22T20:14 |
+| region_ne | Region | veröffentlicht | 11 | vermutlich besser | T7 5→4 (Wunsch-Summe -8) | GS 1 · GG 2 · GQ 1 · **GE 3 (Basis 0)** | – | 2026-11-24T13:32 |
 
 Grundprüfung G0 aller Pläne: `ergebnisse/seite/grundpruefung/grundpruefung.md`
 Hauptgleis-Topologie HT aller Pläne mit Netzmodell: `ergebnisse/seite/hauptgleis/hauptgleis.md`

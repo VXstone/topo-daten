@@ -4,7 +4,7 @@
   "HT2": 7,
   "HT3": 0,
   "HT4": 1,
-  "HT5": 2
+  "HT5": 6
  },
  "befunde": [
   {
@@ -234,6 +234,24 @@
   },
   {
    "regel": "HT5",
+   "x": 513.6,
+   "y": 19.1,
+   "text": "Fahrweg Abgang 712 Adliswil (11465303605) ↔ Abgang 717 Zürich Wiedikon (11465303660) in OSM, fehlt im Plan",
+   "von": "Abgang 712 Adliswil (11465303605)",
+   "nach": "Abgang 717 Zürich Wiedikon (11465303660)",
+   "art": "fehlt"
+  },
+  {
+   "regel": "HT5",
+   "x": 648.3,
+   "y": -34.0,
+   "text": "Fahrweg Abgang 713 Uetliberg (11465267216) ↔ Abgang 717 Zürich Wiedikon (11465303660) in OSM, fehlt im Plan",
+   "von": "Abgang 713 Uetliberg (11465267216)",
+   "nach": "Abgang 717 Zürich Wiedikon (11465303660)",
+   "art": "fehlt"
+  },
+  {
+   "regel": "HT5",
    "x": 592.6,
    "y": 171.2,
    "text": "Fahrweg Abgang 713 Uetliberg (11465267216) ↔ Gl. 2 in OSM, fehlt im Plan",
@@ -242,15 +260,32 @@
    "art": "fehlt"
   },
   {
+   "regel": "HT5",
+   "x": 688.3,
+   "y": -34.0,
+   "text": "Fahrweg Abgang 717 Zürich Wiedikon (11465303660) ↔ Gl. 19 in OSM, fehlt im Plan",
+   "von": "Abgang 717 Zürich Wiedikon (11465303660)",
+   "nach": "Gl. 19",
+   "art": "fehlt"
+  },
+  {
+   "regel": "HT5",
+   "x": 776.0,
+   "y": 27.2,
+   "text": "Fahrweg Abgang 717 Zürich Wiedikon (11465303660) ↔ Gl. 2 in OSM, fehlt im Plan",
+   "von": "Abgang 717 Zürich Wiedikon (11465303660)",
+   "nach": "Gl. 2",
+   "art": "fehlt"
+  },
+  {
    "regel": "_info",
    "x": 0,
    "y": 0,
-   "text": "Fahrwege: 10/11 Ziele im Plan gefunden, OSM 26, Plan 26",
-   "ohne_lage": [
-    "Abgang 717 Zürich Wiedikon (11465303660)"
-   ]
+   "text": "Fahrwege: 11/11 Ziele im Plan gefunden, OSM 30, Plan 26",
+   "ohne_lage": []
   }
  ],
+ "auf_plan": 3,
  "osm_abgleich": {
   "VA2": 2,
   "VB1": 3,
