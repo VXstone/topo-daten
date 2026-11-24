@@ -62,7 +62,7 @@ Hinweis-Abdeckung: 29/57 (Befund < 40 px, ohne G2)
 ✓ xke0 solothurn                    MZ                        25.3  Zwischengerade, doppelter Abstand
 ✓ z6f2 konolfingen                  MX                        21.0  DKW?
 ✓ zcz3 solothurn                    G7,MX,VB2                 18.0  nicht verbunden
-index.html 2057 KB, 149 Pläne
+index.html 2065 KB, 149 Pläne
 /home/runner/work/topo-daten/topo-daten/spurplan/code/alle_plaene_pruefen.py:231: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
   json.dump(dict(erzeugt=datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"), plaene=len(zeilen), geaendert=len(gz),
 region_szu                   veröffentlicht                     13 Stellen  Fehler? Topologie  G2 1→2, GS 14→15
@@ -70,7 +70,6 @@ olten                        bestätigt 2026-11-08                0 Stellen  ver
 olten_hammer                 bestätigt 2026-11-07               12 Stellen  vermutlich besser  W56 4→2, W59 4→1 (Wunsch-Summe -6)
 rothrist                     Archivbeginn (Abnahme 2026-10-29)   17 Stellen  vermutlich besser  G2 0→1, G6 1→0, VB2 6→5, W56 4→1, W59 10→3 (Wunsch-Summe -9)
 zofingen                     bestätigt 2026-11-08               29 Stellen  vermutlich besser  VA2 2→0, VB1 2→1, VD1 2→1
-schonenwerd                  bestätigt 2026-11-08                0 Stellen  vermutlich besser  GG 1→0, VB1 1→0, VD1 2→1
 tecknau                      bestätigt 2026-11-07               14 Stellen  vermutlich besser  W56 1→0, W59 3→2 (Wunsch-Summe -3)
 laufelfingen                 bestätigt 2026-11-07                0 Stellen  gleichwertig  
 neuchatel                    bestätigt 2026-11-08                2 Stellen  vermutlich besser  GG 3→1, VA1 5→0, VC1 2→0, VD1 3→1
