@@ -117,6 +117,12 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   Regionalplan Olten rückt das Ostende 50 px vom Knoten Olten weg (Plan um die Mitte platziert); `_nebengleise` (netz_lage) verteilt das
   Nebengleis südlich Olten anteilig auf die längere Lücke → Schlaufe über Gl. 3 (G0 GS 8→9, Stelle −8/472). Zielplan: Olten Hammer kürzer, Nebengleis wie heute
 - [x] **K0c Selnau parallel (REGELN 2.2, `r34_kette`)** – 24.11. früh, Commit ca9a7b6, Seite v179 (Nachtrag K0c)
+- [ ] **K0d Selnau HB-Ende: Strecke ist Fixpunkt (REGELN 1.8)** (klein, Wunsch Daniel 24.11. vor T-SZU1): OSM hat 22 → 13 und 21 → 11 je
+  geradeaus (Prellbock), keine Verbindung dazwischen (12 nur über stillgelegtes Gleis 111425521/302554652). Plan führt 22 und 21 auf einen
+  gemeinsamen Punkt, 13 zweigt hoch ab (= HT2 2 Selnau in der Basis), Gl. 21 steigt dafür ab (T7). Vermutung (nicht geprüft): Weiche
+  11821888687 zählt wegen des stillgelegten Abzweigs als Weiche, darum darf 21b/11a die Ebene wechseln. Code: eine Weiche zählt nur, wenn
+  ihr Abzweig gezeichnet wird → Neben-/Abstellgleis, das eine Strecke ohne gezeichnete Weiche fortsetzt, behält deren Ebene (alle Pläne).
+  Zielplan: Selnau 22→13 und 21→11 gerade, ohne Abstieg; HT2 Selnau 2→0. Danach Regression aller Pläne (Kopfenden, stillgelegte Abzweige).
 - [ ] **V5 ein Lauf für alle Regionen** / **V6 Netz West (Neuchâtel–Biel–Solothurn–Olten)** – danach – Zweisimmen (dünn→dick am Knick), Solothurn (Weiche am Knick, doppelter Abstand), Selnau (ZL ~4 Ebenen, nur auf Daniels Antwort); Liste `ergebnisse/seite/zwischengeraden.md` – vor oder nach T-SZU1, wie Daniel will
 - [ ] **T-SZU1 DKW aus 4-Arm-Weiche (REGELN 2.4) und Güterverkehr schwarz (REGELN 1.21)** (klein, Entscheid Daniel 18.11.) – nach K0
 - [ ] **T-SZU2 Achse knickt im Fenster (REGELN 2.15), Zielplan Giesshübel · Saalsporthalle** (Entscheid Daniel 18.11.: Variante C) – nach S2b/R4/S3 oder wenn Daniel es vorzieht
