@@ -23,6 +23,11 @@
      "ports",
      true,
      "712"
+    ],
+    [
+     "ports",
+     true,
+     "717"
     ]
    ]
   },
@@ -109,10 +114,10 @@
  },
  "befunde": [
   {
-   "regel": "S1",
+   "regel": "V1",
    "a": "zurich_giesshubel",
    "b": "zurich_selnau",
-   "text": "Zürich Giesshübel: 2 Streckengleis(e) nach Zürich Selnau, Strangbild 3"
+   "text": "Zürich Giesshübel: 3 Gleise nach Zürich Selnau, Zürich Selnau: 2 Gleise nach Zürich Giesshübel"
   },
   {
    "regel": "S1",
