@@ -122,6 +122,7 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - [ ] **V5 ein Lauf für alle Regionen** / **V6 Netz West (Neuchâtel–Biel–Solothurn–Olten)** – danach – Zweisimmen (dünn→dick am Knick), Solothurn (Weiche am Knick, doppelter Abstand), Selnau (ZL ~4 Ebenen, nur auf Daniels Antwort); Liste `ergebnisse/seite/zwischengeraden.md` – vor oder nach T-SZU1, wie Daniel will
 - [x] **T-SZU1 DKW aus 4-Arm-Weiche (REGELN 2.4) und Güterverkehr schwarz (REGELN 1.21)** – 24.11. nachmittags, Commits 388c34f/0f13b55/5dbded2, Seite v182 (Nachtrag T-SZU1)
 - [ ] **T-SZU2 Achse knickt im Fenster (REGELN 2.15), Zielplan Giesshübel · Saalsporthalle** (Entscheid Daniel 18.11.: Variante C) – nach S2b/R4/S3 oder wenn Daniel es vorzieht
+  24.11. Teil 1 (nicht veröffentlicht): Code für 2.15 da, beide Schalter aus – Befund und Teil 2 im Nachtrag T-SZU2 (Abschnitt 6)
 - [ ] **S2b Konolfingen Gleisfeld West** (Zielbild Daniel 18.11.), **R4 Rothrist im Regionalplan** und **S3 Aarau
   Zwischengeraden mit Weiche** – nach T-SZU, je eigener Chat, alle gegen die G0-Sperre geprüft
 - [x] **S1b Sagliains-Bündel durchgehend** (klein) – 16.11. früh, Commits af2a110/21556d3, Seite v150
@@ -1003,4 +1004,17 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   ohne DKW im Plan – angenommen, nicht geprüft), zofingen (VA2 2→0; HT5 0→2 Messung am DKW-Symbol, Basis gesetzt), Giesshübel, region_szu.
   G0/HT grün. OSM-Abgleich Giesshübel VD1 36→34, VB2 9→8. Kein Prüfstand-Baustein (Bausteine sind Meterspur ohne DKW-Messung) – offen.
 - Hinweise Giesshübel (8c9x, 8pv2, gd0v, h0ci, yrc8) gehören zu T-SZU2, nicht beantwortet. Abnahmen nicht neu exportiert.
+
+### 24.11.2026 ~17:40 – Schritt T-SZU2 Teil 1: Code für REGELN 2.15, nicht veröffentlicht (G0 rot)
+- Lokal mit roh.json.gz (ergebnisse 4944ae8) gerechnet. Zwei Teile, beide **Standard aus**: `straenge` Konfig `knoten_knick` (Knick > 30°
+  zwischen zwei Betriebspunkten → kein gemeinsamer Knotenplan; Giesshübel – Saalsporthalle: 67°, 300 m nach Giesshübel) und `spurplan_schema`
+  cfg `achse_knick` (Achse im Fenster gerade in Bündelrichtung, Ast-Knoten ausserhalb → seitlicher Abzweig). REGELN 2.15 Spalte Code nachgeführt.
+- Mit `knoten_knick` allein: Saalsporthalle eigener Plan (G0 0, ruhig), Giesshübel je Seite **zwei** 712-Gleise (kein zerschnittenes 351899126),
+  G0 Giesshübel GS 12→11, GG 32→15, GQ 5→5. **Aber** Regionalplan SZU: Sihltal-Verbindung vom linken Ende Giesshübel nach Saalsporthalle mit
+  2 × drei 90°-Ecken (G0 GW 0→6), weil der Abgang 712 waagrecht nach links zeigt. `lage.drehung` Giesshübel ±30 probiert: Diagonalen werden
+  senkrecht, HB-Abgänge hängen frei – verworfen.
+- Mit `achse_knick` dazu: Ast geht unten weg, aber die gerade Fortsetzung läuft durch die Depot-Einfahrt (Depot-Weichen d ≈ 0) – GS 12→20, GQ 5→13.
+- Teil 2 (nächster Chat): (a) Abgang 712 in Giesshübel als Seitenabzweig nach unten (2.6) ohne die Depot-Verschlechterung – Depot-Fächer
+  (Kurs 220–250°, 15–35° zur Achse) als eigenes Bündel über der Achse (Zielbild); (b) Regionalplan: Verbindung Abgang → Nachbarport ohne 90°.
+  Erst dann beide Schalter an, G0 grün, veröffentlichen. Hinweis 8c9x hat Zwischenantwort, übrige Giesshübel-Hinweise offen.
 

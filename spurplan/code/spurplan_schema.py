@@ -604,13 +604,97 @@ if os.path.exists(f"{key}_axis.json") and not CFG.get("axis_auto") and CFG.get("
         R = np.c_[np.interp(SS, cum, R[:, 0]), np.interp(SS, cum, R[:, 1])]
         A0, AB = R[:-1], R[1:] - R[:-1]; AB2 = (AB ** 2).sum(1)
 
-def project(p):
+def _project_auf(p, A0_, AB_, AB2_, SS_):
     p = np.asarray(p)
-    t = np.clip(((p - A0) * AB).sum(1) / AB2, 0, 1)
-    Q = A0 + t[:, None] * AB
+    t = np.clip(((p - A0_) * AB_).sum(1) / AB2_, 0, 1)
+    Q = A0_ + t[:, None] * AB_
     dd = np.linalg.norm(p - Q, axis=1); i = dd.argmin()
-    cr = AB[i, 0] * (p - A0[i])[1] - AB[i, 1] * (p - A0[i])[0]
-    return SS[i] + t[i] * 5.0, math.copysign(dd[i], cr)
+    cr = AB_[i, 0] * (p - A0_[i])[1] - AB_[i, 1] * (p - A0_[i])[0]
+    return SS_[i] + t[i] * 5.0, math.copysign(dd[i], cr)
+
+# REGELN 2.15 (T-SZU2, 24.11.2026, Giesshübel): Knickt die Achse im Planfenster um mehr als 30° (Kurs über je 100 m),
+# folgt sie dem Bündel mit der grössten parallelen Gleislänge (alle Gleise, Kurs ±15°), sofern dieses Bündel die Achse
+# vom Bahnhof her geradeaus fortsetzt (Kurs ±15°) und im Fenster mehr Gleislänge hat als der abbiegende Ast; der Knick
+# muss scharf sein (je 200 m davor und danach keine weitere Richtungsänderung > 15°, kein gleichmässiger Bogen). Die Achse
+# läuft ab dem Knick gerade in Bündelrichtung weiter; Knoten des abbiegenden Asts (näher am alten Achsast als an der neuen
+# Achse) liegen ausserhalb des Plans, der Ast verlässt ihn als seitlicher Abzweig (Schräge nach 2.6, Pfeil mit Ziel).
+# Den Betriebspunkt am Ast trennt straenge.py vom Knotenplan (eigener Plan). cfg «achse_knick» (Standard aus, 24.11.: in
+# Giesshübel liegt die Depot-Einfahrt auf der geraden Fortsetzung, GS 12 -> 20 – erst mit eigener Depot-Regel einschalten).
+_KN = None
+def _achse_knick():
+    rr = CFG["sw_search_m"]; cR = np.r_[0, np.cumsum(np.linalg.norm(np.diff(R, axis=0), axis=1))]
+    at = lambda s_: np.array([np.interp(s_, cR, R[:, 0]), np.interp(s_, cR, R[:, 1])])
+    def kurs(s0_, s1_):
+        v_ = at(s1_) - at(s0_); return math.atan2(v_[1], v_[0])
+    s_st = float(cR[int(np.argmin(np.hypot(R[:, 0], R[:, 1])))])
+    best_ = None
+    for sK in np.arange(cR[0] + 160, cR[-1] - 160, 10.0):
+        if np.hypot(*at(sK)) > rr - 50 or abs(sK - s_st) < 60: continue
+        sg_ = 1 if sK > s_st else -1
+        h_in = kurs(sK - sg_ * 150, sK - sg_ * 50); h_out = kurs(sK + sg_ * 50, sK + sg_ * 150)
+        dl_ = abs((math.degrees(h_out - h_in) + 180) % 360 - 180)
+        if dl_ <= 30 or (best_ is not None and dl_ <= best_[0]): continue
+        # Knick, kein gleichmässiger Bogen: vor und nach dem Knick je 200 m ohne weitere Richtungsänderung > 15°
+        h_in2 = kurs(sK - sg_ * 250, sK - sg_ * 150); h_out2 = kurs(sK + sg_ * 150, sK + sg_ * 250)
+        if abs((math.degrees(h_in - h_in2) + 180) % 360 - 180) > 15 or abs((math.degrees(h_out2 - h_out) + 180) % 360 - 180) > 15: continue
+        best_ = (dl_, float(sK), sg_, h_in, h_out)
+    if not best_: return None
+    dl_, sK, sg_, h_in, h_out = best_; K_ = at(sK)
+    seg_ = []                                                  # (Mitte, Kurs mod 180, Länge)
+    for w in ways.values():
+        for a_, b_ in zip(w["nodes"], w["nodes"][1:]):
+            if a_ not in P or b_ not in P: continue
+            pa, pb = np.array(P[a_]), np.array(P[b_]); L_ = float(np.linalg.norm(pb - pa))
+            m_ = (pa + pb) / 2
+            if L_ < 0.5 or np.hypot(*m_) > rr: continue
+            seg_.append((m_, math.degrees(math.atan2(pb[1] - pa[1], pb[0] - pa[0])) % 180, L_))
+    if not seg_: return None
+    ad = lambda a_, b_: abs((a_ - b_ + 90) % 180 - 90)
+    c_best = max(range(180), key=lambda c_: sum(L_ for _, h_, L_ in seg_ if ad(h_, c_) <= 15))
+    hi_, ho_ = math.degrees(h_in) % 180, math.degrees(h_out) % 180
+    u_in = np.array([math.cos(h_in), math.sin(h_in)])
+    L_b = sum(L_ for m_, h_, L_ in seg_ if ad(h_, c_best) <= 15); L_o = sum(L_ for m_, h_, L_ in seg_ if ad(h_, ho_) <= 15)
+    info_ = f"Knick {dl_:.0f}° bei s={sK:.0f} ({np.hypot(*K_):.0f} m vom Bahnhof), Bündel {c_best}° (Achse vor {hi_:.0f}°, nach {ho_:.0f}°), " \
+            f"im Fenster Bündel {L_b:.0f} m, Ast {L_o:.0f} m"
+    if ad(c_best, hi_) > 15 or ad(c_best, ho_) <= 15 or L_b < 300 or L_b <= L_o:
+        print("R2.15 nicht angewendet:", info_); return None
+    u_n = np.array([math.cos(math.radians(c_best)), math.sin(math.radians(c_best))])
+    if u_n @ u_in < 0: u_n = -u_n
+    # Richtung entlang des Bündels mit Länge gewichtet (genauer als das 1°-Raster)
+    _vs = [np.array([math.cos(math.radians(h_)), math.sin(math.radians(h_))]) * L_ for m_, h_, L_ in seg_ if ad(h_, c_best) <= 15]
+    _vs = [v_ if v_ @ u_n >= 0 else -v_ for v_ in _vs]; u_n = np.sum(_vs, axis=0); u_n = u_n / np.linalg.norm(u_n)
+    ext_ = np.array([K_ + u_n * t_ for t_ in np.arange(5, 3000, 5.0)])
+    keep_ = R[(cR - sK) * sg_ <= 0]
+    RA = np.vstack([keep_, ext_]) if sg_ > 0 else np.vstack([ext_[::-1], keep_])
+    return dict(sK=sK, sg=sg_, K=K_, RA=RA, info=info_)
+if CFG.get("achse_knick", False) and os.path.exists(f"{key}_axis.json") and not CFG.get("axis_auto"):
+    _KN = _achse_knick()
+if _KN:
+    _A0o, _ABo, _AB2o, _SSo, _Ro = A0, AB, AB2, SS, R           # alte Achse = abbiegender Ast
+    RA = _KN["RA"]; cA = np.r_[0, np.cumsum(np.linalg.norm(np.diff(RA, axis=0), axis=1))]
+    SS = np.arange(0, cA[-1], 5.0)
+    Rx = np.interp(SS, cA, RA[:, 0]); Ry = np.interp(SS, cA, RA[:, 1])
+    R = np.c_[np.convolve(np.pad(Rx, 4, "edge"), k, "valid"), np.convolve(np.pad(Ry, 4, "edge"), k, "valid")]
+    A0, AB = R[:-1], R[1:] - R[:-1]; AB2 = (AB ** 2).sum(1)
+    _kn_sKA = _project_auf(_KN["K"], A0, AB, AB2, SS)[0]; _kn_sg = _KN["sg"]; _kn_sKo = _KN["sK"]
+    def _ast(p, A0=A0, AB=AB, AB2=AB2, SS=SS):
+        """(s, d) auf dem Ast, falls p zum abbiegenden Ast gehört, sonst None."""
+        sA, dA = _project_auf(p, A0, AB, AB2, SS)
+        if (sA - _kn_sKA) * _kn_sg <= 20: return None
+        sB, dB = _project_auf(p, _A0o, _ABo, _AB2o, _SSo)
+        if (sB - _kn_sKo) * _kn_sg <= 0 or abs(dB) + 10 >= abs(dA): return None
+        return _kn_sKA + (sB - _kn_sKo), dB
+    _pB = np.array([np.interp(_kn_sKo + _kn_sg * 300, _SSo[:len(_Ro)], _Ro[:len(_SSo), j_]) for j_ in (0, 1)])
+    _kn_seite = 1 if _project_auf(_pB, A0, AB, AB2, SS)[1] > 0 else -1
+    _kn_doff = 4 * CFG["d_lim"] + 200                         # Ast liegt ausserhalb des Plans: Abzweig am Rand
+    print(f"R2.15 angewendet: {_KN['info']}; Ast Seite {_kn_seite:+d} verlässt den Plan als Abzweig")
+    def project(p, _A=(A0, AB, AB2, SS), _o=_kn_seite * _kn_doff):
+        b_ = _ast(p)
+        if b_ is not None: return b_[0], _o + b_[1] * (1 if _o > 0 else -1)
+        return _project_auf(p, *_A)
+else:
+    def project(p):
+        return _project_auf(p, A0, AB, AB2, SS)
 
 SD = {n: project(p) for n, p in P.items()}
 if os.environ.get("SPUR_SD"): json.dump({str(n): [SD[n][0], SD[n][1], LL[n][0], LL[n][1]] for n in SD if n in LL}, open(os.environ["SPUR_SD"], "w"))

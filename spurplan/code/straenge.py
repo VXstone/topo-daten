@@ -278,6 +278,31 @@ DREI = sorted({tuple(sorted((a, b, c))) for a in NB for b in NB[a] for c in NB[b
 # entsteht ein gemeinsamer Plan (Sagliains – Autoverlad – Sagliains Sasslatsch – Sasslatsch). Halte ohne Weiche schneiden
 # nie (sie liegen am Gleis, ruhig). Höchstens «knoten_max_m» (2500 m) Ausdehnung, sonst bleibt die kürzeste Verbindung offen.
 SW_EIGEN = collections.Counter(k for n, k in ANKER.items() if GA.degree(n) >= 3 and k in BP)
+def _knick_zwischen(a, b):
+    """REGELN 2.15: scharfer Knick > 30° (Kurs über je 100 m, davor/danach je bis 200 m ohne weitere Richtungsänderung
+    > 15°) auf dem Streckengleis zwischen zwei Betriebspunkten (Giesshübel – Saalsporthalle: 712 knickt um 63°). Konfig
+    «knoten_knick»: Standard aus (24.11., T-SZU2: Regionalplan SZU bekäme 6 × 90° an der Sihltal-Verbindung, G0 GW)."""
+    if not K.get("knoten_knick", False): return None
+    import numpy as _np
+    try:
+        na = min(GM.nodes, key=lambda n: math.dist(P[n], BPX[a])); nb = min(GM.nodes, key=lambda n: math.dist(P[n], BPX[b]))
+        pth = nx.shortest_path(GM, na, nb, weight=lambda u, v, d: math.dist(P[u], P[v]))
+    except Exception: return None
+    Q = _np.array([P[n] for n in pth], float)
+    if len(Q) < 3: return None
+    c = _np.r_[0, _np.cumsum(_np.linalg.norm(_np.diff(Q, axis=0), axis=1))]
+    at = lambda s: _np.array([_np.interp(s, c, Q[:, 0]), _np.interp(s, c, Q[:, 1])])
+    def kurs(s0, s1):
+        v = at(s1) - at(s0); return math.degrees(math.atan2(v[1], v[0]))
+    dw = lambda x, y: abs((x - y + 180) % 360 - 180)
+    best = None
+    for s in _np.arange(150, c[-1] - 150, 10.0):
+        d_ = dw(kurs(s + 50, s + 150), kurs(s - 150, s - 50))
+        if d_ <= 30 or (best and d_ <= best[0]): continue
+        if s - 250 >= 0 and dw(kurs(s - 250, s - 150), kurs(s - 150, s - 50)) > 15: continue
+        if s + 250 <= c[-1] and dw(kurs(s + 150, s + 250), kurs(s + 50, s + 150)) > 15: continue
+        best = (d_, s)
+    return f"Knick {best[0]:.0f}° {best[1]:.0f} m nach {BP[a]['name']}" if best else None
 KNOTEN = []
 if K.get("knotenplaene", True):
     _par = {}
@@ -291,7 +316,11 @@ if K.get("knotenplaene", True):
         # «Susch–Sagliains eine Achse, die Linie von Klosters verteilt sich auf zwei Winkel unter 90°»)
         if a in BP and b in BP and SW_EIGEN[a] and SW_EIGEN[b] and (len(ix) >= 2 or K.get("knoten_einspur", False)):
             L_ = min(STR[i]["laenge"] for i in ix)
-            if L_ < K.get("knoten_ruhig_m", 500): _kand.append((L_, a, b))
+            if L_ < K.get("knoten_ruhig_m", 500):
+                _kn = _knick_zwischen(a, b)
+                if _kn:      # REGELN 2.15 (T-SZU2, 24.11.2026): Strecke knickt zwischen den Betriebspunkten – eigene Pläne,
+                    print("Kein Knotenplan", BP[a]["name"], "–", BP[b]["name"], ":", _kn); continue   # der Ast verlässt den Plan
+                _kand.append((L_, a, b))
     # Nebengleis zwischen zwei Betriebspunkten (3.11.2026, D. Eckenstein: «Betriebspunkte vergrössern, damit Nebengleise
     # nicht über Betriebspunkte hinweg gehen», Sagliains Sasslatsch – Autoverlad: zwei Ladegleise): Nebengleise (service),
     # die Weichen zweier Betriebspunkte mit eigenen Weichen verbinden, legen beide in einen Plan. Konfig «knoten_nebengleis».
