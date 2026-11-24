@@ -1,4 +1,4 @@
-147 Pläne, 45 geändert: 7 vermutlich besser, 8 schlechter?, 30 gleichwertig
+147 Pläne, 44 geändert: 6 vermutlich besser, 8 schlechter?, 30 gleichwertig
 
 | Plan | Gruppe | Basis | Stellen | Einordnung | Kennzahlen alt→neu | G0 | HT | letzte Änderung |
 |---|---|---|---|---|---|---|---|---|
@@ -46,7 +46,6 @@
 | olten_hammer | Olten 1 · Knoten Olten | bestätigt 2026-11-07 | 12 | vermutlich besser | W56 4→2, W59 4→1 (Wunsch-Summe -6) | 0 | 0 | 2026-11-24T05:54 |
 | colombier | NE 6 · Neuchâtel – Yverdon | Archivbeginn (Abnahme 2026-10-16) | 7 | vermutlich besser | W56 6→5, W59 1→0 (Wunsch-Summe -3) · OSM ok (kein Alt-Stand) | 0 | 0 | 2026-11-23T21:35 |
 | neuchatel | NE 1 · Neuchâtel – Ins – Kerzers – Bern | bestätigt 2026-11-08 | 2 | vermutlich besser | GG 3→1, VA1 5→0, VC1 2→0, VD1 3→1 | GG 1 · GT 1 | 0 | 2026-11-22T20:14 |
-| region | Region | veröffentlicht | 1 | vermutlich besser | G2 26→24, GG 23→22, GW 4→3 | GS 8 · GG 22 · GQ 2 · GP 3 · GW 3 · GT 6 | – | 2026-11-24T05:54 |
 
 Grundprüfung G0 aller Pläne: `ergebnisse/seite/grundpruefung/grundpruefung.md`
 Hauptgleis-Topologie HT aller Pläne mit Netzmodell: `ergebnisse/seite/hauptgleis/hauptgleis.md`
