@@ -1,7 +1,7 @@
 {
  "_zweck": "Zuletzt veröffentlichte Fassung der Feedback-Seite (Commit auf Branch ergebnisse); Basis der Regression für nicht abgenommene Pläne. Claude führt es beim Veröffentlichen nach.",
- "ergebnisse": "0f5ca7f",
- "version": 176,
+ "ergebnisse": "52597a4",
+ "version": 177,
  "notiz_159": "21.11.2026: v158 + prio-Hinweise rot (Vorlage seite.html), keine Planänderung; ergebnisse-Basis bleibt bb5df3c",
  "notiz_160": "21.11.2026: V4b – NE-Karten aus Code, Vauseyon ohne Treppe (REGELN 4.5 schraeg_port); ergebnisse 476a7bc (Commit 16ca65c)",
  "notiz_161": "21.11.2026: V4c – Netzmodell der Typvorlagen auf dem Plan (HT NE 159→51 in den Typvorlagen), St-Blaise CFF und Serrières Spurwechsel wie OSM, Frage F6 Gampelen; ergebnisse dab114d (Commit c0aa2bb)",
@@ -19,5 +19,6 @@
  "notiz_173": "23.11.2026: V4d – Doppelspur-Paarung in Ketten (REGELN 4.5 kette_paarung), Onnens-Bonvillars kürzer (cfg leer_max, REGELN 5.9); ergebnisse 8eb3e4d (Commit 6f56298)",
  "notiz_174": "23.11.2026 abends: V4d Teil 2 – Muntelier Abzweig Sugiez 42° statt 60°, Strecke ohne Knick (REGELN 4.12, netz_lage _abgang_winkel + lage_auto place ab der Weiche); ergebnisse 5b86f93 (Commit 44943a4). Nur region_ne geändert",
  "notiz_175": "23.11.2026 spät: V4d Teil 3 – Colombier Abstellgleis 706 kürzer (REGELN 5.9, Override Hand-Linie), W59 zählt Perron daneben als Inhalt; ergebnisse 58727d7 (Commit 9909f2d). Nur colombier und region_ne geändert",
- "notiz_176": "23.11.2026 spät: V4d Teil 4 – leer_max nur zwischen Segmentgrenzen (spurplan_warp, req «ereignisse»), Rothrist 150 und Tecknau 90 kürzer, Onnens 120 (1446→1430); Olten Hammer zurückgestellt (G0 GS im Regionalplan Olten); ergebnisse 0f5ca7f (Commit 0f155f3)"
+ "notiz_176": "23.11.2026 spät: V4d Teil 4 – leer_max nur zwischen Segmentgrenzen (spurplan_warp, req «ereignisse»), Rothrist 150 und Tecknau 90 kürzer, Onnens 120 (1446→1430); Olten Hammer zurückgestellt (G0 GS im Regionalplan Olten); ergebnisse 0f5ca7f (Commit 0f155f3)",
+ "notiz_177": "24.11.2026 früh: V4g – Olten Hammer kürzer (leer_max 150, REGELN 5.9), im Regionalplan Mitte −310 → −260 (Ende Seite Olten und Nebengleise unverändert); ergebnisse 52597a4 (Commit f4b39ed). Geändert nur olten_hammer und region (1 Stelle), G0 unverändert"
 }
