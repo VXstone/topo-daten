@@ -1037,3 +1037,18 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - Giesshübel-Plan: GS 12→11, GG 30→15, HT2 9→7, HT5 5→2; HT1 1→2 und Saalsporthalle HT2 1 = Messartefakte → HT-Basis gesetzt (siehe `_stand`).
 - Regression: geändert nur szu__zurich_giesshubel («Fehler? Topologie» = VB1 Messartefakt 1260863706, VC1 4→3), region_szu, neu Saalsporthalle.
 - Rest → Schritt T-SZU2 Teil 3 (Depot-Bündel, 713 über 712 im Regionalplan, Saalsporthalle Gl. 2). Abnahmen nicht neu exportiert.
+
+### 24.11.2026 ~23:40 – Schritt T-SZU2 Teil 3a: Regeln 2.15/1.30/HT, nicht veröffentlicht (Sperren warten auf Daniels Okay) (Commits aae34a1, e184809, 05bd046)
+- REGELN 2.15 neu gefasst («Strecke ist Fixpunkt»): Linie > 30° von der Achse = seitlicher Abgang an ihrer Weiche, keine Ebene nach Abstand,
+  nichts hinter dem Pfeil (cfg `linie_abgang`, Stummelknoten an der Weiche). Nur wenn die Strecke an der Weiche beidseitig ±15° weiterläuft
+  und der Ast eine andere Linie ist (erste Fassung traf MOB Jaman/Gstaad/Glion/Paccot – Strecke im Bogen). cfg `achse_knick` gestrichen.
+  Sichtbar lokal: Giesshübel 717 als 60°-Abgang an Weiche 258325981, GE 11→6 (die 3 losen Enden am 717 weg). Depot/GQ 5→7 unverändert offen.
+- REGELN 1.30 neu, G0-Regel **GE** (loses Gleisende) in `grundpruefung.py`; Zählung v183 an Daniel (Liste im Chat, Blaupausen 219 davon).
+  Selbsttest-Fall `grundpruefung_faelle/giesshuebel_v183`. **GE-Basis noch nicht gesetzt – Daniel fragen** (Blaupausen ausnehmen?).
+- HT: misst auf dem gezeichneten Plan (`hauptgleis._auf_plan`: Netzmodell-Knoten auf gezeichnete Linien/Verzweigungen ≤ 8 px) und schwarze
+  Güterlinien mit Liniennummer zählen als Hauptgleis (`ht` am Abgang `gueter`). Neue HT-Befunde (olten HT4 2→4, Giesshübel HT2/HT5) –
+  **HT-Basis nur mit Daniels Okay**. Prüfstand ab60: T/Q je +1 in 3 Drehungen, sonst besser (T 29→24, X 30→19, G7 2→0) – Basis mit Okay.
+- Verworfen (nicht committet): «Linie setzt sich nicht in anderer Linie fort» in der Kettenbildung (713 oben, aber Y mit Treppe);
+  r34_kette über Nachbargleise messen (Saalsporthalle: Achse liegt im Bogen zwischen den Gleisen, d-Abstand 1–2 m statt 4 m).
+- Offen → T-SZU2 Teil 3b: Depot-Bündel über Y (Ursache: Kette Y–713 hebt Y auf die 713-Ebene, Depot liegt dazwischen), 713/712 im
+  Regionalplan, Saalsporthalle Gl. 2 (zwei Spurwechsel als service=siding in zwei Stücken auf Zwischenebene). Hinweise Giesshübel offen.
