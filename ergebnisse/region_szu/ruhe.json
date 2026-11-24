@@ -16,5 +16,44 @@
   "versatz": 20.3,
   "plan": "uetliberg",
   "text": "uetliberg: Treppe bei x=296.9, y=122.0"
+ },
+ {
+  "regel": "T7",
+  "art": "Treppe",
+  "x": 626.2,
+  "y": 122.0,
+  "versatz": 20.3,
+  "plan": "zurich_saalsporthalle",
+  "text": "zurich_saalsporthalle: Treppe bei x=626.2, y=122.0"
+ },
+ {
+  "regel": "T7",
+  "art": "Ecke",
+  "x": 611.1,
+  "y": 67.8,
+  "winkel": -37.7,
+  "neben": false,
+  "plan": "Regionalplan",
+  "text": "Regionalplan: Ecke bei x=611.1, y=67.8"
+ },
+ {
+  "regel": "T7",
+  "art": "Ecke",
+  "x": 619.4,
+  "y": 92.7,
+  "winkel": 13.6,
+  "neben": false,
+  "plan": "Regionalplan",
+  "text": "Regionalplan: Ecke bei x=619.4, y=92.7"
+ },
+ {
+  "regel": "T7",
+  "art": "Ecke",
+  "x": 612.1,
+  "y": 85.5,
+  "winkel": 15.6,
+  "neben": false,
+  "plan": "Regionalplan",
+  "text": "Regionalplan: Ecke bei x=612.1, y=85.5"
  }
 ]

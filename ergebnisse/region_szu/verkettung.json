@@ -63,6 +63,32 @@
     ]
    ]
   },
+  "zurich_giesshubel|zurich_saalsporthalle": {
+   "zurich_giesshubel": [
+    [
+     "ports",
+     true,
+     "712"
+    ],
+    [
+     "ports",
+     true,
+     "712"
+    ]
+   ],
+   "zurich_saalsporthalle": [
+    [
+     "ports",
+     true,
+     "712"
+    ],
+    [
+     "ports",
+     true,
+     "712"
+    ]
+   ]
+  },
   "borrweg|zurich_binz": {
    "zurich_binz": [
     [
@@ -124,16 +150,6 @@
    "a": "zurich_selnau",
    "b": "zurich_giesshubel",
    "text": "Zürich Selnau: 2 Streckengleis(e) nach Zürich Giesshübel, Strangbild 3"
-  },
-  {
-   "regel": "S3",
-   "a": "zurich_giesshubel",
-   "text": "Zürich Giesshübel: Fahrbeziehung Abgang Adliswil → Zürich Selnau im Plan nicht durchgehend gezeichnet"
-  },
-  {
-   "regel": "S3",
-   "a": "zurich_giesshubel",
-   "text": "Zürich Giesshübel: Fahrbeziehung Zürich Selnau → Abgang Adliswil im Plan nicht durchgehend gezeichnet"
   }
  ]
 }

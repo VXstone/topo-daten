@@ -16,6 +16,10 @@
    "name": "Zürich Giesshübel",
    "art": "station"
   },
+  "zurich_saalsporthalle": {
+   "name": "Zürich Saalsporthalle",
+   "art": "station"
+  },
   "zurich_binz": {
    "name": "Zürich Binz",
    "art": "station"
@@ -47,7 +51,7 @@
  },
  "abgaenge": {
   "_abgang_0": {
-   "bp": "zurich_giesshubel",
+   "bp": "zurich_saalsporthalle",
    "knoten": [
     1263646440,
     81966459
@@ -886,6 +890,131 @@
   },
   {
    "a": "zurich_giesshubel",
+   "b": "zurich_saalsporthalle",
+   "knoten": [
+    1263316902,
+    11465303640,
+    11465303639,
+    11465303641,
+    3067902766,
+    1263316924,
+    11465303609,
+    11465303608,
+    1263316958,
+    11465303607,
+    1263316980,
+    11465303606,
+    1263316927,
+    11465303605,
+    1263316997,
+    11465303604,
+    1263316884,
+    11465303603,
+    1263316954,
+    11465303602,
+    11465303601,
+    1263316975,
+    11465303600,
+    1263316947,
+    11465303599,
+    11465303598,
+    1263316962,
+    11465303597,
+    1263316909,
+    11465303596,
+    11465303595,
+    1263316933,
+    11465303594,
+    1263316981,
+    11465303593,
+    11465303592,
+    1263316855,
+    3067882997,
+    1263316974
+   ],
+   "ways": [
+    110676788,
+    302538713,
+    302542152,
+    324969009,
+    351899126
+   ],
+   "laenge": 288.3,
+   "ref": "712",
+   "refs": [
+    "712"
+   ],
+   "spur": "1435"
+  },
+  {
+   "a": "zurich_giesshubel",
+   "b": "zurich_saalsporthalle",
+   "knoten": [
+    1263316982,
+    3067880740,
+    1260863714,
+    1260863525,
+    11465303571,
+    81966437,
+    1263316915,
+    11465303572,
+    1260863659,
+    11465303573,
+    1263316964,
+    11465303574,
+    11465303575,
+    11465303576,
+    81966439,
+    11465303577,
+    1263316971,
+    11465303578,
+    258325230,
+    11465303579,
+    11465303580,
+    1263316943,
+    11465303581,
+    258325231,
+    11465303582,
+    11465303583,
+    1263316959,
+    11465303584,
+    11465303585,
+    81966440,
+    11465303586,
+    1263316906,
+    11465303587,
+    258325640,
+    11465303588,
+    11465303589,
+    1263316929,
+    11465303590,
+    81966442,
+    11465303591,
+    1263316983,
+    1263316916,
+    11645709862,
+    11645709861,
+    11645709860,
+    11645709859,
+    81966443
+   ],
+   "ways": [
+    110676803,
+    302538473,
+    302538636,
+    324969014,
+    324969020,
+    326218893
+   ],
+   "laenge": 438.7,
+   "ref": "712",
+   "refs": [
+    "712"
+   ],
+   "spur": "1435"
+  },
+  {
+   "a": "zurich_saalsporthalle",
    "b": "_abgang_0",
    "knoten": [
     1263381301,
@@ -993,7 +1122,7 @@
    "spur": "1435"
   },
   {
-   "a": "zurich_giesshubel",
+   "a": "zurich_saalsporthalle",
    "b": "_abgang_0",
    "knoten": [
     81966448,
@@ -1352,7 +1481,7 @@
    "straenge": [
     0,
     2,
-    11
+    13
    ],
    "gleise": 3,
    "refs": [
@@ -1414,7 +1543,7 @@
     "713"
    ]
   },
-  "_abgang_0|zurich_giesshubel": {
+  "zurich_giesshubel|zurich_saalsporthalle": {
    "straenge": [
     8,
     9
@@ -1424,16 +1553,17 @@
     "712"
    ]
   },
-  "zurich_binz|zurich_giesshubel": {
+  "_abgang_0|zurich_saalsporthalle": {
    "straenge": [
-    10
+    10,
+    11
    ],
-   "gleise": 1,
+   "gleise": 2,
    "refs": [
-    "713"
+    "712"
    ]
   },
-  "zurich_schweighof|zurich_triemli": {
+  "zurich_binz|zurich_giesshubel": {
    "straenge": [
     12
    ],
@@ -1442,9 +1572,18 @@
     "713"
    ]
   },
+  "zurich_schweighof|zurich_triemli": {
+   "straenge": [
+    14
+   ],
+   "gleise": 1,
+   "refs": [
+    "713"
+   ]
+  },
   "zurich_friesenberg|zurich_schweighof": {
    "straenge": [
-    13
+    15
    ],
    "gleise": 1,
    "refs": [
@@ -1455,8 +1594,8 @@
  "fahrbeziehungen": [
   {
    "von": "_abgang_0",
-   "bp": "zurich_giesshubel",
-   "nach": "zurich_selnau"
+   "bp": "zurich_saalsporthalle",
+   "nach": "zurich_giesshubel"
   },
   {
    "von": "berghof",
@@ -1524,6 +1663,16 @@
    "nach": "borrweg"
   },
   {
+   "von": "zurich_giesshubel",
+   "bp": "zurich_saalsporthalle",
+   "nach": "_abgang_0"
+  },
+  {
+   "von": "zurich_saalsporthalle",
+   "bp": "zurich_giesshubel",
+   "nach": "zurich_selnau"
+  },
+  {
    "von": "zurich_schweighof",
    "bp": "zurich_friesenberg",
    "nach": "borrweg"
@@ -1536,12 +1685,12 @@
   {
    "von": "zurich_selnau",
    "bp": "zurich_giesshubel",
-   "nach": "_abgang_0"
+   "nach": "zurich_binz"
   },
   {
    "von": "zurich_selnau",
    "bp": "zurich_giesshubel",
-   "nach": "zurich_binz"
+   "nach": "zurich_saalsporthalle"
   },
   {
    "von": "zurich_triemli",
@@ -1561,7 +1710,8 @@
   "zurich_selnau": 870.5,
   "ringlikon": 271.6,
   "uetliberg": 157.5,
-  "zurich_giesshubel": 890.4,
+  "zurich_giesshubel": 426.3,
+  "zurich_saalsporthalle": 400.7,
   "berghof": 151.9,
   "borrweg": 250.9
  }

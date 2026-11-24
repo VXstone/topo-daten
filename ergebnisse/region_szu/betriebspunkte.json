@@ -58,7 +58,7 @@
   "id": 1264771132,
   "lat": 47.3626083,
   "lon": 8.5220149,
-  "radius": 1008.8439089811269,
+  "radius": 500.0,
   "spuren": [
    "1435"
   ],
@@ -77,17 +77,27 @@
    1263316968,
    1263316969,
    1263316991,
-   1263316993,
+   1263316993
+  ],
+  "weichen": 38,
+  "normalspur": false,
+  "dienst": false
+ },
+ "zurich_saalsporthalle": {
+  "name": "Zürich Saalsporthalle",
+  "id": 1264808495,
+  "lat": 47.3580067,
+  "lon": 8.5218339,
+  "radius": 500.0,
+  "spuren": [
+   "1435"
+  ],
+  "gleisenden": [
    1263338233
   ],
-  "weichen": 37,
+  "weichen": 34,
   "normalspur": false,
-  "dienst": false,
-  "mitglieder": [
-   "Zürich Giesshübel",
-   "Zürich Saalsporthalle"
-  ],
-  "titel": "Zürich Giesshübel · Zürich Saalsporthalle"
+  "dienst": false
  },
  "zurich_binz": {
   "name": "Zürich Binz",

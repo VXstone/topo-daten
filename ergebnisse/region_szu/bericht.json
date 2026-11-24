@@ -1,7 +1,7 @@
 {
  "region": "szu",
- "erzeugt": "2026-11-24 15:53 UTC",
- "code_commit": "a015e918a9b143c13ec945749a8ade6d5d4f3411",
+ "erzeugt": "2026-11-24 20:20 UTC",
+ "code_commit": "fcaaba3f7c5c65388a7c29de3c9992368cbdb55f",
  "bahnhoefe": {
   "uetliberg": {
    "name": "Uetliberg",
@@ -27,14 +27,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "zurich_friesenberg": {
-   "name": "Zürich Friesenberg",
+  "zurich_saalsporthalle": {
+   "name": "Zürich Saalsporthalle",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "zurich_schweighof": {
-   "name": "Zürich Schweighof",
+  "zurich_friesenberg": {
+   "name": "Zürich Friesenberg",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -42,11 +42,17 @@
   "zurich_giesshubel": {
    "name": "Zürich Giesshübel",
    "ok": true,
-   "befunde": "Befunde: {'A': 2, 'B': 293, 'C': 1, 'F': 3}",
+   "befunde": "Befunde: {'A': 2, 'B': 202, 'C': 1}",
    "optionen": []
   },
   "berghof": {
    "name": "Berghof",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
+  "zurich_schweighof": {
+   "name": "Zürich Schweighof",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -64,11 +70,11 @@
   "V3": 0,
   "S1": 1,
   "S2": 0,
-  "S3": 2
+  "S3": 0
  },
  "lage_suche": {
-  "ausgang": 307,
-  "ergebnis": 307,
+  "ausgang": 369,
+  "ergebnis": 369,
   "drehung": {},
   "varianten": 7
  },
@@ -76,11 +82,12 @@
  "topologie_region": {
   "T1": 2,
   "T4": 1,
-  "T3": 3
+  "T3": 3,
+  "T6": 1
  },
  "ruhe": {
-  "treppen": 2,
-  "ecken": 0
+  "treppen": 3,
+  "ecken": 3
  },
  "regeln": {
   "G2": 2,
@@ -89,39 +96,42 @@
  "perrons": {
   "P1": 1
  },
- "planrand": 0,
+ "planrand": 1,
  "lage": {
-  "L3a": 2
+  "L3a": 1
  },
  "kennzahlen": {
   "topo_T1": 2,
   "topo_T4": 1,
   "topo_T3": 3,
+  "topo_T6": 1,
   "verk_V1": 1,
   "verk_V2": 0,
   "verk_V3": 0,
   "verk_S1": 1,
   "verk_S2": 0,
-  "verk_S3": 2,
+  "verk_S3": 0,
   "perron_P1": 1,
   "regel_G2": 2,
   "regel_G8": 1,
-  "ruhe_treppen": 2,
-  "ruhe_ecken": 0,
-  "planrand": 0,
-  "lage_L3a": 2
+  "ruhe_treppen": 3,
+  "ruhe_ecken": 3,
+  "planrand": 1,
+  "lage_L3a": 1
  },
- "unruhe": 553,
+ "unruhe": 528,
  "unruhe_teile": {
   "topo_T1": 100,
   "topo_T4": 50,
   "topo_T3": 150,
+  "topo_T6": 50,
   "verk_V1": 50,
   "verk_S1": 50,
-  "verk_S3": 100,
   "perron_P1": 30,
   "regel_G2": 4,
   "regel_G8": 3,
-  "ruhe_treppen": 16
+  "ruhe_treppen": 24,
+  "ruhe_ecken": 12,
+  "planrand": 5
  }
 }
