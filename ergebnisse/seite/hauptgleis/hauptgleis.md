@@ -5,8 +5,9 @@
 | Plan | HT1 | HT2 | HT3 | HT4 | HT5 | Summe |
 |---|---|---|---|---|---|---|
 | olten | 10 | 21 | 7 | 2 | 165 | 205 |
-| aarau | 3 | **5** (Basis 4) | · | 1 | 9 | 18 |
+| aarau | 3 | 4 | · | 1 | 9 | 17 |
 | szu__zurich_giesshubel | 0 ↓1 | 8 ↓9 | **2** (Basis 0) | 1 | **6** (Basis 5) | 17 |
+| solothurn | 2 | 1 | · | · | 11 ↓14 | 14 |
 | rothrist | 2 | 4 | · | · | 5 | 11 |
 | konolfingen | · | 2 | · | · | 6 | 8 |
 | mob__chamby | 1 | 1 | · | 1 | 1 | 4 |
@@ -21,7 +22,6 @@
 | mob__montbovon | 2 | · | · | · | · | 2 |
 | mob__paccot | 2 | · | · | · | · | 2 |
 | mob__saanen | · | 1 | · | · | 1 | 2 |
-| solothurn | 2 | 0 ↓1 | · | · | 0 ↓14 | 2 |
 | mob__glion | · | · | · | · | 1 | 1 |
 | mob__jor | 1 | · | · | · | · | 1 |
 | mob__montreux | · | 1 | · | · | · | 1 |
@@ -148,12 +148,6 @@ Regeln: HT1 = OSM-Weiche am Hauptgleis ohne Abzweig im Plan; HT2 = Abzweig am Ha
 
 ## NEUE Befunde
 
-- **aarau** HT2: 4 → 5
-  - 3120.4/330.8: Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung
-  - 2735.0/210.8: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-  - 836.5/234.8: Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung
-  - 887.1/306.8: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-  - 864.2/282.8: Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung
 - **szu__zurich_giesshubel** HT3: 0 → 2
   - 1183.0/184.4: Gleis (Way 110676783) im Plan an Knoten 1263316880 angebunden, in OSM nicht
   - 1183.0/184.4: Gleis (Way 110676790) im Plan an Knoten 1263316880 angebunden, in OSM nicht

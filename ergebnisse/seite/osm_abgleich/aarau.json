@@ -17,7 +17,7 @@
 },
 {
 "regel": "VB1",
-"x": 2967.9,
+"x": 2994.6,
 "y": 136.4,
 "text": "OSM-Weiche 392703044 ohne Abzweig im Plan",
 "osm": 392703044
@@ -31,22 +31,7 @@
 },
 {
 "regel": "VB2",
-"x": 2800.0,
-"y": 162.8,
-"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
-"ways": [
-103395437,
-109103535,
-164520560,
-1311754340
-],
-"farben": [
-"schwarz"
-]
-},
-{
-"regel": "VB2",
-"x": 3120.4,
+"x": 3147.2,
 "y": 330.8,
 "text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
 "ways": [
@@ -56,23 +41,6 @@
 289118753,
 377106652,
 377871836
-],
-"farben": [
-"gruen",
-"schwarz"
-]
-},
-{
-"regel": "VB2",
-"x": 2735.0,
-"y": 210.8,
-"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
-"ways": [
-33523752,
-34080231,
-168744387,
-902335240,
-902335241
 ],
 "farben": [
 "gruen",
@@ -124,19 +92,19 @@
 },
 {
 "regel": "VD1",
-"x": 3099.2,
+"x": 3125.9,
 "y": 210.8,
 "text": "zwei Gleise 30 px aufeinander"
 },
 {
 "regel": "VD1",
-"x": 3141.0,
+"x": 3167.7,
 "y": 234.7,
 "text": "zwei Gleise 12 px aufeinander"
 },
 {
 "regel": "VD1",
-"x": 2952.8,
+"x": 2979.5,
 "y": 282.8,
 "text": "zwei Gleise 20 px aufeinander"
 },
@@ -167,8 +135,8 @@
 ],
 "info": {
 "dkw_osm_unvollstaendig": [],
-"gleise": 176,
-"knoten_plan": 61,
+"gleise": 174,
+"knoten_plan": 60,
 "dkw_plan": 2,
 "knoten_osm": 71,
 "versatz_y": 0.0,

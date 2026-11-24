@@ -51,7 +51,7 @@
    "regeln": [
     "G5"
    ],
-   "naechster": 26.5,
+   "naechster": 27.3,
    "naechste_regel": "G5",
    "plan_da": true
   },
@@ -535,7 +535,7 @@
    "regeln": [
     "MF"
    ],
-   "naechster": 16.4,
+   "naechster": 38.2,
    "naechste_regel": "MF",
    "plan_da": true
   },
@@ -775,16 +775,17 @@
   {
    "id": "zcz3v5yhncmbd21obybz",
    "plan": "solothurn",
-   "x": 904.2,
+   "x": 848.0,
    "y": 253.1,
    "text": "nicht verbunden",
    "abgedeckt": true,
    "regeln": [
-    "A1",
-    "VB1"
+    "G7",
+    "MX",
+    "VB2"
    ],
-   "naechster": 9.8,
-   "naechste_regel": "VB1",
+   "naechster": 18.0,
+   "naechste_regel": "G7",
    "plan_da": true
   }
  ]

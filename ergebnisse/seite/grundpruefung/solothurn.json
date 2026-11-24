@@ -1,10 +1,10 @@
 {
  "ebene": 24.0,
  "zaehl": {
-  "GS": 11,
+  "GS": 12,
   "GG": 4,
   "GQ": 0,
-  "GP": 1,
+  "GP": 0,
   "GW": 0,
   "GT": 1
  },
@@ -76,6 +76,12 @@
    "text": "Gleise kreuzen sich (24°) ohne DKW, Kreuzung oder Niveautrennung"
   },
   {
+   "regel": "GS",
+   "x": 834.4,
+   "y": 269.6,
+   "text": "Gleise kreuzen sich (60°) ohne DKW, Kreuzung oder Niveautrennung"
+  },
+  {
    "regel": "GG",
    "x": 855.1,
    "y": 184.4,
@@ -98,12 +104,6 @@
    "x": 1495.6,
    "y": 184.4,
    "text": "zwei Gleise 57 px aufeinander"
-  },
-  {
-   "regel": "GP",
-   "x": 887.5,
-   "y": 213.1,
-   "text": "Pfeil zeigt innert 36 px auf ein Gleis"
   },
   {
    "regel": "GT",
