@@ -6557,8 +6557,7 @@
     "2"
    ],
    "gleise_perron_osm": [
-    "1",
-    "2"
+    "1"
    ]
   },
   "ZSAA": {
@@ -6572,15 +6571,13 @@
    "betreiber": "SZU",
    "verkehrsmittel": "TRAIN",
    "plaene": [
-    "szu__zurich_giesshubel"
+    "szu__zurich_saalsporthalle"
    ],
    "regionen": [
     "szu"
    ],
    "linien": [
-    "712",
-    "713",
-    "717"
+    "712"
    ],
    "osm": {
     "node": 1264808495,
@@ -8991,19 +8988,34 @@
   },
   "szu__zurich_giesshubel": {
    "key": "szu__zurich_giesshubel",
-   "name": "Zürich Giesshübel · Zürich Saalsporthalle",
+   "name": "Zürich Giesshübel",
    "gruppe": "SZU · Bahnhöfe",
    "region": "szu",
    "quelle": "Linien-Region szu",
    "workflow": "regionen",
    "art": "code",
    "abk": [
-    "ZGH",
+    "ZGH"
+   ],
+   "ort": [
+    47.362834,
+    8.521718
+   ]
+  },
+  "szu__zurich_saalsporthalle": {
+   "key": "szu__zurich_saalsporthalle",
+   "name": "Zürich Saalsporthalle",
+   "gruppe": "SZU · Bahnhöfe",
+   "region": "szu",
+   "quelle": "Linien-Region szu",
+   "workflow": "regionen",
+   "art": "code",
+   "abk": [
     "ZSAA"
    ],
    "ort": [
-    47.36147,
-    8.521751
+    47.357608,
+    8.521943
    ]
   },
   "szu__zurich_schweighof": {
