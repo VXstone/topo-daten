@@ -951,4 +951,4 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   OSM-Hauptgleis-/Verbindungsstücke mit Tag siding/yard (57016117 mit passenger_lines=2, 137216810 ref 450 längs Hauptgleis, 137216805 4 m neben Gl. 486) –
   weggelassen über `nebengleis_hand` in `olten_region_lage.json` (REGELN 4.7 Ausnahme). Lokal G0 Region: GG 23→22, GW 1→0, sonst gleich. Hinweis lld9 beantwortet.
   Idee für später (nicht entschieden): allgemein erkennen («siding» mit passenger_lines oder deckungsgleich mit Hauptgleis = kein Nebengleis).
-
+  Veröffentlicht als v178 (Commit c08d0f6, ergebnisse e311a77): region «vermutlich besser» (GG 23→22, GW 4→3), sonst nichts geändert.
