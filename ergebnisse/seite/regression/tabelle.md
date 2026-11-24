@@ -2,7 +2,7 @@
 
 | Plan | Gruppe | Basis | Stellen | Einordnung | Kennzahlen alt→neu | G0 | HT | letzte Änderung |
 |---|---|---|---|---|---|---|---|---|
-| solothurn | Bahnhöfe ohne Regionalplan | veröffentlicht | 2 | Fehler? Topologie | G7 3→2, VA1 1→2, VB1 6→4, VB2 14→13, VC1 1→0 | GS 12 · GG 4 · GT 1 | HT1 2 · HT2 1 · HT5 11 | 2026-11-24T13:15 |
+| solothurn | Bahnhöfe ohne Regionalplan | veröffentlicht | 2 | Fehler? Topologie | G7 3→2, VA1 1→2, VB1 6→4, VB2 14→13, VC1 1→0 | GS 12 · GG 4 · GT 1 | HT1 2 · HT2 1 · HT5 11 | 2026-11-24T13:32 |
 | onnens_bonvillars | NE 6 · Neuchâtel – Yverdon | Archivbeginn (Abnahme 2026-10-26) | 9 | schlechter? | G2 1→2, W56 5→1, W59 6→1 (Wunsch-Summe -12) · OSM VA1 1, VA2 1, VB1 1, VD1 1 (kein Alt-Stand) | GG 1 · GT 1 | 0 | 2026-11-23T22:28 |
 | grandson | NE 6 · Neuchâtel – Yverdon | Archivbeginn (Abnahme 2026-10-20) | 6 | schlechter? | G2 0→1 · OSM ok (kein Alt-Stand) | 0 | 0 | 2026-11-21T15:24 |
 | chambrelien | NE 8 · Neuchâtel – La Chaux-de-Fonds | Archivbeginn (Abnahme 2026-10-20) | 5 | schlechter? | G2 1→0, T7 0→1 (Wunsch-Summe +8) · OSM VA1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-22T15:43 |
@@ -40,7 +40,7 @@
 | couvet | NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier | Archivbeginn (Abnahme 2026-10-20) | 1 | gleichwertig | OSM VD1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-20T21:23 |
 | motiers | NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier | Archivbeginn (Abnahme 2026-10-20) | 1 | gleichwertig | OSM VD1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-20T21:23 |
 | les_geneveys_sur_coffrane | NE 8 · Neuchâtel – La Chaux-de-Fonds | Archivbeginn (Abnahme 2026-10-19) | 1 | gleichwertig | OSM VD1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-20T21:23 |
-| region | Region | veröffentlicht | 2 | gleichwertig |  | GS 8 · GG 22 · GQ 2 · GP 3 · GW 3 · GT 6 | – | 2026-11-24T13:04 |
+| region | Region | veröffentlicht | 2 | gleichwertig |  | GS 8 · GG 22 · GQ 2 · GP 3 · GW 3 · GT 6 | – | 2026-11-24T13:32 |
 | zofingen | Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil | bestätigt 2026-11-08 | 29 | vermutlich besser | VA2 2→0, VB1 2→1, VD1 2→1 | GG 1 | HT1 1 · **HT5 2 (Basis 0)** | 2026-11-24T13:04 |
 | rothrist | Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil | Archivbeginn (Abnahme 2026-10-29) | 17 | vermutlich besser | G2 0→1, G6 1→0, VB2 6→5, W56 4→1, W59 10→3 (Wunsch-Summe -9) | GS 2 · GG 1 · GQ 1 · GT 2 | HT1 2 · HT2 4 · HT5 5 | 2026-11-23T22:28 |
 | tecknau | Olten 4 · Hauenstein | bestätigt 2026-11-07 | 14 | vermutlich besser | W56 1→0, W59 3→2 (Wunsch-Summe -3) | 0 | HT2 1 · HT5 2 | 2026-11-23T22:28 |
@@ -48,9 +48,9 @@
 | travers | NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier | Archivbeginn (Abnahme 2026-10-15) | 9 | vermutlich besser | W59 1→0 · OSM ok (kein Alt-Stand) | 0 | 0 | 2026-11-24T07:36 |
 | colombier | NE 6 · Neuchâtel – Yverdon | Archivbeginn (Abnahme 2026-10-16) | 7 | vermutlich besser | W56 6→5, W59 1→0 (Wunsch-Summe -3) · OSM ok (kein Alt-Stand) | 0 | 0 | 2026-11-23T21:35 |
 | neuchatel | NE 1 · Neuchâtel – Ins – Kerzers – Bern | bestätigt 2026-11-08 | 2 | vermutlich besser | GG 3→1, VA1 5→0, VC1 2→0, VD1 3→1 | GG 1 · GT 1 | 0 | 2026-11-22T20:14 |
-| region_szu | Region | veröffentlicht | 14 | vermutlich besser | G7 1→0, GG 27→22, GP 0→1, GQ 4→5, GS 18→9, GW 0→1, T7 1→0, W53 7→4 (Wunsch-Summe -26) | GS 9 · GG 22 · **GQ 5 (Basis 4)** · **GP 1 (Basis 0)** · **GW 1 (Basis 0)** · GT 1 | – | 2026-11-24T13:15 |
-| szu__zurich_giesshubel | SZU · Bahnhöfe | veröffentlicht | 7 | vermutlich besser | G2 2→1, GG 32→25, GP 0→1, GW 0→1, T7 1→0, VB2 9→8, VD1 36→33 (Wunsch-Summe -8) | GS 12 · GG 25 · GQ 5 · **GP 1 (Basis 0)** · **GW 1 (Basis 0)** · **GT 1 (Basis 0)** | HT2 8 · **HT3 2 (Basis 0)** · HT4 1 · **HT5 6 (Basis 5)** | 2026-11-24T13:15 |
-| aarau | Olten 3 · Olten – Aarau | veröffentlicht | 2 | vermutlich besser | VB1 7→4 | GS 3 · GG 6 · GP 2 · GT 1 | HT1 3 · HT2 4 · HT4 1 · HT5 9 | 2026-11-24T13:04 |
+| region_szu | Region | veröffentlicht | 13 | vermutlich besser | G2 2→1, G7 1→0, GG 27→26, GS 18→14, T7 1→0, W53 7→6 (Wunsch-Summe -14) | GS 14 · GG 26 · GQ 4 · GT 1 | – | 2026-11-24T13:15 |
+| szu__zurich_giesshubel | SZU · Bahnhöfe | veröffentlicht | 6 | vermutlich besser | G2 2→1, GG 32→30, T7 1→0, VB2 9→8, VD1 36→34 (Wunsch-Summe -8) | GS 12 · GG 30 · GQ 5 | HT1 1 · HT2 8 · HT4 1 · HT5 5 | 2026-11-24T13:15 |
+| aarau | Olten 3 · Olten – Aarau | veröffentlicht | 2 | vermutlich besser | VB1 7→4 | GS 3 · GG 6 · GP 2 · GT 1 | HT1 3 · HT2 4 · HT4 1 · HT5 9 | 2026-11-24T13:32 |
 
 Grundprüfung G0 aller Pläne: `ergebnisse/seite/grundpruefung/grundpruefung.md`
 Hauptgleis-Topologie HT aller Pläne mit Netzmodell: `ergebnisse/seite/hauptgleis/hauptgleis.md`
