@@ -48,7 +48,7 @@
 | colombier | NE 6 · Neuchâtel – Yverdon | Archivbeginn (Abnahme 2026-10-16) | 7 | vermutlich besser | W56 6→5, W59 1→0 (Wunsch-Summe -3) · OSM ok (kein Alt-Stand) | 0 | 0 | 2026-11-23T21:35 |
 | neuchatel | NE 1 · Neuchâtel – Ins – Kerzers – Bern | bestätigt 2026-11-08 | 2 | vermutlich besser | GG 3→1, VA1 5→0, VC1 2→0, VD1 3→1 | GG 1 · GT 1 | 0 | 2026-11-22T20:14 |
 | region_szu | Region | veröffentlicht | 26 | vermutlich besser | T7 2→1, W53 8→7 (Wunsch-Summe -14) | GS 18 · GG 27 · GQ 4 · GT 1 | – | 2026-11-24T07:47 |
-| szu__zurich_selnau | SZU · Bahnhöfe | veröffentlicht | 11 | vermutlich besser | G2 3→0, T7 2→0, VB2 2→0, W53 1→0 (Wunsch-Summe -22) | 0 | 0 | 2026-11-24T07:47 |
+| szu__zurich_selnau | SZU · Bahnhöfe | veröffentlicht | 11 | vermutlich besser | G2 3→0, T7 2→0, VB2 2→0, W53 1→0, W56 4→5 (Wunsch-Summe -19) | 0 | 0 | 2026-11-24T07:47 |
 
 Grundprüfung G0 aller Pläne: `ergebnisse/seite/grundpruefung/grundpruefung.md`
 Hauptgleis-Topologie HT aller Pläne mit Netzmodell: `ergebnisse/seite/hauptgleis/hauptgleis.md`

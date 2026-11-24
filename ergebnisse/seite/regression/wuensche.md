@@ -19,8 +19,8 @@ Wünsche je Plan (REGELN 5: W53 S-Kurven ×6, W55 Bahnhofsabstand ×3, W56 Leerl
 | auvernier | NE 6 · Neuchâtel – Yverdon | 1 |  | 3 | 15 |
 | colombier | NE 6 · Neuchâtel – Yverdon | 0 |  | 5 | 15 |
 | szu__zurich_giesshubel | SZU · Bahnhöfe | 2 |  | 1 | 15 |
+| szu__zurich_selnau | SZU · Bahnhöfe | 0 |  | 5 | 15 |
 | szu__borrweg | SZU · Bahnhöfe | 1 |  | 2 | 12 |
-| szu__zurich_selnau | SZU · Bahnhöfe | 0 |  | 4 | 12 |
 | laufelfingen | Olten 4 · Hauenstein | 0 |  | 3 | 9 |
 | kerzers | NE 1 · Neuchâtel – Ins – Kerzers – Bern | 1 |  | 1 | 9 |
 | ligerz | NE 5 · Neuchâtel – Biel | 0 |  | 3 | 9 |
