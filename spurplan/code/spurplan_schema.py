@@ -3103,6 +3103,7 @@ _pl_s = [x for pl in OVR.get("platforms", []) if "s" in pl for x in pl["s"]] or 
 S_PERRON = float(np.mean(_pl_s)) if _pl_s else (CFG["s_min"] + CFG["s_max"]) / 2
 # Gleisnummern (Personenverkehr: kleine Nummern)
 labels = {}
+LABELS2 = []            # K0e: (Nummer, Ebene, s0, s1, s0/s1 der Hauptnummer der Kette)
 for c in C:
     refs = [sg["ref"] for sg in c["segs"] if sg["ref"] and sg["ref"].isdigit() and int(sg["ref"]) < 30
             and (sg["pax"] or sg["ref"] in OVR.get("nummern", [])) and sg["ref"] not in OVR.get("nummern_weg", [])]      # "nummern": auch Nebengleise beschriften; "nummern_weg": Nummer weglassen (Kerzers 16, 15.10.)
@@ -3115,6 +3116,13 @@ for c in C:
     a = min(x["s0"] for x in segs_r); b = max(x["s1"] for x in segs_r)
     if r not in labels or (b - a) > labels[r][3]:
         labels[r] = (c["lane"], a, b, b - a)
+    # K0e (24.11.2026, HB SZU Gl. 21/22): weitere Nummern derselben Kette (Gl. 1 + 21 sind eine Kette) als Kandidaten –
+    # gezeichnet nur, wenn ein eigener Perron neben diesem Teil liegt (Prüfung beim Zeichnen, REGELN 1.29). Dulliken 12/13
+    # (Streckengleis ohne Perron) bleibt ohne Nummer.
+    if CFG.get("nummer_je_perron", True):
+        for r2 in sorted(set(refs) - {r}):
+            _s2 = [sg for sg in c["segs"] if sg["ref"] == r2]
+            LABELS2.append((r2, c["lane"], min(x["s0"] for x in _s2), max(x["s1"] for x in _s2), a, b))
 # gemeinsame x-Position im Perronbereich
 pax_mid = np.median([(v[1] + v[2]) / 2 for v in labels.values()]) if labels else S_PERRON   # Halte ohne Gleisnummern: Titel unter den Perrons
 
@@ -5090,8 +5098,20 @@ arrows = [a for a in arrows if not (round(a[1]) in _pax_y and any(abs(a[0] - px)
 for x, y, dr in arrows:
     out.append(f'<path d="M{x:.1f},{y - 4:.1f}L{x + 9 * dr:.1f},{y:.1f}L{x:.1f},{y + 4:.1f}Z" fill="{_pfeil_farbe(x, y, 0.0 if dr > 0 else math.pi)}"{_pfeil_attr(x, y, 0.0 if dr > 0 else math.pi)}/>')
 # Regel Z7 (27.10.2026, Hinweis 1zg2 Vauseyon «Perron-Gleis Nummer?»): Betriebspunkt ohne Perron – keine Gleisnummern
-if not any('rx="1.5"' in o_ for o_ in out + globals().get("MS_TXT", [])) and not OVR.get("nummern"): labels = {}
-for r, (l, a, b, _) in labels.items():
+if not any('rx="1.5"' in o_ for o_ in out + globals().get("MS_TXT", [])) and not OVR.get("nummern"): labels = {}; LABELS2 = []
+# K0e (REGELN 1.29): zweite Nummer an einer Kette nur mit eigenem Perron – der Perron liegt zur Hälfte neben diesem Teil
+# und mehr neben diesem Teil als neben dem Teil mit der Hauptnummer
+_ueb = lambda p_, u_, v_: max(0.0, min(p_[1], v_) - max(p_[0], u_))
+_lab2 = {}
+for r2, l2, a2, b2, a1, b1 in LABELS2:
+    if r2 in labels or r2 in _lab2: continue
+    y2 = Y(l2)
+    for p_ in PERRON_PX:
+        if not (6 <= abs(p_[2] - y2) <= 16): continue
+        o2, o1 = _ueb(p_, X(a2), X(b2)), _ueb(p_, X(a1), X(b1))
+        if o2 >= 0.5 * (p_[1] - p_[0]) and o2 > o1:
+            _lab2[r2] = (l2, a2, b2, b2 - a2); break
+for r, (l, a, b, _) in list(labels.items()) + list(_lab2.items()):
     xm = min(max(pax_mid, X(a) - X(s_lo) + CFG["margin_x"] + 30 and pax_mid), 1e9)
     xs = min(max(X(pax_mid if a <= pax_mid <= b else (a + b) / 2), X(a) + 20), X(b) - 20)
     y = Y(l)

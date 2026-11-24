@@ -146,6 +146,7 @@ NE-Bahnhöfe (fest seit 21.10., Schritt N2), Basel/Bern (P2b), Thun/Ins/Murten/K
 | 1.18 | Perronlänge **80 px** für alle Pläne, Gleisnummer in der Perronmitte (13.11.: 110 px aufgehoben). | | B14, Z1, 5.11., 7.6 | `perron_standard_px` | fehlt | LR 80 / sonst noch 110 (V2) |
 | 1.19 | Perronformen: Querperron an Kopfgleisen als U oder L um die Gleisenden. | Kopfgleise mit Querperron | 8.11. | – (P2a) | PF | fehlt |
 | 1.20 | Gleisnummern: SBB-Perronkanten > SBB-Perronflächen > OSM; nur Gleise mit Perron; Halt mit einem Gleis ohne Nummer; fehlt sie überall «?». `ref` in Gleisnummernform ist ein Gleis, keine Linie. | | R6, E10, D11, 6.11. | gleisnummern_sbb, `gleisnummer_aus_ref` | G1 | alle (MOB: aus_ref aus) |
+| 1.29 | Ein Gleis mit zwei Nummern (eine Kette, z. B. Selnau Gl. 1 → HB SZU Gl. 21): jede Nummer, neben deren Teil ein eigener Perron liegt, wird angeschrieben (Perron zur Hälfte neben diesem Teil und mehr als neben dem Teil der Hauptnummer); Teile ohne eigenen Perron bleiben ohne Nummer (Dulliken 12/13). | Kette mit mehreren Gleisnummern | K0e 24.11. | `nummer_je_perron` | Sicht | alle |
 
 ### 1.D Farbe und Inhalt
 | Nr | Regel | Auslöser | alt | Code | Prüfung | heute aktiv in |
