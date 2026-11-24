@@ -282,7 +282,7 @@ def _knick_zwischen(a, b):
     """REGELN 2.15: scharfer Knick > 30° (Kurs über je 100 m, davor/danach je bis 200 m ohne weitere Richtungsänderung
     > 15°) auf dem Streckengleis zwischen zwei Betriebspunkten (Giesshübel – Saalsporthalle: 712 knickt um 63°). Konfig
     «knoten_knick»: Standard aus (24.11., T-SZU2: Regionalplan SZU bekäme 6 × 90° an der Sihltal-Verbindung, G0 GW)."""
-    if not K.get("knoten_knick", False): return None
+    if not K.get("knoten_knick", True): return None
     import numpy as _np
     try:
         na = min(GM.nodes, key=lambda n: math.dist(P[n], BPX[a])); nb = min(GM.nodes, key=lambda n: math.dist(P[n], BPX[b]))
@@ -302,7 +302,34 @@ def _knick_zwischen(a, b):
         if s - 250 >= 0 and dw(kurs(s - 250, s - 150), kurs(s - 150, s - 50)) > 15: continue
         if s + 250 <= c[-1] and dw(kurs(s + 150, s + 250), kurs(s + 50, s + 150)) > 15: continue
         best = (d_, s)
-    return f"Knick {best[0]:.0f}° {best[1]:.0f} m nach {BP[a]['name']}" if best else None
+    if not best: return None
+    # REGELN 2.15 (T-SZU2 Teil 2, 24.11.2026): welcher der beiden Betriebspunkte zeichnet den Ast als seitlichen Abzweig?
+    # Der, an dem andere Gleise (Neben-/Depotgleise, andere Linien) über den Knick hinaus geradeaus weiterlaufen
+    # (Giesshübel: Depot-Fächer und 713 laufen nach SW weiter, die 712 biegt nach Saalsporthalle ab). Gemessen: Gleislänge
+    # im Umkreis 350 m um den Knick, die nicht auf dem Streckenweg liegt und deren Kurs ±20° zur Strecke vor dem Knick
+    # (Seite des Betriebspunkts) liegt. Mindestens 200 m, sonst kein Seitenabzweig.
+    sK = best[1]; Kp = at(sK); pfad_w = {GM.edges[u, v]["way"] for u, v in zip(pth, pth[1:])}
+    pref = {WREF.get(w_) for w_ in pfad_w} - {None}
+    ad = lambda x, y: abs((x - y + 90) % 180 - 90)
+    def gerade_weiter(h_):
+        L_ = 0.0
+        for w in RAIL:
+            if w["id"] in pfad_w or (WREF.get(w["id"]) in pref and not w["tags"].get("service")): continue
+            for u, v in zip(w["nodes"], w["nodes"][1:]):
+                pu, pv = _np.array(P[u]), _np.array(P[v]); m_ = (pu + pv) / 2
+                if _np.linalg.norm(m_ - Kp) > 350: continue
+                if ad(math.degrees(math.atan2(pv[1] - pu[1], pv[0] - pu[0])) % 180, h_ % 180) <= 20: L_ += float(_np.linalg.norm(pv - pu))
+        return L_
+    La, Lb = gerade_weiter(kurs(sK - 150, sK - 50)), gerade_weiter(kurs(sK + 50, sK + 150))
+    seite = a if La >= Lb else b
+    if max(La, Lb) >= 200:
+        # Punkte in lat/lon: Knick und 150 m dahinter (vom gewählten Betriebspunkt aus gesehen)
+        nach = at(sK + 150) if seite == a else at(sK - 150)
+        ll = lambda q: [LAT0 + float(q[1]) / KY, LON0 + float(q[0]) / KX]
+        KNICK_AB.append(dict(bahnhof=seite, nachbar=b if seite == a else a, knick=ll(Kp), nach=ll(nach), winkel=round(best[0]),
+                             gerade_m=round(max(La, Lb)), refs=sorted(pref)))
+    return f"Knick {best[0]:.0f}° {best[1]:.0f} m nach {BP[a]['name']} (geradeaus weiter: {BP[a]['name']} {La:.0f} m, {BP[b]['name']} {Lb:.0f} m)"
+KNICK_AB = []
 KNOTEN = []
 if K.get("knotenplaene", True):
     _par = {}
@@ -350,6 +377,7 @@ if K.get("knotenplaene", True):
         KNOTEN.append(dict(haupt=BP[h]["name"], mitglieder=[BP[k]["name"] for k in sorted(v, key=lambda k: BPX[k][0])]))
     for g_ in KNOTEN: print("Knotenplan:", " · ".join(g_["mitglieder"]), "(Hauptpunkt", g_["haupt"] + ")")
     if "--knoten" in sys.argv: json.dump(KNOTEN, open("knoten.json", "w"), ensure_ascii=False, indent=1)
+    if "--knoten" in sys.argv: json.dump(KNICK_AB, open("knick_abgaenge.json", "w"), ensure_ascii=False, indent=1)
 
 name = lambda k: BP[k]["name"] if k in BP else (f"Abgang {'/'.join(sorted(EX[k]['refs']))}" if k in EX else str(k))
 BEF = [dict(regel="S0", text=f"Abzweig ohne Betriebspunkt bei Knoten {n}") for n, k in ANKER.items() if str(k).startswith("_abzweig_")]

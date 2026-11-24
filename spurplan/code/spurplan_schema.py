@@ -5296,6 +5296,31 @@ SIDE = []; SIDE_INFO = []
 # Override "seitlich": endet ein anderes Gleis im selben Randknoten (Weiche am Planrand, Kerzers Gleis 3 nach Lyss),
 # bekommt es keinen eigenen Längsabgang; es mündet in den seitlichen Abgang (Regionalvariante Kerzers 27.10.)
 _SEIT_N = {sg["nodes"][-1 if e_ else 0] for sg in segs if sg["way"] in OVR.get("seitlich", []) for e_ in (0, 1) if sg["cut%d" % e_]}
+# REGELN 2.15 (T-SZU2 Teil 2, 24.11.2026): knickt die Strecke hinter dem Planrand zum Nachbarn ab (cfg «knick_abgang» aus
+# straenge.py: an diesem Betriebspunkt laufen andere Gleise geradeaus weiter), verlassen ihre Gleise den Plan als seitlicher
+# Abzweig zur Knickseite (2.6) statt längs am Rand (Giesshübel: 712 nach Saalsporthalle nach unten, Depot und 713 geradeaus).
+_KNICK_DY = {}
+for _ka in CFG.get("knick_abgang", []):
+    _Kp = np.array(xy(dict(lat=_ka["knick"][0], lon=_ka["knick"][1]))); _Np = np.array(xy(dict(lat=_ka["nach"][0], lon=_ka["nach"][1])))
+    _sK = project(_Kp)[0]; _sg = 1 if _sK > _s_st else -1
+    # Seite aus der Geografie: Kurs vor dem Knick (Achse 150 m davor) gegen Kurs danach; links der Fahrrichtung zum Knick
+    # ist bei steigendem s die Seite d > 0 (oben)
+    _Qp = np.array([np.interp(_sK - _sg * 150, SS, R[:len(SS), 0]), np.interp(_sK - _sg * 150, SS, R[:len(SS), 1])])
+    _ui, _uo = _Kp - _Qp, _Np - _Kp
+    _cr = float(_ui[0] * _uo[1] - _ui[1] * _uo[0])
+    if abs(_cr) < 1e-6: continue
+    _dy = -1 if _cr * _sg > 0 else 1
+    for sg in segs:
+        if not sg["pax"] or (_ka.get("refs") and sg["tags"].get("ref") not in _ka["refs"]): continue
+        for e_ in (0, 1):
+            if not sg["cut%d" % e_]: continue
+            n_ = sg["nodes"][-1 if e_ else 0]; p_ = np.array(P[n_])
+            # Randknoten auf der Knickseite: zwischen Bahnhof und Knick, Richtung ±35° zum Knick
+            if np.linalg.norm(p_) > np.linalg.norm(_Kp) + 50 or (SD[n_][0] - _s_st) * (_sK - _s_st) <= 0: continue
+            cw_ = float(p_ @ _Kp) / ((np.linalg.norm(p_) * np.linalg.norm(_Kp)) or 1)
+            if cw_ < math.cos(math.radians(35)): continue
+            _KNICK_DY[n_] = _dy
+if _KNICK_DY: print(f"R2.15 Knick hinter dem Planrand: {len(_KNICK_DY)} Abgänge seitlich")
 for sg in segs:
     if not sg["pax"]: continue
     if not (sg["cut0"] or sg["cut1"]): continue
@@ -5304,8 +5329,8 @@ for sg in segs:
         n = sg["nodes"][-1 if end else 0]
         s_, d_ = SD[n]
         x, y = (xpos(n, sg["s1"]), ypos(n)) if end else (xpos(n, sg["s0"]), ypos(n))
-        if ((abs(d_) > d_lim_at(s_) - 25 and not sg["flat"]) or sg["way"] in OVR.get("seitlich", [])) and sg["way"] not in OVR.get("als_rand", []):   # seitlich abzweigende Strecke; "als_rand": Abgang am Längsrand (Regionalvariante Olten Ost 20.10.)
-            SIDE.append([x, y, end, -1 if d_ > 0 else 1, sg, n])
+        if ((abs(d_) > d_lim_at(s_) - 25 and not sg["flat"]) or sg["way"] in OVR.get("seitlich", []) or n in _KNICK_DY) and sg["way"] not in OVR.get("als_rand", []):   # seitlich abzweigende Strecke; "als_rand": Abgang am Längsrand (Regionalvariante Olten Ost 20.10.)
+            SIDE.append([x, y, end, _KNICK_DY.get(n, -1 if d_ > 0 else 1), sg, n])
         elif n in _SEIT_N: continue
         else:
             if sg["way"] in ZEICHNEN_PORT: x, y = ZEICHNEN_PORT[sg["way"]]     # neu gezeichneter Abgang (Thun Gürbetal)

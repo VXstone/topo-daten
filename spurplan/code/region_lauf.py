@@ -75,7 +75,12 @@ def _bahnhof(n):
     o["cfg"].setdefault("perron_min_px", 40)                          # mindestens 40 px lang
     o["cfg"].setdefault("perron_standard_px", 80)                     # Standardlänge im Regionalplan (5.11., MOB)
     o["cfg"].setdefault("fenster_streckenende", True)                 # Strecke endet ohne Weiche (Lenk)
-    if BP[b].get("gleisenden"): o["cfg"]["gleisenden"] = BP[b]["gleisenden"]   # echte Gleisenden, kein Datenrand (Rochers de Naye)
+    if BP[b].get("gleisenden"): o["cfg"]["gleisenden"] = BP[b]["gleisenden"]
+    # REGELN 2.15 (T-SZU2 Teil 2): Strecke knickt zwischen zwei Betriebspunkten; am Punkt, an dem andere Gleise geradeaus
+    # weiterlaufen, verlässt sie den Plan als seitlicher Abzweig zur Knickseite (straenge.py --knoten, knick_abgaenge.json)
+    _ka = [k_ for k_ in (json.load(open(os.path.join(WORK, "knick_abgaenge.json"))) if os.path.exists(os.path.join(WORK, "knick_abgaenge.json")) else [])
+           if k_["bahnhof"] == b]
+    if _ka: o["cfg"]["knick_abgang"] = _ka   # echte Gleisenden, kein Datenrand (Rochers de Naye)
     o["cfg"].setdefault("schiebebuehne", True)                        # Depot mit Schiebebühne (Glion, 4.11. spät)
     o["cfg"].setdefault("spurgruppe_seite", True)
     o["cfg"].setdefault("kreuzung_schnitt", True)
