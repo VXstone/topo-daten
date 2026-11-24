@@ -1,0 +1,6 @@
+{
+ "_zweck": "K0d 24.11.2026 (Daniel): Zürich HB SZU hat einen Mittelperron zwischen Gl. 21 und 22, in OSM nicht erfasst – von Hand ergänzt (platforms_plus). Die Tramhaltekanten auf dem Platz fallen über cfg perron_ebene weg (REGELN 3.x Perron auf anderer Ebene).",
+ "platforms_plus": [
+  {"between": ["21", "22"]}
+ ]
+}

@@ -206,6 +206,22 @@ def _bushalt(e):
     _pt = [xy(g) for g in e["geometry"]]
     return sum(min(l_.distance(_Pb(p_)) for l_ in _gl) for p_ in _pt) / len(_pt) > 6
 PLAT = [e for e in PLAT if not _bushalt(e)]
+# Perron auf anderer Ebene (K0d 24.11.2026, Selnau/Zürich HB SZU: Tramhaltekanten «Bahnhof Selnau», «Bahnhofplatz/HB» auf dem
+# Platz, die SZU-Gleise zwei Ebenen tiefer im Tunnel): liegt jedes Gleis bis 15 m neben dem Perron mindestens zwei Ebenen
+# (OSM layer, fehlt = 0) höher oder tiefer, gehört der Perron nicht zu diesen Gleisen. cfg «perron_ebene»: false = aus.
+if CFG.get("perron_ebene", True):
+    def _anderer_layer(e):
+        from shapely.geometry import LineString as _LSl, Point as _Pl
+        def _ly(t):
+            try: return int(float(str(t.get("layer", "0")).split(";")[0]))
+            except ValueError: return 0
+        _pe = [xy(g) for g in e["geometry"]]
+        _pg = _LSl(_pe) if len(_pe) > 1 else _Pl(_pe[0])
+        _nah = [w for w in ways.values() if len(w["geometry"]) > 1 and _LSl([xy(g) for g in w["geometry"]]).distance(_pg) <= 15]
+        return bool(_nah) and all(abs(_ly(w["tags"]) - _ly(e["tags"])) >= 2 for w in _nah)
+    _weg = [e for e in PLAT if _anderer_layer(e)]
+    if ARGS.dbg and _weg: print("PERRON-EBENE weg", [(e["id"], e["tags"].get("name")) for e in _weg])
+    PLAT = [e for e in PLAT if e not in _weg]
 
 # Hauptgleis aus Funktion (3.11.2026, MOB: «Streckengleis fett und Nebengleis dünn» stimmte nicht – Lenk: die 321 endet
 # vor dem Bahnhof und läuft als service=siding/yard zu den Perrons, alles dünn; Zweisimmen: Zufahrt zu Gl. 3/5 dünn).
@@ -4717,7 +4733,8 @@ def ref_span(r):
     lanes_ = [seglane[sg["id"]] for sg in segs if sg["ref"] == r and sg["id"] in seglane]
     return min(ss_), max(ss_), (max(set(lanes_), key=lanes_.count) if lanes_ else None)
 _PER = []
-for pl in OVR.get("platforms", []):
+# Override «platforms_plus» (K0d 24.11.2026): wie «platforms», aber zusätzlich zu den OSM-Perrons (Perron fehlt in OSM, HB SZU)
+for pl in OVR.get("platforms", []) + OVR.get("platforms_plus", []):
     if "between" in pl:
         A_, B_ = ref_span(pl["between"][0]), ref_span(pl["between"][1])
         if not (A_ and B_) or A_[2] is None or B_[2] is None: continue
