@@ -1,6 +1,6 @@
 {
  "region": "mob",
- "erzeugt": "2026-11-24 22:03 UTC",
+ "erzeugt": "2026-11-24 22:15 UTC",
  "code_commit": "e184809ae369a8a3e4a0d0832b8191ed60da9f1d",
  "bahnhoefe": {
   "schonried": {
@@ -77,14 +77,14 @@
     "--hauptgleise"
    ]
   },
-  "glion": {
-   "name": "Glion",
+  "caux": {
+   "name": "Caux",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "caux": {
-   "name": "Caux",
+  "glion": {
+   "name": "Glion",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -163,14 +163,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "belmont_sur_montreux": {
-   "name": "Belmont-sur-Montreux",
+  "montbovon": {
+   "name": "Montbovon",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "montbovon": {
-   "name": "Montbovon",
+  "belmont_sur_montreux": {
+   "name": "Belmont-sur-Montreux",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
