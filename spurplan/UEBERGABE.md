@@ -118,7 +118,7 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   Nebengleis südlich Olten anteilig auf die längere Lücke → Schlaufe über Gl. 3 (G0 GS 8→9, Stelle −8/472). Zielplan: Olten Hammer kürzer, Nebengleis wie heute
 - [x] **K0c Selnau parallel (REGELN 2.2, `r34_kette`)** – 24.11. früh, Commit ca9a7b6, Seite v179 (Nachtrag K0c)
 - [x] **K0d Selnau HB-Ende (REGELN 1.8/1.23)** – 24.11. vormittags, Commits ca69e84/559d9e7, Seite v180 (Nachtrag K0d)
-- [ ] **K0e Gleisnummern 21/22 am Mittelperron HB SZU** (klein, aus K0d): ein Gleis bekommt heute nur eine Nummer je Kette (`labels` in spurplan_schema: Gl. 1 + 21 sind eine Kette) – zweite Nummer, wo ein weiterer Perron an derselben Kette liegt; Dulliken-Regel (Nummer im Perronbereich) muss bleiben
+- [x] **K0e Gleisnummern 21/22 am Mittelperron HB SZU** – 24.11. Mittag, Commit 9a91081, Seite v181 (Nachtrag K0e). War (klein, aus K0d): ein Gleis bekommt heute nur eine Nummer je Kette (`labels` in spurplan_schema: Gl. 1 + 21 sind eine Kette) – zweite Nummer, wo ein weiterer Perron an derselben Kette liegt; Dulliken-Regel (Nummer im Perronbereich) muss bleiben
 - [ ] **V5 ein Lauf für alle Regionen** / **V6 Netz West (Neuchâtel–Biel–Solothurn–Olten)** – danach – Zweisimmen (dünn→dick am Knick), Solothurn (Weiche am Knick, doppelter Abstand), Selnau (ZL ~4 Ebenen, nur auf Daniels Antwort); Liste `ergebnisse/seite/zwischengeraden.md` – vor oder nach T-SZU1, wie Daniel will
 - [ ] **T-SZU1 DKW aus 4-Arm-Weiche (REGELN 2.4) und Güterverkehr schwarz (REGELN 1.21)** (klein, Entscheid Daniel 18.11.) – nach K0
 - [ ] **T-SZU2 Achse knickt im Fenster (REGELN 2.15), Zielplan Giesshübel · Saalsporthalle** (Entscheid Daniel 18.11.: Variante C) – nach S2b/R4/S3 oder wenn Daniel es vorzieht
@@ -975,3 +975,11 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - Regression: geändert nur szu__zurich_selnau (vermutlich besser, G2 3→0, T7 2→0), region_szu (vermutlich besser), travers (zwei Abstellgleise
   enger, REGELN 1.5; HT/G0 0) und region_ne (nur Block). G0/HT grün, Prüfstand grün. Synthetischer Baustein zeigte den Fehler nicht → nicht aufgenommen.
 - Giesshübel: lokal andere Abgangsbeschriftung auch mit altem Code (Umgebung) – im Workflow unverändert. Hinweise e7qo, je0e, zi70, 0qpy beantwortet.
+
+### 24.11.2026 ~12:45 – Schritt K0e abgeschlossen, Seite v181 (Commit 9a91081, ergebnisse 165d297)
+- Sichtbar (Bahnhofplan Selnau + Regionalplan SZU): am Mittelperron HB SZU stehen 21 (unten, Kette mit Gl. 1) und 22 (oben, Kette mit Gl. 2).
+- Code: `labels` in spurplan_schema sammelt die übrigen Nummern einer Kette als Kandidaten (`LABELS2`); gezeichnet nur, wenn ein Perron zur Hälfte
+  neben diesem Teil und mehr neben ihm als neben dem Teil der Hauptnummer liegt – cfg `nummer_je_perron` (REGELN 1.29). Dulliken 12/13 bleibt ohne Nummer.
+- Regression: geändert nur szu__zurich_selnau und region_szu (je 1 Stelle, gleichwertig); übrige Zeilen der Tabelle = bekannte NE-Archivstände. G0/HT grün,
+  Prüfstand grün. Kein Prüfstand-Baustein (Kette mit zwei Nummern + Hand-Perron ist synthetisch aufwendig, Fall nur SZU). Hinweis zi70 beantwortet.
+- Im Regionalplan stehen die Nummern waagrecht an der steilen Strecke, eng wie Gl. 1/2 in Selnau (bestehender Stil, nicht geändert).
