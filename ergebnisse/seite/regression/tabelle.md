@@ -1,4 +1,4 @@
-147 Pläne, 46 geändert: 1 Fehler? Topologie, 8 vermutlich besser, 8 schlechter?, 29 gleichwertig
+147 Pläne, 45 geändert: 1 Fehler? Topologie, 7 vermutlich besser, 8 schlechter?, 29 gleichwertig
 
 | Plan | Gruppe | Basis | Stellen | Einordnung | Kennzahlen alt→neu | G0 | HT | letzte Änderung |
 |---|---|---|---|---|---|---|---|---|
@@ -46,7 +46,6 @@
 | olten_hammer | Olten 1 · Knoten Olten | bestätigt 2026-11-07 | 12 | vermutlich besser | W56 4→2, W59 4→1 (Wunsch-Summe -6) | 0 | 0 | 2026-11-24T05:54 |
 | travers | NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier | Archivbeginn (Abnahme 2026-10-15) | 9 | vermutlich besser | W59 1→0 · OSM ok (kein Alt-Stand) | 0 | 0 | 2026-11-24T07:36 |
 | colombier | NE 6 · Neuchâtel – Yverdon | Archivbeginn (Abnahme 2026-10-16) | 7 | vermutlich besser | W56 6→5, W59 1→0 (Wunsch-Summe -3) · OSM ok (kein Alt-Stand) | 0 | 0 | 2026-11-23T21:35 |
-| neuchatel_vauseyon | NE 8 · Neuchâtel – La Chaux-de-Fonds | Archivbeginn (Abnahme 2026-10-29) | 5 | vermutlich besser | VB2 1→0 | 0 | 0 | 2026-11-17T21:57 |
 | neuchatel | NE 1 · Neuchâtel – Ins – Kerzers – Bern | bestätigt 2026-11-08 | 2 | vermutlich besser | GG 3→1, VA1 5→0, VC1 2→0, VD1 3→1 | GG 1 · GT 1 | 0 | 2026-11-22T20:14 |
 
 Grundprüfung G0 aller Pläne: `ergebnisse/seite/grundpruefung/grundpruefung.md`
