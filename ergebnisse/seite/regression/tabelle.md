@@ -1,4 +1,4 @@
-148 Pläne, 46 geändert: 9 vermutlich besser, 8 schlechter?, 29 gleichwertig
+148 Pläne, 44 geändert: 7 vermutlich besser, 8 schlechter?, 29 gleichwertig
 
 | Plan | Gruppe | Basis | Stellen | Einordnung | Kennzahlen alt→neu | G0 | HT | letzte Änderung |
 |---|---|---|---|---|---|---|---|---|
@@ -46,8 +46,6 @@
 | colombier | NE 6 · Neuchâtel – Yverdon | Archivbeginn (Abnahme 2026-10-16) | 7 | vermutlich besser | W56 6→5, W59 1→0 (Wunsch-Summe -3) · OSM ok (kein Alt-Stand) | 0 | 0 | 2026-11-23T21:35 |
 | zofingen | Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil | bestätigt 2026-11-08 | 3 | vermutlich besser | VA2 2→0, VB1 3→1 | GG 1 | HT1 1 · HT5 2 | 2026-11-24T13:04 |
 | neuchatel | NE 1 · Neuchâtel – Ins – Kerzers – Bern | bestätigt 2026-11-08 | 2 | vermutlich besser | GG 3→1, VA2 4→0, VC1 2→0, VD1 3→1 | GG 1 · GT 1 | 0 | 2026-11-25T06:53 |
-| region_szu | Region | veröffentlicht | 5 | vermutlich besser | GE 11→10, GS 5→3 | GS 3 · GG 3 · GQ 5 · GE 10 | 0 | 2026-11-25T13:37 |
-| region_mob | Region | veröffentlicht | 4 | vermutlich besser | GE 24→23, GP 3→2, W53 6→5 (Wunsch-Summe -6) | GS 3 · GG 3 · GQ 1 · GP 2 · GE 23 | 0 | 2026-11-25T14:34 |
 
 Grundprüfung G0 aller Pläne: `ergebnisse/seite/grundpruefung/grundpruefung.md`
 Hauptgleis-Topologie HT aller Pläne mit Netzmodell: `ergebnisse/seite/hauptgleis/hauptgleis.md`

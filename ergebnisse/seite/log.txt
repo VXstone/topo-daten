@@ -65,8 +65,6 @@ Hinweis-Abdeckung: 29/57 (Befund < 40 px, ohne G2)
 index.html 2053 KB, 150 Pläne
 /home/runner/work/topo-daten/topo-daten/spurplan/code/alle_plaene_pruefen.py:231: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
   json.dump(dict(erzeugt=datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"), plaene=len(zeilen), geaendert=len(gz),
-region_mob                   veröffentlicht                      4 Stellen  vermutlich besser  GE 24→23, GP 3→2, W53 6→5 (Wunsch-Summe -6)
-region_szu                   veröffentlicht                      5 Stellen  vermutlich besser  GE 11→10, GS 5→3
 olten                        bestätigt 2026-11-08                0 Stellen  vermutlich besser  VB1 13→10, VB2 25→21
 olten_hammer                 bestätigt 2026-11-07               12 Stellen  vermutlich besser  W56 4→2, W59 4→1 (Wunsch-Summe -6)
 rothrist                     Archivbeginn (Abnahme 2026-10-29)   17 Stellen  vermutlich besser  G2 0→1, G6 1→0, VB2 6→5, W56 4→1, W59 10→3 (Wunsch-Summe -9)
@@ -126,5 +124,5 @@ corcelles_peseux             Archivbeginn (Abnahme 2026-10-15)    0 Stellen  gle
 chambrelien                  Archivbeginn (Abnahme 2026-10-20)    5 Stellen  schlechter?  G2 1→0, T7 0→1 (Wunsch-Summe +8) · OSM VA1 1 (kein Alt-Stand)
 les_geneveys_sur_coffrane    Archivbeginn (Abnahme 2026-10-19)    1 Stellen  gleichwertig  OSM VD1 1 (kein Alt-Stand)
 les_hauts_geneveys           Archivbeginn (Abnahme 2026-10-20)    2 Stellen  gleichwertig  OSM VD1 1 (kein Alt-Stand)
-Regression: 148 Pläne, 46 geändert {'vermutlich besser': 9, 'schlechter?': 8, 'gleichwertig': 29}
+Regression: 148 Pläne, 44 geändert {'vermutlich besser': 7, 'schlechter?': 8, 'gleichwertig': 29}
 Ausnahmen: 920 Einträge, 125 Orte: {'Schalter': 358, 'Ortswissen': 245, 'Geometrie': 192, 'Typvorlage': 125} | ohne Grund: 0
