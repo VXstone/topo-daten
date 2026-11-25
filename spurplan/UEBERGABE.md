@@ -38,6 +38,23 @@ Wird Abschnitt 6 länger als ~60 Zeilen, die ältesten Nachträge ins Archiv ver
 - **Nie abnehmen, nie «erledigt» setzen** – das macht nur Daniel. Lösungen im Code, Overrides nur, wo keine Regel passt.
 - Jeder Hinweis Daniels, den der Prüfstand nicht erkennt, wird nach Möglichkeit ein neuer Prüfstand-Baustein.
 
+## 0a. Neuausrichtung «Fundament zuerst» (Entscheid Daniel 25.11.2026 abends) – gilt vor allem anderen
+Anlass: Daniel 25.11.: «Dinge, die ich dachte sind gefixt, tauchen wie Gespenster wieder auf – die oberste Regel sind ruhige,
+topologisch korrekte Pläne … sind wir zu weit in den Details?» Befund: Sperren melden nur Zunahmen gegen die Basis; bekannte
+Verstösse gegen REGELN 0.1 (Stand v186: GS 130, GG 140, HT1–4 87, HT5 214, HT6/7 17) lagen unbeachtet in den Basen; Regeln waren nur
+auf einem Codeweg umgesetzt (z. B. 2.7 «parallel durch den Knick» nur für Stummel – Regionalstrecke Giesshübel–Selnau läuft 10 → 6 px
+zusammen, Hinweis qzk1) und Prüfungen massen nur den aufgefallenen Fall (GQ nur am Knick).
+1. **Nach Fehlerart über alle Pläne, nicht Ort für Ort.** Reihenfolge: Kreuzungen (GS/HT7) → Gleis auf Gleis (GG) → Abzweige und
+   Fahrwege wie OSM (HT1–HT6) → Parallelität/Ruhe. Detail-Schritte (Kürzen, Nummern, Perrons, Depot-Fächer) ruhen bis dahin.
+2. **Messung zuerst an Daniels Auge eichen:** je Fehlerart eine Stichprobe (~20 gemeldete + 5 nicht gemeldete Stellen, alle
+   Regionen) als Ausschnitte, Daniel tippt «Fehler/ok». Erst wenn Prüfung und Auge übereinstimmen, zählt die Zahl.
+3. **Sichtbar über alle Pläne:** jeder Schritt liefert eine Galerie Vorher/Nachher **aller** geänderten Stellen und die Liste der
+   offenen Stellen mit Bild – kein einzelner Zielplan als Beweis.
+4. **Keine Basis, die Fehler schluckt:** offen ist eine Stelle, bis sie behoben oder von Daniel als Ausnahme bestätigt ist; keine
+   «vorläufigen» Basen mehr. Bestehende vorläufige Basen (GQ/GT Giesshübel, region_szu) gehören auf die Liste.
+5. **Eine Regel = ein Codeweg** für Bahnhofplan, Stummel und Regionalstrecke; REGELN.md markiert je Regel ehrlich «überall /
+   nur Teil X / fehlt». «Erledigt» nur, wenn die Regel auf allen Codewegen gilt und die Prüfung die ganze Regel misst.
+
 ## 0b. Fallstricke (aus den Archiven, nicht vergessen)
 - **«gleichwertig» heisst nur «Zahlen gleich»**: eine neu erfundene Weiche oder ein verschobenes Gleis erkennt die Zählung nicht
   (Zofingen/Aarburg 6.11.). Darum jedes geänderte Plan-Differenzbild ansehen, auch bei «gleichwertig».
@@ -125,6 +142,17 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   24.11. Teil 1 (nicht veröffentlicht): Code für 2.15 da, beide Schalter aus – Befund und Teil 2 im Nachtrag T-SZU2 (Abschnitt 6)
   24.11. Teil 2 abends: Knick zwischen Betriebspunkten aktiv (Saalsporthalle eigener Plan, 712 seitlich nach unten), Seite v183 – Nachtrag T-SZU2 Teil 2
 - [x] **T-SZU2 Teil 3b** – 25.11. früh: Basen (v184), Doppelspur 1 Ebene (REGELN 1.4), Mass HD, Giesshübel nach Zielbild, Saalsporthalle Gl. 2, Seite v185 (Nachtrag)
+- [ ] **F0 Eichung Kreuzungen (Abschnitt 0a)** – NÄCHSTER SCHRITT. Einstieg: «Weiter mit UEBERGABE.md – Schritt F0: Eichung
+  Kreuzungen, mit Artefakt und Repo schreibend». Aus der letzten Seite (G0 GS + HT7, Bahnhof- und Regionalpläne) eine Stichprobe
+  ~20 gemeldete Kreuzungen (über alle Regionen und Plantypen gestreut) + 5 Stellen, wo sich Gleise schneiden und GS schweigt, als
+  Ausschnitte auf einer Eichseite (Karte «Eichung» auf der Feedback-Seite oder eigene Seite), Daniel tippt «Fehler/ok» je Stelle.
+  Danach: Messung korrigieren, bis sie Daniels Urteil trifft; Liste aller Kreuzungen (echt/Messfehler/Ausnahme) mit Bildern.
+  **Keine Planänderung in F0.** Fertig, wenn die Messung geeicht ist und Daniel die Liste hat.
+- [ ] **F1 Kreuzungen beheben** – ein Codeweg für alle Pläne, Galerie aller Stellen, Ziel GS/HT7 0 ohne Basis (nur bestätigte Ausnahmen)
+- [ ] **F2 Gleis auf Gleis (GG)** – Eichung + Behebung wie F0/F1
+- [ ] **F3 Abzweige und Fahrwege wie OSM (HT1–HT6)** – Eichung + Behebung; dazu R4 Rothrist-Regionalvariante, Klosters Einspurwechsel (4.2)
+- [ ] **F4 Parallel bleibt parallel überall (2.7)** – Prüfung über die ganze Länge (qzk1 Giesshübel–Selnau, Sagliains, Olten), ein Codeweg
+- Ruhen bis F4 erledigt (Abschnitt 0a): T-SZU2 Teil 3c, V4d, S2b, S3, V5/V6, K, A2, R2, R3a/b, P2a/b, H1/H2, N1/N2, 5
 - [x] **HT-R HT auf den Regionalplänen** – 25.11. abends, Commits 0de59bb/16cffda/d68e19b, Seite v186 (Nachtrag HT-R): HT6/HT7, Giesshübel 713/717, HT1 Giesshübel 0
 - [ ] **T-SZU2 Teil 3c Giesshübel Depot-Fächer** (klein): GT 1 (Treppe links im Fächer), ~~HT1 1~~ (erledigt in HT-R, Netzmodell),
   VA1 DKW 1263338286 ohne Symbol, Gleisnummer «19» am 713-Abgang (kein Perron?), Saalsporthalle VD1 (zwei Spurwechsel berühren sich) –
@@ -1093,4 +1121,9 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - Regression: geändert nur region_szu, region_mob (je «vermutlich besser»); Olten/NE/Vereina gleich. G0 grün, Prüfstand grün. seite.yml braucht networkx.
 - Offen: Olten HT6/HT7 (Rothrist-Regionalvariante = R4, Eppenbergtunnel = K, Aarau West 540, Wangen), NE HT7 Tunnel-Spurwechsel; Hinweise SZU qzk1 (Doppelspur
   Selnau nicht parallel im Knick), 2qj3 (Perronseite), e92h (Uetliberg Mittelperron) noch ohne Antwort.
+
+### 25.11.2026 ~21:50 – Entscheid Daniel: «Fundament zuerst» (Abschnitt 0a), Fahrplan F0–F4
+- Daniel: Gespenster (für erledigt gehaltene Fehler kommen wieder), oberste Regel 0.1 noch oft verletzt → nach Fehlerart über alle Pläne,
+  Messung an seinem Auge eichen, Galerie aller Stellen, keine schluckenden Basen; reine «unsichtbare» Messschritte wie vor dem 12.11. reichen nicht.
+- Nächster Schritt F0 (Eichung Kreuzungen); Detail-Schritte ruhen. REGELN unverändert (Arbeitsweise, keine Planregel).
 
