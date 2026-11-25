@@ -1052,3 +1052,11 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   r34_kette über Nachbargleise messen (Saalsporthalle: Achse liegt im Bogen zwischen den Gleisen, d-Abstand 1–2 m statt 4 m).
 - Offen → T-SZU2 Teil 3b: Depot-Bündel über Y (Ursache: Kette Y–713 hebt Y auf die 713-Ebene, Depot liegt dazwischen), 713/712 im
   Regionalplan, Saalsporthalle Gl. 2 (zwei Spurwechsel als service=siding in zwei Stücken auf Zwischenebene). Hinweise Giesshübel offen.
+
+### 25.11.2026 ~06:00 – Daniel: Doppelspur Selnau – Saalsporthalle (REGELN 1.4 präzisiert)
+- Daniel: die zwei Gleise Selnau – Saalsporthalle sind eine durchgehende Doppelspur; ohne Mittelperron parallel im Abstand 1 Ebene, nicht
+  auseinander und wieder zusammen. Geprüft: steht schon in 0.5, 1.4 und 2.15 – keine neue Regel, nur 1.4 präzisiert (Mittelperron als einzige
+  Ausnahme; Nebengleise, Depot, abzweigende Linien, Spurwechsel aus mehreren OSM-Stücken schieben nie auseinander). Selnau (Mittelperron 1/2) ist
+  die erlaubte Ausnahme. Verletzt heute: Giesshübel (Y 1→6→2 Ebenen, Kette Y–713), Saalsporthalle Gl. 2 (eine Ebene zu hoch wegen der zwei
+  service=siding-Spurwechsel auf Zwischenebene). Teil 3b setzt das als Umsetzung von 1.4 um, nicht als neuen Schalter, der frühere Pläne
+  wieder umwirft: ein Mass «Doppelspur-Abstand» (Prüfung fehlt) zuerst, dann Code; jede Änderung an anderen Plänen mit Differenzbild.
