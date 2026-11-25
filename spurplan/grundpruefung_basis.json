@@ -1,7 +1,7 @@
 {
  "_quelle": "grundpruefung.py (Schritt G0, REGELN «Grundprüfung als Sperre»); je Abschnitt Zählung je Plan und Regel",
  "_stand": {
-  "plaene": "Seite ergebnisse 7e06848 (Commit 78494e5, live v154), lokal gerechnet 18.11.2026 · 18.11. T-SZU: Ausgangsstand Testregion SZU ergänzt (szu__* aus Seite 219ac67, region_szu aus Regionen 5218b8c) · 19.11. K0: region_ne GQ 0→1 bewusst (Ins Rollbock jetzt durchgehend verbunden, zeigt denselben GQ wie der Bahnhofplan ins, REGELN 2.12) · 22.11. spät (V4e Teil 5): Neuchâtel GG 3 -> 1 (Hand-Linien Ost neu) · 24.11. K0c (REGELN 2.2 r34_kette an): szu__zurich_giesshubel GS 11→12 bewusst (Gleiswechsel 1↔2 Saalsporthalle kreuzt jetzt als eine Schräge das Gleis 351899126, das der Achsknick zwischen die Gleise legt – in OSM 35 m entfernt; vorher zeigte der Plan eine falsche Verbindung über dieses Gleis; → T-SZU2), GG 33→32; szu__zurich_selnau GQ 1→0; region_szu GQ 5→4, GG 28→27 · 25.11. T-SZU2 Teil 3b (Okay Daniel 25.11. 06:03): Abschnitt neu aus ergebnisse bfe5703 (seite 24.11. 23:26) – GE neu (REGELN 1.30; Blaupausen im Code ausgenommen), GQ Giesshübel 5→7 / region_szu 4→8 vorläufig (Okay Daniel 25.11., Depot-Umbau folgt)",
+  "plaene": "Seite ergebnisse 7e06848 (Commit 78494e5, live v154), lokal gerechnet 18.11.2026 · 18.11. T-SZU: Ausgangsstand Testregion SZU ergänzt (szu__* aus Seite 219ac67, region_szu aus Regionen 5218b8c) · 19.11. K0: region_ne GQ 0→1 bewusst (Ins Rollbock jetzt durchgehend verbunden, zeigt denselben GQ wie der Bahnhofplan ins, REGELN 2.12) · 22.11. spät (V4e Teil 5): Neuchâtel GG 3 -> 1 (Hand-Linien Ost neu) · 24.11. K0c (REGELN 2.2 r34_kette an): szu__zurich_giesshubel GS 11→12 bewusst (Gleiswechsel 1↔2 Saalsporthalle kreuzt jetzt als eine Schräge das Gleis 351899126, das der Achsknick zwischen die Gleise legt – in OSM 35 m entfernt; vorher zeigte der Plan eine falsche Verbindung über dieses Gleis; → T-SZU2), GG 33→32; szu__zurich_selnau GQ 1→0; region_szu GQ 5→4, GG 28→27 · 25.11. T-SZU2 Teil 3b (Okay Daniel 25.11. 06:03): Abschnitt neu aus ergebnisse bfe5703 (seite 24.11. 23:26) – GE neu (REGELN 1.30; Blaupausen im Code ausgenommen), GQ Giesshübel 5→7 / region_szu 4→8 vorläufig (Okay Daniel 25.11., Depot-Umbau folgt) · 25.11. Teil 3b Doppelspur (Okay Daniel 25.11.): Giesshübel GT 0→1 vorläufig (Treppe im Depot-Fächer, Teil 3c)",
   "pruefstand": "Workflow pruefstand 44281336491 (Commit 404ca61, ergebnisse/pruefstand/grundpruefung/zaehlung.json, 18.11.2026) · 25.11. Teil 3b (Okay Daniel): neu aus ergebnisse pruefstand 24.11. 22:59, GE neu (REGELN 1.30)"
  },
  "plaene": {
@@ -1136,7 +1136,7 @@
    "GP": 0,
    "GQ": 7,
    "GS": 10,
-   "GT": 0,
+   "GT": 1,
    "GW": 0
   },
   "szu__zurich_saalsporthalle": {
