@@ -1,39 +1,34 @@
 {
- "erzeugt": "2026-11-25 06:01 UTC",
- "lauf": "https://github.com/VXstone/topo-daten/actions/runs/45557437224",
- "code_commit": "93d30c31fd89d4d4c8966953300d95026f28b6b3",
+ "erzeugt": "2026-11-25 06:30 UTC",
+ "lauf": "https://github.com/VXstone/topo-daten/actions/runs/45560966605",
+ "code_commit": "eda41aca8e1a40d63e7b88aeafe6720103141226",
  "bahnhoefe": {
   "neuchatel": {
    "ok": true,
    "fehler": null,
    "topologie": "{}",
-   "verbindungen_abweichungen": 2,
+   "verbindungen_abweichungen": 1,
    "gleich_wie_vergleich": false,
    "regeln": {
-    "G2": 5,
-    "G7": 1
+    "G2": 4,
+    "G6": 1
    },
-   "netz": {
-    "Z1": 1
-   },
-   "differenz_stellen": 12,
+   "netz": {},
+   "differenz_stellen": 7,
    "qualitaet": {
     "status": "besser",
     "schlechter": {},
     "besser": {
-     "regel_G2": -9,
-     "regel_G6": -1,
+     "regel_G2": -10,
      "regel_G8": -1
     },
     "topologie_offen": {},
     "neu": {
-     "regel_G7": 1,
-     "netz_Z1": 1,
-     "ruhe_treppen": 2,
+     "ruhe_treppen": 3,
      "ruhe_ecken": 0
     },
-    "unruhe": 38,
-    "unruhe_basis": 62
+    "unruhe": 35,
+    "unruhe_basis": 58
    }
   },
   "konolfingen": {
@@ -115,47 +110,43 @@
   "solothurn": {
    "ok": true,
    "fehler": null,
-   "topologie": "{'A': 4, 'B': 17, 'F': 2}",
+   "topologie": "{'A': 3, 'B': 23, 'F': 2}",
    "verbindungen_abweichungen": 0,
    "gleich_wie_vergleich": null,
    "regeln": {
     "G2": 4,
-    "G6": 8,
-    "G7": 1
+    "G6": 7,
+    "G7": 2
    },
    "netz": {
     "D11": 2,
-    "W2": 3,
+    "W2": 5,
     "W1": 2
    },
    "differenz_stellen": null,
    "qualitaet": {
     "status": "schlechter",
     "schlechter": {
-     "boegen_alle": 2,
-     "randabstand": 1,
-     "regel_G6": 1,
-     "topo_A": 1,
      "topo_F": 2
     },
     "besser": {
-     "netz_W2": -3,
+     "boegen_alle": -2,
+     "netz_W2": -1,
      "regel_G2": -1,
-     "regel_G7": -2,
-     "regel_G8": -7,
-     "topo_B": -6
+     "regel_G7": -1,
+     "regel_G8": -7
     },
     "topologie_offen": {
-     "topo_A": 4,
-     "topo_B": 17,
+     "topo_A": 3,
+     "topo_B": 23,
      "topo_F": 2
     },
     "neu": {
-     "ruhe_treppen": 1,
+     "ruhe_treppen": 3,
      "ruhe_ecken": 0
     },
-    "unruhe": 1219,
-    "unruhe_basis": 1410
+    "unruhe": 1491,
+    "unruhe_basis": 1426
    }
   }
  }

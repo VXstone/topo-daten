@@ -6,12 +6,11 @@
   "topo_D": 0,
   "topo_E": 0,
   "topo_F": 0,
-  "regel_G2": 5,
-  "regel_G7": 1,
-  "netz_Z1": 1,
+  "regel_G2": 4,
+  "regel_G6": 1,
   "boegen_pax": 34,
   "boegen_alle": 55,
-  "ruhe_treppen": 2,
+  "ruhe_treppen": 3,
   "ruhe_ecken": 0,
   "randabstand": 0
  },
@@ -47,22 +46,22 @@
   "randabstand": 0
  },
  "solothurn": {
-  "topo_A": 4,
-  "topo_B": 17,
+  "topo_A": 3,
+  "topo_B": 23,
   "topo_C": 0,
   "topo_D": 0,
   "topo_E": 0,
   "topo_F": 2,
   "regel_G2": 4,
-  "regel_G6": 8,
-  "regel_G7": 1,
+  "regel_G6": 7,
+  "regel_G7": 2,
   "netz_D11": 2,
-  "netz_W2": 3,
+  "netz_W2": 5,
   "netz_W1": 2,
   "boegen_pax": 11,
-  "boegen_alle": 79,
-  "ruhe_treppen": 1,
+  "boegen_alle": 75,
+  "ruhe_treppen": 3,
   "ruhe_ecken": 0,
-  "randabstand": 1
+  "randabstand": 0
  }
 }
