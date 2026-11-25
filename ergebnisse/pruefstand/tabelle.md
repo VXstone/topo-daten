@@ -1,4 +1,4 @@
-# Prüfstand – Bausteine × Drehungen (2026-11-24 22:59 UTC)
+# Prüfstand – Bausteine × Drehungen (2026-11-25 05:17 UTC)
 
 Zählung je Fall (Regel Anzahl); leer = ohne Befund. Rangfolge der Regeln: T, PF, X, E, K, Q, P, QK, F, Z, D, G2, G3, G4, G5, G6, G7, G8
 
@@ -42,32 +42,7 @@ T 24 · PF 16 · X 19 · E 122 · K 4 · Q 85 · Z 110 · D 1
 
 ## Gegen die Basis
 
-- SCHLECHTER osm/ab60/d60: T 0 → 1
-- SCHLECHTER osm/ab60/dm60: Q 0 → 1
-- SCHLECHTER osm/ab60/a60: T 0 → 1
-- osm/ab60/d0: T 3 → 1 (besser)
-- osm/ab60/d0: X 1 → 0 (besser)
-- osm/ab60/d0: Z 1 → 0 (besser)
-- osm/ab60/d30: T 3 → 1 (besser)
-- osm/ab60/d30: X 1 → 0 (besser)
-- osm/ab60/d30: Z 1 → 0 (besser)
-- osm/ab60/dm30: D 1 → 0 (besser)
-- osm/ab60/d60: X 1 → 0 (besser)
-- osm/ab60/dm60: T 4 → 1 (besser)
-- osm/ab60/dm60: P 2 → 0 (besser)
-- osm/ab60/dm60: D 1 → 0 (besser)
-- osm/ab60/dm60: G2 1 → 0 (besser)
-- osm/ab60/dm60: G7 1 → 0 (besser)
-- osm/ab60/d90: T 3 → 1 (besser)
-- osm/ab60/d90: X 1 → 0 (besser)
-- osm/ab60/a30: T 3 → 1 (besser)
-- osm/ab60/a30: X 3 → 0 (besser)
-- osm/ab60/a60: X 1 → 0 (besser)
-- vorlage/Z3/d30: G2 2 → 0 (besser)
-- vorlage/Z3/dm30: G2 2 → 0 (besser)
-- vorlage/Z3/d60: G2 2 → 0 (besser)
-- vorlage/Z3/dm60: G2 2 → 0 (besser)
-- vorlage/Z3/d90: G2 2 → 0 (besser)
+- keine Verschlechterung
 
 ## Befundliste
 
