@@ -1060,3 +1060,8 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   die erlaubte Ausnahme. Verletzt heute: Giesshübel (Y 1→6→2 Ebenen, Kette Y–713), Saalsporthalle Gl. 2 (eine Ebene zu hoch wegen der zwei
   service=siding-Spurwechsel auf Zwischenebene). Teil 3b setzt das als Umsetzung von 1.4 um, nicht als neuen Schalter, der frühere Pläne
   wieder umwirft: ein Mass «Doppelspur-Abstand» (Prüfung fehlt) zuerst, dann Code; jede Änderung an anderen Plänen mit Differenzbild.
+- 25.11. ~06:00, Zielbild Giesshübel von Daniel («so würde ich es zeichnen»): 712 Selnau – Saalsporthalle = Doppelspur auf der untersten
+  Ebene, gerade durch Giesshübel (REGELN 1.4/2.15). Von rechts: 717 von Wiedikon kommt von rechts oben herein, 713 nach Binz verlässt den
+  Plan links oben; im sich öffnenden Zwickel zwischen den beiden liegen links die Depotanlagen. Ein Gleis muss sich anpassen und geht im
+  Plan nach unten (Rückfrage, welches). Der Knick der Saalsporthalle-Gleise nach unten kommt erst danach (links), unabhängig davon.
+  Ursache im Code bleibt: Kette 712-oben–713 hebt das obere 712-Gleis auf die 713-Ebene; Ziel: 712 beide Gleise unten, 713/717/Depot darüber.
