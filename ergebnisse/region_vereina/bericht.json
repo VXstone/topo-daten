@@ -1,7 +1,7 @@
 {
  "region": "vereina",
- "erzeugt": "2026-11-25 13:21 UTC",
- "code_commit": "0de59bb55c34450ccfe5282b8f9a01e9c796bbe3",
+ "erzeugt": "2026-11-25 14:01 UTC",
+ "code_commit": "16cffdaea4016facc45bf29ad85d982c5df084f6",
  "bahnhoefe": {
   "susch": {
    "name": "Susch",
@@ -27,12 +27,6 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "sagliains_sasslatsch": {
-   "name": "Sagliains Sasslatsch",
-   "ok": true,
-   "befunde": "Befunde: {}",
-   "optionen": []
-  },
   "sasslatsch": {
    "name": "Sasslatsch",
    "ok": true,
@@ -45,20 +39,26 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
+  "sagliains_sasslatsch": {
+   "name": "Sagliains Sasslatsch",
+   "ok": true,
+   "befunde": "Befunde: {}",
+   "optionen": []
+  },
   "vereina_nord": {
    "name": "Vereina Nord",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "vereina_sud": {
-   "name": "Vereina Süd",
+  "sagliains_nord": {
+   "name": "Sagliains Nord",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "sagliains_nord": {
-   "name": "Sagliains Nord",
+  "vereina_sud": {
+   "name": "Vereina Süd",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -73,8 +73,8 @@
   "S3": 0
  },
  "lage_suche": {
-  "ausgang": 65,
-  "ergebnis": 45,
+  "ausgang": 63,
+  "ergebnis": 43,
   "drehung": {
    "Sagliains": -60
   },
@@ -87,7 +87,7 @@
   "ecken": 0
  },
  "regeln": {
-  "G2": 3,
+  "G2": 2,
   "G8": 1
  },
  "planrand": 0,
@@ -101,16 +101,16 @@
   "verk_S1": 0,
   "verk_S2": 0,
   "verk_S3": 0,
-  "regel_G2": 3,
+  "regel_G2": 2,
   "regel_G8": 1,
   "ruhe_treppen": 4,
   "ruhe_ecken": 0,
   "planrand": 0,
   "lage_L3": 1
  },
- "unruhe": 61,
+ "unruhe": 59,
  "unruhe_teile": {
-  "regel_G2": 6,
+  "regel_G2": 4,
   "regel_G8": 3,
   "ruhe_treppen": 32,
   "lage_L3": 20
@@ -119,12 +119,12 @@
   "status": "besser",
   "schlechter": {},
   "besser": {
-   "regel_G2": -1,
+   "regel_G2": -2,
    "ruhe_treppen": -2
   },
   "topologie_offen": {},
   "neu": {},
-  "unruhe": 61,
+  "unruhe": 59,
   "unruhe_basis": 79
  }
 }
