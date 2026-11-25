@@ -20,40 +20,40 @@
  {
   "regel": "T7",
   "art": "Treppe",
-  "x": 626.2,
-  "y": 122.0,
-  "versatz": 20.3,
-  "plan": "zurich_saalsporthalle",
-  "text": "zurich_saalsporthalle: Treppe bei x=626.2, y=122.0"
+  "x": 419.9,
+  "y": 236.0,
+  "versatz": 20.2,
+  "plan": "zurich_giesshubel",
+  "text": "zurich_giesshubel: Treppe bei x=419.9, y=236.0"
  },
  {
   "regel": "T7",
   "art": "Ecke",
-  "x": 569.1,
-  "y": 28.5,
+  "x": 531.7,
+  "y": 22.1,
   "winkel": -37.6,
   "neben": false,
   "plan": "Regionalplan",
-  "text": "Regionalplan: Ecke bei x=569.1, y=28.5"
+  "text": "Regionalplan: Ecke bei x=531.7, y=22.1"
  },
  {
   "regel": "T7",
   "art": "Ecke",
-  "x": 577.4,
-  "y": 53.5,
+  "x": 540.0,
+  "y": 47.1,
   "winkel": 13.7,
   "neben": false,
   "plan": "Regionalplan",
-  "text": "Regionalplan: Ecke bei x=577.4, y=53.5"
+  "text": "Regionalplan: Ecke bei x=540.0, y=47.1"
  },
  {
   "regel": "T7",
   "art": "Ecke",
-  "x": 570.0,
-  "y": 46.3,
+  "x": 532.6,
+  "y": 39.9,
   "winkel": 15.1,
   "neben": false,
   "plan": "Regionalplan",
-  "text": "Regionalplan: Ecke bei x=570.0, y=46.3"
+  "text": "Regionalplan: Ecke bei x=532.6, y=39.9"
  }
 ]

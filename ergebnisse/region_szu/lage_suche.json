@@ -1,21 +1,21 @@
 {
  "ausgang": {
-  "unruhe": 166,
+  "unruhe": 172,
   "kennzahlen": {
    "topo_T3": 2,
    "topo_T6": 1,
    "lage_L3a": 1,
-   "regel_G2": 2,
+   "regel_G2": 5,
    "ruhe_ecken": 3
   }
  },
  "ergebnis": {
-  "unruhe": 166,
+  "unruhe": 172,
   "kennzahlen": {
    "topo_T3": 2,
    "topo_T6": 1,
    "lage_L3a": 1,
-   "regel_G2": 2,
+   "regel_G2": 5,
    "ruhe_ecken": 3
   }
  },
@@ -26,12 +26,12 @@
    "drehung": {
     "Zürich Selnau": -60
    },
-   "unruhe": 166,
+   "unruhe": 172,
    "kennzahlen": {
     "topo_T3": 2,
     "topo_T6": 1,
     "lage_L3a": 1,
-    "regel_G2": 2,
+    "regel_G2": 5,
     "ruhe_ecken": 3
    }
   },
@@ -40,13 +40,13 @@
    "drehung": {
     "Zürich Selnau": -30
    },
-   "unruhe": 166,
+   "unruhe": 168,
    "kennzahlen": {
     "topo_T3": 2,
     "topo_T6": 1,
     "lage_L3a": 1,
-    "regel_G2": 2,
-    "ruhe_ecken": 3
+    "regel_G2": 5,
+    "ruhe_ecken": 2
    }
   },
   {
@@ -54,13 +54,13 @@
    "drehung": {
     "Zürich Selnau": -90
    },
-   "unruhe": 174,
+   "unruhe": 176,
    "kennzahlen": {
     "topo_T3": 2,
     "topo_T6": 1,
     "lage_L3a": 1,
-    "regel_G2": 2,
-    "ruhe_ecken": 5
+    "regel_G2": 5,
+    "ruhe_ecken": 4
    }
   },
   {
@@ -68,12 +68,12 @@
    "drehung": {
     "Zürich Selnau": 0
    },
-   "unruhe": 166,
+   "unruhe": 172,
    "kennzahlen": {
     "topo_T3": 2,
     "topo_T6": 1,
     "lage_L3a": 1,
-    "regel_G2": 2,
+    "regel_G2": 5,
     "ruhe_ecken": 3
    }
   },
@@ -82,12 +82,12 @@
    "drehung": {
     "Zürich Selnau": -120
    },
-   "unruhe": 182,
+   "unruhe": 188,
    "kennzahlen": {
     "topo_T3": 2,
     "topo_T6": 1,
     "lage_L3a": 1,
-    "regel_G2": 2,
+    "regel_G2": 5,
     "ruhe_ecken": 7
    }
   },
@@ -96,13 +96,13 @@
    "drehung": {
     "Zürich Selnau": 30
    },
-   "unruhe": 228,
+   "unruhe": 230,
    "kennzahlen": {
     "topo_T3": 2,
     "topo_T6": 2,
     "lage_L3a": 1,
-    "regel_G2": 2,
-    "ruhe_ecken": 6
+    "regel_G2": 5,
+    "ruhe_ecken": 5
    }
   },
   {
@@ -110,12 +110,12 @@
    "drehung": {
     "Zürich Selnau": -150
    },
-   "unruhe": 176,
+   "unruhe": 182,
    "kennzahlen": {
     "topo_T3": 2,
     "topo_T6": 1,
     "lage_L3a": 1,
-    "regel_G2": 1,
+    "regel_G2": 4,
     "ruhe_ecken": 6
    }
   }
