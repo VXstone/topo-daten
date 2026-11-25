@@ -1,6 +1,6 @@
 {
- "stand": "2026-11-25 06:38 UTC",
- "sekunden": 524,
+ "stand": "2026-11-25 07:12 UTC",
+ "sekunden": 501,
  "varianten": [
   "d0",
   "d30",
@@ -552,7 +552,7 @@
    "stufe": "osm",
    "baustein": "r3_kreuzung",
    "variante": "d0",
-   "sekunden": 19,
+   "sekunden": 18,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -587,7 +587,7 @@
    "stufe": "osm",
    "baustein": "r3_kreuzung",
    "variante": "d30",
-   "sekunden": 19,
+   "sekunden": 18,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -622,7 +622,7 @@
    "stufe": "osm",
    "baustein": "r3_kreuzung",
    "variante": "dm30",
-   "sekunden": 19,
+   "sekunden": 18,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -657,7 +657,7 @@
    "stufe": "osm",
    "baustein": "r3_kreuzung",
    "variante": "d60",
-   "sekunden": 19,
+   "sekunden": 18,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -692,7 +692,7 @@
    "stufe": "osm",
    "baustein": "r3_kreuzung",
    "variante": "dm60",
-   "sekunden": 18,
+   "sekunden": 17,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -727,7 +727,7 @@
    "stufe": "osm",
    "baustein": "r3_kreuzung",
    "variante": "d90",
-   "sekunden": 19,
+   "sekunden": 18,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -787,8 +787,8 @@
    },
    "strecken": {
     "900": [
-     1,
-     1
+     0,
+     0
     ]
    },
    "ordner": "osm_r3_kreuzung_a30"
@@ -797,7 +797,7 @@
    "stufe": "osm",
    "baustein": "r3_kreuzung",
    "variante": "a60",
-   "sekunden": 18,
+   "sekunden": 17,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -822,8 +822,8 @@
    },
    "strecken": {
     "900": [
-     1,
-     1
+     0,
+     0
     ]
    },
    "ordner": "osm_r3_kreuzung_a60"
@@ -832,7 +832,7 @@
    "stufe": "osm",
    "baustein": "r5_halt",
    "variante": "d0",
-   "sekunden": 18,
+   "sekunden": 17,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -867,7 +867,7 @@
    "stufe": "osm",
    "baustein": "r5_halt",
    "variante": "d30",
-   "sekunden": 19,
+   "sekunden": 18,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -972,7 +972,7 @@
    "stufe": "osm",
    "baustein": "r5_halt",
    "variante": "dm60",
-   "sekunden": 18,
+   "sekunden": 17,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -1007,7 +1007,7 @@
    "stufe": "osm",
    "baustein": "r5_halt",
    "variante": "d90",
-   "sekunden": 19,
+   "sekunden": 18,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -1077,7 +1077,7 @@
    "stufe": "osm",
    "baustein": "r5_halt",
    "variante": "a60",
-   "sekunden": 19,
+   "sekunden": 17,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -1182,7 +1182,7 @@
    "stufe": "osm",
    "baustein": "r7_ueberholung",
    "variante": "dm30",
-   "sekunden": 19,
+   "sekunden": 17,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -1217,7 +1217,7 @@
    "stufe": "osm",
    "baustein": "r7_ueberholung",
    "variante": "d60",
-   "sekunden": 19,
+   "sekunden": 17,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -1322,7 +1322,7 @@
    "stufe": "osm",
    "baustein": "r7_ueberholung",
    "variante": "a30",
-   "sekunden": 18,
+   "sekunden": 17,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -1392,7 +1392,7 @@
    "stufe": "osm",
    "baustein": "ab30",
    "variante": "d0",
-   "sekunden": 18,
+   "sekunden": 17,
    "zaehl": {
     "T": 2
    },
@@ -1436,7 +1436,7 @@
    "stufe": "osm",
    "baustein": "ab30",
    "variante": "d30",
-   "sekunden": 18,
+   "sekunden": 17,
    "zaehl": {
     "T": 2
    },
@@ -1480,7 +1480,7 @@
    "stufe": "osm",
    "baustein": "ab30",
    "variante": "dm30",
-   "sekunden": 18,
+   "sekunden": 17,
    "zaehl": {
     "T": 2
    },
@@ -1524,7 +1524,7 @@
    "stufe": "osm",
    "baustein": "ab30",
    "variante": "d60",
-   "sekunden": 18,
+   "sekunden": 17,
    "zaehl": {
     "T": 2
    },
@@ -1558,8 +1558,8 @@
    },
    "strecken": {
     "900": [
-     2,
-     2
+     0,
+     0
     ]
    },
    "ordner": "osm_ab30_d60"
@@ -1612,7 +1612,7 @@
    "stufe": "osm",
    "baustein": "ab30",
    "variante": "d90",
-   "sekunden": 18,
+   "sekunden": 17,
    "zaehl": {
     "T": 2
    },
@@ -1656,7 +1656,7 @@
    "stufe": "osm",
    "baustein": "ab30",
    "variante": "a30",
-   "sekunden": 18,
+   "sekunden": 17,
    "zaehl": {
     "T": 2
    },
@@ -1700,7 +1700,7 @@
    "stufe": "osm",
    "baustein": "ab30",
    "variante": "a60",
-   "sekunden": 18,
+   "sekunden": 17,
    "zaehl": {
     "T": 2
    },
@@ -1744,7 +1744,7 @@
    "stufe": "osm",
    "baustein": "ab60",
    "variante": "d0",
-   "sekunden": 19,
+   "sekunden": 18,
    "zaehl": {
     "T": 1,
     "Q": 1
@@ -1799,7 +1799,7 @@
    "stufe": "osm",
    "baustein": "ab60",
    "variante": "d30",
-   "sekunden": 18,
+   "sekunden": 17,
    "zaehl": {
     "T": 1,
     "Q": 1
@@ -1854,7 +1854,7 @@
    "stufe": "osm",
    "baustein": "ab60",
    "variante": "dm30",
-   "sekunden": 18,
+   "sekunden": 17,
    "zaehl": {
     "T": 1
    },
@@ -1898,7 +1898,7 @@
    "stufe": "osm",
    "baustein": "ab60",
    "variante": "d60",
-   "sekunden": 17,
+   "sekunden": 18,
    "zaehl": {
     "T": 1
    },
@@ -1997,7 +1997,7 @@
    "stufe": "osm",
    "baustein": "ab60",
    "variante": "d90",
-   "sekunden": 19,
+   "sekunden": 17,
    "zaehl": {
     "T": 1,
     "Q": 1
@@ -2052,7 +2052,7 @@
    "stufe": "osm",
    "baustein": "ab60",
    "variante": "a30",
-   "sekunden": 19,
+   "sekunden": 17,
    "zaehl": {
     "T": 1,
     "Q": 1
@@ -2107,7 +2107,7 @@
    "stufe": "osm",
    "baustein": "ab60",
    "variante": "a60",
-   "sekunden": 18,
+   "sekunden": 17,
    "zaehl": {
     "T": 1
    },
@@ -2186,7 +2186,7 @@
    "stufe": "osm",
    "baustein": "sagliains",
    "variante": "d30",
-   "sekunden": 19,
+   "sekunden": 18,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -2221,7 +2221,7 @@
    "stufe": "osm",
    "baustein": "sagliains",
    "variante": "dm30",
-   "sekunden": 18,
+   "sekunden": 17,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -2256,7 +2256,7 @@
    "stufe": "osm",
    "baustein": "sagliains",
    "variante": "d60",
-   "sekunden": 19,
+   "sekunden": 18,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -2291,7 +2291,7 @@
    "stufe": "osm",
    "baustein": "sagliains",
    "variante": "dm60",
-   "sekunden": 19,
+   "sekunden": 17,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -2326,7 +2326,7 @@
    "stufe": "osm",
    "baustein": "sagliains",
    "variante": "d90",
-   "sekunden": 18,
+   "sekunden": 19,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -2431,7 +2431,7 @@
    "stufe": "osm",
    "baustein": "unterwerfung",
    "variante": "d0",
-   "sekunden": 19,
+   "sekunden": 18,
    "zaehl": {
     "X": 2
    },
@@ -2485,7 +2485,7 @@
    "stufe": "osm",
    "baustein": "unterwerfung",
    "variante": "d30",
-   "sekunden": 19,
+   "sekunden": 18,
    "zaehl": {
     "X": 2
    },
@@ -2525,12 +2525,12 @@
    },
    "strecken": {
     "900": [
-     0,
-     0
+     2,
+     3
     ],
     "901": [
-     0,
-     0
+     1,
+     3
     ]
    },
    "ordner": "osm_unterwerfung_d30"
@@ -2717,7 +2717,7 @@
    "stufe": "osm",
    "baustein": "unterwerfung",
    "variante": "d90",
-   "sekunden": 20,
+   "sekunden": 18,
    "zaehl": {
     "X": 2
    },
@@ -2879,7 +2879,7 @@
    "stufe": "osm",
    "baustein": "zwischengerade",
    "variante": "d0",
-   "sekunden": 18,
+   "sekunden": 17,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -2914,7 +2914,7 @@
    "stufe": "osm",
    "baustein": "zwischengerade",
    "variante": "d30",
-   "sekunden": 18,
+   "sekunden": 16,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -3054,7 +3054,7 @@
    "stufe": "osm",
    "baustein": "zwischengerade",
    "variante": "d90",
-   "sekunden": 19,
+   "sekunden": 18,
    "zaehl": {
     "X": 3,
     "K": 4,
@@ -3147,7 +3147,7 @@
    "stufe": "osm",
    "baustein": "zwischengerade",
    "variante": "a30",
-   "sekunden": 19,
+   "sekunden": 17,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -3182,7 +3182,7 @@
    "stufe": "osm",
    "baustein": "zwischengerade",
    "variante": "a60",
-   "sekunden": 18,
+   "sekunden": 17,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -3217,7 +3217,7 @@
    "stufe": "osm",
    "baustein": "gleissprung",
    "variante": "d0",
-   "sekunden": 18,
+   "sekunden": 17,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -3322,7 +3322,7 @@
    "stufe": "osm",
    "baustein": "gleissprung",
    "variante": "d60",
-   "sekunden": 20,
+   "sekunden": 18,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -3427,7 +3427,7 @@
    "stufe": "osm",
    "baustein": "gleissprung",
    "variante": "a30",
-   "sekunden": 19,
+   "sekunden": 17,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -3462,7 +3462,7 @@
    "stufe": "osm",
    "baustein": "gleissprung",
    "variante": "a60",
-   "sekunden": 18,
+   "sekunden": 17,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -3540,7 +3540,7 @@
    "stufe": "osm",
    "baustein": "perronformen",
    "variante": "d30",
-   "sekunden": 19,
+   "sekunden": 17,
    "zaehl": {
     "PF": 2
    },
@@ -3659,8 +3659,8 @@
    },
    "strecken": {
     "900": [
-     0,
-     0
+     2,
+     2
     ]
    },
    "ordner": "osm_perronformen_d60"
@@ -3712,7 +3712,7 @@
    "stufe": "osm",
    "baustein": "perronformen",
    "variante": "d90",
-   "sekunden": 19,
+   "sekunden": 17,
    "zaehl": {
     "PF": 2
    },
@@ -3755,7 +3755,7 @@
    "stufe": "osm",
    "baustein": "perronformen",
    "variante": "a30",
-   "sekunden": 17,
+   "sekunden": 18,
    "zaehl": {
     "PF": 2
    },
@@ -3798,7 +3798,7 @@
    "stufe": "osm",
    "baustein": "perronformen",
    "variante": "a60",
-   "sekunden": 19,
+   "sekunden": 17,
    "zaehl": {
     "PF": 2
    },
@@ -3841,7 +3841,7 @@
    "stufe": "osm",
    "baustein": "buendel_knick",
    "variante": "d0",
-   "sekunden": 17,
+   "sekunden": 18,
    "zaehl": {
     "Q": 4
    },
@@ -3926,7 +3926,7 @@
    "stufe": "osm",
    "baustein": "buendel_knick",
    "variante": "d30",
-   "sekunden": 19,
+   "sekunden": 18,
    "zaehl": {
     "Q": 4
    },
@@ -4011,7 +4011,7 @@
    "stufe": "osm",
    "baustein": "buendel_knick",
    "variante": "dm30",
-   "sekunden": 18,
+   "sekunden": 16,
    "zaehl": {
     "Q": 4
    },
@@ -4096,7 +4096,7 @@
    "stufe": "osm",
    "baustein": "buendel_knick",
    "variante": "d60",
-   "sekunden": 17,
+   "sekunden": 18,
    "zaehl": {
     "Q": 4
    },
@@ -4181,7 +4181,7 @@
    "stufe": "osm",
    "baustein": "buendel_knick",
    "variante": "dm60",
-   "sekunden": 19,
+   "sekunden": 17,
    "zaehl": {
     "Q": 4
    },
@@ -4266,7 +4266,7 @@
    "stufe": "osm",
    "baustein": "buendel_knick",
    "variante": "d90",
-   "sekunden": 18,
+   "sekunden": 17,
    "zaehl": {
     "Q": 4
    },
@@ -4351,7 +4351,7 @@
    "stufe": "osm",
    "baustein": "buendel_knick",
    "variante": "a30",
-   "sekunden": 18,
+   "sekunden": 17,
    "zaehl": {
     "Q": 4
    },
@@ -4436,7 +4436,7 @@
    "stufe": "osm",
    "baustein": "buendel_knick",
    "variante": "a60",
-   "sekunden": 17,
+   "sekunden": 15,
    "zaehl": {
     "Q": 4
    },
@@ -4511,8 +4511,8 @@
    },
    "strecken": {
     "900": [
-     0,
-     0
+     2,
+     2
     ]
    },
    "ordner": "osm_buendel_knick_a60"
@@ -4606,7 +4606,7 @@
    "stufe": "osm",
    "baustein": "buendel_knick_eng",
    "variante": "d30",
-   "sekunden": 19,
+   "sekunden": 17,
    "zaehl": {
     "Q": 4
    },
@@ -4691,7 +4691,7 @@
    "stufe": "osm",
    "baustein": "buendel_knick_eng",
    "variante": "dm30",
-   "sekunden": 19,
+   "sekunden": 18,
    "zaehl": {
     "Q": 4
    },
@@ -4776,7 +4776,7 @@
    "stufe": "osm",
    "baustein": "buendel_knick_eng",
    "variante": "d60",
-   "sekunden": 19,
+   "sekunden": 17,
    "zaehl": {
     "Q": 4
    },
@@ -4861,7 +4861,7 @@
    "stufe": "osm",
    "baustein": "buendel_knick_eng",
    "variante": "dm60",
-   "sekunden": 15,
+   "sekunden": 17,
    "zaehl": {
     "Q": 4
    },
@@ -4946,7 +4946,7 @@
    "stufe": "osm",
    "baustein": "buendel_knick_eng",
    "variante": "d90",
-   "sekunden": 19,
+   "sekunden": 17,
    "zaehl": {
     "Q": 4
    },
@@ -5031,7 +5031,7 @@
    "stufe": "osm",
    "baustein": "buendel_knick_eng",
    "variante": "a30",
-   "sekunden": 19,
+   "sekunden": 17,
    "zaehl": {
     "Q": 4
    },
@@ -5201,7 +5201,7 @@
    "stufe": "osm",
    "baustein": "buendel_versatz",
    "variante": "d0",
-   "sekunden": 17,
+   "sekunden": 19,
    "zaehl": {
     "E": 2,
     "Z": 2
@@ -5272,7 +5272,7 @@
    "stufe": "osm",
    "baustein": "buendel_versatz",
    "variante": "d30",
-   "sekunden": 19,
+   "sekunden": 18,
    "zaehl": {
     "E": 2,
     "Z": 1
@@ -5336,7 +5336,7 @@
    "stufe": "osm",
    "baustein": "buendel_versatz",
    "variante": "dm30",
-   "sekunden": 19,
+   "sekunden": 17,
    "zaehl": {
     "E": 2,
     "Z": 2
@@ -5407,7 +5407,7 @@
    "stufe": "osm",
    "baustein": "buendel_versatz",
    "variante": "d60",
-   "sekunden": 20,
+   "sekunden": 19,
    "zaehl": {
     "E": 2,
     "Z": 2
@@ -5549,7 +5549,7 @@
    "stufe": "osm",
    "baustein": "buendel_versatz",
    "variante": "d90",
-   "sekunden": 18,
+   "sekunden": 19,
    "zaehl": {
     "E": 2,
     "Z": 2
@@ -5620,7 +5620,7 @@
    "stufe": "osm",
    "baustein": "buendel_versatz",
    "variante": "a30",
-   "sekunden": 17,
+   "sekunden": 18,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -5659,7 +5659,7 @@
    "stufe": "osm",
    "baustein": "buendel_versatz",
    "variante": "a60",
-   "sekunden": 18,
+   "sekunden": 16,
    "zaehl": {},
    "befunde": [],
    "bahnhof": {
@@ -5683,13 +5683,9 @@
     }
    },
    "strecken": {
-    "900": [
-     4,
-     4
-    ],
-    "901": [
-     4,
-     4
+    "?": [
+     0,
+     0
     ]
    },
    "ordner": "osm_buendel_versatz_a60"
@@ -6056,8 +6052,8 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     1,
-     1
+     0,
+     0
     ]
    },
    "ordner": "vorlage_R2_a30"
@@ -6202,8 +6198,8 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     1,
-     1
+     0,
+     0
     ]
    },
    "ordner": "vorlage_R3_dm60"
@@ -6234,8 +6230,8 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     0,
-     0
+     1,
+     1
     ]
    },
    "ordner": "vorlage_R3_a30"
@@ -6282,8 +6278,8 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     0,
-     0
+     1,
+     1
     ]
    },
    "ordner": "vorlage_R4_d30"
@@ -6396,8 +6392,8 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     1,
-     1
+     0,
+     0
     ]
    },
    "ordner": "vorlage_R4_d90"
@@ -6476,8 +6472,8 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     0,
-     0
+     2,
+     2
     ]
    },
    "ordner": "vorlage_R5_dm30"
@@ -6800,8 +6796,8 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     2,
-     2
+     0,
+     0
     ]
    },
    "ordner": "vorlage_R6_d60"
@@ -6924,8 +6920,8 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     2,
-     2
+     0,
+     0
     ]
    },
    "ordner": "vorlage_R6_a60"
@@ -6940,8 +6936,8 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     2,
-     2
+     0,
+     0
     ]
    },
    "ordner": "vorlage_R7_d0"
@@ -7048,8 +7044,8 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     2,
-     2
+     0,
+     0
     ]
    },
    "ordner": "vorlage_R7_d60"
@@ -7140,8 +7136,8 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     2,
-     2
+     0,
+     0
     ]
    },
    "ordner": "vorlage_R7_d90"
@@ -7172,8 +7168,8 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     2,
-     2
+     0,
+     0
     ]
    },
    "ordner": "vorlage_R7_a60"
@@ -7344,8 +7340,8 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     2,
-     2
+     0,
+     0
     ]
    },
    "ordner": "vorlage_R8_dm60"
@@ -7488,8 +7484,8 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     1,
-     1
+     0,
+     0
     ]
    },
    "ordner": "vorlage_L1_d60"
@@ -7568,8 +7564,8 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     1,
-     1
+     0,
+     0
     ]
    },
    "ordner": "vorlage_L1_a30"
@@ -7632,8 +7628,8 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     1,
-     1
+     0,
+     0
     ]
    },
    "ordner": "vorlage_L2_dm30"
@@ -7673,8 +7669,8 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     1,
-     1
+     0,
+     0
     ]
    },
    "ordner": "vorlage_L2_d60"
@@ -7714,8 +7710,8 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     1,
-     1
+     0,
+     0
     ]
    },
    "ordner": "vorlage_L2_dm60"
@@ -7746,8 +7742,8 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     1,
-     1
+     0,
+     0
     ]
    },
    "ordner": "vorlage_L2_a30"
@@ -7762,8 +7758,8 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     1,
-     1
+     0,
+     0
     ]
    },
    "ordner": "vorlage_L2_a60"
@@ -7778,8 +7774,8 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     2,
-     2
+     0,
+     0
     ]
    },
    "ordner": "vorlage_Z1_d0"
@@ -7886,8 +7882,8 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     2,
-     2
+     0,
+     0
     ]
    },
    "ordner": "vorlage_Z1_d60"
@@ -7978,8 +7974,8 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     2,
-     2
+     0,
+     0
     ]
    },
    "ordner": "vorlage_Z1_d90"
@@ -7994,8 +7990,8 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     2,
-     2
+     0,
+     0
     ]
    },
    "ordner": "vorlage_Z1_a30"
@@ -8010,8 +8006,8 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     2,
-     2
+     0,
+     0
     ]
    },
    "ordner": "vorlage_Z1_a60"
@@ -8026,8 +8022,8 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     2,
-     2
+     0,
+     0
     ]
    },
    "ordner": "vorlage_Z2_d0"
@@ -8134,8 +8130,8 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     2,
-     2
+     0,
+     0
     ]
    },
    "ordner": "vorlage_Z2_d60"
@@ -8258,8 +8254,8 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     2,
-     2
+     0,
+     0
     ]
    },
    "ordner": "vorlage_Z2_a60"
@@ -8290,8 +8286,8 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     2,
-     2
+     0,
+     0
     ]
    },
    "ordner": "vorlage_Z3_d30"
@@ -8382,8 +8378,8 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     2,
-     2
+     0,
+     0
     ]
    },
    "ordner": "vorlage_Z3_d60"
@@ -8474,8 +8470,8 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     2,
-     2
+     0,
+     0
     ]
    },
    "ordner": "vorlage_Z3_d90"
@@ -8506,8 +8502,8 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     2,
-     2
+     0,
+     0
     ]
    },
    "ordner": "vorlage_Z3_a60"
@@ -8522,8 +8518,8 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     1,
-     1
+     0,
+     0
     ]
    },
    "ordner": "vorlage_Z4_d0"
@@ -8602,8 +8598,8 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     1,
-     1
+     0,
+     0
     ]
    },
    "ordner": "vorlage_Z4_d60"
@@ -8650,8 +8646,8 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     1,
-     1
+     0,
+     0
     ]
    },
    "ordner": "vorlage_Z4_dm60"
@@ -8698,8 +8694,8 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     1,
-     1
+     0,
+     0
     ]
    },
    "ordner": "vorlage_Z4_a60"
@@ -8956,8 +8952,8 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     1,
-     1
+     0,
+     0
     ]
    },
    "ordner": "vorlage_Z5_d90"
@@ -9022,8 +9018,8 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     1,
-     1
+     0,
+     0
     ]
    },
    "ordner": "vorlage_Z5_a60"
@@ -9146,8 +9142,8 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     2,
-     2
+     0,
+     0
     ]
    },
    "ordner": "vorlage_Z6_d60"
@@ -9270,8 +9266,9 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     2,
-     2
+     0,
+     0,
+     0
     ]
    },
    "ordner": "vorlage_Z6_a60"
@@ -9296,9 +9293,8 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     1,
-     1,
-     1
+     0,
+     0
     ]
    },
    "ordner": "vorlage_Z7_d0"
@@ -9442,9 +9438,9 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     1,
-     1,
-     1
+     0,
+     0,
+     0
     ]
    },
    "ordner": "vorlage_Z7_dm60"
@@ -9513,8 +9509,9 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     0,
-     0
+     1,
+     1,
+     1
     ]
    },
    "ordner": "vorlage_Z7_a60"
@@ -9529,8 +9526,8 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     1,
-     2
+     0,
+     0
     ]
    },
    "ordner": "vorlage_Z8_d0"
@@ -9623,8 +9620,8 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     0,
-     0
+     1,
+     2
     ]
    },
    "ordner": "vorlage_Z8_d60"
@@ -9685,8 +9682,8 @@
    "bahnhof": {},
    "strecken": {
     "?": [
-     1,
-     2
+     0,
+     0
     ]
    },
    "ordner": "vorlage_Z8_dm60"
