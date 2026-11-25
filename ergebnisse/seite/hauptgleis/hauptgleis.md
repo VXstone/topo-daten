@@ -28,6 +28,7 @@
 | mob__montreux | · | 1 | · | · | · | · | · | 1 |
 | mob__rossiniere | · | · | · | · | 1 | · | · | 1 |
 | region_ne | · | · | · | · | · | · | **1** (Basis 0) | 1 |
+| region_vereina | · | · | · | · | · | **1** (Basis 0) | · | 1 |
 | szu__uetliberg | · | 1 | · | · | · | · | · | 1 |
 | aarburg_oftringen | · | · | · | · | · | · | · | 0 |
 | auvernier | · | · | · | · | · | · | · | 0 |
@@ -117,7 +118,6 @@
 | pensier | · | · | · | · | · | · | · | 0 |
 | region_mob | · | · | · | · | · | · | · | 0 |
 | region_szu | · | · | · | · | · | · | · | 0 |
-| region_vereina | · | · | · | · | · | · | · | 0 |
 | riedbach | · | · | · | · | · | · | · | 0 |
 | rosshausern | · | · | · | · | · | · | · | 0 |
 | safenwil | · | · | · | · | · | · | · | 0 |
@@ -173,3 +173,5 @@ Regeln: HT1 = OSM-Weiche am Hauptgleis ohne Abzweig im Plan; HT2 = Abzweig am Ha
   - 2626.1/-457.5: Linie der Region (540) kreuzt einem Bahnhofsgleis ohne OSM-Kreuzung
 - **region_ne** HT7: 0 → 1
   - -2796.9/1512.5: Linie der Region (ohne Abgang) kreuzt einer anderen Linie ohne OSM-Kreuzung
+- **region_vereina** HT6: 0 → 1
+  - -546.0/-655.8: Klosters Platz: Abgang Linie ? (Landquart) ohne Fortsetzung im Regionalplan (kein Pfeil, keine Strecke)
