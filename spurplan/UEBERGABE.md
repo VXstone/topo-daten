@@ -1062,6 +1062,7 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   wieder umwirft: ein Mass «Doppelspur-Abstand» (Prüfung fehlt) zuerst, dann Code; jede Änderung an anderen Plänen mit Differenzbild.
 - 25.11. ~06:00, Zielbild Giesshübel von Daniel («so würde ich es zeichnen»): 712 Selnau – Saalsporthalle = Doppelspur auf der untersten
   Ebene, gerade durch Giesshübel (REGELN 1.4/2.15). Von rechts: 717 von Wiedikon kommt von rechts oben herein, 713 nach Binz verlässt den
-  Plan links oben; im sich öffnenden Zwickel zwischen den beiden liegen links die Depotanlagen. Ein Gleis muss sich anpassen und geht im
-  Plan nach unten (Rückfrage, welches). Der Knick der Saalsporthalle-Gleise nach unten kommt erst danach (links), unabhängig davon.
+  Plan links oben; die Depotanlagen liegen im Zwickel zwischen 713 und 712. Einziges Gleis unter der Doppelspur-Linie heute: Depotgleis 110678986
+  (yard, ab DKW 1263338286 an der Südspitze des Depots, mit 110679006/302542007) – liegt in OSM nördlich der 712 (x −132…−150, y −139…−166 m),
+  gehört also oben ins Depot; im Plan taucht es als lange Schräge unter X ab und kreuzt alles (Daniel 25.11.: «scheinbar über die anderen hinweg»). Der Knick der Saalsporthalle-Gleise nach unten kommt erst danach (links), unabhängig davon.
   Ursache im Code bleibt: Kette 712-oben–713 hebt das obere 712-Gleis auf die 713-Ebene; Ziel: 712 beide Gleise unten, 713/717/Depot darüber.
