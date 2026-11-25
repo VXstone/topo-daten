@@ -65,6 +65,22 @@ zuerst; flache EKW 109 ≈ 6°); mehrteiliges Perrongleis zählt die nächste Ka
 Bogenweiche einer OSM-DKW (≤ 30 m neben der Kreuzung) unter einem DKW-Symbol ist gezeichnet (kein HT1); ein nach Regel 1.16 (R39b)
 angedeuteter Stummel ist kein Abzweig (Netzmodell `angedeutet`, Vauseyon). Prüffälle `zeichnen_neuchatel`, `neuchatel_vauseyon`. EKW (Symbol mit **einer** Klammer, REGELN 2.4): im Plan nur geradeaus und die eine Bogenfahrt zwischen den Ästen des Klammerwinkels
 (Neuchâtel EKW 109, Hinweis Daniel 22.11.: «EKW-Symbol, sonst sieht man nicht, dass von Ins abgebogen werden kann»); OSM-Bogenweiche mit 3 Armen zählt für VA2 als EKW.
+**HT auf den Regionalplänen (HT-R, seit 25.11., Entscheid D. Eckenstein «Gleise auf OSM-Ways zurückführen, jede Linie kommt
+mit Pfeil an, Kreuzung nur mit OSM-Grund»; Testfall Region SZU v185: 713 über das Depot Giesshübel, 717 fehlte).** Der Inhalt der
+Bahnhofsgruppen ist im Bahnhofplan gemessen (4.11 «Regionalplan wie Bahnhofplan»); im Regionalplan zählt, was er selbst zeichnet:
+**HT6** Linie kommt nicht an – ein Abgang eines Bahnhofs (Netzmodell `abgaenge`, in die Regionlage transformiert) hat weder eine
+Strecke noch einen Pfeil mit Beschriftung, oder eine Linie der Region endet lose (kein Abgang, keine andere Linie, kein Prellbock,
+keine Beschriftung) · **HT7** Kreuzung ohne OSM-Grund – eine Linie der Region schneidet ein gezeichnetes Gleis (Bahnhofsgruppe oder
+andere Linie), und die OSM-Ways kreuzen sich nicht. Zuordnung Plan → OSM: Linienstücke werden zu Ketten verbunden; eine Kette mit
+Abgängen an beiden Enden = kürzester Weg im OSM-Gleisnetz zwischen den Abgangsknoten (service-Ways dreifach gewichtet), Gleis einer
+Bahnhofsgruppe = Way aus dem Netzmodell; nur ohne direkte Zuordnung reicht eine OSM-Kreuzung (railway_crossing oder Schnitt ohne
+gemeinsamen Knoten = Brücke/Tunnel) im Umkreis 80 m. Ineinanderlaufen unter 12° (Ausrundung an der Weiche) ist kein Schnitt; der
+Stummel nach 4.12 (Strecke beginnt an der Weiche) zählt als Anschluss. Code `code/hauptgleis_region.py`, aufgerufen von
+`hauptgleis.py --alle` für jeden Plan `region*` ohne eigenes Netzmodell; Basis-Abschnitt wie die Bahnhofpläne. Prüffall
+`hauptgleis_faelle/region_szu_v185` (Netzmodelle im Ordner `_netz/`). Netzmodell = gezeichneter Plan auch an Weichenstrassen
+(seit 25.11.): erreicht eine Nebengleis-Weichenstrasse das Hauptgleis schon vor der Weiche und läuft auf ihm bis zur Weiche, legt das
+Netzmodell die Weiche an den gezeichneten Abzweig, wenn dazwischen keine andere Weiche am Hauptgleis liegt (Giesshübel 1263316902;
+`spurplan_schema` cfg `netz_abzweig_gezeichnet`, Plan unverändert).
 
 **Bahnhofregister und Sperre «veraltet» (VR, seit 20.11., Entscheid D. Eckenstein «Regionen harmonisieren, OSM-Fehler
 erkennen»).** Jeder Bahnhof steht **einmal** im Register `spurplan/netz/bahnhoefe.json` (Schlüssel **SBB-Abkürzung**, dazu
@@ -214,6 +230,8 @@ welche Muster erkannt wurden (V0).
 | 4.10 | Perimeter = Vieleck; alles darin wird gezeichnet | Regel | N11, D10 | | fehlt | alle Regionen |
 | 4.11 | **Ein Bauweg für alle Bahnhofspläne** (V4, 20.11., Folge von 0.9 und «alle Bahnhöfe gleich»): auch die NE-Bahnhöfe werden jeden Lauf aus dem Code gebaut (Kette wie run.sh inkl. Typvorlage, danach Beschriftungsrand); Pixelwerte in Ausnahmen (`x:`, `perrons_px`, `nummern_px`, `dkw_px`) gelten für den Warp ihres Baus (`<b>_warp_bezug.json`) und wandern mit der Streckenposition mit, wenn der Code den Plan streckt oder staucht. Der Regionalplan nimmt genau diesen Bahnhofplan (Schlüssel mit Umlaut als ae/oe/ue zuerst – seit 22.11., Zihlbrücke zeigte eine veraltete Fassung «zihlbrucke»). Bahnhöfe aus dem Workflow `plaene` (Neuchâtel, Vauseyon) nimmt der Regionalplan als `repo_bahnhoefe` mit allen Nebengleisen wie im Bahnhofplan, keine eigene Werkstatt-Fassung – seit 23.11. (V4f, Neuchâtel Ostkopf mit EKW 109 fehlte) | Regel | V4, V4f | region_olten_lauf `kette`, `repo_bahnhoefe`, spurplan_schema `PXW`, `px_mitfuehren` | Regression, G0, VR | alle Bahnhofspläne |
 | 4.12 | **Weniger Knicke vor festem Winkel** (seit 23.11., Daniel, V4d Muntelier vpkw): kommt eine Strecke schräg an einen Abzweig, wird im Regionalplan der Abgangswinkel dieser einen Weiche an die Strecke angepasst (z. B. ~40° statt 60°, ausgerundet, unter 90°), statt die Strecke knicken zu lassen oder den Knick an den Nachbarbahnhof zu schieben – in «einfachen Situationen» (nur diese eine Weiche ändert den Winkel). Kein starres Winkelraster im Regionalplan; 1.3 (einheitliche 60°-Diagonalen) gilt weiter für Weichenverbindungen im Bahnhofplan. | Wunsch | V4d | netz_lage `_stummel`/`_abgang_winkel`, lage_auto `place` (Kette ab der Weiche statt ab dem Stummelende, sonst wandert der Knick zum Nachbarbahnhof; Knoten-Ausgleich unverändert), Lage `abgang_winkel` (Standard an; `abgang_winkel_min` 20°, `_max` 75°, `_dmax` 40°): ein Gleis, Stummel = eine Weiche ab geradem Gleis, Kette mit inneren Bahnhöfen, kein Gleis des Plans im neuen Weg → Stummel entfällt, Strecke beginnt ausgerundet an der Weiche (seit 23.11. abends, Muntelier 60° → 42°, Sugiez auf der Geraden) | T7, W53 | Regionalpläne |
+| 4.13 | **Jede Linie kommt mit Pfeil an** (seit 25.11., HT-R, Daniel): ein Abgang eines Bahnhofs, an den in der Region keine Strecke anschliesst (Ziel ausserhalb der Region), behält im Regionalplan Gleis und Pfeil wie im Bahnhofplan – Linie in Abgangsrichtung, Beschriftung «Linie … / Ort →» (schräg: neben dem Linienende, nicht über dem Bahnhofstitel); Güterverkehr schwarz (1.21). Testfall Giesshübel 717 nach Wiedikon (fehlte bis v185 ganz). | Regel | HT-R | netz_lage `FREI`, Lage `abgang_frei_pfeil` (Standard an) | HT6 | alle Regionen |
+| 4.14 | **Strecke bis zum Planrand geradeaus** (seit 25.11., HT-R, Hinweis Daniel 20cc Giesshübel: «die Strecke müsste noch etwas länger geradeausgehen, damit die Strecke nach Binz nicht durch die Abstellanlage geht»): liegen Gleise des Bahnhofs weiter aussen als das Ende eines Streckengleises (Depot links des 713-Endes), läuft die Strecke im Regionalplan bis zum Planrand geradeaus weiter, erst dort folgt der Knick zum Nachbarn (Folge von 2.15 «Strecke ist Fixpunkt»; sonst gilt der Port am Gleisende, 18.10.). | Regel | HT-R | netz_lage `_gleise_aussen`/`port_xy`, Lage `abgang_planrand` (Standard an) | HT7 | alle Regionen |
 
 ---
 

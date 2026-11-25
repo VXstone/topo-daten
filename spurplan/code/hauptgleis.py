@@ -32,10 +32,11 @@ from shapely.strtree import STRtree
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 import osm_abgleich as OA
 
-REGELN = ["HT1", "HT2", "HT3", "HT4", "HT5"]
+REGELN = ["HT1", "HT2", "HT3", "HT4", "HT5", "HT6", "HT7"]
 TEXT = {"HT1": "OSM-Weiche am Hauptgleis ohne Abzweig im Plan", "HT2": "Abzweig am Hauptgleis im Plan ohne OSM-Weiche",
         "HT3": "Gleis an der falschen Weiche (Hauptgleis)", "HT4": "Abzweig zur falschen Seite",
-        "HT5": "Fahrweg im Plan ≠ OSM"}
+        "HT5": "Fahrweg im Plan ≠ OSM", "HT6": "Regionalplan: Linie kommt nicht an (Abgang ohne Fortsetzung/Pfeil, loses Linienende)",
+        "HT7": "Regionalplan: Kreuzung ohne OSM-Grund"}
 NICHT_PLAENE = {"fragen", "pruefstand", "osm_verdacht"}
 
 # ---------------------------------------------------------------- OSM
@@ -687,9 +688,15 @@ def alle(plaene, netz_dir, osm, out, basis=None, basis_setzen=False, abschnitt="
         key = os.path.relpath(f, plaene)[:-4].replace(os.sep, "/")
         if os.path.basename(key) in NICHT_PLAENE or key.endswith("_bare"): continue
         nf = _netz_datei(netz_dir, key)
-        if not nf: continue
+        regional = os.path.basename(key).startswith("region") and not nf      # HT-R (25.11.2026): Regionalpläne ohne eigenes Netzmodell
+        if not nf and not regional: continue
         os.makedirs(os.path.dirname(os.path.join(out, key + ".json")), exist_ok=True)
-        try: R = pruefen(open(f).read(), json.load(open(nf)), O)
+        try:
+            if regional:
+                import hauptgleis_region as HR
+                s_ = open(f).read(); R = HR.pruefen(s_, HR.netze_fuer(key, s_, netz_dir), O, key)
+                R["zaehl"] = {r: R["zaehl"].get(r, 0) for r in REGELN}
+            else: R = pruefen(open(f).read(), json.load(open(nf)), O)
         except Exception as e:
             print(f"FEHLER {key}: {e}", file=sys.stderr); tab[key] = dict(fehler=str(e)[:200]); continue
         _ausnahmen(key, R)
@@ -738,9 +745,12 @@ def selbsttest(faelle, osm):
     """Prüffälle: <name>.svg + <name>_netz.json + <name>.json {erwartet: [{regel,x?,y?,r?,text?}], nicht: [...]}"""
     O = osm_laden(osm); fehler = 0
     for f in sorted(glob.glob(os.path.join(faelle, "*.json"))):
-        if f.endswith("_netz.json"): continue
+        if f.endswith("_netz.json") or os.path.basename(os.path.dirname(f)).endswith("_netz"): continue
         E = json.load(open(f)); svg = f[:-5] + ".svg"
-        R = pruefen(open(svg).read(), json.load(open(f[:-5] + "_netz.json")), O)
+        if os.path.isdir(f[:-5] + "_netz"):        # Regionalplan (HT-R): Netzmodelle der Bahnhöfe im Ordner <name>_netz/
+            import hauptgleis_region as HR
+            s_ = open(svg).read(); R = HR.pruefen(s_, HR.netze_fuer(os.path.basename(f[:-5]), s_, f[:-5] + "_netz"), O)
+        else: R = pruefen(open(svg).read(), json.load(open(f[:-5] + "_netz.json")), O)
         def da(e):
             for b in R["befunde"]:
                 if b["regel"] != e["regel"]: continue

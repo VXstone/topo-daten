@@ -128,7 +128,7 @@ def ht_spalte(k):
     z = json.load(open(os.path.join(HTD, "zaehlung.json"))).get(k)
     if not z: return "–"
     b = (json.load(open(HT_BASIS)).get("plaene", {}) if HT_BASIS and os.path.exists(HT_BASIS) else {}).get(k, {})
-    t = [(f"**{r} {z[r]} (Basis {b.get(r, 0)})**" if z[r] > b.get(r, 0) else f"{r} {z[r]}") for r in ("HT1", "HT2", "HT3", "HT4", "HT5") if z.get(r)]
+    t = [(f"**{r} {z[r]} (Basis {b.get(r, 0)})**" if z[r] > b.get(r, 0) else f"{r} {z[r]}") for r in ("HT1", "HT2", "HT3", "HT4", "HT5", "HT6", "HT7") if z.get(r)]
     return " · ".join(t) or "0"
 
 

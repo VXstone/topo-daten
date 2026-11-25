@@ -3072,6 +3072,7 @@ if CFG.get("schiebebuehne", False):
         SCHIEBE_SVG.append(f'<path d="M{_x:.1f},{min(_ys):.1f}L{_x:.1f},{max(_ys):.1f}" fill="none" stroke="{_col}" stroke-width="1.6" stroke-dasharray="4 3"/>')
         if ARGS.dbg: print("SCHIEBEBUEHNE", tv["way"], len(dep), "Depotgleise", round(s_a), round(s_b))
 STUB_SRC = []
+NETZ_X = {}         # HT-R: Knotenlage im Netzmodell = gezeichneter Abzweig (siehe from_diag-Zweig)
 DBG = []
 STUBS = []
 arrows = []
@@ -3169,6 +3170,17 @@ for sg in segs:
                     if xb - q0 >= _need: q1 = q0 + _need
                     elif q1 - xa >= _need: q0 = q1 - _need
                 d = f"M{xa:.1f},{ya:.1f}H{q0:.1f}" + scurve(q0, ya, q1, yb) + f"M{q1:.1f},{yb:.1f}H{max(xb, q1):.1f}"
+                # REGELN Kopf HT (HT-R 25.11.2026, Giesshübel Depot-Weiche 1263316902): die Weichenstrasse erreicht das Hauptgleis
+                # (grün) schon bei q1 und läuft dann auf ihm bis zur Weiche xb – gezeichnet zweigt sie bei q1 ab. Das Netzmodell
+                # legt die Weiche dorthin, wenn am Hauptgleis zwischen q1 und xb keine andere Weiche liegt (Reihenfolge wie OSM);
+                # ebenso am Anfang (xa/q0). cfg «netz_abzweig_gezeichnet».
+                if RU.get("netz_abzweig_gezeichnet", True) and not any(x_["pax"] for x_ in g):
+                    for _ot, _xd, _xo, _yo in ((gb, q1 + CFG["sw_radius"], xb, yb), (ga, q0 - CFG["sw_radius"], xa, ya)):
+                        if abs(_xd - _xo) <= 8 or _ot not in home: continue
+                        if not any(o_["pax"] and _ot in o_["nodes"] for o_ in segs if o_ not in g): continue
+                        _zw = [q_ for o_ in segs if o_["pax"] for q_ in (o_["nodes"][0], o_["nodes"][-1]) if q_ != _ot and q_ in home and q_ in SD
+                               and abs(ypos(q_) - _yo) < 0.5 and min(_xd, _xo) <= xpos(q_, SD[q_][0]) <= max(_xd, _xo)]
+                        if not _zw: NETZ_X[_ot] = _xd
         else:
             d = ""
     if d and len(sg["nodes"]) == 2 and (sg["nodes"][0] in _LINIE_AB or sg["nodes"][-1] in _LINIE_AB): d = ""   # 2.15: Stummel ohne Länge
@@ -5977,7 +5989,7 @@ if not ARGS.bare and ARGS.out in (None, f"{key}_spurplan.svg"):
     for sg in segs:
         for n_ in sg["nodes"]:
             if n_ in SD and n_ in LL and n_ not in _kn:
-                _kn[n_] = dict(lat=LL[n_][0], lon=LL[n_][1], x=_f(STUMPF_X.get(n_, xpos(n_, SD[n_][0]))), y=_f(ypos(n_)) if n_ in home else None,
+                _kn[n_] = dict(lat=LL[n_][0], lon=LL[n_][1], x=_f(NETZ_X.get(n_, STUMPF_X.get(n_, xpos(n_, SD[n_][0])))), y=_f(ypos(n_)) if n_ in home else None,
                                typ=ntag.get(n_, {}).get("railway"))
     _NETZ = dict(
         bahnhof=key, titel=CFG["title"], W=_f(W), H=_f(H),

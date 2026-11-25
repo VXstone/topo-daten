@@ -1,0 +1,7 @@
+{"_quelle": "Schritt HT-R 25.11.2026 (Daniel: «HT auch auf den Regionalplänen … Testfall Region SZU: 713 über Depot, 717 fehlt»); Regionalplan SZU der Seite v185",
+ "erwartet": [
+  {"regel": "HT6", "x": 741.9, "y": -5.6, "r": 8, "text": "717", "anlass": "Giesshübel: Abgang Linie 717 nach Wiedikon ohne Pfeil im Regionalplan"},
+  {"regel": "HT7", "x": 581.0, "y": -34.6, "r": 20, "text": "713", "anlass": "713 nach Binz kreuzt die Depotgleise ohne OSM-Kreuzung"}],
+ "nicht": [
+  {"regel": "HT6", "x": 898.5, "y": 7.8, "r": 8, "anlass": "712 nach Selnau: Strecke beginnt am verlängerten Abgang (läuft durch den Abgangspunkt)"},
+  {"regel": "HT7", "x": 1200, "y": -400, "r": 400, "anlass": "Doppelspur Selnau – Giesshübel ohne Kreuzung"}]}

@@ -74,7 +74,7 @@ for i, n in nodes.items():
         n["inset"] = _sl
         # eigene Fassung für den Regionalplan (Detailplan mit grösserem Ausschnitt, z. B. Rothrist 14.10.)
         if os.path.exists(n["inset"] + "_regional_ports.json"): n["inset"] += "_regional"
-        PORTS[i] = json.load(open(n["inset"] + "_ports.json"))
+        PORTS[i] = json.load(open(n["inset"] + "_ports.json")); PORTS[i]["_inset"] = n["inset"]
 for a in [i for i in nodes if nodes[i]["inset"]]:
     for b in [i for i in nodes if nodes[i]["inset"]]:
         if a != b and dist(a, b) < CFG["cover_m"] and nodes[b]["name"] not in L0.get("als_halt", []) \
@@ -161,15 +161,31 @@ def geo_bearing(e, at, reach=500):
         if L > reach: break
     return math.degrees(math.atan2(q[1] - p0[1], q[0] - p0[0])) % 360
 S = CFG["S"]
+_GA = {}
+def _gleise_aussen(P, p):
+    """REGELN 2.15 «Strecke ist Fixpunkt», HT-R (25.11.2026, Giesshübel 713 / Hinweis 20cc «die Strecke müsste noch etwas länger
+    geradeausgehen, damit die Strecke nach Binz nicht durch die Abstellanlage geht»): liegen Gleise des Bahnhofs (bare) weiter
+    aussen als das Ende eines Streckengleises, läuft die Strecke bis zum Planrand geradeaus weiter, erst dann folgt der Knick."""
+    k_ = (P.get("_inset"), round(float(p["x"]), 1), round(float(p["y"]), 1))
+    if k_ not in _GA:
+        try: bd_ = open(P["_inset"] + "_bare.svg").read()
+        except Exception: bd_ = ""
+        xs_ = [float(v_) for d_ in re.findall(r'<path d="([^"]+)"', bd_) for v_ in re.findall(r'[MLQ ](-?[\d.]+),-?[\d.]+', d_)]
+        xs_ += [float(v_) for d_ in re.findall(r'<path d="([^"]+)"', bd_) for v_ in re.findall(r'H(-?[\d.]+)', d_)]
+        _GA[k_] = any((v_ < p["x"] - 15) if p["dx"] < 0 else (v_ > p["x"] + 15) for v_ in xs_)
+    return _GA[k_]
 def port_xy(P, p, cx, cy):
     x = p["x"]
     if p["kind"] == "edge" and not ("auto" in L0 and L0.get("port_am_gleisende", True)):     # automatische Lage: Port am Gleisende (Knick direkt am Bahnhof, 18.10.)
+        x = max(P["x_hi"], x) if p["dx"] > 0 else min(P["x_lo"], x)
+    elif p["kind"] == "edge" and L0.get("abgang_planrand", CFG.get("abgang_planrand", True)) and _gleise_aussen(P, p):
         x = max(P["x_hi"], x) if p["dx"] > 0 else min(P["x_lo"], x)
     return np.array([(x - cx) * S, (p["y"] - cy) * S]), np.array([(p["x"] - cx) * S, (p["y"] - cy) * S])
 def port_vec(p):
     if "vx" in p: return np.array([float(p["vx"]), float(p["vy"])])                 # U-Abgang: Austritt in Fortsetzungsrichtung (7.11.)
     if p["kind"] == "side": return np.array([p["dx"] * 0.5, -p["dy"] * 0.866 * -1])   # SVG-y nach unten: dy=+1 -> unten
     return np.array([float(p["dx"]), 0.0])
+FREI = {}          # HT-R (25.11.2026): Abgänge ohne Strecke in der Region -> Pfeil wie im Bahnhofplan
 anchor = {}        # (id(e), node) -> dict(off=np.array (px, rel. Kastenmitte, SVG-Koordinaten), v=Austritt, ports=[...])
 for i in [i for i in ids if nodes[i]["inset"]]:
     P = PORTS[i]["ports"]; cx = (PORTS[i]["x_lo"] + PORTS[i]["x_hi"]) / 2; cy = (PORTS[i]["y_lo"] + PORTS[i]["y_hi"]) / 2
@@ -237,7 +253,7 @@ for i in [i for i in ids if nodes[i]["inset"]]:
         for k in add:
             taken.add(k); a_["pts"].append(port_xy(PORTS[i], P[k], cx, cy)[0]); a_["refs"].append(P[k]["ref"]); a_["ext"].append(port_xy(PORTS[i], P[k], cx, cy))
         if add: a_["off"] = np.mean(a_["pts"], axis=0)
-    free = [k for k in range(len(P)) if k not in taken]
+    free = [k for k in range(len(P)) if k not in taken]; FREI[i] = free
     if free: print(f"  {nodes[i]['name']}: freie Anschlüsse {[(P[k]['ref'], round(P[k]['bearing'])) for k in free]}")
 
 # ------------------------------------------------------------------ Drehung (Nord-Süd-Bahnhöfe senkrecht)
@@ -1979,6 +1995,34 @@ for n in [n for n in MAJOR if nodes[n]["kind"] == "exit"]:
     town = nodes[n].get("town") or ""
     text(p[0], p[1] + dy + 16, (f"{arrow} {town}" if anc == "end" else f"{town} {arrow}").strip(), 13, anc)
 
+# HT-R (25.11.2026, REGELN 4.13, Giesshübel 717 – Daniel: «jede Linie kommt mit Pfeil an»): ein Abgang eines Bahnhofs, an den in
+# der Region keine Strecke anschliesst (Ziel ausserhalb der Region, z. B. 717 nach Wiedikon), behält Gleis und Pfeil wie im
+# Bahnhofplan: Linie in Abgangsrichtung, Beschriftung «Linie … / Ort →». Lage «abgang_frei_pfeil»: false schaltet ab.
+if L0.get("abgang_frei_pfeil", CFG.get("abgang_frei_pfeil", True)):
+    for n_, fr_ in FREI.items():
+        if n_ not in pos or not fr_: continue
+        P_ = PORTS[n_]; cx_ = (P_["x_lo"] + P_["x_hi"]) / 2; cy_ = (P_["y_lo"] + P_["y_hi"]) / 2; r_ = ROT.get(n_, 0)
+        _CUR[0] = next((r for r in routes if n_ in (r["a"], r["b"])), None)
+        for k_ in fr_:
+            p_ = P_["ports"][k_]
+            q0 = pos[n_] + rotv(np.array([(p_["x"] - cx_) * S, (p_["y"] - cy_) * S]), r_)
+            v_ = rotv(port_vec(p_), r_); v_ = v_ / (np.linalg.norm(v_) or 1)
+            q1 = q0 + v_ * 40
+            _gu = bool(p_.get("gueter")) or not p_.get("pax", True)
+            path([q0, q1], BK if _gu else G, 1.3 if _gu else 2.4)
+            arrow = "→" if v_[0] > 0.3 else ("←" if v_[0] < -0.3 else ("↑" if v_[1] < 0 else "↓"))
+            if abs(v_[1]) > 0.3 and abs(v_[0]) > 0.3:      # schräg: Beschriftung neben dem Linienende (nicht über dem Bahnhofstitel)
+                anc = "start" if v_[0] > 0 else "end"; lab_ = q1 + np.array([6.0 if v_[0] > 0 else -6.0, 0.0]); dy_ = -2
+            else:
+                lab_ = q1 + v_ * 10
+                anc = "start" if v_[0] > 0.3 else ("end" if v_[0] < -0.3 else "middle")
+                dy_ = -5 if abs(v_[1]) < 0.7 else (-22 if v_[1] < 0 else 14)
+            _fc = BK if _gu else (_spur_col(_CUR[0]) or G)
+            if p_.get("ref"): text(lab_[0], lab_[1] + dy_, f"Linie {p_['ref']}", 13, anc, color=_fc)
+            town_ = p_.get("town") or ""
+            if town_: text(lab_[0], lab_[1] + dy_ + 16, (f"{arrow} {town_}" if anc == "end" else f"{town_} {arrow}"), 13, anc, color=_fc)
+            print(f"  {nodes[n_]['name']}: freier Abgang {p_.get('ref')} ({town_}) mit Pfeil gezeichnet")
+        _CUR[0] = None
 # Regel «Schwarz hinter grün» (Hinweis Region Olten 19.10.): schwarze Linien (Spurwechsel, Nebengleise, Klammern) unter die grünen
 _gi = next((i_ for i_, o_ in enumerate(out) if o_.startswith("<path") and f'stroke="{G}"' in o_), None)
 if _gi is not None and not L0.get("schwarz_oben"):
