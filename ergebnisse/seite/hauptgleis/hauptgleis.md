@@ -9,7 +9,7 @@
 | solothurn | 2 | 1 | · | · | 14 | 17 |
 | rothrist | 2 | 4 | · | · | 5 | 11 |
 | konolfingen | · | 2 | · | · | 6 | 8 |
-| szu__zurich_giesshubel | **1** (Basis 0) | 3 ↓8 | · | 0 ↓1 | 2 ↓4 | 6 |
+| szu__zurich_giesshubel | 1 | 3 ↓8 | · | 0 ↓1 | 2 ↓4 | 6 |
 | mob__chamby | 1 | 1 | · | 1 | 1 | 4 |
 | vereina__klosters_platz | 3 | · | · | · | 1 | 4 |
 | mob__zweisimmen | · | 3 | · | · | · | 3 |
@@ -146,8 +146,3 @@ Regeln: HT1 = OSM-Weiche am Hauptgleis ohne Abzweig im Plan; HT2 = Abzweig am Ha
 ## Ausnahmen (REGELN 6, `spurplan/hauptgleis_ausnahmen.json`, nicht gezählt)
 
 - **courtepin** HT2 500.0/110.0: Industriegleis nördlich, rechts Richtung Courtepin abzweigend: in Betrieb (Satellitenbild, Daniel 22.11.2026); in OSM endet es 1 m neben dem Streckengleis ohne gemeinsamen Knoten
-
-## NEUE Befunde
-
-- **szu__zurich_giesshubel** HT1: 0 → 1
-  - 392.0/224.0: OSM-Weiche 1263316902 ohne Abzweig im Plan

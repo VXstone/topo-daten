@@ -129,7 +129,7 @@
 | szu__uetliberg | · | · | · | · | · | · | · | 24.0 |
 | szu__zurich_binz | · | · | · | · | · | · | · | 24.0 |
 | szu__zurich_friesenberg | · | · | · | · | · | · | · | 24.0 |
-| szu__zurich_giesshubel | 3 ↓10 | 4 ↓16 | 6 ↓7 | · | · | **1** (Basis 0) | 4 ↓6 | 24.0 |
+| szu__zurich_giesshubel | 3 ↓10 | 4 ↓16 | 6 ↓7 | · | · | 1 | 4 ↓6 | 24.0 |
 | szu__zurich_saalsporthalle | · | · | · | · | · | · | · | 24.0 |
 | szu__zurich_schweighof | · | · | · | · | · | · | · | 24.0 |
 | szu__zurich_selnau | · | · | · | · | · | · | · | 24.0 |
@@ -153,8 +153,3 @@
 | zofingen | · | 1 | · | · | · | · | · | 24.0 |
 
 Regeln: GS = Schnitt ohne DKW/Kreuzung/Niveautrennung; GG = Gleis auf Gleis; GQ = Querabstand nach Knick ≠ davor; GP = Pfeil nach innen / auf Nachbargleis; GW = Knick oder Abgang 90°; GT = Treppe; GE = loses Gleisende (kein Prellbock, Pfeil, Abgang oder Gleis)
-
-## NEUE Befunde
-
-- **szu__zurich_giesshubel** GT: 0 → 1
-  - 267.5/193.4: Treppe, Versatz 16.6 px
