@@ -1949,8 +1949,10 @@ _portale_zeichnen()
 _CUR[0] = None
 for (eid_, n_), a_ in anchor.items():
     if n_ not in pos: continue
+    _CUR[0] = next((r for r in routes if id(r["first"]) == eid_ or id(r["last"]) == eid_), None)   # Schmalspur braun (4.14, Chamby)
     for p, q in a_.get("ext", []):
         if np.linalg.norm(p - q) > 1: path([pos[n_] + q, pos[n_] + p], G if a_["pax"] else BK, 2.4 if a_["pax"] else 1.3)
+_CUR[0] = None
 from shapely.geometry import LineString as _LS2, box as _box
 def _lab_hits(lab, txt, anc, size=12):
     w_ = 0.56 * size * len(txt); x0 = lab[0] - (w_ if anc == "end" else w_ / 2 if anc == "middle" else 0)
@@ -2008,6 +2010,11 @@ if L0.get("abgang_frei_pfeil", CFG.get("abgang_frei_pfeil", True)):
             q0 = pos[n_] + rotv(np.array([(p_["x"] - cx_) * S, (p_["y"] - cy_) * S]), r_)
             v_ = rotv(port_vec(p_), r_); v_ = v_ / (np.linalg.norm(v_) or 1)
             q1 = q0 + v_ * 40
+            # nur wenn der Pfeil frei liegt: läuft er in eine gezeichnete Linie (Klosters Platz: zweites Gleis Richtung Landquart
+            # neben der Strecke – ein Einspurwechsel nach 4.2, kein Abgang), bleibt der Abgang wie bisher (HT6 meldet ihn)
+            _Lq = _LSg([q0 + v_ * 3, q1 + v_ * 12])
+            if any(len(pl_) > 1 and _Lq.distance(_LSg(pl_)) < 3 for pl_ in POLYS):
+                print(f"  {nodes[n_]['name']}: freier Abgang {p_.get('ref')} ({p_.get('town')}) – Pfeil läge auf einer Linie, nicht gezeichnet"); continue
             _gu = bool(p_.get("gueter")) or not p_.get("pax", True)
             path([q0, q1], BK if _gu else G, 1.3 if _gu else 2.4)
             arrow = "→" if v_[0] > 0.3 else ("←" if v_[0] < -0.3 else ("↑" if v_[1] < 0 else "↓"))
