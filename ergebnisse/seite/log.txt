@@ -62,17 +62,20 @@ Hinweis-Abdeckung: 29/57 (Befund < 40 px, ohne G2)
 ✓ xke0 solothurn                    MZ                        25.3  Zwischengerade, doppelter Abstand
 ✓ z6f2 konolfingen                  MX                        21.0  DKW?
 ✓ zcz3 solothurn                    G7,MX,VB2                 18.0  nicht verbunden
-index.html 2054 KB, 150 Pläne
-/home/runner/work/topo-daten/topo-daten/spurplan/code/alle_plaene_pruefen.py:231: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
-  json.dump(dict(erzeugt=datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"), plaene=len(zeilen), geaendert=len(gz),
+index.html 2063 KB, 150 Pläne
 region_szu                   veröffentlicht                      9 Stellen  Fehler? Topologie  G8 1→0, GE 17→12, GG 13→14, GQ 4→8, GS 14→12, W53 9→7 (Wunsch-Summe -12)
 olten                        bestätigt 2026-11-08                0 Stellen  vermutlich besser  VB1 14→10, VB2 27→21
-olten_hammer                 bestätigt 2026-11-07               12 Stellen  vermutlich besser  W56 4→2, W59 4→1 (Wunsch-Summe -6)
-rothrist                     Archivbeginn (Abnahme 2026-10-29)   17 Stellen  vermutlich besser  G2 0→1, G6 1→0, VB2 6→5, W56 4→1, W59 10→3 (Wunsch-Summe -9)
-zofingen                     bestätigt 2026-11-08                3 Stellen  vermutlich besser  VA2 2→0, VB1 3→1
-tecknau                      bestätigt 2026-11-07               14 Stellen  vermutlich besser  W56 1→0, W59 3→2 (Wunsch-Summe -3)
+olten_hammer                 bestätigt 2026-11-07               13 Stellen  vermutlich besser  W56 4→2, W59 4→1 (Wunsch-Summe -6)
+aarburg_oftringen            bestätigt 2026-11-08                2 Stellen  vermutlich besser  G2 1→0, VB2 1→0
+rothrist                     Archivbeginn (Abnahme 2026-10-29)   17 Stellen  vermutlich besser  G2 2→1, G6 1→0, VB2 6→5, W56 4→1, W59 10→3 (Wunsch-Summe -9)
+zofingen                     bestätigt 2026-11-08                9 Stellen  vermutlich besser  G2 3→0, VA2 2→0, VB1 3→1
+dulliken                     bestätigt 2026-11-07                2 Stellen  gleichwertig  
+daniken                      bestätigt 2026-11-07                9 Stellen  vermutlich besser  VB1 3→2
+schonenwerd                  bestätigt 2026-11-08                2 Stellen  gleichwertig  
+tecknau                      bestätigt 2026-11-07               18 Stellen  schlechter?  G2 0→2, W56 1→0, W59 3→2 (Wunsch-Summe -3)
 laufelfingen                 bestätigt 2026-11-07                0 Stellen  gleichwertig  
-neuchatel                    bestätigt 2026-11-08                2 Stellen  vermutlich besser  GG 3→1, VA1 5→0, VC1 2→0, VD1 3→1
+wangen_bei_olten             bestätigt 2026-11-07                4 Stellen  vermutlich besser  VB2 1→0
+neuchatel                    bestätigt 2026-11-08                2 Stellen  vermutlich besser  GG 3→1, VA2 4→0, VC1 2→0, VD1 3→1
 saint_blaise_lac             Archivbeginn (Abnahme 2026-10-15)    1 Stellen  schlechter?  G2 0→1, T7 4→3 (Wunsch-Summe -8) · OSM VD1 1 (kein Alt-Stand)
 marin_epagnier               Archivbeginn (Abnahme 2026-10-15)    1 Stellen  gleichwertig  OSM ok (kein Alt-Stand)
 zihlbruecke                  Archivbeginn (Abnahme 2026-10-15)    4 Stellen  gleichwertig  OSM ok (kein Alt-Stand)
@@ -125,6 +128,8 @@ corcelles_peseux             Archivbeginn (Abnahme 2026-10-15)    0 Stellen  gle
 chambrelien                  Archivbeginn (Abnahme 2026-10-20)    5 Stellen  schlechter?  G2 1→0, T7 0→1 (Wunsch-Summe +8) · OSM VA1 1 (kein Alt-Stand)
 les_geneveys_sur_coffrane    Archivbeginn (Abnahme 2026-10-19)    1 Stellen  gleichwertig  OSM VD1 1 (kein Alt-Stand)
 les_hauts_geneveys           Archivbeginn (Abnahme 2026-10-20)    2 Stellen  gleichwertig  OSM VD1 1 (kein Alt-Stand)
-szu__zurich_giesshubel       veröffentlicht                      6 Stellen  Fehler? Topologie  GE 11→6, GG 15→16, GQ 5→7, GS 11→10, VB1 3→1, VB2 8→9, VD1 25→22
-Regression: 148 Pläne, 46 geändert {'Fehler? Topologie': 2, 'vermutlich besser': 7, 'schlechter?': 8, 'gleichwertig': 29}
+szu__zurich_giesshubel       veröffentlicht                      6 Stellen  Fehler? Topologie  GE 11→6, GG 15→16, GQ 5→7, GS 11→10, VB1 3→1, VB2 8→9, VD1 25→22/home/runner/work/topo-daten/topo-daten/spurplan/code/alle_plaene_pruefen.py:231: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  json.dump(dict(erzeugt=datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"), plaene=len(zeilen), geaendert=len(gz),
+
+Regression: 148 Pläne, 51 geändert {'Fehler? Topologie': 2, 'vermutlich besser': 9, 'gleichwertig': 31, 'schlechter?': 9}
 Ausnahmen: 920 Einträge, 125 Orte: {'Schalter': 358, 'Ortswissen': 245, 'Geometrie': 192, 'Typvorlage': 125} | ohne Grund: 0

@@ -4,10 +4,10 @@
 
 | Plan | HT1 | HT2 | HT3 | HT4 | HT5 | Summe |
 |---|---|---|---|---|---|---|
-| olten | 10 | 21 | 5 ↓7 | **4** (Basis 2) | 165 | 205 |
+| olten | 10 | 21 | 5 | 4 | 165 | 205 |
 | aarau | 3 | 4 | · | 1 | 9 | 17 |
 | solothurn | 2 | 1 | · | · | 14 | 17 |
-| szu__zurich_giesshubel | 0 ↓2 | **8** (Basis 7) | · | 1 | **4** (Basis 2) | 13 |
+| szu__zurich_giesshubel | · | 8 | · | 1 | 4 | 13 |
 | rothrist | 2 | 4 | · | · | 5 | 11 |
 | konolfingen | · | 2 | · | · | 6 | 8 |
 | mob__chamby | 1 | 1 | · | 1 | 1 | 4 |
@@ -17,7 +17,7 @@
 | tecknau | · | 1 | · | · | 2 | 3 |
 | vereina__klosters_selfranga | 1 | · | · | · | 2 | 3 |
 | vereina__sagliains | 1 | 1 | · | · | 1 | 3 |
-| zofingen | 1 ↓2 | · | · | · | 2 | 3 |
+| zofingen | 1 | · | · | · | 2 | 3 |
 | daniken | 2 | · | · | · | · | 2 |
 | mob__montbovon | 2 | · | · | · | · | 2 |
 | mob__paccot | 2 | · | · | · | · | 2 |
@@ -127,7 +127,7 @@
 | szu__zurich_binz | · | · | · | · | · | 0 |
 | szu__zurich_friesenberg | · | · | · | · | · | 0 |
 | szu__zurich_schweighof | · | · | · | · | · | 0 |
-| szu__zurich_selnau | · | 0 ↓2 | · | · | · | 0 |
+| szu__zurich_selnau | · | · | · | · | · | 0 |
 | travers | · | · | · | · | · | 0 |
 | tuscherz | · | · | · | · | · | 0 |
 | twann | · | · | · | · | · | 0 |
@@ -146,25 +146,3 @@ Regeln: HT1 = OSM-Weiche am Hauptgleis ohne Abzweig im Plan; HT2 = Abzweig am Ha
 ## Ausnahmen (REGELN 6, `spurplan/hauptgleis_ausnahmen.json`, nicht gezählt)
 
 - **courtepin** HT2 500.0/110.0: Industriegleis nördlich, rechts Richtung Courtepin abzweigend: in Betrieb (Satellitenbild, Daniel 22.11.2026); in OSM endet es 1 m neben dem Streckengleis ohne gemeinsamen Knoten
-
-## NEUE Befunde
-
-- **olten** HT4: 2 → 4
-  - 430.4/164.0: Weiche 635800855: Äste (Ways 50062913, 195008184) im Plan auf der anderen Seite als in OSM
-  - 438.8/158.0: Weiche 635800831: Äste (Ways 50062913, 57016119) im Plan auf der anderen Seite als in OSM
-  - 996.2/254.0: Weiche 2077484616: Äste (Ways 197523816, 378517710) im Plan auf der anderen Seite als in OSM
-  - 1118.9/254.0: Weiche 6360515787: Äste (Ways 679251541, 1264378757) im Plan auf der anderen Seite als in OSM
-- **szu__zurich_giesshubel** HT2: 7 → 8
-  - 512.7/195.2: Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung
-  - 499.5/195.2: Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung
-  - 620.3/171.2: Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung
-  - 634.1/147.2: Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung
-  - 606.4/195.2: Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung
-  - 577.7/241.7: Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung
-  - 463.7/243.2: Gleise berühren sich (4 Richtungen), in OSM keine Weiche/Kreuzung
-  - 470.8/110.0: Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung
-- **szu__zurich_giesshubel** HT5: 2 → 4
-  - 464.0/176.6: Fahrweg Abgang 712 Adliswil (1263316971) ↔ Abgang 717 Zürich Wiedikon (258325981) im Plan, nicht in OSM
-  - 499.9/180.5: Fahrweg Abgang 712 Adliswil (1263316971) ↔ Gl. 13 im Plan, nicht in OSM
-  - 594.4/176.6: Fahrweg Abgang 713 Uetliberg (11465267216) ↔ Gl. 2 in OSM, fehlt im Plan
-  - 728.2/172.7: Fahrweg Abgang 717 Zürich Wiedikon (258325981) ↔ Gl. 2 in OSM, fehlt im Plan
