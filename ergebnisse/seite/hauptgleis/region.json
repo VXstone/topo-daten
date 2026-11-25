@@ -1,0 +1,149 @@
+{
+ "zaehl": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0,
+  "HT6": 5,
+  "HT7": 10
+ },
+ "befunde": [
+  {
+   "regel": "HT6",
+   "x": -856.8,
+   "y": 765.7,
+   "st": "rothrist",
+   "way": 15244266,
+   "text": "Rothrist: Abgang Linie 400 (Bern) ohne Fortsetzung im Regionalplan (kein Pfeil, keine Strecke)"
+  },
+  {
+   "regel": "HT6",
+   "x": -862.6,
+   "y": 755.6,
+   "st": "rothrist",
+   "way": 139097771,
+   "text": "Rothrist: Abgang Linie 400 (Bern) ohne Fortsetzung im Regionalplan (kein Pfeil, keine Strecke)"
+  },
+  {
+   "regel": "HT6",
+   "x": -146.4,
+   "y": 720.7,
+   "text": "Linie der Region endet lose (kein Abgang, kein Pfeil, keine Beschriftung)"
+  },
+  {
+   "regel": "HT6",
+   "x": -136.6,
+   "y": 764.0,
+   "text": "Linie der Region endet lose (kein Abgang, kein Pfeil, keine Beschriftung)"
+  },
+  {
+   "regel": "HT6",
+   "x": -120.3,
+   "y": 735.7,
+   "text": "Linie der Region endet lose (kein Abgang, kein Pfeil, keine Beschriftung)"
+  },
+  {
+   "regel": "HT7",
+   "x": 2278.1,
+   "y": -467.2,
+   "linie_ways": [],
+   "osm_ort": true,
+   "text": "Linie der Region (ohne Abgang) kreuzt einer anderen Linie ohne OSM-Kreuzung"
+  },
+  {
+   "regel": "HT7",
+   "x": 2075.8,
+   "y": -464.8,
+   "linie_ways": [],
+   "osm_ort": true,
+   "text": "Linie der Region (ohne Abgang) kreuzt einer anderen Linie ohne OSM-Kreuzung"
+  },
+  {
+   "regel": "HT7",
+   "x": -147.4,
+   "y": 742.3,
+   "linie_ways": [
+    195008192,
+    783711751
+   ],
+   "osm_ort": false,
+   "text": "Linie der Region (450) kreuzt einer anderen Linie ohne OSM-Kreuzung"
+  },
+  {
+   "regel": "HT7",
+   "x": -135.6,
+   "y": 742.3,
+   "linie_ways": [
+    195008192,
+    783711751
+   ],
+   "osm_ort": false,
+   "text": "Linie der Region (450) kreuzt einer anderen Linie ohne OSM-Kreuzung"
+  },
+  {
+   "regel": "HT7",
+   "x": -154.3,
+   "y": 742.3,
+   "linie_ways": [
+    195005884
+   ],
+   "osm_ort": false,
+   "text": "Linie der Region (451) kreuzt einer anderen Linie ohne OSM-Kreuzung"
+  },
+  {
+   "regel": "HT7",
+   "x": -128.8,
+   "y": 742.3,
+   "linie_ways": [
+    195005884
+   ],
+   "osm_ort": false,
+   "text": "Linie der Region (451) kreuzt einer anderen Linie ohne OSM-Kreuzung"
+  },
+  {
+   "regel": "HT7",
+   "x": -1233.0,
+   "y": 1014.3,
+   "linie_ways": [
+    157733586
+   ],
+   "osm_ort": false,
+   "text": "Linie der Region (450) kreuzt einer anderen Linie ohne OSM-Kreuzung"
+  },
+  {
+   "regel": "HT7",
+   "x": -1243.0,
+   "y": 1031.6,
+   "linie_ways": [],
+   "osm_ort": false,
+   "text": "Linie der Region (ohne Abgang) kreuzt einer anderen Linie ohne OSM-Kreuzung"
+  },
+  {
+   "regel": "HT7",
+   "x": 2614.4,
+   "y": -477.7,
+   "linie_ways": [
+    302923818,
+    369861202,
+    751611806
+   ],
+   "osm_ort": true,
+   "text": "Linie der Region (540) kreuzt einem Bahnhofsgleis ohne OSM-Kreuzung"
+  },
+  {
+   "regel": "HT7",
+   "x": 2626.1,
+   "y": -457.5,
+   "linie_ways": [
+    302923818,
+    369861202,
+    751611806
+   ],
+   "osm_ort": true,
+   "text": "Linie der Region (540) kreuzt einem Bahnhofsgleis ohne OSM-Kreuzung"
+  }
+ ],
+ "n_ports": 78,
+ "n_linien": 105
+}

@@ -1,0 +1,23 @@
+{
+ "zaehl": {
+  "HT1": 0,
+  "HT2": 0,
+  "HT3": 0,
+  "HT4": 0,
+  "HT5": 0,
+  "HT6": 0,
+  "HT7": 1
+ },
+ "befunde": [
+  {
+   "regel": "HT7",
+   "x": -2796.9,
+   "y": 1512.5,
+   "linie_ways": [],
+   "osm_ort": true,
+   "text": "Linie der Region (ohne Abgang) kreuzt einer anderen Linie ohne OSM-Kreuzung"
+  }
+ ],
+ "n_ports": 166,
+ "n_linien": 100
+}

@@ -8,16 +8,77 @@ OK   giesshuebel_90.svg HT5 -208.4/225.5 künstlicher Schnitt – dito, Mittelgl
 OK   giesshuebel_90.svg HT1 178.0/1697.4  – Weiche 1262541542 an 717 ohne Abzweig
 OK   neuchatel_vauseyon_0.svg kein HT2 /  – Regel 39b: Weiche 266382885 hinter dem Planrand als Stummel auf der Abgangsschräge La Chaux-de-Fonds angedeutet
 OK   neuchatel_vauseyon_90.svg kein HT2 /  – Regel 39b: Weiche 266382885 hinter dem Planrand als Stummel auf der Abgangsschräge La Chaux-de-Fonds angedeutet
-Traceback (most recent call last):
-  File "/home/runner/work/topo-daten/topo-daten/spurplan/code/hauptgleis.py", line 779, in <module>
-    if A.selbsttest: sys.exit(selbsttest(A.selbsttest, A.osm))
-                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/topo-daten/topo-daten/spurplan/code/hauptgleis.py", line 752, in selbsttest
-    s_ = open(svg).read(); R = HR.pruefen(s_, HR.netze_fuer(os.path.basename(f[:-5]), s_, f[:-5] + "_netz"), O)
-                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/topo-daten/topo-daten/spurplan/code/hauptgleis_region.py", line 224, in pruefen
-    G = _osm_graph(osm, bb)
-        ^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/topo-daten/topo-daten/spurplan/code/hauptgleis_region.py", line 144, in _osm_graph
-    import networkx as nx
-ModuleNotFoundError: No module named 'networkx'
+OK   region_szu_v185.svg HT6 741.9/-5.6 717 – Giesshübel: Abgang Linie 717 nach Wiedikon ohne Pfeil im Regionalplan
+OK   region_szu_v185.svg HT7 581.0/-34.6 713 – 713 nach Binz kreuzt die Depotgleise ohne OSM-Kreuzung
+OK   region_szu_v185.svg kein HT6 898.5/7.8  – 712 nach Selnau: Strecke beginnt am verlängerten Abgang (läuft durch den Abgangspunkt)
+OK   region_szu_v185.svg kein HT7 1200/-400  – Doppelspur Selnau – Giesshübel ohne Kreuzung
+OK   vorlage_bern_brunnen_0.svg kein HT5 /  – Doppelter Spurwechsel: zweite Diagonale begann vor dem Ende der ersten (SW_GAP); Gleis aus mehreren OSM-Stücken (Gl. 75) nur über ein Stück erreichbar
+OK   vorlage_bern_brunnen_90.svg kein HT5 /  – Doppelter Spurwechsel: zweite Diagonale begann vor dem Ende der ersten (SW_GAP); Gleis aus mehreren OSM-Stücken (Gl. 75) nur über ein Stück erreichbar
+OK   vorlage_gorgier_saint_aubin_0.svg kein HT5 /  – Gl. 512 (2-m-Stück hinter der Spurwechselweiche) lag im Netzmodell vor der Weiche
+OK   vorlage_gorgier_saint_aubin_0.svg kein HT2 /  – Anschlussring: OSM-Weichen ohne Partner (weichen in der Vorlage)
+OK   vorlage_gorgier_saint_aubin_90.svg kein HT5 /  – Gl. 512 (2-m-Stück hinter der Spurwechselweiche) lag im Netzmodell vor der Weiche
+OK   vorlage_gorgier_saint_aubin_90.svg kein HT2 /  – Anschlussring: OSM-Weichen ohne Partner (weichen in der Vorlage)
+OK   vorlage_gummenen_0.svg kein HT1 /  – Typvorlage: Netzmodell liegt auf dem gezeichneten Plan (V4c), Weiche 569101885 = Abzweig x 390
+OK   vorlage_gummenen_0.svg kein HT2 /  – dito, kein Abzweig ohne OSM-Weiche
+OK   vorlage_gummenen_90.svg kein HT1 /  – Typvorlage: Netzmodell liegt auf dem gezeichneten Plan (V4c), Weiche 569101885 = Abzweig x 390
+OK   vorlage_gummenen_90.svg kein HT2 /  – dito, kein Abzweig ohne OSM-Weiche
+OK   vorlage_le_landeron_0.svg kein HT5 /  – Planrand genau auf der Spurwechselweiche, Abgang ohne aus_ll: der Spurwechsel selbst galt als Fahrweg Abgang ↔ Abgang
+OK   vorlage_le_landeron_90.svg kein HT5 /  – Planrand genau auf der Spurwechselweiche, Abgang ohne aus_ll: der Spurwechsel selbst galt als Fahrweg Abgang ↔ Abgang
+OK   vorlage_riedbach_0.svg kein HT5 /  – künstlicher Schnitt: Lauf führte das tote Abstellgleis aufs Streckengleis
+OK   vorlage_riedbach_0.svg kein HT2 /  – dito, erfundene Weiche
+OK   vorlage_riedbach_90.svg kein HT5 /  – künstlicher Schnitt: Lauf führte das tote Abstellgleis aufs Streckengleis
+OK   vorlage_saint_blaise_cff_0.svg kein HT1 /  – Spurwechsel 49773692 und 171035994–96 fehlten im Netzmodell; vorlage.py ergänzt OSM-Verbindungen zwischen Weichen; beide Spurwechsel Seite Biel
+OK   vorlage_saint_blaise_cff_0.svg kein HT2 /  – Spurwechsel 49773692 und 171035994–96 fehlten im Netzmodell; vorlage.py ergänzt OSM-Verbindungen zwischen Weichen; beide Spurwechsel Seite Biel
+OK   vorlage_saint_blaise_cff_0.svg kein HT5 /  – Spurwechsel 49773692 und 171035994–96 fehlten im Netzmodell; vorlage.py ergänzt OSM-Verbindungen zwischen Weichen; beide Spurwechsel Seite Biel
+OK   vorlage_saint_blaise_cff_90.svg kein HT1 /  – Spurwechsel 49773692 und 171035994–96 fehlten im Netzmodell; vorlage.py ergänzt OSM-Verbindungen zwischen Weichen; beide Spurwechsel Seite Biel
+OK   vorlage_saint_blaise_cff_90.svg kein HT2 /  – Spurwechsel 49773692 und 171035994–96 fehlten im Netzmodell; vorlage.py ergänzt OSM-Verbindungen zwischen Weichen; beide Spurwechsel Seite Biel
+OK   vorlage_saint_blaise_cff_90.svg kein HT5 /  – Spurwechsel 49773692 und 171035994–96 fehlten im Netzmodell; vorlage.py ergänzt OSM-Verbindungen zwischen Weichen; beide Spurwechsel Seite Biel
+OK   vorlage_tuscherz_0.svg kein HT1 /  – Weichen-Zuordnung über alle Gleise sortiert: Anschlussweiche unten blieb ohne Partner
+OK   vorlage_tuscherz_0.svg kein HT2 /  – dito, Spurwechsel oben
+OK   vorlage_tuscherz_90.svg kein HT1 /  – Weichen-Zuordnung über alle Gleise sortiert: Anschlussweiche unten blieb ohne Partner
+OK   vorlage_tuscherz_90.svg kein HT2 /  – dito, Spurwechsel oben
+OK   vorlage_zihlbruecke_0.svg kein HT5 /  – zwei Abgänge Ins mit demselben OSM-Knoten; Doppelspurbeginn nach OSM oben
+OK   wangen_0.svg kein HT1 /  – unverändert: kein Befund
+OK   wangen_0.svg kein HT2 /  – unverändert: kein Befund
+OK   wangen_0.svg kein HT3 /  – unverändert: kein Befund
+OK   wangen_0.svg kein HT4 /  – unverändert: kein Befund
+OK   wangen_0.svg kein HT5 /  – unverändert: kein Befund
+OK   wangen_90.svg kein HT1 /  – unverändert: kein Befund
+OK   wangen_90.svg kein HT2 /  – unverändert: kein Befund
+OK   wangen_90.svg kein HT3 /  – unverändert: kein Befund
+OK   wangen_90.svg kein HT4 /  – unverändert: kein Befund
+OK   wangen_90.svg kein HT5 /  – unverändert: kein Befund
+OK   wangen_fehlt_0.svg HT1 291.0/237.2  – Weiche Spurwechsel West ohne Abzweig
+OK   wangen_fehlt_0.svg HT5 / fehlt im Plan – Fahrweg Solothurn Gl. 4-Seite -> Gl. 3 fehlt
+OK   wangen_fehlt_0.svg kein HT4 /  – 
+OK   wangen_fehlt_90.svg HT1 -237.2/291.0  – Weiche Spurwechsel West ohne Abzweig
+OK   wangen_fehlt_90.svg HT5 / fehlt im Plan – Fahrweg Solothurn Gl. 4-Seite -> Gl. 3 fehlt
+OK   wangen_fehlt_90.svg kein HT4 /  – 
+OK   wangen_schere_0.svg HT2 854.7/225.2  – Kreuzung der Scherendiagonalen ohne OSM-Kreuzung
+OK   wangen_schere_0.svg HT5 / im Plan, nicht in OSM – zusätzlicher Fahrweg über die Gegendiagonale
+OK   wangen_schere_0.svg kein HT4 /  – 
+OK   wangen_schere_90.svg HT2 -225.2/854.7  – Kreuzung der Scherendiagonalen ohne OSM-Kreuzung
+OK   wangen_schere_90.svg HT5 / im Plan, nicht in OSM – zusätzlicher Fahrweg über die Gegendiagonale
+OK   wangen_schere_90.svg kein HT4 /  – 
+OK   wangen_seite_0.svg HT4 840.8/213.2  – Spurwechsel Ost zweigt im Netzmodell zur falschen Seite ab
+OK   wangen_seite_90.svg HT4 -213.2/840.8  – Spurwechsel Ost zweigt im Netzmodell zur falschen Seite ab
+OK   zeichnen_chambrelien_0.svg kein HT5 /  – Gl. 2 und Verbindung 224 am selben Punkt (V) – nicht befahrbar
+OK   zeichnen_chambrelien_0.svg kein HT1 /  – Gleis 3 endete vor der Weiche 393419063
+OK   zeichnen_chambrelien_90.svg kein HT5 /  – Gl. 2 und Verbindung 224 am selben Punkt (V) – nicht befahrbar
+OK   zeichnen_chambrelien_90.svg kein HT1 /  – Gleis 3 endete vor der Weiche 393419063
+OK   zeichnen_cornaux_0.svg kein HT2 /  – Spurwechsel mit geradem Vorstück doppelt gezählt
+OK   zeichnen_cornaux_0.svg kein HT5 /  – von Hand ersetzter Spurwechsel fehlte auf der OSM-Seite
+OK   zeichnen_cornaux_90.svg kein HT2 /  – Spurwechsel mit geradem Vorstück doppelt gezählt
+OK   zeichnen_cornaux_90.svg kein HT5 /  – von Hand ersetzter Spurwechsel fehlte auf der OSM-Seite
+OK   zeichnen_murten_0.svg kein HT5 /  – Knoten-Zusammenfassung 5 px: Gl. 2 hing nicht an Gl. 1; Gl. 13 Ziel am Gleisende
+OK   zeichnen_murten_90.svg kein HT5 /  – Knoten-Zusammenfassung 5 px: Gl. 2 hing nicht an Gl. 1; Gl. 13 Ziel am Gleisende
+OK   zeichnen_neuchatel_0.svg kein HT5 /  – Netzmodell ohne Hand-Linien-Verbindungen (DKW 3/58/63 als Kreuzung + 4 Weichen, R47-Spurwechsel): Biel/Yverdon/Ins ↔ Gl. 5–7 «im Plan, nicht in OSM»; flache Kreuzung EKW 109 (Biel → Ins)
+OK   zeichnen_neuchatel_0.svg kein HT3 /  – A15/A44 an DKW-Knoten angebunden (Bogen-Ways fehlten im Netzmodell)
+OK   zeichnen_neuchatel_0.svg kein HT1 /  – Bogenweiche einer OSM-DKW (Kreuzung + 4 Weichen) unter dem DKW-Symbol
+OK   zeichnen_neuchatel_0.svg kein HT5 /  – EKW 109 mit einer Klammer: nur Ins (Osten) -> Abstellgleis; ohne EKW-Regel galt das Symbol als DKW (Biel -> Ins)
+OK   zeichnen_neuchatel_90.svg kein HT5 /  – Netzmodell ohne Hand-Linien-Verbindungen (DKW 3/58/63 als Kreuzung + 4 Weichen, R47-Spurwechsel): Biel/Yverdon/Ins ↔ Gl. 5–7 «im Plan, nicht in OSM»; flache Kreuzung EKW 109 (Biel → Ins)
+OK   zeichnen_neuchatel_90.svg kein HT3 /  – A15/A44 an DKW-Knoten angebunden (Bogen-Ways fehlten im Netzmodell)
+OK   zeichnen_neuchatel_90.svg kein HT5 /  – EKW 109 mit einer Klammer: nur Ins (Osten) -> Abstellgleis; ohne EKW-Regel galt das Symbol als DKW (Biel -> Ins)
+OK   zeichnen_onnens_bonvillars_0.svg kein HT1 /  – Spurwechsel mit geradem Vorstück im Plan nicht als Abzweig erkannt
+OK   zeichnen_onnens_bonvillars_90.svg kein HT1 /  – Spurwechsel mit geradem Vorstück im Plan nicht als Abzweig erkannt
+Selbsttest HT: bestanden

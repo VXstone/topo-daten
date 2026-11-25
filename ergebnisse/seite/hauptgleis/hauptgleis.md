@@ -7,6 +7,7 @@
 | olten | 10 | 21 | 5 | 4 | 165 | · | · | 205 |
 | aarau | 3 | 4 | · | 1 | 9 | · | · | 17 |
 | solothurn | 2 | 1 | · | · | 14 | · | · | 17 |
+| region | · | · | · | · | · | **5** (Basis 0) | **10** (Basis 0) | 15 |
 | rothrist | 2 | 4 | · | · | 5 | · | · | 11 |
 | konolfingen | · | 2 | · | · | 6 | · | · | 8 |
 | mob__chamby | 1 | 1 | · | 1 | 1 | · | · | 4 |
@@ -26,6 +27,7 @@
 | mob__jor | 1 | · | · | · | · | · | · | 1 |
 | mob__montreux | · | 1 | · | · | · | · | · | 1 |
 | mob__rossiniere | · | · | · | · | 1 | · | · | 1 |
+| region_ne | · | · | · | · | · | · | **1** (Basis 0) | 1 |
 | szu__uetliberg | · | 1 | · | · | · | · | · | 1 |
 | aarburg_oftringen | · | · | · | · | · | · | · | 0 |
 | auvernier | · | · | · | · | · | · | · | 0 |
@@ -113,11 +115,9 @@
 | olten_hammer | · | · | · | · | · | · | · | 0 |
 | onnens_bonvillars | · | · | · | · | · | · | · | 0 |
 | pensier | · | · | · | · | · | · | · | 0 |
-| region | Fehler: No module named 'networkx' |
-| region_mob | Fehler: No module named 'networkx' |
-| region_ne | Fehler: No module named 'networkx' |
-| region_szu | Fehler: No module named 'networkx' |
-| region_vereina | Fehler: No module named 'networkx' |
+| region_mob | · | · | · | · | · | · | · | 0 |
+| region_szu | · | · | · | · | · | · | · | 0 |
+| region_vereina | · | · | · | · | · | · | · | 0 |
 | riedbach | · | · | · | · | · | · | · | 0 |
 | rosshausern | · | · | · | · | · | · | · | 0 |
 | safenwil | · | · | · | · | · | · | · | 0 |
@@ -154,8 +154,22 @@ Regeln: HT1 = OSM-Weiche am Hauptgleis ohne Abzweig im Plan; HT2 = Abzweig am Ha
 
 ## NEUE Befunde
 
-- **region** FEHLER: 0 → 1
-- **region_mob** FEHLER: 0 → 1
-- **region_ne** FEHLER: 0 → 1
-- **region_szu** FEHLER: 0 → 1
-- **region_vereina** FEHLER: 0 → 1
+- **region** HT6: 0 → 5
+  - -856.8/765.7: Rothrist: Abgang Linie 400 (Bern) ohne Fortsetzung im Regionalplan (kein Pfeil, keine Strecke)
+  - -862.6/755.6: Rothrist: Abgang Linie 400 (Bern) ohne Fortsetzung im Regionalplan (kein Pfeil, keine Strecke)
+  - -146.4/720.7: Linie der Region endet lose (kein Abgang, kein Pfeil, keine Beschriftung)
+  - -136.6/764.0: Linie der Region endet lose (kein Abgang, kein Pfeil, keine Beschriftung)
+  - -120.3/735.7: Linie der Region endet lose (kein Abgang, kein Pfeil, keine Beschriftung)
+- **region** HT7: 0 → 10
+  - 2278.1/-467.2: Linie der Region (ohne Abgang) kreuzt einer anderen Linie ohne OSM-Kreuzung
+  - 2075.8/-464.8: Linie der Region (ohne Abgang) kreuzt einer anderen Linie ohne OSM-Kreuzung
+  - -147.4/742.3: Linie der Region (450) kreuzt einer anderen Linie ohne OSM-Kreuzung
+  - -135.6/742.3: Linie der Region (450) kreuzt einer anderen Linie ohne OSM-Kreuzung
+  - -154.3/742.3: Linie der Region (451) kreuzt einer anderen Linie ohne OSM-Kreuzung
+  - -128.8/742.3: Linie der Region (451) kreuzt einer anderen Linie ohne OSM-Kreuzung
+  - -1233.0/1014.3: Linie der Region (450) kreuzt einer anderen Linie ohne OSM-Kreuzung
+  - -1243.0/1031.6: Linie der Region (ohne Abgang) kreuzt einer anderen Linie ohne OSM-Kreuzung
+  - 2614.4/-477.7: Linie der Region (540) kreuzt einem Bahnhofsgleis ohne OSM-Kreuzung
+  - 2626.1/-457.5: Linie der Region (540) kreuzt einem Bahnhofsgleis ohne OSM-Kreuzung
+- **region_ne** HT7: 0 → 1
+  - -2796.9/1512.5: Linie der Region (ohne Abgang) kreuzt einer anderen Linie ohne OSM-Kreuzung
