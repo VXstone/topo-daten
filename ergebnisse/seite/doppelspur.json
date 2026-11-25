@@ -620,15 +620,13 @@
     ],
     "parallel_m": 93,
     "ref": "210",
-    "regel": "HDz",
-    "text": "Doppelspur 35434218/35545993 (210): 2 Ebenen auseinander statt 1, kein Perron dazwischen (93 m parallel), Gleis dazwischen [35567923]",
+    "regel": "HD",
+    "text": "Doppelspur 35434218/35545993 (210): 2 Ebenen auseinander statt 1, kein Perron dazwischen (93 m parallel)",
     "ways": [
      35434218,
      35545993
     ],
-    "zwischen": [
-     35567923
-    ]
+    "zwischen": []
    },
    {
     "ebenen": [
@@ -1107,6 +1105,81 @@
   "solothurn": [
    {
     "ebenen": [
+     16,
+     14
+    ],
+    "parallel_m": 75,
+    "ref": "410",
+    "regel": "HD",
+    "text": "Doppelspur 23176666/49715202 (410): 2 Ebenen auseinander statt 1, kein Perron dazwischen (75 m parallel)",
+    "ways": [
+     23176666,
+     49715202
+    ],
+    "zwischen": []
+   },
+   {
+    "ebenen": [
+     16,
+     14
+    ],
+    "parallel_m": 120,
+    "ref": "410",
+    "regel": "HD",
+    "text": "Doppelspur 23176667/155433651 (410): 2 Ebenen auseinander statt 1, kein Perron dazwischen (120 m parallel)",
+    "ways": [
+     23176667,
+     155433651
+    ],
+    "zwischen": []
+   },
+   {
+    "ebenen": [
+     16,
+     14
+    ],
+    "parallel_m": 110,
+    "ref": "410",
+    "regel": "HD",
+    "text": "Doppelspur 23176668/49715246 (410): 2 Ebenen auseinander statt 1, kein Perron dazwischen (110 m parallel)",
+    "ways": [
+     23176668,
+     49715246
+    ],
+    "zwischen": []
+   },
+   {
+    "ebenen": [
+     16,
+     14
+    ],
+    "parallel_m": 63,
+    "ref": "410",
+    "regel": "HD",
+    "text": "Doppelspur 25115648/49715374 (410): 2 Ebenen auseinander statt 1, kein Perron dazwischen (63 m parallel)",
+    "ways": [
+     25115648,
+     49715374
+    ],
+    "zwischen": []
+   },
+   {
+    "ebenen": [
+     16,
+     14
+    ],
+    "parallel_m": 47,
+    "ref": "410",
+    "regel": "HD",
+    "text": "Doppelspur 25115650/98466480 (410): 2 Ebenen auseinander statt 1, kein Perron dazwischen (47 m parallel)",
+    "ways": [
+     25115650,
+     98466480
+    ],
+    "zwischen": []
+   },
+   {
+    "ebenen": [
      14,
      16
     ],
@@ -1121,6 +1194,156 @@
     "zwischen": [
      1534903296
     ]
+   },
+   {
+    "ebenen": [
+     14,
+     16
+    ],
+    "parallel_m": 99,
+    "ref": "410",
+    "regel": "HD",
+    "text": "Doppelspur 98466480/173428904 (410): 2 Ebenen auseinander statt 1, kein Perron dazwischen (99 m parallel)",
+    "ways": [
+     98466480,
+     173428904
+    ],
+    "zwischen": []
+   },
+   {
+    "ebenen": [
+     14,
+     16
+    ],
+    "parallel_m": 94,
+    "ref": "410",
+    "regel": "HD",
+    "text": "Doppelspur 98467641/98467649 (410): 2 Ebenen auseinander statt 1, kein Perron dazwischen (94 m parallel)",
+    "ways": [
+     98467641,
+     98467649
+    ],
+    "zwischen": []
+   },
+   {
+    "ebenen": [
+     16,
+     14
+    ],
+    "parallel_m": 64,
+    "ref": "410",
+    "regel": "HD",
+    "text": "Doppelspur 98467649/155433654 (410): 2 Ebenen auseinander statt 1, kein Perron dazwischen (64 m parallel)",
+    "ways": [
+     98467649,
+     155433654
+    ],
+    "zwischen": []
+   },
+   {
+    "ebenen": [
+     16,
+     14
+    ],
+    "parallel_m": 167,
+    "ref": "410",
+    "regel": "HD",
+    "text": "Doppelspur 98467649/750373274 (410): 2 Ebenen auseinander statt 1, kein Perron dazwischen (167 m parallel)",
+    "ways": [
+     98467649,
+     750373274
+    ],
+    "zwischen": []
+   },
+   {
+    "ebenen": [
+     16,
+     14
+    ],
+    "parallel_m": 75,
+    "ref": "410",
+    "regel": "HD",
+    "text": "Doppelspur 176323323/230328457 (410): 2 Ebenen auseinander statt 1, kein Perron dazwischen (75 m parallel)",
+    "ways": [
+     176323323,
+     230328457
+    ],
+    "zwischen": []
+   },
+   {
+    "ebenen": [
+     14,
+     16
+    ],
+    "parallel_m": 532,
+    "ref": "410",
+    "regel": "HD",
+    "text": "Doppelspur 190037242/251195482 (410): 2 Ebenen auseinander statt 1, kein Perron dazwischen (532 m parallel)",
+    "ways": [
+     190037242,
+     251195482
+    ],
+    "zwischen": []
+   },
+   {
+    "ebenen": [
+     14,
+     16
+    ],
+    "parallel_m": 160,
+    "ref": "410",
+    "regel": "HD",
+    "text": "Doppelspur 230328457/750266421 (410): 2 Ebenen auseinander statt 1, kein Perron dazwischen (160 m parallel)",
+    "ways": [
+     230328457,
+     750266421
+    ],
+    "zwischen": []
+   },
+   {
+    "ebenen": [
+     14,
+     16
+    ],
+    "parallel_m": 80,
+    "ref": "410",
+    "regel": "HD",
+    "text": "Doppelspur 230328457/1529724782 (410): 2 Ebenen auseinander statt 1, kein Perron dazwischen (80 m parallel)",
+    "ways": [
+     230328457,
+     1529724782
+    ],
+    "zwischen": []
+   },
+   {
+    "ebenen": [
+     16,
+     14
+    ],
+    "parallel_m": 55,
+    "ref": "410",
+    "regel": "HD",
+    "text": "Doppelspur 750266421/1257920631 (410): 2 Ebenen auseinander statt 1, kein Perron dazwischen (55 m parallel)",
+    "ways": [
+     750266421,
+     1257920631
+    ],
+    "zwischen": []
+   },
+   {
+    "ebenen": [
+     16,
+     14
+    ],
+    "parallel_m": 151,
+    "ref": "410",
+    "regel": "HD",
+    "text": "Doppelspur 1529724782/1529724783 (410): 2 Ebenen auseinander statt 1, kein Perron dazwischen (151 m parallel)",
+    "ways": [
+     1529724782,
+     1529724783
+    ],
+    "zwischen": []
    }
   ],
   "sugiez": [],
@@ -1130,125 +1353,8 @@
   "szu__uetliberg": [],
   "szu__zurich_binz": [],
   "szu__zurich_friesenberg": [],
-  "szu__zurich_giesshubel": [
-   {
-    "ebenen": [
-     6,
-     0
-    ],
-    "parallel_m": 70,
-    "ref": "712",
-    "regel": "HD",
-    "text": "Doppelspur 302538266/302538279 (712): 6 Ebenen auseinander statt 1, kein Perron dazwischen (70 m parallel)",
-    "ways": [
-     302538266,
-     302538279
-    ],
-    "zwischen": []
-   }
-  ],
-  "szu__zurich_saalsporthalle": [
-   {
-    "ebenen": [
-     2,
-     0
-    ],
-    "parallel_m": 48,
-    "ref": "712",
-    "regel": "HDz",
-    "text": "Doppelspur 110683212/304513218 (712): 2 Ebenen auseinander statt 1, kein Perron dazwischen (48 m parallel), Gleis dazwischen [110680665]",
-    "ways": [
-     110683212,
-     304513218
-    ],
-    "zwischen": [
-     110680665
-    ]
-   },
-   {
-    "ebenen": [
-     0,
-     2
-    ],
-    "parallel_m": 43,
-    "ref": "712",
-    "regel": "HDz",
-    "text": "Doppelspur 110683215/302549287 (712): 2 Ebenen auseinander statt 1, kein Perron dazwischen (43 m parallel), Gleis dazwischen [110683213, 302549281]",
-    "ways": [
-     110683215,
-     302549287
-    ],
-    "zwischen": [
-     110683213,
-     302549281
-    ]
-   },
-   {
-    "ebenen": [
-     0,
-     2
-    ],
-    "parallel_m": 72,
-    "ref": "712",
-    "regel": "HDz",
-    "text": "Doppelspur 302549282/302549288 (712): 2 Ebenen auseinander statt 1, kein Perron dazwischen (72 m parallel), Gleis dazwischen [110680665, 302549283]",
-    "ways": [
-     302549282,
-     302549288
-    ],
-    "zwischen": [
-     110680665,
-     302549283
-    ]
-   },
-   {
-    "ebenen": [
-     0,
-     2
-    ],
-    "parallel_m": 61,
-    "ref": "712",
-    "regel": "HDz",
-    "text": "Doppelspur 302549285/302549287 (712): 2 Ebenen auseinander statt 1, kein Perron dazwischen (61 m parallel), Gleis dazwischen [302549281]",
-    "ways": [
-     302549285,
-     302549287
-    ],
-    "zwischen": [
-     302549281
-    ]
-   },
-   {
-    "ebenen": [
-     2,
-     0
-    ],
-    "parallel_m": 47,
-    "ref": "712",
-    "regel": "HD",
-    "text": "Doppelspur 302549289/302549290 (712): 2 Ebenen auseinander statt 1, kein Perron dazwischen (47 m parallel)",
-    "ways": [
-     302549289,
-     302549290
-    ],
-    "zwischen": []
-   },
-   {
-    "ebenen": [
-     0,
-     2
-    ],
-    "parallel_m": 43,
-    "ref": "712",
-    "regel": "HD",
-    "text": "Doppelspur 304513218/304513220 (712): 2 Ebenen auseinander statt 1, kein Perron dazwischen (43 m parallel)",
-    "ways": [
-     304513218,
-     304513220
-    ],
-    "zwischen": []
-   }
-  ],
+  "szu__zurich_giesshubel": [],
+  "szu__zurich_saalsporthalle": [],
   "szu__zurich_schweighof": [],
   "szu__zurich_selnau": [],
   "tecknau": [],
@@ -1639,8 +1745,8 @@
    "HDz": 0
   },
   "neuchatel": {
-   "HD": 7,
-   "HDz": 2
+   "HD": 8,
+   "HDz": 1
   },
   "neuchatel_vauseyon": {
    "HD": 0,
@@ -1699,7 +1805,7 @@
    "HDz": 0
   },
   "solothurn": {
-   "HD": 0,
+   "HD": 15,
    "HDz": 1
   },
   "sugiez": {
@@ -1731,12 +1837,12 @@
    "HDz": 0
   },
   "szu__zurich_giesshubel": {
-   "HD": 1,
+   "HD": 0,
    "HDz": 0
   },
   "szu__zurich_saalsporthalle": {
-   "HD": 2,
-   "HDz": 4
+   "HD": 0,
+   "HDz": 0
   },
   "szu__zurich_schweighof": {
    "HD": 0,

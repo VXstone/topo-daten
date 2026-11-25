@@ -2,25 +2,16 @@
 "plan": "szu__zurich_saalsporthalle",
 "befunde": [
 {
-"regel": "VB2",
-"x": 641.1,
+"regel": "VD1",
+"x": 315.6,
 "y": 134.0,
-"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
-"ways": [
-110680664,
-110680666,
-304513220,
-318380983
-],
-"farben": [
-"gruen"
-]
+"text": "zwei Gleise 14 px aufeinander"
 }
 ],
 "info": {
 "dkw_osm_unvollstaendig": [],
-"gleise": 36,
-"knoten_plan": 7,
+"gleise": 35,
+"knoten_plan": 6,
 "dkw_plan": 0,
 "knoten_osm": 6,
 "versatz_y": 0.0,

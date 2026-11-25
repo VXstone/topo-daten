@@ -60,20 +60,6 @@
   "W59": 3
  },
  {
-  "key": "region_szu",
-  "gruppe": "Region",
-  "summe": 42,
-  "W53": 7
- },
- {
-  "key": "szu__zurich_giesshubel",
-  "gruppe": "SZU · Bahnhöfe",
-  "summe": 27,
-  "W53": 4,
-  "W56": 1,
-  "W59": 0
- },
- {
   "key": "schonenwerd",
   "gruppe": "Olten 3 · Olten – Aarau",
   "summe": 21,
@@ -88,6 +74,12 @@
   "W53": 0,
   "W56": 7,
   "W59": 0
+ },
+ {
+  "key": "region_szu",
+  "gruppe": "Region",
+  "summe": 18,
+  "W53": 3
  },
  {
   "key": "solothurn",
@@ -435,6 +427,14 @@
  },
  {
   "key": "szu__ringlikon",
+  "gruppe": "SZU · Bahnhöfe",
+  "summe": 3,
+  "W53": 0,
+  "W56": 1,
+  "W59": 0
+ },
+ {
+  "key": "szu__zurich_giesshubel",
   "gruppe": "SZU · Bahnhöfe",
   "summe": 3,
   "W53": 0,

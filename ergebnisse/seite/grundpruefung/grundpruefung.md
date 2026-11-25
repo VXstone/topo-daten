@@ -101,7 +101,7 @@
 | muntelier_lowenberg | · | · | · | · | · | · | · | 24.0 |
 | muntschemier | · | · | · | · | · | · | · | 24.0 |
 | murten | · | · | · | · | · | · | · | 24.0 |
-| neuchatel | · | 1 | · | · | · | 1 | · | 24.0 |
+| neuchatel | **1** (Basis 0) | 1 | · | · | · | 0 ↓1 | **3** (Basis 0) | 24.0 |
 | neuchatel_vauseyon | · | · | · | · | · | · | · | 24.0 |
 | noiraigue | · | · | · | · | · | · | · | 24.0 |
 | olten | **16** (Basis 1) | **19** (Basis 13) | 0 ↓1 | **2** (Basis 1) | **4** (Basis 0) | 1 ↓4 | **14** (Basis 0) | 24.0 |
@@ -110,8 +110,8 @@
 | pensier | · | · | · | · | · | · | · | 24.0 |
 | region | **23** (Basis 8) | **29** (Basis 22) | 1 ↓2 | **4** (Basis 3) | **19** (Basis 3) | 6 | **44** (Basis 27) | 10.08 |
 | region_mob | 3 | 3 | 1 | 3 | · | · | 24 | 10.08 |
-| region_ne | 1 | 2 | 1 | · | · | · | 3 | 10.08 |
-| region_szu | 12 | 14 | 8 | · | · | · | 12 | 10.08 |
+| region_ne | 1 | 2 | 1 | · | · | · | **4** (Basis 3) | 10.08 |
+| region_szu | 5 ↓12 | 3 ↓14 | 5 ↓8 | · | · | · | 11 ↓12 | 10.08 |
 | region_vereina | 1 | 5 | 2 | · | · | 2 | 2 | 10.08 |
 | riedbach | · | · | · | · | · | · | · | 24.0 |
 | rosshausern | · | · | · | · | · | · | · | 24.0 |
@@ -121,7 +121,7 @@
 | saint_blaise_lac | · | · | · | · | · | · | · | 24.0 |
 | schonenwerd | · | · | · | · | · | · | · | 24.0 |
 | serrieres | · | · | · | · | · | · | · | 24.0 |
-| solothurn | 12 | 4 | · | · | · | 1 | 11 | 24.0 |
+| solothurn | 8 ↓12 | 4 | · | · | · | 1 | 11 | 24.0 |
 | sugiez | · | · | · | · | · | · | · | 24.0 |
 | szu__berghof | · | · | · | · | · | · | · | 24.0 |
 | szu__borrweg | · | · | · | · | · | · | · | 24.0 |
@@ -129,7 +129,7 @@
 | szu__uetliberg | · | · | · | · | · | · | · | 24.0 |
 | szu__zurich_binz | · | · | · | · | · | · | · | 24.0 |
 | szu__zurich_friesenberg | · | · | · | · | · | · | · | 24.0 |
-| szu__zurich_giesshubel | 10 | 16 | 7 | · | · | · | 6 | 24.0 |
+| szu__zurich_giesshubel | 3 ↓10 | 4 ↓16 | 6 ↓7 | · | · | **1** (Basis 0) | 4 ↓6 | 24.0 |
 | szu__zurich_saalsporthalle | · | · | · | · | · | · | · | 24.0 |
 | szu__zurich_schweighof | · | · | · | · | · | · | · | 24.0 |
 | szu__zurich_selnau | · | · | · | · | · | · | · | 24.0 |
@@ -160,6 +160,12 @@ Regeln: GS = Schnitt ohne DKW/Kreuzung/Niveautrennung; GG = Gleis auf Gleis; GQ 
   - 2520.0/306.8: Treppe, Versatz 25.8 px
   - 3007.6/186.8: Treppe, Versatz 25.8 px
   - 2032.3/294.8: Treppe, Versatz 27.7 px
+- **neuchatel** GS: 0 → 1
+  - 540.5/159.3: Gleise kreuzen sich (71°) ohne DKW, Kreuzung oder Niveautrennung
+- **neuchatel** GE: 0 → 3
+  - 801.0/134.0: loses Gleisende, Stück 132 px
+  - 746.6/230.0: loses Gleisende, Stück 45 px
+  - 757.0/230.0: loses Gleisende, Stück 39 px
 - **olten** GS: 1 → 16
   - 1219.7/206.0: Gleise kreuzen sich (60°) ohne DKW, Kreuzung oder Niveautrennung
   - 857.3/227.6: Gleise kreuzen sich (89°) ohne DKW, Kreuzung oder Niveautrennung
@@ -344,3 +350,10 @@ Regeln: GS = Schnitt ohne DKW/Kreuzung/Niveautrennung; GG = Gleis auf Gleis; GQ 
   - -242.9/-1098.2: loses Gleisende, Stück 28 px
   - -243.0/-1177.2: loses Gleisende, Stück 28 px
   - -243.0/-1205.2: loses Gleisende, Stück 28 px
+- **region_ne** GE: 3 → 4
+  - 671.8/-1249.9: Gleisende 5.1 px neben einem Gleis (Stoss), Stück 6 px
+  - -204.1/-733.0: loses Gleisende, Stück 56 px
+  - 3090.4/1202.5: loses Gleisende, Stück 175 px
+  - -3572.9/2414.8: loses Gleisende, Stück 152 px
+- **szu__zurich_giesshubel** GT: 0 → 1
+  - 267.5/193.4: Treppe, Versatz 16.6 px

@@ -7,49 +7,55 @@
   "GP": 0,
   "GW": 0,
   "GT": 0,
-  "GE": 3
+  "GE": 4
  },
  "befunde": [
   {
    "regel": "GS",
-   "x": -2796.9,
-   "y": 1512.5,
-   "text": "Gleise kreuzen sich (88°) ohne DKW, Kreuzung oder Niveautrennung"
+   "x": -2793.4,
+   "y": 1510.8,
+   "text": "Gleise kreuzen sich (89°) ohne DKW, Kreuzung oder Niveautrennung"
   },
   {
    "regel": "GG",
-   "x": -1576.6,
-   "y": 80.2,
+   "x": -1573.2,
+   "y": 78.5,
    "text": "zwei Gleise 12 px aufeinander"
   },
   {
    "regel": "GG",
-   "x": 631.8,
-   "y": -1285.8,
+   "x": 628.7,
+   "y": -1285.2,
    "text": "zwei Gleise 15 px aufeinander"
   },
   {
    "regel": "GQ",
-   "x": 1560.4,
-   "y": -922.4,
+   "x": 1557.3,
+   "y": -920.3,
    "text": "Querabstand nach dem Knick 23.2 px statt 15.9 px wie davor"
   },
   {
    "regel": "GE",
-   "x": 674.9,
-   "y": -1250.4,
+   "x": 671.8,
+   "y": -1249.9,
    "text": "Gleisende 5.1 px neben einem Gleis (Stoss), Stück 6 px"
   },
   {
    "regel": "GE",
-   "x": 3093.4,
-   "y": 1200.4,
+   "x": -204.1,
+   "y": -733.0,
+   "text": "loses Gleisende, Stück 56 px"
+  },
+  {
+   "regel": "GE",
+   "x": 3090.4,
+   "y": 1202.5,
    "text": "loses Gleisende, Stück 175 px"
   },
   {
    "regel": "GE",
-   "x": -3576.4,
-   "y": 2416.5,
+   "x": -3572.9,
+   "y": 2414.8,
    "text": "loses Gleisende, Stück 152 px"
   }
  ]

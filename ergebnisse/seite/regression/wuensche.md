@@ -10,10 +10,9 @@ Wünsche je Plan (REGELN 5: W53 S-Kurven ×6, W55 Bahnhofsabstand ×3, W56 Leerl
 | region_ne | Region | 6 | 5 |  | 51 |
 | olten | Olten 1 · Knoten Olten | 7 |  | 3 | 51 |
 | basel | Grosse Knoten | 7 |  | 2 | 48 |
-| region_szu | Region | 7 |  |  | 42 |
-| szu__zurich_giesshubel | SZU · Bahnhöfe | 4 |  | 1 | 27 |
 | schonenwerd | Olten 3 · Olten – Aarau | 0 |  | 7 | 21 |
 | bole | NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier | 0 |  | 7 | 21 |
+| region_szu | Region | 3 |  |  | 18 |
 | solothurn | Bahnhöfe ohne Regionalplan | 2 |  | 1 | 15 |
 | neuchatel | NE 1 · Neuchâtel – Ins – Kerzers – Bern | 2 |  | 1 | 15 |
 | murten | NE 3 · Lyss – Kerzers – Murten – Payerne | 1 |  | 3 | 15 |
@@ -58,6 +57,7 @@ Wünsche je Plan (REGELN 5: W53 S-Kurven ×6, W55 Bahnhofsabstand ×3, W56 Leerl
 | vereina__sagliains_sasslatsch | Vereina · Bahnhöfe | 0 |  | 1 | 3 |
 | vereina__vereina_sud | Vereina · Bahnhöfe | 0 |  | 1 | 3 |
 | szu__ringlikon | SZU · Bahnhöfe | 0 |  | 1 | 3 |
+| szu__zurich_giesshubel | SZU · Bahnhöfe | 0 |  | 1 | 3 |
 | konolfingen | Bahnhöfe ohne Regionalplan | 0 |  | 0 | 0 |
 | aarburg_oftringen | Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil | 0 |  | 0 | 0 |
 | zofingen | Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil | 0 |  | 0 | 0 |

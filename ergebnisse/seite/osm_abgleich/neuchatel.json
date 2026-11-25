@@ -2,8 +2,41 @@
 "plan": "neuchatel",
 "befunde": [
 {
+"regel": "VB1",
+"x": 783.0,
+"y": 134.0,
+"text": "OSM-Weiche 416783500 ohne Abzweig im Plan",
+"osm": 416783500
+},
+{
+"regel": "VB1",
+"x": 1031.3,
+"y": 182.0,
+"text": "OSM-Weiche 11343288468 ohne Abzweig im Plan",
+"osm": 11343288468
+},
+{
+"regel": "VB1",
+"x": 843.7,
+"y": 134.0,
+"text": "OSM-Weiche 11343328182 ohne Abzweig im Plan",
+"osm": 11343328182
+},
+{
+"regel": "VC1",
+"x": 536.9,
+"y": 158.0,
+"text": "Gleis (Way 35567918) im Plan an Knoten 360421649 angebunden, in OSM nicht",
+"osm": 360421649,
+"ways": [
+35567918,
+1052497422,
+1271585758
+]
+},
+{
 "regel": "VD1",
-"x": 899.0,
+"x": 881.0,
 "y": 206.0,
 "text": "zwei Gleise 21 px aufeinander"
 }
@@ -27,11 +60,11 @@
 11343328182,
 11343328186
 ],
-"gleise": 83,
-"knoten_plan": 33,
+"gleise": 82,
+"knoten_plan": 30,
 "dkw_plan": 5,
 "knoten_osm": 50,
 "versatz_y": 0.0,
-"netz_auf_plan": 0.82
+"netz_auf_plan": 0.81
 }
 }

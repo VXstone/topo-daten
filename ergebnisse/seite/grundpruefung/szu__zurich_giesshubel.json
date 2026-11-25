@@ -1,248 +1,122 @@
 {
  "ebene": 24.0,
  "zaehl": {
-  "GS": 10,
-  "GG": 16,
-  "GQ": 7,
+  "GS": 3,
+  "GG": 4,
+  "GQ": 6,
   "GP": 0,
   "GW": 0,
-  "GT": 0,
-  "GE": 6
+  "GT": 1,
+  "GE": 4
  },
  "befunde": [
   {
    "regel": "GS",
-   "x": 435.8,
-   "y": 188.3,
-   "text": "Gleise kreuzen sich (18°) ohne DKW, Kreuzung oder Niveautrennung"
-  },
-  {
-   "regel": "GS",
-   "x": 513.4,
-   "y": 171.2,
+   "x": 310.2,
+   "y": 200.0,
    "text": "Gleise kreuzen sich (60°) ohne DKW, Kreuzung oder Niveautrennung"
   },
   {
    "regel": "GS",
-   "x": 512.7,
-   "y": 195.2,
+   "x": 374.6,
+   "y": 173.6,
    "text": "Gleise kreuzen sich (60°) ohne DKW, Kreuzung oder Niveautrennung"
   },
   {
    "regel": "GS",
-   "x": 530.8,
-   "y": 141.2,
-   "text": "Gleise kreuzen sich (59°) ohne DKW, Kreuzung oder Niveautrennung"
+   "x": 367.4,
+   "y": 162.8,
+   "text": "Gleise kreuzen sich (21°) ohne DKW, Kreuzung oder Niveautrennung"
   },
   {
-   "regel": "GS",
-   "x": 499.5,
-   "y": 195.2,
-   "text": "Gleise kreuzen sich (60°) ohne DKW, Kreuzung oder Niveautrennung"
+   "regel": "GG",
+   "x": 413.7,
+   "y": 200.0,
+   "text": "zwei Gleise 41 px aufeinander"
   },
   {
-   "regel": "GS",
-   "x": 620.3,
-   "y": 171.2,
-   "text": "Gleise kreuzen sich (60°) ohne DKW, Kreuzung oder Niveautrennung"
-  },
-  {
-   "regel": "GS",
-   "x": 634.1,
+   "regel": "GG",
+   "x": 397.7,
    "y": 147.2,
-   "text": "Gleise kreuzen sich (60°) ohne DKW, Kreuzung oder Niveautrennung"
-  },
-  {
-   "regel": "GS",
-   "x": 606.4,
-   "y": 195.2,
-   "text": "Gleise kreuzen sich (60°) ohne DKW, Kreuzung oder Niveautrennung"
-  },
-  {
-   "regel": "GS",
-   "x": 577.7,
-   "y": 241.7,
-   "text": "Gleise kreuzen sich (59°) ohne DKW, Kreuzung oder Niveautrennung"
-  },
-  {
-   "regel": "GS",
-   "x": 434.3,
-   "y": 195.2,
-   "text": "Gleise kreuzen sich (78°) ohne DKW, Kreuzung oder Niveautrennung"
+   "text": "zwei Gleise 75 px aufeinander"
   },
   {
    "regel": "GG",
-   "x": 529.5,
-   "y": 171.2,
-   "text": "zwei Gleise 128 px aufeinander"
-  },
-  {
-   "regel": "GG",
-   "x": 521.3,
-   "y": 171.2,
-   "text": "zwei Gleise 145 px aufeinander"
-  },
-  {
-   "regel": "GG",
-   "x": 552.9,
-   "y": 171.2,
-   "text": "zwei Gleise 77 px aufeinander"
-  },
-  {
-   "regel": "GG",
-   "x": 530.4,
-   "y": 171.2,
-   "text": "zwei Gleise 129 px aufeinander"
-  },
-  {
-   "regel": "GG",
-   "x": 552.9,
-   "y": 171.2,
-   "text": "zwei Gleise 77 px aufeinander"
-  },
-  {
-   "regel": "GG",
-   "x": 562.5,
-   "y": 171.2,
+   "x": 359.7,
+   "y": 224.0,
    "text": "zwei Gleise 65 px aufeinander"
   },
   {
    "regel": "GG",
-   "x": 496.8,
-   "y": 199.4,
-   "text": "zwei Gleise 114 px aufeinander"
-  },
-  {
-   "regel": "GG",
-   "x": 552.7,
-   "y": 171.2,
-   "text": "zwei Gleise 77 px aufeinander"
-  },
-  {
-   "regel": "GG",
-   "x": 519.3,
-   "y": 243.2,
-   "text": "zwei Gleise 112 px aufeinander"
-  },
-  {
-   "regel": "GG",
-   "x": 473.9,
-   "y": 243.2,
-   "text": "zwei Gleise 21 px aufeinander"
-  },
-  {
-   "regel": "GG",
-   "x": 437.2,
-   "y": 243.2,
-   "text": "zwei Gleise 94 px aufeinander"
-  },
-  {
-   "regel": "GG",
-   "x": 302.4,
-   "y": 243.2,
-   "text": "zwei Gleise 113 px aufeinander"
-  },
-  {
-   "regel": "GG",
-   "x": 629.2,
-   "y": 243.2,
-   "text": "zwei Gleise 69 px aufeinander"
-  },
-  {
-   "regel": "GG",
-   "x": 505.7,
-   "y": 195.2,
-   "text": "zwei Gleise 80 px aufeinander"
-  },
-  {
-   "regel": "GG",
-   "x": 587.3,
-   "y": 243.2,
-   "text": "zwei Gleise 15 px aufeinander"
-  },
-  {
-   "regel": "GG",
-   "x": 479.1,
-   "y": 110.0,
-   "text": "zwei Gleise 16 px aufeinander"
+   "x": 469.1,
+   "y": 248.0,
+   "text": "zwei Gleise 71 px aufeinander"
   },
   {
    "regel": "GQ",
-   "x": 471.5,
-   "y": 255.2,
-   "text": "Querabstand nach dem Knick 11.4 px statt 24.0 px wie davor"
+   "x": 358.4,
+   "y": 167.0,
+   "text": "Querabstand nach dem Knick 47.3 px statt 13.2 px wie davor"
   },
   {
    "regel": "GQ",
-   "x": 471.5,
-   "y": 255.2,
-   "text": "Querabstand nach dem Knick 11.3 px statt 24.0 px wie davor"
+   "x": 318.8,
+   "y": 180.2,
+   "text": "Querabstand nach dem Knick 34.6 px statt 13.2 px wie davor"
   },
   {
    "regel": "GQ",
-   "x": 530.8,
-   "y": 152.6,
-   "text": "Querabstand nach dem Knick 37.2 px statt 11.4 px wie davor"
+   "x": 370.0,
+   "y": 200.0,
+   "text": "Querabstand nach dem Knick 0.0 px statt 34.5 px wie davor"
   },
   {
    "regel": "GQ",
-   "x": 518.8,
-   "y": 171.2,
-   "text": "Querabstand nach dem Knick 0.0 px statt 13.5 px wie davor"
+   "x": 337.1,
+   "y": 212.0,
+   "text": "Querabstand nach dem Knick 24.0 px statt 34.5 px wie davor"
   },
   {
    "regel": "GQ",
-   "x": 527.0,
-   "y": 159.2,
-   "text": "Querabstand nach dem Knick 24.0 px statt 11.4 px wie davor"
+   "x": 334.8,
+   "y": 173.6,
+   "text": "Querabstand nach dem Knick 69.0 px statt 26.4 px wie davor"
   },
   {
    "regel": "GQ",
-   "x": 514.0,
-   "y": 137.6,
-   "text": "Querabstand nach dem Knick 7.2 px statt 32.6 px wie davor"
+   "x": 366.4,
+   "y": 147.2,
+   "text": "Querabstand nach dem Knick 13.7 px statt 26.4 px wie davor"
   },
   {
-   "regel": "GQ",
-   "x": 510.2,
-   "y": 144.2,
-   "text": "Querabstand nach dem Knick 6.0 px statt 32.6 px wie davor"
+   "regel": "GT",
+   "x": 267.5,
+   "y": 193.4,
+   "text": "Treppe, Versatz 16.6 px"
   },
   {
    "regel": "GE",
-   "x": 390.5,
-   "y": 267.2,
-   "text": "loses Gleisende, Stück 258 px"
+   "x": 295.7,
+   "y": 200.0,
+   "text": "loses Gleisende, Stück 139 px"
   },
   {
    "regel": "GE",
-   "x": 595.8,
-   "y": 134.0,
-   "text": "loses Gleisende, Stück 193 px"
+   "x": 255.3,
+   "y": 200.0,
+   "text": "loses Gleisende, Stück 42 px"
   },
   {
    "regel": "GE",
-   "x": 563.3,
-   "y": 141.2,
-   "text": "Gleisende 6.0 px neben einem Gleis (Stoss), Stück 113 px"
+   "x": 328.5,
+   "y": 180.1,
+   "text": "loses Gleisende, Stück 36 px"
   },
   {
    "regel": "GE",
-   "x": 388.6,
-   "y": 219.2,
-   "text": "loses Gleisende, Stück 47 px"
-  },
-  {
-   "regel": "GE",
-   "x": 424.6,
-   "y": 219.2,
-   "text": "loses Gleisende, Stück 52 px"
-  },
-  {
-   "regel": "GE",
-   "x": 247.8,
-   "y": 411.2,
-   "text": "loses Gleisende, Stück 269 px"
+   "x": 328.5,
+   "y": 186.8,
+   "text": "loses Gleisende, Stück 18 px"
   }
  ]
 }

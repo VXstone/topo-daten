@@ -2,119 +2,129 @@
 "plan": "szu__zurich_giesshubel",
 "befunde": [
 {
+"regel": "VA1",
+"x": 292.7,
+"y": 186.8,
+"text": "OSM-DKW 1263338286 im Plan nicht als DKW gezeichnet",
+"osm": 1263338286
+},
+{
 "regel": "VB1",
-"x": 642.8,
-"y": 134.0,
+"x": 392.0,
+"y": 224.0,
+"text": "OSM-Weiche 1263316902 ohne Abzweig im Plan",
+"osm": 1263316902
+},
+{
+"regel": "VB1",
+"x": 467.8,
+"y": 147.2,
 "text": "OSM-Weiche 1263316986 ohne Abzweig im Plan",
 "osm": 1263316986
 },
 {
-"regel": "VC1",
-"x": 513.4,
-"y": 171.2,
-"text": "Gleis (Way 110676795) im Plan an Knoten 1263316870 angebunden, in OSM nicht",
-"osm": 1263316870,
-"ways": [
-110676795,
-110676802,
-110676809,
-110676813,
-110676826,
-302540038
-]
-},
-{
-"regel": "VC1",
-"x": 513.4,
-"y": 171.2,
-"text": "Gleis (Way 110676782) im Plan an Knoten 1263316870 angebunden, in OSM nicht",
-"osm": 1263316870,
-"ways": [
-110676782,
-110676795,
-110676802,
-110676813,
-110676818,
-110676821,
-302539328,
-302540028,
-302540038
-]
-},
-{
 "regel": "VB2",
-"x": 512.7,
-"y": 195.2,
+"x": 310.2,
+"y": 200.0,
 "text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
 "ways": [
+110676785,
 110676786,
 110676787,
-110676790,
+110676788,
 110676793,
 110676799,
 110676802,
-110676803,
 110676805,
 110676806,
+110676807,
 110676808,
-110676814,
-110676825,
+110678986,
+110679006,
 110679016,
-302538472,
-302538473,
-302538627,
+110679019,
+302538626,
 302540028,
 302540033,
 302540194,
-302540868
+302540868,
+302540869,
+302541330,
+302542005
 ],
 "farben": [
-"gruen",
 "schwarz"
 ]
 },
 {
 "regel": "VB2",
-"x": 499.5,
-"y": 195.2,
+"x": 373.7,
+"y": 173.6,
 "text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
 "ways": [
-110676782,
-110676790,
-110676795,
+110676785,
+110676786,
+110676787,
+110676799,
 110676802,
-110676803,
-110676809,
+110676804,
+110676805,
+110676806,
+110676807,
+110676808,
 110676813,
-110676814,
-110676818,
-110676821,
-110676825,
-110676826,
-302538472,
-302538473,
-302538627,
-302539328,
+110676824,
 302540028,
-302540038
+302540033,
+302540038,
+302540194,
+302540868,
+493760374
 ],
 "farben": [
-"gruen",
 "schwarz"
 ]
 },
 {
 "regel": "VB2",
-"x": 428.4,
+"x": 367.5,
+"y": 162.9,
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+"ways": [
+110676785,
+110676786,
+110676787,
+110676799,
+110676802,
+110676804,
+110676805,
+110676806,
+110676807,
+110676808,
+110676813,
+110676824,
+302540028,
+302540033,
+302540038,
+302540194,
+302540868,
+493760374
+],
+"farben": [
+"schwarz"
+]
+},
+{
+"regel": "VB2",
+"x": 342.8,
 "y": 134.0,
 "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
 "ways": [
 110676785,
 110676787,
-110676804,
+110676799,
 110676807,
-110676810,
-110676824,
+110676813,
 302540194,
 493760376
 ],
@@ -124,174 +134,18 @@
 },
 {
 "regel": "VB2",
-"x": 620.3,
-"y": 171.2,
-"text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
+"x": 257.2,
+"y": 224.0,
+"text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
 "ways": [
-110676789,
-110676793,
-110676795,
-110676802,
-110676808,
-110676813,
-110676825,
-110676826,
-110679016,
-302538426,
-302539327,
-302539359,
-302539360,
-302540031,
-302540033,
-302540038,
-302540868
-],
-"farben": [
-"schwarz"
-]
-},
-{
-"regel": "VB2",
-"x": 634.1,
-"y": 147.2,
-"text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
-"ways": [
-110403414,
-110676782,
-110676789,
-110676793,
-110676795,
-110676802,
-110676813,
-110676818,
-110676821,
-110676826,
-110679016,
-302539327,
-302539328,
-302539359,
-302539360,
-302540038,
-302540868
-],
-"farben": [
-"schwarz"
-]
-},
-{
-"regel": "VB2",
-"x": 606.4,
-"y": 195.2,
-"text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
-"ways": [
-110676789,
-110676793,
-110676795,
-110676802,
-110676808,
-110676813,
-110676825,
-110676826,
-110679016,
-302538426,
-302538627,
-302539327,
-302539359,
-302539360,
-302540031,
-302540038,
-302540868
-],
-"farben": [
-"gruen",
-"schwarz"
-]
-},
-{
-"regel": "VB2",
-"x": 577.7,
-"y": 241.7,
-"text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
-"ways": [
-110676789,
-110676790,
-110676793,
-110676795,
-110676802,
-110676803,
-110676813,
-110676814,
-110676826,
-110679016,
-302538472,
-302538473,
-302538627,
-302539327,
-302539359,
-302539360,
-302540038,
-302540868
-],
-"farben": [
-"gruen",
-"schwarz"
-]
-},
-{
-"regel": "VC1",
-"x": 434.3,
-"y": 195.2,
-"text": "Gleis (Way 110676800) im Plan an Knoten 1263316956 angebunden, in OSM nicht",
-"osm": 1263316956,
-"ways": [
-110676800,
-302540869,
-493760364,
-493760366
-]
-},
-{
-"regel": "VB2",
-"x": 463.7,
-"y": 243.2,
-"text": "Gleise berühren sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
-"ways": [
-110676782,
-110676786,
-110676787,
-110676789,
-110676790,
-110676793,
-110676795,
-110676799,
-110676802,
-110676803,
-110676805,
-110676806,
-110676809,
-110676813,
-110676818,
-110676821,
-110676826,
+110676788,
 110678986,
 110679006,
 110679016,
-110679019,
-302538472,
-302538473,
-302539327,
-302539328,
-302539359,
-302539360,
-302540028,
-302540033,
-302540038,
-302540194,
-302540868,
 302541330,
 302542005,
-302542007,
-326218893
+302542152,
+351899126
 ],
 "farben": [
 "gruen",
@@ -300,7 +154,7 @@
 },
 {
 "regel": "VB2",
-"x": 470.8,
+"x": 398.0,
 "y": 110.0,
 "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
 "ways": [
@@ -314,133 +168,31 @@
 },
 {
 "regel": "VD1",
-"x": 529.5,
-"y": 171.2,
-"text": "zwei Gleise 128 px aufeinander"
-},
-{
-"regel": "VD1",
-"x": 521.3,
-"y": 171.2,
-"text": "zwei Gleise 145 px aufeinander"
-},
-{
-"regel": "VD1",
-"x": 457.0,
-"y": 171.2,
-"text": "zwei Gleise 15 px aufeinander"
-},
-{
-"regel": "VD1",
-"x": 408.5,
-"y": 195.2,
-"text": "zwei Gleise 40 px aufeinander"
-},
-{
-"regel": "VD1",
-"x": 552.9,
-"y": 171.2,
-"text": "zwei Gleise 77 px aufeinander"
-},
-{
-"regel": "VD1",
-"x": 561.8,
-"y": 171.2,
-"text": "zwei Gleise 64 px aufeinander"
-},
-{
-"regel": "VD1",
-"x": 530.4,
-"y": 171.2,
-"text": "zwei Gleise 129 px aufeinander"
-},
-{
-"regel": "VD1",
-"x": 552.9,
-"y": 171.2,
-"text": "zwei Gleise 77 px aufeinander"
-},
-{
-"regel": "VD1",
-"x": 563.0,
-"y": 171.2,
-"text": "zwei Gleise 66 px aufeinander"
-},
-{
-"regel": "VD1",
-"x": 562.5,
-"y": 171.2,
-"text": "zwei Gleise 65 px aufeinander"
-},
-{
-"regel": "VD1",
-"x": 560.7,
-"y": 171.2,
-"text": "zwei Gleise 62 px aufeinander"
-},
-{
-"regel": "VD1",
-"x": 496.8,
-"y": 199.4,
-"text": "zwei Gleise 114 px aufeinander"
-},
-{
-"regel": "VD1",
-"x": 552.7,
-"y": 171.2,
-"text": "zwei Gleise 77 px aufeinander"
-},
-{
-"regel": "VD1",
-"x": 455.9,
-"y": 171.2,
-"text": "zwei Gleise 17 px aufeinander"
-},
-{
-"regel": "VD1",
-"x": 519.3,
-"y": 243.2,
-"text": "zwei Gleise 112 px aufeinander"
-},
-{
-"regel": "VD1",
-"x": 473.9,
-"y": 243.2,
+"x": 403.7,
+"y": 200.0,
 "text": "zwei Gleise 21 px aufeinander"
 },
 {
 "regel": "VD1",
-"x": 437.2,
-"y": 243.2,
-"text": "zwei Gleise 94 px aufeinander"
+"x": 383.8,
+"y": 200.0,
+"text": "zwei Gleise 61 px aufeinander"
 },
 {
 "regel": "VD1",
-"x": 374.6,
-"y": 243.2,
-"text": "zwei Gleise 32 px aufeinander"
+"x": 413.8,
+"y": 200.0,
+"text": "zwei Gleise 41 px aufeinander"
 },
 {
 "regel": "VD1",
-"x": 302.4,
-"y": 243.2,
-"text": "zwei Gleise 113 px aufeinander"
+"x": 359.7,
+"y": 224.0,
+"text": "zwei Gleise 65 px aufeinander"
 },
 {
 "regel": "VD1",
-"x": 505.7,
-"y": 195.2,
-"text": "zwei Gleise 80 px aufeinander"
-},
-{
-"regel": "VD1",
-"x": 587.3,
-"y": 243.2,
-"text": "zwei Gleise 15 px aufeinander"
-},
-{
-"regel": "VD1",
-"x": 479.1,
+"x": 406.2,
 "y": 110.0,
 "text": "zwei Gleise 16 px aufeinander"
 }
@@ -448,8 +200,8 @@
 "info": {
 "dkw_osm_unvollstaendig": [],
 "gleise": 69,
-"knoten_plan": 30,
-"dkw_plan": 2,
+"knoten_plan": 27,
+"dkw_plan": 1,
 "knoten_osm": 28,
 "versatz_y": 0.0,
 "netz_auf_plan": 0.97

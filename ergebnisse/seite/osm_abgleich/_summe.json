@@ -879,6 +879,8 @@
   "netz_auf_plan": 1.0
  },
  "neuchatel": {
+  "VB1": 3,
+  "VC1": 1,
   "VD1": 1,
   "dkw_osm_unvollstaendig": [
    11296350712,
@@ -898,12 +900,12 @@
    11343328182,
    11343328186
   ],
-  "gleise": 83,
-  "knoten_plan": 33,
+  "gleise": 82,
+  "knoten_plan": 30,
   "dkw_plan": 5,
   "knoten_osm": 50,
   "versatz_y": 0.0,
-  "netz_auf_plan": 0.82
+  "netz_auf_plan": 0.81
  },
  "neuchatel_vauseyon": {
   "dkw_osm_unvollstaendig": [],
@@ -1053,16 +1055,16 @@
  "solothurn": {
   "VA1": 2,
   "VB1": 4,
-  "VB2": 13,
-  "VD1": 7,
+  "VB2": 9,
+  "VD1": 6,
   "VD2": 1,
   "dkw_osm_unvollstaendig": [],
-  "gleise": 114,
-  "knoten_plan": 59,
+  "gleise": 112,
+  "knoten_plan": 54,
   "dkw_plan": 1,
   "knoten_osm": 61,
   "versatz_y": 0.0,
-  "netz_auf_plan": 0.99
+  "netz_auf_plan": 0.96
  },
  "sugiez": {
   "VD1": 1,
@@ -1130,23 +1132,23 @@
   "netz_auf_plan": 1.0
  },
  "szu__zurich_giesshubel": {
-  "VB1": 1,
-  "VC1": 3,
-  "VB2": 9,
-  "VD1": 22,
+  "VA1": 1,
+  "VB1": 2,
+  "VB2": 6,
+  "VD1": 5,
   "dkw_osm_unvollstaendig": [],
   "gleise": 69,
-  "knoten_plan": 30,
-  "dkw_plan": 2,
+  "knoten_plan": 27,
+  "dkw_plan": 1,
   "knoten_osm": 28,
   "versatz_y": 0.0,
   "netz_auf_plan": 0.97
  },
  "szu__zurich_saalsporthalle": {
-  "VB2": 1,
+  "VD1": 1,
   "dkw_osm_unvollstaendig": [],
-  "gleise": 36,
-  "knoten_plan": 7,
+  "gleise": 35,
+  "knoten_plan": 6,
   "dkw_plan": 0,
   "knoten_osm": 6,
   "versatz_y": 0.0,

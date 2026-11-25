@@ -90,7 +90,7 @@ munchenwiler_courgevaux            {'VD1': 1}
 muntelier_lowenberg                {'VA1': 1, 'VB1': 4}
 muntschemier                       {'VB1': 2, 'VD1': 1}
 murten                             {}
-neuchatel                          {'VD1': 1}
+neuchatel                          {'VB1': 3, 'VC1': 1, 'VD1': 1}
 neuchatel_vauseyon                 {}
 noiraigue                          {'VD1': 1}
 olten                              {'VB1': 23, 'VB2': 24, 'VC1': 1, 'VD1': 16}
@@ -105,7 +105,7 @@ saint_blaise_cff                   {}
 saint_blaise_lac                   {'VD1': 1}
 schonenwerd                        {'VB2': 2, 'VD1': 1}
 serrieres                          {'VA1': 3, 'VB1': 3}
-solothurn                          {'VA1': 2, 'VB1': 4, 'VB2': 13, 'VD1': 7, 'VD2': 1}
+solothurn                          {'VA1': 2, 'VB1': 4, 'VB2': 9, 'VD1': 6, 'VD2': 1}
 sugiez                             {'VD1': 1}
 szu__berghof                       {}
 szu__borrweg                       {}
@@ -113,8 +113,8 @@ szu__ringlikon                     {}
 szu__uetliberg                     {'VB2': 1}
 szu__zurich_binz                   {}
 szu__zurich_friesenberg            {}
-szu__zurich_giesshubel             {'VB1': 1, 'VC1': 3, 'VB2': 9, 'VD1': 22}
-szu__zurich_saalsporthalle         {'VB2': 1}
+szu__zurich_giesshubel             {'VA1': 1, 'VB1': 2, 'VB2': 6, 'VD1': 5}
+szu__zurich_saalsporthalle         {'VD1': 1}
 szu__zurich_schweighof             {}
 szu__zurich_selnau                 {}
 tecknau                            {'VB2': 1}
@@ -134,4 +134,4 @@ vereina__vereina_sud               {}
 wangen_bei_olten                   {}
 zihlbruecke                        {}
 zofingen                           {'VB1': 1, 'VD1': 1}
-OSM-Abgleich: 136 Pläne {'VA1': 9, 'VA2': 5, 'VB1': 73, 'VB2': 73, 'VC1': 5, 'VD1': 99, 'VD2': 1}
+OSM-Abgleich: 136 Pläne {'VA1': 10, 'VA2': 5, 'VB1': 77, 'VB2': 65, 'VC1': 3, 'VD1': 82, 'VD2': 1}

@@ -9,35 +9,38 @@
   {
    "id": "0bw9nnym5m5luilotwzk",
    "plan": "solothurn",
-   "x": 1388.2,
-   "y": 429.1,
+   "x": 1417.3,
+   "y": 439.9,
    "text": "Gleis nach unten, Knick, über anderen Gleisen nach oben",
    "abgedeckt": true,
    "regeln": [
     "G6",
+    "ME",
     "MX",
     "VB1",
     "VB2",
     "W1",
     "W2"
    ],
-   "naechster": 19.2,
-   "naechste_regel": "MX",
+   "naechster": 17.8,
+   "naechste_regel": "VB2",
    "plan_da": true
   },
   {
    "id": "0fpodu3uvthbowtib2di",
    "plan": "solothurn",
-   "x": 1467.2,
-   "y": 341.0,
+   "x": 1482.7,
+   "y": 375.8,
    "text": "sauberes Gleis ins Nichts",
    "abgedeckt": true,
    "regeln": [
+    "G6",
+    "ME",
     "MX",
-    "VA1",
-    "W2"
+    "MZ",
+    "VA1"
    ],
-   "naechster": 18.8,
+   "naechster": 15.4,
    "naechste_regel": "MX",
    "plan_da": true
   },
@@ -182,7 +185,7 @@
   {
    "id": "7ma7j244xvt4xey2r2hg",
    "plan": "solothurn",
-   "x": 1624.2,
+   "x": 1657.5,
    "y": 192.8,
    "text": "Fenster bis Abzweig",
    "abgedeckt": true,
@@ -261,18 +264,19 @@
   {
    "id": "ce8rilwzf07i0nr6qe0x",
    "plan": "solothurn",
-   "x": 1422.3,
-   "y": 379.3,
+   "x": 1452.4,
+   "y": 390.1,
    "text": "90 Grad",
    "abgedeckt": true,
    "regeln": [
     "G6",
-    "MP",
+    "ME",
     "MX",
-    "VB2",
-    "W2"
+    "MZ",
+    "VA1",
+    "VB2"
    ],
-   "naechster": 5.0,
+   "naechster": 1.0,
    "naechste_regel": "G6",
    "plan_da": true
   },
@@ -367,7 +371,7 @@
    "text": "Gleis nicht mehr lang (Pfeil)",
    "abgedeckt": false,
    "regeln": [],
-   "naechster": 125.7,
+   "naechster": 106.6,
    "naechste_regel": "VB1",
    "plan_da": true
   },
@@ -560,8 +564,8 @@
   {
    "id": "obvpbw7iesse9tor1zun",
    "plan": "solothurn",
-   "x": 1121.5,
-   "y": 404.7,
+   "x": 1133.6,
+   "y": 415.5,
    "text": "90 Grad Knick?",
    "abgedeckt": true,
    "regeln": [
@@ -628,19 +632,19 @@
   {
    "id": "t6x02b9nuadgwrwfht9z",
    "plan": "solothurn",
-   "x": 1453.3,
-   "y": 348.4,
+   "x": 1468.8,
+   "y": 383.2,
    "text": "Kreuzung in OSM?",
    "abgedeckt": true,
    "regeln": [
     "G6",
-    "MP",
+    "ME",
     "MX",
+    "MZ",
     "VA1",
-    "VB2",
-    "W2"
+    "VB2"
    ],
-   "naechster": 5.3,
+   "naechster": 1.8,
    "naechste_regel": "MX",
    "plan_da": true
   },
@@ -688,8 +692,8 @@
   {
    "id": "uyuegakpencttc2e6isq",
    "plan": "solothurn",
-   "x": 1155.3,
-   "y": 494.1,
+   "x": 1167.4,
+   "y": 504.9,
    "text": "Perron auf Gleis, gerader Knubbel",
    "abgedeckt": true,
    "regeln": [
@@ -697,7 +701,7 @@
     "VB2",
     "VD2"
    ],
-   "naechster": 2.3,
+   "naechster": 2.2,
    "naechste_regel": "VD2",
    "plan_da": true
   },
@@ -752,8 +756,8 @@
   {
    "id": "xke0q8que3hufliwbag9",
    "plan": "solothurn",
-   "x": 1301.9,
-   "y": 224.3,
+   "x": 1314.0,
+   "y": 235.1,
    "text": "Zwischengerade, doppelter Abstand",
    "abgedeckt": true,
    "regeln": [
@@ -780,16 +784,14 @@
   {
    "id": "zcz3v5yhncmbd21obybz",
    "plan": "solothurn",
-   "x": 848.0,
-   "y": 253.1,
+   "x": 863.2,
+   "y": 270.4,
    "text": "nicht verbunden",
    "abgedeckt": true,
    "regeln": [
-    "G7",
-    "MX",
-    "VB2"
+    "G7"
    ],
-   "naechster": 18.0,
+   "naechster": 21.7,
    "naechste_regel": "G7",
    "plan_da": true
   }

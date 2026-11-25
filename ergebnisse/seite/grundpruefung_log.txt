@@ -1,5 +1,7 @@
-Grundprüfung: {'GS': 174, 'GG': 174, 'GQ': 50, 'GP': 54, 'GW': 24, 'GT': 39, 'GE': 152} – 147 Pläne
+Grundprüfung: {'GS': 157, 'GG': 151, 'GQ': 46, 'GP': 54, 'GW': 24, 'GT': 39, 'GE': 153} – 147 Pläne
 NEU aarau GT: 1 -> 3
+NEU neuchatel GS: 0 -> 1
+NEU neuchatel GE: 0 -> 3
 NEU olten GS: 1 -> 16
 NEU olten GG: 13 -> 19
 NEU olten GP: 1 -> 2
@@ -10,3 +12,5 @@ NEU region GG: 22 -> 29
 NEU region GP: 3 -> 4
 NEU region GW: 3 -> 19
 NEU region GE: 27 -> 44
+NEU region_ne GE: 3 -> 4
+NEU szu__zurich_giesshubel GT: 0 -> 1

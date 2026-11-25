@@ -5,11 +5,12 @@
 | Plan | HT1 | HT2 | HT3 | HT4 | HT5 | Summe |
 |---|---|---|---|---|---|---|
 | olten | **24** (Basis 10) | **25** (Basis 21) | 1 ↓5 | 0 ↓4 | **220** (Basis 165) | 270 |
-| solothurn | 2 | 1 | · | · | 14 | 17 |
-| szu__zurich_giesshubel | · | 8 | · | 1 | 4 | 13 |
+| solothurn | 2 | 0 ↓1 | · | · | **15** (Basis 14) | 17 |
+| neuchatel | **2** (Basis 0) | · | **1** (Basis 0) | · | **12** (Basis 0) | 15 |
 | rothrist | 2 | 4 | · | · | 5 | 11 |
 | aarau | 3 | 3 ↓4 | · | 1 | 3 ↓9 | 10 |
 | konolfingen | · | 2 | · | · | 6 | 8 |
+| szu__zurich_giesshubel | **1** (Basis 0) | 3 ↓8 | · | 0 ↓1 | 2 ↓4 | 6 |
 | mob__chamby | 1 | 1 | · | 1 | 1 | 4 |
 | vereina__klosters_platz | 3 | · | · | · | 1 | 4 |
 | mob__zweisimmen | · | 3 | · | · | · | 3 |
@@ -27,7 +28,6 @@
 | mob__montreux | · | 1 | · | · | · | 1 |
 | mob__rossiniere | · | · | · | · | 1 | 1 |
 | szu__uetliberg | · | 1 | · | · | · | 1 |
-| szu__zurich_saalsporthalle | · | 1 | · | · | · | 1 |
 | aarburg_oftringen | · | · | · | · | · | 0 |
 | auvernier | · | · | · | · | · | 0 |
 | avenches | · | · | · | · | · | 0 |
@@ -108,7 +108,6 @@
 | muntelier_lowenberg | · | · | · | · | · | 0 |
 | muntschemier | · | · | · | · | · | 0 |
 | murten | · | · | · | · | · | 0 |
-| neuchatel | · | · | · | · | · | 0 |
 | neuchatel_vauseyon | · | · | · | · | · | 0 |
 | noiraigue | · | · | · | · | · | 0 |
 | olten_hammer | · | · | · | · | · | 0 |
@@ -126,6 +125,7 @@
 | szu__ringlikon | · | · | · | · | · | 0 |
 | szu__zurich_binz | · | · | · | · | · | 0 |
 | szu__zurich_friesenberg | · | · | · | · | · | 0 |
+| szu__zurich_saalsporthalle | · | 0 ↓1 | · | · | · | 0 |
 | szu__zurich_schweighof | · | · | · | · | · | 0 |
 | szu__zurich_selnau | · | · | · | · | · | 0 |
 | travers | · | · | · | · | · | 0 |
@@ -149,6 +149,24 @@ Regeln: HT1 = OSM-Weiche am Hauptgleis ohne Abzweig im Plan; HT2 = Abzweig am Ha
 
 ## NEUE Befunde
 
+- **neuchatel** HT1: 0 → 2
+  - 783.0/134.0: OSM-Weiche 416783500 ohne Abzweig im Plan
+  - 1031.3/182.0: OSM-Weiche 11343288468 ohne Abzweig im Plan
+- **neuchatel** HT3: 0 → 1
+  - 536.9/158.0: Gleis (Way 35567918) im Plan an Knoten 360421649 angebunden, in OSM nicht
+- **neuchatel** HT5: 0 → 12
+  - 1252.3/194.0: Fahrweg Abgang 210 Biel (249162197) ↔ Gl. A44 im Plan, nicht in OSM
+  - 1252.3/218.0: Fahrweg Abgang 220 Ins (416783525) ↔ Gl. A44 im Plan, nicht in OSM
+  - 1111.0/218.0: Fahrweg Abgang 210 Biel (249162197) ↔ Gl. 2 in OSM, fehlt im Plan
+  - 1111.0/170.0: Fahrweg Abgang 210 Biel (249162197) ↔ Gl. 6 in OSM, fehlt im Plan
+  - 1098.5/158.0: Fahrweg Abgang 210 Biel (249162197) ↔ Gl. 7 in OSM, fehlt im Plan
+  - 1111.0/206.0: Fahrweg Abgang 210 Biel (9608269774) ↔ Gl. 2 in OSM, fehlt im Plan
+  - 1111.0/158.0: Fahrweg Abgang 210 Biel (9608269774) ↔ Gl. 6 in OSM, fehlt im Plan
+  - 1098.5/146.0: Fahrweg Abgang 210 Biel (9608269774) ↔ Gl. 7 in OSM, fehlt im Plan
+  - 379.6/170.0: Fahrweg Abgang 210 Yverdon (415649794) ↔ Gl. A15 in OSM, fehlt im Plan
+  - 1111.0/242.0: Fahrweg Abgang 220 Ins (416783525) ↔ Gl. 2 in OSM, fehlt im Plan
+  - 1111.0/194.0: Fahrweg Abgang 220 Ins (416783525) ↔ Gl. 6 in OSM, fehlt im Plan
+  - 1098.5/182.0: Fahrweg Abgang 220 Ins (416783525) ↔ Gl. 7 in OSM, fehlt im Plan
 - **olten** HT1: 10 → 24
   - 1011.9/374.0: OSM-Weiche 635802261 ohne Abzweig im Plan
   - 1011.3/374.0: OSM-Weiche 635802246 ohne Abzweig im Plan
@@ -421,3 +439,21 @@ Regeln: HT1 = OSM-Weiche am Hauptgleis ohne Abzweig im Plan; HT2 = Abzweig am Ha
   - 575.6/362.0: Fahrweg Gl. 388 ↔ Gleisende 9233862947 in OSM, fehlt im Plan
   - 535.1/362.0: Fahrweg Gl. 389 ↔ Gleisende 9233862947 in OSM, fehlt im Plan
   - 569.9/374.0: Fahrweg Gl. 390 ↔ Gleisende 9233862947 in OSM, fehlt im Plan
+- **solothurn** HT5: 14 → 15
+  - 1260.4/222.6: Fahrweg Abgang 410 Oensingen (630418379) ↔ Abgang 415 Lyss (9237893722) in OSM, fehlt im Plan
+  - 1260.4/222.6: Fahrweg Abgang 410 Oensingen (630418379) ↔ Gl. 433 in OSM, fehlt im Plan
+  - 1260.4/210.6: Fahrweg Abgang 410 Oensingen (80923172) ↔ Abgang 415 Lyss (9237893722) in OSM, fehlt im Plan
+  - 1260.4/210.6: Fahrweg Abgang 410 Oensingen (80923172) ↔ Gl. 433 in OSM, fehlt im Plan
+  - 1260.4/234.6: Fahrweg Abgang 410 Oensingen (9237850152) ↔ Abgang 415 Lyss (9237893722) in OSM, fehlt im Plan
+  - 1260.4/234.6: Fahrweg Abgang 410 Oensingen (9237850152) ↔ Gl. 433 in OSM, fehlt im Plan
+  - 983.1/210.6: Fahrweg Abgang 415 Lyss (9237893722) ↔ Gl. 1 in OSM, fehlt im Plan
+  - 970.1/270.6: Fahrweg Abgang 415 Lyss (9237893722) ↔ Gl. 3 in OSM, fehlt im Plan
+  - 1260.4/222.6: Fahrweg Abgang 415 Lyss (9237893722) ↔ Gl. 332 in OSM, fehlt im Plan
+  - 1246.6/234.6: Fahrweg Abgang 415 Lyss (9237893722) ↔ Gl. 343 in OSM, fehlt im Plan
+  - 1209.1/210.6: Fahrweg Abgang 415 Lyss (9237893722) ↔ Gl. 351 in OSM, fehlt im Plan
+  - 1155.7/234.6: Fahrweg Abgang 415 Lyss (9237893722) ↔ Gl. 362 in OSM, fehlt im Plan
+  - 864.7/260.7: Fahrweg Abgang 415 Lyss (9237893722) ↔ Gl. 433 in OSM, fehlt im Plan
+  - 1023.4/294.6: Fahrweg Abgang 415 Lyss (9237893722) ↔ Gl. 5 in OSM, fehlt im Plan
+  - 1023.4/306.6: Fahrweg Abgang 415 Lyss (9237893722) ↔ Gl. 6 in OSM, fehlt im Plan
+- **szu__zurich_giesshubel** HT1: 0 → 1
+  - 392.0/224.0: OSM-Weiche 1263316902 ohne Abzweig im Plan

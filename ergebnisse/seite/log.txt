@@ -2,11 +2,11 @@
 /home/runner/work/topo-daten/topo-daten/spurplan/werkstatt/olten/feedback/bauen.py:195: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
   _HEUTE = datetime.datetime.utcnow().strftime("%d.%m.%Y")
 18 Einträge
-index.html 2049 KB, 149 Pläne
+index.html 2047 KB, 149 Pläne
 21 Hinweise, 21 Ausschnitte
 Hinweis-Abdeckung: 30/57 (Befund < 40 px, ohne G2)
-✓ 0bw9 solothurn                    G6,MX,VB1,VB2,W1,W2       19.2  Gleis nach unten, Knick, über anderen Gleisen nach oben
-✓ 0fpo solothurn                    MX,VA1,W2                 18.8  sauberes Gleis ins Nichts
+✓ 0bw9 solothurn                    G6,ME,MX,VB1,VB2,W1,W2    17.8  Gleis nach unten, Knick, über anderen Gleisen nach oben
+✓ 0fpo solothurn                    G6,ME,MX,MZ,VA1           15.4  sauberes Gleis ins Nichts
 ✓ 0k4j region                       G5                        22.8  Eppenbergtunnel Weichen/Stummel
 ✓ 2vxh mob__chamby                  VD1                       23.2  Perron und Gleis verdreht, Mittelperron?
 ✓ 33fs konolfingen                  MQ                        15.6  Gleis unter Gleis, sehr steil
@@ -23,14 +23,14 @@ Hinweis-Abdeckung: 30/57 (Befund < 40 px, ohne G2)
 · afkt mob__montreux                -                         66.1  Mindestabstand
 ✓ b3j5 mob__zweisimmen              VA1                        4.8  DKW?
 · bhlv aarau                        -                         72.3  4/5 Hauptachsen gerade
-✓ ce8r solothurn                    G6,MP,MX,VB2,W2            5.0  90 Grad
+✓ ce8r solothurn                    G6,ME,MX,MZ,VA1,VB2        1.0  90 Grad
 · cw2j aarau                        -                        182.6  Tunnel nur ein Gleis unter den anderen durch
 · dmr7 region                       -                         45.3  Weichen sehen wie DKW aus
 ✓ es9y mob__montreux                MQK,MX,VA2,VB2            12.7  Perronnummern braun Meterspur
 ✓ ezxj konolfingen                  Z1                        15.8  grünes Perron?
 ✓ f3mp olten                        MX,VB2,VD1                 9.4  nicht ausgerundeter Knick
 · fmlk aarau                        -                         52.0  Zwischengeraden
-· foiy solothurn                    -                        125.7  Gleis nicht mehr lang (Pfeil)
+· foiy solothurn                    -                        106.6  Gleis nicht mehr lang (Pfeil)
 · fuyq vereina__sagliains_sasslatsch -                            -  fettes Gleis endet an Perron/Autoverlad
 · i06s mob__glion                   -                         87.6  Symbol Schiebebühne
 · j57v region                       -                         52.7  Knubbel vom geraden Strang
@@ -50,33 +50,31 @@ Hinweis-Abdeckung: 30/57 (Befund < 40 px, ohne G2)
 · qotw vereina__klosters_platz      -                         83.3  Mittelperron zwischen 2 und 3
 ✓ r9xv aarau                        VD1                       38.7  Stummel korrekt?
 · rap4 mob__le_tremblex             -                            -  Nebengleis nicht fett
-✓ t6x0 solothurn                    G6,MP,MX,VA1,VB2,W2        5.3  Kreuzung in OSM?
+✓ t6x0 solothurn                    G6,ME,MX,MZ,VA1,VB2        1.8  Kreuzung in OSM?
 ✓ tnvp konolfingen                  G7,MX,VB2,VC1              2.7  Knubbel kurz gerade
 · ttv8 konolfingen                  -                         55.3  DKW?
 · u13h mob__zweisimmen              -                         84.0  Stumpen Normalspur?
-✓ uyue solothurn                    G6,VB2,VD2                 2.3  Perron auf Gleis, gerader Knubbel
+✓ uyue solothurn                    G6,VB2,VD2                 2.2  Perron auf Gleis, gerader Knubbel
 · v2w8 mob__glion                   -                        109.8  Riesenabstand Schiebebühne
 · vnyq aarau                        -                         78.6  Zwischengerade
 · wvrp mob__zweisimmen              -                         48.5  kreuzt das andere oder biegt von DKW falsch ab
 · wyu2 mob__glion                   -                        154.0  dieser Perron?
 ✓ xke0 solothurn                    MZ                        25.3  Zwischengerade, doppelter Abstand
 ✓ z6f2 konolfingen                  MX                        21.0  DKW?
-✓ zcz3 solothurn                    G7,MX,VB2                 18.0  nicht verbunden
-index.html 2065 KB, 150 Pläne
+✓ zcz3 solothurn                    G7                        21.7  nicht verbunden
+index.html 2054 KB, 150 Pläne
 region                       veröffentlicht                      7 Stellen  Fehler? Topologie  G2 24→23, G6 7→3, G7 5→18, G8 1→0, GE 27→44, GG 22→29, GP 3→4, GQ 2→1, GS 8→23, GW 3→19, T7 16→13 (Wunsch-Summe -24)
+region_ne                    veröffentlicht                     67 Stellen  Fehler? Topologie  G2 31→29, G6 3→1, G7 0→3, GE 3→4, T7 5→4 (Wunsch-Summe -8)
+region_szu                   veröffentlicht                      4 Stellen  vermutlich besser  G2 2→5, GE 12→11, GG 14→3, GQ 8→5, GS 12→5, T7 0→1, W53 7→3 (Wunsch-Summe -16)
+solothurn                    veröffentlicht                     11 Stellen  Fehler? Topologie  G6 7→8, G7 2→1, GS 12→8, T7 3→1, VB2 13→9, VD1 7→6 (Wunsch-Summe -16)
 olten                        bestätigt 2026-11-08               15 Stellen  Fehler? Topologie  G2 3→4, G7 2→8, G8 0→1, GE 0→14, GG 13→19, GP 1→2, GQ 1→0, GS 1→16, GW 0→4, T7 24→14, VB1 14→23, VB2 27→24, VC1 7→1, VD1 10→16, W53 3→7 (Wunsch-Summe -56)
-olten_hammer                 bestätigt 2026-11-07               13 Stellen  vermutlich besser  W56 4→2, W59 4→1 (Wunsch-Summe -6)
-aarburg_oftringen            bestätigt 2026-11-08                2 Stellen  vermutlich besser  G2 1→0, VB2 1→0
-rothrist                     Archivbeginn (Abnahme 2026-10-29)   17 Stellen  vermutlich besser  G2 2→1, G6 1→0, VB2 6→5, W56 4→1, W59 10→3 (Wunsch-Summe -9)
-zofingen                     bestätigt 2026-11-08                9 Stellen  vermutlich besser  G2 3→0, VA2 2→0, VB1 3→1
-dulliken                     bestätigt 2026-11-07                2 Stellen  gleichwertig  
-daniken                      bestätigt 2026-11-07                9 Stellen  vermutlich besser  VB1 3→2
-schonenwerd                  bestätigt 2026-11-08                2 Stellen  gleichwertig  
+olten_hammer                 bestätigt 2026-11-07               12 Stellen  vermutlich besser  W56 4→2, W59 4→1 (Wunsch-Summe -6)
+rothrist                     Archivbeginn (Abnahme 2026-10-29)   17 Stellen  vermutlich besser  G2 0→1, G6 1→0, VB2 6→5, W56 4→1, W59 10→3 (Wunsch-Summe -9)
+zofingen                     bestätigt 2026-11-08                3 Stellen  vermutlich besser  VA2 2→0, VB1 3→1
 aarau                        veröffentlicht                     10 Stellen  Fehler? Topologie  G7 1→2, GG 6→4, GS 3→1, VB2 4→3, VD1 7→6
-tecknau                      bestätigt 2026-11-07               18 Stellen  schlechter?  G2 0→2, W56 1→0, W59 3→2 (Wunsch-Summe -3)
+tecknau                      bestätigt 2026-11-07               14 Stellen  vermutlich besser  W56 1→0, W59 3→2 (Wunsch-Summe -3)
 laufelfingen                 bestätigt 2026-11-07                0 Stellen  gleichwertig  
-wangen_bei_olten             bestätigt 2026-11-07                4 Stellen  vermutlich besser  VB2 1→0
-neuchatel                    bestätigt 2026-11-08                2 Stellen  vermutlich besser  GG 3→1, VA2 4→0, VC1 2→0, VD1 3→1
+neuchatel                    bestätigt 2026-11-08               16 Stellen  Fehler? Topologie  G2 4→5, G6 1→0, G7 0→1, GE 0→3, GG 3→1, GS 0→1, T7 3→2, VA2 4→0, VB1 0→3, VC1 2→1, VD1 3→1 (Wunsch-Summe -8)
 saint_blaise_lac             Archivbeginn (Abnahme 2026-10-15)    1 Stellen  schlechter?  G2 0→1, T7 4→3 (Wunsch-Summe -8) · OSM VD1 1 (kein Alt-Stand)
 marin_epagnier               Archivbeginn (Abnahme 2026-10-15)    1 Stellen  gleichwertig  OSM ok (kein Alt-Stand)
 zihlbruecke                  Archivbeginn (Abnahme 2026-10-15)    4 Stellen  gleichwertig  OSM ok (kein Alt-Stand)
@@ -124,7 +122,6 @@ travers                      Archivbeginn (Abnahme 2026-10-15)    9 Stellen  ver
 la_presta_mines_d_asphalte   Archivbeginn (Abnahme 2026-10-19)    0 Stellen  gleichwertig  OSM ok (kein Alt-Stand)
 couvet                       Archivbeginn (Abnahme 2026-10-20)    1 Stellen  gleichwertig  OSM VD1 1 (kein Alt-Stand)
 motiers                      Archivbeginn (Abnahme 2026-10-20)    1 Stellen  gleichwertig  OSM VD1 1 (kein Alt-Stand)
-neuchatel_vauseyon           Archivbeginn (Abnahme 2026-10-29)    5 Stellen  vermutlich besser  G2 0→1, T7 1→0, VB2 1→0 (Wunsch-Summe -8)
 les_deurres                  Archivbeginn (Abnahme 2026-10-20)    0 Stellen  gleichwertig  OSM ok (kein Alt-Stand)
 corcelles_peseux             Archivbeginn (Abnahme 2026-10-15)    0 Stellen  gleichwertig  OSM ok (kein Alt-Stand)
 chambrelien                  Archivbeginn (Abnahme 2026-10-20)    5 Stellen  schlechter?  G2 1→0, T7 0→1 (Wunsch-Summe +8) · OSM VA1 1 (kein Alt-Stand)/home/runner/work/topo-daten/topo-daten/spurplan/code/alle_plaene_pruefen.py:231: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
@@ -132,5 +129,7 @@ chambrelien                  Archivbeginn (Abnahme 2026-10-20)    5 Stellen  sch
 
 les_geneveys_sur_coffrane    Archivbeginn (Abnahme 2026-10-19)    1 Stellen  gleichwertig  OSM VD1 1 (kein Alt-Stand)
 les_hauts_geneveys           Archivbeginn (Abnahme 2026-10-20)    2 Stellen  gleichwertig  OSM VD1 1 (kein Alt-Stand)
-Regression: 148 Pläne, 53 geändert {'Fehler? Topologie': 3, 'vermutlich besser': 10, 'gleichwertig': 31, 'schlechter?': 9}
+szu__zurich_giesshubel       veröffentlicht                      4 Stellen  Fehler? Topologie  G2 3→2, G8 1→0, GE 6→4, GG 16→4, GQ 7→6, GS 10→3, T7 0→1, VA1 0→1, VB1 1→2, VB2 9→6, VC1 3→0, VD1 22→5, W53 4→0 (Wunsch-Summe -16)
+szu__zurich_saalsporthalle   veröffentlicht                     11 Stellen  Fehler? Topologie  G2 1→0, T7 1→0, VB2 1→0, VD1 0→1 (Wunsch-Summe -8)
+Regression: 148 Pläne, 52 geändert {'Fehler? Topologie': 8, 'vermutlich besser': 7, 'schlechter?': 8, 'gleichwertig': 29}
 Ausnahmen: 920 Einträge, 125 Orte: {'Schalter': 358, 'Ortswissen': 245, 'Geometrie': 192, 'Typvorlage': 125} | ohne Grund: 0
