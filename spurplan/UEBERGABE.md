@@ -1066,3 +1066,5 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   (yard, ab DKW 1263338286 an der Südspitze des Depots, mit 110679006/302542007) – liegt in OSM nördlich der 712 (x −132…−150, y −139…−166 m),
   gehört also oben ins Depot; im Plan taucht es als lange Schräge unter X ab und kreuzt alles (Daniel 25.11.: «scheinbar über die anderen hinweg»). Der Knick der Saalsporthalle-Gleise nach unten kommt erst danach (links), unabhängig davon.
   Ursache im Code bleibt: Kette 712-oben–713 hebt das obere 712-Gleis auf die 713-Ebene; Ziel: 712 beide Gleise unten, 713/717/Depot darüber.
+- 25.11. 06:03 **Okay Daniel für die Basen:** (1) GE-Basis setzen, **Blaupausen (blaupause, blaupause2) bei GE ausnehmen** («arbiträre
+  Vorlagen» – im Code ausnehmen, nicht nur in der Basis); (2) HT-Basis neu (olten HT4 4, Giesshübel HT2 8 / HT5 4); (3) Prüfstand-Basis neu (ab60).
