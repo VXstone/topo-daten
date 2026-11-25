@@ -1,4 +1,4 @@
-# Veraltet gegen Code-Stand 93d30c3
+# Veraltet gegen Code-Stand eda41ac
 
 - basel: fest (zusatz_plaene.json), Commit -
 - bern: fest (zusatz_plaene.json), Commit -

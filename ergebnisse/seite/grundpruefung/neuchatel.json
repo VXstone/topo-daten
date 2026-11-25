@@ -1,44 +1,26 @@
 {
  "ebene": 24.0,
  "zaehl": {
-  "GS": 1,
+  "GS": 0,
   "GG": 1,
   "GQ": 0,
   "GP": 0,
   "GW": 0,
-  "GT": 0,
-  "GE": 3
+  "GT": 1,
+  "GE": 0
  },
  "befunde": [
   {
-   "regel": "GS",
-   "x": 540.5,
-   "y": 159.3,
-   "text": "Gleise kreuzen sich (71°) ohne DKW, Kreuzung oder Niveautrennung"
-  },
-  {
    "regel": "GG",
-   "x": 880.9,
+   "x": 898.9,
    "y": 206.0,
    "text": "zwei Gleise 21 px aufeinander"
   },
   {
-   "regel": "GE",
-   "x": 801.0,
-   "y": 134.0,
-   "text": "loses Gleisende, Stück 132 px"
-  },
-  {
-   "regel": "GE",
-   "x": 746.6,
-   "y": 230.0,
-   "text": "loses Gleisende, Stück 45 px"
-  },
-  {
-   "regel": "GE",
-   "x": 757.0,
-   "y": 230.0,
-   "text": "loses Gleisende, Stück 39 px"
+   "regel": "GT",
+   "x": 461.9,
+   "y": 194.0,
+   "text": "Treppe, Versatz 27.7 px"
   }
  ]
 }

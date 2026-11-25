@@ -44,20 +44,20 @@
   "W55": 5
  },
  {
-  "key": "olten",
-  "gruppe": "Olten 1 · Knoten Olten",
-  "summe": 51,
-  "W53": 7,
-  "W56": 3,
-  "W59": 0
- },
- {
   "key": "basel",
   "gruppe": "Grosse Knoten",
   "summe": 48,
   "W53": 7,
   "W56": 2,
   "W59": 3
+ },
+ {
+  "key": "olten",
+  "gruppe": "Olten 1 · Knoten Olten",
+  "summe": 27,
+  "W53": 3,
+  "W56": 3,
+  "W59": 0
  },
  {
   "key": "schonenwerd",

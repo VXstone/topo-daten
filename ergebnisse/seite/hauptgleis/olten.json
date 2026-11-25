@@ -1,383 +1,105 @@
 {
  "zaehl": {
-  "HT1": 24,
-  "HT2": 25,
-  "HT3": 1,
-  "HT4": 0,
-  "HT5": 220
+  "HT1": 10,
+  "HT2": 21,
+  "HT3": 5,
+  "HT4": 4,
+  "HT5": 165
  },
  "befunde": [
   {
    "regel": "HT1",
-   "x": 1011.9,
-   "y": 374.0,
-   "text": "OSM-Weiche 635802261 ohne Abzweig im Plan",
-   "osm": 635802261
-  },
-  {
-   "regel": "HT1",
-   "x": 1011.3,
-   "y": 374.0,
-   "text": "OSM-Weiche 635802246 ohne Abzweig im Plan",
-   "osm": 635802246
-  },
-  {
-   "regel": "HT1",
-   "x": 458.5,
-   "y": 374.0,
+   "x": 430.8,
+   "y": 350.0,
    "text": "OSM-Weiche 635800896 ohne Abzweig im Plan",
    "osm": 635800896
   },
   {
    "regel": "HT1",
-   "x": 508.3,
-   "y": 350.0,
+   "x": 480.6,
+   "y": 326.0,
    "text": "OSM-Weiche 635800902 ohne Abzweig im Plan",
    "osm": 635800902
   },
   {
    "regel": "HT1",
-   "x": 1043.8,
+   "x": 799.6,
+   "y": 326.0,
+   "text": "OSM-Weiche 635801245 ohne Abzweig im Plan",
+   "osm": 635801245
+  },
+  {
+   "regel": "HT1",
+   "x": 956.7,
    "y": 350.0,
-   "text": "OSM-Weiche 635802361 ohne Abzweig im Plan",
-   "osm": 635802361
-  },
-  {
-   "regel": "HT1",
-   "x": 466.5,
-   "y": 158.0,
-   "text": "OSM-Weiche 635800831 ohne Abzweig im Plan",
-   "osm": 635800831
-  },
-  {
-   "regel": "HT1",
-   "x": 465.5,
-   "y": 158.0,
-   "text": "OSM-Weiche 635800855 ohne Abzweig im Plan",
-   "osm": 635800855
-  },
-  {
-   "regel": "HT1",
-   "x": 794.9,
-   "y": 302.0,
-   "text": "OSM-Weiche 635801173 ohne Abzweig im Plan",
-   "osm": 635801173
-  },
-  {
-   "regel": "HT1",
-   "x": 885.6,
-   "y": 350.0,
-   "text": "OSM-Weiche 635801328 ohne Abzweig im Plan",
-   "osm": 635801328
-  },
-  {
-   "regel": "HT1",
-   "x": 1081.1,
-   "y": 182.0,
-   "text": "OSM-Weiche 635802407 ohne Abzweig im Plan",
-   "osm": 635802407
-  },
-  {
-   "regel": "HT1",
-   "x": 411.7,
-   "y": 374.0,
-   "text": "OSM-Weiche 635800864 ohne Abzweig im Plan",
-   "osm": 635800864
-  },
-  {
-   "regel": "HT1",
-   "x": 397.7,
-   "y": 182.0,
-   "text": "OSM-Weiche 635800808 ohne Abzweig im Plan",
-   "osm": 635800808
-  },
-  {
-   "regel": "HT1",
-   "x": 964.2,
-   "y": 374.0,
    "text": "OSM-Weiche 635802164 ohne Abzweig im Plan",
    "osm": 635802164
   },
   {
    "regel": "HT1",
-   "x": 817.0,
-   "y": 159.6,
+   "x": 382.1,
+   "y": 302.0,
+   "text": "OSM-Weiche 635800871 ohne Abzweig im Plan",
+   "osm": 635800871
+  },
+  {
+   "regel": "HT1",
+   "x": 915.6,
+   "y": 182.0,
+   "text": "OSM-Weiche 635801598 ohne Abzweig im Plan",
+   "osm": 635801598
+  },
+  {
+   "regel": "HT1",
+   "x": 800.1,
+   "y": 158.0,
    "text": "OSM-Weiche 635801196 ohne Abzweig im Plan",
    "osm": 635801196
   },
   {
    "regel": "HT1",
-   "x": 919.3,
-   "y": 182.0,
-   "text": "OSM-Weiche 635801600 ohne Abzweig im Plan",
-   "osm": 635801600
-  },
-  {
-   "regel": "HT1",
-   "x": 793.7,
-   "y": 158.0,
-   "text": "OSM-Weiche 2068970953 ohne Abzweig im Plan",
-   "osm": 2068970953
-  },
-  {
-   "regel": "HT1",
-   "x": 1002.8,
+   "x": 1263.7,
    "y": 230.0,
-   "text": "OSM-Weiche 2077484615 ohne Abzweig im Plan",
-   "osm": 2077484615
+   "text": "OSM-Weiche 635802715 ohne Abzweig im Plan",
+   "osm": 635802715
   },
   {
    "regel": "HT1",
-   "x": 1114.1,
-   "y": 230.0,
-   "text": "OSM-Weiche 635802397 ohne Abzweig im Plan",
-   "osm": 635802397
-  },
-  {
-   "regel": "HT1",
-   "x": 437.7,
-   "y": 182.0,
-   "text": "OSM-Weiche 635800825 ohne Abzweig im Plan",
-   "osm": 635800825
-  },
-  {
-   "regel": "HT1",
-   "x": 1135.5,
-   "y": 278.0,
-   "text": "OSM-Weiche 6360515787 ohne Abzweig im Plan",
-   "osm": 6360515787
-  },
-  {
-   "regel": "HT1",
-   "x": 1145.9,
+   "x": 1117.1,
    "y": 206.0,
    "text": "OSM-Weiche 2696673789 ohne Abzweig im Plan",
    "osm": 2696673789
   },
   {
    "regel": "HT1",
-   "x": 1178.1,
-   "y": 206.0,
-   "text": "OSM-Weiche 635802712 ohne Abzweig im Plan",
-   "osm": 635802712
-  },
-  {
-   "regel": "HT1",
-   "x": 1823.9,
-   "y": 182.0,
-   "text": "OSM-Weiche 635804015 ohne Abzweig im Plan",
-   "osm": 635804015
-  },
-  {
-   "regel": "HT1",
-   "x": 1770.4,
-   "y": 374.0,
+   "x": 1655.3,
+   "y": 350.0,
    "text": "OSM-Weiche 635804037 ohne Abzweig im Plan",
    "osm": 635804037
   },
   {
    "regel": "HT2",
-   "x": 1219.7,
-   "y": 206.0,
-   "text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
-   "ways": [
-    136910732,
-    181147974,
-    692444511,
-    692444534,
-    1003002464,
-    1331908787
-   ]
-  },
-  {
-   "regel": "HT2",
-   "x": 1191.2,
-   "y": 374.0,
-   "text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
-   "ways": [
-    23257979,
-    1331904822,
-    1331908788
-   ]
-  },
-  {
-   "regel": "HT2",
-   "x": 1612.3,
-   "y": 374.0,
-   "text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
-   "ways": [
-    50062969,
-    1331908788,
-    1332412905
-   ]
-  },
-  {
-   "regel": "HT2",
-   "x": 1133.8,
-   "y": 350.0,
+   "x": 956.9,
+   "y": 314.0,
    "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
    "ways": [
-    50062884,
-    50062938,
-    50063009,
-    50063026,
-    50063027,
-    173173290,
-    230265754,
-    378516511,
-    1331904821,
-    1331908789
+    378517711,
+    380867859
    ]
   },
   {
    "regel": "HT2",
-   "x": 1182.6,
-   "y": 277.8,
-   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
-   "ways": [
-    50063009,
-    1331904821,
-    1331908789
-   ]
-  },
-  {
-   "regel": "HT2",
-   "x": 1187.1,
-   "y": 269.9,
+   "x": 1697.1,
+   "y": 206.0,
    "text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
    "ways": [
-    50063009,
-    195008187,
-    679251541,
-    679251542,
-    679251568,
-    1331904821,
-    1331908789,
-    1332417469
-   ]
-  },
-  {
-   "regel": "HT2",
-   "x": 1173.1,
-   "y": 294.2,
-   "text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
-   "ways": [
-    50063009,
-    195008185,
-    679251541,
-    679251566,
-    1264378757,
-    1331904821,
-    1331908789,
-    1332417467
-   ]
-  },
-  {
-   "regel": "HT2",
-   "x": 1159.1,
-   "y": 318.4,
-   "text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
-   "ways": [
-    50063009,
-    1331904821,
-    1331908789
-   ]
-  },
-  {
-   "regel": "HT2",
-   "x": 1657.3,
-   "y": 254.0,
-   "text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
-   "ways": [
-    26848404,
+    10057037,
+    48647165,
+    48647246,
     50062969,
-    136910717,
-    136910725,
-    181147974,
-    378516509,
-    692444534,
-    1331908787,
-    1331908789,
-    1332412904,
-    1332412905
-   ]
-  },
-  {
-   "regel": "HT2",
-   "x": 1674.0,
-   "y": 254.0,
-   "text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
-   "ways": [
-    26848404,
-    136910717,
-    136910725,
-    181147974,
-    378516509,
-    692444534,
-    1331908787,
-    1331908789,
-    1332412904
-   ]
-  },
-  {
-   "regel": "HT2",
-   "x": 1267.7,
-   "y": 206.0,
-   "text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
-   "ways": [
-    181147974,
-    692444534,
-    1003002464,
-    1331908787
-   ]
-  },
-  {
-   "regel": "HT2",
-   "x": 1587.7,
-   "y": 206.0,
-   "text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
-   "ways": [
-    26848404,
-    136910717,
-    136910725,
-    181147974,
-    378516509,
-    692444534,
-    1003002464,
-    1331908787,
-    1332412904
-   ]
-  },
-  {
-   "regel": "HT2",
-   "x": 1253.9,
-   "y": 182.0,
-   "text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
-   "ways": [
-    136910732,
-    692444509,
-    692444511,
-    692444531
-   ]
-  },
-  {
-   "regel": "HT2",
-   "x": 1698.7,
-   "y": 206.0,
-   "text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
-   "ways": [
-    50062969,
-    1332412905
-   ]
-  },
-  {
-   "regel": "HT2",
-   "x": 185.8,
-   "y": 278.0,
-   "text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
-   "ways": [
-    230265767,
-    396181909
+    1332412902,
+    1332412905,
+    1525494919
    ]
   },
   {
@@ -387,25 +109,122 @@
    "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
    "ways": [
     136910732,
-    692444511
+    679251571,
+    692444511,
+    1331908790
    ]
   },
   {
    "regel": "HT2",
-   "x": 1253.4,
-   "y": 254.0,
+   "x": 1225.7,
+   "y": 206.0,
    "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
    "ways": [
+    195008189,
+    196578224,
+    230265800,
+    378517710,
+    679251549,
+    679251561,
+    679258585,
+    702696959,
+    1003002464,
+    1332412914,
+    1332417468,
+    1461527813
+   ]
+  },
+  {
+   "regel": "HT2",
+   "x": 821.9,
+   "y": 168.0,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    195008189,
+    195008190,
+    196578217,
+    196578224,
+    230265798,
+    230265800,
+    378517710,
+    679251549,
+    679251561,
+    679258585,
+    702696957,
+    702696959,
+    904059591,
+    1003002464,
+    1332412914,
+    1332417468,
+    1461527813
+   ]
+  },
+  {
+   "regel": "HT2",
+   "x": 850.0,
+   "y": 182.0,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    195008189,
+    196578224,
+    230265800,
+    378517710,
+    679251549,
+    679251561,
+    679258585,
+    702696959,
+    1003002464,
+    1332412914,
+    1332417468,
+    1461527813
+   ]
+  },
+  {
+   "regel": "HT2",
+   "x": 863.9,
+   "y": 302.0,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    50062884,
+    50062938,
     50063009,
+    50063026,
+    50063027,
     136910717,
-    136910732,
-    692444511,
+    173173290,
+    230265754,
+    378516511,
+    1331904821,
     1331908789
    ]
   },
   {
+   "regel": "HT3",
+   "x": 944.0,
+   "y": 326.0,
+   "text": "Gleis (Way 378517711) im Plan an Knoten 635802175 angebunden, in OSM nicht",
+   "osm": 635802175,
+   "ways": [
+    378517711,
+    380867859
+   ]
+  },
+  {
    "regel": "HT2",
-   "x": 2243.0,
+   "x": 1068.0,
+   "y": 278.0,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    230265770,
+    378517711,
+    380867859,
+    679251564,
+    884583191
+   ]
+  },
+  {
+   "regel": "HT2",
+   "x": 2105.9,
    "y": 182.0,
    "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
    "ways": [
@@ -418,12 +237,17 @@
   },
   {
    "regel": "HT2",
-   "x": 2275.9,
+   "x": 2138.8,
    "y": 206.0,
    "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
    "ways": [
+    10057037,
+    48647165,
+    48647246,
     50062969,
-    1332412905
+    1332412902,
+    1332412905,
+    1525494919
    ]
   },
   {
@@ -432,14 +256,19 @@
    "y": 206.0,
    "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
    "ways": [
+    10057037,
+    48647165,
+    48647246,
     50062969,
-    1332412905
+    1332412902,
+    1332412905,
+    1525494919
    ]
   },
   {
    "regel": "HT3",
-   "x": 279.9,
-   "y": 278.0,
+   "x": 266.0,
+   "y": 254.0,
    "text": "Gleis (Way 230265767) im Plan an Knoten 9233845854 angebunden, in OSM nicht",
    "osm": 9233845854,
    "ways": [
@@ -448,21 +277,137 @@
    ]
   },
   {
+   "regel": "HT3",
+   "x": 1076.0,
+   "y": 206.0,
+   "text": "Gleis (Way 197523818) im Plan an Knoten 635802407 angebunden, in OSM nicht",
+   "osm": 635802407,
+   "ways": [
+    197523818,
+    380867858,
+    679251568
+   ]
+  },
+  {
+   "regel": "HT2",
+   "x": 965.9,
+   "y": 206.0,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    195008189,
+    196578221,
+    196578224,
+    196578227,
+    230265773,
+    230265798,
+    378309424,
+    378517711,
+    441319477,
+    702696956,
+    1331904823,
+    1332421867
+   ]
+  },
+  {
+   "regel": "HT2",
+   "x": 1178.0,
+   "y": 254.0,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    679251541,
+    679251566,
+    1264378757
+   ]
+  },
+  {
+   "regel": "HT2",
+   "x": 1203.9,
+   "y": 230.0,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    197523818,
+    380867858,
+    679251568
+   ]
+  },
+  {
+   "regel": "HT3",
+   "x": 907.0,
+   "y": 182.0,
+   "text": "Gleis (Way 195008189) im Plan an Knoten 635801600 angebunden, in OSM nicht",
+   "osm": 635801600,
+   "ways": [
+    195008189,
+    196578224,
+    230265800,
+    378517710,
+    679251549,
+    679251561,
+    679258585,
+    702696959,
+    1003002464,
+    1332412914,
+    1332417468,
+    1461527813
+   ]
+  },
+  {
+   "regel": "HT3",
+   "x": 394.8,
+   "y": 326.0,
+   "text": "Gleis (Way 50062881) im Plan an Knoten 635800864 angebunden, in OSM nicht",
+   "osm": 635800864,
+   "ways": [
+    50062881,
+    50062914,
+    207922000
+   ]
+  },
+  {
+   "regel": "HT2",
+   "x": 354.3,
+   "y": 326.0,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    50062881,
+    50062914,
+    137216807,
+    207922000,
+    207922003,
+    545852535
+   ]
+  },
+  {
    "regel": "HT2",
    "x": 132.0,
    "y": 326.0,
    "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
    "ways": [
+    50062881,
     50062914,
+    207922000
+   ]
+  },
+  {
+   "regel": "HT2",
+   "x": 157.9,
+   "y": 302.0,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
     57016111,
     137216806,
-    137216807,
-    173173291,
-    176323326,
-    207922001,
-    207922003,
-    230265780,
-    545852535
+    207922003
+   ]
+  },
+  {
+   "regel": "HT2",
+   "x": 166.0,
+   "y": 302.0,
+   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    57016111,
+    137216806,
+    207922003
    ]
   },
   {
@@ -471,9 +416,8 @@
    "y": 254.0,
    "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
    "ways": [
-    137216810,
-    195008192,
-    783711750
+    230265767,
+    396181909
    ]
   },
   {
@@ -482,7 +426,9 @@
    "y": 230.0,
    "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
    "ways": [
-    195008192
+    137216810,
+    195008192,
+    783711750
    ]
   },
   {
@@ -493,21 +439,60 @@
    "ways": [
     50062908,
     50062909,
+    50062913,
     195008184,
     230265758,
+    230265783,
     976727148
    ]
   },
   {
-   "regel": "HT2",
+   "regel": "HT4",
    "x": 430.4,
    "y": 164.0,
-   "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
-   "ways": []
+   "text": "Weiche 635800855: Äste (Ways 50062913, 195008184) im Plan auf der anderen Seite als in OSM",
+   "osm": 635800855,
+   "ways": [
+    50062913,
+    195008184
+   ]
+  },
+  {
+   "regel": "HT4",
+   "x": 438.8,
+   "y": 158.0,
+   "text": "Weiche 635800831: Äste (Ways 50062913, 57016119) im Plan auf der anderen Seite als in OSM",
+   "osm": 635800831,
+   "ways": [
+    50062913,
+    57016119
+   ]
+  },
+  {
+   "regel": "HT4",
+   "x": 996.2,
+   "y": 254.0,
+   "text": "Weiche 2077484616: Äste (Ways 197523816, 378517710) im Plan auf der anderen Seite als in OSM",
+   "osm": 2077484616,
+   "ways": [
+    197523816,
+    378517710
+   ]
+  },
+  {
+   "regel": "HT4",
+   "x": 1118.9,
+   "y": 254.0,
+   "text": "Weiche 6360515787: Äste (Ways 679251541, 1264378757) im Plan auf der anderen Seite als in OSM",
+   "osm": 6360515787,
+   "ways": [
+    679251541,
+    1264378757
+   ]
   },
   {
    "regel": "HT5",
-   "x": 1247.9,
+   "x": 1179.4,
    "y": 194.0,
    "text": "Fahrweg Abgang 410 Solothurn (251694964) ↔ Abgang 500 Basel (1510193399) im Plan, nicht in OSM",
    "von": "Abgang 410 Solothurn (251694964)",
@@ -516,8 +501,8 @@
   },
   {
    "regel": "HT5",
-   "x": 861.8,
-   "y": 218.0,
+   "x": 797.0,
+   "y": 254.0,
    "text": "Fahrweg Abgang 410 Solothurn (251694964) ↔ Gl. 174 im Plan, nicht in OSM",
    "von": "Abgang 410 Solothurn (251694964)",
    "nach": "Gl. 174",
@@ -525,8 +510,17 @@
   },
   {
    "regel": "HT5",
-   "x": 338.5,
-   "y": 218.0,
+   "x": 797.0,
+   "y": 266.0,
+   "text": "Fahrweg Abgang 410 Solothurn (251694964) ↔ Gl. 175 im Plan, nicht in OSM",
+   "von": "Abgang 410 Solothurn (251694964)",
+   "nach": "Gl. 175",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 324.6,
+   "y": 206.0,
    "text": "Fahrweg Abgang 410 Solothurn (251694964) ↔ Gl. 27 im Plan, nicht in OSM",
    "von": "Abgang 410 Solothurn (251694964)",
    "nach": "Gl. 27",
@@ -534,8 +528,8 @@
   },
   {
    "regel": "HT5",
-   "x": 374.9,
-   "y": 230.0,
+   "x": 325.9,
+   "y": 218.0,
    "text": "Fahrweg Abgang 410 Solothurn (251694964) ↔ Gl. 28 im Plan, nicht in OSM",
    "von": "Abgang 410 Solothurn (251694964)",
    "nach": "Gl. 28",
@@ -543,8 +537,17 @@
   },
   {
    "regel": "HT5",
-   "x": 374.9,
-   "y": 242.0,
+   "x": 849.9,
+   "y": 266.0,
+   "text": "Fahrweg Abgang 410 Solothurn (251694964) ↔ Gl. 285 im Plan, nicht in OSM",
+   "von": "Abgang 410 Solothurn (251694964)",
+   "nach": "Gl. 285",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 325.9,
+   "y": 230.0,
    "text": "Fahrweg Abgang 410 Solothurn (251694964) ↔ Gl. 29 im Plan, nicht in OSM",
    "von": "Abgang 410 Solothurn (251694964)",
    "nach": "Gl. 29",
@@ -552,8 +555,8 @@
   },
   {
    "regel": "HT5",
-   "x": 628.9,
-   "y": 266.0,
+   "x": 673.1,
+   "y": 254.0,
    "text": "Fahrweg Abgang 410 Solothurn (251694964) ↔ Gl. 318 im Plan, nicht in OSM",
    "von": "Abgang 410 Solothurn (251694964)",
    "nach": "Gl. 318",
@@ -561,8 +564,8 @@
   },
   {
    "regel": "HT5",
-   "x": 703.7,
-   "y": 278.0,
+   "x": 673.3,
+   "y": 266.0,
    "text": "Fahrweg Abgang 410 Solothurn (251694964) ↔ Gl. 319 im Plan, nicht in OSM",
    "von": "Abgang 410 Solothurn (251694964)",
    "nach": "Gl. 319",
@@ -570,8 +573,8 @@
   },
   {
    "regel": "HT5",
-   "x": 422.4,
-   "y": 218.0,
+   "x": 408.5,
+   "y": 206.0,
    "text": "Fahrweg Abgang 410 Solothurn (251694964) ↔ Gl. 7 im Plan, nicht in OSM",
    "von": "Abgang 410 Solothurn (251694964)",
    "nach": "Gl. 7",
@@ -579,8 +582,8 @@
   },
   {
    "regel": "HT5",
-   "x": 394.9,
-   "y": 230.0,
+   "x": 381.0,
+   "y": 218.0,
    "text": "Fahrweg Abgang 410 Solothurn (251694964) ↔ Gl. 8 im Plan, nicht in OSM",
    "von": "Abgang 410 Solothurn (251694964)",
    "nach": "Gl. 8",
@@ -588,8 +591,8 @@
   },
   {
    "regel": "HT5",
-   "x": 394.9,
-   "y": 242.0,
+   "x": 381.1,
+   "y": 230.0,
    "text": "Fahrweg Abgang 410 Solothurn (251694964) ↔ Gl. 9 im Plan, nicht in OSM",
    "von": "Abgang 410 Solothurn (251694964)",
    "nach": "Gl. 9",
@@ -597,7 +600,7 @@
   },
   {
    "regel": "HT5",
-   "x": 1247.9,
+   "x": 1179.4,
    "y": 182.0,
    "text": "Fahrweg Abgang 410 Solothurn (635800742) ↔ Abgang 500 Basel (1510193399) im Plan, nicht in OSM",
    "von": "Abgang 410 Solothurn (635800742)",
@@ -606,16 +609,133 @@
   },
   {
    "regel": "HT5",
-   "x": 861.8,
-   "y": 206.0,
-   "text": "Fahrweg Abgang 410 Solothurn (635800742) ↔ Gl. 174 im Plan, nicht in OSM",
-   "von": "Abgang 410 Solothurn (635800742)",
-   "nach": "Gl. 174",
+   "x": 849.9,
+   "y": 290.0,
+   "text": "Fahrweg Abgang 450 Bern (9233838601) ↔ Gl. 285 im Plan, nicht in OSM",
+   "von": "Abgang 450 Bern (9233838601)",
+   "nach": "Gl. 285",
    "art": "zusaetzlich"
   },
   {
    "regel": "HT5",
-   "x": 1500.9,
+   "x": 377.0,
+   "y": 182.0,
+   "text": "Fahrweg Abgang 450 Bern (9233845856) ↔ Gl. 1 im Plan, nicht in OSM",
+   "von": "Abgang 450 Bern (9233845856)",
+   "nach": "Gl. 1",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 377.0,
+   "y": 194.0,
+   "text": "Fahrweg Abgang 450 Bern (9233845856) ↔ Gl. 2 im Plan, nicht in OSM",
+   "von": "Abgang 450 Bern (9233845856)",
+   "nach": "Gl. 2",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 324.6,
+   "y": 242.0,
+   "text": "Fahrweg Abgang 450 Bern (9233845856) ↔ Gl. 27 im Plan, nicht in OSM",
+   "von": "Abgang 450 Bern (9233845856)",
+   "nach": "Gl. 27",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 849.9,
+   "y": 302.0,
+   "text": "Fahrweg Abgang 450 Bern (9233845856) ↔ Gl. 285 im Plan, nicht in OSM",
+   "von": "Abgang 450 Bern (9233845856)",
+   "nach": "Gl. 285",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 377.0,
+   "y": 206.0,
+   "text": "Fahrweg Abgang 450 Bern (9233845856) ↔ Gl. 3 im Plan, nicht in OSM",
+   "von": "Abgang 450 Bern (9233845856)",
+   "nach": "Gl. 3",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 533.0,
+   "y": 212.0,
+   "text": "Fahrweg Abgang 450 Bern (9233845856) ↔ Gl. 330 im Plan, nicht in OSM",
+   "von": "Abgang 450 Bern (9233845856)",
+   "nach": "Gl. 330",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 575.4,
+   "y": 242.0,
+   "text": "Fahrweg Abgang 450 Bern (9233845856) ↔ Gl. 331 im Plan, nicht in OSM",
+   "von": "Abgang 450 Bern (9233845856)",
+   "nach": "Gl. 331",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 524.7,
+   "y": 207.8,
+   "text": "Fahrweg Abgang 450 Bern (9233845856) ↔ Gl. 350 im Plan, nicht in OSM",
+   "von": "Abgang 450 Bern (9233845856)",
+   "nach": "Gl. 350",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 537.5,
+   "y": 236.7,
+   "text": "Fahrweg Abgang 450 Bern (9233845856) ↔ Gl. 351 im Plan, nicht in OSM",
+   "von": "Abgang 450 Bern (9233845856)",
+   "nach": "Gl. 351",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 491.0,
+   "y": 218.0,
+   "text": "Fahrweg Abgang 450 Bern (9233845856) ↔ Gl. 382 im Plan, nicht in OSM",
+   "von": "Abgang 450 Bern (9233845856)",
+   "nach": "Gl. 382",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 408.5,
+   "y": 218.0,
+   "text": "Fahrweg Abgang 450 Bern (9233845856) ↔ Gl. 4 im Plan, nicht in OSM",
+   "von": "Abgang 450 Bern (9233845856)",
+   "nach": "Gl. 4",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 408.5,
+   "y": 242.0,
+   "text": "Fahrweg Abgang 450 Bern (9233845856) ↔ Gl. 7 im Plan, nicht in OSM",
+   "von": "Abgang 450 Bern (9233845856)",
+   "nach": "Gl. 7",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 1917.4,
+   "y": 290.0,
+   "text": "Fahrweg Abgang 500 Basel (1510193399) ↔ Abgang 531 Aarau (617747521) im Plan, nicht in OSM",
+   "von": "Abgang 500 Basel (1510193399)",
+   "nach": "Abgang 531 Aarau (617747521)",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 1432.4,
    "y": 158.0,
    "text": "Fahrweg Abgang 500 Basel (1510193399) ↔ Gl. 1 im Plan, nicht in OSM",
    "von": "Abgang 500 Basel (1510193399)",
@@ -624,7 +744,7 @@
   },
   {
    "regel": "HT5",
-   "x": 2299.9,
+   "x": 2162.9,
    "y": 194.0,
    "text": "Fahrweg Abgang 500 Basel (1510193399) ↔ Gl. 114 im Plan, nicht in OSM",
    "von": "Abgang 500 Basel (1510193399)",
@@ -633,7 +753,7 @@
   },
   {
    "regel": "HT5",
-   "x": 2246.2,
+   "x": 2109.1,
    "y": 194.0,
    "text": "Fahrweg Abgang 500 Basel (1510193399) ↔ Gl. 124 im Plan, nicht in OSM",
    "von": "Abgang 500 Basel (1510193399)",
@@ -642,7 +762,7 @@
   },
   {
    "regel": "HT5",
-   "x": 2166.4,
+   "x": 2029.3,
    "y": 194.0,
    "text": "Fahrweg Abgang 500 Basel (1510193399) ↔ Gl. 154 im Plan, nicht in OSM",
    "von": "Abgang 500 Basel (1510193399)",
@@ -651,7 +771,7 @@
   },
   {
    "regel": "HT5",
-   "x": 2033.3,
+   "x": 1903.2,
    "y": 194.0,
    "text": "Fahrweg Abgang 500 Basel (1510193399) ↔ Gl. 161 im Plan, nicht in OSM",
    "von": "Abgang 500 Basel (1510193399)",
@@ -660,7 +780,7 @@
   },
   {
    "regel": "HT5",
-   "x": 2018.9,
+   "x": 1887.2,
    "y": 194.0,
    "text": "Fahrweg Abgang 500 Basel (1510193399) ↔ Gl. 171 im Plan, nicht in OSM",
    "von": "Abgang 500 Basel (1510193399)",
@@ -669,7 +789,97 @@
   },
   {
    "regel": "HT5",
-   "x": 1671.2,
+   "x": 1852.4,
+   "y": 266.0,
+   "text": "Fahrweg Abgang 500 Basel (1510193399) ↔ Gl. 174 im Plan, nicht in OSM",
+   "von": "Abgang 500 Basel (1510193399)",
+   "nach": "Gl. 174",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 1432.4,
+   "y": 170.0,
+   "text": "Fahrweg Abgang 500 Basel (1510193399) ↔ Gl. 2 im Plan, nicht in OSM",
+   "von": "Abgang 500 Basel (1510193399)",
+   "nach": "Gl. 2",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 1380.0,
+   "y": 218.0,
+   "text": "Fahrweg Abgang 500 Basel (1510193399) ↔ Gl. 27 im Plan, nicht in OSM",
+   "von": "Abgang 500 Basel (1510193399)",
+   "nach": "Gl. 27",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 1381.2,
+   "y": 230.0,
+   "text": "Fahrweg Abgang 500 Basel (1510193399) ↔ Gl. 28 im Plan, nicht in OSM",
+   "von": "Abgang 500 Basel (1510193399)",
+   "nach": "Gl. 28",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 1905.3,
+   "y": 278.0,
+   "text": "Fahrweg Abgang 500 Basel (1510193399) ↔ Gl. 285 im Plan, nicht in OSM",
+   "von": "Abgang 500 Basel (1510193399)",
+   "nach": "Gl. 285",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 1432.4,
+   "y": 182.0,
+   "text": "Fahrweg Abgang 500 Basel (1510193399) ↔ Gl. 3 im Plan, nicht in OSM",
+   "von": "Abgang 500 Basel (1510193399)",
+   "nach": "Gl. 3",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 1756.2,
+   "y": 206.0,
+   "text": "Fahrweg Abgang 500 Basel (1510193399) ↔ Gl. 302 im Plan, nicht in OSM",
+   "von": "Abgang 500 Basel (1510193399)",
+   "nach": "Gl. 302",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 1756.2,
+   "y": 206.0,
+   "text": "Fahrweg Abgang 500 Basel (1510193399) ↔ Gl. 312 im Plan, nicht in OSM",
+   "von": "Abgang 500 Basel (1510193399)",
+   "nach": "Gl. 312",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 1728.5,
+   "y": 266.0,
+   "text": "Fahrweg Abgang 500 Basel (1510193399) ↔ Gl. 318 im Plan, nicht in OSM",
+   "von": "Abgang 500 Basel (1510193399)",
+   "nach": "Gl. 318",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 1756.2,
+   "y": 206.0,
+   "text": "Fahrweg Abgang 500 Basel (1510193399) ↔ Gl. 322 im Plan, nicht in OSM",
+   "von": "Abgang 500 Basel (1510193399)",
+   "nach": "Gl. 322",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 1588.4,
    "y": 188.0,
    "text": "Fahrweg Abgang 500 Basel (1510193399) ↔ Gl. 330 im Plan, nicht in OSM",
    "von": "Abgang 500 Basel (1510193399)",
@@ -678,8 +888,8 @@
   },
   {
    "regel": "HT5",
-   "x": 1661.5,
-   "y": 182.0,
+   "x": 1580.1,
+   "y": 183.8,
    "text": "Fahrweg Abgang 500 Basel (1510193399) ↔ Gl. 350 im Plan, nicht in OSM",
    "von": "Abgang 500 Basel (1510193399)",
    "nach": "Gl. 350",
@@ -687,26 +897,62 @@
   },
   {
    "regel": "HT5",
-   "x": 1656.0,
-   "y": 194.0,
-   "text": "Fahrweg Abgang 500 Basel (1510193399) ↔ Gl. 361 im Plan, nicht in OSM",
+   "x": 1592.8,
+   "y": 212.7,
+   "text": "Fahrweg Abgang 500 Basel (1510193399) ↔ Gl. 351 im Plan, nicht in OSM",
    "von": "Abgang 500 Basel (1510193399)",
-   "nach": "Gl. 361",
+   "nach": "Gl. 351",
    "art": "zusaetzlich"
   },
   {
    "regel": "HT5",
-   "x": 1606.2,
+   "x": 1612.4,
    "y": 194.0,
-   "text": "Fahrweg Abgang 500 Basel (1510193399) ↔ Gl. 381 im Plan, nicht in OSM",
+   "text": "Fahrweg Abgang 500 Basel (1510193399) ↔ Gl. 352 im Plan, nicht in OSM",
    "von": "Abgang 500 Basel (1510193399)",
-   "nach": "Gl. 381",
+   "nach": "Gl. 352",
    "art": "zusaetzlich"
   },
   {
    "regel": "HT5",
-   "x": 1634.1,
-   "y": 218.0,
+   "x": 1573.4,
+   "y": 206.0,
+   "text": "Fahrweg Abgang 500 Basel (1510193399) ↔ Gl. 353 im Plan, nicht in OSM",
+   "von": "Abgang 500 Basel (1510193399)",
+   "nach": "Gl. 353",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 1593.8,
+   "y": 194.0,
+   "text": "Fahrweg Abgang 500 Basel (1510193399) ↔ Gl. 362 im Plan, nicht in OSM",
+   "von": "Abgang 500 Basel (1510193399)",
+   "nach": "Gl. 362",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 1567.3,
+   "y": 206.0,
+   "text": "Fahrweg Abgang 500 Basel (1510193399) ↔ Gl. 363 im Plan, nicht in OSM",
+   "von": "Abgang 500 Basel (1510193399)",
+   "nach": "Gl. 363",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 1549.4,
+   "y": 230.0,
+   "text": "Fahrweg Abgang 500 Basel (1510193399) ↔ Gl. 364 im Plan, nicht in OSM",
+   "von": "Abgang 500 Basel (1510193399)",
+   "nach": "Gl. 364",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 1546.3,
+   "y": 194.0,
    "text": "Fahrweg Abgang 500 Basel (1510193399) ↔ Gl. 382 im Plan, nicht in OSM",
    "von": "Abgang 500 Basel (1510193399)",
    "nach": "Gl. 382",
@@ -714,7 +960,43 @@
   },
   {
    "regel": "HT5",
-   "x": 2033.3,
+   "x": 1463.9,
+   "y": 194.0,
+   "text": "Fahrweg Abgang 500 Basel (1510193399) ↔ Gl. 4 im Plan, nicht in OSM",
+   "von": "Abgang 500 Basel (1510193399)",
+   "nach": "Gl. 4",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 1320.0,
+   "y": 182.0,
+   "text": "Fahrweg Abgang 500 Basel (1510193399) ↔ Gl. 451 im Plan, nicht in OSM",
+   "von": "Abgang 500 Basel (1510193399)",
+   "nach": "Gl. 451",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 1463.9,
+   "y": 218.0,
+   "text": "Fahrweg Abgang 500 Basel (1510193399) ↔ Gl. 7 im Plan, nicht in OSM",
+   "von": "Abgang 500 Basel (1510193399)",
+   "nach": "Gl. 7",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 1436.4,
+   "y": 230.0,
+   "text": "Fahrweg Abgang 500 Basel (1510193399) ↔ Gl. 8 im Plan, nicht in OSM",
+   "von": "Abgang 500 Basel (1510193399)",
+   "nach": "Gl. 8",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 1903.2,
    "y": 182.0,
    "text": "Fahrweg Abgang 500 Basel (1510193403) ↔ Gl. 161 im Plan, nicht in OSM",
    "von": "Abgang 500 Basel (1510193403)",
@@ -723,17 +1005,584 @@
   },
   {
    "regel": "HT5",
-   "x": 1599.8,
-   "y": 386.0,
-   "text": "Fahrweg Abgang 531 Aarau (617747521) ↔ Gl. 175 im Plan, nicht in OSM",
-   "von": "Abgang 531 Aarau (617747521)",
-   "nach": "Gl. 175",
+   "x": 1756.2,
+   "y": 194.0,
+   "text": "Fahrweg Abgang 500 Basel (1510193403) ↔ Gl. 302 im Plan, nicht in OSM",
+   "von": "Abgang 500 Basel (1510193403)",
+   "nach": "Gl. 302",
    "art": "zusaetzlich"
   },
   {
    "regel": "HT5",
-   "x": 951.1,
-   "y": 365.0,
+   "x": 1756.2,
+   "y": 194.0,
+   "text": "Fahrweg Abgang 500 Basel (1510193403) ↔ Gl. 312 im Plan, nicht in OSM",
+   "von": "Abgang 500 Basel (1510193403)",
+   "nach": "Gl. 312",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 1573.4,
+   "y": 194.0,
+   "text": "Fahrweg Abgang 500 Basel (1510193403) ↔ Gl. 353 im Plan, nicht in OSM",
+   "von": "Abgang 500 Basel (1510193403)",
+   "nach": "Gl. 353",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 1567.3,
+   "y": 194.0,
+   "text": "Fahrweg Abgang 500 Basel (1510193403) ↔ Gl. 363 im Plan, nicht in OSM",
+   "von": "Abgang 500 Basel (1510193403)",
+   "nach": "Gl. 363",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 850.0,
+   "y": 250.1,
+   "text": "Fahrweg Abgang 500 Luzern (9233862947) ↔ Abgang 503 Sissach (13343327653) im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (9233862947)",
+   "nach": "Abgang 503 Sissach (13343327653)",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 723.0,
+   "y": 353.0,
+   "text": "Fahrweg Abgang 500 Luzern (9233862947) ↔ Abgang 540 Aarau (25522388) im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (9233862947)",
+   "nach": "Abgang 540 Aarau (25522388)",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 751.0,
+   "y": 353.0,
+   "text": "Fahrweg Abgang 500 Luzern (9233862947) ↔ Abgang 540 Aarau (3191652525) im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (9233862947)",
+   "nach": "Abgang 540 Aarau (3191652525)",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 737.0,
+   "y": 353.0,
+   "text": "Fahrweg Abgang 500 Luzern (9233862947) ↔ Abgang 540 Aarau (635802999) im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (9233862947)",
+   "nach": "Abgang 540 Aarau (635802999)",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 709.0,
+   "y": 353.0,
+   "text": "Fahrweg Abgang 500 Luzern (9233862947) ↔ Abgang 540 Aarau (635803003) im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (9233862947)",
+   "nach": "Abgang 540 Aarau (635803003)",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 377.0,
+   "y": 218.0,
+   "text": "Fahrweg Abgang 500 Luzern (9233862947) ↔ Gl. 1 im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (9233862947)",
+   "nach": "Gl. 1",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 381.1,
+   "y": 314.0,
+   "text": "Fahrweg Abgang 500 Luzern (9233862947) ↔ Gl. 10 im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (9233862947)",
+   "nach": "Gl. 10",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 847.8,
+   "y": 254.0,
+   "text": "Fahrweg Abgang 500 Luzern (9233862947) ↔ Gl. 161 im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (9233862947)",
+   "nach": "Gl. 161",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 831.8,
+   "y": 254.0,
+   "text": "Fahrweg Abgang 500 Luzern (9233862947) ↔ Gl. 171 im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (9233862947)",
+   "nach": "Gl. 171",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 377.0,
+   "y": 230.0,
+   "text": "Fahrweg Abgang 500 Luzern (9233862947) ↔ Gl. 2 im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (9233862947)",
+   "nach": "Gl. 2",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 324.6,
+   "y": 278.0,
+   "text": "Fahrweg Abgang 500 Luzern (9233862947) ↔ Gl. 27 im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (9233862947)",
+   "nach": "Gl. 27",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 325.9,
+   "y": 290.0,
+   "text": "Fahrweg Abgang 500 Luzern (9233862947) ↔ Gl. 28 im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (9233862947)",
+   "nach": "Gl. 28",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 849.9,
+   "y": 338.0,
+   "text": "Fahrweg Abgang 500 Luzern (9233862947) ↔ Gl. 285 im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (9233862947)",
+   "nach": "Gl. 285",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 325.9,
+   "y": 302.0,
+   "text": "Fahrweg Abgang 500 Luzern (9233862947) ↔ Gl. 29 im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (9233862947)",
+   "nach": "Gl. 29",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 377.0,
+   "y": 242.0,
+   "text": "Fahrweg Abgang 500 Luzern (9233862947) ↔ Gl. 3 im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (9233862947)",
+   "nach": "Gl. 3",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 328.1,
+   "y": 314.0,
+   "text": "Fahrweg Abgang 500 Luzern (9233862947) ↔ Gl. 30 im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (9233862947)",
+   "nach": "Gl. 30",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 700.8,
+   "y": 266.0,
+   "text": "Fahrweg Abgang 500 Luzern (9233862947) ↔ Gl. 302 im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (9233862947)",
+   "nach": "Gl. 302",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 693.9,
+   "y": 278.0,
+   "text": "Fahrweg Abgang 500 Luzern (9233862947) ↔ Gl. 303 im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (9233862947)",
+   "nach": "Gl. 303",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 614.8,
+   "y": 290.0,
+   "text": "Fahrweg Abgang 500 Luzern (9233862947) ↔ Gl. 304 im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (9233862947)",
+   "nach": "Gl. 304",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 700.8,
+   "y": 266.0,
+   "text": "Fahrweg Abgang 500 Luzern (9233862947) ↔ Gl. 312 im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (9233862947)",
+   "nach": "Gl. 312",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 693.9,
+   "y": 278.0,
+   "text": "Fahrweg Abgang 500 Luzern (9233862947) ↔ Gl. 313 im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (9233862947)",
+   "nach": "Gl. 313",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 618.1,
+   "y": 290.0,
+   "text": "Fahrweg Abgang 500 Luzern (9233862947) ↔ Gl. 314 im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (9233862947)",
+   "nach": "Gl. 314",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 700.8,
+   "y": 266.0,
+   "text": "Fahrweg Abgang 500 Luzern (9233862947) ↔ Gl. 322 im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (9233862947)",
+   "nach": "Gl. 322",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 653.5,
+   "y": 278.0,
+   "text": "Fahrweg Abgang 500 Luzern (9233862947) ↔ Gl. 323 im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (9233862947)",
+   "nach": "Gl. 323",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 533.0,
+   "y": 248.0,
+   "text": "Fahrweg Abgang 500 Luzern (9233862947) ↔ Gl. 330 im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (9233862947)",
+   "nach": "Gl. 330",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 575.4,
+   "y": 278.0,
+   "text": "Fahrweg Abgang 500 Luzern (9233862947) ↔ Gl. 331 im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (9233862947)",
+   "nach": "Gl. 331",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 524.7,
+   "y": 243.8,
+   "text": "Fahrweg Abgang 500 Luzern (9233862947) ↔ Gl. 350 im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (9233862947)",
+   "nach": "Gl. 350",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 537.5,
+   "y": 272.6,
+   "text": "Fahrweg Abgang 500 Luzern (9233862947) ↔ Gl. 351 im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (9233862947)",
+   "nach": "Gl. 351",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 557.0,
+   "y": 254.0,
+   "text": "Fahrweg Abgang 500 Luzern (9233862947) ↔ Gl. 352 im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (9233862947)",
+   "nach": "Gl. 352",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 518.0,
+   "y": 266.0,
+   "text": "Fahrweg Abgang 500 Luzern (9233862947) ↔ Gl. 353 im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (9233862947)",
+   "nach": "Gl. 353",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 512.0,
+   "y": 290.0,
+   "text": "Fahrweg Abgang 500 Luzern (9233862947) ↔ Gl. 354 im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (9233862947)",
+   "nach": "Gl. 354",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 527.6,
+   "y": 302.0,
+   "text": "Fahrweg Abgang 500 Luzern (9233862947) ↔ Gl. 355 im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (9233862947)",
+   "nach": "Gl. 355",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 538.4,
+   "y": 254.0,
+   "text": "Fahrweg Abgang 500 Luzern (9233862947) ↔ Gl. 362 im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (9233862947)",
+   "nach": "Gl. 362",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 511.9,
+   "y": 266.0,
+   "text": "Fahrweg Abgang 500 Luzern (9233862947) ↔ Gl. 363 im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (9233862947)",
+   "nach": "Gl. 363",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 494.1,
+   "y": 290.0,
+   "text": "Fahrweg Abgang 500 Luzern (9233862947) ↔ Gl. 364 im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (9233862947)",
+   "nach": "Gl. 364",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 505.3,
+   "y": 302.0,
+   "text": "Fahrweg Abgang 500 Luzern (9233862947) ↔ Gl. 365 im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (9233862947)",
+   "nach": "Gl. 365",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 491.0,
+   "y": 254.0,
+   "text": "Fahrweg Abgang 500 Luzern (9233862947) ↔ Gl. 382 im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (9233862947)",
+   "nach": "Gl. 382",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 408.5,
+   "y": 254.0,
+   "text": "Fahrweg Abgang 500 Luzern (9233862947) ↔ Gl. 4 im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (9233862947)",
+   "nach": "Gl. 4",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 196.8,
+   "y": 314.0,
+   "text": "Fahrweg Abgang 500 Luzern (9233862947) ↔ Gl. 485 im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (9233862947)",
+   "nach": "Gl. 485",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 408.5,
+   "y": 278.0,
+   "text": "Fahrweg Abgang 500 Luzern (9233862947) ↔ Gl. 7 im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (9233862947)",
+   "nach": "Gl. 7",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 381.0,
+   "y": 290.0,
+   "text": "Fahrweg Abgang 500 Luzern (9233862947) ↔ Gl. 8 im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (9233862947)",
+   "nach": "Gl. 8",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 381.1,
+   "y": 302.0,
+   "text": "Fahrweg Abgang 500 Luzern (9233862947) ↔ Gl. 9 im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (9233862947)",
+   "nach": "Gl. 9",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 377.0,
+   "y": 206.0,
+   "text": "Fahrweg Abgang 500 Luzern (9233862950) ↔ Gl. 1 im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (9233862950)",
+   "nach": "Gl. 1",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 377.0,
+   "y": 218.0,
+   "text": "Fahrweg Abgang 500 Luzern (9233862950) ↔ Gl. 2 im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (9233862950)",
+   "nach": "Gl. 2",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 324.6,
+   "y": 266.0,
+   "text": "Fahrweg Abgang 500 Luzern (9233862950) ↔ Gl. 27 im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (9233862950)",
+   "nach": "Gl. 27",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 325.9,
+   "y": 278.0,
+   "text": "Fahrweg Abgang 500 Luzern (9233862950) ↔ Gl. 28 im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (9233862950)",
+   "nach": "Gl. 28",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 849.9,
+   "y": 326.0,
+   "text": "Fahrweg Abgang 500 Luzern (9233862950) ↔ Gl. 285 im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (9233862950)",
+   "nach": "Gl. 285",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 377.0,
+   "y": 230.0,
+   "text": "Fahrweg Abgang 500 Luzern (9233862950) ↔ Gl. 3 im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (9233862950)",
+   "nach": "Gl. 3",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 533.0,
+   "y": 236.0,
+   "text": "Fahrweg Abgang 500 Luzern (9233862950) ↔ Gl. 330 im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (9233862950)",
+   "nach": "Gl. 330",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 575.4,
+   "y": 266.0,
+   "text": "Fahrweg Abgang 500 Luzern (9233862950) ↔ Gl. 331 im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (9233862950)",
+   "nach": "Gl. 331",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 524.7,
+   "y": 231.8,
+   "text": "Fahrweg Abgang 500 Luzern (9233862950) ↔ Gl. 350 im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (9233862950)",
+   "nach": "Gl. 350",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 537.5,
+   "y": 260.6,
+   "text": "Fahrweg Abgang 500 Luzern (9233862950) ↔ Gl. 351 im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (9233862950)",
+   "nach": "Gl. 351",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 491.0,
+   "y": 242.0,
+   "text": "Fahrweg Abgang 500 Luzern (9233862950) ↔ Gl. 382 im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (9233862950)",
+   "nach": "Gl. 382",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 408.5,
+   "y": 242.0,
+   "text": "Fahrweg Abgang 500 Luzern (9233862950) ↔ Gl. 4 im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (9233862950)",
+   "nach": "Gl. 4",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 408.5,
+   "y": 266.0,
+   "text": "Fahrweg Abgang 500 Luzern (9233862950) ↔ Gl. 7 im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (9233862950)",
+   "nach": "Gl. 7",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 381.0,
+   "y": 278.0,
+   "text": "Fahrweg Abgang 500 Luzern (9233862950) ↔ Gl. 8 im Plan, nicht in OSM",
+   "von": "Abgang 500 Luzern (9233862950)",
+   "nach": "Gl. 8",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 1426.8,
+   "y": 190.1,
+   "text": "Fahrweg Abgang 503 Sissach (13343327653) ↔ Gl. 302 im Plan, nicht in OSM",
+   "von": "Abgang 503 Sissach (13343327653)",
+   "nach": "Gl. 302",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 1426.8,
+   "y": 190.1,
+   "text": "Fahrweg Abgang 503 Sissach (13343327653) ↔ Gl. 312 im Plan, nicht in OSM",
+   "von": "Abgang 503 Sissach (13343327653)",
+   "nach": "Gl. 312",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 1244.0,
+   "y": 190.1,
+   "text": "Fahrweg Abgang 503 Sissach (13343327653) ↔ Gl. 353 im Plan, nicht in OSM",
+   "von": "Abgang 503 Sissach (13343327653)",
+   "nach": "Gl. 353",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 1238.0,
+   "y": 190.1,
+   "text": "Fahrweg Abgang 503 Sissach (13343327653) ↔ Gl. 363 im Plan, nicht in OSM",
+   "von": "Abgang 503 Sissach (13343327653)",
+   "nach": "Gl. 363",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 980.1,
+   "y": 341.0,
    "text": "Fahrweg Abgang 540 Aarau (25522388) ↔ Gl. 10 im Plan, nicht in OSM",
    "von": "Abgang 540 Aarau (25522388)",
    "nach": "Gl. 10",
@@ -741,8 +1590,8 @@
   },
   {
    "regel": "HT5",
-   "x": 951.2,
-   "y": 377.0,
+   "x": 980.1,
+   "y": 353.0,
    "text": "Fahrweg Abgang 540 Aarau (25522388) ↔ Gl. 11 im Plan, nicht in OSM",
    "von": "Abgang 540 Aarau (25522388)",
    "nach": "Gl. 11",
@@ -750,8 +1599,17 @@
   },
   {
    "regel": "HT5",
-   "x": 898.2,
+   "x": 976.0,
    "y": 365.0,
+   "text": "Fahrweg Abgang 540 Aarau (25522388) ↔ Gl. 12 im Plan, nicht in OSM",
+   "von": "Abgang 540 Aarau (25522388)",
+   "nach": "Gl. 12",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 927.2,
+   "y": 341.0,
    "text": "Fahrweg Abgang 540 Aarau (25522388) ↔ Gl. 30 im Plan, nicht in OSM",
    "von": "Abgang 540 Aarau (25522388)",
    "nach": "Gl. 30",
@@ -759,8 +1617,8 @@
   },
   {
    "regel": "HT5",
-   "x": 906.8,
-   "y": 377.0,
+   "x": 935.7,
+   "y": 353.0,
    "text": "Fahrweg Abgang 540 Aarau (25522388) ↔ Gl. 31 im Plan, nicht in OSM",
    "von": "Abgang 540 Aarau (25522388)",
    "nach": "Gl. 31",
@@ -768,8 +1626,26 @@
   },
   {
    "regel": "HT5",
-   "x": 1068.2,
-   "y": 341.0,
+   "x": 924.4,
+   "y": 365.0,
+   "text": "Fahrweg Abgang 540 Aarau (25522388) ↔ Gl. 32 im Plan, nicht in OSM",
+   "von": "Abgang 540 Aarau (25522388)",
+   "nach": "Gl. 32",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 1174.4,
+   "y": 305.0,
+   "text": "Fahrweg Abgang 540 Aarau (25522388) ↔ Gl. 331 im Plan, nicht in OSM",
+   "von": "Abgang 540 Aarau (25522388)",
+   "nach": "Gl. 331",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 1111.0,
+   "y": 317.0,
    "text": "Fahrweg Abgang 540 Aarau (25522388) ↔ Gl. 354 im Plan, nicht in OSM",
    "von": "Abgang 540 Aarau (25522388)",
    "nach": "Gl. 354",
@@ -777,8 +1653,8 @@
   },
   {
    "regel": "HT5",
-   "x": 1098.6,
-   "y": 353.0,
+   "x": 1126.6,
+   "y": 329.0,
    "text": "Fahrweg Abgang 540 Aarau (25522388) ↔ Gl. 355 im Plan, nicht in OSM",
    "von": "Abgang 540 Aarau (25522388)",
    "nach": "Gl. 355",
@@ -786,8 +1662,8 @@
   },
   {
    "regel": "HT5",
-   "x": 1079.3,
-   "y": 353.0,
+   "x": 1104.3,
+   "y": 329.0,
    "text": "Fahrweg Abgang 540 Aarau (25522388) ↔ Gl. 365 im Plan, nicht in OSM",
    "von": "Abgang 540 Aarau (25522388)",
    "nach": "Gl. 365",
@@ -795,89 +1671,152 @@
   },
   {
    "regel": "HT5",
-   "x": 732.7,
-   "y": 389.0,
-   "text": "Fahrweg Abgang 540 Aarau (25522388) ↔ Gleisende 9233862947 im Plan, nicht in OSM",
+   "x": 1060.8,
+   "y": 353.0,
+   "text": "Fahrweg Abgang 540 Aarau (25522388) ↔ Gl. 389 im Plan, nicht in OSM",
    "von": "Abgang 540 Aarau (25522388)",
-   "nach": "Gleisende 9233862947",
+   "nach": "Gl. 389",
    "art": "zusaetzlich"
   },
   {
    "regel": "HT5",
-   "x": 979.1,
-   "y": 365.0,
-   "text": "Fahrweg Abgang 540 Aarau (3191652525) ↔ Gl. 10 im Plan, nicht in OSM",
+   "x": 1145.0,
+   "y": 293.0,
+   "text": "Fahrweg Abgang 540 Aarau (3191652525) ↔ Gl. 353 im Plan, nicht in OSM",
    "von": "Abgang 540 Aarau (3191652525)",
+   "nach": "Gl. 353",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 1138.9,
+   "y": 293.0,
+   "text": "Fahrweg Abgang 540 Aarau (3191652525) ↔ Gl. 363 im Plan, nicht in OSM",
+   "von": "Abgang 540 Aarau (3191652525)",
+   "nach": "Gl. 363",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 994.1,
+   "y": 341.0,
+   "text": "Fahrweg Abgang 540 Aarau (635802999) ↔ Gl. 10 im Plan, nicht in OSM",
+   "von": "Abgang 540 Aarau (635802999)",
    "nach": "Gl. 10",
    "art": "zusaetzlich"
   },
   {
    "regel": "HT5",
-   "x": 979.2,
-   "y": 377.0,
-   "text": "Fahrweg Abgang 540 Aarau (3191652525) ↔ Gl. 11 im Plan, nicht in OSM",
-   "von": "Abgang 540 Aarau (3191652525)",
+   "x": 994.1,
+   "y": 353.0,
+   "text": "Fahrweg Abgang 540 Aarau (635802999) ↔ Gl. 11 im Plan, nicht in OSM",
+   "von": "Abgang 540 Aarau (635802999)",
    "nach": "Gl. 11",
    "art": "zusaetzlich"
   },
   {
    "regel": "HT5",
-   "x": 926.2,
+   "x": 990.0,
    "y": 365.0,
-   "text": "Fahrweg Abgang 540 Aarau (3191652525) ↔ Gl. 30 im Plan, nicht in OSM",
-   "von": "Abgang 540 Aarau (3191652525)",
+   "text": "Fahrweg Abgang 540 Aarau (635802999) ↔ Gl. 12 im Plan, nicht in OSM",
+   "von": "Abgang 540 Aarau (635802999)",
+   "nach": "Gl. 12",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 941.2,
+   "y": 341.0,
+   "text": "Fahrweg Abgang 540 Aarau (635802999) ↔ Gl. 30 im Plan, nicht in OSM",
+   "von": "Abgang 540 Aarau (635802999)",
    "nach": "Gl. 30",
    "art": "zusaetzlich"
   },
   {
    "regel": "HT5",
-   "x": 934.8,
-   "y": 377.0,
-   "text": "Fahrweg Abgang 540 Aarau (3191652525) ↔ Gl. 31 im Plan, nicht in OSM",
-   "von": "Abgang 540 Aarau (3191652525)",
+   "x": 1227.8,
+   "y": 317.0,
+   "text": "Fahrweg Abgang 540 Aarau (635802999) ↔ Gl. 304 im Plan, nicht in OSM",
+   "von": "Abgang 540 Aarau (635802999)",
+   "nach": "Gl. 304",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 949.7,
+   "y": 353.0,
+   "text": "Fahrweg Abgang 540 Aarau (635802999) ↔ Gl. 31 im Plan, nicht in OSM",
+   "von": "Abgang 540 Aarau (635802999)",
    "nach": "Gl. 31",
    "art": "zusaetzlich"
   },
   {
    "regel": "HT5",
-   "x": 1213.1,
-   "y": 377.0,
-   "text": "Fahrweg Abgang 540 Aarau (3191652525) ↔ Gl. 318 im Plan, nicht in OSM",
-   "von": "Abgang 540 Aarau (3191652525)",
-   "nach": "Gl. 318",
-   "art": "zusaetzlich"
-  },
-  {
-   "regel": "HT5",
-   "x": 1287.9,
-   "y": 389.0,
-   "text": "Fahrweg Abgang 540 Aarau (3191652525) ↔ Gl. 319 im Plan, nicht in OSM",
-   "von": "Abgang 540 Aarau (3191652525)",
-   "nach": "Gl. 319",
-   "art": "zusaetzlich"
-  },
-  {
-   "regel": "HT5",
-   "x": 760.7,
-   "y": 389.0,
-   "text": "Fahrweg Abgang 540 Aarau (3191652525) ↔ Gleisende 9233862947 im Plan, nicht in OSM",
-   "von": "Abgang 540 Aarau (3191652525)",
-   "nach": "Gleisende 9233862947",
-   "art": "zusaetzlich"
-  },
-  {
-   "regel": "HT5",
-   "x": 746.7,
-   "y": 389.0,
-   "text": "Fahrweg Abgang 540 Aarau (635802999) ↔ Gleisende 9233862947 im Plan, nicht in OSM",
+   "x": 1231.1,
+   "y": 317.0,
+   "text": "Fahrweg Abgang 540 Aarau (635802999) ↔ Gl. 314 im Plan, nicht in OSM",
    "von": "Abgang 540 Aarau (635802999)",
-   "nach": "Gleisende 9233862947",
+   "nach": "Gl. 314",
    "art": "zusaetzlich"
   },
   {
    "regel": "HT5",
-   "x": 937.1,
+   "x": 938.4,
    "y": 365.0,
+   "text": "Fahrweg Abgang 540 Aarau (635802999) ↔ Gl. 32 im Plan, nicht in OSM",
+   "von": "Abgang 540 Aarau (635802999)",
+   "nach": "Gl. 32",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 1188.4,
+   "y": 305.0,
+   "text": "Fahrweg Abgang 540 Aarau (635802999) ↔ Gl. 331 im Plan, nicht in OSM",
+   "von": "Abgang 540 Aarau (635802999)",
+   "nach": "Gl. 331",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 1125.0,
+   "y": 317.0,
+   "text": "Fahrweg Abgang 540 Aarau (635802999) ↔ Gl. 354 im Plan, nicht in OSM",
+   "von": "Abgang 540 Aarau (635802999)",
+   "nach": "Gl. 354",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 1140.6,
+   "y": 329.0,
+   "text": "Fahrweg Abgang 540 Aarau (635802999) ↔ Gl. 355 im Plan, nicht in OSM",
+   "von": "Abgang 540 Aarau (635802999)",
+   "nach": "Gl. 355",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 1118.3,
+   "y": 329.0,
+   "text": "Fahrweg Abgang 540 Aarau (635802999) ↔ Gl. 365 im Plan, nicht in OSM",
+   "von": "Abgang 540 Aarau (635802999)",
+   "nach": "Gl. 365",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 1074.8,
+   "y": 353.0,
+   "text": "Fahrweg Abgang 540 Aarau (635802999) ↔ Gl. 389 im Plan, nicht in OSM",
+   "von": "Abgang 540 Aarau (635802999)",
+   "nach": "Gl. 389",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 966.1,
+   "y": 341.0,
    "text": "Fahrweg Abgang 540 Aarau (635803003) ↔ Gl. 10 im Plan, nicht in OSM",
    "von": "Abgang 540 Aarau (635803003)",
    "nach": "Gl. 10",
@@ -885,8 +1824,8 @@
   },
   {
    "regel": "HT5",
-   "x": 937.2,
-   "y": 377.0,
+   "x": 966.1,
+   "y": 353.0,
    "text": "Fahrweg Abgang 540 Aarau (635803003) ↔ Gl. 11 im Plan, nicht in OSM",
    "von": "Abgang 540 Aarau (635803003)",
    "nach": "Gl. 11",
@@ -894,8 +1833,17 @@
   },
   {
    "regel": "HT5",
-   "x": 884.2,
+   "x": 962.0,
    "y": 365.0,
+   "text": "Fahrweg Abgang 540 Aarau (635803003) ↔ Gl. 12 im Plan, nicht in OSM",
+   "von": "Abgang 540 Aarau (635803003)",
+   "nach": "Gl. 12",
+   "art": "zusaetzlich"
+  },
+  {
+   "regel": "HT5",
+   "x": 913.2,
+   "y": 341.0,
    "text": "Fahrweg Abgang 540 Aarau (635803003) ↔ Gl. 30 im Plan, nicht in OSM",
    "von": "Abgang 540 Aarau (635803003)",
    "nach": "Gl. 30",
@@ -903,8 +1851,8 @@
   },
   {
    "regel": "HT5",
-   "x": 892.8,
-   "y": 377.0,
+   "x": 921.7,
+   "y": 353.0,
    "text": "Fahrweg Abgang 540 Aarau (635803003) ↔ Gl. 31 im Plan, nicht in OSM",
    "von": "Abgang 540 Aarau (635803003)",
    "nach": "Gl. 31",
@@ -912,26 +1860,17 @@
   },
   {
    "regel": "HT5",
-   "x": 1245.9,
-   "y": 389.0,
-   "text": "Fahrweg Abgang 540 Aarau (635803003) ↔ Gl. 319 im Plan, nicht in OSM",
+   "x": 910.4,
+   "y": 365.0,
+   "text": "Fahrweg Abgang 540 Aarau (635803003) ↔ Gl. 32 im Plan, nicht in OSM",
    "von": "Abgang 540 Aarau (635803003)",
-   "nach": "Gl. 319",
+   "nach": "Gl. 32",
    "art": "zusaetzlich"
   },
   {
    "regel": "HT5",
-   "x": 1065.4,
-   "y": 377.0,
-   "text": "Fahrweg Abgang 540 Aarau (635803003) ↔ Gl. 388 im Plan, nicht in OSM",
-   "von": "Abgang 540 Aarau (635803003)",
-   "nach": "Gl. 388",
-   "art": "zusaetzlich"
-  },
-  {
-   "regel": "HT5",
-   "x": 1024.8,
-   "y": 377.0,
+   "x": 1046.8,
+   "y": 353.0,
    "text": "Fahrweg Abgang 540 Aarau (635803003) ↔ Gl. 389 im Plan, nicht in OSM",
    "von": "Abgang 540 Aarau (635803003)",
    "nach": "Gl. 389",
@@ -939,458 +1878,8 @@
   },
   {
    "regel": "HT5",
-   "x": 1059.6,
-   "y": 389.0,
-   "text": "Fahrweg Abgang 540 Aarau (635803003) ↔ Gl. 390 im Plan, nicht in OSM",
-   "von": "Abgang 540 Aarau (635803003)",
-   "nach": "Gl. 390",
-   "art": "zusaetzlich"
-  },
-  {
-   "regel": "HT5",
-   "x": 718.7,
-   "y": 389.0,
-   "text": "Fahrweg Abgang 540 Aarau (635803003) ↔ Gleisende 9233862947 im Plan, nicht in OSM",
-   "von": "Abgang 540 Aarau (635803003)",
-   "nach": "Gleisende 9233862947",
-   "art": "zusaetzlich"
-  },
-  {
-   "regel": "HT5",
-   "x": 391.0,
-   "y": 314.0,
-   "text": "Fahrweg Gl. 27 ↔ Gleisende 9233862947 im Plan, nicht in OSM",
-   "von": "Gl. 27",
-   "nach": "Gleisende 9233862947",
-   "art": "zusaetzlich"
-  },
-  {
-   "regel": "HT5",
-   "x": 427.4,
-   "y": 326.0,
-   "text": "Fahrweg Gl. 28 ↔ Gleisende 9233862947 im Plan, nicht in OSM",
-   "von": "Gl. 28",
-   "nach": "Gleisende 9233862947",
-   "art": "zusaetzlich"
-  },
-  {
-   "regel": "HT5",
-   "x": 427.4,
-   "y": 338.0,
-   "text": "Fahrweg Gl. 29 ↔ Gleisende 9233862947 im Plan, nicht in OSM",
-   "von": "Gl. 29",
-   "nach": "Gleisende 9233862947",
-   "art": "zusaetzlich"
-  },
-  {
-   "regel": "HT5",
-   "x": 703.5,
-   "y": 314.0,
-   "text": "Fahrweg Gl. 303 ↔ Gleisende 9233862947 im Plan, nicht in OSM",
-   "von": "Gl. 303",
-   "nach": "Gleisende 9233862947",
-   "art": "zusaetzlich"
-  },
-  {
-   "regel": "HT5",
-   "x": 682.2,
-   "y": 326.0,
-   "text": "Fahrweg Gl. 304 ↔ Gleisende 9233862947 im Plan, nicht in OSM",
-   "von": "Gl. 304",
-   "nach": "Gleisende 9233862947",
-   "art": "zusaetzlich"
-  },
-  {
-   "regel": "HT5",
-   "x": 703.5,
-   "y": 314.0,
-   "text": "Fahrweg Gl. 313 ↔ Gleisende 9233862947 im Plan, nicht in OSM",
-   "von": "Gl. 313",
-   "nach": "Gleisende 9233862947",
-   "art": "zusaetzlich"
-  },
-  {
-   "regel": "HT5",
-   "x": 682.2,
-   "y": 326.0,
-   "text": "Fahrweg Gl. 314 ↔ Gleisende 9233862947 im Plan, nicht in OSM",
-   "von": "Gl. 314",
-   "nach": "Gleisende 9233862947",
-   "art": "zusaetzlich"
-  },
-  {
-   "regel": "HT5",
-   "x": 692.8,
-   "y": 314.0,
-   "text": "Fahrweg Gl. 323 ↔ Gleisende 9233862947 im Plan, nicht in OSM",
-   "von": "Gl. 323",
-   "nach": "Gleisende 9233862947",
-   "art": "zusaetzlich"
-  },
-  {
-   "regel": "HT5",
-   "x": 570.5,
-   "y": 314.0,
-   "text": "Fahrweg Gl. 353 ↔ Gleisende 9233862947 im Plan, nicht in OSM",
-   "von": "Gl. 353",
-   "nach": "Gleisende 9233862947",
-   "art": "zusaetzlich"
-  },
-  {
-   "regel": "HT5",
-   "x": 564.5,
-   "y": 326.0,
-   "text": "Fahrweg Gl. 354 ↔ Gleisende 9233862947 im Plan, nicht in OSM",
-   "von": "Gl. 354",
-   "nach": "Gleisende 9233862947",
-   "art": "zusaetzlich"
-  },
-  {
-   "regel": "HT5",
-   "x": 594.9,
-   "y": 338.0,
-   "text": "Fahrweg Gl. 355 ↔ Gleisende 9233862947 im Plan, nicht in OSM",
-   "von": "Gl. 355",
-   "nach": "Gleisende 9233862947",
-   "art": "zusaetzlich"
-  },
-  {
-   "regel": "HT5",
-   "x": 571.4,
-   "y": 314.0,
-   "text": "Fahrweg Gl. 363 ↔ Gleisende 9233862947 im Plan, nicht in OSM",
-   "von": "Gl. 363",
-   "nach": "Gleisende 9233862947",
-   "art": "zusaetzlich"
-  },
-  {
-   "regel": "HT5",
-   "x": 557.0,
-   "y": 326.0,
-   "text": "Fahrweg Gl. 364 ↔ Gleisende 9233862947 im Plan, nicht in OSM",
-   "von": "Gl. 364",
-   "nach": "Gleisende 9233862947",
-   "art": "zusaetzlich"
-  },
-  {
-   "regel": "HT5",
-   "x": 575.6,
-   "y": 338.0,
-   "text": "Fahrweg Gl. 365 ↔ Gleisende 9233862947 im Plan, nicht in OSM",
-   "von": "Gl. 365",
-   "nach": "Gleisende 9233862947",
-   "art": "zusaetzlich"
-  },
-  {
-   "regel": "HT5",
-   "x": 474.9,
-   "y": 314.0,
-   "text": "Fahrweg Gl. 7 ↔ Gleisende 9233862947 im Plan, nicht in OSM",
-   "von": "Gl. 7",
-   "nach": "Gleisende 9233862947",
-   "art": "zusaetzlich"
-  },
-  {
-   "regel": "HT5",
-   "x": 447.4,
-   "y": 326.0,
-   "text": "Fahrweg Gl. 8 ↔ Gleisende 9233862947 im Plan, nicht in OSM",
-   "von": "Gl. 8",
-   "nach": "Gleisende 9233862947",
-   "art": "zusaetzlich"
-  },
-  {
-   "regel": "HT5",
-   "x": 447.4,
-   "y": 338.0,
-   "text": "Fahrweg Gl. 9 ↔ Gleisende 9233862947 im Plan, nicht in OSM",
-   "von": "Gl. 9",
-   "nach": "Gleisende 9233862947",
-   "art": "zusaetzlich"
-  },
-  {
-   "regel": "HT5",
-   "x": 377.0,
-   "y": 170.0,
-   "text": "Fahrweg Abgang 410 Solothurn (251694964) ↔ Gl. 3 in OSM, fehlt im Plan",
-   "von": "Abgang 410 Solothurn (251694964)",
-   "nach": "Gl. 3",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 651.0,
-   "y": 194.0,
-   "text": "Fahrweg Abgang 410 Solothurn (251694964) ↔ Gl. 302 in OSM, fehlt im Plan",
-   "von": "Abgang 410 Solothurn (251694964)",
-   "nach": "Gl. 302",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 651.0,
-   "y": 194.0,
-   "text": "Fahrweg Abgang 410 Solothurn (251694964) ↔ Gl. 312 in OSM, fehlt im Plan",
-   "von": "Abgang 410 Solothurn (251694964)",
-   "nach": "Gl. 312",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 651.0,
-   "y": 194.0,
-   "text": "Fahrweg Abgang 410 Solothurn (251694964) ↔ Gl. 322 in OSM, fehlt im Plan",
-   "von": "Abgang 410 Solothurn (251694964)",
-   "nach": "Gl. 322",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 708.2,
-   "y": 281.0,
-   "text": "Fahrweg Abgang 410 Solothurn (635800742) ↔ Abgang 540 Aarau (3191652525) in OSM, fehlt im Plan",
-   "von": "Abgang 410 Solothurn (635800742)",
-   "nach": "Abgang 540 Aarau (3191652525)",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 377.0,
-   "y": 158.0,
-   "text": "Fahrweg Abgang 410 Solothurn (635800742) ↔ Gl. 3 in OSM, fehlt im Plan",
-   "von": "Abgang 410 Solothurn (635800742)",
-   "nach": "Gl. 3",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 651.0,
-   "y": 182.0,
-   "text": "Fahrweg Abgang 410 Solothurn (635800742) ↔ Gl. 302 in OSM, fehlt im Plan",
-   "von": "Abgang 410 Solothurn (635800742)",
-   "nach": "Gl. 302",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 651.0,
-   "y": 182.0,
-   "text": "Fahrweg Abgang 410 Solothurn (635800742) ↔ Gl. 312 in OSM, fehlt im Plan",
-   "von": "Abgang 410 Solothurn (635800742)",
-   "nach": "Gl. 312",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 651.0,
-   "y": 182.0,
-   "text": "Fahrweg Abgang 410 Solothurn (635800742) ↔ Gl. 322 in OSM, fehlt im Plan",
-   "von": "Abgang 410 Solothurn (635800742)",
-   "nach": "Gl. 322",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1247.9,
-   "y": 230.0,
-   "text": "Fahrweg Abgang 450 Bern (9233838601) ↔ Abgang 500 Basel (1510193399) in OSM, fehlt im Plan",
-   "von": "Abgang 450 Bern (9233838601)",
-   "nach": "Abgang 500 Basel (1510193399)",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1247.9,
-   "y": 218.0,
-   "text": "Fahrweg Abgang 450 Bern (9233838601) ↔ Abgang 500 Basel (1510193403) in OSM, fehlt im Plan",
-   "von": "Abgang 450 Bern (9233838601)",
-   "nach": "Abgang 500 Basel (1510193403)",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 911.6,
-   "y": 214.1,
-   "text": "Fahrweg Abgang 450 Bern (9233838601) ↔ Abgang 503 Sissach (13343327653) in OSM, fehlt im Plan",
-   "von": "Abgang 450 Bern (9233838601)",
-   "nach": "Abgang 503 Sissach (13343327653)",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 377.0,
-   "y": 182.0,
-   "text": "Fahrweg Abgang 450 Bern (9233838601) ↔ Gl. 1 in OSM, fehlt im Plan",
-   "von": "Abgang 450 Bern (9233838601)",
-   "nach": "Gl. 1",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1176.0,
-   "y": 218.0,
-   "text": "Fahrweg Abgang 450 Bern (9233838601) ↔ Gl. 114 in OSM, fehlt im Plan",
-   "von": "Abgang 450 Bern (9233838601)",
-   "nach": "Gl. 114",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1122.3,
-   "y": 218.0,
-   "text": "Fahrweg Abgang 450 Bern (9233838601) ↔ Gl. 124 in OSM, fehlt im Plan",
-   "von": "Abgang 450 Bern (9233838601)",
-   "nach": "Gl. 124",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1042.5,
-   "y": 218.0,
-   "text": "Fahrweg Abgang 450 Bern (9233838601) ↔ Gl. 154 in OSM, fehlt im Plan",
-   "von": "Abgang 450 Bern (9233838601)",
-   "nach": "Gl. 154",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 909.4,
-   "y": 218.0,
-   "text": "Fahrweg Abgang 450 Bern (9233838601) ↔ Gl. 161 in OSM, fehlt im Plan",
-   "von": "Abgang 450 Bern (9233838601)",
-   "nach": "Gl. 161",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 895.0,
-   "y": 218.0,
-   "text": "Fahrweg Abgang 450 Bern (9233838601) ↔ Gl. 171 in OSM, fehlt im Plan",
-   "von": "Abgang 450 Bern (9233838601)",
-   "nach": "Gl. 171",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 861.8,
-   "y": 314.0,
-   "text": "Fahrweg Abgang 450 Bern (9233838601) ↔ Gl. 175 in OSM, fehlt im Plan",
-   "von": "Abgang 450 Bern (9233838601)",
-   "nach": "Gl. 175",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 377.0,
-   "y": 194.0,
-   "text": "Fahrweg Abgang 450 Bern (9233838601) ↔ Gl. 2 in OSM, fehlt im Plan",
-   "von": "Abgang 450 Bern (9233838601)",
-   "nach": "Gl. 2",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 377.0,
-   "y": 206.0,
-   "text": "Fahrweg Abgang 450 Bern (9233838601) ↔ Gl. 3 in OSM, fehlt im Plan",
-   "von": "Abgang 450 Bern (9233838601)",
-   "nach": "Gl. 3",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 651.0,
-   "y": 230.0,
-   "text": "Fahrweg Abgang 450 Bern (9233838601) ↔ Gl. 302 in OSM, fehlt im Plan",
-   "von": "Abgang 450 Bern (9233838601)",
-   "nach": "Gl. 302",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 651.0,
-   "y": 230.0,
-   "text": "Fahrweg Abgang 450 Bern (9233838601) ↔ Gl. 312 in OSM, fehlt im Plan",
-   "von": "Abgang 450 Bern (9233838601)",
-   "nach": "Gl. 312",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 651.0,
-   "y": 230.0,
-   "text": "Fahrweg Abgang 450 Bern (9233838601) ↔ Gl. 322 in OSM, fehlt im Plan",
-   "von": "Abgang 450 Bern (9233838601)",
-   "nach": "Gl. 322",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 547.3,
-   "y": 212.0,
-   "text": "Fahrweg Abgang 450 Bern (9233838601) ↔ Gl. 330 in OSM, fehlt im Plan",
-   "von": "Abgang 450 Bern (9233838601)",
-   "nach": "Gl. 330",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 537.6,
-   "y": 206.0,
-   "text": "Fahrweg Abgang 450 Bern (9233838601) ↔ Gl. 350 in OSM, fehlt im Plan",
-   "von": "Abgang 450 Bern (9233838601)",
-   "nach": "Gl. 350",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 557.0,
-   "y": 242.0,
-   "text": "Fahrweg Abgang 450 Bern (9233838601) ↔ Gl. 352 in OSM, fehlt im Plan",
-   "von": "Abgang 450 Bern (9233838601)",
-   "nach": "Gl. 352",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 532.1,
-   "y": 218.0,
-   "text": "Fahrweg Abgang 450 Bern (9233838601) ↔ Gl. 361 in OSM, fehlt im Plan",
-   "von": "Abgang 450 Bern (9233838601)",
-   "nach": "Gl. 361",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 545.3,
-   "y": 242.0,
-   "text": "Fahrweg Abgang 450 Bern (9233838601) ↔ Gl. 362 in OSM, fehlt im Plan",
-   "von": "Abgang 450 Bern (9233838601)",
-   "nach": "Gl. 362",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 482.3,
-   "y": 218.0,
-   "text": "Fahrweg Abgang 450 Bern (9233838601) ↔ Gl. 381 in OSM, fehlt im Plan",
-   "von": "Abgang 450 Bern (9233838601)",
-   "nach": "Gl. 381",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 510.1,
-   "y": 242.0,
-   "text": "Fahrweg Abgang 450 Bern (9233838601) ↔ Gl. 382 in OSM, fehlt im Plan",
-   "von": "Abgang 450 Bern (9233838601)",
-   "nach": "Gl. 382",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 523.1,
-   "y": 302.0,
+   "x": 505.4,
+   "y": 278.0,
    "text": "Fahrweg Abgang 450 Bern (9233838601) ↔ Gl. 388 in OSM, fehlt im Plan",
    "von": "Abgang 450 Bern (9233838601)",
    "nach": "Gl. 388",
@@ -1398,628 +1887,25 @@
   },
   {
    "regel": "HT5",
-   "x": 422.4,
-   "y": 218.0,
-   "text": "Fahrweg Abgang 450 Bern (9233838601) ↔ Gl. 4 in OSM, fehlt im Plan",
-   "von": "Abgang 450 Bern (9233838601)",
-   "nach": "Gl. 4",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1247.9,
-   "y": 242.0,
-   "text": "Fahrweg Abgang 450 Bern (9233845856) ↔ Abgang 500 Basel (1510193399) in OSM, fehlt im Plan",
-   "von": "Abgang 450 Bern (9233845856)",
-   "nach": "Abgang 500 Basel (1510193399)",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1247.9,
-   "y": 230.0,
-   "text": "Fahrweg Abgang 450 Bern (9233845856) ↔ Abgang 500 Basel (1510193403) in OSM, fehlt im Plan",
-   "von": "Abgang 450 Bern (9233845856)",
-   "nach": "Abgang 500 Basel (1510193403)",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 911.6,
-   "y": 226.1,
-   "text": "Fahrweg Abgang 450 Bern (9233845856) ↔ Abgang 503 Sissach (13343327653) in OSM, fehlt im Plan",
-   "von": "Abgang 450 Bern (9233845856)",
-   "nach": "Abgang 503 Sissach (13343327653)",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1176.0,
-   "y": 230.0,
-   "text": "Fahrweg Abgang 450 Bern (9233845856) ↔ Gl. 114 in OSM, fehlt im Plan",
-   "von": "Abgang 450 Bern (9233845856)",
-   "nach": "Gl. 114",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1122.3,
-   "y": 230.0,
-   "text": "Fahrweg Abgang 450 Bern (9233845856) ↔ Gl. 124 in OSM, fehlt im Plan",
-   "von": "Abgang 450 Bern (9233845856)",
-   "nach": "Gl. 124",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1042.5,
-   "y": 230.0,
-   "text": "Fahrweg Abgang 450 Bern (9233845856) ↔ Gl. 154 in OSM, fehlt im Plan",
-   "von": "Abgang 450 Bern (9233845856)",
-   "nach": "Gl. 154",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 909.4,
-   "y": 230.0,
-   "text": "Fahrweg Abgang 450 Bern (9233845856) ↔ Gl. 161 in OSM, fehlt im Plan",
-   "von": "Abgang 450 Bern (9233845856)",
-   "nach": "Gl. 161",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 895.0,
-   "y": 230.0,
-   "text": "Fahrweg Abgang 450 Bern (9233845856) ↔ Gl. 171 in OSM, fehlt im Plan",
-   "von": "Abgang 450 Bern (9233845856)",
-   "nach": "Gl. 171",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 861.8,
-   "y": 326.0,
-   "text": "Fahrweg Abgang 450 Bern (9233845856) ↔ Gl. 175 in OSM, fehlt im Plan",
-   "von": "Abgang 450 Bern (9233845856)",
-   "nach": "Gl. 175",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 651.0,
-   "y": 242.0,
-   "text": "Fahrweg Abgang 450 Bern (9233845856) ↔ Gl. 302 in OSM, fehlt im Plan",
-   "von": "Abgang 450 Bern (9233845856)",
-   "nach": "Gl. 302",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 651.0,
-   "y": 242.0,
-   "text": "Fahrweg Abgang 450 Bern (9233845856) ↔ Gl. 312 in OSM, fehlt im Plan",
-   "von": "Abgang 450 Bern (9233845856)",
-   "nach": "Gl. 312",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 651.0,
-   "y": 242.0,
-   "text": "Fahrweg Abgang 450 Bern (9233845856) ↔ Gl. 322 in OSM, fehlt im Plan",
-   "von": "Abgang 450 Bern (9233845856)",
-   "nach": "Gl. 322",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 557.0,
-   "y": 254.0,
-   "text": "Fahrweg Abgang 450 Bern (9233845856) ↔ Gl. 352 in OSM, fehlt im Plan",
-   "von": "Abgang 450 Bern (9233845856)",
-   "nach": "Gl. 352",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 545.3,
-   "y": 254.0,
-   "text": "Fahrweg Abgang 450 Bern (9233845856) ↔ Gl. 362 in OSM, fehlt im Plan",
-   "von": "Abgang 450 Bern (9233845856)",
-   "nach": "Gl. 362",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 517.4,
-   "y": 326.0,
-   "text": "Fahrweg Abgang 450 Bern (9233845856) ↔ Gl. 390 in OSM, fehlt im Plan",
-   "von": "Abgang 450 Bern (9233845856)",
-   "nach": "Gl. 390",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1247.9,
+   "x": 1905.3,
    "y": 266.0,
-   "text": "Fahrweg Abgang 500 Basel (1510193399) ↔ Abgang 500 Luzern (9233862950) in OSM, fehlt im Plan",
-   "von": "Abgang 500 Basel (1510193399)",
-   "nach": "Abgang 500 Luzern (9233862950)",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1518.8,
-   "y": 266.0,
-   "text": "Fahrweg Abgang 500 Basel (1510193399) ↔ Gl. 10 in OSM, fehlt im Plan",
-   "von": "Abgang 500 Basel (1510193399)",
-   "nach": "Gl. 10",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1518.9,
-   "y": 278.0,
-   "text": "Fahrweg Abgang 500 Basel (1510193399) ↔ Gl. 11 in OSM, fehlt im Plan",
-   "von": "Abgang 500 Basel (1510193399)",
-   "nach": "Gl. 11",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1498.8,
-   "y": 254.0,
-   "text": "Fahrweg Abgang 500 Basel (1510193399) ↔ Gl. 29 in OSM, fehlt im Plan",
-   "von": "Abgang 500 Basel (1510193399)",
-   "nach": "Gl. 29",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1465.9,
-   "y": 266.0,
-   "text": "Fahrweg Abgang 500 Basel (1510193399) ↔ Gl. 30 in OSM, fehlt im Plan",
-   "von": "Abgang 500 Basel (1510193399)",
-   "nach": "Gl. 30",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1474.5,
-   "y": 278.0,
-   "text": "Fahrweg Abgang 500 Basel (1510193399) ↔ Gl. 31 in OSM, fehlt im Plan",
-   "von": "Abgang 500 Basel (1510193399)",
-   "nach": "Gl. 31",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1827.6,
-   "y": 290.0,
-   "text": "Fahrweg Abgang 500 Basel (1510193399) ↔ Gl. 319 in OSM, fehlt im Plan",
-   "von": "Abgang 500 Basel (1510193399)",
-   "nach": "Gl. 319",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1647.1,
-   "y": 278.0,
-   "text": "Fahrweg Abgang 500 Basel (1510193399) ↔ Gl. 388 in OSM, fehlt im Plan",
-   "von": "Abgang 500 Basel (1510193399)",
-   "nach": "Gl. 388",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1606.5,
-   "y": 278.0,
-   "text": "Fahrweg Abgang 500 Basel (1510193399) ↔ Gl. 389 in OSM, fehlt im Plan",
-   "von": "Abgang 500 Basel (1510193399)",
-   "nach": "Gl. 389",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1641.3,
-   "y": 290.0,
-   "text": "Fahrweg Abgang 500 Basel (1510193399) ↔ Gl. 390 in OSM, fehlt im Plan",
-   "von": "Abgang 500 Basel (1510193399)",
-   "nach": "Gl. 390",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1324.1,
-   "y": 266.0,
-   "text": "Fahrweg Abgang 500 Basel (1510193399) ↔ Gl. 485 in OSM, fehlt im Plan",
-   "von": "Abgang 500 Basel (1510193399)",
-   "nach": "Gl. 485",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1518.8,
-   "y": 254.0,
-   "text": "Fahrweg Abgang 500 Basel (1510193399) ↔ Gl. 9 in OSM, fehlt im Plan",
-   "von": "Abgang 500 Basel (1510193399)",
-   "nach": "Gl. 9",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1300.4,
-   "y": 290.0,
-   "text": "Fahrweg Abgang 500 Basel (1510193399) ↔ Gleisende 9233862947 in OSM, fehlt im Plan",
-   "von": "Abgang 500 Basel (1510193399)",
-   "nach": "Gleisende 9233862947",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1247.9,
-   "y": 254.0,
-   "text": "Fahrweg Abgang 500 Basel (1510193403) ↔ Abgang 500 Luzern (9233862950) in OSM, fehlt im Plan",
+   "text": "Fahrweg Abgang 500 Basel (1510193403) ↔ Gl. 285 in OSM, fehlt im Plan",
    "von": "Abgang 500 Basel (1510193403)",
-   "nach": "Abgang 500 Luzern (9233862950)",
+   "nach": "Gl. 285",
    "art": "fehlt"
   },
   {
    "regel": "HT5",
-   "x": 1985.9,
-   "y": 290.0,
-   "text": "Fahrweg Abgang 500 Basel (1510193403) ↔ Abgang 531 Aarau (617747521) in OSM, fehlt im Plan",
-   "von": "Abgang 500 Basel (1510193403)",
-   "nach": "Abgang 531 Aarau (617747521)",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1518.8,
-   "y": 254.0,
-   "text": "Fahrweg Abgang 500 Basel (1510193403) ↔ Gl. 10 in OSM, fehlt im Plan",
-   "von": "Abgang 500 Basel (1510193403)",
-   "nach": "Gl. 10",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1518.9,
-   "y": 266.0,
-   "text": "Fahrweg Abgang 500 Basel (1510193403) ↔ Gl. 11 in OSM, fehlt im Plan",
-   "von": "Abgang 500 Basel (1510193403)",
-   "nach": "Gl. 11",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1985.7,
-   "y": 218.0,
-   "text": "Fahrweg Abgang 500 Basel (1510193403) ↔ Gl. 174 in OSM, fehlt im Plan",
-   "von": "Abgang 500 Basel (1510193403)",
-   "nach": "Gl. 174",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1500.9,
-   "y": 158.0,
-   "text": "Fahrweg Abgang 500 Basel (1510193403) ↔ Gl. 2 in OSM, fehlt im Plan",
-   "von": "Abgang 500 Basel (1510193403)",
-   "nach": "Gl. 2",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1462.4,
-   "y": 218.0,
-   "text": "Fahrweg Abgang 500 Basel (1510193403) ↔ Gl. 27 in OSM, fehlt im Plan",
-   "von": "Abgang 500 Basel (1510193403)",
-   "nach": "Gl. 27",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1498.8,
-   "y": 230.0,
-   "text": "Fahrweg Abgang 500 Basel (1510193403) ↔ Gl. 28 in OSM, fehlt im Plan",
-   "von": "Abgang 500 Basel (1510193403)",
-   "nach": "Gl. 28",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1498.8,
-   "y": 242.0,
-   "text": "Fahrweg Abgang 500 Basel (1510193403) ↔ Gl. 29 in OSM, fehlt im Plan",
-   "von": "Abgang 500 Basel (1510193403)",
-   "nach": "Gl. 29",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1500.9,
-   "y": 170.0,
-   "text": "Fahrweg Abgang 500 Basel (1510193403) ↔ Gl. 3 in OSM, fehlt im Plan",
-   "von": "Abgang 500 Basel (1510193403)",
-   "nach": "Gl. 3",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1465.9,
-   "y": 254.0,
-   "text": "Fahrweg Abgang 500 Basel (1510193403) ↔ Gl. 30 in OSM, fehlt im Plan",
-   "von": "Abgang 500 Basel (1510193403)",
-   "nach": "Gl. 30",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1474.5,
-   "y": 266.0,
-   "text": "Fahrweg Abgang 500 Basel (1510193403) ↔ Gl. 31 in OSM, fehlt im Plan",
-   "von": "Abgang 500 Basel (1510193403)",
-   "nach": "Gl. 31",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1752.8,
-   "y": 266.0,
-   "text": "Fahrweg Abgang 500 Basel (1510193403) ↔ Gl. 318 in OSM, fehlt im Plan",
-   "von": "Abgang 500 Basel (1510193403)",
-   "nach": "Gl. 318",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1775.0,
-   "y": 194.0,
-   "text": "Fahrweg Abgang 500 Basel (1510193403) ↔ Gl. 322 in OSM, fehlt im Plan",
-   "von": "Abgang 500 Basel (1510193403)",
-   "nach": "Gl. 322",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1680.9,
+   "x": 1630.7,
    "y": 206.0,
-   "text": "Fahrweg Abgang 500 Basel (1510193403) ↔ Gl. 352 in OSM, fehlt im Plan",
+   "text": "Fahrweg Abgang 500 Basel (1510193403) ↔ Gl. 331 in OSM, fehlt im Plan",
    "von": "Abgang 500 Basel (1510193403)",
-   "nach": "Gl. 352",
+   "nach": "Gl. 331",
    "art": "fehlt"
   },
   {
    "regel": "HT5",
-   "x": 1669.2,
-   "y": 206.0,
-   "text": "Fahrweg Abgang 500 Basel (1510193403) ↔ Gl. 362 in OSM, fehlt im Plan",
-   "von": "Abgang 500 Basel (1510193403)",
-   "nach": "Gl. 362",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1628.4,
-   "y": 230.0,
-   "text": "Fahrweg Abgang 500 Basel (1510193403) ↔ Gl. 364 in OSM, fehlt im Plan",
-   "von": "Abgang 500 Basel (1510193403)",
-   "nach": "Gl. 364",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1647.1,
-   "y": 266.0,
-   "text": "Fahrweg Abgang 500 Basel (1510193403) ↔ Gl. 388 in OSM, fehlt im Plan",
-   "von": "Abgang 500 Basel (1510193403)",
-   "nach": "Gl. 388",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1606.5,
-   "y": 266.0,
-   "text": "Fahrweg Abgang 500 Basel (1510193403) ↔ Gl. 389 in OSM, fehlt im Plan",
-   "von": "Abgang 500 Basel (1510193403)",
-   "nach": "Gl. 389",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1641.3,
-   "y": 278.0,
-   "text": "Fahrweg Abgang 500 Basel (1510193403) ↔ Gl. 390 in OSM, fehlt im Plan",
-   "von": "Abgang 500 Basel (1510193403)",
-   "nach": "Gl. 390",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1546.3,
-   "y": 182.0,
-   "text": "Fahrweg Abgang 500 Basel (1510193403) ↔ Gl. 4 in OSM, fehlt im Plan",
-   "von": "Abgang 500 Basel (1510193403)",
-   "nach": "Gl. 4",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1367.9,
-   "y": 170.0,
-   "text": "Fahrweg Abgang 500 Basel (1510193403) ↔ Gl. 451 in OSM, fehlt im Plan",
-   "von": "Abgang 500 Basel (1510193403)",
-   "nach": "Gl. 451",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1324.1,
-   "y": 254.0,
-   "text": "Fahrweg Abgang 500 Basel (1510193403) ↔ Gl. 485 in OSM, fehlt im Plan",
-   "von": "Abgang 500 Basel (1510193403)",
-   "nach": "Gl. 485",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1546.3,
-   "y": 218.0,
-   "text": "Fahrweg Abgang 500 Basel (1510193403) ↔ Gl. 7 in OSM, fehlt im Plan",
-   "von": "Abgang 500 Basel (1510193403)",
-   "nach": "Gl. 7",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1518.8,
-   "y": 230.0,
-   "text": "Fahrweg Abgang 500 Basel (1510193403) ↔ Gl. 8 in OSM, fehlt im Plan",
-   "von": "Abgang 500 Basel (1510193403)",
-   "nach": "Gl. 8",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1518.8,
-   "y": 242.0,
-   "text": "Fahrweg Abgang 500 Basel (1510193403) ↔ Gl. 9 in OSM, fehlt im Plan",
-   "von": "Abgang 500 Basel (1510193403)",
-   "nach": "Gl. 9",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1300.4,
-   "y": 278.0,
-   "text": "Fahrweg Abgang 500 Basel (1510193403) ↔ Gleisende 9233862947 in OSM, fehlt im Plan",
-   "von": "Abgang 500 Basel (1510193403)",
-   "nach": "Gleisende 9233862947",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 911.6,
-   "y": 250.1,
-   "text": "Fahrweg Abgang 500 Luzern (9233862950) ↔ Abgang 503 Sissach (13343327653) in OSM, fehlt im Plan",
-   "von": "Abgang 500 Luzern (9233862950)",
-   "nach": "Abgang 503 Sissach (13343327653)",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1176.0,
-   "y": 254.0,
-   "text": "Fahrweg Abgang 500 Luzern (9233862950) ↔ Gl. 114 in OSM, fehlt im Plan",
-   "von": "Abgang 500 Luzern (9233862950)",
-   "nach": "Gl. 114",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1122.3,
-   "y": 254.0,
-   "text": "Fahrweg Abgang 500 Luzern (9233862950) ↔ Gl. 124 in OSM, fehlt im Plan",
-   "von": "Abgang 500 Luzern (9233862950)",
-   "nach": "Gl. 124",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1042.5,
-   "y": 254.0,
-   "text": "Fahrweg Abgang 500 Luzern (9233862950) ↔ Gl. 154 in OSM, fehlt im Plan",
-   "von": "Abgang 500 Luzern (9233862950)",
-   "nach": "Gl. 154",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 909.4,
-   "y": 254.0,
-   "text": "Fahrweg Abgang 500 Luzern (9233862950) ↔ Gl. 161 in OSM, fehlt im Plan",
-   "von": "Abgang 500 Luzern (9233862950)",
-   "nach": "Gl. 161",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 895.0,
-   "y": 254.0,
-   "text": "Fahrweg Abgang 500 Luzern (9233862950) ↔ Gl. 171 in OSM, fehlt im Plan",
-   "von": "Abgang 500 Luzern (9233862950)",
-   "nach": "Gl. 171",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 861.8,
-   "y": 350.0,
-   "text": "Fahrweg Abgang 500 Luzern (9233862950) ↔ Gl. 175 in OSM, fehlt im Plan",
-   "von": "Abgang 500 Luzern (9233862950)",
-   "nach": "Gl. 175",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 651.0,
-   "y": 266.0,
-   "text": "Fahrweg Abgang 500 Luzern (9233862950) ↔ Gl. 302 in OSM, fehlt im Plan",
-   "von": "Abgang 500 Luzern (9233862950)",
-   "nach": "Gl. 302",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 651.0,
-   "y": 266.0,
-   "text": "Fahrweg Abgang 500 Luzern (9233862950) ↔ Gl. 312 in OSM, fehlt im Plan",
-   "von": "Abgang 500 Luzern (9233862950)",
-   "nach": "Gl. 312",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 651.0,
-   "y": 266.0,
-   "text": "Fahrweg Abgang 500 Luzern (9233862950) ↔ Gl. 322 in OSM, fehlt im Plan",
-   "von": "Abgang 500 Luzern (9233862950)",
-   "nach": "Gl. 322",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 557.0,
-   "y": 278.0,
-   "text": "Fahrweg Abgang 500 Luzern (9233862950) ↔ Gl. 352 in OSM, fehlt im Plan",
-   "von": "Abgang 500 Luzern (9233862950)",
-   "nach": "Gl. 352",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 545.3,
-   "y": 278.0,
-   "text": "Fahrweg Abgang 500 Luzern (9233862950) ↔ Gl. 362 in OSM, fehlt im Plan",
-   "von": "Abgang 500 Luzern (9233862950)",
-   "nach": "Gl. 362",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 517.4,
-   "y": 350.0,
-   "text": "Fahrweg Abgang 500 Luzern (9233862950) ↔ Gl. 390 in OSM, fehlt im Plan",
-   "von": "Abgang 500 Luzern (9233862950)",
-   "nach": "Gl. 390",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1697.0,
+   "x": 1573.8,
    "y": 178.1,
    "text": "Fahrweg Abgang 503 Sissach (13343327653) ↔ Gl. 161 in OSM, fehlt im Plan",
    "von": "Abgang 503 Sissach (13343327653)",
@@ -2028,215 +1914,44 @@
   },
   {
    "regel": "HT5",
-   "x": 1164.6,
-   "y": 154.1,
-   "text": "Fahrweg Abgang 503 Sissach (13343327653) ↔ Gl. 2 in OSM, fehlt im Plan",
-   "von": "Abgang 503 Sissach (13343327653)",
-   "nach": "Gl. 2",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1126.1,
-   "y": 214.1,
-   "text": "Fahrweg Abgang 503 Sissach (13343327653) ↔ Gl. 27 in OSM, fehlt im Plan",
-   "von": "Abgang 503 Sissach (13343327653)",
-   "nach": "Gl. 27",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1162.5,
-   "y": 226.1,
-   "text": "Fahrweg Abgang 503 Sissach (13343327653) ↔ Gl. 28 in OSM, fehlt im Plan",
-   "von": "Abgang 503 Sissach (13343327653)",
-   "nach": "Gl. 28",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1162.5,
-   "y": 238.1,
-   "text": "Fahrweg Abgang 503 Sissach (13343327653) ↔ Gl. 29 in OSM, fehlt im Plan",
-   "von": "Abgang 503 Sissach (13343327653)",
-   "nach": "Gl. 29",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1164.6,
-   "y": 166.1,
-   "text": "Fahrweg Abgang 503 Sissach (13343327653) ↔ Gl. 3 in OSM, fehlt im Plan",
-   "von": "Abgang 503 Sissach (13343327653)",
-   "nach": "Gl. 3",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1438.7,
-   "y": 190.1,
-   "text": "Fahrweg Abgang 503 Sissach (13343327653) ↔ Gl. 322 in OSM, fehlt im Plan",
-   "von": "Abgang 503 Sissach (13343327653)",
-   "nach": "Gl. 322",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1344.6,
+   "x": 1301.4,
    "y": 202.1,
-   "text": "Fahrweg Abgang 503 Sissach (13343327653) ↔ Gl. 352 in OSM, fehlt im Plan",
+   "text": "Fahrweg Abgang 503 Sissach (13343327653) ↔ Gl. 331 in OSM, fehlt im Plan",
    "von": "Abgang 503 Sissach (13343327653)",
-   "nach": "Gl. 352",
+   "nach": "Gl. 331",
    "art": "fehlt"
   },
   {
    "regel": "HT5",
-   "x": 1333.0,
-   "y": 202.1,
-   "text": "Fahrweg Abgang 503 Sissach (13343327653) ↔ Gl. 362 in OSM, fehlt im Plan",
-   "von": "Abgang 503 Sissach (13343327653)",
-   "nach": "Gl. 362",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1292.1,
-   "y": 226.1,
-   "text": "Fahrweg Abgang 503 Sissach (13343327653) ↔ Gl. 364 in OSM, fehlt im Plan",
-   "von": "Abgang 503 Sissach (13343327653)",
-   "nach": "Gl. 364",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1210.0,
-   "y": 178.1,
-   "text": "Fahrweg Abgang 503 Sissach (13343327653) ↔ Gl. 4 in OSM, fehlt im Plan",
-   "von": "Abgang 503 Sissach (13343327653)",
-   "nach": "Gl. 4",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1031.6,
-   "y": 166.1,
-   "text": "Fahrweg Abgang 503 Sissach (13343327653) ↔ Gl. 451 in OSM, fehlt im Plan",
-   "von": "Abgang 503 Sissach (13343327653)",
-   "nach": "Gl. 451",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 987.9,
-   "y": 250.1,
-   "text": "Fahrweg Abgang 503 Sissach (13343327653) ↔ Gl. 485 in OSM, fehlt im Plan",
-   "von": "Abgang 503 Sissach (13343327653)",
-   "nach": "Gl. 485",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1210.0,
-   "y": 214.1,
-   "text": "Fahrweg Abgang 503 Sissach (13343327653) ↔ Gl. 7 in OSM, fehlt im Plan",
-   "von": "Abgang 503 Sissach (13343327653)",
-   "nach": "Gl. 7",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1182.5,
-   "y": 226.1,
-   "text": "Fahrweg Abgang 503 Sissach (13343327653) ↔ Gl. 8 in OSM, fehlt im Plan",
-   "von": "Abgang 503 Sissach (13343327653)",
-   "nach": "Gl. 8",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1182.5,
-   "y": 238.1,
-   "text": "Fahrweg Abgang 503 Sissach (13343327653) ↔ Gl. 9 in OSM, fehlt im Plan",
-   "von": "Abgang 503 Sissach (13343327653)",
-   "nach": "Gl. 9",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1914.0,
-   "y": 290.0,
-   "text": "Fahrweg Abgang 531 Aarau (617747521) ↔ Gl. 114 in OSM, fehlt im Plan",
+   "x": 1587.9,
+   "y": 362.0,
+   "text": "Fahrweg Abgang 531 Aarau (617747521) ↔ Gl. 285 in OSM, fehlt im Plan",
    "von": "Abgang 531 Aarau (617747521)",
-   "nach": "Gl. 114",
+   "nach": "Gl. 285",
    "art": "fehlt"
   },
   {
    "regel": "HT5",
-   "x": 1860.3,
-   "y": 290.0,
-   "text": "Fahrweg Abgang 531 Aarau (617747521) ↔ Gl. 124 in OSM, fehlt im Plan",
-   "von": "Abgang 531 Aarau (617747521)",
-   "nach": "Gl. 124",
+   "x": 1117.0,
+   "y": 293.0,
+   "text": "Fahrweg Abgang 540 Aarau (25522388) ↔ Gl. 353 in OSM, fehlt im Plan",
+   "von": "Abgang 540 Aarau (25522388)",
+   "nach": "Gl. 353",
    "art": "fehlt"
   },
   {
    "regel": "HT5",
-   "x": 1780.5,
-   "y": 290.0,
-   "text": "Fahrweg Abgang 531 Aarau (617747521) ↔ Gl. 154 in OSM, fehlt im Plan",
-   "von": "Abgang 531 Aarau (617747521)",
-   "nach": "Gl. 154",
+   "x": 1110.9,
+   "y": 293.0,
+   "text": "Fahrweg Abgang 540 Aarau (25522388) ↔ Gl. 363 in OSM, fehlt im Plan",
+   "von": "Abgang 540 Aarau (25522388)",
+   "nach": "Gl. 363",
    "art": "fehlt"
   },
   {
    "regel": "HT5",
-   "x": 961.2,
-   "y": 257.0,
-   "text": "Fahrweg Abgang 540 Aarau (3191652525) ↔ Gl. 1 in OSM, fehlt im Plan",
-   "von": "Abgang 540 Aarau (3191652525)",
-   "nach": "Gl. 1",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 961.2,
-   "y": 269.0,
-   "text": "Fahrweg Abgang 540 Aarau (3191652525) ↔ Gl. 2 in OSM, fehlt im Plan",
-   "von": "Abgang 540 Aarau (3191652525)",
-   "nach": "Gl. 2",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 922.7,
-   "y": 329.0,
-   "text": "Fahrweg Abgang 540 Aarau (3191652525) ↔ Gl. 27 in OSM, fehlt im Plan",
-   "von": "Abgang 540 Aarau (3191652525)",
-   "nach": "Gl. 27",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 959.1,
-   "y": 341.0,
-   "text": "Fahrweg Abgang 540 Aarau (3191652525) ↔ Gl. 28 in OSM, fehlt im Plan",
-   "von": "Abgang 540 Aarau (3191652525)",
-   "nach": "Gl. 28",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 961.2,
-   "y": 281.0,
-   "text": "Fahrweg Abgang 540 Aarau (3191652525) ↔ Gl. 3 in OSM, fehlt im Plan",
-   "von": "Abgang 540 Aarau (3191652525)",
-   "nach": "Gl. 3",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1235.3,
-   "y": 305.0,
+   "x": 1327.8,
+   "y": 293.0,
    "text": "Fahrweg Abgang 540 Aarau (3191652525) ↔ Gl. 302 in OSM, fehlt im Plan",
    "von": "Abgang 540 Aarau (3191652525)",
    "nach": "Gl. 302",
@@ -2244,8 +1959,8 @@
   },
   {
    "regel": "HT5",
-   "x": 1235.3,
-   "y": 305.0,
+   "x": 1327.8,
+   "y": 293.0,
    "text": "Fahrweg Abgang 540 Aarau (3191652525) ↔ Gl. 312 in OSM, fehlt im Plan",
    "von": "Abgang 540 Aarau (3191652525)",
    "nach": "Gl. 312",
@@ -2253,255 +1968,26 @@
   },
   {
    "regel": "HT5",
-   "x": 1235.3,
+   "x": 1202.4,
    "y": 305.0,
-   "text": "Fahrweg Abgang 540 Aarau (3191652525) ↔ Gl. 322 in OSM, fehlt im Plan",
+   "text": "Fahrweg Abgang 540 Aarau (3191652525) ↔ Gl. 331 in OSM, fehlt im Plan",
    "von": "Abgang 540 Aarau (3191652525)",
-   "nach": "Gl. 322",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1131.5,
-   "y": 287.0,
-   "text": "Fahrweg Abgang 540 Aarau (3191652525) ↔ Gl. 330 in OSM, fehlt im Plan",
-   "von": "Abgang 540 Aarau (3191652525)",
-   "nach": "Gl. 330",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1121.8,
-   "y": 281.0,
-   "text": "Fahrweg Abgang 540 Aarau (3191652525) ↔ Gl. 350 in OSM, fehlt im Plan",
-   "von": "Abgang 540 Aarau (3191652525)",
-   "nach": "Gl. 350",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1141.2,
-   "y": 317.0,
-   "text": "Fahrweg Abgang 540 Aarau (3191652525) ↔ Gl. 352 in OSM, fehlt im Plan",
-   "von": "Abgang 540 Aarau (3191652525)",
-   "nach": "Gl. 352",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1116.3,
-   "y": 293.0,
-   "text": "Fahrweg Abgang 540 Aarau (3191652525) ↔ Gl. 361 in OSM, fehlt im Plan",
-   "von": "Abgang 540 Aarau (3191652525)",
-   "nach": "Gl. 361",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1129.6,
-   "y": 317.0,
-   "text": "Fahrweg Abgang 540 Aarau (3191652525) ↔ Gl. 362 in OSM, fehlt im Plan",
-   "von": "Abgang 540 Aarau (3191652525)",
-   "nach": "Gl. 362",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1088.7,
-   "y": 341.0,
-   "text": "Fahrweg Abgang 540 Aarau (3191652525) ↔ Gl. 364 in OSM, fehlt im Plan",
-   "von": "Abgang 540 Aarau (3191652525)",
-   "nach": "Gl. 364",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1066.5,
-   "y": 293.0,
-   "text": "Fahrweg Abgang 540 Aarau (3191652525) ↔ Gl. 381 in OSM, fehlt im Plan",
-   "von": "Abgang 540 Aarau (3191652525)",
-   "nach": "Gl. 381",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1094.4,
-   "y": 317.0,
-   "text": "Fahrweg Abgang 540 Aarau (3191652525) ↔ Gl. 382 in OSM, fehlt im Plan",
-   "von": "Abgang 540 Aarau (3191652525)",
-   "nach": "Gl. 382",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1006.6,
-   "y": 293.0,
-   "text": "Fahrweg Abgang 540 Aarau (3191652525) ↔ Gl. 4 in OSM, fehlt im Plan",
-   "von": "Abgang 540 Aarau (3191652525)",
-   "nach": "Gl. 4",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 828.2,
-   "y": 281.0,
-   "text": "Fahrweg Abgang 540 Aarau (3191652525) ↔ Gl. 451 in OSM, fehlt im Plan",
-   "von": "Abgang 540 Aarau (3191652525)",
-   "nach": "Gl. 451",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1006.6,
-   "y": 329.0,
-   "text": "Fahrweg Abgang 540 Aarau (3191652525) ↔ Gl. 7 in OSM, fehlt im Plan",
-   "von": "Abgang 540 Aarau (3191652525)",
-   "nach": "Gl. 7",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 979.1,
-   "y": 341.0,
-   "text": "Fahrweg Abgang 540 Aarau (3191652525) ↔ Gl. 8 in OSM, fehlt im Plan",
-   "von": "Abgang 540 Aarau (3191652525)",
-   "nach": "Gl. 8",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 947.2,
-   "y": 269.0,
-   "text": "Fahrweg Abgang 540 Aarau (635802999) ↔ Gl. 2 in OSM, fehlt im Plan",
-   "von": "Abgang 540 Aarau (635802999)",
-   "nach": "Gl. 2",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 947.2,
-   "y": 281.0,
-   "text": "Fahrweg Abgang 540 Aarau (635802999) ↔ Gl. 3 in OSM, fehlt im Plan",
-   "von": "Abgang 540 Aarau (635802999)",
-   "nach": "Gl. 3",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1102.3,
-   "y": 293.0,
-   "text": "Fahrweg Abgang 540 Aarau (635802999) ↔ Gl. 361 in OSM, fehlt im Plan",
-   "von": "Abgang 540 Aarau (635802999)",
-   "nach": "Gl. 361",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 814.2,
-   "y": 281.0,
-   "text": "Fahrweg Abgang 540 Aarau (635802999) ↔ Gl. 451 in OSM, fehlt im Plan",
-   "von": "Abgang 540 Aarau (635802999)",
-   "nach": "Gl. 451",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 447.4,
-   "y": 362.0,
-   "text": "Fahrweg Gl. 11 ↔ Gleisende 9233862947 in OSM, fehlt im Plan",
-   "von": "Gl. 11",
-   "nach": "Gleisende 9233862947",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1228.5,
-   "y": 278.0,
-   "text": "Fahrweg Gl. 114 ↔ Gleisende 9233862947 in OSM, fehlt im Plan",
-   "von": "Gl. 114",
-   "nach": "Gleisende 9233862947",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1174.8,
-   "y": 278.0,
-   "text": "Fahrweg Gl. 124 ↔ Gleisende 9233862947 in OSM, fehlt im Plan",
-   "von": "Gl. 124",
-   "nach": "Gleisende 9233862947",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1095.0,
-   "y": 278.0,
-   "text": "Fahrweg Gl. 154 ↔ Gleisende 9233862947 in OSM, fehlt im Plan",
-   "von": "Gl. 154",
-   "nach": "Gleisende 9233862947",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 914.3,
-   "y": 374.0,
-   "text": "Fahrweg Gl. 175 ↔ Gleisende 9233862947 in OSM, fehlt im Plan",
-   "von": "Gl. 175",
-   "nach": "Gleisende 9233862947",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 403.1,
-   "y": 362.0,
-   "text": "Fahrweg Gl. 31 ↔ Gleisende 9233862947 in OSM, fehlt im Plan",
-   "von": "Gl. 31",
-   "nach": "Gleisende 9233862947",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 575.6,
-   "y": 362.0,
-   "text": "Fahrweg Gl. 388 ↔ Gleisende 9233862947 in OSM, fehlt im Plan",
-   "von": "Gl. 388",
-   "nach": "Gleisende 9233862947",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 535.1,
-   "y": 362.0,
-   "text": "Fahrweg Gl. 389 ↔ Gleisende 9233862947 in OSM, fehlt im Plan",
-   "von": "Gl. 389",
-   "nach": "Gleisende 9233862947",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 569.9,
-   "y": 374.0,
-   "text": "Fahrweg Gl. 390 ↔ Gleisende 9233862947 in OSM, fehlt im Plan",
-   "von": "Gl. 390",
-   "nach": "Gleisende 9233862947",
+   "nach": "Gl. 331",
    "art": "fehlt"
   },
   {
    "regel": "_info",
    "x": 0,
    "y": 0,
-   "text": "Fahrwege: 64/78 Ziele im Plan gefunden, OSM 365, Plan 279",
+   "text": "Fahrwege: 68/78 Ziele im Plan gefunden, OSM 378, Plan 521",
    "ohne_lage": [
     "Gl. 115",
-    "Gl. 12",
     "Gl. 125",
     "Gl. 155",
-    "Gl. 285",
-    "Gl. 286",
     "Gl. 305",
     "Gl. 315",
-    "Gl. 32",
-    "Gl. 331",
-    "Gl. 351",
+    "Gl. 361",
+    "Gl. 381",
     "Gl. 486",
     "Gl. 493",
     "Gl. 559"
@@ -2510,9 +1996,9 @@
  ],
  "auf_plan": 4,
  "osm_abgleich": {
-  "VB1": 24,
-  "VB2": 25,
-  "VC1": 1,
-  "VD1": 16
+  "VB1": 10,
+  "VB2": 21,
+  "VC1": 5,
+  "VD1": 10
  }
 }

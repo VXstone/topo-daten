@@ -1,30 +1,42 @@
 {
  "zaehl": {
   "HT1": 2,
-  "HT2": 0,
+  "HT2": 1,
   "HT3": 0,
   "HT4": 0,
-  "HT5": 15
+  "HT5": 14
  },
  "befunde": [
   {
    "regel": "HT1",
-   "x": 1545.7,
-   "y": 208.4,
+   "x": 1524.0,
+   "y": 184.4,
    "text": "OSM-Weiche 1599161050 ohne Abzweig im Plan",
    "osm": 1599161050
   },
   {
    "regel": "HT1",
-   "x": 1656.1,
+   "x": 1622.8,
    "y": 184.4,
    "text": "OSM-Weiche 630418379 ohne Abzweig im Plan",
    "osm": 630418379
   },
   {
+   "regel": "HT2",
+   "x": 834.4,
+   "y": 269.6,
+   "text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
+   "ways": [
+    49565863,
+    49715372,
+    49715373,
+    1273524863
+   ]
+  },
+  {
    "regel": "HT5",
-   "x": 1260.4,
-   "y": 222.6,
+   "x": 1236.1,
+   "y": 213.9,
    "text": "Fahrweg Abgang 410 Oensingen (630418379) ↔ Abgang 415 Lyss (9237893722) in OSM, fehlt im Plan",
    "von": "Abgang 410 Oensingen (630418379)",
    "nach": "Abgang 415 Lyss (9237893722)",
@@ -32,8 +44,8 @@
   },
   {
    "regel": "HT5",
-   "x": 1260.4,
-   "y": 222.6,
+   "x": 1236.2,
+   "y": 213.9,
    "text": "Fahrweg Abgang 410 Oensingen (630418379) ↔ Gl. 433 in OSM, fehlt im Plan",
    "von": "Abgang 410 Oensingen (630418379)",
    "nach": "Gl. 433",
@@ -41,8 +53,8 @@
   },
   {
    "regel": "HT5",
-   "x": 1260.4,
-   "y": 210.6,
+   "x": 1236.1,
+   "y": 201.9,
    "text": "Fahrweg Abgang 410 Oensingen (80923172) ↔ Abgang 415 Lyss (9237893722) in OSM, fehlt im Plan",
    "von": "Abgang 410 Oensingen (80923172)",
    "nach": "Abgang 415 Lyss (9237893722)",
@@ -50,8 +62,8 @@
   },
   {
    "regel": "HT5",
-   "x": 1260.4,
-   "y": 210.6,
+   "x": 1236.2,
+   "y": 201.9,
    "text": "Fahrweg Abgang 410 Oensingen (80923172) ↔ Gl. 433 in OSM, fehlt im Plan",
    "von": "Abgang 410 Oensingen (80923172)",
    "nach": "Gl. 433",
@@ -59,8 +71,8 @@
   },
   {
    "regel": "HT5",
-   "x": 1260.4,
-   "y": 234.6,
+   "x": 1236.1,
+   "y": 225.9,
    "text": "Fahrweg Abgang 410 Oensingen (9237850152) ↔ Abgang 415 Lyss (9237893722) in OSM, fehlt im Plan",
    "von": "Abgang 410 Oensingen (9237850152)",
    "nach": "Abgang 415 Lyss (9237893722)",
@@ -68,8 +80,8 @@
   },
   {
    "regel": "HT5",
-   "x": 1260.4,
-   "y": 234.6,
+   "x": 1236.2,
+   "y": 225.9,
    "text": "Fahrweg Abgang 410 Oensingen (9237850152) ↔ Gl. 433 in OSM, fehlt im Plan",
    "von": "Abgang 410 Oensingen (9237850152)",
    "nach": "Gl. 433",
@@ -77,8 +89,8 @@
   },
   {
    "regel": "HT5",
-   "x": 983.1,
-   "y": 210.6,
+   "x": 969.5,
+   "y": 201.9,
    "text": "Fahrweg Abgang 415 Lyss (9237893722) ↔ Gl. 1 in OSM, fehlt im Plan",
    "von": "Abgang 415 Lyss (9237893722)",
    "nach": "Gl. 1",
@@ -86,8 +98,8 @@
   },
   {
    "regel": "HT5",
-   "x": 970.1,
-   "y": 270.6,
+   "x": 956.4,
+   "y": 256.5,
    "text": "Fahrweg Abgang 415 Lyss (9237893722) ↔ Gl. 3 in OSM, fehlt im Plan",
    "von": "Abgang 415 Lyss (9237893722)",
    "nach": "Gl. 3",
@@ -95,8 +107,8 @@
   },
   {
    "regel": "HT5",
-   "x": 1260.4,
-   "y": 222.6,
+   "x": 1224.8,
+   "y": 213.9,
    "text": "Fahrweg Abgang 415 Lyss (9237893722) ↔ Gl. 332 in OSM, fehlt im Plan",
    "von": "Abgang 415 Lyss (9237893722)",
    "nach": "Gl. 332",
@@ -104,8 +116,8 @@
   },
   {
    "regel": "HT5",
-   "x": 1246.6,
-   "y": 234.6,
+   "x": 1236.1,
+   "y": 225.9,
    "text": "Fahrweg Abgang 415 Lyss (9237893722) ↔ Gl. 343 in OSM, fehlt im Plan",
    "von": "Abgang 415 Lyss (9237893722)",
    "nach": "Gl. 343",
@@ -113,8 +125,8 @@
   },
   {
    "regel": "HT5",
-   "x": 1209.1,
-   "y": 210.6,
+   "x": 1185.6,
+   "y": 201.9,
    "text": "Fahrweg Abgang 415 Lyss (9237893722) ↔ Gl. 351 in OSM, fehlt im Plan",
    "von": "Abgang 415 Lyss (9237893722)",
    "nach": "Gl. 351",
@@ -122,8 +134,8 @@
   },
   {
    "regel": "HT5",
-   "x": 1155.7,
-   "y": 234.6,
+   "x": 1141.0,
+   "y": 213.9,
    "text": "Fahrweg Abgang 415 Lyss (9237893722) ↔ Gl. 362 in OSM, fehlt im Plan",
    "von": "Abgang 415 Lyss (9237893722)",
    "nach": "Gl. 362",
@@ -131,17 +143,8 @@
   },
   {
    "regel": "HT5",
-   "x": 864.7,
-   "y": 260.7,
-   "text": "Fahrweg Abgang 415 Lyss (9237893722) ↔ Gl. 433 in OSM, fehlt im Plan",
-   "von": "Abgang 415 Lyss (9237893722)",
-   "nach": "Gl. 433",
-   "art": "fehlt"
-  },
-  {
-   "regel": "HT5",
-   "x": 1023.4,
-   "y": 294.6,
+   "x": 1010.3,
+   "y": 280.5,
    "text": "Fahrweg Abgang 415 Lyss (9237893722) ↔ Gl. 5 in OSM, fehlt im Plan",
    "von": "Abgang 415 Lyss (9237893722)",
    "nach": "Gl. 5",
@@ -149,8 +152,8 @@
   },
   {
    "regel": "HT5",
-   "x": 1023.4,
-   "y": 306.6,
+   "x": 1010.3,
+   "y": 292.5,
    "text": "Fahrweg Abgang 415 Lyss (9237893722) ↔ Gl. 6 in OSM, fehlt im Plan",
    "von": "Abgang 415 Lyss (9237893722)",
    "nach": "Gl. 6",
@@ -160,16 +163,16 @@
    "regel": "_info",
    "x": 0,
    "y": 0,
-   "text": "Fahrwege: 27/27 Ziele im Plan gefunden, OSM 116, Plan 101",
+   "text": "Fahrwege: 27/27 Ziele im Plan gefunden, OSM 116, Plan 102",
    "ohne_lage": []
   }
  ],
- "auf_plan": 3,
+ "auf_plan": 2,
  "osm_abgleich": {
   "VA1": 2,
-  "VB1": 3,
-  "VB2": 7,
-  "VD1": 6,
+  "VB1": 4,
+  "VB2": 13,
+  "VD1": 7,
   "VD2": 1
  }
 }

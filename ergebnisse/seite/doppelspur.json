@@ -3,66 +3,6 @@
   "aarau": [
    {
     "ebenen": [
-     4,
-     6
-    ],
-    "parallel_m": 44,
-    "ref": "650",
-    "regel": "HD",
-    "text": "Doppelspur 24786490/87351119 (650): 2 Ebenen auseinander statt 1, kein Perron dazwischen (44 m parallel)",
-    "ways": [
-     24786490,
-     87351119
-    ],
-    "zwischen": []
-   },
-   {
-    "ebenen": [
-     4,
-     6
-    ],
-    "parallel_m": 489,
-    "ref": "650",
-    "regel": "HD",
-    "text": "Doppelspur 26730190/87351115 (650): 2 Ebenen auseinander statt 1, kein Perron dazwischen (489 m parallel)",
-    "ways": [
-     26730190,
-     87351115
-    ],
-    "zwischen": []
-   },
-   {
-    "ebenen": [
-     4,
-     6
-    ],
-    "parallel_m": 62,
-    "ref": "650",
-    "regel": "HD",
-    "text": "Doppelspur 27528345/87351111 (650): 2 Ebenen auseinander statt 1, kein Perron dazwischen (62 m parallel)",
-    "ways": [
-     27528345,
-     87351111
-    ],
-    "zwischen": []
-   },
-   {
-    "ebenen": [
-     4,
-     6
-    ],
-    "parallel_m": 40,
-    "ref": "650",
-    "regel": "HD",
-    "text": "Doppelspur 27528346/87351109 (650): 2 Ebenen auseinander statt 1, kein Perron dazwischen (40 m parallel)",
-    "ways": [
-     27528346,
-     87351109
-    ],
-    "zwischen": []
-   },
-   {
-    "ebenen": [
      8,
      6
     ],
@@ -88,51 +28,6 @@
     "ways": [
      33789989,
      168744376
-    ],
-    "zwischen": []
-   },
-   {
-    "ebenen": [
-     6,
-     4
-    ],
-    "parallel_m": 251,
-    "ref": "650",
-    "regel": "HD",
-    "text": "Doppelspur 87351106/89041552 (650): 2 Ebenen auseinander statt 1, kein Perron dazwischen (251 m parallel)",
-    "ways": [
-     87351106,
-     89041552
-    ],
-    "zwischen": []
-   },
-   {
-    "ebenen": [
-     4,
-     6
-    ],
-    "parallel_m": 53,
-    "ref": "650",
-    "regel": "HD",
-    "text": "Doppelspur 88889164/88889255 (650): 2 Ebenen auseinander statt 1, kein Perron dazwischen (53 m parallel)",
-    "ways": [
-     88889164,
-     88889255
-    ],
-    "zwischen": []
-   },
-   {
-    "ebenen": [
-     4,
-     6
-    ],
-    "parallel_m": 489,
-    "ref": "650",
-    "regel": "HD",
-    "text": "Doppelspur 89041552/109104547 (650): 2 Ebenen auseinander statt 1, kein Perron dazwischen (489 m parallel)",
-    "ways": [
-     89041552,
-     109104547
     ],
     "zwischen": []
    },
@@ -277,28 +172,13 @@
    },
    {
     "ebenen": [
-     4,
-     6
-    ],
-    "parallel_m": 186,
-    "ref": "650",
-    "regel": "HD",
-    "text": "Doppelspur 168744380/168744381 (650): 2 Ebenen auseinander statt 1, kein Perron dazwischen (186 m parallel)",
-    "ways": [
-     168744380,
-     168744381
-    ],
-    "zwischen": []
-   },
-   {
-    "ebenen": [
      8,
-     5
+     6
     ],
     "parallel_m": 48,
     "ref": "650",
     "regel": "HD",
-    "text": "Doppelspur 220130945/1419225677 (650): 3 Ebenen auseinander statt 1, kein Perron dazwischen (48 m parallel)",
+    "text": "Doppelspur 220130945/1419225677 (650): 2 Ebenen auseinander statt 1, kein Perron dazwischen (48 m parallel)",
     "ways": [
      220130945,
      1419225677
@@ -308,12 +188,12 @@
    {
     "ebenen": [
      8,
-     5
+     6
     ],
     "parallel_m": 385,
     "ref": "650",
     "regel": "HD",
-    "text": "Doppelspur 220130945/538685738 (650): 3 Ebenen auseinander statt 1, kein Perron dazwischen (385 m parallel)",
+    "text": "Doppelspur 220130945/538685738 (650): 2 Ebenen auseinander statt 1, kein Perron dazwischen (385 m parallel)",
     "ways": [
      220130945,
      538685738
@@ -322,13 +202,13 @@
    },
    {
     "ebenen": [
-     5,
+     6,
      8
     ],
     "parallel_m": 178,
     "ref": "650",
     "regel": "HD",
-    "text": "Doppelspur 302923820/302923821 (650): 3 Ebenen auseinander statt 1, kein Perron dazwischen (178 m parallel)",
+    "text": "Doppelspur 302923820/302923821 (650): 2 Ebenen auseinander statt 1, kein Perron dazwischen (178 m parallel)",
     "ways": [
      302923820,
      302923821
@@ -338,12 +218,12 @@
    {
     "ebenen": [
      8,
-     5
+     6
     ],
     "parallel_m": 641,
     "ref": "650",
     "regel": "HD",
-    "text": "Doppelspur 302923821/538685736 (650): 3 Ebenen auseinander statt 1, kein Perron dazwischen (641 m parallel)",
+    "text": "Doppelspur 302923821/538685736 (650): 2 Ebenen auseinander statt 1, kein Perron dazwischen (641 m parallel)",
     "ways": [
      302923821,
      538685736
@@ -352,13 +232,13 @@
    },
    {
     "ebenen": [
-     5,
+     6,
      8
     ],
     "parallel_m": 717,
     "ref": "650",
     "regel": "HD",
-    "text": "Doppelspur 313264479/313264480 (650): 3 Ebenen auseinander statt 1, kein Perron dazwischen (717 m parallel)",
+    "text": "Doppelspur 313264479/313264480 (650): 2 Ebenen auseinander statt 1, kein Perron dazwischen (717 m parallel)",
     "ways": [
      313264479,
      313264480
@@ -382,13 +262,13 @@
    },
    {
     "ebenen": [
-     5,
+     6,
      8
     ],
     "parallel_m": 57,
     "ref": "650",
     "regel": "HD",
-    "text": "Doppelspur 384372574/394411217 (650): 3 Ebenen auseinander statt 1, kein Perron dazwischen (57 m parallel)",
+    "text": "Doppelspur 384372574/394411217 (650): 2 Ebenen auseinander statt 1, kein Perron dazwischen (57 m parallel)",
     "ways": [
      384372574,
      394411217
@@ -417,23 +297,25 @@
     ],
     "parallel_m": 75,
     "ref": "650",
-    "regel": "HD",
-    "text": "Doppelspur 1371903485/1515277114 (650): 2 Ebenen auseinander statt 1, kein Perron dazwischen (75 m parallel)",
+    "regel": "HDz",
+    "text": "Doppelspur 1371903485/1515277114 (650): 2 Ebenen auseinander statt 1, kein Perron dazwischen (75 m parallel), Gleis dazwischen [197751777]",
     "ways": [
      1371903485,
      1515277114
     ],
-    "zwischen": []
+    "zwischen": [
+     197751777
+    ]
    },
    {
     "ebenen": [
      8,
-     5
+     6
     ],
     "parallel_m": 41,
     "ref": "650",
     "regel": "HD",
-    "text": "Doppelspur 1419225676/1419225677 (650): 3 Ebenen auseinander statt 1, kein Perron dazwischen (41 m parallel)",
+    "text": "Doppelspur 1419225676/1419225677 (650): 2 Ebenen auseinander statt 1, kein Perron dazwischen (41 m parallel)",
     "ways": [
      1419225676,
      1419225677
@@ -620,13 +502,15 @@
     ],
     "parallel_m": 93,
     "ref": "210",
-    "regel": "HD",
-    "text": "Doppelspur 35434218/35545993 (210): 2 Ebenen auseinander statt 1, kein Perron dazwischen (93 m parallel)",
+    "regel": "HDz",
+    "text": "Doppelspur 35434218/35545993 (210): 2 Ebenen auseinander statt 1, kein Perron dazwischen (93 m parallel), Gleis dazwischen [35567923]",
     "ways": [
      35434218,
      35545993
     ],
-    "zwischen": []
+    "zwischen": [
+     35567923
+    ]
    },
    {
     "ebenen": [
@@ -724,21 +608,6 @@
   "olten": [
    {
     "ebenen": [
-     0,
-     5
-    ],
-    "parallel_m": 202,
-    "ref": "500",
-    "regel": "HD",
-    "text": "Doppelspur 50062969/136910717 (500): 5 Ebenen auseinander statt 1, kein Perron dazwischen (202 m parallel)",
-    "ways": [
-     50062969,
-     136910717
-    ],
-    "zwischen": []
-   },
-   {
-    "ebenen": [
      2,
      0
     ],
@@ -759,58 +628,11 @@
     ],
     "parallel_m": 43,
     "ref": "450",
-    "regel": "HDz",
-    "text": "Doppelspur 137216811/396181910 (450): 2 Ebenen auseinander statt 1, kein Perron dazwischen (43 m parallel), Gleis dazwischen [396181909]",
+    "regel": "HD",
+    "text": "Doppelspur 137216811/396181910 (450): 2 Ebenen auseinander statt 1, kein Perron dazwischen (43 m parallel)",
     "ways": [
      137216811,
      396181910
-    ],
-    "zwischen": [
-     396181909
-    ]
-   },
-   {
-    "ebenen": [
-     6,
-     8
-    ],
-    "parallel_m": 203,
-    "ref": "540",
-    "regel": "HD",
-    "text": "Doppelspur 195008189/195008190 (540): 2 Ebenen auseinander statt 1, kein Perron dazwischen (203 m parallel)",
-    "ways": [
-     195008189,
-     195008190
-    ],
-    "zwischen": []
-   },
-   {
-    "ebenen": [
-     6,
-     9
-    ],
-    "parallel_m": 52,
-    "ref": "540",
-    "regel": "HD",
-    "text": "Doppelspur 195008189/679251571 (540): 3 Ebenen auseinander statt 1, kein Perron dazwischen (52 m parallel)",
-    "ways": [
-     195008189,
-     679251571
-    ],
-    "zwischen": []
-   },
-   {
-    "ebenen": [
-     6,
-     8
-    ],
-    "parallel_m": 57,
-    "ref": "540",
-    "regel": "HD",
-    "text": "Doppelspur 195008189/1331904823 (540): 2 Ebenen auseinander statt 1, kein Perron dazwischen (57 m parallel)",
-    "ways": [
-     195008189,
-     1331904823
     ],
     "zwischen": []
    },
@@ -876,28 +698,28 @@
    },
    {
     "ebenen": [
-     4,
-     2
+     6,
+     4
     ],
-    "parallel_m": 54,
+    "parallel_m": 196,
     "ref": "540",
     "regel": "HD",
-    "text": "Doppelspur 380867859/718445977 (540): 2 Ebenen auseinander statt 1, kein Perron dazwischen (54 m parallel)",
+    "text": "Doppelspur 230265773/230265777 (540): 2 Ebenen auseinander statt 1, kein Perron dazwischen (196 m parallel)",
     "ways": [
-     380867859,
-     718445977
+     230265773,
+     230265777
     ],
     "zwischen": []
    },
    {
     "ebenen": [
      5,
-     8
+     7
     ],
     "parallel_m": 43,
     "ref": "450",
     "regel": "HDz",
-    "text": "Doppelspur 396181910/977851900 (450): 3 Ebenen auseinander statt 1, kein Perron dazwischen (43 m parallel), Gleis dazwischen [137216808]",
+    "text": "Doppelspur 396181910/977851900 (450): 2 Ebenen auseinander statt 1, kein Perron dazwischen (43 m parallel), Gleis dazwischen [137216808]",
     "ways": [
      396181910,
      977851900
@@ -908,58 +730,13 @@
    },
    {
     "ebenen": [
-     2,
-     4
-    ],
-    "parallel_m": 107,
-    "ref": "540",
-    "regel": "HD",
-    "text": "Doppelspur 692444537/884583191 (540): 2 Ebenen auseinander statt 1, kein Perron dazwischen (107 m parallel)",
-    "ways": [
-     692444537,
-     884583191
-    ],
-    "zwischen": []
-   },
-   {
-    "ebenen": [
-     8,
-     6
-    ],
-    "parallel_m": 116,
-    "ref": "540",
-    "regel": "HD",
-    "text": "Doppelspur 1331904823/1332412914 (540): 2 Ebenen auseinander statt 1, kein Perron dazwischen (116 m parallel)",
-    "ways": [
-     1331904823,
-     1332412914
-    ],
-    "zwischen": []
-   },
-   {
-    "ebenen": [
-     0,
-     5
-    ],
-    "parallel_m": 219,
-    "ref": "500",
-    "regel": "HD",
-    "text": "Doppelspur 1331908788/1331908789 (500): 5 Ebenen auseinander statt 1, kein Perron dazwischen (219 m parallel)",
-    "ways": [
-     1331908788,
-     1331908789
-    ],
-    "zwischen": []
-   },
-   {
-    "ebenen": [
-     8,
+     7,
      0
     ],
     "parallel_m": 49,
     "ref": "500",
     "regel": "HD",
-    "text": "Doppelspur 48647118/1332412907 (500): 8 Ebenen auseinander statt 1, kein Perron dazwischen (49 m parallel)",
+    "text": "Doppelspur 48647118/1332412907 (500): 7 Ebenen auseinander statt 1, kein Perron dazwischen (49 m parallel)",
     "ways": [
      48647118,
      1332412907
@@ -968,13 +745,13 @@
    },
    {
     "ebenen": [
-     8,
+     7,
      0
     ],
     "parallel_m": 225,
     "ref": "500",
     "regel": "HD",
-    "text": "Doppelspur 48647120/56659859 (500): 8 Ebenen auseinander statt 1, kein Perron dazwischen (225 m parallel)",
+    "text": "Doppelspur 48647120/56659859 (500): 7 Ebenen auseinander statt 1, kein Perron dazwischen (225 m parallel)",
     "ways": [
      48647120,
      56659859
@@ -984,12 +761,12 @@
    {
     "ebenen": [
      0,
-     8
+     7
     ],
     "parallel_m": 84,
     "ref": "500",
     "regel": "HD",
-    "text": "Doppelspur 56659861/1332412906 (500): 8 Ebenen auseinander statt 1, kein Perron dazwischen (84 m parallel)",
+    "text": "Doppelspur 56659861/1332412906 (500): 7 Ebenen auseinander statt 1, kein Perron dazwischen (84 m parallel)",
     "ways": [
      56659861,
      1332412906
@@ -999,12 +776,12 @@
    {
     "ebenen": [
      0,
-     8
+     7
     ],
     "parallel_m": 148,
     "ref": "500",
     "regel": "HD",
-    "text": "Doppelspur 173572107/181147972 (500): 8 Ebenen auseinander statt 1, kein Perron dazwischen (148 m parallel)",
+    "text": "Doppelspur 173572107/181147972 (500): 7 Ebenen auseinander statt 1, kein Perron dazwischen (148 m parallel)",
     "ways": [
      173572107,
      181147972
@@ -1016,7 +793,55 @@
   "onnens_bonvillars": [],
   "pensier": [],
   "riedbach": [],
-  "rosshausern": [],
+  "rosshausern": [
+   {
+    "ebenen": [
+     2,
+     0
+    ],
+    "parallel_m": 93,
+    "ref": "220",
+    "regel": "HD",
+    "text": "Doppelspur 28056934/586385836 (220): 2 Ebenen auseinander statt 1, kein Perron dazwischen (93 m parallel)",
+    "ways": [
+     28056934,
+     586385836
+    ],
+    "zwischen": []
+   },
+   {
+    "ebenen": [
+     0,
+     2
+    ],
+    "parallel_m": 133,
+    "ref": "220",
+    "regel": "HDz",
+    "text": "Doppelspur 586385836/624407792 (220): 2 Ebenen auseinander statt 1, kein Perron dazwischen (133 m parallel), Gleis dazwischen [624407791]",
+    "ways": [
+     586385836,
+     624407792
+    ],
+    "zwischen": [
+     624407791
+    ]
+   },
+   {
+    "ebenen": [
+     2,
+     0
+    ],
+    "parallel_m": 229,
+    "ref": "220",
+    "regel": "HD",
+    "text": "Doppelspur 624407792/1199689777 (220): 2 Ebenen auseinander statt 1, kein Perron dazwischen (229 m parallel)",
+    "ways": [
+     624407792,
+     1199689777
+    ],
+    "zwischen": []
+   }
+  ],
   "rothrist": [
    {
     "ebenen": [
@@ -1105,81 +930,6 @@
   "solothurn": [
    {
     "ebenen": [
-     16,
-     14
-    ],
-    "parallel_m": 75,
-    "ref": "410",
-    "regel": "HD",
-    "text": "Doppelspur 23176666/49715202 (410): 2 Ebenen auseinander statt 1, kein Perron dazwischen (75 m parallel)",
-    "ways": [
-     23176666,
-     49715202
-    ],
-    "zwischen": []
-   },
-   {
-    "ebenen": [
-     16,
-     14
-    ],
-    "parallel_m": 120,
-    "ref": "410",
-    "regel": "HD",
-    "text": "Doppelspur 23176667/155433651 (410): 2 Ebenen auseinander statt 1, kein Perron dazwischen (120 m parallel)",
-    "ways": [
-     23176667,
-     155433651
-    ],
-    "zwischen": []
-   },
-   {
-    "ebenen": [
-     16,
-     14
-    ],
-    "parallel_m": 110,
-    "ref": "410",
-    "regel": "HD",
-    "text": "Doppelspur 23176668/49715246 (410): 2 Ebenen auseinander statt 1, kein Perron dazwischen (110 m parallel)",
-    "ways": [
-     23176668,
-     49715246
-    ],
-    "zwischen": []
-   },
-   {
-    "ebenen": [
-     16,
-     14
-    ],
-    "parallel_m": 63,
-    "ref": "410",
-    "regel": "HD",
-    "text": "Doppelspur 25115648/49715374 (410): 2 Ebenen auseinander statt 1, kein Perron dazwischen (63 m parallel)",
-    "ways": [
-     25115648,
-     49715374
-    ],
-    "zwischen": []
-   },
-   {
-    "ebenen": [
-     16,
-     14
-    ],
-    "parallel_m": 47,
-    "ref": "410",
-    "regel": "HD",
-    "text": "Doppelspur 25115650/98466480 (410): 2 Ebenen auseinander statt 1, kein Perron dazwischen (47 m parallel)",
-    "ways": [
-     25115650,
-     98466480
-    ],
-    "zwischen": []
-   },
-   {
-    "ebenen": [
      14,
      16
     ],
@@ -1194,156 +944,6 @@
     "zwischen": [
      1534903296
     ]
-   },
-   {
-    "ebenen": [
-     14,
-     16
-    ],
-    "parallel_m": 99,
-    "ref": "410",
-    "regel": "HD",
-    "text": "Doppelspur 98466480/173428904 (410): 2 Ebenen auseinander statt 1, kein Perron dazwischen (99 m parallel)",
-    "ways": [
-     98466480,
-     173428904
-    ],
-    "zwischen": []
-   },
-   {
-    "ebenen": [
-     14,
-     16
-    ],
-    "parallel_m": 94,
-    "ref": "410",
-    "regel": "HD",
-    "text": "Doppelspur 98467641/98467649 (410): 2 Ebenen auseinander statt 1, kein Perron dazwischen (94 m parallel)",
-    "ways": [
-     98467641,
-     98467649
-    ],
-    "zwischen": []
-   },
-   {
-    "ebenen": [
-     16,
-     14
-    ],
-    "parallel_m": 64,
-    "ref": "410",
-    "regel": "HD",
-    "text": "Doppelspur 98467649/155433654 (410): 2 Ebenen auseinander statt 1, kein Perron dazwischen (64 m parallel)",
-    "ways": [
-     98467649,
-     155433654
-    ],
-    "zwischen": []
-   },
-   {
-    "ebenen": [
-     16,
-     14
-    ],
-    "parallel_m": 167,
-    "ref": "410",
-    "regel": "HD",
-    "text": "Doppelspur 98467649/750373274 (410): 2 Ebenen auseinander statt 1, kein Perron dazwischen (167 m parallel)",
-    "ways": [
-     98467649,
-     750373274
-    ],
-    "zwischen": []
-   },
-   {
-    "ebenen": [
-     16,
-     14
-    ],
-    "parallel_m": 75,
-    "ref": "410",
-    "regel": "HD",
-    "text": "Doppelspur 176323323/230328457 (410): 2 Ebenen auseinander statt 1, kein Perron dazwischen (75 m parallel)",
-    "ways": [
-     176323323,
-     230328457
-    ],
-    "zwischen": []
-   },
-   {
-    "ebenen": [
-     14,
-     16
-    ],
-    "parallel_m": 532,
-    "ref": "410",
-    "regel": "HD",
-    "text": "Doppelspur 190037242/251195482 (410): 2 Ebenen auseinander statt 1, kein Perron dazwischen (532 m parallel)",
-    "ways": [
-     190037242,
-     251195482
-    ],
-    "zwischen": []
-   },
-   {
-    "ebenen": [
-     14,
-     16
-    ],
-    "parallel_m": 160,
-    "ref": "410",
-    "regel": "HD",
-    "text": "Doppelspur 230328457/750266421 (410): 2 Ebenen auseinander statt 1, kein Perron dazwischen (160 m parallel)",
-    "ways": [
-     230328457,
-     750266421
-    ],
-    "zwischen": []
-   },
-   {
-    "ebenen": [
-     14,
-     16
-    ],
-    "parallel_m": 80,
-    "ref": "410",
-    "regel": "HD",
-    "text": "Doppelspur 230328457/1529724782 (410): 2 Ebenen auseinander statt 1, kein Perron dazwischen (80 m parallel)",
-    "ways": [
-     230328457,
-     1529724782
-    ],
-    "zwischen": []
-   },
-   {
-    "ebenen": [
-     16,
-     14
-    ],
-    "parallel_m": 55,
-    "ref": "410",
-    "regel": "HD",
-    "text": "Doppelspur 750266421/1257920631 (410): 2 Ebenen auseinander statt 1, kein Perron dazwischen (55 m parallel)",
-    "ways": [
-     750266421,
-     1257920631
-    ],
-    "zwischen": []
-   },
-   {
-    "ebenen": [
-     16,
-     14
-    ],
-    "parallel_m": 151,
-    "ref": "410",
-    "regel": "HD",
-    "text": "Doppelspur 1529724782/1529724783 (410): 2 Ebenen auseinander statt 1, kein Perron dazwischen (151 m parallel)",
-    "ways": [
-     1529724782,
-     1529724783
-    ],
-    "zwischen": []
    }
   ],
   "sugiez": [],
@@ -1359,7 +959,40 @@
   "szu__zurich_selnau": [],
   "tecknau": [],
   "travers": [],
-  "tuscherz": [],
+  "tuscherz": [
+   {
+    "ebenen": [
+     1,
+     3
+    ],
+    "parallel_m": 56,
+    "ref": "210",
+    "regel": "HD",
+    "text": "Doppelspur 255557403/255557409 (210): 2 Ebenen auseinander statt 1, kein Perron dazwischen (56 m parallel)",
+    "ways": [
+     255557403,
+     255557409
+    ],
+    "zwischen": []
+   },
+   {
+    "ebenen": [
+     1,
+     3
+    ],
+    "parallel_m": 52,
+    "ref": "210",
+    "regel": "HDz",
+    "text": "Doppelspur 255557403/255557409 (210): 2 Ebenen auseinander statt 1, kein Perron dazwischen (52 m parallel), Gleis dazwischen [184190241]",
+    "ways": [
+     255557403,
+     255557409
+    ],
+    "zwischen": [
+     184190241
+    ]
+   }
+  ],
   "twann": [],
   "vereina__klosters_platz": [],
   "vereina__klosters_selfranga": [],
@@ -1377,8 +1010,8 @@
  },
  "zaehlung": {
   "aarau": {
-   "HD": 27,
-   "HDz": 2
+   "HD": 18,
+   "HDz": 3
   },
   "aarburg_oftringen": {
    "HD": 0,
@@ -1745,8 +1378,8 @@
    "HDz": 0
   },
   "neuchatel": {
-   "HD": 8,
-   "HDz": 1
+   "HD": 7,
+   "HDz": 2
   },
   "neuchatel_vauseyon": {
    "HD": 0,
@@ -1757,8 +1390,8 @@
    "HDz": 0
   },
   "olten": {
-   "HD": 17,
-   "HDz": 2
+   "HD": 11,
+   "HDz": 1
   },
   "olten_hammer": {
    "HD": 0,
@@ -1777,8 +1410,8 @@
    "HDz": 0
   },
   "rosshausern": {
-   "HD": 0,
-   "HDz": 0
+   "HD": 2,
+   "HDz": 1
   },
   "rothrist": {
    "HD": 4,
@@ -1805,7 +1438,7 @@
    "HDz": 0
   },
   "solothurn": {
-   "HD": 15,
+   "HD": 0,
    "HDz": 1
   },
   "sugiez": {
@@ -1861,8 +1494,8 @@
    "HDz": 0
   },
   "tuscherz": {
-   "HD": 0,
-   "HDz": 0
+   "HD": 1,
+   "HDz": 1
   },
   "twann": {
    "HD": 0,

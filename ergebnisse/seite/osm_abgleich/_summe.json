@@ -1,11 +1,11 @@
 {
  "aarau": {
   "VB1": 4,
-  "VB2": 3,
-  "VD1": 6,
+  "VB2": 4,
+  "VD1": 7,
   "dkw_osm_unvollstaendig": [],
-  "gleise": 175,
-  "knoten_plan": 58,
+  "gleise": 174,
+  "knoten_plan": 60,
   "dkw_plan": 2,
   "knoten_osm": 71,
   "versatz_y": 0.0,
@@ -879,8 +879,6 @@
   "netz_auf_plan": 1.0
  },
  "neuchatel": {
-  "VB1": 3,
-  "VC1": 1,
   "VD1": 1,
   "dkw_osm_unvollstaendig": [
    11296350712,
@@ -900,12 +898,12 @@
    11343328182,
    11343328186
   ],
-  "gleise": 82,
-  "knoten_plan": 30,
+  "gleise": 83,
+  "knoten_plan": 33,
   "dkw_plan": 5,
   "knoten_osm": 50,
   "versatz_y": 0.0,
-  "netz_auf_plan": 0.81
+  "netz_auf_plan": 0.82
  },
  "neuchatel_vauseyon": {
   "dkw_osm_unvollstaendig": [],
@@ -927,17 +925,17 @@
   "netz_auf_plan": 0.86
  },
  "olten": {
-  "VB1": 23,
-  "VB2": 24,
-  "VC1": 1,
-  "VD1": 16,
+  "VB1": 10,
+  "VB2": 21,
+  "VC1": 7,
+  "VD1": 10,
   "dkw_osm_unvollstaendig": [],
-  "gleise": 125,
-  "knoten_plan": 75,
+  "gleise": 131,
+  "knoten_plan": 83,
   "dkw_plan": 2,
   "knoten_osm": 86,
   "versatz_y": 0.0,
-  "netz_auf_plan": 0.76
+  "netz_auf_plan": 0.82
  },
  "olten_hammer": {
   "VB1": 1,
@@ -988,7 +986,7 @@
   "dkw_plan": 0,
   "knoten_osm": 4,
   "versatz_y": 0.0,
-  "netz_auf_plan": 1.0
+  "netz_auf_plan": 0.8
  },
  "rothrist": {
   "VA2": 1,
@@ -1055,16 +1053,16 @@
  "solothurn": {
   "VA1": 2,
   "VB1": 4,
-  "VB2": 9,
-  "VD1": 6,
+  "VB2": 13,
+  "VD1": 7,
   "VD2": 1,
   "dkw_osm_unvollstaendig": [],
-  "gleise": 112,
-  "knoten_plan": 54,
+  "gleise": 114,
+  "knoten_plan": 59,
   "dkw_plan": 1,
   "knoten_osm": 61,
   "versatz_y": 0.0,
-  "netz_auf_plan": 0.96
+  "netz_auf_plan": 0.99
  },
  "sugiez": {
   "VD1": 1,
@@ -1198,7 +1196,7 @@
   "dkw_plan": 0,
   "knoten_osm": 5,
   "versatz_y": 0.0,
-  "netz_auf_plan": 1.0
+  "netz_auf_plan": 0.89
  },
  "twann": {
   "dkw_osm_unvollstaendig": [],

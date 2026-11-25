@@ -3,35 +3,53 @@
 "befunde": [
 {
 "regel": "VB1",
-"x": 2481.7,
+"x": 2541.5,
 "y": 210.8,
 "text": "OSM-Weiche 382373779 ohne Abzweig im Plan",
 "osm": 382373779
 },
 {
 "regel": "VB1",
-"x": 2103.2,
+"x": 2145.0,
 "y": 378.8,
 "text": "OSM-Weiche 382373821 ohne Abzweig im Plan",
 "osm": 382373821
 },
 {
 "regel": "VB1",
-"x": 2934.8,
+"x": 2994.6,
 "y": 136.4,
 "text": "OSM-Weiche 392703044 ohne Abzweig im Plan",
 "osm": 392703044
 },
 {
 "regel": "VB1",
-"x": 2618.0,
+"x": 2677.7,
 "y": 234.8,
 "text": "OSM-Weiche 10605866262 ohne Abzweig im Plan",
 "osm": 10605866262
 },
 {
 "regel": "VB2",
-"x": 822.7,
+"x": 3147.2,
+"y": 330.8,
+"text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
+"ways": [
+109103548,
+168744383,
+197753128,
+289118753,
+377106652,
+377871836
+],
+"farben": [
+"gruen",
+"schwarz"
+]
+},
+{
+"regel": "VB2",
+"x": 836.5,
 "y": 234.8,
 "text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
 "ways": [
@@ -46,7 +64,7 @@
 {
 "regel": "VB2",
 "x": 887.1,
-"y": 330.8,
+"y": 306.8,
 "text": "Gleise berühren sich (3 Richtungen), in OSM keine Weiche/Kreuzung",
 "ways": [
 302923818,
@@ -61,7 +79,7 @@
 {
 "regel": "VB2",
 "x": 864.2,
-"y": 306.8,
+"y": 282.8,
 "text": "Gleise kreuzen sich (4 Richtungen), in OSM keine Weiche/Kreuzung",
 "ways": [
 302923820,
@@ -74,13 +92,19 @@
 },
 {
 "regel": "VD1",
-"x": 3061.3,
+"x": 3125.9,
 "y": 210.8,
-"text": "zwei Gleise 20 px aufeinander"
+"text": "zwei Gleise 30 px aufeinander"
 },
 {
 "regel": "VD1",
-"x": 2919.8,
+"x": 3167.7,
+"y": 234.7,
+"text": "zwei Gleise 12 px aufeinander"
+},
+{
+"regel": "VD1",
+"x": 2979.5,
 "y": 282.8,
 "text": "zwei Gleise 20 px aufeinander"
 },
@@ -92,27 +116,27 @@
 },
 {
 "regel": "VD1",
-"x": 2523.4,
+"x": 2583.1,
 "y": 210.8,
 "text": "zwei Gleise 83 px aufeinander"
 },
 {
 "regel": "VD1",
-"x": 2601.8,
+"x": 2661.5,
 "y": 234.8,
 "text": "zwei Gleise 32 px aufeinander"
 },
 {
 "regel": "VD1",
 "x": 1335.5,
-"y": 330.8,
+"y": 306.8,
 "text": "zwei Gleise 14 px aufeinander"
 }
 ],
 "info": {
 "dkw_osm_unvollstaendig": [],
-"gleise": 175,
-"knoten_plan": 58,
+"gleise": 174,
+"knoten_plan": 60,
 "dkw_plan": 2,
 "knoten_osm": 71,
 "versatz_y": 0.0,
