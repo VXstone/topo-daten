@@ -1,7 +1,7 @@
 {
  "region": "szu",
- "erzeugt": "2026-11-25 06:35 UTC",
- "code_commit": "eda41aca8e1a40d63e7b88aeafe6720103141226",
+ "erzeugt": "2026-11-25 13:20 UTC",
+ "code_commit": "0de59bb55c34450ccfe5282b8f9a01e9c796bbe3",
  "bahnhoefe": {
   "uetliberg": {
    "name": "Uetliberg",
@@ -51,14 +51,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "berghof": {
-   "name": "Berghof",
+  "borrweg": {
+   "name": "Borrweg",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "borrweg": {
-   "name": "Borrweg",
+  "berghof": {
+   "name": "Berghof",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -73,8 +73,8 @@
   "S3": 0
  },
  "lage_suche": {
-  "ausgang": 172,
-  "ergebnis": 172,
+  "ausgang": 168,
+  "ergebnis": 168,
   "drehung": {},
   "varianten": 7
  },
@@ -85,7 +85,7 @@
  },
  "ruhe": {
   "treppen": 3,
-  "ecken": 3
+  "ecken": 2
  },
  "regeln": {
   "G2": 5
@@ -109,11 +109,11 @@
   "perron_P1": 1,
   "regel_G2": 5,
   "ruhe_treppen": 3,
-  "ruhe_ecken": 3,
+  "ruhe_ecken": 2,
   "planrand": 0,
   "lage_L3a": 1
  },
- "unruhe": 326,
+ "unruhe": 322,
  "unruhe_teile": {
   "topo_T3": 100,
   "topo_T6": 50,
@@ -121,6 +121,6 @@
   "perron_P1": 30,
   "regel_G2": 10,
   "ruhe_treppen": 24,
-  "ruhe_ecken": 12
+  "ruhe_ecken": 8
  }
 }

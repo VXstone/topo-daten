@@ -1,7 +1,7 @@
 {
  "region": "mob",
- "erzeugt": "2026-11-25 06:30 UTC",
- "code_commit": "eda41aca8e1a40d63e7b88aeafe6720103141226",
+ "erzeugt": "2026-11-25 13:15 UTC",
+ "code_commit": "0de59bb55c34450ccfe5282b8f9a01e9c796bbe3",
  "bahnhoefe": {
   "schonried": {
    "name": "Schönried",
@@ -57,14 +57,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "st_stephan": {
-   "name": "St. Stephan",
+  "blankenburg": {
+   "name": "Blankenburg",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "blankenburg": {
-   "name": "Blankenburg",
+  "st_stephan": {
+   "name": "St. Stephan",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -287,9 +287,10 @@
   "S3": 0
  },
  "lage_suche": {
-  "ausgang": 165,
+  "ausgang": 176,
   "ergebnis": 49,
   "drehung": {
+   "Chamby": -30,
    "Montbovon": 60,
    "Montreux": 30
   },
@@ -307,7 +308,7 @@
  },
  "planrand": 0,
  "lage": {
-  "L3a": 8
+  "L3a": 9
  },
  "kennzahlen": {
   "verk_V1": 0,
@@ -321,7 +322,7 @@
   "ruhe_treppen": 4,
   "ruhe_ecken": 1,
   "planrand": 0,
-  "lage_L3a": 8
+  "lage_L3a": 9
  },
  "unruhe": 81,
  "unruhe_teile": {
@@ -343,7 +344,7 @@
   },
   "topologie_offen": {},
   "neu": {
-   "lage_L3a": 8
+   "lage_L3a": 9
   },
   "unruhe": 81,
   "unruhe_basis": 777
