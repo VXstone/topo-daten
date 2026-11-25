@@ -124,7 +124,11 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - [ ] **T-SZU2 Achse knickt im Fenster (REGELN 2.15), Zielplan Giesshübel · Saalsporthalle** (Entscheid Daniel 18.11.: Variante C) – nach S2b/R4/S3 oder wenn Daniel es vorzieht
   24.11. Teil 1 (nicht veröffentlicht): Code für 2.15 da, beide Schalter aus – Befund und Teil 2 im Nachtrag T-SZU2 (Abschnitt 6)
   24.11. Teil 2 abends: Knick zwischen Betriebspunkten aktiv (Saalsporthalle eigener Plan, 712 seitlich nach unten), Seite v183 – Nachtrag T-SZU2 Teil 2
-- [ ] **T-SZU2 Teil 3 Giesshübel Depot und Regionalplan-Rest** (mittel, aus Teil 2): Zielbild `vergleich/szu/zielbild_giesshuebel.svg`.
+- [x] **T-SZU2 Teil 3b** – 25.11. früh: Basen (v184), Doppelspur 1 Ebene (REGELN 1.4), Mass HD, Giesshübel nach Zielbild, Saalsporthalle Gl. 2, Seite v185 (Nachtrag)
+- [ ] **T-SZU2 Teil 3c Giesshübel Depot-Fächer** (klein): GT 1 (Treppe links im Fächer), HT1 1 (Depot-Weiche 1263316902 am oberen 712-Gleis fehlt),
+  VA1 DKW 1263338286 ohne Symbol, Gleisnummer «19» am 713-Abgang (kein Perron?), Saalsporthalle VD1 (zwei Spurwechsel berühren sich) –
+  dann GT/HT1-Basis wieder auf 0. Danach: doppelspur_flach/_wechsel für Olten/Aarau prüfen (REGELN 1.4 «Ausweitung offen»), HD-Liste ansehen.
+- [ ] **T-SZU2 Teil 3 Giesshübel Depot und Regionalplan-Rest** (erledigt bis auf 3c; Rest unten nur noch Geschichte) (mittel, aus Teil 2): Zielbild `vergleich/szu/zielbild_giesshuebel.svg`.
   (1) Depot-Fächer als eigenes Bündel über Y (OSM: Depot ab Y 899/970 und ab 713; heute hängen Depotgleise an X und kreuzen Y – VC1
   110676795/110676782 an 1263316870, 110676800 an 1263316956; GS 11, GG 15); (2) Regionalplan: 713 nach Binz kreuzt die 712-Abgänge links
   von Giesshübel (Binz liegt im Plan tiefer als der 713-Port); Sihltal-Verbindung mit S-Schwung (3 Ecken T7, T6 1 Haken); (3) Saalsporthalle:
@@ -1068,3 +1072,13 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   Ursache im Code bleibt: Kette 712-oben–713 hebt das obere 712-Gleis auf die 713-Ebene; Ziel: 712 beide Gleise unten, 713/717/Depot darüber.
 - 25.11. 06:03 **Okay Daniel für die Basen:** (1) GE-Basis setzen, **Blaupausen (blaupause, blaupause2) bei GE ausnehmen** («arbiträre
   Vorlagen» – im Code ausnehmen, nicht nur in der Basis); (2) HT-Basis neu (olten HT4 4, Giesshübel HT2 8 / HT5 4); (3) Prüfstand-Basis neu (ab60).
+
+### 25.11.2026 ~08:30 – Schritt T-SZU2 Teil 3b, Seiten v184 und v185 (Commits e701cdd, 93d30c3, eda41ac, 6d3fd54)
+- v184: Basen nach Okay Daniel (GE neu, Blaupausen im Code ausgenommen REGELN 1.30; HT; Prüfstand; GQ Giesshübel/Region SZU vorläufig).
+- Sichtbar v185: Giesshübel nach Zielbild – 712 Doppelspur unten gerade, 717 rechts oben, 713 links oben, Depot dazwischen, nichts unter der
+  Doppelspur (Depotgleis 110678986 oben). Saalsporthalle Gl. 2 eine Ebene über Gl. 1. Regionalplan: 713 kreuzt die 712 nicht mehr.
+- Code (REGELN 1.4): `linie_fortsetzung`, `lane_guess_nah_m` (alle Pläne, ohne Wirkung ausserhalb SZU); `doppelspur_flach`, `doppelspur_wechsel`
+  nur Linien-Regionen (Olten/Aarau G0 schlechter: Olten GS 1→16, Aarau GT 1→3). Mass `doppelspur.py` (HD/HDz) im Workflow seite, Bericht doppelspur.md.
+- Regression: geändert nur Giesshübel (GS 10→3, GG 16→4, VD1 22→5), Saalsporthalle, region_szu (GS 12→5, GG 14→3); MOB/Vereina/Olten/NE gleich.
+  Basis vorläufig (Okay Daniel): Giesshübel GT 0→1, HT1 0→1 → Teil 3c. Fallstrick: region_olten_lauf schreibt in werkstatt/olten – zurücksetzen.
+
