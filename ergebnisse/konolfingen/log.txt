@@ -6,7 +6,6 @@ geschrieben konolfingen_override.json
 
 $ spurplan_schema.py --src konolfingen.json --nowarp
 Bahnhof Konolfingen: Achse 3695 m, Ausschnitt s=1206…2230, 29 Weichen, 3 Perrons
-R1c Bündel kompakt: [('verbindung_schraeg', 156705005, 6, 1884, 1964), ('ebene_leer', 6)]
 G6: 1 Überstand(e) vor Ausrundung gekürzt
 chains 17 lanes 12 segs 62 W 1256 H 518
 
@@ -16,7 +15,6 @@ Breite linear 942 px -> entzerrt 612 px
 
 $ spurplan_schema.py --src konolfingen.json
 Bahnhof Konolfingen: Achse 3695 m, Ausschnitt s=1206…2230, 29 Weichen, 3 Perrons
-R1c Bündel kompakt: [('verbindung_schraeg', 156705005, 6, 1884, 1964), ('ebene_leer', 6)]
 G6: 3 Überstand(e) vor Ausrundung gekürzt
 chains 17 lanes 12 segs 62 W 929 H 518
 
@@ -26,13 +24,11 @@ Breite linear 942 px -> entzerrt 612 px
 
 $ spurplan_schema.py --src konolfingen.json
 Bahnhof Konolfingen: Achse 3695 m, Ausschnitt s=1206…2230, 29 Weichen, 3 Perrons
-R1c Bündel kompakt: [('verbindung_schraeg', 156705005, 6, 1884, 1964), ('ebene_leer', 6)]
 G6: 3 Überstand(e) vor Ausrundung gekürzt
 chains 17 lanes 12 segs 62 W 929 H 518
 
 $ spurplan_check.py --src konolfingen.json --out /tmp/spurplan_lauf/_check_konolfingen.svg
 Bahnhof Konolfingen: Achse 3695 m, Ausschnitt s=1206…2230, 29 Weichen, 3 Perrons
-R1c Bündel kompakt: [('verbindung_schraeg', 156705005, 6, 1884, 1964), ('ebene_leer', 6)]
 G6: 3 Überstand(e) vor Ausrundung gekürzt
 chains 17 lanes 12 segs 62 W 929 H 518
 Befunde: {'B': 2}
@@ -42,7 +38,6 @@ B x=   397 y=  283  Überlagerung 22px: Gleis (way 606745360) / yard (way 739598
 
 $ spurplan_schema.py --src konolfingen.json --bare --out konolfingen_bare.svg
 Bahnhof Konolfingen: Achse 3695 m, Ausschnitt s=1206…2230, 29 Weichen, 3 Perrons
-R1c Bündel kompakt: [('verbindung_schraeg', 156705005, 6, 1884, 1964), ('ebene_leer', 6)]
 G6: 3 Überstand(e) vor Ausrundung gekürzt
 chains 17 lanes 12 segs 62 W 929 H 436
 
