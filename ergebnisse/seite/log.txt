@@ -62,7 +62,7 @@ Hinweis-Abdeckung: 29/57 (Befund < 40 px, ohne G2)
 ✓ xke0 solothurn                    MZ                        25.3  Zwischengerade, doppelter Abstand
 ✓ z6f2 konolfingen                  MX                        21.0  DKW?
 ✓ zcz3 solothurn                    G7,MX,VB2                 18.0  nicht verbunden
-index.html 2063 KB, 150 Pläne
+index.html 2054 KB, 150 Pläne
 region_szu                   veröffentlicht                      9 Stellen  Fehler? Topologie  G8 1→0, GE 17→12, GG 13→14, GQ 4→8, GS 14→12, W53 9→7 (Wunsch-Summe -12)
 olten                        bestätigt 2026-11-08                0 Stellen  vermutlich besser  VB1 14→10, VB2 27→21
 olten_hammer                 bestätigt 2026-11-07               13 Stellen  vermutlich besser  W56 4→2, W59 4→1 (Wunsch-Summe -6)
@@ -123,13 +123,14 @@ travers                      Archivbeginn (Abnahme 2026-10-15)    9 Stellen  ver
 la_presta_mines_d_asphalte   Archivbeginn (Abnahme 2026-10-19)    0 Stellen  gleichwertig  OSM ok (kein Alt-Stand)
 couvet                       Archivbeginn (Abnahme 2026-10-20)    1 Stellen  gleichwertig  OSM VD1 1 (kein Alt-Stand)
 motiers                      Archivbeginn (Abnahme 2026-10-20)    1 Stellen  gleichwertig  OSM VD1 1 (kein Alt-Stand)
+neuchatel_vauseyon           Archivbeginn (Abnahme 2026-10-29)    5 Stellen  vermutlich besser  G2 0→1, T7 1→0, VB2 1→0 (Wunsch-Summe -8)
 les_deurres                  Archivbeginn (Abnahme 2026-10-20)    0 Stellen  gleichwertig  OSM ok (kein Alt-Stand)
 corcelles_peseux             Archivbeginn (Abnahme 2026-10-15)    0 Stellen  gleichwertig  OSM ok (kein Alt-Stand)
 chambrelien                  Archivbeginn (Abnahme 2026-10-20)    5 Stellen  schlechter?  G2 1→0, T7 0→1 (Wunsch-Summe +8) · OSM VA1 1 (kein Alt-Stand)
 les_geneveys_sur_coffrane    Archivbeginn (Abnahme 2026-10-19)    1 Stellen  gleichwertig  OSM VD1 1 (kein Alt-Stand)
-les_hauts_geneveys           Archivbeginn (Abnahme 2026-10-20)    2 Stellen  gleichwertig  OSM VD1 1 (kein Alt-Stand)
-szu__zurich_giesshubel       veröffentlicht                      6 Stellen  Fehler? Topologie  GE 11→6, GG 15→16, GQ 5→7, GS 11→10, VB1 3→1, VB2 8→9, VD1 25→22/home/runner/work/topo-daten/topo-daten/spurplan/code/alle_plaene_pruefen.py:231: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+les_hauts_geneveys           Archivbeginn (Abnahme 2026-10-20)    2 Stellen  gleichwertig  OSM VD1 1 (kein Alt-Stand)/home/runner/work/topo-daten/topo-daten/spurplan/code/alle_plaene_pruefen.py:231: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
   json.dump(dict(erzeugt=datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"), plaene=len(zeilen), geaendert=len(gz),
 
-Regression: 148 Pläne, 51 geändert {'Fehler? Topologie': 2, 'vermutlich besser': 9, 'gleichwertig': 31, 'schlechter?': 9}
+szu__zurich_giesshubel       veröffentlicht                      6 Stellen  Fehler? Topologie  GE 11→6, GG 15→16, GQ 5→7, GS 11→10, VB1 3→1, VB2 8→9, VD1 25→22
+Regression: 148 Pläne, 52 geändert {'Fehler? Topologie': 2, 'vermutlich besser': 10, 'gleichwertig': 31, 'schlechter?': 9}
 Ausnahmen: 920 Einträge, 125 Orte: {'Schalter': 358, 'Ortswissen': 245, 'Geometrie': 192, 'Typvorlage': 125} | ohne Grund: 0

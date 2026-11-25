@@ -1,4 +1,4 @@
-148 Pläne, 51 geändert: 2 Fehler? Topologie, 9 vermutlich besser, 31 gleichwertig, 9 schlechter?
+148 Pläne, 52 geändert: 2 Fehler? Topologie, 10 vermutlich besser, 31 gleichwertig, 9 schlechter?
 
 | Plan | Gruppe | Basis | Stellen | Einordnung | Kennzahlen alt→neu | G0 | HT | letzte Änderung |
 |---|---|---|---|---|---|---|---|---|
@@ -50,6 +50,7 @@
 | daniken | Olten 3 · Olten – Aarau | bestätigt 2026-11-07 | 9 | vermutlich besser | VB1 3→2 | GG 2 | HT1 2 | 2026-11-17T21:57 |
 | travers | NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier | Archivbeginn (Abnahme 2026-10-15) | 9 | vermutlich besser | W59 1→0 · OSM ok (kein Alt-Stand) | 0 | 0 | 2026-11-24T07:36 |
 | colombier | NE 6 · Neuchâtel – Yverdon | Archivbeginn (Abnahme 2026-10-16) | 7 | vermutlich besser | W56 6→5, W59 1→0 (Wunsch-Summe -3) · OSM ok (kein Alt-Stand) | 0 | 0 | 2026-11-23T21:35 |
+| neuchatel_vauseyon | NE 8 · Neuchâtel – La Chaux-de-Fonds | Archivbeginn (Abnahme 2026-10-29) | 5 | vermutlich besser | G2 0→1, T7 1→0, VB2 1→0 (Wunsch-Summe -8) | 0 | 0 | 2026-11-17T21:57 |
 | wangen_bei_olten | Olten 5 · Olten – Solothurn | bestätigt 2026-11-07 | 4 | vermutlich besser | VB2 1→0 | 0 | 0 | 2026-11-17T21:57 |
 | aarburg_oftringen | Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil | bestätigt 2026-11-08 | 2 | vermutlich besser | G2 1→0, VB2 1→0 | GE 1 | 0 | 2026-11-17T21:57 |
 | neuchatel | NE 1 · Neuchâtel – Ins – Kerzers – Bern | bestätigt 2026-11-08 | 2 | vermutlich besser | GG 3→1, VA2 4→0, VC1 2→0, VD1 3→1 | GG 1 · GT 1 | 0 | 2026-11-22T20:14 |
