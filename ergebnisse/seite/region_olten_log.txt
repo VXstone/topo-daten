@@ -12,25 +12,25 @@ tecknau {"ok": true, "optionen": [], "plan_geaendert": true, "bare_geaendert": t
 wangen_bei_olten {"ok": true, "optionen": [], "plan_geaendert": true, "bare_geaendert": true, "netz": {"T10": 1}, "topologie": "{}", "qualitaet": {"topo_A": 0, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "topo_F": 0, "netz_T10": 1, "boegen_pax": 0, "boegen_alle": 28, "randabstand": 0}}
 zofingen {"ok": true, "optionen": [], "plan_geaendert": true, "bare_geaendert": true, "netz": {"D11": 2, "A1": 1}, "topologie": "{}", "qualitaet": {"topo_A": 0, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "topo_F": 0, "netz_D11": 2, "netz_A1": 1, "boegen_pax": 10, "boegen_alle": 46, "randabstand": 0}}
 daniken {"ok": true, "optionen": ["--hauptgleise"], "plan_geaendert": true, "bare_geaendert": true, "netz": {"D11": 1}, "topologie": "{}", "qualitaet": {"topo_A": 0, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "topo_F": 0, "netz_D11": 1, "boegen_pax": 0, "boegen_alle": 26, "randabstand": 0}}
-olten {"ok": true, "optionen": ["--hauptgleise"], "plan_geaendert": true, "bare_geaendert": true, "netz": {"Z2": 4}, "topologie": "{}", "qualitaet": {"topo_A": 0, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "topo_F": 0, "netz_Z2": 4, "boegen_pax": 93, "boegen_alle": 114, "randabstand": 0}}
+olten {"ok": true, "optionen": ["--hauptgleise"], "plan_geaendert": true, "bare_geaendert": true, "netz": {"Z1": 4, "D11": 2, "Z2": 4, "F2": 3, "A1": 4}, "topologie": "{}", "qualitaet": {"topo_A": 0, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "topo_F": 0, "netz_Z1": 4, "netz_D11": 2, "netz_Z2": 4, "netz_F2": 3, "netz_A1": 4, "boegen_pax": 93, "boegen_alle": 113, "randabstand": 0}}
 olten_hammer {"ok": true, "optionen": ["--hauptgleise"], "plan_geaendert": true, "bare_geaendert": true, "netz": {"D11": 8}, "topologie": "{}", "qualitaet": {"topo_A": 0, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "topo_F": 0, "netz_D11": 8, "boegen_pax": 0, "boegen_alle": 13, "randabstand": 0}}
-aarau {"ok": true, "optionen": ["--hauptgleise"], "plan_geaendert": true, "bare_geaendert": true, "netz": {"D11": 3, "W2": 3, "A1": 1}, "topologie": "{}", "qualitaet": {"topo_A": 0, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "topo_F": 0, "netz_D11": 3, "netz_W2": 3, "netz_A1": 1, "boegen_pax": 6, "boegen_alle": 83, "randabstand": 2}}
-Regionalgeometrie /home/runner/work/topo-daten/topo-daten/spurplan/werkstatt/olten/feedback/region.svg: Achse 10.05 px, 83 Streckenpfade; {'A1': 1, 'F11': 3, 'W8': 2}
+aarau {"ok": true, "optionen": ["--hauptgleise"], "plan_geaendert": true, "bare_geaendert": true, "netz": {"D11": 3, "W2": 2, "F7": 2}, "topologie": "{}", "qualitaet": {"topo_A": 0, "topo_B": 0, "topo_C": 0, "topo_D": 0, "topo_E": 0, "topo_F": 0, "netz_D11": 3, "netz_W2": 2, "netz_F7": 2, "boegen_pax": 4, "boegen_alle": 87, "randabstand": 3}}
+Regionalgeometrie /home/runner/work/topo-daten/topo-daten/spurplan/werkstatt/olten/feedback/region.svg: Achse 10.06 px, 83 Streckenpfade; {'A1': 1, 'F11': 1, 'W8': 4}
   A1  x=85.6 y=-178.5  zwei Streckengleise 11.8 px auseinander (1.17 Achsen) über 42 px
   F11 x=-118.6 y=770.5  Versatz 4.2 px ohne Grund zwischen zwei parallelen Stücken
+  W8  x=40.9 y=496.3  kurzes Zwischenstück 7.0 px zwischen zwei Knicken (90°/120°)
+  W8  x=27.1 y=486.2  kurzes Zwischenstück 14.4 px zwischen zwei Knicken (90°/120°)
   W8  x=48.1 y=1442.0  kurzes Zwischenstück 7.5 px zwischen zwei Knicken (120°/90°)
-  W8  x=-28.7 y=484.5  kurzes Zwischenstück 10.8 px zwischen zwei Knicken (30°/60°)
-  F11 x=2340.8 y=-475.1  Versatz 5.0 px ohne Grund zwischen zwei parallelen Stücken
-  F11 x=2340.8 y=-460.0  Versatz 5.0 px ohne Grund zwischen zwei parallelen Stücken
+  W8  x=-33.5 y=491.5  kurzes Zwischenstück 5.4 px zwischen zwei Knicken (145°/60°)
 
-Region Olten: {"ok": true, "geaendert": true, "geometrie": {"plan": "/home/runner/work/topo-daten/topo-daten/spurplan/werkstatt/olten/feedback/region.svg", "achse": 10.049888225264604, "befunde": [{"regel": "A1", "x": 85.6, "y": -178.5, "text": "zwei Streckengleise 11.8 px auseinander (1.17 Achsen) über 42 px"}, {"regel": "F11", "x": -118.6, "y": 770.5, "text": "Versatz 4.2 px ohne Grund zwischen zwei parallelen Stücken"}, {"regel": "W8", "x": 48.1, "y": 1442.0, "text": "kurzes Zwischenstück 7.5 px zwischen zwei Knicken (120°/90°)"}, {"regel": "W8", "x": -28.7, "y": 484.5, "text": "kurzes Zwischenstück 10.8 px zwischen zwei Knicken (30°/60°)"}, {"regel": "F11", "x": 2340.8, "y": -475.1, "text": "Versatz 5.0 px ohne Grund zwischen zwei parallelen Stücken"}, {"regel": "F11", "x": 2340.8, "y": -460.0, "text": "Versatz 5.0 px ohne Grund zwischen zwei parallelen Stücken"}]}}
+Region Olten: {"ok": true, "geaendert": true, "geometrie": {"plan": "/home/runner/work/topo-daten/topo-daten/spurplan/werkstatt/olten/feedback/region.svg", "achse": 10.062529573159528, "befunde": [{"regel": "A1", "x": 85.6, "y": -178.5, "text": "zwei Streckengleise 11.8 px auseinander (1.17 Achsen) über 42 px"}, {"regel": "F11", "x": -118.6, "y": 770.5, "text": "Versatz 4.2 px ohne Grund zwischen zwei parallelen Stücken"}, {"regel": "W8", "x": 40.9, "y": 496.3, "text": "kurzes Zwischenstück 7.0 px zwischen zwei Knicken (90°/120°)"}, {"regel": "W8", "x": 27.1, "y": 486.2, "text": "kurzes Zwischenstück 14.4 px zwischen zwei Knicken (90°/120°)"}, {"regel": "W8", "x": 48.1, "y": 1442.0, "text": "kurzes Zwischenstück 7.5 px zwischen zwei Knicken (120°/90°)"}, {"regel": "W8", "x": -33.5, "y": 491.5, "text": "kurzes Zwischenstück 5.4 px zwischen zwei Knicken (145°/60°)"}]}}
 Kennzahlen gegen die Basis:
   aarau                  neu   
   aarburg_oftringen      gleich   
   daniken                gleich   
   dulliken               gleich   
   laufelfingen           gleich   
-  olten                  gleich   
+  olten                  besser  {'boegen_alle': -1} 
   olten_hammer           gleich   
   rothrist               schlechter {'topo_F': 1}  | Topologie offen: {'topo_F': 1}
   safenwil               gleich   

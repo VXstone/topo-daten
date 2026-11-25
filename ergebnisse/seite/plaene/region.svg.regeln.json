@@ -1,15 +1,15 @@
 [
  {
   "regel": "G3",
-  "x": -18.9,
-  "y": -276.8,
+  "x": -23.9,
+  "y": -305.6,
   "bahnhof": "Olten",
   "text": "Knick 59° ohne Ausrundung"
  },
  {
   "regel": "G3",
-  "x": -2.9,
-  "y": -276.8,
+  "x": -7.9,
+  "y": -305.6,
   "bahnhof": "Olten",
   "text": "Knick 59° ohne Ausrundung"
  },
@@ -22,45 +22,38 @@
  },
  {
   "regel": "G2",
-  "x": -5.9,
-  "y": 388.9,
+  "x": -0.8,
+  "y": 435.8,
+  "bahnhof": "Olten",
+  "text": "Weiche ohne Ausrundung (29°)"
+ },
+ {
+  "regel": "G2",
+  "x": -0.8,
+  "y": 411.9,
   "bahnhof": "Olten",
   "text": "Weiche ohne Ausrundung (60°)"
  },
  {
   "regel": "G2",
-  "x": 39.5,
-  "y": 103.4,
+  "x": -21.0,
+  "y": 27.5,
   "bahnhof": "Olten",
   "text": "Weiche ohne Ausrundung (60°)"
  },
  {
   "regel": "G2",
-  "x": -26.0,
-  "y": 321.4,
+  "x": 9.3,
+  "y": 39.3,
   "bahnhof": "Olten",
-  "text": "Weiche ohne Ausrundung (19°)"
+  "text": "Weiche ohne Ausrundung (31°)"
  },
  {
   "regel": "G2",
-  "x": 14.3,
-  "y": 62.6,
+  "x": 19.4,
+  "y": 91.4,
   "bahnhof": "Olten",
   "text": "Weiche ohne Ausrundung (17°)"
- },
- {
-  "regel": "G2",
-  "x": 4.2,
-  "y": 72.7,
-  "bahnhof": "Olten",
-  "text": "Weiche ohne Ausrundung (21°)"
- },
- {
-  "regel": "G2",
-  "x": 4.2,
-  "y": 43.3,
-  "bahnhof": "Olten",
-  "text": "Weiche ohne Ausrundung (20°)"
  },
  {
   "regel": "G2",
@@ -78,28 +71,28 @@
  },
  {
   "regel": "G2",
-  "x": 4.2,
+  "x": -0.8,
   "y": -947.3,
   "bahnhof": "Tecknau",
   "text": "Weiche ohne Ausrundung (15°)"
  },
  {
   "regel": "G2",
-  "x": -26.0,
+  "x": -31.0,
   "y": -1096.9,
   "bahnhof": "Tecknau",
   "text": "Weiche ohne Ausrundung (15°)"
  },
  {
   "regel": "G2",
-  "x": 3382.7,
+  "x": 3373.0,
   "y": -497.8,
   "bahnhof": "Aarau",
   "text": "Weiche ohne Ausrundung (33°)"
  },
  {
   "regel": "G2",
-  "x": 3470.9,
+  "x": 3461.2,
   "y": -525.7,
   "bahnhof": "Aarau",
   "text": "Weiche ohne Ausrundung (60°)"
@@ -120,64 +113,64 @@
  },
  {
   "regel": "G2",
-  "x": -31.0,
-  "y": -163.5,
+  "x": -35.5,
+  "y": -186.1,
   "bahnhof": null,
-  "text": "Weiche ohne Ausrundung (61°)"
+  "text": "Weiche ohne Ausrundung (59°)"
  },
  {
   "regel": "G2",
-  "x": 2287.6,
-  "y": -472.6,
-  "bahnhof": null,
-  "text": "Weiche ohne Ausrundung (60°)"
- },
- {
-  "regel": "G2",
-  "x": 2288.0,
-  "y": -462.5,
+  "x": 2305.0,
+  "y": -467.6,
   "bahnhof": null,
   "text": "Weiche ohne Ausrundung (60°)"
  },
  {
   "regel": "G2",
-  "x": 4310.7,
+  "x": 2305.4,
+  "y": -457.5,
+  "bahnhof": null,
+  "text": "Weiche ohne Ausrundung (60°)"
+ },
+ {
+  "regel": "G2",
+  "x": 4295.7,
   "y": -487.7,
   "bahnhof": null,
   "text": "Weiche ohne Ausrundung (61°)"
  },
  {
   "regel": "G2",
-  "x": 4313.1,
-  "y": -447.4,
+  "x": 4298.5,
+  "y": -437.3,
   "bahnhof": null,
   "text": "Weiche ohne Ausrundung (60°)"
  },
  {
   "regel": "G2",
-  "x": 4370.3,
-  "y": -447.4,
-  "bahnhof": null,
-  "text": "Weiche ohne Ausrundung (59°)"
- },
- {
-  "regel": "G2",
-  "x": 4312.5,
-  "y": -447.4,
+  "x": 4363.4,
+  "y": -437.3,
   "bahnhof": null,
   "text": "Weiche ohne Ausrundung (60°)"
  },
  {
   "regel": "G2",
-  "x": 4331.8,
-  "y": -447.4,
+  "x": 4299.1,
+  "y": -437.3,
   "bahnhof": null,
   "text": "Weiche ohne Ausrundung (60°)"
  },
  {
   "regel": "G2",
-  "x": 4313.6,
-  "y": -447.4,
+  "x": 4318.4,
+  "y": -437.3,
+  "bahnhof": null,
+  "text": "Weiche ohne Ausrundung (60°)"
+ },
+ {
+  "regel": "G2",
+  "x": 4299.0,
+  "y": -437.3,
   "bahnhof": null,
   "text": "Weiche ohne Ausrundung (60°)"
  },
@@ -197,38 +190,10 @@
  },
  {
   "regel": "G6",
-  "x": 64.7,
-  "y": -166.7,
-  "bahnhof": "Olten",
-  "text": "Linien stossen mit Knick 150° zusammen (Knubbel)"
- },
- {
-  "regel": "G6",
-  "x": 64.7,
-  "y": -178.5,
-  "bahnhof": "Olten",
-  "text": "Linien stossen mit Knick 150° zusammen (Knubbel)"
- },
- {
-  "regel": "G6",
   "x": -52.5,
   "y": 768.4,
   "bahnhof": null,
   "text": "Linien stossen mit Knick 60° zusammen (Knubbel)"
- },
- {
-  "regel": "G6",
-  "x": 67.2,
-  "y": -73.5,
-  "bahnhof": null,
-  "text": "Linien stossen mit Knick 150° zusammen (Knubbel)"
- },
- {
-  "regel": "G6",
-  "x": 72.3,
-  "y": -64.7,
-  "bahnhof": null,
-  "text": "Linien stossen mit Knick 151° zusammen (Knubbel)"
  },
  {
   "regel": "G7",
@@ -239,15 +204,99 @@
  },
  {
   "regel": "G7",
-  "x": 2618.5,
-  "y": -447.4,
+  "x": -31.0,
+  "y": 200.7,
+  "bahnhof": "Olten",
+  "text": "Gleisende nicht angebunden, nächstes Gleis 8.2 px"
+ },
+ {
+  "regel": "G7",
+  "x": 69.8,
+  "y": -137.9,
+  "bahnhof": "Olten",
+  "text": "Gleisende nicht angebunden, nächstes Gleis 10.1 px"
+ },
+ {
+  "regel": "G7",
+  "x": 69.8,
+  "y": -149.7,
+  "bahnhof": "Olten",
+  "text": "Gleisende nicht angebunden, nächstes Gleis 10.1 px"
+ },
+ {
+  "regel": "G7",
+  "x": 9.3,
+  "y": 39.3,
+  "bahnhof": "Olten",
+  "text": "Gleisende nicht angebunden, nächstes Gleis 1.1 px"
+ },
+ {
+  "regel": "G7",
+  "x": -0.8,
+  "y": 195.7,
+  "bahnhof": "Olten",
+  "text": "Gleisende nicht angebunden, nächstes Gleis 1.4 px"
+ },
+ {
+  "regel": "G7",
+  "x": -0.8,
+  "y": 201.6,
+  "bahnhof": "Olten",
+  "text": "Gleisende nicht angebunden, nächstes Gleis 2.9 px"
+ },
+ {
+  "regel": "G7",
+  "x": 19.4,
+  "y": 39.3,
+  "bahnhof": "Olten",
+  "text": "Gleisende nicht angebunden, nächstes Gleis 1.6 px"
+ },
+ {
+  "regel": "G7",
+  "x": 29.4,
+  "y": 390.3,
+  "bahnhof": "Olten",
+  "text": "Gleisende nicht angebunden, nächstes Gleis 19.6 px"
+ },
+ {
+  "regel": "G7",
+  "x": 29.4,
+  "y": 467.8,
+  "bahnhof": "Olten",
+  "text": "Gleisende nicht angebunden, nächstes Gleis 3.4 px"
+ },
+ {
+  "regel": "G7",
+  "x": 29.4,
+  "y": 464.4,
+  "bahnhof": "Olten",
+  "text": "Gleisende nicht angebunden, nächstes Gleis 3.4 px"
+ },
+ {
+  "regel": "G7",
+  "x": -0.8,
+  "y": 403.1,
+  "bahnhof": "Olten",
+  "text": "Gleisende nicht angebunden, nächstes Gleis 7.6 px"
+ },
+ {
+  "regel": "G7",
+  "x": -31.0,
+  "y": 348.5,
+  "bahnhof": "Olten",
+  "text": "Gleisende nicht angebunden, nächstes Gleis 3.0 px"
+ },
+ {
+  "regel": "G7",
+  "x": 2633.9,
+  "y": -437.4,
   "bahnhof": "Aarau",
   "text": "Gleisende nicht angebunden, nächstes Gleis 11.6 px"
  },
  {
   "regel": "G7",
-  "x": 2631.9,
-  "y": -447.4,
+  "x": 2647.3,
+  "y": -437.4,
   "bahnhof": "Aarau",
   "text": "Gleisende nicht angebunden, nächstes Gleis 1.9 px"
  },
@@ -266,30 +315,30 @@
   "text": "Gleisende nicht angebunden, nächstes Gleis 2.4 px"
  },
  {
-  "regel": "G8",
-  "x": 4322.2,
-  "y": -439.4,
+  "regel": "G7",
+  "x": 64.7,
+  "y": -166.7,
   "bahnhof": null,
-  "text": "Gleise 11 px deckungsgleich"
+  "text": "Gleisende nicht angebunden, nächstes Gleis 5.0 px"
  },
  {
   "regel": "G5",
-  "x": 2278.1,
-  "y": -467.2,
-  "bahnhof": null,
-  "text": "Spurwechsel kreuzen sich"
- },
- {
-  "regel": "G5",
-  "x": 2075.8,
-  "y": -465.3,
+  "x": 2295.4,
+  "y": -462.1,
   "bahnhof": null,
   "text": "Spurwechsel kreuzen sich"
  },
  {
   "regel": "G5",
-  "x": 2133.0,
-  "y": -462.9,
+  "x": 2090.0,
+  "y": -460.2,
+  "bahnhof": null,
+  "text": "Spurwechsel kreuzen sich"
+ },
+ {
+  "regel": "G5",
+  "x": 2148.1,
+  "y": -457.8,
   "bahnhof": null,
   "text": "Spurwechsel kreuzen sich"
  }

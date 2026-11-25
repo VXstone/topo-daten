@@ -160,9 +160,9 @@
     "topo_D": 0,
     "topo_E": 0,
     "topo_F": 0,
-    "boegen_pax": 2,
-    "boegen_alle": 8,
-    "randabstand": 1
+    "boegen_pax": 0,
+    "boegen_alle": 4,
+    "randabstand": 0
    }
   },
   "riedbach": {
@@ -652,9 +652,9 @@
     "topo_D": 0,
     "topo_E": 0,
     "topo_F": 0,
-    "boegen_pax": 6,
-    "boegen_alle": 10,
-    "randabstand": 1
+    "boegen_pax": 4,
+    "boegen_alle": 8,
+    "randabstand": 0
    }
   },
   "serrieres": {
@@ -1225,9 +1225,9 @@
    "topo_D": 0,
    "topo_E": 0,
    "topo_F": 0,
-   "boegen_pax": 2,
-   "boegen_alle": 8,
-   "randabstand": 1
+   "boegen_pax": 0,
+   "boegen_alle": 4,
+   "randabstand": 0
   },
   "riedbach": {
    "topo_A": 0,
@@ -1502,9 +1502,9 @@
    "topo_D": 0,
    "topo_E": 0,
    "topo_F": 0,
-   "boegen_pax": 6,
-   "boegen_alle": 10,
-   "randabstand": 1
+   "boegen_pax": 4,
+   "boegen_alle": 8,
+   "randabstand": 0
   },
   "serrieres": {
    "topo_A": 0,

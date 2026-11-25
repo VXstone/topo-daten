@@ -1,4 +1,4 @@
-aarau                              {'VB1': 4, 'VB2': 4, 'VD1': 7}
+aarau                              {'VB1': 4, 'VB2': 3, 'VD1': 6}
 aarburg_oftringen                  {}
 auvernier                          {'VB1': 1, 'VD1': 1}
 avenches                           {'VB1': 1}
@@ -93,7 +93,7 @@ murten                             {}
 neuchatel                          {'VD1': 1}
 neuchatel_vauseyon                 {}
 noiraigue                          {'VD1': 1}
-olten                              {'VB1': 10, 'VB2': 21, 'VC1': 7, 'VD1': 10}
+olten                              {'VB1': 23, 'VB2': 24, 'VC1': 1, 'VD1': 16}
 olten_hammer                       {'VB1': 1}
 onnens_bonvillars                  {'VA1': 1, 'VA2': 1, 'VB1': 1, 'VD1': 1}
 pensier                            {'VD1': 1}
@@ -134,4 +134,4 @@ vereina__vereina_sud               {}
 wangen_bei_olten                   {}
 zihlbruecke                        {}
 zofingen                           {'VB1': 1, 'VD1': 1}
-OSM-Abgleich: 136 Pläne {'VA1': 9, 'VA2': 5, 'VB1': 60, 'VB2': 71, 'VC1': 11, 'VD1': 94, 'VD2': 1}
+OSM-Abgleich: 136 Pläne {'VA1': 9, 'VA2': 5, 'VB1': 73, 'VB2': 73, 'VC1': 5, 'VD1': 99, 'VD2': 1}

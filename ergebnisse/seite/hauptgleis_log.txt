@@ -1,4 +1,4 @@
-aarau                                  HT1 3 HT2 4 HT3 0 HT4 1 HT5 9
+aarau                                  HT1 3 HT2 3 HT3 0 HT4 1 HT5 3
 aarburg_oftringen                      HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 auvernier                              HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 avenches                               HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
@@ -93,7 +93,7 @@ murten                                 HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 neuchatel                              HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 neuchatel_vauseyon                     HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 noiraigue                              HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
-olten                                  HT1 10 HT2 21 HT3 5 HT4 4 HT5 165
+olten                                  HT1 24 HT2 25 HT3 1 HT4 0 HT5 220
 olten_hammer                           HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 onnens_bonvillars                      HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 pensier                                HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
@@ -134,4 +134,7 @@ vereina__vereina_sud                   HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 wangen_bei_olten                       HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 zihlbruecke                            HT1 0 HT2 0 HT3 0 HT4 0 HT5 0
 zofingen                               HT1 1 HT2 0 HT3 0 HT4 0 HT5 2
-Hauptgleis HT: {'HT1': 31, 'HT2': 52, 'HT3': 5, 'HT4': 7, 'HT5': 216} – 136 Pläne, 24 mit HT > 0
+Hauptgleis HT: {'HT1': 45, 'HT2': 55, 'HT3': 1, 'HT4': 3, 'HT5': 265} – 136 Pläne, 24 mit HT > 0
+NEU olten HT1: 10 -> 24
+NEU olten HT2: 21 -> 25
+NEU olten HT5: 165 -> 220

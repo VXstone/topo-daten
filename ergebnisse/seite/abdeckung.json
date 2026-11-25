@@ -1,5 +1,5 @@
 {
- "abgedeckt": 29,
+ "abgedeckt": 30,
  "offen": 57,
  "radius": 40.0,
  "ohne": [
@@ -51,7 +51,7 @@
    "regeln": [
     "G5"
    ],
-   "naechster": 27.3,
+   "naechster": 22.8,
    "naechste_regel": "G5",
    "plan_da": true
   },
@@ -254,8 +254,8 @@
    "text": "4/5 Hauptachsen gerade",
    "abgedeckt": false,
    "regeln": [],
-   "naechster": 66.9,
-   "naechste_regel": "MZ",
+   "naechster": 72.3,
+   "naechste_regel": "VB1",
    "plan_da": true
   },
   {
@@ -284,8 +284,8 @@
    "text": "Tunnel nur ein Gleis unter den anderen durch",
    "abgedeckt": false,
    "regeln": [],
-   "naechster": 195.6,
-   "naechste_regel": "VB2",
+   "naechster": 182.6,
+   "naechste_regel": "G7",
    "plan_da": true
   },
   {
@@ -339,10 +339,12 @@
    "text": "nicht ausgerundeter Knick",
    "abgedeckt": true,
    "regeln": [
-    "VB1"
+    "MX",
+    "VB2",
+    "VD1"
    ],
-   "naechster": 36.9,
-   "naechste_regel": "VB1",
+   "naechster": 9.4,
+   "naechste_regel": "VD1",
    "plan_da": true
   },
   {
@@ -353,7 +355,7 @@
    "text": "Zwischengeraden",
    "abgedeckt": false,
    "regeln": [],
-   "naechster": 79.0,
+   "naechster": 52.0,
    "naechste_regel": "VB1",
    "plan_da": true
   },
@@ -415,6 +417,7 @@
    "regeln": [
     "G6",
     "ME",
+    "MX",
     "MZ"
    ],
    "naechster": 25.7,
@@ -468,7 +471,7 @@
    "text": "was ist das für ein Gleis",
    "abgedeckt": false,
    "regeln": [],
-   "naechster": 122.6,
+   "naechster": 100.9,
    "naechste_regel": "G7",
    "plan_da": true
   },
@@ -494,7 +497,7 @@
    "regeln": [
     "VB1"
    ],
-   "naechster": 4.8,
+   "naechster": 37.2,
    "naechste_regel": "VB1",
    "plan_da": true
   },
@@ -506,7 +509,7 @@
    "text": "Anschlussgleise südlich Olten",
    "abgedeckt": false,
    "regeln": [],
-   "naechster": 119.8,
+   "naechster": 125.5,
    "naechste_regel": "VB2",
    "plan_da": true
   },
@@ -535,7 +538,7 @@
    "regeln": [
     "MF"
    ],
-   "naechster": 38.2,
+   "naechster": 27.9,
    "naechste_regel": "MF",
    "plan_da": true
   },
@@ -602,9 +605,11 @@
    "x": 2570,
    "y": 256.9,
    "text": "Stummel korrekt?",
-   "abgedeckt": false,
-   "regeln": [],
-   "naechster": 47.9,
+   "abgedeckt": true,
+   "regeln": [
+    "VD1"
+   ],
+   "naechster": 38.7,
    "naechste_regel": "VD1",
    "plan_da": true
   },
@@ -716,7 +721,7 @@
    "text": "Zwischengerade",
    "abgedeckt": false,
    "regeln": [],
-   "naechster": 99.4,
+   "naechster": 78.6,
    "naechste_regel": "VD1",
    "plan_da": true
   },

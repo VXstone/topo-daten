@@ -1,11 +1,11 @@
 {
  "aarau": {
   "VB1": 4,
-  "VB2": 4,
-  "VD1": 7,
+  "VB2": 3,
+  "VD1": 6,
   "dkw_osm_unvollstaendig": [],
-  "gleise": 174,
-  "knoten_plan": 60,
+  "gleise": 175,
+  "knoten_plan": 58,
   "dkw_plan": 2,
   "knoten_osm": 71,
   "versatz_y": 0.0,
@@ -925,17 +925,17 @@
   "netz_auf_plan": 0.86
  },
  "olten": {
-  "VB1": 10,
-  "VB2": 21,
-  "VC1": 7,
-  "VD1": 10,
+  "VB1": 23,
+  "VB2": 24,
+  "VC1": 1,
+  "VD1": 16,
   "dkw_osm_unvollstaendig": [],
-  "gleise": 131,
-  "knoten_plan": 83,
+  "gleise": 125,
+  "knoten_plan": 75,
   "dkw_plan": 2,
   "knoten_osm": 86,
   "versatz_y": 0.0,
-  "netz_auf_plan": 0.82
+  "netz_auf_plan": 0.76
  },
  "olten_hammer": {
   "VB1": 1,
@@ -986,7 +986,7 @@
   "dkw_plan": 0,
   "knoten_osm": 4,
   "versatz_y": 0.0,
-  "netz_auf_plan": 0.8
+  "netz_auf_plan": 1.0
  },
  "rothrist": {
   "VA2": 1,
@@ -1196,7 +1196,7 @@
   "dkw_plan": 0,
   "knoten_osm": 5,
   "versatz_y": 0.0,
-  "netz_auf_plan": 0.89
+  "netz_auf_plan": 1.0
  },
  "twann": {
   "dkw_osm_unvollstaendig": [],

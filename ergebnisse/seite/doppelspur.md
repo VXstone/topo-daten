@@ -1,0 +1,87 @@
+# Mass «Doppelspur-Abstand» (REGELN 1.4) – HD
+
+73 Befunde in 10 von 136 Plänen (Doppelspur nicht auf benachbarten Ebenen, ohne Perron dazwischen). Nur Messung, keine Sperre.
+
+- **aarau** (29)
+  - HD Doppelspur 24786490/87351119 (650): 2 Ebenen auseinander statt 1, kein Perron dazwischen (44 m parallel)
+  - HD Doppelspur 26730190/87351115 (650): 2 Ebenen auseinander statt 1, kein Perron dazwischen (489 m parallel)
+  - HD Doppelspur 27528345/87351111 (650): 2 Ebenen auseinander statt 1, kein Perron dazwischen (62 m parallel)
+  - HD Doppelspur 27528346/87351109 (650): 2 Ebenen auseinander statt 1, kein Perron dazwischen (40 m parallel)
+  - HD Doppelspur 33789989/109103532 (650): 2 Ebenen auseinander statt 1, kein Perron dazwischen (314 m parallel)
+  - HD Doppelspur 33789989/168744376 (650): 2 Ebenen auseinander statt 1, kein Perron dazwischen (622 m parallel)
+  - HD Doppelspur 87351106/89041552 (650): 2 Ebenen auseinander statt 1, kein Perron dazwischen (251 m parallel)
+  - HD Doppelspur 88889164/88889255 (650): 2 Ebenen auseinander statt 1, kein Perron dazwischen (53 m parallel)
+  - HD Doppelspur 89041552/109104547 (650): 2 Ebenen auseinander statt 1, kein Perron dazwischen (489 m parallel)
+  - HD Doppelspur 109103531/109103545 (650): 2 Ebenen auseinander statt 1, kein Perron dazwischen (85 m parallel)
+  - HD Doppelspur 109103532/377871836 (650): 2 Ebenen auseinander statt 1, kein Perron dazwischen (368 m parallel)
+  - HD Doppelspur 109103543/109103553 (650): 2 Ebenen auseinander statt 1, kein Perron dazwischen (82 m parallel)
+  - HD Doppelspur 109103545/588133265 (650): 2 Ebenen auseinander statt 1, kein Perron dazwischen (47 m parallel)
+  - HD Doppelspur 109103548/168744376 (650): 2 Ebenen auseinander statt 1, kein Perron dazwischen (354 m parallel)
+  - HD Doppelspur 109103553/588133265 (650): 2 Ebenen auseinander statt 1, kein Perron dazwischen (176 m parallel)
+  - HDz Doppelspur 109103553/902335244 (650): 2 Ebenen auseinander statt 1, kein Perron dazwischen (51 m parallel), Gleis dazwischen [34013597]
+  - HDz Doppelspur 109103553/1419400915 (650): 2 Ebenen auseinander statt 1, kein Perron dazwischen (70 m parallel), Gleis dazwischen [1419400916]
+  - HD Doppelspur 168744376/377871836 (650): 2 Ebenen auseinander statt 1, kein Perron dazwischen (276 m parallel)
+  - HD Doppelspur 168744380/168744381 (650): 2 Ebenen auseinander statt 1, kein Perron dazwischen (186 m parallel)
+  - HD Doppelspur 220130945/1419225677 (650): 3 Ebenen auseinander statt 1, kein Perron dazwischen (48 m parallel)
+  - HD Doppelspur 220130945/538685738 (650): 3 Ebenen auseinander statt 1, kein Perron dazwischen (385 m parallel)
+  - HD Doppelspur 302923820/302923821 (650): 3 Ebenen auseinander statt 1, kein Perron dazwischen (178 m parallel)
+  - HD Doppelspur 302923821/538685736 (650): 3 Ebenen auseinander statt 1, kein Perron dazwischen (641 m parallel)
+  - HD Doppelspur 313264479/313264480 (650): 3 Ebenen auseinander statt 1, kein Perron dazwischen (717 m parallel)
+  - HD Doppelspur 377875378/1371903485 (650): 2 Ebenen auseinander statt 1, kein Perron dazwischen (47 m parallel)
+  - HD Doppelspur 384372574/394411217 (650): 3 Ebenen auseinander statt 1, kein Perron dazwischen (57 m parallel)
+  - HD Doppelspur 1371903485/1515277114 (650): 2 Ebenen auseinander statt 1, kein Perron dazwischen (92 m parallel)
+  - HD Doppelspur 1371903485/1515277114 (650): 2 Ebenen auseinander statt 1, kein Perron dazwischen (75 m parallel)
+  - HD Doppelspur 1419225676/1419225677 (650): 3 Ebenen auseinander statt 1, kein Perron dazwischen (41 m parallel)
+- **gorgier_saint_aubin** (1)
+  - HD Doppelspur 42761846/42761850 (210): 2 Ebenen auseinander statt 1, kein Perron dazwischen (55 m parallel)
+- **konolfingen** (1)
+  - HD Doppelspur 156704985/606748594 (430): 2 Ebenen auseinander statt 1, kein Perron dazwischen (233 m parallel)
+- **mob__paccot** (1)
+  - HD Doppelspur 228124359/1307327985 (122): 0 Ebenen auseinander statt 1, kein Perron dazwischen (80 m parallel)
+- **neuchatel** (9)
+  - HDz Doppelspur 32113628/579953618 (210): 2 Ebenen auseinander statt 1, kein Perron dazwischen (45 m parallel), Gleis dazwischen [184331539]
+  - HD Doppelspur 32113628/1222936431 (210): 2 Ebenen auseinander statt 1, kein Perron dazwischen (58 m parallel)
+  - HDz Doppelspur 35434218/35545993 (210): 2 Ebenen auseinander statt 1, kein Perron dazwischen (93 m parallel), Gleis dazwischen [35567923]
+  - HD Doppelspur 35567582/57690880 (210): 2 Ebenen auseinander statt 1, kein Perron dazwischen (179 m parallel)
+  - HD Doppelspur 49689309/49689310 (210): 2 Ebenen auseinander statt 1, kein Perron dazwischen (47 m parallel)
+  - HD Doppelspur 579953619/579953620 (210): 2 Ebenen auseinander statt 1, kein Perron dazwischen (61 m parallel)
+  - HD Doppelspur 579953619/580046575 (210): 2 Ebenen auseinander statt 1, kein Perron dazwischen (42 m parallel)
+  - HD Doppelspur 579953619/1222936425 (210): 2 Ebenen auseinander statt 1, kein Perron dazwischen (94 m parallel)
+  - HD Doppelspur 1199938588/1199938589 (210): 2 Ebenen auseinander statt 1, kein Perron dazwischen (122 m parallel)
+- **olten** (19)
+  - HD Doppelspur 50062969/136910717 (500): 5 Ebenen auseinander statt 1, kein Perron dazwischen (202 m parallel)
+  - HD Doppelspur 57016111/196581722 (500): 2 Ebenen auseinander statt 1, kein Perron dazwischen (96 m parallel)
+  - HDz Doppelspur 137216811/396181910 (450): 2 Ebenen auseinander statt 1, kein Perron dazwischen (43 m parallel), Gleis dazwischen [396181909]
+  - HD Doppelspur 195008189/195008190 (540): 2 Ebenen auseinander statt 1, kein Perron dazwischen (203 m parallel)
+  - HD Doppelspur 195008189/679251571 (540): 3 Ebenen auseinander statt 1, kein Perron dazwischen (52 m parallel)
+  - HD Doppelspur 195008189/1331904823 (540): 2 Ebenen auseinander statt 1, kein Perron dazwischen (57 m parallel)
+  - HD Doppelspur 196581722/545852535 (500): 2 Ebenen auseinander statt 1, kein Perron dazwischen (81 m parallel)
+  - HD Doppelspur 207922001/545852534 (500): 2 Ebenen auseinander statt 1, kein Perron dazwischen (48 m parallel)
+  - HD Doppelspur 207922002/396181910 (450): 2 Ebenen auseinander statt 1, kein Perron dazwischen (60 m parallel)
+  - HD Doppelspur 207922002/783711750 (450): 2 Ebenen auseinander statt 1, kein Perron dazwischen (46 m parallel)
+  - HD Doppelspur 380867859/718445977 (540): 2 Ebenen auseinander statt 1, kein Perron dazwischen (54 m parallel)
+  - HDz Doppelspur 396181910/977851900 (450): 3 Ebenen auseinander statt 1, kein Perron dazwischen (43 m parallel), Gleis dazwischen [137216808]
+  - HD Doppelspur 692444537/884583191 (540): 2 Ebenen auseinander statt 1, kein Perron dazwischen (107 m parallel)
+  - HD Doppelspur 1331904823/1332412914 (540): 2 Ebenen auseinander statt 1, kein Perron dazwischen (116 m parallel)
+  - HD Doppelspur 1331908788/1331908789 (500): 5 Ebenen auseinander statt 1, kein Perron dazwischen (219 m parallel)
+  - HD Doppelspur 48647118/1332412907 (500): 8 Ebenen auseinander statt 1, kein Perron dazwischen (49 m parallel)
+  - HD Doppelspur 48647120/56659859 (500): 8 Ebenen auseinander statt 1, kein Perron dazwischen (225 m parallel)
+  - HD Doppelspur 56659861/1332412906 (500): 8 Ebenen auseinander statt 1, kein Perron dazwischen (84 m parallel)
+  - HD Doppelspur 173572107/181147972 (500): 8 Ebenen auseinander statt 1, kein Perron dazwischen (148 m parallel)
+- **rothrist** (5)
+  - HD Doppelspur 62062321/157733586 (450): 3 Ebenen auseinander statt 1, kein Perron dazwischen (355 m parallel)
+  - HD Doppelspur 62062321/780534821 (450): 3 Ebenen auseinander statt 1, kein Perron dazwischen (126 m parallel)
+  - HDz Doppelspur 87369578/773830214 (450): 3 Ebenen auseinander statt 1, kein Perron dazwischen (146 m parallel), Gleis dazwischen [15416684, 139097783]
+  - HD Doppelspur 87369578/780534821 (450): 3 Ebenen auseinander statt 1, kein Perron dazwischen (110 m parallel)
+  - HD Doppelspur 780534819/780534821 (450): 3 Ebenen auseinander statt 1, kein Perron dazwischen (71 m parallel)
+- **solothurn** (1)
+  - HDz Doppelspur 28708038/750266421 (410): 2 Ebenen auseinander statt 1, kein Perron dazwischen (69 m parallel), Gleis dazwischen [1534903296]
+- **szu__zurich_giesshubel** (1)
+  - HD Doppelspur 302538266/302538279 (712): 6 Ebenen auseinander statt 1, kein Perron dazwischen (70 m parallel)
+- **szu__zurich_saalsporthalle** (6)
+  - HDz Doppelspur 110683212/304513218 (712): 2 Ebenen auseinander statt 1, kein Perron dazwischen (48 m parallel), Gleis dazwischen [110680665]
+  - HDz Doppelspur 110683215/302549287 (712): 2 Ebenen auseinander statt 1, kein Perron dazwischen (43 m parallel), Gleis dazwischen [110683213, 302549281]
+  - HDz Doppelspur 302549282/302549288 (712): 2 Ebenen auseinander statt 1, kein Perron dazwischen (72 m parallel), Gleis dazwischen [110680665, 302549283]
+  - HDz Doppelspur 302549285/302549287 (712): 2 Ebenen auseinander statt 1, kein Perron dazwischen (61 m parallel), Gleis dazwischen [302549281]
+  - HD Doppelspur 302549289/302549290 (712): 2 Ebenen auseinander statt 1, kein Perron dazwischen (47 m parallel)
+  - HD Doppelspur 304513218/304513220 (712): 2 Ebenen auseinander statt 1, kein Perron dazwischen (43 m parallel)
