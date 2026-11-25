@@ -31,6 +31,10 @@ CFG = dict(
     sw_search_m=900,            # Weichen in diesem Umkreis um den Bahnhof bestimmen den Ausschnitt
     d_lim=60,                   # max. seitlicher Abstand [m], darüber abgeschnitten
     flat_slope=0.06,            # |dd/ds| darunter = Gleisspur
+    # REGELN 1.4 (Doppelspur 1 Ebene, Präzisierung 25.11., Testfall Giesshübel) – gelten für alle Pläne:
+    linie_fortsetzung=0.5,      # Hauptgleis setzt sich in derselben Linie (ref) fort, nicht in einer anderen / ref-losen
+    doppelspur_flach=1.6,       # Doppelspur im Bogen: Stück bis 1,6 × flat_slope bleibt Gleis, wenn die Partnerspur gleich läuft
+    lane_guess_nah_m=40,        # Ebene von Knoten knapp hinter dem Ende der Hauptgleise: deren Enden zählen mit
     # Weichen-Standard (alle Verbindungen werden daraus gebaut)
     sw_angle=60,       # Neigung der Diagonale [Grad], wie Uppsala-Vorlage
     sw_radius=7,       # Ausrundung Gleis -> Diagonale [px]
@@ -1053,6 +1057,71 @@ for i, sg in enumerate(segs):
     for _r, _ws in OVR.get("gleise", {}).items():
         if sg["way"] in _ws: sg["ref"] = _r
 
+# REGELN 1.4 (Präzisierung 25.11., Giesshübel): ein Stück einer durchgehenden Doppelspur, das nur leicht über der
+# Flachgrenze liegt (im Bogen), bleibt Gleis, wenn daneben (3–6,5 m) ein flaches Streckengleis derselben Linie gleich
+# verläuft – sonst wird es Schräge und die Doppelspur reisst auseinander. cfg «doppelspur_flach» (Faktor auf flat_slope).
+if CFG.get("doppelspur_flach", 0):
+    _dsf = CFG["doppelspur_flach"] * CFG["flat_slope"]
+    _lr = lambda sg: sg["tags"].get("ref") if not sg["tags"].get("service") else None
+    for _it in range(3):
+        _neu = []
+        for a in segs:
+            if a["flat"] or not _lr(a) or a["slope"] >= _dsf or a["s1"] - a["s0"] < 5: continue
+            _abd = 0.0
+            for b in segs:
+                if b is a or _lr(b) != _lr(a) or not (b["flat"] or b["slope"] < _dsf): continue
+                lo, hi = max(a["s0"], b["s0"]), min(a["s1"], b["s1"])
+                if hi - lo < 2: continue
+                q = np.linspace(lo, hi, 5)
+                dd = np.interp(q, a["p"][:, 0], a["p"][:, 1]) - np.interp(q, b["p"][:, 0], b["p"][:, 1])
+                if np.all((3.0 <= np.abs(dd)) & (np.abs(dd) <= 6.5)) and np.ptp(dd) < 1.0: _abd += hi - lo
+            if _abd >= 0.6 * (a["s1"] - a["s0"]): _neu.append(a)
+        if not _neu: break
+        for a in _neu:
+            a["flat"] = True
+            if ARGS.dbg: print("DSF", a["way"], round(a["slope"], 3))
+    # Spurwechsel aus mehreren OSM-Stücken ohne ref zwischen den beiden Gleisen derselben Linie (Giesshübel 302538265 +
+    # 110403387, 70 m, 2.8 m Seitenwechsel): wird Schräge, schiebt die Doppelspur nicht auseinander (REGELN 1.4)
+    _an = collections.defaultdict(list)
+    for sg in segs:
+        _an[sg["nodes"][0]].append(sg); _an[sg["nodes"][-1]].append(sg)
+    _gesehen = set()
+    # Stück eines Spurwechsels: kein Hauptgleis mit Linie, keine Gleisnummer; service nur siding/crossover (Saalsporthalle:
+    # zwei Spurwechsel als service=siding in je zwei Stücken lagen auf einer Zwischenebene und hoben Gl. 2 eine Ebene an)
+    _dsw_ok = lambda x: (not _lr(x) and x["tags"].get("service") in (None, "siding", "crossover")
+                         and not x["tags"].get("railway:track_ref"))
+    for sg in segs:
+        if id(sg) in _gesehen or not _dsw_ok(sg) or not sg["flat"]: continue
+        lauf, enden = [sg], []
+        for e_ in (0, -1):
+            cur, n_ = sg, sg["nodes"][e_]
+            while True:
+                o_ = [x for x in _an[n_] if x is not cur]
+                if len(o_) == 1 and _dsw_ok(o_[0]):
+                    cur = o_[0]; lauf.append(cur); n_ = cur["nodes"][-1] if cur["nodes"][0] == n_ else cur["nodes"][0]
+                    if len(lauf) > 6: break
+                    continue
+                enden.append((n_, [x for x in o_ if _lr(x)])); break
+        for x in lauf: _gesehen.add(id(x))
+        if len(enden) != 2 or not all(e[1] for e in enden): continue
+        r0 = {_lr(x) for x in enden[0][1]}; r1 = {_lr(x) for x in enden[1][1]}
+        if not (r0 & r1): continue
+        L_ = sum(x["s1"] - x["s0"] for x in lauf); dd_ = abs(SD[enden[0][0]][1] - SD[enden[1][0]][1])
+        # andere Spur am anderen Ende: am einen Endknoten liegt die Partnerspur (gleiche Linie, 2,5–6,5 m) auf der einen
+        # Seite, am anderen Endknoten auf der anderen – der Lauf wechselt von einer Spur der Doppelspur auf die andere
+        def _partner(n_, r_):
+            s_, d_ = SD[n_]; out = []
+            for x in segs:
+                if _lr(x) not in r_ or n_ in (x["nodes"][0], x["nodes"][-1]) or not (x["s0"] - 1 <= s_ <= x["s1"] + 1): continue
+                dx_ = float(np.interp(s_, x["p"][:, 0], x["p"][:, 1])) - d_
+                if 2.5 <= abs(dx_) <= 6.5: out.append(np.sign(dx_))
+            return set(out)
+        _p0, _p1 = _partner(enden[0][0], r0 & r1), _partner(enden[1][0], r0 & r1)
+        _quer = 4.0 if (len(_p0) == 1 and len(_p1) == 1 and _p0 != _p1) else 0.0
+        if L_ < 150 and _quer and any(x["flat"] for x in lauf):
+            for x in lauf: x["flat"] = False
+            if ARGS.dbg: print("DSW", [x["way"] for x in lauf], round(L_), round(dd_, 1))
+
 # Perron mit genau einer Nummer, daneben ein Gleis ohne railway:track_ref (29.10.2026, Susch: Gl. 2 = service=yard ohne
 # Nummer am Perron «2»): das nächste Gleis ohne Nummer bis 12 m bekommt die Nummer und ist Perrongleis. Gibt es im Plan
 # schon ein Gleis mit dieser Nummer, bleibt alles, wie es ist. cfg «perron_nummer»: false schaltet ab.
@@ -1412,7 +1481,15 @@ for n, (L, Rr) in at.items():
     # gerade weiter). cfg «haupt_fortsetzung» (Regionen: an, Bahnhöfe aus «plaene»: aus, abgenommene Pläne)
     _hf = CFG.get("haupt_fortsetzung", 0)
     _hm = lambda a, b: _hf if bool(a["tags"].get("service")) != bool(b["tags"].get("service")) else 0
-    pairs = sorted(((abs(dir_at(a, 1) - dir_at(b, 0)) + (0 if a["way"] == b["way"] else CFG.get("way_pen", 0.06)) + _xo(a) + _xo(b) + _hm(a, b)
+    # Linie setzt sich in derselben Linie fort (REGELN 1.4/2.15, 25.11. Giesshübel: Y lief in die 713 statt geradeaus als 712)
+    _lf = CFG.get("linie_fortsetzung", 0)
+    # nur wenn auf der anderen Seite ein Gleis derselben Linie weiterläuft (Glion 121 → 122: keine 121 → keine Strafe)
+    _refs_l = {a["tags"].get("ref") for a in fl if not a["tags"].get("service")}
+    _refs_r = {b["tags"].get("ref") for b in fr if not b["tags"].get("service")}
+    _lm = lambda a, b: _lf if (a["tags"].get("ref") and b["tags"].get("ref") and a["tags"].get("ref") != b["tags"].get("ref")
+                               and not a["tags"].get("service") and not b["tags"].get("service")
+                               and ((a["tags"].get("ref") and a["tags"]["ref"] in _refs_r) or (b["tags"].get("ref") and b["tags"]["ref"] in _refs_l))) else 0
+    pairs = sorted(((abs(dir_at(a, 1) - dir_at(b, 0)) + (0 if a["way"] == b["way"] else CFG.get("way_pen", 0.06)) + _xo(a) + _xo(b) + _hm(a, b) + _lm(a, b)
                      - (10 if (a["id"], b["id"]) in FW_PAARE else 0), a["id"], b["id"])
                     for a in fl for b in fr))
     usedl, usedr = set(), set()
@@ -2230,8 +2307,17 @@ for n in list(home):
     for w in ways_thru:
         if w in _wl[n]:
             home[n] = _wl[n][w]; thru_fixed.add(n); break
-def lane_guess(s, d):
-    cc = [(d_at(c, s), c["lane"]) for c in C if c["s0"] - 1 <= s <= c["s1"] + 1]
+def lane_guess(s, d, nah=False):
+    _am_ort = [c for c in C if c["s0"] - 1 <= s <= c["s1"] + 1]
+    cc = [(d_at(c, s), c["lane"]) for c in _am_ort]
+    # REGELN 1.4/2.15 (25.11., Giesshübel Depotgleis 110678986): liegt der Knoten knapp hinter dem Ende der Hauptgleise
+    # (≤ cfg «lane_guess_nah_m»), zählen deren Enden mit – sonst entscheiden nur ferne Fächergleise und der Knoten fällt
+    # unter die Doppelspur, obwohl er in OSM darüber liegt
+    _nah = CFG.get("lane_guess_nah_m", 0)
+    if _nah and nah and cc and min(abs(d - x[0]) for x in cc) > CFG.get("lane_guess_fern_m", 25):
+        # nur für Enden von Nebengleis-Schrägen (Aufruf mit nah=True) und wenn die Gleise am Ort fern sind
+        cc += [(d_at(c, s), c["lane"]) for c in C if not (c["s0"] - 1 <= s <= c["s1"] + 1) and c["s0"] - _nah <= s <= c["s1"] + _nah
+               and any(x["pax"] for x in c["segs"])]
     if not cc: return 0
     cc.sort()
     # Regel 22: ausserhalb der vorhandenen Gleise mit Gleisabstand weiterzählen statt am Rand kleben
@@ -2271,8 +2357,9 @@ for sg in diag:
     groups.append(g)
 for g in groups:
     a, b = g[0]["nodes"][0], g[-1]["nodes"][-1]
+    _ng = not any(x["pax"] for x in g)
     for n in (a, b):
-        if n not in home: home[n] = int(round(lane_guess(*SD[n])))
+        if n not in home: home[n] = int(round(lane_guess(*SD[n], nah=_ng)))
     if len(g) > 1:
         sa, sb = g[0]["s0"], g[-1]["s1"]
         la, lb = home[a], home[b]
