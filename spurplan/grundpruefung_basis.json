@@ -1,19 +1,21 @@
 {
  "_quelle": "grundpruefung.py (Schritt G0, REGELN «Grundprüfung als Sperre»); je Abschnitt Zählung je Plan und Regel",
  "_stand": {
-  "plaene": "Seite ergebnisse 7e06848 (Commit 78494e5, live v154), lokal gerechnet 18.11.2026 · 18.11. T-SZU: Ausgangsstand Testregion SZU ergänzt (szu__* aus Seite 219ac67, region_szu aus Regionen 5218b8c) · 19.11. K0: region_ne GQ 0→1 bewusst (Ins Rollbock jetzt durchgehend verbunden, zeigt denselben GQ wie der Bahnhofplan ins, REGELN 2.12) · 22.11. spät (V4e Teil 5): Neuchâtel GG 3 -> 1 (Hand-Linien Ost neu) · 24.11. K0c (REGELN 2.2 r34_kette an): szu__zurich_giesshubel GS 11→12 bewusst (Gleiswechsel 1↔2 Saalsporthalle kreuzt jetzt als eine Schräge das Gleis 351899126, das der Achsknick zwischen die Gleise legt – in OSM 35 m entfernt; vorher zeigte der Plan eine falsche Verbindung über dieses Gleis; → T-SZU2), GG 33→32; szu__zurich_selnau GQ 1→0; region_szu GQ 5→4, GG 28→27",
-  "pruefstand": "Workflow pruefstand 44281336491 (Commit 404ca61, ergebnisse/pruefstand/grundpruefung/zaehlung.json, 18.11.2026)"
+  "plaene": "Seite ergebnisse 7e06848 (Commit 78494e5, live v154), lokal gerechnet 18.11.2026 · 18.11. T-SZU: Ausgangsstand Testregion SZU ergänzt (szu__* aus Seite 219ac67, region_szu aus Regionen 5218b8c) · 19.11. K0: region_ne GQ 0→1 bewusst (Ins Rollbock jetzt durchgehend verbunden, zeigt denselben GQ wie der Bahnhofplan ins, REGELN 2.12) · 22.11. spät (V4e Teil 5): Neuchâtel GG 3 -> 1 (Hand-Linien Ost neu) · 24.11. K0c (REGELN 2.2 r34_kette an): szu__zurich_giesshubel GS 11→12 bewusst (Gleiswechsel 1↔2 Saalsporthalle kreuzt jetzt als eine Schräge das Gleis 351899126, das der Achsknick zwischen die Gleise legt – in OSM 35 m entfernt; vorher zeigte der Plan eine falsche Verbindung über dieses Gleis; → T-SZU2), GG 33→32; szu__zurich_selnau GQ 1→0; region_szu GQ 5→4, GG 28→27 · 25.11. T-SZU2 Teil 3b (Okay Daniel 25.11. 06:03): Abschnitt neu aus ergebnisse bfe5703 (seite 24.11. 23:26) – GE neu (REGELN 1.30; Blaupausen im Code ausgenommen), GQ Giesshübel 5→7 / region_szu 4→8 vorläufig (Okay Daniel 25.11., Depot-Umbau folgt)",
+  "pruefstand": "Workflow pruefstand 44281336491 (Commit 404ca61, ergebnisse/pruefstand/grundpruefung/zaehlung.json, 18.11.2026) · 25.11. Teil 3b (Okay Daniel): neu aus ergebnisse pruefstand 24.11. 22:59, GE neu (REGELN 1.30)"
  },
  "plaene": {
   "aarau": {
+   "GE": 5,
    "GG": 6,
    "GP": 2,
    "GQ": 0,
    "GS": 3,
-   "GT": 5,
+   "GT": 1,
    "GW": 0
   },
   "aarburg_oftringen": {
+   "GE": 1,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -22,6 +24,7 @@
    "GW": 0
   },
   "auvernier": {
+   "GE": 0,
    "GG": 1,
    "GP": 0,
    "GQ": 0,
@@ -30,6 +33,7 @@
    "GW": 0
   },
   "avenches": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -38,6 +42,7 @@
    "GW": 0
   },
   "basel": {
+   "GE": 13,
    "GG": 21,
    "GP": 20,
    "GQ": 17,
@@ -46,6 +51,7 @@
    "GW": 0
   },
   "bern": {
+   "GE": 9,
    "GG": 25,
    "GP": 22,
    "GQ": 9,
@@ -54,6 +60,7 @@
    "GW": 1
   },
   "bern_brunnen_westside": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -62,6 +69,7 @@
    "GW": 0
   },
   "bevaix": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -70,6 +78,7 @@
    "GW": 0
   },
   "blaupause": {
+   "GE": 0,
    "GG": 1,
    "GP": 0,
    "GQ": 0,
@@ -78,6 +87,7 @@
    "GW": 0
   },
   "blaupause2": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -86,6 +96,7 @@
    "GW": 0
   },
   "bole": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -94,6 +105,7 @@
    "GW": 0
   },
   "boudry": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -102,6 +114,7 @@
    "GW": 0
   },
   "chambrelien": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -110,6 +123,7 @@
    "GW": 0
   },
   "champ_du_moulin": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -118,6 +132,7 @@
    "GW": 0
   },
   "colombier": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -126,6 +141,7 @@
    "GW": 0
   },
   "concise": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -134,6 +150,7 @@
    "GW": 0
   },
   "corcelles_peseux": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -142,6 +159,7 @@
    "GW": 0
   },
   "cornaux": {
+   "GE": 1,
    "GG": 4,
    "GP": 0,
    "GQ": 0,
@@ -150,6 +168,7 @@
    "GW": 0
   },
   "courtepin": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -158,6 +177,7 @@
    "GW": 0
   },
   "couvet": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -166,6 +186,7 @@
    "GW": 0
   },
   "cressier": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -174,6 +195,7 @@
    "GW": 0
   },
   "cressier_fr": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -182,6 +204,7 @@
    "GW": 0
   },
   "daniken": {
+   "GE": 0,
    "GG": 2,
    "GP": 0,
    "GQ": 0,
@@ -190,6 +213,7 @@
    "GW": 0
   },
   "domdidier": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -198,6 +222,7 @@
    "GW": 0
   },
   "dompierre": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -206,6 +231,7 @@
    "GW": 0
   },
   "dulliken": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -214,6 +240,7 @@
    "GW": 0
   },
   "faoug": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -222,6 +249,7 @@
    "GW": 0
   },
   "fraschels": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -230,6 +258,7 @@
    "GW": 0
   },
   "galmiz": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -238,6 +267,7 @@
    "GW": 0
   },
   "gampelen": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -246,6 +276,7 @@
    "GW": 0
   },
   "gorgier_saint_aubin": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -254,6 +285,7 @@
    "GW": 0
   },
   "grandson": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -262,6 +294,7 @@
    "GW": 0
   },
   "gummenen": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -270,6 +303,7 @@
    "GW": 0
   },
   "ins": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 1,
@@ -278,6 +312,7 @@
    "GW": 0
   },
   "kallnach": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -286,6 +321,7 @@
    "GW": 0
   },
   "kerzers": {
+   "GE": 0,
    "GG": 2,
    "GP": 0,
    "GQ": 0,
@@ -294,6 +330,7 @@
    "GW": 0
   },
   "kerzers_papiliorama": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -302,6 +339,7 @@
    "GW": 0
   },
   "konolfingen": {
+   "GE": 1,
    "GG": 2,
    "GP": 0,
    "GQ": 0,
@@ -310,6 +348,7 @@
    "GW": 0
   },
   "la_neuveville": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -318,6 +357,7 @@
    "GW": 0
   },
   "la_presta_mines_d_asphalte": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -326,6 +366,7 @@
    "GW": 0
   },
   "laufelfingen": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -334,6 +375,7 @@
    "GW": 0
   },
   "le_landeron": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -342,6 +384,7 @@
    "GW": 0
   },
   "les_deurres": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -350,6 +393,7 @@
    "GW": 0
   },
   "les_geneveys_sur_coffrane": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -358,6 +402,7 @@
    "GW": 0
   },
   "les_hauts_geneveys": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -366,6 +411,7 @@
    "GW": 0
   },
   "ligerz": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -374,6 +420,7 @@
    "GW": 0
   },
   "marin_epagnier": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -382,6 +429,7 @@
    "GW": 0
   },
   "mob__allieres": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -390,6 +438,7 @@
    "GW": 0
   },
   "mob__belmont_sur_montreux": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -398,6 +447,7 @@
    "GW": 0
   },
   "mob__blankenburg": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -406,6 +456,7 @@
    "GW": 0
   },
   "mob__caux": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -414,6 +465,7 @@
    "GW": 0
   },
   "mob__chamby": {
+   "GE": 0,
    "GG": 1,
    "GP": 0,
    "GQ": 0,
@@ -422,6 +474,7 @@
    "GW": 0
   },
   "mob__chateau_d_oex": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -430,6 +483,7 @@
    "GW": 0
   },
   "mob__chatelard": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -438,6 +492,7 @@
    "GW": 0
   },
   "mob__chernex": {
+   "GE": 0,
    "GG": 1,
    "GP": 0,
    "GQ": 0,
@@ -446,6 +501,7 @@
    "GW": 0
   },
   "mob__cret_d_y_bau": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -454,6 +510,7 @@
    "GW": 0
   },
   "mob__flendruz": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -462,6 +519,7 @@
    "GW": 0
   },
   "mob__fontanivent": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -470,6 +528,7 @@
    "GW": 0
   },
   "mob__glion": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -478,6 +537,7 @@
    "GW": 0
   },
   "mob__glion_college": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -486,6 +546,7 @@
    "GW": 0
   },
   "mob__gruben": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -494,6 +555,7 @@
    "GW": 0
   },
   "mob__gstaad": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -502,6 +564,7 @@
    "GW": 0
   },
   "mob__jaman": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -510,6 +573,7 @@
    "GW": 0
   },
   "mob__jor": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -518,6 +582,7 @@
    "GW": 0
   },
   "mob__la_perche": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -526,6 +591,7 @@
    "GW": 0
   },
   "mob__la_tine": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -534,6 +600,7 @@
    "GW": 0
   },
   "mob__le_tremblex": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -542,6 +609,7 @@
    "GW": 0
   },
   "mob__lenk_im_simmental": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -550,6 +618,7 @@
    "GW": 0
   },
   "mob__les_avants": {
+   "GE": 2,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -558,6 +627,7 @@
    "GW": 0
   },
   "mob__les_cases": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -566,6 +636,7 @@
    "GW": 0
   },
   "mob__les_echets": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -574,6 +645,7 @@
    "GW": 0
   },
   "mob__les_sciernes": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -582,6 +654,7 @@
    "GW": 0
   },
   "mob__matten": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -590,6 +663,7 @@
    "GW": 0
   },
   "mob__montbovon": {
+   "GE": 1,
    "GG": 1,
    "GP": 0,
    "GQ": 0,
@@ -598,6 +672,7 @@
    "GW": 0
   },
   "mob__montreux": {
+   "GE": 0,
    "GG": 2,
    "GP": 1,
    "GQ": 1,
@@ -606,6 +681,7 @@
    "GW": 0
   },
   "mob__montreux_les_planches": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -614,6 +690,7 @@
    "GW": 0
   },
   "mob__oeschseite": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -622,6 +699,7 @@
    "GW": 0
   },
   "mob__paccot": {
+   "GE": 0,
    "GG": 1,
    "GP": 0,
    "GQ": 0,
@@ -630,6 +708,7 @@
    "GW": 0
   },
   "mob__planchamp": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -638,6 +717,7 @@
    "GW": 0
   },
   "mob__rochers_de_naye": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -646,6 +726,7 @@
    "GW": 0
   },
   "mob__rossiniere": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -654,6 +735,7 @@
    "GW": 0
   },
   "mob__rougemont": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -662,6 +744,7 @@
    "GW": 0
   },
   "mob__saanen": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -670,6 +753,7 @@
    "GW": 0
   },
   "mob__saanenmoser": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -678,6 +762,7 @@
    "GW": 0
   },
   "mob__schonried": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -686,6 +771,7 @@
    "GW": 0
   },
   "mob__sendy_sollard": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -694,6 +780,7 @@
    "GW": 0
   },
   "mob__st_stephan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -702,6 +789,7 @@
    "GW": 0
   },
   "mob__toveyre": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -710,6 +798,7 @@
    "GW": 0
   },
   "mob__valmont": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -718,6 +807,7 @@
    "GW": 0
   },
   "mob__vernex": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -726,6 +816,7 @@
    "GW": 0
   },
   "mob__vuarennes": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -734,14 +825,16 @@
    "GW": 0
   },
   "mob__zweisimmen": {
+   "GE": 0,
    "GG": 1,
    "GP": 0,
    "GQ": 0,
    "GS": 2,
-   "GT": 1,
+   "GT": 0,
    "GW": 0
   },
   "motiers": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -750,6 +843,7 @@
    "GW": 0
   },
   "munchenwiler_courgevaux": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -758,6 +852,7 @@
    "GW": 0
   },
   "muntelier_lowenberg": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -766,6 +861,7 @@
    "GW": 0
   },
   "muntschemier": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -774,6 +870,7 @@
    "GW": 0
   },
   "murten": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -782,6 +879,7 @@
    "GW": 0
   },
   "neuchatel": {
+   "GE": 0,
    "GG": 1,
    "GP": 0,
    "GQ": 0,
@@ -790,6 +888,7 @@
    "GW": 0
   },
   "neuchatel_vauseyon": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -798,6 +897,7 @@
    "GW": 0
   },
   "noiraigue": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -806,6 +906,7 @@
    "GW": 0
   },
   "olten": {
+   "GE": 0,
    "GG": 13,
    "GP": 1,
    "GQ": 1,
@@ -814,6 +915,7 @@
    "GW": 0
   },
   "olten_hammer": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -822,6 +924,7 @@
    "GW": 0
   },
   "onnens_bonvillars": {
+   "GE": 0,
    "GG": 1,
    "GP": 0,
    "GQ": 0,
@@ -830,6 +933,7 @@
    "GW": 0
   },
   "pensier": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -838,30 +942,43 @@
    "GW": 0
   },
   "region": {
-   "GG": 23,
+   "GE": 27,
+   "GG": 22,
    "GP": 3,
    "GQ": 2,
    "GS": 8,
-   "GT": 10,
-   "GW": 4
+   "GT": 6,
+   "GW": 3
   },
   "region_mob": {
+   "GE": 24,
    "GG": 3,
    "GP": 3,
    "GQ": 1,
    "GS": 3,
-   "GT": 1,
+   "GT": 0,
    "GW": 0
   },
   "region_ne": {
+   "GE": 3,
    "GG": 2,
    "GP": 0,
    "GQ": 1,
    "GS": 1,
-   "GT": 4,
+   "GT": 0,
+   "GW": 0
+  },
+  "region_szu": {
+   "GE": 12,
+   "GG": 14,
+   "GP": 0,
+   "GQ": 8,
+   "GS": 12,
+   "GT": 0,
    "GW": 0
   },
   "region_vereina": {
+   "GE": 2,
    "GG": 5,
    "GP": 0,
    "GQ": 2,
@@ -870,6 +987,7 @@
    "GW": 0
   },
   "riedbach": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -878,6 +996,7 @@
    "GW": 0
   },
   "rosshausern": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -886,6 +1005,7 @@
    "GW": 0
   },
   "rothrist": {
+   "GE": 0,
    "GG": 1,
    "GP": 0,
    "GQ": 1,
@@ -894,6 +1014,7 @@
    "GW": 0
   },
   "safenwil": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -902,6 +1023,7 @@
    "GW": 0
   },
   "saint_blaise_cff": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -910,6 +1032,7 @@
    "GW": 0
   },
   "saint_blaise_lac": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -918,6 +1041,7 @@
    "GW": 0
   },
   "schonenwerd": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -926,6 +1050,7 @@
    "GW": 0
   },
   "serrieres": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -934,6 +1059,7 @@
    "GW": 0
   },
   "solothurn": {
+   "GE": 11,
    "GG": 4,
    "GP": 0,
    "GQ": 0,
@@ -942,151 +1068,8 @@
    "GW": 0
   },
   "sugiez": {
+   "GE": 0,
    "GG": 0,
-   "GP": 0,
-   "GQ": 0,
-   "GS": 0,
-   "GT": 0,
-   "GW": 0
-  },
-  "tecknau": {
-   "GG": 0,
-   "GP": 0,
-   "GQ": 0,
-   "GS": 0,
-   "GT": 0,
-   "GW": 0
-  },
-  "thun": {
-   "GG": 2,
-   "GP": 0,
-   "GQ": 0,
-   "GS": 0,
-   "GT": 1,
-   "GW": 0
-  },
-  "travers": {
-   "GG": 0,
-   "GP": 0,
-   "GQ": 0,
-   "GS": 0,
-   "GT": 0,
-   "GW": 0
-  },
-  "tuscherz": {
-   "GG": 0,
-   "GP": 0,
-   "GQ": 0,
-   "GS": 0,
-   "GT": 0,
-   "GW": 0
-  },
-  "twann": {
-   "GG": 0,
-   "GP": 0,
-   "GQ": 0,
-   "GS": 0,
-   "GT": 0,
-   "GW": 0
-  },
-  "vereina__klosters_platz": {
-   "GG": 4,
-   "GP": 0,
-   "GQ": 0,
-   "GS": 0,
-   "GT": 0,
-   "GW": 0
-  },
-  "vereina__klosters_selfranga": {
-   "GG": 0,
-   "GP": 0,
-   "GQ": 1,
-   "GS": 0,
-   "GT": 0,
-   "GW": 0
-  },
-  "vereina__sagliains": {
-   "GG": 3,
-   "GP": 0,
-   "GQ": 0,
-   "GS": 0,
-   "GT": 0,
-   "GW": 0
-  },
-  "vereina__sagliains_nord": {
-   "GG": 0,
-   "GP": 0,
-   "GQ": 0,
-   "GS": 0,
-   "GT": 0,
-   "GW": 0
-  },
-  "vereina__sagliains_sasslatsch": {
-   "GG": 0,
-   "GP": 0,
-   "GQ": 0,
-   "GS": 0,
-   "GT": 0,
-   "GW": 0
-  },
-  "vereina__sasslatsch": {
-   "GG": 0,
-   "GP": 0,
-   "GQ": 0,
-   "GS": 0,
-   "GT": 0,
-   "GW": 0
-  },
-  "vereina__selfranga_sud": {
-   "GG": 0,
-   "GP": 0,
-   "GQ": 0,
-   "GS": 0,
-   "GT": 0,
-   "GW": 0
-  },
-  "vereina__susch": {
-   "GG": 0,
-   "GP": 0,
-   "GQ": 0,
-   "GS": 0,
-   "GT": 0,
-   "GW": 0
-  },
-  "vereina__vereina_nord": {
-   "GG": 0,
-   "GP": 0,
-   "GQ": 0,
-   "GS": 0,
-   "GT": 0,
-   "GW": 0
-  },
-  "vereina__vereina_sud": {
-   "GG": 0,
-   "GP": 0,
-   "GQ": 0,
-   "GS": 0,
-   "GT": 0,
-   "GW": 0
-  },
-  "wangen_bei_olten": {
-   "GG": 0,
-   "GP": 0,
-   "GQ": 0,
-   "GS": 0,
-   "GT": 0,
-   "GW": 0
-  },
-  "zihlbruecke": {
-   "GG": 0,
-   "GP": 0,
-   "GQ": 0,
-   "GS": 0,
-   "GT": 0,
-   "GW": 0
-  },
-  "zofingen": {
-   "GG": 1,
    "GP": 0,
    "GQ": 0,
    "GS": 0,
@@ -1094,6 +1077,7 @@
    "GW": 0
   },
   "szu__berghof": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1102,6 +1086,7 @@
    "GW": 0
   },
   "szu__borrweg": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1110,6 +1095,7 @@
    "GW": 0
   },
   "szu__ringlikon": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1118,6 +1104,7 @@
    "GW": 0
   },
   "szu__uetliberg": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1126,6 +1113,7 @@
    "GW": 0
   },
   "szu__zurich_binz": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1134,6 +1122,7 @@
    "GW": 0
   },
   "szu__zurich_friesenberg": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1142,14 +1131,25 @@
    "GW": 0
   },
   "szu__zurich_giesshubel": {
-   "GG": 32,
+   "GE": 6,
+   "GG": 16,
    "GP": 0,
-   "GQ": 5,
-   "GS": 12,
+   "GQ": 7,
+   "GS": 10,
+   "GT": 0,
+   "GW": 0
+  },
+  "szu__zurich_saalsporthalle": {
+   "GE": 0,
+   "GG": 0,
+   "GP": 0,
+   "GQ": 0,
+   "GS": 0,
    "GT": 0,
    "GW": 0
   },
   "szu__zurich_schweighof": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1158,6 +1158,7 @@
    "GW": 0
   },
   "szu__zurich_selnau": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1165,17 +1166,172 @@
    "GT": 0,
    "GW": 0
   },
-  "region_szu": {
-   "GG": 27,
+  "tecknau": {
+   "GE": 0,
+   "GG": 0,
    "GP": 0,
-   "GQ": 4,
-   "GS": 18,
+   "GQ": 0,
+   "GS": 0,
+   "GT": 0,
+   "GW": 0
+  },
+  "thun": {
+   "GE": 2,
+   "GG": 2,
+   "GP": 0,
+   "GQ": 0,
+   "GS": 0,
    "GT": 1,
+   "GW": 0
+  },
+  "travers": {
+   "GE": 0,
+   "GG": 0,
+   "GP": 0,
+   "GQ": 0,
+   "GS": 0,
+   "GT": 0,
+   "GW": 0
+  },
+  "tuscherz": {
+   "GE": 0,
+   "GG": 0,
+   "GP": 0,
+   "GQ": 0,
+   "GS": 0,
+   "GT": 0,
+   "GW": 0
+  },
+  "twann": {
+   "GE": 0,
+   "GG": 0,
+   "GP": 0,
+   "GQ": 0,
+   "GS": 0,
+   "GT": 0,
+   "GW": 0
+  },
+  "vereina__klosters_platz": {
+   "GE": 0,
+   "GG": 4,
+   "GP": 0,
+   "GQ": 0,
+   "GS": 0,
+   "GT": 0,
+   "GW": 0
+  },
+  "vereina__klosters_selfranga": {
+   "GE": 1,
+   "GG": 0,
+   "GP": 0,
+   "GQ": 1,
+   "GS": 0,
+   "GT": 0,
+   "GW": 0
+  },
+  "vereina__sagliains": {
+   "GE": 0,
+   "GG": 3,
+   "GP": 0,
+   "GQ": 0,
+   "GS": 0,
+   "GT": 0,
+   "GW": 0
+  },
+  "vereina__sagliains_nord": {
+   "GE": 0,
+   "GG": 0,
+   "GP": 0,
+   "GQ": 0,
+   "GS": 0,
+   "GT": 0,
+   "GW": 0
+  },
+  "vereina__sagliains_sasslatsch": {
+   "GE": 0,
+   "GG": 0,
+   "GP": 0,
+   "GQ": 0,
+   "GS": 0,
+   "GT": 0,
+   "GW": 0
+  },
+  "vereina__sasslatsch": {
+   "GE": 0,
+   "GG": 0,
+   "GP": 0,
+   "GQ": 0,
+   "GS": 0,
+   "GT": 0,
+   "GW": 0
+  },
+  "vereina__selfranga_sud": {
+   "GE": 0,
+   "GG": 0,
+   "GP": 0,
+   "GQ": 0,
+   "GS": 0,
+   "GT": 0,
+   "GW": 0
+  },
+  "vereina__susch": {
+   "GE": 0,
+   "GG": 0,
+   "GP": 0,
+   "GQ": 0,
+   "GS": 0,
+   "GT": 0,
+   "GW": 0
+  },
+  "vereina__vereina_nord": {
+   "GE": 0,
+   "GG": 0,
+   "GP": 0,
+   "GQ": 0,
+   "GS": 0,
+   "GT": 0,
+   "GW": 0
+  },
+  "vereina__vereina_sud": {
+   "GE": 0,
+   "GG": 0,
+   "GP": 0,
+   "GQ": 0,
+   "GS": 0,
+   "GT": 0,
+   "GW": 0
+  },
+  "wangen_bei_olten": {
+   "GE": 0,
+   "GG": 0,
+   "GP": 0,
+   "GQ": 0,
+   "GS": 0,
+   "GT": 0,
+   "GW": 0
+  },
+  "zihlbruecke": {
+   "GE": 0,
+   "GG": 0,
+   "GP": 0,
+   "GQ": 0,
+   "GS": 0,
+   "GT": 0,
+   "GW": 0
+  },
+  "zofingen": {
+   "GE": 0,
+   "GG": 1,
+   "GP": 0,
+   "GQ": 0,
+   "GS": 0,
+   "GT": 0,
    "GW": 0
   }
  },
  "pruefstand": {
   "osm_ab30_a30/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1184,6 +1340,7 @@
    "GW": 0
   },
   "osm_ab30_a30/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1192,6 +1349,7 @@
    "GW": 0
   },
   "osm_ab30_a30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1200,6 +1358,7 @@
    "GW": 0
   },
   "osm_ab30_a60/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1208,6 +1367,7 @@
    "GW": 0
   },
   "osm_ab30_a60/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1216,6 +1376,7 @@
    "GW": 0
   },
   "osm_ab30_a60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1224,6 +1385,7 @@
    "GW": 0
   },
   "osm_ab30_d0/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1232,6 +1394,7 @@
    "GW": 0
   },
   "osm_ab30_d0/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1240,6 +1403,7 @@
    "GW": 0
   },
   "osm_ab30_d0/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1248,6 +1412,7 @@
    "GW": 0
   },
   "osm_ab30_d30/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1256,6 +1421,7 @@
    "GW": 0
   },
   "osm_ab30_d30/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1264,6 +1430,7 @@
    "GW": 0
   },
   "osm_ab30_d30/region": {
+   "GE": 1,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1272,6 +1439,7 @@
    "GW": 0
   },
   "osm_ab30_d60/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1280,6 +1448,7 @@
    "GW": 0
   },
   "osm_ab30_d60/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1288,6 +1457,7 @@
    "GW": 0
   },
   "osm_ab30_d60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1296,6 +1466,7 @@
    "GW": 0
   },
   "osm_ab30_d90/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1304,6 +1475,7 @@
    "GW": 0
   },
   "osm_ab30_d90/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1312,6 +1484,7 @@
    "GW": 0
   },
   "osm_ab30_d90/region": {
+   "GE": 2,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1320,6 +1493,7 @@
    "GW": 0
   },
   "osm_ab30_dm30/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1328,6 +1502,7 @@
    "GW": 0
   },
   "osm_ab30_dm30/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1336,6 +1511,7 @@
    "GW": 0
   },
   "osm_ab30_dm30/region": {
+   "GE": 1,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1344,6 +1520,7 @@
    "GW": 0
   },
   "osm_ab30_dm60/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1352,6 +1529,7 @@
    "GW": 0
   },
   "osm_ab30_dm60/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1360,6 +1538,7 @@
    "GW": 0
   },
   "osm_ab30_dm60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1368,14 +1547,16 @@
    "GW": 0
   },
   "osm_ab60_a30/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
-   "GS": 1,
+   "GS": 0,
    "GT": 0,
    "GW": 0
   },
   "osm_ab60_a30/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1384,22 +1565,25 @@
    "GW": 0
   },
   "osm_ab60_a30/region": {
+   "GE": 2,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
-   "GS": 2,
+   "GS": 0,
    "GT": 2,
    "GW": 0
   },
   "osm_ab60_a60/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
-   "GS": 1,
+   "GS": 0,
    "GT": 0,
    "GW": 0
   },
   "osm_ab60_a60/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1408,6 +1592,7 @@
    "GW": 0
   },
   "osm_ab60_a60/region": {
+   "GE": 1,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1416,14 +1601,16 @@
    "GW": 0
   },
   "osm_ab60_d0/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
-   "GS": 1,
+   "GS": 0,
    "GT": 0,
    "GW": 0
   },
   "osm_ab60_d0/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1432,6 +1619,7 @@
    "GW": 0
   },
   "osm_ab60_d0/region": {
+   "GE": 2,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1440,14 +1628,16 @@
    "GW": 0
   },
   "osm_ab60_d30/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
-   "GS": 1,
+   "GS": 0,
    "GT": 0,
    "GW": 0
   },
   "osm_ab60_d30/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1456,6 +1646,7 @@
    "GW": 0
   },
   "osm_ab60_d30/region": {
+   "GE": 3,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1464,14 +1655,16 @@
    "GW": 0
   },
   "osm_ab60_d60/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
-   "GS": 1,
+   "GS": 0,
    "GT": 0,
    "GW": 0
   },
   "osm_ab60_d60/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1480,6 +1673,7 @@
    "GW": 0
   },
   "osm_ab60_d60/region": {
+   "GE": 1,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1488,14 +1682,16 @@
    "GW": 0
   },
   "osm_ab60_d90/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
-   "GS": 1,
+   "GS": 0,
    "GT": 0,
    "GW": 0
   },
   "osm_ab60_d90/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1504,6 +1700,7 @@
    "GW": 0
   },
   "osm_ab60_d90/region": {
+   "GE": 4,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1512,7 +1709,8 @@
    "GW": 0
   },
   "osm_ab60_dm30/alpha_spurplan": {
-   "GG": 1,
+   "GE": 0,
+   "GG": 0,
    "GP": 0,
    "GQ": 0,
    "GS": 0,
@@ -1520,6 +1718,7 @@
    "GW": 0
   },
   "osm_ab60_dm30/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1528,6 +1727,7 @@
    "GW": 0
   },
   "osm_ab60_dm30/region": {
+   "GE": 2,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1536,7 +1736,8 @@
    "GW": 0
   },
   "osm_ab60_dm60/alpha_spurplan": {
-   "GG": 1,
+   "GE": 0,
+   "GG": 0,
    "GP": 0,
    "GQ": 0,
    "GS": 0,
@@ -1544,6 +1745,7 @@
    "GW": 0
   },
   "osm_ab60_dm60/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1552,6 +1754,7 @@
    "GW": 0
   },
   "osm_ab60_dm60/region": {
+   "GE": 2,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1560,6 +1763,7 @@
    "GW": 0
   },
   "osm_buendel_knick_a30/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1568,6 +1772,7 @@
    "GW": 0
   },
   "osm_buendel_knick_a30/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1576,6 +1781,7 @@
    "GW": 0
   },
   "osm_buendel_knick_a30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1584,6 +1790,7 @@
    "GW": 0
   },
   "osm_buendel_knick_a60/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1592,6 +1799,7 @@
    "GW": 0
   },
   "osm_buendel_knick_a60/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1600,6 +1808,7 @@
    "GW": 0
   },
   "osm_buendel_knick_a60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1608,6 +1817,7 @@
    "GW": 0
   },
   "osm_buendel_knick_d0/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1616,6 +1826,7 @@
    "GW": 0
   },
   "osm_buendel_knick_d0/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1624,6 +1835,7 @@
    "GW": 0
   },
   "osm_buendel_knick_d0/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1632,6 +1844,7 @@
    "GW": 0
   },
   "osm_buendel_knick_d30/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1640,6 +1853,7 @@
    "GW": 0
   },
   "osm_buendel_knick_d30/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1648,6 +1862,7 @@
    "GW": 0
   },
   "osm_buendel_knick_d30/region": {
+   "GE": 1,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1656,6 +1871,7 @@
    "GW": 0
   },
   "osm_buendel_knick_d60/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1664,6 +1880,7 @@
    "GW": 0
   },
   "osm_buendel_knick_d60/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1672,6 +1889,7 @@
    "GW": 0
   },
   "osm_buendel_knick_d60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1680,6 +1898,7 @@
    "GW": 0
   },
   "osm_buendel_knick_d90/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1688,6 +1907,7 @@
    "GW": 0
   },
   "osm_buendel_knick_d90/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1696,6 +1916,7 @@
    "GW": 0
   },
   "osm_buendel_knick_d90/region": {
+   "GE": 2,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1704,6 +1925,7 @@
    "GW": 0
   },
   "osm_buendel_knick_dm30/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1712,6 +1934,7 @@
    "GW": 0
   },
   "osm_buendel_knick_dm30/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1720,6 +1943,7 @@
    "GW": 0
   },
   "osm_buendel_knick_dm30/region": {
+   "GE": 1,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1728,6 +1952,7 @@
    "GW": 0
   },
   "osm_buendel_knick_dm60/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1736,6 +1961,7 @@
    "GW": 0
   },
   "osm_buendel_knick_dm60/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1744,6 +1970,7 @@
    "GW": 0
   },
   "osm_buendel_knick_dm60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1752,6 +1979,7 @@
    "GW": 0
   },
   "osm_buendel_knick_eng_a30/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1760,6 +1988,7 @@
    "GW": 0
   },
   "osm_buendel_knick_eng_a30/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1768,6 +1997,7 @@
    "GW": 0
   },
   "osm_buendel_knick_eng_a30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1776,6 +2006,7 @@
    "GW": 0
   },
   "osm_buendel_knick_eng_a60/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1784,6 +2015,7 @@
    "GW": 0
   },
   "osm_buendel_knick_eng_a60/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1792,6 +2024,7 @@
    "GW": 0
   },
   "osm_buendel_knick_eng_a60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1800,6 +2033,7 @@
    "GW": 0
   },
   "osm_buendel_knick_eng_d0/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1808,6 +2042,7 @@
    "GW": 0
   },
   "osm_buendel_knick_eng_d0/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1816,6 +2051,7 @@
    "GW": 0
   },
   "osm_buendel_knick_eng_d0/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1824,6 +2060,7 @@
    "GW": 0
   },
   "osm_buendel_knick_eng_d30/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1832,6 +2069,7 @@
    "GW": 0
   },
   "osm_buendel_knick_eng_d30/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1840,6 +2078,7 @@
    "GW": 0
   },
   "osm_buendel_knick_eng_d30/region": {
+   "GE": 1,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1848,6 +2087,7 @@
    "GW": 0
   },
   "osm_buendel_knick_eng_d60/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1856,6 +2096,7 @@
    "GW": 0
   },
   "osm_buendel_knick_eng_d60/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1864,6 +2105,7 @@
    "GW": 0
   },
   "osm_buendel_knick_eng_d60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1872,6 +2114,7 @@
    "GW": 0
   },
   "osm_buendel_knick_eng_d90/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1880,6 +2123,7 @@
    "GW": 0
   },
   "osm_buendel_knick_eng_d90/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1888,6 +2132,7 @@
    "GW": 0
   },
   "osm_buendel_knick_eng_d90/region": {
+   "GE": 2,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1896,6 +2141,7 @@
    "GW": 0
   },
   "osm_buendel_knick_eng_dm30/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1904,6 +2150,7 @@
    "GW": 0
   },
   "osm_buendel_knick_eng_dm30/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1912,6 +2159,7 @@
    "GW": 0
   },
   "osm_buendel_knick_eng_dm30/region": {
+   "GE": 1,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1920,6 +2168,7 @@
    "GW": 0
   },
   "osm_buendel_knick_eng_dm60/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1928,6 +2177,7 @@
    "GW": 0
   },
   "osm_buendel_knick_eng_dm60/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1936,6 +2186,7 @@
    "GW": 0
   },
   "osm_buendel_knick_eng_dm60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1944,6 +2195,7 @@
    "GW": 0
   },
   "osm_buendel_versatz_a30/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1952,6 +2204,7 @@
    "GW": 0
   },
   "osm_buendel_versatz_a30/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1960,6 +2213,7 @@
    "GW": 0
   },
   "osm_buendel_versatz_a30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1968,6 +2222,7 @@
    "GW": 0
   },
   "osm_buendel_versatz_a60/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1976,6 +2231,7 @@
    "GW": 0
   },
   "osm_buendel_versatz_a60/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1984,6 +2240,7 @@
    "GW": 0
   },
   "osm_buendel_versatz_a60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -1992,6 +2249,7 @@
    "GW": 0
   },
   "osm_buendel_versatz_d0/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2000,6 +2258,7 @@
    "GW": 0
   },
   "osm_buendel_versatz_d0/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2008,6 +2267,7 @@
    "GW": 0
   },
   "osm_buendel_versatz_d0/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2016,6 +2276,7 @@
    "GW": 0
   },
   "osm_buendel_versatz_d30/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2024,6 +2285,7 @@
    "GW": 0
   },
   "osm_buendel_versatz_d30/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2032,6 +2294,7 @@
    "GW": 0
   },
   "osm_buendel_versatz_d30/region": {
+   "GE": 2,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2040,6 +2303,7 @@
    "GW": 0
   },
   "osm_buendel_versatz_d60/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2048,6 +2312,7 @@
    "GW": 0
   },
   "osm_buendel_versatz_d60/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2056,6 +2321,7 @@
    "GW": 0
   },
   "osm_buendel_versatz_d60/region": {
+   "GE": 2,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2064,6 +2330,7 @@
    "GW": 0
   },
   "osm_buendel_versatz_d90/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2072,6 +2339,7 @@
    "GW": 0
   },
   "osm_buendel_versatz_d90/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2080,6 +2348,7 @@
    "GW": 0
   },
   "osm_buendel_versatz_d90/region": {
+   "GE": 6,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2088,6 +2357,7 @@
    "GW": 0
   },
   "osm_buendel_versatz_dm30/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2096,6 +2366,7 @@
    "GW": 0
   },
   "osm_buendel_versatz_dm30/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2104,6 +2375,7 @@
    "GW": 0
   },
   "osm_buendel_versatz_dm30/region": {
+   "GE": 2,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2112,6 +2384,7 @@
    "GW": 0
   },
   "osm_buendel_versatz_dm60/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2120,6 +2393,7 @@
    "GW": 0
   },
   "osm_buendel_versatz_dm60/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2128,6 +2402,7 @@
    "GW": 0
   },
   "osm_buendel_versatz_dm60/region": {
+   "GE": 1,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2136,6 +2411,7 @@
    "GW": 0
   },
   "osm_gleissprung_a30/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2144,6 +2420,7 @@
    "GW": 0
   },
   "osm_gleissprung_a30/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2152,6 +2429,7 @@
    "GW": 0
   },
   "osm_gleissprung_a30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2160,6 +2438,7 @@
    "GW": 0
   },
   "osm_gleissprung_a60/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2168,6 +2447,7 @@
    "GW": 0
   },
   "osm_gleissprung_a60/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2176,6 +2456,7 @@
    "GW": 0
   },
   "osm_gleissprung_a60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2184,6 +2465,7 @@
    "GW": 0
   },
   "osm_gleissprung_d0/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2192,6 +2474,7 @@
    "GW": 0
   },
   "osm_gleissprung_d0/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2200,6 +2483,7 @@
    "GW": 0
   },
   "osm_gleissprung_d0/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2208,6 +2492,7 @@
    "GW": 0
   },
   "osm_gleissprung_d30/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2216,6 +2501,7 @@
    "GW": 0
   },
   "osm_gleissprung_d30/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2224,6 +2510,7 @@
    "GW": 0
   },
   "osm_gleissprung_d30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2232,6 +2519,7 @@
    "GW": 0
   },
   "osm_gleissprung_d60/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2240,6 +2528,7 @@
    "GW": 0
   },
   "osm_gleissprung_d60/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2248,6 +2537,7 @@
    "GW": 0
   },
   "osm_gleissprung_d60/region": {
+   "GE": 1,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2256,6 +2546,7 @@
    "GW": 0
   },
   "osm_gleissprung_d90/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2264,6 +2555,7 @@
    "GW": 0
   },
   "osm_gleissprung_d90/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2272,6 +2564,7 @@
    "GW": 0
   },
   "osm_gleissprung_d90/region": {
+   "GE": 2,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2280,6 +2573,7 @@
    "GW": 0
   },
   "osm_gleissprung_dm30/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2288,6 +2582,7 @@
    "GW": 0
   },
   "osm_gleissprung_dm30/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2296,6 +2591,7 @@
    "GW": 0
   },
   "osm_gleissprung_dm30/region": {
+   "GE": 1,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2304,6 +2600,7 @@
    "GW": 0
   },
   "osm_gleissprung_dm60/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2312,6 +2609,7 @@
    "GW": 0
   },
   "osm_gleissprung_dm60/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2320,6 +2618,7 @@
    "GW": 0
   },
   "osm_gleissprung_dm60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2328,6 +2627,7 @@
    "GW": 0
   },
   "osm_perronformen_a30/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2336,6 +2636,7 @@
    "GW": 0
   },
   "osm_perronformen_a30/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2344,6 +2645,7 @@
    "GW": 0
   },
   "osm_perronformen_a30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2352,6 +2654,7 @@
    "GW": 0
   },
   "osm_perronformen_a60/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2360,6 +2663,7 @@
    "GW": 0
   },
   "osm_perronformen_a60/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2368,6 +2672,7 @@
    "GW": 0
   },
   "osm_perronformen_a60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2376,6 +2681,7 @@
    "GW": 0
   },
   "osm_perronformen_d0/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2384,6 +2690,7 @@
    "GW": 0
   },
   "osm_perronformen_d0/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2392,6 +2699,7 @@
    "GW": 0
   },
   "osm_perronformen_d0/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2400,6 +2708,7 @@
    "GW": 0
   },
   "osm_perronformen_d30/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2408,6 +2717,7 @@
    "GW": 0
   },
   "osm_perronformen_d30/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2416,6 +2726,7 @@
    "GW": 0
   },
   "osm_perronformen_d30/region": {
+   "GE": 1,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2424,6 +2735,7 @@
    "GW": 0
   },
   "osm_perronformen_d60/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2432,6 +2744,7 @@
    "GW": 0
   },
   "osm_perronformen_d60/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2440,6 +2753,7 @@
    "GW": 0
   },
   "osm_perronformen_d60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2448,6 +2762,7 @@
    "GW": 0
   },
   "osm_perronformen_d90/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2456,6 +2771,7 @@
    "GW": 0
   },
   "osm_perronformen_d90/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2464,6 +2780,7 @@
    "GW": 0
   },
   "osm_perronformen_d90/region": {
+   "GE": 2,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2472,6 +2789,7 @@
    "GW": 0
   },
   "osm_perronformen_dm30/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2480,6 +2798,7 @@
    "GW": 0
   },
   "osm_perronformen_dm30/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2488,6 +2807,7 @@
    "GW": 0
   },
   "osm_perronformen_dm30/region": {
+   "GE": 1,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2496,6 +2816,7 @@
    "GW": 0
   },
   "osm_perronformen_dm60/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2504,6 +2825,7 @@
    "GW": 0
   },
   "osm_perronformen_dm60/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2512,6 +2834,7 @@
    "GW": 0
   },
   "osm_perronformen_dm60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2520,6 +2843,7 @@
    "GW": 0
   },
   "osm_r3_kreuzung_a30/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2528,6 +2852,7 @@
    "GW": 0
   },
   "osm_r3_kreuzung_a30/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2536,6 +2861,7 @@
    "GW": 0
   },
   "osm_r3_kreuzung_a30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2544,6 +2870,7 @@
    "GW": 0
   },
   "osm_r3_kreuzung_a60/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2552,6 +2879,7 @@
    "GW": 0
   },
   "osm_r3_kreuzung_a60/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2560,6 +2888,7 @@
    "GW": 0
   },
   "osm_r3_kreuzung_a60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2568,6 +2897,7 @@
    "GW": 0
   },
   "osm_r3_kreuzung_d0/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2576,6 +2906,7 @@
    "GW": 0
   },
   "osm_r3_kreuzung_d0/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2584,6 +2915,7 @@
    "GW": 0
   },
   "osm_r3_kreuzung_d0/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2592,6 +2924,7 @@
    "GW": 0
   },
   "osm_r3_kreuzung_d30/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2600,6 +2933,7 @@
    "GW": 0
   },
   "osm_r3_kreuzung_d30/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2608,6 +2942,7 @@
    "GW": 0
   },
   "osm_r3_kreuzung_d30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2616,6 +2951,7 @@
    "GW": 0
   },
   "osm_r3_kreuzung_d60/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2624,6 +2960,7 @@
    "GW": 0
   },
   "osm_r3_kreuzung_d60/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2632,6 +2969,7 @@
    "GW": 0
   },
   "osm_r3_kreuzung_d60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2640,6 +2978,7 @@
    "GW": 0
   },
   "osm_r3_kreuzung_d90/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2648,6 +2987,7 @@
    "GW": 0
   },
   "osm_r3_kreuzung_d90/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2656,6 +2996,7 @@
    "GW": 0
   },
   "osm_r3_kreuzung_d90/region": {
+   "GE": 1,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2664,6 +3005,7 @@
    "GW": 0
   },
   "osm_r3_kreuzung_dm30/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2672,6 +3014,7 @@
    "GW": 0
   },
   "osm_r3_kreuzung_dm30/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2680,6 +3023,7 @@
    "GW": 0
   },
   "osm_r3_kreuzung_dm30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2688,6 +3032,7 @@
    "GW": 0
   },
   "osm_r3_kreuzung_dm60/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2696,6 +3041,7 @@
    "GW": 0
   },
   "osm_r3_kreuzung_dm60/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2704,6 +3050,7 @@
    "GW": 0
   },
   "osm_r3_kreuzung_dm60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2712,6 +3059,7 @@
    "GW": 0
   },
   "osm_r5_halt_a30/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2720,6 +3068,7 @@
    "GW": 0
   },
   "osm_r5_halt_a30/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2728,6 +3077,7 @@
    "GW": 0
   },
   "osm_r5_halt_a30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2736,6 +3086,7 @@
    "GW": 0
   },
   "osm_r5_halt_a60/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2744,6 +3095,7 @@
    "GW": 0
   },
   "osm_r5_halt_a60/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2752,6 +3104,7 @@
    "GW": 0
   },
   "osm_r5_halt_a60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2760,6 +3113,7 @@
    "GW": 0
   },
   "osm_r5_halt_d0/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2768,6 +3122,7 @@
    "GW": 0
   },
   "osm_r5_halt_d0/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2776,6 +3131,7 @@
    "GW": 0
   },
   "osm_r5_halt_d0/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2784,6 +3140,7 @@
    "GW": 0
   },
   "osm_r5_halt_d30/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2792,6 +3149,7 @@
    "GW": 0
   },
   "osm_r5_halt_d30/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2800,6 +3158,7 @@
    "GW": 0
   },
   "osm_r5_halt_d30/region": {
+   "GE": 1,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2808,6 +3167,7 @@
    "GW": 0
   },
   "osm_r5_halt_d60/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2816,6 +3176,7 @@
    "GW": 0
   },
   "osm_r5_halt_d60/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2824,6 +3185,7 @@
    "GW": 0
   },
   "osm_r5_halt_d60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2832,6 +3194,7 @@
    "GW": 0
   },
   "osm_r5_halt_d90/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2840,6 +3203,7 @@
    "GW": 0
   },
   "osm_r5_halt_d90/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2848,6 +3212,7 @@
    "GW": 0
   },
   "osm_r5_halt_d90/region": {
+   "GE": 2,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2856,6 +3221,7 @@
    "GW": 0
   },
   "osm_r5_halt_dm30/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2864,6 +3230,7 @@
    "GW": 0
   },
   "osm_r5_halt_dm30/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2872,6 +3239,7 @@
    "GW": 0
   },
   "osm_r5_halt_dm30/region": {
+   "GE": 1,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2880,6 +3248,7 @@
    "GW": 0
   },
   "osm_r5_halt_dm60/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2888,6 +3257,7 @@
    "GW": 0
   },
   "osm_r5_halt_dm60/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2896,6 +3266,7 @@
    "GW": 0
   },
   "osm_r5_halt_dm60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2904,6 +3275,7 @@
    "GW": 0
   },
   "osm_r7_ueberholung_a30/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2912,6 +3284,7 @@
    "GW": 0
   },
   "osm_r7_ueberholung_a30/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2920,6 +3293,7 @@
    "GW": 0
   },
   "osm_r7_ueberholung_a30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2928,6 +3302,7 @@
    "GW": 0
   },
   "osm_r7_ueberholung_a60/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2936,6 +3311,7 @@
    "GW": 0
   },
   "osm_r7_ueberholung_a60/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2944,6 +3320,7 @@
    "GW": 0
   },
   "osm_r7_ueberholung_a60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2952,6 +3329,7 @@
    "GW": 0
   },
   "osm_r7_ueberholung_d0/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2960,6 +3338,7 @@
    "GW": 0
   },
   "osm_r7_ueberholung_d0/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2968,6 +3347,7 @@
    "GW": 0
   },
   "osm_r7_ueberholung_d0/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2976,6 +3356,7 @@
    "GW": 0
   },
   "osm_r7_ueberholung_d30/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2984,6 +3365,7 @@
    "GW": 0
   },
   "osm_r7_ueberholung_d30/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -2992,6 +3374,7 @@
    "GW": 0
   },
   "osm_r7_ueberholung_d30/region": {
+   "GE": 1,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3000,6 +3383,7 @@
    "GW": 0
   },
   "osm_r7_ueberholung_d60/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3008,6 +3392,7 @@
    "GW": 0
   },
   "osm_r7_ueberholung_d60/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3016,6 +3401,7 @@
    "GW": 0
   },
   "osm_r7_ueberholung_d60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3024,6 +3410,7 @@
    "GW": 0
   },
   "osm_r7_ueberholung_d90/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3032,6 +3419,7 @@
    "GW": 0
   },
   "osm_r7_ueberholung_d90/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3040,6 +3428,7 @@
    "GW": 0
   },
   "osm_r7_ueberholung_d90/region": {
+   "GE": 2,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3048,6 +3437,7 @@
    "GW": 0
   },
   "osm_r7_ueberholung_dm30/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3056,6 +3446,7 @@
    "GW": 0
   },
   "osm_r7_ueberholung_dm30/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3064,6 +3455,7 @@
    "GW": 0
   },
   "osm_r7_ueberholung_dm30/region": {
+   "GE": 1,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3072,6 +3464,7 @@
    "GW": 0
   },
   "osm_r7_ueberholung_dm60/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3080,6 +3473,7 @@
    "GW": 0
   },
   "osm_r7_ueberholung_dm60/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3088,6 +3482,7 @@
    "GW": 0
   },
   "osm_r7_ueberholung_dm60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3096,6 +3491,7 @@
    "GW": 0
   },
   "osm_sagliains_a30/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3104,6 +3500,7 @@
    "GW": 0
   },
   "osm_sagliains_a30/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3112,6 +3509,7 @@
    "GW": 0
   },
   "osm_sagliains_a30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3120,6 +3518,7 @@
    "GW": 0
   },
   "osm_sagliains_a60/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3128,6 +3527,7 @@
    "GW": 0
   },
   "osm_sagliains_a60/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3136,6 +3536,7 @@
    "GW": 0
   },
   "osm_sagliains_a60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3144,6 +3545,7 @@
    "GW": 0
   },
   "osm_sagliains_d0/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3152,6 +3554,7 @@
    "GW": 0
   },
   "osm_sagliains_d0/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3160,6 +3563,7 @@
    "GW": 0
   },
   "osm_sagliains_d0/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3168,6 +3572,7 @@
    "GW": 0
   },
   "osm_sagliains_d30/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3176,6 +3581,7 @@
    "GW": 0
   },
   "osm_sagliains_d30/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3184,6 +3590,7 @@
    "GW": 0
   },
   "osm_sagliains_d30/region": {
+   "GE": 1,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3192,6 +3599,7 @@
    "GW": 0
   },
   "osm_sagliains_d60/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3200,6 +3608,7 @@
    "GW": 0
   },
   "osm_sagliains_d60/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3208,6 +3617,7 @@
    "GW": 0
   },
   "osm_sagliains_d60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3216,6 +3626,7 @@
    "GW": 0
   },
   "osm_sagliains_d90/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3224,6 +3635,7 @@
    "GW": 0
   },
   "osm_sagliains_d90/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3232,6 +3644,7 @@
    "GW": 0
   },
   "osm_sagliains_d90/region": {
+   "GE": 2,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3240,6 +3653,7 @@
    "GW": 0
   },
   "osm_sagliains_dm30/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3248,6 +3662,7 @@
    "GW": 0
   },
   "osm_sagliains_dm30/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3256,6 +3671,7 @@
    "GW": 0
   },
   "osm_sagliains_dm30/region": {
+   "GE": 1,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3264,6 +3680,7 @@
    "GW": 0
   },
   "osm_sagliains_dm60/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3272,6 +3689,7 @@
    "GW": 0
   },
   "osm_sagliains_dm60/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3280,6 +3698,7 @@
    "GW": 0
   },
   "osm_sagliains_dm60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3288,6 +3707,7 @@
    "GW": 0
   },
   "osm_unterwerfung_a30/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3296,6 +3716,7 @@
    "GW": 0
   },
   "osm_unterwerfung_a30/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3304,6 +3725,7 @@
    "GW": 0
   },
   "osm_unterwerfung_a30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3312,6 +3734,7 @@
    "GW": 0
   },
   "osm_unterwerfung_a60/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3320,6 +3743,7 @@
    "GW": 0
   },
   "osm_unterwerfung_a60/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3328,6 +3752,7 @@
    "GW": 0
   },
   "osm_unterwerfung_a60/region": {
+   "GE": 1,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3336,6 +3761,7 @@
    "GW": 2
   },
   "osm_unterwerfung_d0/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3344,6 +3770,7 @@
    "GW": 0
   },
   "osm_unterwerfung_d0/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3352,6 +3779,7 @@
    "GW": 0
   },
   "osm_unterwerfung_d0/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3360,6 +3788,7 @@
    "GW": 0
   },
   "osm_unterwerfung_d30/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3368,6 +3797,7 @@
    "GW": 0
   },
   "osm_unterwerfung_d30/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3376,6 +3806,7 @@
    "GW": 0
   },
   "osm_unterwerfung_d30/region": {
+   "GE": 1,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3384,6 +3815,7 @@
    "GW": 0
   },
   "osm_unterwerfung_d60/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3392,6 +3824,7 @@
    "GW": 0
   },
   "osm_unterwerfung_d60/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3400,6 +3833,7 @@
    "GW": 0
   },
   "osm_unterwerfung_d60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3408,6 +3842,7 @@
    "GW": 0
   },
   "osm_unterwerfung_d90/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3416,6 +3851,7 @@
    "GW": 0
   },
   "osm_unterwerfung_d90/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3424,6 +3860,7 @@
    "GW": 0
   },
   "osm_unterwerfung_d90/region": {
+   "GE": 2,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3432,6 +3869,7 @@
    "GW": 0
   },
   "osm_unterwerfung_dm30/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3440,6 +3878,7 @@
    "GW": 0
   },
   "osm_unterwerfung_dm30/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3448,6 +3887,7 @@
    "GW": 0
   },
   "osm_unterwerfung_dm30/region": {
+   "GE": 1,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3456,6 +3896,7 @@
    "GW": 0
   },
   "osm_unterwerfung_dm60/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3464,6 +3905,7 @@
    "GW": 0
   },
   "osm_unterwerfung_dm60/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3472,6 +3914,7 @@
    "GW": 0
   },
   "osm_unterwerfung_dm60/region": {
+   "GE": 1,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3480,6 +3923,7 @@
    "GW": 0
   },
   "osm_zwischengerade_a30/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3488,6 +3932,7 @@
    "GW": 0
   },
   "osm_zwischengerade_a30/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3496,6 +3941,7 @@
    "GW": 0
   },
   "osm_zwischengerade_a30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3504,6 +3950,7 @@
    "GW": 0
   },
   "osm_zwischengerade_a60/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3512,6 +3959,7 @@
    "GW": 0
   },
   "osm_zwischengerade_a60/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3520,6 +3968,7 @@
    "GW": 0
   },
   "osm_zwischengerade_a60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3528,6 +3977,7 @@
    "GW": 0
   },
   "osm_zwischengerade_d0/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3536,6 +3986,7 @@
    "GW": 0
   },
   "osm_zwischengerade_d0/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3544,6 +3995,7 @@
    "GW": 0
   },
   "osm_zwischengerade_d0/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3552,6 +4004,7 @@
    "GW": 0
   },
   "osm_zwischengerade_d30/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3560,6 +4013,7 @@
    "GW": 0
   },
   "osm_zwischengerade_d30/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3568,6 +4022,7 @@
    "GW": 0
   },
   "osm_zwischengerade_d30/region": {
+   "GE": 1,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3576,6 +4031,7 @@
    "GW": 0
   },
   "osm_zwischengerade_d60/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3584,6 +4040,7 @@
    "GW": 0
   },
   "osm_zwischengerade_d60/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3592,6 +4049,7 @@
    "GW": 0
   },
   "osm_zwischengerade_d60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3600,6 +4058,7 @@
    "GW": 0
   },
   "osm_zwischengerade_d90/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3608,6 +4067,7 @@
    "GW": 0
   },
   "osm_zwischengerade_d90/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3616,6 +4076,7 @@
    "GW": 0
   },
   "osm_zwischengerade_d90/region": {
+   "GE": 2,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3624,6 +4085,7 @@
    "GW": 5
   },
   "osm_zwischengerade_dm30/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3632,6 +4094,7 @@
    "GW": 0
   },
   "osm_zwischengerade_dm30/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3640,6 +4103,7 @@
    "GW": 0
   },
   "osm_zwischengerade_dm30/region": {
+   "GE": 1,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3648,6 +4112,7 @@
    "GW": 0
   },
   "osm_zwischengerade_dm60/alpha_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3656,6 +4121,7 @@
    "GW": 0
   },
   "osm_zwischengerade_dm60/beta_spurplan": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3664,6 +4130,7 @@
    "GW": 0
   },
   "osm_zwischengerade_dm60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3672,6 +4139,7 @@
    "GW": 0
   },
   "vorlage_L1_a30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3680,6 +4148,7 @@
    "GW": 0
   },
   "vorlage_L1_a60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3688,6 +4157,7 @@
    "GW": 2
   },
   "vorlage_L1_d0/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3696,6 +4166,7 @@
    "GW": 0
   },
   "vorlage_L1_d30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3704,6 +4175,7 @@
    "GW": 0
   },
   "vorlage_L1_d60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3712,6 +4184,7 @@
    "GW": 0
   },
   "vorlage_L1_d90/region": {
+   "GE": 1,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3720,6 +4193,7 @@
    "GW": 0
   },
   "vorlage_L1_dm30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3728,6 +4202,7 @@
    "GW": 0
   },
   "vorlage_L1_dm60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3736,6 +4211,7 @@
    "GW": 0
   },
   "vorlage_L2_a30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3744,6 +4220,7 @@
    "GW": 0
   },
   "vorlage_L2_a60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3752,6 +4229,7 @@
    "GW": 2
   },
   "vorlage_L2_d0/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3760,6 +4238,7 @@
    "GW": 0
   },
   "vorlage_L2_d30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3768,6 +4247,7 @@
    "GW": 0
   },
   "vorlage_L2_d60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3776,6 +4256,7 @@
    "GW": 0
   },
   "vorlage_L2_d90/region": {
+   "GE": 1,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3784,6 +4265,7 @@
    "GW": 0
   },
   "vorlage_L2_dm30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3792,6 +4274,7 @@
    "GW": 0
   },
   "vorlage_L2_dm60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3800,6 +4283,7 @@
    "GW": 0
   },
   "vorlage_R1_a30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3808,6 +4292,7 @@
    "GW": 0
   },
   "vorlage_R1_a60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3816,6 +4301,7 @@
    "GW": 2
   },
   "vorlage_R1_d0/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3824,6 +4310,7 @@
    "GW": 0
   },
   "vorlage_R1_d30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3832,6 +4319,7 @@
    "GW": 0
   },
   "vorlage_R1_d60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3840,6 +4328,7 @@
    "GW": 0
   },
   "vorlage_R1_d90/region": {
+   "GE": 1,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3848,6 +4337,7 @@
    "GW": 0
   },
   "vorlage_R1_dm30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3856,6 +4346,7 @@
    "GW": 0
   },
   "vorlage_R1_dm60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3864,6 +4355,7 @@
    "GW": 0
   },
   "vorlage_R2_a30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3872,6 +4364,7 @@
    "GW": 0
   },
   "vorlage_R2_a60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3880,6 +4373,7 @@
    "GW": 2
   },
   "vorlage_R2_d0/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3888,6 +4382,7 @@
    "GW": 0
   },
   "vorlage_R2_d30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3896,6 +4391,7 @@
    "GW": 0
   },
   "vorlage_R2_d60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3904,6 +4400,7 @@
    "GW": 0
   },
   "vorlage_R2_d90/region": {
+   "GE": 1,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3912,6 +4409,7 @@
    "GW": 0
   },
   "vorlage_R2_dm30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3920,6 +4418,7 @@
    "GW": 0
   },
   "vorlage_R2_dm60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3928,6 +4427,7 @@
    "GW": 0
   },
   "vorlage_R3_a30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3936,6 +4436,7 @@
    "GW": 0
   },
   "vorlage_R3_a60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3944,6 +4445,7 @@
    "GW": 2
   },
   "vorlage_R3_d0/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3952,6 +4454,7 @@
    "GW": 0
   },
   "vorlage_R3_d30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3960,6 +4463,7 @@
    "GW": 0
   },
   "vorlage_R3_d60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3968,6 +4472,7 @@
    "GW": 0
   },
   "vorlage_R3_d90/region": {
+   "GE": 1,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3976,6 +4481,7 @@
    "GW": 0
   },
   "vorlage_R3_dm30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3984,6 +4490,7 @@
    "GW": 0
   },
   "vorlage_R3_dm60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -3992,6 +4499,7 @@
    "GW": 0
   },
   "vorlage_R4_a30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4000,6 +4508,7 @@
    "GW": 0
   },
   "vorlage_R4_a60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4008,6 +4517,7 @@
    "GW": 2
   },
   "vorlage_R4_d0/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4016,6 +4526,7 @@
    "GW": 0
   },
   "vorlage_R4_d30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4024,6 +4535,7 @@
    "GW": 0
   },
   "vorlage_R4_d60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4032,6 +4544,7 @@
    "GW": 0
   },
   "vorlage_R4_d90/region": {
+   "GE": 1,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4040,6 +4553,7 @@
    "GW": 0
   },
   "vorlage_R4_dm30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4048,6 +4562,7 @@
    "GW": 0
   },
   "vorlage_R4_dm60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4056,6 +4571,7 @@
    "GW": 0
   },
   "vorlage_R5_a30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4064,6 +4580,7 @@
    "GW": 0
   },
   "vorlage_R5_a60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4072,6 +4589,7 @@
    "GW": 4
   },
   "vorlage_R5_d0/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4080,6 +4598,7 @@
    "GW": 0
   },
   "vorlage_R5_d30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4088,6 +4607,7 @@
    "GW": 0
   },
   "vorlage_R5_d60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4096,6 +4616,7 @@
    "GW": 0
   },
   "vorlage_R5_d90/region": {
+   "GE": 2,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4104,6 +4625,7 @@
    "GW": 0
   },
   "vorlage_R5_dm30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4112,6 +4634,7 @@
    "GW": 0
   },
   "vorlage_R5_dm60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4120,6 +4643,7 @@
    "GW": 0
   },
   "vorlage_R6_a30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4128,6 +4652,7 @@
    "GW": 0
   },
   "vorlage_R6_a60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4136,6 +4661,7 @@
    "GW": 4
   },
   "vorlage_R6_d0/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4144,6 +4670,7 @@
    "GW": 0
   },
   "vorlage_R6_d30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4152,6 +4679,7 @@
    "GW": 0
   },
   "vorlage_R6_d60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4160,6 +4688,7 @@
    "GW": 0
   },
   "vorlage_R6_d90/region": {
+   "GE": 2,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4168,6 +4697,7 @@
    "GW": 0
   },
   "vorlage_R6_dm30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4176,6 +4706,7 @@
    "GW": 0
   },
   "vorlage_R6_dm60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4184,6 +4715,7 @@
    "GW": 0
   },
   "vorlage_R7_a30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4192,6 +4724,7 @@
    "GW": 0
   },
   "vorlage_R7_a60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4200,6 +4733,7 @@
    "GW": 4
   },
   "vorlage_R7_d0/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4208,6 +4742,7 @@
    "GW": 0
   },
   "vorlage_R7_d30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4216,6 +4751,7 @@
    "GW": 0
   },
   "vorlage_R7_d60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4224,6 +4760,7 @@
    "GW": 0
   },
   "vorlage_R7_d90/region": {
+   "GE": 2,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4232,6 +4769,7 @@
    "GW": 0
   },
   "vorlage_R7_dm30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4240,6 +4778,7 @@
    "GW": 0
   },
   "vorlage_R7_dm60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4248,6 +4787,7 @@
    "GW": 0
   },
   "vorlage_R8_a30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4256,6 +4796,7 @@
    "GW": 0
   },
   "vorlage_R8_a60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4264,6 +4805,7 @@
    "GW": 4
   },
   "vorlage_R8_d0/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4272,6 +4814,7 @@
    "GW": 0
   },
   "vorlage_R8_d30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4280,6 +4823,7 @@
    "GW": 0
   },
   "vorlage_R8_d60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4288,6 +4832,7 @@
    "GW": 0
   },
   "vorlage_R8_d90/region": {
+   "GE": 2,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4296,6 +4841,7 @@
    "GW": 0
   },
   "vorlage_R8_dm30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4304,6 +4850,7 @@
    "GW": 0
   },
   "vorlage_R8_dm60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4312,6 +4859,7 @@
    "GW": 0
   },
   "vorlage_Z1_a30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4320,6 +4868,7 @@
    "GW": 0
   },
   "vorlage_Z1_a60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4328,6 +4877,7 @@
    "GW": 4
   },
   "vorlage_Z1_d0/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4336,6 +4886,7 @@
    "GW": 0
   },
   "vorlage_Z1_d30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4344,6 +4895,7 @@
    "GW": 0
   },
   "vorlage_Z1_d60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4352,6 +4904,7 @@
    "GW": 0
   },
   "vorlage_Z1_d90/region": {
+   "GE": 2,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4360,6 +4913,7 @@
    "GW": 0
   },
   "vorlage_Z1_dm30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4368,6 +4922,7 @@
    "GW": 0
   },
   "vorlage_Z1_dm60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4376,6 +4931,7 @@
    "GW": 0
   },
   "vorlage_Z2_a30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4384,6 +4940,7 @@
    "GW": 0
   },
   "vorlage_Z2_a60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4392,6 +4949,7 @@
    "GW": 4
   },
   "vorlage_Z2_d0/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4400,6 +4958,7 @@
    "GW": 0
   },
   "vorlage_Z2_d30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4408,6 +4967,7 @@
    "GW": 0
   },
   "vorlage_Z2_d60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4416,6 +4976,7 @@
    "GW": 0
   },
   "vorlage_Z2_d90/region": {
+   "GE": 2,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4424,6 +4985,7 @@
    "GW": 0
   },
   "vorlage_Z2_dm30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4432,6 +4994,7 @@
    "GW": 0
   },
   "vorlage_Z2_dm60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4440,6 +5003,7 @@
    "GW": 0
   },
   "vorlage_Z3_a30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4448,6 +5012,7 @@
    "GW": 0
   },
   "vorlage_Z3_a60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4456,6 +5021,7 @@
    "GW": 4
   },
   "vorlage_Z3_d0/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4464,6 +5030,7 @@
    "GW": 0
   },
   "vorlage_Z3_d30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4472,6 +5039,7 @@
    "GW": 0
   },
   "vorlage_Z3_d60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4480,6 +5048,7 @@
    "GW": 0
   },
   "vorlage_Z3_d90/region": {
+   "GE": 2,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4488,6 +5057,7 @@
    "GW": 0
   },
   "vorlage_Z3_dm30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4496,6 +5066,7 @@
    "GW": 0
   },
   "vorlage_Z3_dm60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4504,6 +5075,7 @@
    "GW": 0
   },
   "vorlage_Z4_a30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4512,6 +5084,7 @@
    "GW": 0
   },
   "vorlage_Z4_a60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4520,6 +5093,7 @@
    "GW": 2
   },
   "vorlage_Z4_d0/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4528,6 +5102,7 @@
    "GW": 0
   },
   "vorlage_Z4_d30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4536,6 +5111,7 @@
    "GW": 0
   },
   "vorlage_Z4_d60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4544,6 +5120,7 @@
    "GW": 0
   },
   "vorlage_Z4_d90/region": {
+   "GE": 1,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4552,6 +5129,7 @@
    "GW": 0
   },
   "vorlage_Z4_dm30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4560,6 +5138,7 @@
    "GW": 0
   },
   "vorlage_Z4_dm60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4568,6 +5147,7 @@
    "GW": 0
   },
   "vorlage_Z5_a30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4576,6 +5156,7 @@
    "GW": 0
   },
   "vorlage_Z5_a60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4584,6 +5165,7 @@
    "GW": 2
   },
   "vorlage_Z5_d0/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4592,6 +5174,7 @@
    "GW": 0
   },
   "vorlage_Z5_d30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4600,6 +5183,7 @@
    "GW": 0
   },
   "vorlage_Z5_d60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4608,6 +5192,7 @@
    "GW": 0
   },
   "vorlage_Z5_d90/region": {
+   "GE": 1,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4616,6 +5201,7 @@
    "GW": 0
   },
   "vorlage_Z5_dm30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4624,6 +5210,7 @@
    "GW": 0
   },
   "vorlage_Z5_dm60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4632,6 +5219,7 @@
    "GW": 0
   },
   "vorlage_Z6_a30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4640,6 +5228,7 @@
    "GW": 0
   },
   "vorlage_Z6_a60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4648,6 +5237,7 @@
    "GW": 4
   },
   "vorlage_Z6_d0/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4656,6 +5246,7 @@
    "GW": 0
   },
   "vorlage_Z6_d30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4664,6 +5255,7 @@
    "GW": 0
   },
   "vorlage_Z6_d60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4672,6 +5264,7 @@
    "GW": 0
   },
   "vorlage_Z6_d90/region": {
+   "GE": 2,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4680,6 +5273,7 @@
    "GW": 0
   },
   "vorlage_Z6_dm30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4688,6 +5282,7 @@
    "GW": 0
   },
   "vorlage_Z6_dm60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4696,6 +5291,7 @@
    "GW": 0
   },
   "vorlage_Z7_a30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4704,6 +5300,7 @@
    "GW": 0
   },
   "vorlage_Z7_a60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4712,6 +5309,7 @@
    "GW": 2
   },
   "vorlage_Z7_d0/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4720,6 +5318,7 @@
    "GW": 0
   },
   "vorlage_Z7_d30/region": {
+   "GE": 1,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4728,6 +5327,7 @@
    "GW": 0
   },
   "vorlage_Z7_d60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4736,6 +5336,7 @@
    "GW": 0
   },
   "vorlage_Z7_d90/region": {
+   "GE": 1,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4744,6 +5345,7 @@
    "GW": 0
   },
   "vorlage_Z7_dm30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4752,6 +5354,7 @@
    "GW": 0
   },
   "vorlage_Z7_dm60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4760,6 +5363,7 @@
    "GW": 0
   },
   "vorlage_Z8_a30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4768,6 +5372,7 @@
    "GW": 0
   },
   "vorlage_Z8_a60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4776,6 +5381,7 @@
    "GW": 3
   },
   "vorlage_Z8_d0/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4784,6 +5390,7 @@
    "GW": 0
   },
   "vorlage_Z8_d30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4792,6 +5399,7 @@
    "GW": 0
   },
   "vorlage_Z8_d60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4800,6 +5408,7 @@
    "GW": 0
   },
   "vorlage_Z8_d90/region": {
+   "GE": 2,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4808,6 +5417,7 @@
    "GW": 0
   },
   "vorlage_Z8_dm30/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,
@@ -4816,6 +5426,7 @@
    "GW": 0
   },
   "vorlage_Z8_dm60/region": {
+   "GE": 0,
    "GG": 0,
    "GP": 0,
    "GQ": 0,

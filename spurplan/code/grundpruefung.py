@@ -47,6 +47,9 @@ TEXT = {"GS": "Schnitt ohne DKW/Kreuzung/Niveautrennung", "GG": "Gleis auf Gleis
         "GE": "loses Gleisende (kein Prellbock, Pfeil, Abgang oder Gleis)"}
 LANE_B, LANE_R = 24.0, 24 * 0.42          # Ebenenabstand Bahnhofplan / Regionalplan (S = 0,42)
 NICHT_PLAENE = {"fragen", "pruefstand", "osm_verdacht"}          # Werkzeugkasten-Karten ohne Gleise im Plansinn
+# Regeln, die in bestimmten Karten nicht gelten (REGELN 1.30, Daniel 25.11.: Blaupausen sind «arbiträre Vorlagen» mit
+# frei endenden Musterstücken – GE dort nicht zählen, im Code statt nur in der Basis)
+REGEL_AUSNAHMEN = {"blaupause": {"GE"}, "blaupause2": {"GE"}}
 
 
 def _mat(tr):
@@ -372,6 +375,10 @@ def alle(plaene, netz_dir, out, basis=None, basis_setzen=False, abschnitt="plaen
         try: R = pruefen(open(f).read(), _netz(netz_dir, key), lane=LANE_R if os.path.basename(key).startswith("region") else LANE_B)
         except Exception as e:
             print(f"FEHLER {key}: {e}", file=sys.stderr); tab[key] = dict(fehler=str(e)); continue
+        aus = REGEL_AUSNAHMEN.get(os.path.basename(key), set())
+        if aus:
+            R["befunde"] = [b for b in R["befunde"] if b["regel"] not in aus]
+            R["zaehl"] = {r: (0 if r in aus else v) for r, v in R["zaehl"].items()}
         json.dump(R, open(os.path.join(out, key + ".json"), "w"), ensure_ascii=False, indent=1)
         tab[key] = dict(R["zaehl"], ebene=R["ebene"])
     json.dump(tab, open(os.path.join(out, "zaehlung.json"), "w"), ensure_ascii=False, indent=1, sort_keys=True)

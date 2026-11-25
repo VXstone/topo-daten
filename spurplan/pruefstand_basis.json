@@ -26,42 +26,32 @@
   },
   "osm/ab60/a30": {
    "Q": 1,
-   "T": 3,
-   "X": 3
+   "T": 1
   },
   "osm/ab60/a60": {
-   "X": 1
+   "T": 1
   },
   "osm/ab60/d0": {
    "Q": 1,
-   "T": 3,
-   "X": 1,
-   "Z": 1
+   "T": 1
   },
   "osm/ab60/d30": {
    "Q": 1,
-   "T": 3,
-   "X": 1,
-   "Z": 1
+   "T": 1
   },
   "osm/ab60/d60": {
-   "X": 1
+   "T": 1
   },
   "osm/ab60/d90": {
    "Q": 1,
-   "T": 3,
-   "X": 1
+   "T": 1
   },
   "osm/ab60/dm30": {
-   "D": 1,
    "T": 1
   },
   "osm/ab60/dm60": {
-   "D": 1,
-   "G2": 1,
-   "G7": 1,
-   "P": 2,
-   "T": 4
+   "Q": 1,
+   "T": 1
   },
   "osm/buendel_knick/a30": {
    "Q": 4
@@ -410,23 +400,15 @@
   "vorlage/Z3/a30": {},
   "vorlage/Z3/a60": {},
   "vorlage/Z3/d0": {},
-  "vorlage/Z3/d30": {
-   "G2": 2
-  },
+  "vorlage/Z3/d30": {},
   "vorlage/Z3/d60": {
    "E": 4,
-   "G2": 2,
    "Z": 4
   },
-  "vorlage/Z3/d90": {
-   "G2": 2
-  },
-  "vorlage/Z3/dm30": {
-   "G2": 2
-  },
+  "vorlage/Z3/d90": {},
+  "vorlage/Z3/dm30": {},
   "vorlage/Z3/dm60": {
    "E": 4,
-   "G2": 2,
    "Z": 4
   },
   "vorlage/Z4/a30": {},
@@ -521,6 +503,6 @@
   }
  },
  "fehler": [],
- "gesetzt": "2026-11-12 23:09 UTC",
- "quelle": "ps_tabelle.json"
+ "gesetzt": "2026-11-24 22:59 UTC",
+ "quelle": "tabelle.json"
 }
