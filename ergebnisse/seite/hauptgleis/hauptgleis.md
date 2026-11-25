@@ -9,8 +9,8 @@
 | solothurn | 2 | 1 | · | · | 14 | · | · | 17 |
 | rothrist | 2 | 4 | · | · | 5 | · | · | 11 |
 | konolfingen | · | 2 | · | · | 6 | · | · | 8 |
-| szu__zurich_giesshubel | 1 | 3 ↓8 | · | 0 ↓1 | 2 ↓4 | · | · | 6 |
 | mob__chamby | 1 | 1 | · | 1 | 1 | · | · | 4 |
+| szu__zurich_giesshubel | 0 ↓1 | 2 ↓8 | · | 0 ↓1 | 2 ↓4 | · | · | 4 |
 | vereina__klosters_platz | 3 | · | · | · | 1 | · | · | 4 |
 | mob__zweisimmen | · | 3 | · | · | · | · | · | 3 |
 | schonenwerd | · | 2 | · | · | 1 | · | · | 3 |
