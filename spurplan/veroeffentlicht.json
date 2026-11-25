@@ -1,7 +1,7 @@
 {
  "_zweck": "Zuletzt veröffentlichte Fassung der Feedback-Seite (Commit auf Branch ergebnisse); Basis der Regression für nicht abgenommene Pläne. Claude führt es beim Veröffentlichen nach.",
- "ergebnisse": "727c5e1",
- "version": 185,
+ "ergebnisse": "ced760a",
+ "version": 186,
  "notiz_159": "21.11.2026: v158 + prio-Hinweise rot (Vorlage seite.html), keine Planänderung; ergebnisse-Basis bleibt bb5df3c",
  "notiz_160": "21.11.2026: V4b – NE-Karten aus Code, Vauseyon ohne Treppe (REGELN 4.5 schraeg_port); ergebnisse 476a7bc (Commit 16ca65c)",
  "notiz_161": "21.11.2026: V4c – Netzmodell der Typvorlagen auf dem Plan (HT NE 159→51 in den Typvorlagen), St-Blaise CFF und Serrières Spurwechsel wie OSM, Frage F6 Gampelen; ergebnisse dab114d (Commit c0aa2bb)",
@@ -28,5 +28,6 @@
  "notiz_182": "24.11.2026: T-SZU1 – Güterverkehr schwarz (REGELN 1.21, nur Farbe: Giesshübel 717 mit Pfeil «Linie 717 / Zürich Wiedikon», Solothurn 415), 4-Arm-Weiche = DKW (REGELN 2.4: Depot Giesshübel, Zofingen, Aarau); Regionalplan SZU Giesshübel-Lage festgehalten; ergebnisse 4944ae8 (Commit 5dbded2)",
  "notiz_183": "24.11.2026 abends: T-SZU2 Teil 2 – Knick zwischen Betriebspunkten (REGELN 2.15, knoten_knick an): Saalsporthalle eigener Plan, 712 verlässt Giesshübel seitlich nach unten; Regionalplan SZU ohne 90° an der Sihltal-Verbindung; ergebnisse 818c37f (Commits fcaaba3, 1897e83). Nur szu__zurich_giesshubel, region_szu geändert, szu__zurich_saalsporthalle neu",
  "notiz_184": "25.11.2026 früh: T-SZU2 Teil 3a (REGELN 2.15 Neufassung: 717 als 60°-Abgang, GE 1.30) + Teil 3b Basen GE/HT/Prüfstand nach Okay Daniel (Blaupausen bei GE ausgenommen); ergebnisse 9856a66 (Commit e701cdd). Geändert gegen v183 nur szu__zurich_giesshubel und region_szu",
- "notiz_185": "25.11.2026: T-SZU2 Teil 3b – Doppelspur 1 Ebene (REGELN 1.4): Giesshübel 712 gerade, 713/717/Depot darüber; Saalsporthalle Gl. 2 eine Ebene; Mass HD; ergebnisse 727c5e1 (Commits 93d30c3, eda41ac, 6d3fd54). Geändert nur szu__zurich_giesshubel, szu__zurich_saalsporthalle, region_szu"
+ "notiz_185": "25.11.2026: T-SZU2 Teil 3b – Doppelspur 1 Ebene (REGELN 1.4): Giesshübel 712 gerade, 713/717/Depot darüber; Saalsporthalle Gl. 2 eine Ebene; Mass HD; ergebnisse 727c5e1 (Commits 93d30c3, eda41ac, 6d3fd54). Geändert nur szu__zurich_giesshubel, szu__zurich_saalsporthalle, region_szu",
+ "notiz_186": "25.11.2026 abends: HT-R – HT auf Regionalplänen (HT6/HT7, REGELN Kopf HT), Giesshübel 717 mit Pfeil (REGELN 4.13), 713 bis Planrand geradeaus (REGELN 4.14), Chamby 114 ebenso (Lagesuche dreht Chamby −30°, Okay Daniel); Netzmodell Weiche am gezeichneten Abzweig (Giesshübel HT1 0); ergebnisse ced760a (Commit d68e19b). Geändert nur region_szu, region_mob"
 }

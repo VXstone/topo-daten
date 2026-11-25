@@ -125,7 +125,8 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   24.11. Teil 1 (nicht veröffentlicht): Code für 2.15 da, beide Schalter aus – Befund und Teil 2 im Nachtrag T-SZU2 (Abschnitt 6)
   24.11. Teil 2 abends: Knick zwischen Betriebspunkten aktiv (Saalsporthalle eigener Plan, 712 seitlich nach unten), Seite v183 – Nachtrag T-SZU2 Teil 2
 - [x] **T-SZU2 Teil 3b** – 25.11. früh: Basen (v184), Doppelspur 1 Ebene (REGELN 1.4), Mass HD, Giesshübel nach Zielbild, Saalsporthalle Gl. 2, Seite v185 (Nachtrag)
-- [ ] **T-SZU2 Teil 3c Giesshübel Depot-Fächer** (klein): GT 1 (Treppe links im Fächer), HT1 1 (Depot-Weiche 1263316902 am oberen 712-Gleis fehlt),
+- [x] **HT-R HT auf den Regionalplänen** – 25.11. abends, Commits 0de59bb/16cffda/d68e19b, Seite v186 (Nachtrag HT-R): HT6/HT7, Giesshübel 713/717, HT1 Giesshübel 0
+- [ ] **T-SZU2 Teil 3c Giesshübel Depot-Fächer** (klein): GT 1 (Treppe links im Fächer), ~~HT1 1~~ (erledigt in HT-R, Netzmodell),
   VA1 DKW 1263338286 ohne Symbol, Gleisnummer «19» am 713-Abgang (kein Perron?), Saalsporthalle VD1 (zwei Spurwechsel berühren sich) –
   dann GT/HT1-Basis wieder auf 0. Danach: doppelspur_flach/_wechsel für Olten/Aarau prüfen (REGELN 1.4 «Ausweitung offen»), HD-Liste ansehen.
 - [ ] **T-SZU2 Teil 3 Giesshübel Depot und Regionalplan-Rest** (erledigt bis auf 3c; Rest unten nur noch Geschichte) (mittel, aus Teil 2): Zielbild `vergleich/szu/zielbild_giesshuebel.svg`.
@@ -1081,4 +1082,15 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   nur Linien-Regionen (Olten/Aarau G0 schlechter: Olten GS 1→16, Aarau GT 1→3). Mass `doppelspur.py` (HD/HDz) im Workflow seite, Bericht doppelspur.md.
 - Regression: geändert nur Giesshübel (GS 10→3, GG 16→4, VD1 22→5), Saalsporthalle, region_szu (GS 12→5, GG 14→3); MOB/Vereina/Olten/NE gleich.
   Basis vorläufig (Okay Daniel): Giesshübel GT 0→1, HT1 0→1 → Teil 3c. Fallstrick: region_olten_lauf schreibt in werkstatt/olten – zurücksetzen.
+
+### 25.11.2026 ~21:30 – Schritt HT-R: HT auf den Regionalplänen, Seite v186 (Commits 0de59bb, 16cffda, d68e19b; ergebnisse ced760a)
+- Sichtbar (Regionalplan SZU): 717 nach Wiedikon mit Linie und Beschriftung (REGELN 4.13), 713 geradeaus bis zum Planrand, dann nach Binz – nicht mehr
+  durchs Depot (REGELN 4.14). Nebenwirkung MOB: Chamby 114 nach Blonay ebenfalls bis Planrand, Lagesuche dreht Chamby −30° statt −60° (Okay Daniel).
+- Messung (REGELN Kopf HT, «HT-R»): `hauptgleis_region.py` – HT6 Linie kommt nicht an, HT7 Kreuzung ohne OSM-Grund; `hauptgleis.py --alle` ruft es für
+  `region*`. Prüffall `hauptgleis_faelle/region_szu_v185` (+ `_netz/`). Basis (Okay Daniel): Olten HT6 5 / HT7 10, NE HT7 1, Vereina HT6 1, MOB/SZU 0.
+- Giesshübel HT1 0: Netzmodell legt Weiche 1263316902 an den gezeichneten Abzweig der Weichenstrasse (cfg `netz_abzweig_gezeichnet`, Plan byte-gleich).
+- Freier Abgang nur ohne Kollision: Klosters Platz (2. Gleis Richtung Landquart) wäre ins Streckengleis gelaufen → nicht gezeichnet, bleibt HT6 (eigentlich 4.2).
+- Regression: geändert nur region_szu, region_mob (je «vermutlich besser»); Olten/NE/Vereina gleich. G0 grün, Prüfstand grün. seite.yml braucht networkx.
+- Offen: Olten HT6/HT7 (Rothrist-Regionalvariante = R4, Eppenbergtunnel = K, Aarau West 540, Wangen), NE HT7 Tunnel-Spurwechsel; Hinweise SZU qzk1 (Doppelspur
+  Selnau nicht parallel im Knick), 2qj3 (Perronseite), e92h (Uetliberg Mittelperron) noch ohne Antwort.
 
