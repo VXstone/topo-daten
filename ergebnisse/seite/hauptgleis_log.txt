@@ -140,7 +140,3 @@ wangen_bei_olten                       HT1 0 HT2 0 HT3 0 HT4 0 HT5 0 HT6 0 HT7 0
 zihlbruecke                            HT1 0 HT2 0 HT3 0 HT4 0 HT5 0 HT6 0 HT7 0
 zofingen                               HT1 1 HT2 0 HT3 0 HT4 0 HT5 2 HT6 0 HT7 0
 Hauptgleis HT: {'HT1': 31, 'HT2': 45, 'HT3': 5, 'HT4': 6, 'HT5': 214, 'HT6': 6, 'HT7': 11} – 141 Pläne, 26 mit HT > 0
-NEU region HT6: 0 -> 5
-NEU region HT7: 0 -> 10
-NEU region_ne HT7: 0 -> 1
-NEU region_vereina HT6: 0 -> 1
