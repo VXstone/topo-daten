@@ -85,6 +85,8 @@ def _bahnhof(n):
     o["cfg"].setdefault("spurgruppe_seite", True)
     o["cfg"].setdefault("kreuzung_schnitt", True)
     o["cfg"].setdefault("dkw_auto", True)                             # E3 automatisch (Schritt E, 8.11.2026): DKW an Ort, Anlage im 60°-Gitter
+    o["cfg"].setdefault("doppelspur_flach", 1.6)                     # REGELN 1.4 (25.11., Giesshübel): Doppelspur im Bogen bleibt Gleis
+    o["cfg"].setdefault("doppelspur_wechsel", True)                   # REGELN 1.4 (25.11., Saalsporthalle): Spurwechsel aus mehreren Stücken = Schräge
     o["cfg"].setdefault("randzone", True)                             # Streckengleise am Planrand im Standardabstand (Selfranga)
     o["cfg"].setdefault("einspur_gerade", False)                     # Punkt 4 im Plan zerlegt die Weichenstrasse (Château-d'Oex) – stattdessen Kippen im Regionalplan
     o["cfg"]["rules"].setdefault("r49", True)                       # zu eng für 60°: volle Schräge statt 90° (Sagliains West)

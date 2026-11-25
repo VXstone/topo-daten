@@ -33,7 +33,8 @@ CFG = dict(
     flat_slope=0.06,            # |dd/ds| darunter = Gleisspur
     # REGELN 1.4 (Doppelspur 1 Ebene, Präzisierung 25.11., Testfall Giesshübel) – gelten für alle Pläne:
     linie_fortsetzung=0.5,      # Hauptgleis setzt sich in derselben Linie (ref) fort, nicht in einer anderen / ref-losen
-    doppelspur_flach=1.6,       # Doppelspur im Bogen: Stück bis 1,6 × flat_slope bleibt Gleis, wenn die Partnerspur gleich läuft
+    doppelspur_flach=0,         # Doppelspur im Bogen: Stück bis n × flat_slope bleibt Gleis, wenn die Partnerspur gleich läuft (Linien-Regionen: 1.6)
+    doppelspur_wechsel=False,   # Spurwechsel aus mehreren Stücken zwischen den Spuren einer Doppelspur = Schräge (Linien-Regionen: an)
     lane_guess_nah_m=40,        # Ebene von Knoten knapp hinter dem Ende der Hauptgleise: deren Enden zählen mit
     # Weichen-Standard (alle Verbindungen werden daraus gebaut)
     sw_angle=60,       # Neigung der Diagonale [Grad], wie Uppsala-Vorlage
@@ -1075,7 +1076,12 @@ if CFG.get("doppelspur_flach", 0):
                 q = np.linspace(lo, hi, 5)
                 dd = np.interp(q, a["p"][:, 0], a["p"][:, 1]) - np.interp(q, b["p"][:, 0], b["p"][:, 1])
                 if np.all((3.0 <= np.abs(dd)) & (np.abs(dd) <= 6.5)) and np.ptp(dd) < 1.0: _abd += hi - lo
-            if _abd >= 0.6 * (a["s1"] - a["s0"]): _neu.append(a)
+            # nur echte Doppelspur: in der Mitte des Stücks liegt genau ein weiteres Gleis derselben Linie im Umkreis 10 m
+            # (Olten/Aarau 25.11.: vier Gleise einer Linie – dort nicht)
+            _sm = 0.5 * (a["s0"] + a["s1"]); _dm = float(np.interp(_sm, a["p"][:, 0], a["p"][:, 1]))
+            _nb = sum(1 for b in segs if b is not a and _lr(b) == _lr(a) and b["s0"] - 1 <= _sm <= b["s1"] + 1
+                      and abs(float(np.interp(_sm, b["p"][:, 0], b["p"][:, 1])) - _dm) <= 10)
+            if _abd >= 0.6 * (a["s1"] - a["s0"]) and _nb == 1: _neu.append(a)
         if not _neu: break
         for a in _neu:
             a["flat"] = True
@@ -1085,12 +1091,12 @@ if CFG.get("doppelspur_flach", 0):
     _an = collections.defaultdict(list)
     for sg in segs:
         _an[sg["nodes"][0]].append(sg); _an[sg["nodes"][-1]].append(sg)
-    _gesehen = set()
+    _gesehen = set() if CFG.get("doppelspur_wechsel", False) else None
     # Stück eines Spurwechsels: kein Hauptgleis mit Linie, keine Gleisnummer; service nur siding/crossover (Saalsporthalle:
     # zwei Spurwechsel als service=siding in je zwei Stücken lagen auf einer Zwischenebene und hoben Gl. 2 eine Ebene an)
     _dsw_ok = lambda x: (not _lr(x) and x["tags"].get("service") in (None, "siding", "crossover")
                          and not x["tags"].get("railway:track_ref"))
-    for sg in segs:
+    for sg in (segs if _gesehen is not None else []):
         if id(sg) in _gesehen or not _dsw_ok(sg) or not sg["flat"]: continue
         lauf, enden = [sg], []
         for e_ in (0, -1):
