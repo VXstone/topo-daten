@@ -1,7 +1,7 @@
 {
  "_zweck": "Zuletzt veröffentlichte Fassung der Feedback-Seite (Commit auf Branch ergebnisse); Basis der Regression für nicht abgenommene Pläne. Claude führt es beim Veröffentlichen nach.",
- "ergebnisse": "b38da97",
- "version": 188,
+ "ergebnisse": "8409209",
+ "version": 189,
  "notiz_159": "21.11.2026: v158 + prio-Hinweise rot (Vorlage seite.html), keine Planänderung; ergebnisse-Basis bleibt bb5df3c",
  "notiz_160": "21.11.2026: V4b – NE-Karten aus Code, Vauseyon ohne Treppe (REGELN 4.5 schraeg_port); ergebnisse 476a7bc (Commit 16ca65c)",
  "notiz_161": "21.11.2026: V4c – Netzmodell der Typvorlagen auf dem Plan (HT NE 159→51 in den Typvorlagen), St-Blaise CFF und Serrières Spurwechsel wie OSM, Frage F6 Gampelen; ergebnisse dab114d (Commit c0aa2bb)",
@@ -31,5 +31,6 @@
  "notiz_185": "25.11.2026: T-SZU2 Teil 3b – Doppelspur 1 Ebene (REGELN 1.4): Giesshübel 712 gerade, 713/717/Depot darüber; Saalsporthalle Gl. 2 eine Ebene; Mass HD; ergebnisse 727c5e1 (Commits 93d30c3, eda41ac, 6d3fd54). Geändert nur szu__zurich_giesshubel, szu__zurich_saalsporthalle, region_szu",
  "notiz_186": "25.11.2026 abends: HT-R – HT auf Regionalplänen (HT6/HT7, REGELN Kopf HT), Giesshübel 717 mit Pfeil (REGELN 4.13), 713 bis Planrand geradeaus (REGELN 4.14), Chamby 114 ebenso (Lagesuche dreht Chamby −30°, Okay Daniel); Netzmodell Weiche am gezeichneten Abzweig (Giesshübel HT1 0); ergebnisse ced760a (Commit d68e19b). Geändert nur region_szu, region_mob",
  "notiz_187": "26.11.2026: nur Fähigkeit «downloads» deklariert (Inhalt = v186)",
- "notiz_188": "26.11.2026: D1 – Knopf «SVG herunterladen» je Regionalplan (Vorlage seite.html, Fähigkeit downloads); alle 150 Pläne gleich wie v186; ergebnisse b38da97 (Commit 82fef04)"
+ "notiz_188": "26.11.2026: D1 – Knopf «SVG herunterladen» je Regionalplan (Vorlage seite.html, Fähigkeit downloads); alle 150 Pläne gleich wie v186; ergebnisse b38da97 (Commit 82fef04)",
+ "notiz_189": "26.11.2026: F4a – Regionalstrecke knickt parallel (REGELN 2.7, netz_lage port_knick_parallel, ab 8°): qzk1 Giesshübel–Selnau, Saalsporthalle, MOB Vernex/Les Planches, Vereina Sasslatsch; Lagesuche dreht Selnau waagrecht (Region SZU flacher); Olten gleich, NE 1 Stelle gleichwertig; ergebnisse 8409209 (Commits 2dd8601, 32ce42a)"
 }

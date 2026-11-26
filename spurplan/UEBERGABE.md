@@ -154,6 +154,7 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - [ ] **F1 Kreuzungen beheben** – ein Codeweg für alle Pläne, Galerie aller Stellen, Ziel GS/HT7 0 ohne Basis (nur bestätigte Ausnahmen)
 - [ ] **F2 Gleis auf Gleis (GG)** – Eichung + Behebung wie F0/F1
 - [ ] **F3 Abzweige und Fahrwege wie OSM (HT1–HT6)** – Eichung + Behebung; dazu R4 Rothrist-Regionalvariante, Klosters Einspurwechsel (4.2)
+- [x] **F4a Knick parallel auf Regionalstrecken** – 26.11. abends, Commits 2dd8601/32ce42a, Seite v189 (Nachtrag F4a); vorgezogen auf Wunsch Daniel
 - [ ] **F4 Parallel bleibt parallel überall (2.7)** – Prüfung über die ganze Länge (qzk1 Giesshübel–Selnau, Sagliains, Olten), ein Codeweg
 - Ruhen bis F4 erledigt (Abschnitt 0a): T-SZU2 Teil 3c, V4d, S2b, S3, V5/V6, K, A2, R2, R3a/b, P2a/b, H1/H2, N1/N2, 5
 - [x] **HT-R HT auf den Regionalplänen** – 25.11. abends, Commits 0de59bb/16cffda/d68e19b, Seite v186 (Nachtrag HT-R): HT6/HT7, Giesshübel 713/717, HT1 Giesshübel 0
@@ -1136,3 +1137,15 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   `spurplan_<key>_<datum>.svg`. Artefakt-Fähigkeit `downloads` deklariert (v187); die App fragt beim Speichern nach.
 - Lokal geprüft: region, region_ne, region_mob ergeben gültiges SVG, mit cairosvg gerendert. Im Browser nicht angesehen.
 - Keine Planänderung: alle 150 Pläne gleich wie v186, G0/HT/VR grün. Nächster Schritt: F0.
+
+### 26.11.2026 ~23:00 – Schritt F4a: Knick parallel auf Regionalstrecken, Seite v189 (Commits 2dd8601, 32ce42a; ergebnisse 8409209)
+- Ursache (anders als im D1-Chat vermutet): Gerade von Port zu Port mit dem Knick **am Anschluss** – der Knick war nicht Teil der Achse, alle
+  Gleise knickten auf derselben Querlinie (qzk1 10 → 6 px). Neu (REGELN 2.7, `port_knick_parallel`): Eckpunkt der Achse kurz vor dem Anschluss
+  (Abstand aus der tatsächlichen Querlage + Ausrundung R), Gehrung je Gleis in `track_line` auch an Knicken 8°–25°, kein Rückwärtsstück.
+- Unter 8° (`schraeg_max`) bleibt die schräge Gerade (REGELN 4.5): erste Fassung ab 3° machte in region_ne eine Treppe (GT +2) und schob
+  Spurwechsel auf freier Strecke über das Gleis (GS +2) → G0 rot, behoben in 32ce42a.
+- Sichtbar (Galerie `vergleich/f4a/`): SZU Giesshübel–Selnau und Saalsporthalle (S-Schwung weg), MOB Vernex/Les Planches, Vereina Sasslatsch.
+  Olten gleich, NE 1 Stelle gleichwertig. G0/HT/Prüfstand grün. SZU T6 1→0, Ecken 3→0.
+- **Nebenwirkung:** im Workflow dreht die Lagesuche Selnau waagrecht (Unruhe 164→108; lokal bleibt −60°, Ausgang 112 – Rechenunterschied
+  Runner/lokal), Region SZU flacher, Selnau-Strecke mit einer 60°-Schräge. Daniel fragen, ob ok (sonst `lage.drehung` fest oder Suche ändern).
+- Offen in F4: Messung «Abstand über die ganze Länge» fehlt noch (GQ misst nur am Knick); Bahnhofplan-Bündel. qzk1 beantwortet, nicht abgenommen.
