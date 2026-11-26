@@ -715,11 +715,18 @@ def track_line(core, ps, pe, o, defer_px=250, stub=6, defer_s=True, defer_e=True
         a0 = C[i] + N[i - 1] * W[i - 1]; b0 = C[i] + N[i] * W[i]
         M_ = np.array([U[i - 1], -U[i]]).T
         if turn(U[i - 1], U[i]) > 25:
-            t_ = np.linalg.solve(M_, b0 - a0)[0]; pts.append(a0 + U[i - 1] * t_)
+            t_ = np.linalg.solve(M_, b0 - a0)[0]; _q = a0 + U[i - 1] * t_
+            if float((_q - pts[-1]) @ U[i - 1]) > 0.5 or not L0.get("port_knick_parallel", True): pts.append(_q)   # F4a: kein Rückwärtsstück
         elif abs(W[i] - W[i - 1]) > 0.5:
             run = abs(W[i] - W[i - 1]) / TAN60
             run = min(run, 0.9 * np.linalg.norm(C[i] - C[i - 1]), 0.9 * np.linalg.norm(C[i + 1] - C[i]))
             pts += [a0 - U[i - 1] * run / 2, b0 + U[i] * run / 2]
+        elif turn(U[i - 1], U[i]) > 0.5:
+            # REGELN 2.7 (F4a, 26.11.2026, Hinweis qzk1 Giesshübel–Selnau, Saalsporthalle): auch am flachen Knick (≤ 25°) bekommt jedes
+            # Gleis seinen eigenen Eckpunkt im gleichen Seitenabstand – vorher lief es gerade über die Ecke, die Gleise einer
+            # Doppelspur schnitten sie verschieden und liefen zusammen (10 -> 6 px).
+            t_ = np.linalg.solve(M_, b0 - a0)[0]; _q = a0 + U[i - 1] * t_
+            if float((_q - pts[-1]) @ U[i - 1]) > 0.5: pts.append(_q)
     if jog_e:
         r2 = pe - U[-1] * stub; pts += [r2 - U[-1] * abs(o - he) / TAN60 + N[-1] * (o - he), r2]
     pts.append(np.array(pe, float))
@@ -983,6 +990,24 @@ def route_geom(r):
         _lt = [y - x for x, y in zip(sorted(float(p @ _nr) for p in pa), sorted(float(p @ _nr) for p in pb))]
         if min(abs(x) for x in _lt) < 0.3 and max(abs(x) for x in _lt) > 0.3:
             core = [A, A + va * float((B - A) @ va)]; _bund = True
+    # REGELN 2.7 (F4a, 26.11.2026, Hinweis qzk1 Giesshübel–Selnau, Saalsporthalle): knickt die Strecke direkt am Anschluss (Gerade
+    # von Port zu Port, Knick zwischen letzter Richtung und Portrichtung), war der Knick nicht Teil der Achse – alle Gleise knickten
+    # auf derselben Querlinie, die Doppelspur lief schräg zusammen (10 -> 6 px). Jetzt bekommt die Achse dort einen Eckpunkt kurz vor
+    # dem Anschluss, so dass jedes Gleis im eigenen Abstand um die Ecke geht (Gehrung in track_line). Lage-Option «port_knick_parallel».
+    if L0.get("port_knick_parallel", True) and len(core) >= 2 and max(len(pa), len(pb)) >= 2:
+        def _pk(c0, c1, v_, pp_):
+            d_ = c1 - c0; L_ = float(np.linalg.norm(d_))
+            if L_ < 1: return None
+            th = turn(v_, d_ / L_)
+            if not 3 < th < 89: return None
+            nv_ = np.array([-v_[1], v_[0]])                  # Querlage der Gleise am Anschluss (tatsächlich, nicht Regelabstand)
+            hb_ = max([abs(float((np.array(q_, float) - c0) @ nv_)) for q_ in pp_] + [(k - 1) / 2 * TG])
+            m_ = hb_ * math.tan(math.radians(th / 2)) + CFG["R"]   # auch das innere Gleis knickt vor dem Anschluss, mit Ausrundung
+            return c0 + v_ * m_ if m_ < 0.4 * L_ else None
+        _ka = _pk(np.array(core[0], float), np.array(core[1], float), va, pa)
+        if _ka is not None: core = [core[0], _ka] + list(core[1:])
+        _kb = _pk(np.array(core[-1], float), np.array(core[-2], float), vb, pb)
+        if _kb is not None: core = list(core[:-1]) + [_kb, core[-1]]
     if os.environ.get("CDBG") and os.environ["CDBG"] in (nodes[na]["name"], nodes[nb]["name"]): print("CORE", nodes[na]["name"], nodes[nb]["name"], A.round(1), va.round(2), B.round(1), vb.round(2), [np.round(c_, 1).tolist() for c_ in core])
     col, w = (G, 2.4) if (xa and xb) else (BK, 1.3)
     offs = [(j - (k - 1) / 2) * TG for j in range(k)]
