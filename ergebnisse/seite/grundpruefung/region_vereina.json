@@ -3,7 +3,7 @@
  "zaehl": {
   "GS": 1,
   "GG": 5,
-  "GQ": 2,
+  "GQ": 1,
   "GP": 0,
   "GW": 0,
   "GT": 2,
@@ -51,12 +51,6 @@
    "x": -395.8,
    "y": -327.4,
    "text": "Querabstand nach dem Knick 3.6 px statt 10.1 px wie davor"
-  },
-  {
-   "regel": "GQ",
-   "x": 558.8,
-   "y": 421.9,
-   "text": "Querabstand nach dem Knick 7.8 px statt 10.1 px wie davor"
   },
   {
    "regel": "GT",
