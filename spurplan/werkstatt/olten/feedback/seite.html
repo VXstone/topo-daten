@@ -149,6 +149,7 @@ nav.plans .nr{font-family:var(--f-mono);font-size:11px;color:var(--muted);width:
       <span class="counts" id="pCounts"></span>
       <span class="spacer"></span>
       <label class="tog" id="befTog"><input type="checkbox" id="befChk" checked> Prüfbefunde zeigen</label>
+      <button class="btn" id="dlBtn" hidden title="Regionalplan als SVG-Datei speichern (zum Weiterbearbeiten/Plotten)">SVG herunterladen</button>
       <button class="btn" id="legBtn" aria-expanded="false">Legende</button>
       <span class="abn" id="abn"></span>
     </div>
@@ -260,6 +261,7 @@ function show(key){
   $("#pName").textContent=cur.name;$("#pLab").textContent=cur.label;
   $("#pCounts").innerHTML=cur.counts?Object.entries(cur.counts).map(([k,v])=>`<span class="${v?"hit":""}" title="${k}">${k} ${v}</span>`).join(""):"";
   $("#befTog").hidden=!cur.counts;
+  $("#dlBtn").hidden=!(isReg(cur)&&dl);
   renderAll();
 }
 function fit(){const m=0.03;vb={x:base.x-base.w*m,y:base.y-base.h*m,w:base.w*(1+2*m),h:base.h*(1+2*m)};applyVB()}
@@ -270,6 +272,24 @@ function zoomAt(f,cx,cy){const p=toSvg(cx,cy);const nw=vb.w*f;if(nw<base.w/60||n
   vb={x:p.x-(p.x-vb.x)*f,y:p.y-(p.y-vb.y)*f,w:nw,h:vb.h*f};applyVB()}
 function zoomCenter(f){const r=svgEl.getBoundingClientRect();zoomAt(f,r.left+r.width/2,r.top+r.height/2)}
 $("#zIn").onclick=()=>zoomCenter(1/1.4);$("#zOut").onclick=()=>zoomCenter(1.4);$("#zFit").onclick=fit;
+/* D1 (Daniel 25.11.2026): Regionalplan als SVG herunterladen – genau der gezeichnete Plan (ohne Pins/Hinweise), mit Breite/Höhe aus der viewBox */
+let dl=null;
+(async()=>{for(let k=0;k<50&&!(window.claude&&window.claude.use);k++)await new Promise(r=>setTimeout(r,200));
+  try{dl=window.claude&&window.claude.use?await window.claude.use("downloads"):null}catch(e){dl=null}
+  $("#dlBtn").hidden=!(isReg(cur)&&dl)})();
+function planSvgDatei(p){
+  let t=p.svg.trim();const m=t.match(/<svg\b[^>]*>/);if(!m)return null;let tag=m[0];
+  if(!/\sxmlns=/.test(tag))tag=tag.replace(/<svg\b/,'<svg xmlns="http://www.w3.org/2000/svg"');
+  const v=(tag.match(/viewBox="([^"]*)"/)||[])[1];
+  if(v&&!/\swidth=/.test(tag)){const n=v.split(/[\s,]+/).map(Number);if(n.length===4)tag=tag.replace(/<svg\b/,`<svg width="${n[2]}" height="${n[3]}"`)}
+  return '<?xml version="1.0" encoding="UTF-8"?>\n'+t.slice(0,m.index)+tag+t.slice(m.index+m[0].length)+"\n";
+}
+$("#dlBtn").onclick=async()=>{
+  if(!dl||!isReg(cur))return;const d=planSvgDatei(cur);if(!d){toast("Plan nicht lesbar");return}
+  const st=new Date().toISOString().slice(0,10);
+  try{await dl.save({filename:`spurplan_${cur.key}_${st}.svg`,data:d});toast("SVG gespeichert")}
+  catch(e){const c=e&&e.code;toast(c==="declined"?"Nicht gespeichert":c==="rate_limited"?"Bitte kurz warten und nochmals":"Herunterladen geht hier nicht")}
+};
 $("#befChk").onchange=e=>$("#cv").classList.toggle("nobef",!e.target.checked);
 
 /* Pan / Pinch / Klick */
