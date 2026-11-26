@@ -1,4 +1,4 @@
-# Prüfstand – Bausteine × Drehungen (2026-11-25 14:01 UTC)
+# Prüfstand – Bausteine × Drehungen (2026-11-26 21:14 UTC)
 
 Zählung je Fall (Regel Anzahl); leer = ohne Befund. Rangfolge der Regeln: T, PF, X, E, K, Q, P, QK, F, Z, D, G2, G3, G4, G5, G6, G7, G8
 
@@ -69,8 +69,8 @@ T 24 · PF 16 · X 19 · E 122 · K 4 · Q 85 · Z 110 · D 1
 - osm ab60 a60: **T** 5 statt 6 freie Gleisenden am Planrand (Strecke oder Gleis fehlt)
 - osm unterwerfung d0: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (60°)
 - osm unterwerfung d0: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (60°)
-- osm unterwerfung d30: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (30°)
-- osm unterwerfung d30: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (30°)
+- osm unterwerfung d30: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (33°)
+- osm unterwerfung d30: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (33°)
 - osm unterwerfung dm30: **Z** Zwischengerade 16.8 px
 - osm unterwerfung dm30: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (30°)
 - osm unterwerfung dm30: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (30°)
@@ -79,18 +79,18 @@ T 24 · PF 16 · X 19 · E 122 · K 4 · Q 85 · Z 110 · D 1
 - osm unterwerfung dm60: **Z** Zwischengerade 16.8 px
 - osm unterwerfung dm60: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (30°)
 - osm unterwerfung dm60: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (30°)
-- osm unterwerfung d90: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (30°)
-- osm unterwerfung d90: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (30°)
+- osm unterwerfung d90: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (33°)
+- osm unterwerfung d90: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (33°)
 - osm unterwerfung a30: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (60°)
 - osm unterwerfung a30: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (60°)
 - osm unterwerfung a60: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (60°)
 - osm unterwerfung a60: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (60°)
-- osm zwischengerade d90: **K** Spitzkehre 149°
+- osm zwischengerade d90: **K** Spitzkehre 150°
 - osm zwischengerade d90: **K** Spitzkehre 150°
 - osm zwischengerade d90: **K** Spitzkehre 120°
 - osm zwischengerade d90: **K** Spitzkehre 150°
 - osm zwischengerade d90: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (30°)
-- osm zwischengerade d90: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (149°)
+- osm zwischengerade d90: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (150°)
 - osm zwischengerade d90: **X** Gleise kreuzen sich ohne Knoten und ohne Lücke (150°)
 - osm zwischengerade d90: **D** Bahnhofplan anders als ungedreht (Linien 7→9, Befunde {}→{}) (Bahnhof alpha)
 - osm perronformen d0: **PF** 0 statt 2 Perronformen (U/L/T als eine Fläche) (Bahnhof alpha)
