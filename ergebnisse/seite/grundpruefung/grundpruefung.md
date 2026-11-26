@@ -110,7 +110,7 @@
 | pensier | · | · | · | · | · | · | · | 24.0 |
 | region | 8 | 22 | 2 | 3 | 3 | 6 | 27 | 10.08 |
 | region_mob | 3 | 3 | 1 | 2 ↓3 | · | · | 23 ↓24 | 10.08 |
-| region_ne | **3** (Basis 1) | 2 | 1 | · | · | **2** (Basis 0) | 3 | 10.08 |
+| region_ne | 1 | 2 | 1 | · | · | · | 3 | 10.08 |
 | region_szu | 3 ↓12 | 3 ↓14 | 4 ↓8 | · | · | · | 10 ↓12 | 10.08 |
 | region_vereina | 1 | 5 | 1 ↓2 | · | · | 2 | 2 | 10.08 |
 | riedbach | · | · | · | · | · | · | · | 24.0 |
@@ -153,13 +153,3 @@
 | zofingen | · | 1 | · | · | · | · | · | 24.0 |
 
 Regeln: GS = Schnitt ohne DKW/Kreuzung/Niveautrennung; GG = Gleis auf Gleis; GQ = Querabstand nach Knick ≠ davor; GP = Pfeil nach innen / auf Nachbargleis; GW = Knick oder Abgang 90°; GT = Treppe; GE = loses Gleisende (kein Prellbock, Pfeil, Abgang oder Gleis)
-
-## NEUE Befunde
-
-- **region_ne** GS: 1 → 3
-  - -2796.9/1512.5: Gleise kreuzen sich (88°) ohne DKW, Kreuzung oder Niveautrennung
-  - 1380.0/-1872.5: Gleise kreuzen sich (26°) ohne DKW, Kreuzung oder Niveautrennung
-  - -477.3/-580.5: Gleise kreuzen sich (27°) ohne DKW, Kreuzung oder Niveautrennung
-- **region_ne** GT: 0 → 2
-  - 1346.8/-876.4: Treppe, Versatz 16.8 px
-  - 1346.6/-886.5: Treppe, Versatz 16.8 px

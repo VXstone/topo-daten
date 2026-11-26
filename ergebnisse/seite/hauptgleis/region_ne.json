@@ -6,29 +6,13 @@
   "HT4": 0,
   "HT5": 0,
   "HT6": 0,
-  "HT7": 3
+  "HT7": 1
  },
  "befunde": [
   {
    "regel": "HT7",
    "x": -2796.9,
    "y": 1512.5,
-   "linie_ways": [],
-   "osm_ort": true,
-   "text": "Linie der Region (ohne Abgang) kreuzt einer anderen Linie ohne OSM-Kreuzung"
-  },
-  {
-   "regel": "HT7",
-   "x": 1380.0,
-   "y": -1872.6,
-   "linie_ways": [],
-   "osm_ort": true,
-   "text": "Linie der Region (ohne Abgang) kreuzt einer anderen Linie ohne OSM-Kreuzung"
-  },
-  {
-   "regel": "HT7",
-   "x": -477.3,
-   "y": -580.5,
    "linie_ways": [],
    "osm_ort": true,
    "text": "Linie der Region (ohne Abgang) kreuzt einer anderen Linie ohne OSM-Kreuzung"

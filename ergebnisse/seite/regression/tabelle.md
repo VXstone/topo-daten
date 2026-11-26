@@ -1,8 +1,7 @@
-148 Pläne, 48 geändert: 1 Fehler? Topologie, 30 gleichwertig, 9 vermutlich besser, 8 schlechter?
+148 Pläne, 48 geändert: 31 gleichwertig, 9 vermutlich besser, 8 schlechter?
 
 | Plan | Gruppe | Basis | Stellen | Einordnung | Kennzahlen alt→neu | G0 | HT | letzte Änderung |
 |---|---|---|---|---|---|---|---|---|
-| region_ne | Region | veröffentlicht | 2 | Fehler? Topologie | GS 1→3, W53 6→7 (Wunsch-Summe +6) | **GS 3 (Basis 1)** · GG 2 · GQ 1 · **GT 2 (Basis 0)** · GE 3 | **HT7 3 (Basis 1)** | 2026-11-26T21:19 |
 | onnens_bonvillars | NE 6 · Neuchâtel – Yverdon | Archivbeginn (Abnahme 2026-10-26) | 9 | schlechter? | G2 1→2, W56 5→1, W59 6→1 (Wunsch-Summe -12) · OSM VA1 1, VA2 1, VB1 1, VD1 1 (kein Alt-Stand) | GG 1 · GT 1 | 0 | 2026-11-23T22:28 |
 | grandson | NE 6 · Neuchâtel – Yverdon | Archivbeginn (Abnahme 2026-10-20) | 6 | schlechter? | G2 0→1 · OSM ok (kein Alt-Stand) | 0 | 0 | 2026-11-21T15:24 |
 | chambrelien | NE 8 · Neuchâtel – La Chaux-de-Fonds | Archivbeginn (Abnahme 2026-10-20) | 5 | schlechter? | G2 1→0, T7 0→1 (Wunsch-Summe +8) · OSM VA1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-22T15:43 |
@@ -40,7 +39,8 @@
 | couvet | NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier | Archivbeginn (Abnahme 2026-10-20) | 1 | gleichwertig | OSM VD1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-20T21:23 |
 | motiers | NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier | Archivbeginn (Abnahme 2026-10-20) | 1 | gleichwertig | OSM VD1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-20T21:23 |
 | les_geneveys_sur_coffrane | NE 8 · Neuchâtel – La Chaux-de-Fonds | Archivbeginn (Abnahme 2026-10-19) | 1 | gleichwertig | OSM VD1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-20T21:23 |
-| region_mob | Region | veröffentlicht | 2 | gleichwertig |  | GS 3 · GG 3 · GQ 1 · GP 2 · GE 23 | 0 | 2026-11-25T14:34 |
+| region_mob | Region | veröffentlicht | 2 | gleichwertig |  | GS 3 · GG 3 · GQ 1 · GP 2 · GE 23 | 0 | 2026-11-26T21:30 |
+| region_ne | Region | veröffentlicht | 1 | gleichwertig |  | GS 1 · GG 2 · GQ 1 · GE 3 | HT7 1 | 2026-11-26T21:19 |
 | rothrist | Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil | Archivbeginn (Abnahme 2026-10-29) | 17 | vermutlich besser | G2 0→1, G6 1→0, VB2 6→5, W56 4→1, W59 10→3 (Wunsch-Summe -9) | GS 2 · GG 1 · GQ 1 · GT 2 | HT1 2 · HT2 4 · HT5 5 | 2026-11-23T22:28 |
 | tecknau | Olten 4 · Hauenstein | bestätigt 2026-11-07 | 14 | vermutlich besser | W56 1→0, W59 3→2 (Wunsch-Summe -3) | 0 | HT2 1 · HT5 2 | 2026-11-23T22:28 |
 | olten_hammer | Olten 1 · Knoten Olten | bestätigt 2026-11-07 | 12 | vermutlich besser | W56 4→2, W59 4→1 (Wunsch-Summe -6) | 0 | 0 | 2026-11-24T05:54 |
@@ -48,8 +48,8 @@
 | colombier | NE 6 · Neuchâtel – Yverdon | Archivbeginn (Abnahme 2026-10-16) | 7 | vermutlich besser | W56 6→5, W59 1→0 (Wunsch-Summe -3) · OSM ok (kein Alt-Stand) | 0 | 0 | 2026-11-23T21:35 |
 | zofingen | Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil | bestätigt 2026-11-08 | 3 | vermutlich besser | VA2 2→0, VB1 3→1 | GG 1 | HT1 1 · HT5 2 | 2026-11-24T13:04 |
 | neuchatel | NE 1 · Neuchâtel – Ins – Kerzers – Bern | bestätigt 2026-11-08 | 2 | vermutlich besser | GG 3→1, VA2 4→0, VC1 2→0, VD1 3→1 | GG 1 · GT 1 | 0 | 2026-11-25T06:53 |
-| region_szu | Region | veröffentlicht | 9 | vermutlich besser | G2 5→4, GQ 5→4 | GS 3 · GG 3 · GQ 4 · GE 10 | 0 | 2026-11-25T13:37 |
-| region_vereina | Region | veröffentlicht | 1 | vermutlich besser | GQ 2→1 | GS 1 · GG 5 · GQ 1 · GT 2 · GE 2 | HT6 1 | 2026-11-25T14:34 |
+| region_szu | Region | veröffentlicht | 9 | vermutlich besser | G2 5→4, GQ 5→4 | GS 3 · GG 3 · GQ 4 · GE 10 | 0 | 2026-11-26T21:30 |
+| region_vereina | Region | veröffentlicht | 1 | vermutlich besser | GQ 2→1 | GS 1 · GG 5 · GQ 1 · GT 2 · GE 2 | HT6 1 | 2026-11-26T21:30 |
 
 Grundprüfung G0 aller Pläne: `ergebnisse/seite/grundpruefung/grundpruefung.md`
 Hauptgleis-Topologie HT aller Pläne mit Netzmodell: `ergebnisse/seite/hauptgleis/hauptgleis.md`
