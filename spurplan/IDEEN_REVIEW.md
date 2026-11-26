@@ -45,3 +45,10 @@ als Schritt in die UEBERGABE und entschieden nach REGELN.md.
   einem Hauptgleis liegt, ist ein Stück Haupt-/Verbindungsgleis und kein Nebengleis → auf freier Strecke nicht als Stumpen zeichnen, als OSM-Verdacht
   melden. Heute: Ausnahme südlich Olten (REGELN 4.7, `nebengleis_hand`). Wirkt auf alle Regionen → eigener Schritt mit Regression.
 
+## Ideen D. Eckenstein 25.11.2026 (Backlog)
+- **SVG-Export Regionalplan:** je Regionalplan auf der Feedback-Seite ein Knopf «SVG herunterladen» (Plan zum Weiterbearbeiten/Plotten).
+  → eingeplant als Schritt D1 (UEBERGABE Fahrplan), Seitenfunktion, ändert keine Pläne.
+- **Handgezeichnete Ausnahme-Knoten (z. B. Zürich HB):** sehr grosse Knoten nicht aus dem Code, sondern als von Hand gezeichneter Plan,
+  den der Regionalplan wie einen Bahnhofplan einbindet (Abgänge/Ports wie aus dem Code, damit Verkettung und HT weiter greifen).
+  Offen: Format der Handzeichnung, Prüfung gegen OSM (HT) auch für Handpläne. Erst nach F0–F4 (UEBERGABE Abschnitt 0a).
+
