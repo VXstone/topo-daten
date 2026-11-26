@@ -1,38 +1,38 @@
 {
  "ausgang": {
-  "unruhe": 168,
+  "unruhe": 164,
   "kennzahlen": {
    "topo_T3": 2,
    "topo_T6": 1,
    "lage_L3a": 1,
    "regel_G2": 5,
-   "ruhe_ecken": 2
+   "ruhe_ecken": 1
   }
  },
  "ergebnis": {
-  "unruhe": 168,
+  "unruhe": 108,
   "kennzahlen": {
    "topo_T3": 2,
-   "topo_T6": 1,
    "lage_L3a": 1,
-   "regel_G2": 5,
-   "ruhe_ecken": 2
+   "regel_G2": 4
   }
  },
- "drehung": {},
+ "drehung": {
+  "Zürich Selnau": 0
+ },
  "varianten": [
   {
    "schritt": "Ausgang",
    "drehung": {
     "Zürich Selnau": -60
    },
-   "unruhe": 168,
+   "unruhe": 164,
    "kennzahlen": {
     "topo_T3": 2,
     "topo_T6": 1,
     "lage_L3a": 1,
     "regel_G2": 5,
-    "ruhe_ecken": 2
+    "ruhe_ecken": 1
    }
   },
   {
@@ -40,6 +40,19 @@
    "drehung": {
     "Zürich Selnau": -30
    },
+   "unruhe": 160,
+   "kennzahlen": {
+    "topo_T3": 2,
+    "topo_T6": 1,
+    "lage_L3a": 1,
+    "regel_G2": 5
+   }
+  },
+  {
+   "schritt": "Zürich Selnau -30",
+   "drehung": {
+    "Zürich Selnau": -90
+   },
    "unruhe": 168,
    "kennzahlen": {
     "topo_T3": 2,
@@ -50,31 +63,15 @@
    }
   },
   {
-   "schritt": "Zürich Selnau -30",
-   "drehung": {
-    "Zürich Selnau": -90
-   },
-   "unruhe": 176,
-   "kennzahlen": {
-    "topo_T3": 2,
-    "topo_T6": 1,
-    "lage_L3a": 1,
-    "regel_G2": 5,
-    "ruhe_ecken": 4
-   }
-  },
-  {
    "schritt": "Zürich Selnau +60",
    "drehung": {
     "Zürich Selnau": 0
    },
-   "unruhe": 170,
+   "unruhe": 108,
    "kennzahlen": {
     "topo_T3": 2,
-    "topo_T6": 1,
     "lage_L3a": 1,
-    "regel_G2": 4,
-    "ruhe_ecken": 3
+    "regel_G2": 4
    }
   },
   {
@@ -82,13 +79,13 @@
    "drehung": {
     "Zürich Selnau": -120
    },
-   "unruhe": 182,
+   "unruhe": 174,
    "kennzahlen": {
     "topo_T3": 2,
     "topo_T6": 1,
     "lage_L3a": 1,
     "regel_G2": 4,
-    "ruhe_ecken": 6
+    "ruhe_ecken": 4
    }
   },
   {
@@ -96,13 +93,13 @@
    "drehung": {
     "Zürich Selnau": 30
    },
-   "unruhe": 228,
+   "unruhe": 220,
    "kennzahlen": {
     "topo_T3": 2,
     "topo_T6": 2,
     "lage_L3a": 1,
     "regel_G2": 4,
-    "ruhe_ecken": 5
+    "ruhe_ecken": 3
    }
   },
   {
@@ -110,13 +107,96 @@
    "drehung": {
     "Zürich Selnau": -150
    },
-   "unruhe": 182,
+   "unruhe": 120,
+   "kennzahlen": {
+    "topo_T3": 2,
+    "lage_L3a": 1,
+    "regel_G2": 4,
+    "ruhe_ecken": 3
+   }
+  },
+  {
+   "schritt": "Zürich Selnau +30",
+   "drehung": {
+    "Zürich Selnau": 30
+   },
+   "unruhe": 220,
+   "kennzahlen": {
+    "topo_T3": 2,
+    "topo_T6": 2,
+    "lage_L3a": 1,
+    "regel_G2": 4,
+    "ruhe_ecken": 3
+   }
+  },
+  {
+   "schritt": "Zürich Selnau -30",
+   "drehung": {
+    "Zürich Selnau": -30
+   },
+   "unruhe": 160,
    "kennzahlen": {
     "topo_T3": 2,
     "topo_T6": 1,
     "lage_L3a": 1,
-    "regel_G2": 4,
-    "ruhe_ecken": 6
+    "regel_G2": 5
+   }
+  },
+  {
+   "schritt": "Zürich Selnau +60",
+   "drehung": {
+    "Zürich Selnau": 60
+   },
+   "unruhe": 226,
+   "kennzahlen": {
+    "topo_T3": 2,
+    "topo_T6": 2,
+    "lage_L3a": 1,
+    "regel_G2": 5,
+    "ruhe_ecken": 4
+   }
+  },
+  {
+   "schritt": "Zürich Selnau -60",
+   "drehung": {
+    "Zürich Selnau": -60
+   },
+   "unruhe": 164,
+   "kennzahlen": {
+    "topo_T3": 2,
+    "topo_T6": 1,
+    "lage_L3a": 1,
+    "regel_G2": 5,
+    "ruhe_ecken": 1
+   }
+  },
+  {
+   "schritt": "Zürich Selnau +90",
+   "drehung": {
+    "Zürich Selnau": 90
+   },
+   "unruhe": 236,
+   "kennzahlen": {
+    "topo_T3": 2,
+    "topo_T6": 2,
+    "lage_L2": 1,
+    "lage_L3a": 1,
+    "regel_G2": 5,
+    "ruhe_ecken": 4
+   }
+  },
+  {
+   "schritt": "Zürich Selnau -90",
+   "drehung": {
+    "Zürich Selnau": -90
+   },
+   "unruhe": 168,
+   "kennzahlen": {
+    "topo_T3": 2,
+    "topo_T6": 1,
+    "lage_L3a": 1,
+    "regel_G2": 5,
+    "ruhe_ecken": 2
    }
   }
  ]

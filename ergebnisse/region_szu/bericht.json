@@ -1,7 +1,7 @@
 {
  "region": "szu",
- "erzeugt": "2026-11-25 14:00 UTC",
- "code_commit": "16cffdaea4016facc45bf29ad85d982c5df084f6",
+ "erzeugt": "2026-11-26 21:07 UTC",
+ "code_commit": "2dd86016edd384d3be0d296d3950e5eaa20b35eb",
  "bahnhoefe": {
   "uetliberg": {
    "name": "Uetliberg",
@@ -51,14 +51,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "borrweg": {
-   "name": "Borrweg",
+  "berghof": {
+   "name": "Berghof",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "berghof": {
-   "name": "Berghof",
+  "borrweg": {
+   "name": "Borrweg",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
@@ -73,22 +73,23 @@
   "S3": 0
  },
  "lage_suche": {
-  "ausgang": 168,
-  "ergebnis": 168,
-  "drehung": {},
-  "varianten": 7
+  "ausgang": 164,
+  "ergebnis": 108,
+  "drehung": {
+   "Zürich Selnau": 0
+  },
+  "varianten": 13
  },
  "netz_lage": 0,
  "topologie_region": {
-  "T3": 2,
-  "T6": 1
+  "T3": 2
  },
  "ruhe": {
   "treppen": 3,
-  "ecken": 2
+  "ecken": 0
  },
  "regeln": {
-  "G2": 5
+  "G2": 4
  },
  "perrons": {
   "P1": 1
@@ -99,7 +100,6 @@
  },
  "kennzahlen": {
   "topo_T3": 2,
-  "topo_T6": 1,
   "verk_V1": 0,
   "verk_V2": 0,
   "verk_V3": 0,
@@ -107,20 +107,18 @@
   "verk_S2": 0,
   "verk_S3": 0,
   "perron_P1": 1,
-  "regel_G2": 5,
+  "regel_G2": 4,
   "ruhe_treppen": 3,
-  "ruhe_ecken": 2,
+  "ruhe_ecken": 0,
   "planrand": 0,
   "lage_L3a": 1
  },
- "unruhe": 322,
+ "unruhe": 262,
  "unruhe_teile": {
   "topo_T3": 100,
-  "topo_T6": 50,
   "verk_S1": 100,
   "perron_P1": 30,
-  "regel_G2": 10,
-  "ruhe_treppen": 24,
-  "ruhe_ecken": 8
+  "regel_G2": 8,
+  "ruhe_treppen": 24
  }
 }

@@ -1,7 +1,7 @@
 {
  "region": "vereina",
- "erzeugt": "2026-11-25 14:01 UTC",
- "code_commit": "16cffdaea4016facc45bf29ad85d982c5df084f6",
+ "erzeugt": "2026-11-26 21:07 UTC",
+ "code_commit": "2dd86016edd384d3be0d296d3950e5eaa20b35eb",
  "bahnhoefe": {
   "susch": {
    "name": "Susch",
@@ -51,14 +51,14 @@
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "sagliains_nord": {
-   "name": "Sagliains Nord",
+  "vereina_sud": {
+   "name": "Vereina Süd",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
   },
-  "vereina_sud": {
-   "name": "Vereina Süd",
+  "sagliains_nord": {
+   "name": "Sagliains Nord",
    "ok": true,
    "befunde": "Befunde: {}",
    "optionen": []
