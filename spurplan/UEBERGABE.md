@@ -142,7 +142,7 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   24.11. Teil 1 (nicht veröffentlicht): Code für 2.15 da, beide Schalter aus – Befund und Teil 2 im Nachtrag T-SZU2 (Abschnitt 6)
   24.11. Teil 2 abends: Knick zwischen Betriebspunkten aktiv (Saalsporthalle eigener Plan, 712 seitlich nach unten), Seite v183 – Nachtrag T-SZU2 Teil 2
 - [x] **T-SZU2 Teil 3b** – 25.11. früh: Basen (v184), Doppelspur 1 Ebene (REGELN 1.4), Mass HD, Giesshübel nach Zielbild, Saalsporthalle Gl. 2, Seite v185 (Nachtrag)
-- [ ] **D1 SVG-Download je Regionalplan** (klein, Wunsch Daniel 25.11., IDEEN_REVIEW «Ideen 25.11.») – Einstieg: «Weiter mit UEBERGABE.md –
+- [x] **D1 SVG-Download je Regionalplan** – 26.11., Commit 82fef04, Seite v188 (Nachtrag D1). War: (klein, Wunsch Daniel 25.11., IDEEN_REVIEW «Ideen 25.11.») – Einstieg: «Weiter mit UEBERGABE.md –
   Schritt D1: SVG-Download Regionalplan, mit Artefakt und Repo schreibend». Knopf «SVG herunterladen» je Regionalplan-Karte auf der
   Feedback-Seite (Vorlage feedback/bauen.py bzw. seite.html, Workflow seite), lädt das gezeichnete region*.svg; keine Planänderung. Danach F0.
 - [ ] **F0 Eichung Kreuzungen (Abschnitt 0a)** – nach D1. Einstieg: «Weiter mit UEBERGABE.md – Schritt F0: Eichung
@@ -1130,3 +1130,9 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   Messung an seinem Auge eichen, Galerie aller Stellen, keine schluckenden Basen; reine «unsichtbare» Messschritte wie vor dem 12.11. reichen nicht.
 - Nächster Schritt F0 (Eichung Kreuzungen); Detail-Schritte ruhen. REGELN unverändert (Arbeitsweise, keine Planregel).
 
+### 26.11.2026 ~16:40 – Schritt D1 abgeschlossen, Seite v188 (Commit 82fef04, ergebnisse b38da97)
+- Knopf «SVG herunterladen» in der Kopfleiste, nur bei Regionalplänen sichtbar (Vorlage `feedback/seite.html`, `planSvgDatei`):
+  speichert genau den gezeichneten Plan (ohne Pins/Hinweise) mit XML-Kopf und Breite/Höhe aus der viewBox, Dateiname
+  `spurplan_<key>_<datum>.svg`. Artefakt-Fähigkeit `downloads` deklariert (v187); die App fragt beim Speichern nach.
+- Lokal geprüft: region, region_ne, region_mob ergeben gültiges SVG, mit cairosvg gerendert. Im Browser nicht angesehen.
+- Keine Planänderung: alle 150 Pläne gleich wie v186, G0/HT/VR grün. Nächster Schritt: F0.
