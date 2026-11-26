@@ -14,6 +14,7 @@
 | szu__zurich_giesshubel | · | 2 | · | · | 2 | · | · | 4 |
 | vereina__klosters_platz | 3 | · | · | · | 1 | · | · | 4 |
 | mob__zweisimmen | · | 3 | · | · | · | · | · | 3 |
+| region_ne | · | · | · | · | · | · | **3** (Basis 1) | 3 |
 | schonenwerd | · | 2 | · | · | 1 | · | · | 3 |
 | tecknau | · | 1 | · | · | 2 | · | · | 3 |
 | vereina__klosters_selfranga | 1 | · | · | · | 2 | · | · | 3 |
@@ -27,7 +28,6 @@
 | mob__jor | 1 | · | · | · | · | · | · | 1 |
 | mob__montreux | · | 1 | · | · | · | · | · | 1 |
 | mob__rossiniere | · | · | · | · | 1 | · | · | 1 |
-| region_ne | · | · | · | · | · | · | 1 | 1 |
 | region_vereina | · | · | · | · | · | 1 | · | 1 |
 | szu__uetliberg | · | 1 | · | · | · | · | · | 1 |
 | aarburg_oftringen | · | · | · | · | · | · | · | 0 |
@@ -151,3 +151,10 @@ Regeln: HT1 = OSM-Weiche am Hauptgleis ohne Abzweig im Plan; HT2 = Abzweig am Ha
 ## Ausnahmen (REGELN 6, `spurplan/hauptgleis_ausnahmen.json`, nicht gezählt)
 
 - **courtepin** HT2 500.0/110.0: Industriegleis nördlich, rechts Richtung Courtepin abzweigend: in Betrieb (Satellitenbild, Daniel 22.11.2026); in OSM endet es 1 m neben dem Streckengleis ohne gemeinsamen Knoten
+
+## NEUE Befunde
+
+- **region_ne** HT7: 1 → 3
+  - -2796.9/1512.5: Linie der Region (ohne Abgang) kreuzt einer anderen Linie ohne OSM-Kreuzung
+  - 1380.0/-1872.6: Linie der Region (ohne Abgang) kreuzt einer anderen Linie ohne OSM-Kreuzung
+  - -477.3/-580.5: Linie der Region (ohne Abgang) kreuzt einer anderen Linie ohne OSM-Kreuzung

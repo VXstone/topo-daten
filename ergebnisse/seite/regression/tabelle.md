@@ -1,7 +1,8 @@
-148 Pläne, 44 geändert: 7 vermutlich besser, 8 schlechter?, 29 gleichwertig
+148 Pläne, 45 geändert: 1 Fehler? Topologie, 7 vermutlich besser, 8 schlechter?, 29 gleichwertig
 
 | Plan | Gruppe | Basis | Stellen | Einordnung | Kennzahlen alt→neu | G0 | HT | letzte Änderung |
 |---|---|---|---|---|---|---|---|---|
+| region_ne | Region | veröffentlicht | 2 | Fehler? Topologie | GS 1→3, W53 6→7 (Wunsch-Summe +6) | **GS 3 (Basis 1)** · GG 2 · GQ 1 · **GT 2 (Basis 0)** · GE 3 | **HT7 3 (Basis 1)** | 2026-11-25T06:53 |
 | onnens_bonvillars | NE 6 · Neuchâtel – Yverdon | Archivbeginn (Abnahme 2026-10-26) | 9 | schlechter? | G2 1→2, W56 5→1, W59 6→1 (Wunsch-Summe -12) · OSM VA1 1, VA2 1, VB1 1, VD1 1 (kein Alt-Stand) | GG 1 · GT 1 | 0 | 2026-11-23T22:28 |
 | grandson | NE 6 · Neuchâtel – Yverdon | Archivbeginn (Abnahme 2026-10-20) | 6 | schlechter? | G2 0→1 · OSM ok (kein Alt-Stand) | 0 | 0 | 2026-11-21T15:24 |
 | chambrelien | NE 8 · Neuchâtel – La Chaux-de-Fonds | Archivbeginn (Abnahme 2026-10-20) | 5 | schlechter? | G2 1→0, T7 0→1 (Wunsch-Summe +8) · OSM VA1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-22T15:43 |
