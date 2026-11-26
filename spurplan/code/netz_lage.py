@@ -721,8 +721,8 @@ def track_line(core, ps, pe, o, defer_px=250, stub=6, defer_s=True, defer_e=True
             run = abs(W[i] - W[i - 1]) / TAN60
             run = min(run, 0.9 * np.linalg.norm(C[i] - C[i - 1]), 0.9 * np.linalg.norm(C[i + 1] - C[i]))
             pts += [a0 - U[i - 1] * run / 2, b0 + U[i] * run / 2]
-        elif turn(U[i - 1], U[i]) > 0.5:
-            # REGELN 2.7 (F4a, 26.11.2026, Hinweis qzk1 Giesshübel–Selnau, Saalsporthalle): auch am flachen Knick (≤ 25°) bekommt jedes
+        elif turn(U[i - 1], U[i]) > L0.get("schraeg_max", 8) and L0.get("port_knick_parallel", True):
+            # REGELN 2.7 (F4a, 26.11.2026, Hinweis qzk1 Giesshübel–Selnau, Saalsporthalle): auch am flachen Knick (8°–25°) bekommt jedes
             # Gleis seinen eigenen Eckpunkt im gleichen Seitenabstand – vorher lief es gerade über die Ecke, die Gleise einer
             # Doppelspur schnitten sie verschieden und liefen zusammen (10 -> 6 px).
             t_ = np.linalg.solve(M_, b0 - a0)[0]; _q = a0 + U[i - 1] * t_
@@ -999,7 +999,7 @@ def route_geom(r):
             d_ = c1 - c0; L_ = float(np.linalg.norm(d_))
             if L_ < 1: return None
             th = turn(v_, d_ / L_)
-            if not 3 < th < 89: return None
+            if not L0.get("schraeg_max", 8) < th < 89: return None     # bis 8° gilt die schräge Gerade (REGELN 4.5), Abstand ändert sich kaum
             nv_ = np.array([-v_[1], v_[0]])                  # Querlage der Gleise am Anschluss (tatsächlich, nicht Regelabstand)
             hb_ = max([abs(float((np.array(q_, float) - c0) @ nv_)) for q_ in pp_] + [(k - 1) / 2 * TG])
             m_ = hb_ * math.tan(math.radians(th / 2)) + CFG["R"]   # auch das innere Gleis knickt vor dem Anschluss, mit Ausrundung
