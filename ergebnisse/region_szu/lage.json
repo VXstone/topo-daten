@@ -18,53 +18,53 @@
  },
  "_drehung": "Zürich Giesshübel 0 von Hand (T-SZU1 24.11.2026, Zielbild Daniel: 712 unten gerade). Uetliberg 120 (K0d) gestrichen in L1 (27.11.2026): Uetliberg liegt auf der Achse Selnau – Giesshübel – Uetliberg und wird aus ihr gedreht (REGELN 4.15).",
  "Zürich Selnau": [
-  1375,
-  90
+  1389,
+  87
  ],
  "Ringlikon": [
-  -1113,
-  40
+  -1099,
+  37
  ],
  "Uetliberg": [
-  -1371,
-  40
+  -1357,
+  37
  ],
  "Zürich Giesshübel": [
-  651,
-  66
+  665,
+  63
  ],
  "Zürich Saalsporthalle": [
-  506,
-  263
+  499,
+  264
  ],
  "Zürich Binz": [
-  312,
-  37
+  326,
+  34
  ],
  "Zürich Friesenberg": [
-  -232,
-  37
+  -218,
+  34
  ],
  "Zürich Schweighof": [
-  -461,
-  37
+  -447,
+  34
  ],
  "Berghof": [
-  -759,
-  37
+  -745,
+  34
  ],
  "Borrweg": [
-  40,
-  37
+  54,
+  34
  ],
  "Abgang 712 #12": [
-  576,
-  527
+  534,
+  536
  ],
  "drehung_auto": {
   "Ringlikon": 180.0,
   "Uetliberg": -180,
-  "Zürich Saalsporthalle": -105.0,
+  "Zürich Saalsporthalle": -97.6,
   "Zürich Binz": -0.0,
   "Zürich Friesenberg": -0.0,
   "Zürich Schweighof": -0.0,
@@ -91,7 +91,7 @@
     "Zürich Giesshübel",
     "Abgang 712"
    ],
-   "richtung": 75.0,
+   "richtung": 82.4,
    "geo": 82.4,
    "fest": null,
    "eigen": []
