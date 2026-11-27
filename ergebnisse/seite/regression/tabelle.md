@@ -1,8 +1,8 @@
-148 Pläne, 48 geändert: 30 gleichwertig, 10 schlechter?, 1 Fehler? Topologie, 7 vermutlich besser
+148 Pläne, 48 geändert: 11 schlechter?, 1 Fehler? Topologie, 7 vermutlich besser, 29 gleichwertig
 
 | Plan | Gruppe | Basis | Stellen | Einordnung | Kennzahlen alt→neu | G0 | HT | letzte Änderung |
 |---|---|---|---|---|---|---|---|---|
-| region_vereina | Region | veröffentlicht | 12 | Fehler? Topologie | GE 2→1, GS 1→2, W53 5→4 (Wunsch-Summe -6) | **GS 2 (Basis 1)** · GG 5 · GQ 1 · GT 2 · GE 1 | 0 | 2026-11-26T21:30 |
+| region_vereina | Region | veröffentlicht | 12 | Fehler? Topologie | GE 2→1, GS 1→2, W53 5→4 (Wunsch-Summe -6) | **GS 2 (Basis 1)** · GG 5 · GQ 1 · GT 2 · GE 1 | 0 | 2026-11-27T06:11 |
 | onnens_bonvillars | NE 6 · Neuchâtel – Yverdon | Archivbeginn (Abnahme 2026-10-26) | 9 | schlechter? | G2 1→2, W56 5→1, W59 6→1 (Wunsch-Summe -12) · OSM VA1 1, VA2 1, VB1 1, VD1 1 (kein Alt-Stand) | GG 1 · GT 1 | 0 | 2026-11-23T22:28 |
 | grandson | NE 6 · Neuchâtel – Yverdon | Archivbeginn (Abnahme 2026-10-20) | 6 | schlechter? | G2 0→1 · OSM ok (kein Alt-Stand) | 0 | 0 | 2026-11-21T15:24 |
 | chambrelien | NE 8 · Neuchâtel – La Chaux-de-Fonds | Archivbeginn (Abnahme 2026-10-20) | 5 | schlechter? | G2 1→0, T7 0→1 (Wunsch-Summe +8) · OSM VA1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-22T15:43 |
@@ -11,8 +11,9 @@
 | bole | NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier | Archivbeginn (Abnahme 2026-10-20) | 3 | schlechter? | W56 6→7 (Wunsch-Summe +3) · OSM VB1 2 (kein Alt-Stand) | 0 | 0 | 2026-11-20T21:23 |
 | le_landeron | NE 5 · Neuchâtel – Biel | Archivbeginn (Abnahme 2026-10-20) | 2 | schlechter? | G2 0→1, T7 2→3 (Wunsch-Summe +8) · OSM VD1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-21T15:24 |
 | saint_blaise_lac | NE 1 · Neuchâtel – Ins – Kerzers – Bern | Archivbeginn (Abnahme 2026-10-15) | 1 | schlechter? | G2 0→1, T7 4→3 (Wunsch-Summe -8) · OSM VD1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-21T15:24 |
-| region_szu | Region | veröffentlicht | 20 | schlechter? | GQ 4→5 | GS 3 · GG 3 · GQ 5 · GE 10 | 0 | 2026-11-26T21:30 |
-| region_mob | Region | veröffentlicht | 4 | schlechter? | G2 18→17, GE 23→22, W53 5→6 (Wunsch-Summe +6) | GS 3 · GG 3 · GQ 1 · GP 2 · **GT 1 (Basis 0)** · GE 22 | 0 | 2026-11-26T21:30 |
+| region_szu | Region | veröffentlicht | 20 | schlechter? | GQ 4→5 | GS 3 · GG 3 · GQ 5 · GE 10 | 0 | 2026-11-27T06:11 |
+| region_ne | Region | veröffentlicht | 6 | schlechter? | G2 31→32 | GS 1 · GG 2 · GQ 1 · GE 3 | HT7 1 | 2026-11-27T05:58 |
+| region_mob | Region | veröffentlicht | 4 | schlechter? | G2 18→17, GE 23→22, W53 5→6 (Wunsch-Summe +6) | GS 3 · GG 3 · GQ 1 · GP 2 · **GT 1 (Basis 0)** · GE 22 | 0 | 2026-11-27T06:11 |
 | auvernier | NE 6 · Neuchâtel – Yverdon | Archivbeginn (Abnahme 2026-10-20) | 14 | gleichwertig | OSM VB1 1, VD1 1 (kein Alt-Stand) | GG 1 · GT 1 | 0 | 2026-11-20T21:23 |
 | gampelen | NE 1 · Neuchâtel – Ins – Kerzers – Bern | Archivbeginn (Abnahme 2026-10-15) | 11 | gleichwertig | OSM ok (kein Alt-Stand) | 0 | 0 | 2026-11-21T15:24 |
 | saint_blaise_cff | NE 5 · Neuchâtel – Biel | Archivbeginn (Abnahme 2026-10-15) | 9 | gleichwertig | OSM ok (kein Alt-Stand) | 0 | 0 | 2026-11-22T05:27 |
@@ -42,7 +43,6 @@
 | couvet | NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier | Archivbeginn (Abnahme 2026-10-20) | 1 | gleichwertig | OSM VD1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-20T21:23 |
 | motiers | NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier | Archivbeginn (Abnahme 2026-10-20) | 1 | gleichwertig | OSM VD1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-20T21:23 |
 | les_geneveys_sur_coffrane | NE 8 · Neuchâtel – La Chaux-de-Fonds | Archivbeginn (Abnahme 2026-10-19) | 1 | gleichwertig | OSM VD1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-20T21:23 |
-| region_ne | Region | veröffentlicht | 4 | gleichwertig |  | GS 1 · GG 2 · GQ 1 · GE 3 | HT7 1 | 2026-11-27T05:58 |
 | rothrist | Olten 2 · Olten – Aarburg – Rothrist / Zofingen – Safenwil | Archivbeginn (Abnahme 2026-10-29) | 17 | vermutlich besser | G2 0→1, G6 1→0, VB2 6→5, W56 4→1, W59 10→3 (Wunsch-Summe -9) | GS 2 · GG 1 · GQ 1 · GT 2 | HT1 2 · HT2 4 · HT5 5 | 2026-11-23T22:28 |
 | tecknau | Olten 4 · Hauenstein | bestätigt 2026-11-07 | 14 | vermutlich besser | W56 1→0, W59 3→2 (Wunsch-Summe -3) | 0 | HT2 1 · HT5 2 | 2026-11-23T22:28 |
 | olten_hammer | Olten 1 · Knoten Olten | bestätigt 2026-11-07 | 12 | vermutlich besser | W56 4→2, W59 4→1 (Wunsch-Summe -6) | 0 | 0 | 2026-11-24T05:54 |

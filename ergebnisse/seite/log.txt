@@ -62,10 +62,10 @@ Hinweis-Abdeckung: 28/57 (Befund < 40 px, ohne G2)
 ✓ xke0 solothurn                    MZ                        25.3  Zwischengerade, doppelter Abstand
 ✓ z6f2 konolfingen                  MX                        21.0  DKW?
 ✓ zcz3 solothurn                    G7,MX,VB2                 18.0  nicht verbunden
-index.html 2043 KB, 150 Pläne
+index.html 2050 KB, 150 Pläne
 /home/runner/work/topo-daten/topo-daten/spurplan/code/alle_plaene_pruefen.py:231: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
   json.dump(dict(erzeugt=datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"), plaene=len(zeilen), geaendert=len(gz),
-region_ne                    veröffentlicht                      4 Stellen  gleichwertig  
+region_ne                    veröffentlicht                      6 Stellen  schlechter?  G2 31→32
 region_mob                   veröffentlicht                      4 Stellen  schlechter?  G2 18→17, GE 23→22, W53 5→6 (Wunsch-Summe +6)
 region_vereina               veröffentlicht                     12 Stellen  Fehler? Topologie  GE 2→1, GS 1→2, W53 5→4 (Wunsch-Summe -6)
 region_szu                   veröffentlicht                     20 Stellen  schlechter?  GQ 4→5
@@ -128,5 +128,5 @@ corcelles_peseux             Archivbeginn (Abnahme 2026-10-15)    0 Stellen  gle
 chambrelien                  Archivbeginn (Abnahme 2026-10-20)    5 Stellen  schlechter?  G2 1→0, T7 0→1 (Wunsch-Summe +8) · OSM VA1 1 (kein Alt-Stand)
 les_geneveys_sur_coffrane    Archivbeginn (Abnahme 2026-10-19)    1 Stellen  gleichwertig  OSM VD1 1 (kein Alt-Stand)
 les_hauts_geneveys           Archivbeginn (Abnahme 2026-10-20)    2 Stellen  gleichwertig  OSM VD1 1 (kein Alt-Stand)
-Regression: 148 Pläne, 48 geändert {'gleichwertig': 30, 'schlechter?': 10, 'Fehler? Topologie': 1, 'vermutlich besser': 7}
+Regression: 148 Pläne, 48 geändert {'schlechter?': 11, 'Fehler? Topologie': 1, 'vermutlich besser': 7, 'gleichwertig': 29}
 Ausnahmen: 920 Einträge, 125 Orte: {'Schalter': 358, 'Ortswissen': 245, 'Geometrie': 192, 'Typvorlage': 125} | ohne Grund: 0
