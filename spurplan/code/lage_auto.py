@@ -236,6 +236,10 @@ def achsen(nodes, MAJOR, routes, anchor, chains, inner, hubs, geo, fix, P):
             if S_[x[0]]["fest"] is None: S_[x[0]]["fest"] = n; S_[x[0]]["phi"] = _d(x)[1]
             continue
         eigen[n] = max(L_, key=lambda x: (S_[x[0]]["km"], len(S_[x[0]]["cl"])))
+    # Abschnitt ohne eigenen oder von Hand gedrehten Knotenbahnhof: nichts muss zu ihm passen – Richtung ungerundet aus der
+    # Geografie (SZU Giesshübel – Saalsporthalle: 82° auf 75° gerundet lief gegen den seitlichen Abgang, 2 Haken T6)
+    for si, sg in enumerate(S_):
+        if sg["fest"] is None and not any(x[0] == si for x in eigen.values()): sg["phi"] = sg["roh"]
     rot = {}
     for n, (si, ci, j, plus) in eigen.items():
         r_ = hubrot(n, S_[si]["phi"], ci, j, plus)
