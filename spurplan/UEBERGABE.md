@@ -155,6 +155,11 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - [ ] **F2 Gleis auf Gleis (GG)** – Eichung + Behebung wie F0/F1
 - [ ] **F3 Abzweige und Fahrwege wie OSM (HT1–HT6)** – Eichung + Behebung; dazu R4 Rothrist-Regionalvariante, Klosters Einspurwechsel (4.2)
 - [x] **F4a Knick parallel auf Regionalstrecken** – 26.11. abends, Commits 2dd8601/32ce42a, Seite v189 (Nachtrag F4a); vorgezogen auf Wunsch Daniel
+- [ ] **L1 Teil 1 (Schritte 3–4) erledigt 27.11. früh** – Commits a57d5c3/b9e1607, nicht veröffentlicht (Nachtrag L1 Teil 1). Offen in L1:
+  **L1b Olten auf das Achsen-Gerüst** (Lage `auto` statt Handlage; `strecke_hand`/`tunnel_hand`/Regionalvariante Olten Ost an Pixeln prüfen,
+  Probelauf 27.11.: Aarau schräg, Kreuzungen Aarau, Rothrist schräg) **und G0 in der Lagesuche** (Schritt 7: GT/GS als Mass, MOB Chamby
+  Abgang 114 Treppe, Vereina Klosters GS) – danach erst veröffentlichen. Einstieg: «Weiter mit UEBERGABE.md – Schritt L1b: Olten aufs
+  Achsen-Gerüst und G0 in der Lagesuche, mit Artefakt und Repo schreibend». Danach L1c = Schritte 5–6 (Position auf der Achse, Zeichnen).
 - [ ] **L1 Achsen-Gerüst für alle Regionalpläne** (Entscheid Daniel 27.11. früh: «keine Einzelbasteleien», «‹nur hier› geht vergessen und ich merke nicht was wo läuft») – Einstieg:
   «Weiter mit UEBERGABE.md – Schritt L1: Achsen-Gerüst für alle Regionalpläne, mit Artefakt und Repo schreibend». Reihenfolge im Code:
   (1) Topologie/HT – (2) Bahnhofpläne/Ports (4.11) – (3) **Achsen**: durchgehende Strecken als lange Geraden, auch über Knoten, Richtung aus
@@ -1164,3 +1169,17 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - Treppe Giesshübel–Selnau v189: Lagesuche dreht Selnau waagrecht, Position bleibt geografisch schräg (lage_auto kennt die Drehung nicht).
   Daniel: «einfachste Lösung gerade auf gleicher Höhe … der Code stellt sich selbst Beine», «keine Einzelbasteleien». → Schritt L1 (Abschnitt 5),
   ohne Teil-Einführung nach Region (Abschnitt 0a Punkt 5). Kein Code geändert.
+
+### 27.11.2026 ~07:40 – Schritt L1 Teil 1: Achsen-Gerüst (REGELN 4.15), nicht veröffentlicht (Commits a57d5c3, b9e1607)
+- Code `lage_auto.achsen`: Ketten an jedem Knoten gepaart (links/rechts im Bahnhofplan), Achse über die Knoten, Teilung nur bei Knick > 75°
+  (auch zum nächsten Halt), Richtung gerundet 15°; Drehung der Knotenbahnhöfe und Kettenrichtung aus dem Abschnitt; Achswechsel-Knoten
+  (MOB Montbovon) behalten eigene Drehung. Lagesuche: eine Stellschraube je Abschnitt bzw. Achswechsel (`achsen_auto` in der Lagedatei).
+- Sichtbar (Galerie `vergleich/l1/`): SZU Selnau auf gleicher Höhe wie Giesshübel (Stufe weg); Vereina Landquart–Klosters–Sagliains eine
+  Gerade; MOB drei lange Geraden; NE Twann–Neuchâtel–Bevaix und Murten–Avenches je eine Gerade. Olten unverändert (Handlage → L1b).
+- Gestrichen (Achse statt Hand): SZU `drehung` Uetliberg 120, NE `kette_winkel` Münchenwiler 255.
+- Messung (lokal/Runner): SZU 266→260, Vereina 59→67 (2 Ecken), MOB 81→113 (L2 Rossinière/La Tine über Les Sciernes, Fontanivent),
+  NE 99→107 (L2 Cressier FR/Murten, Chambrelien/Boudry; eine Ecke weniger). G0 rot: MOB GT 0→1 (Chamby Abgang 114), Vereina GS 1→2 (Klosters).
+- SZU Runner (b9e1607): Unruhe 312 mit T6 «2 Haken» Giesshübel → Saalsporthalle (seitlicher 712-Abgang); lokal 260 ohne T6 – einziger
+  Unterschied Lage Saalsporthalle 499/264 vs 489/266 (Runner/lokal, wie F4a). In L1b mit ansehen (Kette ab seitlichem Abgang).
+- Prüfstand rot nur `buendel_versatz` d30/a30/a60 (E/Z 0→2): jetzt in allen 8 Drehungen gleich wie d0 (nötiger Paarversatz) – neue Basis nur mit Okay Daniel.
+
