@@ -11,7 +11,7 @@
 | bole | NE 7 · Neuchâtel – Travers – Fleurier / Pontarlier | Archivbeginn (Abnahme 2026-10-20) | 3 | schlechter? | W56 6→7 (Wunsch-Summe +3) · OSM VB1 2 (kein Alt-Stand) | 0 | 0 | 2026-11-20T21:23 |
 | le_landeron | NE 5 · Neuchâtel – Biel | Archivbeginn (Abnahme 2026-10-20) | 2 | schlechter? | G2 0→1, T7 2→3 (Wunsch-Summe +8) · OSM VD1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-21T15:24 |
 | saint_blaise_lac | NE 1 · Neuchâtel – Ins – Kerzers – Bern | Archivbeginn (Abnahme 2026-10-15) | 1 | schlechter? | G2 0→1, T7 4→3 (Wunsch-Summe -8) · OSM VD1 1 (kein Alt-Stand) | 0 | 0 | 2026-11-21T15:24 |
-| region_szu | Region | veröffentlicht | 13 | schlechter? | GQ 4→5 | GS 3 · GG 3 · GQ 5 · GE 10 | 0 | 2026-11-27T06:11 |
+| region_szu | Region | veröffentlicht | 13 | schlechter? | GQ 4→5 | GS 3 · GG 3 · GQ 5 · GE 10 | 0 | 2026-11-27T06:41 |
 | region_ne | Region | veröffentlicht | 6 | schlechter? | G2 31→32 | GS 1 · GG 2 · GQ 1 · GE 3 | HT7 1 | 2026-11-27T06:27 |
 | region_mob | Region | veröffentlicht | 4 | schlechter? | G2 18→17, GE 23→22, W53 5→6 (Wunsch-Summe +6) | GS 3 · GG 3 · GQ 1 · GP 2 · **GT 1 (Basis 0)** · GE 22 | 0 | 2026-11-27T06:11 |
 | auvernier | NE 6 · Neuchâtel – Yverdon | Archivbeginn (Abnahme 2026-10-20) | 14 | gleichwertig | OSM VB1 1, VD1 1 (kein Alt-Stand) | GG 1 · GT 1 | 0 | 2026-11-20T21:23 |
