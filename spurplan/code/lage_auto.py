@@ -12,7 +12,7 @@ den Austrittsrichtungen der Enden). Unbekannt sind die Kastenmitten und die Sche
 Ausgleichsproblem mit Schranken (scipy lsq_linear): Richtungen hart, Längen weich, schwacher Zug zur Geografie.
 Überlappende Kästen werden in Folgedurchgängen mit Abstandsbedingungen getrennt.
 """
-import math
+import math, collections
 import numpy as np
 from scipy.optimize import lsq_linear
 
@@ -108,6 +108,156 @@ def loese(nodes, MAJOR, routes, anchor, ROT, PORTS, S, P, geo_bearing, L0):
     return pos
 
 
+# ---------------------------------------------------------------- Achsen-Gerüst (Schritt L1, 27.11.2026)
+LETZTE_ACHSEN = []      # für netz_lage (Lagedatei «achsen_auto») und lage_suche (eine Stellschraube je Achse)
+
+def _wink(a, b):
+    """Winkel zwischen zwei Richtungen in Grad (0…180)."""
+    na, nb = np.linalg.norm(a), np.linalg.norm(b)
+    if not na or not nb: return 0.0
+    return math.degrees(math.acos(max(-1.0, min(1.0, float(a @ b) / na / nb))))
+
+def achsen(nodes, MAJOR, routes, anchor, chains, inner, hubs, geo, fix, P):
+    """REGELN 4.15: Achsen-Gerüst. (1) An jedem Knoten werden die beiden Ketten gepaart, die gerade durchlaufen (Knoten mit
+    Spurplan: links gegen rechts, gleiche Linie bevorzugt, Winkel > achs_paar_min 100°; Abzweig ohne Plan: > 150°). (2) Gepaarte
+    Ketten bilden eine Achse über die Knoten hinweg. (3) Eine Achse wird nur dort in Abschnitte geteilt, wo die Geografie
+    deutlich knickt (Knick > achs_knick 75° oder Abweichung von der Sehne > achs_abw 0.35 der Länge; Geografie gibt nur
+    Reihenfolge und Seite, Daniel 27.11.). (4) Jeder Abschnitt hat eine
+    Richtung = Luftlinie seiner Enden, gerundet auf achs_schritt (15°); ist ein Knotenbahnhof von Hand gedreht, gibt er seinem
+    Abschnitt die Richtung. (5) Drehung jedes Knotenbahnhofs = Richtung seines Abschnitts (an einem Teilungspunkt: der längere,
+    bei Drehung von Hand der passendere); Richtung jeder Kette = Richtung ihres Abschnitts."""
+    global LETZTE_ACHSEN
+    SCH = float(P.get("achs_schritt", 15)); KN = float(P.get("achs_knick", 75)); ABW = float(P.get("achs_abw", 0.35))
+    PMIN = float(P.get("achs_paar_min", 100)); JMIN = float(P.get("achs_paar_abzweig", 150))
+    def anc(k, n):
+        r = routes[k]; e = r["first"] if r["a"] == n else r["last"]
+        return anchor.get((id(e), n))
+    ends = collections.defaultdict(list)          # Knoten -> [(Kette-Index, Ende 0/-1)]
+    for ci, ch in enumerate(chains):
+        if ch["seq"][0] == ch["seq"][-1]: continue
+        ends[ch["seq"][0]].append((ci, 0)); ends[ch["seq"][-1]].append((ci, -1))
+    def info(n, ci, j):
+        ch = chains[ci]; k = ch["ks"][0] if j == 0 else ch["ks"][-1]
+        nb = ch["seq"][1] if j == 0 else ch["seq"][-2]
+        a_ = anc(k, n); g = geo[nb] - geo[n]
+        s = 0 if (a_ is None or a_.get("side") or not nodes[n].get("inset")) else (1 if a_["v"][0] > 0 else -1)
+        refs = set(a_.get("refs", [])) if a_ else set()
+        if not refs: refs = set(routes[k]["first" if routes[k]["a"] == n else "last"].get("refs", []))
+        return dict(g=g, s=s, refs={str(x) for x in refs if x})
+    paar = {}                                     # (ci, j) -> (ci2, j2)
+    for n in hubs:
+        if n in inner or nodes[n]["kind"] == "exit": continue
+        E = ends.get(n, [])
+        if len(E) < 2: continue
+        I = {e: info(n, *e) for e in E}
+        best = None
+        for x in range(len(E)):
+            for y in range(x + 1, len(E)):
+                e1, e2 = E[x], E[y]; i1, i2 = I[e1], I[e2]
+                w = _wink(i1["g"], i2["g"])
+                if nodes[n].get("inset"):
+                    if i1["s"] * i2["s"] != -1 or w < PMIN: continue
+                elif w < JMIN: continue
+                sc = (1.0 if i1["refs"] & i2["refs"] else 0.0) + w / 180.0
+                if best is None or sc > best[0]: best = (sc, e1, e2)
+        if best: paar[best[1]] = best[2]; paar[best[2]] = best[1]
+        if os.environ.get("ACHSDBG"):
+            print("PAAR?", nodes[n]["name"], [(nodes[chains[c]["seq"][-1 if j == 0 else 0]]["name"], I[(c, j)]["s"], sorted(I[(c, j)]["refs"]),
+                  round(math.degrees(math.atan2(I[(c, j)]["g"][1], I[(c, j)]["g"][0])))) for c, j in E], "->", best and (best[1], best[2]))
+    # Achsen ablaufen: Knotenfolge n0..nk, Ketten dazwischen (ci, vorwärts)
+    seen, axes = set(), []
+    def walk(ci, j):
+        nl, cl = [chains[ci]["seq"][j]], []
+        while ci not in seen:
+            seen.add(ci); fw = j == 0; ch = chains[ci]
+            cl.append((ci, fw)); far = ch["seq"][-1] if fw else ch["seq"][0]; nl.append(far)
+            nxt = paar.get((ci, -1 if fw else 0))
+            if nxt is None: break
+            ci, j = nxt
+        return nl, cl
+    for ci in range(len(chains)):              # zuerst von offenen Enden aus, dann Ringe
+        for j in (0, -1):
+            if ci not in seen and (ci, j) not in paar and chains[ci]["seq"][0] != chains[ci]["seq"][-1]: axes.append(walk(ci, j))
+    for ci in range(len(chains)):
+        if ci not in seen and chains[ci]["seq"][0] != chains[ci]["seq"][-1]: axes.append(walk(ci, 0))
+    segs = []                                  # (nl, cl) Abschnitte
+    def teilen(nl, cl):
+        if len(cl) >= 2:
+            sehne = geo[nl[-1]] - geo[nl[0]]; Ls = float(np.linalg.norm(sehne)) or 1.0
+            kand = []
+            for i in range(1, len(nl) - 1):
+                bend = _wink(geo[nl[i]] - geo[nl[i - 1]], geo[nl[i + 1]] - geo[nl[i]])
+                # auch der Knick zum nächsten Bahnhof der Kette zählt (MOB Montbovon: Les Sciernes – Montbovon – La Tine
+                # knickt um 120°, die Knoten Montreux – Montbovon – Zweisimmen liegen fast auf einer Linie; La Tine und
+                # Rossinière lagen sonst über Les Sciernes, L2)
+                ci0, fw0 = cl[i - 1]; ci1, fw1 = cl[i]
+                vor = chains[ci0]["seq"][-2] if fw0 else chains[ci0]["seq"][1]
+                nach = chains[ci1]["seq"][1] if fw1 else chains[ci1]["seq"][-2]
+                bend = max(bend, _wink(geo[nl[i]] - geo[vor], geo[nach] - geo[nl[i]]))
+                q = geo[nl[i]] - geo[nl[0]]; abw = abs(float(sehne[0] * q[1] - sehne[1] * q[0])) / Ls / Ls
+                if bend > KN or abw > ABW: kand.append((max(bend / KN, abw / ABW), i))
+            if kand:
+                i = max(kand)[1]; teilen(nl[:i + 1], cl[:i]); teilen(nl[i:], cl[i:]); return
+        segs.append((nl, cl))
+    for nl, cl in axes: teilen(nl, cl)
+    def rund(a): return ((round(a / SCH) * SCH + 180) % 360) - 180
+    S_ = []
+    for nl, cl in segs:
+        d = geo[nl[-1]] - geo[nl[0]]
+        S_.append(dict(nl=nl, cl=cl, phi=rund(math.degrees(math.atan2(d[1], d[0]))), roh=round(math.degrees(math.atan2(d[1], d[0])), 1), km=sum(chains[ci]["km"] for ci, _ in cl), fest=None))
+    # Knoten -> Abschnitte, an denen er liegt (Kette, die den Knoten verlässt, und ob in Achsrichtung)
+    am = collections.defaultdict(list)          # n -> [(si, ci, j, plus)]
+    for si, sg in enumerate(S_):
+        for i, (ci, fw) in enumerate(sg["cl"]):
+            a, b = sg["nl"][i], sg["nl"][i + 1]
+            am[a].append((si, ci, 0 if fw else -1, True)); am[b].append((si, ci, -1 if fw else 0, False))
+    def hubrot(n, phi, ci, j, plus):            # Drehung, bei der die Kette (ci, Ende j) in Richtung ±phi den Plan verlässt
+        s = info(n, ci, j)["s"]
+        if not s: return None
+        return ((phi + (0 if (s > 0) == plus else 180)) + 180) % 360 - 180
+    eigen, wechsel = {}, []
+    for n, L_ in sorted(am.items(), key=lambda t: (t[0] not in fix, -len(ends.get(t[0], [])))):   # von Hand gedrehte, grosse Knoten zuerst
+        if not nodes[n].get("inset") or n in inner: continue
+        L_ = [x for x in L_ if info(n, x[1], x[2])["s"]]
+        if not L_: continue
+        # gepaarter Knoten: nur Abschnitte der Achse durch ihn; ungepaarter mit mehr als einer Kette: kein eigener Abschnitt
+        gp = [x for x in L_ if (x[1], x[2]) in paar]
+        if gp: L_ = gp
+        elif len(ends.get(n, [])) > 1: continue
+        # Achswechsel (die Achse durch den Knoten wird an ihm geteilt, z. B. MOB Montbovon): Drehung bleibt beim Knoten
+        # selbst (aus seinen Anschlüssen) und ist eine eigene Stellschraube der Lagesuche – Knick nur hier
+        if len({x[0] for x in L_}) > 1:
+            wechsel.append(n); continue          # von Hand / von der Suche gedreht: dreht nur den Knoten, nicht die Abschnitte
+        if n in fix:
+            def _d(x):
+                ph2 = ((fix[n] + (0 if (info(n, x[1], x[2])["s"] > 0) == x[3] else 180)) + 180) % 360 - 180
+                return abs(((ph2 - S_[x[0]]["phi"]) + 180) % 360 - 180), ph2
+            x = min(L_, key=lambda x: _d(x)[0])
+            if S_[x[0]]["fest"] is None: S_[x[0]]["fest"] = n; S_[x[0]]["phi"] = _d(x)[1]
+            continue
+        eigen[n] = max(L_, key=lambda x: (S_[x[0]]["km"], len(S_[x[0]]["cl"])))
+    rot = {}
+    for n, (si, ci, j, plus) in eigen.items():
+        r_ = hubrot(n, S_[si]["phi"], ci, j, plus)
+        if r_ is not None: rot[n] = r_
+    dirv = {}
+    for si, sg in enumerate(S_):
+        # einzelne Kette zu einem Abgang ohne eigenen Knotenbahnhof: keine Achse, es gilt «Abgang gerade aus dem Plan»
+        # (abgang_knick, 4.11. Klosters Platz – Abgang 915 Davos; in L1 erst als Haken aufgefallen)
+        if len(sg["cl"]) == 1 and len(chains[sg["cl"][0][0]]["seq"]) == 2 and sg["fest"] is None and not any(x[0] == si for x in eigen.values()) \
+                and any(nodes[m]["kind"] == "exit" for m in (sg["nl"][0], sg["nl"][-1])): continue
+        u = np.array([math.cos(math.radians(sg["phi"])), math.sin(math.radians(sg["phi"]))])
+        for ci, fw in sg["cl"]: dirv[id(chains[ci])] = u if fw else -u
+    LETZTE_ACHSEN = [dict(knoten=[nodes[n]["name"] for n in sg["nl"]], richtung=sg["phi"], geo=sg["roh"], fest=nodes[sg["fest"]]["name"] if sg["fest"] is not None else None,
+                          eigen=[nodes[n]["name"] for n, x in eigen.items() if x[0] == si]) for si, sg in enumerate(S_)]
+    LETZTE_ACHSEN.append(dict(knoten=[nodes[n]["name"] for n in wechsel], achswechsel=True, richtung=None, fest=None,
+                              eigen=[nodes[n]["name"] for n in wechsel]))
+    if os.environ.get("ACHSDBG"):
+        for a_ in LETZTE_ACHSEN: print("ACHSE", a_)
+    print(f"  Achsen: {len(axes)} Achsen, {len(S_)} Abschnitte, {len(rot)} Knotenbahnhöfe aus der Achse gedreht")
+    return dict(rot=rot, dir=dirv, segs=S_)
+
+
 # ---------------------------------------------------------------- Ketten-Verfahren (16.10. abends)
 def rotv(v, a):
     c, s = math.cos(math.radians(a)), math.sin(math.radians(a)); return np.array([v[0] * c - v[1] * s, v[0] * s + v[1] * c])
@@ -148,6 +298,13 @@ def ketten(nodes, MAJOR, routes, anchor, PORTS, S, P, fix, L0):
             chains.append(dict(seq=seq, ks=ks, km=sum(routes[x]["length"] for x in ks) / 1000.0))
     # Drehung der Knoten-Bahnhöfe
     rot = dict(fix)
+    # Achsen-Gerüst (REGELN 4.15, Schritt L1, 27.11.2026): durchgehende Strecken über Knoten hinweg sind Achsen; Drehung der
+    # Knotenbahnhöfe und Richtung der Ketten kommen aus der Achse (ein Codeweg für alle Regionen). Der alte Weg (Drehung je
+    # Bahnhof aus seinen Anschlüssen, Kette aus der Luftlinie) nur noch zum Vergleich: Lage auto.achsen false.
+    ACH = achsen(nodes, MAJOR, routes, anchor, chains, inner, hubs, geo, fix, P) if P.get("achsen", True) else None
+    if ACH:
+        for n, r_ in ACH["rot"].items():
+            if n not in rot: rot[n] = r_
     _slug = {nodes[m]["inset"]: m for m in MAJOR if nodes[m].get("inset")}
     def _peil(n, p):
         """Peilung eines Anschlusses für die Drehung: Richtung zum Zielbahnhof, wenn bekannt (3.11.2026, Montbovon: die
@@ -203,6 +360,7 @@ def ketten(nodes, MAJOR, routes, anchor, PORTS, S, P, fix, L0):
         ex = nodes[a]["kind"] == "exit" or nodes[b]["kind"] == "exit"
         L = max(need(ch), (P["abgang"] if ex and len(ch["seq"]) == 2 else P["c0"] + P["c1"] * ch["km"] ** P["p"]) + (need(ch) if ex else 0))
         d = geo[b] - geo[a]; ch["T"] = d / (np.linalg.norm(d) or 1) * L
+        if ACH and id(ch) in ACH["dir"]: ch["T"] = ACH["dir"][id(ch)] * L; ch["achse"] = True
         # Kettenrichtung von Hand (Lage auto.kette_winkel {Bahnhof: Grad, 0 = rechts, 90 = oben}), Murten–Fribourg 18.10.
         for nm_, wk_ in P.get("kette_winkel", {}).items():
             ix_ = [i_ for i_, n_ in enumerate(ch["seq"]) if nodes[n_]["name"] == nm_]
@@ -234,7 +392,7 @@ def ketten(nodes, MAJOR, routes, anchor, PORTS, S, P, fix, L0):
     if P.get("linien_region"):
         for ch in chains:
             a, b = ch["seq"][0], ch["seq"][-1]
-            if len(ch["seq"]) != 2 or (nodes[a]["kind"] == "exit") == (nodes[b]["kind"] == "exit"): continue
+            if len(ch["seq"]) != 2 or (nodes[a]["kind"] == "exit") == (nodes[b]["kind"] == "exit") or ch.get("achse"): continue
             j_, h_, sg_ = (0, a, 1) if nodes[b]["kind"] == "exit" else (-1, b, -1)
             a_ = anc(ch["ks"][j_], h_)
             if not a_ or h_ in inner: continue
@@ -253,7 +411,10 @@ def ketten(nodes, MAJOR, routes, anchor, PORTS, S, P, fix, L0):
             for (a1, c1, s1), (a2, c2, s2) in zip(ang, ang[1:]):
                 if a2 - a1 < 28:
                     dl = (28 - (a2 - a1)) / 2; done = False
-                    for c_, s_, d_ in ((c1, s1, -dl), (c2, s2, dl)):
+                    _f = [(c1, s1, -dl), (c2, s2, dl)]
+                    if bool(c1.get("achse")) != bool(c2.get("achse")):        # Achskette bleibt gerade, die andere spreizt ganz
+                        _f = [(c_, s_, 2 * d_) for c_, s_, d_ in _f if not c_.get("achse")]
+                    for c_, s_, d_ in _f:
                         L_ = np.linalg.norm(c_["T"]); a_ = math.atan2(s_ * c_["T"][1], s_ * c_["T"][0]) + math.radians(d_)
                         c_["T"] = s_ * L_ * np.array([math.cos(a_), math.sin(a_)])
             if done: break

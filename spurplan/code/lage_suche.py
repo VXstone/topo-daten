@@ -6,8 +6,9 @@ netz_lage --pruefen), Lage gegen die Karte (L2/L3, Grundsatz 2), Zeichenregeln (
 Regionalplan (ruhe.py --region).
 Die Bahnhofspläne selbst ändern sich nicht.
 
-Stellschrauben (je Knotenbahnhof, d. h. automatisch auf 30° gedrehte Pläne):
-  Drehung ±30°, ±60°, ±90°  (Lage «drehung», wird dabei fest); je Bahnhof die beste Variante (nicht die erste bessere)
+Stellschrauben (seit L1, 27.11.2026: je Achsabschnitt, REGELN 4.15; vorher je Knotenbahnhof):
+  Drehung ±30°, ±60°, ±90° des Abschnitts (über seinen ersten Knotenbahnhof in Lage «drehung», wird dabei fest);
+  je Abschnitt die beste Variante (nicht die erste bessere)
 
   python3 lage_suche.py <NAME> [--max-sek 900] [--json lage_suche.json]     (im Arbeitsordner der Region)
 Ergebnis: <NAME>_lage.json mit «drehung» der besten Variante (nur wenn besser als die Ausgangslage), Protokoll als JSON.
@@ -71,9 +72,20 @@ t0 = time.time()
 u0, k0 = bewerten({})
 L_aus = json.load(open(os.path.join(TMP, LF)))
 auto_ = L_aus.get("drehung_auto", {})
-knoten = sorted(n for n, w in auto_.items() if abs(w / 30 - round(w / 30)) < 1e-6)
-knoten = [n for n in knoten if n not in L0.get("drehung", {})]          # von Hand fest: nicht anfassen
-best = {n: int(round(auto_[n])) for n in knoten}
+# Achsen-Gerüst (REGELN 4.15, L1 27.11.2026): eine Stellschraube je Achsabschnitt – gedreht wird der erste Knotenbahnhof,
+# der seine Drehung aus dem Abschnitt hat; netz_lage dreht damit den ganzen Abschnitt (alle Bahnhöfe und Ketten darauf).
+# Abschnitte mit einem von Hand gedrehten Bahnhof bleiben fest. Ohne Achsen (auto.achsen false): alter Weg je Bahnhof.
+if L_aus.get("achsen_auto"):
+    knoten = []
+    for a_ in L_aus["achsen_auto"]:
+        if a_.get("fest"): continue
+        k_ = [n for n in a_.get("eigen", []) if n not in L0.get("drehung", {})]
+        if a_.get("achswechsel"): knoten += [n for n in k_ if n not in knoten]      # Achswechsel: je Knoten eine Schraube
+        elif k_ and k_[0] not in knoten: knoten.append(k_[0])
+else:
+    knoten = sorted(n for n, w in auto_.items() if abs(w / 30 - round(w / 30)) < 1e-6)
+    knoten = [n for n in knoten if n not in L0.get("drehung", {})]          # von Hand fest: nicht anfassen
+best = {n: int(round(auto_.get(n, 0))) for n in knoten}
 best_u, best_k = u0, k0
 proto = [dict(schritt="Ausgang", drehung=dict(best), unruhe=u0, kennzahlen=k0)]
 print(f"Lagesuche {NAME}: Ausgang Unruhe {u0} {k0}; Knotenbahnhöfe {knoten}")
@@ -95,7 +107,7 @@ while besser and time.time() - t0 < MAXS and runde < 4:
             best, best_u, best_k = kand; besser = True
 print(f"Lagesuche {NAME}: Unruhe {u0} -> {best_u} in {time.time() - t0:.0f} s, {len(proto)} Varianten")
 erg = dict(ausgang=dict(unruhe=u0, kennzahlen=k0), ergebnis=dict(unruhe=best_u, kennzahlen=best_k),
-           drehung={n: w for n, w in best.items() if w != int(round(auto_[n]))}, varianten=proto)
+           drehung={n: w for n, w in best.items() if w != int(round(auto_.get(n, 0)))}, varianten=proto)
 json.dump(erg, open(OUTJ, "w"), ensure_ascii=False, indent=1)
 if best_u < u0:
     L = json.load(open(LF)); L["drehung"] = {**L.get("drehung", {}), **erg["drehung"]}

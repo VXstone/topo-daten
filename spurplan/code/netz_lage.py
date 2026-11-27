@@ -373,6 +373,7 @@ if AUTO:
     _L = json.load(open(LAGE_F)) if os.path.exists(LAGE_F) else {}
     for n in MAJOR: _L[nodes[n]["name"] + ("" if nodes[n]["inset"] else f" #{n}")] = [round(float(pos[n][0])), round(float(pos[n][1]))]
     _L["drehung_auto"] = {nodes[i]["name"]: round(ROT[i], 1) for i in ROT if ROT[i]}
+    _L["achsen_auto"] = lage_auto.LETZTE_ACHSEN          # REGELN 4.15 (L1): Achsen-Gerüst, Stellschrauben der Lagesuche
     json.dump(_L, open(LAGE_F, "w"), ensure_ascii=False, indent=1)
 # Regel F11 (früher S1; 27.10.2026, Hinweis c8i4 Region Olten: «solche S-Kurven vermeiden, da passiert ja nichts»): liegen die
 # Anschlüsse zweier Bahnhöfe auf einer geraden Strecke fast auf einer Linie (Versatz unter einer halben Gleisachse),
