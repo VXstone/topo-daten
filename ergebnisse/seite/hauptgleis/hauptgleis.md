@@ -28,7 +28,6 @@
 | mob__montreux | · | 1 | · | · | · | · | · | 1 |
 | mob__rossiniere | · | · | · | · | 1 | · | · | 1 |
 | region_ne | · | · | · | · | · | · | 1 | 1 |
-| region_vereina | · | · | · | · | · | 1 | · | 1 |
 | szu__uetliberg | · | 1 | · | · | · | · | · | 1 |
 | aarburg_oftringen | · | · | · | · | · | · | · | 0 |
 | auvernier | · | · | · | · | · | · | · | 0 |
@@ -118,6 +117,7 @@
 | pensier | · | · | · | · | · | · | · | 0 |
 | region_mob | · | · | · | · | · | · | · | 0 |
 | region_szu | · | · | · | · | · | · | · | 0 |
+| region_vereina | · | · | · | · | · | 0 ↓1 | · | 0 |
 | riedbach | · | · | · | · | · | · | · | 0 |
 | rosshausern | · | · | · | · | · | · | · | 0 |
 | safenwil | · | · | · | · | · | · | · | 0 |

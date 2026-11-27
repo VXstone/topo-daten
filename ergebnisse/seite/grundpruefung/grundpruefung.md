@@ -109,10 +109,10 @@
 | onnens_bonvillars | · | 1 | · | · | · | 1 | · | 24.0 |
 | pensier | · | · | · | · | · | · | · | 24.0 |
 | region | 8 | 22 | 2 | 3 | 3 | 6 | 27 | 10.08 |
-| region_mob | 3 | 3 | 1 | 2 ↓3 | · | · | 23 ↓24 | 10.08 |
+| region_mob | 3 | 3 | 1 | 2 ↓3 | · | **1** (Basis 0) | 22 ↓24 | 10.08 |
 | region_ne | 1 | 2 | 1 | · | · | · | 3 | 10.08 |
-| region_szu | 3 ↓12 | 3 ↓14 | 4 ↓8 | · | · | · | 10 ↓12 | 10.08 |
-| region_vereina | 1 | 5 | 1 ↓2 | · | · | 2 | 2 | 10.08 |
+| region_szu | 3 ↓12 | 3 ↓14 | 5 ↓8 | · | · | · | 10 ↓12 | 10.08 |
+| region_vereina | **2** (Basis 1) | 5 | 1 ↓2 | · | · | 2 | 1 ↓2 | 10.08 |
 | riedbach | · | · | · | · | · | · | · | 24.0 |
 | rosshausern | · | · | · | · | · | · | · | 24.0 |
 | rothrist | 2 | 1 | 1 | · | · | 2 | · | 24.0 |
@@ -153,3 +153,11 @@
 | zofingen | · | 1 | · | · | · | · | · | 24.0 |
 
 Regeln: GS = Schnitt ohne DKW/Kreuzung/Niveautrennung; GG = Gleis auf Gleis; GQ = Querabstand nach Knick ≠ davor; GP = Pfeil nach innen / auf Nachbargleis; GW = Knick oder Abgang 90°; GT = Treppe; GE = loses Gleisende (kein Prellbock, Pfeil, Abgang oder Gleis)
+
+## NEUE Befunde
+
+- **region_mob** GT: 0 → 1
+  - -3462.1/836.0: Treppe, Versatz 97.3 px
+- **region_vereina** GS: 1 → 2
+  - -706.9/-574.7: Gleise kreuzen sich (18°) ohne DKW, Kreuzung oder Niveautrennung
+  - -572.5/-485.5: Gleise kreuzen sich (60°) ohne DKW, Kreuzung oder Niveautrennung

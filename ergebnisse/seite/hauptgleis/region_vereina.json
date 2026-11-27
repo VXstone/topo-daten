@@ -5,19 +5,10 @@
   "HT3": 0,
   "HT4": 0,
   "HT5": 0,
-  "HT6": 1,
+  "HT6": 0,
   "HT7": 0
  },
- "befunde": [
-  {
-   "regel": "HT6",
-   "x": -546.0,
-   "y": -655.8,
-   "st": "klosters_platz",
-   "way": 107134436,
-   "text": "Klosters Platz: Abgang Linie ? (Landquart) ohne Fortsetzung im Regionalplan (kein Pfeil, keine Strecke)"
-  }
- ],
+ "befunde": [],
  "n_ports": 31,
- "n_linien": 19
+ "n_linien": 20
 }

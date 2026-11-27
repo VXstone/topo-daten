@@ -1,4 +1,4 @@
-# Hinweis-Abdeckung 29/57
+# Hinweis-Abdeckung 28/57
 
 Befund < 40 px im selben Plan, ohne G2.
 
@@ -34,7 +34,7 @@ Befund < 40 px im selben Plan, ohne G2.
 | · | i06s | mob__glion |  | 87.6 | Symbol Schiebebühne |
 | · | j57v | region |  | 52.7 | Knubbel vom geraden Strang |
 | ✓ | jbs1 | region | G6, ME, MZ | 25.7 | fehlen Weichen |
-| ✓ | jxpf | region_vereina | ME, MZ | 30.3 | S-Kurve Klosters |
+| · | jxpf | region_vereina |  | 101.9 | S-Kurve Klosters |
 | · | jy8r | mob__zweisimmen |  | 49.6 | Zwischengerade? |
 | · | k4qi | mob__rossiniere |  |  | Stumpen? |
 | · | ldor | aarau |  | 122.6 | was ist das für ein Gleis |

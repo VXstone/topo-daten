@@ -1,5 +1,5 @@
 {
- "abgedeckt": 29,
+ "abgedeckt": 28,
  "offen": 57,
  "radius": 40.0,
  "ohne": [
@@ -427,13 +427,10 @@
    "x": -194.7,
    "y": -161.3,
    "text": "S-Kurve Klosters",
-   "abgedeckt": true,
-   "regeln": [
-    "ME",
-    "MZ"
-   ],
-   "naechster": 30.3,
-   "naechste_regel": "MZ",
+   "abgedeckt": false,
+   "regeln": [],
+   "naechster": 101.9,
+   "naechste_regel": "MQ",
    "plan_da": true
   },
   {

@@ -3,7 +3,7 @@
  "zaehl": {
   "GS": 3,
   "GG": 3,
-  "GQ": 4,
+  "GQ": 5,
   "GP": 0,
   "GW": 0,
   "GT": 0,
@@ -12,123 +12,129 @@
  "befunde": [
   {
    "regel": "GS",
-   "x": 497.5,
-   "y": -87.2,
+   "x": 511.9,
+   "y": 78.8,
    "text": "Gleise kreuzen sich (60°) ohne DKW, Kreuzung oder Niveautrennung"
   },
   {
    "regel": "GS",
-   "x": 524.1,
-   "y": -98.3,
+   "x": 538.5,
+   "y": 67.7,
    "text": "Gleise kreuzen sich (58°) ohne DKW, Kreuzung oder Niveautrennung"
   },
   {
    "regel": "GS",
-   "x": 521.5,
-   "y": -102.8,
+   "x": 535.9,
+   "y": 63.2,
    "text": "Gleise kreuzen sich (23°) ohne DKW, Kreuzung oder Niveautrennung"
   },
   {
    "regel": "GG",
-   "x": 540.7,
-   "y": -87.2,
+   "x": 555.1,
+   "y": 78.8,
    "text": "zwei Gleise 18 px aufeinander"
   },
   {
    "regel": "GG",
-   "x": 534.2,
-   "y": -109.4,
+   "x": 548.6,
+   "y": 56.6,
    "text": "zwei Gleise 31 px aufeinander"
   },
   {
    "regel": "GG",
-   "x": 517.9,
-   "y": -77.1,
+   "x": 532.3,
+   "y": 88.9,
    "text": "zwei Gleise 28 px aufeinander"
   },
   {
    "regel": "GQ",
-   "x": 517.7,
-   "y": -101.1,
+   "x": 532.1,
+   "y": 64.9,
    "text": "Querabstand nach dem Knick 19.9 px statt 5.5 px wie davor"
   },
   {
    "regel": "GQ",
-   "x": 522.6,
-   "y": -87.2,
+   "x": 537.0,
+   "y": 78.8,
    "text": "Querabstand nach dem Knick 0.0 px statt 14.5 px wie davor"
   },
   {
    "regel": "GQ",
-   "x": 508.8,
-   "y": -82.2,
+   "x": 523.2,
+   "y": 83.8,
    "text": "Querabstand nach dem Knick 10.1 px statt 14.5 px wie davor"
   },
   {
    "regel": "GQ",
-   "x": 507.8,
-   "y": -98.3,
+   "x": 522.2,
+   "y": 67.7,
    "text": "Querabstand nach dem Knick 29.0 px statt 11.1 px wie davor"
   },
   {
+   "regel": "GQ",
+   "x": 456.0,
+   "y": 110.8,
+   "text": "Querabstand nach dem Knick 10.0 px statt 5.0 px wie davor"
+  },
+  {
    "regel": "GE",
-   "x": 491.4,
-   "y": -87.2,
+   "x": 505.8,
+   "y": 78.8,
    "text": "Gleisende 5.3 px neben einem Gleis (Stoss), Stück 58 px"
   },
   {
    "regel": "GE",
-   "x": 518.0,
-   "y": -98.3,
+   "x": 532.4,
+   "y": 67.7,
    "text": "Gleisende 5.3 px neben einem Gleis (Stoss), Stück 25 px"
   },
   {
    "regel": "GE",
-   "x": 526.4,
-   "y": -134.4,
+   "x": 540.8,
+   "y": 31.5,
    "text": "loses Gleisende, Stück 13 px"
   },
   {
    "regel": "GE",
-   "x": 474.4,
-   "y": -87.2,
+   "x": 488.8,
+   "y": 78.8,
    "text": "loses Gleisende, Stück 18 px"
   },
   {
    "regel": "GE",
-   "x": 505.2,
-   "y": -95.6,
+   "x": 519.6,
+   "y": 70.4,
    "text": "Gleisende 2.7 px neben einem Gleis (Stoss), Stück 15 px"
   },
   {
    "regel": "GE",
-   "x": 505.2,
-   "y": -92.7,
+   "x": 519.6,
+   "y": 73.3,
    "text": "Gleisende 2.8 px neben einem Gleis (Stoss), Stück 8 px"
   },
   {
    "regel": "GE",
-   "x": -831.8,
-   "y": 471.3,
-   "text": "loses Gleisende, Stück 28 px"
+   "x": -948.0,
+   "y": 47.1,
+   "text": "Gleisende 6.0 px neben einem Gleis (Stoss), Stück 28 px"
   },
   {
    "regel": "GE",
-   "x": -806.3,
-   "y": 459.7,
-   "text": "loses Gleisende, Stück 28 px"
+   "x": -920.0,
+   "y": 47.1,
+   "text": "Gleisende 6.0 px neben einem Gleis (Stoss), Stück 28 px"
   },
   {
    "regel": "GE",
-   "x": -510.8,
-   "y": 312.0,
-   "text": "loses Gleisende, Stück 28 px"
+   "x": -589.9,
+   "y": 35.1,
+   "text": "Gleisende 6.0 px neben einem Gleis (Stoss), Stück 28 px"
   },
   {
    "regel": "GE",
-   "x": -536.3,
-   "y": 323.6,
-   "text": "loses Gleisende, Stück 28 px"
+   "x": -617.9,
+   "y": 35.1,
+   "text": "Gleisende 6.0 px neben einem Gleis (Stoss), Stück 28 px"
   }
  ]
 }
