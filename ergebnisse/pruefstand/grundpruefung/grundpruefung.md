@@ -6,7 +6,7 @@
 |---|---|---|---|---|---|---|---|---|
 | osm_ab30_a30/alpha_spurplan | · | · | · | · | · | · | · | 24.0 |
 | osm_ab30_a30/beta_spurplan | · | · | · | · | · | · | · | 24.0 |
-| osm_ab30_a30/region | · | · | · | · | · | 2 | · | 10.08 |
+| osm_ab30_a30/region | · | · | · | · | · | 0 ↓2 | · | 10.08 |
 | osm_ab30_a60/alpha_spurplan | · | · | · | · | · | · | · | 24.0 |
 | osm_ab30_a60/beta_spurplan | · | · | · | · | · | · | · | 24.0 |
 | osm_ab30_a60/region | · | · | · | · | · | · | · | 10.08 |
@@ -30,7 +30,7 @@
 | osm_ab30_dm60/region | · | · | · | · | · | · | · | 10.08 |
 | osm_ab60_a30/alpha_spurplan | · | · | · | · | · | · | · | 24.0 |
 | osm_ab60_a30/beta_spurplan | · | · | · | · | · | · | · | 24.0 |
-| osm_ab60_a30/region | · | · | · | · | · | 2 | 2 | 10.08 |
+| osm_ab60_a30/region | · | · | · | · | · | 0 ↓2 | 2 | 10.08 |
 | osm_ab60_a60/alpha_spurplan | · | · | · | · | · | · | · | 24.0 |
 | osm_ab60_a60/beta_spurplan | · | · | · | · | · | · | · | 24.0 |
 | osm_ab60_a60/region | · | · | · | · | · | · | 1 | 10.08 |
@@ -54,7 +54,7 @@
 | osm_ab60_dm60/region | · | · | · | · | · | · | 2 | 10.08 |
 | osm_buendel_knick_a30/alpha_spurplan | · | · | · | · | · | · | · | 24.0 |
 | osm_buendel_knick_a30/beta_spurplan | · | · | · | · | · | · | · | 24.0 |
-| osm_buendel_knick_a30/region | · | · | · | · | · | 2 | · | 10.08 |
+| osm_buendel_knick_a30/region | · | · | · | · | · | 0 ↓2 | · | 10.08 |
 | osm_buendel_knick_a60/alpha_spurplan | · | · | · | · | · | · | · | 24.0 |
 | osm_buendel_knick_a60/beta_spurplan | · | · | · | · | · | · | · | 24.0 |
 | osm_buendel_knick_a60/region | · | · | · | · | · | · | · | 10.08 |
@@ -78,7 +78,7 @@
 | osm_buendel_knick_dm60/region | · | · | · | · | · | · | · | 10.08 |
 | osm_buendel_knick_eng_a30/alpha_spurplan | · | · | · | · | · | · | · | 24.0 |
 | osm_buendel_knick_eng_a30/beta_spurplan | · | · | · | · | · | · | · | 24.0 |
-| osm_buendel_knick_eng_a30/region | · | · | · | · | · | 2 | · | 10.08 |
+| osm_buendel_knick_eng_a30/region | · | · | · | · | · | 0 ↓2 | · | 10.08 |
 | osm_buendel_knick_eng_a60/alpha_spurplan | · | · | · | · | · | · | · | 24.0 |
 | osm_buendel_knick_eng_a60/beta_spurplan | · | · | · | · | · | · | · | 24.0 |
 | osm_buendel_knick_eng_a60/region | · | · | · | · | · | · | · | 10.08 |
@@ -102,10 +102,10 @@
 | osm_buendel_knick_eng_dm60/region | · | · | · | · | · | · | · | 10.08 |
 | osm_buendel_versatz_a30/alpha_spurplan | · | · | · | · | · | · | · | 24.0 |
 | osm_buendel_versatz_a30/beta_spurplan | · | · | · | · | · | · | · | 24.0 |
-| osm_buendel_versatz_a30/region | · | · | · | · | · | 4 | · | 10.08 |
+| osm_buendel_versatz_a30/region | · | · | · | · | · | 2 ↓4 | · | 10.08 |
 | osm_buendel_versatz_a60/alpha_spurplan | · | · | · | · | · | · | · | 24.0 |
 | osm_buendel_versatz_a60/beta_spurplan | · | · | · | · | · | · | · | 24.0 |
-| osm_buendel_versatz_a60/region | · | · | · | · | · | · | · | 10.08 |
+| osm_buendel_versatz_a60/region | · | · | · | · | · | **2** (Basis 0) | · | 10.08 |
 | osm_buendel_versatz_d0/alpha_spurplan | · | · | · | · | · | · | · | 24.0 |
 | osm_buendel_versatz_d0/beta_spurplan | · | · | · | · | · | · | · | 24.0 |
 | osm_buendel_versatz_d0/region | · | · | · | · | · | 2 | · | 10.08 |
@@ -126,7 +126,7 @@
 | osm_buendel_versatz_dm60/region | · | · | · | · | · | 2 | 1 | 10.08 |
 | osm_gleissprung_a30/alpha_spurplan | · | · | · | · | · | · | · | 24.0 |
 | osm_gleissprung_a30/beta_spurplan | · | · | · | · | · | · | · | 24.0 |
-| osm_gleissprung_a30/region | · | · | · | · | · | 2 | · | 10.08 |
+| osm_gleissprung_a30/region | · | · | · | · | · | 0 ↓2 | · | 10.08 |
 | osm_gleissprung_a60/alpha_spurplan | · | · | · | · | · | · | · | 24.0 |
 | osm_gleissprung_a60/beta_spurplan | · | · | · | · | · | · | · | 24.0 |
 | osm_gleissprung_a60/region | · | · | · | · | · | · | · | 10.08 |
@@ -150,7 +150,7 @@
 | osm_gleissprung_dm60/region | · | · | · | · | · | · | · | 10.08 |
 | osm_perronformen_a30/alpha_spurplan | · | · | · | · | · | · | · | 24.0 |
 | osm_perronformen_a30/beta_spurplan | · | · | · | · | · | · | · | 24.0 |
-| osm_perronformen_a30/region | · | · | · | · | · | 2 | · | 10.08 |
+| osm_perronformen_a30/region | · | · | · | · | · | 0 ↓2 | · | 10.08 |
 | osm_perronformen_a60/alpha_spurplan | · | · | · | · | · | · | · | 24.0 |
 | osm_perronformen_a60/beta_spurplan | · | · | · | · | · | · | · | 24.0 |
 | osm_perronformen_a60/region | · | · | · | · | · | · | · | 10.08 |
@@ -174,7 +174,7 @@
 | osm_perronformen_dm60/region | · | · | · | · | · | · | · | 10.08 |
 | osm_r3_kreuzung_a30/alpha_spurplan | · | · | · | · | · | · | · | 24.0 |
 | osm_r3_kreuzung_a30/beta_spurplan | · | · | · | · | · | · | · | 24.0 |
-| osm_r3_kreuzung_a30/region | · | · | · | · | · | 1 | · | 10.08 |
+| osm_r3_kreuzung_a30/region | · | · | · | · | · | 0 ↓1 | · | 10.08 |
 | osm_r3_kreuzung_a60/alpha_spurplan | · | · | · | · | · | · | · | 24.0 |
 | osm_r3_kreuzung_a60/beta_spurplan | · | · | · | · | · | · | · | 24.0 |
 | osm_r3_kreuzung_a60/region | · | · | · | · | · | · | · | 10.08 |
@@ -198,7 +198,7 @@
 | osm_r3_kreuzung_dm60/region | · | · | · | · | · | · | · | 10.08 |
 | osm_r5_halt_a30/alpha_spurplan | · | · | · | · | · | · | · | 24.0 |
 | osm_r5_halt_a30/beta_spurplan | · | · | · | · | · | · | · | 24.0 |
-| osm_r5_halt_a30/region | · | · | · | · | · | 2 | · | 10.08 |
+| osm_r5_halt_a30/region | · | · | · | · | · | 0 ↓2 | · | 10.08 |
 | osm_r5_halt_a60/alpha_spurplan | · | · | · | · | · | · | · | 24.0 |
 | osm_r5_halt_a60/beta_spurplan | · | · | · | · | · | · | · | 24.0 |
 | osm_r5_halt_a60/region | · | · | · | · | · | · | · | 10.08 |
@@ -222,7 +222,7 @@
 | osm_r5_halt_dm60/region | · | · | · | · | · | · | · | 10.08 |
 | osm_r7_ueberholung_a30/alpha_spurplan | · | · | · | · | · | · | · | 24.0 |
 | osm_r7_ueberholung_a30/beta_spurplan | · | · | · | · | · | · | · | 24.0 |
-| osm_r7_ueberholung_a30/region | · | · | · | · | · | 2 | · | 10.08 |
+| osm_r7_ueberholung_a30/region | · | · | · | · | · | 0 ↓2 | · | 10.08 |
 | osm_r7_ueberholung_a60/alpha_spurplan | · | · | · | · | · | · | · | 24.0 |
 | osm_r7_ueberholung_a60/beta_spurplan | · | · | · | · | · | · | · | 24.0 |
 | osm_r7_ueberholung_a60/region | · | · | · | · | · | · | · | 10.08 |
@@ -246,7 +246,7 @@
 | osm_r7_ueberholung_dm60/region | · | · | · | · | · | · | · | 10.08 |
 | osm_sagliains_a30/alpha_spurplan | · | · | · | · | · | · | · | 24.0 |
 | osm_sagliains_a30/beta_spurplan | · | · | · | · | · | · | · | 24.0 |
-| osm_sagliains_a30/region | · | · | · | · | · | 2 | · | 10.08 |
+| osm_sagliains_a30/region | · | · | · | · | · | 0 ↓2 | · | 10.08 |
 | osm_sagliains_a60/alpha_spurplan | · | · | · | · | · | · | · | 24.0 |
 | osm_sagliains_a60/beta_spurplan | · | · | · | · | · | · | · | 24.0 |
 | osm_sagliains_a60/region | · | · | · | · | · | · | · | 10.08 |
@@ -270,10 +270,10 @@
 | osm_sagliains_dm60/region | · | · | · | · | · | · | · | 10.08 |
 | osm_unterwerfung_a30/alpha_spurplan | · | · | · | · | · | · | · | 24.0 |
 | osm_unterwerfung_a30/beta_spurplan | · | · | · | · | · | · | · | 24.0 |
-| osm_unterwerfung_a30/region | 2 | · | · | · | · | 2 | · | 10.08 |
+| osm_unterwerfung_a30/region | 0 ↓2 | · | · | · | · | 0 ↓2 | · | 10.08 |
 | osm_unterwerfung_a60/alpha_spurplan | · | · | · | · | · | · | · | 24.0 |
 | osm_unterwerfung_a60/beta_spurplan | · | · | · | · | · | · | · | 24.0 |
-| osm_unterwerfung_a60/region | 2 | · | · | · | 2 | · | 1 | 10.08 |
+| osm_unterwerfung_a60/region | 0 ↓2 | · | · | · | 0 ↓2 | · | 0 ↓1 | 10.08 |
 | osm_unterwerfung_d0/alpha_spurplan | · | · | · | · | · | · | · | 24.0 |
 | osm_unterwerfung_d0/beta_spurplan | · | · | · | · | · | · | · | 24.0 |
 | osm_unterwerfung_d0/region | 2 | · | · | · | · | · | · | 10.08 |
@@ -294,7 +294,7 @@
 | osm_unterwerfung_dm60/region | 2 | · | · | · | · | · | 1 | 10.08 |
 | osm_zwischengerade_a30/alpha_spurplan | · | · | · | · | · | · | · | 24.0 |
 | osm_zwischengerade_a30/beta_spurplan | · | · | · | · | · | · | · | 24.0 |
-| osm_zwischengerade_a30/region | · | · | · | · | · | 2 | · | 10.08 |
+| osm_zwischengerade_a30/region | · | · | · | · | · | 0 ↓2 | · | 10.08 |
 | osm_zwischengerade_a60/alpha_spurplan | · | · | · | · | · | · | · | 24.0 |
 | osm_zwischengerade_a60/beta_spurplan | · | · | · | · | · | · | · | 24.0 |
 | osm_zwischengerade_a60/region | · | · | · | · | · | · | · | 10.08 |
@@ -309,7 +309,7 @@
 | osm_zwischengerade_d60/region | · | · | · | · | · | · | · | 10.08 |
 | osm_zwischengerade_d90/alpha_spurplan | · | · | · | · | · | · | · | 24.0 |
 | osm_zwischengerade_d90/beta_spurplan | · | · | · | · | · | · | · | 24.0 |
-| osm_zwischengerade_d90/region | 2 | · | · | · | 5 | · | 2 | 10.08 |
+| osm_zwischengerade_d90/region | 0 ↓2 | · | · | · | 0 ↓5 | · | 2 | 10.08 |
 | osm_zwischengerade_dm30/alpha_spurplan | · | · | · | · | · | · | · | 24.0 |
 | osm_zwischengerade_dm30/beta_spurplan | · | · | · | · | · | · | · | 24.0 |
 | osm_zwischengerade_dm30/region | · | · | · | · | · | · | 1 | 10.08 |
@@ -462,3 +462,9 @@
 | vorlage_Z8_dm60/region | · | · | · | · | · | 3 | · | 10.08 |
 
 Regeln: GS = Schnitt ohne DKW/Kreuzung/Niveautrennung; GG = Gleis auf Gleis; GQ = Querabstand nach Knick ≠ davor; GP = Pfeil nach innen / auf Nachbargleis; GW = Knick oder Abgang 90°; GT = Treppe; GE = loses Gleisende (kein Prellbock, Pfeil, Abgang oder Gleis)
+
+## NEUE Befunde
+
+- **osm_buendel_versatz_a60/region** GT: 0 → 2
+  - 14.5/7.1: Treppe, Versatz 20.1 px
+  - 14.5/17.2: Treppe, Versatz 20.1 px
