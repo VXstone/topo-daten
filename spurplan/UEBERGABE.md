@@ -155,6 +155,16 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - [ ] **F2 Gleis auf Gleis (GG)** – Eichung + Behebung wie F0/F1
 - [ ] **F3 Abzweige und Fahrwege wie OSM (HT1–HT6)** – Eichung + Behebung; dazu R4 Rothrist-Regionalvariante, Klosters Einspurwechsel (4.2)
 - [x] **F4a Knick parallel auf Regionalstrecken** – 26.11. abends, Commits 2dd8601/32ce42a, Seite v189 (Nachtrag F4a); vorgezogen auf Wunsch Daniel
+- [ ] **L1 Achsen-Gerüst für alle Regionalpläne** (Entscheid Daniel 27.11. früh: «keine Einzelbasteleien», «‹nur hier› geht vergessen und ich merke nicht was wo läuft») – Einstieg:
+  «Weiter mit UEBERGABE.md – Schritt L1: Achsen-Gerüst für alle Regionalpläne, mit Artefakt und Repo schreibend». Reihenfolge im Code:
+  (1) Topologie/HT – (2) Bahnhofpläne/Ports (4.11) – (3) **Achsen**: durchgehende Strecken als lange Geraden, auch über Knoten, Richtung aus
+  Geografie gerundet, Geografie nur Reihenfolge/Seite – (4) **Drehung aus der Achse** (keine Einzeldrehung je Bahnhof) – (5) **Position auf
+  der Achse**, quer nur für Reihenfolge/Überlagerung – (6) Zeichnen fährt nur Achsen nach (Bündel parallel, Knick nur bei Achswechsel; Sonderfälle
+  in connector streichen) – (7) Prüfen mit G0/HT, Lagesuche bewertet mit denselben Massen inkl. Treppen auf Strecken und variiert Achsrichtungen.
+  Anlass: lage_auto setzt Knoten-Position aus Geografie unabhängig von der Drehung, Lagesuche dreht danach (Selnau waagrecht 130 px über
+  Giesshübel → Stufe, v189). **Ohne Teil-Einführung:** sofort alle Regionen (Olten, NE, MOB, Vereina, SZU), kein Schalter je Region, alter Weg
+  nur als Vergleich und am Ende gelöscht; schlechtere Stellen auf die Offen-Liste, nicht ausnehmen; Beschriftung je Regionalplan zeigt den Weg;
+  REGELN je Regel «überall/fehlt». Aufteilen nur nach Arbeitsschritt (3–4 / 5 / 6), nie nach Region; veröffentlichen erst, wenn alle Regionen neu.
 - [ ] **F4 Parallel bleibt parallel überall (2.7)** – Prüfung über die ganze Länge (qzk1 Giesshübel–Selnau, Sagliains, Olten), ein Codeweg
 - Ruhen bis F4 erledigt (Abschnitt 0a): T-SZU2 Teil 3c, V4d, S2b, S3, V5/V6, K, A2, R2, R3a/b, P2a/b, H1/H2, N1/N2, 5
 - [x] **HT-R HT auf den Regionalplänen** – 25.11. abends, Commits 0de59bb/16cffda/d68e19b, Seite v186 (Nachtrag HT-R): HT6/HT7, Giesshübel 713/717, HT1 Giesshübel 0
@@ -1149,3 +1159,8 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
 - **Nebenwirkung:** im Workflow dreht die Lagesuche Selnau waagrecht (Unruhe 164→108; lokal bleibt −60°, Ausgang 112 – Rechenunterschied
   Runner/lokal), Region SZU flacher, Selnau-Strecke mit einer 60°-Schräge. Daniel fragen, ob ok (sonst `lage.drehung` fest oder Suche ändern).
 - Offen in F4: Messung «Abstand über die ganze Länge» fehlt noch (GQ misst nur am Knick); Bahnhofplan-Bündel. qzk1 beantwortet, nicht abgenommen.
+
+### 27.11.2026 ~06:00 – Entscheid Daniel: Achsen-Gerüst statt Einzelreparaturen (Schritt L1)
+- Treppe Giesshübel–Selnau v189: Lagesuche dreht Selnau waagrecht, Position bleibt geografisch schräg (lage_auto kennt die Drehung nicht).
+  Daniel: «einfachste Lösung gerade auf gleicher Höhe … der Code stellt sich selbst Beine», «keine Einzelbasteleien». → Schritt L1 (Abschnitt 5),
+  ohne Teil-Einführung nach Region (Abschnitt 0a Punkt 5). Kein Code geändert.
