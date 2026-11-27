@@ -1,4 +1,4 @@
-# Prüfstand – Bausteine × Drehungen (2026-11-27 06:24 UTC)
+# Prüfstand – Bausteine × Drehungen (2026-11-27 06:47 UTC)
 
 Zählung je Fall (Regel Anzahl); leer = ohne Befund. Rangfolge der Regeln: T, PF, X, E, K, Q, P, QK, F, Z, D, G2, G3, G4, G5, G6, G7, G8
 
@@ -42,17 +42,7 @@ T 24 · PF 16 · X 12 · E 126 · Q 85 · Z 113 · D 1
 
 ## Gegen die Basis
 
-- SCHLECHTER osm/buendel_versatz/d30: Z 1 → 2
-- SCHLECHTER osm/buendel_versatz/a30: E 0 → 2
-- SCHLECHTER osm/buendel_versatz/a30: Z 0 → 2
-- SCHLECHTER osm/buendel_versatz/a60: E 0 → 2
-- SCHLECHTER osm/buendel_versatz/a60: Z 0 → 2
-- osm/unterwerfung/dm30: Z 1 → 0 (besser)
-- osm/unterwerfung/dm60: Z 1 → 0 (besser)
-- osm/unterwerfung/a30: X 2 → 0 (besser)
-- osm/unterwerfung/a60: X 2 → 0 (besser)
-- osm/zwischengerade/d90: X 3 → 0 (besser)
-- osm/zwischengerade/d90: K 4 → 0 (besser)
+- keine Verschlechterung
 
 ## Befundliste
 
