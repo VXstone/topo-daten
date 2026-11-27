@@ -3,125 +3,139 @@
   "unruhe": 63,
   "kennzahlen": {
    "lage_L3": 1,
-   "regel_G2": 4,
+   "regel_G2": 2,
    "regel_G8": 1,
-   "ruhe_treppen": 4
+   "ruhe_ecken": 3,
+   "ruhe_treppen": 3
   }
  },
  "ergebnis": {
-  "unruhe": 43,
+  "unruhe": 51,
   "kennzahlen": {
    "lage_L3": 1,
    "regel_G2": 2,
    "regel_G8": 1,
+   "ruhe_ecken": 2,
    "ruhe_treppen": 2
   }
  },
  "drehung": {
-  "Sagliains": -60
+  "Sagliains": 0
  },
  "varianten": [
   {
    "schritt": "Ausgang",
    "drehung": {
-    "Klosters Platz": 90,
+    "Klosters Platz": 30,
     "Sagliains": -30,
-    "Sasslatsch": 90
+    "Sasslatsch": 105
    },
    "unruhe": 63,
    "kennzahlen": {
     "lage_L3": 1,
-    "regel_G2": 4,
+    "regel_G2": 2,
     "regel_G8": 1,
-    "ruhe_treppen": 4
+    "ruhe_ecken": 3,
+    "ruhe_treppen": 3
    }
   },
   {
    "schritt": "Klosters Platz +30",
    "drehung": {
-    "Klosters Platz": 120
+    "Klosters Platz": 60
    },
-   "unruhe": 101,
+   "unruhe": 124,
    "kennzahlen": {
     "topo_T6": 1,
-    "regel_G2": 4,
-    "regel_G8": 1,
-    "ruhe_ecken": 2,
-    "ruhe_treppen": 4
+    "lage_L3": 1,
+    "regel_G2": 2,
+    "regel_G8": 2,
+    "ruhe_ecken": 5,
+    "ruhe_treppen": 3
    }
   },
   {
    "schritt": "Klosters Platz -30",
    "drehung": {
-    "Klosters Platz": 60
+    "Klosters Platz": 0
    },
-   "unruhe": 67,
+   "unruhe": 63,
    "kennzahlen": {
+    "lage_L2": 2,
+    "lage_L3a": 1,
     "lage_L3": 1,
-    "regel_G2": 6,
+    "regel_G2": 2,
     "regel_G8": 1,
-    "ruhe_treppen": 4
+    "ruhe_treppen": 2
    }
   },
   {
    "schritt": "Klosters Platz +60",
    "drehung": {
-    "Klosters Platz": 150
+    "Klosters Platz": 90
    },
-   "unruhe": 131,
+   "unruhe": 213,
    "kennzahlen": {
     "topo_T6": 1,
-    "lage_L4": 1,
+    "lage_L2": 10,
     "lage_L3a": 1,
-    "regel_G2": 4,
+    "lage_L3": 1,
+    "regel_G2": 2,
     "regel_G8": 1,
-    "ruhe_ecken": 2,
-    "ruhe_treppen": 4
+    "ruhe_treppen": 3,
+    "ruhe_ecken": 3
    }
   },
   {
    "schritt": "Klosters Platz -60",
    "drehung": {
-    "Klosters Platz": 30
+    "Klosters Platz": -30
    },
-   "unruhe": 67,
+   "unruhe": 423,
    "kennzahlen": {
+    "topo_T6": 1,
+    "lage_L2": 28,
+    "lage_L4": 1,
+    "lage_L3a": 6,
     "lage_L3": 1,
-    "regel_G2": 4,
+    "regel_G2": 2,
     "regel_G8": 1,
-    "ruhe_ecken": 1,
-    "ruhe_treppen": 4
+    "ruhe_treppen": 3,
+    "ruhe_ecken": 3
    }
   },
   {
    "schritt": "Klosters Platz +90",
    "drehung": {
-    "Klosters Platz": -180
+    "Klosters Platz": 120
    },
-   "unruhe": 127,
+   "unruhe": 430,
    "kennzahlen": {
     "topo_T6": 1,
-    "lage_L4": 1,
-    "lage_L3a": 1,
-    "regel_G2": 4,
-    "regel_G8": 1,
-    "ruhe_ecken": 1,
-    "ruhe_treppen": 4
+    "lage_L2": 34,
+    "lage_L3a": 6,
+    "regel_G2": 3,
+    "regel_G8": 2,
+    "ruhe_ecken": 3,
+    "ruhe_treppen": 2
    }
   },
   {
    "schritt": "Klosters Platz -90",
    "drehung": {
-    "Klosters Platz": 0
+    "Klosters Platz": -60
    },
-   "unruhe": 95,
+   "unruhe": 441,
    "kennzahlen": {
+    "topo_T6": 1,
+    "lage_L2": 29,
     "lage_L4": 1,
-    "lage_L3a": 1,
+    "lage_L3a": 7,
     "lage_L3": 1,
-    "regel_G2": 5,
+    "regel_G2": 2,
     "regel_G8": 1,
-    "ruhe_treppen": 4
+    "ruhe_treppen": 3,
+    "ruhe_ecken": 5
    }
   },
   {
@@ -129,13 +143,13 @@
    "drehung": {
     "Sagliains": 0
    },
-   "unruhe": 67,
+   "unruhe": 51,
    "kennzahlen": {
     "lage_L3": 1,
     "regel_G2": 2,
     "regel_G8": 1,
-    "ruhe_treppen": 4,
-    "ruhe_ecken": 2
+    "ruhe_ecken": 2,
+    "ruhe_treppen": 2
    }
   },
   {
@@ -143,11 +157,13 @@
    "drehung": {
     "Sagliains": -60
    },
-   "unruhe": 43,
+   "unruhe": 117,
    "kennzahlen": {
+    "topo_T6": 1,
     "lage_L3": 1,
     "regel_G2": 2,
     "regel_G8": 1,
+    "ruhe_ecken": 6,
     "ruhe_treppen": 2
    }
   },
@@ -156,13 +172,13 @@
    "drehung": {
     "Sagliains": 30
    },
-   "unruhe": 83,
+   "unruhe": 59,
    "kennzahlen": {
     "lage_L3": 1,
-    "regel_G2": 4,
+    "regel_G2": 2,
     "regel_G8": 1,
-    "ruhe_ecken": 5,
-    "ruhe_treppen": 4
+    "ruhe_ecken": 4,
+    "ruhe_treppen": 2
    }
   },
   {
@@ -170,14 +186,15 @@
    "drehung": {
     "Sagliains": -90
    },
-   "unruhe": 71,
+   "unruhe": 117,
    "kennzahlen": {
+    "topo_T6": 1,
     "lage_L3a": 1,
     "lage_L3": 1,
     "regel_G2": 2,
     "regel_G8": 1,
-    "ruhe_ecken": 3,
-    "ruhe_treppen": 4
+    "ruhe_ecken": 6,
+    "ruhe_treppen": 2
    }
   },
   {
@@ -185,280 +202,11 @@
    "drehung": {
     "Sagliains": 60
    },
-   "unruhe": 121,
-   "kennzahlen": {
-    "topo_T6": 1,
-    "lage_L3a": 1,
-    "lage_L3": 1,
-    "regel_G2": 2,
-    "regel_G8": 1,
-    "ruhe_ecken": 3,
-    "ruhe_treppen": 4
-   }
-  },
-  {
-   "schritt": "Sagliains -90",
-   "drehung": {
-    "Sagliains": -120
-   },
-   "unruhe": 179,
-   "kennzahlen": {
-    "topo_T6": 1,
-    "lage_L4": 1,
-    "lage_L3a": 1,
-    "lage_L3": 2,
-    "regel_G2": 2,
-    "regel_G8": 1,
-    "ruhe_ecken": 3,
-    "ruhe_treppen": 5
-   }
-  },
-  {
-   "schritt": "Sasslatsch +30",
-   "drehung": {
-    "Sasslatsch": 120
-   },
-   "unruhe": 105,
-   "kennzahlen": {
-    "topo_T6": 1,
-    "lage_L3": 1,
-    "regel_G2": 2,
-    "regel_G8": 1,
-    "ruhe_treppen": 3,
-    "ruhe_ecken": 1
-   }
-  },
-  {
-   "schritt": "Sasslatsch -30",
-   "drehung": {
-    "Sasslatsch": 60
-   },
-   "unruhe": 43,
+   "unruhe": 79,
    "kennzahlen": {
     "lage_L3a": 1,
     "lage_L3": 1,
     "regel_G2": 2,
-    "regel_G8": 1,
-    "ruhe_treppen": 2
-   }
-  },
-  {
-   "schritt": "Sasslatsch +60",
-   "drehung": {
-    "Sasslatsch": 150
-   },
-   "unruhe": 105,
-   "kennzahlen": {
-    "topo_T6": 1,
-    "lage_L3": 1,
-    "regel_G2": 2,
-    "regel_G8": 1,
-    "ruhe_treppen": 3,
-    "ruhe_ecken": 1
-   }
-  },
-  {
-   "schritt": "Sasslatsch -60",
-   "drehung": {
-    "Sasslatsch": 30
-   },
-   "unruhe": 47,
-   "kennzahlen": {
-    "lage_L3a": 1,
-    "lage_L3": 1,
-    "regel_G2": 2,
-    "regel_G8": 1,
-    "ruhe_ecken": 1,
-    "ruhe_treppen": 2
-   }
-  },
-  {
-   "schritt": "Sasslatsch +90",
-   "drehung": {
-    "Sasslatsch": -180
-   },
-   "unruhe": 155,
-   "kennzahlen": {
-    "topo_T6": 2,
-    "lage_L3": 1,
-    "regel_G2": 2,
-    "regel_G8": 1,
-    "ruhe_ecken": 3,
-    "ruhe_treppen": 2
-   }
-  },
-  {
-   "schritt": "Sasslatsch -90",
-   "drehung": {
-    "Sasslatsch": 0
-   },
-   "unruhe": 167,
-   "kennzahlen": {
-    "topo_T6": 2,
-    "lage_L3a": 1,
-    "lage_L3": 1,
-    "regel_G2": 2,
-    "regel_G8": 1,
-    "ruhe_ecken": 6,
-    "ruhe_treppen": 2
-   }
-  },
-  {
-   "schritt": "Klosters Platz +30",
-   "drehung": {
-    "Klosters Platz": 120
-   },
-   "unruhe": 81,
-   "kennzahlen": {
-    "topo_T6": 1,
-    "regel_G2": 2,
-    "regel_G8": 1,
-    "ruhe_ecken": 2,
-    "ruhe_treppen": 2
-   }
-  },
-  {
-   "schritt": "Klosters Platz -30",
-   "drehung": {
-    "Klosters Platz": 60
-   },
-   "unruhe": 47,
-   "kennzahlen": {
-    "lage_L3": 1,
-    "regel_G2": 4,
-    "regel_G8": 1,
-    "ruhe_treppen": 2
-   }
-  },
-  {
-   "schritt": "Klosters Platz +60",
-   "drehung": {
-    "Klosters Platz": 150
-   },
-   "unruhe": 111,
-   "kennzahlen": {
-    "topo_T6": 1,
-    "lage_L4": 1,
-    "lage_L3a": 1,
-    "regel_G2": 2,
-    "regel_G8": 1,
-    "ruhe_ecken": 2,
-    "ruhe_treppen": 2
-   }
-  },
-  {
-   "schritt": "Klosters Platz -60",
-   "drehung": {
-    "Klosters Platz": 30
-   },
-   "unruhe": 47,
-   "kennzahlen": {
-    "lage_L3": 1,
-    "regel_G2": 2,
-    "regel_G8": 1,
-    "ruhe_ecken": 1,
-    "ruhe_treppen": 2
-   }
-  },
-  {
-   "schritt": "Klosters Platz +90",
-   "drehung": {
-    "Klosters Platz": -180
-   },
-   "unruhe": 107,
-   "kennzahlen": {
-    "topo_T6": 1,
-    "lage_L4": 1,
-    "lage_L3a": 1,
-    "regel_G2": 2,
-    "regel_G8": 1,
-    "ruhe_ecken": 1,
-    "ruhe_treppen": 2
-   }
-  },
-  {
-   "schritt": "Klosters Platz -90",
-   "drehung": {
-    "Klosters Platz": 0
-   },
-   "unruhe": 75,
-   "kennzahlen": {
-    "lage_L4": 1,
-    "lage_L3a": 1,
-    "lage_L3": 1,
-    "regel_G2": 3,
-    "regel_G8": 1,
-    "ruhe_treppen": 2
-   }
-  },
-  {
-   "schritt": "Sagliains +30",
-   "drehung": {
-    "Sagliains": -30
-   },
-   "unruhe": 63,
-   "kennzahlen": {
-    "lage_L3": 1,
-    "regel_G2": 4,
-    "regel_G8": 1,
-    "ruhe_treppen": 4
-   }
-  },
-  {
-   "schritt": "Sagliains -30",
-   "drehung": {
-    "Sagliains": -90
-   },
-   "unruhe": 71,
-   "kennzahlen": {
-    "lage_L3a": 1,
-    "lage_L3": 1,
-    "regel_G2": 2,
-    "regel_G8": 1,
-    "ruhe_ecken": 3,
-    "ruhe_treppen": 4
-   }
-  },
-  {
-   "schritt": "Sagliains +60",
-   "drehung": {
-    "Sagliains": 0
-   },
-   "unruhe": 67,
-   "kennzahlen": {
-    "lage_L3": 1,
-    "regel_G2": 2,
-    "regel_G8": 1,
-    "ruhe_treppen": 4,
-    "ruhe_ecken": 2
-   }
-  },
-  {
-   "schritt": "Sagliains -60",
-   "drehung": {
-    "Sagliains": -120
-   },
-   "unruhe": 179,
-   "kennzahlen": {
-    "topo_T6": 1,
-    "lage_L4": 1,
-    "lage_L3a": 1,
-    "lage_L3": 2,
-    "regel_G2": 2,
-    "regel_G8": 1,
-    "ruhe_ecken": 3,
-    "ruhe_treppen": 5
-   }
-  },
-  {
-   "schritt": "Sagliains +90",
-   "drehung": {
-    "Sagliains": 30
-   },
-   "unruhe": 83,
-   "kennzahlen": {
-    "lage_L3": 1,
-    "regel_G2": 4,
     "regel_G8": 1,
     "ruhe_ecken": 5,
     "ruhe_treppen": 4
@@ -467,87 +215,57 @@
   {
    "schritt": "Sagliains -90",
    "drehung": {
-    "Sagliains": -150
+    "Sagliains": -120
    },
-   "unruhe": 225,
+   "unruhe": 239,
    "kennzahlen": {
     "topo_T6": 2,
     "lage_L4": 1,
     "lage_L3a": 1,
     "lage_L3": 2,
     "regel_G2": 2,
+    "regel_G4": 1,
     "regel_G8": 1,
-    "ruhe_ecken": 6,
-    "ruhe_treppen": 3
+    "ruhe_ecken": 9,
+    "ruhe_treppen": 2
    }
   },
   {
    "schritt": "Sasslatsch +30",
    "drehung": {
-    "Sasslatsch": 120
+    "Sasslatsch": 135
    },
-   "unruhe": 105,
+   "unruhe": 51,
    "kennzahlen": {
-    "topo_T6": 1,
     "lage_L3": 1,
     "regel_G2": 2,
     "regel_G8": 1,
-    "ruhe_treppen": 3,
-    "ruhe_ecken": 1
+    "ruhe_ecken": 2,
+    "ruhe_treppen": 2
    }
   },
   {
    "schritt": "Sasslatsch -30",
    "drehung": {
-    "Sasslatsch": 60
+    "Sasslatsch": 75
    },
-   "unruhe": 43,
+   "unruhe": 51,
    "kennzahlen": {
-    "lage_L3a": 1,
     "lage_L3": 1,
     "regel_G2": 2,
     "regel_G8": 1,
+    "ruhe_ecken": 2,
     "ruhe_treppen": 2
    }
   },
   {
    "schritt": "Sasslatsch +60",
    "drehung": {
-    "Sasslatsch": 150
+    "Sasslatsch": 165
    },
    "unruhe": 105,
    "kennzahlen": {
     "topo_T6": 1,
-    "lage_L3": 1,
-    "regel_G2": 2,
-    "regel_G8": 1,
-    "ruhe_treppen": 3,
-    "ruhe_ecken": 1
-   }
-  },
-  {
-   "schritt": "Sasslatsch -60",
-   "drehung": {
-    "Sasslatsch": 30
-   },
-   "unruhe": 47,
-   "kennzahlen": {
-    "lage_L3a": 1,
-    "lage_L3": 1,
-    "regel_G2": 2,
-    "regel_G8": 1,
-    "ruhe_ecken": 1,
-    "ruhe_treppen": 2
-   }
-  },
-  {
-   "schritt": "Sasslatsch +90",
-   "drehung": {
-    "Sasslatsch": -180
-   },
-   "unruhe": 155,
-   "kennzahlen": {
-    "topo_T6": 2,
     "lage_L3": 1,
     "regel_G2": 2,
     "regel_G8": 1,
@@ -556,18 +274,331 @@
    }
   },
   {
+   "schritt": "Sasslatsch -60",
+   "drehung": {
+    "Sasslatsch": 45
+   },
+   "unruhe": 113,
+   "kennzahlen": {
+    "topo_T6": 1,
+    "lage_L3a": 2,
+    "lage_L3": 1,
+    "regel_G2": 4,
+    "regel_G8": 1,
+    "ruhe_ecken": 4,
+    "ruhe_treppen": 2
+   }
+  },
+  {
+   "schritt": "Sasslatsch +90",
+   "drehung": {
+    "Sasslatsch": -165
+   },
+   "unruhe": 155,
+   "kennzahlen": {
+    "topo_T6": 1,
+    "lage_L4": 1,
+    "lage_L3a": 2,
+    "lage_L3": 1,
+    "regel_G2": 2,
+    "regel_G8": 1,
+    "ruhe_ecken": 8,
+    "ruhe_treppen": 2
+   }
+  },
+  {
    "schritt": "Sasslatsch -90",
    "drehung": {
-    "Sasslatsch": 0
+    "Sasslatsch": 15
    },
-   "unruhe": 167,
+   "unruhe": 113,
+   "kennzahlen": {
+    "topo_T6": 1,
+    "lage_L3a": 2,
+    "lage_L3": 1,
+    "regel_G2": 2,
+    "regel_G8": 1,
+    "ruhe_ecken": 5,
+    "ruhe_treppen": 2
+   }
+  },
+  {
+   "schritt": "Klosters Platz +30",
+   "drehung": {
+    "Klosters Platz": 60
+   },
+   "unruhe": 63,
+   "kennzahlen": {
+    "lage_L3": 1,
+    "regel_G2": 2,
+    "regel_G8": 1,
+    "ruhe_ecken": 3,
+    "ruhe_treppen": 3
+   }
+  },
+  {
+   "schritt": "Klosters Platz -30",
+   "drehung": {
+    "Klosters Platz": 0
+   },
+   "unruhe": 51,
+   "kennzahlen": {
+    "lage_L3a": 1,
+    "lage_L3": 1,
+    "regel_G2": 2,
+    "regel_G8": 1,
+    "ruhe_treppen": 2,
+    "ruhe_ecken": 2
+   }
+  },
+  {
+   "schritt": "Klosters Platz +60",
+   "drehung": {
+    "Klosters Platz": 90
+   },
+   "unruhe": 209,
+   "kennzahlen": {
+    "topo_T6": 1,
+    "lage_L2": 10,
+    "lage_L3a": 1,
+    "lage_L3": 1,
+    "regel_G2": 2,
+    "regel_G8": 1,
+    "ruhe_treppen": 3,
+    "ruhe_ecken": 2
+   }
+  },
+  {
+   "schritt": "Klosters Platz -60",
+   "drehung": {
+    "Klosters Platz": -30
+   },
+   "unruhe": 435,
+   "kennzahlen": {
+    "topo_T6": 1,
+    "lage_L2": 28,
+    "lage_L4": 1,
+    "lage_L3a": 6,
+    "lage_L3": 1,
+    "regel_G2": 4,
+    "regel_G8": 1,
+    "ruhe_treppen": 4,
+    "ruhe_ecken": 3
+   }
+  },
+  {
+   "schritt": "Klosters Platz +90",
+   "drehung": {
+    "Klosters Platz": 120
+   },
+   "unruhe": 499,
    "kennzahlen": {
     "topo_T6": 2,
+    "lage_L2": 34,
+    "lage_L3a": 6,
+    "regel_G2": 2,
+    "regel_G8": 1,
+    "ruhe_ecken": 9,
+    "ruhe_treppen": 2
+   }
+  },
+  {
+   "schritt": "Klosters Platz -90",
+   "drehung": {
+    "Klosters Platz": -60
+   },
+   "unruhe": 443,
+   "kennzahlen": {
+    "topo_T6": 1,
+    "lage_L2": 30,
+    "lage_L4": 1,
+    "lage_L3a": 7,
+    "lage_L3": 1,
+    "regel_G2": 2,
+    "regel_G8": 1,
+    "ruhe_ecken": 5,
+    "ruhe_treppen": 2
+   }
+  },
+  {
+   "schritt": "Sagliains +30",
+   "drehung": {
+    "Sagliains": 30
+   },
+   "unruhe": 59,
+   "kennzahlen": {
+    "lage_L3": 1,
+    "regel_G2": 2,
+    "regel_G8": 1,
+    "ruhe_ecken": 4,
+    "ruhe_treppen": 2
+   }
+  },
+  {
+   "schritt": "Sagliains -30",
+   "drehung": {
+    "Sagliains": -30
+   },
+   "unruhe": 63,
+   "kennzahlen": {
+    "lage_L3": 1,
+    "regel_G2": 2,
+    "regel_G8": 1,
+    "ruhe_ecken": 3,
+    "ruhe_treppen": 3
+   }
+  },
+  {
+   "schritt": "Sagliains +60",
+   "drehung": {
+    "Sagliains": 60
+   },
+   "unruhe": 79,
+   "kennzahlen": {
+    "lage_L3a": 1,
+    "lage_L3": 1,
+    "regel_G2": 2,
+    "regel_G8": 1,
+    "ruhe_ecken": 5,
+    "ruhe_treppen": 4
+   }
+  },
+  {
+   "schritt": "Sagliains -60",
+   "drehung": {
+    "Sagliains": -60
+   },
+   "unruhe": 117,
+   "kennzahlen": {
+    "topo_T6": 1,
+    "lage_L3": 1,
+    "regel_G2": 2,
+    "regel_G8": 1,
+    "ruhe_ecken": 6,
+    "ruhe_treppen": 2
+   }
+  },
+  {
+   "schritt": "Sagliains +90",
+   "drehung": {
+    "Sagliains": 90
+   },
+   "unruhe": 116,
+   "kennzahlen": {
+    "lage_L4": 1,
+    "lage_L3a": 1,
+    "lage_L3": 2,
+    "regel_G2": 2,
+    "regel_G8": 2,
+    "ruhe_ecken": 5,
+    "ruhe_treppen": 2
+   }
+  },
+  {
+   "schritt": "Sagliains -90",
+   "drehung": {
+    "Sagliains": -90
+   },
+   "unruhe": 117,
+   "kennzahlen": {
+    "topo_T6": 1,
     "lage_L3a": 1,
     "lage_L3": 1,
     "regel_G2": 2,
     "regel_G8": 1,
     "ruhe_ecken": 6,
+    "ruhe_treppen": 2
+   }
+  },
+  {
+   "schritt": "Sasslatsch +30",
+   "drehung": {
+    "Sasslatsch": 135
+   },
+   "unruhe": 51,
+   "kennzahlen": {
+    "lage_L3": 1,
+    "regel_G2": 2,
+    "regel_G8": 1,
+    "ruhe_ecken": 2,
+    "ruhe_treppen": 2
+   }
+  },
+  {
+   "schritt": "Sasslatsch -30",
+   "drehung": {
+    "Sasslatsch": 75
+   },
+   "unruhe": 51,
+   "kennzahlen": {
+    "lage_L3": 1,
+    "regel_G2": 2,
+    "regel_G8": 1,
+    "ruhe_ecken": 2,
+    "ruhe_treppen": 2
+   }
+  },
+  {
+   "schritt": "Sasslatsch +60",
+   "drehung": {
+    "Sasslatsch": 165
+   },
+   "unruhe": 105,
+   "kennzahlen": {
+    "topo_T6": 1,
+    "lage_L3": 1,
+    "regel_G2": 2,
+    "regel_G8": 1,
+    "ruhe_ecken": 3,
+    "ruhe_treppen": 2
+   }
+  },
+  {
+   "schritt": "Sasslatsch -60",
+   "drehung": {
+    "Sasslatsch": 45
+   },
+   "unruhe": 113,
+   "kennzahlen": {
+    "topo_T6": 1,
+    "lage_L3a": 2,
+    "lage_L3": 1,
+    "regel_G2": 4,
+    "regel_G8": 1,
+    "ruhe_ecken": 4,
+    "ruhe_treppen": 2
+   }
+  },
+  {
+   "schritt": "Sasslatsch +90",
+   "drehung": {
+    "Sasslatsch": -165
+   },
+   "unruhe": 155,
+   "kennzahlen": {
+    "topo_T6": 1,
+    "lage_L4": 1,
+    "lage_L3a": 2,
+    "lage_L3": 1,
+    "regel_G2": 2,
+    "regel_G8": 1,
+    "ruhe_ecken": 8,
+    "ruhe_treppen": 2
+   }
+  },
+  {
+   "schritt": "Sasslatsch -90",
+   "drehung": {
+    "Sasslatsch": 15
+   },
+   "unruhe": 113,
+   "kennzahlen": {
+    "topo_T6": 1,
+    "lage_L3a": 2,
+    "lage_L3": 1,
+    "regel_G2": 2,
+    "regel_G8": 1,
+    "ruhe_ecken": 5,
     "ruhe_treppen": 2
    }
   }

@@ -20,78 +20,136 @@
   "merge_junction_m": 200
  },
  "Susch": [
-  658,
-  822
+  633,
+  656
  ],
  "Klosters Platz": [
-  -532,
-  -526
+  -652,
+  -536
  ],
  "Sagliains": [
-  960,
-  269
+  1089,
+  377
  ],
  "Klosters Selfranga": [
-  -348,
-  -286
+  -349,
+  -388
  ],
  "Sagliains Sasslatsch": [
-  650,
-  415
+  721,
+  242
  ],
  "Sasslatsch": [
-  700,
-  593
+  691,
+  431
  ],
  "Selfranga Süd": [
-  -139,
-  -106
+  -119,
+  -234
  ],
  "Vereina Nord": [
-  47,
-  35
+  83,
+  -118
  ],
  "Vereina Süd": [
-  213,
-  161
+  264,
+  -13
  ],
  "Sagliains Nord": [
-  423,
-  308
+  490,
+  106
  ],
  "Abgang 915 #12": [
-  -546,
-  -200
+  -444,
+  -291
  ],
  "Abgang 960 #13": [
-  1251,
-  53
+  1464,
+  397
  ],
  "Abgang 960 #14": [
-  588,
-  1074
+  560,
+  907
  ],
  "Abgang 910 #15": [
-  -582,
-  -850
+  -940,
+  -698
  ],
  "drehung_auto": {
-  "Susch": -75.9,
-  "Klosters Platz": 90,
-  "Sagliains": -60,
-  "Klosters Selfranga": 37.1,
-  "Sasslatsch": 90,
-  "Selfranga Süd": 37.1,
-  "Vereina Nord": 37.1,
-  "Vereina Süd": 37.1,
-  "Sagliains Nord": 37.1
+  "Susch": -75.0,
+  "Klosters Platz": 30.0,
+  "Klosters Selfranga": 30.0,
+  "Sagliains Sasslatsch": 30.0,
+  "Sasslatsch": 105.0,
+  "Selfranga Süd": 30.0,
+  "Vereina Nord": 30.0,
+  "Vereina Süd": 30.0,
+  "Sagliains Nord": 30.0
  },
+ "achsen_auto": [
+  {
+   "knoten": [
+    "Klosters Platz",
+    "Abgang 915"
+   ],
+   "richtung": -150.0,
+   "geo": -145.8,
+   "fest": null,
+   "eigen": []
+  },
+  {
+   "knoten": [
+    "Abgang 910",
+    "Klosters Platz",
+    "Sagliains Sasslatsch",
+    "Sagliains"
+   ],
+   "richtung": 30.0,
+   "geo": 36.4,
+   "fest": null,
+   "eigen": [
+    "Klosters Platz",
+    "Sagliains Sasslatsch"
+   ]
+  },
+  {
+   "knoten": [
+    "Sasslatsch",
+    "Sagliains",
+    "Abgang 960"
+   ],
+   "richtung": 0,
+   "geo": -26.7,
+   "fest": "Sagliains",
+   "eigen": []
+  },
+  {
+   "knoten": [
+    "Sagliains Sasslatsch",
+    "Sasslatsch",
+    "Abgang 960"
+   ],
+   "richtung": 105.0,
+   "geo": 102.1,
+   "fest": null,
+   "eigen": [
+    "Sasslatsch"
+   ]
+  },
+  {
+   "knoten": [],
+   "achswechsel": true,
+   "richtung": null,
+   "fest": null,
+   "eigen": []
+  }
+ ],
  "drehung": {
-  "Sagliains": -60
+  "Sagliains": 0
  },
  "suche": {
   "drehung": {
-   "Sagliains": -60
+   "Sagliains": 0
   }
  }
 }

@@ -1,7 +1,7 @@
 {
  "region": "vereina",
- "erzeugt": "2026-11-26 21:30 UTC",
- "code_commit": "32ce42aa4cc7db0aba0a2446160098a024e0ea56",
+ "erzeugt": "2026-11-27 05:52 UTC",
+ "code_commit": "a57d5c3103a912310c5d73fab2f9b0d60873ee0d",
  "bahnhoefe": {
   "susch": {
    "name": "Susch",
@@ -74,9 +74,9 @@
  },
  "lage_suche": {
   "ausgang": 63,
-  "ergebnis": 43,
+  "ergebnis": 51,
   "drehung": {
-   "Sagliains": -60
+   "Sagliains": 0
   },
   "varianten": 37
  },
@@ -84,7 +84,7 @@
  "topologie_region": {},
  "ruhe": {
   "treppen": 4,
-  "ecken": 0
+  "ecken": 2
  },
  "regeln": {
   "G2": 2,
@@ -104,27 +104,30 @@
   "regel_G2": 2,
   "regel_G8": 1,
   "ruhe_treppen": 4,
-  "ruhe_ecken": 0,
+  "ruhe_ecken": 2,
   "planrand": 0,
   "lage_L3": 1
  },
- "unruhe": 59,
+ "unruhe": 67,
  "unruhe_teile": {
   "regel_G2": 4,
   "regel_G8": 3,
   "ruhe_treppen": 32,
+  "ruhe_ecken": 8,
   "lage_L3": 20
  },
  "vergleich": {
-  "status": "besser",
-  "schlechter": {},
+  "status": "schlechter",
+  "schlechter": {
+   "ruhe_ecken": 2
+  },
   "besser": {
    "regel_G2": -2,
    "ruhe_treppen": -2
   },
   "topologie_offen": {},
   "neu": {},
-  "unruhe": 59,
+  "unruhe": 67,
   "unruhe_basis": 79
  }
 }

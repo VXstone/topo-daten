@@ -14,68 +14,94 @@
   "merge_junction_m": 200
  },
  "drehung": {
-  "Uetliberg": 120,
-  "Zürich Giesshübel": 0,
-  "Zürich Selnau": 0
+  "Zürich Giesshübel": 0
  },
- "_drehung": "Uetliberg 120 von Hand (K0d 24.11.2026): Lagesuche hat 90 und 120 gleich bewertet; 120 läuft ohne Ecke in Uetliberg ein (Stand v179); Zürich Giesshübel 0 von Hand (T-SZU1 24.11.2026): mit dem Abgang 717 nach Zürich Wiedikon drehte die Lagesuche Giesshübel um 30° (Binz überdeckte den Titel) – Lage wie v181 bis T-SZU2",
+ "_drehung": "Zürich Giesshübel 0 von Hand (T-SZU1 24.11.2026, Zielbild Daniel: 712 unten gerade). Uetliberg 120 (K0d) gestrichen in L1 (27.11.2026): Uetliberg liegt auf der Achse Selnau – Giesshübel – Uetliberg und wird aus ihr gedreht (REGELN 4.15).",
  "Zürich Selnau": [
-  1290,
-  -210
+  1375,
+  90
  ],
  "Ringlikon": [
-  -984,
-  533
+  -1113,
+  40
  ],
  "Uetliberg": [
-  -1202,
-  661
+  -1371,
+  40
  ],
  "Zürich Giesshübel": [
-  637,
-  -100
+  651,
+  66
  ],
  "Zürich Saalsporthalle": [
-  460,
-  102
+  506,
+  263
  ],
  "Zürich Binz": [
-  311,
-  -60
+  312,
+  37
  ],
  "Zürich Friesenberg": [
-  -184,
-  165
+  -232,
+  37
  ],
  "Zürich Schweighof": [
-  -392,
-  260
+  -461,
+  37
  ],
  "Berghof": [
-  -664,
-  384
+  -759,
+  37
  ],
  "Borrweg": [
-  63,
-  53
+  40,
+  37
  ],
  "Abgang 712 #12": [
-  506,
-  373
+  576,
+  527
  ],
  "drehung_auto": {
-  "Ringlikon": 155.5,
-  "Uetliberg": 120,
-  "Zürich Saalsporthalle": -97.6,
-  "Zürich Binz": -24.5,
-  "Zürich Friesenberg": -24.5,
-  "Zürich Schweighof": -24.5,
-  "Berghof": -21.0,
-  "Borrweg": -22.1
+  "Ringlikon": 180.0,
+  "Uetliberg": -180,
+  "Zürich Saalsporthalle": -105.0,
+  "Zürich Binz": -0.0,
+  "Zürich Friesenberg": -0.0,
+  "Zürich Schweighof": -0.0,
+  "Berghof": 3.5,
+  "Borrweg": 2.3
  },
- "suche": {
-  "drehung": {
-   "Zürich Selnau": 0
+ "achsen_auto": [
+  {
+   "knoten": [
+    "Zürich Selnau",
+    "Zürich Giesshübel",
+    "Uetliberg"
+   ],
+   "richtung": -180,
+   "geo": 145.8,
+   "fest": "Zürich Giesshübel",
+   "eigen": [
+    "Zürich Selnau",
+    "Uetliberg"
+   ]
+  },
+  {
+   "knoten": [
+    "Zürich Giesshübel",
+    "Abgang 712"
+   ],
+   "richtung": 75.0,
+   "geo": 82.4,
+   "fest": null,
+   "eigen": []
+  },
+  {
+   "knoten": [],
+   "achswechsel": true,
+   "richtung": null,
+   "fest": null,
+   "eigen": []
   }
- }
+ ]
 }

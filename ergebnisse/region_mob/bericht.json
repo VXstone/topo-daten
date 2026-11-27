@@ -1,7 +1,7 @@
 {
  "region": "mob",
- "erzeugt": "2026-11-26 21:23 UTC",
- "code_commit": "32ce42aa4cc7db0aba0a2446160098a024e0ea56",
+ "erzeugt": "2026-11-27 05:43 UTC",
+ "code_commit": "a57d5c3103a912310c5d73fab2f9b0d60873ee0d",
  "bahnhoefe": {
   "schonried": {
    "name": "Schönried",
@@ -287,28 +287,29 @@
   "S3": 0
  },
  "lage_suche": {
-  "ausgang": 176,
-  "ergebnis": 49,
+  "ausgang": 281,
+  "ergebnis": 81,
   "drehung": {
-   "Chamby": -30,
-   "Montbovon": 60,
-   "Montreux": 30
+   "Lenk im Simmental": 90,
+   "Chamby": -60,
+   "Montbovon": 30
   },
   "varianten": 73
  },
  "netz_lage": 0,
  "topologie_region": {},
  "ruhe": {
-  "treppen": 4,
-  "ecken": 1
+  "treppen": 5,
+  "ecken": 0
  },
  "regeln": {
-  "G2": 18,
+  "G2": 17,
   "G6": 3
  },
  "planrand": 0,
  "lage": {
-  "L3a": 9
+  "L2": 3,
+  "L3a": 11
  },
  "kennzahlen": {
   "verk_V1": 0,
@@ -317,36 +318,37 @@
   "verk_S1": 0,
   "verk_S2": 0,
   "verk_S3": 0,
-  "regel_G2": 18,
+  "regel_G2": 17,
   "regel_G6": 3,
-  "ruhe_treppen": 4,
-  "ruhe_ecken": 1,
+  "ruhe_treppen": 5,
+  "ruhe_ecken": 0,
   "planrand": 0,
-  "lage_L3a": 9
+  "lage_L2": 3,
+  "lage_L3a": 11
  },
- "unruhe": 81,
+ "unruhe": 113,
  "unruhe_teile": {
-  "regel_G2": 36,
+  "regel_G2": 34,
   "regel_G6": 9,
-  "ruhe_treppen": 32,
-  "ruhe_ecken": 4
+  "ruhe_treppen": 40,
+  "lage_L2": 30
  },
  "vergleich": {
   "status": "besser",
   "schlechter": {},
   "besser": {
-   "lage_L2": -34,
+   "lage_L2": -31,
    "lage_L3": -7,
-   "regel_G2": -5,
-   "ruhe_ecken": -2,
-   "ruhe_treppen": -6,
+   "regel_G2": -6,
+   "ruhe_ecken": -3,
+   "ruhe_treppen": -5,
    "topo_T6": -3
   },
   "topologie_offen": {},
   "neu": {
-   "lage_L3a": 9
+   "lage_L3a": 11
   },
-  "unruhe": 81,
+  "unruhe": 113,
   "unruhe_basis": 777
  }
 }
