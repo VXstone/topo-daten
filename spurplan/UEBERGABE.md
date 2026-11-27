@@ -1181,5 +1181,6 @@ Veröffentlichung). Was grösser wird, am Ende in einen Folgeschritt abspalten s
   NE 99→107 (L2 Cressier FR/Murten, Chambrelien/Boudry; eine Ecke weniger). G0 rot: MOB GT 0→1 (Chamby Abgang 114), Vereina GS 1→2 (Klosters).
 - SZU Runner (b9e1607): Unruhe 312 mit T6 «2 Haken» Giesshübel → Saalsporthalle (seitlicher 712-Abgang); lokal 260 ohne T6 – einziger
   Unterschied Lage Saalsporthalle 499/264 vs 489/266 (Runner/lokal, wie F4a). In L1b mit ansehen (Kette ab seitlichem Abgang).
-- Prüfstand rot nur `buendel_versatz` d30/a30/a60 (E/Z 0→2): jetzt in allen 8 Drehungen gleich wie d0 (nötiger Paarversatz) – neue Basis nur mit Okay Daniel.
+- Prüfstand: `buendel_versatz` d30/a30/a60 E/Z 0→2 (jetzt in allen 8 Drehungen gleich wie d0, nötiger Paarversatz); besser: unterwerfung
+  a30/a60 X 2→0, dm30/dm60 Z 1→0, zwischengerade d90 K 4/X 3→0. **27.11. 07:38 Okay Daniel → Basis neu aus Prüfstand-Lauf b9e1607.**
 

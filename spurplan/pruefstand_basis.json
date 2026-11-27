@@ -101,15 +101,21 @@
   "osm/buendel_knick_eng/dm60": {
    "Q": 4
   },
-  "osm/buendel_versatz/a30": {},
-  "osm/buendel_versatz/a60": {},
+  "osm/buendel_versatz/a30": {
+   "E": 2,
+   "Z": 2
+  },
+  "osm/buendel_versatz/a60": {
+   "E": 2,
+   "Z": 2
+  },
   "osm/buendel_versatz/d0": {
    "E": 2,
    "Z": 2
   },
   "osm/buendel_versatz/d30": {
    "E": 2,
-   "Z": 1
+   "Z": 2
   },
   "osm/buendel_versatz/d60": {
    "E": 2,
@@ -191,12 +197,8 @@
   "osm/sagliains/d90": {},
   "osm/sagliains/dm30": {},
   "osm/sagliains/dm60": {},
-  "osm/unterwerfung/a30": {
-   "X": 2
-  },
-  "osm/unterwerfung/a60": {
-   "X": 2
-  },
+  "osm/unterwerfung/a30": {},
+  "osm/unterwerfung/a60": {},
   "osm/unterwerfung/d0": {
    "X": 2
   },
@@ -210,12 +212,10 @@
    "X": 2
   },
   "osm/unterwerfung/dm30": {
-   "X": 2,
-   "Z": 1
+   "X": 2
   },
   "osm/unterwerfung/dm60": {
-   "X": 2,
-   "Z": 1
+   "X": 2
   },
   "osm/zwischengerade/a30": {},
   "osm/zwischengerade/a60": {},
@@ -223,9 +223,7 @@
   "osm/zwischengerade/d30": {},
   "osm/zwischengerade/d60": {},
   "osm/zwischengerade/d90": {
-   "D": 1,
-   "K": 4,
-   "X": 3
+   "D": 1
   },
   "osm/zwischengerade/dm30": {},
   "osm/zwischengerade/dm60": {},
@@ -503,6 +501,6 @@
   }
  },
  "fehler": [],
- "gesetzt": "2026-11-24 22:59 UTC",
- "quelle": "tabelle.json"
+ "gesetzt": "2026-11-27 06:24 UTC",
+ "quelle": "ps_tab.json"
 }
